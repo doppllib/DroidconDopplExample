@@ -56,9 +56,9 @@ Add the following to ~/.bash_profile
 
 export J2OBJC_HOME=[dist dir]
 
-[dist dir] is the path where you installed the j2objc zip
+[dist dir] is the absolute path where you installed the j2objc zip
 
-Add the following to local.properties
+Add the following to local.properties in the project directory
 
 ```
 sdk.dir=[android sdk dir]
@@ -67,6 +67,8 @@ baseurl=https://droidcon-server.herokuapp.com/
 jwLicenseKey=[get a key from jwplayer.com]
 releasePassword=[You make this. Only needed for release builds]
 ```
+
+Be sure to restart your terminal for the variables to take effect
 
 ## Verify build works
 
@@ -102,7 +104,7 @@ That was a lot of steps, but it should run, and you should see the app at this p
 
 # Other Stuff
 
-The rest of this is from the original README. To be updated...
+Notes from the original Droidcon README
 
 #################################
 
@@ -112,12 +114,6 @@ The server isn't open source at this time, but it would be relatively simple to 
 work with local data and seed it with json.  If you'd like to use the server, get in touch (info [at] touchlab.co)
 
 # Code
-
-## New Stuff
-
-### Doppel/iOS
-
-If you try to build this thing you'll pretty quickly find a few problems.  One of them is that there are ton of projects referenced in the settings.gradle that you can't access.  The other is that there are dependencies you can't find.  You'll also notice 'ios' in the folders.  This is sort of secret, but we're working on an extension of j2objc that will include better tooling and popular android libraries.  There's an ios version of this app now.  That's what this branch is.  You can't build it, though.  Sorry.
 
 ### Kotlin
 
