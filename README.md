@@ -60,15 +60,13 @@ export J2OBJC_HOME=[dist dir]
 
 Add the following to local.properties
 
+```
 sdk.dir=[android sdk dir]
-
 j2objc.home=[dist dir]
-
 baseurl=https://droidcon-server.herokuapp.com/
-
 jwLicenseKey=[get a key from jwplayer.com]
-
 releasePassword=[You make this. Only needed for release builds]
+```
 
 ## Verify build works
 
