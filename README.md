@@ -17,13 +17,13 @@ Doppl is at a very early stage, so setup may be somewhat brittle, but should wor
 
 ## Overview
 
-1) Install Android Studio
-2) Install Xcode/Cocoapods
-3) Install j2objc runtime (slightly modded version)
-4) Config gradle with doppl maven repo
-5) Verify build works
-6) Run Android
-7) Run iOS
+1. Install Android Studio
+2. Install Xcode/Cocoapods
+3. Install j2objc runtime (slightly modded version)
+4. Config gradle with doppl maven repo
+5. Verify build works
+6. Run Android
+7. Run iOS
 
 ## Install Android Studio
 
