@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/item_root" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/item_root_padding_bottom"
+    android:paddingEnd="0dp"
+    android:paddingLeft="@dimen/padding_medium"
+    android:paddingRight="0dp"
+    android:paddingStart="@dimen/padding_medium"
+    android:paddingTop="@dimen/item_root_padding_top">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/notify_card"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_xmicro"
+        android:layout_marginLeft="@dimen/notify_card_margin_start"
+        android:layout_marginRight="@dimen/padding_xmicro"
+        android:layout_marginStart="@dimen/notify_card_margin_start"
+        android:stateListAnimator="@anim/lift"
+        card_view:cardBackgroundColor="@color/card_bg_event"
+        card_view:cardCornerRadius="0dp"
+        tools:targetApi="lollipop">
+
+        <RelativeLayout
+            android:id="@+id/card_root"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_wedge"
+            android:layout_marginRight="@dimen/padding_wedge"
+            android:layout_marginTop="@dimen/padding_wedge"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/notify_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/notif_card_title"
+                android:textColor="@color/primary_dark_50"
+                android:textSize="@dimen/text_small"/>
+
+            <TextView
+                android:id="@+id/notify_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/notify_title"
+                android:layout_marginTop="4dp"
+                android:text="@string/notif_card_body"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text_small"/>
+
+            <Button
+                android:id="@+id/notify_accept"
+                style="@style/notif_card_button"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/notify_body"
+                android:textColor="@color/primary_dark_50"
+                android:text="@string/notif_card_accept"
+            />
+
+            <Button
+                android:id="@+id/notify_decline"
+                style="@style/notif_card_button"
+                android:layout_below="@id/notify_body"
+                android:layout_toLeftOf="@id/notify_accept"
+                android:layout_toStartOf="@id/notify_accept"
+                android:text="@string/notif_card_decline"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

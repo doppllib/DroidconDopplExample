@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C54A52442921369F7C26828E289FA9EC083D1F08",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C54A52442921369F7C26828E289FA9EC083D1F08" : 0,
+    "3B4146233A538D9C0924D4761F58DD8BE09D991C" : 0,
+    "44D221F7591175A4A445187FEA95357B21A925E5" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F786F2FA-2C50-4FAE-9A1C-5A5DB9C3A2D0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C54A52442921369F7C26828E289FA9EC083D1F08" : "DroidconAppMerge\/",
+    "3B4146233A538D9C0924D4761F58DD8BE09D991C" : "..",
+    "44D221F7591175A4A445187FEA95357B21A925E5" : "..\/..\/j2objc"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ios",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ios\/ios.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:touchlab\/DoppelPoc.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3B4146233A538D9C0924D4761F58DD8BE09D991C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:google\/j2objc.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "44D221F7591175A4A445187FEA95357B21A925E5"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/touchlab\/DroidconApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C54A52442921369F7C26828E289FA9EC083D1F08"
+    }
+  ]
+}

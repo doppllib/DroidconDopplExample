@@ -1,0 +1,9 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <fragment
+        class="co.touchlab.droidconandroid.EventDetailFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/wtf"/>
+</FrameLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_title_margin_top">42dp</dimen>
+    <dimen name="toolbar_title_margin_left">16dp</dimen>
+    <dimen name="item_root_padding_bottom">@dimen/padding_xlarge</dimen>
+    <dimen name="item_root_padding_top">@dimen/padding_xlarge</dimen>
+    <dimen name="notify_card_margin_start">@dimen/height_large</dimen>
+    <dimen name="item_new_row_width">156dp</dimen>
+    <dimen name="item_new_row_height">156dp</dimen>
+    <dimen name="item_event_layout_width">@dimen/match_parent</dimen>
+    <dimen name="item_event_layout_height">200dp</dimen>
+    <dimen name="item_event_padding_bottom">@dimen/padding_xlarge</dimen>
+    <dimen name="item_event_padding_top">@dimen/padding_xlarge</dimen>
+    <dimen name="conflict_text_width">@dimen/height_large</dimen>
+    <dimen name="item_event_card_margin_start">@dimen/height_large</dimen>
+    <dimen name="live_icon_margin">@dimen/padding_small</dimen>
+    <dimen name="location_time_margin_bottom">@dimen/padding_tiny</dimen>
+    <dimen name="event_divider_width">@dimen/match_parent</dimen>
+    <dimen name="event_divider_height">1dp</dimen>
+    <dimen name="event_description_width">@dimen/match_parent</dimen>
+    <dimen name="event_description_height">@dimen/wrap_content</dimen>
+    <dimen name="event_description_margin_bottom">@dimen/padding_small</dimen>
+    <dimen name="event_description_margin_start">@dimen/padding_micro</dimen>
+    <dimen name="event_description_margin_top">@dimen/padding_tiny</dimen>
+    <dimen name="event_list_margin_start">@dimen/padding_medium</dimen>
+</resources>

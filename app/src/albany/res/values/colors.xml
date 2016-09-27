@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#237aff</color>
+    <color name="primary_dark">#005ae0</color>
+    <color name="primary_dark_50">#0041a3</color>
+    <color name="accent">#5dfdad</color>
+
+    <color name="welcome_background_0">#ffc92d</color>
+    <color name="welcome_background_1">#689f38</color>
+    <color name="welcome_background_2">#4fc3f7</color>
+    <color name="social_icons">@color/primary_dark_50</color>
+
+    <color name="text_gray">#777777</color>
+</resources>

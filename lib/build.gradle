@@ -1,0 +1,57 @@
+apply plugin: 'java'
+apply plugin: 'net.ltgt.apt'
+apply plugin: 'com.touchlab.doppel.doppelgradle'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    apt 'co.touchlab.squeaky:squeaky-processor:0.5.0.0'
+    compile 'co.touchlab.squeaky:squeaky-query:0.5.0.0'
+    provided 'com.intellij:annotations:9.0.4'
+    compile 'commons-io:commons-io:1.4'
+    compile 'org.apache.commons:commons-lang3:3.3.2'
+    compile 'co.touchlab:magicthreads:0.9.1'
+
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'de.greenrobot:eventbus:2.4.0'
+    compile 'com.google.code.gson:gson:2.3.1'
+
+    testApt 'co.touchlab.doppel:testapt:0.3.1-SNAPSHOT'
+
+    doppel 'doppl.com.squareup.retrofit:retrofit:1.9.0.2@dop'
+    doppel 'doppl.com.google.code.gson:gson:2.6.2.3@dop'
+    doppel 'doppl.de.greenrobot:eventbus:2.4.0.2@dop'
+
+    doppel 'doppl.co.touchlab.squeaky:squeaky-core:0.5.0.2@dop'
+    doppel 'doppl.co.touchlab.squeaky:squeaky-query:0.5.0.2@dop'
+    doppel 'doppl.co.touchlab:magicthreads:0.9.1.1@dop'
+    doppel 'doppl.org.apache.commons:commons-lang3:3.3.2.3@dop'
+    doppel 'doppl.commons-io:commons-io:1.4.3@dop'
+    doppel 'doppl.io.reactivex:rxjava:1.1.6.2@dop'
+
+    provided 'com.intellij:annotations:9.0.4'
+    doppel 'doppl.com.intellij:intellijannotations:9.0.4@dop'
+}
+
+test{
+    enabled = false
+}
+
+j2objcConfig {
+
+    xcodeProjectDir '../ios'  //  suggested directory name
+    xcodeTargetsIos 'ios', 'iosTests'  // replace with your iOS targets
+
+    testMinExpectedTests 0
+
+    translateArgs '--prefix', 'co.touchlab.droidconandroid.data=DCD'
+    translateArgs '--prefix', 'co.touchlab.droidconandroid.presenter=DCP'
+    translateArgs '--prefix', 'co.touchlab.droidconandroid.tasks=DCT'
+
+    extraObjcCompilerArgs '-fmodules'
+
+    finalConfigure()          // Must be last call to configuration
+}
