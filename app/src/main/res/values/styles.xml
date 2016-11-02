@@ -1,0 +1,175 @@
+<resources>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/accent</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:windowBackground">@color/bg_window</item>
+        <item name="colorControlActivated">@color/accent</item>
+        <item name="colorControlHighlight">@color/accent</item>
+        <item name="colorPrimary">@color/primary_dark</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+    </style>
+
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- todo transparent status bar pre-lollipop-->
+    </style>
+
+    <style name="drawerTheme" parent="AppTheme">
+        <item name="colorControlHighlight">@color/black_10</item>
+    </style>
+
+    <style name="WelcomeCirclePageIndicator">
+        <item name="fillColor">@color/white</item>
+        <item name="pageColor">@color/black_20</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="radius">5dp</item>
+        <item name="centered">true</item>
+    </style>
+
+    <style name="SignInEditText" parent="AppTheme">
+        <item name="android:textSize">@dimen/text_medium</item>
+        <item name="android:layout_marginBottom">@dimen/padding_small</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="ActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="theme">@style/ActionBar.ThemeOverlay</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat</item>
+    </style>
+
+    <style name="StarRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/custom_ratingbar</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:maxHeight">48dip</item>
+    </style>
+
+    <style name="ActionBar.ThemeOverlay" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+    
+    <style name="ProfileIcons">
+        <item name="android:layout_marginTop">@dimen/padding_small</item>
+        <item name="android:layout_marginBottom">@dimen/padding_small</item>
+        <item name="android:layout_marginLeft">@dimen/padding_xxlarge</item>
+        <item name="android:layout_marginRight">@dimen/padding_xxlarge</item>
+    </style>
+
+    <style name="TabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/accent</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/primary_dark</item>
+        <item name="android:windowTitleStyle">@style/AlertTitleTextStyle</item>
+    </style>
+
+    <style name="GrayEditText">
+        <item name="colorControlActivated">@color/text_gray</item>
+        <item name="colorControlHighlight">@color/text_gray</item>
+    </style>
+
+    <style name="AlertTitleTextStyle">
+        <item name="android:textColor">@color/primary_dark</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+    </style>
+
+    <style name="track_checkbox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:paddingTop">@dimen/padding_wedge</item>
+        <item name="android:paddingBottom">@dimen/padding_wedge</item>
+        <item name="android:layout_marginRight">@dimen/padding_large</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/text_xlarge</item>
+    </style>
+
+    <style name="track">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:paddingLeft">@dimen/height_xlarge</item>
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+    <style name="about_icon">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_marginTop">@dimen/padding_medium</item>
+        <item name="android:layout_marginBottom">@dimen/padding_medium</item>
+        <item name="android:layout_marginLeft">@dimen/padding_medium</item>
+        <item name="android:tint">@color/primary_dark_50</item>
+    </style>
+    <style name="about_header">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/padding_medium</item>
+        <item name="android:layout_marginRight">@dimen/padding_medium</item>
+        <item name="android:layout_marginTop">@dimen/padding_medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+    <style name="about_logo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginLeft">@dimen/padding_medium</item>
+        <item name="android:layout_marginRight">@dimen/padding_medium</item>
+        <item name="android:layout_marginTop">@dimen/padding_medium</item>
+    </style>
+    <style name="about_body">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/padding_medium</item>
+        <item name="android:layout_marginRight">@dimen/padding_medium</item>
+        <item name="android:layout_marginTop">@dimen/padding_medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorLink">@color/primary_dark_50</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+    <style name="notif_card_button" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">104dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:textColor">@color/text_gray</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="sabota_toolbar_title" parent="AppTheme">
+        <item name="android:layout_gravity">top</item>
+        <item name="android:textSize">@dimen/text_xlarge</item>
+        <item name="android:layout_marginTop">@dimen/toolbar_title_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/toolbar_title_margin_left</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="EditProfileHeader">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignLeft">@id/name</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="EditProfileField">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_alignLeft">@+id/name</item>
+        <item name="android:textColor">@color/primary_dark_50</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+    <style name="EditProfileIcon">
+        <item name="android:layout_width">@dimen/social_icon</item>
+        <item name="android:layout_height">@dimen/social_icon</item>
+        <item name="android:layout_alignLeft">@id/profile_image</item>
+        <item name="android:layout_alignRight">@id/profile_image</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+</resources>

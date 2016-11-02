@@ -1,0 +1,69 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url "http://dl.bintray.com/populov/maven" }
+    }
+    dependencies {
+        classpath 'net.ltgt.gradle:gradle-apt-plugin:0.5'
+    }
+}
+
+apply plugin: 'com.touchlab.doppel.doppelgradle'
+
+apply plugin: 'java'
+apply plugin: 'net.ltgt.apt'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    apt 'co.touchlab.squeaky:squeaky-processor:0.5.0.0'
+    compile 'co.touchlab.squeaky:squeaky-query:0.5.0.0'
+
+    compile 'commons-io:commons-io:1.4'
+    compile 'org.apache.commons:commons-lang3:3.3.2'
+    compile 'co.touchlab:magicthreads:0.9.1'
+
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'de.greenrobot:eventbus:2.4.0'
+    compile 'com.google.code.gson:gson:2.3.1'
+
+    testApt 'co.touchlab.doppel:testapt:0.4.0-SNAPSHOT'
+
+    provided 'co.touchlab.doppel:androidbase:0.4.0-SNAPSHOT'
+    testCompile 'co.touchlab.doppel:androidbasetest:0.4.0-SNAPSHOT'
+
+    doppel 'co.touchlab.doppel:androidbase:0.4.0-SNAPSHOT@dop'
+//    doppel 'co.touchlab.doppel:androidbasetest:0.4.0-SNAPSHOT@dop'
+
+    doppel 'doppl.com.squareup.retrofit:retrofit:1.9.0.3@dop'
+    doppel 'doppl.com.google.code.gson:gson:2.6.2.4@dop'
+    doppel 'doppl.de.greenrobot:eventbus:2.4.0.3@dop'
+
+    doppel 'doppl.co.touchlab.squeaky:squeaky-core:0.5.0.3@dop'
+    doppel 'doppl.co.touchlab.squeaky:squeaky-query:0.5.0.3@dop'
+    doppel 'doppl.co.touchlab:magicthreads:0.9.1.2@dop'
+    doppel 'doppl.io.reactivex:rxjava:1.2.1.1@dop'
+
+    provided 'com.intellij:annotations:9.0.4'
+    doppel 'doppl.com.intellij:intellijannotations:9.0.4@dop'
+}
+
+j2objcConfig {
+
+//    frameworkName="dcframework"
+
+    translateArgs '--prefix', 'co.touchlab.droidconandroid.data=DCD'
+    translateArgs '--prefix', 'co.touchlab.droidconandroid.presenter=DCP'
+    translateArgs '--prefix', 'co.touchlab.droidconandroid.tasks=DCT'
+
+    copyMainOutput="../ios/dcframework/generated"
+    copyDependencies true
+}
+
+test{
+    enabled = false
+}

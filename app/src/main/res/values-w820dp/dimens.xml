@@ -1,0 +1,21 @@
+<resources>
+    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+    <dimen name="welcome_image_side">500dp</dimen>
+
+    <dimen name="sponsor_platinum_width">640dp</dimen>
+    <dimen name="sponsor_platinum_height">150dp</dimen>
+
+    <dimen name="sponsor_gold_width">370dp</dimen>
+    <dimen name="sponsor_gold_height">87dp</dimen>
+
+    <dimen name="sponsor_silver_width">300dp</dimen>
+    <dimen name="sponsor_silver_height">70dp</dimen>
+
+    <dimen name="sponsor_bronze_width">230dp</dimen>
+    <dimen name="sponsor_bronze_height">54dp</dimen>
+
+    <dimen name="sponsor_section_title">44sp</dimen>
+</resources>

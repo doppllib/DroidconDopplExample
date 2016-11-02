@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_small" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:theme="@style/drawerTheme">
+
+    <View
+        android:id="@+id/highlight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/padding_tiny"
+        android:layout_marginTop="@dimen/padding_tiny"
+        android:background="@color/nav_highlight"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/padding_medium"
+        android:paddingRight="@dimen/padding_medium">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/height_xxtiny"
+            android:layout_height="@dimen/height_xxtiny"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/cd_navigation_icon"
+            tools:src="@drawable/vic_event_black_24dp"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/height_medium"
+            android:layout_marginStart="@dimen/height_medium"
+            android:singleLine="true"
+            android:textColor="@color/selectable_text_black"
+            tools:text="Schedule"/>
+
+        <ImageView
+            android:id="@+id/action_icon"
+            android:layout_width="@dimen/height_xxtiny"
+            android:layout_height="@dimen/height_xxtiny"
+            android:layout_gravity="center_vertical|right"
+            android:tint="#979797"
+            android:contentDescription="@string/cd_navigation_icon"
+            app:srcCompat="@drawable/ic_launch_black_24dp"/>
+
+    </FrameLayout>
+
+</FrameLayout>

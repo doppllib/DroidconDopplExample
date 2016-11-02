@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingTop="@dimen/status_bar_height"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/height_small">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CODE LAB Powered By Twilio"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sponsor_section_title"
+                />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/sponsor_padding">
+
+                <ImageView
+                    android:id="@+id/twilio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/sponsor_padding"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/sponsor_padding">
+
+                <ImageView
+                    android:id="@+id/couchbase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/sponsor_padding"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/sponsor_padding">
+
+                <ImageView
+                    android:id="@+id/firebase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/sponsor_padding"
+                    />
+
+                <ImageView
+                    android:id="@+id/commonsware"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/sponsor_padding"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/sponsor_section_padding2"
+                android:text="PARTY SPONSORS"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sponsor_section_title"
+                />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/sponsor_padding">
+
+                <ImageView
+                    android:id="@+id/dramafever"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/sponsor_padding"
+                    />
+
+                <ImageView
+                    android:id="@+id/bignerdranch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/sponsor_padding"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/sponsor_section_padding2"
+                android:text="COMMUNITY SPONSORS"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sponsor_section_title"
+                />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/sponsor_padding">
+
+                <ImageView
+                    android:id="@+id/mirego"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/sponsor_padding"
+                    />
+
+                <ImageView
+                    android:id="@+id/lyft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/sponsor_padding"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_small"
+        android:text="... and, more sponsors"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/sponsor_section_title"
+        />
+
+</LinearLayout>
