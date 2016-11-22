@@ -24,8 +24,12 @@
   return [((CoTouchlabSqueakyStmtWhere *) nil_chk(where_)) joinWithCoTouchlabSqueakyStmtJoinAlias:self withNSString:field];
 }
 
+- (void)__javaClone:(CoTouchlabSqueakyStmtJoinAlias *)original {
+  [super __javaClone:original];
+  [where_ release];
+}
+
 - (void)dealloc {
-  RELEASE_(where_);
   RELEASE_(parentPrefix_);
   RELEASE_(tableType_);
   RELEASE_(tablePrefix_);
@@ -59,7 +63,7 @@
 
 void CoTouchlabSqueakyStmtJoinAlias_initWithCoTouchlabSqueakyStmtWhere_withNSString_withIOSClass_withNSString_withCoTouchlabSqueakyFieldFieldType_(CoTouchlabSqueakyStmtJoinAlias *self, CoTouchlabSqueakyStmtWhere *where, NSString *parentPrefix, IOSClass *tableType, NSString *tablePrefix, CoTouchlabSqueakyFieldFieldType *fieldType) {
   NSObject_init(self);
-  JreStrongAssign(&self->where_, where);
+  self->where_ = where;
   JreStrongAssign(&self->parentPrefix_, parentPrefix);
   JreStrongAssign(&self->tableType_, tableType);
   JreStrongAssign(&self->tablePrefix_, tablePrefix);

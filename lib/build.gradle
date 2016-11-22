@@ -42,8 +42,8 @@ dependencies {
     doppel 'doppl.com.google.code.gson:gson:2.6.2.4@dop'
     doppel 'doppl.de.greenrobot:eventbus:2.4.0.3@dop'
 
-    doppel 'doppl.co.touchlab.squeaky:squeaky-core:0.5.0.3@dop'
-    doppel 'doppl.co.touchlab.squeaky:squeaky-query:0.5.0.3@dop'
+    doppel 'doppl.co.touchlab.squeaky:squeaky-core:0.5.0.4@dop'
+    doppel 'doppl.co.touchlab.squeaky:squeaky-query:0.5.0.4@dop'
     doppel 'doppl.co.touchlab:magicthreads:0.9.1.2@dop'
     doppel 'doppl.io.reactivex:rxjava:1.2.1.1@dop'
 

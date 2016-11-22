@@ -22,7 +22,7 @@
 
 @interface CoTouchlabSqueakyStmtJoinAlias : NSObject {
  @public
-  CoTouchlabSqueakyStmtWhere *where_;
+  __unsafe_unretained CoTouchlabSqueakyStmtWhere *where_;
   NSString *parentPrefix_;
   IOSClass *tableType_;
   NSString *tablePrefix_;
@@ -43,7 +43,6 @@
 
 J2OBJC_EMPTY_STATIC_INIT(CoTouchlabSqueakyStmtJoinAlias)
 
-J2OBJC_FIELD_SETTER(CoTouchlabSqueakyStmtJoinAlias, where_, CoTouchlabSqueakyStmtWhere *)
 J2OBJC_FIELD_SETTER(CoTouchlabSqueakyStmtJoinAlias, parentPrefix_, NSString *)
 J2OBJC_FIELD_SETTER(CoTouchlabSqueakyStmtJoinAlias, tableType_, IOSClass *)
 J2OBJC_FIELD_SETTER(CoTouchlabSqueakyStmtJoinAlias, tablePrefix_, NSString *)
