@@ -1,16 +1,18 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "EF2AA972D5534A0E12A41CB8556B51E8FFC0B375",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5A94FC530971278F8584B70EB2C055F45A9A2D91",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "EF2AA972D5534A0E12A41CB8556B51E8FFC0B375" : 9223372036854775807,
-    "44D221F7591175A4A445187FEA95357B21A925E5" : 9223372036854775807
+    "5A94FC530971278F8584B70EB2C055F45A9A2D91" : 9223372036854775807,
+    "44D221F7591175A4A445187FEA95357B21A925E5" : 9223372036854775807,
+    "EF2AA972D5534A0E12A41CB8556B51E8FFC0B375" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FF86B83D-56A7-4AC9-8DCB-5D87B275978F",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "EF2AA972D5534A0E12A41CB8556B51E8FFC0B375" : "DroidconAppSimple\/",
-    "44D221F7591175A4A445187FEA95357B21A925E5" : "..\/devel\/j2objc"
+    "5A94FC530971278F8584B70EB2C055F45A9A2D91" : "DroidconDopplExample\/",
+    "44D221F7591175A4A445187FEA95357B21A925E5" : "..\/devel\/j2objc",
+    "EF2AA972D5534A0E12A41CB8556B51E8FFC0B375" : "DroidconAppSimple\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "ios",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -20,6 +22,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:google\/j2objc.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "44D221F7591175A4A445187FEA95357B21A925E5"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/doppllib\/DroidconDopplExample.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5A94FC530971278F8584B70EB2C055F45A9A2D91"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/doppllib\/DroidconDopplExample.git",

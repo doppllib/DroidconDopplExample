@@ -4,6 +4,7 @@
 //
 
 #include "AndroidOsBundle.h"
+#include "AndroidOsParcel.h"
 #include "IOSClass.h"
 #include "IOSObjectArray.h"
 #include "IOSPrimitiveArray.h"
@@ -22,6 +23,7 @@
 #include "java/lang/Long.h"
 #include "java/lang/Short.h"
 #include "java/lang/StringBuilder.h"
+#include "java/lang/UnsupportedOperationException.h"
 #include "java/util/ArrayList.h"
 #include "java/util/Collection.h"
 #include "java/util/Collections.h"
@@ -732,6 +734,15 @@ J2OBJC_IGNORE_DESIGNATED_END
   }
 }
 
+- (jint)describeContents {
+  @throw create_JavaLangUnsupportedOperationException_init();
+}
+
+- (void)writeToParcelWithAndroidOsParcel:(AndroidOsParcel *)dest
+                                 withInt:(jint)flags {
+  @throw create_JavaLangUnsupportedOperationException_init();
+}
+
 - (void)dealloc {
   RELEASE_(mMap_);
   RELEASE_(mClassLoader_);
@@ -821,6 +832,8 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "[LNSString;", 0x1, 93, 9, -1, -1, -1, -1 },
     { NULL, "[LJavaLangCharSequence;", 0x1, 94, 9, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x21, 95, -1, -1, -1, -1, -1 },
+    { NULL, "I", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 96, 97, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -905,18 +918,20 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[78].selector = @selector(getStringArrayWithNSString:);
   methods[79].selector = @selector(getCharSequenceArrayWithNSString:);
   methods[80].selector = @selector(description);
+  methods[81].selector = @selector(describeContents);
+  methods[82].selector = @selector(writeToParcelWithAndroidOsParcel:withInt:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "LOG_TAG", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 96, -1, -1 },
-    { "EMPTY", "LAndroidOsBundle;", .constantValue.asLong = 0, 0x19, -1, 97, -1, -1 },
-    { "mMap_", "LJavaUtilMap;", .constantValue.asLong = 0, 0x0, -1, -1, 98, -1 },
+    { "LOG_TAG", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 98, -1, -1 },
+    { "EMPTY", "LAndroidOsBundle;", .constantValue.asLong = 0, 0x19, -1, 99, -1, -1 },
+    { "mMap_", "LJavaUtilMap;", .constantValue.asLong = 0, 0x0, -1, -1, 100, -1 },
     { "mHasFds_", "Z", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "mFdsKnown_", "Z", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "mAllowFds_", "Z", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "mClassLoader_", "LJavaLangClassLoader;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LJavaLangClassLoader;", "I", "LAndroidOsBundle;", "forPair", "LNSString;LNSString;", "setClassLoader", "setAllowFds", "Z", "containsKey", "LNSString;", "get", "remove", "putAll", "()Ljava/util/Set<Ljava/lang/String;>;", "putBoolean", "LNSString;Z", "putByte", "LNSString;B", "putChar", "LNSString;C", "putShort", "LNSString;S", "putInt", "LNSString;I", "putLong", "LNSString;J", "putFloat", "LNSString;F", "putDouble", "LNSString;D", "putString", "putCharSequence", "LNSString;LJavaLangCharSequence;", "putIntegerArrayList", "LNSString;LJavaUtilArrayList;", "(Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/Integer;>;)V", "putStringArrayList", "(Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/String;>;)V", "putCharSequenceArrayList", "(Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/CharSequence;>;)V", "putSerializable", "LNSString;LJavaIoSerializable;", "putBooleanArray", "LNSString;[Z", "putByteArray", "LNSString;[B", "putShortArray", "LNSString;[S", "putCharArray", "LNSString;[C", "putIntArray", "LNSString;[I", "putLongArray", "LNSString;[J", "putFloatArray", "LNSString;[F", "putDoubleArray", "LNSString;[D", "putStringArray", "LNSString;[LNSString;", "putCharSequenceArray", "LNSString;[LJavaLangCharSequence;", "putBundle", "LNSString;LAndroidOsBundle;", "getBoolean", "typeWarning", "LNSString;LNSObject;LNSString;LNSObject;LJavaLangClassCastException;", "LNSString;LNSObject;LNSString;LJavaLangClassCastException;", "getByte", "getChar", "getShort", "getInt", "getLong", "getFloat", "getDouble", "getString", "getCharSequence", "getBundle", "getSerializable", "getIntegerArrayList", "(Ljava/lang/String;)Ljava/util/ArrayList<Ljava/lang/Integer;>;", "getStringArrayList", "(Ljava/lang/String;)Ljava/util/ArrayList<Ljava/lang/String;>;", "getCharSequenceArrayList", "(Ljava/lang/String;)Ljava/util/ArrayList<Ljava/lang/CharSequence;>;", "getBooleanArray", "getByteArray", "getShortArray", "getCharArray", "getIntArray", "getLongArray", "getFloatArray", "getDoubleArray", "getStringArray", "getCharSequenceArray", "toString", &AndroidOsBundle_LOG_TAG, &AndroidOsBundle_EMPTY, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;" };
-  static const J2ObjcClassInfo _AndroidOsBundle = { "Bundle", "android.os", ptrTable, methods, fields, 7, 0x11, 81, 7, -1, -1, -1, -1, -1 };
+  static const void *ptrTable[] = { "LJavaLangClassLoader;", "I", "LAndroidOsBundle;", "forPair", "LNSString;LNSString;", "setClassLoader", "setAllowFds", "Z", "containsKey", "LNSString;", "get", "remove", "putAll", "()Ljava/util/Set<Ljava/lang/String;>;", "putBoolean", "LNSString;Z", "putByte", "LNSString;B", "putChar", "LNSString;C", "putShort", "LNSString;S", "putInt", "LNSString;I", "putLong", "LNSString;J", "putFloat", "LNSString;F", "putDouble", "LNSString;D", "putString", "putCharSequence", "LNSString;LJavaLangCharSequence;", "putIntegerArrayList", "LNSString;LJavaUtilArrayList;", "(Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/Integer;>;)V", "putStringArrayList", "(Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/String;>;)V", "putCharSequenceArrayList", "(Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/CharSequence;>;)V", "putSerializable", "LNSString;LJavaIoSerializable;", "putBooleanArray", "LNSString;[Z", "putByteArray", "LNSString;[B", "putShortArray", "LNSString;[S", "putCharArray", "LNSString;[C", "putIntArray", "LNSString;[I", "putLongArray", "LNSString;[J", "putFloatArray", "LNSString;[F", "putDoubleArray", "LNSString;[D", "putStringArray", "LNSString;[LNSString;", "putCharSequenceArray", "LNSString;[LJavaLangCharSequence;", "putBundle", "LNSString;LAndroidOsBundle;", "getBoolean", "typeWarning", "LNSString;LNSObject;LNSString;LNSObject;LJavaLangClassCastException;", "LNSString;LNSObject;LNSString;LJavaLangClassCastException;", "getByte", "getChar", "getShort", "getInt", "getLong", "getFloat", "getDouble", "getString", "getCharSequence", "getBundle", "getSerializable", "getIntegerArrayList", "(Ljava/lang/String;)Ljava/util/ArrayList<Ljava/lang/Integer;>;", "getStringArrayList", "(Ljava/lang/String;)Ljava/util/ArrayList<Ljava/lang/String;>;", "getCharSequenceArrayList", "(Ljava/lang/String;)Ljava/util/ArrayList<Ljava/lang/CharSequence;>;", "getBooleanArray", "getByteArray", "getShortArray", "getCharArray", "getIntArray", "getLongArray", "getFloatArray", "getDoubleArray", "getStringArray", "getCharSequenceArray", "toString", "writeToParcel", "LAndroidOsParcel;I", &AndroidOsBundle_LOG_TAG, &AndroidOsBundle_EMPTY, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;" };
+  static const J2ObjcClassInfo _AndroidOsBundle = { "Bundle", "android.os", ptrTable, methods, fields, 7, 0x11, 83, 7, -1, -1, -1, -1, -1 };
   return &_AndroidOsBundle;
 }
 

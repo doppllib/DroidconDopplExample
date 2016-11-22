@@ -1606,6 +1606,12 @@
 		6342B6C41DC6A18B0060BE83 /* dcframework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6342B6AD1DC6A18A0060BE83 /* dcframework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6342C9D51DC6A34E0060BE83 /* JRE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F0E8291DC4EBEA000A2AD7 /* JRE.framework */; };
 		6342C9D71DC6A3540060BE83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6342C9D61DC6A3540060BE83 /* UIKit.framework */; };
+		6359898D1DE46D5B002E0AEC /* RxDopplJ2objcWeakReference.h in Headers */ = {isa = PBXBuildFile; fileRef = 635989871DE46D5B002E0AEC /* RxDopplJ2objcWeakReference.h */; };
+		6359898E1DE46D5B002E0AEC /* RxDopplJ2objcWeakReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 635989881DE46D5B002E0AEC /* RxDopplJ2objcWeakReference.m */; };
+		6359898F1DE46D5B002E0AEC /* RxDopplSafeObservableUnsubscribe.h in Headers */ = {isa = PBXBuildFile; fileRef = 635989891DE46D5B002E0AEC /* RxDopplSafeObservableUnsubscribe.h */; };
+		635989901DE46D5B002E0AEC /* RxDopplSafeObservableUnsubscribe.m in Sources */ = {isa = PBXBuildFile; fileRef = 6359898A1DE46D5B002E0AEC /* RxDopplSafeObservableUnsubscribe.m */; };
+		635989911DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 6359898B1DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.h */; };
+		635989921DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6359898C1DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.m */; };
 		639320311D77FF700047224B /* dataseeds in Resources */ = {isa = PBXBuildFile; fileRef = 639320301D77FF700047224B /* dataseeds */; };
 		63EE30CC1CC5E1BD00B64D3D /* CheckLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30CB1CC5E1BD00B64D3D /* CheckLoginController.swift */; };
 		63EE30CE1CC6985800B64D3D /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30CD1CC6985800B64D3D /* StartScreenViewController.swift */; };
@@ -3289,6 +3295,12 @@
 		6342B6BC1DC6A18B0060BE83 /* dcframeworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dcframeworkTests.m; sourceTree = "<group>"; };
 		6342B6BE1DC6A18B0060BE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6342C9D61DC6A3540060BE83 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		635989871DE46D5B002E0AEC /* RxDopplJ2objcWeakReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxDopplJ2objcWeakReference.h; sourceTree = "<group>"; };
+		635989881DE46D5B002E0AEC /* RxDopplJ2objcWeakReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxDopplJ2objcWeakReference.m; sourceTree = "<group>"; };
+		635989891DE46D5B002E0AEC /* RxDopplSafeObservableUnsubscribe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxDopplSafeObservableUnsubscribe.h; sourceTree = "<group>"; };
+		6359898A1DE46D5B002E0AEC /* RxDopplSafeObservableUnsubscribe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxDopplSafeObservableUnsubscribe.m; sourceTree = "<group>"; };
+		6359898B1DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxDopplWeakReferenceHelper.h; sourceTree = "<group>"; };
+		6359898C1DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxDopplWeakReferenceHelper.m; sourceTree = "<group>"; };
 		639320301D77FF700047224B /* dataseeds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dataseeds; sourceTree = "<group>"; };
 		63EE30CB1CC5E1BD00B64D3D /* CheckLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckLoginController.swift; sourceTree = "<group>"; };
 		63EE30CD1CC6985800B64D3D /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
@@ -4794,6 +4806,12 @@
 		630AAACA1DC7C42A009A4050 /* rxjava */ = {
 			isa = PBXGroup;
 			children = (
+				635989871DE46D5B002E0AEC /* RxDopplJ2objcWeakReference.h */,
+				635989881DE46D5B002E0AEC /* RxDopplJ2objcWeakReference.m */,
+				635989891DE46D5B002E0AEC /* RxDopplSafeObservableUnsubscribe.h */,
+				6359898A1DE46D5B002E0AEC /* RxDopplSafeObservableUnsubscribe.m */,
+				6359898B1DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.h */,
+				6359898C1DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.m */,
 				630AAACB1DC7C42A009A4050 /* rx */,
 				630AAADE1DC7C42A009A4050 /* RxAnnotationsBeta.h */,
 				630AAADF1DC7C42A009A4050 /* RxAnnotationsBeta.m */,
@@ -6346,6 +6364,7 @@
 				630AB2DB1DC7C433009A4050 /* RxInternalSchedulersSchedulerWhen.h in Headers */,
 				630AAF1F1DC7C42E009A4050 /* SQLiteErrors.h in Headers */,
 				630AB2971DC7C432009A4050 /* RxInternalOperatorsSingleDoOnSubscribe.h in Headers */,
+				6359898F1DE46D5B002E0AEC /* RxDopplSafeObservableUnsubscribe.h in Headers */,
 				630AAFC51DC7C42E009A4050 /* DeGreenrobotEventSubscriberMethodFinder.h in Headers */,
 				630AB21B1DC7C431009A4050 /* RxInternalOperatorsOperatorDoOnRequest.h in Headers */,
 				630AB3411DC7C433009A4050 /* RxObservable.h in Headers */,
@@ -6497,6 +6516,7 @@
 				630AB0311DC7C42E009A4050 /* ComGoogleGsonJsonObject.h in Headers */,
 				630AAFC11DC7C42E009A4050 /* DeGreenrobotEventSubscriberExceptionEvent.h in Headers */,
 				630AAFCB1DC7C42E009A4050 /* DeGreenrobotEventUtilAsyncExecutor.h in Headers */,
+				6359898D1DE46D5B002E0AEC /* RxDopplJ2objcWeakReference.h in Headers */,
 				630AB19F1DC7C430009A4050 /* RxInternalOperatorsDeferredScalarSubscriber.h in Headers */,
 				630AB0AF1DC7C42F009A4050 /* RetrofitClientUrlConnectionClient.h in Headers */,
 				630AB2ED1DC7C433009A4050 /* RxInternalUtilAtomicBaseLinkedAtomicQueue.h in Headers */,
@@ -6622,6 +6642,7 @@
 				630AAF111DC7C42E009A4050 /* RenameLibcoreInternalStringPool.h in Headers */,
 				630AB1991DC7C430009A4050 /* RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable.h in Headers */,
 				630AB15B1DC7C430009A4050 /* RxFunctionsCancellable.h in Headers */,
+				635989911DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.h in Headers */,
 				630AB1171DC7C430009A4050 /* RetrofitTypes.h in Headers */,
 				630AB2A51DC7C432009A4050 /* RxInternalOperatorsSingleOnErrorReturn.h in Headers */,
 				630AAEAD1DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteDoneException.h in Headers */,
@@ -7647,6 +7668,7 @@
 				630AB2D21DC7C432009A4050 /* RxInternalSchedulersImmediateScheduler.m in Sources */,
 				630AB0961DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksUtilsNetworkUtils.m in Sources */,
 				630AB46C1DC7C435009A4050 /* CoTouchlabSqueakyStmtQueryQueryBuilder.m in Sources */,
+				6359898E1DE46D5B002E0AEC /* RxDopplJ2objcWeakReference.m in Sources */,
 				630AB0201DC7C42E009A4050 /* ComGoogleGsonInternalPrimitives.m in Sources */,
 				630AAF4C1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkWatchVideoRequest.m in Sources */,
 				630AB1221DC7C430009A4050 /* RxAsyncEmitter.m in Sources */,
@@ -7974,6 +7996,7 @@
 				630AB4621DC7C435009A4050 /* CoTouchlabSqueakyStmtQueryIsNotNull.m in Sources */,
 				630AB3221DC7C433009A4050 /* RxInternalUtilUnsafeBaseLinkedQueueConsumerNodeRef.m in Sources */,
 				630AB0161DC7C42E009A4050 /* ComGoogleGsonInternalLazilyParsedNumber.m in Sources */,
+				635989901DE46D5B002E0AEC /* RxDopplSafeObservableUnsubscribe.m in Sources */,
 				630AAE501DC7C42D009A4050 /* AndroidAppApplication.m in Sources */,
 				630AB1681DC7C430009A4050 /* RxFunctionsFunc5.m in Sources */,
 				630AAF461DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkRefreshScheduleDataRequest.m in Sources */,
@@ -8081,6 +8104,7 @@
 				630AAE541DC7C42D009A4050 /* AndroidAppSharedPreferencesImpl.m in Sources */,
 				630AB3581DC7C433009A4050 /* RxObserversSafeCompletableSubscriber.m in Sources */,
 				630AB0D01DC7C42F009A4050 /* RetrofitHttpGET.m in Sources */,
+				635989921DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.m in Sources */,
 				630AAF001DC7C42E009A4050 /* AndroidUtilTimeUtils.m in Sources */,
 				630AAFFE1DC7C42E009A4050 /* ComGoogleGsonInternalBindJsonTreeWriter.m in Sources */,
 				630AB24E1DC7C431009A4050 /* RxInternalOperatorsOperatorSingle.m in Sources */,

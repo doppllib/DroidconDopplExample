@@ -16,6 +16,11 @@
 #if !defined (AndroidOsBundle_) && (INCLUDE_ALL_AndroidOsBundle || defined(INCLUDE_AndroidOsBundle))
 #define AndroidOsBundle_
 
+#define RESTRICT_AndroidOsParcelable 1
+#define INCLUDE_AndroidOsParcelable 1
+#include "AndroidOsParcelable.h"
+
+@class AndroidOsParcel;
 @class IOSBooleanArray;
 @class IOSByteArray;
 @class IOSCharArray;
@@ -33,7 +38,7 @@
 @protocol JavaUtilMap;
 @protocol JavaUtilSet;
 
-@interface AndroidOsBundle : NSObject < NSCopying > {
+@interface AndroidOsBundle : NSObject < AndroidOsParcelable, NSCopying > {
  @public
   id<JavaUtilMap> mMap_;
 }
@@ -53,6 +58,8 @@
 - (id)clone;
 
 - (jboolean)containsKeyWithNSString:(NSString *)key;
+
+- (jint)describeContents;
 
 + (AndroidOsBundle *)forPairWithNSString:(NSString *)key
                             withNSString:(NSString *)value;
@@ -233,6 +240,9 @@
 - (jint)size;
 
 - (NSString *)description;
+
+- (void)writeToParcelWithAndroidOsParcel:(AndroidOsParcel *)dest
+                                 withInt:(jint)flags;
 
 @end
 

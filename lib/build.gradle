@@ -9,10 +9,9 @@ buildscript {
     }
 }
 
-apply plugin: 'com.touchlab.doppel.doppelgradle'
-
 apply plugin: 'java'
 apply plugin: 'net.ltgt.apt'
+apply plugin: 'com.touchlab.doppel.doppelgradle'
 
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
