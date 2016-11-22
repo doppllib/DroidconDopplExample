@@ -13,6 +13,6 @@ import java.util.List;
 public class Venue extends co.touchlab.droidconandroid.data.Venue
 {
     @NotNull
-    
+
     public List<Event> events = new ArrayList<Event>();
 }
