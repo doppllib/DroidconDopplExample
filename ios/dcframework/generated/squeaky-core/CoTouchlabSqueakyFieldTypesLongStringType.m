@@ -50,7 +50,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   static J2ObjcMethodInfo methods[] = {
     { NULL, "LCoTouchlabSqueakyFieldTypesLongStringType;", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x4, -1, 0, -1, -1, -1, -1 },
+    { NULL, NULL, 0x4, -1, 0, -1, 1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -59,9 +59,9 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[2].selector = @selector(initWithCoTouchlabSqueakyFieldSqlType:withIOSClassArray:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "singleTon", "LCoTouchlabSqueakyFieldTypesLongStringType;", .constantValue.asLong = 0, 0x1a, -1, 1, -1, -1 },
+    { "singleTon", "LCoTouchlabSqueakyFieldTypesLongStringType;", .constantValue.asLong = 0, 0x1a, -1, 2, -1, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", &CoTouchlabSqueakyFieldTypesLongStringType_singleTon };
+  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "(Lco/touchlab/squeaky/field/SqlType;[Ljava/lang/Class<*>;)V", &CoTouchlabSqueakyFieldTypesLongStringType_singleTon };
   static const J2ObjcClassInfo _CoTouchlabSqueakyFieldTypesLongStringType = { "LongStringType", "co.touchlab.squeaky.field.types", ptrTable, methods, fields, 7, 0x1, 3, 1, -1, -1, -1, -1, -1 };
   return &_CoTouchlabSqueakyFieldTypesLongStringType;
 }

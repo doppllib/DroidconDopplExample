@@ -391,6 +391,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxExceptionsCompositeException)
 
 @implementation RxExceptionsCompositeException_PrintStreamOrWriter
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxExceptionsCompositeException_PrintStreamOrWriter_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (id)lock {
   // can't call an abstract method
   [self doesNotRecognizeSelector:_cmd];
@@ -402,24 +409,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxExceptionsCompositeException)
   [self doesNotRecognizeSelector:_cmd];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxExceptionsCompositeException_PrintStreamOrWriter_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x400, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x400, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(lock);
-  methods[1].selector = @selector(printlnWithId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(lock);
+  methods[2].selector = @selector(printlnWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "println", "LNSObject;", "LRxExceptionsCompositeException;" };
   static const J2ObjcClassInfo _RxExceptionsCompositeException_PrintStreamOrWriter = { "PrintStreamOrWriter", "rx.exceptions", ptrTable, methods, NULL, 7, 0x408, 3, 0, 2, -1, -1, -1, -1 };
@@ -552,10 +552,6 @@ NSString *RxExceptionsCompositeException_CompositeExceptionCausalChain_MESSAGE =
 
 @implementation RxExceptionsCompositeException_CompositeExceptionCausalChain
 
-- (NSString *)getMessage {
-  return RxExceptionsCompositeException_CompositeExceptionCausalChain_MESSAGE;
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   RxExceptionsCompositeException_CompositeExceptionCausalChain_init(self);
@@ -563,15 +559,19 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (NSString *)getMessage {
+  return RxExceptionsCompositeException_CompositeExceptionCausalChain_MESSAGE;
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getMessage);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(getMessage);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "serialVersionUID", "J", .constantValue.asLong = RxExceptionsCompositeException_CompositeExceptionCausalChain_serialVersionUID, 0x1a, -1, -1, -1, -1 },

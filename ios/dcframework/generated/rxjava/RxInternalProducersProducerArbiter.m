@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/producers/ProducerArbiter.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxInternalProducersProducerArbiter.h"
 #include "RxProducer.h"
@@ -11,27 +10,34 @@
 #include "java/lang/IllegalStateException.h"
 #include "java/lang/Long.h"
 
-@interface RxInternalProducersProducerArbiter_$1 : NSObject < RxProducer >
-
-- (void)requestWithLong:(jlong)n;
+@interface RxInternalProducersProducerArbiter_1 : NSObject < RxProducer >
 
 - (instancetype)init;
 
+- (void)requestWithLong:(jlong)n;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalProducersProducerArbiter_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalProducersProducerArbiter_1)
 
-__attribute__((unused)) static void RxInternalProducersProducerArbiter_$1_init(RxInternalProducersProducerArbiter_$1 *self);
+__attribute__((unused)) static void RxInternalProducersProducerArbiter_1_init(RxInternalProducersProducerArbiter_1 *self);
 
-__attribute__((unused)) static RxInternalProducersProducerArbiter_$1 *new_RxInternalProducersProducerArbiter_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalProducersProducerArbiter_1 *new_RxInternalProducersProducerArbiter_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalProducersProducerArbiter_$1 *create_RxInternalProducersProducerArbiter_$1_init();
+__attribute__((unused)) static RxInternalProducersProducerArbiter_1 *create_RxInternalProducersProducerArbiter_1_init();
 
 J2OBJC_INITIALIZED_DEFN(RxInternalProducersProducerArbiter)
 
 id<RxProducer> RxInternalProducersProducerArbiter_NULL_PRODUCER;
 
 @implementation RxInternalProducersProducerArbiter
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalProducersProducerArbiter_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)requestWithLong:(jlong)n {
   if (n < 0) {
@@ -181,13 +187,6 @@ id<RxProducer> RxInternalProducersProducerArbiter_NULL_PRODUCER;
   }
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalProducersProducerArbiter_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(currentProducer_);
   RELEASE_(missedProducer_);
@@ -196,19 +195,19 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(requestWithLong:);
-  methods[1].selector = @selector(producedWithLong:);
-  methods[2].selector = @selector(setProducerWithRxProducer:);
-  methods[3].selector = @selector(emitLoop);
-  methods[4].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(requestWithLong:);
+  methods[2].selector = @selector(producedWithLong:);
+  methods[3].selector = @selector(setProducerWithRxProducer:);
+  methods[4].selector = @selector(emitLoop);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "requested_", "J", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
@@ -226,7 +225,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (void)initialize {
   if (self == [RxInternalProducersProducerArbiter class]) {
-    JreStrongAssignAndConsume(&RxInternalProducersProducerArbiter_NULL_PRODUCER, new_RxInternalProducersProducerArbiter_$1_init());
+    JreStrongAssignAndConsume(&RxInternalProducersProducerArbiter_NULL_PRODUCER, new_RxInternalProducersProducerArbiter_1_init());
     J2OBJC_SET_INITIALIZED(RxInternalProducersProducerArbiter)
   }
 }
@@ -247,43 +246,43 @@ RxInternalProducersProducerArbiter *create_RxInternalProducersProducerArbiter_in
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalProducersProducerArbiter)
 
-@implementation RxInternalProducersProducerArbiter_$1
-
-- (void)requestWithLong:(jlong)n {
-}
+@implementation RxInternalProducersProducerArbiter_1
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
-  RxInternalProducersProducerArbiter_$1_init(self);
+  RxInternalProducersProducerArbiter_1_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (void)requestWithLong:(jlong)n {
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(requestWithLong:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(requestWithLong:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "request", "J", "LRxInternalProducersProducerArbiter;" };
-  static const J2ObjcClassInfo _RxInternalProducersProducerArbiter_$1 = { "", "rx.internal.producers", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, -1, -1, -1 };
-  return &_RxInternalProducersProducerArbiter_$1;
+  static const J2ObjcClassInfo _RxInternalProducersProducerArbiter_1 = { "", "rx.internal.producers", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, -1, -1, -1 };
+  return &_RxInternalProducersProducerArbiter_1;
 }
 
 @end
 
-void RxInternalProducersProducerArbiter_$1_init(RxInternalProducersProducerArbiter_$1 *self) {
+void RxInternalProducersProducerArbiter_1_init(RxInternalProducersProducerArbiter_1 *self) {
   NSObject_init(self);
 }
 
-RxInternalProducersProducerArbiter_$1 *new_RxInternalProducersProducerArbiter_$1_init() {
-  J2OBJC_NEW_IMPL(RxInternalProducersProducerArbiter_$1, init)
+RxInternalProducersProducerArbiter_1 *new_RxInternalProducersProducerArbiter_1_init() {
+  J2OBJC_NEW_IMPL(RxInternalProducersProducerArbiter_1, init)
 }
 
-RxInternalProducersProducerArbiter_$1 *create_RxInternalProducersProducerArbiter_$1_init() {
-  J2OBJC_CREATE_IMPL(RxInternalProducersProducerArbiter_$1, init)
+RxInternalProducersProducerArbiter_1 *create_RxInternalProducersProducerArbiter_1_init() {
+  J2OBJC_CREATE_IMPL(RxInternalProducersProducerArbiter_1, init)
 }

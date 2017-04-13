@@ -24,31 +24,28 @@
 #include "java/util/concurrent/TimeUnit.h"
 #include "java/util/concurrent/atomic/AtomicInteger.h"
 
-@interface RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *this$0_;
   RxSubscriptionsMultipleAssignmentSubscription *val$mas_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker:(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *)outer$
                                     withRxSubscriptionsMultipleAssignmentSubscription:(RxSubscriptionsMultipleAssignmentSubscription *)capture$0;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1)
 
-J2OBJC_FIELD_SETTER(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1, this$0_, RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *)
-J2OBJC_FIELD_SETTER(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1, val$mas_, RxSubscriptionsMultipleAssignmentSubscription *)
+__attribute__((unused)) static void RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1 *self, RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0);
 
-__attribute__((unused)) static void RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1 *self, RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0);
+__attribute__((unused)) static RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1 *new_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1 *new_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1 *create_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0);
 
-__attribute__((unused)) static RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1 *create_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0);
-
-@interface RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *this$0_;
   RxSubscriptionsMultipleAssignmentSubscription *val$mas_;
@@ -56,27 +53,22 @@ __attribute__((unused)) static RxInternalSchedulersExecutorScheduler_ExecutorSch
   id<RxSubscription> val$removeMas_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker:(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *)outer$
                                     withRxSubscriptionsMultipleAssignmentSubscription:(RxSubscriptionsMultipleAssignmentSubscription *)capture$0
                                                                withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$1
                                                                    withRxSubscription:(id<RxSubscription>)capture$2;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2)
 
-J2OBJC_FIELD_SETTER(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2, this$0_, RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *)
-J2OBJC_FIELD_SETTER(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2, val$mas_, RxSubscriptionsMultipleAssignmentSubscription *)
-J2OBJC_FIELD_SETTER(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2, val$decorated_, id<RxFunctionsAction0>)
-J2OBJC_FIELD_SETTER(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2, val$removeMas_, id<RxSubscription>)
+__attribute__((unused)) static void RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2 *self, RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0, id<RxFunctionsAction0> capture$1, id<RxSubscription> capture$2);
 
-__attribute__((unused)) static void RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2 *self, RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0, id<RxFunctionsAction0> capture$1, id<RxSubscription> capture$2);
+__attribute__((unused)) static RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2 *new_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0, id<RxFunctionsAction0> capture$1, id<RxSubscription> capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2 *new_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0, id<RxFunctionsAction0> capture$1, id<RxSubscription> capture$2) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2 *create_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0, id<RxFunctionsAction0> capture$1, id<RxSubscription> capture$2);
+__attribute__((unused)) static RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2 *create_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0, id<RxFunctionsAction0> capture$1, id<RxSubscription> capture$2);
 
 @implementation RxInternalSchedulersExecutorScheduler
 
@@ -195,8 +187,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersExecutorScheduler)
   RxSubscriptionsMultipleAssignmentSubscription *mas = create_RxSubscriptionsMultipleAssignmentSubscription_init();
   [mas setWithRxSubscription:first];
   [((RxSubscriptionsCompositeSubscription *) nil_chk(tasks_)) addWithRxSubscription:mas];
-  id<RxSubscription> removeMas = RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_(self, mas));
-  RxInternalSchedulersScheduledAction *ea = create_RxInternalSchedulersScheduledAction_initWithRxFunctionsAction0_(create_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_(self, mas, decorated, removeMas));
+  id<RxSubscription> removeMas = RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_(self, mas));
+  RxInternalSchedulersScheduledAction *ea = create_RxInternalSchedulersScheduledAction_initWithRxFunctionsAction0_(create_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_(self, mas, decorated, removeMas));
   [first setWithRxSubscription:ea];
   @try {
     id<JavaUtilConcurrentFuture> f = [((id<JavaUtilConcurrentScheduledExecutorService>) nil_chk(service_)) scheduleWithJavaLangRunnable:ea withLong:delayTime withJavaUtilConcurrentTimeUnit:unit];
@@ -278,16 +270,16 @@ RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *create_RxInternal
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker)
 
-@implementation RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1
-
-- (void)call {
-  [((RxSubscriptionsCompositeSubscription *) nil_chk(this$0_->tasks_)) removeWithRxSubscription:val$mas_];
-}
+@implementation RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1
 
 - (instancetype)initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker:(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *)outer$
                                     withRxSubscriptionsMultipleAssignmentSubscription:(RxSubscriptionsMultipleAssignmentSubscription *)capture$0 {
-  RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_(self, outer$, capture$0);
+  RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_(self, outer$, capture$0);
   return self;
+}
+
+- (void)call {
+  [((RxSubscriptionsCompositeSubscription *) nil_chk(this$0_->tasks_)) removeWithRxSubscription:val$mas_];
 }
 
 - (void)dealloc {
@@ -298,40 +290,48 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersExecutorScheduler_ExecutorS
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker:withRxSubscriptionsMultipleAssignmentSubscription:);
+  methods[0].selector = @selector(initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker:withRxSubscriptionsMultipleAssignmentSubscription:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$mas_", "LRxSubscriptionsMultipleAssignmentSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker;LRxSubscriptionsMultipleAssignmentSubscription;", "LRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker;", "scheduleWithRxFunctionsAction0:withLong:withJavaUtilConcurrentTimeUnit:" };
-  static const J2ObjcClassInfo _RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1;
+  static const void *ptrTable[] = { "LRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker;", "scheduleWithRxFunctionsAction0:withLong:withJavaUtilConcurrentTimeUnit:" };
+  static const J2ObjcClassInfo _RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 2, 0, -1, 1, -1, -1 };
+  return &_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1;
 }
 
 @end
 
-void RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1 *self, RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0) {
+void RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1 *self, RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$mas_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1 *new_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1, initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_, outer$, capture$0)
+RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1 *new_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1, initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_, outer$, capture$0)
 }
 
-RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1 *create_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1, initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_, outer$, capture$0)
+RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1 *create_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_1, initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_, outer$, capture$0)
 }
 
-@implementation RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2
+@implementation RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2
+
+- (instancetype)initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker:(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *)outer$
+                                    withRxSubscriptionsMultipleAssignmentSubscription:(RxSubscriptionsMultipleAssignmentSubscription *)capture$0
+                                                               withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$1
+                                                                   withRxSubscription:(id<RxSubscription>)capture$2 {
+  RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_(self, outer$, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)call {
   if ([((RxSubscriptionsMultipleAssignmentSubscription *) nil_chk(val$mas_)) isUnsubscribed]) {
@@ -339,17 +339,9 @@ RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1 *create_RxInter
   }
   id<RxSubscription> s2 = [this$0_ scheduleWithRxFunctionsAction0:val$decorated_];
   [val$mas_ setWithRxSubscription:s2];
-  if ([((id<RxSubscription>) nil_chk(s2)) java_getClass] == (id) RxInternalSchedulersScheduledAction_class_()) {
+  if ([((id<RxSubscription>) nil_chk(s2)) java_getClass] == RxInternalSchedulersScheduledAction_class_()) {
     [((RxInternalSchedulersScheduledAction *) cast_chk(s2, [RxInternalSchedulersScheduledAction class])) addWithRxSubscription:val$removeMas_];
   }
-}
-
-- (instancetype)initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker:(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *)outer$
-                                    withRxSubscriptionsMultipleAssignmentSubscription:(RxSubscriptionsMultipleAssignmentSubscription *)capture$0
-                                                               withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$1
-                                                                   withRxSubscription:(id<RxSubscription>)capture$2 {
-  RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_(self, outer$, capture$0, capture$1, capture$2);
-  return self;
 }
 
 - (void)dealloc {
@@ -362,13 +354,13 @@ RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1 *create_RxInter
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker:withRxSubscriptionsMultipleAssignmentSubscription:withRxFunctionsAction0:withRxSubscription:);
+  methods[0].selector = @selector(initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker:withRxSubscriptionsMultipleAssignmentSubscription:withRxFunctionsAction0:withRxSubscription:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
@@ -376,14 +368,14 @@ RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$1 *create_RxInter
     { "val$decorated_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$removeMas_", "LRxSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker;LRxSubscriptionsMultipleAssignmentSubscription;LRxFunctionsAction0;LRxSubscription;", "LRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker;", "scheduleWithRxFunctionsAction0:withLong:withJavaUtilConcurrentTimeUnit:" };
-  static const J2ObjcClassInfo _RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 4, 1, -1, 2, -1, -1 };
-  return &_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2;
+  static const void *ptrTable[] = { "LRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker;", "scheduleWithRxFunctionsAction0:withLong:withJavaUtilConcurrentTimeUnit:" };
+  static const J2ObjcClassInfo _RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 4, 0, -1, 1, -1, -1 };
+  return &_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2;
 }
 
 @end
 
-void RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2 *self, RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0, id<RxFunctionsAction0> capture$1, id<RxSubscription> capture$2) {
+void RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2 *self, RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0, id<RxFunctionsAction0> capture$1, id<RxSubscription> capture$2) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$mas_, capture$0);
   JreStrongAssign(&self->val$decorated_, capture$1);
@@ -391,10 +383,10 @@ void RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2_initWithRx
   NSObject_init(self);
 }
 
-RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2 *new_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0, id<RxFunctionsAction0> capture$1, id<RxSubscription> capture$2) {
-  J2OBJC_NEW_IMPL(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2, initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_, outer$, capture$0, capture$1, capture$2)
+RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2 *new_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0, id<RxFunctionsAction0> capture$1, id<RxSubscription> capture$2) {
+  J2OBJC_NEW_IMPL(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2, initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_, outer$, capture$0, capture$1, capture$2)
 }
 
-RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2 *create_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0, id<RxFunctionsAction0> capture$1, id<RxSubscription> capture$2) {
-  J2OBJC_CREATE_IMPL(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_$2, initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_, outer$, capture$0, capture$1, capture$2)
+RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2 *create_RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2_initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker *outer$, RxSubscriptionsMultipleAssignmentSubscription *capture$0, id<RxFunctionsAction0> capture$1, id<RxSubscription> capture$2) {
+  J2OBJC_CREATE_IMPL(RxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_2, initWithRxInternalSchedulersExecutorScheduler_ExecutorSchedulerWorker_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction0_withRxSubscription_, outer$, capture$0, capture$1, capture$2)
 }

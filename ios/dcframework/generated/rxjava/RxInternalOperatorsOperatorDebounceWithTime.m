@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OperatorDebounceWithTime.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxExceptionsExceptions.h"
 #include "RxFunctionsAction0.h"
@@ -16,15 +15,21 @@
 #include "java/lang/Long.h"
 #include "java/util/concurrent/TimeUnit.h"
 
-@interface RxInternalOperatorsOperatorDebounceWithTime_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorDebounceWithTime_1 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorDebounceWithTime *this$0_;
-  RxInternalOperatorsOperatorDebounceWithTime_DebounceState *state_;
-  RxSubscriber *self__;
   RxSubscriptionsSerialSubscription *val$serial_;
   RxScheduler_Worker *val$worker_;
   RxObserversSerializedSubscriber *val$s_;
+  RxInternalOperatorsOperatorDebounceWithTime_DebounceState *state_;
+  RxSubscriber *self__;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorDebounceWithTime:(RxInternalOperatorsOperatorDebounceWithTime *)outer$
+                              withRxSubscriptionsSerialSubscription:(RxSubscriptionsSerialSubscription *)capture$0
+                                             withRxScheduler_Worker:(RxScheduler_Worker *)capture$1
+                                withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$2
+                                                   withRxSubscriber:(RxSubscriber *)param0;
 
 - (void)onStart;
 
@@ -34,51 +39,39 @@
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxInternalOperatorsOperatorDebounceWithTime:(RxInternalOperatorsOperatorDebounceWithTime *)outer$
-                              withRxSubscriptionsSerialSubscription:(RxSubscriptionsSerialSubscription *)capture$0
-                                             withRxScheduler_Worker:(RxScheduler_Worker *)capture$1
-                                withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$2
-                                                   withRxSubscriber:(RxSubscriber *)arg$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorDebounceWithTime_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorDebounceWithTime_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDebounceWithTime_$1, this$0_, RxInternalOperatorsOperatorDebounceWithTime *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDebounceWithTime_$1, state_, RxInternalOperatorsOperatorDebounceWithTime_DebounceState *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDebounceWithTime_$1, self__, RxSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDebounceWithTime_$1, val$serial_, RxSubscriptionsSerialSubscription *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDebounceWithTime_$1, val$worker_, RxScheduler_Worker *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDebounceWithTime_$1, val$s_, RxObserversSerializedSubscriber *)
+J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDebounceWithTime_1, state_, RxInternalOperatorsOperatorDebounceWithTime_DebounceState *)
+J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDebounceWithTime_1, self__, RxSubscriber *)
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorDebounceWithTime_$1_initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDebounceWithTime_$1 *self, RxInternalOperatorsOperatorDebounceWithTime *outer$, RxSubscriptionsSerialSubscription *capture$0, RxScheduler_Worker *capture$1, RxObserversSerializedSubscriber *capture$2, RxSubscriber *arg$0);
+__attribute__((unused)) static void RxInternalOperatorsOperatorDebounceWithTime_1_initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDebounceWithTime_1 *self, RxInternalOperatorsOperatorDebounceWithTime *outer$, RxSubscriptionsSerialSubscription *capture$0, RxScheduler_Worker *capture$1, RxObserversSerializedSubscriber *capture$2, RxSubscriber *param0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorDebounceWithTime_$1 *new_RxInternalOperatorsOperatorDebounceWithTime_$1_initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDebounceWithTime *outer$, RxSubscriptionsSerialSubscription *capture$0, RxScheduler_Worker *capture$1, RxObserversSerializedSubscriber *capture$2, RxSubscriber *arg$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorDebounceWithTime_1 *new_RxInternalOperatorsOperatorDebounceWithTime_1_initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDebounceWithTime *outer$, RxSubscriptionsSerialSubscription *capture$0, RxScheduler_Worker *capture$1, RxObserversSerializedSubscriber *capture$2, RxSubscriber *param0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorDebounceWithTime_$1 *create_RxInternalOperatorsOperatorDebounceWithTime_$1_initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDebounceWithTime *outer$, RxSubscriptionsSerialSubscription *capture$0, RxScheduler_Worker *capture$1, RxObserversSerializedSubscriber *capture$2, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorDebounceWithTime_1 *create_RxInternalOperatorsOperatorDebounceWithTime_1_initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDebounceWithTime *outer$, RxSubscriptionsSerialSubscription *capture$0, RxScheduler_Worker *capture$1, RxObserversSerializedSubscriber *capture$2, RxSubscriber *param0);
 
-@interface RxInternalOperatorsOperatorDebounceWithTime_$1_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOperatorDebounceWithTime_1_1 : NSObject < RxFunctionsAction0 > {
  @public
-  RxInternalOperatorsOperatorDebounceWithTime_$1 *this$0_;
+  RxInternalOperatorsOperatorDebounceWithTime_1 *this$0_;
   jint val$index_;
 }
 
-- (void)call;
+- (instancetype)initWithRxInternalOperatorsOperatorDebounceWithTime_1:(RxInternalOperatorsOperatorDebounceWithTime_1 *)outer$
+                                                              withInt:(jint)capture$0;
 
-- (instancetype)initWithRxInternalOperatorsOperatorDebounceWithTime_$1:(RxInternalOperatorsOperatorDebounceWithTime_$1 *)outer$
-                                                               withInt:(jint)capture$0;
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorDebounceWithTime_$1_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorDebounceWithTime_1_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDebounceWithTime_$1_$1, this$0_, RxInternalOperatorsOperatorDebounceWithTime_$1 *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorDebounceWithTime_1_1_initWithRxInternalOperatorsOperatorDebounceWithTime_1_withInt_(RxInternalOperatorsOperatorDebounceWithTime_1_1 *self, RxInternalOperatorsOperatorDebounceWithTime_1 *outer$, jint capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorDebounceWithTime_$1_$1_initWithRxInternalOperatorsOperatorDebounceWithTime_$1_withInt_(RxInternalOperatorsOperatorDebounceWithTime_$1_$1 *self, RxInternalOperatorsOperatorDebounceWithTime_$1 *outer$, jint capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorDebounceWithTime_1_1 *new_RxInternalOperatorsOperatorDebounceWithTime_1_1_initWithRxInternalOperatorsOperatorDebounceWithTime_1_withInt_(RxInternalOperatorsOperatorDebounceWithTime_1 *outer$, jint capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorDebounceWithTime_$1_$1 *new_RxInternalOperatorsOperatorDebounceWithTime_$1_$1_initWithRxInternalOperatorsOperatorDebounceWithTime_$1_withInt_(RxInternalOperatorsOperatorDebounceWithTime_$1 *outer$, jint capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorDebounceWithTime_$1_$1 *create_RxInternalOperatorsOperatorDebounceWithTime_$1_$1_initWithRxInternalOperatorsOperatorDebounceWithTime_$1_withInt_(RxInternalOperatorsOperatorDebounceWithTime_$1 *outer$, jint capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorDebounceWithTime_1_1 *create_RxInternalOperatorsOperatorDebounceWithTime_1_1_initWithRxInternalOperatorsOperatorDebounceWithTime_1_withInt_(RxInternalOperatorsOperatorDebounceWithTime_1 *outer$, jint capture$0);
 
 @implementation RxInternalOperatorsOperatorDebounceWithTime
 
@@ -95,7 +88,7 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit
   RxSubscriptionsSerialSubscription *serial = create_RxSubscriptionsSerialSubscription_init();
   [s addWithRxSubscription:worker];
   [s addWithRxSubscription:serial];
-  return create_RxInternalOperatorsOperatorDebounceWithTime_$1_initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_(self, serial, worker, s, child);
+  return create_RxInternalOperatorsOperatorDebounceWithTime_1_initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_(self, serial, worker, s, child);
 }
 
 - (void)dealloc {
@@ -143,7 +136,155 @@ RxInternalOperatorsOperatorDebounceWithTime *create_RxInternalOperatorsOperatorD
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorDebounceWithTime)
 
+@implementation RxInternalOperatorsOperatorDebounceWithTime_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorDebounceWithTime:(RxInternalOperatorsOperatorDebounceWithTime *)outer$
+                              withRxSubscriptionsSerialSubscription:(RxSubscriptionsSerialSubscription *)capture$0
+                                             withRxScheduler_Worker:(RxScheduler_Worker *)capture$1
+                                withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$2
+                                                   withRxSubscriber:(RxSubscriber *)param0 {
+  RxInternalOperatorsOperatorDebounceWithTime_1_initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_(self, outer$, capture$0, capture$1, capture$2, param0);
+  return self;
+}
+
+- (void)onStart {
+  [self requestWithLong:JavaLangLong_MAX_VALUE];
+}
+
+- (void)onNextWithId:(id)t {
+  jint index = [((RxInternalOperatorsOperatorDebounceWithTime_DebounceState *) nil_chk(state_)) nextWithId:t];
+  [((RxSubscriptionsSerialSubscription *) nil_chk(val$serial_)) setWithRxSubscription:[((RxScheduler_Worker *) nil_chk(val$worker_)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsOperatorDebounceWithTime_1_1_initWithRxInternalOperatorsOperatorDebounceWithTime_1_withInt_(self, index) withLong:this$0_->timeout_ withJavaUtilConcurrentTimeUnit:this$0_->unit_]];
+}
+
+- (void)onErrorWithNSException:(NSException *)e {
+  [((RxObserversSerializedSubscriber *) nil_chk(val$s_)) onErrorWithNSException:e];
+  [self unsubscribe];
+  [((RxInternalOperatorsOperatorDebounceWithTime_DebounceState *) nil_chk(state_)) clear];
+}
+
+- (void)onCompleted {
+  [((RxInternalOperatorsOperatorDebounceWithTime_DebounceState *) nil_chk(state_)) emitAndCompleteWithRxSubscriber:val$s_ withRxSubscriber:self];
+}
+
+- (void)dealloc {
+  RELEASE_(this$0_);
+  RELEASE_(val$serial_);
+  RELEASE_(val$worker_);
+  RELEASE_(val$s_);
+  RELEASE_(state_);
+  RELEASE_(self__);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
+    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorDebounceWithTime:withRxSubscriptionsSerialSubscription:withRxScheduler_Worker:withRxObserversSerializedSubscriber:withRxSubscriber:);
+  methods[1].selector = @selector(onStart);
+  methods[2].selector = @selector(onNextWithId:);
+  methods[3].selector = @selector(onErrorWithNSException:);
+  methods[4].selector = @selector(onCompleted);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "this$0_", "LRxInternalOperatorsOperatorDebounceWithTime;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$serial_", "LRxSubscriptionsSerialSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "val$worker_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "val$s_", "LRxObserversSerializedSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "state_", "LRxInternalOperatorsOperatorDebounceWithTime_DebounceState;", .constantValue.asLong = 0, 0x10, -1, -1, 9, -1 },
+    { "self__", "LRxSubscriber;", .constantValue.asLong = 0, 0x10, 10, -1, 11, -1 },
+  };
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/internal/operators/OperatorDebounceWithTime<TT;>;", "Lrx/observers/SerializedSubscriber<TT;>;", "Lrx/internal/operators/OperatorDebounceWithTime$DebounceState<TT;>;", "self", "Lrx/Subscriber<*>;", "LRxInternalOperatorsOperatorDebounceWithTime;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorDebounceWithTime_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 6, 12, -1, 13, 14, -1 };
+  return &_RxInternalOperatorsOperatorDebounceWithTime_1;
+}
+
+@end
+
+void RxInternalOperatorsOperatorDebounceWithTime_1_initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDebounceWithTime_1 *self, RxInternalOperatorsOperatorDebounceWithTime *outer$, RxSubscriptionsSerialSubscription *capture$0, RxScheduler_Worker *capture$1, RxObserversSerializedSubscriber *capture$2, RxSubscriber *param0) {
+  JreStrongAssign(&self->this$0_, outer$);
+  JreStrongAssign(&self->val$serial_, capture$0);
+  JreStrongAssign(&self->val$worker_, capture$1);
+  JreStrongAssign(&self->val$s_, capture$2);
+  RxSubscriber_initWithRxSubscriber_(self, param0);
+  JreStrongAssignAndConsume(&self->state_, new_RxInternalOperatorsOperatorDebounceWithTime_DebounceState_init());
+  JreStrongAssign(&self->self__, self);
+}
+
+RxInternalOperatorsOperatorDebounceWithTime_1 *new_RxInternalOperatorsOperatorDebounceWithTime_1_initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDebounceWithTime *outer$, RxSubscriptionsSerialSubscription *capture$0, RxScheduler_Worker *capture$1, RxObserversSerializedSubscriber *capture$2, RxSubscriber *param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorDebounceWithTime_1, initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_, outer$, capture$0, capture$1, capture$2, param0)
+}
+
+RxInternalOperatorsOperatorDebounceWithTime_1 *create_RxInternalOperatorsOperatorDebounceWithTime_1_initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDebounceWithTime *outer$, RxSubscriptionsSerialSubscription *capture$0, RxScheduler_Worker *capture$1, RxObserversSerializedSubscriber *capture$2, RxSubscriber *param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorDebounceWithTime_1, initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_, outer$, capture$0, capture$1, capture$2, param0)
+}
+
+@implementation RxInternalOperatorsOperatorDebounceWithTime_1_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorDebounceWithTime_1:(RxInternalOperatorsOperatorDebounceWithTime_1 *)outer$
+                                                              withInt:(jint)capture$0 {
+  RxInternalOperatorsOperatorDebounceWithTime_1_1_initWithRxInternalOperatorsOperatorDebounceWithTime_1_withInt_(self, outer$, capture$0);
+  return self;
+}
+
+- (void)call {
+  [((RxInternalOperatorsOperatorDebounceWithTime_DebounceState *) nil_chk(this$0_->state_)) emitWithInt:val$index_ withRxSubscriber:this$0_->val$s_ withRxSubscriber:this$0_->self__];
+}
+
+- (void)dealloc {
+  RELEASE_(this$0_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorDebounceWithTime_1:withInt:);
+  methods[1].selector = @selector(call);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "this$0_", "LRxInternalOperatorsOperatorDebounceWithTime_1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "val$index_", "I", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorDebounceWithTime_1;", "onNextWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorDebounceWithTime_1_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 0, -1, 1, -1, -1 };
+  return &_RxInternalOperatorsOperatorDebounceWithTime_1_1;
+}
+
+@end
+
+void RxInternalOperatorsOperatorDebounceWithTime_1_1_initWithRxInternalOperatorsOperatorDebounceWithTime_1_withInt_(RxInternalOperatorsOperatorDebounceWithTime_1_1 *self, RxInternalOperatorsOperatorDebounceWithTime_1 *outer$, jint capture$0) {
+  JreStrongAssign(&self->this$0_, outer$);
+  self->val$index_ = capture$0;
+  NSObject_init(self);
+}
+
+RxInternalOperatorsOperatorDebounceWithTime_1_1 *new_RxInternalOperatorsOperatorDebounceWithTime_1_1_initWithRxInternalOperatorsOperatorDebounceWithTime_1_withInt_(RxInternalOperatorsOperatorDebounceWithTime_1 *outer$, jint capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorDebounceWithTime_1_1, initWithRxInternalOperatorsOperatorDebounceWithTime_1_withInt_, outer$, capture$0)
+}
+
+RxInternalOperatorsOperatorDebounceWithTime_1_1 *create_RxInternalOperatorsOperatorDebounceWithTime_1_1_initWithRxInternalOperatorsOperatorDebounceWithTime_1_withInt_(RxInternalOperatorsOperatorDebounceWithTime_1 *outer$, jint capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorDebounceWithTime_1_1, initWithRxInternalOperatorsOperatorDebounceWithTime_1_withInt_, outer$, capture$0)
+}
+
 @implementation RxInternalOperatorsOperatorDebounceWithTime_DebounceState
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalOperatorsOperatorDebounceWithTime_DebounceState_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (jint)nextWithId:(id)value {
   @synchronized(self) {
@@ -217,13 +358,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorDebounceWithTime)
   }
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalOperatorsOperatorDebounceWithTime_DebounceState_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(value_);
   [super dealloc];
@@ -231,19 +365,19 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "I", 0x21, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, 5, -1, -1 },
     { NULL, "V", 0x1, 6, 7, -1, 8, -1, -1 },
     { NULL, "V", 0x21, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(nextWithId:);
-  methods[1].selector = @selector(emitWithInt:withRxSubscriber:withRxSubscriber:);
-  methods[2].selector = @selector(emitAndCompleteWithRxSubscriber:withRxSubscriber:);
-  methods[3].selector = @selector(clear);
-  methods[4].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(nextWithId:);
+  methods[2].selector = @selector(emitWithInt:withRxSubscriber:withRxSubscriber:);
+  methods[3].selector = @selector(emitAndCompleteWithRxSubscriber:withRxSubscriber:);
+  methods[4].selector = @selector(clear);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "index_", "I", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
@@ -272,145 +406,3 @@ RxInternalOperatorsOperatorDebounceWithTime_DebounceState *create_RxInternalOper
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorDebounceWithTime_DebounceState)
-
-@implementation RxInternalOperatorsOperatorDebounceWithTime_$1
-
-- (void)onStart {
-  [self requestWithLong:JavaLangLong_MAX_VALUE];
-}
-
-- (void)onNextWithId:(id)t {
-  jint index = [((RxInternalOperatorsOperatorDebounceWithTime_DebounceState *) nil_chk(state_)) nextWithId:t];
-  [((RxSubscriptionsSerialSubscription *) nil_chk(val$serial_)) setWithRxSubscription:[((RxScheduler_Worker *) nil_chk(val$worker_)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsOperatorDebounceWithTime_$1_$1_initWithRxInternalOperatorsOperatorDebounceWithTime_$1_withInt_(self, index) withLong:this$0_->timeout_ withJavaUtilConcurrentTimeUnit:this$0_->unit_]];
-}
-
-- (void)onErrorWithNSException:(NSException *)e {
-  [((RxObserversSerializedSubscriber *) nil_chk(val$s_)) onErrorWithNSException:e];
-  [self unsubscribe];
-  [((RxInternalOperatorsOperatorDebounceWithTime_DebounceState *) nil_chk(state_)) clear];
-}
-
-- (void)onCompleted {
-  [((RxInternalOperatorsOperatorDebounceWithTime_DebounceState *) nil_chk(state_)) emitAndCompleteWithRxSubscriber:val$s_ withRxSubscriber:self];
-}
-
-- (instancetype)initWithRxInternalOperatorsOperatorDebounceWithTime:(RxInternalOperatorsOperatorDebounceWithTime *)outer$
-                              withRxSubscriptionsSerialSubscription:(RxSubscriptionsSerialSubscription *)capture$0
-                                             withRxScheduler_Worker:(RxScheduler_Worker *)capture$1
-                                withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$2
-                                                   withRxSubscriber:(RxSubscriber *)arg$0 {
-  RxInternalOperatorsOperatorDebounceWithTime_$1_initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_(self, outer$, capture$0, capture$1, capture$2, arg$0);
-  return self;
-}
-
-- (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorDebounceWithTime_$1 class]);
-  RELEASE_(this$0_);
-  RELEASE_(state_);
-  RELEASE_(self__);
-  RELEASE_(val$serial_);
-  RELEASE_(val$worker_);
-  RELEASE_(val$s_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onStart);
-  methods[1].selector = @selector(onNextWithId:);
-  methods[2].selector = @selector(onErrorWithNSException:);
-  methods[3].selector = @selector(onCompleted);
-  methods[4].selector = @selector(initWithRxInternalOperatorsOperatorDebounceWithTime:withRxSubscriptionsSerialSubscription:withRxScheduler_Worker:withRxObserversSerializedSubscriber:withRxSubscriber:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorDebounceWithTime;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "state_", "LRxInternalOperatorsOperatorDebounceWithTime_DebounceState;", .constantValue.asLong = 0, 0x10, -1, -1, 7, -1 },
-    { "self__", "LRxSubscriber;", .constantValue.asLong = 0, 0x10, 8, -1, 9, -1 },
-    { "val$serial_", "LRxSubscriptionsSerialSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$worker_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$s_", "LRxObserversSerializedSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 10, -1 },
-  };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxInternalOperatorsOperatorDebounceWithTime;LRxSubscriptionsSerialSubscription;LRxScheduler_Worker;LRxObserversSerializedSubscriber;LRxSubscriber;", "(Lrx/internal/operators/OperatorDebounceWithTime;Lrx/subscriptions/SerialSubscription;Lrx/Scheduler$Worker;Lrx/observers/SerializedSubscriber<TT;>;Lrx/Subscriber<*>;)V", "Lrx/internal/operators/OperatorDebounceWithTime$DebounceState<TT;>;", "self", "Lrx/Subscriber<*>;", "Lrx/observers/SerializedSubscriber<TT;>;", "LRxInternalOperatorsOperatorDebounceWithTime;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorDebounceWithTime_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 6, 11, -1, 12, 13, -1 };
-  return &_RxInternalOperatorsOperatorDebounceWithTime_$1;
-}
-
-@end
-
-void RxInternalOperatorsOperatorDebounceWithTime_$1_initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDebounceWithTime_$1 *self, RxInternalOperatorsOperatorDebounceWithTime *outer$, RxSubscriptionsSerialSubscription *capture$0, RxScheduler_Worker *capture$1, RxObserversSerializedSubscriber *capture$2, RxSubscriber *arg$0) {
-  JreStrongAssign(&self->this$0_, outer$);
-  JreStrongAssign(&self->val$serial_, capture$0);
-  JreStrongAssign(&self->val$worker_, capture$1);
-  JreStrongAssign(&self->val$s_, capture$2);
-  RxSubscriber_initWithRxSubscriber_(self, arg$0);
-  JreStrongAssignAndConsume(&self->state_, new_RxInternalOperatorsOperatorDebounceWithTime_DebounceState_init());
-  JreStrongAssign(&self->self__, self);
-}
-
-RxInternalOperatorsOperatorDebounceWithTime_$1 *new_RxInternalOperatorsOperatorDebounceWithTime_$1_initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDebounceWithTime *outer$, RxSubscriptionsSerialSubscription *capture$0, RxScheduler_Worker *capture$1, RxObserversSerializedSubscriber *capture$2, RxSubscriber *arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorDebounceWithTime_$1, initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_, outer$, capture$0, capture$1, capture$2, arg$0)
-}
-
-RxInternalOperatorsOperatorDebounceWithTime_$1 *create_RxInternalOperatorsOperatorDebounceWithTime_$1_initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDebounceWithTime *outer$, RxSubscriptionsSerialSubscription *capture$0, RxScheduler_Worker *capture$1, RxObserversSerializedSubscriber *capture$2, RxSubscriber *arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorDebounceWithTime_$1, initWithRxInternalOperatorsOperatorDebounceWithTime_withRxSubscriptionsSerialSubscription_withRxScheduler_Worker_withRxObserversSerializedSubscriber_withRxSubscriber_, outer$, capture$0, capture$1, capture$2, arg$0)
-}
-
-@implementation RxInternalOperatorsOperatorDebounceWithTime_$1_$1
-
-- (void)call {
-  [((RxInternalOperatorsOperatorDebounceWithTime_DebounceState *) nil_chk(this$0_->state_)) emitWithInt:val$index_ withRxSubscriber:this$0_->val$s_ withRxSubscriber:this$0_->self__];
-}
-
-- (instancetype)initWithRxInternalOperatorsOperatorDebounceWithTime_$1:(RxInternalOperatorsOperatorDebounceWithTime_$1 *)outer$
-                                                               withInt:(jint)capture$0 {
-  RxInternalOperatorsOperatorDebounceWithTime_$1_$1_initWithRxInternalOperatorsOperatorDebounceWithTime_$1_withInt_(self, outer$, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(this$0_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorDebounceWithTime_$1:withInt:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorDebounceWithTime_$1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$index_", "I", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorDebounceWithTime_$1;I", "LRxInternalOperatorsOperatorDebounceWithTime_$1;", "onNextWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorDebounceWithTime_$1_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_RxInternalOperatorsOperatorDebounceWithTime_$1_$1;
-}
-
-@end
-
-void RxInternalOperatorsOperatorDebounceWithTime_$1_$1_initWithRxInternalOperatorsOperatorDebounceWithTime_$1_withInt_(RxInternalOperatorsOperatorDebounceWithTime_$1_$1 *self, RxInternalOperatorsOperatorDebounceWithTime_$1 *outer$, jint capture$0) {
-  JreStrongAssign(&self->this$0_, outer$);
-  self->val$index_ = capture$0;
-  NSObject_init(self);
-}
-
-RxInternalOperatorsOperatorDebounceWithTime_$1_$1 *new_RxInternalOperatorsOperatorDebounceWithTime_$1_$1_initWithRxInternalOperatorsOperatorDebounceWithTime_$1_withInt_(RxInternalOperatorsOperatorDebounceWithTime_$1 *outer$, jint capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorDebounceWithTime_$1_$1, initWithRxInternalOperatorsOperatorDebounceWithTime_$1_withInt_, outer$, capture$0)
-}
-
-RxInternalOperatorsOperatorDebounceWithTime_$1_$1 *create_RxInternalOperatorsOperatorDebounceWithTime_$1_$1_initWithRxInternalOperatorsOperatorDebounceWithTime_$1_withInt_(RxInternalOperatorsOperatorDebounceWithTime_$1 *outer$, jint capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorDebounceWithTime_$1_$1, initWithRxInternalOperatorsOperatorDebounceWithTime_$1_withInt_, outer$, capture$0)
-}

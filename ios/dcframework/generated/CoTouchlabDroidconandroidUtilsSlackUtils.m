@@ -24,6 +24,13 @@ NSString *CoTouchlabDroidconandroidUtilsSlackUtils_DEFAULT_SLACK_ID = @"C26RNUDV
 
 @implementation CoTouchlabDroidconandroidUtilsSlackUtils
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabDroidconandroidUtilsSlackUtils_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (NSString *)createSlackLinkWithDCDVenue:(DCDVenue *)venue {
   return CoTouchlabDroidconandroidUtilsSlackUtils_createSlackLinkWithDCDVenue_(venue);
 }
@@ -36,26 +43,19 @@ NSString *CoTouchlabDroidconandroidUtilsSlackUtils_DEFAULT_SLACK_ID = @"C26RNUDV
   return CoTouchlabDroidconandroidUtilsSlackUtils_createSlackLinkHttpWithDCDVenue_(venue);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabDroidconandroidUtilsSlackUtils_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0xa, 2, 1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x9, 3, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(createSlackLinkWithDCDVenue:);
-  methods[1].selector = @selector(getChannelIdWithDCDVenue:);
-  methods[2].selector = @selector(createSlackLinkHttpWithDCDVenue:);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(createSlackLinkWithDCDVenue:);
+  methods[2].selector = @selector(getChannelIdWithDCDVenue:);
+  methods[3].selector = @selector(createSlackLinkHttpWithDCDVenue:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "TEAM_ID", "LNSString;", .constantValue.asLong = 0, 0x19, -1, 4, -1, -1 },
@@ -75,6 +75,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void CoTouchlabDroidconandroidUtilsSlackUtils_init(CoTouchlabDroidconandroidUtilsSlackUtils *self) {
+  NSObject_init(self);
+}
+
+CoTouchlabDroidconandroidUtilsSlackUtils *new_CoTouchlabDroidconandroidUtilsSlackUtils_init() {
+  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidUtilsSlackUtils, init)
+}
+
+CoTouchlabDroidconandroidUtilsSlackUtils *create_CoTouchlabDroidconandroidUtilsSlackUtils_init() {
+  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidUtilsSlackUtils, init)
+}
 
 NSString *CoTouchlabDroidconandroidUtilsSlackUtils_createSlackLinkWithDCDVenue_(DCDVenue *venue) {
   CoTouchlabDroidconandroidUtilsSlackUtils_initialize();
@@ -115,18 +127,6 @@ NSString *CoTouchlabDroidconandroidUtilsSlackUtils_createSlackLinkHttpWithDCDVen
     JreStrAppend(&link, "$", CoTouchlabDroidconandroidUtilsSlackUtils_getChannelIdWithDCDVenue_(venue));
   }
   return link;
-}
-
-void CoTouchlabDroidconandroidUtilsSlackUtils_init(CoTouchlabDroidconandroidUtilsSlackUtils *self) {
-  NSObject_init(self);
-}
-
-CoTouchlabDroidconandroidUtilsSlackUtils *new_CoTouchlabDroidconandroidUtilsSlackUtils_init() {
-  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidUtilsSlackUtils, init)
-}
-
-CoTouchlabDroidconandroidUtilsSlackUtils *create_CoTouchlabDroidconandroidUtilsSlackUtils_init() {
-  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidUtilsSlackUtils, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabDroidconandroidUtilsSlackUtils)

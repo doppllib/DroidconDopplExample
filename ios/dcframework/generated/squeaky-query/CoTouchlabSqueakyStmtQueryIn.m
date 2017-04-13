@@ -9,7 +9,6 @@
 #include "CoTouchlabSqueakyStmtJoinAlias.h"
 #include "CoTouchlabSqueakyStmtQueryBaseComparison.h"
 #include "CoTouchlabSqueakyStmtQueryIn.h"
-#include "IOSClass.h"
 #include "IOSObjectArray.h"
 #include "J2ObjC_source.h"
 #include "java/lang/IllegalArgumentException.h"

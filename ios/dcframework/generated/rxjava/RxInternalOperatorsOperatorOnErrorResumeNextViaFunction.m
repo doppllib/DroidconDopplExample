@@ -16,111 +16,102 @@
 #include "RxSubscriptionsSerialSubscription.h"
 #include "java/lang/Exception.h"
 
-@interface RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1 : NSObject < RxFunctionsFunc1 > {
+@interface RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1 : NSObject < RxFunctionsFunc1 > {
  @public
   id<RxFunctionsFunc1> val$resumeFunction_;
 }
 
-- (RxObservable *)callWithId:(NSException *)t;
-
 - (instancetype)initWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$0;
 
+- (RxObservable *)callWithId:(NSException *)t;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1, val$resumeFunction_, id<RxFunctionsFunc1>)
+__attribute__((unused)) static void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1_initWithRxFunctionsFunc1_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1 *self, id<RxFunctionsFunc1> capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1_initWithRxFunctionsFunc1_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1 *self, id<RxFunctionsFunc1> capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0);
-
-@interface RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2 : NSObject < RxFunctionsFunc1 > {
+@interface RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2 : NSObject < RxFunctionsFunc1 > {
  @public
   RxObservable *val$other_;
 }
 
-- (RxObservable *)callWithId:(NSException *)t;
-
 - (instancetype)initWithRxObservable:(RxObservable *)capture$0;
+
+- (RxObservable *)callWithId:(NSException *)t;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2, val$other_, RxObservable *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2_initWithRxObservable_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2 *self, RxObservable *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2_initWithRxObservable_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2 *self, RxObservable *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2_initWithRxObservable_(RxObservable *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2_initWithRxObservable_(RxObservable *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2_initWithRxObservable_(RxObservable *capture$0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2_initWithRxObservable_(RxObservable *capture$0);
-
-@interface RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3 : NSObject < RxFunctionsFunc1 > {
+@interface RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3 : NSObject < RxFunctionsFunc1 > {
  @public
   RxObservable *val$other_;
 }
 
-- (RxObservable *)callWithId:(NSException *)t;
-
 - (instancetype)initWithRxObservable:(RxObservable *)capture$0;
+
+- (RxObservable *)callWithId:(NSException *)t;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3, val$other_, RxObservable *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3_initWithRxObservable_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3 *self, RxObservable *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3_initWithRxObservable_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3 *self, RxObservable *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3_initWithRxObservable_(RxObservable *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3_initWithRxObservable_(RxObservable *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3_initWithRxObservable_(RxObservable *capture$0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3_initWithRxObservable_(RxObservable *capture$0);
-
-@interface RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 : RxSubscriber {
+@interface RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *this$0_;
-  jboolean done_;
-  jlong produced_;
   RxSubscriber *val$child_;
   RxInternalProducersProducerArbiter *val$pa_;
   RxSubscriptionsSerialSubscription *val$serial_;
+  jboolean done_;
+  jlong produced_;
 }
-
-- (void)onCompleted;
-
-- (void)onErrorWithNSException:(NSException *)e;
-
-- (void)onNextWithId:(id)t;
-
-- (void)setProducerWithRxProducer:(id<RxProducer>)producer;
 
 - (instancetype)initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction:(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *)outer$
                                                                withRxSubscriber:(RxSubscriber *)capture$0
                                          withRxInternalProducersProducerArbiter:(RxInternalProducersProducerArbiter *)capture$1
                                           withRxSubscriptionsSerialSubscription:(RxSubscriptionsSerialSubscription *)capture$2;
 
+- (void)onCompleted;
+
+- (void)onErrorWithNSException:(NSException *)e;
+
+- (void)onNextWithId:(id)t;
+
+- (void)setProducerWithRxProducer:(id<RxProducer>)producer;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4, this$0_, RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4, val$child_, RxSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4, val$pa_, RxInternalProducersProducerArbiter *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4, val$serial_, RxSubscriptionsSerialSubscription *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4 *self, RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *outer$, RxSubscriber *capture$0, RxInternalProducersProducerArbiter *capture$1, RxSubscriptionsSerialSubscription *capture$2);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 *self, RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *outer$, RxSubscriber *capture$0, RxInternalProducersProducerArbiter *capture$1, RxSubscriptionsSerialSubscription *capture$2);
+__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *outer$, RxSubscriber *capture$0, RxInternalProducersProducerArbiter *capture$1, RxSubscriptionsSerialSubscription *capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *outer$, RxSubscriber *capture$0, RxInternalProducersProducerArbiter *capture$1, RxSubscriptionsSerialSubscription *capture$2) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *outer$, RxSubscriber *capture$0, RxInternalProducersProducerArbiter *capture$1, RxSubscriptionsSerialSubscription *capture$2);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *outer$, RxSubscriber *capture$0, RxInternalProducersProducerArbiter *capture$1, RxSubscriptionsSerialSubscription *capture$2);
-
-@interface RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1 : RxSubscriber {
  @public
-  RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 *this$0_;
+  RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4 *this$0_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4:(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4 *)outer$;
 
 - (void)onNextWithId:(id)t;
 
@@ -130,19 +121,15 @@ __attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFu
 
 - (void)setProducerWithRxProducer:(id<RxProducer>)producer;
 
-- (instancetype)initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4:(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 *)outer$;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1, this$0_, RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1 *self, RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4 *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1 *self, RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4 *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4 *outer$);
 
 @implementation RxInternalOperatorsOperatorOnErrorResumeNextViaFunction
 
@@ -166,7 +153,7 @@ __attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFu
 - (RxSubscriber *)callWithId:(RxSubscriber *)child {
   RxInternalProducersProducerArbiter *pa = create_RxInternalProducersProducerArbiter_init();
   RxSubscriptionsSerialSubscription *serial = create_RxSubscriptionsSerialSubscription_init();
-  RxSubscriber *parent = create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_(self, child, pa, serial);
+  RxSubscriber *parent = create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_(self, child, pa, serial);
   [serial setWithRxSubscription:parent];
   [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:serial];
   [child setProducerWithRxProducer:pa];
@@ -206,17 +193,17 @@ __attribute__((unused)) static RxInternalOperatorsOperatorOnErrorResumeNextViaFu
 
 RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withSingleWithRxFunctionsFunc1_(id<RxFunctionsFunc1> resumeFunction) {
   RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_initialize();
-  return create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_initWithRxFunctionsFunc1_(create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1_initWithRxFunctionsFunc1_(resumeFunction));
+  return create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_initWithRxFunctionsFunc1_(create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1_initWithRxFunctionsFunc1_(resumeFunction));
 }
 
 RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withOtherWithRxObservable_(RxObservable *other) {
   RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_initialize();
-  return create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_initWithRxFunctionsFunc1_(create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2_initWithRxObservable_(other));
+  return create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_initWithRxFunctionsFunc1_(create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2_initWithRxObservable_(other));
 }
 
 RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withExceptionWithRxObservable_(RxObservable *other) {
   RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_initialize();
-  return create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_initWithRxFunctionsFunc1_(create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3_initWithRxObservable_(other));
+  return create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_initWithRxFunctionsFunc1_(create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3_initWithRxObservable_(other));
 }
 
 void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_initWithRxFunctionsFunc1_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *self, id<RxFunctionsFunc1> f) {
@@ -234,15 +221,15 @@ RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *create_RxInternalOperat
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction)
 
-@implementation RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1
+@implementation RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1
+
+- (instancetype)initWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$0 {
+  RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1_initWithRxFunctionsFunc1_(self, capture$0);
+  return self;
+}
 
 - (RxObservable *)callWithId:(NSException *)t {
   return RxObservable_justWithId_([((id<RxFunctionsFunc1>) nil_chk(val$resumeFunction_)) callWithId:t]);
-}
-
-- (instancetype)initWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$0 {
-  RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1_initWithRxFunctionsFunc1_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -252,46 +239,46 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorOnErrorResumeNextVia
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxObservable;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxFunctionsFunc1:);
+  methods[0].selector = @selector(initWithRxFunctionsFunc1:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$resumeFunction_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$resumeFunction_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
   };
-  static const void *ptrTable[] = { "call", "LNSException;", "(Ljava/lang/Throwable;)Lrx/Observable<+TT;>;", "LRxFunctionsFunc1;", "(Lrx/functions/Func1<-Ljava/lang/Throwable;+TT;>;)V", "Lrx/functions/Func1<-Ljava/lang/Throwable;+TT;>;", "LRxInternalOperatorsOperatorOnErrorResumeNextViaFunction;", "withSingleWithRxFunctionsFunc1:", "Ljava/lang/Object;Lrx/functions/Func1<Ljava/lang/Throwable;Lrx/Observable<+TT;>;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 6, -1, 7, 8, -1 };
-  return &_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1;
+  static const void *ptrTable[] = { "call", "LNSException;", "(Ljava/lang/Throwable;)Lrx/Observable<+TT;>;", "Lrx/functions/Func1<-Ljava/lang/Throwable;+TT;>;", "LRxInternalOperatorsOperatorOnErrorResumeNextViaFunction;", "withSingleWithRxFunctionsFunc1:", "Ljava/lang/Object;Lrx/functions/Func1<Ljava/lang/Throwable;Lrx/Observable<+TT;>;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
+  return &_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1_initWithRxFunctionsFunc1_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1 *self, id<RxFunctionsFunc1> capture$0) {
+void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1_initWithRxFunctionsFunc1_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1 *self, id<RxFunctionsFunc1> capture$0) {
   JreStrongAssign(&self->val$resumeFunction_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1, initWithRxFunctionsFunc1_, capture$0)
+RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1, initWithRxFunctionsFunc1_, capture$0)
 }
 
-RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1, initWithRxFunctionsFunc1_, capture$0)
+RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_1, initWithRxFunctionsFunc1_, capture$0)
 }
 
-@implementation RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2
+@implementation RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2
+
+- (instancetype)initWithRxObservable:(RxObservable *)capture$0 {
+  RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2_initWithRxObservable_(self, capture$0);
+  return self;
+}
 
 - (RxObservable *)callWithId:(NSException *)t {
   return val$other_;
-}
-
-- (instancetype)initWithRxObservable:(RxObservable *)capture$0 {
-  RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2_initWithRxObservable_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -301,38 +288,43 @@ RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$1 *create_RxInternalOpe
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxObservable;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxObservable:);
+  methods[0].selector = @selector(initWithRxObservable:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$other_", "LRxObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$other_", "LRxObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
   };
-  static const void *ptrTable[] = { "call", "LNSException;", "(Ljava/lang/Throwable;)Lrx/Observable<+TT;>;", "LRxObservable;", "(Lrx/Observable<+TT;>;)V", "Lrx/Observable<+TT;>;", "LRxInternalOperatorsOperatorOnErrorResumeNextViaFunction;", "withOtherWithRxObservable:", "Ljava/lang/Object;Lrx/functions/Func1<Ljava/lang/Throwable;Lrx/Observable<+TT;>;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 6, -1, 7, 8, -1 };
-  return &_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2;
+  static const void *ptrTable[] = { "call", "LNSException;", "(Ljava/lang/Throwable;)Lrx/Observable<+TT;>;", "Lrx/Observable<+TT;>;", "LRxInternalOperatorsOperatorOnErrorResumeNextViaFunction;", "withOtherWithRxObservable:", "Ljava/lang/Object;Lrx/functions/Func1<Ljava/lang/Throwable;Lrx/Observable<+TT;>;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
+  return &_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2;
 }
 
 @end
 
-void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2_initWithRxObservable_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2 *self, RxObservable *capture$0) {
+void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2_initWithRxObservable_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2 *self, RxObservable *capture$0) {
   JreStrongAssign(&self->val$other_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2_initWithRxObservable_(RxObservable *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2, initWithRxObservable_, capture$0)
+RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2_initWithRxObservable_(RxObservable *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2, initWithRxObservable_, capture$0)
 }
 
-RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2_initWithRxObservable_(RxObservable *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2, initWithRxObservable_, capture$0)
+RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2_initWithRxObservable_(RxObservable *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_2, initWithRxObservable_, capture$0)
 }
 
-@implementation RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3
+@implementation RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3
+
+- (instancetype)initWithRxObservable:(RxObservable *)capture$0 {
+  RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3_initWithRxObservable_(self, capture$0);
+  return self;
+}
 
 - (RxObservable *)callWithId:(NSException *)t {
   if ([t isKindOfClass:[JavaLangException class]]) {
@@ -341,11 +333,6 @@ RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2 *create_RxInternalOpe
   return RxObservable_errorWithNSException_(t);
 }
 
-- (instancetype)initWithRxObservable:(RxObservable *)capture$0 {
-  RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3_initWithRxObservable_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$other_);
   [super dealloc];
@@ -353,38 +340,46 @@ RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$2 *create_RxInternalOpe
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxObservable;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxObservable:);
+  methods[0].selector = @selector(initWithRxObservable:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$other_", "LRxObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$other_", "LRxObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
   };
-  static const void *ptrTable[] = { "call", "LNSException;", "(Ljava/lang/Throwable;)Lrx/Observable<+TT;>;", "LRxObservable;", "(Lrx/Observable<+TT;>;)V", "Lrx/Observable<+TT;>;", "LRxInternalOperatorsOperatorOnErrorResumeNextViaFunction;", "withExceptionWithRxObservable:", "Ljava/lang/Object;Lrx/functions/Func1<Ljava/lang/Throwable;Lrx/Observable<+TT;>;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 6, -1, 7, 8, -1 };
-  return &_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3;
+  static const void *ptrTable[] = { "call", "LNSException;", "(Ljava/lang/Throwable;)Lrx/Observable<+TT;>;", "Lrx/Observable<+TT;>;", "LRxInternalOperatorsOperatorOnErrorResumeNextViaFunction;", "withExceptionWithRxObservable:", "Ljava/lang/Object;Lrx/functions/Func1<Ljava/lang/Throwable;Lrx/Observable<+TT;>;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
+  return &_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3;
 }
 
 @end
 
-void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3_initWithRxObservable_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3 *self, RxObservable *capture$0) {
+void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3_initWithRxObservable_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3 *self, RxObservable *capture$0) {
   JreStrongAssign(&self->val$other_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3_initWithRxObservable_(RxObservable *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3, initWithRxObservable_, capture$0)
+RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3_initWithRxObservable_(RxObservable *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3, initWithRxObservable_, capture$0)
 }
 
-RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3_initWithRxObservable_(RxObservable *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3, initWithRxObservable_, capture$0)
+RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3_initWithRxObservable_(RxObservable *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_3, initWithRxObservable_, capture$0)
 }
 
-@implementation RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4
+@implementation RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4
+
+- (instancetype)initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction:(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *)outer$
+                                                               withRxSubscriber:(RxSubscriber *)capture$0
+                                         withRxInternalProducersProducerArbiter:(RxInternalProducersProducerArbiter *)capture$1
+                                          withRxSubscriptionsSerialSubscription:(RxSubscriptionsSerialSubscription *)capture$2 {
+  RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_(self, outer$, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)onCompleted {
   if (done_) {
@@ -403,7 +398,7 @@ RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3 *create_RxInternalOpe
   done_ = true;
   @try {
     [self unsubscribe];
-    RxSubscriber *next = create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_(self);
+    RxSubscriber *next = create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_(self);
     [((RxSubscriptionsSerialSubscription *) nil_chk(val$serial_)) setWithRxSubscription:next];
     jlong p = produced_;
     if (p != 0LL) {
@@ -429,16 +424,7 @@ RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3 *create_RxInternalOpe
   [((RxInternalProducersProducerArbiter *) nil_chk(val$pa_)) setProducerWithRxProducer:producer];
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction:(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *)outer$
-                                                               withRxSubscriber:(RxSubscriber *)capture$0
-                                         withRxInternalProducersProducerArbiter:(RxInternalProducersProducerArbiter *)capture$1
-                                          withRxSubscriptionsSerialSubscription:(RxSubscriptionsSerialSubscription *)capture$2 {
-  RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_(self, outer$, capture$0, capture$1, capture$2);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 class]);
   RELEASE_(this$0_);
   RELEASE_(val$child_);
   RELEASE_(val$pa_);
@@ -448,36 +434,36 @@ RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$3 *create_RxInternalOpe
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
     { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 7, -1, 8, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(setProducerWithRxProducer:);
-  methods[4].selector = @selector(initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction:withRxSubscriber:withRxInternalProducersProducerArbiter:withRxSubscriptionsSerialSubscription:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction:withRxSubscriber:withRxInternalProducersProducerArbiter:withRxSubscriptionsSerialSubscription:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
+  methods[4].selector = @selector(setProducerWithRxProducer:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorOnErrorResumeNextViaFunction;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "done_", "Z", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
-    { "produced_", "J", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
-    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 9, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorOnErrorResumeNextViaFunction;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
     { "val$pa_", "LRxInternalProducersProducerArbiter;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$serial_", "LRxSubscriptionsSerialSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "done_", "Z", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
+    { "produced_", "J", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "setProducer", "LRxProducer;", "LRxInternalOperatorsOperatorOnErrorResumeNextViaFunction;LRxSubscriber;LRxInternalProducersProducerArbiter;LRxSubscriptionsSerialSubscription;", "(Lrx/internal/operators/OperatorOnErrorResumeNextViaFunction;Lrx/Subscriber<-TT;>;Lrx/internal/producers/ProducerArbiter;Lrx/subscriptions/SerialSubscription;)V", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorOnErrorResumeNextViaFunction;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 6, 10, -1, 11, 12, -1 };
-  return &_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "setProducer", "LRxProducer;", "Lrx/internal/operators/OperatorOnErrorResumeNextViaFunction<TT;>;", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorOnErrorResumeNextViaFunction;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 6, 9, -1, 10, 11, -1 };
+  return &_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4;
 }
 
 @end
 
-void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 *self, RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *outer$, RxSubscriber *capture$0, RxInternalProducersProducerArbiter *capture$1, RxSubscriptionsSerialSubscription *capture$2) {
+void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4 *self, RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *outer$, RxSubscriber *capture$0, RxInternalProducersProducerArbiter *capture$1, RxSubscriptionsSerialSubscription *capture$2) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$child_, capture$0);
   JreStrongAssign(&self->val$pa_, capture$1);
@@ -485,15 +471,20 @@ void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_initWithRxIntern
   RxSubscriber_init(self);
 }
 
-RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *outer$, RxSubscriber *capture$0, RxInternalProducersProducerArbiter *capture$1, RxSubscriptionsSerialSubscription *capture$2) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4, initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_, outer$, capture$0, capture$1, capture$2)
+RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *outer$, RxSubscriber *capture$0, RxInternalProducersProducerArbiter *capture$1, RxSubscriptionsSerialSubscription *capture$2) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4, initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_, outer$, capture$0, capture$1, capture$2)
 }
 
-RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *outer$, RxSubscriber *capture$0, RxInternalProducersProducerArbiter *capture$1, RxSubscriptionsSerialSubscription *capture$2) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4, initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_, outer$, capture$0, capture$1, capture$2)
+RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction *outer$, RxSubscriber *capture$0, RxInternalProducersProducerArbiter *capture$1, RxSubscriptionsSerialSubscription *capture$2) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4, initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_withRxSubscriber_withRxInternalProducersProducerArbiter_withRxSubscriptionsSerialSubscription_, outer$, capture$0, capture$1, capture$2)
 }
 
-@implementation RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1
+@implementation RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4:(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4 *)outer$ {
+  RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_(self, outer$);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   [((RxSubscriber *) nil_chk(this$0_->val$child_)) onNextWithId:t];
@@ -511,52 +502,46 @@ RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 *create_RxInternalOpe
   [((RxInternalProducersProducerArbiter *) nil_chk(this$0_->val$pa_)) setProducerWithRxProducer:producer];
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4:(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 *)outer$ {
-  RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1 class]);
   RELEASE_(this$0_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 7, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(setProducerWithRxProducer:);
-  methods[4].selector = @selector(initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
+  methods[4].selector = @selector(setProducerWithRxProducer:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "setProducer", "LRxProducer;", "LRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4;", "onErrorWithNSException:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 1, 7, -1, 8, 9, -1 };
-  return &_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1;
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "setProducer", "LRxProducer;", "LRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4;", "onErrorWithNSException:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 1, 7, -1, 8, 9, -1 };
+  return &_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1 *self, RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 *outer$) {
+void RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1 *self, RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4 *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   RxSubscriber_init(self);
 }
 
-RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1, initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_, outer$)
+RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1 *new_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4 *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1, initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_, outer$)
 }
 
-RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4 *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_$1, initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_$4_, outer$)
+RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1 *create_RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1_initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4 *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_1, initWithRxInternalOperatorsOperatorOnErrorResumeNextViaFunction_4_, outer$)
 }

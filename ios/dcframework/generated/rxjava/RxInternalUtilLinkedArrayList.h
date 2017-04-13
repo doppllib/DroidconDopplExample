@@ -48,7 +48,7 @@
 
 #pragma mark Protected
 
-- (void)javaFinalize;
+- (void)java_finalize;
 
 #pragma mark Package-Private
 

@@ -73,7 +73,7 @@ FOUNDATION_EXPORT RetrofitRequestInterceptorTape_Command *RetrofitRequestInterce
 
 J2OBJC_TYPE_LITERAL_HEADER(RetrofitRequestInterceptorTape_Command)
 
-@interface RetrofitRequestInterceptorTape_Command_$1 : RetrofitRequestInterceptorTape_Command < NSCopying >
+@interface RetrofitRequestInterceptorTape_Command_1 : RetrofitRequestInterceptorTape_Command < NSCopying >
 
 - (void)interceptWithRetrofitRequestInterceptor_RequestFacade:(id<RetrofitRequestInterceptor_RequestFacade>)facade
                                                  withNSString:(NSString *)name
@@ -81,23 +81,11 @@ J2OBJC_TYPE_LITERAL_HEADER(RetrofitRequestInterceptorTape_Command)
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RetrofitRequestInterceptorTape_Command_$1)
+J2OBJC_EMPTY_STATIC_INIT(RetrofitRequestInterceptorTape_Command_1)
 
-__attribute__((unused)) static void RetrofitRequestInterceptorTape_Command_$1_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_$1 *self, NSString *__name, jint __ordinal);
+__attribute__((unused)) static void RetrofitRequestInterceptorTape_Command_1_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_1 *self, NSString *__name, jint __ordinal);
 
-@interface RetrofitRequestInterceptorTape_Command_$2 : RetrofitRequestInterceptorTape_Command < NSCopying >
-
-- (void)interceptWithRetrofitRequestInterceptor_RequestFacade:(id<RetrofitRequestInterceptor_RequestFacade>)facade
-                                                 withNSString:(NSString *)name
-                                                 withNSString:(NSString *)value;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RetrofitRequestInterceptorTape_Command_$2)
-
-__attribute__((unused)) static void RetrofitRequestInterceptorTape_Command_$2_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_$2 *self, NSString *__name, jint __ordinal);
-
-@interface RetrofitRequestInterceptorTape_Command_$3 : RetrofitRequestInterceptorTape_Command < NSCopying >
+@interface RetrofitRequestInterceptorTape_Command_2 : RetrofitRequestInterceptorTape_Command < NSCopying >
 
 - (void)interceptWithRetrofitRequestInterceptor_RequestFacade:(id<RetrofitRequestInterceptor_RequestFacade>)facade
                                                  withNSString:(NSString *)name
@@ -105,23 +93,11 @@ __attribute__((unused)) static void RetrofitRequestInterceptorTape_Command_$2_in
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RetrofitRequestInterceptorTape_Command_$3)
+J2OBJC_EMPTY_STATIC_INIT(RetrofitRequestInterceptorTape_Command_2)
 
-__attribute__((unused)) static void RetrofitRequestInterceptorTape_Command_$3_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_$3 *self, NSString *__name, jint __ordinal);
+__attribute__((unused)) static void RetrofitRequestInterceptorTape_Command_2_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_2 *self, NSString *__name, jint __ordinal);
 
-@interface RetrofitRequestInterceptorTape_Command_$4 : RetrofitRequestInterceptorTape_Command < NSCopying >
-
-- (void)interceptWithRetrofitRequestInterceptor_RequestFacade:(id<RetrofitRequestInterceptor_RequestFacade>)facade
-                                                 withNSString:(NSString *)name
-                                                 withNSString:(NSString *)value;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RetrofitRequestInterceptorTape_Command_$4)
-
-__attribute__((unused)) static void RetrofitRequestInterceptorTape_Command_$4_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_$4 *self, NSString *__name, jint __ordinal);
-
-@interface RetrofitRequestInterceptorTape_Command_$5 : RetrofitRequestInterceptorTape_Command < NSCopying >
+@interface RetrofitRequestInterceptorTape_Command_3 : RetrofitRequestInterceptorTape_Command < NSCopying >
 
 - (void)interceptWithRetrofitRequestInterceptor_RequestFacade:(id<RetrofitRequestInterceptor_RequestFacade>)facade
                                                  withNSString:(NSString *)name
@@ -129,9 +105,33 @@ __attribute__((unused)) static void RetrofitRequestInterceptorTape_Command_$4_in
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RetrofitRequestInterceptorTape_Command_$5)
+J2OBJC_EMPTY_STATIC_INIT(RetrofitRequestInterceptorTape_Command_3)
 
-__attribute__((unused)) static void RetrofitRequestInterceptorTape_Command_$5_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_$5 *self, NSString *__name, jint __ordinal);
+__attribute__((unused)) static void RetrofitRequestInterceptorTape_Command_3_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_3 *self, NSString *__name, jint __ordinal);
+
+@interface RetrofitRequestInterceptorTape_Command_4 : RetrofitRequestInterceptorTape_Command < NSCopying >
+
+- (void)interceptWithRetrofitRequestInterceptor_RequestFacade:(id<RetrofitRequestInterceptor_RequestFacade>)facade
+                                                 withNSString:(NSString *)name
+                                                 withNSString:(NSString *)value;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RetrofitRequestInterceptorTape_Command_4)
+
+__attribute__((unused)) static void RetrofitRequestInterceptorTape_Command_4_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_4 *self, NSString *__name, jint __ordinal);
+
+@interface RetrofitRequestInterceptorTape_Command_5 : RetrofitRequestInterceptorTape_Command < NSCopying >
+
+- (void)interceptWithRetrofitRequestInterceptor_RequestFacade:(id<RetrofitRequestInterceptor_RequestFacade>)facade
+                                                 withNSString:(NSString *)name
+                                                 withNSString:(NSString *)value;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RetrofitRequestInterceptorTape_Command_5)
+
+__attribute__((unused)) static void RetrofitRequestInterceptorTape_Command_5_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_5 *self, NSString *__name, jint __ordinal);
 
 @interface RetrofitRequestInterceptorTape_CommandWithParams : NSObject {
  @public
@@ -161,6 +161,13 @@ __attribute__((unused)) static RetrofitRequestInterceptorTape_CommandWithParams 
 J2OBJC_TYPE_LITERAL_HEADER(RetrofitRequestInterceptorTape_CommandWithParams)
 
 @implementation RetrofitRequestInterceptorTape
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RetrofitRequestInterceptorTape_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)addHeaderWithNSString:(NSString *)name
                  withNSString:(NSString *)value {
@@ -193,13 +200,6 @@ J2OBJC_TYPE_LITERAL_HEADER(RetrofitRequestInterceptorTape_CommandWithParams)
   }
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RetrofitRequestInterceptorTape_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(tape_);
   [super dealloc];
@@ -207,23 +207,23 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 3, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 4, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 5, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 6, 7, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(addHeaderWithNSString:withNSString:);
-  methods[1].selector = @selector(addPathParamWithNSString:withNSString:);
-  methods[2].selector = @selector(addEncodedPathParamWithNSString:withNSString:);
-  methods[3].selector = @selector(addQueryParamWithNSString:withNSString:);
-  methods[4].selector = @selector(addEncodedQueryParamWithNSString:withNSString:);
-  methods[5].selector = @selector(interceptWithRetrofitRequestInterceptor_RequestFacade:);
-  methods[6].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(addHeaderWithNSString:withNSString:);
+  methods[2].selector = @selector(addPathParamWithNSString:withNSString:);
+  methods[3].selector = @selector(addEncodedPathParamWithNSString:withNSString:);
+  methods[4].selector = @selector(addQueryParamWithNSString:withNSString:);
+  methods[5].selector = @selector(addEncodedQueryParamWithNSString:withNSString:);
+  methods[6].selector = @selector(interceptWithRetrofitRequestInterceptor_RequestFacade:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "tape_", "LJavaUtilList;", .constantValue.asLong = 0, 0x12, -1, -1, 8, -1 },
@@ -302,28 +302,28 @@ RetrofitRequestInterceptorTape_Command *RetrofitRequestInterceptorTape_Command_v
 + (void)initialize {
   if (self == [RetrofitRequestInterceptorTape_Command class]) {
     size_t allocSize = 0;
-    size_t objSize_ADD_HEADER = class_getInstanceSize([RetrofitRequestInterceptorTape_Command_$1 class]);
+    size_t objSize_ADD_HEADER = class_getInstanceSize([RetrofitRequestInterceptorTape_Command_1 class]);
     allocSize += objSize_ADD_HEADER;
-    size_t objSize_ADD_PATH_PARAM = class_getInstanceSize([RetrofitRequestInterceptorTape_Command_$2 class]);
+    size_t objSize_ADD_PATH_PARAM = class_getInstanceSize([RetrofitRequestInterceptorTape_Command_2 class]);
     allocSize += objSize_ADD_PATH_PARAM;
-    size_t objSize_ADD_ENCODED_PATH_PARAM = class_getInstanceSize([RetrofitRequestInterceptorTape_Command_$3 class]);
+    size_t objSize_ADD_ENCODED_PATH_PARAM = class_getInstanceSize([RetrofitRequestInterceptorTape_Command_3 class]);
     allocSize += objSize_ADD_ENCODED_PATH_PARAM;
-    size_t objSize_ADD_QUERY_PARAM = class_getInstanceSize([RetrofitRequestInterceptorTape_Command_$4 class]);
+    size_t objSize_ADD_QUERY_PARAM = class_getInstanceSize([RetrofitRequestInterceptorTape_Command_4 class]);
     allocSize += objSize_ADD_QUERY_PARAM;
-    size_t objSize_ADD_ENCODED_QUERY_PARAM = class_getInstanceSize([RetrofitRequestInterceptorTape_Command_$5 class]);
+    size_t objSize_ADD_ENCODED_QUERY_PARAM = class_getInstanceSize([RetrofitRequestInterceptorTape_Command_5 class]);
     allocSize += objSize_ADD_ENCODED_QUERY_PARAM;
     uintptr_t ptr = (uintptr_t)calloc(allocSize, 1);
     id e;
-    (JreEnum(RetrofitRequestInterceptorTape_Command, ADD_HEADER) = e = objc_constructInstance([RetrofitRequestInterceptorTape_Command_$1 class], (void *)ptr), ptr += objSize_ADD_HEADER);
-    RetrofitRequestInterceptorTape_Command_$1_initWithNSString_withInt_(e, @"ADD_HEADER", 0);
-    (JreEnum(RetrofitRequestInterceptorTape_Command, ADD_PATH_PARAM) = e = objc_constructInstance([RetrofitRequestInterceptorTape_Command_$2 class], (void *)ptr), ptr += objSize_ADD_PATH_PARAM);
-    RetrofitRequestInterceptorTape_Command_$2_initWithNSString_withInt_(e, @"ADD_PATH_PARAM", 1);
-    (JreEnum(RetrofitRequestInterceptorTape_Command, ADD_ENCODED_PATH_PARAM) = e = objc_constructInstance([RetrofitRequestInterceptorTape_Command_$3 class], (void *)ptr), ptr += objSize_ADD_ENCODED_PATH_PARAM);
-    RetrofitRequestInterceptorTape_Command_$3_initWithNSString_withInt_(e, @"ADD_ENCODED_PATH_PARAM", 2);
-    (JreEnum(RetrofitRequestInterceptorTape_Command, ADD_QUERY_PARAM) = e = objc_constructInstance([RetrofitRequestInterceptorTape_Command_$4 class], (void *)ptr), ptr += objSize_ADD_QUERY_PARAM);
-    RetrofitRequestInterceptorTape_Command_$4_initWithNSString_withInt_(e, @"ADD_QUERY_PARAM", 3);
-    (JreEnum(RetrofitRequestInterceptorTape_Command, ADD_ENCODED_QUERY_PARAM) = e = objc_constructInstance([RetrofitRequestInterceptorTape_Command_$5 class], (void *)ptr), ptr += objSize_ADD_ENCODED_QUERY_PARAM);
-    RetrofitRequestInterceptorTape_Command_$5_initWithNSString_withInt_(e, @"ADD_ENCODED_QUERY_PARAM", 4);
+    (JreEnum(RetrofitRequestInterceptorTape_Command, ADD_HEADER) = e = objc_constructInstance([RetrofitRequestInterceptorTape_Command_1 class], (void *)ptr), ptr += objSize_ADD_HEADER);
+    RetrofitRequestInterceptorTape_Command_1_initWithNSString_withInt_(e, @"ADD_HEADER", 0);
+    (JreEnum(RetrofitRequestInterceptorTape_Command, ADD_PATH_PARAM) = e = objc_constructInstance([RetrofitRequestInterceptorTape_Command_2 class], (void *)ptr), ptr += objSize_ADD_PATH_PARAM);
+    RetrofitRequestInterceptorTape_Command_2_initWithNSString_withInt_(e, @"ADD_PATH_PARAM", 1);
+    (JreEnum(RetrofitRequestInterceptorTape_Command, ADD_ENCODED_PATH_PARAM) = e = objc_constructInstance([RetrofitRequestInterceptorTape_Command_3 class], (void *)ptr), ptr += objSize_ADD_ENCODED_PATH_PARAM);
+    RetrofitRequestInterceptorTape_Command_3_initWithNSString_withInt_(e, @"ADD_ENCODED_PATH_PARAM", 2);
+    (JreEnum(RetrofitRequestInterceptorTape_Command, ADD_QUERY_PARAM) = e = objc_constructInstance([RetrofitRequestInterceptorTape_Command_4 class], (void *)ptr), ptr += objSize_ADD_QUERY_PARAM);
+    RetrofitRequestInterceptorTape_Command_4_initWithNSString_withInt_(e, @"ADD_QUERY_PARAM", 3);
+    (JreEnum(RetrofitRequestInterceptorTape_Command, ADD_ENCODED_QUERY_PARAM) = e = objc_constructInstance([RetrofitRequestInterceptorTape_Command_5 class], (void *)ptr), ptr += objSize_ADD_ENCODED_QUERY_PARAM);
+    RetrofitRequestInterceptorTape_Command_5_initWithNSString_withInt_(e, @"ADD_ENCODED_QUERY_PARAM", 4);
     J2OBJC_SET_INITIALIZED(RetrofitRequestInterceptorTape_Command)
   }
 }
@@ -361,7 +361,7 @@ RetrofitRequestInterceptorTape_Command *RetrofitRequestInterceptorTape_Command_f
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitRequestInterceptorTape_Command)
 
-@implementation RetrofitRequestInterceptorTape_Command_$1
+@implementation RetrofitRequestInterceptorTape_Command_1
 
 - (void)interceptWithRetrofitRequestInterceptor_RequestFacade:(id<RetrofitRequestInterceptor_RequestFacade>)facade
                                                  withNSString:(NSString *)name
@@ -370,7 +370,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitRequestInterceptorTape_Command)
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RetrofitRequestInterceptorTape_Command_$1 class]);
+  JreCheckFinalize(self, [RetrofitRequestInterceptorTape_Command_1 class]);
   [super dealloc];
 }
 
@@ -383,17 +383,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitRequestInterceptorTape_Command)
   methods[0].selector = @selector(interceptWithRetrofitRequestInterceptor_RequestFacade:withNSString:withNSString:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "intercept", "LRetrofitRequestInterceptor_RequestFacade;LNSString;LNSString;", "LRetrofitRequestInterceptorTape_Command;" };
-  static const J2ObjcClassInfo _RetrofitRequestInterceptorTape_Command_$1 = { "", "retrofit", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
-  return &_RetrofitRequestInterceptorTape_Command_$1;
+  static const J2ObjcClassInfo _RetrofitRequestInterceptorTape_Command_1 = { "", "retrofit", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
+  return &_RetrofitRequestInterceptorTape_Command_1;
 }
 
 @end
 
-void RetrofitRequestInterceptorTape_Command_$1_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_$1 *self, NSString *__name, jint __ordinal) {
+void RetrofitRequestInterceptorTape_Command_1_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_1 *self, NSString *__name, jint __ordinal) {
   RetrofitRequestInterceptorTape_Command_initWithNSString_withInt_(self, __name, __ordinal);
 }
 
-@implementation RetrofitRequestInterceptorTape_Command_$2
+@implementation RetrofitRequestInterceptorTape_Command_2
 
 - (void)interceptWithRetrofitRequestInterceptor_RequestFacade:(id<RetrofitRequestInterceptor_RequestFacade>)facade
                                                  withNSString:(NSString *)name
@@ -402,7 +402,7 @@ void RetrofitRequestInterceptorTape_Command_$1_initWithNSString_withInt_(Retrofi
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RetrofitRequestInterceptorTape_Command_$2 class]);
+  JreCheckFinalize(self, [RetrofitRequestInterceptorTape_Command_2 class]);
   [super dealloc];
 }
 
@@ -415,17 +415,17 @@ void RetrofitRequestInterceptorTape_Command_$1_initWithNSString_withInt_(Retrofi
   methods[0].selector = @selector(interceptWithRetrofitRequestInterceptor_RequestFacade:withNSString:withNSString:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "intercept", "LRetrofitRequestInterceptor_RequestFacade;LNSString;LNSString;", "LRetrofitRequestInterceptorTape_Command;" };
-  static const J2ObjcClassInfo _RetrofitRequestInterceptorTape_Command_$2 = { "", "retrofit", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
-  return &_RetrofitRequestInterceptorTape_Command_$2;
+  static const J2ObjcClassInfo _RetrofitRequestInterceptorTape_Command_2 = { "", "retrofit", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
+  return &_RetrofitRequestInterceptorTape_Command_2;
 }
 
 @end
 
-void RetrofitRequestInterceptorTape_Command_$2_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_$2 *self, NSString *__name, jint __ordinal) {
+void RetrofitRequestInterceptorTape_Command_2_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_2 *self, NSString *__name, jint __ordinal) {
   RetrofitRequestInterceptorTape_Command_initWithNSString_withInt_(self, __name, __ordinal);
 }
 
-@implementation RetrofitRequestInterceptorTape_Command_$3
+@implementation RetrofitRequestInterceptorTape_Command_3
 
 - (void)interceptWithRetrofitRequestInterceptor_RequestFacade:(id<RetrofitRequestInterceptor_RequestFacade>)facade
                                                  withNSString:(NSString *)name
@@ -434,7 +434,7 @@ void RetrofitRequestInterceptorTape_Command_$2_initWithNSString_withInt_(Retrofi
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RetrofitRequestInterceptorTape_Command_$3 class]);
+  JreCheckFinalize(self, [RetrofitRequestInterceptorTape_Command_3 class]);
   [super dealloc];
 }
 
@@ -447,17 +447,17 @@ void RetrofitRequestInterceptorTape_Command_$2_initWithNSString_withInt_(Retrofi
   methods[0].selector = @selector(interceptWithRetrofitRequestInterceptor_RequestFacade:withNSString:withNSString:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "intercept", "LRetrofitRequestInterceptor_RequestFacade;LNSString;LNSString;", "LRetrofitRequestInterceptorTape_Command;" };
-  static const J2ObjcClassInfo _RetrofitRequestInterceptorTape_Command_$3 = { "", "retrofit", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
-  return &_RetrofitRequestInterceptorTape_Command_$3;
+  static const J2ObjcClassInfo _RetrofitRequestInterceptorTape_Command_3 = { "", "retrofit", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
+  return &_RetrofitRequestInterceptorTape_Command_3;
 }
 
 @end
 
-void RetrofitRequestInterceptorTape_Command_$3_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_$3 *self, NSString *__name, jint __ordinal) {
+void RetrofitRequestInterceptorTape_Command_3_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_3 *self, NSString *__name, jint __ordinal) {
   RetrofitRequestInterceptorTape_Command_initWithNSString_withInt_(self, __name, __ordinal);
 }
 
-@implementation RetrofitRequestInterceptorTape_Command_$4
+@implementation RetrofitRequestInterceptorTape_Command_4
 
 - (void)interceptWithRetrofitRequestInterceptor_RequestFacade:(id<RetrofitRequestInterceptor_RequestFacade>)facade
                                                  withNSString:(NSString *)name
@@ -466,7 +466,7 @@ void RetrofitRequestInterceptorTape_Command_$3_initWithNSString_withInt_(Retrofi
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RetrofitRequestInterceptorTape_Command_$4 class]);
+  JreCheckFinalize(self, [RetrofitRequestInterceptorTape_Command_4 class]);
   [super dealloc];
 }
 
@@ -479,17 +479,17 @@ void RetrofitRequestInterceptorTape_Command_$3_initWithNSString_withInt_(Retrofi
   methods[0].selector = @selector(interceptWithRetrofitRequestInterceptor_RequestFacade:withNSString:withNSString:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "intercept", "LRetrofitRequestInterceptor_RequestFacade;LNSString;LNSString;", "LRetrofitRequestInterceptorTape_Command;" };
-  static const J2ObjcClassInfo _RetrofitRequestInterceptorTape_Command_$4 = { "", "retrofit", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
-  return &_RetrofitRequestInterceptorTape_Command_$4;
+  static const J2ObjcClassInfo _RetrofitRequestInterceptorTape_Command_4 = { "", "retrofit", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
+  return &_RetrofitRequestInterceptorTape_Command_4;
 }
 
 @end
 
-void RetrofitRequestInterceptorTape_Command_$4_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_$4 *self, NSString *__name, jint __ordinal) {
+void RetrofitRequestInterceptorTape_Command_4_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_4 *self, NSString *__name, jint __ordinal) {
   RetrofitRequestInterceptorTape_Command_initWithNSString_withInt_(self, __name, __ordinal);
 }
 
-@implementation RetrofitRequestInterceptorTape_Command_$5
+@implementation RetrofitRequestInterceptorTape_Command_5
 
 - (void)interceptWithRetrofitRequestInterceptor_RequestFacade:(id<RetrofitRequestInterceptor_RequestFacade>)facade
                                                  withNSString:(NSString *)name
@@ -498,7 +498,7 @@ void RetrofitRequestInterceptorTape_Command_$4_initWithNSString_withInt_(Retrofi
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RetrofitRequestInterceptorTape_Command_$5 class]);
+  JreCheckFinalize(self, [RetrofitRequestInterceptorTape_Command_5 class]);
   [super dealloc];
 }
 
@@ -511,13 +511,13 @@ void RetrofitRequestInterceptorTape_Command_$4_initWithNSString_withInt_(Retrofi
   methods[0].selector = @selector(interceptWithRetrofitRequestInterceptor_RequestFacade:withNSString:withNSString:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "intercept", "LRetrofitRequestInterceptor_RequestFacade;LNSString;LNSString;", "LRetrofitRequestInterceptorTape_Command;" };
-  static const J2ObjcClassInfo _RetrofitRequestInterceptorTape_Command_$5 = { "", "retrofit", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
-  return &_RetrofitRequestInterceptorTape_Command_$5;
+  static const J2ObjcClassInfo _RetrofitRequestInterceptorTape_Command_5 = { "", "retrofit", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
+  return &_RetrofitRequestInterceptorTape_Command_5;
 }
 
 @end
 
-void RetrofitRequestInterceptorTape_Command_$5_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_$5 *self, NSString *__name, jint __ordinal) {
+void RetrofitRequestInterceptorTape_Command_5_initWithNSString_withInt_(RetrofitRequestInterceptorTape_Command_5 *self, NSString *__name, jint __ordinal) {
   RetrofitRequestInterceptorTape_Command_initWithNSString_withInt_(self, __name, __ordinal);
 }
 

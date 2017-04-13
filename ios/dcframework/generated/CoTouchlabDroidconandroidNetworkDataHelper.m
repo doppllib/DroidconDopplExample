@@ -17,24 +17,41 @@
 #include "RetrofitErrorHandler.h"
 #include "RetrofitRequestInterceptor.h"
 #include "RetrofitRestAdapter.h"
+#include "javax/net/ssl/HttpsURLConnection.h"
 
-@interface CoTouchlabDroidconandroidNetworkDataHelper_$1 : NSObject < RetrofitRequestInterceptor >
-
-- (void)interceptWithRetrofitRequestInterceptor_RequestFacade:(id<RetrofitRequestInterceptor_RequestFacade>)request;
-
-- (instancetype)init;
+@interface CoTouchlabDroidconandroidNetworkDataHelper () {
+ @public
+  IOSClass *asdf_;
+}
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(CoTouchlabDroidconandroidNetworkDataHelper_$1)
+J2OBJC_FIELD_SETTER(CoTouchlabDroidconandroidNetworkDataHelper, asdf_, IOSClass *)
 
-__attribute__((unused)) static void CoTouchlabDroidconandroidNetworkDataHelper_$1_init(CoTouchlabDroidconandroidNetworkDataHelper_$1 *self);
+@interface CoTouchlabDroidconandroidNetworkDataHelper_1 : NSObject < RetrofitRequestInterceptor >
 
-__attribute__((unused)) static CoTouchlabDroidconandroidNetworkDataHelper_$1 *new_CoTouchlabDroidconandroidNetworkDataHelper_$1_init() NS_RETURNS_RETAINED;
+- (instancetype)init;
 
-__attribute__((unused)) static CoTouchlabDroidconandroidNetworkDataHelper_$1 *create_CoTouchlabDroidconandroidNetworkDataHelper_$1_init();
+- (void)interceptWithRetrofitRequestInterceptor_RequestFacade:(id<RetrofitRequestInterceptor_RequestFacade>)request;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(CoTouchlabDroidconandroidNetworkDataHelper_1)
+
+__attribute__((unused)) static void CoTouchlabDroidconandroidNetworkDataHelper_1_init(CoTouchlabDroidconandroidNetworkDataHelper_1 *self);
+
+__attribute__((unused)) static CoTouchlabDroidconandroidNetworkDataHelper_1 *new_CoTouchlabDroidconandroidNetworkDataHelper_1_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static CoTouchlabDroidconandroidNetworkDataHelper_1 *create_CoTouchlabDroidconandroidNetworkDataHelper_1_init();
 
 @implementation CoTouchlabDroidconandroidNetworkDataHelper
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabDroidconandroidNetworkDataHelper_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 + (RetrofitRestAdapter *)makeRequestAdapterWithAndroidContentContext:(AndroidContentContext *)context
                                                withDCPPlatformClient:(id<DCPPlatformClient>)platformClient {
@@ -59,35 +76,49 @@ __attribute__((unused)) static CoTouchlabDroidconandroidNetworkDataHelper_$1 *cr
   return CoTouchlabDroidconandroidNetworkDataHelper_makeRequestAdapterBuilderWithAndroidContentContext_withDCPPlatformClient_withNSString_withRetrofitErrorHandler_(context, platformClient, baseUrl, errorHandler);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabDroidconandroidNetworkDataHelper_init(self);
-  return self;
+- (void)dealloc {
+  RELEASE_(asdf_);
+  [super dealloc];
 }
-J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRetrofitRestAdapter;", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, "LRetrofitRestAdapter_Builder;", 0x9, 2, 1, -1, -1, -1, -1 },
     { NULL, "LRetrofitRestAdapter_Builder;", 0x9, 2, 3, -1, -1, -1, -1 },
     { NULL, "LRetrofitRestAdapter_Builder;", 0x9, 2, 4, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(makeRequestAdapterWithAndroidContentContext:withDCPPlatformClient:);
-  methods[1].selector = @selector(makeRequestAdapterBuilderWithAndroidContentContext:withDCPPlatformClient:);
-  methods[2].selector = @selector(makeRequestAdapterBuilderWithAndroidContentContext:withDCPPlatformClient:withRetrofitErrorHandler:);
-  methods[3].selector = @selector(makeRequestAdapterBuilderWithAndroidContentContext:withDCPPlatformClient:withNSString:withRetrofitErrorHandler:);
-  methods[4].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(makeRequestAdapterWithAndroidContentContext:withDCPPlatformClient:);
+  methods[2].selector = @selector(makeRequestAdapterBuilderWithAndroidContentContext:withDCPPlatformClient:);
+  methods[3].selector = @selector(makeRequestAdapterBuilderWithAndroidContentContext:withDCPPlatformClient:withRetrofitErrorHandler:);
+  methods[4].selector = @selector(makeRequestAdapterBuilderWithAndroidContentContext:withDCPPlatformClient:withNSString:withRetrofitErrorHandler:);
   #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "asdf_", "LIOSClass;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
+  };
   static const void *ptrTable[] = { "makeRequestAdapter", "LAndroidContentContext;LDCPPlatformClient;", "makeRequestAdapterBuilder", "LAndroidContentContext;LDCPPlatformClient;LRetrofitErrorHandler;", "LAndroidContentContext;LDCPPlatformClient;LNSString;LRetrofitErrorHandler;" };
-  static const J2ObjcClassInfo _CoTouchlabDroidconandroidNetworkDataHelper = { "DataHelper", "co.touchlab.droidconandroid.network", ptrTable, methods, NULL, 7, 0x1, 5, 0, -1, -1, -1, -1, -1 };
+  static const J2ObjcClassInfo _CoTouchlabDroidconandroidNetworkDataHelper = { "DataHelper", "co.touchlab.droidconandroid.network", ptrTable, methods, fields, 7, 0x1, 5, 1, -1, -1, -1, -1, -1 };
   return &_CoTouchlabDroidconandroidNetworkDataHelper;
 }
 
 @end
+
+void CoTouchlabDroidconandroidNetworkDataHelper_init(CoTouchlabDroidconandroidNetworkDataHelper *self) {
+  NSObject_init(self);
+  JreStrongAssign(&self->asdf_, JavaxNetSslHttpsURLConnection_class_());
+}
+
+CoTouchlabDroidconandroidNetworkDataHelper *new_CoTouchlabDroidconandroidNetworkDataHelper_init() {
+  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidNetworkDataHelper, init)
+}
+
+CoTouchlabDroidconandroidNetworkDataHelper *create_CoTouchlabDroidconandroidNetworkDataHelper_init() {
+  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidNetworkDataHelper, init)
+}
 
 RetrofitRestAdapter *CoTouchlabDroidconandroidNetworkDataHelper_makeRequestAdapterWithAndroidContentContext_withDCPPlatformClient_(AndroidContentContext *context, id<DCPPlatformClient> platformClient) {
   CoTouchlabDroidconandroidNetworkDataHelper_initialize();
@@ -108,7 +139,7 @@ RetrofitRestAdapter_Builder *CoTouchlabDroidconandroidNetworkDataHelper_makeRequ
 RetrofitRestAdapter_Builder *CoTouchlabDroidconandroidNetworkDataHelper_makeRequestAdapterBuilderWithAndroidContentContext_withDCPPlatformClient_withNSString_withRetrofitErrorHandler_(AndroidContentContext *context, id<DCPPlatformClient> platformClient, NSString *baseUrl, id<RetrofitErrorHandler> errorHandler) {
   CoTouchlabDroidconandroidNetworkDataHelper_initialize();
   DCDAppPrefs *appPrefs = DCDAppPrefs_getInstanceWithAndroidContentContext_(context);
-  id<RetrofitRequestInterceptor> requestInterceptor = create_CoTouchlabDroidconandroidNetworkDataHelper_$1_init();
+  id<RetrofitRequestInterceptor> requestInterceptor = create_CoTouchlabDroidconandroidNetworkDataHelper_1_init();
   ComGoogleGsonGson *gson = [create_ComGoogleGsonGsonBuilder_init() create];
   CoTouchlabDroidconandroidNetworkGsonConverter *gsonConverter = create_CoTouchlabDroidconandroidNetworkGsonConverter_initWithComGoogleGsonGson_(gson);
   RetrofitRestAdapter_Builder *builder = [((RetrofitRestAdapter_Builder *) nil_chk([((RetrofitRestAdapter_Builder *) nil_chk([((RetrofitRestAdapter_Builder *) nil_chk([((RetrofitRestAdapter_Builder *) nil_chk([create_RetrofitRestAdapter_Builder_init() setRequestInterceptorWithRetrofitRequestInterceptor:requestInterceptor])) setConverterWithRetrofitConverterConverter:gsonConverter])) setLogLevelWithRetrofitRestAdapter_LogLevel:JreLoadEnum(RetrofitRestAdapter_LogLevel, FULL)])) setLogWithRetrofitRestAdapter_Log:create_RetrofitAndroidAndroidLog_initWithNSString_(@"DroidconApp")])) setEndpointWithNSString:baseUrl];
@@ -122,58 +153,46 @@ RetrofitRestAdapter_Builder *CoTouchlabDroidconandroidNetworkDataHelper_makeRequ
   return builder;
 }
 
-void CoTouchlabDroidconandroidNetworkDataHelper_init(CoTouchlabDroidconandroidNetworkDataHelper *self) {
-  NSObject_init(self);
-}
-
-CoTouchlabDroidconandroidNetworkDataHelper *new_CoTouchlabDroidconandroidNetworkDataHelper_init() {
-  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidNetworkDataHelper, init)
-}
-
-CoTouchlabDroidconandroidNetworkDataHelper *create_CoTouchlabDroidconandroidNetworkDataHelper_init() {
-  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidNetworkDataHelper, init)
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabDroidconandroidNetworkDataHelper)
 
-@implementation CoTouchlabDroidconandroidNetworkDataHelper_$1
+@implementation CoTouchlabDroidconandroidNetworkDataHelper_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabDroidconandroidNetworkDataHelper_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)interceptWithRetrofitRequestInterceptor_RequestFacade:(id<RetrofitRequestInterceptor_RequestFacade>)request {
   [((id<RetrofitRequestInterceptor_RequestFacade>) nil_chk(request)) addHeaderWithNSString:@"Accept" withNSString:@"application/json"];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabDroidconandroidNetworkDataHelper_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(interceptWithRetrofitRequestInterceptor_RequestFacade:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(interceptWithRetrofitRequestInterceptor_RequestFacade:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "intercept", "LRetrofitRequestInterceptor_RequestFacade;", "LCoTouchlabDroidconandroidNetworkDataHelper;", "makeRequestAdapterBuilderWithAndroidContentContext:withDCPPlatformClient:withNSString:withRetrofitErrorHandler:" };
-  static const J2ObjcClassInfo _CoTouchlabDroidconandroidNetworkDataHelper_$1 = { "", "co.touchlab.droidconandroid.network", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, -1, -1 };
-  return &_CoTouchlabDroidconandroidNetworkDataHelper_$1;
+  static const J2ObjcClassInfo _CoTouchlabDroidconandroidNetworkDataHelper_1 = { "", "co.touchlab.droidconandroid.network", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, -1, -1 };
+  return &_CoTouchlabDroidconandroidNetworkDataHelper_1;
 }
 
 @end
 
-void CoTouchlabDroidconandroidNetworkDataHelper_$1_init(CoTouchlabDroidconandroidNetworkDataHelper_$1 *self) {
+void CoTouchlabDroidconandroidNetworkDataHelper_1_init(CoTouchlabDroidconandroidNetworkDataHelper_1 *self) {
   NSObject_init(self);
 }
 
-CoTouchlabDroidconandroidNetworkDataHelper_$1 *new_CoTouchlabDroidconandroidNetworkDataHelper_$1_init() {
-  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidNetworkDataHelper_$1, init)
+CoTouchlabDroidconandroidNetworkDataHelper_1 *new_CoTouchlabDroidconandroidNetworkDataHelper_1_init() {
+  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidNetworkDataHelper_1, init)
 }
 
-CoTouchlabDroidconandroidNetworkDataHelper_$1 *create_CoTouchlabDroidconandroidNetworkDataHelper_$1_init() {
-  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidNetworkDataHelper_$1, init)
+CoTouchlabDroidconandroidNetworkDataHelper_1 *create_CoTouchlabDroidconandroidNetworkDataHelper_1_init() {
+  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidNetworkDataHelper_1, init)
 }

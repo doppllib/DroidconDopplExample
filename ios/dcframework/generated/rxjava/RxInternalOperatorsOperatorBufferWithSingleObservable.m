@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OperatorBufferWithSingleObservable.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxExceptionsExceptions.h"
 #include "RxFunctionsFunc0.h"
@@ -16,40 +15,31 @@
 #include "java/util/ArrayList.h"
 #include "java/util/List.h"
 
-@interface RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber () {
- @public
-  RxInternalOperatorsOperatorBufferWithSingleObservable *this$0_;
-}
-
-@end
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber, this$0_, RxInternalOperatorsOperatorBufferWithSingleObservable *)
-
-@interface RxInternalOperatorsOperatorBufferWithSingleObservable_$1 : NSObject < RxFunctionsFunc0 > {
+@interface RxInternalOperatorsOperatorBufferWithSingleObservable_1 : NSObject < RxFunctionsFunc0 > {
  @public
   RxObservable *val$bufferClosing_;
 }
 
-- (RxObservable *)call;
-
 - (instancetype)initWithRxObservable:(RxObservable *)capture$0;
+
+- (RxObservable *)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorBufferWithSingleObservable_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorBufferWithSingleObservable_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorBufferWithSingleObservable_$1, val$bufferClosing_, RxObservable *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorBufferWithSingleObservable_1_initWithRxObservable_(RxInternalOperatorsOperatorBufferWithSingleObservable_1 *self, RxObservable *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorBufferWithSingleObservable_$1_initWithRxObservable_(RxInternalOperatorsOperatorBufferWithSingleObservable_$1 *self, RxObservable *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithSingleObservable_1 *new_RxInternalOperatorsOperatorBufferWithSingleObservable_1_initWithRxObservable_(RxObservable *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithSingleObservable_$1 *new_RxInternalOperatorsOperatorBufferWithSingleObservable_$1_initWithRxObservable_(RxObservable *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithSingleObservable_1 *create_RxInternalOperatorsOperatorBufferWithSingleObservable_1_initWithRxObservable_(RxObservable *capture$0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithSingleObservable_$1 *create_RxInternalOperatorsOperatorBufferWithSingleObservable_$1_initWithRxObservable_(RxObservable *capture$0);
-
-@interface RxInternalOperatorsOperatorBufferWithSingleObservable_$2 : RxSubscriber {
+@interface RxInternalOperatorsOperatorBufferWithSingleObservable_2 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *val$s_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber:(RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *)capture$0;
 
 - (void)onNextWithId:(id)t;
 
@@ -57,19 +47,22 @@ __attribute__((unused)) static RxInternalOperatorsOperatorBufferWithSingleObserv
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber:(RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorBufferWithSingleObservable_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorBufferWithSingleObservable_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorBufferWithSingleObservable_$2, val$s_, RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorBufferWithSingleObservable_2_initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithSingleObservable_2 *self, RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorBufferWithSingleObservable_$2_initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithSingleObservable_$2 *self, RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithSingleObservable_2 *new_RxInternalOperatorsOperatorBufferWithSingleObservable_2_initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithSingleObservable_$2 *new_RxInternalOperatorsOperatorBufferWithSingleObservable_$2_initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithSingleObservable_2 *create_RxInternalOperatorsOperatorBufferWithSingleObservable_2_initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *capture$0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithSingleObservable_$2 *create_RxInternalOperatorsOperatorBufferWithSingleObservable_$2_initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *capture$0);
+@interface RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber () {
+ @public
+  RxInternalOperatorsOperatorBufferWithSingleObservable *this$0_;
+}
+
+@end
 
 @implementation RxInternalOperatorsOperatorBufferWithSingleObservable
 
@@ -95,7 +88,7 @@ __attribute__((unused)) static RxInternalOperatorsOperatorBufferWithSingleObserv
     return RxObserversSubscribers_empty();
   }
   RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *s = create_RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_initWithRxInternalOperatorsOperatorBufferWithSingleObservable_withRxSubscriber_(self, create_RxObserversSerializedSubscriber_initWithRxSubscriber_(child));
-  RxSubscriber *closingSubscriber = create_RxInternalOperatorsOperatorBufferWithSingleObservable_$2_initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_(s);
+  RxSubscriber *closingSubscriber = create_RxInternalOperatorsOperatorBufferWithSingleObservable_2_initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_(s);
   [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:closingSubscriber];
   [child addWithRxSubscription:s];
   [((RxObservable *) nil_chk(closing)) unsafeSubscribeWithRxSubscriber:closingSubscriber];
@@ -146,7 +139,7 @@ RxInternalOperatorsOperatorBufferWithSingleObservable *create_RxInternalOperator
 
 void RxInternalOperatorsOperatorBufferWithSingleObservable_initWithRxObservable_withInt_(RxInternalOperatorsOperatorBufferWithSingleObservable *self, RxObservable *bufferClosing, jint initialCapacity) {
   NSObject_init(self);
-  JreStrongAssignAndConsume(&self->bufferClosingSelector_, new_RxInternalOperatorsOperatorBufferWithSingleObservable_$1_initWithRxObservable_(bufferClosing));
+  JreStrongAssignAndConsume(&self->bufferClosingSelector_, new_RxInternalOperatorsOperatorBufferWithSingleObservable_1_initWithRxObservable_(bufferClosing));
   self->initialCapacity_ = initialCapacity;
 }
 
@@ -159,6 +152,116 @@ RxInternalOperatorsOperatorBufferWithSingleObservable *create_RxInternalOperator
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithSingleObservable)
+
+@implementation RxInternalOperatorsOperatorBufferWithSingleObservable_1
+
+- (instancetype)initWithRxObservable:(RxObservable *)capture$0 {
+  RxInternalOperatorsOperatorBufferWithSingleObservable_1_initWithRxObservable_(self, capture$0);
+  return self;
+}
+
+- (RxObservable *)call {
+  return val$bufferClosing_;
+}
+
+- (void)dealloc {
+  RELEASE_(val$bufferClosing_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxObservable;", 0x1, -1, -1, -1, 0, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxObservable:);
+  methods[1].selector = @selector(call);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$bufferClosing_", "LRxObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 1, -1 },
+  };
+  static const void *ptrTable[] = { "()Lrx/Observable<+TTClosing;>;", "Lrx/Observable<+TTClosing;>;", "LRxInternalOperatorsOperatorBufferWithSingleObservable;", "initWithRxObservable:withInt:", "Ljava/lang/Object;Lrx/functions/Func0<Lrx/Observable<+TTClosing;>;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorBufferWithSingleObservable_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, 4, -1 };
+  return &_RxInternalOperatorsOperatorBufferWithSingleObservable_1;
+}
+
+@end
+
+void RxInternalOperatorsOperatorBufferWithSingleObservable_1_initWithRxObservable_(RxInternalOperatorsOperatorBufferWithSingleObservable_1 *self, RxObservable *capture$0) {
+  JreStrongAssign(&self->val$bufferClosing_, capture$0);
+  NSObject_init(self);
+}
+
+RxInternalOperatorsOperatorBufferWithSingleObservable_1 *new_RxInternalOperatorsOperatorBufferWithSingleObservable_1_initWithRxObservable_(RxObservable *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorBufferWithSingleObservable_1, initWithRxObservable_, capture$0)
+}
+
+RxInternalOperatorsOperatorBufferWithSingleObservable_1 *create_RxInternalOperatorsOperatorBufferWithSingleObservable_1_initWithRxObservable_(RxObservable *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorBufferWithSingleObservable_1, initWithRxObservable_, capture$0)
+}
+
+@implementation RxInternalOperatorsOperatorBufferWithSingleObservable_2
+
+- (instancetype)initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber:(RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *)capture$0 {
+  RxInternalOperatorsOperatorBufferWithSingleObservable_2_initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_(self, capture$0);
+  return self;
+}
+
+- (void)onNextWithId:(id)t {
+  [((RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *) nil_chk(val$s_)) emit];
+}
+
+- (void)onErrorWithNSException:(NSException *)e {
+  [((RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *) nil_chk(val$s_)) onErrorWithNSException:e];
+}
+
+- (void)onCompleted {
+  [((RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *) nil_chk(val$s_)) onCompleted];
+}
+
+- (void)dealloc {
+  RELEASE_(val$s_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$s_", "LRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TTClosing;)V", "onError", "LNSException;", "LRxInternalOperatorsOperatorBufferWithSingleObservable;", "callWithId:", "Lrx/Subscriber<TTClosing;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorBufferWithSingleObservable_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 1, 5, -1, 6, 7, -1 };
+  return &_RxInternalOperatorsOperatorBufferWithSingleObservable_2;
+}
+
+@end
+
+void RxInternalOperatorsOperatorBufferWithSingleObservable_2_initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithSingleObservable_2 *self, RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *capture$0) {
+  JreStrongAssign(&self->val$s_, capture$0);
+  RxSubscriber_init(self);
+}
+
+RxInternalOperatorsOperatorBufferWithSingleObservable_2 *new_RxInternalOperatorsOperatorBufferWithSingleObservable_2_initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorBufferWithSingleObservable_2, initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_, capture$0)
+}
+
+RxInternalOperatorsOperatorBufferWithSingleObservable_2 *create_RxInternalOperatorsOperatorBufferWithSingleObservable_2_initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorBufferWithSingleObservable_2, initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_, capture$0)
+}
 
 @implementation RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber
 
@@ -235,7 +338,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithSingleObse
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber class]);
   RELEASE_(this$0_);
   RELEASE_(child_);
   RELEASE_(chunk_);
@@ -259,13 +361,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithSingleObse
   methods[4].selector = @selector(emit);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorBufferWithSingleObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x10, -1, -1, 7, -1 },
-    { "chunk_", "LJavaUtilList;", .constantValue.asLong = 0, 0x0, -1, -1, 8, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorBufferWithSingleObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x10, -1, -1, 8, -1 },
+    { "chunk_", "LJavaUtilList;", .constantValue.asLong = 0, 0x0, -1, -1, 9, -1 },
     { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorBufferWithSingleObservable;LRxSubscriber;", "(Lrx/internal/operators/OperatorBufferWithSingleObservable;Lrx/Subscriber<-Ljava/util/List<TT;>;>;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/Subscriber<-Ljava/util/List<TT;>;>;", "Ljava/util/List<TT;>;", "LRxInternalOperatorsOperatorBufferWithSingleObservable;", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber = { "BufferingSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 5, 4, 9, -1, -1, 10, -1 };
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<-Ljava/util/List<TT;>;>;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/internal/operators/OperatorBufferWithSingleObservable<TT;TTClosing;>;", "Lrx/Subscriber<-Ljava/util/List<TT;>;>;", "Ljava/util/List<TT;>;", "LRxInternalOperatorsOperatorBufferWithSingleObservable;", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber = { "BufferingSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 5, 4, 10, -1, -1, 11, -1 };
   return &_RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber;
 }
 
@@ -287,114 +389,3 @@ RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *creat
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber)
-
-@implementation RxInternalOperatorsOperatorBufferWithSingleObservable_$1
-
-- (RxObservable *)call {
-  return val$bufferClosing_;
-}
-
-- (instancetype)initWithRxObservable:(RxObservable *)capture$0 {
-  RxInternalOperatorsOperatorBufferWithSingleObservable_$1_initWithRxObservable_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$bufferClosing_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxObservable;", 0x1, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, 2, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxObservable:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$bufferClosing_", "LRxObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
-  };
-  static const void *ptrTable[] = { "()Lrx/Observable<+TTClosing;>;", "LRxObservable;", "(Lrx/Observable<+TTClosing;>;)V", "Lrx/Observable<+TTClosing;>;", "LRxInternalOperatorsOperatorBufferWithSingleObservable;", "initWithRxObservable:withInt:", "Ljava/lang/Object;Lrx/functions/Func0<Lrx/Observable<+TTClosing;>;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorBufferWithSingleObservable_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
-  return &_RxInternalOperatorsOperatorBufferWithSingleObservable_$1;
-}
-
-@end
-
-void RxInternalOperatorsOperatorBufferWithSingleObservable_$1_initWithRxObservable_(RxInternalOperatorsOperatorBufferWithSingleObservable_$1 *self, RxObservable *capture$0) {
-  JreStrongAssign(&self->val$bufferClosing_, capture$0);
-  NSObject_init(self);
-}
-
-RxInternalOperatorsOperatorBufferWithSingleObservable_$1 *new_RxInternalOperatorsOperatorBufferWithSingleObservable_$1_initWithRxObservable_(RxObservable *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorBufferWithSingleObservable_$1, initWithRxObservable_, capture$0)
-}
-
-RxInternalOperatorsOperatorBufferWithSingleObservable_$1 *create_RxInternalOperatorsOperatorBufferWithSingleObservable_$1_initWithRxObservable_(RxObservable *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorBufferWithSingleObservable_$1, initWithRxObservable_, capture$0)
-}
-
-@implementation RxInternalOperatorsOperatorBufferWithSingleObservable_$2
-
-- (void)onNextWithId:(id)t {
-  [((RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *) nil_chk(val$s_)) emit];
-}
-
-- (void)onErrorWithNSException:(NSException *)e {
-  [((RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *) nil_chk(val$s_)) onErrorWithNSException:e];
-}
-
-- (void)onCompleted {
-  [((RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *) nil_chk(val$s_)) onCompleted];
-}
-
-- (instancetype)initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber:(RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *)capture$0 {
-  RxInternalOperatorsOperatorBufferWithSingleObservable_$2_initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorBufferWithSingleObservable_$2 class]);
-  RELEASE_(val$s_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$s_", "LRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TTClosing;)V", "onError", "LNSException;", "LRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber;", "LRxInternalOperatorsOperatorBufferWithSingleObservable;", "callWithId:", "Lrx/Subscriber<TTClosing;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorBufferWithSingleObservable_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 1, 6, -1, 7, 8, -1 };
-  return &_RxInternalOperatorsOperatorBufferWithSingleObservable_$2;
-}
-
-@end
-
-void RxInternalOperatorsOperatorBufferWithSingleObservable_$2_initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithSingleObservable_$2 *self, RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *capture$0) {
-  JreStrongAssign(&self->val$s_, capture$0);
-  RxSubscriber_init(self);
-}
-
-RxInternalOperatorsOperatorBufferWithSingleObservable_$2 *new_RxInternalOperatorsOperatorBufferWithSingleObservable_$2_initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorBufferWithSingleObservable_$2, initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_, capture$0)
-}
-
-RxInternalOperatorsOperatorBufferWithSingleObservable_$2 *create_RxInternalOperatorsOperatorBufferWithSingleObservable_$2_initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorBufferWithSingleObservable_$2, initWithRxInternalOperatorsOperatorBufferWithSingleObservable_BufferingSubscriber_, capture$0)
-}

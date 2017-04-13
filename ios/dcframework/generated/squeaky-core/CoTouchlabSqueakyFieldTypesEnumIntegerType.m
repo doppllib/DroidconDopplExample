@@ -113,13 +113,13 @@ J2OBJC_IGNORE_DESIGNATED_END
   static J2ObjcMethodInfo methods[] = {
     { NULL, "LCoTouchlabSqueakyFieldTypesEnumIntegerType;", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x4, -1, 0, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 1, 2, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 3, 4, 5, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 6, 7, 5, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 8, 9, -1, -1, -1, -1 },
+    { NULL, NULL, 0x4, -1, 0, -1, 1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 2, 3, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 4, 5, 6, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 7, 8, 6, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 9, 10, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 10, 11, 5, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 11, 12, 6, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -134,9 +134,9 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[8].selector = @selector(makeConfigObjectWithCoTouchlabSqueakyFieldFieldType:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "singleTon", "LCoTouchlabSqueakyFieldTypesEnumIntegerType;", .constantValue.asLong = 0, 0x1a, -1, 12, -1, -1 },
+    { "singleTon", "LCoTouchlabSqueakyFieldTypesEnumIntegerType;", .constantValue.asLong = 0, 0x1a, -1, 13, -1, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "parseDefaultString", "LCoTouchlabSqueakyFieldFieldType;LNSString;", "resultToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LAndroidDatabaseCursor;I", "LJavaSqlSQLException;", "sqlArgToJava", "LCoTouchlabSqueakyFieldFieldType;LNSObject;I", "javaToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LNSObject;", "makeConfigObject", "LCoTouchlabSqueakyFieldFieldType;", &CoTouchlabSqueakyFieldTypesEnumIntegerType_singleTon };
+  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "(Lco/touchlab/squeaky/field/SqlType;[Ljava/lang/Class<*>;)V", "parseDefaultString", "LCoTouchlabSqueakyFieldFieldType;LNSString;", "resultToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LAndroidDatabaseCursor;I", "LJavaSqlSQLException;", "sqlArgToJava", "LCoTouchlabSqueakyFieldFieldType;LNSObject;I", "javaToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LNSObject;", "makeConfigObject", "LCoTouchlabSqueakyFieldFieldType;", &CoTouchlabSqueakyFieldTypesEnumIntegerType_singleTon };
   static const J2ObjcClassInfo _CoTouchlabSqueakyFieldTypesEnumIntegerType = { "EnumIntegerType", "co.touchlab.squeaky.field.types", ptrTable, methods, fields, 7, 0x1, 9, 1, -1, -1, -1, -1, -1 };
   return &_CoTouchlabSqueakyFieldTypesEnumIntegerType;
 }

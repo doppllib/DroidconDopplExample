@@ -108,65 +108,67 @@ __attribute__((unused)) static RxSingle *RxCompletable_toSingleWithRxFunctionsFu
 
 @end
 
-@interface RxCompletable_$1 : NSObject < RxCompletable_OnSubscribe >
-
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
+@interface RxCompletable_1 : NSObject < RxCompletable_OnSubscribe >
 
 - (instancetype)init;
 
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_1)
 
-__attribute__((unused)) static void RxCompletable_$1_init(RxCompletable_$1 *self);
+__attribute__((unused)) static void RxCompletable_1_init(RxCompletable_1 *self);
 
-__attribute__((unused)) static RxCompletable_$1 *new_RxCompletable_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_1 *new_RxCompletable_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$1 *create_RxCompletable_$1_init();
+__attribute__((unused)) static RxCompletable_1 *create_RxCompletable_1_init();
 
-@interface RxCompletable_$2 : NSObject < RxCompletable_OnSubscribe >
-
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
+@interface RxCompletable_2 : NSObject < RxCompletable_OnSubscribe >
 
 - (instancetype)init;
 
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_2)
 
-__attribute__((unused)) static void RxCompletable_$2_init(RxCompletable_$2 *self);
+__attribute__((unused)) static void RxCompletable_2_init(RxCompletable_2 *self);
 
-__attribute__((unused)) static RxCompletable_$2 *new_RxCompletable_$2_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_2 *new_RxCompletable_2_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$2 *create_RxCompletable_$2_init();
+__attribute__((unused)) static RxCompletable_2 *create_RxCompletable_2_init();
 
-@interface RxCompletable_$3 : NSObject < RxCompletable_OnSubscribe > {
+@interface RxCompletable_3 : NSObject < RxCompletable_OnSubscribe > {
  @public
   IOSObjectArray *val$sources_;
 }
 
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
-
 - (instancetype)initWithRxCompletableArray:(IOSObjectArray *)capture$0;
+
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$3)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_3)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$3, val$sources_, IOSObjectArray *)
+__attribute__((unused)) static void RxCompletable_3_initWithRxCompletableArray_(RxCompletable_3 *self, IOSObjectArray *capture$0);
 
-__attribute__((unused)) static void RxCompletable_$3_initWithRxCompletableArray_(RxCompletable_$3 *self, IOSObjectArray *capture$0);
+__attribute__((unused)) static RxCompletable_3 *new_RxCompletable_3_initWithRxCompletableArray_(IOSObjectArray *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$3 *new_RxCompletable_$3_initWithRxCompletableArray_(IOSObjectArray *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_3 *create_RxCompletable_3_initWithRxCompletableArray_(IOSObjectArray *capture$0);
 
-__attribute__((unused)) static RxCompletable_$3 *create_RxCompletable_$3_initWithRxCompletableArray_(IOSObjectArray *capture$0);
-
-@interface RxCompletable_$3_$1 : NSObject < RxCompletableSubscriber > {
+@interface RxCompletable_3_1 : NSObject < RxCompletableSubscriber > {
  @public
   JavaUtilConcurrentAtomicAtomicBoolean *val$once_;
   RxSubscriptionsCompositeSubscription *val$set_;
   id<RxCompletableSubscriber> val$s_;
 }
+
+- (instancetype)initWithJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$0
+                     withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$1
+                                  withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2;
 
 - (void)onCompleted;
 
@@ -174,51 +176,45 @@ __attribute__((unused)) static RxCompletable_$3 *create_RxCompletable_$3_initWit
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
-- (instancetype)initWithJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$0
-                     withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$1
-                                  withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$3_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_3_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$3_$1, val$once_, JavaUtilConcurrentAtomicAtomicBoolean *)
-J2OBJC_FIELD_SETTER(RxCompletable_$3_$1, val$set_, RxSubscriptionsCompositeSubscription *)
-J2OBJC_FIELD_SETTER(RxCompletable_$3_$1, val$s_, id<RxCompletableSubscriber>)
+__attribute__((unused)) static void RxCompletable_3_1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxCompletable_3_1 *self, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2);
 
-__attribute__((unused)) static void RxCompletable_$3_$1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxCompletable_$3_$1 *self, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2);
+__attribute__((unused)) static RxCompletable_3_1 *new_RxCompletable_3_1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$3_$1 *new_RxCompletable_$3_$1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_3_1 *create_RxCompletable_3_1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2);
 
-__attribute__((unused)) static RxCompletable_$3_$1 *create_RxCompletable_$3_$1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2);
-
-@interface RxCompletable_$4 : NSObject < RxCompletable_OnSubscribe > {
+@interface RxCompletable_4 : NSObject < RxCompletable_OnSubscribe > {
  @public
   id<JavaLangIterable> val$sources_;
 }
 
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
-
 - (instancetype)initWithJavaLangIterable:(id<JavaLangIterable>)capture$0;
+
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$4)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_4)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$4, val$sources_, id<JavaLangIterable>)
+__attribute__((unused)) static void RxCompletable_4_initWithJavaLangIterable_(RxCompletable_4 *self, id<JavaLangIterable> capture$0);
 
-__attribute__((unused)) static void RxCompletable_$4_initWithJavaLangIterable_(RxCompletable_$4 *self, id<JavaLangIterable> capture$0);
+__attribute__((unused)) static RxCompletable_4 *new_RxCompletable_4_initWithJavaLangIterable_(id<JavaLangIterable> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$4 *new_RxCompletable_$4_initWithJavaLangIterable_(id<JavaLangIterable> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_4 *create_RxCompletable_4_initWithJavaLangIterable_(id<JavaLangIterable> capture$0);
 
-__attribute__((unused)) static RxCompletable_$4 *create_RxCompletable_$4_initWithJavaLangIterable_(id<JavaLangIterable> capture$0);
-
-@interface RxCompletable_$4_$1 : NSObject < RxCompletableSubscriber > {
+@interface RxCompletable_4_1 : NSObject < RxCompletableSubscriber > {
  @public
   JavaUtilConcurrentAtomicAtomicBoolean *val$once_;
   RxSubscriptionsCompositeSubscription *val$set_;
   id<RxCompletableSubscriber> val$s_;
 }
+
+- (instancetype)initWithJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$0
+                     withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$1
+                                  withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2;
 
 - (void)onCompleted;
 
@@ -226,154 +222,136 @@ __attribute__((unused)) static RxCompletable_$4 *create_RxCompletable_$4_initWit
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
-- (instancetype)initWithJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$0
-                     withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$1
-                                  withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$4_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_4_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$4_$1, val$once_, JavaUtilConcurrentAtomicAtomicBoolean *)
-J2OBJC_FIELD_SETTER(RxCompletable_$4_$1, val$set_, RxSubscriptionsCompositeSubscription *)
-J2OBJC_FIELD_SETTER(RxCompletable_$4_$1, val$s_, id<RxCompletableSubscriber>)
+__attribute__((unused)) static void RxCompletable_4_1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxCompletable_4_1 *self, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2);
 
-__attribute__((unused)) static void RxCompletable_$4_$1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxCompletable_$4_$1 *self, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2);
+__attribute__((unused)) static RxCompletable_4_1 *new_RxCompletable_4_1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$4_$1 *new_RxCompletable_$4_$1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_4_1 *create_RxCompletable_4_1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2);
 
-__attribute__((unused)) static RxCompletable_$4_$1 *create_RxCompletable_$4_$1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2);
-
-@interface RxCompletable_$5 : NSObject < RxCompletable_OnSubscribe > {
+@interface RxCompletable_5 : NSObject < RxCompletable_OnSubscribe > {
  @public
   id<RxFunctionsFunc0> val$completableFunc0_;
 }
 
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
-
 - (instancetype)initWithRxFunctionsFunc0:(id<RxFunctionsFunc0>)capture$0;
+
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$5)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_5)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$5, val$completableFunc0_, id<RxFunctionsFunc0>)
+__attribute__((unused)) static void RxCompletable_5_initWithRxFunctionsFunc0_(RxCompletable_5 *self, id<RxFunctionsFunc0> capture$0);
 
-__attribute__((unused)) static void RxCompletable_$5_initWithRxFunctionsFunc0_(RxCompletable_$5 *self, id<RxFunctionsFunc0> capture$0);
+__attribute__((unused)) static RxCompletable_5 *new_RxCompletable_5_initWithRxFunctionsFunc0_(id<RxFunctionsFunc0> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$5 *new_RxCompletable_$5_initWithRxFunctionsFunc0_(id<RxFunctionsFunc0> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_5 *create_RxCompletable_5_initWithRxFunctionsFunc0_(id<RxFunctionsFunc0> capture$0);
 
-__attribute__((unused)) static RxCompletable_$5 *create_RxCompletable_$5_initWithRxFunctionsFunc0_(id<RxFunctionsFunc0> capture$0);
-
-@interface RxCompletable_$6 : NSObject < RxCompletable_OnSubscribe > {
+@interface RxCompletable_6 : NSObject < RxCompletable_OnSubscribe > {
  @public
   id<RxFunctionsFunc0> val$errorFunc0_;
 }
 
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
-
 - (instancetype)initWithRxFunctionsFunc0:(id<RxFunctionsFunc0>)capture$0;
+
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$6)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_6)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$6, val$errorFunc0_, id<RxFunctionsFunc0>)
+__attribute__((unused)) static void RxCompletable_6_initWithRxFunctionsFunc0_(RxCompletable_6 *self, id<RxFunctionsFunc0> capture$0);
 
-__attribute__((unused)) static void RxCompletable_$6_initWithRxFunctionsFunc0_(RxCompletable_$6 *self, id<RxFunctionsFunc0> capture$0);
+__attribute__((unused)) static RxCompletable_6 *new_RxCompletable_6_initWithRxFunctionsFunc0_(id<RxFunctionsFunc0> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$6 *new_RxCompletable_$6_initWithRxFunctionsFunc0_(id<RxFunctionsFunc0> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_6 *create_RxCompletable_6_initWithRxFunctionsFunc0_(id<RxFunctionsFunc0> capture$0);
 
-__attribute__((unused)) static RxCompletable_$6 *create_RxCompletable_$6_initWithRxFunctionsFunc0_(id<RxFunctionsFunc0> capture$0);
-
-@interface RxCompletable_$7 : NSObject < RxCompletable_OnSubscribe > {
+@interface RxCompletable_7 : NSObject < RxCompletable_OnSubscribe > {
  @public
   NSException *val$error_;
 }
 
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
-
 - (instancetype)initWithNSException:(NSException *)capture$0;
+
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$7)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_7)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$7, val$error_, NSException *)
+__attribute__((unused)) static void RxCompletable_7_initWithNSException_(RxCompletable_7 *self, NSException *capture$0);
 
-__attribute__((unused)) static void RxCompletable_$7_initWithNSException_(RxCompletable_$7 *self, NSException *capture$0);
+__attribute__((unused)) static RxCompletable_7 *new_RxCompletable_7_initWithNSException_(NSException *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$7 *new_RxCompletable_$7_initWithNSException_(NSException *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_7 *create_RxCompletable_7_initWithNSException_(NSException *capture$0);
 
-__attribute__((unused)) static RxCompletable_$7 *create_RxCompletable_$7_initWithNSException_(NSException *capture$0);
-
-@interface RxCompletable_$8 : NSObject < RxCompletable_OnSubscribe > {
+@interface RxCompletable_8 : NSObject < RxCompletable_OnSubscribe > {
  @public
   id<RxFunctionsAction0> val$action_;
 }
 
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
-
 - (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0;
+
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$8)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_8)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$8, val$action_, id<RxFunctionsAction0>)
+__attribute__((unused)) static void RxCompletable_8_initWithRxFunctionsAction0_(RxCompletable_8 *self, id<RxFunctionsAction0> capture$0);
 
-__attribute__((unused)) static void RxCompletable_$8_initWithRxFunctionsAction0_(RxCompletable_$8 *self, id<RxFunctionsAction0> capture$0);
+__attribute__((unused)) static RxCompletable_8 *new_RxCompletable_8_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$8 *new_RxCompletable_$8_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_8 *create_RxCompletable_8_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0);
 
-__attribute__((unused)) static RxCompletable_$8 *create_RxCompletable_$8_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0);
-
-@interface RxCompletable_$9 : NSObject < RxCompletable_OnSubscribe > {
+@interface RxCompletable_9 : NSObject < RxCompletable_OnSubscribe > {
  @public
   id<JavaUtilConcurrentCallable> val$callable_;
 }
 
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
-
 - (instancetype)initWithJavaUtilConcurrentCallable:(id<JavaUtilConcurrentCallable>)capture$0;
+
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$9)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_9)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$9, val$callable_, id<JavaUtilConcurrentCallable>)
+__attribute__((unused)) static void RxCompletable_9_initWithJavaUtilConcurrentCallable_(RxCompletable_9 *self, id<JavaUtilConcurrentCallable> capture$0);
 
-__attribute__((unused)) static void RxCompletable_$9_initWithJavaUtilConcurrentCallable_(RxCompletable_$9 *self, id<JavaUtilConcurrentCallable> capture$0);
+__attribute__((unused)) static RxCompletable_9 *new_RxCompletable_9_initWithJavaUtilConcurrentCallable_(id<JavaUtilConcurrentCallable> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$9 *new_RxCompletable_$9_initWithJavaUtilConcurrentCallable_(id<JavaUtilConcurrentCallable> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_9 *create_RxCompletable_9_initWithJavaUtilConcurrentCallable_(id<JavaUtilConcurrentCallable> capture$0);
 
-__attribute__((unused)) static RxCompletable_$9 *create_RxCompletable_$9_initWithJavaUtilConcurrentCallable_(id<JavaUtilConcurrentCallable> capture$0);
-
-@interface RxCompletable_$10 : NSObject < RxCompletable_OnSubscribe > {
+@interface RxCompletable_10 : NSObject < RxCompletable_OnSubscribe > {
  @public
   RxObservable *val$flowable_;
 }
 
-- (void)callWithId:(id<RxCompletableSubscriber>)cs;
-
 - (instancetype)initWithRxObservable:(RxObservable *)capture$0;
+
+- (void)callWithId:(id<RxCompletableSubscriber>)cs;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$10)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_10)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$10, val$flowable_, RxObservable *)
+__attribute__((unused)) static void RxCompletable_10_initWithRxObservable_(RxCompletable_10 *self, RxObservable *capture$0);
 
-__attribute__((unused)) static void RxCompletable_$10_initWithRxObservable_(RxCompletable_$10 *self, RxObservable *capture$0);
+__attribute__((unused)) static RxCompletable_10 *new_RxCompletable_10_initWithRxObservable_(RxObservable *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$10 *new_RxCompletable_$10_initWithRxObservable_(RxObservable *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_10 *create_RxCompletable_10_initWithRxObservable_(RxObservable *capture$0);
 
-__attribute__((unused)) static RxCompletable_$10 *create_RxCompletable_$10_initWithRxObservable_(RxObservable *capture$0);
-
-@interface RxCompletable_$10_$1 : RxSubscriber {
+@interface RxCompletable_10_1 : RxSubscriber {
  @public
   id<RxCompletableSubscriber> val$cs_;
 }
+
+- (instancetype)initWithRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0;
 
 - (void)onCompleted;
 
@@ -381,115 +359,101 @@ __attribute__((unused)) static RxCompletable_$10 *create_RxCompletable_$10_initW
 
 - (void)onNextWithId:(id)t;
 
-- (instancetype)initWithRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$10_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_10_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$10_$1, val$cs_, id<RxCompletableSubscriber>)
+__attribute__((unused)) static void RxCompletable_10_1_initWithRxCompletableSubscriber_(RxCompletable_10_1 *self, id<RxCompletableSubscriber> capture$0);
 
-__attribute__((unused)) static void RxCompletable_$10_$1_initWithRxCompletableSubscriber_(RxCompletable_$10_$1 *self, id<RxCompletableSubscriber> capture$0);
+__attribute__((unused)) static RxCompletable_10_1 *new_RxCompletable_10_1_initWithRxCompletableSubscriber_(id<RxCompletableSubscriber> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$10_$1 *new_RxCompletable_$10_$1_initWithRxCompletableSubscriber_(id<RxCompletableSubscriber> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_10_1 *create_RxCompletable_10_1_initWithRxCompletableSubscriber_(id<RxCompletableSubscriber> capture$0);
 
-__attribute__((unused)) static RxCompletable_$10_$1 *create_RxCompletable_$10_$1_initWithRxCompletableSubscriber_(id<RxCompletableSubscriber> capture$0);
-
-@interface RxCompletable_$11 : NSObject < RxCompletable_OnSubscribe > {
+@interface RxCompletable_11 : NSObject < RxCompletable_OnSubscribe > {
  @public
   RxSingle *val$single_;
 }
 
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
-
 - (instancetype)initWithRxSingle:(RxSingle *)capture$0;
+
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$11)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_11)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$11, val$single_, RxSingle *)
+__attribute__((unused)) static void RxCompletable_11_initWithRxSingle_(RxCompletable_11 *self, RxSingle *capture$0);
 
-__attribute__((unused)) static void RxCompletable_$11_initWithRxSingle_(RxCompletable_$11 *self, RxSingle *capture$0);
+__attribute__((unused)) static RxCompletable_11 *new_RxCompletable_11_initWithRxSingle_(RxSingle *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$11 *new_RxCompletable_$11_initWithRxSingle_(RxSingle *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_11 *create_RxCompletable_11_initWithRxSingle_(RxSingle *capture$0);
 
-__attribute__((unused)) static RxCompletable_$11 *create_RxCompletable_$11_initWithRxSingle_(RxSingle *capture$0);
-
-@interface RxCompletable_$11_$1 : RxSingleSubscriber {
+@interface RxCompletable_11_1 : RxSingleSubscriber {
  @public
   id<RxCompletableSubscriber> val$s_;
 }
+
+- (instancetype)initWithRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0;
 
 - (void)onErrorWithNSException:(NSException *)e;
 
 - (void)onSuccessWithId:(id)value;
 
-- (instancetype)initWithRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$11_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_11_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$11_$1, val$s_, id<RxCompletableSubscriber>)
+__attribute__((unused)) static void RxCompletable_11_1_initWithRxCompletableSubscriber_(RxCompletable_11_1 *self, id<RxCompletableSubscriber> capture$0);
 
-__attribute__((unused)) static void RxCompletable_$11_$1_initWithRxCompletableSubscriber_(RxCompletable_$11_$1 *self, id<RxCompletableSubscriber> capture$0);
+__attribute__((unused)) static RxCompletable_11_1 *new_RxCompletable_11_1_initWithRxCompletableSubscriber_(id<RxCompletableSubscriber> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$11_$1 *new_RxCompletable_$11_$1_initWithRxCompletableSubscriber_(id<RxCompletableSubscriber> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_11_1 *create_RxCompletable_11_1_initWithRxCompletableSubscriber_(id<RxCompletableSubscriber> capture$0);
 
-__attribute__((unused)) static RxCompletable_$11_$1 *create_RxCompletable_$11_$1_initWithRxCompletableSubscriber_(id<RxCompletableSubscriber> capture$0);
-
-@interface RxCompletable_$12 : NSObject < RxCompletable_OnSubscribe > {
+@interface RxCompletable_12 : NSObject < RxCompletable_OnSubscribe > {
  @public
   RxScheduler *val$scheduler_;
   jlong val$delay_;
   JavaUtilConcurrentTimeUnit *val$unit_;
 }
 
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
-
 - (instancetype)initWithRxScheduler:(RxScheduler *)capture$0
                            withLong:(jlong)capture$1
      withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)capture$2;
 
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$12)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_12)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$12, val$scheduler_, RxScheduler *)
-J2OBJC_FIELD_SETTER(RxCompletable_$12, val$unit_, JavaUtilConcurrentTimeUnit *)
+__attribute__((unused)) static void RxCompletable_12_initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_(RxCompletable_12 *self, RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2);
 
-__attribute__((unused)) static void RxCompletable_$12_initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_(RxCompletable_$12 *self, RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2);
+__attribute__((unused)) static RxCompletable_12 *new_RxCompletable_12_initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_(RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$12 *new_RxCompletable_$12_initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_(RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_12 *create_RxCompletable_12_initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_(RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2);
 
-__attribute__((unused)) static RxCompletable_$12 *create_RxCompletable_$12_initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_(RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2);
-
-@interface RxCompletable_$12_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxCompletable_12_1 : NSObject < RxFunctionsAction0 > {
  @public
   id<RxCompletableSubscriber> val$s_;
   RxScheduler_Worker *val$w_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0
                          withRxScheduler_Worker:(RxScheduler_Worker *)capture$1;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$12_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_12_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$12_$1, val$s_, id<RxCompletableSubscriber>)
-J2OBJC_FIELD_SETTER(RxCompletable_$12_$1, val$w_, RxScheduler_Worker *)
+__attribute__((unused)) static void RxCompletable_12_1_initWithRxCompletableSubscriber_withRxScheduler_Worker_(RxCompletable_12_1 *self, id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1);
 
-__attribute__((unused)) static void RxCompletable_$12_$1_initWithRxCompletableSubscriber_withRxScheduler_Worker_(RxCompletable_$12_$1 *self, id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1);
+__attribute__((unused)) static RxCompletable_12_1 *new_RxCompletable_12_1_initWithRxCompletableSubscriber_withRxScheduler_Worker_(id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$12_$1 *new_RxCompletable_$12_$1_initWithRxCompletableSubscriber_withRxScheduler_Worker_(id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_12_1 *create_RxCompletable_12_1_initWithRxCompletableSubscriber_withRxScheduler_Worker_(id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1);
 
-__attribute__((unused)) static RxCompletable_$12_$1 *create_RxCompletable_$12_$1_initWithRxCompletableSubscriber_withRxScheduler_Worker_(id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1);
-
-@interface RxCompletable_$13 : NSObject < RxCompletable_OnSubscribe > {
+@interface RxCompletable_13 : NSObject < RxCompletable_OnSubscribe > {
  @public
   id<RxFunctionsFunc0> val$resourceFunc0_;
   id<RxFunctionsFunc1> val$completableFunc1_;
@@ -497,35 +461,36 @@ __attribute__((unused)) static RxCompletable_$12_$1 *create_RxCompletable_$12_$1
   jboolean val$eager_;
 }
 
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
-
 - (instancetype)initWithRxFunctionsFunc0:(id<RxFunctionsFunc0>)capture$0
                     withRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$1
                   withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$2
                              withBoolean:(jboolean)capture$3;
 
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$13)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_13)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$13, val$resourceFunc0_, id<RxFunctionsFunc0>)
-J2OBJC_FIELD_SETTER(RxCompletable_$13, val$completableFunc1_, id<RxFunctionsFunc1>)
-J2OBJC_FIELD_SETTER(RxCompletable_$13, val$disposer_, id<RxFunctionsAction1>)
+__attribute__((unused)) static void RxCompletable_13_initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_(RxCompletable_13 *self, id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1, id<RxFunctionsAction1> capture$2, jboolean capture$3);
 
-__attribute__((unused)) static void RxCompletable_$13_initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_(RxCompletable_$13 *self, id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1, id<RxFunctionsAction1> capture$2, jboolean capture$3);
+__attribute__((unused)) static RxCompletable_13 *new_RxCompletable_13_initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_(id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1, id<RxFunctionsAction1> capture$2, jboolean capture$3) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$13 *new_RxCompletable_$13_initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_(id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1, id<RxFunctionsAction1> capture$2, jboolean capture$3) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_13 *create_RxCompletable_13_initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_(id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1, id<RxFunctionsAction1> capture$2, jboolean capture$3);
 
-__attribute__((unused)) static RxCompletable_$13 *create_RxCompletable_$13_initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_(id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1, id<RxFunctionsAction1> capture$2, jboolean capture$3);
-
-@interface RxCompletable_$13_$1 : NSObject < RxCompletableSubscriber > {
+@interface RxCompletable_13_1 : NSObject < RxCompletableSubscriber > {
  @public
-  RxCompletable_$13 *this$0_;
-  id<RxSubscription> d_;
+  RxCompletable_13 *this$0_;
   JavaUtilConcurrentAtomicAtomicBoolean *val$once_;
   id val$resource_;
   id<RxCompletableSubscriber> val$s_;
+  id<RxSubscription> d_;
 }
+
+- (instancetype)initWithRxCompletable_13:(RxCompletable_13 *)outer$
+withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$0
+                                  withId:(id)capture$1
+             withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2;
 
 - (void)dispose;
 
@@ -535,53 +500,45 @@ __attribute__((unused)) static RxCompletable_$13 *create_RxCompletable_$13_initW
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
-- (instancetype)initWithRxCompletable_$13:(RxCompletable_$13 *)outer$
-withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$0
-                                   withId:(id)capture$1
-              withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$13_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_13_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$13_$1, this$0_, RxCompletable_$13 *)
-J2OBJC_FIELD_SETTER(RxCompletable_$13_$1, d_, id<RxSubscription>)
-J2OBJC_FIELD_SETTER(RxCompletable_$13_$1, val$once_, JavaUtilConcurrentAtomicAtomicBoolean *)
-J2OBJC_FIELD_SETTER(RxCompletable_$13_$1, val$resource_, id)
-J2OBJC_FIELD_SETTER(RxCompletable_$13_$1, val$s_, id<RxCompletableSubscriber>)
+J2OBJC_FIELD_SETTER(RxCompletable_13_1, d_, id<RxSubscription>)
 
-__attribute__((unused)) static void RxCompletable_$13_$1_initWithRxCompletable_$13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_(RxCompletable_$13_$1 *self, RxCompletable_$13 *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, id capture$1, id<RxCompletableSubscriber> capture$2);
+__attribute__((unused)) static void RxCompletable_13_1_initWithRxCompletable_13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_(RxCompletable_13_1 *self, RxCompletable_13 *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, id capture$1, id<RxCompletableSubscriber> capture$2);
 
-__attribute__((unused)) static RxCompletable_$13_$1 *new_RxCompletable_$13_$1_initWithRxCompletable_$13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_(RxCompletable_$13 *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, id capture$1, id<RxCompletableSubscriber> capture$2) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_13_1 *new_RxCompletable_13_1_initWithRxCompletable_13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_(RxCompletable_13 *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, id capture$1, id<RxCompletableSubscriber> capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$13_$1 *create_RxCompletable_$13_$1_initWithRxCompletable_$13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_(RxCompletable_$13 *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, id capture$1, id<RxCompletableSubscriber> capture$2);
+__attribute__((unused)) static RxCompletable_13_1 *create_RxCompletable_13_1_initWithRxCompletable_13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_(RxCompletable_13 *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, id capture$1, id<RxCompletableSubscriber> capture$2);
 
-@interface RxCompletable_$13_$1_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxCompletable_13_1_1 : NSObject < RxFunctionsAction0 > {
  @public
-  RxCompletable_$13_$1 *this$0_;
+  RxCompletable_13_1 *this$0_;
 }
+
+- (instancetype)initWithRxCompletable_13_1:(RxCompletable_13_1 *)outer$;
 
 - (void)call;
 
-- (instancetype)initWithRxCompletable_$13_$1:(RxCompletable_$13_$1 *)outer$;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$13_$1_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_13_1_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$13_$1_$1, this$0_, RxCompletable_$13_$1 *)
+__attribute__((unused)) static void RxCompletable_13_1_1_initWithRxCompletable_13_1_(RxCompletable_13_1_1 *self, RxCompletable_13_1 *outer$);
 
-__attribute__((unused)) static void RxCompletable_$13_$1_$1_initWithRxCompletable_$13_$1_(RxCompletable_$13_$1_$1 *self, RxCompletable_$13_$1 *outer$);
+__attribute__((unused)) static RxCompletable_13_1_1 *new_RxCompletable_13_1_1_initWithRxCompletable_13_1_(RxCompletable_13_1 *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$13_$1_$1 *new_RxCompletable_$13_$1_$1_initWithRxCompletable_$13_$1_(RxCompletable_$13_$1 *outer$) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_13_1_1 *create_RxCompletable_13_1_1_initWithRxCompletable_13_1_(RxCompletable_13_1 *outer$);
 
-__attribute__((unused)) static RxCompletable_$13_$1_$1 *create_RxCompletable_$13_$1_$1_initWithRxCompletable_$13_$1_(RxCompletable_$13_$1 *outer$);
-
-@interface RxCompletable_$14 : NSObject < RxCompletableSubscriber > {
+@interface RxCompletable_14 : NSObject < RxCompletableSubscriber > {
  @public
   JavaUtilConcurrentCountDownLatch *val$cdl_;
   IOSObjectArray *val$err_;
 }
+
+- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
+                                    withNSExceptionArray:(IOSObjectArray *)capture$1;
 
 - (void)onCompleted;
 
@@ -589,27 +546,24 @@ __attribute__((unused)) static RxCompletable_$13_$1_$1 *create_RxCompletable_$13
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
-- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
-                                    withNSExceptionArray:(IOSObjectArray *)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$14)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_14)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$14, val$cdl_, JavaUtilConcurrentCountDownLatch *)
-J2OBJC_FIELD_SETTER(RxCompletable_$14, val$err_, IOSObjectArray *)
+__attribute__((unused)) static void RxCompletable_14_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(RxCompletable_14 *self, JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1);
 
-__attribute__((unused)) static void RxCompletable_$14_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(RxCompletable_$14 *self, JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1);
+__attribute__((unused)) static RxCompletable_14 *new_RxCompletable_14_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$14 *new_RxCompletable_$14_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_14 *create_RxCompletable_14_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1);
 
-__attribute__((unused)) static RxCompletable_$14 *create_RxCompletable_$14_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1);
-
-@interface RxCompletable_$15 : NSObject < RxCompletableSubscriber > {
+@interface RxCompletable_15 : NSObject < RxCompletableSubscriber > {
  @public
   JavaUtilConcurrentCountDownLatch *val$cdl_;
   IOSObjectArray *val$err_;
 }
+
+- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
+                                    withNSExceptionArray:(IOSObjectArray *)capture$1;
 
 - (void)onCompleted;
 
@@ -617,23 +571,17 @@ __attribute__((unused)) static RxCompletable_$14 *create_RxCompletable_$14_initW
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
-- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
-                                    withNSExceptionArray:(IOSObjectArray *)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$15)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_15)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$15, val$cdl_, JavaUtilConcurrentCountDownLatch *)
-J2OBJC_FIELD_SETTER(RxCompletable_$15, val$err_, IOSObjectArray *)
+__attribute__((unused)) static void RxCompletable_15_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(RxCompletable_15 *self, JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1);
 
-__attribute__((unused)) static void RxCompletable_$15_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(RxCompletable_$15 *self, JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1);
+__attribute__((unused)) static RxCompletable_15 *new_RxCompletable_15_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$15 *new_RxCompletable_$15_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_15 *create_RxCompletable_15_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1);
 
-__attribute__((unused)) static RxCompletable_$15 *create_RxCompletable_$15_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1);
-
-@interface RxCompletable_$16 : NSObject < RxCompletable_OnSubscribe > {
+@interface RxCompletable_16 : NSObject < RxCompletable_OnSubscribe > {
  @public
   RxCompletable *this$0_;
   RxScheduler *val$scheduler_;
@@ -642,35 +590,36 @@ __attribute__((unused)) static RxCompletable_$15 *create_RxCompletable_$15_initW
   jboolean val$delayError_;
 }
 
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
-
 - (instancetype)initWithRxCompletable:(RxCompletable *)outer$
                       withRxScheduler:(RxScheduler *)capture$0
                              withLong:(jlong)capture$1
        withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)capture$2
                           withBoolean:(jboolean)capture$3;
 
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$16)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_16)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$16, this$0_, RxCompletable *)
-J2OBJC_FIELD_SETTER(RxCompletable_$16, val$scheduler_, RxScheduler *)
-J2OBJC_FIELD_SETTER(RxCompletable_$16, val$unit_, JavaUtilConcurrentTimeUnit *)
+__attribute__((unused)) static void RxCompletable_16_initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_(RxCompletable_16 *self, RxCompletable *outer$, RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2, jboolean capture$3);
 
-__attribute__((unused)) static void RxCompletable_$16_initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_(RxCompletable_$16 *self, RxCompletable *outer$, RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2, jboolean capture$3);
+__attribute__((unused)) static RxCompletable_16 *new_RxCompletable_16_initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_(RxCompletable *outer$, RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2, jboolean capture$3) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$16 *new_RxCompletable_$16_initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_(RxCompletable *outer$, RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2, jboolean capture$3) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_16 *create_RxCompletable_16_initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_(RxCompletable *outer$, RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2, jboolean capture$3);
 
-__attribute__((unused)) static RxCompletable_$16 *create_RxCompletable_$16_initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_(RxCompletable *outer$, RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2, jboolean capture$3);
-
-@interface RxCompletable_$16_$1 : NSObject < RxCompletableSubscriber > {
+@interface RxCompletable_16_1 : NSObject < RxCompletableSubscriber > {
  @public
-  RxCompletable_$16 *this$0_;
+  RxCompletable_16 *this$0_;
   RxSubscriptionsCompositeSubscription *val$set_;
   RxScheduler_Worker *val$w_;
   id<RxCompletableSubscriber> val$s_;
 }
+
+- (instancetype)initWithRxCompletable_16:(RxCompletable_16 *)outer$
+withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$0
+                  withRxScheduler_Worker:(RxScheduler_Worker *)capture$1
+             withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2;
 
 - (void)onCompleted;
 
@@ -678,114 +627,95 @@ __attribute__((unused)) static RxCompletable_$16 *create_RxCompletable_$16_initW
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
-- (instancetype)initWithRxCompletable_$16:(RxCompletable_$16 *)outer$
- withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$0
-                   withRxScheduler_Worker:(RxScheduler_Worker *)capture$1
-              withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$16_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_16_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$16_$1, this$0_, RxCompletable_$16 *)
-J2OBJC_FIELD_SETTER(RxCompletable_$16_$1, val$set_, RxSubscriptionsCompositeSubscription *)
-J2OBJC_FIELD_SETTER(RxCompletable_$16_$1, val$w_, RxScheduler_Worker *)
-J2OBJC_FIELD_SETTER(RxCompletable_$16_$1, val$s_, id<RxCompletableSubscriber>)
+__attribute__((unused)) static void RxCompletable_16_1_initWithRxCompletable_16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_(RxCompletable_16_1 *self, RxCompletable_16 *outer$, RxSubscriptionsCompositeSubscription *capture$0, RxScheduler_Worker *capture$1, id<RxCompletableSubscriber> capture$2);
 
-__attribute__((unused)) static void RxCompletable_$16_$1_initWithRxCompletable_$16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_(RxCompletable_$16_$1 *self, RxCompletable_$16 *outer$, RxSubscriptionsCompositeSubscription *capture$0, RxScheduler_Worker *capture$1, id<RxCompletableSubscriber> capture$2);
+__attribute__((unused)) static RxCompletable_16_1 *new_RxCompletable_16_1_initWithRxCompletable_16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_(RxCompletable_16 *outer$, RxSubscriptionsCompositeSubscription *capture$0, RxScheduler_Worker *capture$1, id<RxCompletableSubscriber> capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$16_$1 *new_RxCompletable_$16_$1_initWithRxCompletable_$16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_(RxCompletable_$16 *outer$, RxSubscriptionsCompositeSubscription *capture$0, RxScheduler_Worker *capture$1, id<RxCompletableSubscriber> capture$2) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_16_1 *create_RxCompletable_16_1_initWithRxCompletable_16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_(RxCompletable_16 *outer$, RxSubscriptionsCompositeSubscription *capture$0, RxScheduler_Worker *capture$1, id<RxCompletableSubscriber> capture$2);
 
-__attribute__((unused)) static RxCompletable_$16_$1 *create_RxCompletable_$16_$1_initWithRxCompletable_$16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_(RxCompletable_$16 *outer$, RxSubscriptionsCompositeSubscription *capture$0, RxScheduler_Worker *capture$1, id<RxCompletableSubscriber> capture$2);
-
-@interface RxCompletable_$16_$1_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxCompletable_16_1_1 : NSObject < RxFunctionsAction0 > {
  @public
-  RxCompletable_$16_$1 *this$0_;
+  RxCompletable_16_1 *this$0_;
 }
+
+- (instancetype)initWithRxCompletable_16_1:(RxCompletable_16_1 *)outer$;
 
 - (void)call;
 
-- (instancetype)initWithRxCompletable_$16_$1:(RxCompletable_$16_$1 *)outer$;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$16_$1_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_16_1_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$16_$1_$1, this$0_, RxCompletable_$16_$1 *)
+__attribute__((unused)) static void RxCompletable_16_1_1_initWithRxCompletable_16_1_(RxCompletable_16_1_1 *self, RxCompletable_16_1 *outer$);
 
-__attribute__((unused)) static void RxCompletable_$16_$1_$1_initWithRxCompletable_$16_$1_(RxCompletable_$16_$1_$1 *self, RxCompletable_$16_$1 *outer$);
+__attribute__((unused)) static RxCompletable_16_1_1 *new_RxCompletable_16_1_1_initWithRxCompletable_16_1_(RxCompletable_16_1 *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$16_$1_$1 *new_RxCompletable_$16_$1_$1_initWithRxCompletable_$16_$1_(RxCompletable_$16_$1 *outer$) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_16_1_1 *create_RxCompletable_16_1_1_initWithRxCompletable_16_1_(RxCompletable_16_1 *outer$);
 
-__attribute__((unused)) static RxCompletable_$16_$1_$1 *create_RxCompletable_$16_$1_$1_initWithRxCompletable_$16_$1_(RxCompletable_$16_$1 *outer$);
-
-@interface RxCompletable_$16_$1_$2 : NSObject < RxFunctionsAction0 > {
+@interface RxCompletable_16_1_2 : NSObject < RxFunctionsAction0 > {
  @public
-  RxCompletable_$16_$1 *this$0_;
+  RxCompletable_16_1 *this$0_;
   NSException *val$e_;
 }
 
-- (void)call;
+- (instancetype)initWithRxCompletable_16_1:(RxCompletable_16_1 *)outer$
+                           withNSException:(NSException *)capture$0;
 
-- (instancetype)initWithRxCompletable_$16_$1:(RxCompletable_$16_$1 *)outer$
-                             withNSException:(NSException *)capture$0;
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$16_$1_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_16_1_2)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$16_$1_$2, this$0_, RxCompletable_$16_$1 *)
-J2OBJC_FIELD_SETTER(RxCompletable_$16_$1_$2, val$e_, NSException *)
+__attribute__((unused)) static void RxCompletable_16_1_2_initWithRxCompletable_16_1_withNSException_(RxCompletable_16_1_2 *self, RxCompletable_16_1 *outer$, NSException *capture$0);
 
-__attribute__((unused)) static void RxCompletable_$16_$1_$2_initWithRxCompletable_$16_$1_withNSException_(RxCompletable_$16_$1_$2 *self, RxCompletable_$16_$1 *outer$, NSException *capture$0);
+__attribute__((unused)) static RxCompletable_16_1_2 *new_RxCompletable_16_1_2_initWithRxCompletable_16_1_withNSException_(RxCompletable_16_1 *outer$, NSException *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$16_$1_$2 *new_RxCompletable_$16_$1_$2_initWithRxCompletable_$16_$1_withNSException_(RxCompletable_$16_$1 *outer$, NSException *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_16_1_2 *create_RxCompletable_16_1_2_initWithRxCompletable_16_1_withNSException_(RxCompletable_16_1 *outer$, NSException *capture$0);
 
-__attribute__((unused)) static RxCompletable_$16_$1_$2 *create_RxCompletable_$16_$1_$2_initWithRxCompletable_$16_$1_withNSException_(RxCompletable_$16_$1 *outer$, NSException *capture$0);
-
-@interface RxCompletable_$17 : NSObject < RxFunctionsAction1 > {
+@interface RxCompletable_17 : NSObject < RxFunctionsAction1 > {
  @public
   id<RxFunctionsAction1> val$onNotification_;
 }
+
+- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0;
 
 - (void)callWithId:(NSException *)throwable;
 
-- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$17)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_17)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$17, val$onNotification_, id<RxFunctionsAction1>)
+__attribute__((unused)) static void RxCompletable_17_initWithRxFunctionsAction1_(RxCompletable_17 *self, id<RxFunctionsAction1> capture$0);
 
-__attribute__((unused)) static void RxCompletable_$17_initWithRxFunctionsAction1_(RxCompletable_$17 *self, id<RxFunctionsAction1> capture$0);
+__attribute__((unused)) static RxCompletable_17 *new_RxCompletable_17_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$17 *new_RxCompletable_$17_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_17 *create_RxCompletable_17_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0);
 
-__attribute__((unused)) static RxCompletable_$17 *create_RxCompletable_$17_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0);
-
-@interface RxCompletable_$18 : NSObject < RxFunctionsAction0 > {
+@interface RxCompletable_18 : NSObject < RxFunctionsAction0 > {
  @public
   id<RxFunctionsAction1> val$onNotification_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0;
+
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$18)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_18)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$18, val$onNotification_, id<RxFunctionsAction1>)
+__attribute__((unused)) static void RxCompletable_18_initWithRxFunctionsAction1_(RxCompletable_18 *self, id<RxFunctionsAction1> capture$0);
 
-__attribute__((unused)) static void RxCompletable_$18_initWithRxFunctionsAction1_(RxCompletable_$18 *self, id<RxFunctionsAction1> capture$0);
+__attribute__((unused)) static RxCompletable_18 *new_RxCompletable_18_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$18 *new_RxCompletable_$18_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_18 *create_RxCompletable_18_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0);
 
-__attribute__((unused)) static RxCompletable_$18 *create_RxCompletable_$18_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0);
-
-@interface RxCompletable_$19 : NSObject < RxCompletable_OnSubscribe > {
+@interface RxCompletable_19 : NSObject < RxCompletable_OnSubscribe > {
  @public
   RxCompletable *this$0_;
   id<RxFunctionsAction0> val$onComplete_;
@@ -795,8 +725,6 @@ __attribute__((unused)) static RxCompletable_$18 *create_RxCompletable_$18_initW
   id<RxFunctionsAction0> val$onUnsubscribe_;
 }
 
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
-
 - (instancetype)initWithRxCompletable:(RxCompletable *)outer$
                withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0
                withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$1
@@ -804,28 +732,26 @@ __attribute__((unused)) static RxCompletable_$18 *create_RxCompletable_$18_initW
                withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$3
                withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$4;
 
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$19)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_19)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$19, this$0_, RxCompletable *)
-J2OBJC_FIELD_SETTER(RxCompletable_$19, val$onComplete_, id<RxFunctionsAction0>)
-J2OBJC_FIELD_SETTER(RxCompletable_$19, val$onAfterComplete_, id<RxFunctionsAction0>)
-J2OBJC_FIELD_SETTER(RxCompletable_$19, val$onError_, id<RxFunctionsAction1>)
-J2OBJC_FIELD_SETTER(RxCompletable_$19, val$onSubscribe_, id<RxFunctionsAction1>)
-J2OBJC_FIELD_SETTER(RxCompletable_$19, val$onUnsubscribe_, id<RxFunctionsAction0>)
+__attribute__((unused)) static void RxCompletable_19_initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(RxCompletable_19 *self, RxCompletable *outer$, id<RxFunctionsAction0> capture$0, id<RxFunctionsAction0> capture$1, id<RxFunctionsAction1> capture$2, id<RxFunctionsAction1> capture$3, id<RxFunctionsAction0> capture$4);
 
-__attribute__((unused)) static void RxCompletable_$19_initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(RxCompletable_$19 *self, RxCompletable *outer$, id<RxFunctionsAction0> capture$0, id<RxFunctionsAction0> capture$1, id<RxFunctionsAction1> capture$2, id<RxFunctionsAction1> capture$3, id<RxFunctionsAction0> capture$4);
+__attribute__((unused)) static RxCompletable_19 *new_RxCompletable_19_initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(RxCompletable *outer$, id<RxFunctionsAction0> capture$0, id<RxFunctionsAction0> capture$1, id<RxFunctionsAction1> capture$2, id<RxFunctionsAction1> capture$3, id<RxFunctionsAction0> capture$4) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$19 *new_RxCompletable_$19_initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(RxCompletable *outer$, id<RxFunctionsAction0> capture$0, id<RxFunctionsAction0> capture$1, id<RxFunctionsAction1> capture$2, id<RxFunctionsAction1> capture$3, id<RxFunctionsAction0> capture$4) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_19 *create_RxCompletable_19_initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(RxCompletable *outer$, id<RxFunctionsAction0> capture$0, id<RxFunctionsAction0> capture$1, id<RxFunctionsAction1> capture$2, id<RxFunctionsAction1> capture$3, id<RxFunctionsAction0> capture$4);
 
-__attribute__((unused)) static RxCompletable_$19 *create_RxCompletable_$19_initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(RxCompletable *outer$, id<RxFunctionsAction0> capture$0, id<RxFunctionsAction0> capture$1, id<RxFunctionsAction1> capture$2, id<RxFunctionsAction1> capture$3, id<RxFunctionsAction0> capture$4);
-
-@interface RxCompletable_$19_$1 : NSObject < RxCompletableSubscriber > {
+@interface RxCompletable_19_1 : NSObject < RxCompletableSubscriber > {
  @public
-  RxCompletable_$19 *this$0_;
+  RxCompletable_19 *this$0_;
   id<RxCompletableSubscriber> val$s_;
 }
+
+- (instancetype)initWithRxCompletable_19:(RxCompletable_19 *)outer$
+             withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0;
 
 - (void)onCompleted;
 
@@ -833,72 +759,64 @@ __attribute__((unused)) static RxCompletable_$19 *create_RxCompletable_$19_initW
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
-- (instancetype)initWithRxCompletable_$19:(RxCompletable_$19 *)outer$
-              withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$19_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_19_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$19_$1, this$0_, RxCompletable_$19 *)
-J2OBJC_FIELD_SETTER(RxCompletable_$19_$1, val$s_, id<RxCompletableSubscriber>)
+__attribute__((unused)) static void RxCompletable_19_1_initWithRxCompletable_19_withRxCompletableSubscriber_(RxCompletable_19_1 *self, RxCompletable_19 *outer$, id<RxCompletableSubscriber> capture$0);
 
-__attribute__((unused)) static void RxCompletable_$19_$1_initWithRxCompletable_$19_withRxCompletableSubscriber_(RxCompletable_$19_$1 *self, RxCompletable_$19 *outer$, id<RxCompletableSubscriber> capture$0);
+__attribute__((unused)) static RxCompletable_19_1 *new_RxCompletable_19_1_initWithRxCompletable_19_withRxCompletableSubscriber_(RxCompletable_19 *outer$, id<RxCompletableSubscriber> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$19_$1 *new_RxCompletable_$19_$1_initWithRxCompletable_$19_withRxCompletableSubscriber_(RxCompletable_$19 *outer$, id<RxCompletableSubscriber> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_19_1 *create_RxCompletable_19_1_initWithRxCompletable_19_withRxCompletableSubscriber_(RxCompletable_19 *outer$, id<RxCompletableSubscriber> capture$0);
 
-__attribute__((unused)) static RxCompletable_$19_$1 *create_RxCompletable_$19_$1_initWithRxCompletable_$19_withRxCompletableSubscriber_(RxCompletable_$19 *outer$, id<RxCompletableSubscriber> capture$0);
-
-@interface RxCompletable_$19_$1_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxCompletable_19_1_1 : NSObject < RxFunctionsAction0 > {
  @public
-  RxCompletable_$19_$1 *this$0_;
+  RxCompletable_19_1 *this$0_;
   id<RxSubscription> val$d_;
 }
 
-- (void)call;
+- (instancetype)initWithRxCompletable_19_1:(RxCompletable_19_1 *)outer$
+                        withRxSubscription:(id<RxSubscription>)capture$0;
 
-- (instancetype)initWithRxCompletable_$19_$1:(RxCompletable_$19_$1 *)outer$
-                          withRxSubscription:(id<RxSubscription>)capture$0;
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$19_$1_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_19_1_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$19_$1_$1, this$0_, RxCompletable_$19_$1 *)
-J2OBJC_FIELD_SETTER(RxCompletable_$19_$1_$1, val$d_, id<RxSubscription>)
+__attribute__((unused)) static void RxCompletable_19_1_1_initWithRxCompletable_19_1_withRxSubscription_(RxCompletable_19_1_1 *self, RxCompletable_19_1 *outer$, id<RxSubscription> capture$0);
 
-__attribute__((unused)) static void RxCompletable_$19_$1_$1_initWithRxCompletable_$19_$1_withRxSubscription_(RxCompletable_$19_$1_$1 *self, RxCompletable_$19_$1 *outer$, id<RxSubscription> capture$0);
+__attribute__((unused)) static RxCompletable_19_1_1 *new_RxCompletable_19_1_1_initWithRxCompletable_19_1_withRxSubscription_(RxCompletable_19_1 *outer$, id<RxSubscription> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$19_$1_$1 *new_RxCompletable_$19_$1_$1_initWithRxCompletable_$19_$1_withRxSubscription_(RxCompletable_$19_$1 *outer$, id<RxSubscription> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_19_1_1 *create_RxCompletable_19_1_1_initWithRxCompletable_19_1_withRxSubscription_(RxCompletable_19_1 *outer$, id<RxSubscription> capture$0);
 
-__attribute__((unused)) static RxCompletable_$19_$1_$1 *create_RxCompletable_$19_$1_$1_initWithRxCompletable_$19_$1_withRxSubscription_(RxCompletable_$19_$1 *outer$, id<RxSubscription> capture$0);
-
-@interface RxCompletable_$20 : NSObject < RxFunctionsAction1 > {
+@interface RxCompletable_20 : NSObject < RxFunctionsAction1 > {
  @public
   id<RxFunctionsAction0> val$onTerminate_;
 }
 
-- (void)callWithId:(NSException *)e;
-
 - (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0;
 
+- (void)callWithId:(NSException *)e;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$20)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_20)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$20, val$onTerminate_, id<RxFunctionsAction0>)
+__attribute__((unused)) static void RxCompletable_20_initWithRxFunctionsAction0_(RxCompletable_20 *self, id<RxFunctionsAction0> capture$0);
 
-__attribute__((unused)) static void RxCompletable_$20_initWithRxFunctionsAction0_(RxCompletable_$20 *self, id<RxFunctionsAction0> capture$0);
+__attribute__((unused)) static RxCompletable_20 *new_RxCompletable_20_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$20 *new_RxCompletable_$20_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_20 *create_RxCompletable_20_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0);
 
-__attribute__((unused)) static RxCompletable_$20 *create_RxCompletable_$20_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0);
-
-@interface RxCompletable_$21 : NSObject < RxCompletableSubscriber > {
+@interface RxCompletable_21 : NSObject < RxCompletableSubscriber > {
  @public
   JavaUtilConcurrentCountDownLatch *val$cdl_;
   IOSObjectArray *val$err_;
 }
+
+- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
+                                    withNSExceptionArray:(IOSObjectArray *)capture$1;
 
 - (void)onCompleted;
 
@@ -906,27 +824,24 @@ __attribute__((unused)) static RxCompletable_$20 *create_RxCompletable_$20_initW
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
-- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
-                                    withNSExceptionArray:(IOSObjectArray *)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$21)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_21)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$21, val$cdl_, JavaUtilConcurrentCountDownLatch *)
-J2OBJC_FIELD_SETTER(RxCompletable_$21, val$err_, IOSObjectArray *)
+__attribute__((unused)) static void RxCompletable_21_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(RxCompletable_21 *self, JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1);
 
-__attribute__((unused)) static void RxCompletable_$21_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(RxCompletable_$21 *self, JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1);
+__attribute__((unused)) static RxCompletable_21 *new_RxCompletable_21_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$21 *new_RxCompletable_$21_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_21 *create_RxCompletable_21_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1);
 
-__attribute__((unused)) static RxCompletable_$21 *create_RxCompletable_$21_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1);
-
-@interface RxCompletable_$22 : NSObject < RxCompletableSubscriber > {
+@interface RxCompletable_22 : NSObject < RxCompletableSubscriber > {
  @public
   JavaUtilConcurrentCountDownLatch *val$cdl_;
   IOSObjectArray *val$err_;
 }
+
+- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
+                                    withNSExceptionArray:(IOSObjectArray *)capture$1;
 
 - (void)onCompleted;
 
@@ -934,175 +849,154 @@ __attribute__((unused)) static RxCompletable_$21 *create_RxCompletable_$21_initW
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
-- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
-                                    withNSExceptionArray:(IOSObjectArray *)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$22)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_22)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$22, val$cdl_, JavaUtilConcurrentCountDownLatch *)
-J2OBJC_FIELD_SETTER(RxCompletable_$22, val$err_, IOSObjectArray *)
+__attribute__((unused)) static void RxCompletable_22_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(RxCompletable_22 *self, JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1);
 
-__attribute__((unused)) static void RxCompletable_$22_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(RxCompletable_$22 *self, JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1);
+__attribute__((unused)) static RxCompletable_22 *new_RxCompletable_22_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$22 *new_RxCompletable_$22_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_22 *create_RxCompletable_22_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1);
 
-__attribute__((unused)) static RxCompletable_$22 *create_RxCompletable_$22_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1);
-
-@interface RxCompletable_$23 : NSObject < RxCompletable_OnSubscribe > {
+@interface RxCompletable_23 : NSObject < RxCompletable_OnSubscribe > {
  @public
   RxCompletable *this$0_;
   id<RxCompletable_Operator> val$onLift_;
 }
 
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
-
 - (instancetype)initWithRxCompletable:(RxCompletable *)outer$
            withRxCompletable_Operator:(id<RxCompletable_Operator>)capture$0;
 
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$23)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_23)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$23, this$0_, RxCompletable *)
-J2OBJC_FIELD_SETTER(RxCompletable_$23, val$onLift_, id<RxCompletable_Operator>)
+__attribute__((unused)) static void RxCompletable_23_initWithRxCompletable_withRxCompletable_Operator_(RxCompletable_23 *self, RxCompletable *outer$, id<RxCompletable_Operator> capture$0);
 
-__attribute__((unused)) static void RxCompletable_$23_initWithRxCompletable_withRxCompletable_Operator_(RxCompletable_$23 *self, RxCompletable *outer$, id<RxCompletable_Operator> capture$0);
+__attribute__((unused)) static RxCompletable_23 *new_RxCompletable_23_initWithRxCompletable_withRxCompletable_Operator_(RxCompletable *outer$, id<RxCompletable_Operator> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$23 *new_RxCompletable_$23_initWithRxCompletable_withRxCompletable_Operator_(RxCompletable *outer$, id<RxCompletable_Operator> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_23 *create_RxCompletable_23_initWithRxCompletable_withRxCompletable_Operator_(RxCompletable *outer$, id<RxCompletable_Operator> capture$0);
 
-__attribute__((unused)) static RxCompletable_$23 *create_RxCompletable_$23_initWithRxCompletable_withRxCompletable_Operator_(RxCompletable *outer$, id<RxCompletable_Operator> capture$0);
-
-@interface RxCompletable_$24 : NSObject < RxCompletable_OnSubscribe > {
+@interface RxCompletable_24 : NSObject < RxCompletable_OnSubscribe > {
  @public
   RxCompletable *this$0_;
   RxScheduler *val$scheduler_;
 }
 
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
-
 - (instancetype)initWithRxCompletable:(RxCompletable *)outer$
                       withRxScheduler:(RxScheduler *)capture$0;
 
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$24)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_24)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$24, this$0_, RxCompletable *)
-J2OBJC_FIELD_SETTER(RxCompletable_$24, val$scheduler_, RxScheduler *)
+__attribute__((unused)) static void RxCompletable_24_initWithRxCompletable_withRxScheduler_(RxCompletable_24 *self, RxCompletable *outer$, RxScheduler *capture$0);
 
-__attribute__((unused)) static void RxCompletable_$24_initWithRxCompletable_withRxScheduler_(RxCompletable_$24 *self, RxCompletable *outer$, RxScheduler *capture$0);
+__attribute__((unused)) static RxCompletable_24 *new_RxCompletable_24_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$24 *new_RxCompletable_$24_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_24 *create_RxCompletable_24_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0);
 
-__attribute__((unused)) static RxCompletable_$24 *create_RxCompletable_$24_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0);
-
-@interface RxCompletable_$24_$1 : NSObject < RxCompletableSubscriber > {
+@interface RxCompletable_24_1 : NSObject < RxCompletableSubscriber > {
  @public
   RxScheduler_Worker *val$w_;
   id<RxCompletableSubscriber> val$s_;
   RxInternalUtilSubscriptionList *val$ad_;
 }
 
+- (instancetype)initWithRxScheduler_Worker:(RxScheduler_Worker *)capture$0
+               withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$1
+        withRxInternalUtilSubscriptionList:(RxInternalUtilSubscriptionList *)capture$2;
+
 - (void)onCompleted;
 
 - (void)onErrorWithNSException:(NSException *)e;
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
-- (instancetype)initWithRxScheduler_Worker:(RxScheduler_Worker *)capture$0
-               withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$1
-        withRxInternalUtilSubscriptionList:(RxInternalUtilSubscriptionList *)capture$2;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$24_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_24_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$24_$1, val$w_, RxScheduler_Worker *)
-J2OBJC_FIELD_SETTER(RxCompletable_$24_$1, val$s_, id<RxCompletableSubscriber>)
-J2OBJC_FIELD_SETTER(RxCompletable_$24_$1, val$ad_, RxInternalUtilSubscriptionList *)
+__attribute__((unused)) static void RxCompletable_24_1_initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_(RxCompletable_24_1 *self, RxScheduler_Worker *capture$0, id<RxCompletableSubscriber> capture$1, RxInternalUtilSubscriptionList *capture$2);
 
-__attribute__((unused)) static void RxCompletable_$24_$1_initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_(RxCompletable_$24_$1 *self, RxScheduler_Worker *capture$0, id<RxCompletableSubscriber> capture$1, RxInternalUtilSubscriptionList *capture$2);
+__attribute__((unused)) static RxCompletable_24_1 *new_RxCompletable_24_1_initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_(RxScheduler_Worker *capture$0, id<RxCompletableSubscriber> capture$1, RxInternalUtilSubscriptionList *capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$24_$1 *new_RxCompletable_$24_$1_initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_(RxScheduler_Worker *capture$0, id<RxCompletableSubscriber> capture$1, RxInternalUtilSubscriptionList *capture$2) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_24_1 *create_RxCompletable_24_1_initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_(RxScheduler_Worker *capture$0, id<RxCompletableSubscriber> capture$1, RxInternalUtilSubscriptionList *capture$2);
 
-__attribute__((unused)) static RxCompletable_$24_$1 *create_RxCompletable_$24_$1_initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_(RxScheduler_Worker *capture$0, id<RxCompletableSubscriber> capture$1, RxInternalUtilSubscriptionList *capture$2);
-
-@interface RxCompletable_$24_$1_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxCompletable_24_1_1 : NSObject < RxFunctionsAction0 > {
  @public
-  RxCompletable_$24_$1 *this$0_;
+  RxCompletable_24_1 *this$0_;
 }
+
+- (instancetype)initWithRxCompletable_24_1:(RxCompletable_24_1 *)outer$;
 
 - (void)call;
 
-- (instancetype)initWithRxCompletable_$24_$1:(RxCompletable_$24_$1 *)outer$;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$24_$1_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_24_1_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$24_$1_$1, this$0_, RxCompletable_$24_$1 *)
+__attribute__((unused)) static void RxCompletable_24_1_1_initWithRxCompletable_24_1_(RxCompletable_24_1_1 *self, RxCompletable_24_1 *outer$);
 
-__attribute__((unused)) static void RxCompletable_$24_$1_$1_initWithRxCompletable_$24_$1_(RxCompletable_$24_$1_$1 *self, RxCompletable_$24_$1 *outer$);
+__attribute__((unused)) static RxCompletable_24_1_1 *new_RxCompletable_24_1_1_initWithRxCompletable_24_1_(RxCompletable_24_1 *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$24_$1_$1 *new_RxCompletable_$24_$1_$1_initWithRxCompletable_$24_$1_(RxCompletable_$24_$1 *outer$) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_24_1_1 *create_RxCompletable_24_1_1_initWithRxCompletable_24_1_(RxCompletable_24_1 *outer$);
 
-__attribute__((unused)) static RxCompletable_$24_$1_$1 *create_RxCompletable_$24_$1_$1_initWithRxCompletable_$24_$1_(RxCompletable_$24_$1 *outer$);
-
-@interface RxCompletable_$24_$1_$2 : NSObject < RxFunctionsAction0 > {
+@interface RxCompletable_24_1_2 : NSObject < RxFunctionsAction0 > {
  @public
-  RxCompletable_$24_$1 *this$0_;
+  RxCompletable_24_1 *this$0_;
   NSException *val$e_;
 }
 
-- (void)call;
+- (instancetype)initWithRxCompletable_24_1:(RxCompletable_24_1 *)outer$
+                           withNSException:(NSException *)capture$0;
 
-- (instancetype)initWithRxCompletable_$24_$1:(RxCompletable_$24_$1 *)outer$
-                             withNSException:(NSException *)capture$0;
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$24_$1_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_24_1_2)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$24_$1_$2, this$0_, RxCompletable_$24_$1 *)
-J2OBJC_FIELD_SETTER(RxCompletable_$24_$1_$2, val$e_, NSException *)
+__attribute__((unused)) static void RxCompletable_24_1_2_initWithRxCompletable_24_1_withNSException_(RxCompletable_24_1_2 *self, RxCompletable_24_1 *outer$, NSException *capture$0);
 
-__attribute__((unused)) static void RxCompletable_$24_$1_$2_initWithRxCompletable_$24_$1_withNSException_(RxCompletable_$24_$1_$2 *self, RxCompletable_$24_$1 *outer$, NSException *capture$0);
+__attribute__((unused)) static RxCompletable_24_1_2 *new_RxCompletable_24_1_2_initWithRxCompletable_24_1_withNSException_(RxCompletable_24_1 *outer$, NSException *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$24_$1_$2 *new_RxCompletable_$24_$1_$2_initWithRxCompletable_$24_$1_withNSException_(RxCompletable_$24_$1 *outer$, NSException *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_24_1_2 *create_RxCompletable_24_1_2_initWithRxCompletable_24_1_withNSException_(RxCompletable_24_1 *outer$, NSException *capture$0);
 
-__attribute__((unused)) static RxCompletable_$24_$1_$2 *create_RxCompletable_$24_$1_$2_initWithRxCompletable_$24_$1_withNSException_(RxCompletable_$24_$1 *outer$, NSException *capture$0);
-
-@interface RxCompletable_$25 : NSObject < RxCompletable_OnSubscribe > {
+@interface RxCompletable_25 : NSObject < RxCompletable_OnSubscribe > {
  @public
   RxCompletable *this$0_;
   id<RxFunctionsFunc1> val$predicate_;
 }
 
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
-
 - (instancetype)initWithRxCompletable:(RxCompletable *)outer$
                  withRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$0;
 
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$25)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_25)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$25, this$0_, RxCompletable *)
-J2OBJC_FIELD_SETTER(RxCompletable_$25, val$predicate_, id<RxFunctionsFunc1>)
+__attribute__((unused)) static void RxCompletable_25_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable_25 *self, RxCompletable *outer$, id<RxFunctionsFunc1> capture$0);
 
-__attribute__((unused)) static void RxCompletable_$25_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable_$25 *self, RxCompletable *outer$, id<RxFunctionsFunc1> capture$0);
+__attribute__((unused)) static RxCompletable_25 *new_RxCompletable_25_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable *outer$, id<RxFunctionsFunc1> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$25 *new_RxCompletable_$25_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable *outer$, id<RxFunctionsFunc1> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_25 *create_RxCompletable_25_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable *outer$, id<RxFunctionsFunc1> capture$0);
 
-__attribute__((unused)) static RxCompletable_$25 *create_RxCompletable_$25_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable *outer$, id<RxFunctionsFunc1> capture$0);
-
-@interface RxCompletable_$25_$1 : NSObject < RxCompletableSubscriber > {
+@interface RxCompletable_25_1 : NSObject < RxCompletableSubscriber > {
  @public
-  RxCompletable_$25 *this$0_;
+  RxCompletable_25 *this$0_;
   id<RxCompletableSubscriber> val$s_;
 }
+
+- (instancetype)initWithRxCompletable_25:(RxCompletable_25 *)outer$
+             withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0;
 
 - (void)onCompleted;
 
@@ -1110,163 +1004,147 @@ __attribute__((unused)) static RxCompletable_$25 *create_RxCompletable_$25_initW
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
-- (instancetype)initWithRxCompletable_$25:(RxCompletable_$25 *)outer$
-              withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$25_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_25_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$25_$1, this$0_, RxCompletable_$25 *)
-J2OBJC_FIELD_SETTER(RxCompletable_$25_$1, val$s_, id<RxCompletableSubscriber>)
+__attribute__((unused)) static void RxCompletable_25_1_initWithRxCompletable_25_withRxCompletableSubscriber_(RxCompletable_25_1 *self, RxCompletable_25 *outer$, id<RxCompletableSubscriber> capture$0);
 
-__attribute__((unused)) static void RxCompletable_$25_$1_initWithRxCompletable_$25_withRxCompletableSubscriber_(RxCompletable_$25_$1 *self, RxCompletable_$25 *outer$, id<RxCompletableSubscriber> capture$0);
+__attribute__((unused)) static RxCompletable_25_1 *new_RxCompletable_25_1_initWithRxCompletable_25_withRxCompletableSubscriber_(RxCompletable_25 *outer$, id<RxCompletableSubscriber> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$25_$1 *new_RxCompletable_$25_$1_initWithRxCompletable_$25_withRxCompletableSubscriber_(RxCompletable_$25 *outer$, id<RxCompletableSubscriber> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_25_1 *create_RxCompletable_25_1_initWithRxCompletable_25_withRxCompletableSubscriber_(RxCompletable_25 *outer$, id<RxCompletableSubscriber> capture$0);
 
-__attribute__((unused)) static RxCompletable_$25_$1 *create_RxCompletable_$25_$1_initWithRxCompletable_$25_withRxCompletableSubscriber_(RxCompletable_$25 *outer$, id<RxCompletableSubscriber> capture$0);
-
-@interface RxCompletable_$26 : NSObject < RxCompletable_OnSubscribe > {
+@interface RxCompletable_26 : NSObject < RxCompletable_OnSubscribe > {
  @public
   RxCompletable *this$0_;
   id<RxFunctionsFunc1> val$errorMapper_;
 }
 
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
-
 - (instancetype)initWithRxCompletable:(RxCompletable *)outer$
                  withRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$0;
 
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$26)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_26)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$26, this$0_, RxCompletable *)
-J2OBJC_FIELD_SETTER(RxCompletable_$26, val$errorMapper_, id<RxFunctionsFunc1>)
+__attribute__((unused)) static void RxCompletable_26_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable_26 *self, RxCompletable *outer$, id<RxFunctionsFunc1> capture$0);
 
-__attribute__((unused)) static void RxCompletable_$26_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable_$26 *self, RxCompletable *outer$, id<RxFunctionsFunc1> capture$0);
+__attribute__((unused)) static RxCompletable_26 *new_RxCompletable_26_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable *outer$, id<RxFunctionsFunc1> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$26 *new_RxCompletable_$26_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable *outer$, id<RxFunctionsFunc1> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_26 *create_RxCompletable_26_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable *outer$, id<RxFunctionsFunc1> capture$0);
 
-__attribute__((unused)) static RxCompletable_$26 *create_RxCompletable_$26_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable *outer$, id<RxFunctionsFunc1> capture$0);
-
-@interface RxCompletable_$26_$1 : NSObject < RxCompletableSubscriber > {
+@interface RxCompletable_26_1 : NSObject < RxCompletableSubscriber > {
  @public
-  RxCompletable_$26 *this$0_;
+  RxCompletable_26 *this$0_;
   id<RxCompletableSubscriber> val$s_;
   RxSubscriptionsSerialSubscription *val$sd_;
 }
 
+- (instancetype)initWithRxCompletable_26:(RxCompletable_26 *)outer$
+             withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0
+   withRxSubscriptionsSerialSubscription:(RxSubscriptionsSerialSubscription *)capture$1;
+
 - (void)onCompleted;
 
 - (void)onErrorWithNSException:(NSException *)e;
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
-- (instancetype)initWithRxCompletable_$26:(RxCompletable_$26 *)outer$
-              withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0
-    withRxSubscriptionsSerialSubscription:(RxSubscriptionsSerialSubscription *)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$26_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_26_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$26_$1, this$0_, RxCompletable_$26 *)
-J2OBJC_FIELD_SETTER(RxCompletable_$26_$1, val$s_, id<RxCompletableSubscriber>)
-J2OBJC_FIELD_SETTER(RxCompletable_$26_$1, val$sd_, RxSubscriptionsSerialSubscription *)
+__attribute__((unused)) static void RxCompletable_26_1_initWithRxCompletable_26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_(RxCompletable_26_1 *self, RxCompletable_26 *outer$, id<RxCompletableSubscriber> capture$0, RxSubscriptionsSerialSubscription *capture$1);
 
-__attribute__((unused)) static void RxCompletable_$26_$1_initWithRxCompletable_$26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_(RxCompletable_$26_$1 *self, RxCompletable_$26 *outer$, id<RxCompletableSubscriber> capture$0, RxSubscriptionsSerialSubscription *capture$1);
+__attribute__((unused)) static RxCompletable_26_1 *new_RxCompletable_26_1_initWithRxCompletable_26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_(RxCompletable_26 *outer$, id<RxCompletableSubscriber> capture$0, RxSubscriptionsSerialSubscription *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$26_$1 *new_RxCompletable_$26_$1_initWithRxCompletable_$26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_(RxCompletable_$26 *outer$, id<RxCompletableSubscriber> capture$0, RxSubscriptionsSerialSubscription *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_26_1 *create_RxCompletable_26_1_initWithRxCompletable_26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_(RxCompletable_26 *outer$, id<RxCompletableSubscriber> capture$0, RxSubscriptionsSerialSubscription *capture$1);
 
-__attribute__((unused)) static RxCompletable_$26_$1 *create_RxCompletable_$26_$1_initWithRxCompletable_$26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_(RxCompletable_$26 *outer$, id<RxCompletableSubscriber> capture$0, RxSubscriptionsSerialSubscription *capture$1);
-
-@interface RxCompletable_$26_$1_$1 : NSObject < RxCompletableSubscriber > {
+@interface RxCompletable_26_1_1 : NSObject < RxCompletableSubscriber > {
  @public
-  RxCompletable_$26_$1 *this$0_;
+  RxCompletable_26_1 *this$0_;
 }
 
+- (instancetype)initWithRxCompletable_26_1:(RxCompletable_26_1 *)outer$;
+
 - (void)onCompleted;
 
 - (void)onErrorWithNSException:(NSException *)e;
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
-- (instancetype)initWithRxCompletable_$26_$1:(RxCompletable_$26_$1 *)outer$;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$26_$1_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_26_1_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$26_$1_$1, this$0_, RxCompletable_$26_$1 *)
+__attribute__((unused)) static void RxCompletable_26_1_1_initWithRxCompletable_26_1_(RxCompletable_26_1_1 *self, RxCompletable_26_1 *outer$);
 
-__attribute__((unused)) static void RxCompletable_$26_$1_$1_initWithRxCompletable_$26_$1_(RxCompletable_$26_$1_$1 *self, RxCompletable_$26_$1 *outer$);
+__attribute__((unused)) static RxCompletable_26_1_1 *new_RxCompletable_26_1_1_initWithRxCompletable_26_1_(RxCompletable_26_1 *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$26_$1_$1 *new_RxCompletable_$26_$1_$1_initWithRxCompletable_$26_$1_(RxCompletable_$26_$1 *outer$) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_26_1_1 *create_RxCompletable_26_1_1_initWithRxCompletable_26_1_(RxCompletable_26_1 *outer$);
 
-__attribute__((unused)) static RxCompletable_$26_$1_$1 *create_RxCompletable_$26_$1_$1_initWithRxCompletable_$26_$1_(RxCompletable_$26_$1 *outer$);
-
-@interface RxCompletable_$27 : NSObject < RxCompletableSubscriber > {
+@interface RxCompletable_27 : NSObject < RxCompletableSubscriber > {
  @public
   RxSubscriptionsMultipleAssignmentSubscription *val$mad_;
 }
-
-- (void)onCompleted;
-
-- (void)onErrorWithNSException:(NSException *)e;
-
-- (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
 - (instancetype)initWithRxSubscriptionsMultipleAssignmentSubscription:(RxSubscriptionsMultipleAssignmentSubscription *)capture$0;
 
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$27)
-
-J2OBJC_FIELD_SETTER(RxCompletable_$27, val$mad_, RxSubscriptionsMultipleAssignmentSubscription *)
-
-__attribute__((unused)) static void RxCompletable_$27_initWithRxSubscriptionsMultipleAssignmentSubscription_(RxCompletable_$27 *self, RxSubscriptionsMultipleAssignmentSubscription *capture$0);
-
-__attribute__((unused)) static RxCompletable_$27 *new_RxCompletable_$27_initWithRxSubscriptionsMultipleAssignmentSubscription_(RxSubscriptionsMultipleAssignmentSubscription *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxCompletable_$27 *create_RxCompletable_$27_initWithRxSubscriptionsMultipleAssignmentSubscription_(RxSubscriptionsMultipleAssignmentSubscription *capture$0);
-
-@interface RxCompletable_$28 : NSObject < RxCompletableSubscriber > {
- @public
-  jboolean done_;
-  id<RxFunctionsAction0> val$onComplete_;
-  RxSubscriptionsMultipleAssignmentSubscription *val$mad_;
-}
-
 - (void)onCompleted;
 
 - (void)onErrorWithNSException:(NSException *)e;
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_27)
+
+__attribute__((unused)) static void RxCompletable_27_initWithRxSubscriptionsMultipleAssignmentSubscription_(RxCompletable_27 *self, RxSubscriptionsMultipleAssignmentSubscription *capture$0);
+
+__attribute__((unused)) static RxCompletable_27 *new_RxCompletable_27_initWithRxSubscriptionsMultipleAssignmentSubscription_(RxSubscriptionsMultipleAssignmentSubscription *capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxCompletable_27 *create_RxCompletable_27_initWithRxSubscriptionsMultipleAssignmentSubscription_(RxSubscriptionsMultipleAssignmentSubscription *capture$0);
+
+@interface RxCompletable_28 : NSObject < RxCompletableSubscriber > {
+ @public
+  id<RxFunctionsAction0> val$onComplete_;
+  RxSubscriptionsMultipleAssignmentSubscription *val$mad_;
+  jboolean done_;
+}
 
 - (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0
 withRxSubscriptionsMultipleAssignmentSubscription:(RxSubscriptionsMultipleAssignmentSubscription *)capture$1;
 
+- (void)onCompleted;
+
+- (void)onErrorWithNSException:(NSException *)e;
+
+- (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$28)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_28)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$28, val$onComplete_, id<RxFunctionsAction0>)
-J2OBJC_FIELD_SETTER(RxCompletable_$28, val$mad_, RxSubscriptionsMultipleAssignmentSubscription *)
+__attribute__((unused)) static void RxCompletable_28_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_(RxCompletable_28 *self, id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1);
 
-__attribute__((unused)) static void RxCompletable_$28_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_(RxCompletable_$28 *self, id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1);
+__attribute__((unused)) static RxCompletable_28 *new_RxCompletable_28_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_(id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$28 *new_RxCompletable_$28_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_(id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_28 *create_RxCompletable_28_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_(id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1);
 
-__attribute__((unused)) static RxCompletable_$28 *create_RxCompletable_$28_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_(id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1);
-
-@interface RxCompletable_$29 : NSObject < RxCompletableSubscriber > {
+@interface RxCompletable_29 : NSObject < RxCompletableSubscriber > {
  @public
-  jboolean done_;
   id<RxFunctionsAction0> val$onComplete_;
   RxSubscriptionsMultipleAssignmentSubscription *val$mad_;
   id<RxFunctionsAction1> val$onError_;
+  jboolean done_;
 }
+
+- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0
+withRxSubscriptionsMultipleAssignmentSubscription:(RxSubscriptionsMultipleAssignmentSubscription *)capture$1
+                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$2;
 
 - (void)onCompleted;
 
@@ -1276,28 +1154,22 @@ __attribute__((unused)) static RxCompletable_$28 *create_RxCompletable_$28_initW
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
-- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0
-withRxSubscriptionsMultipleAssignmentSubscription:(RxSubscriptionsMultipleAssignmentSubscription *)capture$1
-                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$2;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$29)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_29)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$29, val$onComplete_, id<RxFunctionsAction0>)
-J2OBJC_FIELD_SETTER(RxCompletable_$29, val$mad_, RxSubscriptionsMultipleAssignmentSubscription *)
-J2OBJC_FIELD_SETTER(RxCompletable_$29, val$onError_, id<RxFunctionsAction1>)
+__attribute__((unused)) static void RxCompletable_29_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_(RxCompletable_29 *self, id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1, id<RxFunctionsAction1> capture$2);
 
-__attribute__((unused)) static void RxCompletable_$29_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_(RxCompletable_$29 *self, id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1, id<RxFunctionsAction1> capture$2);
+__attribute__((unused)) static RxCompletable_29 *new_RxCompletable_29_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_(id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1, id<RxFunctionsAction1> capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$29 *new_RxCompletable_$29_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_(id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1, id<RxFunctionsAction1> capture$2) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_29 *create_RxCompletable_29_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_(id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1, id<RxFunctionsAction1> capture$2);
 
-__attribute__((unused)) static RxCompletable_$29 *create_RxCompletable_$29_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_(id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1, id<RxFunctionsAction1> capture$2);
-
-@interface RxCompletable_$30 : NSObject < RxCompletableSubscriber > {
+@interface RxCompletable_30 : NSObject < RxCompletableSubscriber > {
  @public
   RxSubscriber *val$s_;
 }
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0;
 
 - (void)onCompleted;
 
@@ -1305,121 +1177,108 @@ __attribute__((unused)) static RxCompletable_$29 *create_RxCompletable_$29_initW
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$30)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_30)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$30, val$s_, RxSubscriber *)
+__attribute__((unused)) static void RxCompletable_30_initWithRxSubscriber_(RxCompletable_30 *self, RxSubscriber *capture$0);
 
-__attribute__((unused)) static void RxCompletable_$30_initWithRxSubscriber_(RxCompletable_$30 *self, RxSubscriber *capture$0);
+__attribute__((unused)) static RxCompletable_30 *new_RxCompletable_30_initWithRxSubscriber_(RxSubscriber *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$30 *new_RxCompletable_$30_initWithRxSubscriber_(RxSubscriber *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_30 *create_RxCompletable_30_initWithRxSubscriber_(RxSubscriber *capture$0);
 
-__attribute__((unused)) static RxCompletable_$30 *create_RxCompletable_$30_initWithRxSubscriber_(RxSubscriber *capture$0);
-
-@interface RxCompletable_$31 : NSObject < RxCompletable_OnSubscribe > {
+@interface RxCompletable_31 : NSObject < RxCompletable_OnSubscribe > {
  @public
   RxCompletable *this$0_;
   RxScheduler *val$scheduler_;
 }
 
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
-
 - (instancetype)initWithRxCompletable:(RxCompletable *)outer$
                       withRxScheduler:(RxScheduler *)capture$0;
 
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$31)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_31)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$31, this$0_, RxCompletable *)
-J2OBJC_FIELD_SETTER(RxCompletable_$31, val$scheduler_, RxScheduler *)
+__attribute__((unused)) static void RxCompletable_31_initWithRxCompletable_withRxScheduler_(RxCompletable_31 *self, RxCompletable *outer$, RxScheduler *capture$0);
 
-__attribute__((unused)) static void RxCompletable_$31_initWithRxCompletable_withRxScheduler_(RxCompletable_$31 *self, RxCompletable *outer$, RxScheduler *capture$0);
+__attribute__((unused)) static RxCompletable_31 *new_RxCompletable_31_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$31 *new_RxCompletable_$31_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_31 *create_RxCompletable_31_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0);
 
-__attribute__((unused)) static RxCompletable_$31 *create_RxCompletable_$31_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0);
-
-@interface RxCompletable_$31_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxCompletable_31_1 : NSObject < RxFunctionsAction0 > {
  @public
-  RxCompletable_$31 *this$0_;
+  RxCompletable_31 *this$0_;
   id<RxCompletableSubscriber> val$s_;
   RxScheduler_Worker *val$w_;
 }
 
-- (void)call;
+- (instancetype)initWithRxCompletable_31:(RxCompletable_31 *)outer$
+             withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0
+                  withRxScheduler_Worker:(RxScheduler_Worker *)capture$1;
 
-- (instancetype)initWithRxCompletable_$31:(RxCompletable_$31 *)outer$
-              withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0
-                   withRxScheduler_Worker:(RxScheduler_Worker *)capture$1;
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$31_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_31_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$31_$1, this$0_, RxCompletable_$31 *)
-J2OBJC_FIELD_SETTER(RxCompletable_$31_$1, val$s_, id<RxCompletableSubscriber>)
-J2OBJC_FIELD_SETTER(RxCompletable_$31_$1, val$w_, RxScheduler_Worker *)
+__attribute__((unused)) static void RxCompletable_31_1_initWithRxCompletable_31_withRxCompletableSubscriber_withRxScheduler_Worker_(RxCompletable_31_1 *self, RxCompletable_31 *outer$, id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1);
 
-__attribute__((unused)) static void RxCompletable_$31_$1_initWithRxCompletable_$31_withRxCompletableSubscriber_withRxScheduler_Worker_(RxCompletable_$31_$1 *self, RxCompletable_$31 *outer$, id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1);
+__attribute__((unused)) static RxCompletable_31_1 *new_RxCompletable_31_1_initWithRxCompletable_31_withRxCompletableSubscriber_withRxScheduler_Worker_(RxCompletable_31 *outer$, id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$31_$1 *new_RxCompletable_$31_$1_initWithRxCompletable_$31_withRxCompletableSubscriber_withRxScheduler_Worker_(RxCompletable_$31 *outer$, id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_31_1 *create_RxCompletable_31_1_initWithRxCompletable_31_withRxCompletableSubscriber_withRxScheduler_Worker_(RxCompletable_31 *outer$, id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1);
 
-__attribute__((unused)) static RxCompletable_$31_$1 *create_RxCompletable_$31_$1_initWithRxCompletable_$31_withRxCompletableSubscriber_withRxScheduler_Worker_(RxCompletable_$31 *outer$, id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1);
-
-@interface RxCompletable_$32 : NSObject < RxObservable_OnSubscribe > {
+@interface RxCompletable_32 : NSObject < RxObservable_OnSubscribe > {
  @public
   RxCompletable *this$0_;
 }
 
-- (void)callWithId:(RxSubscriber *)s;
-
 - (instancetype)initWithRxCompletable:(RxCompletable *)outer$;
+
+- (void)callWithId:(RxSubscriber *)s;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$32)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_32)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$32, this$0_, RxCompletable *)
+__attribute__((unused)) static void RxCompletable_32_initWithRxCompletable_(RxCompletable_32 *self, RxCompletable *outer$);
 
-__attribute__((unused)) static void RxCompletable_$32_initWithRxCompletable_(RxCompletable_$32 *self, RxCompletable *outer$);
+__attribute__((unused)) static RxCompletable_32 *new_RxCompletable_32_initWithRxCompletable_(RxCompletable *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$32 *new_RxCompletable_$32_initWithRxCompletable_(RxCompletable *outer$) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_32 *create_RxCompletable_32_initWithRxCompletable_(RxCompletable *outer$);
 
-__attribute__((unused)) static RxCompletable_$32 *create_RxCompletable_$32_initWithRxCompletable_(RxCompletable *outer$);
-
-@interface RxCompletable_$33 : NSObject < RxSingle_OnSubscribe > {
+@interface RxCompletable_33 : NSObject < RxSingle_OnSubscribe > {
  @public
   RxCompletable *this$0_;
   id<RxFunctionsFunc0> val$completionValueFunc0_;
 }
 
-- (void)callWithId:(RxSingleSubscriber *)s;
-
 - (instancetype)initWithRxCompletable:(RxCompletable *)outer$
                  withRxFunctionsFunc0:(id<RxFunctionsFunc0>)capture$0;
 
+- (void)callWithId:(RxSingleSubscriber *)s;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$33)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_33)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$33, this$0_, RxCompletable *)
-J2OBJC_FIELD_SETTER(RxCompletable_$33, val$completionValueFunc0_, id<RxFunctionsFunc0>)
+__attribute__((unused)) static void RxCompletable_33_initWithRxCompletable_withRxFunctionsFunc0_(RxCompletable_33 *self, RxCompletable *outer$, id<RxFunctionsFunc0> capture$0);
 
-__attribute__((unused)) static void RxCompletable_$33_initWithRxCompletable_withRxFunctionsFunc0_(RxCompletable_$33 *self, RxCompletable *outer$, id<RxFunctionsFunc0> capture$0);
+__attribute__((unused)) static RxCompletable_33 *new_RxCompletable_33_initWithRxCompletable_withRxFunctionsFunc0_(RxCompletable *outer$, id<RxFunctionsFunc0> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$33 *new_RxCompletable_$33_initWithRxCompletable_withRxFunctionsFunc0_(RxCompletable *outer$, id<RxFunctionsFunc0> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_33 *create_RxCompletable_33_initWithRxCompletable_withRxFunctionsFunc0_(RxCompletable *outer$, id<RxFunctionsFunc0> capture$0);
 
-__attribute__((unused)) static RxCompletable_$33 *create_RxCompletable_$33_initWithRxCompletable_withRxFunctionsFunc0_(RxCompletable *outer$, id<RxFunctionsFunc0> capture$0);
-
-@interface RxCompletable_$33_$1 : NSObject < RxCompletableSubscriber > {
+@interface RxCompletable_33_1 : NSObject < RxCompletableSubscriber > {
  @public
-  RxCompletable_$33 *this$0_;
+  RxCompletable_33 *this$0_;
   RxSingleSubscriber *val$s_;
 }
+
+- (instancetype)initWithRxCompletable_33:(RxCompletable_33 *)outer$
+                  withRxSingleSubscriber:(RxSingleSubscriber *)capture$0;
 
 - (void)onCompleted;
 
@@ -1427,72 +1286,64 @@ __attribute__((unused)) static RxCompletable_$33 *create_RxCompletable_$33_initW
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
-- (instancetype)initWithRxCompletable_$33:(RxCompletable_$33 *)outer$
-                   withRxSingleSubscriber:(RxSingleSubscriber *)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$33_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_33_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$33_$1, this$0_, RxCompletable_$33 *)
-J2OBJC_FIELD_SETTER(RxCompletable_$33_$1, val$s_, RxSingleSubscriber *)
+__attribute__((unused)) static void RxCompletable_33_1_initWithRxCompletable_33_withRxSingleSubscriber_(RxCompletable_33_1 *self, RxCompletable_33 *outer$, RxSingleSubscriber *capture$0);
 
-__attribute__((unused)) static void RxCompletable_$33_$1_initWithRxCompletable_$33_withRxSingleSubscriber_(RxCompletable_$33_$1 *self, RxCompletable_$33 *outer$, RxSingleSubscriber *capture$0);
+__attribute__((unused)) static RxCompletable_33_1 *new_RxCompletable_33_1_initWithRxCompletable_33_withRxSingleSubscriber_(RxCompletable_33 *outer$, RxSingleSubscriber *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$33_$1 *new_RxCompletable_$33_$1_initWithRxCompletable_$33_withRxSingleSubscriber_(RxCompletable_$33 *outer$, RxSingleSubscriber *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_33_1 *create_RxCompletable_33_1_initWithRxCompletable_33_withRxSingleSubscriber_(RxCompletable_33 *outer$, RxSingleSubscriber *capture$0);
 
-__attribute__((unused)) static RxCompletable_$33_$1 *create_RxCompletable_$33_$1_initWithRxCompletable_$33_withRxSingleSubscriber_(RxCompletable_$33 *outer$, RxSingleSubscriber *capture$0);
-
-@interface RxCompletable_$34 : NSObject < RxFunctionsFunc0 > {
+@interface RxCompletable_34 : NSObject < RxFunctionsFunc0 > {
  @public
   id val$completionValue_;
 }
 
-- (id)call;
-
 - (instancetype)initWithId:(id)capture$0;
+
+- (id)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$34)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_34)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$34, val$completionValue_, id)
+__attribute__((unused)) static void RxCompletable_34_initWithId_(RxCompletable_34 *self, id capture$0);
 
-__attribute__((unused)) static void RxCompletable_$34_initWithId_(RxCompletable_$34 *self, id capture$0);
+__attribute__((unused)) static RxCompletable_34 *new_RxCompletable_34_initWithId_(id capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$34 *new_RxCompletable_$34_initWithId_(id capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_34 *create_RxCompletable_34_initWithId_(id capture$0);
 
-__attribute__((unused)) static RxCompletable_$34 *create_RxCompletable_$34_initWithId_(id capture$0);
-
-@interface RxCompletable_$35 : NSObject < RxCompletable_OnSubscribe > {
+@interface RxCompletable_35 : NSObject < RxCompletable_OnSubscribe > {
  @public
   RxCompletable *this$0_;
   RxScheduler *val$scheduler_;
 }
 
-- (void)callWithId:(id<RxCompletableSubscriber>)s;
-
 - (instancetype)initWithRxCompletable:(RxCompletable *)outer$
                       withRxScheduler:(RxScheduler *)capture$0;
 
+- (void)callWithId:(id<RxCompletableSubscriber>)s;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$35)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_35)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$35, this$0_, RxCompletable *)
-J2OBJC_FIELD_SETTER(RxCompletable_$35, val$scheduler_, RxScheduler *)
+__attribute__((unused)) static void RxCompletable_35_initWithRxCompletable_withRxScheduler_(RxCompletable_35 *self, RxCompletable *outer$, RxScheduler *capture$0);
 
-__attribute__((unused)) static void RxCompletable_$35_initWithRxCompletable_withRxScheduler_(RxCompletable_$35 *self, RxCompletable *outer$, RxScheduler *capture$0);
+__attribute__((unused)) static RxCompletable_35 *new_RxCompletable_35_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$35 *new_RxCompletable_$35_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_35 *create_RxCompletable_35_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0);
 
-__attribute__((unused)) static RxCompletable_$35 *create_RxCompletable_$35_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0);
-
-@interface RxCompletable_$35_$1 : NSObject < RxCompletableSubscriber > {
+@interface RxCompletable_35_1 : NSObject < RxCompletableSubscriber > {
  @public
-  RxCompletable_$35 *this$0_;
+  RxCompletable_35 *this$0_;
   id<RxCompletableSubscriber> val$s_;
 }
+
+- (instancetype)initWithRxCompletable_35:(RxCompletable_35 *)outer$
+             withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0;
 
 - (void)onCompleted;
 
@@ -1500,69 +1351,57 @@ __attribute__((unused)) static RxCompletable_$35 *create_RxCompletable_$35_initW
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
-- (instancetype)initWithRxCompletable_$35:(RxCompletable_$35 *)outer$
-              withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$35_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_35_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$35_$1, this$0_, RxCompletable_$35 *)
-J2OBJC_FIELD_SETTER(RxCompletable_$35_$1, val$s_, id<RxCompletableSubscriber>)
+__attribute__((unused)) static void RxCompletable_35_1_initWithRxCompletable_35_withRxCompletableSubscriber_(RxCompletable_35_1 *self, RxCompletable_35 *outer$, id<RxCompletableSubscriber> capture$0);
 
-__attribute__((unused)) static void RxCompletable_$35_$1_initWithRxCompletable_$35_withRxCompletableSubscriber_(RxCompletable_$35_$1 *self, RxCompletable_$35 *outer$, id<RxCompletableSubscriber> capture$0);
+__attribute__((unused)) static RxCompletable_35_1 *new_RxCompletable_35_1_initWithRxCompletable_35_withRxCompletableSubscriber_(RxCompletable_35 *outer$, id<RxCompletableSubscriber> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$35_$1 *new_RxCompletable_$35_$1_initWithRxCompletable_$35_withRxCompletableSubscriber_(RxCompletable_$35 *outer$, id<RxCompletableSubscriber> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_35_1 *create_RxCompletable_35_1_initWithRxCompletable_35_withRxCompletableSubscriber_(RxCompletable_35 *outer$, id<RxCompletableSubscriber> capture$0);
 
-__attribute__((unused)) static RxCompletable_$35_$1 *create_RxCompletable_$35_$1_initWithRxCompletable_$35_withRxCompletableSubscriber_(RxCompletable_$35 *outer$, id<RxCompletableSubscriber> capture$0);
-
-@interface RxCompletable_$35_$1_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxCompletable_35_1_1 : NSObject < RxFunctionsAction0 > {
  @public
-  RxCompletable_$35_$1 *this$0_;
+  RxCompletable_35_1 *this$0_;
   id<RxSubscription> val$d_;
 }
 
-- (void)call;
+- (instancetype)initWithRxCompletable_35_1:(RxCompletable_35_1 *)outer$
+                        withRxSubscription:(id<RxSubscription>)capture$0;
 
-- (instancetype)initWithRxCompletable_$35_$1:(RxCompletable_$35_$1 *)outer$
-                          withRxSubscription:(id<RxSubscription>)capture$0;
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$35_$1_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_35_1_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$35_$1_$1, this$0_, RxCompletable_$35_$1 *)
-J2OBJC_FIELD_SETTER(RxCompletable_$35_$1_$1, val$d_, id<RxSubscription>)
+__attribute__((unused)) static void RxCompletable_35_1_1_initWithRxCompletable_35_1_withRxSubscription_(RxCompletable_35_1_1 *self, RxCompletable_35_1 *outer$, id<RxSubscription> capture$0);
 
-__attribute__((unused)) static void RxCompletable_$35_$1_$1_initWithRxCompletable_$35_$1_withRxSubscription_(RxCompletable_$35_$1_$1 *self, RxCompletable_$35_$1 *outer$, id<RxSubscription> capture$0);
+__attribute__((unused)) static RxCompletable_35_1_1 *new_RxCompletable_35_1_1_initWithRxCompletable_35_1_withRxSubscription_(RxCompletable_35_1 *outer$, id<RxSubscription> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$35_$1_$1 *new_RxCompletable_$35_$1_$1_initWithRxCompletable_$35_$1_withRxSubscription_(RxCompletable_$35_$1 *outer$, id<RxSubscription> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxCompletable_35_1_1 *create_RxCompletable_35_1_1_initWithRxCompletable_35_1_withRxSubscription_(RxCompletable_35_1 *outer$, id<RxSubscription> capture$0);
 
-__attribute__((unused)) static RxCompletable_$35_$1_$1 *create_RxCompletable_$35_$1_$1_initWithRxCompletable_$35_$1_withRxSubscription_(RxCompletable_$35_$1 *outer$, id<RxSubscription> capture$0);
-
-@interface RxCompletable_$35_$1_$1_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxCompletable_35_1_1_1 : NSObject < RxFunctionsAction0 > {
  @public
-  RxCompletable_$35_$1_$1 *this$0_;
+  RxCompletable_35_1_1 *this$0_;
   RxScheduler_Worker *val$w_;
 }
 
-- (void)call;
+- (instancetype)initWithRxCompletable_35_1_1:(RxCompletable_35_1_1 *)outer$
+                      withRxScheduler_Worker:(RxScheduler_Worker *)capture$0;
 
-- (instancetype)initWithRxCompletable_$35_$1_$1:(RxCompletable_$35_$1_$1 *)outer$
-                         withRxScheduler_Worker:(RxScheduler_Worker *)capture$0;
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxCompletable_$35_$1_$1_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxCompletable_35_1_1_1)
 
-J2OBJC_FIELD_SETTER(RxCompletable_$35_$1_$1_$1, this$0_, RxCompletable_$35_$1_$1 *)
-J2OBJC_FIELD_SETTER(RxCompletable_$35_$1_$1_$1, val$w_, RxScheduler_Worker *)
+__attribute__((unused)) static void RxCompletable_35_1_1_1_initWithRxCompletable_35_1_1_withRxScheduler_Worker_(RxCompletable_35_1_1_1 *self, RxCompletable_35_1_1 *outer$, RxScheduler_Worker *capture$0);
 
-__attribute__((unused)) static void RxCompletable_$35_$1_$1_$1_initWithRxCompletable_$35_$1_$1_withRxScheduler_Worker_(RxCompletable_$35_$1_$1_$1 *self, RxCompletable_$35_$1_$1 *outer$, RxScheduler_Worker *capture$0);
+__attribute__((unused)) static RxCompletable_35_1_1_1 *new_RxCompletable_35_1_1_1_initWithRxCompletable_35_1_1_withRxScheduler_Worker_(RxCompletable_35_1_1 *outer$, RxScheduler_Worker *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxCompletable_$35_$1_$1_$1 *new_RxCompletable_$35_$1_$1_$1_initWithRxCompletable_$35_$1_$1_withRxScheduler_Worker_(RxCompletable_$35_$1_$1 *outer$, RxScheduler_Worker *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxCompletable_$35_$1_$1_$1 *create_RxCompletable_$35_$1_$1_$1_initWithRxCompletable_$35_$1_$1_withRxScheduler_Worker_(RxCompletable_$35_$1_$1 *outer$, RxScheduler_Worker *capture$0);
+__attribute__((unused)) static RxCompletable_35_1_1_1 *create_RxCompletable_35_1_1_1_initWithRxCompletable_35_1_1_withRxScheduler_Worker_(RxCompletable_35_1_1 *outer$, RxScheduler_Worker *capture$0);
 
 J2OBJC_INITIALIZED_DEFN(RxCompletable)
 
@@ -1735,7 +1574,7 @@ RxCompletable *RxCompletable_NEVER;
 - (void)await {
   JavaUtilConcurrentCountDownLatch *cdl = create_JavaUtilConcurrentCountDownLatch_initWithInt_(1);
   IOSObjectArray *err = [IOSObjectArray arrayWithLength:1 type:NSException_class_()];
-  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(self, create_RxCompletable_$14_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(cdl, err));
+  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(self, create_RxCompletable_14_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(cdl, err));
   if ([cdl getCount] == 0) {
     if (IOSObjectArray_Get(err, 0) != nil) {
       RxExceptionsExceptions_propagateWithNSException_(IOSObjectArray_Get(err, 0));
@@ -1758,7 +1597,7 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit {
   RxCompletable_requireNonNullWithId_(unit);
   JavaUtilConcurrentCountDownLatch *cdl = create_JavaUtilConcurrentCountDownLatch_initWithInt_(1);
   IOSObjectArray *err = [IOSObjectArray arrayWithLength:1 type:NSException_class_()];
-  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(self, create_RxCompletable_$15_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(cdl, err));
+  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(self, create_RxCompletable_15_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(cdl, err));
   if ([cdl getCount] == 0) {
     if (IOSObjectArray_Get(err, 0) != nil) {
       RxExceptionsExceptions_propagateWithNSException_(IOSObjectArray_Get(err, 0));
@@ -1828,7 +1667,7 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit {
   if (onNotification == nil) {
     @throw create_JavaLangIllegalArgumentException_initWithNSString_(@"onNotification is null");
   }
-  return RxCompletable_doOnLifecycleWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction0_(self, RxFunctionsActions_empty(), create_RxCompletable_$17_initWithRxFunctionsAction1_(onNotification), create_RxCompletable_$18_initWithRxFunctionsAction1_(onNotification), RxFunctionsActions_empty(), RxFunctionsActions_empty());
+  return RxCompletable_doOnLifecycleWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction0_(self, RxFunctionsActions_empty(), create_RxCompletable_17_initWithRxFunctionsAction1_(onNotification), create_RxCompletable_18_initWithRxFunctionsAction1_(onNotification), RxFunctionsActions_empty(), RxFunctionsActions_empty());
 }
 
 - (RxCompletable *)doOnUnsubscribeWithRxFunctionsAction0:(id<RxFunctionsAction0>)onUnsubscribe {
@@ -1852,7 +1691,7 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit {
 }
 
 - (RxCompletable *)doOnTerminateWithRxFunctionsAction0:(id<RxFunctionsAction0>)onTerminate {
-  return RxCompletable_doOnLifecycleWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction0_(self, RxFunctionsActions_empty(), create_RxCompletable_$20_initWithRxFunctionsAction0_(onTerminate), onTerminate, RxFunctionsActions_empty(), RxFunctionsActions_empty());
+  return RxCompletable_doOnLifecycleWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction0_(self, RxFunctionsActions_empty(), create_RxCompletable_20_initWithRxFunctionsAction0_(onTerminate), onTerminate, RxFunctionsActions_empty(), RxFunctionsActions_empty());
 }
 
 - (RxCompletable *)doAfterTerminateWithRxFunctionsAction0:(id<RxFunctionsAction0>)onAfterComplete {
@@ -1862,7 +1701,7 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit {
 - (NSException *)get {
   JavaUtilConcurrentCountDownLatch *cdl = create_JavaUtilConcurrentCountDownLatch_initWithInt_(1);
   IOSObjectArray *err = [IOSObjectArray arrayWithLength:1 type:NSException_class_()];
-  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(self, create_RxCompletable_$21_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(cdl, err));
+  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(self, create_RxCompletable_21_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(cdl, err));
   if ([cdl getCount] == 0) {
     return IOSObjectArray_Get(err, 0);
   }
@@ -1880,7 +1719,7 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit {
   RxCompletable_requireNonNullWithId_(unit);
   JavaUtilConcurrentCountDownLatch *cdl = create_JavaUtilConcurrentCountDownLatch_initWithInt_(1);
   IOSObjectArray *err = [IOSObjectArray arrayWithLength:1 type:NSException_class_()];
-  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(self, create_RxCompletable_$22_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(cdl, err));
+  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(self, create_RxCompletable_22_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(cdl, err));
   if ([cdl getCount] == 0) {
     return IOSObjectArray_Get(err, 0);
   }
@@ -1900,7 +1739,7 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit {
 
 - (RxCompletable *)liftWithRxCompletable_Operator:(id<RxCompletable_Operator>)onLift {
   RxCompletable_requireNonNullWithId_(onLift);
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_$23_initWithRxCompletable_withRxCompletable_Operator_(self, onLift));
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_23_initWithRxCompletable_withRxCompletable_Operator_(self, onLift));
 }
 
 - (RxCompletable *)mergeWithWithRxCompletable:(RxCompletable *)other {
@@ -1910,7 +1749,7 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit {
 
 - (RxCompletable *)observeOnWithRxScheduler:(RxScheduler *)scheduler {
   RxCompletable_requireNonNullWithId_(scheduler);
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_$24_initWithRxCompletable_withRxScheduler_(self, scheduler));
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_24_initWithRxCompletable_withRxScheduler_(self, scheduler));
 }
 
 - (RxCompletable *)onErrorComplete {
@@ -1923,7 +1762,7 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit {
 
 - (RxCompletable *)onErrorResumeNextWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)errorMapper {
   RxCompletable_requireNonNullWithId_(errorMapper);
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_$26_initWithRxCompletable_withRxFunctionsFunc1_(self, errorMapper));
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_26_initWithRxCompletable_withRxFunctionsFunc1_(self, errorMapper));
 }
 
 - (RxCompletable *)repeat {
@@ -1967,14 +1806,14 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit {
 
 - (id<RxSubscription>)subscribe {
   RxSubscriptionsMultipleAssignmentSubscription *mad = create_RxSubscriptionsMultipleAssignmentSubscription_init();
-  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(self, create_RxCompletable_$27_initWithRxSubscriptionsMultipleAssignmentSubscription_(mad));
+  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(self, create_RxCompletable_27_initWithRxSubscriptionsMultipleAssignmentSubscription_(mad));
   return mad;
 }
 
 - (id<RxSubscription>)subscribeWithRxFunctionsAction0:(id<RxFunctionsAction0>)onComplete {
   RxCompletable_requireNonNullWithId_(onComplete);
   RxSubscriptionsMultipleAssignmentSubscription *mad = create_RxSubscriptionsMultipleAssignmentSubscription_init();
-  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(self, create_RxCompletable_$28_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_(onComplete, mad));
+  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(self, create_RxCompletable_28_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_(onComplete, mad));
   return mad;
 }
 
@@ -1983,7 +1822,7 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit {
   RxCompletable_requireNonNullWithId_(onComplete);
   RxCompletable_requireNonNullWithId_(onError);
   RxSubscriptionsMultipleAssignmentSubscription *mad = create_RxSubscriptionsMultipleAssignmentSubscription_init();
-  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(self, create_RxCompletable_$29_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_(onComplete, mad, onError));
+  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(self, create_RxCompletable_29_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_(onComplete, mad, onError));
   return mad;
 }
 
@@ -2021,7 +1860,7 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit {
 
 - (RxCompletable *)subscribeOnWithRxScheduler:(RxScheduler *)scheduler {
   RxCompletable_requireNonNullWithId_(scheduler);
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_$31_initWithRxCompletable_withRxScheduler_(self, scheduler));
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_31_initWithRxCompletable_withRxScheduler_(self, scheduler));
 }
 
 - (RxCompletable *)timeoutWithLong:(jlong)timeout
@@ -2071,12 +1910,12 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit {
 
 - (RxSingle *)toSingleDefaultWithId:(id)completionValue {
   RxCompletable_requireNonNullWithId_(completionValue);
-  return RxCompletable_toSingleWithRxFunctionsFunc0_(self, create_RxCompletable_$34_initWithId_(completionValue));
+  return RxCompletable_toSingleWithRxFunctionsFunc0_(self, create_RxCompletable_34_initWithId_(completionValue));
 }
 
 - (RxCompletable *)unsubscribeOnWithRxScheduler:(RxScheduler *)scheduler {
   RxCompletable_requireNonNullWithId_(scheduler);
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_$35_initWithRxCompletable_withRxScheduler_(self, scheduler));
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_35_initWithRxCompletable_withRxScheduler_(self, scheduler));
 }
 
 - (void)dealloc {
@@ -2277,15 +2116,15 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit {
     { "COMPLETE", "LRxCompletable;", .constantValue.asLong = 0, 0x18, -1, 119, -1, -1 },
     { "NEVER", "LRxCompletable;", .constantValue.asLong = 0, 0x18, -1, 120, -1, -1 },
   };
-  static const void *ptrTable[] = { "amb", "[LRxCompletable;", "LJavaLangIterable;", "(Ljava/lang/Iterable<+Lrx/Completable;>;)Lrx/Completable;", "concat", "LRxObservable;", "(Lrx/Observable<+Lrx/Completable;>;)Lrx/Completable;", "LRxObservable;I", "(Lrx/Observable<+Lrx/Completable;>;I)Lrx/Completable;", "create", "LRxCompletable_OnSubscribe;", "defer", "LRxFunctionsFunc0;", "(Lrx/functions/Func0<+Lrx/Completable;>;)Lrx/Completable;", "error", "(Lrx/functions/Func0<+Ljava/lang/Throwable;>;)Lrx/Completable;", "LNSException;", "fromAction", "LRxFunctionsAction0;", "fromCallable", "LJavaUtilConcurrentCallable;", "(Ljava/util/concurrent/Callable<*>;)Lrx/Completable;", "fromEmitter", "LRxFunctionsAction1;", "(Lrx/functions/Action1<Lrx/CompletableEmitter;>;)Lrx/Completable;", "fromFuture", "LJavaUtilConcurrentFuture;", "(Ljava/util/concurrent/Future<*>;)Lrx/Completable;", "fromObservable", "(Lrx/Observable<*>;)Lrx/Completable;", "fromSingle", "LRxSingle;", "(Lrx/Single<*>;)Lrx/Completable;", "merge", "merge0", "LRxObservable;IZ", "(Lrx/Observable<+Lrx/Completable;>;IZ)Lrx/Completable;", "mergeDelayError", "requireNonNull", "LNSObject;", "<T:Ljava/lang/Object;>(TT;)TT;", "timer", "JLJavaUtilConcurrentTimeUnit;", "JLJavaUtilConcurrentTimeUnit;LRxScheduler;", "toNpe", "using", "LRxFunctionsFunc0;LRxFunctionsFunc1;LRxFunctionsAction1;", "<R:Ljava/lang/Object;>(Lrx/functions/Func0<TR;>;Lrx/functions/Func1<-TR;+Lrx/Completable;>;Lrx/functions/Action1<-TR;>;)Lrx/Completable;", "LRxFunctionsFunc0;LRxFunctionsFunc1;LRxFunctionsAction1;Z", "<R:Ljava/lang/Object;>(Lrx/functions/Func0<TR;>;Lrx/functions/Func1<-TR;+Lrx/Completable;>;Lrx/functions/Action1<-TR;>;Z)Lrx/Completable;", "LRxCompletable_OnSubscribe;Z", "ambWith", "LRxCompletable;", "await", "compose", "LRxCompletable_Transformer;", "andThen", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;)Lrx/Observable<TT;>;", "<T:Ljava/lang/Object;>(Lrx/Single<TT;>;)Lrx/Single<TT;>;", "concatWith", "delay", "JLJavaUtilConcurrentTimeUnit;LRxScheduler;Z", "doOnCompleted", "doOnEach", "(Lrx/functions/Action1<Lrx/Notification<Ljava/lang/Object;>;>;)Lrx/Completable;", "doOnUnsubscribe", "doOnError", "(Lrx/functions/Action1<-Ljava/lang/Throwable;>;)Lrx/Completable;", "doOnLifecycle", "LRxFunctionsAction1;LRxFunctionsAction1;LRxFunctionsAction0;LRxFunctionsAction0;LRxFunctionsAction0;", "(Lrx/functions/Action1<-Lrx/Subscription;>;Lrx/functions/Action1<-Ljava/lang/Throwable;>;Lrx/functions/Action0;Lrx/functions/Action0;Lrx/functions/Action0;)Lrx/Completable;", "doOnSubscribe", "(Lrx/functions/Action1<-Lrx/Subscription;>;)Lrx/Completable;", "doOnTerminate", "doAfterTerminate", "get", "lift", "LRxCompletable_Operator;", "mergeWith", "observeOn", "LRxScheduler;", "onErrorComplete", "LRxFunctionsFunc1;", "(Lrx/functions/Func1<-Ljava/lang/Throwable;Ljava/lang/Boolean;>;)Lrx/Completable;", "onErrorResumeNext", "(Lrx/functions/Func1<-Ljava/lang/Throwable;+Lrx/Completable;>;)Lrx/Completable;", "repeat", "J", "repeatWhen", "(Lrx/functions/Func1<+Lrx/Observable<+Ljava/lang/Void;>;+Lrx/Observable<*>;>;)Lrx/Completable;", "retry", "LRxFunctionsFunc2;", "(Lrx/functions/Func2<Ljava/lang/Integer;Ljava/lang/Throwable;Ljava/lang/Boolean;>;)Lrx/Completable;", "retryWhen", "(Lrx/functions/Func1<+Lrx/Observable<+Ljava/lang/Throwable;>;+Lrx/Observable<*>;>;)Lrx/Completable;", "startWith", "subscribe", "LRxFunctionsAction0;LRxFunctionsAction1;", "(Lrx/functions/Action0;Lrx/functions/Action1<-Ljava/lang/Throwable;>;)Lrx/Subscription;", "deliverUncaughtException", "unsafeSubscribe", "LRxCompletableSubscriber;", "LRxSubscriber;", "<T:Ljava/lang/Object;>(Lrx/Subscriber<TT;>;)V", "LRxSubscriber;Z", "<T:Ljava/lang/Object;>(Lrx/Subscriber<TT;>;Z)V", "subscribeOn", "timeout", "JLJavaUtilConcurrentTimeUnit;LRxCompletable;", "JLJavaUtilConcurrentTimeUnit;LRxScheduler;LRxCompletable;", "timeout0", "to", "<R:Ljava/lang/Object;>(Lrx/functions/Func1<-Lrx/Completable;TR;>;)TR;", "<T:Ljava/lang/Object;>()Lrx/Observable<TT;>;", "toSingle", "<T:Ljava/lang/Object;>(Lrx/functions/Func0<+TT;>;)Lrx/Single<TT;>;", "toSingleDefault", "<T:Ljava/lang/Object;>(TT;)Lrx/Single<TT;>;", "unsubscribeOn", &RxCompletable_COMPLETE, &RxCompletable_NEVER, "LRxCompletable_OnSubscribe;LRxCompletable_Operator;LRxCompletable_Transformer;" };
+  static const void *ptrTable[] = { "amb", "[LRxCompletable;", "LJavaLangIterable;", "(Ljava/lang/Iterable<+Lrx/Completable;>;)Lrx/Completable;", "concat", "LRxObservable;", "(Lrx/Observable<+Lrx/Completable;>;)Lrx/Completable;", "LRxObservable;I", "(Lrx/Observable<+Lrx/Completable;>;I)Lrx/Completable;", "create", "LRxCompletable_OnSubscribe;", "defer", "LRxFunctionsFunc0;", "(Lrx/functions/Func0<+Lrx/Completable;>;)Lrx/Completable;", "error", "(Lrx/functions/Func0<+Ljava/lang/Throwable;>;)Lrx/Completable;", "LNSException;", "fromAction", "LRxFunctionsAction0;", "fromCallable", "LJavaUtilConcurrentCallable;", "(Ljava/util/concurrent/Callable<*>;)Lrx/Completable;", "fromEmitter", "LRxFunctionsAction1;", "(Lrx/functions/Action1<Lrx/CompletableEmitter;>;)Lrx/Completable;", "fromFuture", "LJavaUtilConcurrentFuture;", "(Ljava/util/concurrent/Future<*>;)Lrx/Completable;", "fromObservable", "(Lrx/Observable<*>;)Lrx/Completable;", "fromSingle", "LRxSingle;", "(Lrx/Single<*>;)Lrx/Completable;", "merge", "merge0", "LRxObservable;IZ", "(Lrx/Observable<+Lrx/Completable;>;IZ)Lrx/Completable;", "mergeDelayError", "requireNonNull", "LNSObject;", "<T:Ljava/lang/Object;>(TT;)TT;", "timer", "JLJavaUtilConcurrentTimeUnit;", "JLJavaUtilConcurrentTimeUnit;LRxScheduler;", "toNpe", "using", "LRxFunctionsFunc0;LRxFunctionsFunc1;LRxFunctionsAction1;", "<R:Ljava/lang/Object;>(Lrx/functions/Func0<TR;>;Lrx/functions/Func1<-TR;+Lrx/Completable;>;Lrx/functions/Action1<-TR;>;)Lrx/Completable;", "LRxFunctionsFunc0;LRxFunctionsFunc1;LRxFunctionsAction1;Z", "<R:Ljava/lang/Object;>(Lrx/functions/Func0<TR;>;Lrx/functions/Func1<-TR;+Lrx/Completable;>;Lrx/functions/Action1<-TR;>;Z)Lrx/Completable;", "LRxCompletable_OnSubscribe;Z", "ambWith", "LRxCompletable;", "await", "compose", "LRxCompletable_Transformer;", "andThen", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;)Lrx/Observable<TT;>;", "<T:Ljava/lang/Object;>(Lrx/Single<TT;>;)Lrx/Single<TT;>;", "concatWith", "delay", "JLJavaUtilConcurrentTimeUnit;LRxScheduler;Z", "doOnCompleted", "doOnEach", "(Lrx/functions/Action1<Lrx/Notification<Ljava/lang/Object;>;>;)Lrx/Completable;", "doOnUnsubscribe", "doOnError", "(Lrx/functions/Action1<-Ljava/lang/Throwable;>;)Lrx/Completable;", "doOnLifecycle", "LRxFunctionsAction1;LRxFunctionsAction1;LRxFunctionsAction0;LRxFunctionsAction0;LRxFunctionsAction0;", "(Lrx/functions/Action1<-Lrx/Subscription;>;Lrx/functions/Action1<-Ljava/lang/Throwable;>;Lrx/functions/Action0;Lrx/functions/Action0;Lrx/functions/Action0;)Lrx/Completable;", "doOnSubscribe", "(Lrx/functions/Action1<-Lrx/Subscription;>;)Lrx/Completable;", "doOnTerminate", "doAfterTerminate", "get", "lift", "LRxCompletable_Operator;", "mergeWith", "observeOn", "LRxScheduler;", "onErrorComplete", "LRxFunctionsFunc1;", "(Lrx/functions/Func1<-Ljava/lang/Throwable;Ljava/lang/Boolean;>;)Lrx/Completable;", "onErrorResumeNext", "(Lrx/functions/Func1<-Ljava/lang/Throwable;+Lrx/Completable;>;)Lrx/Completable;", "repeat", "J", "repeatWhen", "(Lrx/functions/Func1<-Lrx/Observable<+Ljava/lang/Void;>;+Lrx/Observable<*>;>;)Lrx/Completable;", "retry", "LRxFunctionsFunc2;", "(Lrx/functions/Func2<Ljava/lang/Integer;Ljava/lang/Throwable;Ljava/lang/Boolean;>;)Lrx/Completable;", "retryWhen", "(Lrx/functions/Func1<-Lrx/Observable<+Ljava/lang/Throwable;>;+Lrx/Observable<*>;>;)Lrx/Completable;", "startWith", "subscribe", "LRxFunctionsAction0;LRxFunctionsAction1;", "(Lrx/functions/Action0;Lrx/functions/Action1<-Ljava/lang/Throwable;>;)Lrx/Subscription;", "deliverUncaughtException", "unsafeSubscribe", "LRxCompletableSubscriber;", "LRxSubscriber;", "<T:Ljava/lang/Object;>(Lrx/Subscriber<TT;>;)V", "LRxSubscriber;Z", "<T:Ljava/lang/Object;>(Lrx/Subscriber<TT;>;Z)V", "subscribeOn", "timeout", "JLJavaUtilConcurrentTimeUnit;LRxCompletable;", "JLJavaUtilConcurrentTimeUnit;LRxScheduler;LRxCompletable;", "timeout0", "to", "<R:Ljava/lang/Object;>(Lrx/functions/Func1<-Lrx/Completable;TR;>;)TR;", "<T:Ljava/lang/Object;>()Lrx/Observable<TT;>;", "toSingle", "<T:Ljava/lang/Object;>(Lrx/functions/Func0<+TT;>;)Lrx/Single<TT;>;", "toSingleDefault", "<T:Ljava/lang/Object;>(TT;)Lrx/Single<TT;>;", "unsubscribeOn", &RxCompletable_COMPLETE, &RxCompletable_NEVER, "LRxCompletable_OnSubscribe;LRxCompletable_Operator;LRxCompletable_Transformer;" };
   static const J2ObjcClassInfo _RxCompletable = { "Completable", "rx", ptrTable, methods, fields, 7, 0x1, 91, 3, -1, 121, -1, -1, -1 };
   return &_RxCompletable;
 }
 
 + (void)initialize {
   if (self == [RxCompletable class]) {
-    JreStrongAssignAndConsume(&RxCompletable_COMPLETE, new_RxCompletable_initWithRxCompletable_OnSubscribe_withBoolean_(create_RxCompletable_$1_init(), false));
-    JreStrongAssignAndConsume(&RxCompletable_NEVER, new_RxCompletable_initWithRxCompletable_OnSubscribe_withBoolean_(create_RxCompletable_$2_init(), false));
+    JreStrongAssignAndConsume(&RxCompletable_COMPLETE, new_RxCompletable_initWithRxCompletable_OnSubscribe_withBoolean_(create_RxCompletable_1_init(), false));
+    JreStrongAssignAndConsume(&RxCompletable_NEVER, new_RxCompletable_initWithRxCompletable_OnSubscribe_withBoolean_(create_RxCompletable_2_init(), false));
     J2OBJC_SET_INITIALIZED(RxCompletable)
   }
 }
@@ -2301,13 +2140,13 @@ RxCompletable *RxCompletable_ambWithRxCompletableArray_(IOSObjectArray *sources)
   if (sources->size_ == 1) {
     return IOSObjectArray_Get(sources, 0);
   }
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_$3_initWithRxCompletableArray_(sources));
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_3_initWithRxCompletableArray_(sources));
 }
 
 RxCompletable *RxCompletable_ambWithJavaLangIterable_(id<JavaLangIterable> sources) {
   RxCompletable_initialize();
   RxCompletable_requireNonNullWithId_(sources);
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_$4_initWithJavaLangIterable_(sources));
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_4_initWithJavaLangIterable_(sources));
 }
 
 RxCompletable *RxCompletable_complete() {
@@ -2369,31 +2208,31 @@ RxCompletable *RxCompletable_createWithRxCompletable_OnSubscribe_(id<RxCompletab
 RxCompletable *RxCompletable_deferWithRxFunctionsFunc0_(id<RxFunctionsFunc0> completableFunc0) {
   RxCompletable_initialize();
   RxCompletable_requireNonNullWithId_(completableFunc0);
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_$5_initWithRxFunctionsFunc0_(completableFunc0));
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_5_initWithRxFunctionsFunc0_(completableFunc0));
 }
 
 RxCompletable *RxCompletable_errorWithRxFunctionsFunc0_(id<RxFunctionsFunc0> errorFunc0) {
   RxCompletable_initialize();
   RxCompletable_requireNonNullWithId_(errorFunc0);
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_$6_initWithRxFunctionsFunc0_(errorFunc0));
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_6_initWithRxFunctionsFunc0_(errorFunc0));
 }
 
 RxCompletable *RxCompletable_errorWithNSException_(NSException *error) {
   RxCompletable_initialize();
   RxCompletable_requireNonNullWithId_(error);
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_$7_initWithNSException_(error));
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_7_initWithNSException_(error));
 }
 
 RxCompletable *RxCompletable_fromActionWithRxFunctionsAction0_(id<RxFunctionsAction0> action) {
   RxCompletable_initialize();
   RxCompletable_requireNonNullWithId_(action);
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_$8_initWithRxFunctionsAction0_(action));
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_8_initWithRxFunctionsAction0_(action));
 }
 
 RxCompletable *RxCompletable_fromCallableWithJavaUtilConcurrentCallable_(id<JavaUtilConcurrentCallable> callable) {
   RxCompletable_initialize();
   RxCompletable_requireNonNullWithId_(callable);
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_$9_initWithJavaUtilConcurrentCallable_(callable));
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_9_initWithJavaUtilConcurrentCallable_(callable));
 }
 
 RxCompletable *RxCompletable_fromEmitterWithRxFunctionsAction1_(id<RxFunctionsAction1> producer) {
@@ -2410,13 +2249,13 @@ RxCompletable *RxCompletable_fromFutureWithJavaUtilConcurrentFuture_(id<JavaUtil
 RxCompletable *RxCompletable_fromObservableWithRxObservable_(RxObservable *flowable) {
   RxCompletable_initialize();
   RxCompletable_requireNonNullWithId_(flowable);
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_$10_initWithRxObservable_(flowable));
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_10_initWithRxObservable_(flowable));
 }
 
 RxCompletable *RxCompletable_fromSingleWithRxSingle_(RxSingle *single) {
   RxCompletable_initialize();
   RxCompletable_requireNonNullWithId_(single);
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_$11_initWithRxSingle_(single));
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_11_initWithRxSingle_(single));
 }
 
 RxCompletable *RxCompletable_mergeWithRxCompletableArray_(IOSObjectArray *sources) {
@@ -2504,7 +2343,7 @@ RxCompletable *RxCompletable_timerWithLong_withJavaUtilConcurrentTimeUnit_withRx
   RxCompletable_initialize();
   RxCompletable_requireNonNullWithId_(unit);
   RxCompletable_requireNonNullWithId_(scheduler);
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_$12_initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_(scheduler, delay, unit));
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_12_initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_(scheduler, delay, unit));
 }
 
 JavaLangNullPointerException *RxCompletable_toNpeWithNSException_(NSException *ex) {
@@ -2524,7 +2363,7 @@ RxCompletable *RxCompletable_using__WithRxFunctionsFunc0_withRxFunctionsFunc1_wi
   RxCompletable_requireNonNullWithId_(resourceFunc0);
   RxCompletable_requireNonNullWithId_(completableFunc1);
   RxCompletable_requireNonNullWithId_(disposer);
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_$13_initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_(resourceFunc0, completableFunc1, disposer, eager));
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_13_initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_(resourceFunc0, completableFunc1, disposer, eager));
 }
 
 void RxCompletable_initWithRxCompletable_OnSubscribe_(RxCompletable *self, id<RxCompletable_OnSubscribe> onSubscribe) {
@@ -2561,7 +2400,7 @@ RxCompletable *RxCompletable_concatWithWithRxCompletable_(RxCompletable *self, R
 RxCompletable *RxCompletable_delayWithLong_withJavaUtilConcurrentTimeUnit_withRxScheduler_withBoolean_(RxCompletable *self, jlong delay, JavaUtilConcurrentTimeUnit *unit, RxScheduler *scheduler, jboolean delayError) {
   RxCompletable_requireNonNullWithId_(unit);
   RxCompletable_requireNonNullWithId_(scheduler);
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_$16_initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_(self, scheduler, delay, unit, delayError));
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_16_initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_(self, scheduler, delay, unit, delayError));
 }
 
 RxCompletable *RxCompletable_doOnLifecycleWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction0_(RxCompletable *self, id<RxFunctionsAction1> onSubscribe, id<RxFunctionsAction1> onError, id<RxFunctionsAction0> onComplete, id<RxFunctionsAction0> onAfterComplete, id<RxFunctionsAction0> onUnsubscribe) {
@@ -2570,12 +2409,12 @@ RxCompletable *RxCompletable_doOnLifecycleWithRxFunctionsAction1_withRxFunctions
   RxCompletable_requireNonNullWithId_(onComplete);
   RxCompletable_requireNonNullWithId_(onAfterComplete);
   RxCompletable_requireNonNullWithId_(onUnsubscribe);
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_$19_initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(self, onComplete, onAfterComplete, onError, onSubscribe, onUnsubscribe));
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_19_initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(self, onComplete, onAfterComplete, onError, onSubscribe, onUnsubscribe));
 }
 
 RxCompletable *RxCompletable_onErrorCompleteWithRxFunctionsFunc1_(RxCompletable *self, id<RxFunctionsFunc1> predicate) {
   RxCompletable_requireNonNullWithId_(predicate);
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_$25_initWithRxCompletable_withRxFunctionsFunc1_(self, predicate));
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxCompletable_25_initWithRxCompletable_withRxFunctionsFunc1_(self, predicate));
 }
 
 void RxCompletable_deliverUncaughtExceptionWithNSException_(NSException *e) {
@@ -2611,7 +2450,7 @@ void RxCompletable_unsafeSubscribeWithRxSubscriber_withBoolean_(RxCompletable *s
     if (callOnStart) {
       [((RxSubscriber *) nil_chk(s)) onStart];
     }
-    RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(self, create_RxCompletable_$30_initWithRxSubscriber_(s));
+    RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(self, create_RxCompletable_30_initWithRxSubscriber_(s));
     RxPluginsRxJavaHooks_onObservableReturnWithRxSubscription_(s);
   }
   @catch (JavaLangNullPointerException *ex) {
@@ -2636,12 +2475,12 @@ id RxCompletable_toWithRxFunctionsFunc1_(RxCompletable *self, id<RxFunctionsFunc
 }
 
 RxObservable *RxCompletable_toObservable(RxCompletable *self) {
-  return RxObservable_createWithRxObservable_OnSubscribe_(create_RxCompletable_$32_initWithRxCompletable_(self));
+  return RxObservable_createWithRxObservable_OnSubscribe_(create_RxCompletable_32_initWithRxCompletable_(self));
 }
 
 RxSingle *RxCompletable_toSingleWithRxFunctionsFunc0_(RxCompletable *self, id<RxFunctionsFunc0> completionValueFunc0) {
   RxCompletable_requireNonNullWithId_(completionValueFunc0);
-  return RxSingle_createWithRxSingle_OnSubscribe_(create_RxCompletable_$33_initWithRxCompletable_withRxFunctionsFunc0_(self, completionValueFunc0));
+  return RxSingle_createWithRxSingle_OnSubscribe_(create_RxCompletable_33_initWithRxCompletable_withRxFunctionsFunc0_(self, completionValueFunc0));
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxCompletable)
@@ -2682,98 +2521,103 @@ J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(RxCompletable_Operator)
 
 J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(RxCompletable_Transformer)
 
-@implementation RxCompletable_$1
+@implementation RxCompletable_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxCompletable_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)callWithId:(id<RxCompletableSubscriber>)s {
   [((id<RxCompletableSubscriber>) nil_chk(s)) onSubscribeWithRxSubscription:RxSubscriptionsSubscriptions_unsubscribed()];
   [s onCompleted];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxCompletable_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxCompletable;" };
-  static const J2ObjcClassInfo _RxCompletable_$1 = { "", "rx", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, -1, -1, -1 };
-  return &_RxCompletable_$1;
+  static const J2ObjcClassInfo _RxCompletable_1 = { "", "rx", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, -1, -1, -1 };
+  return &_RxCompletable_1;
 }
 
 @end
 
-void RxCompletable_$1_init(RxCompletable_$1 *self) {
+void RxCompletable_1_init(RxCompletable_1 *self) {
   NSObject_init(self);
 }
 
-RxCompletable_$1 *new_RxCompletable_$1_init() {
-  J2OBJC_NEW_IMPL(RxCompletable_$1, init)
+RxCompletable_1 *new_RxCompletable_1_init() {
+  J2OBJC_NEW_IMPL(RxCompletable_1, init)
 }
 
-RxCompletable_$1 *create_RxCompletable_$1_init() {
-  J2OBJC_CREATE_IMPL(RxCompletable_$1, init)
+RxCompletable_1 *create_RxCompletable_1_init() {
+  J2OBJC_CREATE_IMPL(RxCompletable_1, init)
 }
 
-@implementation RxCompletable_$2
+@implementation RxCompletable_2
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxCompletable_2_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)callWithId:(id<RxCompletableSubscriber>)s {
   [((id<RxCompletableSubscriber>) nil_chk(s)) onSubscribeWithRxSubscription:RxSubscriptionsSubscriptions_unsubscribed()];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxCompletable_$2_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxCompletable;" };
-  static const J2ObjcClassInfo _RxCompletable_$2 = { "", "rx", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, -1, -1, -1 };
-  return &_RxCompletable_$2;
+  static const J2ObjcClassInfo _RxCompletable_2 = { "", "rx", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, -1, -1, -1 };
+  return &_RxCompletable_2;
 }
 
 @end
 
-void RxCompletable_$2_init(RxCompletable_$2 *self) {
+void RxCompletable_2_init(RxCompletable_2 *self) {
   NSObject_init(self);
 }
 
-RxCompletable_$2 *new_RxCompletable_$2_init() {
-  J2OBJC_NEW_IMPL(RxCompletable_$2, init)
+RxCompletable_2 *new_RxCompletable_2_init() {
+  J2OBJC_NEW_IMPL(RxCompletable_2, init)
 }
 
-RxCompletable_$2 *create_RxCompletable_$2_init() {
-  J2OBJC_CREATE_IMPL(RxCompletable_$2, init)
+RxCompletable_2 *create_RxCompletable_2_init() {
+  J2OBJC_CREATE_IMPL(RxCompletable_2, init)
 }
 
-@implementation RxCompletable_$3
+@implementation RxCompletable_3
+
+- (instancetype)initWithRxCompletableArray:(IOSObjectArray *)capture$0 {
+  RxCompletable_3_initWithRxCompletableArray_(self, capture$0);
+  return self;
+}
 
 - (void)callWithId:(id<RxCompletableSubscriber>)s {
   RxSubscriptionsCompositeSubscription *set = create_RxSubscriptionsCompositeSubscription_init();
   [((id<RxCompletableSubscriber>) nil_chk(s)) onSubscribeWithRxSubscription:set];
   JavaUtilConcurrentAtomicAtomicBoolean *once = create_JavaUtilConcurrentAtomicAtomicBoolean_init();
-  id<RxCompletableSubscriber> inner = create_RxCompletable_$3_$1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(once, set, s);
+  id<RxCompletableSubscriber> inner = create_RxCompletable_3_1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(once, set, s);
   {
     IOSObjectArray *a__ = val$sources_;
     RxCompletable * const *b__ = ((IOSObjectArray *) nil_chk(a__))->buffer_;
@@ -2802,11 +2646,6 @@ RxCompletable_$2 *create_RxCompletable_$2_init() {
   }
 }
 
-- (instancetype)initWithRxCompletableArray:(IOSObjectArray *)capture$0 {
-  RxCompletable_$3_initWithRxCompletableArray_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$sources_);
   [super dealloc];
@@ -2814,38 +2653,45 @@ RxCompletable_$2 *create_RxCompletable_$2_init() {
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxCompletableArray:);
+  methods[0].selector = @selector(initWithRxCompletableArray:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$sources_", "[LRxCompletable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "[LRxCompletable;", "LRxCompletable;", "ambWithRxCompletableArray:" };
-  static const J2ObjcClassInfo _RxCompletable_$3 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
-  return &_RxCompletable_$3;
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxCompletable;", "ambWithRxCompletableArray:" };
+  static const J2ObjcClassInfo _RxCompletable_3 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, -1, -1 };
+  return &_RxCompletable_3;
 }
 
 @end
 
-void RxCompletable_$3_initWithRxCompletableArray_(RxCompletable_$3 *self, IOSObjectArray *capture$0) {
+void RxCompletable_3_initWithRxCompletableArray_(RxCompletable_3 *self, IOSObjectArray *capture$0) {
   JreStrongAssign(&self->val$sources_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$3 *new_RxCompletable_$3_initWithRxCompletableArray_(IOSObjectArray *capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$3, initWithRxCompletableArray_, capture$0)
+RxCompletable_3 *new_RxCompletable_3_initWithRxCompletableArray_(IOSObjectArray *capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_3, initWithRxCompletableArray_, capture$0)
 }
 
-RxCompletable_$3 *create_RxCompletable_$3_initWithRxCompletableArray_(IOSObjectArray *capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$3, initWithRxCompletableArray_, capture$0)
+RxCompletable_3 *create_RxCompletable_3_initWithRxCompletableArray_(IOSObjectArray *capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_3, initWithRxCompletableArray_, capture$0)
 }
 
-@implementation RxCompletable_$3_$1
+@implementation RxCompletable_3_1
+
+- (instancetype)initWithJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$0
+                     withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$1
+                                  withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2 {
+  RxCompletable_3_1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(self, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)onCompleted {
   if ([((JavaUtilConcurrentAtomicAtomicBoolean *) nil_chk(val$once_)) compareAndSetWithBoolean:false withBoolean:true]) {
@@ -2868,13 +2714,6 @@ RxCompletable_$3 *create_RxCompletable_$3_initWithRxCompletableArray_(IOSObjectA
   [((RxSubscriptionsCompositeSubscription *) nil_chk(val$set_)) addWithRxSubscription:d];
 }
 
-- (instancetype)initWithJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$0
-                     withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$1
-                                  withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2 {
-  RxCompletable_$3_$1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(self, capture$0, capture$1, capture$2);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$once_);
   RELEASE_(val$set_);
@@ -2884,46 +2723,51 @@ RxCompletable_$3 *create_RxCompletable_$3_initWithRxCompletableArray_(IOSObjectA
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[3].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicBoolean:withRxSubscriptionsCompositeSubscription:withRxCompletableSubscriber:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicBoolean:withRxSubscriptionsCompositeSubscription:withRxCompletableSubscriber:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onSubscribeWithRxSubscription:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$once_", "LJavaUtilConcurrentAtomicAtomicBoolean;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$set_", "LRxSubscriptionsCompositeSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$s_", "LRxCompletableSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LJavaUtilConcurrentAtomicAtomicBoolean;LRxSubscriptionsCompositeSubscription;LRxCompletableSubscriber;", "LRxCompletable_$3;", "callWithId:" };
-  static const J2ObjcClassInfo _RxCompletable_$3_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 3, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$3_$1;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable_3;", "callWithId:" };
+  static const J2ObjcClassInfo _RxCompletable_3_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 3, 4, -1, 5, -1, -1 };
+  return &_RxCompletable_3_1;
 }
 
 @end
 
-void RxCompletable_$3_$1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxCompletable_$3_$1 *self, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) {
+void RxCompletable_3_1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxCompletable_3_1 *self, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) {
   JreStrongAssign(&self->val$once_, capture$0);
   JreStrongAssign(&self->val$set_, capture$1);
   JreStrongAssign(&self->val$s_, capture$2);
   NSObject_init(self);
 }
 
-RxCompletable_$3_$1 *new_RxCompletable_$3_$1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) {
-  J2OBJC_NEW_IMPL(RxCompletable_$3_$1, initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_, capture$0, capture$1, capture$2)
+RxCompletable_3_1 *new_RxCompletable_3_1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) {
+  J2OBJC_NEW_IMPL(RxCompletable_3_1, initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_, capture$0, capture$1, capture$2)
 }
 
-RxCompletable_$3_$1 *create_RxCompletable_$3_$1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$3_$1, initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_, capture$0, capture$1, capture$2)
+RxCompletable_3_1 *create_RxCompletable_3_1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) {
+  J2OBJC_CREATE_IMPL(RxCompletable_3_1, initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_, capture$0, capture$1, capture$2)
 }
 
-@implementation RxCompletable_$4
+@implementation RxCompletable_4
+
+- (instancetype)initWithJavaLangIterable:(id<JavaLangIterable>)capture$0 {
+  RxCompletable_4_initWithJavaLangIterable_(self, capture$0);
+  return self;
+}
 
 - (void)callWithId:(id<RxCompletableSubscriber>)s {
   RxSubscriptionsCompositeSubscription *set = create_RxSubscriptionsCompositeSubscription_init();
@@ -2942,7 +2786,7 @@ RxCompletable_$3_$1 *create_RxCompletable_$3_$1_initWithJavaUtilConcurrentAtomic
   }
   jboolean empty = true;
   JavaUtilConcurrentAtomicAtomicBoolean *once = create_JavaUtilConcurrentAtomicAtomicBoolean_init();
-  id<RxCompletableSubscriber> inner = create_RxCompletable_$4_$1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(once, set, s);
+  id<RxCompletableSubscriber> inner = create_RxCompletable_4_1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(once, set, s);
   for (; ; ) {
     if ([once get] || [set isUnsubscribed]) {
       return;
@@ -3003,11 +2847,6 @@ RxCompletable_$3_$1 *create_RxCompletable_$3_$1_initWithJavaUtilConcurrentAtomic
   }
 }
 
-- (instancetype)initWithJavaLangIterable:(id<JavaLangIterable>)capture$0 {
-  RxCompletable_$4_initWithJavaLangIterable_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$sources_);
   [super dealloc];
@@ -3015,38 +2854,45 @@ RxCompletable_$3_$1 *create_RxCompletable_$3_$1_initWithJavaUtilConcurrentAtomic
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, 3, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithJavaLangIterable:);
+  methods[0].selector = @selector(initWithJavaLangIterable:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$sources_", "LJavaLangIterable;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+    { "val$sources_", "LJavaLangIterable;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LJavaLangIterable;", "(Ljava/lang/Iterable<+Lrx/Completable;>;)V", "Ljava/lang/Iterable<+Lrx/Completable;>;", "LRxCompletable;", "ambWithJavaLangIterable:" };
-  static const J2ObjcClassInfo _RxCompletable_$4 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$4;
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "Ljava/lang/Iterable<+Lrx/Completable;>;", "LRxCompletable;", "ambWithJavaLangIterable:" };
+  static const J2ObjcClassInfo _RxCompletable_4 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
+  return &_RxCompletable_4;
 }
 
 @end
 
-void RxCompletable_$4_initWithJavaLangIterable_(RxCompletable_$4 *self, id<JavaLangIterable> capture$0) {
+void RxCompletable_4_initWithJavaLangIterable_(RxCompletable_4 *self, id<JavaLangIterable> capture$0) {
   JreStrongAssign(&self->val$sources_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$4 *new_RxCompletable_$4_initWithJavaLangIterable_(id<JavaLangIterable> capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$4, initWithJavaLangIterable_, capture$0)
+RxCompletable_4 *new_RxCompletable_4_initWithJavaLangIterable_(id<JavaLangIterable> capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_4, initWithJavaLangIterable_, capture$0)
 }
 
-RxCompletable_$4 *create_RxCompletable_$4_initWithJavaLangIterable_(id<JavaLangIterable> capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$4, initWithJavaLangIterable_, capture$0)
+RxCompletable_4 *create_RxCompletable_4_initWithJavaLangIterable_(id<JavaLangIterable> capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_4, initWithJavaLangIterable_, capture$0)
 }
 
-@implementation RxCompletable_$4_$1
+@implementation RxCompletable_4_1
+
+- (instancetype)initWithJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$0
+                     withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$1
+                                  withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2 {
+  RxCompletable_4_1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(self, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)onCompleted {
   if ([((JavaUtilConcurrentAtomicAtomicBoolean *) nil_chk(val$once_)) compareAndSetWithBoolean:false withBoolean:true]) {
@@ -3069,13 +2915,6 @@ RxCompletable_$4 *create_RxCompletable_$4_initWithJavaLangIterable_(id<JavaLangI
   [((RxSubscriptionsCompositeSubscription *) nil_chk(val$set_)) addWithRxSubscription:d];
 }
 
-- (instancetype)initWithJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$0
-                     withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$1
-                                  withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2 {
-  RxCompletable_$4_$1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(self, capture$0, capture$1, capture$2);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$once_);
   RELEASE_(val$set_);
@@ -3085,46 +2924,51 @@ RxCompletable_$4 *create_RxCompletable_$4_initWithJavaLangIterable_(id<JavaLangI
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[3].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicBoolean:withRxSubscriptionsCompositeSubscription:withRxCompletableSubscriber:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicBoolean:withRxSubscriptionsCompositeSubscription:withRxCompletableSubscriber:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onSubscribeWithRxSubscription:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$once_", "LJavaUtilConcurrentAtomicAtomicBoolean;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$set_", "LRxSubscriptionsCompositeSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$s_", "LRxCompletableSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LJavaUtilConcurrentAtomicAtomicBoolean;LRxSubscriptionsCompositeSubscription;LRxCompletableSubscriber;", "LRxCompletable_$4;", "callWithId:" };
-  static const J2ObjcClassInfo _RxCompletable_$4_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 3, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$4_$1;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable_4;", "callWithId:" };
+  static const J2ObjcClassInfo _RxCompletable_4_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 3, 4, -1, 5, -1, -1 };
+  return &_RxCompletable_4_1;
 }
 
 @end
 
-void RxCompletable_$4_$1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxCompletable_$4_$1 *self, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) {
+void RxCompletable_4_1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxCompletable_4_1 *self, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) {
   JreStrongAssign(&self->val$once_, capture$0);
   JreStrongAssign(&self->val$set_, capture$1);
   JreStrongAssign(&self->val$s_, capture$2);
   NSObject_init(self);
 }
 
-RxCompletable_$4_$1 *new_RxCompletable_$4_$1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) {
-  J2OBJC_NEW_IMPL(RxCompletable_$4_$1, initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_, capture$0, capture$1, capture$2)
+RxCompletable_4_1 *new_RxCompletable_4_1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) {
+  J2OBJC_NEW_IMPL(RxCompletable_4_1, initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_, capture$0, capture$1, capture$2)
 }
 
-RxCompletable_$4_$1 *create_RxCompletable_$4_$1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$4_$1, initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_, capture$0, capture$1, capture$2)
+RxCompletable_4_1 *create_RxCompletable_4_1_initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) {
+  J2OBJC_CREATE_IMPL(RxCompletable_4_1, initWithJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_, capture$0, capture$1, capture$2)
 }
 
-@implementation RxCompletable_$5
+@implementation RxCompletable_5
+
+- (instancetype)initWithRxFunctionsFunc0:(id<RxFunctionsFunc0>)capture$0 {
+  RxCompletable_5_initWithRxFunctionsFunc0_(self, capture$0);
+  return self;
+}
 
 - (void)callWithId:(id<RxCompletableSubscriber>)s {
   RxCompletable *c;
@@ -3144,11 +2988,6 @@ RxCompletable_$4_$1 *create_RxCompletable_$4_$1_initWithJavaUtilConcurrentAtomic
   RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(c, s);
 }
 
-- (instancetype)initWithRxFunctionsFunc0:(id<RxFunctionsFunc0>)capture$0 {
-  RxCompletable_$5_initWithRxFunctionsFunc0_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$completableFunc0_);
   [super dealloc];
@@ -3156,38 +2995,43 @@ RxCompletable_$4_$1 *create_RxCompletable_$4_$1_initWithJavaUtilConcurrentAtomic
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, 3, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxFunctionsFunc0:);
+  methods[0].selector = @selector(initWithRxFunctionsFunc0:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$completableFunc0_", "LRxFunctionsFunc0;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+    { "val$completableFunc0_", "LRxFunctionsFunc0;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxFunctionsFunc0;", "(Lrx/functions/Func0<+Lrx/Completable;>;)V", "Lrx/functions/Func0<+Lrx/Completable;>;", "LRxCompletable;", "deferWithRxFunctionsFunc0:" };
-  static const J2ObjcClassInfo _RxCompletable_$5 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$5;
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "Lrx/functions/Func0<+Lrx/Completable;>;", "LRxCompletable;", "deferWithRxFunctionsFunc0:" };
+  static const J2ObjcClassInfo _RxCompletable_5 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
+  return &_RxCompletable_5;
 }
 
 @end
 
-void RxCompletable_$5_initWithRxFunctionsFunc0_(RxCompletable_$5 *self, id<RxFunctionsFunc0> capture$0) {
+void RxCompletable_5_initWithRxFunctionsFunc0_(RxCompletable_5 *self, id<RxFunctionsFunc0> capture$0) {
   JreStrongAssign(&self->val$completableFunc0_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$5 *new_RxCompletable_$5_initWithRxFunctionsFunc0_(id<RxFunctionsFunc0> capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$5, initWithRxFunctionsFunc0_, capture$0)
+RxCompletable_5 *new_RxCompletable_5_initWithRxFunctionsFunc0_(id<RxFunctionsFunc0> capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_5, initWithRxFunctionsFunc0_, capture$0)
 }
 
-RxCompletable_$5 *create_RxCompletable_$5_initWithRxFunctionsFunc0_(id<RxFunctionsFunc0> capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$5, initWithRxFunctionsFunc0_, capture$0)
+RxCompletable_5 *create_RxCompletable_5_initWithRxFunctionsFunc0_(id<RxFunctionsFunc0> capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_5, initWithRxFunctionsFunc0_, capture$0)
 }
 
-@implementation RxCompletable_$6
+@implementation RxCompletable_6
+
+- (instancetype)initWithRxFunctionsFunc0:(id<RxFunctionsFunc0>)capture$0 {
+  RxCompletable_6_initWithRxFunctionsFunc0_(self, capture$0);
+  return self;
+}
 
 - (void)callWithId:(id<RxCompletableSubscriber>)s {
   [((id<RxCompletableSubscriber>) nil_chk(s)) onSubscribeWithRxSubscription:RxSubscriptionsSubscriptions_unsubscribed()];
@@ -3204,11 +3048,6 @@ RxCompletable_$5 *create_RxCompletable_$5_initWithRxFunctionsFunc0_(id<RxFunctio
   [s onErrorWithNSException:error];
 }
 
-- (instancetype)initWithRxFunctionsFunc0:(id<RxFunctionsFunc0>)capture$0 {
-  RxCompletable_$6_initWithRxFunctionsFunc0_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$errorFunc0_);
   [super dealloc];
@@ -3216,47 +3055,47 @@ RxCompletable_$5 *create_RxCompletable_$5_initWithRxFunctionsFunc0_(id<RxFunctio
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, 3, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxFunctionsFunc0:);
+  methods[0].selector = @selector(initWithRxFunctionsFunc0:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$errorFunc0_", "LRxFunctionsFunc0;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+    { "val$errorFunc0_", "LRxFunctionsFunc0;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxFunctionsFunc0;", "(Lrx/functions/Func0<+Ljava/lang/Throwable;>;)V", "Lrx/functions/Func0<+Ljava/lang/Throwable;>;", "LRxCompletable;", "errorWithRxFunctionsFunc0:" };
-  static const J2ObjcClassInfo _RxCompletable_$6 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$6;
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "Lrx/functions/Func0<+Ljava/lang/Throwable;>;", "LRxCompletable;", "errorWithRxFunctionsFunc0:" };
+  static const J2ObjcClassInfo _RxCompletable_6 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
+  return &_RxCompletable_6;
 }
 
 @end
 
-void RxCompletable_$6_initWithRxFunctionsFunc0_(RxCompletable_$6 *self, id<RxFunctionsFunc0> capture$0) {
+void RxCompletable_6_initWithRxFunctionsFunc0_(RxCompletable_6 *self, id<RxFunctionsFunc0> capture$0) {
   JreStrongAssign(&self->val$errorFunc0_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$6 *new_RxCompletable_$6_initWithRxFunctionsFunc0_(id<RxFunctionsFunc0> capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$6, initWithRxFunctionsFunc0_, capture$0)
+RxCompletable_6 *new_RxCompletable_6_initWithRxFunctionsFunc0_(id<RxFunctionsFunc0> capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_6, initWithRxFunctionsFunc0_, capture$0)
 }
 
-RxCompletable_$6 *create_RxCompletable_$6_initWithRxFunctionsFunc0_(id<RxFunctionsFunc0> capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$6, initWithRxFunctionsFunc0_, capture$0)
+RxCompletable_6 *create_RxCompletable_6_initWithRxFunctionsFunc0_(id<RxFunctionsFunc0> capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_6, initWithRxFunctionsFunc0_, capture$0)
 }
 
-@implementation RxCompletable_$7
+@implementation RxCompletable_7
+
+- (instancetype)initWithNSException:(NSException *)capture$0 {
+  RxCompletable_7_initWithNSException_(self, capture$0);
+  return self;
+}
 
 - (void)callWithId:(id<RxCompletableSubscriber>)s {
   [((id<RxCompletableSubscriber>) nil_chk(s)) onSubscribeWithRxSubscription:RxSubscriptionsSubscriptions_unsubscribed()];
   [s onErrorWithNSException:val$error_];
-}
-
-- (instancetype)initWithNSException:(NSException *)capture$0 {
-  RxCompletable_$7_initWithNSException_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -3266,38 +3105,43 @@ RxCompletable_$6 *create_RxCompletable_$6_initWithRxFunctionsFunc0_(id<RxFunctio
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithNSException:);
+  methods[0].selector = @selector(initWithNSException:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$error_", "LNSException;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LNSException;", "LRxCompletable;", "errorWithNSException:" };
-  static const J2ObjcClassInfo _RxCompletable_$7 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
-  return &_RxCompletable_$7;
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxCompletable;", "errorWithNSException:" };
+  static const J2ObjcClassInfo _RxCompletable_7 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, -1, -1 };
+  return &_RxCompletable_7;
 }
 
 @end
 
-void RxCompletable_$7_initWithNSException_(RxCompletable_$7 *self, NSException *capture$0) {
+void RxCompletable_7_initWithNSException_(RxCompletable_7 *self, NSException *capture$0) {
   JreStrongAssign(&self->val$error_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$7 *new_RxCompletable_$7_initWithNSException_(NSException *capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$7, initWithNSException_, capture$0)
+RxCompletable_7 *new_RxCompletable_7_initWithNSException_(NSException *capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_7, initWithNSException_, capture$0)
 }
 
-RxCompletable_$7 *create_RxCompletable_$7_initWithNSException_(NSException *capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$7, initWithNSException_, capture$0)
+RxCompletable_7 *create_RxCompletable_7_initWithNSException_(NSException *capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_7, initWithNSException_, capture$0)
 }
 
-@implementation RxCompletable_$8
+@implementation RxCompletable_8
+
+- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0 {
+  RxCompletable_8_initWithRxFunctionsAction0_(self, capture$0);
+  return self;
+}
 
 - (void)callWithId:(id<RxCompletableSubscriber>)s {
   RxSubscriptionsBooleanSubscription *bs = create_RxSubscriptionsBooleanSubscription_init();
@@ -3316,11 +3160,6 @@ RxCompletable_$7 *create_RxCompletable_$7_initWithNSException_(NSException *capt
   }
 }
 
-- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0 {
-  RxCompletable_$8_initWithRxFunctionsAction0_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$action_);
   [super dealloc];
@@ -3328,38 +3167,43 @@ RxCompletable_$7 *create_RxCompletable_$7_initWithNSException_(NSException *capt
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxFunctionsAction0:);
+  methods[0].selector = @selector(initWithRxFunctionsAction0:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$action_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxFunctionsAction0;", "LRxCompletable;", "fromActionWithRxFunctionsAction0:" };
-  static const J2ObjcClassInfo _RxCompletable_$8 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
-  return &_RxCompletable_$8;
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxCompletable;", "fromActionWithRxFunctionsAction0:" };
+  static const J2ObjcClassInfo _RxCompletable_8 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, -1, -1 };
+  return &_RxCompletable_8;
 }
 
 @end
 
-void RxCompletable_$8_initWithRxFunctionsAction0_(RxCompletable_$8 *self, id<RxFunctionsAction0> capture$0) {
+void RxCompletable_8_initWithRxFunctionsAction0_(RxCompletable_8 *self, id<RxFunctionsAction0> capture$0) {
   JreStrongAssign(&self->val$action_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$8 *new_RxCompletable_$8_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$8, initWithRxFunctionsAction0_, capture$0)
+RxCompletable_8 *new_RxCompletable_8_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_8, initWithRxFunctionsAction0_, capture$0)
 }
 
-RxCompletable_$8 *create_RxCompletable_$8_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$8, initWithRxFunctionsAction0_, capture$0)
+RxCompletable_8 *create_RxCompletable_8_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_8, initWithRxFunctionsAction0_, capture$0)
 }
 
-@implementation RxCompletable_$9
+@implementation RxCompletable_9
+
+- (instancetype)initWithJavaUtilConcurrentCallable:(id<JavaUtilConcurrentCallable>)capture$0 {
+  RxCompletable_9_initWithJavaUtilConcurrentCallable_(self, capture$0);
+  return self;
+}
 
 - (void)callWithId:(id<RxCompletableSubscriber>)s {
   RxSubscriptionsBooleanSubscription *bs = create_RxSubscriptionsBooleanSubscription_init();
@@ -3378,11 +3222,6 @@ RxCompletable_$8 *create_RxCompletable_$8_initWithRxFunctionsAction0_(id<RxFunct
   }
 }
 
-- (instancetype)initWithJavaUtilConcurrentCallable:(id<JavaUtilConcurrentCallable>)capture$0 {
-  RxCompletable_$9_initWithJavaUtilConcurrentCallable_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$callable_);
   [super dealloc];
@@ -3390,48 +3229,48 @@ RxCompletable_$8 *create_RxCompletable_$8_initWithRxFunctionsAction0_(id<RxFunct
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, 3, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithJavaUtilConcurrentCallable:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentCallable:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$callable_", "LJavaUtilConcurrentCallable;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+    { "val$callable_", "LJavaUtilConcurrentCallable;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LJavaUtilConcurrentCallable;", "(Ljava/util/concurrent/Callable<*>;)V", "Ljava/util/concurrent/Callable<*>;", "LRxCompletable;", "fromCallableWithJavaUtilConcurrentCallable:" };
-  static const J2ObjcClassInfo _RxCompletable_$9 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$9;
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "Ljava/util/concurrent/Callable<*>;", "LRxCompletable;", "fromCallableWithJavaUtilConcurrentCallable:" };
+  static const J2ObjcClassInfo _RxCompletable_9 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
+  return &_RxCompletable_9;
 }
 
 @end
 
-void RxCompletable_$9_initWithJavaUtilConcurrentCallable_(RxCompletable_$9 *self, id<JavaUtilConcurrentCallable> capture$0) {
+void RxCompletable_9_initWithJavaUtilConcurrentCallable_(RxCompletable_9 *self, id<JavaUtilConcurrentCallable> capture$0) {
   JreStrongAssign(&self->val$callable_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$9 *new_RxCompletable_$9_initWithJavaUtilConcurrentCallable_(id<JavaUtilConcurrentCallable> capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$9, initWithJavaUtilConcurrentCallable_, capture$0)
+RxCompletable_9 *new_RxCompletable_9_initWithJavaUtilConcurrentCallable_(id<JavaUtilConcurrentCallable> capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_9, initWithJavaUtilConcurrentCallable_, capture$0)
 }
 
-RxCompletable_$9 *create_RxCompletable_$9_initWithJavaUtilConcurrentCallable_(id<JavaUtilConcurrentCallable> capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$9, initWithJavaUtilConcurrentCallable_, capture$0)
+RxCompletable_9 *create_RxCompletable_9_initWithJavaUtilConcurrentCallable_(id<JavaUtilConcurrentCallable> capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_9, initWithJavaUtilConcurrentCallable_, capture$0)
 }
 
-@implementation RxCompletable_$10
-
-- (void)callWithId:(id<RxCompletableSubscriber>)cs {
-  RxSubscriber *subscriber = create_RxCompletable_$10_$1_initWithRxCompletableSubscriber_(cs);
-  [((id<RxCompletableSubscriber>) nil_chk(cs)) onSubscribeWithRxSubscription:subscriber];
-  [((RxObservable *) nil_chk(val$flowable_)) unsafeSubscribeWithRxSubscriber:subscriber];
-}
+@implementation RxCompletable_10
 
 - (instancetype)initWithRxObservable:(RxObservable *)capture$0 {
-  RxCompletable_$10_initWithRxObservable_(self, capture$0);
+  RxCompletable_10_initWithRxObservable_(self, capture$0);
   return self;
+}
+
+- (void)callWithId:(id<RxCompletableSubscriber>)cs {
+  RxSubscriber *subscriber = create_RxCompletable_10_1_initWithRxCompletableSubscriber_(cs);
+  [((id<RxCompletableSubscriber>) nil_chk(cs)) onSubscribeWithRxSubscription:subscriber];
+  [((RxObservable *) nil_chk(val$flowable_)) unsafeSubscribeWithRxSubscriber:subscriber];
 }
 
 - (void)dealloc {
@@ -3441,38 +3280,43 @@ RxCompletable_$9 *create_RxCompletable_$9_initWithJavaUtilConcurrentCallable_(id
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, 3, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxObservable:);
+  methods[0].selector = @selector(initWithRxObservable:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$flowable_", "LRxObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+    { "val$flowable_", "LRxObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxObservable;", "(Lrx/Observable<*>;)V", "Lrx/Observable<*>;", "LRxCompletable;", "fromObservableWithRxObservable:" };
-  static const J2ObjcClassInfo _RxCompletable_$10 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$10;
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "Lrx/Observable<*>;", "LRxCompletable;", "fromObservableWithRxObservable:" };
+  static const J2ObjcClassInfo _RxCompletable_10 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
+  return &_RxCompletable_10;
 }
 
 @end
 
-void RxCompletable_$10_initWithRxObservable_(RxCompletable_$10 *self, RxObservable *capture$0) {
+void RxCompletable_10_initWithRxObservable_(RxCompletable_10 *self, RxObservable *capture$0) {
   JreStrongAssign(&self->val$flowable_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$10 *new_RxCompletable_$10_initWithRxObservable_(RxObservable *capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$10, initWithRxObservable_, capture$0)
+RxCompletable_10 *new_RxCompletable_10_initWithRxObservable_(RxObservable *capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_10, initWithRxObservable_, capture$0)
 }
 
-RxCompletable_$10 *create_RxCompletable_$10_initWithRxObservable_(RxObservable *capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$10, initWithRxObservable_, capture$0)
+RxCompletable_10 *create_RxCompletable_10_initWithRxObservable_(RxObservable *capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_10, initWithRxObservable_, capture$0)
 }
 
-@implementation RxCompletable_$10_$1
+@implementation RxCompletable_10_1
+
+- (instancetype)initWithRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0 {
+  RxCompletable_10_1_initWithRxCompletableSubscriber_(self, capture$0);
+  return self;
+}
 
 - (void)onCompleted {
   [((id<RxCompletableSubscriber>) nil_chk(val$cs_)) onCompleted];
@@ -3485,65 +3329,59 @@ RxCompletable_$10 *create_RxCompletable_$10_initWithRxObservable_(RxObservable *
 - (void)onNextWithId:(id)t {
 }
 
-- (instancetype)initWithRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0 {
-  RxCompletable_$10_$1_initWithRxCompletableSubscriber_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxCompletable_$10_$1 class]);
   RELEASE_(val$cs_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(initWithRxCompletableSubscriber:);
+  methods[0].selector = @selector(initWithRxCompletableSubscriber:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$cs_", "LRxCompletableSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "LRxCompletableSubscriber;", "LRxCompletable_$10;", "callWithId:", "Lrx/Subscriber<Ljava/lang/Object;>;" };
-  static const J2ObjcClassInfo _RxCompletable_$10_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 1, 5, -1, 6, 7, -1 };
-  return &_RxCompletable_$10_$1;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "LRxCompletable_10;", "callWithId:", "Lrx/Subscriber<Ljava/lang/Object;>;" };
+  static const J2ObjcClassInfo _RxCompletable_10_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 1, 4, -1, 5, 6, -1 };
+  return &_RxCompletable_10_1;
 }
 
 @end
 
-void RxCompletable_$10_$1_initWithRxCompletableSubscriber_(RxCompletable_$10_$1 *self, id<RxCompletableSubscriber> capture$0) {
+void RxCompletable_10_1_initWithRxCompletableSubscriber_(RxCompletable_10_1 *self, id<RxCompletableSubscriber> capture$0) {
   JreStrongAssign(&self->val$cs_, capture$0);
   RxSubscriber_init(self);
 }
 
-RxCompletable_$10_$1 *new_RxCompletable_$10_$1_initWithRxCompletableSubscriber_(id<RxCompletableSubscriber> capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$10_$1, initWithRxCompletableSubscriber_, capture$0)
+RxCompletable_10_1 *new_RxCompletable_10_1_initWithRxCompletableSubscriber_(id<RxCompletableSubscriber> capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_10_1, initWithRxCompletableSubscriber_, capture$0)
 }
 
-RxCompletable_$10_$1 *create_RxCompletable_$10_$1_initWithRxCompletableSubscriber_(id<RxCompletableSubscriber> capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$10_$1, initWithRxCompletableSubscriber_, capture$0)
+RxCompletable_10_1 *create_RxCompletable_10_1_initWithRxCompletableSubscriber_(id<RxCompletableSubscriber> capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_10_1, initWithRxCompletableSubscriber_, capture$0)
 }
 
-@implementation RxCompletable_$11
-
-- (void)callWithId:(id<RxCompletableSubscriber>)s {
-  RxSingleSubscriber *te = create_RxCompletable_$11_$1_initWithRxCompletableSubscriber_(s);
-  [((id<RxCompletableSubscriber>) nil_chk(s)) onSubscribeWithRxSubscription:te];
-  [((RxSingle *) nil_chk(val$single_)) subscribeWithRxSingleSubscriber:te];
-}
+@implementation RxCompletable_11
 
 - (instancetype)initWithRxSingle:(RxSingle *)capture$0 {
-  RxCompletable_$11_initWithRxSingle_(self, capture$0);
+  RxCompletable_11_initWithRxSingle_(self, capture$0);
   return self;
+}
+
+- (void)callWithId:(id<RxCompletableSubscriber>)s {
+  RxSingleSubscriber *te = create_RxCompletable_11_1_initWithRxCompletableSubscriber_(s);
+  [((id<RxCompletableSubscriber>) nil_chk(s)) onSubscribeWithRxSubscription:te];
+  [((RxSingle *) nil_chk(val$single_)) subscribeWithRxSingleSubscriber:te];
 }
 
 - (void)dealloc {
@@ -3553,38 +3391,43 @@ RxCompletable_$10_$1 *create_RxCompletable_$10_$1_initWithRxCompletableSubscribe
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, 3, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxSingle:);
+  methods[0].selector = @selector(initWithRxSingle:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$single_", "LRxSingle;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+    { "val$single_", "LRxSingle;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxSingle;", "(Lrx/Single<*>;)V", "Lrx/Single<*>;", "LRxCompletable;", "fromSingleWithRxSingle:" };
-  static const J2ObjcClassInfo _RxCompletable_$11 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$11;
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "Lrx/Single<*>;", "LRxCompletable;", "fromSingleWithRxSingle:" };
+  static const J2ObjcClassInfo _RxCompletable_11 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
+  return &_RxCompletable_11;
 }
 
 @end
 
-void RxCompletable_$11_initWithRxSingle_(RxCompletable_$11 *self, RxSingle *capture$0) {
+void RxCompletable_11_initWithRxSingle_(RxCompletable_11 *self, RxSingle *capture$0) {
   JreStrongAssign(&self->val$single_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$11 *new_RxCompletable_$11_initWithRxSingle_(RxSingle *capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$11, initWithRxSingle_, capture$0)
+RxCompletable_11 *new_RxCompletable_11_initWithRxSingle_(RxSingle *capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_11, initWithRxSingle_, capture$0)
 }
 
-RxCompletable_$11 *create_RxCompletable_$11_initWithRxSingle_(RxSingle *capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$11, initWithRxSingle_, capture$0)
+RxCompletable_11 *create_RxCompletable_11_initWithRxSingle_(RxSingle *capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_11, initWithRxSingle_, capture$0)
 }
 
-@implementation RxCompletable_$11_$1
+@implementation RxCompletable_11_1
+
+- (instancetype)initWithRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0 {
+  RxCompletable_11_1_initWithRxCompletableSubscriber_(self, capture$0);
+  return self;
+}
 
 - (void)onErrorWithNSException:(NSException *)e {
   [((id<RxCompletableSubscriber>) nil_chk(val$s_)) onErrorWithNSException:e];
@@ -3594,11 +3437,6 @@ RxCompletable_$11 *create_RxCompletable_$11_initWithRxSingle_(RxSingle *capture$
   [((id<RxCompletableSubscriber>) nil_chk(val$s_)) onCompleted];
 }
 
-- (instancetype)initWithRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0 {
-  RxCompletable_$11_$1_initWithRxCompletableSubscriber_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$s_);
   [super dealloc];
@@ -3606,40 +3444,47 @@ RxCompletable_$11 *create_RxCompletable_$11_initWithRxSingle_(RxSingle *capture$
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onErrorWithNSException:);
-  methods[1].selector = @selector(onSuccessWithId:);
-  methods[2].selector = @selector(initWithRxCompletableSubscriber:);
+  methods[0].selector = @selector(initWithRxCompletableSubscriber:);
+  methods[1].selector = @selector(onErrorWithNSException:);
+  methods[2].selector = @selector(onSuccessWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$s_", "LRxCompletableSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onSuccess", "LNSObject;", "(Ljava/lang/Object;)V", "LRxCompletableSubscriber;", "LRxCompletable_$11;", "callWithId:", "Lrx/SingleSubscriber<Ljava/lang/Object;>;" };
-  static const J2ObjcClassInfo _RxCompletable_$11_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 3, 1, 6, -1, 7, 8, -1 };
-  return &_RxCompletable_$11_$1;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onSuccess", "LNSObject;", "LRxCompletable_11;", "callWithId:", "Lrx/SingleSubscriber<Ljava/lang/Object;>;" };
+  static const J2ObjcClassInfo _RxCompletable_11_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 3, 1, 4, -1, 5, 6, -1 };
+  return &_RxCompletable_11_1;
 }
 
 @end
 
-void RxCompletable_$11_$1_initWithRxCompletableSubscriber_(RxCompletable_$11_$1 *self, id<RxCompletableSubscriber> capture$0) {
+void RxCompletable_11_1_initWithRxCompletableSubscriber_(RxCompletable_11_1 *self, id<RxCompletableSubscriber> capture$0) {
   JreStrongAssign(&self->val$s_, capture$0);
   RxSingleSubscriber_init(self);
 }
 
-RxCompletable_$11_$1 *new_RxCompletable_$11_$1_initWithRxCompletableSubscriber_(id<RxCompletableSubscriber> capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$11_$1, initWithRxCompletableSubscriber_, capture$0)
+RxCompletable_11_1 *new_RxCompletable_11_1_initWithRxCompletableSubscriber_(id<RxCompletableSubscriber> capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_11_1, initWithRxCompletableSubscriber_, capture$0)
 }
 
-RxCompletable_$11_$1 *create_RxCompletable_$11_$1_initWithRxCompletableSubscriber_(id<RxCompletableSubscriber> capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$11_$1, initWithRxCompletableSubscriber_, capture$0)
+RxCompletable_11_1 *create_RxCompletable_11_1_initWithRxCompletableSubscriber_(id<RxCompletableSubscriber> capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_11_1, initWithRxCompletableSubscriber_, capture$0)
 }
 
-@implementation RxCompletable_$12
+@implementation RxCompletable_12
+
+- (instancetype)initWithRxScheduler:(RxScheduler *)capture$0
+                           withLong:(jlong)capture$1
+     withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)capture$2 {
+  RxCompletable_12_initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_(self, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)callWithId:(id<RxCompletableSubscriber>)s {
   RxSubscriptionsMultipleAssignmentSubscription *mad = create_RxSubscriptionsMultipleAssignmentSubscription_init();
@@ -3647,15 +3492,8 @@ RxCompletable_$11_$1 *create_RxCompletable_$11_$1_initWithRxCompletableSubscribe
   if (![mad isUnsubscribed]) {
     RxScheduler_Worker *w = [((RxScheduler *) nil_chk(val$scheduler_)) createWorker];
     [mad setWithRxSubscription:w];
-    [((RxScheduler_Worker *) nil_chk(w)) scheduleWithRxFunctionsAction0:create_RxCompletable_$12_$1_initWithRxCompletableSubscriber_withRxScheduler_Worker_(s, w) withLong:val$delay_ withJavaUtilConcurrentTimeUnit:val$unit_];
+    [((RxScheduler_Worker *) nil_chk(w)) scheduleWithRxFunctionsAction0:create_RxCompletable_12_1_initWithRxCompletableSubscriber_withRxScheduler_Worker_(s, w) withLong:val$delay_ withJavaUtilConcurrentTimeUnit:val$unit_];
   }
-}
-
-- (instancetype)initWithRxScheduler:(RxScheduler *)capture$0
-                           withLong:(jlong)capture$1
-     withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)capture$2 {
-  RxCompletable_$12_initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_(self, capture$0, capture$1, capture$2);
-  return self;
 }
 
 - (void)dealloc {
@@ -3666,42 +3504,48 @@ RxCompletable_$11_$1 *create_RxCompletable_$11_$1_initWithRxCompletableSubscribe
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxScheduler:withLong:withJavaUtilConcurrentTimeUnit:);
+  methods[0].selector = @selector(initWithRxScheduler:withLong:withJavaUtilConcurrentTimeUnit:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$scheduler_", "LRxScheduler;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$delay_", "J", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$unit_", "LJavaUtilConcurrentTimeUnit;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxScheduler;JLJavaUtilConcurrentTimeUnit;", "LRxCompletable;", "timerWithLong:withJavaUtilConcurrentTimeUnit:withRxScheduler:" };
-  static const J2ObjcClassInfo _RxCompletable_$12 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 3, 3, -1, 4, -1, -1 };
-  return &_RxCompletable_$12;
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxCompletable;", "timerWithLong:withJavaUtilConcurrentTimeUnit:withRxScheduler:" };
+  static const J2ObjcClassInfo _RxCompletable_12 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 3, 2, -1, 3, -1, -1 };
+  return &_RxCompletable_12;
 }
 
 @end
 
-void RxCompletable_$12_initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_(RxCompletable_$12 *self, RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2) {
+void RxCompletable_12_initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_(RxCompletable_12 *self, RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2) {
   JreStrongAssign(&self->val$scheduler_, capture$0);
   self->val$delay_ = capture$1;
   JreStrongAssign(&self->val$unit_, capture$2);
   NSObject_init(self);
 }
 
-RxCompletable_$12 *new_RxCompletable_$12_initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_(RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2) {
-  J2OBJC_NEW_IMPL(RxCompletable_$12, initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_, capture$0, capture$1, capture$2)
+RxCompletable_12 *new_RxCompletable_12_initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_(RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2) {
+  J2OBJC_NEW_IMPL(RxCompletable_12, initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_, capture$0, capture$1, capture$2)
 }
 
-RxCompletable_$12 *create_RxCompletable_$12_initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_(RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$12, initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_, capture$0, capture$1, capture$2)
+RxCompletable_12 *create_RxCompletable_12_initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_(RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2) {
+  J2OBJC_CREATE_IMPL(RxCompletable_12, initWithRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_, capture$0, capture$1, capture$2)
 }
 
-@implementation RxCompletable_$12_$1
+@implementation RxCompletable_12_1
+
+- (instancetype)initWithRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0
+                         withRxScheduler_Worker:(RxScheduler_Worker *)capture$1 {
+  RxCompletable_12_1_initWithRxCompletableSubscriber_withRxScheduler_Worker_(self, capture$0, capture$1);
+  return self;
+}
 
 - (void)call {
   @try {
@@ -3712,12 +3556,6 @@ RxCompletable_$12 *create_RxCompletable_$12_initWithRxScheduler_withLong_withJav
   }
 }
 
-- (instancetype)initWithRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0
-                         withRxScheduler_Worker:(RxScheduler_Worker *)capture$1 {
-  RxCompletable_$12_$1_initWithRxCompletableSubscriber_withRxScheduler_Worker_(self, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$s_);
   RELEASE_(val$w_);
@@ -3726,40 +3564,48 @@ RxCompletable_$12 *create_RxCompletable_$12_initWithRxScheduler_withLong_withJav
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxCompletableSubscriber:withRxScheduler_Worker:);
+  methods[0].selector = @selector(initWithRxCompletableSubscriber:withRxScheduler_Worker:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$s_", "LRxCompletableSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$w_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxCompletableSubscriber;LRxScheduler_Worker;", "LRxCompletable_$12;", "callWithId:" };
-  static const J2ObjcClassInfo _RxCompletable_$12_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_RxCompletable_$12_$1;
+  static const void *ptrTable[] = { "LRxCompletable_12;", "callWithId:" };
+  static const J2ObjcClassInfo _RxCompletable_12_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 0, -1, 1, -1, -1 };
+  return &_RxCompletable_12_1;
 }
 
 @end
 
-void RxCompletable_$12_$1_initWithRxCompletableSubscriber_withRxScheduler_Worker_(RxCompletable_$12_$1 *self, id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1) {
+void RxCompletable_12_1_initWithRxCompletableSubscriber_withRxScheduler_Worker_(RxCompletable_12_1 *self, id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1) {
   JreStrongAssign(&self->val$s_, capture$0);
   JreStrongAssign(&self->val$w_, capture$1);
   NSObject_init(self);
 }
 
-RxCompletable_$12_$1 *new_RxCompletable_$12_$1_initWithRxCompletableSubscriber_withRxScheduler_Worker_(id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1) {
-  J2OBJC_NEW_IMPL(RxCompletable_$12_$1, initWithRxCompletableSubscriber_withRxScheduler_Worker_, capture$0, capture$1)
+RxCompletable_12_1 *new_RxCompletable_12_1_initWithRxCompletableSubscriber_withRxScheduler_Worker_(id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1) {
+  J2OBJC_NEW_IMPL(RxCompletable_12_1, initWithRxCompletableSubscriber_withRxScheduler_Worker_, capture$0, capture$1)
 }
 
-RxCompletable_$12_$1 *create_RxCompletable_$12_$1_initWithRxCompletableSubscriber_withRxScheduler_Worker_(id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$12_$1, initWithRxCompletableSubscriber_withRxScheduler_Worker_, capture$0, capture$1)
+RxCompletable_12_1 *create_RxCompletable_12_1_initWithRxCompletableSubscriber_withRxScheduler_Worker_(id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1) {
+  J2OBJC_CREATE_IMPL(RxCompletable_12_1, initWithRxCompletableSubscriber_withRxScheduler_Worker_, capture$0, capture$1)
 }
 
-@implementation RxCompletable_$13
+@implementation RxCompletable_13
+
+- (instancetype)initWithRxFunctionsFunc0:(id<RxFunctionsFunc0>)capture$0
+                    withRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$1
+                  withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$2
+                             withBoolean:(jboolean)capture$3 {
+  RxCompletable_13_initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_(self, capture$0, capture$1, capture$2, capture$3);
+  return self;
+}
 
 - (void)callWithId:(id<RxCompletableSubscriber>)s {
   id resource;
@@ -3806,15 +3652,7 @@ RxCompletable_$12_$1 *create_RxCompletable_$12_$1_initWithRxCompletableSubscribe
     return;
   }
   JavaUtilConcurrentAtomicAtomicBoolean *once = create_JavaUtilConcurrentAtomicAtomicBoolean_init();
-  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(cs, create_RxCompletable_$13_$1_initWithRxCompletable_$13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_(self, once, resource, s));
-}
-
-- (instancetype)initWithRxFunctionsFunc0:(id<RxFunctionsFunc0>)capture$0
-                    withRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$1
-                  withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$2
-                             withBoolean:(jboolean)capture$3 {
-  RxCompletable_$13_initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_(self, capture$0, capture$1, capture$2, capture$3);
-  return self;
+  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(cs, create_RxCompletable_13_1_initWithRxCompletable_13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_(self, once, resource, s));
 }
 
 - (void)dealloc {
@@ -3826,28 +3664,28 @@ RxCompletable_$12_$1 *create_RxCompletable_$12_$1_initWithRxCompletableSubscribe
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, 3, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxFunctionsFunc0:withRxFunctionsFunc1:withRxFunctionsAction1:withBoolean:);
+  methods[0].selector = @selector(initWithRxFunctionsFunc0:withRxFunctionsFunc1:withRxFunctionsAction1:withBoolean:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$resourceFunc0_", "LRxFunctionsFunc0;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
-    { "val$completableFunc1_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-    { "val$disposer_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
+    { "val$resourceFunc0_", "LRxFunctionsFunc0;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+    { "val$completableFunc1_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$disposer_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
     { "val$eager_", "Z", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxFunctionsFunc0;LRxFunctionsFunc1;LRxFunctionsAction1;Z", "(Lrx/functions/Func0<TR;>;Lrx/functions/Func1<-TR;+Lrx/Completable;>;Lrx/functions/Action1<-TR;>;Z)V", "Lrx/functions/Func0<TR;>;", "Lrx/functions/Func1<-TR;+Lrx/Completable;>;", "Lrx/functions/Action1<-TR;>;", "LRxCompletable;", "using__WithRxFunctionsFunc0:withRxFunctionsFunc1:withRxFunctionsAction1:withBoolean:" };
-  static const J2ObjcClassInfo _RxCompletable_$13 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 4, 7, -1, 8, -1, -1 };
-  return &_RxCompletable_$13;
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "Lrx/functions/Func0<TR;>;", "Lrx/functions/Func1<-TR;+Lrx/Completable;>;", "Lrx/functions/Action1<-TR;>;", "LRxCompletable;", "using__WithRxFunctionsFunc0:withRxFunctionsFunc1:withRxFunctionsAction1:withBoolean:" };
+  static const J2ObjcClassInfo _RxCompletable_13 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 4, 5, -1, 6, -1, -1 };
+  return &_RxCompletable_13;
 }
 
 @end
 
-void RxCompletable_$13_initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_(RxCompletable_$13 *self, id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1, id<RxFunctionsAction1> capture$2, jboolean capture$3) {
+void RxCompletable_13_initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_(RxCompletable_13 *self, id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1, id<RxFunctionsAction1> capture$2, jboolean capture$3) {
   JreStrongAssign(&self->val$resourceFunc0_, capture$0);
   JreStrongAssign(&self->val$completableFunc1_, capture$1);
   JreStrongAssign(&self->val$disposer_, capture$2);
@@ -3855,15 +3693,23 @@ void RxCompletable_$13_initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunct
   NSObject_init(self);
 }
 
-RxCompletable_$13 *new_RxCompletable_$13_initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_(id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1, id<RxFunctionsAction1> capture$2, jboolean capture$3) {
-  J2OBJC_NEW_IMPL(RxCompletable_$13, initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_, capture$0, capture$1, capture$2, capture$3)
+RxCompletable_13 *new_RxCompletable_13_initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_(id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1, id<RxFunctionsAction1> capture$2, jboolean capture$3) {
+  J2OBJC_NEW_IMPL(RxCompletable_13, initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_, capture$0, capture$1, capture$2, capture$3)
 }
 
-RxCompletable_$13 *create_RxCompletable_$13_initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_(id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1, id<RxFunctionsAction1> capture$2, jboolean capture$3) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$13, initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_, capture$0, capture$1, capture$2, capture$3)
+RxCompletable_13 *create_RxCompletable_13_initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_(id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1, id<RxFunctionsAction1> capture$2, jboolean capture$3) {
+  J2OBJC_CREATE_IMPL(RxCompletable_13, initWithRxFunctionsFunc0_withRxFunctionsFunc1_withRxFunctionsAction1_withBoolean_, capture$0, capture$1, capture$2, capture$3)
 }
 
-@implementation RxCompletable_$13_$1
+@implementation RxCompletable_13_1
+
+- (instancetype)initWithRxCompletable_13:(RxCompletable_13 *)outer$
+withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$0
+                                  withId:(id)capture$1
+             withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2 {
+  RxCompletable_13_1_initWithRxCompletable_13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_(self, outer$, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)dispose {
   [((id<RxSubscription>) nil_chk(d_)) unsubscribe];
@@ -3914,57 +3760,49 @@ RxCompletable_$13 *create_RxCompletable_$13_initWithRxFunctionsFunc0_withRxFunct
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d {
   JreStrongAssign(&self->d_, d);
-  [((id<RxCompletableSubscriber>) nil_chk(val$s_)) onSubscribeWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxCompletable_$13_$1_$1_initWithRxCompletable_$13_$1_(self))];
-}
-
-- (instancetype)initWithRxCompletable_$13:(RxCompletable_$13 *)outer$
-withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$0
-                                   withId:(id)capture$1
-              withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2 {
-  RxCompletable_$13_$1_initWithRxCompletable_$13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_(self, outer$, capture$0, capture$1, capture$2);
-  return self;
+  [((id<RxCompletableSubscriber>) nil_chk(val$s_)) onSubscribeWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxCompletable_13_1_1_initWithRxCompletable_13_1_(self))];
 }
 
 - (void)dealloc {
   RELEASE_(this$0_);
-  RELEASE_(d_);
   RELEASE_(val$once_);
   RELEASE_(val$resource_);
   RELEASE_(val$s_);
+  RELEASE_(d_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, 5, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(dispose);
-  methods[1].selector = @selector(onCompleted);
-  methods[2].selector = @selector(onErrorWithNSException:);
-  methods[3].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[4].selector = @selector(initWithRxCompletable_$13:withJavaUtilConcurrentAtomicAtomicBoolean:withId:withRxCompletableSubscriber:);
+  methods[0].selector = @selector(initWithRxCompletable_13:withJavaUtilConcurrentAtomicAtomicBoolean:withId:withRxCompletableSubscriber:);
+  methods[1].selector = @selector(dispose);
+  methods[2].selector = @selector(onCompleted);
+  methods[3].selector = @selector(onErrorWithNSException:);
+  methods[4].selector = @selector(onSubscribeWithRxSubscription:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxCompletable_$13;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "d_", "LRxSubscription;", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
+    { "this$0_", "LRxCompletable_13;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$once_", "LJavaUtilConcurrentAtomicAtomicBoolean;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$resource_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
+    { "val$resource_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
     { "val$s_", "LRxCompletableSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "d_", "LRxSubscription;", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable_$13;LJavaUtilConcurrentAtomicAtomicBoolean;LNSObject;LRxCompletableSubscriber;", "(Lrx/Completable$13;Ljava/util/concurrent/atomic/AtomicBoolean;TR;Lrx/CompletableSubscriber;)V", "TR;", "LRxCompletable_$13;", "callWithId:" };
-  static const J2ObjcClassInfo _RxCompletable_$13_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 5, 5, 7, -1, 8, -1, -1 };
-  return &_RxCompletable_$13_$1;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "TR;", "LRxCompletable_13;", "callWithId:" };
+  static const J2ObjcClassInfo _RxCompletable_13_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 5, 5, 5, -1, 6, -1, -1 };
+  return &_RxCompletable_13_1;
 }
 
 @end
 
-void RxCompletable_$13_$1_initWithRxCompletable_$13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_(RxCompletable_$13_$1 *self, RxCompletable_$13 *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, id capture$1, id<RxCompletableSubscriber> capture$2) {
+void RxCompletable_13_1_initWithRxCompletable_13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_(RxCompletable_13_1 *self, RxCompletable_13 *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, id capture$1, id<RxCompletableSubscriber> capture$2) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$once_, capture$0);
   JreStrongAssign(&self->val$resource_, capture$1);
@@ -3972,23 +3810,23 @@ void RxCompletable_$13_$1_initWithRxCompletable_$13_withJavaUtilConcurrentAtomic
   NSObject_init(self);
 }
 
-RxCompletable_$13_$1 *new_RxCompletable_$13_$1_initWithRxCompletable_$13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_(RxCompletable_$13 *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, id capture$1, id<RxCompletableSubscriber> capture$2) {
-  J2OBJC_NEW_IMPL(RxCompletable_$13_$1, initWithRxCompletable_$13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_, outer$, capture$0, capture$1, capture$2)
+RxCompletable_13_1 *new_RxCompletable_13_1_initWithRxCompletable_13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_(RxCompletable_13 *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, id capture$1, id<RxCompletableSubscriber> capture$2) {
+  J2OBJC_NEW_IMPL(RxCompletable_13_1, initWithRxCompletable_13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_, outer$, capture$0, capture$1, capture$2)
 }
 
-RxCompletable_$13_$1 *create_RxCompletable_$13_$1_initWithRxCompletable_$13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_(RxCompletable_$13 *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, id capture$1, id<RxCompletableSubscriber> capture$2) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$13_$1, initWithRxCompletable_$13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_, outer$, capture$0, capture$1, capture$2)
+RxCompletable_13_1 *create_RxCompletable_13_1_initWithRxCompletable_13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_(RxCompletable_13 *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, id capture$1, id<RxCompletableSubscriber> capture$2) {
+  J2OBJC_CREATE_IMPL(RxCompletable_13_1, initWithRxCompletable_13_withJavaUtilConcurrentAtomicAtomicBoolean_withId_withRxCompletableSubscriber_, outer$, capture$0, capture$1, capture$2)
 }
 
-@implementation RxCompletable_$13_$1_$1
+@implementation RxCompletable_13_1_1
+
+- (instancetype)initWithRxCompletable_13_1:(RxCompletable_13_1 *)outer$ {
+  RxCompletable_13_1_1_initWithRxCompletable_13_1_(self, outer$);
+  return self;
+}
 
 - (void)call {
   [this$0_ dispose];
-}
-
-- (instancetype)initWithRxCompletable_$13_$1:(RxCompletable_$13_$1 *)outer$ {
-  RxCompletable_$13_$1_$1_initWithRxCompletable_$13_$1_(self, outer$);
-  return self;
 }
 
 - (void)dealloc {
@@ -3998,38 +3836,44 @@ RxCompletable_$13_$1 *create_RxCompletable_$13_$1_initWithRxCompletable_$13_with
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxCompletable_$13_$1:);
+  methods[0].selector = @selector(initWithRxCompletable_13_1:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxCompletable_$13_$1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxCompletable_13_1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxCompletable_$13_$1;", "onSubscribeWithRxSubscription:" };
-  static const J2ObjcClassInfo _RxCompletable_$13_$1_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
-  return &_RxCompletable_$13_$1_$1;
+  static const void *ptrTable[] = { "LRxCompletable_13_1;", "onSubscribeWithRxSubscription:" };
+  static const J2ObjcClassInfo _RxCompletable_13_1_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  return &_RxCompletable_13_1_1;
 }
 
 @end
 
-void RxCompletable_$13_$1_$1_initWithRxCompletable_$13_$1_(RxCompletable_$13_$1_$1 *self, RxCompletable_$13_$1 *outer$) {
+void RxCompletable_13_1_1_initWithRxCompletable_13_1_(RxCompletable_13_1_1 *self, RxCompletable_13_1 *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxCompletable_$13_$1_$1 *new_RxCompletable_$13_$1_$1_initWithRxCompletable_$13_$1_(RxCompletable_$13_$1 *outer$) {
-  J2OBJC_NEW_IMPL(RxCompletable_$13_$1_$1, initWithRxCompletable_$13_$1_, outer$)
+RxCompletable_13_1_1 *new_RxCompletable_13_1_1_initWithRxCompletable_13_1_(RxCompletable_13_1 *outer$) {
+  J2OBJC_NEW_IMPL(RxCompletable_13_1_1, initWithRxCompletable_13_1_, outer$)
 }
 
-RxCompletable_$13_$1_$1 *create_RxCompletable_$13_$1_$1_initWithRxCompletable_$13_$1_(RxCompletable_$13_$1 *outer$) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$13_$1_$1, initWithRxCompletable_$13_$1_, outer$)
+RxCompletable_13_1_1 *create_RxCompletable_13_1_1_initWithRxCompletable_13_1_(RxCompletable_13_1 *outer$) {
+  J2OBJC_CREATE_IMPL(RxCompletable_13_1_1, initWithRxCompletable_13_1_, outer$)
 }
 
-@implementation RxCompletable_$14
+@implementation RxCompletable_14
+
+- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
+                                    withNSExceptionArray:(IOSObjectArray *)capture$1 {
+  RxCompletable_14_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(self, capture$0, capture$1);
+  return self;
+}
 
 - (void)onCompleted {
   [((JavaUtilConcurrentCountDownLatch *) nil_chk(val$cdl_)) countDown];
@@ -4043,12 +3887,6 @@ RxCompletable_$13_$1_$1 *create_RxCompletable_$13_$1_$1_initWithRxCompletable_$1
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d {
 }
 
-- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
-                                    withNSExceptionArray:(IOSObjectArray *)capture$1 {
-  RxCompletable_$14_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(self, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$cdl_);
   RELEASE_(val$err_);
@@ -4057,44 +3895,50 @@ RxCompletable_$13_$1_$1 *create_RxCompletable_$13_$1_$1_initWithRxCompletable_$1
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[3].selector = @selector(initWithJavaUtilConcurrentCountDownLatch:withNSExceptionArray:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentCountDownLatch:withNSExceptionArray:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onSubscribeWithRxSubscription:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$cdl_", "LJavaUtilConcurrentCountDownLatch;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$err_", "[LNSException;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LJavaUtilConcurrentCountDownLatch;[LNSException;", "LRxCompletable;", "await" };
-  static const J2ObjcClassInfo _RxCompletable_$14 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 2, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$14;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable;", "await" };
+  static const J2ObjcClassInfo _RxCompletable_14 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 2, 4, -1, 5, -1, -1 };
+  return &_RxCompletable_14;
 }
 
 @end
 
-void RxCompletable_$14_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(RxCompletable_$14 *self, JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
+void RxCompletable_14_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(RxCompletable_14 *self, JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
   JreStrongAssign(&self->val$cdl_, capture$0);
   JreStrongAssign(&self->val$err_, capture$1);
   NSObject_init(self);
 }
 
-RxCompletable_$14 *new_RxCompletable_$14_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
-  J2OBJC_NEW_IMPL(RxCompletable_$14, initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_, capture$0, capture$1)
+RxCompletable_14 *new_RxCompletable_14_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
+  J2OBJC_NEW_IMPL(RxCompletable_14, initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_, capture$0, capture$1)
 }
 
-RxCompletable_$14 *create_RxCompletable_$14_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$14, initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_, capture$0, capture$1)
+RxCompletable_14 *create_RxCompletable_14_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
+  J2OBJC_CREATE_IMPL(RxCompletable_14, initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_, capture$0, capture$1)
 }
 
-@implementation RxCompletable_$15
+@implementation RxCompletable_15
+
+- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
+                                    withNSExceptionArray:(IOSObjectArray *)capture$1 {
+  RxCompletable_15_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(self, capture$0, capture$1);
+  return self;
+}
 
 - (void)onCompleted {
   [((JavaUtilConcurrentCountDownLatch *) nil_chk(val$cdl_)) countDown];
@@ -4108,12 +3952,6 @@ RxCompletable_$14 *create_RxCompletable_$14_initWithJavaUtilConcurrentCountDownL
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d {
 }
 
-- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
-                                    withNSExceptionArray:(IOSObjectArray *)capture$1 {
-  RxCompletable_$15_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(self, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$cdl_);
   RELEASE_(val$err_);
@@ -4122,59 +3960,59 @@ RxCompletable_$14 *create_RxCompletable_$14_initWithJavaUtilConcurrentCountDownL
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[3].selector = @selector(initWithJavaUtilConcurrentCountDownLatch:withNSExceptionArray:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentCountDownLatch:withNSExceptionArray:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onSubscribeWithRxSubscription:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$cdl_", "LJavaUtilConcurrentCountDownLatch;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$err_", "[LNSException;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LJavaUtilConcurrentCountDownLatch;[LNSException;", "LRxCompletable;", "awaitWithLong:withJavaUtilConcurrentTimeUnit:" };
-  static const J2ObjcClassInfo _RxCompletable_$15 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 2, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$15;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable;", "awaitWithLong:withJavaUtilConcurrentTimeUnit:" };
+  static const J2ObjcClassInfo _RxCompletable_15 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 2, 4, -1, 5, -1, -1 };
+  return &_RxCompletable_15;
 }
 
 @end
 
-void RxCompletable_$15_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(RxCompletable_$15 *self, JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
+void RxCompletable_15_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(RxCompletable_15 *self, JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
   JreStrongAssign(&self->val$cdl_, capture$0);
   JreStrongAssign(&self->val$err_, capture$1);
   NSObject_init(self);
 }
 
-RxCompletable_$15 *new_RxCompletable_$15_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
-  J2OBJC_NEW_IMPL(RxCompletable_$15, initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_, capture$0, capture$1)
+RxCompletable_15 *new_RxCompletable_15_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
+  J2OBJC_NEW_IMPL(RxCompletable_15, initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_, capture$0, capture$1)
 }
 
-RxCompletable_$15 *create_RxCompletable_$15_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$15, initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_, capture$0, capture$1)
+RxCompletable_15 *create_RxCompletable_15_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
+  J2OBJC_CREATE_IMPL(RxCompletable_15, initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_, capture$0, capture$1)
 }
 
-@implementation RxCompletable_$16
-
-- (void)callWithId:(id<RxCompletableSubscriber>)s {
-  RxSubscriptionsCompositeSubscription *set = create_RxSubscriptionsCompositeSubscription_init();
-  RxScheduler_Worker *w = [((RxScheduler *) nil_chk(val$scheduler_)) createWorker];
-  [set addWithRxSubscription:w];
-  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(this$0_, create_RxCompletable_$16_$1_initWithRxCompletable_$16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_(self, set, w, s));
-}
+@implementation RxCompletable_16
 
 - (instancetype)initWithRxCompletable:(RxCompletable *)outer$
                       withRxScheduler:(RxScheduler *)capture$0
                              withLong:(jlong)capture$1
        withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)capture$2
                           withBoolean:(jboolean)capture$3 {
-  RxCompletable_$16_initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_(self, outer$, capture$0, capture$1, capture$2, capture$3);
+  RxCompletable_16_initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_(self, outer$, capture$0, capture$1, capture$2, capture$3);
   return self;
+}
+
+- (void)callWithId:(id<RxCompletableSubscriber>)s {
+  RxSubscriptionsCompositeSubscription *set = create_RxSubscriptionsCompositeSubscription_init();
+  RxScheduler_Worker *w = [((RxScheduler *) nil_chk(val$scheduler_)) createWorker];
+  [set addWithRxSubscription:w];
+  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(this$0_, create_RxCompletable_16_1_initWithRxCompletable_16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_(self, set, w, s));
 }
 
 - (void)dealloc {
@@ -4186,13 +4024,13 @@ RxCompletable_$15 *create_RxCompletable_$15_initWithJavaUtilConcurrentCountDownL
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxCompletable:withRxScheduler:withLong:withJavaUtilConcurrentTimeUnit:withBoolean:);
+  methods[0].selector = @selector(initWithRxCompletable:withRxScheduler:withLong:withJavaUtilConcurrentTimeUnit:withBoolean:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxCompletable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
@@ -4201,14 +4039,14 @@ RxCompletable_$15 *create_RxCompletable_$15_initWithJavaUtilConcurrentCountDownL
     { "val$unit_", "LJavaUtilConcurrentTimeUnit;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$delayError_", "Z", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxCompletable;LRxScheduler;JLJavaUtilConcurrentTimeUnit;Z", "LRxCompletable;", "delayWithLong:withJavaUtilConcurrentTimeUnit:withRxScheduler:withBoolean:" };
-  static const J2ObjcClassInfo _RxCompletable_$16 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 5, 3, -1, 4, -1, -1 };
-  return &_RxCompletable_$16;
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxCompletable;", "delayWithLong:withJavaUtilConcurrentTimeUnit:withRxScheduler:withBoolean:" };
+  static const J2ObjcClassInfo _RxCompletable_16 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 5, 2, -1, 3, -1, -1 };
+  return &_RxCompletable_16;
 }
 
 @end
 
-void RxCompletable_$16_initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_(RxCompletable_$16 *self, RxCompletable *outer$, RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2, jboolean capture$3) {
+void RxCompletable_16_initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_(RxCompletable_16 *self, RxCompletable *outer$, RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2, jboolean capture$3) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$scheduler_, capture$0);
   self->val$delay_ = capture$1;
@@ -4217,23 +4055,31 @@ void RxCompletable_$16_initWithRxCompletable_withRxScheduler_withLong_withJavaUt
   NSObject_init(self);
 }
 
-RxCompletable_$16 *new_RxCompletable_$16_initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_(RxCompletable *outer$, RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2, jboolean capture$3) {
-  J2OBJC_NEW_IMPL(RxCompletable_$16, initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_, outer$, capture$0, capture$1, capture$2, capture$3)
+RxCompletable_16 *new_RxCompletable_16_initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_(RxCompletable *outer$, RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2, jboolean capture$3) {
+  J2OBJC_NEW_IMPL(RxCompletable_16, initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_, outer$, capture$0, capture$1, capture$2, capture$3)
 }
 
-RxCompletable_$16 *create_RxCompletable_$16_initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_(RxCompletable *outer$, RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2, jboolean capture$3) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$16, initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_, outer$, capture$0, capture$1, capture$2, capture$3)
+RxCompletable_16 *create_RxCompletable_16_initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_(RxCompletable *outer$, RxScheduler *capture$0, jlong capture$1, JavaUtilConcurrentTimeUnit *capture$2, jboolean capture$3) {
+  J2OBJC_CREATE_IMPL(RxCompletable_16, initWithRxCompletable_withRxScheduler_withLong_withJavaUtilConcurrentTimeUnit_withBoolean_, outer$, capture$0, capture$1, capture$2, capture$3)
 }
 
-@implementation RxCompletable_$16_$1
+@implementation RxCompletable_16_1
+
+- (instancetype)initWithRxCompletable_16:(RxCompletable_16 *)outer$
+withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$0
+                  withRxScheduler_Worker:(RxScheduler_Worker *)capture$1
+             withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2 {
+  RxCompletable_16_1_initWithRxCompletable_16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_(self, outer$, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)onCompleted {
-  [((RxSubscriptionsCompositeSubscription *) nil_chk(val$set_)) addWithRxSubscription:[((RxScheduler_Worker *) nil_chk(val$w_)) scheduleWithRxFunctionsAction0:create_RxCompletable_$16_$1_$1_initWithRxCompletable_$16_$1_(self) withLong:this$0_->val$delay_ withJavaUtilConcurrentTimeUnit:this$0_->val$unit_]];
+  [((RxSubscriptionsCompositeSubscription *) nil_chk(val$set_)) addWithRxSubscription:[((RxScheduler_Worker *) nil_chk(val$w_)) scheduleWithRxFunctionsAction0:create_RxCompletable_16_1_1_initWithRxCompletable_16_1_(self) withLong:this$0_->val$delay_ withJavaUtilConcurrentTimeUnit:this$0_->val$unit_]];
 }
 
 - (void)onErrorWithNSException:(NSException *)e {
   if (this$0_->val$delayError_) {
-    [((RxSubscriptionsCompositeSubscription *) nil_chk(val$set_)) addWithRxSubscription:[((RxScheduler_Worker *) nil_chk(val$w_)) scheduleWithRxFunctionsAction0:create_RxCompletable_$16_$1_$2_initWithRxCompletable_$16_$1_withNSException_(self, e) withLong:this$0_->val$delay_ withJavaUtilConcurrentTimeUnit:this$0_->val$unit_]];
+    [((RxSubscriptionsCompositeSubscription *) nil_chk(val$set_)) addWithRxSubscription:[((RxScheduler_Worker *) nil_chk(val$w_)) scheduleWithRxFunctionsAction0:create_RxCompletable_16_1_2_initWithRxCompletable_16_1_withNSException_(self, e) withLong:this$0_->val$delay_ withJavaUtilConcurrentTimeUnit:this$0_->val$unit_]];
   }
   else {
     [((id<RxCompletableSubscriber>) nil_chk(val$s_)) onErrorWithNSException:e];
@@ -4243,14 +4089,6 @@ RxCompletable_$16 *create_RxCompletable_$16_initWithRxCompletable_withRxSchedule
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d {
   [((RxSubscriptionsCompositeSubscription *) nil_chk(val$set_)) addWithRxSubscription:d];
   [((id<RxCompletableSubscriber>) nil_chk(val$s_)) onSubscribeWithRxSubscription:val$set_];
-}
-
-- (instancetype)initWithRxCompletable_$16:(RxCompletable_$16 *)outer$
- withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$0
-                   withRxScheduler_Worker:(RxScheduler_Worker *)capture$1
-              withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2 {
-  RxCompletable_$16_$1_initWithRxCompletable_$16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_(self, outer$, capture$0, capture$1, capture$2);
-  return self;
 }
 
 - (void)dealloc {
@@ -4263,32 +4101,32 @@ RxCompletable_$16 *create_RxCompletable_$16_initWithRxCompletable_withRxSchedule
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[3].selector = @selector(initWithRxCompletable_$16:withRxSubscriptionsCompositeSubscription:withRxScheduler_Worker:withRxCompletableSubscriber:);
+  methods[0].selector = @selector(initWithRxCompletable_16:withRxSubscriptionsCompositeSubscription:withRxScheduler_Worker:withRxCompletableSubscriber:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onSubscribeWithRxSubscription:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxCompletable_$16;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxCompletable_16;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$set_", "LRxSubscriptionsCompositeSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$w_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$s_", "LRxCompletableSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable_$16;LRxSubscriptionsCompositeSubscription;LRxScheduler_Worker;LRxCompletableSubscriber;", "LRxCompletable_$16;", "callWithId:" };
-  static const J2ObjcClassInfo _RxCompletable_$16_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 4, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$16_$1;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable_16;", "callWithId:" };
+  static const J2ObjcClassInfo _RxCompletable_16_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 4, 4, -1, 5, -1, -1 };
+  return &_RxCompletable_16_1;
 }
 
 @end
 
-void RxCompletable_$16_$1_initWithRxCompletable_$16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_(RxCompletable_$16_$1 *self, RxCompletable_$16 *outer$, RxSubscriptionsCompositeSubscription *capture$0, RxScheduler_Worker *capture$1, id<RxCompletableSubscriber> capture$2) {
+void RxCompletable_16_1_initWithRxCompletable_16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_(RxCompletable_16_1 *self, RxCompletable_16 *outer$, RxSubscriptionsCompositeSubscription *capture$0, RxScheduler_Worker *capture$1, id<RxCompletableSubscriber> capture$2) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$set_, capture$0);
   JreStrongAssign(&self->val$w_, capture$1);
@@ -4296,15 +4134,20 @@ void RxCompletable_$16_$1_initWithRxCompletable_$16_withRxSubscriptionsComposite
   NSObject_init(self);
 }
 
-RxCompletable_$16_$1 *new_RxCompletable_$16_$1_initWithRxCompletable_$16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_(RxCompletable_$16 *outer$, RxSubscriptionsCompositeSubscription *capture$0, RxScheduler_Worker *capture$1, id<RxCompletableSubscriber> capture$2) {
-  J2OBJC_NEW_IMPL(RxCompletable_$16_$1, initWithRxCompletable_$16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_, outer$, capture$0, capture$1, capture$2)
+RxCompletable_16_1 *new_RxCompletable_16_1_initWithRxCompletable_16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_(RxCompletable_16 *outer$, RxSubscriptionsCompositeSubscription *capture$0, RxScheduler_Worker *capture$1, id<RxCompletableSubscriber> capture$2) {
+  J2OBJC_NEW_IMPL(RxCompletable_16_1, initWithRxCompletable_16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_, outer$, capture$0, capture$1, capture$2)
 }
 
-RxCompletable_$16_$1 *create_RxCompletable_$16_$1_initWithRxCompletable_$16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_(RxCompletable_$16 *outer$, RxSubscriptionsCompositeSubscription *capture$0, RxScheduler_Worker *capture$1, id<RxCompletableSubscriber> capture$2) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$16_$1, initWithRxCompletable_$16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_, outer$, capture$0, capture$1, capture$2)
+RxCompletable_16_1 *create_RxCompletable_16_1_initWithRxCompletable_16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_(RxCompletable_16 *outer$, RxSubscriptionsCompositeSubscription *capture$0, RxScheduler_Worker *capture$1, id<RxCompletableSubscriber> capture$2) {
+  J2OBJC_CREATE_IMPL(RxCompletable_16_1, initWithRxCompletable_16_withRxSubscriptionsCompositeSubscription_withRxScheduler_Worker_withRxCompletableSubscriber_, outer$, capture$0, capture$1, capture$2)
 }
 
-@implementation RxCompletable_$16_$1_$1
+@implementation RxCompletable_16_1_1
+
+- (instancetype)initWithRxCompletable_16_1:(RxCompletable_16_1 *)outer$ {
+  RxCompletable_16_1_1_initWithRxCompletable_16_1_(self, outer$);
+  return self;
+}
 
 - (void)call {
   @try {
@@ -4315,11 +4158,6 @@ RxCompletable_$16_$1 *create_RxCompletable_$16_$1_initWithRxCompletable_$16_with
   }
 }
 
-- (instancetype)initWithRxCompletable_$16_$1:(RxCompletable_$16_$1 *)outer$ {
-  RxCompletable_$16_$1_$1_initWithRxCompletable_$16_$1_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -4327,38 +4165,44 @@ RxCompletable_$16_$1 *create_RxCompletable_$16_$1_initWithRxCompletable_$16_with
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxCompletable_$16_$1:);
+  methods[0].selector = @selector(initWithRxCompletable_16_1:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxCompletable_$16_$1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxCompletable_16_1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxCompletable_$16_$1;", "onCompleted" };
-  static const J2ObjcClassInfo _RxCompletable_$16_$1_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
-  return &_RxCompletable_$16_$1_$1;
+  static const void *ptrTable[] = { "LRxCompletable_16_1;", "onCompleted" };
+  static const J2ObjcClassInfo _RxCompletable_16_1_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  return &_RxCompletable_16_1_1;
 }
 
 @end
 
-void RxCompletable_$16_$1_$1_initWithRxCompletable_$16_$1_(RxCompletable_$16_$1_$1 *self, RxCompletable_$16_$1 *outer$) {
+void RxCompletable_16_1_1_initWithRxCompletable_16_1_(RxCompletable_16_1_1 *self, RxCompletable_16_1 *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxCompletable_$16_$1_$1 *new_RxCompletable_$16_$1_$1_initWithRxCompletable_$16_$1_(RxCompletable_$16_$1 *outer$) {
-  J2OBJC_NEW_IMPL(RxCompletable_$16_$1_$1, initWithRxCompletable_$16_$1_, outer$)
+RxCompletable_16_1_1 *new_RxCompletable_16_1_1_initWithRxCompletable_16_1_(RxCompletable_16_1 *outer$) {
+  J2OBJC_NEW_IMPL(RxCompletable_16_1_1, initWithRxCompletable_16_1_, outer$)
 }
 
-RxCompletable_$16_$1_$1 *create_RxCompletable_$16_$1_$1_initWithRxCompletable_$16_$1_(RxCompletable_$16_$1 *outer$) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$16_$1_$1, initWithRxCompletable_$16_$1_, outer$)
+RxCompletable_16_1_1 *create_RxCompletable_16_1_1_initWithRxCompletable_16_1_(RxCompletable_16_1 *outer$) {
+  J2OBJC_CREATE_IMPL(RxCompletable_16_1_1, initWithRxCompletable_16_1_, outer$)
 }
 
-@implementation RxCompletable_$16_$1_$2
+@implementation RxCompletable_16_1_2
+
+- (instancetype)initWithRxCompletable_16_1:(RxCompletable_16_1 *)outer$
+                           withNSException:(NSException *)capture$0 {
+  RxCompletable_16_1_2_initWithRxCompletable_16_1_withNSException_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)call {
   @try {
@@ -4369,12 +4213,6 @@ RxCompletable_$16_$1_$1 *create_RxCompletable_$16_$1_$1_initWithRxCompletable_$1
   }
 }
 
-- (instancetype)initWithRxCompletable_$16_$1:(RxCompletable_$16_$1 *)outer$
-                             withNSException:(NSException *)capture$0 {
-  RxCompletable_$16_$1_$2_initWithRxCompletable_$16_$1_withNSException_(self, outer$, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$e_);
@@ -4383,50 +4221,50 @@ RxCompletable_$16_$1_$1 *create_RxCompletable_$16_$1_$1_initWithRxCompletable_$1
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxCompletable_$16_$1:withNSException:);
+  methods[0].selector = @selector(initWithRxCompletable_16_1:withNSException:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxCompletable_$16_$1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxCompletable_16_1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$e_", "LNSException;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxCompletable_$16_$1;LNSException;", "LRxCompletable_$16_$1;", "onErrorWithNSException:" };
-  static const J2ObjcClassInfo _RxCompletable_$16_$1_$2 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_RxCompletable_$16_$1_$2;
+  static const void *ptrTable[] = { "LRxCompletable_16_1;", "onErrorWithNSException:" };
+  static const J2ObjcClassInfo _RxCompletable_16_1_2 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 0, -1, 1, -1, -1 };
+  return &_RxCompletable_16_1_2;
 }
 
 @end
 
-void RxCompletable_$16_$1_$2_initWithRxCompletable_$16_$1_withNSException_(RxCompletable_$16_$1_$2 *self, RxCompletable_$16_$1 *outer$, NSException *capture$0) {
+void RxCompletable_16_1_2_initWithRxCompletable_16_1_withNSException_(RxCompletable_16_1_2 *self, RxCompletable_16_1 *outer$, NSException *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$e_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$16_$1_$2 *new_RxCompletable_$16_$1_$2_initWithRxCompletable_$16_$1_withNSException_(RxCompletable_$16_$1 *outer$, NSException *capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$16_$1_$2, initWithRxCompletable_$16_$1_withNSException_, outer$, capture$0)
+RxCompletable_16_1_2 *new_RxCompletable_16_1_2_initWithRxCompletable_16_1_withNSException_(RxCompletable_16_1 *outer$, NSException *capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_16_1_2, initWithRxCompletable_16_1_withNSException_, outer$, capture$0)
 }
 
-RxCompletable_$16_$1_$2 *create_RxCompletable_$16_$1_$2_initWithRxCompletable_$16_$1_withNSException_(RxCompletable_$16_$1 *outer$, NSException *capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$16_$1_$2, initWithRxCompletable_$16_$1_withNSException_, outer$, capture$0)
+RxCompletable_16_1_2 *create_RxCompletable_16_1_2_initWithRxCompletable_16_1_withNSException_(RxCompletable_16_1 *outer$, NSException *capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_16_1_2, initWithRxCompletable_16_1_withNSException_, outer$, capture$0)
 }
 
-@implementation RxCompletable_$17
+@implementation RxCompletable_17
+
+- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0 {
+  RxCompletable_17_initWithRxFunctionsAction1_(self, capture$0);
+  return self;
+}
 
 - (void)callWithId:(NSException *)throwable {
   [((id<RxFunctionsAction1>) nil_chk(val$onNotification_)) callWithId:RxNotification_createOnErrorWithNSException_(throwable)];
 }
 
-- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0 {
-  RxCompletable_$17_initWithRxFunctionsAction1_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$onNotification_);
   [super dealloc];
@@ -4434,48 +4272,48 @@ RxCompletable_$16_$1_$2 *create_RxCompletable_$16_$1_$2_initWithRxCompletable_$1
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, 3, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxFunctionsAction1:);
+  methods[0].selector = @selector(initWithRxFunctionsAction1:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$onNotification_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+    { "val$onNotification_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
   };
-  static const void *ptrTable[] = { "call", "LNSException;", "LRxFunctionsAction1;", "(Lrx/functions/Action1<Lrx/Notification<Ljava/lang/Object;>;>;)V", "Lrx/functions/Action1<Lrx/Notification<Ljava/lang/Object;>;>;", "LRxCompletable;", "doOnEachWithRxFunctionsAction1:", "Ljava/lang/Object;Lrx/functions/Action1<Ljava/lang/Throwable;>;" };
-  static const J2ObjcClassInfo _RxCompletable_$17 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 5, -1, 6, 7, -1 };
-  return &_RxCompletable_$17;
+  static const void *ptrTable[] = { "call", "LNSException;", "Lrx/functions/Action1<Lrx/Notification<Ljava/lang/Object;>;>;", "LRxCompletable;", "doOnEachWithRxFunctionsAction1:", "Ljava/lang/Object;Lrx/functions/Action1<Ljava/lang/Throwable;>;" };
+  static const J2ObjcClassInfo _RxCompletable_17 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, 5, -1 };
+  return &_RxCompletable_17;
 }
 
 @end
 
-void RxCompletable_$17_initWithRxFunctionsAction1_(RxCompletable_$17 *self, id<RxFunctionsAction1> capture$0) {
+void RxCompletable_17_initWithRxFunctionsAction1_(RxCompletable_17 *self, id<RxFunctionsAction1> capture$0) {
   JreStrongAssign(&self->val$onNotification_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$17 *new_RxCompletable_$17_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$17, initWithRxFunctionsAction1_, capture$0)
+RxCompletable_17 *new_RxCompletable_17_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_17, initWithRxFunctionsAction1_, capture$0)
 }
 
-RxCompletable_$17 *create_RxCompletable_$17_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$17, initWithRxFunctionsAction1_, capture$0)
+RxCompletable_17 *create_RxCompletable_17_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_17, initWithRxFunctionsAction1_, capture$0)
 }
 
-@implementation RxCompletable_$18
+@implementation RxCompletable_18
+
+- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0 {
+  RxCompletable_18_initWithRxFunctionsAction1_(self, capture$0);
+  return self;
+}
 
 - (void)call {
   [((id<RxFunctionsAction1>) nil_chk(val$onNotification_)) callWithId:RxNotification_createOnCompleted()];
 }
 
-- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0 {
-  RxCompletable_$18_initWithRxFunctionsAction1_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$onNotification_);
   [super dealloc];
@@ -4483,42 +4321,38 @@ RxCompletable_$17 *create_RxCompletable_$17_initWithRxFunctionsAction1_(id<RxFun
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxFunctionsAction1:);
+  methods[0].selector = @selector(initWithRxFunctionsAction1:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$onNotification_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+    { "val$onNotification_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
   };
-  static const void *ptrTable[] = { "LRxFunctionsAction1;", "(Lrx/functions/Action1<Lrx/Notification<Ljava/lang/Object;>;>;)V", "Lrx/functions/Action1<Lrx/Notification<Ljava/lang/Object;>;>;", "LRxCompletable;", "doOnEachWithRxFunctionsAction1:" };
-  static const J2ObjcClassInfo _RxCompletable_$18 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
-  return &_RxCompletable_$18;
+  static const void *ptrTable[] = { "Lrx/functions/Action1<Lrx/Notification<Ljava/lang/Object;>;>;", "LRxCompletable;", "doOnEachWithRxFunctionsAction1:" };
+  static const J2ObjcClassInfo _RxCompletable_18 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
+  return &_RxCompletable_18;
 }
 
 @end
 
-void RxCompletable_$18_initWithRxFunctionsAction1_(RxCompletable_$18 *self, id<RxFunctionsAction1> capture$0) {
+void RxCompletable_18_initWithRxFunctionsAction1_(RxCompletable_18 *self, id<RxFunctionsAction1> capture$0) {
   JreStrongAssign(&self->val$onNotification_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$18 *new_RxCompletable_$18_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$18, initWithRxFunctionsAction1_, capture$0)
+RxCompletable_18 *new_RxCompletable_18_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_18, initWithRxFunctionsAction1_, capture$0)
 }
 
-RxCompletable_$18 *create_RxCompletable_$18_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$18, initWithRxFunctionsAction1_, capture$0)
+RxCompletable_18 *create_RxCompletable_18_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_18, initWithRxFunctionsAction1_, capture$0)
 }
 
-@implementation RxCompletable_$19
-
-- (void)callWithId:(id<RxCompletableSubscriber>)s {
-  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(this$0_, create_RxCompletable_$19_$1_initWithRxCompletable_$19_withRxCompletableSubscriber_(self, s));
-}
+@implementation RxCompletable_19
 
 - (instancetype)initWithRxCompletable:(RxCompletable *)outer$
                withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0
@@ -4526,8 +4360,12 @@ RxCompletable_$18 *create_RxCompletable_$18_initWithRxFunctionsAction1_(id<RxFun
                withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$2
                withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$3
                withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$4 {
-  RxCompletable_$19_initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(self, outer$, capture$0, capture$1, capture$2, capture$3, capture$4);
+  RxCompletable_19_initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(self, outer$, capture$0, capture$1, capture$2, capture$3, capture$4);
   return self;
+}
+
+- (void)callWithId:(id<RxCompletableSubscriber>)s {
+  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(this$0_, create_RxCompletable_19_1_initWithRxCompletable_19_withRxCompletableSubscriber_(self, s));
 }
 
 - (void)dealloc {
@@ -4542,30 +4380,30 @@ RxCompletable_$18 *create_RxCompletable_$18_initWithRxFunctionsAction1_(id<RxFun
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, 3, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxCompletable:withRxFunctionsAction0:withRxFunctionsAction0:withRxFunctionsAction1:withRxFunctionsAction1:withRxFunctionsAction0:);
+  methods[0].selector = @selector(initWithRxCompletable:withRxFunctionsAction0:withRxFunctionsAction0:withRxFunctionsAction1:withRxFunctionsAction1:withRxFunctionsAction0:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxCompletable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$onComplete_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$onAfterComplete_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$onError_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
-    { "val$onSubscribe_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$onError_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+    { "val$onSubscribe_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
     { "val$onUnsubscribe_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxCompletable;LRxFunctionsAction0;LRxFunctionsAction0;LRxFunctionsAction1;LRxFunctionsAction1;LRxFunctionsAction0;", "(Lrx/Completable;Lrx/functions/Action0;Lrx/functions/Action0;Lrx/functions/Action1<-Ljava/lang/Throwable;>;Lrx/functions/Action1<-Lrx/Subscription;>;Lrx/functions/Action0;)V", "Lrx/functions/Action1<-Ljava/lang/Throwable;>;", "Lrx/functions/Action1<-Lrx/Subscription;>;", "LRxCompletable;", "doOnLifecycleWithRxFunctionsAction1:withRxFunctionsAction1:withRxFunctionsAction0:withRxFunctionsAction0:withRxFunctionsAction0:" };
-  static const J2ObjcClassInfo _RxCompletable_$19 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 6, 6, -1, 7, -1, -1 };
-  return &_RxCompletable_$19;
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "Lrx/functions/Action1<-Ljava/lang/Throwable;>;", "Lrx/functions/Action1<-Lrx/Subscription;>;", "LRxCompletable;", "doOnLifecycleWithRxFunctionsAction1:withRxFunctionsAction1:withRxFunctionsAction0:withRxFunctionsAction0:withRxFunctionsAction0:" };
+  static const J2ObjcClassInfo _RxCompletable_19 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 6, 4, -1, 5, -1, -1 };
+  return &_RxCompletable_19;
 }
 
 @end
 
-void RxCompletable_$19_initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(RxCompletable_$19 *self, RxCompletable *outer$, id<RxFunctionsAction0> capture$0, id<RxFunctionsAction0> capture$1, id<RxFunctionsAction1> capture$2, id<RxFunctionsAction1> capture$3, id<RxFunctionsAction0> capture$4) {
+void RxCompletable_19_initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(RxCompletable_19 *self, RxCompletable *outer$, id<RxFunctionsAction0> capture$0, id<RxFunctionsAction0> capture$1, id<RxFunctionsAction1> capture$2, id<RxFunctionsAction1> capture$3, id<RxFunctionsAction0> capture$4) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$onComplete_, capture$0);
   JreStrongAssign(&self->val$onAfterComplete_, capture$1);
@@ -4575,15 +4413,21 @@ void RxCompletable_$19_initWithRxCompletable_withRxFunctionsAction0_withRxFuncti
   NSObject_init(self);
 }
 
-RxCompletable_$19 *new_RxCompletable_$19_initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(RxCompletable *outer$, id<RxFunctionsAction0> capture$0, id<RxFunctionsAction0> capture$1, id<RxFunctionsAction1> capture$2, id<RxFunctionsAction1> capture$3, id<RxFunctionsAction0> capture$4) {
-  J2OBJC_NEW_IMPL(RxCompletable_$19, initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_, outer$, capture$0, capture$1, capture$2, capture$3, capture$4)
+RxCompletable_19 *new_RxCompletable_19_initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(RxCompletable *outer$, id<RxFunctionsAction0> capture$0, id<RxFunctionsAction0> capture$1, id<RxFunctionsAction1> capture$2, id<RxFunctionsAction1> capture$3, id<RxFunctionsAction0> capture$4) {
+  J2OBJC_NEW_IMPL(RxCompletable_19, initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_, outer$, capture$0, capture$1, capture$2, capture$3, capture$4)
 }
 
-RxCompletable_$19 *create_RxCompletable_$19_initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(RxCompletable *outer$, id<RxFunctionsAction0> capture$0, id<RxFunctionsAction0> capture$1, id<RxFunctionsAction1> capture$2, id<RxFunctionsAction1> capture$3, id<RxFunctionsAction0> capture$4) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$19, initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_, outer$, capture$0, capture$1, capture$2, capture$3, capture$4)
+RxCompletable_19 *create_RxCompletable_19_initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(RxCompletable *outer$, id<RxFunctionsAction0> capture$0, id<RxFunctionsAction0> capture$1, id<RxFunctionsAction1> capture$2, id<RxFunctionsAction1> capture$3, id<RxFunctionsAction0> capture$4) {
+  J2OBJC_CREATE_IMPL(RxCompletable_19, initWithRxCompletable_withRxFunctionsAction0_withRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_, outer$, capture$0, capture$1, capture$2, capture$3, capture$4)
 }
 
-@implementation RxCompletable_$19_$1
+@implementation RxCompletable_19_1
+
+- (instancetype)initWithRxCompletable_19:(RxCompletable_19 *)outer$
+             withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0 {
+  RxCompletable_19_1_initWithRxCompletable_19_withRxCompletableSubscriber_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)onCompleted {
   @try {
@@ -4622,13 +4466,7 @@ RxCompletable_$19 *create_RxCompletable_$19_initWithRxCompletable_withRxFunction
     [val$s_ onErrorWithNSException:ex];
     return;
   }
-  [((id<RxCompletableSubscriber>) nil_chk(val$s_)) onSubscribeWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxCompletable_$19_$1_$1_initWithRxCompletable_$19_$1_withRxSubscription_(self, d))];
-}
-
-- (instancetype)initWithRxCompletable_$19:(RxCompletable_$19 *)outer$
-              withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0 {
-  RxCompletable_$19_$1_initWithRxCompletable_$19_withRxCompletableSubscriber_(self, outer$, capture$0);
-  return self;
+  [((id<RxCompletableSubscriber>) nil_chk(val$s_)) onSubscribeWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxCompletable_19_1_1_initWithRxCompletable_19_1_withRxSubscription_(self, d))];
 }
 
 - (void)dealloc {
@@ -4639,44 +4477,50 @@ RxCompletable_$19 *create_RxCompletable_$19_initWithRxCompletable_withRxFunction
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[3].selector = @selector(initWithRxCompletable_$19:withRxCompletableSubscriber:);
+  methods[0].selector = @selector(initWithRxCompletable_19:withRxCompletableSubscriber:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onSubscribeWithRxSubscription:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxCompletable_$19;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxCompletable_19;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$s_", "LRxCompletableSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable_$19;LRxCompletableSubscriber;", "LRxCompletable_$19;", "callWithId:" };
-  static const J2ObjcClassInfo _RxCompletable_$19_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 2, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$19_$1;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable_19;", "callWithId:" };
+  static const J2ObjcClassInfo _RxCompletable_19_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 2, 4, -1, 5, -1, -1 };
+  return &_RxCompletable_19_1;
 }
 
 @end
 
-void RxCompletable_$19_$1_initWithRxCompletable_$19_withRxCompletableSubscriber_(RxCompletable_$19_$1 *self, RxCompletable_$19 *outer$, id<RxCompletableSubscriber> capture$0) {
+void RxCompletable_19_1_initWithRxCompletable_19_withRxCompletableSubscriber_(RxCompletable_19_1 *self, RxCompletable_19 *outer$, id<RxCompletableSubscriber> capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$s_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$19_$1 *new_RxCompletable_$19_$1_initWithRxCompletable_$19_withRxCompletableSubscriber_(RxCompletable_$19 *outer$, id<RxCompletableSubscriber> capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$19_$1, initWithRxCompletable_$19_withRxCompletableSubscriber_, outer$, capture$0)
+RxCompletable_19_1 *new_RxCompletable_19_1_initWithRxCompletable_19_withRxCompletableSubscriber_(RxCompletable_19 *outer$, id<RxCompletableSubscriber> capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_19_1, initWithRxCompletable_19_withRxCompletableSubscriber_, outer$, capture$0)
 }
 
-RxCompletable_$19_$1 *create_RxCompletable_$19_$1_initWithRxCompletable_$19_withRxCompletableSubscriber_(RxCompletable_$19 *outer$, id<RxCompletableSubscriber> capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$19_$1, initWithRxCompletable_$19_withRxCompletableSubscriber_, outer$, capture$0)
+RxCompletable_19_1 *create_RxCompletable_19_1_initWithRxCompletable_19_withRxCompletableSubscriber_(RxCompletable_19 *outer$, id<RxCompletableSubscriber> capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_19_1, initWithRxCompletable_19_withRxCompletableSubscriber_, outer$, capture$0)
 }
 
-@implementation RxCompletable_$19_$1_$1
+@implementation RxCompletable_19_1_1
+
+- (instancetype)initWithRxCompletable_19_1:(RxCompletable_19_1 *)outer$
+                        withRxSubscription:(id<RxSubscription>)capture$0 {
+  RxCompletable_19_1_1_initWithRxCompletable_19_1_withRxSubscription_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)call {
   @try {
@@ -4688,12 +4532,6 @@ RxCompletable_$19_$1 *create_RxCompletable_$19_$1_initWithRxCompletable_$19_with
   [((id<RxSubscription>) nil_chk(val$d_)) unsubscribe];
 }
 
-- (instancetype)initWithRxCompletable_$19_$1:(RxCompletable_$19_$1 *)outer$
-                          withRxSubscription:(id<RxSubscription>)capture$0 {
-  RxCompletable_$19_$1_$1_initWithRxCompletable_$19_$1_withRxSubscription_(self, outer$, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$d_);
@@ -4702,48 +4540,48 @@ RxCompletable_$19_$1 *create_RxCompletable_$19_$1_initWithRxCompletable_$19_with
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxCompletable_$19_$1:withRxSubscription:);
+  methods[0].selector = @selector(initWithRxCompletable_19_1:withRxSubscription:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxCompletable_$19_$1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxCompletable_19_1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$d_", "LRxSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxCompletable_$19_$1;LRxSubscription;", "LRxCompletable_$19_$1;", "onSubscribeWithRxSubscription:" };
-  static const J2ObjcClassInfo _RxCompletable_$19_$1_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_RxCompletable_$19_$1_$1;
+  static const void *ptrTable[] = { "LRxCompletable_19_1;", "onSubscribeWithRxSubscription:" };
+  static const J2ObjcClassInfo _RxCompletable_19_1_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 0, -1, 1, -1, -1 };
+  return &_RxCompletable_19_1_1;
 }
 
 @end
 
-void RxCompletable_$19_$1_$1_initWithRxCompletable_$19_$1_withRxSubscription_(RxCompletable_$19_$1_$1 *self, RxCompletable_$19_$1 *outer$, id<RxSubscription> capture$0) {
+void RxCompletable_19_1_1_initWithRxCompletable_19_1_withRxSubscription_(RxCompletable_19_1_1 *self, RxCompletable_19_1 *outer$, id<RxSubscription> capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$d_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$19_$1_$1 *new_RxCompletable_$19_$1_$1_initWithRxCompletable_$19_$1_withRxSubscription_(RxCompletable_$19_$1 *outer$, id<RxSubscription> capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$19_$1_$1, initWithRxCompletable_$19_$1_withRxSubscription_, outer$, capture$0)
+RxCompletable_19_1_1 *new_RxCompletable_19_1_1_initWithRxCompletable_19_1_withRxSubscription_(RxCompletable_19_1 *outer$, id<RxSubscription> capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_19_1_1, initWithRxCompletable_19_1_withRxSubscription_, outer$, capture$0)
 }
 
-RxCompletable_$19_$1_$1 *create_RxCompletable_$19_$1_$1_initWithRxCompletable_$19_$1_withRxSubscription_(RxCompletable_$19_$1 *outer$, id<RxSubscription> capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$19_$1_$1, initWithRxCompletable_$19_$1_withRxSubscription_, outer$, capture$0)
+RxCompletable_19_1_1 *create_RxCompletable_19_1_1_initWithRxCompletable_19_1_withRxSubscription_(RxCompletable_19_1 *outer$, id<RxSubscription> capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_19_1_1, initWithRxCompletable_19_1_withRxSubscription_, outer$, capture$0)
 }
 
-@implementation RxCompletable_$20
+@implementation RxCompletable_20
+
+- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0 {
+  RxCompletable_20_initWithRxFunctionsAction0_(self, capture$0);
+  return self;
+}
 
 - (void)callWithId:(NSException *)e {
   [((id<RxFunctionsAction0>) nil_chk(val$onTerminate_)) call];
-}
-
-- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0 {
-  RxCompletable_$20_initWithRxFunctionsAction0_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -4753,38 +4591,44 @@ RxCompletable_$19_$1_$1 *create_RxCompletable_$19_$1_$1_initWithRxCompletable_$1
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxFunctionsAction0:);
+  methods[0].selector = @selector(initWithRxFunctionsAction0:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$onTerminate_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "call", "LNSException;", "LRxFunctionsAction0;", "LRxCompletable;", "doOnTerminateWithRxFunctionsAction0:", "Ljava/lang/Object;Lrx/functions/Action1<Ljava/lang/Throwable;>;" };
-  static const J2ObjcClassInfo _RxCompletable_$20 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, 5, -1 };
-  return &_RxCompletable_$20;
+  static const void *ptrTable[] = { "call", "LNSException;", "LRxCompletable;", "doOnTerminateWithRxFunctionsAction0:", "Ljava/lang/Object;Lrx/functions/Action1<Ljava/lang/Throwable;>;" };
+  static const J2ObjcClassInfo _RxCompletable_20 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, 4, -1 };
+  return &_RxCompletable_20;
 }
 
 @end
 
-void RxCompletable_$20_initWithRxFunctionsAction0_(RxCompletable_$20 *self, id<RxFunctionsAction0> capture$0) {
+void RxCompletable_20_initWithRxFunctionsAction0_(RxCompletable_20 *self, id<RxFunctionsAction0> capture$0) {
   JreStrongAssign(&self->val$onTerminate_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$20 *new_RxCompletable_$20_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$20, initWithRxFunctionsAction0_, capture$0)
+RxCompletable_20 *new_RxCompletable_20_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_20, initWithRxFunctionsAction0_, capture$0)
 }
 
-RxCompletable_$20 *create_RxCompletable_$20_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$20, initWithRxFunctionsAction0_, capture$0)
+RxCompletable_20 *create_RxCompletable_20_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_20, initWithRxFunctionsAction0_, capture$0)
 }
 
-@implementation RxCompletable_$21
+@implementation RxCompletable_21
+
+- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
+                                    withNSExceptionArray:(IOSObjectArray *)capture$1 {
+  RxCompletable_21_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(self, capture$0, capture$1);
+  return self;
+}
 
 - (void)onCompleted {
   [((JavaUtilConcurrentCountDownLatch *) nil_chk(val$cdl_)) countDown];
@@ -4798,12 +4642,6 @@ RxCompletable_$20 *create_RxCompletable_$20_initWithRxFunctionsAction0_(id<RxFun
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d {
 }
 
-- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
-                                    withNSExceptionArray:(IOSObjectArray *)capture$1 {
-  RxCompletable_$21_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(self, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$cdl_);
   RELEASE_(val$err_);
@@ -4812,44 +4650,50 @@ RxCompletable_$20 *create_RxCompletable_$20_initWithRxFunctionsAction0_(id<RxFun
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[3].selector = @selector(initWithJavaUtilConcurrentCountDownLatch:withNSExceptionArray:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentCountDownLatch:withNSExceptionArray:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onSubscribeWithRxSubscription:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$cdl_", "LJavaUtilConcurrentCountDownLatch;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$err_", "[LNSException;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LJavaUtilConcurrentCountDownLatch;[LNSException;", "LRxCompletable;", "get" };
-  static const J2ObjcClassInfo _RxCompletable_$21 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 2, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$21;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable;", "get" };
+  static const J2ObjcClassInfo _RxCompletable_21 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 2, 4, -1, 5, -1, -1 };
+  return &_RxCompletable_21;
 }
 
 @end
 
-void RxCompletable_$21_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(RxCompletable_$21 *self, JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
+void RxCompletable_21_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(RxCompletable_21 *self, JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
   JreStrongAssign(&self->val$cdl_, capture$0);
   JreStrongAssign(&self->val$err_, capture$1);
   NSObject_init(self);
 }
 
-RxCompletable_$21 *new_RxCompletable_$21_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
-  J2OBJC_NEW_IMPL(RxCompletable_$21, initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_, capture$0, capture$1)
+RxCompletable_21 *new_RxCompletable_21_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
+  J2OBJC_NEW_IMPL(RxCompletable_21, initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_, capture$0, capture$1)
 }
 
-RxCompletable_$21 *create_RxCompletable_$21_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$21, initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_, capture$0, capture$1)
+RxCompletable_21 *create_RxCompletable_21_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
+  J2OBJC_CREATE_IMPL(RxCompletable_21, initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_, capture$0, capture$1)
 }
 
-@implementation RxCompletable_$22
+@implementation RxCompletable_22
+
+- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
+                                    withNSExceptionArray:(IOSObjectArray *)capture$1 {
+  RxCompletable_22_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(self, capture$0, capture$1);
+  return self;
+}
 
 - (void)onCompleted {
   [((JavaUtilConcurrentCountDownLatch *) nil_chk(val$cdl_)) countDown];
@@ -4863,12 +4707,6 @@ RxCompletable_$21 *create_RxCompletable_$21_initWithJavaUtilConcurrentCountDownL
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d {
 }
 
-- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
-                                    withNSExceptionArray:(IOSObjectArray *)capture$1 {
-  RxCompletable_$22_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(self, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$cdl_);
   RELEASE_(val$err_);
@@ -4877,44 +4715,50 @@ RxCompletable_$21 *create_RxCompletable_$21_initWithJavaUtilConcurrentCountDownL
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[3].selector = @selector(initWithJavaUtilConcurrentCountDownLatch:withNSExceptionArray:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentCountDownLatch:withNSExceptionArray:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onSubscribeWithRxSubscription:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$cdl_", "LJavaUtilConcurrentCountDownLatch;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$err_", "[LNSException;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LJavaUtilConcurrentCountDownLatch;[LNSException;", "LRxCompletable;", "getWithLong:withJavaUtilConcurrentTimeUnit:" };
-  static const J2ObjcClassInfo _RxCompletable_$22 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 2, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$22;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable;", "getWithLong:withJavaUtilConcurrentTimeUnit:" };
+  static const J2ObjcClassInfo _RxCompletable_22 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 2, 4, -1, 5, -1, -1 };
+  return &_RxCompletable_22;
 }
 
 @end
 
-void RxCompletable_$22_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(RxCompletable_$22 *self, JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
+void RxCompletable_22_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(RxCompletable_22 *self, JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
   JreStrongAssign(&self->val$cdl_, capture$0);
   JreStrongAssign(&self->val$err_, capture$1);
   NSObject_init(self);
 }
 
-RxCompletable_$22 *new_RxCompletable_$22_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
-  J2OBJC_NEW_IMPL(RxCompletable_$22, initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_, capture$0, capture$1)
+RxCompletable_22 *new_RxCompletable_22_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
+  J2OBJC_NEW_IMPL(RxCompletable_22, initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_, capture$0, capture$1)
 }
 
-RxCompletable_$22 *create_RxCompletable_$22_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$22, initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_, capture$0, capture$1)
+RxCompletable_22 *create_RxCompletable_22_initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_(JavaUtilConcurrentCountDownLatch *capture$0, IOSObjectArray *capture$1) {
+  J2OBJC_CREATE_IMPL(RxCompletable_22, initWithJavaUtilConcurrentCountDownLatch_withNSExceptionArray_, capture$0, capture$1)
 }
 
-@implementation RxCompletable_$23
+@implementation RxCompletable_23
+
+- (instancetype)initWithRxCompletable:(RxCompletable *)outer$
+           withRxCompletable_Operator:(id<RxCompletable_Operator>)capture$0 {
+  RxCompletable_23_initWithRxCompletable_withRxCompletable_Operator_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)callWithId:(id<RxCompletableSubscriber>)s {
   @try {
@@ -4930,12 +4774,6 @@ RxCompletable_$22 *create_RxCompletable_$22_initWithJavaUtilConcurrentCountDownL
   }
 }
 
-- (instancetype)initWithRxCompletable:(RxCompletable *)outer$
-           withRxCompletable_Operator:(id<RxCompletable_Operator>)capture$0 {
-  RxCompletable_$23_initWithRxCompletable_withRxCompletable_Operator_(self, outer$, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$onLift_);
@@ -4944,53 +4782,53 @@ RxCompletable_$22 *create_RxCompletable_$22_initWithJavaUtilConcurrentCountDownL
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxCompletable:withRxCompletable_Operator:);
+  methods[0].selector = @selector(initWithRxCompletable:withRxCompletable_Operator:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxCompletable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$onLift_", "LRxCompletable_Operator;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxCompletable;LRxCompletable_Operator;", "LRxCompletable;", "liftWithRxCompletable_Operator:" };
-  static const J2ObjcClassInfo _RxCompletable_$23 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, -1, -1 };
-  return &_RxCompletable_$23;
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxCompletable;", "liftWithRxCompletable_Operator:" };
+  static const J2ObjcClassInfo _RxCompletable_23 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 2, -1, 3, -1, -1 };
+  return &_RxCompletable_23;
 }
 
 @end
 
-void RxCompletable_$23_initWithRxCompletable_withRxCompletable_Operator_(RxCompletable_$23 *self, RxCompletable *outer$, id<RxCompletable_Operator> capture$0) {
+void RxCompletable_23_initWithRxCompletable_withRxCompletable_Operator_(RxCompletable_23 *self, RxCompletable *outer$, id<RxCompletable_Operator> capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$onLift_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$23 *new_RxCompletable_$23_initWithRxCompletable_withRxCompletable_Operator_(RxCompletable *outer$, id<RxCompletable_Operator> capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$23, initWithRxCompletable_withRxCompletable_Operator_, outer$, capture$0)
+RxCompletable_23 *new_RxCompletable_23_initWithRxCompletable_withRxCompletable_Operator_(RxCompletable *outer$, id<RxCompletable_Operator> capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_23, initWithRxCompletable_withRxCompletable_Operator_, outer$, capture$0)
 }
 
-RxCompletable_$23 *create_RxCompletable_$23_initWithRxCompletable_withRxCompletable_Operator_(RxCompletable *outer$, id<RxCompletable_Operator> capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$23, initWithRxCompletable_withRxCompletable_Operator_, outer$, capture$0)
+RxCompletable_23 *create_RxCompletable_23_initWithRxCompletable_withRxCompletable_Operator_(RxCompletable *outer$, id<RxCompletable_Operator> capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_23, initWithRxCompletable_withRxCompletable_Operator_, outer$, capture$0)
 }
 
-@implementation RxCompletable_$24
+@implementation RxCompletable_24
+
+- (instancetype)initWithRxCompletable:(RxCompletable *)outer$
+                      withRxScheduler:(RxScheduler *)capture$0 {
+  RxCompletable_24_initWithRxCompletable_withRxScheduler_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)callWithId:(id<RxCompletableSubscriber>)s {
   RxInternalUtilSubscriptionList *ad = create_RxInternalUtilSubscriptionList_init();
   RxScheduler_Worker *w = [((RxScheduler *) nil_chk(val$scheduler_)) createWorker];
   [ad addWithRxSubscription:w];
   [((id<RxCompletableSubscriber>) nil_chk(s)) onSubscribeWithRxSubscription:ad];
-  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(this$0_, create_RxCompletable_$24_$1_initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_(w, s, ad));
-}
-
-- (instancetype)initWithRxCompletable:(RxCompletable *)outer$
-                      withRxScheduler:(RxScheduler *)capture$0 {
-  RxCompletable_$24_initWithRxCompletable_withRxScheduler_(self, outer$, capture$0);
-  return self;
+  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(this$0_, create_RxCompletable_24_1_initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_(w, s, ad));
 }
 
 - (void)dealloc {
@@ -5001,58 +4839,58 @@ RxCompletable_$23 *create_RxCompletable_$23_initWithRxCompletable_withRxCompleta
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxCompletable:withRxScheduler:);
+  methods[0].selector = @selector(initWithRxCompletable:withRxScheduler:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxCompletable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$scheduler_", "LRxScheduler;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxCompletable;LRxScheduler;", "LRxCompletable;", "observeOnWithRxScheduler:" };
-  static const J2ObjcClassInfo _RxCompletable_$24 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, -1, -1 };
-  return &_RxCompletable_$24;
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxCompletable;", "observeOnWithRxScheduler:" };
+  static const J2ObjcClassInfo _RxCompletable_24 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 2, -1, 3, -1, -1 };
+  return &_RxCompletable_24;
 }
 
 @end
 
-void RxCompletable_$24_initWithRxCompletable_withRxScheduler_(RxCompletable_$24 *self, RxCompletable *outer$, RxScheduler *capture$0) {
+void RxCompletable_24_initWithRxCompletable_withRxScheduler_(RxCompletable_24 *self, RxCompletable *outer$, RxScheduler *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$scheduler_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$24 *new_RxCompletable_$24_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$24, initWithRxCompletable_withRxScheduler_, outer$, capture$0)
+RxCompletable_24 *new_RxCompletable_24_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_24, initWithRxCompletable_withRxScheduler_, outer$, capture$0)
 }
 
-RxCompletable_$24 *create_RxCompletable_$24_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$24, initWithRxCompletable_withRxScheduler_, outer$, capture$0)
+RxCompletable_24 *create_RxCompletable_24_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_24, initWithRxCompletable_withRxScheduler_, outer$, capture$0)
 }
 
-@implementation RxCompletable_$24_$1
-
-- (void)onCompleted {
-  [((RxScheduler_Worker *) nil_chk(val$w_)) scheduleWithRxFunctionsAction0:create_RxCompletable_$24_$1_$1_initWithRxCompletable_$24_$1_(self)];
-}
-
-- (void)onErrorWithNSException:(NSException *)e {
-  [((RxScheduler_Worker *) nil_chk(val$w_)) scheduleWithRxFunctionsAction0:create_RxCompletable_$24_$1_$2_initWithRxCompletable_$24_$1_withNSException_(self, e)];
-}
-
-- (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d {
-  [((RxInternalUtilSubscriptionList *) nil_chk(val$ad_)) addWithRxSubscription:d];
-}
+@implementation RxCompletable_24_1
 
 - (instancetype)initWithRxScheduler_Worker:(RxScheduler_Worker *)capture$0
                withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$1
         withRxInternalUtilSubscriptionList:(RxInternalUtilSubscriptionList *)capture$2 {
-  RxCompletable_$24_$1_initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_(self, capture$0, capture$1, capture$2);
+  RxCompletable_24_1_initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_(self, capture$0, capture$1, capture$2);
   return self;
+}
+
+- (void)onCompleted {
+  [((RxScheduler_Worker *) nil_chk(val$w_)) scheduleWithRxFunctionsAction0:create_RxCompletable_24_1_1_initWithRxCompletable_24_1_(self)];
+}
+
+- (void)onErrorWithNSException:(NSException *)e {
+  [((RxScheduler_Worker *) nil_chk(val$w_)) scheduleWithRxFunctionsAction0:create_RxCompletable_24_1_2_initWithRxCompletable_24_1_withNSException_(self, e)];
+}
+
+- (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d {
+  [((RxInternalUtilSubscriptionList *) nil_chk(val$ad_)) addWithRxSubscription:d];
 }
 
 - (void)dealloc {
@@ -5064,46 +4902,51 @@ RxCompletable_$24 *create_RxCompletable_$24_initWithRxCompletable_withRxSchedule
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[3].selector = @selector(initWithRxScheduler_Worker:withRxCompletableSubscriber:withRxInternalUtilSubscriptionList:);
+  methods[0].selector = @selector(initWithRxScheduler_Worker:withRxCompletableSubscriber:withRxInternalUtilSubscriptionList:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onSubscribeWithRxSubscription:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$w_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$s_", "LRxCompletableSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$ad_", "LRxInternalUtilSubscriptionList;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxScheduler_Worker;LRxCompletableSubscriber;LRxInternalUtilSubscriptionList;", "LRxCompletable_$24;", "callWithId:" };
-  static const J2ObjcClassInfo _RxCompletable_$24_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 3, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$24_$1;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable_24;", "callWithId:" };
+  static const J2ObjcClassInfo _RxCompletable_24_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 3, 4, -1, 5, -1, -1 };
+  return &_RxCompletable_24_1;
 }
 
 @end
 
-void RxCompletable_$24_$1_initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_(RxCompletable_$24_$1 *self, RxScheduler_Worker *capture$0, id<RxCompletableSubscriber> capture$1, RxInternalUtilSubscriptionList *capture$2) {
+void RxCompletable_24_1_initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_(RxCompletable_24_1 *self, RxScheduler_Worker *capture$0, id<RxCompletableSubscriber> capture$1, RxInternalUtilSubscriptionList *capture$2) {
   JreStrongAssign(&self->val$w_, capture$0);
   JreStrongAssign(&self->val$s_, capture$1);
   JreStrongAssign(&self->val$ad_, capture$2);
   NSObject_init(self);
 }
 
-RxCompletable_$24_$1 *new_RxCompletable_$24_$1_initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_(RxScheduler_Worker *capture$0, id<RxCompletableSubscriber> capture$1, RxInternalUtilSubscriptionList *capture$2) {
-  J2OBJC_NEW_IMPL(RxCompletable_$24_$1, initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_, capture$0, capture$1, capture$2)
+RxCompletable_24_1 *new_RxCompletable_24_1_initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_(RxScheduler_Worker *capture$0, id<RxCompletableSubscriber> capture$1, RxInternalUtilSubscriptionList *capture$2) {
+  J2OBJC_NEW_IMPL(RxCompletable_24_1, initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_, capture$0, capture$1, capture$2)
 }
 
-RxCompletable_$24_$1 *create_RxCompletable_$24_$1_initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_(RxScheduler_Worker *capture$0, id<RxCompletableSubscriber> capture$1, RxInternalUtilSubscriptionList *capture$2) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$24_$1, initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_, capture$0, capture$1, capture$2)
+RxCompletable_24_1 *create_RxCompletable_24_1_initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_(RxScheduler_Worker *capture$0, id<RxCompletableSubscriber> capture$1, RxInternalUtilSubscriptionList *capture$2) {
+  J2OBJC_CREATE_IMPL(RxCompletable_24_1, initWithRxScheduler_Worker_withRxCompletableSubscriber_withRxInternalUtilSubscriptionList_, capture$0, capture$1, capture$2)
 }
 
-@implementation RxCompletable_$24_$1_$1
+@implementation RxCompletable_24_1_1
+
+- (instancetype)initWithRxCompletable_24_1:(RxCompletable_24_1 *)outer$ {
+  RxCompletable_24_1_1_initWithRxCompletable_24_1_(self, outer$);
+  return self;
+}
 
 - (void)call {
   @try {
@@ -5114,11 +4957,6 @@ RxCompletable_$24_$1 *create_RxCompletable_$24_$1_initWithRxScheduler_Worker_wit
   }
 }
 
-- (instancetype)initWithRxCompletable_$24_$1:(RxCompletable_$24_$1 *)outer$ {
-  RxCompletable_$24_$1_$1_initWithRxCompletable_$24_$1_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -5126,38 +4964,44 @@ RxCompletable_$24_$1 *create_RxCompletable_$24_$1_initWithRxScheduler_Worker_wit
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxCompletable_$24_$1:);
+  methods[0].selector = @selector(initWithRxCompletable_24_1:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxCompletable_$24_$1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxCompletable_24_1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxCompletable_$24_$1;", "onCompleted" };
-  static const J2ObjcClassInfo _RxCompletable_$24_$1_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
-  return &_RxCompletable_$24_$1_$1;
+  static const void *ptrTable[] = { "LRxCompletable_24_1;", "onCompleted" };
+  static const J2ObjcClassInfo _RxCompletable_24_1_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  return &_RxCompletable_24_1_1;
 }
 
 @end
 
-void RxCompletable_$24_$1_$1_initWithRxCompletable_$24_$1_(RxCompletable_$24_$1_$1 *self, RxCompletable_$24_$1 *outer$) {
+void RxCompletable_24_1_1_initWithRxCompletable_24_1_(RxCompletable_24_1_1 *self, RxCompletable_24_1 *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxCompletable_$24_$1_$1 *new_RxCompletable_$24_$1_$1_initWithRxCompletable_$24_$1_(RxCompletable_$24_$1 *outer$) {
-  J2OBJC_NEW_IMPL(RxCompletable_$24_$1_$1, initWithRxCompletable_$24_$1_, outer$)
+RxCompletable_24_1_1 *new_RxCompletable_24_1_1_initWithRxCompletable_24_1_(RxCompletable_24_1 *outer$) {
+  J2OBJC_NEW_IMPL(RxCompletable_24_1_1, initWithRxCompletable_24_1_, outer$)
 }
 
-RxCompletable_$24_$1_$1 *create_RxCompletable_$24_$1_$1_initWithRxCompletable_$24_$1_(RxCompletable_$24_$1 *outer$) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$24_$1_$1, initWithRxCompletable_$24_$1_, outer$)
+RxCompletable_24_1_1 *create_RxCompletable_24_1_1_initWithRxCompletable_24_1_(RxCompletable_24_1 *outer$) {
+  J2OBJC_CREATE_IMPL(RxCompletable_24_1_1, initWithRxCompletable_24_1_, outer$)
 }
 
-@implementation RxCompletable_$24_$1_$2
+@implementation RxCompletable_24_1_2
+
+- (instancetype)initWithRxCompletable_24_1:(RxCompletable_24_1 *)outer$
+                           withNSException:(NSException *)capture$0 {
+  RxCompletable_24_1_2_initWithRxCompletable_24_1_withNSException_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)call {
   @try {
@@ -5168,12 +5012,6 @@ RxCompletable_$24_$1_$1 *create_RxCompletable_$24_$1_$1_initWithRxCompletable_$2
   }
 }
 
-- (instancetype)initWithRxCompletable_$24_$1:(RxCompletable_$24_$1 *)outer$
-                             withNSException:(NSException *)capture$0 {
-  RxCompletable_$24_$1_$2_initWithRxCompletable_$24_$1_withNSException_(self, outer$, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$e_);
@@ -5182,49 +5020,49 @@ RxCompletable_$24_$1_$1 *create_RxCompletable_$24_$1_$1_initWithRxCompletable_$2
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxCompletable_$24_$1:withNSException:);
+  methods[0].selector = @selector(initWithRxCompletable_24_1:withNSException:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxCompletable_$24_$1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxCompletable_24_1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$e_", "LNSException;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxCompletable_$24_$1;LNSException;", "LRxCompletable_$24_$1;", "onErrorWithNSException:" };
-  static const J2ObjcClassInfo _RxCompletable_$24_$1_$2 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_RxCompletable_$24_$1_$2;
+  static const void *ptrTable[] = { "LRxCompletable_24_1;", "onErrorWithNSException:" };
+  static const J2ObjcClassInfo _RxCompletable_24_1_2 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 0, -1, 1, -1, -1 };
+  return &_RxCompletable_24_1_2;
 }
 
 @end
 
-void RxCompletable_$24_$1_$2_initWithRxCompletable_$24_$1_withNSException_(RxCompletable_$24_$1_$2 *self, RxCompletable_$24_$1 *outer$, NSException *capture$0) {
+void RxCompletable_24_1_2_initWithRxCompletable_24_1_withNSException_(RxCompletable_24_1_2 *self, RxCompletable_24_1 *outer$, NSException *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$e_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$24_$1_$2 *new_RxCompletable_$24_$1_$2_initWithRxCompletable_$24_$1_withNSException_(RxCompletable_$24_$1 *outer$, NSException *capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$24_$1_$2, initWithRxCompletable_$24_$1_withNSException_, outer$, capture$0)
+RxCompletable_24_1_2 *new_RxCompletable_24_1_2_initWithRxCompletable_24_1_withNSException_(RxCompletable_24_1 *outer$, NSException *capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_24_1_2, initWithRxCompletable_24_1_withNSException_, outer$, capture$0)
 }
 
-RxCompletable_$24_$1_$2 *create_RxCompletable_$24_$1_$2_initWithRxCompletable_$24_$1_withNSException_(RxCompletable_$24_$1 *outer$, NSException *capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$24_$1_$2, initWithRxCompletable_$24_$1_withNSException_, outer$, capture$0)
+RxCompletable_24_1_2 *create_RxCompletable_24_1_2_initWithRxCompletable_24_1_withNSException_(RxCompletable_24_1 *outer$, NSException *capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_24_1_2, initWithRxCompletable_24_1_withNSException_, outer$, capture$0)
 }
 
-@implementation RxCompletable_$25
-
-- (void)callWithId:(id<RxCompletableSubscriber>)s {
-  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(this$0_, create_RxCompletable_$25_$1_initWithRxCompletable_$25_withRxCompletableSubscriber_(self, s));
-}
+@implementation RxCompletable_25
 
 - (instancetype)initWithRxCompletable:(RxCompletable *)outer$
                  withRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$0 {
-  RxCompletable_$25_initWithRxCompletable_withRxFunctionsFunc1_(self, outer$, capture$0);
+  RxCompletable_25_initWithRxCompletable_withRxFunctionsFunc1_(self, outer$, capture$0);
   return self;
+}
+
+- (void)callWithId:(id<RxCompletableSubscriber>)s {
+  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(this$0_, create_RxCompletable_25_1_initWithRxCompletable_25_withRxCompletableSubscriber_(self, s));
 }
 
 - (void)dealloc {
@@ -5235,40 +5073,46 @@ RxCompletable_$24_$1_$2 *create_RxCompletable_$24_$1_$2_initWithRxCompletable_$2
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, 3, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxCompletable:withRxFunctionsFunc1:);
+  methods[0].selector = @selector(initWithRxCompletable:withRxFunctionsFunc1:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxCompletable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$predicate_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+    { "val$predicate_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxCompletable;LRxFunctionsFunc1;", "(Lrx/Completable;Lrx/functions/Func1<-Ljava/lang/Throwable;Ljava/lang/Boolean;>;)V", "Lrx/functions/Func1<-Ljava/lang/Throwable;Ljava/lang/Boolean;>;", "LRxCompletable;", "onErrorCompleteWithRxFunctionsFunc1:" };
-  static const J2ObjcClassInfo _RxCompletable_$25 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$25;
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "Lrx/functions/Func1<-Ljava/lang/Throwable;Ljava/lang/Boolean;>;", "LRxCompletable;", "onErrorCompleteWithRxFunctionsFunc1:" };
+  static const J2ObjcClassInfo _RxCompletable_25 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, -1, -1 };
+  return &_RxCompletable_25;
 }
 
 @end
 
-void RxCompletable_$25_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable_$25 *self, RxCompletable *outer$, id<RxFunctionsFunc1> capture$0) {
+void RxCompletable_25_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable_25 *self, RxCompletable *outer$, id<RxFunctionsFunc1> capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$predicate_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$25 *new_RxCompletable_$25_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable *outer$, id<RxFunctionsFunc1> capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$25, initWithRxCompletable_withRxFunctionsFunc1_, outer$, capture$0)
+RxCompletable_25 *new_RxCompletable_25_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable *outer$, id<RxFunctionsFunc1> capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_25, initWithRxCompletable_withRxFunctionsFunc1_, outer$, capture$0)
 }
 
-RxCompletable_$25 *create_RxCompletable_$25_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable *outer$, id<RxFunctionsFunc1> capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$25, initWithRxCompletable_withRxFunctionsFunc1_, outer$, capture$0)
+RxCompletable_25 *create_RxCompletable_25_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable *outer$, id<RxFunctionsFunc1> capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_25, initWithRxCompletable_withRxFunctionsFunc1_, outer$, capture$0)
 }
 
-@implementation RxCompletable_$25_$1
+@implementation RxCompletable_25_1
+
+- (instancetype)initWithRxCompletable_25:(RxCompletable_25 *)outer$
+             withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0 {
+  RxCompletable_25_1_initWithRxCompletable_25_withRxCompletableSubscriber_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)onCompleted {
   [((id<RxCompletableSubscriber>) nil_chk(val$s_)) onCompleted];
@@ -5296,12 +5140,6 @@ RxCompletable_$25 *create_RxCompletable_$25_initWithRxCompletable_withRxFunction
   [((id<RxCompletableSubscriber>) nil_chk(val$s_)) onSubscribeWithRxSubscription:d];
 }
 
-- (instancetype)initWithRxCompletable_$25:(RxCompletable_$25 *)outer$
-              withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0 {
-  RxCompletable_$25_$1_initWithRxCompletable_$25_withRxCompletableSubscriber_(self, outer$, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$s_);
@@ -5310,54 +5148,54 @@ RxCompletable_$25 *create_RxCompletable_$25_initWithRxCompletable_withRxFunction
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[3].selector = @selector(initWithRxCompletable_$25:withRxCompletableSubscriber:);
+  methods[0].selector = @selector(initWithRxCompletable_25:withRxCompletableSubscriber:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onSubscribeWithRxSubscription:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxCompletable_$25;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxCompletable_25;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$s_", "LRxCompletableSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable_$25;LRxCompletableSubscriber;", "LRxCompletable_$25;", "callWithId:" };
-  static const J2ObjcClassInfo _RxCompletable_$25_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 2, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$25_$1;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable_25;", "callWithId:" };
+  static const J2ObjcClassInfo _RxCompletable_25_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 2, 4, -1, 5, -1, -1 };
+  return &_RxCompletable_25_1;
 }
 
 @end
 
-void RxCompletable_$25_$1_initWithRxCompletable_$25_withRxCompletableSubscriber_(RxCompletable_$25_$1 *self, RxCompletable_$25 *outer$, id<RxCompletableSubscriber> capture$0) {
+void RxCompletable_25_1_initWithRxCompletable_25_withRxCompletableSubscriber_(RxCompletable_25_1 *self, RxCompletable_25 *outer$, id<RxCompletableSubscriber> capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$s_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$25_$1 *new_RxCompletable_$25_$1_initWithRxCompletable_$25_withRxCompletableSubscriber_(RxCompletable_$25 *outer$, id<RxCompletableSubscriber> capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$25_$1, initWithRxCompletable_$25_withRxCompletableSubscriber_, outer$, capture$0)
+RxCompletable_25_1 *new_RxCompletable_25_1_initWithRxCompletable_25_withRxCompletableSubscriber_(RxCompletable_25 *outer$, id<RxCompletableSubscriber> capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_25_1, initWithRxCompletable_25_withRxCompletableSubscriber_, outer$, capture$0)
 }
 
-RxCompletable_$25_$1 *create_RxCompletable_$25_$1_initWithRxCompletable_$25_withRxCompletableSubscriber_(RxCompletable_$25 *outer$, id<RxCompletableSubscriber> capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$25_$1, initWithRxCompletable_$25_withRxCompletableSubscriber_, outer$, capture$0)
+RxCompletable_25_1 *create_RxCompletable_25_1_initWithRxCompletable_25_withRxCompletableSubscriber_(RxCompletable_25 *outer$, id<RxCompletableSubscriber> capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_25_1, initWithRxCompletable_25_withRxCompletableSubscriber_, outer$, capture$0)
 }
 
-@implementation RxCompletable_$26
-
-- (void)callWithId:(id<RxCompletableSubscriber>)s {
-  RxSubscriptionsSerialSubscription *sd = create_RxSubscriptionsSerialSubscription_init();
-  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(this$0_, create_RxCompletable_$26_$1_initWithRxCompletable_$26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_(self, s, sd));
-}
+@implementation RxCompletable_26
 
 - (instancetype)initWithRxCompletable:(RxCompletable *)outer$
                  withRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$0 {
-  RxCompletable_$26_initWithRxCompletable_withRxFunctionsFunc1_(self, outer$, capture$0);
+  RxCompletable_26_initWithRxCompletable_withRxFunctionsFunc1_(self, outer$, capture$0);
   return self;
+}
+
+- (void)callWithId:(id<RxCompletableSubscriber>)s {
+  RxSubscriptionsSerialSubscription *sd = create_RxSubscriptionsSerialSubscription_init();
+  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(this$0_, create_RxCompletable_26_1_initWithRxCompletable_26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_(self, s, sd));
 }
 
 - (void)dealloc {
@@ -5368,40 +5206,47 @@ RxCompletable_$25_$1 *create_RxCompletable_$25_$1_initWithRxCompletable_$25_with
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, 3, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxCompletable:withRxFunctionsFunc1:);
+  methods[0].selector = @selector(initWithRxCompletable:withRxFunctionsFunc1:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxCompletable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$errorMapper_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+    { "val$errorMapper_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxCompletable;LRxFunctionsFunc1;", "(Lrx/Completable;Lrx/functions/Func1<-Ljava/lang/Throwable;+Lrx/Completable;>;)V", "Lrx/functions/Func1<-Ljava/lang/Throwable;+Lrx/Completable;>;", "LRxCompletable;", "onErrorResumeNextWithRxFunctionsFunc1:" };
-  static const J2ObjcClassInfo _RxCompletable_$26 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$26;
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "Lrx/functions/Func1<-Ljava/lang/Throwable;+Lrx/Completable;>;", "LRxCompletable;", "onErrorResumeNextWithRxFunctionsFunc1:" };
+  static const J2ObjcClassInfo _RxCompletable_26 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, -1, -1 };
+  return &_RxCompletable_26;
 }
 
 @end
 
-void RxCompletable_$26_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable_$26 *self, RxCompletable *outer$, id<RxFunctionsFunc1> capture$0) {
+void RxCompletable_26_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable_26 *self, RxCompletable *outer$, id<RxFunctionsFunc1> capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$errorMapper_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$26 *new_RxCompletable_$26_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable *outer$, id<RxFunctionsFunc1> capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$26, initWithRxCompletable_withRxFunctionsFunc1_, outer$, capture$0)
+RxCompletable_26 *new_RxCompletable_26_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable *outer$, id<RxFunctionsFunc1> capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_26, initWithRxCompletable_withRxFunctionsFunc1_, outer$, capture$0)
 }
 
-RxCompletable_$26 *create_RxCompletable_$26_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable *outer$, id<RxFunctionsFunc1> capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$26, initWithRxCompletable_withRxFunctionsFunc1_, outer$, capture$0)
+RxCompletable_26 *create_RxCompletable_26_initWithRxCompletable_withRxFunctionsFunc1_(RxCompletable *outer$, id<RxFunctionsFunc1> capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_26, initWithRxCompletable_withRxFunctionsFunc1_, outer$, capture$0)
 }
 
-@implementation RxCompletable_$26_$1
+@implementation RxCompletable_26_1
+
+- (instancetype)initWithRxCompletable_26:(RxCompletable_26 *)outer$
+             withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0
+   withRxSubscriptionsSerialSubscription:(RxSubscriptionsSerialSubscription *)capture$1 {
+  RxCompletable_26_1_initWithRxCompletable_26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_(self, outer$, capture$0, capture$1);
+  return self;
+}
 
 - (void)onCompleted {
   [((id<RxCompletableSubscriber>) nil_chk(val$s_)) onCompleted];
@@ -5423,18 +5268,11 @@ RxCompletable_$26 *create_RxCompletable_$26_initWithRxCompletable_withRxFunction
     [((id<RxCompletableSubscriber>) nil_chk(val$s_)) onErrorWithNSException:e];
     return;
   }
-  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(c, create_RxCompletable_$26_$1_$1_initWithRxCompletable_$26_$1_(self));
+  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(c, create_RxCompletable_26_1_1_initWithRxCompletable_26_1_(self));
 }
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d {
   [((RxSubscriptionsSerialSubscription *) nil_chk(val$sd_)) setWithRxSubscription:d];
-}
-
-- (instancetype)initWithRxCompletable_$26:(RxCompletable_$26 *)outer$
-              withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0
-    withRxSubscriptionsSerialSubscription:(RxSubscriptionsSerialSubscription *)capture$1 {
-  RxCompletable_$26_$1_initWithRxCompletable_$26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_(self, outer$, capture$0, capture$1);
-  return self;
 }
 
 - (void)dealloc {
@@ -5446,46 +5284,51 @@ RxCompletable_$26 *create_RxCompletable_$26_initWithRxCompletable_withRxFunction
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[3].selector = @selector(initWithRxCompletable_$26:withRxCompletableSubscriber:withRxSubscriptionsSerialSubscription:);
+  methods[0].selector = @selector(initWithRxCompletable_26:withRxCompletableSubscriber:withRxSubscriptionsSerialSubscription:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onSubscribeWithRxSubscription:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxCompletable_$26;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxCompletable_26;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$s_", "LRxCompletableSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$sd_", "LRxSubscriptionsSerialSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable_$26;LRxCompletableSubscriber;LRxSubscriptionsSerialSubscription;", "LRxCompletable_$26;", "callWithId:" };
-  static const J2ObjcClassInfo _RxCompletable_$26_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 3, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$26_$1;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable_26;", "callWithId:" };
+  static const J2ObjcClassInfo _RxCompletable_26_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 3, 4, -1, 5, -1, -1 };
+  return &_RxCompletable_26_1;
 }
 
 @end
 
-void RxCompletable_$26_$1_initWithRxCompletable_$26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_(RxCompletable_$26_$1 *self, RxCompletable_$26 *outer$, id<RxCompletableSubscriber> capture$0, RxSubscriptionsSerialSubscription *capture$1) {
+void RxCompletable_26_1_initWithRxCompletable_26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_(RxCompletable_26_1 *self, RxCompletable_26 *outer$, id<RxCompletableSubscriber> capture$0, RxSubscriptionsSerialSubscription *capture$1) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$s_, capture$0);
   JreStrongAssign(&self->val$sd_, capture$1);
   NSObject_init(self);
 }
 
-RxCompletable_$26_$1 *new_RxCompletable_$26_$1_initWithRxCompletable_$26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_(RxCompletable_$26 *outer$, id<RxCompletableSubscriber> capture$0, RxSubscriptionsSerialSubscription *capture$1) {
-  J2OBJC_NEW_IMPL(RxCompletable_$26_$1, initWithRxCompletable_$26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_, outer$, capture$0, capture$1)
+RxCompletable_26_1 *new_RxCompletable_26_1_initWithRxCompletable_26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_(RxCompletable_26 *outer$, id<RxCompletableSubscriber> capture$0, RxSubscriptionsSerialSubscription *capture$1) {
+  J2OBJC_NEW_IMPL(RxCompletable_26_1, initWithRxCompletable_26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_, outer$, capture$0, capture$1)
 }
 
-RxCompletable_$26_$1 *create_RxCompletable_$26_$1_initWithRxCompletable_$26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_(RxCompletable_$26 *outer$, id<RxCompletableSubscriber> capture$0, RxSubscriptionsSerialSubscription *capture$1) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$26_$1, initWithRxCompletable_$26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_, outer$, capture$0, capture$1)
+RxCompletable_26_1 *create_RxCompletable_26_1_initWithRxCompletable_26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_(RxCompletable_26 *outer$, id<RxCompletableSubscriber> capture$0, RxSubscriptionsSerialSubscription *capture$1) {
+  J2OBJC_CREATE_IMPL(RxCompletable_26_1, initWithRxCompletable_26_withRxCompletableSubscriber_withRxSubscriptionsSerialSubscription_, outer$, capture$0, capture$1)
 }
 
-@implementation RxCompletable_$26_$1_$1
+@implementation RxCompletable_26_1_1
+
+- (instancetype)initWithRxCompletable_26_1:(RxCompletable_26_1 *)outer$ {
+  RxCompletable_26_1_1_initWithRxCompletable_26_1_(self, outer$);
+  return self;
+}
 
 - (void)onCompleted {
   [((id<RxCompletableSubscriber>) nil_chk(this$0_->val$s_)) onCompleted];
@@ -5499,11 +5342,6 @@ RxCompletable_$26_$1 *create_RxCompletable_$26_$1_initWithRxCompletable_$26_with
   [((RxSubscriptionsSerialSubscription *) nil_chk(this$0_->val$sd_)) setWithRxSubscription:d];
 }
 
-- (instancetype)initWithRxCompletable_$26_$1:(RxCompletable_$26_$1 *)outer$ {
-  RxCompletable_$26_$1_$1_initWithRxCompletable_$26_$1_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -5511,42 +5349,47 @@ RxCompletable_$26_$1 *create_RxCompletable_$26_$1_initWithRxCompletable_$26_with
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[3].selector = @selector(initWithRxCompletable_$26_$1:);
+  methods[0].selector = @selector(initWithRxCompletable_26_1:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onSubscribeWithRxSubscription:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxCompletable_$26_$1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxCompletable_26_1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable_$26_$1;", "onErrorWithNSException:" };
-  static const J2ObjcClassInfo _RxCompletable_$26_$1_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 1, 4, -1, 5, -1, -1 };
-  return &_RxCompletable_$26_$1_$1;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable_26_1;", "onErrorWithNSException:" };
+  static const J2ObjcClassInfo _RxCompletable_26_1_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 1, 4, -1, 5, -1, -1 };
+  return &_RxCompletable_26_1_1;
 }
 
 @end
 
-void RxCompletable_$26_$1_$1_initWithRxCompletable_$26_$1_(RxCompletable_$26_$1_$1 *self, RxCompletable_$26_$1 *outer$) {
+void RxCompletable_26_1_1_initWithRxCompletable_26_1_(RxCompletable_26_1_1 *self, RxCompletable_26_1 *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxCompletable_$26_$1_$1 *new_RxCompletable_$26_$1_$1_initWithRxCompletable_$26_$1_(RxCompletable_$26_$1 *outer$) {
-  J2OBJC_NEW_IMPL(RxCompletable_$26_$1_$1, initWithRxCompletable_$26_$1_, outer$)
+RxCompletable_26_1_1 *new_RxCompletable_26_1_1_initWithRxCompletable_26_1_(RxCompletable_26_1 *outer$) {
+  J2OBJC_NEW_IMPL(RxCompletable_26_1_1, initWithRxCompletable_26_1_, outer$)
 }
 
-RxCompletable_$26_$1_$1 *create_RxCompletable_$26_$1_$1_initWithRxCompletable_$26_$1_(RxCompletable_$26_$1 *outer$) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$26_$1_$1, initWithRxCompletable_$26_$1_, outer$)
+RxCompletable_26_1_1 *create_RxCompletable_26_1_1_initWithRxCompletable_26_1_(RxCompletable_26_1 *outer$) {
+  J2OBJC_CREATE_IMPL(RxCompletable_26_1_1, initWithRxCompletable_26_1_, outer$)
 }
 
-@implementation RxCompletable_$27
+@implementation RxCompletable_27
+
+- (instancetype)initWithRxSubscriptionsMultipleAssignmentSubscription:(RxSubscriptionsMultipleAssignmentSubscription *)capture$0 {
+  RxCompletable_27_initWithRxSubscriptionsMultipleAssignmentSubscription_(self, capture$0);
+  return self;
+}
 
 - (void)onCompleted {
   [((RxSubscriptionsMultipleAssignmentSubscription *) nil_chk(val$mad_)) unsubscribe];
@@ -5562,11 +5405,6 @@ RxCompletable_$26_$1_$1 *create_RxCompletable_$26_$1_$1_initWithRxCompletable_$2
   [((RxSubscriptionsMultipleAssignmentSubscription *) nil_chk(val$mad_)) setWithRxSubscription:d];
 }
 
-- (instancetype)initWithRxSubscriptionsMultipleAssignmentSubscription:(RxSubscriptionsMultipleAssignmentSubscription *)capture$0 {
-  RxCompletable_$27_initWithRxSubscriptionsMultipleAssignmentSubscription_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$mad_);
   [super dealloc];
@@ -5574,42 +5412,48 @@ RxCompletable_$26_$1_$1 *create_RxCompletable_$26_$1_$1_initWithRxCompletable_$2
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[3].selector = @selector(initWithRxSubscriptionsMultipleAssignmentSubscription:);
+  methods[0].selector = @selector(initWithRxSubscriptionsMultipleAssignmentSubscription:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onSubscribeWithRxSubscription:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$mad_", "LRxSubscriptionsMultipleAssignmentSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxSubscriptionsMultipleAssignmentSubscription;", "LRxCompletable;", "subscribe" };
-  static const J2ObjcClassInfo _RxCompletable_$27 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 1, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$27;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable;", "subscribe" };
+  static const J2ObjcClassInfo _RxCompletable_27 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 1, 4, -1, 5, -1, -1 };
+  return &_RxCompletable_27;
 }
 
 @end
 
-void RxCompletable_$27_initWithRxSubscriptionsMultipleAssignmentSubscription_(RxCompletable_$27 *self, RxSubscriptionsMultipleAssignmentSubscription *capture$0) {
+void RxCompletable_27_initWithRxSubscriptionsMultipleAssignmentSubscription_(RxCompletable_27 *self, RxSubscriptionsMultipleAssignmentSubscription *capture$0) {
   JreStrongAssign(&self->val$mad_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$27 *new_RxCompletable_$27_initWithRxSubscriptionsMultipleAssignmentSubscription_(RxSubscriptionsMultipleAssignmentSubscription *capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$27, initWithRxSubscriptionsMultipleAssignmentSubscription_, capture$0)
+RxCompletable_27 *new_RxCompletable_27_initWithRxSubscriptionsMultipleAssignmentSubscription_(RxSubscriptionsMultipleAssignmentSubscription *capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_27, initWithRxSubscriptionsMultipleAssignmentSubscription_, capture$0)
 }
 
-RxCompletable_$27 *create_RxCompletable_$27_initWithRxSubscriptionsMultipleAssignmentSubscription_(RxSubscriptionsMultipleAssignmentSubscription *capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$27, initWithRxSubscriptionsMultipleAssignmentSubscription_, capture$0)
+RxCompletable_27 *create_RxCompletable_27_initWithRxSubscriptionsMultipleAssignmentSubscription_(RxSubscriptionsMultipleAssignmentSubscription *capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_27, initWithRxSubscriptionsMultipleAssignmentSubscription_, capture$0)
 }
 
-@implementation RxCompletable_$28
+@implementation RxCompletable_28
+
+- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0
+withRxSubscriptionsMultipleAssignmentSubscription:(RxSubscriptionsMultipleAssignmentSubscription *)capture$1 {
+  RxCompletable_28_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_(self, capture$0, capture$1);
+  return self;
+}
 
 - (void)onCompleted {
   if (!done_) {
@@ -5637,12 +5481,6 @@ RxCompletable_$27 *create_RxCompletable_$27_initWithRxSubscriptionsMultipleAssig
   [((RxSubscriptionsMultipleAssignmentSubscription *) nil_chk(val$mad_)) setWithRxSubscription:d];
 }
 
-- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0
-withRxSubscriptionsMultipleAssignmentSubscription:(RxSubscriptionsMultipleAssignmentSubscription *)capture$1 {
-  RxCompletable_$28_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_(self, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$onComplete_);
   RELEASE_(val$mad_);
@@ -5651,45 +5489,52 @@ withRxSubscriptionsMultipleAssignmentSubscription:(RxSubscriptionsMultipleAssign
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[3].selector = @selector(initWithRxFunctionsAction0:withRxSubscriptionsMultipleAssignmentSubscription:);
+  methods[0].selector = @selector(initWithRxFunctionsAction0:withRxSubscriptionsMultipleAssignmentSubscription:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onSubscribeWithRxSubscription:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "val$onComplete_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$mad_", "LRxSubscriptionsMultipleAssignmentSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxFunctionsAction0;LRxSubscriptionsMultipleAssignmentSubscription;", "LRxCompletable;", "subscribeWithRxFunctionsAction0:" };
-  static const J2ObjcClassInfo _RxCompletable_$28 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 3, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$28;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable;", "subscribeWithRxFunctionsAction0:" };
+  static const J2ObjcClassInfo _RxCompletable_28 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 3, 4, -1, 5, -1, -1 };
+  return &_RxCompletable_28;
 }
 
 @end
 
-void RxCompletable_$28_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_(RxCompletable_$28 *self, id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1) {
+void RxCompletable_28_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_(RxCompletable_28 *self, id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1) {
   JreStrongAssign(&self->val$onComplete_, capture$0);
   JreStrongAssign(&self->val$mad_, capture$1);
   NSObject_init(self);
 }
 
-RxCompletable_$28 *new_RxCompletable_$28_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_(id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1) {
-  J2OBJC_NEW_IMPL(RxCompletable_$28, initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_, capture$0, capture$1)
+RxCompletable_28 *new_RxCompletable_28_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_(id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1) {
+  J2OBJC_NEW_IMPL(RxCompletable_28, initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_, capture$0, capture$1)
 }
 
-RxCompletable_$28 *create_RxCompletable_$28_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_(id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$28, initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_, capture$0, capture$1)
+RxCompletable_28 *create_RxCompletable_28_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_(id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1) {
+  J2OBJC_CREATE_IMPL(RxCompletable_28, initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_, capture$0, capture$1)
 }
 
-@implementation RxCompletable_$29
+@implementation RxCompletable_29
+
+- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0
+withRxSubscriptionsMultipleAssignmentSubscription:(RxSubscriptionsMultipleAssignmentSubscription *)capture$1
+                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$2 {
+  RxCompletable_29_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_(self, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)onCompleted {
   if (!done_) {
@@ -5734,13 +5579,6 @@ RxCompletable_$28 *create_RxCompletable_$28_initWithRxFunctionsAction0_withRxSub
   [((RxSubscriptionsMultipleAssignmentSubscription *) nil_chk(val$mad_)) setWithRxSubscription:d];
 }
 
-- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0
-withRxSubscriptionsMultipleAssignmentSubscription:(RxSubscriptionsMultipleAssignmentSubscription *)capture$1
-                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$2 {
-  RxCompletable_$29_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_(self, capture$0, capture$1, capture$2);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$onComplete_);
   RELEASE_(val$mad_);
@@ -5750,49 +5588,54 @@ withRxSubscriptionsMultipleAssignmentSubscription:(RxSubscriptionsMultipleAssign
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x0, 2, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(callOnErrorWithNSException:);
-  methods[3].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[4].selector = @selector(initWithRxFunctionsAction0:withRxSubscriptionsMultipleAssignmentSubscription:withRxFunctionsAction1:);
+  methods[0].selector = @selector(initWithRxFunctionsAction0:withRxSubscriptionsMultipleAssignmentSubscription:withRxFunctionsAction1:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(callOnErrorWithNSException:);
+  methods[4].selector = @selector(onSubscribeWithRxSubscription:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "val$onComplete_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$mad_", "LRxSubscriptionsMultipleAssignmentSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$onError_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$onError_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "callOnError", "onSubscribe", "LRxSubscription;", "LRxFunctionsAction0;LRxSubscriptionsMultipleAssignmentSubscription;LRxFunctionsAction1;", "(Lrx/functions/Action0;Lrx/subscriptions/MultipleAssignmentSubscription;Lrx/functions/Action1<-Ljava/lang/Throwable;>;)V", "Lrx/functions/Action1<-Ljava/lang/Throwable;>;", "LRxCompletable;", "subscribeWithRxFunctionsAction0:withRxFunctionsAction1:" };
-  static const J2ObjcClassInfo _RxCompletable_$29 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 5, 4, 8, -1, 9, -1, -1 };
-  return &_RxCompletable_$29;
+  static const void *ptrTable[] = { "onError", "LNSException;", "callOnError", "onSubscribe", "LRxSubscription;", "Lrx/functions/Action1<-Ljava/lang/Throwable;>;", "LRxCompletable;", "subscribeWithRxFunctionsAction0:withRxFunctionsAction1:" };
+  static const J2ObjcClassInfo _RxCompletable_29 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 5, 4, 6, -1, 7, -1, -1 };
+  return &_RxCompletable_29;
 }
 
 @end
 
-void RxCompletable_$29_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_(RxCompletable_$29 *self, id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1, id<RxFunctionsAction1> capture$2) {
+void RxCompletable_29_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_(RxCompletable_29 *self, id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1, id<RxFunctionsAction1> capture$2) {
   JreStrongAssign(&self->val$onComplete_, capture$0);
   JreStrongAssign(&self->val$mad_, capture$1);
   JreStrongAssign(&self->val$onError_, capture$2);
   NSObject_init(self);
 }
 
-RxCompletable_$29 *new_RxCompletable_$29_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_(id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1, id<RxFunctionsAction1> capture$2) {
-  J2OBJC_NEW_IMPL(RxCompletable_$29, initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_, capture$0, capture$1, capture$2)
+RxCompletable_29 *new_RxCompletable_29_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_(id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1, id<RxFunctionsAction1> capture$2) {
+  J2OBJC_NEW_IMPL(RxCompletable_29, initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_, capture$0, capture$1, capture$2)
 }
 
-RxCompletable_$29 *create_RxCompletable_$29_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_(id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1, id<RxFunctionsAction1> capture$2) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$29, initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_, capture$0, capture$1, capture$2)
+RxCompletable_29 *create_RxCompletable_29_initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_(id<RxFunctionsAction0> capture$0, RxSubscriptionsMultipleAssignmentSubscription *capture$1, id<RxFunctionsAction1> capture$2) {
+  J2OBJC_CREATE_IMPL(RxCompletable_29, initWithRxFunctionsAction0_withRxSubscriptionsMultipleAssignmentSubscription_withRxFunctionsAction1_, capture$0, capture$1, capture$2)
 }
 
-@implementation RxCompletable_$30
+@implementation RxCompletable_30
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0 {
+  RxCompletable_30_initWithRxSubscriber_(self, capture$0);
+  return self;
+}
 
 - (void)onCompleted {
   [((RxSubscriber *) nil_chk(val$s_)) onCompleted];
@@ -5806,11 +5649,6 @@ RxCompletable_$29 *create_RxCompletable_$29_initWithRxFunctionsAction0_withRxSub
   [((RxSubscriber *) nil_chk(val$s_)) addWithRxSubscription:d];
 }
 
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0 {
-  RxCompletable_$30_initWithRxSubscriber_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$s_);
   [super dealloc];
@@ -5818,52 +5656,52 @@ RxCompletable_$29 *create_RxCompletable_$29_initWithRxFunctionsAction0_withRxSub
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, 5, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[3].selector = @selector(initWithRxSubscriber:);
+  methods[0].selector = @selector(initWithRxSubscriber:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onSubscribeWithRxSubscription:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$s_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
+    { "val$s_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxSubscriber;", "(Lrx/Subscriber<TT;>;)V", "Lrx/Subscriber<TT;>;", "LRxCompletable;", "unsafeSubscribeWithRxSubscriber:withBoolean:" };
-  static const J2ObjcClassInfo _RxCompletable_$30 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 1, 7, -1, 8, -1, -1 };
-  return &_RxCompletable_$30;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "Lrx/Subscriber<TT;>;", "LRxCompletable;", "unsafeSubscribeWithRxSubscriber:withBoolean:" };
+  static const J2ObjcClassInfo _RxCompletable_30 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 1, 5, -1, 6, -1, -1 };
+  return &_RxCompletable_30;
 }
 
 @end
 
-void RxCompletable_$30_initWithRxSubscriber_(RxCompletable_$30 *self, RxSubscriber *capture$0) {
+void RxCompletable_30_initWithRxSubscriber_(RxCompletable_30 *self, RxSubscriber *capture$0) {
   JreStrongAssign(&self->val$s_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$30 *new_RxCompletable_$30_initWithRxSubscriber_(RxSubscriber *capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$30, initWithRxSubscriber_, capture$0)
+RxCompletable_30 *new_RxCompletable_30_initWithRxSubscriber_(RxSubscriber *capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_30, initWithRxSubscriber_, capture$0)
 }
 
-RxCompletable_$30 *create_RxCompletable_$30_initWithRxSubscriber_(RxSubscriber *capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$30, initWithRxSubscriber_, capture$0)
+RxCompletable_30 *create_RxCompletable_30_initWithRxSubscriber_(RxSubscriber *capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_30, initWithRxSubscriber_, capture$0)
 }
 
-@implementation RxCompletable_$31
-
-- (void)callWithId:(id<RxCompletableSubscriber>)s {
-  RxScheduler_Worker *w = [((RxScheduler *) nil_chk(val$scheduler_)) createWorker];
-  [((RxScheduler_Worker *) nil_chk(w)) scheduleWithRxFunctionsAction0:create_RxCompletable_$31_$1_initWithRxCompletable_$31_withRxCompletableSubscriber_withRxScheduler_Worker_(self, s, w)];
-}
+@implementation RxCompletable_31
 
 - (instancetype)initWithRxCompletable:(RxCompletable *)outer$
                       withRxScheduler:(RxScheduler *)capture$0 {
-  RxCompletable_$31_initWithRxCompletable_withRxScheduler_(self, outer$, capture$0);
+  RxCompletable_31_initWithRxCompletable_withRxScheduler_(self, outer$, capture$0);
   return self;
+}
+
+- (void)callWithId:(id<RxCompletableSubscriber>)s {
+  RxScheduler_Worker *w = [((RxScheduler *) nil_chk(val$scheduler_)) createWorker];
+  [((RxScheduler_Worker *) nil_chk(w)) scheduleWithRxFunctionsAction0:create_RxCompletable_31_1_initWithRxCompletable_31_withRxCompletableSubscriber_withRxScheduler_Worker_(self, s, w)];
 }
 
 - (void)dealloc {
@@ -5874,40 +5712,47 @@ RxCompletable_$30 *create_RxCompletable_$30_initWithRxSubscriber_(RxSubscriber *
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxCompletable:withRxScheduler:);
+  methods[0].selector = @selector(initWithRxCompletable:withRxScheduler:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxCompletable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$scheduler_", "LRxScheduler;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxCompletable;LRxScheduler;", "LRxCompletable;", "subscribeOnWithRxScheduler:" };
-  static const J2ObjcClassInfo _RxCompletable_$31 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, -1, -1 };
-  return &_RxCompletable_$31;
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxCompletable;", "subscribeOnWithRxScheduler:" };
+  static const J2ObjcClassInfo _RxCompletable_31 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 2, -1, 3, -1, -1 };
+  return &_RxCompletable_31;
 }
 
 @end
 
-void RxCompletable_$31_initWithRxCompletable_withRxScheduler_(RxCompletable_$31 *self, RxCompletable *outer$, RxScheduler *capture$0) {
+void RxCompletable_31_initWithRxCompletable_withRxScheduler_(RxCompletable_31 *self, RxCompletable *outer$, RxScheduler *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$scheduler_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$31 *new_RxCompletable_$31_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$31, initWithRxCompletable_withRxScheduler_, outer$, capture$0)
+RxCompletable_31 *new_RxCompletable_31_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_31, initWithRxCompletable_withRxScheduler_, outer$, capture$0)
 }
 
-RxCompletable_$31 *create_RxCompletable_$31_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$31, initWithRxCompletable_withRxScheduler_, outer$, capture$0)
+RxCompletable_31 *create_RxCompletable_31_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_31, initWithRxCompletable_withRxScheduler_, outer$, capture$0)
 }
 
-@implementation RxCompletable_$31_$1
+@implementation RxCompletable_31_1
+
+- (instancetype)initWithRxCompletable_31:(RxCompletable_31 *)outer$
+             withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0
+                  withRxScheduler_Worker:(RxScheduler_Worker *)capture$1 {
+  RxCompletable_31_1_initWithRxCompletable_31_withRxCompletableSubscriber_withRxScheduler_Worker_(self, outer$, capture$0, capture$1);
+  return self;
+}
 
 - (void)call {
   @try {
@@ -5916,13 +5761,6 @@ RxCompletable_$31 *create_RxCompletable_$31_initWithRxCompletable_withRxSchedule
   @finally {
     [((RxScheduler_Worker *) nil_chk(val$w_)) unsubscribe];
   }
-}
-
-- (instancetype)initWithRxCompletable_$31:(RxCompletable_$31 *)outer$
-              withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0
-                   withRxScheduler_Worker:(RxScheduler_Worker *)capture$1 {
-  RxCompletable_$31_$1_initWithRxCompletable_$31_withRxCompletableSubscriber_withRxScheduler_Worker_(self, outer$, capture$0, capture$1);
-  return self;
 }
 
 - (void)dealloc {
@@ -5934,50 +5772,50 @@ RxCompletable_$31 *create_RxCompletable_$31_initWithRxCompletable_withRxSchedule
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxCompletable_$31:withRxCompletableSubscriber:withRxScheduler_Worker:);
+  methods[0].selector = @selector(initWithRxCompletable_31:withRxCompletableSubscriber:withRxScheduler_Worker:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxCompletable_$31;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxCompletable_31;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$s_", "LRxCompletableSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$w_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxCompletable_$31;LRxCompletableSubscriber;LRxScheduler_Worker;", "LRxCompletable_$31;", "callWithId:" };
-  static const J2ObjcClassInfo _RxCompletable_$31_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 3, 1, -1, 2, -1, -1 };
-  return &_RxCompletable_$31_$1;
+  static const void *ptrTable[] = { "LRxCompletable_31;", "callWithId:" };
+  static const J2ObjcClassInfo _RxCompletable_31_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 3, 0, -1, 1, -1, -1 };
+  return &_RxCompletable_31_1;
 }
 
 @end
 
-void RxCompletable_$31_$1_initWithRxCompletable_$31_withRxCompletableSubscriber_withRxScheduler_Worker_(RxCompletable_$31_$1 *self, RxCompletable_$31 *outer$, id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1) {
+void RxCompletable_31_1_initWithRxCompletable_31_withRxCompletableSubscriber_withRxScheduler_Worker_(RxCompletable_31_1 *self, RxCompletable_31 *outer$, id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$s_, capture$0);
   JreStrongAssign(&self->val$w_, capture$1);
   NSObject_init(self);
 }
 
-RxCompletable_$31_$1 *new_RxCompletable_$31_$1_initWithRxCompletable_$31_withRxCompletableSubscriber_withRxScheduler_Worker_(RxCompletable_$31 *outer$, id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1) {
-  J2OBJC_NEW_IMPL(RxCompletable_$31_$1, initWithRxCompletable_$31_withRxCompletableSubscriber_withRxScheduler_Worker_, outer$, capture$0, capture$1)
+RxCompletable_31_1 *new_RxCompletable_31_1_initWithRxCompletable_31_withRxCompletableSubscriber_withRxScheduler_Worker_(RxCompletable_31 *outer$, id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1) {
+  J2OBJC_NEW_IMPL(RxCompletable_31_1, initWithRxCompletable_31_withRxCompletableSubscriber_withRxScheduler_Worker_, outer$, capture$0, capture$1)
 }
 
-RxCompletable_$31_$1 *create_RxCompletable_$31_$1_initWithRxCompletable_$31_withRxCompletableSubscriber_withRxScheduler_Worker_(RxCompletable_$31 *outer$, id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$31_$1, initWithRxCompletable_$31_withRxCompletableSubscriber_withRxScheduler_Worker_, outer$, capture$0, capture$1)
+RxCompletable_31_1 *create_RxCompletable_31_1_initWithRxCompletable_31_withRxCompletableSubscriber_withRxScheduler_Worker_(RxCompletable_31 *outer$, id<RxCompletableSubscriber> capture$0, RxScheduler_Worker *capture$1) {
+  J2OBJC_CREATE_IMPL(RxCompletable_31_1, initWithRxCompletable_31_withRxCompletableSubscriber_withRxScheduler_Worker_, outer$, capture$0, capture$1)
 }
 
-@implementation RxCompletable_$32
+@implementation RxCompletable_32
+
+- (instancetype)initWithRxCompletable:(RxCompletable *)outer$ {
+  RxCompletable_32_initWithRxCompletable_(self, outer$);
+  return self;
+}
 
 - (void)callWithId:(RxSubscriber *)s {
   RxCompletable_unsafeSubscribeWithRxSubscriber_(this$0_, s);
-}
-
-- (instancetype)initWithRxCompletable:(RxCompletable *)outer$ {
-  RxCompletable_$32_initWithRxCompletable_(self, outer$);
-  return self;
 }
 
 - (void)dealloc {
@@ -5987,47 +5825,47 @@ RxCompletable_$31_$1 *create_RxCompletable_$31_$1_initWithRxCompletable_$31_with
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxCompletable:);
+  methods[0].selector = @selector(initWithRxCompletable:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxCompletable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)V", "LRxCompletable;", "toObservable", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<TT;>;" };
-  static const J2ObjcClassInfo _RxCompletable_$32 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, 5, -1 };
-  return &_RxCompletable_$32;
+  static const J2ObjcClassInfo _RxCompletable_32 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, 5, -1 };
+  return &_RxCompletable_32;
 }
 
 @end
 
-void RxCompletable_$32_initWithRxCompletable_(RxCompletable_$32 *self, RxCompletable *outer$) {
+void RxCompletable_32_initWithRxCompletable_(RxCompletable_32 *self, RxCompletable *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxCompletable_$32 *new_RxCompletable_$32_initWithRxCompletable_(RxCompletable *outer$) {
-  J2OBJC_NEW_IMPL(RxCompletable_$32, initWithRxCompletable_, outer$)
+RxCompletable_32 *new_RxCompletable_32_initWithRxCompletable_(RxCompletable *outer$) {
+  J2OBJC_NEW_IMPL(RxCompletable_32, initWithRxCompletable_, outer$)
 }
 
-RxCompletable_$32 *create_RxCompletable_$32_initWithRxCompletable_(RxCompletable *outer$) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$32, initWithRxCompletable_, outer$)
+RxCompletable_32 *create_RxCompletable_32_initWithRxCompletable_(RxCompletable *outer$) {
+  J2OBJC_CREATE_IMPL(RxCompletable_32, initWithRxCompletable_, outer$)
 }
 
-@implementation RxCompletable_$33
-
-- (void)callWithId:(RxSingleSubscriber *)s {
-  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(this$0_, create_RxCompletable_$33_$1_initWithRxCompletable_$33_withRxSingleSubscriber_(self, s));
-}
+@implementation RxCompletable_33
 
 - (instancetype)initWithRxCompletable:(RxCompletable *)outer$
                  withRxFunctionsFunc0:(id<RxFunctionsFunc0>)capture$0 {
-  RxCompletable_$33_initWithRxCompletable_withRxFunctionsFunc0_(self, outer$, capture$0);
+  RxCompletable_33_initWithRxCompletable_withRxFunctionsFunc0_(self, outer$, capture$0);
   return self;
+}
+
+- (void)callWithId:(RxSingleSubscriber *)s {
+  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(this$0_, create_RxCompletable_33_1_initWithRxCompletable_33_withRxSingleSubscriber_(self, s));
 }
 
 - (void)dealloc {
@@ -6038,40 +5876,46 @@ RxCompletable_$32 *create_RxCompletable_$32_initWithRxCompletable_(RxCompletable
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxCompletable:withRxFunctionsFunc0:);
+  methods[0].selector = @selector(initWithRxCompletable:withRxFunctionsFunc0:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxCompletable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$completionValueFunc0_", "LRxFunctionsFunc0;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$completionValueFunc0_", "LRxFunctionsFunc0;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxSingleSubscriber;", "(Lrx/SingleSubscriber<-TT;>;)V", "LRxCompletable;LRxFunctionsFunc0;", "(Lrx/Completable;Lrx/functions/Func0<+TT;>;)V", "Lrx/functions/Func0<+TT;>;", "LRxCompletable;", "toSingleWithRxFunctionsFunc0:", "Ljava/lang/Object;Lrx/Single$OnSubscribe<TT;>;" };
-  static const J2ObjcClassInfo _RxCompletable_$33 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 6, -1, 7, 8, -1 };
-  return &_RxCompletable_$33;
+  static const void *ptrTable[] = { "call", "LRxSingleSubscriber;", "(Lrx/SingleSubscriber<-TT;>;)V", "Lrx/functions/Func0<+TT;>;", "LRxCompletable;", "toSingleWithRxFunctionsFunc0:", "Ljava/lang/Object;Lrx/Single$OnSubscribe<TT;>;" };
+  static const J2ObjcClassInfo _RxCompletable_33 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 4, -1, 5, 6, -1 };
+  return &_RxCompletable_33;
 }
 
 @end
 
-void RxCompletable_$33_initWithRxCompletable_withRxFunctionsFunc0_(RxCompletable_$33 *self, RxCompletable *outer$, id<RxFunctionsFunc0> capture$0) {
+void RxCompletable_33_initWithRxCompletable_withRxFunctionsFunc0_(RxCompletable_33 *self, RxCompletable *outer$, id<RxFunctionsFunc0> capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$completionValueFunc0_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$33 *new_RxCompletable_$33_initWithRxCompletable_withRxFunctionsFunc0_(RxCompletable *outer$, id<RxFunctionsFunc0> capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$33, initWithRxCompletable_withRxFunctionsFunc0_, outer$, capture$0)
+RxCompletable_33 *new_RxCompletable_33_initWithRxCompletable_withRxFunctionsFunc0_(RxCompletable *outer$, id<RxFunctionsFunc0> capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_33, initWithRxCompletable_withRxFunctionsFunc0_, outer$, capture$0)
 }
 
-RxCompletable_$33 *create_RxCompletable_$33_initWithRxCompletable_withRxFunctionsFunc0_(RxCompletable *outer$, id<RxFunctionsFunc0> capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$33, initWithRxCompletable_withRxFunctionsFunc0_, outer$, capture$0)
+RxCompletable_33 *create_RxCompletable_33_initWithRxCompletable_withRxFunctionsFunc0_(RxCompletable *outer$, id<RxFunctionsFunc0> capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_33, initWithRxCompletable_withRxFunctionsFunc0_, outer$, capture$0)
 }
 
-@implementation RxCompletable_$33_$1
+@implementation RxCompletable_33_1
+
+- (instancetype)initWithRxCompletable_33:(RxCompletable_33 *)outer$
+                  withRxSingleSubscriber:(RxSingleSubscriber *)capture$0 {
+  RxCompletable_33_1_initWithRxCompletable_33_withRxSingleSubscriber_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)onCompleted {
   id v;
@@ -6098,12 +5942,6 @@ RxCompletable_$33 *create_RxCompletable_$33_initWithRxCompletable_withRxFunction
   [((RxSingleSubscriber *) nil_chk(val$s_)) addWithRxSubscription:d];
 }
 
-- (instancetype)initWithRxCompletable_$33:(RxCompletable_$33 *)outer$
-                   withRxSingleSubscriber:(RxSingleSubscriber *)capture$0 {
-  RxCompletable_$33_$1_initWithRxCompletable_$33_withRxSingleSubscriber_(self, outer$, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$s_);
@@ -6112,52 +5950,52 @@ RxCompletable_$33 *create_RxCompletable_$33_initWithRxCompletable_withRxFunction
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, 5, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[3].selector = @selector(initWithRxCompletable_$33:withRxSingleSubscriber:);
+  methods[0].selector = @selector(initWithRxCompletable_33:withRxSingleSubscriber:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onSubscribeWithRxSubscription:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxCompletable_$33;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$s_", "LRxSingleSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
+    { "this$0_", "LRxCompletable_33;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "val$s_", "LRxSingleSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable_$33;LRxSingleSubscriber;", "(Lrx/Completable$33;Lrx/SingleSubscriber<-TT;>;)V", "Lrx/SingleSubscriber<-TT;>;", "LRxCompletable_$33;", "callWithId:" };
-  static const J2ObjcClassInfo _RxCompletable_$33_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 2, 7, -1, 8, -1, -1 };
-  return &_RxCompletable_$33_$1;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "Lrx/SingleSubscriber<-TT;>;", "LRxCompletable_33;", "callWithId:" };
+  static const J2ObjcClassInfo _RxCompletable_33_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 2, 5, -1, 6, -1, -1 };
+  return &_RxCompletable_33_1;
 }
 
 @end
 
-void RxCompletable_$33_$1_initWithRxCompletable_$33_withRxSingleSubscriber_(RxCompletable_$33_$1 *self, RxCompletable_$33 *outer$, RxSingleSubscriber *capture$0) {
+void RxCompletable_33_1_initWithRxCompletable_33_withRxSingleSubscriber_(RxCompletable_33_1 *self, RxCompletable_33 *outer$, RxSingleSubscriber *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$s_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$33_$1 *new_RxCompletable_$33_$1_initWithRxCompletable_$33_withRxSingleSubscriber_(RxCompletable_$33 *outer$, RxSingleSubscriber *capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$33_$1, initWithRxCompletable_$33_withRxSingleSubscriber_, outer$, capture$0)
+RxCompletable_33_1 *new_RxCompletable_33_1_initWithRxCompletable_33_withRxSingleSubscriber_(RxCompletable_33 *outer$, RxSingleSubscriber *capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_33_1, initWithRxCompletable_33_withRxSingleSubscriber_, outer$, capture$0)
 }
 
-RxCompletable_$33_$1 *create_RxCompletable_$33_$1_initWithRxCompletable_$33_withRxSingleSubscriber_(RxCompletable_$33 *outer$, RxSingleSubscriber *capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$33_$1, initWithRxCompletable_$33_withRxSingleSubscriber_, outer$, capture$0)
+RxCompletable_33_1 *create_RxCompletable_33_1_initWithRxCompletable_33_withRxSingleSubscriber_(RxCompletable_33 *outer$, RxSingleSubscriber *capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_33_1, initWithRxCompletable_33_withRxSingleSubscriber_, outer$, capture$0)
 }
 
-@implementation RxCompletable_$34
+@implementation RxCompletable_34
+
+- (instancetype)initWithId:(id)capture$0 {
+  RxCompletable_34_initWithId_(self, capture$0);
+  return self;
+}
 
 - (id)call {
   return val$completionValue_;
-}
-
-- (instancetype)initWithId:(id)capture$0 {
-  RxCompletable_$34_initWithId_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -6167,47 +6005,47 @@ RxCompletable_$33_$1 *create_RxCompletable_$33_$1_initWithRxCompletable_$33_with
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, 2, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithId:);
+  methods[0].selector = @selector(initWithId:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$completionValue_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$completionValue_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 1, -1 },
   };
-  static const void *ptrTable[] = { "()TT;", "LNSObject;", "(TT;)V", "TT;", "LRxCompletable;", "toSingleDefaultWithId:", "Ljava/lang/Object;Lrx/functions/Func0<TT;>;" };
-  static const J2ObjcClassInfo _RxCompletable_$34 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
-  return &_RxCompletable_$34;
+  static const void *ptrTable[] = { "()TT;", "TT;", "LRxCompletable;", "toSingleDefaultWithId:", "Ljava/lang/Object;Lrx/functions/Func0<TT;>;" };
+  static const J2ObjcClassInfo _RxCompletable_34 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, 4, -1 };
+  return &_RxCompletable_34;
 }
 
 @end
 
-void RxCompletable_$34_initWithId_(RxCompletable_$34 *self, id capture$0) {
+void RxCompletable_34_initWithId_(RxCompletable_34 *self, id capture$0) {
   JreStrongAssign(&self->val$completionValue_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$34 *new_RxCompletable_$34_initWithId_(id capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$34, initWithId_, capture$0)
+RxCompletable_34 *new_RxCompletable_34_initWithId_(id capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_34, initWithId_, capture$0)
 }
 
-RxCompletable_$34 *create_RxCompletable_$34_initWithId_(id capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$34, initWithId_, capture$0)
+RxCompletable_34 *create_RxCompletable_34_initWithId_(id capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_34, initWithId_, capture$0)
 }
 
-@implementation RxCompletable_$35
-
-- (void)callWithId:(id<RxCompletableSubscriber>)s {
-  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(this$0_, create_RxCompletable_$35_$1_initWithRxCompletable_$35_withRxCompletableSubscriber_(self, s));
-}
+@implementation RxCompletable_35
 
 - (instancetype)initWithRxCompletable:(RxCompletable *)outer$
                       withRxScheduler:(RxScheduler *)capture$0 {
-  RxCompletable_$35_initWithRxCompletable_withRxScheduler_(self, outer$, capture$0);
+  RxCompletable_35_initWithRxCompletable_withRxScheduler_(self, outer$, capture$0);
   return self;
+}
+
+- (void)callWithId:(id<RxCompletableSubscriber>)s {
+  RxCompletable_unsafeSubscribeWithRxCompletableSubscriber_(this$0_, create_RxCompletable_35_1_initWithRxCompletable_35_withRxCompletableSubscriber_(self, s));
 }
 
 - (void)dealloc {
@@ -6218,40 +6056,46 @@ RxCompletable_$34 *create_RxCompletable_$34_initWithId_(id capture$0) {
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxCompletable:withRxScheduler:);
+  methods[0].selector = @selector(initWithRxCompletable:withRxScheduler:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxCompletable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$scheduler_", "LRxScheduler;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxCompletable;LRxScheduler;", "LRxCompletable;", "unsubscribeOnWithRxScheduler:" };
-  static const J2ObjcClassInfo _RxCompletable_$35 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, -1, -1 };
-  return &_RxCompletable_$35;
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxCompletable;", "unsubscribeOnWithRxScheduler:" };
+  static const J2ObjcClassInfo _RxCompletable_35 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 2, -1, 3, -1, -1 };
+  return &_RxCompletable_35;
 }
 
 @end
 
-void RxCompletable_$35_initWithRxCompletable_withRxScheduler_(RxCompletable_$35 *self, RxCompletable *outer$, RxScheduler *capture$0) {
+void RxCompletable_35_initWithRxCompletable_withRxScheduler_(RxCompletable_35 *self, RxCompletable *outer$, RxScheduler *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$scheduler_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$35 *new_RxCompletable_$35_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$35, initWithRxCompletable_withRxScheduler_, outer$, capture$0)
+RxCompletable_35 *new_RxCompletable_35_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_35, initWithRxCompletable_withRxScheduler_, outer$, capture$0)
 }
 
-RxCompletable_$35 *create_RxCompletable_$35_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$35, initWithRxCompletable_withRxScheduler_, outer$, capture$0)
+RxCompletable_35 *create_RxCompletable_35_initWithRxCompletable_withRxScheduler_(RxCompletable *outer$, RxScheduler *capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_35, initWithRxCompletable_withRxScheduler_, outer$, capture$0)
 }
 
-@implementation RxCompletable_$35_$1
+@implementation RxCompletable_35_1
+
+- (instancetype)initWithRxCompletable_35:(RxCompletable_35 *)outer$
+             withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0 {
+  RxCompletable_35_1_initWithRxCompletable_35_withRxCompletableSubscriber_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)onCompleted {
   [((id<RxCompletableSubscriber>) nil_chk(val$s_)) onCompleted];
@@ -6262,13 +6106,7 @@ RxCompletable_$35 *create_RxCompletable_$35_initWithRxCompletable_withRxSchedule
 }
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d {
-  [((id<RxCompletableSubscriber>) nil_chk(val$s_)) onSubscribeWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxCompletable_$35_$1_$1_initWithRxCompletable_$35_$1_withRxSubscription_(self, d))];
-}
-
-- (instancetype)initWithRxCompletable_$35:(RxCompletable_$35 *)outer$
-              withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$0 {
-  RxCompletable_$35_$1_initWithRxCompletable_$35_withRxCompletableSubscriber_(self, outer$, capture$0);
-  return self;
+  [((id<RxCompletableSubscriber>) nil_chk(val$s_)) onSubscribeWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxCompletable_35_1_1_initWithRxCompletable_35_1_withRxSubscription_(self, d))];
 }
 
 - (void)dealloc {
@@ -6279,54 +6117,54 @@ RxCompletable_$35 *create_RxCompletable_$35_initWithRxCompletable_withRxSchedule
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[3].selector = @selector(initWithRxCompletable_$35:withRxCompletableSubscriber:);
+  methods[0].selector = @selector(initWithRxCompletable_35:withRxCompletableSubscriber:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onSubscribeWithRxSubscription:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxCompletable_$35;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxCompletable_35;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$s_", "LRxCompletableSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable_$35;LRxCompletableSubscriber;", "LRxCompletable_$35;", "callWithId:" };
-  static const J2ObjcClassInfo _RxCompletable_$35_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 2, 5, -1, 6, -1, -1 };
-  return &_RxCompletable_$35_$1;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onSubscribe", "LRxSubscription;", "LRxCompletable_35;", "callWithId:" };
+  static const J2ObjcClassInfo _RxCompletable_35_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 4, 2, 4, -1, 5, -1, -1 };
+  return &_RxCompletable_35_1;
 }
 
 @end
 
-void RxCompletable_$35_$1_initWithRxCompletable_$35_withRxCompletableSubscriber_(RxCompletable_$35_$1 *self, RxCompletable_$35 *outer$, id<RxCompletableSubscriber> capture$0) {
+void RxCompletable_35_1_initWithRxCompletable_35_withRxCompletableSubscriber_(RxCompletable_35_1 *self, RxCompletable_35 *outer$, id<RxCompletableSubscriber> capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$s_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$35_$1 *new_RxCompletable_$35_$1_initWithRxCompletable_$35_withRxCompletableSubscriber_(RxCompletable_$35 *outer$, id<RxCompletableSubscriber> capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$35_$1, initWithRxCompletable_$35_withRxCompletableSubscriber_, outer$, capture$0)
+RxCompletable_35_1 *new_RxCompletable_35_1_initWithRxCompletable_35_withRxCompletableSubscriber_(RxCompletable_35 *outer$, id<RxCompletableSubscriber> capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_35_1, initWithRxCompletable_35_withRxCompletableSubscriber_, outer$, capture$0)
 }
 
-RxCompletable_$35_$1 *create_RxCompletable_$35_$1_initWithRxCompletable_$35_withRxCompletableSubscriber_(RxCompletable_$35 *outer$, id<RxCompletableSubscriber> capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$35_$1, initWithRxCompletable_$35_withRxCompletableSubscriber_, outer$, capture$0)
+RxCompletable_35_1 *create_RxCompletable_35_1_initWithRxCompletable_35_withRxCompletableSubscriber_(RxCompletable_35 *outer$, id<RxCompletableSubscriber> capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_35_1, initWithRxCompletable_35_withRxCompletableSubscriber_, outer$, capture$0)
 }
 
-@implementation RxCompletable_$35_$1_$1
+@implementation RxCompletable_35_1_1
+
+- (instancetype)initWithRxCompletable_35_1:(RxCompletable_35_1 *)outer$
+                        withRxSubscription:(id<RxSubscription>)capture$0 {
+  RxCompletable_35_1_1_initWithRxCompletable_35_1_withRxSubscription_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)call {
   RxScheduler_Worker *w = [((RxScheduler *) nil_chk(this$0_->this$0_->val$scheduler_)) createWorker];
-  [((RxScheduler_Worker *) nil_chk(w)) scheduleWithRxFunctionsAction0:create_RxCompletable_$35_$1_$1_$1_initWithRxCompletable_$35_$1_$1_withRxScheduler_Worker_(self, w)];
-}
-
-- (instancetype)initWithRxCompletable_$35_$1:(RxCompletable_$35_$1 *)outer$
-                          withRxSubscription:(id<RxSubscription>)capture$0 {
-  RxCompletable_$35_$1_$1_initWithRxCompletable_$35_$1_withRxSubscription_(self, outer$, capture$0);
-  return self;
+  [((RxScheduler_Worker *) nil_chk(w)) scheduleWithRxFunctionsAction0:create_RxCompletable_35_1_1_1_initWithRxCompletable_35_1_1_withRxScheduler_Worker_(self, w)];
 }
 
 - (void)dealloc {
@@ -6337,40 +6175,46 @@ RxCompletable_$35_$1 *create_RxCompletable_$35_$1_initWithRxCompletable_$35_with
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxCompletable_$35_$1:withRxSubscription:);
+  methods[0].selector = @selector(initWithRxCompletable_35_1:withRxSubscription:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxCompletable_$35_$1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxCompletable_35_1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$d_", "LRxSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxCompletable_$35_$1;LRxSubscription;", "LRxCompletable_$35_$1;", "onSubscribeWithRxSubscription:" };
-  static const J2ObjcClassInfo _RxCompletable_$35_$1_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_RxCompletable_$35_$1_$1;
+  static const void *ptrTable[] = { "LRxCompletable_35_1;", "onSubscribeWithRxSubscription:" };
+  static const J2ObjcClassInfo _RxCompletable_35_1_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 0, -1, 1, -1, -1 };
+  return &_RxCompletable_35_1_1;
 }
 
 @end
 
-void RxCompletable_$35_$1_$1_initWithRxCompletable_$35_$1_withRxSubscription_(RxCompletable_$35_$1_$1 *self, RxCompletable_$35_$1 *outer$, id<RxSubscription> capture$0) {
+void RxCompletable_35_1_1_initWithRxCompletable_35_1_withRxSubscription_(RxCompletable_35_1_1 *self, RxCompletable_35_1 *outer$, id<RxSubscription> capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$d_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$35_$1_$1 *new_RxCompletable_$35_$1_$1_initWithRxCompletable_$35_$1_withRxSubscription_(RxCompletable_$35_$1 *outer$, id<RxSubscription> capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$35_$1_$1, initWithRxCompletable_$35_$1_withRxSubscription_, outer$, capture$0)
+RxCompletable_35_1_1 *new_RxCompletable_35_1_1_initWithRxCompletable_35_1_withRxSubscription_(RxCompletable_35_1 *outer$, id<RxSubscription> capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_35_1_1, initWithRxCompletable_35_1_withRxSubscription_, outer$, capture$0)
 }
 
-RxCompletable_$35_$1_$1 *create_RxCompletable_$35_$1_$1_initWithRxCompletable_$35_$1_withRxSubscription_(RxCompletable_$35_$1 *outer$, id<RxSubscription> capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$35_$1_$1, initWithRxCompletable_$35_$1_withRxSubscription_, outer$, capture$0)
+RxCompletable_35_1_1 *create_RxCompletable_35_1_1_initWithRxCompletable_35_1_withRxSubscription_(RxCompletable_35_1 *outer$, id<RxSubscription> capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_35_1_1, initWithRxCompletable_35_1_withRxSubscription_, outer$, capture$0)
 }
 
-@implementation RxCompletable_$35_$1_$1_$1
+@implementation RxCompletable_35_1_1_1
+
+- (instancetype)initWithRxCompletable_35_1_1:(RxCompletable_35_1_1 *)outer$
+                      withRxScheduler_Worker:(RxScheduler_Worker *)capture$0 {
+  RxCompletable_35_1_1_1_initWithRxCompletable_35_1_1_withRxScheduler_Worker_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)call {
   @try {
@@ -6381,12 +6225,6 @@ RxCompletable_$35_$1_$1 *create_RxCompletable_$35_$1_$1_initWithRxCompletable_$3
   }
 }
 
-- (instancetype)initWithRxCompletable_$35_$1_$1:(RxCompletable_$35_$1_$1 *)outer$
-                         withRxScheduler_Worker:(RxScheduler_Worker *)capture$0 {
-  RxCompletable_$35_$1_$1_$1_initWithRxCompletable_$35_$1_$1_withRxScheduler_Worker_(self, outer$, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$w_);
@@ -6395,35 +6233,35 @@ RxCompletable_$35_$1_$1 *create_RxCompletable_$35_$1_$1_initWithRxCompletable_$3
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxCompletable_$35_$1_$1:withRxScheduler_Worker:);
+  methods[0].selector = @selector(initWithRxCompletable_35_1_1:withRxScheduler_Worker:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxCompletable_$35_$1_$1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxCompletable_35_1_1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$w_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxCompletable_$35_$1_$1;LRxScheduler_Worker;", "LRxCompletable_$35_$1_$1;", "call" };
-  static const J2ObjcClassInfo _RxCompletable_$35_$1_$1_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_RxCompletable_$35_$1_$1_$1;
+  static const void *ptrTable[] = { "LRxCompletable_35_1_1;", "call" };
+  static const J2ObjcClassInfo _RxCompletable_35_1_1_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 2, 0, -1, 1, -1, -1 };
+  return &_RxCompletable_35_1_1_1;
 }
 
 @end
 
-void RxCompletable_$35_$1_$1_$1_initWithRxCompletable_$35_$1_$1_withRxScheduler_Worker_(RxCompletable_$35_$1_$1_$1 *self, RxCompletable_$35_$1_$1 *outer$, RxScheduler_Worker *capture$0) {
+void RxCompletable_35_1_1_1_initWithRxCompletable_35_1_1_withRxScheduler_Worker_(RxCompletable_35_1_1_1 *self, RxCompletable_35_1_1 *outer$, RxScheduler_Worker *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$w_, capture$0);
   NSObject_init(self);
 }
 
-RxCompletable_$35_$1_$1_$1 *new_RxCompletable_$35_$1_$1_$1_initWithRxCompletable_$35_$1_$1_withRxScheduler_Worker_(RxCompletable_$35_$1_$1 *outer$, RxScheduler_Worker *capture$0) {
-  J2OBJC_NEW_IMPL(RxCompletable_$35_$1_$1_$1, initWithRxCompletable_$35_$1_$1_withRxScheduler_Worker_, outer$, capture$0)
+RxCompletable_35_1_1_1 *new_RxCompletable_35_1_1_1_initWithRxCompletable_35_1_1_withRxScheduler_Worker_(RxCompletable_35_1_1 *outer$, RxScheduler_Worker *capture$0) {
+  J2OBJC_NEW_IMPL(RxCompletable_35_1_1_1, initWithRxCompletable_35_1_1_withRxScheduler_Worker_, outer$, capture$0)
 }
 
-RxCompletable_$35_$1_$1_$1 *create_RxCompletable_$35_$1_$1_$1_initWithRxCompletable_$35_$1_$1_withRxScheduler_Worker_(RxCompletable_$35_$1_$1 *outer$, RxScheduler_Worker *capture$0) {
-  J2OBJC_CREATE_IMPL(RxCompletable_$35_$1_$1_$1, initWithRxCompletable_$35_$1_$1_withRxScheduler_Worker_, outer$, capture$0)
+RxCompletable_35_1_1_1 *create_RxCompletable_35_1_1_1_initWithRxCompletable_35_1_1_withRxScheduler_Worker_(RxCompletable_35_1_1 *outer$, RxScheduler_Worker *capture$0) {
+  J2OBJC_CREATE_IMPL(RxCompletable_35_1_1_1, initWithRxCompletable_35_1_1_withRxScheduler_Worker_, outer$, capture$0)
 }

@@ -8,7 +8,6 @@
 #include "CoTouchlabSqueakyStmtJoinAlias.h"
 #include "CoTouchlabSqueakyStmtQueryBaseComparison.h"
 #include "CoTouchlabSqueakyStmtQueryIsNull.h"
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "java/util/List.h"
 

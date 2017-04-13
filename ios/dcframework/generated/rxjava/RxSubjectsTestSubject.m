@@ -29,95 +29,85 @@
 J2OBJC_FIELD_SETTER(RxSubjectsTestSubject, state_, RxSubjectsSubjectSubscriptionManager *)
 J2OBJC_FIELD_SETTER(RxSubjectsTestSubject, innerScheduler_, RxScheduler_Worker *)
 
-@interface RxSubjectsTestSubject_$1 : NSObject < RxFunctionsAction1 > {
+@interface RxSubjectsTestSubject_1 : NSObject < RxFunctionsAction1 > {
  @public
   RxSubjectsSubjectSubscriptionManager *val$state_;
 }
 
-- (void)callWithId:(RxSubjectsSubjectSubscriptionManager_SubjectObserver *)o;
-
 - (instancetype)initWithRxSubjectsSubjectSubscriptionManager:(RxSubjectsSubjectSubscriptionManager *)capture$0;
+
+- (void)callWithId:(RxSubjectsSubjectSubscriptionManager_SubjectObserver *)o;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxSubjectsTestSubject_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxSubjectsTestSubject_1)
 
-J2OBJC_FIELD_SETTER(RxSubjectsTestSubject_$1, val$state_, RxSubjectsSubjectSubscriptionManager *)
+__attribute__((unused)) static void RxSubjectsTestSubject_1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsTestSubject_1 *self, RxSubjectsSubjectSubscriptionManager *capture$0);
 
-__attribute__((unused)) static void RxSubjectsTestSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsTestSubject_$1 *self, RxSubjectsSubjectSubscriptionManager *capture$0);
+__attribute__((unused)) static RxSubjectsTestSubject_1 *new_RxSubjectsTestSubject_1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxSubjectsTestSubject_$1 *new_RxSubjectsTestSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxSubjectsTestSubject_1 *create_RxSubjectsTestSubject_1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0);
 
-__attribute__((unused)) static RxSubjectsTestSubject_$1 *create_RxSubjectsTestSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0);
-
-@interface RxSubjectsTestSubject_$2 : NSObject < RxFunctionsAction0 > {
+@interface RxSubjectsTestSubject_2 : NSObject < RxFunctionsAction0 > {
  @public
   RxSubjectsTestSubject *this$0_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxSubjectsTestSubject:(RxSubjectsTestSubject *)outer$;
+
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxSubjectsTestSubject_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxSubjectsTestSubject_2)
 
-J2OBJC_FIELD_SETTER(RxSubjectsTestSubject_$2, this$0_, RxSubjectsTestSubject *)
+__attribute__((unused)) static void RxSubjectsTestSubject_2_initWithRxSubjectsTestSubject_(RxSubjectsTestSubject_2 *self, RxSubjectsTestSubject *outer$);
 
-__attribute__((unused)) static void RxSubjectsTestSubject_$2_initWithRxSubjectsTestSubject_(RxSubjectsTestSubject_$2 *self, RxSubjectsTestSubject *outer$);
+__attribute__((unused)) static RxSubjectsTestSubject_2 *new_RxSubjectsTestSubject_2_initWithRxSubjectsTestSubject_(RxSubjectsTestSubject *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxSubjectsTestSubject_$2 *new_RxSubjectsTestSubject_$2_initWithRxSubjectsTestSubject_(RxSubjectsTestSubject *outer$) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxSubjectsTestSubject_2 *create_RxSubjectsTestSubject_2_initWithRxSubjectsTestSubject_(RxSubjectsTestSubject *outer$);
 
-__attribute__((unused)) static RxSubjectsTestSubject_$2 *create_RxSubjectsTestSubject_$2_initWithRxSubjectsTestSubject_(RxSubjectsTestSubject *outer$);
-
-@interface RxSubjectsTestSubject_$3 : NSObject < RxFunctionsAction0 > {
+@interface RxSubjectsTestSubject_3 : NSObject < RxFunctionsAction0 > {
  @public
   RxSubjectsTestSubject *this$0_;
   NSException *val$e_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxSubjectsTestSubject:(RxSubjectsTestSubject *)outer$
                               withNSException:(NSException *)capture$0;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxSubjectsTestSubject_$3)
+J2OBJC_EMPTY_STATIC_INIT(RxSubjectsTestSubject_3)
 
-J2OBJC_FIELD_SETTER(RxSubjectsTestSubject_$3, this$0_, RxSubjectsTestSubject *)
-J2OBJC_FIELD_SETTER(RxSubjectsTestSubject_$3, val$e_, NSException *)
+__attribute__((unused)) static void RxSubjectsTestSubject_3_initWithRxSubjectsTestSubject_withNSException_(RxSubjectsTestSubject_3 *self, RxSubjectsTestSubject *outer$, NSException *capture$0);
 
-__attribute__((unused)) static void RxSubjectsTestSubject_$3_initWithRxSubjectsTestSubject_withNSException_(RxSubjectsTestSubject_$3 *self, RxSubjectsTestSubject *outer$, NSException *capture$0);
+__attribute__((unused)) static RxSubjectsTestSubject_3 *new_RxSubjectsTestSubject_3_initWithRxSubjectsTestSubject_withNSException_(RxSubjectsTestSubject *outer$, NSException *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxSubjectsTestSubject_$3 *new_RxSubjectsTestSubject_$3_initWithRxSubjectsTestSubject_withNSException_(RxSubjectsTestSubject *outer$, NSException *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxSubjectsTestSubject_3 *create_RxSubjectsTestSubject_3_initWithRxSubjectsTestSubject_withNSException_(RxSubjectsTestSubject *outer$, NSException *capture$0);
 
-__attribute__((unused)) static RxSubjectsTestSubject_$3 *create_RxSubjectsTestSubject_$3_initWithRxSubjectsTestSubject_withNSException_(RxSubjectsTestSubject *outer$, NSException *capture$0);
-
-@interface RxSubjectsTestSubject_$4 : NSObject < RxFunctionsAction0 > {
+@interface RxSubjectsTestSubject_4 : NSObject < RxFunctionsAction0 > {
  @public
   RxSubjectsTestSubject *this$0_;
   id val$v_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxSubjectsTestSubject:(RxSubjectsTestSubject *)outer$
                                        withId:(id)capture$0;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxSubjectsTestSubject_$4)
+J2OBJC_EMPTY_STATIC_INIT(RxSubjectsTestSubject_4)
 
-J2OBJC_FIELD_SETTER(RxSubjectsTestSubject_$4, this$0_, RxSubjectsTestSubject *)
-J2OBJC_FIELD_SETTER(RxSubjectsTestSubject_$4, val$v_, id)
+__attribute__((unused)) static void RxSubjectsTestSubject_4_initWithRxSubjectsTestSubject_withId_(RxSubjectsTestSubject_4 *self, RxSubjectsTestSubject *outer$, id capture$0);
 
-__attribute__((unused)) static void RxSubjectsTestSubject_$4_initWithRxSubjectsTestSubject_withId_(RxSubjectsTestSubject_$4 *self, RxSubjectsTestSubject *outer$, id capture$0);
+__attribute__((unused)) static RxSubjectsTestSubject_4 *new_RxSubjectsTestSubject_4_initWithRxSubjectsTestSubject_withId_(RxSubjectsTestSubject *outer$, id capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxSubjectsTestSubject_$4 *new_RxSubjectsTestSubject_$4_initWithRxSubjectsTestSubject_withId_(RxSubjectsTestSubject *outer$, id capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxSubjectsTestSubject_$4 *create_RxSubjectsTestSubject_$4_initWithRxSubjectsTestSubject_withId_(RxSubjectsTestSubject *outer$, id capture$0);
+__attribute__((unused)) static RxSubjectsTestSubject_4 *create_RxSubjectsTestSubject_4_initWithRxSubjectsTestSubject_withId_(RxSubjectsTestSubject *outer$, id capture$0);
 
 @implementation RxSubjectsTestSubject
 
@@ -151,7 +141,7 @@ __attribute__((unused)) static RxSubjectsTestSubject_$4 *create_RxSubjectsTestSu
 }
 
 - (void)onCompletedWithLong:(jlong)delayTime {
-  [((RxScheduler_Worker *) nil_chk(innerScheduler_)) scheduleWithRxFunctionsAction0:create_RxSubjectsTestSubject_$2_initWithRxSubjectsTestSubject_(self) withLong:delayTime withJavaUtilConcurrentTimeUnit:JreLoadEnum(JavaUtilConcurrentTimeUnit, MILLISECONDS)];
+  [((RxScheduler_Worker *) nil_chk(innerScheduler_)) scheduleWithRxFunctionsAction0:create_RxSubjectsTestSubject_2_initWithRxSubjectsTestSubject_(self) withLong:delayTime withJavaUtilConcurrentTimeUnit:JreLoadEnum(JavaUtilConcurrentTimeUnit, MILLISECONDS)];
 }
 
 - (void)onErrorWithNSException:(NSException *)e {
@@ -174,7 +164,7 @@ __attribute__((unused)) static RxSubjectsTestSubject_$4 *create_RxSubjectsTestSu
 
 - (void)onErrorWithNSException:(NSException *)e
                       withLong:(jlong)delayTime {
-  [((RxScheduler_Worker *) nil_chk(innerScheduler_)) scheduleWithRxFunctionsAction0:create_RxSubjectsTestSubject_$3_initWithRxSubjectsTestSubject_withNSException_(self, e) withLong:delayTime withJavaUtilConcurrentTimeUnit:JreLoadEnum(JavaUtilConcurrentTimeUnit, MILLISECONDS)];
+  [((RxScheduler_Worker *) nil_chk(innerScheduler_)) scheduleWithRxFunctionsAction0:create_RxSubjectsTestSubject_3_initWithRxSubjectsTestSubject_withNSException_(self, e) withLong:delayTime withJavaUtilConcurrentTimeUnit:JreLoadEnum(JavaUtilConcurrentTimeUnit, MILLISECONDS)];
 }
 
 - (void)onNextWithId:(id)v {
@@ -195,7 +185,7 @@ __attribute__((unused)) static RxSubjectsTestSubject_$4 *create_RxSubjectsTestSu
 
 - (void)onNextWithId:(id)v
             withLong:(jlong)delayTime {
-  [((RxScheduler_Worker *) nil_chk(innerScheduler_)) scheduleWithRxFunctionsAction0:create_RxSubjectsTestSubject_$4_initWithRxSubjectsTestSubject_withId_(self, v) withLong:delayTime withJavaUtilConcurrentTimeUnit:JreLoadEnum(JavaUtilConcurrentTimeUnit, MILLISECONDS)];
+  [((RxScheduler_Worker *) nil_chk(innerScheduler_)) scheduleWithRxFunctionsAction0:create_RxSubjectsTestSubject_4_initWithRxSubjectsTestSubject_withId_(self, v) withLong:delayTime withJavaUtilConcurrentTimeUnit:JreLoadEnum(JavaUtilConcurrentTimeUnit, MILLISECONDS)];
 }
 
 - (jboolean)hasObservers {
@@ -252,7 +242,7 @@ __attribute__((unused)) static RxSubjectsTestSubject_$4 *create_RxSubjectsTestSu
 RxSubjectsTestSubject *RxSubjectsTestSubject_createWithRxSchedulersTestScheduler_(RxSchedulersTestScheduler *scheduler) {
   RxSubjectsTestSubject_initialize();
   RxSubjectsSubjectSubscriptionManager *state = create_RxSubjectsSubjectSubscriptionManager_init();
-  JreStrongAssignAndConsume(&state->onAdded_, new_RxSubjectsTestSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(state));
+  JreStrongAssignAndConsume(&state->onAdded_, new_RxSubjectsTestSubject_1_initWithRxSubjectsSubjectSubscriptionManager_(state));
   JreStrongAssign(&state->onTerminated_, state->onAdded_);
   return create_RxSubjectsTestSubject_initWithRxObservable_OnSubscribe_withRxSubjectsSubjectSubscriptionManager_withRxSchedulersTestScheduler_(state, state, scheduler);
 }
@@ -273,15 +263,15 @@ RxSubjectsTestSubject *create_RxSubjectsTestSubject_initWithRxObservable_OnSubsc
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubjectsTestSubject)
 
-@implementation RxSubjectsTestSubject_$1
+@implementation RxSubjectsTestSubject_1
+
+- (instancetype)initWithRxSubjectsSubjectSubscriptionManager:(RxSubjectsSubjectSubscriptionManager *)capture$0 {
+  RxSubjectsTestSubject_1_initWithRxSubjectsSubjectSubscriptionManager_(self, capture$0);
+  return self;
+}
 
 - (void)callWithId:(RxSubjectsSubjectSubscriptionManager_SubjectObserver *)o {
   [((RxSubjectsSubjectSubscriptionManager_SubjectObserver *) nil_chk(o)) emitFirstWithId:[((RxSubjectsSubjectSubscriptionManager *) nil_chk(val$state_)) getLatest]];
-}
-
-- (instancetype)initWithRxSubjectsSubjectSubscriptionManager:(RxSubjectsSubjectSubscriptionManager *)capture$0 {
-  RxSubjectsTestSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -291,46 +281,46 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubjectsTestSubject)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxSubjectsSubjectSubscriptionManager:);
+  methods[0].selector = @selector(initWithRxSubjectsSubjectSubscriptionManager:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$state_", "LRxSubjectsSubjectSubscriptionManager;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$state_", "LRxSubjectsSubjectSubscriptionManager;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxSubjectsSubjectSubscriptionManager_SubjectObserver;", "(Lrx/subjects/SubjectSubscriptionManager$SubjectObserver<TT;>;)V", "LRxSubjectsSubjectSubscriptionManager;", "(Lrx/subjects/SubjectSubscriptionManager<TT;>;)V", "Lrx/subjects/SubjectSubscriptionManager<TT;>;", "LRxSubjectsTestSubject;", "createWithRxSchedulersTestScheduler:", "Ljava/lang/Object;Lrx/functions/Action1<Lrx/subjects/SubjectSubscriptionManager$SubjectObserver<TT;>;>;" };
-  static const J2ObjcClassInfo _RxSubjectsTestSubject_$1 = { "", "rx.subjects", ptrTable, methods, fields, 7, 0x8008, 2, 1, 6, -1, 7, 8, -1 };
-  return &_RxSubjectsTestSubject_$1;
+  static const void *ptrTable[] = { "call", "LRxSubjectsSubjectSubscriptionManager_SubjectObserver;", "(Lrx/subjects/SubjectSubscriptionManager$SubjectObserver<TT;>;)V", "Lrx/subjects/SubjectSubscriptionManager<TT;>;", "LRxSubjectsTestSubject;", "createWithRxSchedulersTestScheduler:", "Ljava/lang/Object;Lrx/functions/Action1<Lrx/subjects/SubjectSubscriptionManager$SubjectObserver<TT;>;>;" };
+  static const J2ObjcClassInfo _RxSubjectsTestSubject_1 = { "", "rx.subjects", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
+  return &_RxSubjectsTestSubject_1;
 }
 
 @end
 
-void RxSubjectsTestSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsTestSubject_$1 *self, RxSubjectsSubjectSubscriptionManager *capture$0) {
+void RxSubjectsTestSubject_1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsTestSubject_1 *self, RxSubjectsSubjectSubscriptionManager *capture$0) {
   JreStrongAssign(&self->val$state_, capture$0);
   NSObject_init(self);
 }
 
-RxSubjectsTestSubject_$1 *new_RxSubjectsTestSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0) {
-  J2OBJC_NEW_IMPL(RxSubjectsTestSubject_$1, initWithRxSubjectsSubjectSubscriptionManager_, capture$0)
+RxSubjectsTestSubject_1 *new_RxSubjectsTestSubject_1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0) {
+  J2OBJC_NEW_IMPL(RxSubjectsTestSubject_1, initWithRxSubjectsSubjectSubscriptionManager_, capture$0)
 }
 
-RxSubjectsTestSubject_$1 *create_RxSubjectsTestSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0) {
-  J2OBJC_CREATE_IMPL(RxSubjectsTestSubject_$1, initWithRxSubjectsSubjectSubscriptionManager_, capture$0)
+RxSubjectsTestSubject_1 *create_RxSubjectsTestSubject_1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0) {
+  J2OBJC_CREATE_IMPL(RxSubjectsTestSubject_1, initWithRxSubjectsSubjectSubscriptionManager_, capture$0)
 }
 
-@implementation RxSubjectsTestSubject_$2
+@implementation RxSubjectsTestSubject_2
+
+- (instancetype)initWithRxSubjectsTestSubject:(RxSubjectsTestSubject *)outer$ {
+  RxSubjectsTestSubject_2_initWithRxSubjectsTestSubject_(self, outer$);
+  return self;
+}
 
 - (void)call {
   [this$0_ internalOnCompleted];
-}
-
-- (instancetype)initWithRxSubjectsTestSubject:(RxSubjectsTestSubject *)outer$ {
-  RxSubjectsTestSubject_$2_initWithRxSubjectsTestSubject_(self, outer$);
-  return self;
 }
 
 - (void)dealloc {
@@ -340,47 +330,47 @@ RxSubjectsTestSubject_$1 *create_RxSubjectsTestSubject_$1_initWithRxSubjectsSubj
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxSubjectsTestSubject:);
+  methods[0].selector = @selector(initWithRxSubjectsTestSubject:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxSubjectsTestSubject;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxSubjectsTestSubject;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
   };
-  static const void *ptrTable[] = { "LRxSubjectsTestSubject;", "onCompletedWithLong:" };
-  static const J2ObjcClassInfo _RxSubjectsTestSubject_$2 = { "", "rx.subjects", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
-  return &_RxSubjectsTestSubject_$2;
+  static const void *ptrTable[] = { "Lrx/subjects/TestSubject<TT;>;", "LRxSubjectsTestSubject;", "onCompletedWithLong:" };
+  static const J2ObjcClassInfo _RxSubjectsTestSubject_2 = { "", "rx.subjects", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
+  return &_RxSubjectsTestSubject_2;
 }
 
 @end
 
-void RxSubjectsTestSubject_$2_initWithRxSubjectsTestSubject_(RxSubjectsTestSubject_$2 *self, RxSubjectsTestSubject *outer$) {
+void RxSubjectsTestSubject_2_initWithRxSubjectsTestSubject_(RxSubjectsTestSubject_2 *self, RxSubjectsTestSubject *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxSubjectsTestSubject_$2 *new_RxSubjectsTestSubject_$2_initWithRxSubjectsTestSubject_(RxSubjectsTestSubject *outer$) {
-  J2OBJC_NEW_IMPL(RxSubjectsTestSubject_$2, initWithRxSubjectsTestSubject_, outer$)
+RxSubjectsTestSubject_2 *new_RxSubjectsTestSubject_2_initWithRxSubjectsTestSubject_(RxSubjectsTestSubject *outer$) {
+  J2OBJC_NEW_IMPL(RxSubjectsTestSubject_2, initWithRxSubjectsTestSubject_, outer$)
 }
 
-RxSubjectsTestSubject_$2 *create_RxSubjectsTestSubject_$2_initWithRxSubjectsTestSubject_(RxSubjectsTestSubject *outer$) {
-  J2OBJC_CREATE_IMPL(RxSubjectsTestSubject_$2, initWithRxSubjectsTestSubject_, outer$)
+RxSubjectsTestSubject_2 *create_RxSubjectsTestSubject_2_initWithRxSubjectsTestSubject_(RxSubjectsTestSubject *outer$) {
+  J2OBJC_CREATE_IMPL(RxSubjectsTestSubject_2, initWithRxSubjectsTestSubject_, outer$)
 }
 
-@implementation RxSubjectsTestSubject_$3
-
-- (void)call {
-  [this$0_ internalOnErrorWithNSException:val$e_];
-}
+@implementation RxSubjectsTestSubject_3
 
 - (instancetype)initWithRxSubjectsTestSubject:(RxSubjectsTestSubject *)outer$
                               withNSException:(NSException *)capture$0 {
-  RxSubjectsTestSubject_$3_initWithRxSubjectsTestSubject_withNSException_(self, outer$, capture$0);
+  RxSubjectsTestSubject_3_initWithRxSubjectsTestSubject_withNSException_(self, outer$, capture$0);
   return self;
+}
+
+- (void)call {
+  [this$0_ internalOnErrorWithNSException:val$e_];
 }
 
 - (void)dealloc {
@@ -391,49 +381,49 @@ RxSubjectsTestSubject_$2 *create_RxSubjectsTestSubject_$2_initWithRxSubjectsTest
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxSubjectsTestSubject:withNSException:);
+  methods[0].selector = @selector(initWithRxSubjectsTestSubject:withNSException:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxSubjectsTestSubject;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxSubjectsTestSubject;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
     { "val$e_", "LNSException;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxSubjectsTestSubject;LNSException;", "LRxSubjectsTestSubject;", "onErrorWithNSException:withLong:" };
-  static const J2ObjcClassInfo _RxSubjectsTestSubject_$3 = { "", "rx.subjects", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_RxSubjectsTestSubject_$3;
+  static const void *ptrTable[] = { "Lrx/subjects/TestSubject<TT;>;", "LRxSubjectsTestSubject;", "onErrorWithNSException:withLong:" };
+  static const J2ObjcClassInfo _RxSubjectsTestSubject_3 = { "", "rx.subjects", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
+  return &_RxSubjectsTestSubject_3;
 }
 
 @end
 
-void RxSubjectsTestSubject_$3_initWithRxSubjectsTestSubject_withNSException_(RxSubjectsTestSubject_$3 *self, RxSubjectsTestSubject *outer$, NSException *capture$0) {
+void RxSubjectsTestSubject_3_initWithRxSubjectsTestSubject_withNSException_(RxSubjectsTestSubject_3 *self, RxSubjectsTestSubject *outer$, NSException *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$e_, capture$0);
   NSObject_init(self);
 }
 
-RxSubjectsTestSubject_$3 *new_RxSubjectsTestSubject_$3_initWithRxSubjectsTestSubject_withNSException_(RxSubjectsTestSubject *outer$, NSException *capture$0) {
-  J2OBJC_NEW_IMPL(RxSubjectsTestSubject_$3, initWithRxSubjectsTestSubject_withNSException_, outer$, capture$0)
+RxSubjectsTestSubject_3 *new_RxSubjectsTestSubject_3_initWithRxSubjectsTestSubject_withNSException_(RxSubjectsTestSubject *outer$, NSException *capture$0) {
+  J2OBJC_NEW_IMPL(RxSubjectsTestSubject_3, initWithRxSubjectsTestSubject_withNSException_, outer$, capture$0)
 }
 
-RxSubjectsTestSubject_$3 *create_RxSubjectsTestSubject_$3_initWithRxSubjectsTestSubject_withNSException_(RxSubjectsTestSubject *outer$, NSException *capture$0) {
-  J2OBJC_CREATE_IMPL(RxSubjectsTestSubject_$3, initWithRxSubjectsTestSubject_withNSException_, outer$, capture$0)
+RxSubjectsTestSubject_3 *create_RxSubjectsTestSubject_3_initWithRxSubjectsTestSubject_withNSException_(RxSubjectsTestSubject *outer$, NSException *capture$0) {
+  J2OBJC_CREATE_IMPL(RxSubjectsTestSubject_3, initWithRxSubjectsTestSubject_withNSException_, outer$, capture$0)
 }
 
-@implementation RxSubjectsTestSubject_$4
-
-- (void)call {
-  [this$0_ internalOnNextWithId:val$v_];
-}
+@implementation RxSubjectsTestSubject_4
 
 - (instancetype)initWithRxSubjectsTestSubject:(RxSubjectsTestSubject *)outer$
                                        withId:(id)capture$0 {
-  RxSubjectsTestSubject_$4_initWithRxSubjectsTestSubject_withId_(self, outer$, capture$0);
+  RxSubjectsTestSubject_4_initWithRxSubjectsTestSubject_withId_(self, outer$, capture$0);
   return self;
+}
+
+- (void)call {
+  [this$0_ internalOnNextWithId:val$v_];
 }
 
 - (void)dealloc {
@@ -444,35 +434,35 @@ RxSubjectsTestSubject_$3 *create_RxSubjectsTestSubject_$3_initWithRxSubjectsTest
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxSubjectsTestSubject:withId:);
+  methods[0].selector = @selector(initWithRxSubjectsTestSubject:withId:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxSubjectsTestSubject;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$v_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+    { "this$0_", "LRxSubjectsTestSubject;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
+    { "val$v_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 1, -1 },
   };
-  static const void *ptrTable[] = { "LRxSubjectsTestSubject;LNSObject;", "(Lrx/subjects/TestSubject;TT;)V", "TT;", "LRxSubjectsTestSubject;", "onNextWithId:withLong:" };
-  static const J2ObjcClassInfo _RxSubjectsTestSubject_$4 = { "", "rx.subjects", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, -1, -1 };
-  return &_RxSubjectsTestSubject_$4;
+  static const void *ptrTable[] = { "Lrx/subjects/TestSubject<TT;>;", "TT;", "LRxSubjectsTestSubject;", "onNextWithId:withLong:" };
+  static const J2ObjcClassInfo _RxSubjectsTestSubject_4 = { "", "rx.subjects", ptrTable, methods, fields, 7, 0x8008, 2, 2, 2, -1, 3, -1, -1 };
+  return &_RxSubjectsTestSubject_4;
 }
 
 @end
 
-void RxSubjectsTestSubject_$4_initWithRxSubjectsTestSubject_withId_(RxSubjectsTestSubject_$4 *self, RxSubjectsTestSubject *outer$, id capture$0) {
+void RxSubjectsTestSubject_4_initWithRxSubjectsTestSubject_withId_(RxSubjectsTestSubject_4 *self, RxSubjectsTestSubject *outer$, id capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$v_, capture$0);
   NSObject_init(self);
 }
 
-RxSubjectsTestSubject_$4 *new_RxSubjectsTestSubject_$4_initWithRxSubjectsTestSubject_withId_(RxSubjectsTestSubject *outer$, id capture$0) {
-  J2OBJC_NEW_IMPL(RxSubjectsTestSubject_$4, initWithRxSubjectsTestSubject_withId_, outer$, capture$0)
+RxSubjectsTestSubject_4 *new_RxSubjectsTestSubject_4_initWithRxSubjectsTestSubject_withId_(RxSubjectsTestSubject *outer$, id capture$0) {
+  J2OBJC_NEW_IMPL(RxSubjectsTestSubject_4, initWithRxSubjectsTestSubject_withId_, outer$, capture$0)
 }
 
-RxSubjectsTestSubject_$4 *create_RxSubjectsTestSubject_$4_initWithRxSubjectsTestSubject_withId_(RxSubjectsTestSubject *outer$, id capture$0) {
-  J2OBJC_CREATE_IMPL(RxSubjectsTestSubject_$4, initWithRxSubjectsTestSubject_withId_, outer$, capture$0)
+RxSubjectsTestSubject_4 *create_RxSubjectsTestSubject_4_initWithRxSubjectsTestSubject_withId_(RxSubjectsTestSubject *outer$, id capture$0) {
+  J2OBJC_CREATE_IMPL(RxSubjectsTestSubject_4, initWithRxSubjectsTestSubject_withId_, outer$, capture$0)
 }

@@ -30,6 +30,13 @@ __attribute__((unused)) static IOSObjectArray *CoTouchlabSqueakyDaoDaoHelper_fil
 
 @implementation CoTouchlabSqueakyDaoDaoHelper
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabSqueakyDaoDaoHelper_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (IOSObjectArray *)refreshWithNSString:(NSString *)refreshTree {
   return CoTouchlabSqueakyDaoDaoHelper_refreshWithNSString_(refreshTree);
 }
@@ -61,32 +68,25 @@ __attribute__((unused)) static IOSObjectArray *CoTouchlabSqueakyDaoDaoHelper_fil
   return CoTouchlabSqueakyDaoDaoHelper_fillForeignRefreshMapWithCoTouchlabSqueakyDaoSqueakyContext_withCoTouchlabSqueakyFieldFieldType_withInt_(squeakyContext, parentType, count);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabSqueakyDaoDaoHelper_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "[LCoTouchlabSqueakyDaoDao_ForeignRefresh;", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, "LCoTouchlabSqueakyDaoDaoHelper_ValBuilder;", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, "LCoTouchlabSqueakyDaoDao_ForeignRefresh;", 0x9, 2, 3, -1, -1, -1, -1 },
     { NULL, "[LCoTouchlabSqueakyDaoDao_ForeignRefresh;", 0x9, 4, 5, 6, -1, -1, -1 },
     { NULL, "[LCoTouchlabSqueakyDaoDao_ForeignRefresh;", 0x9, 4, 7, 6, -1, -1, -1 },
     { NULL, "[LCoTouchlabSqueakyDaoDao_ForeignRefresh;", 0xa, 4, 8, 6, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(refreshWithNSString:);
-  methods[1].selector = @selector(vals);
-  methods[2].selector = @selector(findRefreshWithCoTouchlabSqueakyDaoDao_ForeignRefreshArray:withNSString:);
-  methods[3].selector = @selector(fillForeignRefreshMapWithCoTouchlabSqueakyDaoSqueakyContext:withIOSClass:withInt:);
-  methods[4].selector = @selector(fillForeignRefreshMapWithCoTouchlabSqueakyDaoSqueakyContext:withCoTouchlabSqueakyFieldFieldTypeArray:withInt:);
-  methods[5].selector = @selector(fillForeignRefreshMapWithCoTouchlabSqueakyDaoSqueakyContext:withCoTouchlabSqueakyFieldFieldType:withInt:);
-  methods[6].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(refreshWithNSString:);
+  methods[2].selector = @selector(vals);
+  methods[3].selector = @selector(findRefreshWithCoTouchlabSqueakyDaoDao_ForeignRefreshArray:withNSString:);
+  methods[4].selector = @selector(fillForeignRefreshMapWithCoTouchlabSqueakyDaoSqueakyContext:withIOSClass:withInt:);
+  methods[5].selector = @selector(fillForeignRefreshMapWithCoTouchlabSqueakyDaoSqueakyContext:withCoTouchlabSqueakyFieldFieldTypeArray:withInt:);
+  methods[6].selector = @selector(fillForeignRefreshMapWithCoTouchlabSqueakyDaoSqueakyContext:withCoTouchlabSqueakyFieldFieldType:withInt:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "refresh", "LNSString;", "findRefresh", "[LCoTouchlabSqueakyDaoDao_ForeignRefresh;LNSString;", "fillForeignRefreshMap", "LCoTouchlabSqueakyDaoSqueakyContext;LIOSClass;I", "LJavaSqlSQLException;", "LCoTouchlabSqueakyDaoSqueakyContext;[LCoTouchlabSqueakyFieldFieldType;I", "LCoTouchlabSqueakyDaoSqueakyContext;LCoTouchlabSqueakyFieldFieldType;I", "LCoTouchlabSqueakyDaoDaoHelper_ValBuilder;" };
   static const J2ObjcClassInfo _CoTouchlabSqueakyDaoDaoHelper = { "DaoHelper", "co.touchlab.squeaky.dao", ptrTable, methods, NULL, 7, 0x1, 7, 0, -1, 9, -1, -1, -1 };
@@ -95,6 +95,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 @end
 
+void CoTouchlabSqueakyDaoDaoHelper_init(CoTouchlabSqueakyDaoDaoHelper *self) {
+  NSObject_init(self);
+}
+
+CoTouchlabSqueakyDaoDaoHelper *new_CoTouchlabSqueakyDaoDaoHelper_init() {
+  J2OBJC_NEW_IMPL(CoTouchlabSqueakyDaoDaoHelper, init)
+}
+
+CoTouchlabSqueakyDaoDaoHelper *create_CoTouchlabSqueakyDaoDaoHelper_init() {
+  J2OBJC_CREATE_IMPL(CoTouchlabSqueakyDaoDaoHelper, init)
+}
+
 IOSObjectArray *CoTouchlabSqueakyDaoDaoHelper_refreshWithNSString_(NSString *refreshTree) {
   CoTouchlabSqueakyDaoDaoHelper_initialize();
   id<JavaUtilList> parsedFields = create_JavaUtilArrayList_init();
@@ -102,8 +114,8 @@ IOSObjectArray *CoTouchlabSqueakyDaoDaoHelper_refreshWithNSString_(NSString *ref
   jint lastBreak = 0;
   for (jint i = 0; i < ((jint) [((NSString *) nil_chk(refreshTree)) length]); i++) {
     if (bracketCount == 0 && [refreshTree charAtWithInt:i] == ',') {
-      NSString *fieldTree = [refreshTree substring:lastBreak endIndex:i];
-      [parsedFields addWithId:[((NSString *) nil_chk(fieldTree)) trim]];
+      NSString *fieldTree = [refreshTree java_substring:lastBreak endIndex:i];
+      [parsedFields addWithId:[((NSString *) nil_chk(fieldTree)) java_trim]];
       lastBreak = i + 1;
     }
     else if ([refreshTree charAtWithInt:i] == '[') {
@@ -114,12 +126,12 @@ IOSObjectArray *CoTouchlabSqueakyDaoDaoHelper_refreshWithNSString_(NSString *ref
     }
   }
   if (bracketCount != 0) @throw create_JavaLangRuntimeException_initWithNSString_(JreStrcat("$$", @"Bad refresh format ", refreshTree));
-  [parsedFields addWithId:[((NSString *) nil_chk([refreshTree substring:lastBreak])) trim]];
+  [parsedFields addWithId:[((NSString *) nil_chk([refreshTree java_substring:lastBreak])) java_trim]];
   id<JavaUtilList> refreshs = create_JavaUtilArrayList_initWithInt_([parsedFields size]);
   for (NSString * __strong parsedField in parsedFields) {
-    if ([((NSString *) nil_chk(parsedField)) contains:@"["]) {
-      jint startIndex = [parsedField indexOf:'['];
-      [refreshs addWithId:create_CoTouchlabSqueakyDaoDao_ForeignRefresh_initWithNSString_withCoTouchlabSqueakyDaoDao_ForeignRefreshArray_([parsedField substring:0 endIndex:startIndex], CoTouchlabSqueakyDaoDaoHelper_refreshWithNSString_([parsedField substring:startIndex + 1 endIndex:((jint) [parsedField length]) - 1]))];
+    if ([((NSString *) nil_chk(parsedField)) java_contains:@"["]) {
+      jint startIndex = [parsedField java_indexOf:'['];
+      [refreshs addWithId:create_CoTouchlabSqueakyDaoDao_ForeignRefresh_initWithNSString_withCoTouchlabSqueakyDaoDao_ForeignRefreshArray_([parsedField java_substring:0 endIndex:startIndex], CoTouchlabSqueakyDaoDaoHelper_refreshWithNSString_([parsedField java_substring:startIndex + 1 endIndex:((jint) [parsedField length]) - 1]))];
     }
     else {
       [refreshs addWithId:create_CoTouchlabSqueakyDaoDao_ForeignRefresh_initWithNSString_(parsedField)];
@@ -177,21 +189,16 @@ IOSObjectArray *CoTouchlabSqueakyDaoDaoHelper_fillForeignRefreshMapWithCoTouchla
   return CoTouchlabSqueakyDaoDaoHelper_fillForeignRefreshMapWithCoTouchlabSqueakyDaoSqueakyContext_withCoTouchlabSqueakyFieldFieldTypeArray_withInt_(squeakyContext, fieldTypes, count);
 }
 
-void CoTouchlabSqueakyDaoDaoHelper_init(CoTouchlabSqueakyDaoDaoHelper *self) {
-  NSObject_init(self);
-}
-
-CoTouchlabSqueakyDaoDaoHelper *new_CoTouchlabSqueakyDaoDaoHelper_init() {
-  J2OBJC_NEW_IMPL(CoTouchlabSqueakyDaoDaoHelper, init)
-}
-
-CoTouchlabSqueakyDaoDaoHelper *create_CoTouchlabSqueakyDaoDaoHelper_init() {
-  J2OBJC_CREATE_IMPL(CoTouchlabSqueakyDaoDaoHelper, init)
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabSqueakyDaoDaoHelper)
 
 @implementation CoTouchlabSqueakyDaoDaoHelper_ValBuilder
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabSqueakyDaoDaoHelper_ValBuilder_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (CoTouchlabSqueakyDaoDaoHelper_ValBuilder *)addWithNSString:(NSString *)col
                                                        withId:(id)val {
@@ -203,13 +210,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabSqueakyDaoDaoHelper)
   return vals_;
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabSqueakyDaoDaoHelper_ValBuilder_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(vals_);
   [super dealloc];
@@ -217,15 +217,15 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LCoTouchlabSqueakyDaoDaoHelper_ValBuilder;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "LJavaUtilMap;", 0x1, -1, -1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(addWithNSString:withId:);
-  methods[1].selector = @selector(build);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(addWithNSString:withId:);
+  methods[2].selector = @selector(build);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "vals_", "LJavaUtilMap;", .constantValue.asLong = 0, 0x0, -1, -1, 3, -1 },

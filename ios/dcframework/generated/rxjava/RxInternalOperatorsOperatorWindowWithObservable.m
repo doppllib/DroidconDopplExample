@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OperatorWindowWithObservable.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxInternalOperatorsNotificationLite.h"
 #include "RxInternalOperatorsOperatorWindowWithObservable.h"
@@ -290,7 +289,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithObservable
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorWindowWithObservable_SourceSubscriber class]);
   RELEASE_(child_);
   RELEASE_(guard_);
   RELEASE_(consumer_);
@@ -384,7 +382,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithObservable
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorWindowWithObservable_BoundarySubscriber class]);
   RELEASE_(sub_);
   [super dealloc];
 }

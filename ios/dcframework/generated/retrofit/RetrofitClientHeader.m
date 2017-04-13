@@ -36,7 +36,7 @@ J2OBJC_FIELD_SETTER(RetrofitClientHeader, value_, NSString *)
 
 - (jboolean)isEqual:(id)o {
   if (self == o) return true;
-  if (o == nil || [self java_getClass] != (id) [o java_getClass]) return false;
+  if (o == nil || [self java_getClass] != [o java_getClass]) return false;
   RetrofitClientHeader *header = (RetrofitClientHeader *) cast_chk(o, [RetrofitClientHeader class]);
   if (name_ != nil ? ![name_ isEqual:header->name_] : header->name_ != nil) return false;
   if (value_ != nil ? ![value_ isEqual:header->value_] : header->value_ != nil) return false;

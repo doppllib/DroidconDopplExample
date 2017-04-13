@@ -61,12 +61,16 @@ __attribute__((unused)) static RxObservablesBlockingObservable *create_RxObserva
 
 __attribute__((unused)) static id RxObservablesBlockingObservable_blockForSingleWithRxObservable_(RxObservablesBlockingObservable *self, RxObservable *observable);
 
-@interface RxObservablesBlockingObservable_$1 : RxSubscriber {
+@interface RxObservablesBlockingObservable_1 : RxSubscriber {
  @public
   JavaUtilConcurrentCountDownLatch *val$latch_;
   JavaUtilConcurrentAtomicAtomicReference *val$exceptionFromOnError_;
   id<RxFunctionsAction1> val$onNext_;
 }
+
+- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
+             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$1
+                                  withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$2;
 
 - (void)onCompleted;
 
@@ -74,51 +78,45 @@ __attribute__((unused)) static id RxObservablesBlockingObservable_blockForSingle
 
 - (void)onNextWithId:(id)args;
 
-- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
-             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$1
-                                  withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$2;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxObservablesBlockingObservable_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxObservablesBlockingObservable_1)
 
-J2OBJC_FIELD_SETTER(RxObservablesBlockingObservable_$1, val$latch_, JavaUtilConcurrentCountDownLatch *)
-J2OBJC_FIELD_SETTER(RxObservablesBlockingObservable_$1, val$exceptionFromOnError_, JavaUtilConcurrentAtomicAtomicReference *)
-J2OBJC_FIELD_SETTER(RxObservablesBlockingObservable_$1, val$onNext_, id<RxFunctionsAction1>)
+__attribute__((unused)) static void RxObservablesBlockingObservable_1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_(RxObservablesBlockingObservable_1 *self, JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<RxFunctionsAction1> capture$2);
 
-__attribute__((unused)) static void RxObservablesBlockingObservable_$1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_(RxObservablesBlockingObservable_$1 *self, JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<RxFunctionsAction1> capture$2);
+__attribute__((unused)) static RxObservablesBlockingObservable_1 *new_RxObservablesBlockingObservable_1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<RxFunctionsAction1> capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxObservablesBlockingObservable_$1 *new_RxObservablesBlockingObservable_$1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<RxFunctionsAction1> capture$2) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxObservablesBlockingObservable_1 *create_RxObservablesBlockingObservable_1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<RxFunctionsAction1> capture$2);
 
-__attribute__((unused)) static RxObservablesBlockingObservable_$1 *create_RxObservablesBlockingObservable_$1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<RxFunctionsAction1> capture$2);
-
-@interface RxObservablesBlockingObservable_$2 : NSObject < JavaLangIterable > {
+@interface RxObservablesBlockingObservable_2 : NSObject < JavaLangIterable > {
  @public
   RxObservablesBlockingObservable *this$0_;
 }
 
-- (id<JavaUtilIterator>)iterator;
-
 - (instancetype)initWithRxObservablesBlockingObservable:(RxObservablesBlockingObservable *)outer$;
+
+- (id<JavaUtilIterator>)iterator;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxObservablesBlockingObservable_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxObservablesBlockingObservable_2)
 
-J2OBJC_FIELD_SETTER(RxObservablesBlockingObservable_$2, this$0_, RxObservablesBlockingObservable *)
+__attribute__((unused)) static void RxObservablesBlockingObservable_2_initWithRxObservablesBlockingObservable_(RxObservablesBlockingObservable_2 *self, RxObservablesBlockingObservable *outer$);
 
-__attribute__((unused)) static void RxObservablesBlockingObservable_$2_initWithRxObservablesBlockingObservable_(RxObservablesBlockingObservable_$2 *self, RxObservablesBlockingObservable *outer$);
+__attribute__((unused)) static RxObservablesBlockingObservable_2 *new_RxObservablesBlockingObservable_2_initWithRxObservablesBlockingObservable_(RxObservablesBlockingObservable *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxObservablesBlockingObservable_$2 *new_RxObservablesBlockingObservable_$2_initWithRxObservablesBlockingObservable_(RxObservablesBlockingObservable *outer$) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxObservablesBlockingObservable_2 *create_RxObservablesBlockingObservable_2_initWithRxObservablesBlockingObservable_(RxObservablesBlockingObservable *outer$);
 
-__attribute__((unused)) static RxObservablesBlockingObservable_$2 *create_RxObservablesBlockingObservable_$2_initWithRxObservablesBlockingObservable_(RxObservablesBlockingObservable *outer$);
-
-@interface RxObservablesBlockingObservable_$3 : RxSubscriber {
+@interface RxObservablesBlockingObservable_3 : RxSubscriber {
  @public
   JavaUtilConcurrentCountDownLatch *val$latch_;
   JavaUtilConcurrentAtomicAtomicReference *val$returnException_;
   JavaUtilConcurrentAtomicAtomicReference *val$returnItem_;
 }
+
+- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
+             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$1
+             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$2;
 
 - (void)onCompleted;
 
@@ -126,82 +124,72 @@ __attribute__((unused)) static RxObservablesBlockingObservable_$2 *create_RxObse
 
 - (void)onNextWithId:(id)item;
 
-- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
-             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$1
-             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$2;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxObservablesBlockingObservable_$3)
+J2OBJC_EMPTY_STATIC_INIT(RxObservablesBlockingObservable_3)
 
-J2OBJC_FIELD_SETTER(RxObservablesBlockingObservable_$3, val$latch_, JavaUtilConcurrentCountDownLatch *)
-J2OBJC_FIELD_SETTER(RxObservablesBlockingObservable_$3, val$returnException_, JavaUtilConcurrentAtomicAtomicReference *)
-J2OBJC_FIELD_SETTER(RxObservablesBlockingObservable_$3, val$returnItem_, JavaUtilConcurrentAtomicAtomicReference *)
+__attribute__((unused)) static void RxObservablesBlockingObservable_3_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(RxObservablesBlockingObservable_3 *self, JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2);
 
-__attribute__((unused)) static void RxObservablesBlockingObservable_$3_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(RxObservablesBlockingObservable_$3 *self, JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2);
+__attribute__((unused)) static RxObservablesBlockingObservable_3 *new_RxObservablesBlockingObservable_3_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxObservablesBlockingObservable_$3 *new_RxObservablesBlockingObservable_$3_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxObservablesBlockingObservable_3 *create_RxObservablesBlockingObservable_3_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2);
 
-__attribute__((unused)) static RxObservablesBlockingObservable_$3 *create_RxObservablesBlockingObservable_$3_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2);
-
-@interface RxObservablesBlockingObservable_$4 : RxSubscriber {
+@interface RxObservablesBlockingObservable_4 : RxSubscriber {
  @public
   IOSObjectArray *val$error_;
   JavaUtilConcurrentCountDownLatch *val$cdl_;
 }
 
+- (instancetype)initWithNSExceptionArray:(IOSObjectArray *)capture$0
+    withJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$1;
+
 - (void)onNextWithId:(id)t;
 
 - (void)onErrorWithNSException:(NSException *)e;
 
 - (void)onCompleted;
 
-- (instancetype)initWithNSExceptionArray:(IOSObjectArray *)capture$0
-    withJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxObservablesBlockingObservable_$4)
+J2OBJC_EMPTY_STATIC_INIT(RxObservablesBlockingObservable_4)
 
-J2OBJC_FIELD_SETTER(RxObservablesBlockingObservable_$4, val$error_, IOSObjectArray *)
-J2OBJC_FIELD_SETTER(RxObservablesBlockingObservable_$4, val$cdl_, JavaUtilConcurrentCountDownLatch *)
+__attribute__((unused)) static void RxObservablesBlockingObservable_4_initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_(RxObservablesBlockingObservable_4 *self, IOSObjectArray *capture$0, JavaUtilConcurrentCountDownLatch *capture$1);
 
-__attribute__((unused)) static void RxObservablesBlockingObservable_$4_initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_(RxObservablesBlockingObservable_$4 *self, IOSObjectArray *capture$0, JavaUtilConcurrentCountDownLatch *capture$1);
+__attribute__((unused)) static RxObservablesBlockingObservable_4 *new_RxObservablesBlockingObservable_4_initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_(IOSObjectArray *capture$0, JavaUtilConcurrentCountDownLatch *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxObservablesBlockingObservable_$4 *new_RxObservablesBlockingObservable_$4_initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_(IOSObjectArray *capture$0, JavaUtilConcurrentCountDownLatch *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxObservablesBlockingObservable_4 *create_RxObservablesBlockingObservable_4_initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_(IOSObjectArray *capture$0, JavaUtilConcurrentCountDownLatch *capture$1);
 
-__attribute__((unused)) static RxObservablesBlockingObservable_$4 *create_RxObservablesBlockingObservable_$4_initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_(IOSObjectArray *capture$0, JavaUtilConcurrentCountDownLatch *capture$1);
-
-@interface RxObservablesBlockingObservable_$5 : RxSubscriber {
+@interface RxObservablesBlockingObservable_5 : RxSubscriber {
  @public
   id<JavaUtilConcurrentBlockingQueue> val$queue_;
 }
 
+- (instancetype)initWithJavaUtilConcurrentBlockingQueue:(id<JavaUtilConcurrentBlockingQueue>)capture$0;
+
 - (void)onNextWithId:(id)t;
 
 - (void)onErrorWithNSException:(NSException *)e;
 
 - (void)onCompleted;
 
-- (instancetype)initWithJavaUtilConcurrentBlockingQueue:(id<JavaUtilConcurrentBlockingQueue>)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxObservablesBlockingObservable_$5)
+J2OBJC_EMPTY_STATIC_INIT(RxObservablesBlockingObservable_5)
 
-J2OBJC_FIELD_SETTER(RxObservablesBlockingObservable_$5, val$queue_, id<JavaUtilConcurrentBlockingQueue>)
+__attribute__((unused)) static void RxObservablesBlockingObservable_5_initWithJavaUtilConcurrentBlockingQueue_(RxObservablesBlockingObservable_5 *self, id<JavaUtilConcurrentBlockingQueue> capture$0);
 
-__attribute__((unused)) static void RxObservablesBlockingObservable_$5_initWithJavaUtilConcurrentBlockingQueue_(RxObservablesBlockingObservable_$5 *self, id<JavaUtilConcurrentBlockingQueue> capture$0);
+__attribute__((unused)) static RxObservablesBlockingObservable_5 *new_RxObservablesBlockingObservable_5_initWithJavaUtilConcurrentBlockingQueue_(id<JavaUtilConcurrentBlockingQueue> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxObservablesBlockingObservable_$5 *new_RxObservablesBlockingObservable_$5_initWithJavaUtilConcurrentBlockingQueue_(id<JavaUtilConcurrentBlockingQueue> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxObservablesBlockingObservable_5 *create_RxObservablesBlockingObservable_5_initWithJavaUtilConcurrentBlockingQueue_(id<JavaUtilConcurrentBlockingQueue> capture$0);
 
-__attribute__((unused)) static RxObservablesBlockingObservable_$5 *create_RxObservablesBlockingObservable_$5_initWithJavaUtilConcurrentBlockingQueue_(id<JavaUtilConcurrentBlockingQueue> capture$0);
-
-@interface RxObservablesBlockingObservable_$6 : RxSubscriber {
+@interface RxObservablesBlockingObservable_6 : RxSubscriber {
  @public
   id<JavaUtilConcurrentBlockingQueue> val$queue_;
   IOSObjectArray *val$theProducer_;
 }
+
+- (instancetype)initWithJavaUtilConcurrentBlockingQueue:(id<JavaUtilConcurrentBlockingQueue>)capture$0
+                                    withRxProducerArray:(IOSObjectArray *)capture$1;
 
 - (void)onNextWithId:(id)t;
 
@@ -213,65 +201,61 @@ __attribute__((unused)) static RxObservablesBlockingObservable_$5 *create_RxObse
 
 - (void)onStart;
 
-- (instancetype)initWithJavaUtilConcurrentBlockingQueue:(id<JavaUtilConcurrentBlockingQueue>)capture$0
-                                    withRxProducerArray:(IOSObjectArray *)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxObservablesBlockingObservable_$6)
+J2OBJC_EMPTY_STATIC_INIT(RxObservablesBlockingObservable_6)
 
-J2OBJC_FIELD_SETTER(RxObservablesBlockingObservable_$6, val$queue_, id<JavaUtilConcurrentBlockingQueue>)
-J2OBJC_FIELD_SETTER(RxObservablesBlockingObservable_$6, val$theProducer_, IOSObjectArray *)
+__attribute__((unused)) static void RxObservablesBlockingObservable_6_initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_(RxObservablesBlockingObservable_6 *self, id<JavaUtilConcurrentBlockingQueue> capture$0, IOSObjectArray *capture$1);
 
-__attribute__((unused)) static void RxObservablesBlockingObservable_$6_initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_(RxObservablesBlockingObservable_$6 *self, id<JavaUtilConcurrentBlockingQueue> capture$0, IOSObjectArray *capture$1);
+__attribute__((unused)) static RxObservablesBlockingObservable_6 *new_RxObservablesBlockingObservable_6_initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_(id<JavaUtilConcurrentBlockingQueue> capture$0, IOSObjectArray *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxObservablesBlockingObservable_$6 *new_RxObservablesBlockingObservable_$6_initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_(id<JavaUtilConcurrentBlockingQueue> capture$0, IOSObjectArray *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxObservablesBlockingObservable_6 *create_RxObservablesBlockingObservable_6_initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_(id<JavaUtilConcurrentBlockingQueue> capture$0, IOSObjectArray *capture$1);
 
-__attribute__((unused)) static RxObservablesBlockingObservable_$6 *create_RxObservablesBlockingObservable_$6_initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_(id<JavaUtilConcurrentBlockingQueue> capture$0, IOSObjectArray *capture$1);
-
-@interface RxObservablesBlockingObservable_$7 : NSObject < RxFunctionsAction0 > {
+@interface RxObservablesBlockingObservable_7 : NSObject < RxFunctionsAction0 > {
  @public
   id<JavaUtilConcurrentBlockingQueue> val$queue_;
 }
 
-- (void)call;
-
 - (instancetype)initWithJavaUtilConcurrentBlockingQueue:(id<JavaUtilConcurrentBlockingQueue>)capture$0;
+
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxObservablesBlockingObservable_$7)
+J2OBJC_EMPTY_STATIC_INIT(RxObservablesBlockingObservable_7)
 
-J2OBJC_FIELD_SETTER(RxObservablesBlockingObservable_$7, val$queue_, id<JavaUtilConcurrentBlockingQueue>)
+__attribute__((unused)) static void RxObservablesBlockingObservable_7_initWithJavaUtilConcurrentBlockingQueue_(RxObservablesBlockingObservable_7 *self, id<JavaUtilConcurrentBlockingQueue> capture$0);
 
-__attribute__((unused)) static void RxObservablesBlockingObservable_$7_initWithJavaUtilConcurrentBlockingQueue_(RxObservablesBlockingObservable_$7 *self, id<JavaUtilConcurrentBlockingQueue> capture$0);
+__attribute__((unused)) static RxObservablesBlockingObservable_7 *new_RxObservablesBlockingObservable_7_initWithJavaUtilConcurrentBlockingQueue_(id<JavaUtilConcurrentBlockingQueue> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxObservablesBlockingObservable_$7 *new_RxObservablesBlockingObservable_$7_initWithJavaUtilConcurrentBlockingQueue_(id<JavaUtilConcurrentBlockingQueue> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxObservablesBlockingObservable_7 *create_RxObservablesBlockingObservable_7_initWithJavaUtilConcurrentBlockingQueue_(id<JavaUtilConcurrentBlockingQueue> capture$0);
 
-__attribute__((unused)) static RxObservablesBlockingObservable_$7 *create_RxObservablesBlockingObservable_$7_initWithJavaUtilConcurrentBlockingQueue_(id<JavaUtilConcurrentBlockingQueue> capture$0);
-
-@interface RxObservablesBlockingObservable_$8 : NSObject < RxFunctionsAction1 >
-
-- (void)callWithId:(NSException *)t;
+@interface RxObservablesBlockingObservable_8 : NSObject < RxFunctionsAction1 >
 
 - (instancetype)init;
 
+- (void)callWithId:(NSException *)t;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxObservablesBlockingObservable_$8)
+J2OBJC_EMPTY_STATIC_INIT(RxObservablesBlockingObservable_8)
 
-__attribute__((unused)) static void RxObservablesBlockingObservable_$8_init(RxObservablesBlockingObservable_$8 *self);
+__attribute__((unused)) static void RxObservablesBlockingObservable_8_init(RxObservablesBlockingObservable_8 *self);
 
-__attribute__((unused)) static RxObservablesBlockingObservable_$8 *new_RxObservablesBlockingObservable_$8_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxObservablesBlockingObservable_8 *new_RxObservablesBlockingObservable_8_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxObservablesBlockingObservable_$8 *create_RxObservablesBlockingObservable_$8_init();
+__attribute__((unused)) static RxObservablesBlockingObservable_8 *create_RxObservablesBlockingObservable_8_init();
 
-@interface RxObservablesBlockingObservable_$9 : NSObject < RxObserver > {
+@interface RxObservablesBlockingObservable_9 : NSObject < RxObserver > {
  @public
   id<RxFunctionsAction1> val$onNext_;
   id<RxFunctionsAction1> val$onError_;
   id<RxFunctionsAction0> val$onCompleted_;
 }
+
+- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0
+                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$1
+                    withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$2;
 
 - (void)onNextWithId:(id)t;
 
@@ -279,23 +263,15 @@ __attribute__((unused)) static RxObservablesBlockingObservable_$8 *create_RxObse
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0
-                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$1
-                    withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$2;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxObservablesBlockingObservable_$9)
+J2OBJC_EMPTY_STATIC_INIT(RxObservablesBlockingObservable_9)
 
-J2OBJC_FIELD_SETTER(RxObservablesBlockingObservable_$9, val$onNext_, id<RxFunctionsAction1>)
-J2OBJC_FIELD_SETTER(RxObservablesBlockingObservable_$9, val$onError_, id<RxFunctionsAction1>)
-J2OBJC_FIELD_SETTER(RxObservablesBlockingObservable_$9, val$onCompleted_, id<RxFunctionsAction0>)
+__attribute__((unused)) static void RxObservablesBlockingObservable_9_initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(RxObservablesBlockingObservable_9 *self, id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction0> capture$2);
 
-__attribute__((unused)) static void RxObservablesBlockingObservable_$9_initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(RxObservablesBlockingObservable_$9 *self, id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction0> capture$2);
+__attribute__((unused)) static RxObservablesBlockingObservable_9 *new_RxObservablesBlockingObservable_9_initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction0> capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxObservablesBlockingObservable_$9 *new_RxObservablesBlockingObservable_$9_initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction0> capture$2) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxObservablesBlockingObservable_$9 *create_RxObservablesBlockingObservable_$9_initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction0> capture$2);
+__attribute__((unused)) static RxObservablesBlockingObservable_9 *create_RxObservablesBlockingObservable_9_initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction0> capture$2);
 
 J2OBJC_INITIALIZED_DEFN(RxObservablesBlockingObservable)
 
@@ -317,7 +293,7 @@ id RxObservablesBlockingObservable_UNSUBSCRIBE;
 - (void)forEachWithRxFunctionsAction1:(id<RxFunctionsAction1>)onNext {
   JavaUtilConcurrentCountDownLatch *latch = create_JavaUtilConcurrentCountDownLatch_initWithInt_(1);
   JavaUtilConcurrentAtomicAtomicReference *exceptionFromOnError = create_JavaUtilConcurrentAtomicAtomicReference_init();
-  id<RxSubscription> subscription = [((RxObservable *) nil_chk((o_))) subscribeWithRxSubscriber:create_RxObservablesBlockingObservable_$1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_(latch, exceptionFromOnError, onNext)];
+  id<RxSubscription> subscription = [((RxObservable *) nil_chk((o_))) subscribeWithRxSubscriber:create_RxObservablesBlockingObservable_1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_(latch, exceptionFromOnError, onNext)];
   RxInternalUtilBlockingUtils_awaitForCompleteWithJavaUtilConcurrentCountDownLatch_withRxSubscription_(latch, subscription);
   if ([exceptionFromOnError get] != nil) {
     RxExceptionsExceptions_propagateWithNSException_([exceptionFromOnError get]);
@@ -396,7 +372,7 @@ id RxObservablesBlockingObservable_UNSUBSCRIBE;
 }
 
 - (id<JavaLangIterable>)toIterable {
-  return create_RxObservablesBlockingObservable_$2_initWithRxObservablesBlockingObservable_(self);
+  return create_RxObservablesBlockingObservable_2_initWithRxObservablesBlockingObservable_(self);
 }
 
 - (id)blockForSingleWithRxObservable:(RxObservable *)observable {
@@ -406,7 +382,7 @@ id RxObservablesBlockingObservable_UNSUBSCRIBE;
 - (void)subscribe {
   JavaUtilConcurrentCountDownLatch *cdl = create_JavaUtilConcurrentCountDownLatch_initWithInt_(1);
   IOSObjectArray *error = [IOSObjectArray arrayWithObjects:(id[]){ nil } count:1 type:NSException_class_()];
-  id<RxSubscription> s = [((RxObservable *) nil_chk((o_))) subscribeWithRxSubscriber:create_RxObservablesBlockingObservable_$4_initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_(error, cdl)];
+  id<RxSubscription> s = [((RxObservable *) nil_chk((o_))) subscribeWithRxSubscriber:create_RxObservablesBlockingObservable_4_initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_(error, cdl)];
   RxInternalUtilBlockingUtils_awaitForCompleteWithJavaUtilConcurrentCountDownLatch_withRxSubscription_(cdl, s);
   NSException *e = IOSObjectArray_Get(error, 0);
   if (e != nil) {
@@ -416,7 +392,7 @@ id RxObservablesBlockingObservable_UNSUBSCRIBE;
 
 - (void)subscribeWithRxObserver:(id<RxObserver>)observer {
   id<JavaUtilConcurrentBlockingQueue> queue = create_JavaUtilConcurrentLinkedBlockingQueue_init();
-  id<RxSubscription> s = [((RxObservable *) nil_chk((o_))) subscribeWithRxSubscriber:create_RxObservablesBlockingObservable_$5_initWithJavaUtilConcurrentBlockingQueue_(queue)];
+  id<RxSubscription> s = [((RxObservable *) nil_chk((o_))) subscribeWithRxSubscriber:create_RxObservablesBlockingObservable_5_initWithJavaUtilConcurrentBlockingQueue_(queue)];
   @try {
     for (; ; ) {
       id o = [queue poll];
@@ -440,9 +416,9 @@ id RxObservablesBlockingObservable_UNSUBSCRIBE;
 - (void)subscribeWithRxSubscriber:(RxSubscriber *)subscriber {
   id<JavaUtilConcurrentBlockingQueue> queue = create_JavaUtilConcurrentLinkedBlockingQueue_init();
   IOSObjectArray *theProducer = [IOSObjectArray arrayWithObjects:(id[]){ nil } count:1 type:RxProducer_class_()];
-  RxSubscriber *s = create_RxObservablesBlockingObservable_$6_initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_(queue, theProducer);
+  RxSubscriber *s = create_RxObservablesBlockingObservable_6_initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_(queue, theProducer);
   [((RxSubscriber *) nil_chk(subscriber)) addWithRxSubscription:s];
-  [subscriber addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxObservablesBlockingObservable_$7_initWithJavaUtilConcurrentBlockingQueue_(queue))];
+  [subscriber addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxObservablesBlockingObservable_7_initWithJavaUtilConcurrentBlockingQueue_(queue))];
   [((RxObservable *) nil_chk((o_))) subscribeWithRxSubscriber:s];
   @try {
     for (; ; ) {
@@ -477,7 +453,7 @@ id RxObservablesBlockingObservable_UNSUBSCRIBE;
 }
 
 - (void)subscribeWithRxFunctionsAction1:(id<RxFunctionsAction1>)onNext {
-  [self subscribeWithRxFunctionsAction1:onNext withRxFunctionsAction1:create_RxObservablesBlockingObservable_$8_init() withRxFunctionsAction0:RxFunctionsActions_empty()];
+  [self subscribeWithRxFunctionsAction1:onNext withRxFunctionsAction1:create_RxObservablesBlockingObservable_8_init() withRxFunctionsAction0:RxFunctionsActions_empty()];
 }
 
 - (void)subscribeWithRxFunctionsAction1:(id<RxFunctionsAction1>)onNext
@@ -488,7 +464,7 @@ id RxObservablesBlockingObservable_UNSUBSCRIBE;
 - (void)subscribeWithRxFunctionsAction1:(id<RxFunctionsAction1>)onNext
                  withRxFunctionsAction1:(id<RxFunctionsAction1>)onError
                  withRxFunctionsAction0:(id<RxFunctionsAction0>)onCompleted {
-  [self subscribeWithRxObserver:create_RxObservablesBlockingObservable_$9_initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(onNext, onError, onCompleted)];
+  [self subscribeWithRxObserver:create_RxObservablesBlockingObservable_9_initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(onNext, onError, onCompleted)];
 }
 
 - (void)dealloc {
@@ -602,7 +578,7 @@ id RxObservablesBlockingObservable_blockForSingleWithRxObservable_(RxObservables
   JavaUtilConcurrentAtomicAtomicReference *returnItem = create_JavaUtilConcurrentAtomicAtomicReference_init();
   JavaUtilConcurrentAtomicAtomicReference *returnException = create_JavaUtilConcurrentAtomicAtomicReference_init();
   JavaUtilConcurrentCountDownLatch *latch = create_JavaUtilConcurrentCountDownLatch_initWithInt_(1);
-  id<RxSubscription> subscription = [((RxObservable *) nil_chk((observable))) subscribeWithRxSubscriber:create_RxObservablesBlockingObservable_$3_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(latch, returnException, returnItem)];
+  id<RxSubscription> subscription = [((RxObservable *) nil_chk((observable))) subscribeWithRxSubscriber:create_RxObservablesBlockingObservable_3_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(latch, returnException, returnItem)];
   RxInternalUtilBlockingUtils_awaitForCompleteWithJavaUtilConcurrentCountDownLatch_withRxSubscription_(latch, subscription);
   if ([returnException get] != nil) {
     RxExceptionsExceptions_propagateWithNSException_([returnException get]);
@@ -612,7 +588,14 @@ id RxObservablesBlockingObservable_blockForSingleWithRxObservable_(RxObservables
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObservablesBlockingObservable)
 
-@implementation RxObservablesBlockingObservable_$1
+@implementation RxObservablesBlockingObservable_1
+
+- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
+             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$1
+                                  withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$2 {
+  RxObservablesBlockingObservable_1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_(self, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)onCompleted {
   [((JavaUtilConcurrentCountDownLatch *) nil_chk(val$latch_)) countDown];
@@ -627,15 +610,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObservablesBlockingObservable)
   [((id<RxFunctionsAction1>) nil_chk(val$onNext_)) callWithId:args];
 }
 
-- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
-             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$1
-                                  withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$2 {
-  RxObservablesBlockingObservable_$1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_(self, capture$0, capture$1, capture$2);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxObservablesBlockingObservable_$1 class]);
   RELEASE_(val$latch_);
   RELEASE_(val$exceptionFromOnError_);
   RELEASE_(val$onNext_);
@@ -644,54 +619,54 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObservablesBlockingObservable)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(initWithJavaUtilConcurrentCountDownLatch:withJavaUtilConcurrentAtomicAtomicReference:withRxFunctionsAction1:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentCountDownLatch:withJavaUtilConcurrentAtomicAtomicReference:withRxFunctionsAction1:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$latch_", "LJavaUtilConcurrentCountDownLatch;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$exceptionFromOnError_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
-    { "val$onNext_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "val$exceptionFromOnError_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$onNext_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "LJavaUtilConcurrentCountDownLatch;LJavaUtilConcurrentAtomicAtomicReference;LRxFunctionsAction1;", "(Ljava/util/concurrent/CountDownLatch;Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Throwable;>;Lrx/functions/Action1<-TT;>;)V", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Throwable;>;", "Lrx/functions/Action1<-TT;>;", "LRxObservablesBlockingObservable;", "forEachWithRxFunctionsAction1:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxObservablesBlockingObservable_$1 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 4, 3, 9, -1, 10, 11, -1 };
-  return &_RxObservablesBlockingObservable_$1;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Throwable;>;", "Lrx/functions/Action1<-TT;>;", "LRxObservablesBlockingObservable;", "forEachWithRxFunctionsAction1:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxObservablesBlockingObservable_1 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 4, 3, 7, -1, 8, 9, -1 };
+  return &_RxObservablesBlockingObservable_1;
 }
 
 @end
 
-void RxObservablesBlockingObservable_$1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_(RxObservablesBlockingObservable_$1 *self, JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<RxFunctionsAction1> capture$2) {
+void RxObservablesBlockingObservable_1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_(RxObservablesBlockingObservable_1 *self, JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<RxFunctionsAction1> capture$2) {
   JreStrongAssign(&self->val$latch_, capture$0);
   JreStrongAssign(&self->val$exceptionFromOnError_, capture$1);
   JreStrongAssign(&self->val$onNext_, capture$2);
   RxSubscriber_init(self);
 }
 
-RxObservablesBlockingObservable_$1 *new_RxObservablesBlockingObservable_$1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<RxFunctionsAction1> capture$2) {
-  J2OBJC_NEW_IMPL(RxObservablesBlockingObservable_$1, initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_, capture$0, capture$1, capture$2)
+RxObservablesBlockingObservable_1 *new_RxObservablesBlockingObservable_1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<RxFunctionsAction1> capture$2) {
+  J2OBJC_NEW_IMPL(RxObservablesBlockingObservable_1, initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_, capture$0, capture$1, capture$2)
 }
 
-RxObservablesBlockingObservable_$1 *create_RxObservablesBlockingObservable_$1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<RxFunctionsAction1> capture$2) {
-  J2OBJC_CREATE_IMPL(RxObservablesBlockingObservable_$1, initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_, capture$0, capture$1, capture$2)
+RxObservablesBlockingObservable_1 *create_RxObservablesBlockingObservable_1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<RxFunctionsAction1> capture$2) {
+  J2OBJC_CREATE_IMPL(RxObservablesBlockingObservable_1, initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsAction1_, capture$0, capture$1, capture$2)
 }
 
-@implementation RxObservablesBlockingObservable_$2
+@implementation RxObservablesBlockingObservable_2
+
+- (instancetype)initWithRxObservablesBlockingObservable:(RxObservablesBlockingObservable *)outer$ {
+  RxObservablesBlockingObservable_2_initWithRxObservablesBlockingObservable_(self, outer$);
+  return self;
+}
 
 - (id<JavaUtilIterator>)iterator {
   return [this$0_ getIterator];
-}
-
-- (instancetype)initWithRxObservablesBlockingObservable:(RxObservablesBlockingObservable *)outer$ {
-  RxObservablesBlockingObservable_$2_initWithRxObservablesBlockingObservable_(self, outer$);
-  return self;
 }
 
 - (void)forEachWithJavaUtilFunctionConsumer:(id<JavaUtilFunctionConsumer>)arg0 {
@@ -713,38 +688,45 @@ RxObservablesBlockingObservable_$1 *create_RxObservablesBlockingObservable_$1_in
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaUtilIterator;", 0x1, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(iterator);
-  methods[1].selector = @selector(initWithRxObservablesBlockingObservable:);
+  methods[0].selector = @selector(initWithRxObservablesBlockingObservable:);
+  methods[1].selector = @selector(iterator);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxObservablesBlockingObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxObservablesBlockingObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 1, -1 },
   };
-  static const void *ptrTable[] = { "()Ljava/util/Iterator<TT;>;", "LRxObservablesBlockingObservable;", "toIterable", "Ljava/lang/Object;Ljava/lang/Iterable<TT;>;" };
-  static const J2ObjcClassInfo _RxObservablesBlockingObservable_$2 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, 3, -1 };
-  return &_RxObservablesBlockingObservable_$2;
+  static const void *ptrTable[] = { "()Ljava/util/Iterator<TT;>;", "Lrx/observables/BlockingObservable<TT;>;", "LRxObservablesBlockingObservable;", "toIterable", "Ljava/lang/Object;Ljava/lang/Iterable<TT;>;" };
+  static const J2ObjcClassInfo _RxObservablesBlockingObservable_2 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, 4, -1 };
+  return &_RxObservablesBlockingObservable_2;
 }
 
 @end
 
-void RxObservablesBlockingObservable_$2_initWithRxObservablesBlockingObservable_(RxObservablesBlockingObservable_$2 *self, RxObservablesBlockingObservable *outer$) {
+void RxObservablesBlockingObservable_2_initWithRxObservablesBlockingObservable_(RxObservablesBlockingObservable_2 *self, RxObservablesBlockingObservable *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxObservablesBlockingObservable_$2 *new_RxObservablesBlockingObservable_$2_initWithRxObservablesBlockingObservable_(RxObservablesBlockingObservable *outer$) {
-  J2OBJC_NEW_IMPL(RxObservablesBlockingObservable_$2, initWithRxObservablesBlockingObservable_, outer$)
+RxObservablesBlockingObservable_2 *new_RxObservablesBlockingObservable_2_initWithRxObservablesBlockingObservable_(RxObservablesBlockingObservable *outer$) {
+  J2OBJC_NEW_IMPL(RxObservablesBlockingObservable_2, initWithRxObservablesBlockingObservable_, outer$)
 }
 
-RxObservablesBlockingObservable_$2 *create_RxObservablesBlockingObservable_$2_initWithRxObservablesBlockingObservable_(RxObservablesBlockingObservable *outer$) {
-  J2OBJC_CREATE_IMPL(RxObservablesBlockingObservable_$2, initWithRxObservablesBlockingObservable_, outer$)
+RxObservablesBlockingObservable_2 *create_RxObservablesBlockingObservable_2_initWithRxObservablesBlockingObservable_(RxObservablesBlockingObservable *outer$) {
+  J2OBJC_CREATE_IMPL(RxObservablesBlockingObservable_2, initWithRxObservablesBlockingObservable_, outer$)
 }
 
-@implementation RxObservablesBlockingObservable_$3
+@implementation RxObservablesBlockingObservable_3
+
+- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
+             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$1
+             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$2 {
+  RxObservablesBlockingObservable_3_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(self, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)onCompleted {
   [((JavaUtilConcurrentCountDownLatch *) nil_chk(val$latch_)) countDown];
@@ -759,15 +741,7 @@ RxObservablesBlockingObservable_$2 *create_RxObservablesBlockingObservable_$2_in
   [((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(val$returnItem_)) setWithId:item];
 }
 
-- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
-             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$1
-             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$2 {
-  RxObservablesBlockingObservable_$3_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(self, capture$0, capture$1, capture$2);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxObservablesBlockingObservable_$3 class]);
   RELEASE_(val$latch_);
   RELEASE_(val$returnException_);
   RELEASE_(val$returnItem_);
@@ -776,46 +750,52 @@ RxObservablesBlockingObservable_$2 *create_RxObservablesBlockingObservable_$2_in
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(initWithJavaUtilConcurrentCountDownLatch:withJavaUtilConcurrentAtomicAtomicReference:withJavaUtilConcurrentAtomicAtomicReference:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentCountDownLatch:withJavaUtilConcurrentAtomicAtomicReference:withJavaUtilConcurrentAtomicAtomicReference:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$latch_", "LJavaUtilConcurrentCountDownLatch;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$returnException_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
-    { "val$returnItem_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "val$returnException_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$returnItem_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "LJavaUtilConcurrentCountDownLatch;LJavaUtilConcurrentAtomicAtomicReference;LJavaUtilConcurrentAtomicAtomicReference;", "(Ljava/util/concurrent/CountDownLatch;Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Throwable;>;Ljava/util/concurrent/atomic/AtomicReference<TT;>;)V", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Throwable;>;", "Ljava/util/concurrent/atomic/AtomicReference<TT;>;", "LRxObservablesBlockingObservable;", "blockForSingleWithRxObservable:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxObservablesBlockingObservable_$3 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 4, 3, 9, -1, 10, 11, -1 };
-  return &_RxObservablesBlockingObservable_$3;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Throwable;>;", "Ljava/util/concurrent/atomic/AtomicReference<TT;>;", "LRxObservablesBlockingObservable;", "blockForSingleWithRxObservable:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxObservablesBlockingObservable_3 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 4, 3, 7, -1, 8, 9, -1 };
+  return &_RxObservablesBlockingObservable_3;
 }
 
 @end
 
-void RxObservablesBlockingObservable_$3_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(RxObservablesBlockingObservable_$3 *self, JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
+void RxObservablesBlockingObservable_3_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(RxObservablesBlockingObservable_3 *self, JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
   JreStrongAssign(&self->val$latch_, capture$0);
   JreStrongAssign(&self->val$returnException_, capture$1);
   JreStrongAssign(&self->val$returnItem_, capture$2);
   RxSubscriber_init(self);
 }
 
-RxObservablesBlockingObservable_$3 *new_RxObservablesBlockingObservable_$3_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
-  J2OBJC_NEW_IMPL(RxObservablesBlockingObservable_$3, initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2)
+RxObservablesBlockingObservable_3 *new_RxObservablesBlockingObservable_3_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
+  J2OBJC_NEW_IMPL(RxObservablesBlockingObservable_3, initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2)
 }
 
-RxObservablesBlockingObservable_$3 *create_RxObservablesBlockingObservable_$3_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
-  J2OBJC_CREATE_IMPL(RxObservablesBlockingObservable_$3, initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2)
+RxObservablesBlockingObservable_3 *create_RxObservablesBlockingObservable_3_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
+  J2OBJC_CREATE_IMPL(RxObservablesBlockingObservable_3, initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2)
 }
 
-@implementation RxObservablesBlockingObservable_$4
+@implementation RxObservablesBlockingObservable_4
+
+- (instancetype)initWithNSExceptionArray:(IOSObjectArray *)capture$0
+    withJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$1 {
+  RxObservablesBlockingObservable_4_initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_(self, capture$0, capture$1);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
 }
@@ -829,14 +809,7 @@ RxObservablesBlockingObservable_$3 *create_RxObservablesBlockingObservable_$3_in
   [((JavaUtilConcurrentCountDownLatch *) nil_chk(val$cdl_)) countDown];
 }
 
-- (instancetype)initWithNSExceptionArray:(IOSObjectArray *)capture$0
-    withJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$1 {
-  RxObservablesBlockingObservable_$4_initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_(self, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxObservablesBlockingObservable_$4 class]);
   RELEASE_(val$error_);
   RELEASE_(val$cdl_);
   [super dealloc];
@@ -844,44 +817,49 @@ RxObservablesBlockingObservable_$3 *create_RxObservablesBlockingObservable_$3_in
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithNSExceptionArray:withJavaUtilConcurrentCountDownLatch:);
+  methods[0].selector = @selector(initWithNSExceptionArray:withJavaUtilConcurrentCountDownLatch:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$error_", "[LNSException;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$cdl_", "LJavaUtilConcurrentCountDownLatch;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "[LNSException;LJavaUtilConcurrentCountDownLatch;", "LRxObservablesBlockingObservable;", "subscribe", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxObservablesBlockingObservable_$4 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 4, 2, 6, -1, 7, 8, -1 };
-  return &_RxObservablesBlockingObservable_$4;
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxObservablesBlockingObservable;", "subscribe", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxObservablesBlockingObservable_4 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 4, 2, 5, -1, 6, 7, -1 };
+  return &_RxObservablesBlockingObservable_4;
 }
 
 @end
 
-void RxObservablesBlockingObservable_$4_initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_(RxObservablesBlockingObservable_$4 *self, IOSObjectArray *capture$0, JavaUtilConcurrentCountDownLatch *capture$1) {
+void RxObservablesBlockingObservable_4_initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_(RxObservablesBlockingObservable_4 *self, IOSObjectArray *capture$0, JavaUtilConcurrentCountDownLatch *capture$1) {
   JreStrongAssign(&self->val$error_, capture$0);
   JreStrongAssign(&self->val$cdl_, capture$1);
   RxSubscriber_init(self);
 }
 
-RxObservablesBlockingObservable_$4 *new_RxObservablesBlockingObservable_$4_initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_(IOSObjectArray *capture$0, JavaUtilConcurrentCountDownLatch *capture$1) {
-  J2OBJC_NEW_IMPL(RxObservablesBlockingObservable_$4, initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_, capture$0, capture$1)
+RxObservablesBlockingObservable_4 *new_RxObservablesBlockingObservable_4_initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_(IOSObjectArray *capture$0, JavaUtilConcurrentCountDownLatch *capture$1) {
+  J2OBJC_NEW_IMPL(RxObservablesBlockingObservable_4, initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_, capture$0, capture$1)
 }
 
-RxObservablesBlockingObservable_$4 *create_RxObservablesBlockingObservable_$4_initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_(IOSObjectArray *capture$0, JavaUtilConcurrentCountDownLatch *capture$1) {
-  J2OBJC_CREATE_IMPL(RxObservablesBlockingObservable_$4, initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_, capture$0, capture$1)
+RxObservablesBlockingObservable_4 *create_RxObservablesBlockingObservable_4_initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_(IOSObjectArray *capture$0, JavaUtilConcurrentCountDownLatch *capture$1) {
+  J2OBJC_CREATE_IMPL(RxObservablesBlockingObservable_4, initWithNSExceptionArray_withJavaUtilConcurrentCountDownLatch_, capture$0, capture$1)
 }
 
-@implementation RxObservablesBlockingObservable_$5
+@implementation RxObservablesBlockingObservable_5
+
+- (instancetype)initWithJavaUtilConcurrentBlockingQueue:(id<JavaUtilConcurrentBlockingQueue>)capture$0 {
+  RxObservablesBlockingObservable_5_initWithJavaUtilConcurrentBlockingQueue_(self, capture$0);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   [((id<JavaUtilConcurrentBlockingQueue>) nil_chk(val$queue_)) offerWithId:RxInternalOperatorsNotificationLite_nextWithId_(t)];
@@ -895,55 +873,55 @@ RxObservablesBlockingObservable_$4 *create_RxObservablesBlockingObservable_$4_in
   [((id<JavaUtilConcurrentBlockingQueue>) nil_chk(val$queue_)) offerWithId:RxInternalOperatorsNotificationLite_completed()];
 }
 
-- (instancetype)initWithJavaUtilConcurrentBlockingQueue:(id<JavaUtilConcurrentBlockingQueue>)capture$0 {
-  RxObservablesBlockingObservable_$5_initWithJavaUtilConcurrentBlockingQueue_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxObservablesBlockingObservable_$5 class]);
   RELEASE_(val$queue_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithJavaUtilConcurrentBlockingQueue:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentBlockingQueue:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$queue_", "LJavaUtilConcurrentBlockingQueue;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$queue_", "LJavaUtilConcurrentBlockingQueue;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LJavaUtilConcurrentBlockingQueue;", "(Ljava/util/concurrent/BlockingQueue<Ljava/lang/Object;>;)V", "Ljava/util/concurrent/BlockingQueue<Ljava/lang/Object;>;", "LRxObservablesBlockingObservable;", "subscribeWithRxObserver:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxObservablesBlockingObservable_$5 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 4, 1, 8, -1, 9, 10, -1 };
-  return &_RxObservablesBlockingObservable_$5;
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Ljava/util/concurrent/BlockingQueue<Ljava/lang/Object;>;", "LRxObservablesBlockingObservable;", "subscribeWithRxObserver:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxObservablesBlockingObservable_5 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 4, 1, 6, -1, 7, 8, -1 };
+  return &_RxObservablesBlockingObservable_5;
 }
 
 @end
 
-void RxObservablesBlockingObservable_$5_initWithJavaUtilConcurrentBlockingQueue_(RxObservablesBlockingObservable_$5 *self, id<JavaUtilConcurrentBlockingQueue> capture$0) {
+void RxObservablesBlockingObservable_5_initWithJavaUtilConcurrentBlockingQueue_(RxObservablesBlockingObservable_5 *self, id<JavaUtilConcurrentBlockingQueue> capture$0) {
   JreStrongAssign(&self->val$queue_, capture$0);
   RxSubscriber_init(self);
 }
 
-RxObservablesBlockingObservable_$5 *new_RxObservablesBlockingObservable_$5_initWithJavaUtilConcurrentBlockingQueue_(id<JavaUtilConcurrentBlockingQueue> capture$0) {
-  J2OBJC_NEW_IMPL(RxObservablesBlockingObservable_$5, initWithJavaUtilConcurrentBlockingQueue_, capture$0)
+RxObservablesBlockingObservable_5 *new_RxObservablesBlockingObservable_5_initWithJavaUtilConcurrentBlockingQueue_(id<JavaUtilConcurrentBlockingQueue> capture$0) {
+  J2OBJC_NEW_IMPL(RxObservablesBlockingObservable_5, initWithJavaUtilConcurrentBlockingQueue_, capture$0)
 }
 
-RxObservablesBlockingObservable_$5 *create_RxObservablesBlockingObservable_$5_initWithJavaUtilConcurrentBlockingQueue_(id<JavaUtilConcurrentBlockingQueue> capture$0) {
-  J2OBJC_CREATE_IMPL(RxObservablesBlockingObservable_$5, initWithJavaUtilConcurrentBlockingQueue_, capture$0)
+RxObservablesBlockingObservable_5 *create_RxObservablesBlockingObservable_5_initWithJavaUtilConcurrentBlockingQueue_(id<JavaUtilConcurrentBlockingQueue> capture$0) {
+  J2OBJC_CREATE_IMPL(RxObservablesBlockingObservable_5, initWithJavaUtilConcurrentBlockingQueue_, capture$0)
 }
 
-@implementation RxObservablesBlockingObservable_$6
+@implementation RxObservablesBlockingObservable_6
+
+- (instancetype)initWithJavaUtilConcurrentBlockingQueue:(id<JavaUtilConcurrentBlockingQueue>)capture$0
+                                    withRxProducerArray:(IOSObjectArray *)capture$1 {
+  RxObservablesBlockingObservable_6_initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_(self, capture$0, capture$1);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   [((id<JavaUtilConcurrentBlockingQueue>) nil_chk(val$queue_)) offerWithId:RxInternalOperatorsNotificationLite_nextWithId_(t)];
@@ -966,14 +944,7 @@ RxObservablesBlockingObservable_$5 *create_RxObservablesBlockingObservable_$5_in
   [((id<JavaUtilConcurrentBlockingQueue>) nil_chk(val$queue_)) offerWithId:JreLoadStatic(RxObservablesBlockingObservable, ON_START)];
 }
 
-- (instancetype)initWithJavaUtilConcurrentBlockingQueue:(id<JavaUtilConcurrentBlockingQueue>)capture$0
-                                    withRxProducerArray:(IOSObjectArray *)capture$1 {
-  RxObservablesBlockingObservable_$6_initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_(self, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxObservablesBlockingObservable_$6 class]);
   RELEASE_(val$queue_);
   RELEASE_(val$theProducer_);
   [super dealloc];
@@ -981,56 +952,56 @@ RxObservablesBlockingObservable_$5 *create_RxObservablesBlockingObservable_$5_in
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 7, -1, 8, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(setProducerWithRxProducer:);
-  methods[4].selector = @selector(onStart);
-  methods[5].selector = @selector(initWithJavaUtilConcurrentBlockingQueue:withRxProducerArray:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentBlockingQueue:withRxProducerArray:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
+  methods[4].selector = @selector(setProducerWithRxProducer:);
+  methods[5].selector = @selector(onStart);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$queue_", "LJavaUtilConcurrentBlockingQueue;", .constantValue.asLong = 0, 0x1012, -1, -1, 9, -1 },
+    { "val$queue_", "LJavaUtilConcurrentBlockingQueue;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
     { "val$theProducer_", "[LRxProducer;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "setProducer", "LRxProducer;", "LJavaUtilConcurrentBlockingQueue;[LRxProducer;", "(Ljava/util/concurrent/BlockingQueue<Ljava/lang/Object;>;[Lrx/Producer;)V", "Ljava/util/concurrent/BlockingQueue<Ljava/lang/Object;>;", "LRxObservablesBlockingObservable;", "subscribeWithRxSubscriber:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxObservablesBlockingObservable_$6 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 6, 2, 10, -1, 11, 12, -1 };
-  return &_RxObservablesBlockingObservable_$6;
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "setProducer", "LRxProducer;", "Ljava/util/concurrent/BlockingQueue<Ljava/lang/Object;>;", "LRxObservablesBlockingObservable;", "subscribeWithRxSubscriber:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxObservablesBlockingObservable_6 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 6, 2, 8, -1, 9, 10, -1 };
+  return &_RxObservablesBlockingObservable_6;
 }
 
 @end
 
-void RxObservablesBlockingObservable_$6_initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_(RxObservablesBlockingObservable_$6 *self, id<JavaUtilConcurrentBlockingQueue> capture$0, IOSObjectArray *capture$1) {
+void RxObservablesBlockingObservable_6_initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_(RxObservablesBlockingObservable_6 *self, id<JavaUtilConcurrentBlockingQueue> capture$0, IOSObjectArray *capture$1) {
   JreStrongAssign(&self->val$queue_, capture$0);
   JreStrongAssign(&self->val$theProducer_, capture$1);
   RxSubscriber_init(self);
 }
 
-RxObservablesBlockingObservable_$6 *new_RxObservablesBlockingObservable_$6_initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_(id<JavaUtilConcurrentBlockingQueue> capture$0, IOSObjectArray *capture$1) {
-  J2OBJC_NEW_IMPL(RxObservablesBlockingObservable_$6, initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_, capture$0, capture$1)
+RxObservablesBlockingObservable_6 *new_RxObservablesBlockingObservable_6_initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_(id<JavaUtilConcurrentBlockingQueue> capture$0, IOSObjectArray *capture$1) {
+  J2OBJC_NEW_IMPL(RxObservablesBlockingObservable_6, initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_, capture$0, capture$1)
 }
 
-RxObservablesBlockingObservable_$6 *create_RxObservablesBlockingObservable_$6_initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_(id<JavaUtilConcurrentBlockingQueue> capture$0, IOSObjectArray *capture$1) {
-  J2OBJC_CREATE_IMPL(RxObservablesBlockingObservable_$6, initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_, capture$0, capture$1)
+RxObservablesBlockingObservable_6 *create_RxObservablesBlockingObservable_6_initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_(id<JavaUtilConcurrentBlockingQueue> capture$0, IOSObjectArray *capture$1) {
+  J2OBJC_CREATE_IMPL(RxObservablesBlockingObservable_6, initWithJavaUtilConcurrentBlockingQueue_withRxProducerArray_, capture$0, capture$1)
 }
 
-@implementation RxObservablesBlockingObservable_$7
+@implementation RxObservablesBlockingObservable_7
+
+- (instancetype)initWithJavaUtilConcurrentBlockingQueue:(id<JavaUtilConcurrentBlockingQueue>)capture$0 {
+  RxObservablesBlockingObservable_7_initWithJavaUtilConcurrentBlockingQueue_(self, capture$0);
+  return self;
+}
 
 - (void)call {
   [((id<JavaUtilConcurrentBlockingQueue>) nil_chk(val$queue_)) offerWithId:JreLoadStatic(RxObservablesBlockingObservable, UNSUBSCRIBE)];
-}
-
-- (instancetype)initWithJavaUtilConcurrentBlockingQueue:(id<JavaUtilConcurrentBlockingQueue>)capture$0 {
-  RxObservablesBlockingObservable_$7_initWithJavaUtilConcurrentBlockingQueue_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -1040,80 +1011,87 @@ RxObservablesBlockingObservable_$6 *create_RxObservablesBlockingObservable_$6_in
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithJavaUtilConcurrentBlockingQueue:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentBlockingQueue:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$queue_", "LJavaUtilConcurrentBlockingQueue;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+    { "val$queue_", "LJavaUtilConcurrentBlockingQueue;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
   };
-  static const void *ptrTable[] = { "LJavaUtilConcurrentBlockingQueue;", "(Ljava/util/concurrent/BlockingQueue<Ljava/lang/Object;>;)V", "Ljava/util/concurrent/BlockingQueue<Ljava/lang/Object;>;", "LRxObservablesBlockingObservable;", "subscribeWithRxSubscriber:" };
-  static const J2ObjcClassInfo _RxObservablesBlockingObservable_$7 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
-  return &_RxObservablesBlockingObservable_$7;
+  static const void *ptrTable[] = { "Ljava/util/concurrent/BlockingQueue<Ljava/lang/Object;>;", "LRxObservablesBlockingObservable;", "subscribeWithRxSubscriber:" };
+  static const J2ObjcClassInfo _RxObservablesBlockingObservable_7 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
+  return &_RxObservablesBlockingObservable_7;
 }
 
 @end
 
-void RxObservablesBlockingObservable_$7_initWithJavaUtilConcurrentBlockingQueue_(RxObservablesBlockingObservable_$7 *self, id<JavaUtilConcurrentBlockingQueue> capture$0) {
+void RxObservablesBlockingObservable_7_initWithJavaUtilConcurrentBlockingQueue_(RxObservablesBlockingObservable_7 *self, id<JavaUtilConcurrentBlockingQueue> capture$0) {
   JreStrongAssign(&self->val$queue_, capture$0);
   NSObject_init(self);
 }
 
-RxObservablesBlockingObservable_$7 *new_RxObservablesBlockingObservable_$7_initWithJavaUtilConcurrentBlockingQueue_(id<JavaUtilConcurrentBlockingQueue> capture$0) {
-  J2OBJC_NEW_IMPL(RxObservablesBlockingObservable_$7, initWithJavaUtilConcurrentBlockingQueue_, capture$0)
+RxObservablesBlockingObservable_7 *new_RxObservablesBlockingObservable_7_initWithJavaUtilConcurrentBlockingQueue_(id<JavaUtilConcurrentBlockingQueue> capture$0) {
+  J2OBJC_NEW_IMPL(RxObservablesBlockingObservable_7, initWithJavaUtilConcurrentBlockingQueue_, capture$0)
 }
 
-RxObservablesBlockingObservable_$7 *create_RxObservablesBlockingObservable_$7_initWithJavaUtilConcurrentBlockingQueue_(id<JavaUtilConcurrentBlockingQueue> capture$0) {
-  J2OBJC_CREATE_IMPL(RxObservablesBlockingObservable_$7, initWithJavaUtilConcurrentBlockingQueue_, capture$0)
+RxObservablesBlockingObservable_7 *create_RxObservablesBlockingObservable_7_initWithJavaUtilConcurrentBlockingQueue_(id<JavaUtilConcurrentBlockingQueue> capture$0) {
+  J2OBJC_CREATE_IMPL(RxObservablesBlockingObservable_7, initWithJavaUtilConcurrentBlockingQueue_, capture$0)
 }
 
-@implementation RxObservablesBlockingObservable_$8
+@implementation RxObservablesBlockingObservable_8
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxObservablesBlockingObservable_8_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)callWithId:(NSException *)t {
   @throw create_RxExceptionsOnErrorNotImplementedException_initWithNSException_(t);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxObservablesBlockingObservable_$8_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LNSException;", "LRxObservablesBlockingObservable;", "subscribeWithRxFunctionsAction1:", "Ljava/lang/Object;Lrx/functions/Action1<Ljava/lang/Throwable;>;" };
-  static const J2ObjcClassInfo _RxObservablesBlockingObservable_$8 = { "", "rx.observables", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxObservablesBlockingObservable_$8;
+  static const J2ObjcClassInfo _RxObservablesBlockingObservable_8 = { "", "rx.observables", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxObservablesBlockingObservable_8;
 }
 
 @end
 
-void RxObservablesBlockingObservable_$8_init(RxObservablesBlockingObservable_$8 *self) {
+void RxObservablesBlockingObservable_8_init(RxObservablesBlockingObservable_8 *self) {
   NSObject_init(self);
 }
 
-RxObservablesBlockingObservable_$8 *new_RxObservablesBlockingObservable_$8_init() {
-  J2OBJC_NEW_IMPL(RxObservablesBlockingObservable_$8, init)
+RxObservablesBlockingObservable_8 *new_RxObservablesBlockingObservable_8_init() {
+  J2OBJC_NEW_IMPL(RxObservablesBlockingObservable_8, init)
 }
 
-RxObservablesBlockingObservable_$8 *create_RxObservablesBlockingObservable_$8_init() {
-  J2OBJC_CREATE_IMPL(RxObservablesBlockingObservable_$8, init)
+RxObservablesBlockingObservable_8 *create_RxObservablesBlockingObservable_8_init() {
+  J2OBJC_CREATE_IMPL(RxObservablesBlockingObservable_8, init)
 }
 
-@implementation RxObservablesBlockingObservable_$9
+@implementation RxObservablesBlockingObservable_9
+
+- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0
+                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$1
+                    withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$2 {
+  RxObservablesBlockingObservable_9_initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(self, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   [((id<RxFunctionsAction1>) nil_chk(val$onNext_)) callWithId:t];
@@ -1127,13 +1105,6 @@ RxObservablesBlockingObservable_$8 *create_RxObservablesBlockingObservable_$8_in
   [((id<RxFunctionsAction0>) nil_chk(val$onCompleted_)) call];
 }
 
-- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0
-                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$1
-                    withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$2 {
-  RxObservablesBlockingObservable_$9_initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(self, capture$0, capture$1, capture$2);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$onNext_);
   RELEASE_(val$onError_);
@@ -1143,41 +1114,41 @@ RxObservablesBlockingObservable_$8 *create_RxObservablesBlockingObservable_$8_in
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxFunctionsAction1:withRxFunctionsAction1:withRxFunctionsAction0:);
+  methods[0].selector = @selector(initWithRxFunctionsAction1:withRxFunctionsAction1:withRxFunctionsAction0:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$onNext_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
-    { "val$onError_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "val$onNext_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$onError_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
     { "val$onCompleted_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxFunctionsAction1;LRxFunctionsAction1;LRxFunctionsAction0;", "(Lrx/functions/Action1<-TT;>;Lrx/functions/Action1<-Ljava/lang/Throwable;>;Lrx/functions/Action0;)V", "Lrx/functions/Action1<-TT;>;", "Lrx/functions/Action1<-Ljava/lang/Throwable;>;", "LRxObservablesBlockingObservable;", "subscribeWithRxFunctionsAction1:withRxFunctionsAction1:withRxFunctionsAction0:", "Ljava/lang/Object;Lrx/Observer<TT;>;" };
-  static const J2ObjcClassInfo _RxObservablesBlockingObservable_$9 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 4, 3, 9, -1, 10, 11, -1 };
-  return &_RxObservablesBlockingObservable_$9;
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/functions/Action1<-TT;>;", "Lrx/functions/Action1<-Ljava/lang/Throwable;>;", "LRxObservablesBlockingObservable;", "subscribeWithRxFunctionsAction1:withRxFunctionsAction1:withRxFunctionsAction0:", "Ljava/lang/Object;Lrx/Observer<TT;>;" };
+  static const J2ObjcClassInfo _RxObservablesBlockingObservable_9 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 4, 3, 7, -1, 8, 9, -1 };
+  return &_RxObservablesBlockingObservable_9;
 }
 
 @end
 
-void RxObservablesBlockingObservable_$9_initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(RxObservablesBlockingObservable_$9 *self, id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction0> capture$2) {
+void RxObservablesBlockingObservable_9_initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(RxObservablesBlockingObservable_9 *self, id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction0> capture$2) {
   JreStrongAssign(&self->val$onNext_, capture$0);
   JreStrongAssign(&self->val$onError_, capture$1);
   JreStrongAssign(&self->val$onCompleted_, capture$2);
   NSObject_init(self);
 }
 
-RxObservablesBlockingObservable_$9 *new_RxObservablesBlockingObservable_$9_initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction0> capture$2) {
-  J2OBJC_NEW_IMPL(RxObservablesBlockingObservable_$9, initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_, capture$0, capture$1, capture$2)
+RxObservablesBlockingObservable_9 *new_RxObservablesBlockingObservable_9_initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction0> capture$2) {
+  J2OBJC_NEW_IMPL(RxObservablesBlockingObservable_9, initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_, capture$0, capture$1, capture$2)
 }
 
-RxObservablesBlockingObservable_$9 *create_RxObservablesBlockingObservable_$9_initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction0> capture$2) {
-  J2OBJC_CREATE_IMPL(RxObservablesBlockingObservable_$9, initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_, capture$0, capture$1, capture$2)
+RxObservablesBlockingObservable_9 *create_RxObservablesBlockingObservable_9_initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction0> capture$2) {
+  J2OBJC_CREATE_IMPL(RxObservablesBlockingObservable_9, initWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_, capture$0, capture$1, capture$2)
 }

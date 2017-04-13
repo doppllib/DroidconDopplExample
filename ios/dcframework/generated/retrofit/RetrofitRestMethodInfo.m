@@ -105,26 +105,26 @@ __attribute__((unused)) static void RetrofitRestMethodInfo_RequestType_initWithN
 
 @interface RetrofitRestMethodInfo_RxSupport : NSObject
 
+- (instancetype)init;
+
 + (jboolean)isObservableWithIOSClass:(IOSClass *)rawType;
 
 + (id<JavaLangReflectType>)getObservableTypeWithJavaLangReflectType:(id<JavaLangReflectType>)contextType
                                                        withIOSClass:(IOSClass *)contextRawType;
 
-- (instancetype)init;
-
 @end
 
 J2OBJC_EMPTY_STATIC_INIT(RetrofitRestMethodInfo_RxSupport)
-
-__attribute__((unused)) static jboolean RetrofitRestMethodInfo_RxSupport_isObservableWithIOSClass_(IOSClass *rawType);
-
-__attribute__((unused)) static id<JavaLangReflectType> RetrofitRestMethodInfo_RxSupport_getObservableTypeWithJavaLangReflectType_withIOSClass_(id<JavaLangReflectType> contextType, IOSClass *contextRawType);
 
 __attribute__((unused)) static void RetrofitRestMethodInfo_RxSupport_init(RetrofitRestMethodInfo_RxSupport *self);
 
 __attribute__((unused)) static RetrofitRestMethodInfo_RxSupport *new_RetrofitRestMethodInfo_RxSupport_init() NS_RETURNS_RETAINED;
 
 __attribute__((unused)) static RetrofitRestMethodInfo_RxSupport *create_RetrofitRestMethodInfo_RxSupport_init();
+
+__attribute__((unused)) static jboolean RetrofitRestMethodInfo_RxSupport_isObservableWithIOSClass_(IOSClass *rawType);
+
+__attribute__((unused)) static id<JavaLangReflectType> RetrofitRestMethodInfo_RxSupport_getObservableTypeWithJavaLangReflectType_withIOSClass_(id<JavaLangReflectType> contextType, IOSClass *contextRawType);
 
 J2OBJC_TYPE_LITERAL_HEADER(RetrofitRestMethodInfo_RxSupport)
 
@@ -173,13 +173,13 @@ J2OBJC_INITIALIZED_DEFN(RetrofitRestMethodInfo)
     NSString * const *e__ = b__ + a__->size_;
     while (b__ < e__) {
       NSString *header = *b__++;
-      jint colon = [((NSString *) nil_chk(header)) indexOf:':'];
+      jint colon = [((NSString *) nil_chk(header)) java_indexOf:':'];
       if (colon == -1 || colon == 0 || colon == ((jint) [header length]) - 1) {
         @throw RetrofitRestMethodInfo_methodErrorWithNSString_withNSObjectArray_(self, @"@Headers value must be in the form \"Name: Value\". Found: \"%s\"", [IOSObjectArray arrayWithObjects:(id[]){ header } count:1 type:NSObject_class_()]);
       }
-      NSString *headerName = [header substring:0 endIndex:colon];
-      NSString *headerValue = [((NSString *) nil_chk([header substring:colon + 1])) trim];
-      if ([@"Content-Type" equalsIgnoreCase:headerName]) {
+      NSString *headerName = [header java_substring:0 endIndex:colon];
+      NSString *headerValue = [((NSString *) nil_chk([header java_substring:colon + 1])) java_trim];
+      if ([@"Content-Type" java_equalsIgnoreCase:headerName]) {
         JreStrongAssign(&contentTypeHeader_, headerValue);
       }
       else {
@@ -312,7 +312,7 @@ RetrofitRestMethodInfo *create_RetrofitRestMethodInfo_initWithJavaLangReflectMet
 
 JavaLangRuntimeException *RetrofitRestMethodInfo_methodErrorWithNSString_withNSObjectArray_(RetrofitRestMethodInfo *self, NSString *message, IOSObjectArray *args) {
   if (((IOSObjectArray *) nil_chk(args))->size_ > 0) {
-    message = NSString_formatWithNSString_withNSObjectArray_(message, args);
+    message = NSString_java_formatWithNSString_withNSObjectArray_(message, args);
   }
   return create_JavaLangIllegalArgumentException_initWithNSString_(JreStrcat("$C$$$", [((IOSClass *) nil_chk([((JavaLangReflectMethod *) nil_chk(self->method_)) getDeclaringClass])) getSimpleName], '.', [self->method_ getName], @": ", message));
 }
@@ -336,8 +336,8 @@ void RetrofitRestMethodInfo_parseMethodAnnotations(RetrofitRestMethodInfo *self)
         id<JavaLangAnnotationAnnotation> const *e__ = b__ + a__->size_;
         while (b__ < e__) {
           id<JavaLangAnnotationAnnotation> innerAnnotation = *b__++;
-          if (RetrofitHttpRestMethod_class_() == (id) [((id<JavaLangAnnotationAnnotation>) nil_chk(innerAnnotation)) annotationType]) {
-            methodInfo = (id<RetrofitHttpRestMethod>) cast_chk(innerAnnotation, [RetrofitHttpRestMethod class]);
+          if (RetrofitHttpRestMethod_class_() == [((id<JavaLangAnnotationAnnotation>) nil_chk(innerAnnotation)) annotationType]) {
+            methodInfo = (id<RetrofitHttpRestMethod>) cast_check(innerAnnotation, RetrofitHttpRestMethod_class_());
             break;
           }
         }
@@ -358,7 +358,7 @@ void RetrofitRestMethodInfo_parseMethodAnnotations(RetrofitRestMethodInfo *self)
         self->requestHasBody_ = [methodInfo hasBody];
       }
       else if (annotationType == RetrofitHttpHeaders_class_()) {
-        IOSObjectArray *headersToParse = [((id<RetrofitHttpHeaders>) cast_chk(methodAnnotation, [RetrofitHttpHeaders class])) value];
+        IOSObjectArray *headersToParse = [((id<RetrofitHttpHeaders>) cast_check(methodAnnotation, RetrofitHttpHeaders_class_())) value];
         if (((IOSObjectArray *) nil_chk(headersToParse))->size_ == 0) {
           @throw RetrofitRestMethodInfo_methodErrorWithNSString_withNSObjectArray_(self, @"@Headers annotation is empty.", [IOSObjectArray arrayWithLength:0 type:NSObject_class_()]);
         }
@@ -377,7 +377,7 @@ void RetrofitRestMethodInfo_parseMethodAnnotations(RetrofitRestMethodInfo *self)
         JreStrongAssign(&self->requestType_, JreLoadEnum(RetrofitRestMethodInfo_RequestType, FORM_URL_ENCODED));
       }
       else if (annotationType == RetrofitHttpStreaming_class_()) {
-        if (self->responseObjectType_ != RetrofitClientResponse_class_()) {
+        if (self->responseObjectType_ != (id) RetrofitClientResponse_class_()) {
           @throw RetrofitRestMethodInfo_methodErrorWithNSString_withNSObjectArray_(self, @"Only methods having %s as data type are allowed to have @%s annotation.", [IOSObjectArray arrayWithObjects:(id[]){ [RetrofitClientResponse_class_() getSimpleName], [RetrofitHttpStreaming_class_() getSimpleName] } count:2 type:NSObject_class_()]);
         }
         self->isStreaming_ = true;
@@ -403,10 +403,10 @@ void RetrofitRestMethodInfo_parsePathWithNSString_(RetrofitRestMethodInfo *self,
   }
   NSString *url = path;
   NSString *query = nil;
-  jint question = [path indexOf:'?'];
+  jint question = [path java_indexOf:'?'];
   if (question != -1 && question < ((jint) [path length]) - 1) {
-    url = [path substring:0 endIndex:question];
-    query = [path substring:question + 1];
+    url = [path java_substring:0 endIndex:question];
+    query = [path java_substring:question + 1];
     JavaUtilRegexMatcher *queryParamMatcher = [((JavaUtilRegexPattern *) nil_chk(RetrofitRestMethodInfo_PARAM_URL_REGEX)) matcherWithJavaLangCharSequence:query];
     if ([((JavaUtilRegexMatcher *) nil_chk(queryParamMatcher)) find]) {
       @throw RetrofitRestMethodInfo_methodErrorWithNSString_withNSObjectArray_(self, @"URL query string \"%s\" must not have replace block. For dynamic query parameters use @Query.", [IOSObjectArray arrayWithObjects:(id[]){ query } count:1 type:NSObject_class_()]);
@@ -433,7 +433,7 @@ RetrofitRestMethodInfo_ResponseType *RetrofitRestMethodInfo_parseResponseType(Re
       lastArgClass = (IOSClass *) cast_chk(typeToCheck, [IOSClass class]);
     }
   }
-  jboolean hasReturnType = returnType != [IOSClass voidClass];
+  jboolean hasReturnType = returnType != (id) [IOSClass voidClass];
   jboolean hasCallback = lastArgClass != nil && [RetrofitCallback_class_() isAssignableFrom:lastArgClass];
   if (hasReturnType && hasCallback) {
     @throw RetrofitRestMethodInfo_methodErrorWithNSString_withNSObjectArray_(self, @"Must have return type or Callback as last argument, not both.", [IOSObjectArray arrayWithLength:0 type:NSObject_class_()]);
@@ -496,11 +496,11 @@ void RetrofitRestMethodInfo_parseParameters(RetrofitRestMethodInfo *self) {
           id<JavaLangAnnotationAnnotation> methodParameterAnnotation = *b__++;
           IOSClass *methodAnnotationType = [((id<JavaLangAnnotationAnnotation>) nil_chk(methodParameterAnnotation)) annotationType];
           if (methodAnnotationType == RetrofitHttpPath_class_()) {
-            NSString *name = [((id<RetrofitHttpPath>) cast_chk(methodParameterAnnotation, [RetrofitHttpPath class])) value];
+            NSString *name = [((id<RetrofitHttpPath>) cast_check(methodParameterAnnotation, RetrofitHttpPath_class_())) value];
             RetrofitRestMethodInfo_validatePathNameWithInt_withNSString_(self, i, name);
           }
           else if (methodAnnotationType == RetrofitHttpEncodedPath_class_()) {
-            NSString *name = [((id<RetrofitHttpEncodedPath>) cast_chk(methodParameterAnnotation, [RetrofitHttpEncodedPath class])) value];
+            NSString *name = [((id<RetrofitHttpEncodedPath>) cast_check(methodParameterAnnotation, RetrofitHttpEncodedPath_class_())) value];
             RetrofitRestMethodInfo_validatePathNameWithInt_withNSString_(self, i, name);
           }
           else if (methodAnnotationType == RetrofitHttpQuery_class_()) {
@@ -783,6 +783,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitRestMethodInfo_RequestType)
 
 @implementation RetrofitRestMethodInfo_RxSupport
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RetrofitRestMethodInfo_RxSupport_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (jboolean)isObservableWithIOSClass:(IOSClass *)rawType {
   return RetrofitRestMethodInfo_RxSupport_isObservableWithIOSClass_(rawType);
 }
@@ -792,24 +799,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitRestMethodInfo_RequestType)
   return RetrofitRestMethodInfo_RxSupport_getObservableTypeWithJavaLangReflectType_withIOSClass_(contextType, contextRawType);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RetrofitRestMethodInfo_RxSupport_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, "LJavaLangReflectType;", 0x9, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(isObservableWithIOSClass:);
-  methods[1].selector = @selector(getObservableTypeWithJavaLangReflectType:withIOSClass:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(isObservableWithIOSClass:);
+  methods[2].selector = @selector(getObservableTypeWithJavaLangReflectType:withIOSClass:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "isObservable", "LIOSClass;", "getObservableType", "LJavaLangReflectType;LIOSClass;", "LRetrofitRestMethodInfo;" };
   static const J2ObjcClassInfo _RetrofitRestMethodInfo_RxSupport = { "RxSupport", "retrofit", ptrTable, methods, NULL, 7, 0x1a, 3, 0, 4, -1, -1, -1, -1 };
@@ -817,16 +817,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
-
-jboolean RetrofitRestMethodInfo_RxSupport_isObservableWithIOSClass_(IOSClass *rawType) {
-  RetrofitRestMethodInfo_RxSupport_initialize();
-  return rawType == RxObservable_class_();
-}
-
-id<JavaLangReflectType> RetrofitRestMethodInfo_RxSupport_getObservableTypeWithJavaLangReflectType_withIOSClass_(id<JavaLangReflectType> contextType, IOSClass *contextRawType) {
-  RetrofitRestMethodInfo_RxSupport_initialize();
-  return RetrofitTypes_getSupertypeWithJavaLangReflectType_withIOSClass_withIOSClass_(contextType, contextRawType, RxObservable_class_());
-}
 
 void RetrofitRestMethodInfo_RxSupport_init(RetrofitRestMethodInfo_RxSupport *self) {
   NSObject_init(self);
@@ -838,6 +828,16 @@ RetrofitRestMethodInfo_RxSupport *new_RetrofitRestMethodInfo_RxSupport_init() {
 
 RetrofitRestMethodInfo_RxSupport *create_RetrofitRestMethodInfo_RxSupport_init() {
   J2OBJC_CREATE_IMPL(RetrofitRestMethodInfo_RxSupport, init)
+}
+
+jboolean RetrofitRestMethodInfo_RxSupport_isObservableWithIOSClass_(IOSClass *rawType) {
+  RetrofitRestMethodInfo_RxSupport_initialize();
+  return rawType == RxObservable_class_();
+}
+
+id<JavaLangReflectType> RetrofitRestMethodInfo_RxSupport_getObservableTypeWithJavaLangReflectType_withIOSClass_(id<JavaLangReflectType> contextType, IOSClass *contextRawType) {
+  RetrofitRestMethodInfo_RxSupport_initialize();
+  return RetrofitTypes_getSupertypeWithJavaLangReflectType_withIOSClass_withIOSClass_(contextType, contextRawType, RxObservable_class_());
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitRestMethodInfo_RxSupport)

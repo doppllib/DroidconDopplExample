@@ -5,15 +5,15 @@
 
 #include "J2ObjC_header.h"
 
-#pragma push_macro("INCLUDE_ALL_RemoteException")
-#ifdef RESTRICT_RemoteException
-#define INCLUDE_ALL_RemoteException 0
+#pragma push_macro("INCLUDE_ALL_AndroidOsRemoteException")
+#ifdef RESTRICT_AndroidOsRemoteException
+#define INCLUDE_ALL_AndroidOsRemoteException 0
 #else
-#define INCLUDE_ALL_RemoteException 1
+#define INCLUDE_ALL_AndroidOsRemoteException 1
 #endif
-#undef RESTRICT_RemoteException
+#undef RESTRICT_AndroidOsRemoteException
 
-#if !defined (AndroidOsRemoteException_) && (INCLUDE_ALL_RemoteException || defined(INCLUDE_AndroidOsRemoteException))
+#if !defined (AndroidOsRemoteException_) && (INCLUDE_ALL_AndroidOsRemoteException || defined(INCLUDE_AndroidOsRemoteException))
 #define AndroidOsRemoteException_
 
 #define RESTRICT_AndroidUtilAndroidException 1
@@ -40,4 +40,4 @@ J2OBJC_TYPE_LITERAL_HEADER(AndroidOsRemoteException)
 
 #endif
 
-#pragma pop_macro("INCLUDE_ALL_RemoteException")
+#pragma pop_macro("INCLUDE_ALL_AndroidOsRemoteException")

@@ -49,6 +49,12 @@ inline NSString *DCPAppManager_get_FIRST_SEED();
 FOUNDATION_EXPORT NSString *DCPAppManager_FIRST_SEED;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(DCPAppManager, FIRST_SEED, NSString *)
 
+FOUNDATION_EXPORT void DCPAppManager_init(DCPAppManager *self);
+
+FOUNDATION_EXPORT DCPAppManager *new_DCPAppManager_init() NS_RETURNS_RETAINED;
+
+FOUNDATION_EXPORT DCPAppManager *create_DCPAppManager_init();
+
 FOUNDATION_EXPORT void DCPAppManager_initContextWithAndroidContentContext_withDCPPlatformClient_withDCPAppManager_LoadDataSeed_(AndroidContentContext *context, id<DCPPlatformClient> platformClient, id<DCPAppManager_LoadDataSeed> loadDataSeed);
 
 FOUNDATION_EXPORT AndroidContentContext *DCPAppManager_getContext();
@@ -58,12 +64,6 @@ FOUNDATION_EXPORT id<DCPPlatformClient> DCPAppManager_getPlatformClient();
 FOUNDATION_EXPORT DCPAppManager_AppScreens *DCPAppManager_findStartScreen();
 
 FOUNDATION_EXPORT DCDAppPrefs *DCPAppManager_getAppPrefs();
-
-FOUNDATION_EXPORT void DCPAppManager_init(DCPAppManager *self);
-
-FOUNDATION_EXPORT DCPAppManager *new_DCPAppManager_init() NS_RETURNS_RETAINED;
-
-FOUNDATION_EXPORT DCPAppManager *create_DCPAppManager_init();
 
 J2OBJC_TYPE_LITERAL_HEADER(DCPAppManager)
 

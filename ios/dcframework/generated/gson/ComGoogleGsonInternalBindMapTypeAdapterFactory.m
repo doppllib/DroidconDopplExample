@@ -31,6 +31,8 @@
 #include "java/util/Map.h"
 #include "java/util/Set.h"
 
+@class JavaIoReader;
+
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
 
 @interface ComGoogleGsonInternalBindMapTypeAdapterFactory () {
@@ -80,7 +82,6 @@ __attribute__((unused)) static ComGoogleGsonTypeAdapter *ComGoogleGsonInternalBi
 
 J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindMapTypeAdapterFactory_Adapter)
 
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindMapTypeAdapterFactory_Adapter, this$0_, ComGoogleGsonInternalBindMapTypeAdapterFactory *)
 J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindMapTypeAdapterFactory_Adapter, keyTypeAdapter_, ComGoogleGsonTypeAdapter *)
 J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindMapTypeAdapterFactory_Adapter, valueTypeAdapter_, ComGoogleGsonTypeAdapter *)
 J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindMapTypeAdapterFactory_Adapter, constructor_, id<ComGoogleGsonInternalObjectConstructor>)
@@ -167,7 +168,7 @@ ComGoogleGsonInternalBindMapTypeAdapterFactory *create_ComGoogleGsonInternalBind
 }
 
 ComGoogleGsonTypeAdapter *ComGoogleGsonInternalBindMapTypeAdapterFactory_getKeyAdapterWithComGoogleGsonGson_withJavaLangReflectType_(ComGoogleGsonInternalBindMapTypeAdapterFactory *self, ComGoogleGsonGson *context, id<JavaLangReflectType> keyType) {
-  return (keyType == [IOSClass booleanClass] || keyType == JavaLangBoolean_class_()) ? JreLoadStatic(ComGoogleGsonInternalBindTypeAdapters, BOOLEAN_AS_STRING) : (id) [((ComGoogleGsonGson *) nil_chk(context)) getAdapterWithComGoogleGsonReflectTypeToken:ComGoogleGsonReflectTypeToken_getWithJavaLangReflectType_(keyType)];
+  return (keyType == (id) [IOSClass booleanClass] || keyType == (id) JavaLangBoolean_class_()) ? JreLoadStatic(ComGoogleGsonInternalBindTypeAdapters, BOOLEAN_AS_STRING) : [((ComGoogleGsonGson *) nil_chk(context)) getAdapterWithComGoogleGsonReflectTypeToken:ComGoogleGsonReflectTypeToken_getWithJavaLangReflectType_(keyType)];
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalBindMapTypeAdapterFactory)
@@ -231,7 +232,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalBindMapTypeAdapterFactory)
   if (!this$0_->complexMapKeySerialization_) {
     [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) beginObject];
     for (id<JavaUtilMap_Entry> __strong entry_ in nil_chk([map entrySet])) {
-      [outArg nameWithNSString:NSString_valueOf_([((id<JavaUtilMap_Entry>) nil_chk(entry_)) getKey])];
+      [outArg nameWithNSString:NSString_java_valueOf_([((id<JavaUtilMap_Entry>) nil_chk(entry_)) getKey])];
       [((ComGoogleGsonTypeAdapter *) nil_chk(valueTypeAdapter_)) writeWithComGoogleGsonStreamJsonWriter:outArg withId:[entry_ getValue]];
     }
     [outArg endObject];
@@ -299,7 +300,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalBindMapTypeAdapterFactory)
     { "valueTypeAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x12, -1, -1, 12, -1 },
     { "constructor_", "LComGoogleGsonInternalObjectConstructor;", .constantValue.asLong = 0, 0x12, -1, -1, 13, -1 },
   };
-  static const void *ptrTable[] = { "LComGoogleGsonInternalBindMapTypeAdapterFactory;LComGoogleGsonGson;LJavaLangReflectType;LComGoogleGsonTypeAdapter;LJavaLangReflectType;LComGoogleGsonTypeAdapter;LComGoogleGsonInternalObjectConstructor;", "(Lcom/google/gson/internal/bind/MapTypeAdapterFactory;Lcom/google/gson/Gson;Ljava/lang/reflect/Type;Lcom/google/gson/TypeAdapter<TK;>;Ljava/lang/reflect/Type;Lcom/google/gson/TypeAdapter<TV;>;Lcom/google/gson/internal/ObjectConstructor<+Ljava/util/Map<TK;TV;>;>;)V", "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/util/Map<TK;TV;>;", "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilMap;", "(Lcom/google/gson/stream/JsonWriter;Ljava/util/Map<TK;TV;>;)V", "keyToString", "LComGoogleGsonJsonElement;", "Lcom/google/gson/TypeAdapter<TK;>;", "Lcom/google/gson/TypeAdapter<TV;>;", "Lcom/google/gson/internal/ObjectConstructor<+Ljava/util/Map<TK;TV;>;>;", "LComGoogleGsonInternalBindMapTypeAdapterFactory;", "<K:Ljava/lang/Object;V:Ljava/lang/Object;>Lcom/google/gson/TypeAdapter<Ljava/util/Map<TK;TV;>;>;" };
+  static const void *ptrTable[] = { "LComGoogleGsonGson;LJavaLangReflectType;LComGoogleGsonTypeAdapter;LJavaLangReflectType;LComGoogleGsonTypeAdapter;LComGoogleGsonInternalObjectConstructor;", "(Lcom/google/gson/Gson;Ljava/lang/reflect/Type;Lcom/google/gson/TypeAdapter<TK;>;Ljava/lang/reflect/Type;Lcom/google/gson/TypeAdapter<TV;>;Lcom/google/gson/internal/ObjectConstructor<+Ljava/util/Map<TK;TV;>;>;)V", "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/util/Map<TK;TV;>;", "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilMap;", "(Lcom/google/gson/stream/JsonWriter;Ljava/util/Map<TK;TV;>;)V", "keyToString", "LComGoogleGsonJsonElement;", "Lcom/google/gson/TypeAdapter<TK;>;", "Lcom/google/gson/TypeAdapter<TV;>;", "Lcom/google/gson/internal/ObjectConstructor<+Ljava/util/Map<TK;TV;>;>;", "LComGoogleGsonInternalBindMapTypeAdapterFactory;", "<K:Ljava/lang/Object;V:Ljava/lang/Object;>Lcom/google/gson/TypeAdapter<Ljava/util/Map<TK;TV;>;>;" };
   static const J2ObjcClassInfo _ComGoogleGsonInternalBindMapTypeAdapterFactory_Adapter = { "Adapter", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x12, 4, 4, 14, -1, -1, 15, -1 };
   return &_ComGoogleGsonInternalBindMapTypeAdapterFactory_Adapter;
 }
@@ -326,7 +327,7 @@ NSString *ComGoogleGsonInternalBindMapTypeAdapterFactory_Adapter_keyToStringWith
   if ([((ComGoogleGsonJsonElement *) nil_chk(keyElement)) isJsonPrimitive]) {
     ComGoogleGsonJsonPrimitive *primitive = [keyElement getAsJsonPrimitive];
     if ([((ComGoogleGsonJsonPrimitive *) nil_chk(primitive)) isNumber]) {
-      return NSString_valueOf_([primitive getAsNumber]);
+      return NSString_java_valueOf_([primitive getAsNumber]);
     }
     else if ([primitive isBoolean]) {
       return JavaLangBoolean_toStringWithBoolean_([primitive getAsBoolean]);

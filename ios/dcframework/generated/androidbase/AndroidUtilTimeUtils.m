@@ -64,6 +64,13 @@ J2OBJC_INITIALIZED_DEFN(AndroidUtilTimeUtils)
 
 @implementation AndroidUtilTimeUtils
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  AndroidUtilTimeUtils_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (jint)accumFieldWithInt:(jint)amt
                   withInt:(jint)suffix
               withBoolean:(jboolean)always
@@ -90,28 +97,21 @@ J2OBJC_INITIALIZED_DEFN(AndroidUtilTimeUtils)
   AndroidUtilTimeUtils_formatDurationWithLong_withJavaLangStringBuilder_(duration, builder);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  AndroidUtilTimeUtils_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "I", 0xa, 0, 1, -1, -1, -1, -1 },
     { NULL, "I", 0xa, 2, 3, -1, -1, -1, -1 },
     { NULL, "I", 0xa, 4, 5, -1, -1, -1, -1 },
     { NULL, "V", 0x9, 6, 7, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(accumFieldWithInt:withInt:withBoolean:withInt:);
-  methods[1].selector = @selector(printFieldLockedWithCharArray:withInt:withChar:withInt:withBoolean:withInt:);
-  methods[2].selector = @selector(formatDurationLockedWithLong:withInt:);
-  methods[3].selector = @selector(formatDurationWithLong:withJavaLangStringBuilder:);
-  methods[4].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(accumFieldWithInt:withInt:withBoolean:withInt:);
+  methods[2].selector = @selector(printFieldLockedWithCharArray:withInt:withChar:withInt:withBoolean:withInt:);
+  methods[3].selector = @selector(formatDurationLockedWithLong:withInt:);
+  methods[4].selector = @selector(formatDurationWithLong:withJavaLangStringBuilder:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "HUNDRED_DAY_FIELD_LEN", "I", .constantValue.asInt = AndroidUtilTimeUtils_HUNDRED_DAY_FIELD_LEN, 0x19, -1, -1, -1, -1 },
@@ -138,6 +138,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void AndroidUtilTimeUtils_init(AndroidUtilTimeUtils *self) {
+  NSObject_init(self);
+}
+
+AndroidUtilTimeUtils *new_AndroidUtilTimeUtils_init() {
+  J2OBJC_NEW_IMPL(AndroidUtilTimeUtils, init)
+}
+
+AndroidUtilTimeUtils *create_AndroidUtilTimeUtils_init() {
+  J2OBJC_CREATE_IMPL(AndroidUtilTimeUtils, init)
+}
 
 jint AndroidUtilTimeUtils_accumFieldWithInt_withInt_withBoolean_withInt_(jint amt, jint suffix, jboolean always, jint zeropad) {
   AndroidUtilTimeUtils_initialize();
@@ -274,18 +286,6 @@ void AndroidUtilTimeUtils_formatDurationWithLong_withJavaLangStringBuilder_(jlon
     jint len = AndroidUtilTimeUtils_formatDurationLockedWithLong_withInt_(duration, 0);
     [((JavaLangStringBuilder *) nil_chk(builder)) appendWithCharArray:AndroidUtilTimeUtils_sFormatStr withInt:0 withInt:len];
   }
-}
-
-void AndroidUtilTimeUtils_init(AndroidUtilTimeUtils *self) {
-  NSObject_init(self);
-}
-
-AndroidUtilTimeUtils *new_AndroidUtilTimeUtils_init() {
-  J2OBJC_NEW_IMPL(AndroidUtilTimeUtils, init)
-}
-
-AndroidUtilTimeUtils *create_AndroidUtilTimeUtils_init() {
-  J2OBJC_CREATE_IMPL(AndroidUtilTimeUtils, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidUtilTimeUtils)

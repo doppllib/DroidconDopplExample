@@ -95,11 +95,11 @@
 
 + (RxScheduler *)onComputationSchedulerWithRxScheduler:(RxScheduler *)scheduler;
 
-+ (id<RxCompletable_OnSubscribe>)onCreateWithRxCompletable_OnSubscribe:(id<RxCompletable_OnSubscribe>)onSubscribe;
-
 + (id<RxObservable_OnSubscribe>)onCreateWithRxObservable_OnSubscribe:(id<RxObservable_OnSubscribe>)onSubscribe;
 
 + (id<RxSingle_OnSubscribe>)onCreateWithRxSingle_OnSubscribe:(id<RxSingle_OnSubscribe>)onSubscribe;
+
++ (id<RxCompletable_OnSubscribe>)onCreateWithRxCompletable_OnSubscribe:(id<RxCompletable_OnSubscribe>)onSubscribe;
 
 + (void)onErrorWithNSException:(NSException *)ex;
 

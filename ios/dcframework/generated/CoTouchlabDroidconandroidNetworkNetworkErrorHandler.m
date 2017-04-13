@@ -12,6 +12,13 @@
 
 @implementation CoTouchlabDroidconandroidNetworkNetworkErrorHandler
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabDroidconandroidNetworkNetworkErrorHandler_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (NSException *)handleErrorWithRetrofitRetrofitError:(RetrofitRetrofitError *)cause {
   if ([((RetrofitRetrofitError *) nil_chk(cause)) isNetworkError]) {
     return create_CoTouchlabDroidconandroidNetworkNetworkErrorHandler_NetworkException_initWithNSException_([cause getCause]);
@@ -28,24 +35,17 @@
   return nil;
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabDroidconandroidNetworkNetworkErrorHandler_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSException;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "LCoTouchlabDroidconandroidNetworkNetworkErrorHandler_ResponseException;", 0x4, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(handleErrorWithRetrofitRetrofitError:);
-  methods[1].selector = @selector(parseResponseWithRetrofitClientResponse:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(handleErrorWithRetrofitRetrofitError:);
+  methods[2].selector = @selector(parseResponseWithRetrofitClientResponse:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "handleError", "LRetrofitRetrofitError;", "parseResponse", "LRetrofitClientResponse;", "LCoTouchlabDroidconandroidNetworkNetworkErrorHandler_NetworkException;LCoTouchlabDroidconandroidNetworkNetworkErrorHandler_ResponseException;LCoTouchlabDroidconandroidNetworkNetworkErrorHandler_NotFoundException;LCoTouchlabDroidconandroidNetworkNetworkErrorHandler_FatalUnknownException;" };
   static const J2ObjcClassInfo _CoTouchlabDroidconandroidNetworkNetworkErrorHandler = { "NetworkErrorHandler", "co.touchlab.droidconandroid.network", ptrTable, methods, NULL, 7, 0x1, 3, 0, -1, 4, -1, -1, -1 };

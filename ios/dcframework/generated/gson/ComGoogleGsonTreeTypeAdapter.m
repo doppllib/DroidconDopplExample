@@ -207,7 +207,7 @@ id<ComGoogleGsonTypeAdapterFactory> ComGoogleGsonTreeTypeAdapter_newFactoryWithC
 
 id<ComGoogleGsonTypeAdapterFactory> ComGoogleGsonTreeTypeAdapter_newFactoryWithMatchRawTypeWithComGoogleGsonReflectTypeToken_withId_(ComGoogleGsonReflectTypeToken *exactType, id typeAdapter) {
   ComGoogleGsonTreeTypeAdapter_initialize();
-  jboolean matchRawType = [((ComGoogleGsonReflectTypeToken *) nil_chk(exactType)) getType] == [exactType getRawType];
+  jboolean matchRawType = [((ComGoogleGsonReflectTypeToken *) nil_chk(exactType)) getType] == (id) [exactType getRawType];
   return create_ComGoogleGsonTreeTypeAdapter_SingleTypeFactory_initWithId_withComGoogleGsonReflectTypeToken_withBoolean_withIOSClass_(typeAdapter, exactType, matchRawType, nil);
 }
 
@@ -230,7 +230,7 @@ withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)exactType
 
 - (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
                         withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)type {
-  jboolean matches = exactType_ != nil ? [exactType_ isEqual:type] || (matchRawType_ && [exactType_ getType] == [((ComGoogleGsonReflectTypeToken *) nil_chk(type)) getRawType]) : [((IOSClass *) nil_chk(hierarchyType_)) isAssignableFrom:[((ComGoogleGsonReflectTypeToken *) nil_chk(type)) getRawType]];
+  jboolean matches = exactType_ != nil ? [exactType_ isEqual:type] || (matchRawType_ && [exactType_ getType] == (id) [((ComGoogleGsonReflectTypeToken *) nil_chk(type)) getRawType]) : [((IOSClass *) nil_chk(hierarchyType_)) isAssignableFrom:[((ComGoogleGsonReflectTypeToken *) nil_chk(type)) getRawType]];
   return matches ? create_ComGoogleGsonTreeTypeAdapter_initWithComGoogleGsonJsonSerializer_withComGoogleGsonJsonDeserializer_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapterFactory_(serializer_, deserializer_, gson, type, self) : nil;
 }
 

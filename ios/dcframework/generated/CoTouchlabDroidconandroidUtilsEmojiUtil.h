@@ -43,13 +43,13 @@ inline IOSIntArray *CoTouchlabDroidconandroidUtilsEmojiUtil_set_EMOJI_ABC(IOSInt
 FOUNDATION_EXPORT IOSIntArray *CoTouchlabDroidconandroidUtilsEmojiUtil_EMOJI_ABC;
 J2OBJC_STATIC_FIELD_OBJ(CoTouchlabDroidconandroidUtilsEmojiUtil, EMOJI_ABC, IOSIntArray *)
 
-FOUNDATION_EXPORT NSString *CoTouchlabDroidconandroidUtilsEmojiUtil_getEmojiForUserWithNSString_(NSString *displayName);
-
 FOUNDATION_EXPORT void CoTouchlabDroidconandroidUtilsEmojiUtil_init(CoTouchlabDroidconandroidUtilsEmojiUtil *self);
 
 FOUNDATION_EXPORT CoTouchlabDroidconandroidUtilsEmojiUtil *new_CoTouchlabDroidconandroidUtilsEmojiUtil_init() NS_RETURNS_RETAINED;
 
 FOUNDATION_EXPORT CoTouchlabDroidconandroidUtilsEmojiUtil *create_CoTouchlabDroidconandroidUtilsEmojiUtil_init();
+
+FOUNDATION_EXPORT NSString *CoTouchlabDroidconandroidUtilsEmojiUtil_getEmojiForUserWithNSString_(NSString *displayName);
 
 J2OBJC_TYPE_LITERAL_HEADER(CoTouchlabDroidconandroidUtilsEmojiUtil)
 

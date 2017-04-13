@@ -20,34 +20,30 @@
 #include "java/util/Arrays.h"
 #include "java/util/List.h"
 
-@interface RxInternalOperatorsSingleOnSubscribeUsing_$1 : RxSingleSubscriber {
+@interface RxInternalOperatorsSingleOnSubscribeUsing_1 : RxSingleSubscriber {
  @public
   RxInternalOperatorsSingleOnSubscribeUsing *this$0_;
   id val$resource_;
   RxSingleSubscriber *val$child_;
 }
 
-- (void)onSuccessWithId:(id)value;
-
-- (void)onErrorWithNSException:(NSException *)error;
-
 - (instancetype)initWithRxInternalOperatorsSingleOnSubscribeUsing:(RxInternalOperatorsSingleOnSubscribeUsing *)outer$
                                                            withId:(id)capture$0
                                            withRxSingleSubscriber:(RxSingleSubscriber *)capture$1;
 
+- (void)onSuccessWithId:(id)value;
+
+- (void)onErrorWithNSException:(NSException *)error;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsSingleOnSubscribeUsing_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsSingleOnSubscribeUsing_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsSingleOnSubscribeUsing_$1, this$0_, RxInternalOperatorsSingleOnSubscribeUsing *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsSingleOnSubscribeUsing_$1, val$resource_, id)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsSingleOnSubscribeUsing_$1, val$child_, RxSingleSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsSingleOnSubscribeUsing_1_initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_(RxInternalOperatorsSingleOnSubscribeUsing_1 *self, RxInternalOperatorsSingleOnSubscribeUsing *outer$, id capture$0, RxSingleSubscriber *capture$1);
 
-__attribute__((unused)) static void RxInternalOperatorsSingleOnSubscribeUsing_$1_initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_(RxInternalOperatorsSingleOnSubscribeUsing_$1 *self, RxInternalOperatorsSingleOnSubscribeUsing *outer$, id capture$0, RxSingleSubscriber *capture$1);
+__attribute__((unused)) static RxInternalOperatorsSingleOnSubscribeUsing_1 *new_RxInternalOperatorsSingleOnSubscribeUsing_1_initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_(RxInternalOperatorsSingleOnSubscribeUsing *outer$, id capture$0, RxSingleSubscriber *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsSingleOnSubscribeUsing_$1 *new_RxInternalOperatorsSingleOnSubscribeUsing_$1_initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_(RxInternalOperatorsSingleOnSubscribeUsing *outer$, id capture$0, RxSingleSubscriber *capture$1) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsSingleOnSubscribeUsing_$1 *create_RxInternalOperatorsSingleOnSubscribeUsing_$1_initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_(RxInternalOperatorsSingleOnSubscribeUsing *outer$, id capture$0, RxSingleSubscriber *capture$1);
+__attribute__((unused)) static RxInternalOperatorsSingleOnSubscribeUsing_1 *create_RxInternalOperatorsSingleOnSubscribeUsing_1_initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_(RxInternalOperatorsSingleOnSubscribeUsing *outer$, id capture$0, RxSingleSubscriber *capture$1);
 
 @implementation RxInternalOperatorsSingleOnSubscribeUsing
 
@@ -81,7 +77,7 @@ __attribute__((unused)) static RxInternalOperatorsSingleOnSubscribeUsing_$1 *cre
     [self handleSubscriptionTimeErrorWithRxSingleSubscriber:child withId:resource withNSException:create_JavaLangNullPointerException_initWithNSString_(@"The single")];
     return;
   }
-  RxSingleSubscriber *parent = create_RxInternalOperatorsSingleOnSubscribeUsing_$1_initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_(self, resource, child);
+  RxSingleSubscriber *parent = create_RxInternalOperatorsSingleOnSubscribeUsing_1_initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_(self, resource, child);
   [((RxSingleSubscriber *) nil_chk(child)) addWithRxSubscription:parent];
   [single subscribeWithRxSingleSubscriber:parent];
 }
@@ -161,7 +157,14 @@ RxInternalOperatorsSingleOnSubscribeUsing *create_RxInternalOperatorsSingleOnSub
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsSingleOnSubscribeUsing)
 
-@implementation RxInternalOperatorsSingleOnSubscribeUsing_$1
+@implementation RxInternalOperatorsSingleOnSubscribeUsing_1
+
+- (instancetype)initWithRxInternalOperatorsSingleOnSubscribeUsing:(RxInternalOperatorsSingleOnSubscribeUsing *)outer$
+                                                           withId:(id)capture$0
+                                           withRxSingleSubscriber:(RxSingleSubscriber *)capture$1 {
+  RxInternalOperatorsSingleOnSubscribeUsing_1_initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_(self, outer$, capture$0, capture$1);
+  return self;
+}
 
 - (void)onSuccessWithId:(id)value {
   if (this$0_->disposeEagerly_) {
@@ -190,13 +193,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsSingleOnSubscribeUsing)
   [this$0_ handleSubscriptionTimeErrorWithRxSingleSubscriber:val$child_ withId:val$resource_ withNSException:error];
 }
 
-- (instancetype)initWithRxInternalOperatorsSingleOnSubscribeUsing:(RxInternalOperatorsSingleOnSubscribeUsing *)outer$
-                                                           withId:(id)capture$0
-                                           withRxSingleSubscriber:(RxSingleSubscriber *)capture$1 {
-  RxInternalOperatorsSingleOnSubscribeUsing_$1_initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_(self, outer$, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$resource_);
@@ -206,39 +202,39 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsSingleOnSubscribeUsing)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onSuccessWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(initWithRxInternalOperatorsSingleOnSubscribeUsing:withId:withRxSingleSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsSingleOnSubscribeUsing:withId:withRxSingleSubscriber:);
+  methods[1].selector = @selector(onSuccessWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsSingleOnSubscribeUsing;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$resource_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
-    { "val$child_", "LRxSingleSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "this$0_", "LRxInternalOperatorsSingleOnSubscribeUsing;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$resource_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
+    { "val$child_", "LRxSingleSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
   };
-  static const void *ptrTable[] = { "onSuccess", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxInternalOperatorsSingleOnSubscribeUsing;LNSObject;LRxSingleSubscriber;", "(Lrx/internal/operators/SingleOnSubscribeUsing;TResource;Lrx/SingleSubscriber<-TT;>;)V", "TResource;", "Lrx/SingleSubscriber<-TT;>;", "LRxInternalOperatorsSingleOnSubscribeUsing;", "callWithId:", "Lrx/SingleSubscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsSingleOnSubscribeUsing_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 3, 3, 9, -1, 10, 11, -1 };
-  return &_RxInternalOperatorsSingleOnSubscribeUsing_$1;
+  static const void *ptrTable[] = { "onSuccess", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/internal/operators/SingleOnSubscribeUsing<TT;TResource;>;", "TResource;", "Lrx/SingleSubscriber<-TT;>;", "LRxInternalOperatorsSingleOnSubscribeUsing;", "callWithId:", "Lrx/SingleSubscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsSingleOnSubscribeUsing_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 3, 3, 8, -1, 9, 10, -1 };
+  return &_RxInternalOperatorsSingleOnSubscribeUsing_1;
 }
 
 @end
 
-void RxInternalOperatorsSingleOnSubscribeUsing_$1_initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_(RxInternalOperatorsSingleOnSubscribeUsing_$1 *self, RxInternalOperatorsSingleOnSubscribeUsing *outer$, id capture$0, RxSingleSubscriber *capture$1) {
+void RxInternalOperatorsSingleOnSubscribeUsing_1_initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_(RxInternalOperatorsSingleOnSubscribeUsing_1 *self, RxInternalOperatorsSingleOnSubscribeUsing *outer$, id capture$0, RxSingleSubscriber *capture$1) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$resource_, capture$0);
   JreStrongAssign(&self->val$child_, capture$1);
   RxSingleSubscriber_init(self);
 }
 
-RxInternalOperatorsSingleOnSubscribeUsing_$1 *new_RxInternalOperatorsSingleOnSubscribeUsing_$1_initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_(RxInternalOperatorsSingleOnSubscribeUsing *outer$, id capture$0, RxSingleSubscriber *capture$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsSingleOnSubscribeUsing_$1, initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_, outer$, capture$0, capture$1)
+RxInternalOperatorsSingleOnSubscribeUsing_1 *new_RxInternalOperatorsSingleOnSubscribeUsing_1_initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_(RxInternalOperatorsSingleOnSubscribeUsing *outer$, id capture$0, RxSingleSubscriber *capture$1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsSingleOnSubscribeUsing_1, initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_, outer$, capture$0, capture$1)
 }
 
-RxInternalOperatorsSingleOnSubscribeUsing_$1 *create_RxInternalOperatorsSingleOnSubscribeUsing_$1_initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_(RxInternalOperatorsSingleOnSubscribeUsing *outer$, id capture$0, RxSingleSubscriber *capture$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsSingleOnSubscribeUsing_$1, initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_, outer$, capture$0, capture$1)
+RxInternalOperatorsSingleOnSubscribeUsing_1 *create_RxInternalOperatorsSingleOnSubscribeUsing_1_initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_(RxInternalOperatorsSingleOnSubscribeUsing *outer$, id capture$0, RxSingleSubscriber *capture$1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsSingleOnSubscribeUsing_1, initWithRxInternalOperatorsSingleOnSubscribeUsing_withId_withRxSingleSubscriber_, outer$, capture$0, capture$1)
 }

@@ -422,22 +422,22 @@ __attribute__((unused)) static void CoTouchlabSqueakyStmtWhere_checkClause(CoTou
     { NULL, "LCoTouchlabSqueakyStmtWhere;", 0x1, 28, 31, 1, 32, -1, -1 },
     { NULL, "LCoTouchlabSqueakyStmtWhere;", 0x1, 33, 29, 1, 30, -1, -1 },
     { NULL, "LCoTouchlabSqueakyStmtWhere;", 0x1, 33, 31, 1, 32, -1, -1 },
-    { NULL, "LCoTouchlabSqueakyStmtQueryManyClause;", 0x1, 34, -1, 1, 35, -1, -1 },
-    { NULL, "LCoTouchlabSqueakyStmtQueryManyClause;", 0x1, 36, -1, 1, 35, -1, -1 },
-    { NULL, "LCoTouchlabSqueakyStmtQueryNot;", 0x1, 37, -1, 1, 38, -1, -1 },
-    { NULL, "LCoTouchlabSqueakyStmtQueryQueryable;", 0x1, -1, -1, 1, 39, -1, -1 },
-    { NULL, "LCoTouchlabSqueakyStmtJoinAlias;", 0x1, 40, 29, 1, -1, -1, -1 },
-    { NULL, "LCoTouchlabSqueakyStmtJoinAlias;", 0x1, 40, 31, 1, -1, -1, -1 },
-    { NULL, "LCoTouchlabSqueakyStmtJoinAlias;", 0x2, 41, 42, 1, 43, -1, -1 },
-    { NULL, "LNSString;", 0x1, 44, 45, 1, -1, -1, -1 },
+    { NULL, "LCoTouchlabSqueakyStmtQueryManyClause;", 0x1, 34, -1, 1, -1, -1, -1 },
+    { NULL, "LCoTouchlabSqueakyStmtQueryManyClause;", 0x1, 35, -1, 1, -1, -1, -1 },
+    { NULL, "LCoTouchlabSqueakyStmtQueryNot;", 0x1, 36, -1, 1, -1, -1, -1 },
+    { NULL, "LCoTouchlabSqueakyStmtQueryQueryable;", 0x1, -1, -1, 1, 37, -1, -1 },
+    { NULL, "LCoTouchlabSqueakyStmtJoinAlias;", 0x1, 38, 29, 1, -1, -1, -1 },
+    { NULL, "LCoTouchlabSqueakyStmtJoinAlias;", 0x1, 38, 31, 1, -1, -1, -1 },
+    { NULL, "LCoTouchlabSqueakyStmtJoinAlias;", 0x2, 39, 40, 1, 41, -1, -1 },
+    { NULL, "LNSString;", 0x1, 42, 43, 1, -1, -1, -1 },
     { NULL, "V", 0x2, -1, -1, 1, -1, -1, -1 },
     { NULL, "LCoTouchlabSqueakyStmtQueryQueryFactory;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LCoTouchlabSqueakyStmtWhere;", 0x1, -1, -1, -1, 46, -1, -1 },
-    { NULL, "LNSString;", 0x1, 47, 45, 1, -1, -1, -1 },
+    { NULL, "LCoTouchlabSqueakyStmtWhere;", 0x1, -1, -1, -1, 44, -1, -1 },
+    { NULL, "LNSString;", 0x1, 45, 43, 1, -1, -1, -1 },
     { NULL, "[LNSString;", 0x1, -1, -1, 1, -1, -1, -1 },
-    { NULL, "LCoTouchlabSqueakyDaoDao_QueryModifiers;", 0x1, -1, -1, 1, 48, -1, -1 },
-    { NULL, "V", 0x0, 49, 50, 1, -1, -1, -1 },
-    { NULL, "LNSString;", 0x1, 51, -1, -1, -1, -1, -1 },
+    { NULL, "LCoTouchlabSqueakyDaoDao_QueryModifiers;", 0x1, -1, -1, 1, 46, -1, -1 },
+    { NULL, "V", 0x0, 47, 48, 1, -1, -1, -1 },
+    { NULL, "LNSString;", 0x1, 49, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -489,19 +489,19 @@ __attribute__((unused)) static void CoTouchlabSqueakyStmtWhere_checkClause(CoTou
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "CLAUSE_STACK_START_SIZE", "I", .constantValue.asInt = CoTouchlabSqueakyStmtWhere_CLAUSE_STACK_START_SIZE, 0x1a, -1, -1, -1, -1 },
-    { "modelDao_", "LCoTouchlabSqueakyDaoModelDao;", .constantValue.asLong = 0, 0x12, -1, -1, 52, -1 },
+    { "modelDao_", "LCoTouchlabSqueakyDaoModelDao;", .constantValue.asLong = 0, 0x12, -1, -1, 50, -1 },
     { "openHelperHelper_", "LCoTouchlabSqueakyDaoSqueakyContext;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
-    { "generatedTableMapper_", "LCoTouchlabSqueakyTableGeneratedTableMapper;", .constantValue.asLong = 0, 0x12, -1, -1, 53, -1 },
+    { "generatedTableMapper_", "LCoTouchlabSqueakyTableGeneratedTableMapper;", .constantValue.asLong = 0, 0x12, -1, -1, 51, -1 },
     { "idFieldType_", "LCoTouchlabSqueakyFieldFieldType;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
     { "idColumnName_", "LNSString;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
     { "queryFactory_", "LCoTouchlabSqueakyStmtQueryQueryFactory;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
     { "joinTableCount_", "I", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
-    { "joins_", "LJavaUtilList;", .constantValue.asLong = 0, 0x12, -1, -1, 54, -1 },
+    { "joins_", "LJavaUtilList;", .constantValue.asLong = 0, 0x12, -1, -1, 52, -1 },
     { "defaultJoinAlias_", "LCoTouchlabSqueakyStmtJoinAlias;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
     { "clause_", "LCoTouchlabSqueakyStmtQueryClause;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabSqueakyDaoDao;", "LJavaSqlSQLException;", "eq", "LNSString;LNSObject;", "(Ljava/lang/String;Ljava/lang/Object;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "LCoTouchlabSqueakyStmtJoinAlias;LNSString;LNSObject;", "(Lco/touchlab/squeaky/stmt/JoinAlias;Ljava/lang/String;Ljava/lang/Object;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "gt", "ge", "lt", "le", "like", "ne", "in", "LNSString;LJavaLangIterable;", "(Ljava/lang/String;Ljava/lang/Iterable<*>;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "LCoTouchlabSqueakyStmtJoinAlias;LNSString;LJavaLangIterable;", "(Lco/touchlab/squeaky/stmt/JoinAlias;Ljava/lang/String;Ljava/lang/Iterable<*>;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "notIn", "LNSString;[LNSObject;", "(Ljava/lang/String;[Ljava/lang/Object;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "LCoTouchlabSqueakyStmtJoinAlias;LNSString;[LNSObject;", "(Lco/touchlab/squeaky/stmt/JoinAlias;Ljava/lang/String;[Ljava/lang/Object;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "between", "LNSString;LNSObject;LNSObject;", "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "LCoTouchlabSqueakyStmtJoinAlias;LNSString;LNSObject;LNSObject;", "(Lco/touchlab/squeaky/stmt/JoinAlias;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "isNull", "LNSString;", "(Ljava/lang/String;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "LCoTouchlabSqueakyStmtJoinAlias;LNSString;", "(Lco/touchlab/squeaky/stmt/JoinAlias;Ljava/lang/String;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "isNotNull", "and", "()Lco/touchlab/squeaky/stmt/query/ManyClause;", "or", "not", "()Lco/touchlab/squeaky/stmt/query/Not;", "()Lco/touchlab/squeaky/stmt/query/Queryable<TT;>;", "join", "makeJoin", "LNSString;LNSString;LIOSClass;", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class<TT;>;)Lco/touchlab/squeaky/stmt/JoinAlias;", "getFromStatement", "Z", "()Lco/touchlab/squeaky/stmt/Where<TT;>;", "getWhereStatement", "()Lco/touchlab/squeaky/dao/Dao$QueryModifiers<TT;>;", "appendSql", "LJavaLangStringBuilder;Z", "toString", "Lco/touchlab/squeaky/dao/ModelDao<TT;>;", "Lco/touchlab/squeaky/table/GeneratedTableMapper<TT;>;", "Ljava/util/List<Lco/touchlab/squeaky/stmt/JoinAlias;>;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Lco/touchlab/squeaky/stmt/query/Queryable<TT;>;Lco/touchlab/squeaky/dao/Query;" };
-  static const J2ObjcClassInfo _CoTouchlabSqueakyStmtWhere = { "Where", "co.touchlab.squeaky.stmt", ptrTable, methods, fields, 7, 0x1, 45, 11, -1, -1, -1, 55, -1 };
+  static const void *ptrTable[] = { "LCoTouchlabSqueakyDaoDao;", "LJavaSqlSQLException;", "eq", "LNSString;LNSObject;", "(Ljava/lang/String;Ljava/lang/Object;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "LCoTouchlabSqueakyStmtJoinAlias;LNSString;LNSObject;", "(Lco/touchlab/squeaky/stmt/JoinAlias;Ljava/lang/String;Ljava/lang/Object;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "gt", "ge", "lt", "le", "like", "ne", "in", "LNSString;LJavaLangIterable;", "(Ljava/lang/String;Ljava/lang/Iterable<*>;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "LCoTouchlabSqueakyStmtJoinAlias;LNSString;LJavaLangIterable;", "(Lco/touchlab/squeaky/stmt/JoinAlias;Ljava/lang/String;Ljava/lang/Iterable<*>;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "notIn", "LNSString;[LNSObject;", "(Ljava/lang/String;[Ljava/lang/Object;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "LCoTouchlabSqueakyStmtJoinAlias;LNSString;[LNSObject;", "(Lco/touchlab/squeaky/stmt/JoinAlias;Ljava/lang/String;[Ljava/lang/Object;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "between", "LNSString;LNSObject;LNSObject;", "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "LCoTouchlabSqueakyStmtJoinAlias;LNSString;LNSObject;LNSObject;", "(Lco/touchlab/squeaky/stmt/JoinAlias;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "isNull", "LNSString;", "(Ljava/lang/String;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "LCoTouchlabSqueakyStmtJoinAlias;LNSString;", "(Lco/touchlab/squeaky/stmt/JoinAlias;Ljava/lang/String;)Lco/touchlab/squeaky/stmt/Where<TT;>;", "isNotNull", "and", "or", "not", "()Lco/touchlab/squeaky/stmt/query/Queryable<TT;>;", "join", "makeJoin", "LNSString;LNSString;LIOSClass;", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class<TT;>;)Lco/touchlab/squeaky/stmt/JoinAlias;", "getFromStatement", "Z", "()Lco/touchlab/squeaky/stmt/Where<TT;>;", "getWhereStatement", "()Lco/touchlab/squeaky/dao/Dao$QueryModifiers<TT;>;", "appendSql", "LJavaLangStringBuilder;Z", "toString", "Lco/touchlab/squeaky/dao/ModelDao<TT;>;", "Lco/touchlab/squeaky/table/GeneratedTableMapper<TT;>;", "Ljava/util/List<Lco/touchlab/squeaky/stmt/JoinAlias;>;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Lco/touchlab/squeaky/stmt/query/Queryable<TT;>;Lco/touchlab/squeaky/dao/Query;" };
+  static const J2ObjcClassInfo _CoTouchlabSqueakyStmtWhere = { "Where", "co.touchlab.squeaky.stmt", ptrTable, methods, fields, 7, 0x1, 45, 11, -1, -1, -1, 53, -1 };
   return &_CoTouchlabSqueakyStmtWhere;
 }
 

@@ -55,7 +55,7 @@
 
 - (void)clear;
 
-- (id)clone;
+- (id)java_clone;
 
 - (jboolean)containsKeyWithNSString:(NSString *)key;
 

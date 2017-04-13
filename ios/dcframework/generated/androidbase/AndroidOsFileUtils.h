@@ -101,6 +101,12 @@ inline jint AndroidOsFileUtils_get_S_IXOTH();
 #define AndroidOsFileUtils_S_IXOTH 1
 J2OBJC_STATIC_FIELD_CONSTANT(AndroidOsFileUtils, S_IXOTH, jint)
 
+FOUNDATION_EXPORT void AndroidOsFileUtils_init(AndroidOsFileUtils *self);
+
+FOUNDATION_EXPORT AndroidOsFileUtils *new_AndroidOsFileUtils_init() NS_RETURNS_RETAINED;
+
+FOUNDATION_EXPORT AndroidOsFileUtils *create_AndroidOsFileUtils_init();
+
 FOUNDATION_EXPORT jboolean AndroidOsFileUtils_getFileStatusWithNSString_withAndroidOsFileUtils_FileStatus_(NSString *path, AndroidOsFileUtils_FileStatus *status);
 
 FOUNDATION_EXPORT jint AndroidOsFileUtils_setPermissionsWithNSString_withInt_withInt_withInt_(NSString *file, jint mode, jint uid, jint gid);
@@ -114,12 +120,6 @@ FOUNDATION_EXPORT jboolean AndroidOsFileUtils_copyToFileWithJavaIoInputStream_wi
 FOUNDATION_EXPORT jboolean AndroidOsFileUtils_isFilenameSafeWithJavaIoFile_(JavaIoFile *file);
 
 FOUNDATION_EXPORT NSString *AndroidOsFileUtils_readTextFileWithJavaIoFile_withInt_withNSString_(JavaIoFile *file, jint max, NSString *ellipsis);
-
-FOUNDATION_EXPORT void AndroidOsFileUtils_init(AndroidOsFileUtils *self);
-
-FOUNDATION_EXPORT AndroidOsFileUtils *new_AndroidOsFileUtils_init() NS_RETURNS_RETAINED;
-
-FOUNDATION_EXPORT AndroidOsFileUtils *create_AndroidOsFileUtils_init();
 
 J2OBJC_TYPE_LITERAL_HEADER(AndroidOsFileUtils)
 

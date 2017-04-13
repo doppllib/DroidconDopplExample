@@ -114,7 +114,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeMap)
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribeMap_MapSubscriber class]);
   RELEASE_(actual_);
   RELEASE_(mapper_);
   [super dealloc];

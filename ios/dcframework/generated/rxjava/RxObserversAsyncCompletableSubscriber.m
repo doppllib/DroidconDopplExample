@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/observers/AsyncCompletableSubscriber.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxObserversAsyncCompletableSubscriber.h"
 #include "RxPluginsRxJavaHooks.h"
@@ -27,6 +26,13 @@ J2OBJC_INITIALIZED_DEFN(RxObserversAsyncCompletableSubscriber)
 RxObserversAsyncCompletableSubscriber_Unsubscribed *RxObserversAsyncCompletableSubscriber_UNSUBSCRIBED;
 
 @implementation RxObserversAsyncCompletableSubscriber
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxObserversAsyncCompletableSubscriber_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d {
   if (![((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(upstream_)) compareAndSetWithId:nil withId:d]) {
@@ -61,13 +67,6 @@ RxObserversAsyncCompletableSubscriber_Unsubscribed *RxObserversAsyncCompletableS
   }
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxObserversAsyncCompletableSubscriber_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(upstream_);
   [super dealloc];
@@ -75,21 +74,21 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x11, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x4, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x11, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x14, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x11, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[1].selector = @selector(onStart);
-  methods[2].selector = @selector(isUnsubscribed);
-  methods[3].selector = @selector(clear);
-  methods[4].selector = @selector(unsubscribe);
-  methods[5].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(onSubscribeWithRxSubscription:);
+  methods[2].selector = @selector(onStart);
+  methods[3].selector = @selector(isUnsubscribed);
+  methods[4].selector = @selector(clear);
+  methods[5].selector = @selector(unsubscribe);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "UNSUBSCRIBED", "LRxObserversAsyncCompletableSubscriber_Unsubscribed;", .constantValue.asLong = 0, 0x18, -1, 2, -1, -1 },
@@ -118,13 +117,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObserversAsyncCompletableSubscriber)
 
 @implementation RxObserversAsyncCompletableSubscriber_Unsubscribed
 
-- (void)unsubscribe {
-}
-
-- (jboolean)isUnsubscribed {
-  return true;
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   RxObserversAsyncCompletableSubscriber_Unsubscribed_init(self);
@@ -132,17 +124,24 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (void)unsubscribe {
+}
+
+- (jboolean)isUnsubscribed {
+  return true;
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(unsubscribe);
-  methods[1].selector = @selector(isUnsubscribed);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(unsubscribe);
+  methods[2].selector = @selector(isUnsubscribed);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "LRxObserversAsyncCompletableSubscriber;" };
   static const J2ObjcClassInfo _RxObserversAsyncCompletableSubscriber_Unsubscribed = { "Unsubscribed", "rx.observers", ptrTable, methods, NULL, 7, 0x18, 3, 0, 0, -1, -1, -1, -1 };

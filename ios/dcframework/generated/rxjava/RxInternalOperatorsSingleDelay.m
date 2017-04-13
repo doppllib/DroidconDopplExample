@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/SingleDelay.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxInternalOperatorsSingleDelay.h"
 #include "RxScheduler.h"

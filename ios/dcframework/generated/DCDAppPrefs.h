@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_DCDAppPrefs
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (DCDAppPrefs_) && (INCLUDE_ALL_DCDAppPrefs || defined(INCLUDE_DCDAppPrefs))
 #define DCDAppPrefs_
 
@@ -111,13 +116,13 @@ inline NSString *DCDAppPrefs_get_SHOW_SLACK_DIALOG();
 FOUNDATION_EXPORT NSString *DCDAppPrefs_SHOW_SLACK_DIALOG;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(DCDAppPrefs, SHOW_SLACK_DIALOG, NSString *)
 
-FOUNDATION_EXPORT DCDAppPrefs *DCDAppPrefs_getInstanceWithAndroidContentContext_(AndroidContentContext *context);
-
 FOUNDATION_EXPORT void DCDAppPrefs_init(DCDAppPrefs *self);
 
 FOUNDATION_EXPORT DCDAppPrefs *new_DCDAppPrefs_init() NS_RETURNS_RETAINED;
 
 FOUNDATION_EXPORT DCDAppPrefs *create_DCDAppPrefs_init();
+
+FOUNDATION_EXPORT DCDAppPrefs *DCDAppPrefs_getInstanceWithAndroidContentContext_(AndroidContentContext *context);
 
 J2OBJC_TYPE_LITERAL_HEADER(DCDAppPrefs)
 
@@ -125,4 +130,8 @@ J2OBJC_TYPE_LITERAL_HEADER(DCDAppPrefs)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_DCDAppPrefs")

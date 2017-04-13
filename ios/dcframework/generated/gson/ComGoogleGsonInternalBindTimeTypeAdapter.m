@@ -31,28 +31,35 @@
 
 J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindTimeTypeAdapter, format_, JavaTextDateFormat *)
 
-@interface ComGoogleGsonInternalBindTimeTypeAdapter_$1 : NSObject < ComGoogleGsonTypeAdapterFactory >
+@interface ComGoogleGsonInternalBindTimeTypeAdapter_1 : NSObject < ComGoogleGsonTypeAdapterFactory >
+
+- (instancetype)init;
 
 - (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
                         withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTimeTypeAdapter_$1)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTimeTypeAdapter_1)
 
-__attribute__((unused)) static void ComGoogleGsonInternalBindTimeTypeAdapter_$1_init(ComGoogleGsonInternalBindTimeTypeAdapter_$1 *self);
+__attribute__((unused)) static void ComGoogleGsonInternalBindTimeTypeAdapter_1_init(ComGoogleGsonInternalBindTimeTypeAdapter_1 *self);
 
-__attribute__((unused)) static ComGoogleGsonInternalBindTimeTypeAdapter_$1 *new_ComGoogleGsonInternalBindTimeTypeAdapter_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalBindTimeTypeAdapter_1 *new_ComGoogleGsonInternalBindTimeTypeAdapter_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalBindTimeTypeAdapter_$1 *create_ComGoogleGsonInternalBindTimeTypeAdapter_$1_init();
+__attribute__((unused)) static ComGoogleGsonInternalBindTimeTypeAdapter_1 *create_ComGoogleGsonInternalBindTimeTypeAdapter_1_init();
 
 J2OBJC_INITIALIZED_DEFN(ComGoogleGsonInternalBindTimeTypeAdapter)
 
 id<ComGoogleGsonTypeAdapterFactory> ComGoogleGsonInternalBindTimeTypeAdapter_FACTORY;
 
 @implementation ComGoogleGsonInternalBindTimeTypeAdapter
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTimeTypeAdapter_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaSqlTime *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   @synchronized(self) {
@@ -77,13 +84,6 @@ id<ComGoogleGsonTypeAdapterFactory> ComGoogleGsonInternalBindTimeTypeAdapter_FAC
   }
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTimeTypeAdapter_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(format_);
   [super dealloc];
@@ -91,28 +91,28 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaSqlTime;", 0x21, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x21, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaSqlTime;", 0x21, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x21, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "FACTORY", "LComGoogleGsonTypeAdapterFactory;", .constantValue.asLong = 0, 0x19, -1, 7, -1, -1 },
+    { "FACTORY", "LComGoogleGsonTypeAdapterFactory;", .constantValue.asLong = 0, 0x19, -1, 5, -1, -1 },
     { "format_", "LJavaTextDateFormat;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/sql/Time;", "write", "LComGoogleGsonStreamJsonWriter;LJavaSqlTime;", "(Lcom/google/gson/stream/JsonWriter;Ljava/sql/Time;)V", &ComGoogleGsonInternalBindTimeTypeAdapter_FACTORY, "Lcom/google/gson/TypeAdapter<Ljava/sql/Time;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTimeTypeAdapter = { "TimeTypeAdapter", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x11, 3, 2, -1, -1, -1, 8, -1 };
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaSqlTime;", &ComGoogleGsonInternalBindTimeTypeAdapter_FACTORY, "Lcom/google/gson/TypeAdapter<Ljava/sql/Time;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTimeTypeAdapter = { "TimeTypeAdapter", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x11, 3, 2, -1, -1, -1, 6, -1 };
   return &_ComGoogleGsonInternalBindTimeTypeAdapter;
 }
 
 + (void)initialize {
   if (self == [ComGoogleGsonInternalBindTimeTypeAdapter class]) {
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTimeTypeAdapter_FACTORY, new_ComGoogleGsonInternalBindTimeTypeAdapter_$1_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTimeTypeAdapter_FACTORY, new_ComGoogleGsonInternalBindTimeTypeAdapter_1_init());
     J2OBJC_SET_INITIALIZED(ComGoogleGsonInternalBindTimeTypeAdapter)
   }
 }
@@ -134,45 +134,45 @@ ComGoogleGsonInternalBindTimeTypeAdapter *create_ComGoogleGsonInternalBindTimeTy
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalBindTimeTypeAdapter)
 
-@implementation ComGoogleGsonInternalBindTimeTypeAdapter_$1
-
-- (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
-                        withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken {
-  return [((ComGoogleGsonReflectTypeToken *) nil_chk(typeToken)) getRawType] == (id) JavaSqlTime_class_() ? create_ComGoogleGsonInternalBindTimeTypeAdapter_init() : nil;
-}
+@implementation ComGoogleGsonInternalBindTimeTypeAdapter_1
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
-  ComGoogleGsonInternalBindTimeTypeAdapter_$1_init(self);
+  ComGoogleGsonInternalBindTimeTypeAdapter_1_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
+                        withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken {
+  return [((ComGoogleGsonReflectTypeToken *) nil_chk(typeToken)) getRawType] == JavaSqlTime_class_() ? create_ComGoogleGsonInternalBindTimeTypeAdapter_init() : nil;
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LComGoogleGsonTypeAdapter;", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LComGoogleGsonTypeAdapter;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "create", "LComGoogleGsonGson;LComGoogleGsonReflectTypeToken;", "<T:Ljava/lang/Object;>(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken<TT;>;)Lcom/google/gson/TypeAdapter<TT;>;", "LComGoogleGsonInternalBindTimeTypeAdapter;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTimeTypeAdapter_$1 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, -1, -1, -1 };
-  return &_ComGoogleGsonInternalBindTimeTypeAdapter_$1;
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTimeTypeAdapter_1 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, -1, -1, -1 };
+  return &_ComGoogleGsonInternalBindTimeTypeAdapter_1;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTimeTypeAdapter_$1_init(ComGoogleGsonInternalBindTimeTypeAdapter_$1 *self) {
+void ComGoogleGsonInternalBindTimeTypeAdapter_1_init(ComGoogleGsonInternalBindTimeTypeAdapter_1 *self) {
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalBindTimeTypeAdapter_$1 *new_ComGoogleGsonInternalBindTimeTypeAdapter_$1_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTimeTypeAdapter_$1, init)
+ComGoogleGsonInternalBindTimeTypeAdapter_1 *new_ComGoogleGsonInternalBindTimeTypeAdapter_1_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTimeTypeAdapter_1, init)
 }
 
-ComGoogleGsonInternalBindTimeTypeAdapter_$1 *create_ComGoogleGsonInternalBindTimeTypeAdapter_$1_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTimeTypeAdapter_$1, init)
+ComGoogleGsonInternalBindTimeTypeAdapter_1 *create_ComGoogleGsonInternalBindTimeTypeAdapter_1_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTimeTypeAdapter_1, init)
 }

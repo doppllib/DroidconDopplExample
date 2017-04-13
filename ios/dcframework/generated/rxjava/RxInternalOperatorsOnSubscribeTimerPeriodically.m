@@ -13,30 +13,27 @@
 #include "java/lang/Long.h"
 #include "java/util/concurrent/TimeUnit.h"
 
-@interface RxInternalOperatorsOnSubscribeTimerPeriodically_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOnSubscribeTimerPeriodically_1 : NSObject < RxFunctionsAction0 > {
  @public
-  jlong counter_;
   RxSubscriber *val$child_;
   RxScheduler_Worker *val$worker_;
+  jlong counter_;
 }
-
-- (void)call;
 
 - (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
               withRxScheduler_Worker:(RxScheduler_Worker *)capture$1;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeTimerPeriodically_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeTimerPeriodically_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeTimerPeriodically_$1, val$child_, RxSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeTimerPeriodically_$1, val$worker_, RxScheduler_Worker *)
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeTimerPeriodically_1_initWithRxSubscriber_withRxScheduler_Worker_(RxInternalOperatorsOnSubscribeTimerPeriodically_1 *self, RxSubscriber *capture$0, RxScheduler_Worker *capture$1);
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeTimerPeriodically_$1_initWithRxSubscriber_withRxScheduler_Worker_(RxInternalOperatorsOnSubscribeTimerPeriodically_$1 *self, RxSubscriber *capture$0, RxScheduler_Worker *capture$1);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeTimerPeriodically_1 *new_RxInternalOperatorsOnSubscribeTimerPeriodically_1_initWithRxSubscriber_withRxScheduler_Worker_(RxSubscriber *capture$0, RxScheduler_Worker *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeTimerPeriodically_$1 *new_RxInternalOperatorsOnSubscribeTimerPeriodically_$1_initWithRxSubscriber_withRxScheduler_Worker_(RxSubscriber *capture$0, RxScheduler_Worker *capture$1) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeTimerPeriodically_$1 *create_RxInternalOperatorsOnSubscribeTimerPeriodically_$1_initWithRxSubscriber_withRxScheduler_Worker_(RxSubscriber *capture$0, RxScheduler_Worker *capture$1);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeTimerPeriodically_1 *create_RxInternalOperatorsOnSubscribeTimerPeriodically_1_initWithRxSubscriber_withRxScheduler_Worker_(RxSubscriber *capture$0, RxScheduler_Worker *capture$1);
 
 @implementation RxInternalOperatorsOnSubscribeTimerPeriodically
 
@@ -51,7 +48,7 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit
 - (void)callWithId:(RxSubscriber *)child {
   RxScheduler_Worker *worker = [((RxScheduler *) nil_chk(scheduler_)) createWorker];
   [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:worker];
-  [((RxScheduler_Worker *) nil_chk(worker)) schedulePeriodicallyWithRxFunctionsAction0:create_RxInternalOperatorsOnSubscribeTimerPeriodically_$1_initWithRxSubscriber_withRxScheduler_Worker_(child, worker) withLong:initialDelay_ withLong:period_ withJavaUtilConcurrentTimeUnit:unit_];
+  [((RxScheduler_Worker *) nil_chk(worker)) schedulePeriodicallyWithRxFunctionsAction0:create_RxInternalOperatorsOnSubscribeTimerPeriodically_1_initWithRxSubscriber_withRxScheduler_Worker_(child, worker) withLong:initialDelay_ withLong:period_ withJavaUtilConcurrentTimeUnit:unit_];
 }
 
 - (void)dealloc {
@@ -101,7 +98,13 @@ RxInternalOperatorsOnSubscribeTimerPeriodically *create_RxInternalOperatorsOnSub
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeTimerPeriodically)
 
-@implementation RxInternalOperatorsOnSubscribeTimerPeriodically_$1
+@implementation RxInternalOperatorsOnSubscribeTimerPeriodically_1
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
+              withRxScheduler_Worker:(RxScheduler_Worker *)capture$1 {
+  RxInternalOperatorsOnSubscribeTimerPeriodically_1_initWithRxSubscriber_withRxScheduler_Worker_(self, capture$0, capture$1);
+  return self;
+}
 
 - (void)call {
   @try {
@@ -117,12 +120,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeTimerPeriodically
   }
 }
 
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
-              withRxScheduler_Worker:(RxScheduler_Worker *)capture$1 {
-  RxInternalOperatorsOnSubscribeTimerPeriodically_$1_initWithRxSubscriber_withRxScheduler_Worker_(self, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$child_);
   RELEASE_(val$worker_);
@@ -131,36 +128,36 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeTimerPeriodically
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxSubscriber:withRxScheduler_Worker:);
+  methods[0].selector = @selector(initWithRxSubscriber:withRxScheduler_Worker:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "counter_", "J", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
-    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
     { "val$worker_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "counter_", "J", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxSubscriber;LRxScheduler_Worker;", "(Lrx/Subscriber<-Ljava/lang/Long;>;Lrx/Scheduler$Worker;)V", "Lrx/Subscriber<-Ljava/lang/Long;>;", "LRxInternalOperatorsOnSubscribeTimerPeriodically;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeTimerPeriodically_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 3, 3, -1, 4, -1, -1 };
-  return &_RxInternalOperatorsOnSubscribeTimerPeriodically_$1;
+  static const void *ptrTable[] = { "Lrx/Subscriber<-Ljava/lang/Long;>;", "LRxInternalOperatorsOnSubscribeTimerPeriodically;", "callWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeTimerPeriodically_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 3, 1, -1, 2, -1, -1 };
+  return &_RxInternalOperatorsOnSubscribeTimerPeriodically_1;
 }
 
 @end
 
-void RxInternalOperatorsOnSubscribeTimerPeriodically_$1_initWithRxSubscriber_withRxScheduler_Worker_(RxInternalOperatorsOnSubscribeTimerPeriodically_$1 *self, RxSubscriber *capture$0, RxScheduler_Worker *capture$1) {
+void RxInternalOperatorsOnSubscribeTimerPeriodically_1_initWithRxSubscriber_withRxScheduler_Worker_(RxInternalOperatorsOnSubscribeTimerPeriodically_1 *self, RxSubscriber *capture$0, RxScheduler_Worker *capture$1) {
   JreStrongAssign(&self->val$child_, capture$0);
   JreStrongAssign(&self->val$worker_, capture$1);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOnSubscribeTimerPeriodically_$1 *new_RxInternalOperatorsOnSubscribeTimerPeriodically_$1_initWithRxSubscriber_withRxScheduler_Worker_(RxSubscriber *capture$0, RxScheduler_Worker *capture$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeTimerPeriodically_$1, initWithRxSubscriber_withRxScheduler_Worker_, capture$0, capture$1)
+RxInternalOperatorsOnSubscribeTimerPeriodically_1 *new_RxInternalOperatorsOnSubscribeTimerPeriodically_1_initWithRxSubscriber_withRxScheduler_Worker_(RxSubscriber *capture$0, RxScheduler_Worker *capture$1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeTimerPeriodically_1, initWithRxSubscriber_withRxScheduler_Worker_, capture$0, capture$1)
 }
 
-RxInternalOperatorsOnSubscribeTimerPeriodically_$1 *create_RxInternalOperatorsOnSubscribeTimerPeriodically_$1_initWithRxSubscriber_withRxScheduler_Worker_(RxSubscriber *capture$0, RxScheduler_Worker *capture$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeTimerPeriodically_$1, initWithRxSubscriber_withRxScheduler_Worker_, capture$0, capture$1)
+RxInternalOperatorsOnSubscribeTimerPeriodically_1 *create_RxInternalOperatorsOnSubscribeTimerPeriodically_1_initWithRxSubscriber_withRxScheduler_Worker_(RxSubscriber *capture$0, RxScheduler_Worker *capture$1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeTimerPeriodically_1, initWithRxSubscriber_withRxScheduler_Worker_, capture$0, capture$1)
 }

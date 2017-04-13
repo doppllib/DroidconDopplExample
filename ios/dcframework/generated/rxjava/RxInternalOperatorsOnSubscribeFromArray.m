@@ -34,8 +34,8 @@ J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsOnSubscribeFromArray_FromArrayPr
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, NULL, 0x1, -1, 0, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 1, 2, -1, 3, -1, -1 },
+    { NULL, NULL, 0x1, -1, 0, -1, 1, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -43,10 +43,10 @@ J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsOnSubscribeFromArray_FromArrayPr
   methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "array_", "[LNSObject;", .constantValue.asLong = 0, 0x10, -1, -1, 4, -1 },
+    { "array_", "[LNSObject;", .constantValue.asLong = 0, 0x10, -1, -1, 5, -1 },
   };
-  static const void *ptrTable[] = { "[LNSObject;", "call", "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)V", "[TT;", "LRxInternalOperatorsOnSubscribeFromArray_FromArrayProducer;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Lrx/Observable$OnSubscribe<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeFromArray = { "OnSubscribeFromArray", "rx.internal.operators", ptrTable, methods, fields, 7, 0x11, 2, 1, -1, 5, -1, 6, -1 };
+  static const void *ptrTable[] = { "[LNSObject;", "([TT;)V", "call", "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)V", "[TT;", "LRxInternalOperatorsOnSubscribeFromArray_FromArrayProducer;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Lrx/Observable$OnSubscribe<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeFromArray = { "OnSubscribeFromArray", "rx.internal.operators", ptrTable, methods, fields, 7, 0x11, 2, 1, -1, 6, -1, 7, -1 };
   return &_RxInternalOperatorsOnSubscribeFromArray;
 }
 
@@ -145,8 +145,12 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeFromArray)
   }
 }
 
+- (void)__javaClone:(RxInternalOperatorsOnSubscribeFromArray_FromArrayProducer *)original {
+  [super __javaClone:original];
+  [child_ release];
+}
+
 - (void)dealloc {
-  RELEASE_(child_);
   RELEASE_(array_);
   [super dealloc];
 }
@@ -180,7 +184,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeFromArray)
 
 void RxInternalOperatorsOnSubscribeFromArray_FromArrayProducer_initWithRxSubscriber_withNSObjectArray_(RxInternalOperatorsOnSubscribeFromArray_FromArrayProducer *self, RxSubscriber *child, IOSObjectArray *array) {
   JavaUtilConcurrentAtomicAtomicLong_init(self);
-  JreStrongAssign(&self->child_, child);
+  self->child_ = child;
   JreStrongAssign(&self->array_, array);
 }
 

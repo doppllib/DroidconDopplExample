@@ -47,6 +47,12 @@
 
 J2OBJC_EMPTY_STATIC_INIT(CoTouchlabSqueakyDaoDaoHelper)
 
+FOUNDATION_EXPORT void CoTouchlabSqueakyDaoDaoHelper_init(CoTouchlabSqueakyDaoDaoHelper *self);
+
+FOUNDATION_EXPORT CoTouchlabSqueakyDaoDaoHelper *new_CoTouchlabSqueakyDaoDaoHelper_init() NS_RETURNS_RETAINED;
+
+FOUNDATION_EXPORT CoTouchlabSqueakyDaoDaoHelper *create_CoTouchlabSqueakyDaoDaoHelper_init();
+
 FOUNDATION_EXPORT IOSObjectArray *CoTouchlabSqueakyDaoDaoHelper_refreshWithNSString_(NSString *refreshTree);
 
 FOUNDATION_EXPORT CoTouchlabSqueakyDaoDaoHelper_ValBuilder *CoTouchlabSqueakyDaoDaoHelper_vals();
@@ -56,12 +62,6 @@ FOUNDATION_EXPORT CoTouchlabSqueakyDaoDao_ForeignRefresh *CoTouchlabSqueakyDaoDa
 FOUNDATION_EXPORT IOSObjectArray *CoTouchlabSqueakyDaoDaoHelper_fillForeignRefreshMapWithCoTouchlabSqueakyDaoSqueakyContext_withIOSClass_withInt_(CoTouchlabSqueakyDaoSqueakyContext *squeakyContext, IOSClass *type, jint count);
 
 FOUNDATION_EXPORT IOSObjectArray *CoTouchlabSqueakyDaoDaoHelper_fillForeignRefreshMapWithCoTouchlabSqueakyDaoSqueakyContext_withCoTouchlabSqueakyFieldFieldTypeArray_withInt_(CoTouchlabSqueakyDaoSqueakyContext *squeakyContext, IOSObjectArray *fieldTypes, jint count);
-
-FOUNDATION_EXPORT void CoTouchlabSqueakyDaoDaoHelper_init(CoTouchlabSqueakyDaoDaoHelper *self);
-
-FOUNDATION_EXPORT CoTouchlabSqueakyDaoDaoHelper *new_CoTouchlabSqueakyDaoDaoHelper_init() NS_RETURNS_RETAINED;
-
-FOUNDATION_EXPORT CoTouchlabSqueakyDaoDaoHelper *create_CoTouchlabSqueakyDaoDaoHelper_init();
 
 J2OBJC_TYPE_LITERAL_HEADER(CoTouchlabSqueakyDaoDaoHelper)
 

@@ -103,14 +103,14 @@ J2OBJC_INITIALIZED_DEFN(CoTouchlabSqueakyFieldTypesBaseDataType)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, NULL, 0x1, -1, 0, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, 1, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x401, 2, 3, 4, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x401, 5, 6, 4, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 7, 6, 4, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 8, 9, 4, -1, -1, -1 },
+    { NULL, NULL, 0x1, -1, 0, -1, 1, -1, -1 },
+    { NULL, NULL, 0x1, -1, 2, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x401, 3, 4, 5, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x401, 6, 7, 5, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 8, 7, 5, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 9, 10, 5, -1, -1, -1 },
     { NULL, "LCoTouchlabSqueakyFieldSqlType;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "[LIOSClass;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "[LIOSClass;", 0x1, -1, -1, -1, 11, -1, -1 },
     { NULL, "[LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
@@ -134,11 +134,11 @@ J2OBJC_INITIALIZED_DEFN(CoTouchlabSqueakyFieldTypesBaseDataType)
   methods[12].selector = @selector(isComparable);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "NO_CLASSES", "[LIOSClass;", .constantValue.asLong = 0, 0x1a, -1, 10, 11, -1 },
+    { "NO_CLASSES", "[LIOSClass;", .constantValue.asLong = 0, 0x1a, -1, 12, 13, -1 },
     { "sqlType_", "LCoTouchlabSqueakyFieldSqlType;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
-    { "classes_", "[LIOSClass;", .constantValue.asLong = 0, 0x12, -1, -1, 11, -1 },
+    { "classes_", "[LIOSClass;", .constantValue.asLong = 0, 0x12, -1, -1, 13, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "LCoTouchlabSqueakyFieldSqlType;", "parseDefaultString", "LCoTouchlabSqueakyFieldFieldType;LNSString;", "LJavaSqlSQLException;", "resultToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LAndroidDatabaseCursor;I", "resultToJava", "makeConfigObject", "LCoTouchlabSqueakyFieldFieldType;", &CoTouchlabSqueakyFieldTypesBaseDataType_NO_CLASSES, "[Ljava/lang/Class<*>;" };
+  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "(Lco/touchlab/squeaky/field/SqlType;[Ljava/lang/Class<*>;)V", "LCoTouchlabSqueakyFieldSqlType;", "parseDefaultString", "LCoTouchlabSqueakyFieldFieldType;LNSString;", "LJavaSqlSQLException;", "resultToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LAndroidDatabaseCursor;I", "resultToJava", "makeConfigObject", "LCoTouchlabSqueakyFieldFieldType;", "()[Ljava/lang/Class<*>;", &CoTouchlabSqueakyFieldTypesBaseDataType_NO_CLASSES, "[Ljava/lang/Class<*>;" };
   static const J2ObjcClassInfo _CoTouchlabSqueakyFieldTypesBaseDataType = { "BaseDataType", "co.touchlab.squeaky.field.types", ptrTable, methods, fields, 7, 0x401, 13, 3, -1, -1, -1, -1, -1 };
   return &_CoTouchlabSqueakyFieldTypesBaseDataType;
 }

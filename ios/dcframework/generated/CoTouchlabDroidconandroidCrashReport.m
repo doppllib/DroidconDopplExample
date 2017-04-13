@@ -10,10 +10,6 @@
 
 @implementation CoTouchlabDroidconandroidCrashReport
 
-+ (void)logExceptionWithNSException:(NSException *)t {
-  CoTouchlabDroidconandroidCrashReport_logExceptionWithNSException_(t);
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   CoTouchlabDroidconandroidCrashReport_init(self);
@@ -21,15 +17,19 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
++ (void)logExceptionWithNSException:(NSException *)t {
+  CoTouchlabDroidconandroidCrashReport_logExceptionWithNSException_(t);
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x9, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(logExceptionWithNSException:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(logExceptionWithNSException:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "logException", "LNSException;" };
   static const J2ObjcClassInfo _CoTouchlabDroidconandroidCrashReport = { "CrashReport", "co.touchlab.droidconandroid", ptrTable, methods, NULL, 7, 0x1, 2, 0, -1, -1, -1, -1, -1 };
@@ -37,11 +37,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
-
-void CoTouchlabDroidconandroidCrashReport_logExceptionWithNSException_(NSException *t) {
-  CoTouchlabDroidconandroidCrashReport_initialize();
-  [((id<DCPPlatformClient>) nil_chk(DCPAppManager_getPlatformClient())) logExceptionWithNSException:t];
-}
 
 void CoTouchlabDroidconandroidCrashReport_init(CoTouchlabDroidconandroidCrashReport *self) {
   NSObject_init(self);
@@ -53,6 +48,11 @@ CoTouchlabDroidconandroidCrashReport *new_CoTouchlabDroidconandroidCrashReport_i
 
 CoTouchlabDroidconandroidCrashReport *create_CoTouchlabDroidconandroidCrashReport_init() {
   J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidCrashReport, init)
+}
+
+void CoTouchlabDroidconandroidCrashReport_logExceptionWithNSException_(NSException *t) {
+  CoTouchlabDroidconandroidCrashReport_initialize();
+  [((id<DCPPlatformClient>) nil_chk(DCPAppManager_getPlatformClient())) logExceptionWithNSException:t];
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabDroidconandroidCrashReport)

@@ -78,7 +78,7 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleGsonJsonPrimitive)
 - (void)setValueWithId:(id)primitive {
   if ([primitive isKindOfClass:[JavaLangCharacter class]]) {
     jchar c = [((JavaLangCharacter *) nil_chk(((JavaLangCharacter *) cast_chk(primitive, [JavaLangCharacter class])))) charValue];
-    JreStrongAssign(&self->value_, NSString_valueOfChar_(c));
+    JreStrongAssign(&self->value_, NSString_java_valueOfChar_(c));
   }
   else {
     ComGoogleGsonInternal_Gson_Preconditions_checkArgumentWithBoolean_([primitive isKindOfClass:[NSNumber class]] || ComGoogleGsonJsonPrimitive_isPrimitiveOrStringWithId_(primitive));
@@ -186,7 +186,7 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleGsonJsonPrimitive)
   if (self == obj) {
     return true;
   }
-  if (obj == nil || [self java_getClass] != (id) [obj java_getClass]) {
+  if (obj == nil || [self java_getClass] != [obj java_getClass]) {
     return false;
   }
   ComGoogleGsonJsonPrimitive *other = (ComGoogleGsonJsonPrimitive *) cast_chk(obj, [ComGoogleGsonJsonPrimitive class]);

@@ -34,34 +34,30 @@ __attribute__((unused)) static RxSinglesBlockingSingle *new_RxSinglesBlockingSin
 
 __attribute__((unused)) static RxSinglesBlockingSingle *create_RxSinglesBlockingSingle_initWithRxSingle_(RxSingle *single);
 
-@interface RxSinglesBlockingSingle_$1 : RxSingleSubscriber {
+@interface RxSinglesBlockingSingle_1 : RxSingleSubscriber {
  @public
   JavaUtilConcurrentAtomicAtomicReference *val$returnItem_;
   JavaUtilConcurrentCountDownLatch *val$latch_;
   JavaUtilConcurrentAtomicAtomicReference *val$returnException_;
 }
 
-- (void)onSuccessWithId:(id)value;
-
-- (void)onErrorWithNSException:(NSException *)error;
-
 - (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
                            withJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$1
                     withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$2;
 
+- (void)onSuccessWithId:(id)value;
+
+- (void)onErrorWithNSException:(NSException *)error;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxSinglesBlockingSingle_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxSinglesBlockingSingle_1)
 
-J2OBJC_FIELD_SETTER(RxSinglesBlockingSingle_$1, val$returnItem_, JavaUtilConcurrentAtomicAtomicReference *)
-J2OBJC_FIELD_SETTER(RxSinglesBlockingSingle_$1, val$latch_, JavaUtilConcurrentCountDownLatch *)
-J2OBJC_FIELD_SETTER(RxSinglesBlockingSingle_$1, val$returnException_, JavaUtilConcurrentAtomicAtomicReference *)
+__attribute__((unused)) static void RxSinglesBlockingSingle_1_initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_(RxSinglesBlockingSingle_1 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, JavaUtilConcurrentCountDownLatch *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2);
 
-__attribute__((unused)) static void RxSinglesBlockingSingle_$1_initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_(RxSinglesBlockingSingle_$1 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, JavaUtilConcurrentCountDownLatch *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2);
+__attribute__((unused)) static RxSinglesBlockingSingle_1 *new_RxSinglesBlockingSingle_1_initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0, JavaUtilConcurrentCountDownLatch *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxSinglesBlockingSingle_$1 *new_RxSinglesBlockingSingle_$1_initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0, JavaUtilConcurrentCountDownLatch *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxSinglesBlockingSingle_$1 *create_RxSinglesBlockingSingle_$1_initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0, JavaUtilConcurrentCountDownLatch *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2);
+__attribute__((unused)) static RxSinglesBlockingSingle_1 *create_RxSinglesBlockingSingle_1_initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0, JavaUtilConcurrentCountDownLatch *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2);
 
 @implementation RxSinglesBlockingSingle
 
@@ -78,7 +74,7 @@ __attribute__((unused)) static RxSinglesBlockingSingle_$1 *create_RxSinglesBlock
   JavaUtilConcurrentAtomicAtomicReference *returnItem = create_JavaUtilConcurrentAtomicAtomicReference_init();
   JavaUtilConcurrentAtomicAtomicReference *returnException = create_JavaUtilConcurrentAtomicAtomicReference_init();
   JavaUtilConcurrentCountDownLatch *latch = create_JavaUtilConcurrentCountDownLatch_initWithInt_(1);
-  id<RxSubscription> subscription = [((RxSingle *) nil_chk(single_)) subscribeWithRxSingleSubscriber:create_RxSinglesBlockingSingle_$1_initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_(returnItem, latch, returnException)];
+  id<RxSubscription> subscription = [((RxSingle *) nil_chk(single_)) subscribeWithRxSingleSubscriber:create_RxSinglesBlockingSingle_1_initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_(returnItem, latch, returnException)];
   RxInternalUtilBlockingUtils_awaitForCompleteWithJavaUtilConcurrentCountDownLatch_withRxSubscription_(latch, subscription);
   NSException *throwable = [returnException get];
   if (throwable != nil) {
@@ -140,7 +136,14 @@ RxSinglesBlockingSingle *RxSinglesBlockingSingle_fromWithRxSingle_(RxSingle *sin
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSinglesBlockingSingle)
 
-@implementation RxSinglesBlockingSingle_$1
+@implementation RxSinglesBlockingSingle_1
+
+- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
+                           withJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$1
+                    withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$2 {
+  RxSinglesBlockingSingle_1_initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_(self, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)onSuccessWithId:(id)value {
   [((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(val$returnItem_)) setWithId:value];
@@ -152,13 +155,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSinglesBlockingSingle)
   [((JavaUtilConcurrentCountDownLatch *) nil_chk(val$latch_)) countDown];
 }
 
-- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
-                           withJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$1
-                    withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$2 {
-  RxSinglesBlockingSingle_$1_initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_(self, capture$0, capture$1, capture$2);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$returnItem_);
   RELEASE_(val$latch_);
@@ -168,39 +164,39 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSinglesBlockingSingle)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onSuccessWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicReference:withJavaUtilConcurrentCountDownLatch:withJavaUtilConcurrentAtomicAtomicReference:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicReference:withJavaUtilConcurrentCountDownLatch:withJavaUtilConcurrentAtomicAtomicReference:);
+  methods[1].selector = @selector(onSuccessWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$returnItem_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$returnItem_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
     { "val$latch_", "LJavaUtilConcurrentCountDownLatch;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$returnException_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "val$returnException_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
   };
-  static const void *ptrTable[] = { "onSuccess", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LJavaUtilConcurrentAtomicAtomicReference;LJavaUtilConcurrentCountDownLatch;LJavaUtilConcurrentAtomicAtomicReference;", "(Ljava/util/concurrent/atomic/AtomicReference<TT;>;Ljava/util/concurrent/CountDownLatch;Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Throwable;>;)V", "Ljava/util/concurrent/atomic/AtomicReference<TT;>;", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Throwable;>;", "LRxSinglesBlockingSingle;", "value", "Lrx/SingleSubscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxSinglesBlockingSingle_$1 = { "", "rx.singles", ptrTable, methods, fields, 7, 0x8008, 3, 3, 9, -1, 10, 11, -1 };
-  return &_RxSinglesBlockingSingle_$1;
+  static const void *ptrTable[] = { "onSuccess", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Ljava/util/concurrent/atomic/AtomicReference<TT;>;", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Throwable;>;", "LRxSinglesBlockingSingle;", "value", "Lrx/SingleSubscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxSinglesBlockingSingle_1 = { "", "rx.singles", ptrTable, methods, fields, 7, 0x8008, 3, 3, 7, -1, 8, 9, -1 };
+  return &_RxSinglesBlockingSingle_1;
 }
 
 @end
 
-void RxSinglesBlockingSingle_$1_initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_(RxSinglesBlockingSingle_$1 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, JavaUtilConcurrentCountDownLatch *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
+void RxSinglesBlockingSingle_1_initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_(RxSinglesBlockingSingle_1 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, JavaUtilConcurrentCountDownLatch *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
   JreStrongAssign(&self->val$returnItem_, capture$0);
   JreStrongAssign(&self->val$latch_, capture$1);
   JreStrongAssign(&self->val$returnException_, capture$2);
   RxSingleSubscriber_init(self);
 }
 
-RxSinglesBlockingSingle_$1 *new_RxSinglesBlockingSingle_$1_initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0, JavaUtilConcurrentCountDownLatch *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
-  J2OBJC_NEW_IMPL(RxSinglesBlockingSingle_$1, initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2)
+RxSinglesBlockingSingle_1 *new_RxSinglesBlockingSingle_1_initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0, JavaUtilConcurrentCountDownLatch *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
+  J2OBJC_NEW_IMPL(RxSinglesBlockingSingle_1, initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2)
 }
 
-RxSinglesBlockingSingle_$1 *create_RxSinglesBlockingSingle_$1_initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0, JavaUtilConcurrentCountDownLatch *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
-  J2OBJC_CREATE_IMPL(RxSinglesBlockingSingle_$1, initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2)
+RxSinglesBlockingSingle_1 *create_RxSinglesBlockingSingle_1_initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0, JavaUtilConcurrentCountDownLatch *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
+  J2OBJC_CREATE_IMPL(RxSinglesBlockingSingle_1, initWithJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2)
 }

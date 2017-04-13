@@ -9,11 +9,14 @@
 #include "RxSubscriber.h"
 #include "java/lang/IllegalArgumentException.h"
 
-@interface RxInternalOperatorsOperatorDematerialize_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorDematerialize_1 : RxSubscriber {
  @public
-  jboolean terminated_;
   RxSubscriber *val$child_;
+  jboolean terminated_;
 }
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
+                    withRxSubscriber:(RxSubscriber *)param0;
 
 - (void)onNextWithId:(RxNotification *)t;
 
@@ -21,20 +24,15 @@
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
-                    withRxSubscriber:(RxSubscriber *)arg$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorDematerialize_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorDematerialize_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDematerialize_$1, val$child_, RxSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorDematerialize_1_initWithRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDematerialize_1 *self, RxSubscriber *capture$0, RxSubscriber *param0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorDematerialize_$1_initWithRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDematerialize_$1 *self, RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorDematerialize_1 *new_RxInternalOperatorsOperatorDematerialize_1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *param0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorDematerialize_$1 *new_RxInternalOperatorsOperatorDematerialize_$1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *arg$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorDematerialize_$1 *create_RxInternalOperatorsOperatorDematerialize_$1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorDematerialize_1 *create_RxInternalOperatorsOperatorDematerialize_1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *param0);
 
 @implementation RxInternalOperatorsOperatorDematerialize
 
@@ -50,7 +48,7 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 J2OBJC_IGNORE_DESIGNATED_END
 
 - (RxSubscriber *)callWithId:(RxSubscriber *)child {
-  return create_RxInternalOperatorsOperatorDematerialize_$1_initWithRxSubscriber_withRxSubscriber_(child, child);
+  return create_RxInternalOperatorsOperatorDematerialize_1_initWithRxSubscriber_withRxSubscriber_(child, child);
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -143,7 +141,13 @@ RxInternalOperatorsOperatorDematerialize_Holder *create_RxInternalOperatorsOpera
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorDematerialize_Holder)
 
-@implementation RxInternalOperatorsOperatorDematerialize_$1
+@implementation RxInternalOperatorsOperatorDematerialize_1
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
+                    withRxSubscriber:(RxSubscriber *)param0 {
+  RxInternalOperatorsOperatorDematerialize_1_initWithRxSubscriber_withRxSubscriber_(self, capture$0, param0);
+  return self;
+}
 
 - (void)onNextWithId:(RxNotification *)t {
   switch ([[((RxNotification *) nil_chk(t)) getKind] ordinal]) {
@@ -178,52 +182,45 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorDematerialize_Holder
   }
 }
 
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
-                    withRxSubscriber:(RxSubscriber *)arg$0 {
-  RxInternalOperatorsOperatorDematerialize_$1_initWithRxSubscriber_withRxSubscriber_(self, capture$0, arg$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorDematerialize_$1 class]);
   RELEASE_(val$child_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
+    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxSubscriber:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxSubscriber:withRxSubscriber:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "terminated_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "terminated_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LRxNotification;", "(Lrx/Notification<TT;>;)V", "onError", "LNSException;", "LRxSubscriber;LRxSubscriber;", "(Lrx/Subscriber<-TT;>;Lrx/Subscriber<*>;)V", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorDematerialize;", "callWithId:", "Lrx/Subscriber<Lrx/Notification<TT;>;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorDematerialize_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 2, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsOperatorDematerialize_$1;
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "onNext", "LRxNotification;", "(Lrx/Notification<TT;>;)V", "onError", "LNSException;", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorDematerialize;", "callWithId:", "Lrx/Subscriber<Lrx/Notification<TT;>;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorDematerialize_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 2, 8, -1, 9, 10, -1 };
+  return &_RxInternalOperatorsOperatorDematerialize_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorDematerialize_$1_initWithRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDematerialize_$1 *self, RxSubscriber *capture$0, RxSubscriber *arg$0) {
+void RxInternalOperatorsOperatorDematerialize_1_initWithRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDematerialize_1 *self, RxSubscriber *capture$0, RxSubscriber *param0) {
   JreStrongAssign(&self->val$child_, capture$0);
-  RxSubscriber_initWithRxSubscriber_(self, arg$0);
+  RxSubscriber_initWithRxSubscriber_(self, param0);
 }
 
-RxInternalOperatorsOperatorDematerialize_$1 *new_RxInternalOperatorsOperatorDematerialize_$1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorDematerialize_$1, initWithRxSubscriber_withRxSubscriber_, capture$0, arg$0)
+RxInternalOperatorsOperatorDematerialize_1 *new_RxInternalOperatorsOperatorDematerialize_1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorDematerialize_1, initWithRxSubscriber_withRxSubscriber_, capture$0, param0)
 }
 
-RxInternalOperatorsOperatorDematerialize_$1 *create_RxInternalOperatorsOperatorDematerialize_$1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorDematerialize_$1, initWithRxSubscriber_withRxSubscriber_, capture$0, arg$0)
+RxInternalOperatorsOperatorDematerialize_1 *create_RxInternalOperatorsOperatorDematerialize_1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorDematerialize_1, initWithRxSubscriber_withRxSubscriber_, capture$0, param0)
 }

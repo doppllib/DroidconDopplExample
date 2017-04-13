@@ -9,12 +9,16 @@
 #include "RxSchedulersTimeInterval.h"
 #include "RxSubscriber.h"
 
-@interface RxInternalOperatorsOperatorTimeInterval_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorTimeInterval_1 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorTimeInterval *this$0_;
-  jlong lastTimestamp_;
   RxSubscriber *val$subscriber_;
+  jlong lastTimestamp_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorTimeInterval:(RxInternalOperatorsOperatorTimeInterval *)outer$
+                                               withRxSubscriber:(RxSubscriber *)capture$0
+                                               withRxSubscriber:(RxSubscriber *)param0;
 
 - (void)onNextWithId:(id)args;
 
@@ -22,22 +26,15 @@
 
 - (void)onErrorWithNSException:(NSException *)e;
 
-- (instancetype)initWithRxInternalOperatorsOperatorTimeInterval:(RxInternalOperatorsOperatorTimeInterval *)outer$
-                                               withRxSubscriber:(RxSubscriber *)capture$0
-                                               withRxSubscriber:(RxSubscriber *)arg$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTimeInterval_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTimeInterval_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorTimeInterval_$1, this$0_, RxInternalOperatorsOperatorTimeInterval *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorTimeInterval_$1, val$subscriber_, RxSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorTimeInterval_1_initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorTimeInterval_1 *self, RxInternalOperatorsOperatorTimeInterval *outer$, RxSubscriber *capture$0, RxSubscriber *param0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorTimeInterval_$1_initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorTimeInterval_$1 *self, RxInternalOperatorsOperatorTimeInterval *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorTimeInterval_1 *new_RxInternalOperatorsOperatorTimeInterval_1_initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorTimeInterval *outer$, RxSubscriber *capture$0, RxSubscriber *param0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorTimeInterval_$1 *new_RxInternalOperatorsOperatorTimeInterval_$1_initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorTimeInterval *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorTimeInterval_$1 *create_RxInternalOperatorsOperatorTimeInterval_$1_initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorTimeInterval *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorTimeInterval_1 *create_RxInternalOperatorsOperatorTimeInterval_1_initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorTimeInterval *outer$, RxSubscriber *capture$0, RxSubscriber *param0);
 
 @implementation RxInternalOperatorsOperatorTimeInterval
 
@@ -47,7 +44,7 @@ __attribute__((unused)) static RxInternalOperatorsOperatorTimeInterval_$1 *creat
 }
 
 - (RxSubscriber *)callWithId:(RxSubscriber *)subscriber {
-  return create_RxInternalOperatorsOperatorTimeInterval_$1_initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_(self, subscriber, subscriber);
+  return create_RxInternalOperatorsOperatorTimeInterval_1_initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_(self, subscriber, subscriber);
 }
 
 - (void)dealloc {
@@ -90,7 +87,14 @@ RxInternalOperatorsOperatorTimeInterval *create_RxInternalOperatorsOperatorTimeI
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorTimeInterval)
 
-@implementation RxInternalOperatorsOperatorTimeInterval_$1
+@implementation RxInternalOperatorsOperatorTimeInterval_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorTimeInterval:(RxInternalOperatorsOperatorTimeInterval *)outer$
+                                               withRxSubscriber:(RxSubscriber *)capture$0
+                                               withRxSubscriber:(RxSubscriber *)param0 {
+  RxInternalOperatorsOperatorTimeInterval_1_initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, param0);
+  return self;
+}
 
 - (void)onNextWithId:(id)args {
   jlong nowTimestamp = [((RxScheduler *) nil_chk(this$0_->scheduler_)) now];
@@ -106,15 +110,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorTimeInterval)
   [((RxSubscriber *) nil_chk(val$subscriber_)) onErrorWithNSException:e];
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorTimeInterval:(RxInternalOperatorsOperatorTimeInterval *)outer$
-                                               withRxSubscriber:(RxSubscriber *)capture$0
-                                               withRxSubscriber:(RxSubscriber *)arg$0 {
-  RxInternalOperatorsOperatorTimeInterval_$1_initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, arg$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorTimeInterval_$1 class]);
   RELEASE_(this$0_);
   RELEASE_(val$subscriber_);
   [super dealloc];
@@ -122,41 +118,41 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorTimeInterval)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
+    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onCompleted);
-  methods[2].selector = @selector(onErrorWithNSException:);
-  methods[3].selector = @selector(initWithRxInternalOperatorsOperatorTimeInterval:withRxSubscriber:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorTimeInterval:withRxSubscriber:withRxSubscriber:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onCompleted);
+  methods[3].selector = @selector(onErrorWithNSException:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorTimeInterval;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorTimeInterval;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
     { "lastTimestamp_", "J", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
-    { "val$subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxInternalOperatorsOperatorTimeInterval;LRxSubscriber;LRxSubscriber;", "(Lrx/internal/operators/OperatorTimeInterval;Lrx/Subscriber<-Lrx/schedulers/TimeInterval<TT;>;>;Lrx/Subscriber<*>;)V", "Lrx/Subscriber<-Lrx/schedulers/TimeInterval<TT;>;>;", "LRxInternalOperatorsOperatorTimeInterval;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTimeInterval_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsOperatorTimeInterval_$1;
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/internal/operators/OperatorTimeInterval<TT;>;", "Lrx/Subscriber<-Lrx/schedulers/TimeInterval<TT;>;>;", "LRxInternalOperatorsOperatorTimeInterval;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTimeInterval_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 9, -1, 10, 11, -1 };
+  return &_RxInternalOperatorsOperatorTimeInterval_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorTimeInterval_$1_initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorTimeInterval_$1 *self, RxInternalOperatorsOperatorTimeInterval *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
+void RxInternalOperatorsOperatorTimeInterval_1_initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorTimeInterval_1 *self, RxInternalOperatorsOperatorTimeInterval *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$subscriber_, capture$0);
-  RxSubscriber_initWithRxSubscriber_(self, arg$0);
+  RxSubscriber_initWithRxSubscriber_(self, param0);
   self->lastTimestamp_ = [((RxScheduler *) nil_chk(outer$->scheduler_)) now];
 }
 
-RxInternalOperatorsOperatorTimeInterval_$1 *new_RxInternalOperatorsOperatorTimeInterval_$1_initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorTimeInterval *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTimeInterval_$1, initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_, outer$, capture$0, arg$0)
+RxInternalOperatorsOperatorTimeInterval_1 *new_RxInternalOperatorsOperatorTimeInterval_1_initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorTimeInterval *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTimeInterval_1, initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_, outer$, capture$0, param0)
 }
 
-RxInternalOperatorsOperatorTimeInterval_$1 *create_RxInternalOperatorsOperatorTimeInterval_$1_initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorTimeInterval *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTimeInterval_$1, initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_, outer$, capture$0, arg$0)
+RxInternalOperatorsOperatorTimeInterval_1 *create_RxInternalOperatorsOperatorTimeInterval_1_initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorTimeInterval *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTimeInterval_1, initWithRxInternalOperatorsOperatorTimeInterval_withRxSubscriber_withRxSubscriber_, outer$, capture$0, param0)
 }

@@ -31,28 +31,35 @@
 
 J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindSqlDateTypeAdapter, format_, JavaTextDateFormat *)
 
-@interface ComGoogleGsonInternalBindSqlDateTypeAdapter_$1 : NSObject < ComGoogleGsonTypeAdapterFactory >
+@interface ComGoogleGsonInternalBindSqlDateTypeAdapter_1 : NSObject < ComGoogleGsonTypeAdapterFactory >
+
+- (instancetype)init;
 
 - (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
                         withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindSqlDateTypeAdapter_$1)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindSqlDateTypeAdapter_1)
 
-__attribute__((unused)) static void ComGoogleGsonInternalBindSqlDateTypeAdapter_$1_init(ComGoogleGsonInternalBindSqlDateTypeAdapter_$1 *self);
+__attribute__((unused)) static void ComGoogleGsonInternalBindSqlDateTypeAdapter_1_init(ComGoogleGsonInternalBindSqlDateTypeAdapter_1 *self);
 
-__attribute__((unused)) static ComGoogleGsonInternalBindSqlDateTypeAdapter_$1 *new_ComGoogleGsonInternalBindSqlDateTypeAdapter_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalBindSqlDateTypeAdapter_1 *new_ComGoogleGsonInternalBindSqlDateTypeAdapter_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalBindSqlDateTypeAdapter_$1 *create_ComGoogleGsonInternalBindSqlDateTypeAdapter_$1_init();
+__attribute__((unused)) static ComGoogleGsonInternalBindSqlDateTypeAdapter_1 *create_ComGoogleGsonInternalBindSqlDateTypeAdapter_1_init();
 
 J2OBJC_INITIALIZED_DEFN(ComGoogleGsonInternalBindSqlDateTypeAdapter)
 
 id<ComGoogleGsonTypeAdapterFactory> ComGoogleGsonInternalBindSqlDateTypeAdapter_FACTORY;
 
 @implementation ComGoogleGsonInternalBindSqlDateTypeAdapter
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindSqlDateTypeAdapter_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaSqlDate *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   @synchronized(self) {
@@ -77,13 +84,6 @@ id<ComGoogleGsonTypeAdapterFactory> ComGoogleGsonInternalBindSqlDateTypeAdapter_
   }
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindSqlDateTypeAdapter_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(format_);
   [super dealloc];
@@ -91,28 +91,28 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaSqlDate;", 0x21, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x21, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaSqlDate;", 0x21, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x21, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "FACTORY", "LComGoogleGsonTypeAdapterFactory;", .constantValue.asLong = 0, 0x19, -1, 7, -1, -1 },
+    { "FACTORY", "LComGoogleGsonTypeAdapterFactory;", .constantValue.asLong = 0, 0x19, -1, 5, -1, -1 },
     { "format_", "LJavaTextDateFormat;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/sql/Date;", "write", "LComGoogleGsonStreamJsonWriter;LJavaSqlDate;", "(Lcom/google/gson/stream/JsonWriter;Ljava/sql/Date;)V", &ComGoogleGsonInternalBindSqlDateTypeAdapter_FACTORY, "Lcom/google/gson/TypeAdapter<Ljava/sql/Date;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindSqlDateTypeAdapter = { "SqlDateTypeAdapter", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x11, 3, 2, -1, -1, -1, 8, -1 };
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaSqlDate;", &ComGoogleGsonInternalBindSqlDateTypeAdapter_FACTORY, "Lcom/google/gson/TypeAdapter<Ljava/sql/Date;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindSqlDateTypeAdapter = { "SqlDateTypeAdapter", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x11, 3, 2, -1, -1, -1, 6, -1 };
   return &_ComGoogleGsonInternalBindSqlDateTypeAdapter;
 }
 
 + (void)initialize {
   if (self == [ComGoogleGsonInternalBindSqlDateTypeAdapter class]) {
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindSqlDateTypeAdapter_FACTORY, new_ComGoogleGsonInternalBindSqlDateTypeAdapter_$1_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindSqlDateTypeAdapter_FACTORY, new_ComGoogleGsonInternalBindSqlDateTypeAdapter_1_init());
     J2OBJC_SET_INITIALIZED(ComGoogleGsonInternalBindSqlDateTypeAdapter)
   }
 }
@@ -134,45 +134,45 @@ ComGoogleGsonInternalBindSqlDateTypeAdapter *create_ComGoogleGsonInternalBindSql
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalBindSqlDateTypeAdapter)
 
-@implementation ComGoogleGsonInternalBindSqlDateTypeAdapter_$1
-
-- (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
-                        withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken {
-  return [((ComGoogleGsonReflectTypeToken *) nil_chk(typeToken)) getRawType] == (id) JavaSqlDate_class_() ? create_ComGoogleGsonInternalBindSqlDateTypeAdapter_init() : nil;
-}
+@implementation ComGoogleGsonInternalBindSqlDateTypeAdapter_1
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
-  ComGoogleGsonInternalBindSqlDateTypeAdapter_$1_init(self);
+  ComGoogleGsonInternalBindSqlDateTypeAdapter_1_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
+                        withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken {
+  return [((ComGoogleGsonReflectTypeToken *) nil_chk(typeToken)) getRawType] == JavaSqlDate_class_() ? create_ComGoogleGsonInternalBindSqlDateTypeAdapter_init() : nil;
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LComGoogleGsonTypeAdapter;", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LComGoogleGsonTypeAdapter;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "create", "LComGoogleGsonGson;LComGoogleGsonReflectTypeToken;", "<T:Ljava/lang/Object;>(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken<TT;>;)Lcom/google/gson/TypeAdapter<TT;>;", "LComGoogleGsonInternalBindSqlDateTypeAdapter;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindSqlDateTypeAdapter_$1 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, -1, -1, -1 };
-  return &_ComGoogleGsonInternalBindSqlDateTypeAdapter_$1;
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindSqlDateTypeAdapter_1 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, -1, -1, -1 };
+  return &_ComGoogleGsonInternalBindSqlDateTypeAdapter_1;
 }
 
 @end
 
-void ComGoogleGsonInternalBindSqlDateTypeAdapter_$1_init(ComGoogleGsonInternalBindSqlDateTypeAdapter_$1 *self) {
+void ComGoogleGsonInternalBindSqlDateTypeAdapter_1_init(ComGoogleGsonInternalBindSqlDateTypeAdapter_1 *self) {
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalBindSqlDateTypeAdapter_$1 *new_ComGoogleGsonInternalBindSqlDateTypeAdapter_$1_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindSqlDateTypeAdapter_$1, init)
+ComGoogleGsonInternalBindSqlDateTypeAdapter_1 *new_ComGoogleGsonInternalBindSqlDateTypeAdapter_1_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindSqlDateTypeAdapter_1, init)
 }
 
-ComGoogleGsonInternalBindSqlDateTypeAdapter_$1 *create_ComGoogleGsonInternalBindSqlDateTypeAdapter_$1_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindSqlDateTypeAdapter_$1, init)
+ComGoogleGsonInternalBindSqlDateTypeAdapter_1 *create_ComGoogleGsonInternalBindSqlDateTypeAdapter_1_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindSqlDateTypeAdapter_1, init)
 }

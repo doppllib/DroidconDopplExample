@@ -18,7 +18,6 @@
 #include "CoTouchlabAndroidThreadingTasksPersistedStorageSqliteSQLiteDatabaseIntf.h"
 #include "CoTouchlabAndroidThreadingTasksPersistedStorageSqliteSimpleDatabaseHelper.h"
 #include "CoTouchlabAndroidThreadingTasksPersistedTransientMethuselahCommandPurgePolicy.h"
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "java/util/ArrayList.h"
 #include "java/util/List.h"
@@ -67,6 +66,13 @@ NSString *CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_PERSI
 
 @implementation CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (id<CoTouchlabAndroidThreadingTasksPersistedBusLog>)getLog {
   return log_;
 }
@@ -83,13 +89,6 @@ NSString *CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_PERSI
   return eventListeners_;
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(eventListeners_);
   RELEASE_(log_);
@@ -100,19 +99,19 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LCoTouchlabAndroidThreadingTasksPersistedBusLog;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LCoTouchlabAndroidThreadingTasksPersistedCommandPurgePolicy;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LCoTouchlabAndroidThreadingTasksPersistedPersistenceProvider;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaUtilList;", 0x1, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getLog);
-  methods[1].selector = @selector(getCommandPurgePolicy);
-  methods[2].selector = @selector(getPersistenceProvider);
-  methods[3].selector = @selector(getEventListeners);
-  methods[4].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(getLog);
+  methods[2].selector = @selector(getCommandPurgePolicy);
+  methods[3].selector = @selector(getPersistenceProvider);
+  methods[4].selector = @selector(getEventListeners);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "PERSISTED_QUEUE", "LNSString;", .constantValue.asLong = 0, 0x19, -1, 1, -1, -1 },
@@ -144,6 +143,13 @@ CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig *create_CoTouch
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig)
 
 @implementation CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_Builder
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_Builder_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)checkState {
   CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_Builder_checkState(self);
@@ -194,13 +200,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksPersistedPersist
   return retConfig;
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_Builder_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(config_);
   [super dealloc];
@@ -208,6 +207,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x2, -1, -1, 0, -1, -1, -1 },
     { NULL, "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_Builder;", 0x1, 1, 2, 0, -1, -1, -1 },
     { NULL, "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_Builder;", 0x1, 3, 4, 0, -1, -1, -1 },
@@ -215,18 +215,17 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_Builder;", 0x1, 7, 8, 0, -1, -1, -1 },
     { NULL, "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_Builder;", 0x1, 9, 10, 0, -1, -1, -1 },
     { NULL, "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig;", 0x1, 11, 12, 0, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(checkState);
-  methods[1].selector = @selector(addQueueListenerWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueListener:);
-  methods[2].selector = @selector(setLogWithCoTouchlabAndroidThreadingTasksPersistedBusLog:);
-  methods[3].selector = @selector(setCommandPurgePolicyWithCoTouchlabAndroidThreadingTasksPersistedCommandPurgePolicy:);
-  methods[4].selector = @selector(setPersistenceProviderWithCoTouchlabAndroidThreadingTasksPersistedPersistenceProvider:);
-  methods[5].selector = @selector(setDatabaseWithAndroidDatabaseSqliteSQLiteDatabase:);
-  methods[6].selector = @selector(buildWithAndroidContentContext:);
-  methods[7].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(checkState);
+  methods[2].selector = @selector(addQueueListenerWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueListener:);
+  methods[3].selector = @selector(setLogWithCoTouchlabAndroidThreadingTasksPersistedBusLog:);
+  methods[4].selector = @selector(setCommandPurgePolicyWithCoTouchlabAndroidThreadingTasksPersistedCommandPurgePolicy:);
+  methods[5].selector = @selector(setPersistenceProviderWithCoTouchlabAndroidThreadingTasksPersistedPersistenceProvider:);
+  methods[6].selector = @selector(setDatabaseWithAndroidDatabaseSqliteSQLiteDatabase:);
+  methods[7].selector = @selector(buildWithAndroidContentContext:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "config_", "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig;", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
@@ -237,12 +236,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
-
-void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_Builder_checkState(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_Builder *self) {
-  if (self->config_ == nil) {
-    @throw create_CoTouchlabAndroidThreadingTasksPersistedConfigException_initWithNSString_(@"build already called");
-  }
-}
 
 void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_Builder_init(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_Builder *self) {
   NSObject_init(self);
@@ -255,6 +248,12 @@ CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_Builder *new_Co
 
 CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_Builder *create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_Builder_init() {
   J2OBJC_CREATE_IMPL(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_Builder, init)
+}
+
+void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_Builder_checkState(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_Builder *self) {
+  if (self->config_ == nil) {
+    @throw create_CoTouchlabAndroidThreadingTasksPersistedConfigException_initWithNSString_(@"build already called");
+  }
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueueConfig_Builder)

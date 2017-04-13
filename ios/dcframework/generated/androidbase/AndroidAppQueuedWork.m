@@ -4,7 +4,6 @@
 //
 
 #include "AndroidAppQueuedWork.h"
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "java/lang/Runnable.h"
 #include "java/util/concurrent/ConcurrentLinkedQueue.h"
@@ -24,6 +23,13 @@ J2OBJC_INITIALIZED_DEFN(AndroidAppQueuedWork)
 
 @implementation AndroidAppQueuedWork
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  AndroidAppQueuedWork_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (id<JavaUtilConcurrentExecutorService>)singleThreadExecutor {
   return AndroidAppQueuedWork_singleThreadExecutor();
 }
@@ -40,28 +46,21 @@ J2OBJC_INITIALIZED_DEFN(AndroidAppQueuedWork)
   AndroidAppQueuedWork_waitToFinish();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  AndroidAppQueuedWork_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaUtilConcurrentExecutorService;", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x9, 2, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x9, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(singleThreadExecutor);
-  methods[1].selector = @selector(addWithJavaLangRunnable:);
-  methods[2].selector = @selector(removeWithJavaLangRunnable:);
-  methods[3].selector = @selector(waitToFinish);
-  methods[4].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(singleThreadExecutor);
+  methods[2].selector = @selector(addWithJavaLangRunnable:);
+  methods[3].selector = @selector(removeWithJavaLangRunnable:);
+  methods[4].selector = @selector(waitToFinish);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "sPendingWorkFinishers", "LJavaUtilConcurrentConcurrentLinkedQueue;", .constantValue.asLong = 0, 0x1a, -1, 3, 4, -1 },
@@ -81,6 +80,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void AndroidAppQueuedWork_init(AndroidAppQueuedWork *self) {
+  NSObject_init(self);
+}
+
+AndroidAppQueuedWork *new_AndroidAppQueuedWork_init() {
+  J2OBJC_NEW_IMPL(AndroidAppQueuedWork, init)
+}
+
+AndroidAppQueuedWork *create_AndroidAppQueuedWork_init() {
+  J2OBJC_CREATE_IMPL(AndroidAppQueuedWork, init)
+}
 
 id<JavaUtilConcurrentExecutorService> AndroidAppQueuedWork_singleThreadExecutor() {
   AndroidAppQueuedWork_initialize();
@@ -108,18 +119,6 @@ void AndroidAppQueuedWork_waitToFinish() {
   while ((toFinish = [((JavaUtilConcurrentConcurrentLinkedQueue *) nil_chk(AndroidAppQueuedWork_sPendingWorkFinishers)) poll]) != nil) {
     [((id<JavaLangRunnable>) nil_chk(toFinish)) run];
   }
-}
-
-void AndroidAppQueuedWork_init(AndroidAppQueuedWork *self) {
-  NSObject_init(self);
-}
-
-AndroidAppQueuedWork *new_AndroidAppQueuedWork_init() {
-  J2OBJC_NEW_IMPL(AndroidAppQueuedWork, init)
-}
-
-AndroidAppQueuedWork *create_AndroidAppQueuedWork_init() {
-  J2OBJC_CREATE_IMPL(AndroidAppQueuedWork, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidAppQueuedWork)

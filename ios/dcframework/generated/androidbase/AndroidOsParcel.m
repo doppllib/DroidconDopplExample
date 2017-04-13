@@ -346,23 +346,23 @@ __attribute__((unused)) static void AndroidOsParcel_readSparseBooleanArrayIntern
 
 __attribute__((unused)) static IOSObjectArray *AndroidOsParcel__Annotations$0();
 
-@interface AndroidOsParcel_$1 : NSObject < AndroidOsParcelable_Creator >
+@interface AndroidOsParcel_1 : NSObject < AndroidOsParcelable_Creator >
+
+- (instancetype)init;
 
 - (NSString *)createFromParcelWithAndroidOsParcel:(AndroidOsParcel *)source;
 
 - (IOSObjectArray *)newArrayWithInt:(jint)size OBJC_METHOD_FAMILY_NONE;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(AndroidOsParcel_$1)
+J2OBJC_EMPTY_STATIC_INIT(AndroidOsParcel_1)
 
-__attribute__((unused)) static void AndroidOsParcel_$1_init(AndroidOsParcel_$1 *self);
+__attribute__((unused)) static void AndroidOsParcel_1_init(AndroidOsParcel_1 *self);
 
-__attribute__((unused)) static AndroidOsParcel_$1 *new_AndroidOsParcel_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static AndroidOsParcel_1 *new_AndroidOsParcel_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static AndroidOsParcel_$1 *create_AndroidOsParcel_$1_init();
+__attribute__((unused)) static AndroidOsParcel_1 *create_AndroidOsParcel_1_init();
 
 J2OBJC_INITIALIZED_DEFN(AndroidOsParcel)
 
@@ -1121,7 +1121,7 @@ id<AndroidOsParcelable_Creator> AndroidOsParcel_STRING_CREATOR;
   return self;
 }
 
-- (void)javaFinalize {
+- (void)java_finalize {
   AndroidOsParcel_destroy(self);
 }
 
@@ -1417,7 +1417,7 @@ id<AndroidOsParcelable_Creator> AndroidOsParcel_STRING_CREATOR;
   methods[110].selector = @selector(readSerializable);
   methods[111].selector = @selector(obtainWithInt:);
   methods[112].selector = @selector(initWithInt:);
-  methods[113].selector = @selector(javaFinalize);
+  methods[113].selector = @selector(java_finalize);
   methods[114].selector = @selector(freeBuffer);
   methods[115].selector = @selector(init__WithInt:);
   methods[116].selector = @selector(destroy);
@@ -1480,7 +1480,7 @@ id<AndroidOsParcelable_Creator> AndroidOsParcel_STRING_CREATOR;
   if (self == [AndroidOsParcel class]) {
     JreStrongAssignAndConsume(&AndroidOsParcel_sOwnedPool, [IOSObjectArray newArrayWithLength:AndroidOsParcel_POOL_SIZE type:AndroidOsParcel_class_()]);
     JreStrongAssignAndConsume(&AndroidOsParcel_sHolderPool, [IOSObjectArray newArrayWithLength:AndroidOsParcel_POOL_SIZE type:AndroidOsParcel_class_()]);
-    JreStrongAssignAndConsume(&AndroidOsParcel_STRING_CREATOR, new_AndroidOsParcel_$1_init());
+    JreStrongAssignAndConsume(&AndroidOsParcel_STRING_CREATOR, new_AndroidOsParcel_1_init());
     JreStrongAssignAndConsume(&AndroidOsParcel_mCreators, new_JavaUtilHashMap_init());
     J2OBJC_SET_INITIALIZED(AndroidOsParcel)
   }
@@ -1824,7 +1824,7 @@ id<AndroidOsParcelable> AndroidOsParcel_readParcelableWithJavaLangClassLoader_(A
     creator = [map getWithId:name];
     if (creator == nil) {
       @try {
-        IOSClass *c = loader == nil ? IOSClass_forName_(name) : (id) IOSClass_forName_initialize_classLoader_(name, true, loader);
+        IOSClass *c = loader == nil ? IOSClass_forName_(name) : IOSClass_forName_initialize_classLoader_(name, true, loader);
         JavaLangReflectField *f = [c getField:@"CREATOR"];
         creator = (id<AndroidOsParcelable_Creator>) cast_check([((JavaLangReflectField *) nil_chk(f)) getWithId:nil], AndroidOsParcelable_Creator_class_());
       }
@@ -1959,7 +1959,14 @@ IOSObjectArray *AndroidOsParcel__Annotations$0() {
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidOsParcel)
 
-@implementation AndroidOsParcel_$1
+@implementation AndroidOsParcel_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  AndroidOsParcel_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (NSString *)createFromParcelWithAndroidOsParcel:(AndroidOsParcel *)source {
   return AndroidOsParcel_readString(nil_chk(source));
@@ -1969,40 +1976,33 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidOsParcel)
   return [IOSObjectArray arrayWithLength:size type:NSString_class_()];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  AndroidOsParcel_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "[LNSString;", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(createFromParcelWithAndroidOsParcel:);
-  methods[1].selector = @selector(newArrayWithInt:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(createFromParcelWithAndroidOsParcel:);
+  methods[2].selector = @selector(newArrayWithInt:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "createFromParcel", "LAndroidOsParcel;", "newArray", "I", "Ljava/lang/Object;Landroid/os/Parcelable$Creator<Ljava/lang/String;>;" };
-  static const J2ObjcClassInfo _AndroidOsParcel_$1 = { "", "android.os", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 1, -1, -1, 4, -1 };
-  return &_AndroidOsParcel_$1;
+  static const J2ObjcClassInfo _AndroidOsParcel_1 = { "", "android.os", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 1, -1, -1, 4, -1 };
+  return &_AndroidOsParcel_1;
 }
 
 @end
 
-void AndroidOsParcel_$1_init(AndroidOsParcel_$1 *self) {
+void AndroidOsParcel_1_init(AndroidOsParcel_1 *self) {
   NSObject_init(self);
 }
 
-AndroidOsParcel_$1 *new_AndroidOsParcel_$1_init() {
-  J2OBJC_NEW_IMPL(AndroidOsParcel_$1, init)
+AndroidOsParcel_1 *new_AndroidOsParcel_1_init() {
+  J2OBJC_NEW_IMPL(AndroidOsParcel_1, init)
 }
 
-AndroidOsParcel_$1 *create_AndroidOsParcel_$1_init() {
-  J2OBJC_CREATE_IMPL(AndroidOsParcel_$1, init)
+AndroidOsParcel_1 *create_AndroidOsParcel_1_init() {
+  J2OBJC_CREATE_IMPL(AndroidOsParcel_1, init)
 }

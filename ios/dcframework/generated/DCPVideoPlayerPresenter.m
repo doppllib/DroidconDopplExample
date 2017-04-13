@@ -9,6 +9,7 @@
 #include "DCPAbstractEventBusPresenter.h"
 #include "DCPVideoPlayerHost.h"
 #include "DCPVideoPlayerPresenter.h"
+#include "DCTAbstractWatchVideoTask.h"
 #include "DCTCheckWatchVideoTask.h"
 #include "J2ObjC_source.h"
 #include "java/util/Random.h"
@@ -36,8 +37,6 @@ __attribute__((unused)) static void DCPVideoPlayerPresenter_checkWatchVideoDelay
 
 @end
 
-J2OBJC_FIELD_SETTER(DCPVideoPlayerPresenter_CheckVideoRunnable, this$0_, DCPVideoPlayerPresenter *)
-
 @implementation DCPVideoPlayerPresenter
 
 - (instancetype)initWithAndroidContentContext:(AndroidContentContext *)context
@@ -53,7 +52,7 @@ J2OBJC_FIELD_SETTER(DCPVideoPlayerPresenter_CheckVideoRunnable, this$0_, DCPVide
 }
 
 - (void)onEventMainThreadWithDCTCheckWatchVideoTask:(DCTCheckWatchVideoTask *)task {
-  if (((DCTCheckWatchVideoTask *) nil_chk(task))->videoOk_) {
+  if (((DCTAbstractWatchVideoTask *) nil_chk(task))->videoOk_) {
     DCPVideoPlayerPresenter_checkWatchVideoDelayed(self);
   }
   else {
@@ -145,14 +144,14 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(DCPVideoPlayerPresenter)
 
 @implementation DCPVideoPlayerPresenter_CheckVideoRunnable
 
-- (void)run {
-  [((CoTouchlabAndroidThreadingTasksTaskQueue *) nil_chk(CoTouchlabAndroidThreadingTasksTaskQueue_loadQueueNetworkWithAndroidContentContext_([this$0_ getContext]))) executeWithCoTouchlabAndroidThreadingTasksTask:create_DCTCheckWatchVideoTask_initWithLong_(this$0_->eventId_)];
-  this$0_->checkCount_++;
-}
-
 - (instancetype)initWithDCPVideoPlayerPresenter:(DCPVideoPlayerPresenter *)outer$ {
   DCPVideoPlayerPresenter_CheckVideoRunnable_initWithDCPVideoPlayerPresenter_(self, outer$);
   return self;
+}
+
+- (void)run {
+  [((CoTouchlabAndroidThreadingTasksTaskQueue *) nil_chk(CoTouchlabAndroidThreadingTasksTaskQueue_loadQueueNetworkWithAndroidContentContext_([this$0_ getContext]))) executeWithCoTouchlabAndroidThreadingTasksTask:create_DCTCheckWatchVideoTask_initWithLong_(this$0_->eventId_)];
+  this$0_->checkCount_++;
 }
 
 - (void)dealloc {
@@ -162,13 +161,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(DCPVideoPlayerPresenter)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithDCPVideoPlayerPresenter:);
+  methods[0].selector = @selector(initWithDCPVideoPlayerPresenter:);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LDCPVideoPlayerPresenter;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },

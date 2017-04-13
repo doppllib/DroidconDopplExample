@@ -262,7 +262,7 @@ __attribute__((unused)) static IOSObjectArray *AndroidDatabaseCursorWindow__Anno
   return self;
 }
 
-- (void)javaFinalize {
+- (void)java_finalize {
   @try {
     if (mCloseGuard_ != nil) {
       [mCloseGuard_ warnIfOpen];
@@ -270,7 +270,7 @@ __attribute__((unused)) static IOSObjectArray *AndroidDatabaseCursorWindow__Anno
     AndroidDatabaseCursorWindow_dispose(self);
   }
   @finally {
-    [super javaFinalize];
+    [super java_finalize];
   }
 }
 
@@ -598,7 +598,7 @@ withAndroidDatabaseCharArrayBuffer:(AndroidDatabaseCharArrayBuffer *)buffer {
   methods[16].selector = @selector(nativePutNullWithId:withInt:withInt:);
   methods[17].selector = @selector(initWithNSString:);
   methods[18].selector = @selector(initWithBoolean:);
-  methods[19].selector = @selector(javaFinalize);
+  methods[19].selector = @selector(java_finalize);
   methods[20].selector = @selector(dispose);
   methods[21].selector = @selector(getName);
   methods[22].selector = @selector(clear);

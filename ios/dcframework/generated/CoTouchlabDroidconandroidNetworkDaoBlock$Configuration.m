@@ -14,6 +14,7 @@
 #include "CoTouchlabSqueakyFieldOrmLiteHelper.h"
 #include "CoTouchlabSqueakyTableTableInfo.h"
 #include "CoTouchlabSqueakyTableTransientCache.h"
+#include "DCDBlock.h"
 #include "IOSClass.h"
 #include "IOSObjectArray.h"
 #include "J2ObjC_source.h"
@@ -68,7 +69,7 @@ withCoTouchlabSqueakyTableTransientCache:(CoTouchlabSqueakyTableTransientCache *
 
 - (void)assignIdWithId:(CoTouchlabDroidconandroidNetworkDaoBlock *)data
                 withId:(id)val {
-  ((CoTouchlabDroidconandroidNetworkDaoBlock *) nil_chk(data))->id__ = [((JavaLangLong *) nil_chk((JavaLangLong *) cast_chk(CoTouchlabSqueakyFieldOrmLiteHelper_safeConvertWithIOSClass_withId_([IOSClass longClass], val), [JavaLangLong class]))) longLongValue];
+  ((DCDBlock *) nil_chk(data))->id__ = [((JavaLangLong *) nil_chk((JavaLangLong *) cast_chk(CoTouchlabSqueakyFieldOrmLiteHelper_safeConvertWithIOSClass_withId_([IOSClass longClass], val), [JavaLangLong class]))) longLongValue];
 }
 
 - (JavaLangLong *)extractIdWithId:(CoTouchlabDroidconandroidNetworkDaoBlock *)data {

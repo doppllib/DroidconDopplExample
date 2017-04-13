@@ -93,7 +93,7 @@ J2OBJC_IGNORE_DESIGNATED_END
     jlong length = [body length];
     if (length != -1) {
       [connection setFixedLengthStreamingModeWithInt:(jint) length];
-      [connection addRequestPropertyWithNSString:@"Content-Length" withNSString:NSString_valueOfLong_(length)];
+      [connection addRequestPropertyWithNSString:@"Content-Length" withNSString:NSString_java_valueOfLong_(length)];
     }
     else {
       [connection setChunkedStreamingModeWithInt:RetrofitClientUrlConnectionClient_CHUNK_SIZE];

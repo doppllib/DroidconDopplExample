@@ -460,7 +460,7 @@ jboolean ComGoogleGsonInternal_Gson_Types_equalsWithJavaLangReflectType_withJava
     }
     id<JavaLangReflectTypeVariable> va = (id<JavaLangReflectTypeVariable>) cast_check(a, JavaLangReflectTypeVariable_class_());
     id<JavaLangReflectTypeVariable> vb = (id<JavaLangReflectTypeVariable>) cast_check(b, JavaLangReflectTypeVariable_class_());
-    return [((id<JavaLangReflectTypeVariable>) nil_chk(va)) getGenericDeclaration] == (id) [((id<JavaLangReflectTypeVariable>) nil_chk(vb)) getGenericDeclaration] && [((NSString *) nil_chk([va getName])) isEqual:[vb getName]];
+    return [((id<JavaLangReflectTypeVariable>) nil_chk(va)) getGenericDeclaration] == [((id<JavaLangReflectTypeVariable>) nil_chk(vb)) getGenericDeclaration] && [((NSString *) nil_chk([va getName])) isEqual:[vb getName]];
   }
   else {
     return false;
@@ -516,7 +516,7 @@ id<JavaLangReflectType> ComGoogleGsonInternal_Gson_Types_getSupertypeWithJavaLan
 
 id<JavaLangReflectType> ComGoogleGsonInternal_Gson_Types_getArrayComponentTypeWithJavaLangReflectType_(id<JavaLangReflectType> array) {
   ComGoogleGsonInternal_Gson_Types_initialize();
-  return [JavaLangReflectGenericArrayType_class_() isInstance:array] ? [((id<JavaLangReflectGenericArrayType>) nil_chk(((id<JavaLangReflectGenericArrayType>) cast_check(array, JavaLangReflectGenericArrayType_class_())))) getGenericComponentType] : [((IOSClass *) nil_chk(((IOSClass *) cast_chk(array, [IOSClass class])))) getComponentType];
+  return [JavaLangReflectGenericArrayType_class_() isInstance:array] ? [((id<JavaLangReflectGenericArrayType>) nil_chk(((id<JavaLangReflectGenericArrayType>) cast_check(array, JavaLangReflectGenericArrayType_class_())))) getGenericComponentType] : (id) [((IOSClass *) nil_chk(((IOSClass *) cast_chk(array, [IOSClass class])))) getComponentType];
 }
 
 id<JavaLangReflectType> ComGoogleGsonInternal_Gson_Types_getCollectionElementTypeWithJavaLangReflectType_withIOSClass_(id<JavaLangReflectType> context, IOSClass *contextRawType) {
@@ -533,7 +533,7 @@ id<JavaLangReflectType> ComGoogleGsonInternal_Gson_Types_getCollectionElementTyp
 
 IOSObjectArray *ComGoogleGsonInternal_Gson_Types_getMapKeyAndValueTypesWithJavaLangReflectType_withIOSClass_(id<JavaLangReflectType> context, IOSClass *contextRawType) {
   ComGoogleGsonInternal_Gson_Types_initialize();
-  if (context == JavaUtilProperties_class_()) {
+  if (context == (id) JavaUtilProperties_class_()) {
     return [IOSObjectArray arrayWithObjects:(id[]){ NSString_class_(), NSString_class_() } count:2 type:JavaLangReflectType_class_()];
   }
   id<JavaLangReflectType> mapType = ComGoogleGsonInternal_Gson_Types_getSupertypeWithJavaLangReflectType_withIOSClass_withIOSClass_(context, contextRawType, JavaUtilMap_class_());
@@ -576,7 +576,7 @@ id<JavaLangReflectType> ComGoogleGsonInternal_Gson_Types_resolveWithJavaLangRefl
         id<JavaLangReflectType> resolvedTypeArgument = ComGoogleGsonInternal_Gson_Types_resolveWithJavaLangReflectType_withIOSClass_withJavaLangReflectType_(context, contextRawType, IOSObjectArray_Get(args, t));
         if (resolvedTypeArgument != IOSObjectArray_Get(args, t)) {
           if (!changed) {
-            args = [args clone];
+            args = [args java_clone];
             changed = true;
           }
           IOSObjectArray_Set(nil_chk(args), t, resolvedTypeArgument);
@@ -655,7 +655,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternal_Gson_Types)
 }
 
 - (IOSObjectArray *)getActualTypeArguments {
-  return [((IOSObjectArray *) nil_chk(typeArguments_)) clone];
+  return [((IOSObjectArray *) nil_chk(typeArguments_)) java_clone];
 }
 
 - (id<JavaLangReflectType>)getRawType {
@@ -740,7 +740,7 @@ void ComGoogleGsonInternal_Gson_Types_ParameterizedTypeImpl_initWithJavaLangRefl
   }
   JreStrongAssign(&self->ownerType_, ownerType == nil ? nil : ComGoogleGsonInternal_Gson_Types_canonicalizeWithJavaLangReflectType_(ownerType));
   JreStrongAssign(&self->rawType_, ComGoogleGsonInternal_Gson_Types_canonicalizeWithJavaLangReflectType_(rawType));
-  JreStrongAssign(&self->typeArguments_, [((IOSObjectArray *) nil_chk(typeArguments)) clone]);
+  JreStrongAssign(&self->typeArguments_, [((IOSObjectArray *) nil_chk(typeArguments)) java_clone]);
   for (jint t = 0; t < ((IOSObjectArray *) nil_chk(self->typeArguments_))->size_; t++) {
     ComGoogleGsonInternal_Gson_Preconditions_checkNotNullWithId_(IOSObjectArray_Get(self->typeArguments_, t));
     ComGoogleGsonInternal_Gson_Types_checkNotPrimitiveWithJavaLangReflectType_(IOSObjectArray_Get(self->typeArguments_, t));
@@ -860,7 +860,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternal_Gson_Types_GenericArrayTy
   if (lowerBound_ != nil) {
     return JreStrcat("$$", @"? super ", ComGoogleGsonInternal_Gson_Types_typeToStringWithJavaLangReflectType_(lowerBound_));
   }
-  else if (upperBound_ == NSObject_class_()) {
+  else if (upperBound_ == (id) NSObject_class_()) {
     return @"?";
   }
   else {
@@ -915,7 +915,7 @@ void ComGoogleGsonInternal_Gson_Types_WildcardTypeImpl_initWithJavaLangReflectTy
   if (lowerBounds->size_ == 1) {
     ComGoogleGsonInternal_Gson_Preconditions_checkNotNullWithId_(IOSObjectArray_Get(lowerBounds, 0));
     ComGoogleGsonInternal_Gson_Types_checkNotPrimitiveWithJavaLangReflectType_(IOSObjectArray_Get(lowerBounds, 0));
-    ComGoogleGsonInternal_Gson_Preconditions_checkArgumentWithBoolean_(IOSObjectArray_Get(upperBounds, 0) == NSObject_class_());
+    ComGoogleGsonInternal_Gson_Preconditions_checkArgumentWithBoolean_(IOSObjectArray_Get(upperBounds, 0) == (id) NSObject_class_());
     JreStrongAssign(&self->lowerBound_, ComGoogleGsonInternal_Gson_Types_canonicalizeWithJavaLangReflectType_(IOSObjectArray_Get(lowerBounds, 0)));
     JreStrongAssign(&self->upperBound_, NSObject_class_());
   }

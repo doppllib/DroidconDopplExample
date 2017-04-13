@@ -120,15 +120,15 @@ JavaLangNumberFormatException *AndroidUtilSize_invalidSizeWithNSString_(NSString
 
 AndroidUtilSize *AndroidUtilSize_parseSizeWithNSString_(NSString *string) {
   AndroidUtilSize_initialize();
-  jint sep_ix = [((NSString *) nil_chk(string)) indexOf:'*'];
+  jint sep_ix = [((NSString *) nil_chk(string)) java_indexOf:'*'];
   if (sep_ix < 0) {
-    sep_ix = [string indexOf:'x'];
+    sep_ix = [string java_indexOf:'x'];
   }
   if (sep_ix < 0) {
     @throw AndroidUtilSize_invalidSizeWithNSString_(string);
   }
   @try {
-    return create_AndroidUtilSize_initWithInt_withInt_(JavaLangInteger_parseIntWithNSString_([string substring:0 endIndex:sep_ix]), JavaLangInteger_parseIntWithNSString_([string substring:sep_ix + 1]));
+    return create_AndroidUtilSize_initWithInt_withInt_(JavaLangInteger_parseIntWithNSString_([string java_substring:0 endIndex:sep_ix]), JavaLangInteger_parseIntWithNSString_([string java_substring:sep_ix + 1]));
   }
   @catch (JavaLangNumberFormatException *e) {
     @throw AndroidUtilSize_invalidSizeWithNSString_(string);

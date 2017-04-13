@@ -137,17 +137,17 @@ J2OBJC_IGNORE_DESIGNATED_END
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
     { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x4, -1, 0, -1, -1, -1, -1 },
+    { NULL, NULL, 0x4, -1, 0, -1, 1, -1, -1 },
     { NULL, "LCoTouchlabSqueakyFieldTypesDateTimeType;", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, "[LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 1, 2, 3, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 4, 5, 3, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 6, 7, 3, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 8, 9, 3, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 2, 3, 4, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 5, 6, 4, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 7, 8, 4, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 9, 10, 4, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x2, 10, 11, 3, -1, -1, -1 },
-    { NULL, "LJavaLangLong;", 0x2, 12, 13, 3, -1, -1, -1 },
-    { NULL, "LIOSClass;", 0x2, -1, -1, 14, 15, -1, -1 },
+    { NULL, "LNSObject;", 0x2, 11, 12, 4, -1, -1, -1 },
+    { NULL, "LJavaLangLong;", 0x2, 13, 14, 4, -1, -1, -1 },
+    { NULL, "LIOSClass;", 0x2, -1, -1, 15, 16, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -165,13 +165,13 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[11].selector = @selector(getDateTimeClass);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "singleTon", "LCoTouchlabSqueakyFieldTypesDateTimeType;", .constantValue.asLong = 0, 0x1a, -1, 16, -1, -1 },
-    { "dateTimeClass", "LIOSClass;", .constantValue.asLong = 0, 0xa, -1, 17, 18, -1 },
-    { "getMillisMethod", "LJavaLangReflectMethod;", .constantValue.asLong = 0, 0xa, -1, 19, -1, -1 },
-    { "millisConstructor", "LJavaLangReflectConstructor;", .constantValue.asLong = 0, 0xa, -1, 20, 21, -1 },
-    { "associatedClassNames", "[LNSString;", .constantValue.asLong = 0, 0x1a, -1, 22, -1, -1 },
+    { "singleTon", "LCoTouchlabSqueakyFieldTypesDateTimeType;", .constantValue.asLong = 0, 0x1a, -1, 17, -1, -1 },
+    { "dateTimeClass", "LIOSClass;", .constantValue.asLong = 0, 0xa, -1, 18, 19, -1 },
+    { "getMillisMethod", "LJavaLangReflectMethod;", .constantValue.asLong = 0, 0xa, -1, 20, -1, -1 },
+    { "millisConstructor", "LJavaLangReflectConstructor;", .constantValue.asLong = 0, 0xa, -1, 21, 22, -1 },
+    { "associatedClassNames", "[LNSString;", .constantValue.asLong = 0, 0x1a, -1, 23, -1, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "javaToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LNSObject;", "LJavaSqlSQLException;", "parseDefaultString", "LCoTouchlabSqueakyFieldFieldType;LNSString;", "resultToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LAndroidDatabaseCursor;I", "sqlArgToJava", "LCoTouchlabSqueakyFieldFieldType;LNSObject;I", "createInstance", "LJavaLangLong;", "extractMillis", "LNSObject;", "LJavaLangClassNotFoundException;", "()Ljava/lang/Class<*>;", &CoTouchlabSqueakyFieldTypesDateTimeType_singleTon, &CoTouchlabSqueakyFieldTypesDateTimeType_dateTimeClass, "Ljava/lang/Class<*>;", &CoTouchlabSqueakyFieldTypesDateTimeType_getMillisMethod, &CoTouchlabSqueakyFieldTypesDateTimeType_millisConstructor, "Ljava/lang/reflect/Constructor<*>;", &CoTouchlabSqueakyFieldTypesDateTimeType_associatedClassNames };
+  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "(Lco/touchlab/squeaky/field/SqlType;[Ljava/lang/Class<*>;)V", "javaToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LNSObject;", "LJavaSqlSQLException;", "parseDefaultString", "LCoTouchlabSqueakyFieldFieldType;LNSString;", "resultToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LAndroidDatabaseCursor;I", "sqlArgToJava", "LCoTouchlabSqueakyFieldFieldType;LNSObject;I", "createInstance", "LJavaLangLong;", "extractMillis", "LNSObject;", "LJavaLangClassNotFoundException;", "()Ljava/lang/Class<*>;", &CoTouchlabSqueakyFieldTypesDateTimeType_singleTon, &CoTouchlabSqueakyFieldTypesDateTimeType_dateTimeClass, "Ljava/lang/Class<*>;", &CoTouchlabSqueakyFieldTypesDateTimeType_getMillisMethod, &CoTouchlabSqueakyFieldTypesDateTimeType_millisConstructor, "Ljava/lang/reflect/Constructor<*>;", &CoTouchlabSqueakyFieldTypesDateTimeType_associatedClassNames };
   static const J2ObjcClassInfo _CoTouchlabSqueakyFieldTypesDateTimeType = { "DateTimeType", "co.touchlab.squeaky.field.types", ptrTable, methods, fields, 7, 0x1, 12, 5, -1, -1, -1, -1, -1 };
   return &_CoTouchlabSqueakyFieldTypesDateTimeType;
 }

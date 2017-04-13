@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OperatorElementAt.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxInternalOperatorsOperatorElementAt.h"
 #include "RxProducer.h"
@@ -27,16 +26,15 @@ __attribute__((unused)) static RxInternalOperatorsOperatorElementAt *new_RxInter
 
 __attribute__((unused)) static RxInternalOperatorsOperatorElementAt *create_RxInternalOperatorsOperatorElementAt_initWithInt_withId_withBoolean_(jint index, id defaultValue, jboolean hasDefault);
 
-inline jlong RxInternalOperatorsOperatorElementAt_InnerProducer_get_serialVersionUID();
-#define RxInternalOperatorsOperatorElementAt_InnerProducer_serialVersionUID 1LL
-J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsOperatorElementAt_InnerProducer, serialVersionUID, jlong)
-
-@interface RxInternalOperatorsOperatorElementAt_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorElementAt_1 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorElementAt *this$0_;
-  jint currentIndex_;
   RxSubscriber *val$child_;
+  jint currentIndex_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorElementAt:(RxInternalOperatorsOperatorElementAt *)outer$
+                                            withRxSubscriber:(RxSubscriber *)capture$0;
 
 - (void)onNextWithId:(id)value;
 
@@ -46,21 +44,19 @@ J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsOperatorElementAt_InnerProducer,
 
 - (void)setProducerWithRxProducer:(id<RxProducer>)p;
 
-- (instancetype)initWithRxInternalOperatorsOperatorElementAt:(RxInternalOperatorsOperatorElementAt *)outer$
-                                            withRxSubscriber:(RxSubscriber *)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorElementAt_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorElementAt_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorElementAt_$1, this$0_, RxInternalOperatorsOperatorElementAt *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorElementAt_$1, val$child_, RxSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorElementAt_1_initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_(RxInternalOperatorsOperatorElementAt_1 *self, RxInternalOperatorsOperatorElementAt *outer$, RxSubscriber *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorElementAt_$1_initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_(RxInternalOperatorsOperatorElementAt_$1 *self, RxInternalOperatorsOperatorElementAt *outer$, RxSubscriber *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorElementAt_1 *new_RxInternalOperatorsOperatorElementAt_1_initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_(RxInternalOperatorsOperatorElementAt *outer$, RxSubscriber *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorElementAt_$1 *new_RxInternalOperatorsOperatorElementAt_$1_initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_(RxInternalOperatorsOperatorElementAt *outer$, RxSubscriber *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorElementAt_1 *create_RxInternalOperatorsOperatorElementAt_1_initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_(RxInternalOperatorsOperatorElementAt *outer$, RxSubscriber *capture$0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorElementAt_$1 *create_RxInternalOperatorsOperatorElementAt_$1_initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_(RxInternalOperatorsOperatorElementAt *outer$, RxSubscriber *capture$0);
+inline jlong RxInternalOperatorsOperatorElementAt_InnerProducer_get_serialVersionUID();
+#define RxInternalOperatorsOperatorElementAt_InnerProducer_serialVersionUID 1LL
+J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsOperatorElementAt_InnerProducer, serialVersionUID, jlong)
 
 @implementation RxInternalOperatorsOperatorElementAt
 
@@ -83,7 +79,7 @@ __attribute__((unused)) static RxInternalOperatorsOperatorElementAt_$1 *create_R
 }
 
 - (RxSubscriber *)callWithId:(RxSubscriber *)child {
-  RxSubscriber *parent = create_RxInternalOperatorsOperatorElementAt_$1_initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_(self, child);
+  RxSubscriber *parent = create_RxInternalOperatorsOperatorElementAt_1_initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_(self, child);
   [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:parent];
   return parent;
 }
@@ -163,6 +159,90 @@ RxInternalOperatorsOperatorElementAt *create_RxInternalOperatorsOperatorElementA
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorElementAt)
 
+@implementation RxInternalOperatorsOperatorElementAt_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorElementAt:(RxInternalOperatorsOperatorElementAt *)outer$
+                                            withRxSubscriber:(RxSubscriber *)capture$0 {
+  RxInternalOperatorsOperatorElementAt_1_initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_(self, outer$, capture$0);
+  return self;
+}
+
+- (void)onNextWithId:(id)value {
+  if (currentIndex_++ == this$0_->index_) {
+    [((RxSubscriber *) nil_chk(val$child_)) onNextWithId:value];
+    [val$child_ onCompleted];
+    [self unsubscribe];
+  }
+}
+
+- (void)onErrorWithNSException:(NSException *)e {
+  [((RxSubscriber *) nil_chk(val$child_)) onErrorWithNSException:e];
+}
+
+- (void)onCompleted {
+  if (currentIndex_ <= this$0_->index_) {
+    if (this$0_->hasDefault_) {
+      [((RxSubscriber *) nil_chk(val$child_)) onNextWithId:this$0_->defaultValue_];
+      [val$child_ onCompleted];
+    }
+    else {
+      [((RxSubscriber *) nil_chk(val$child_)) onErrorWithNSException:create_JavaLangIndexOutOfBoundsException_initWithNSString_(JreStrcat("I$", this$0_->index_, @" is out of bounds"))];
+    }
+  }
+}
+
+- (void)setProducerWithRxProducer:(id<RxProducer>)p {
+  [((RxSubscriber *) nil_chk(val$child_)) setProducerWithRxProducer:create_RxInternalOperatorsOperatorElementAt_InnerProducer_initWithRxProducer_(p)];
+}
+
+- (void)dealloc {
+  RELEASE_(this$0_);
+  RELEASE_(val$child_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorElementAt:withRxSubscriber:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
+  methods[4].selector = @selector(setProducerWithRxProducer:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "this$0_", "LRxInternalOperatorsOperatorElementAt;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "currentIndex_", "I", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "setProducer", "LRxProducer;", "Lrx/internal/operators/OperatorElementAt<TT;>;", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorElementAt;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorElementAt_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 3, 9, -1, 10, 11, -1 };
+  return &_RxInternalOperatorsOperatorElementAt_1;
+}
+
+@end
+
+void RxInternalOperatorsOperatorElementAt_1_initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_(RxInternalOperatorsOperatorElementAt_1 *self, RxInternalOperatorsOperatorElementAt *outer$, RxSubscriber *capture$0) {
+  JreStrongAssign(&self->this$0_, outer$);
+  JreStrongAssign(&self->val$child_, capture$0);
+  RxSubscriber_init(self);
+}
+
+RxInternalOperatorsOperatorElementAt_1 *new_RxInternalOperatorsOperatorElementAt_1_initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_(RxInternalOperatorsOperatorElementAt *outer$, RxSubscriber *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorElementAt_1, initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_, outer$, capture$0)
+}
+
+RxInternalOperatorsOperatorElementAt_1 *create_RxInternalOperatorsOperatorElementAt_1_initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_(RxInternalOperatorsOperatorElementAt *outer$, RxSubscriber *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorElementAt_1, initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_, outer$, capture$0)
+}
+
 @implementation RxInternalOperatorsOperatorElementAt_InnerProducer
 
 - (instancetype)initWithRxProducer:(id<RxProducer>)actual {
@@ -219,88 +299,3 @@ RxInternalOperatorsOperatorElementAt_InnerProducer *create_RxInternalOperatorsOp
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorElementAt_InnerProducer)
-
-@implementation RxInternalOperatorsOperatorElementAt_$1
-
-- (void)onNextWithId:(id)value {
-  if (currentIndex_++ == this$0_->index_) {
-    [((RxSubscriber *) nil_chk(val$child_)) onNextWithId:value];
-    [val$child_ onCompleted];
-    [self unsubscribe];
-  }
-}
-
-- (void)onErrorWithNSException:(NSException *)e {
-  [((RxSubscriber *) nil_chk(val$child_)) onErrorWithNSException:e];
-}
-
-- (void)onCompleted {
-  if (currentIndex_ <= this$0_->index_) {
-    if (this$0_->hasDefault_) {
-      [((RxSubscriber *) nil_chk(val$child_)) onNextWithId:this$0_->defaultValue_];
-      [val$child_ onCompleted];
-    }
-    else {
-      [((RxSubscriber *) nil_chk(val$child_)) onErrorWithNSException:create_JavaLangIndexOutOfBoundsException_initWithNSString_(JreStrcat("I$", this$0_->index_, @" is out of bounds"))];
-    }
-  }
-}
-
-- (void)setProducerWithRxProducer:(id<RxProducer>)p {
-  [((RxSubscriber *) nil_chk(val$child_)) setProducerWithRxProducer:create_RxInternalOperatorsOperatorElementAt_InnerProducer_initWithRxProducer_(p)];
-}
-
-- (instancetype)initWithRxInternalOperatorsOperatorElementAt:(RxInternalOperatorsOperatorElementAt *)outer$
-                                            withRxSubscriber:(RxSubscriber *)capture$0 {
-  RxInternalOperatorsOperatorElementAt_$1_initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_(self, outer$, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorElementAt_$1 class]);
-  RELEASE_(this$0_);
-  RELEASE_(val$child_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 7, -1, 8, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(setProducerWithRxProducer:);
-  methods[4].selector = @selector(initWithRxInternalOperatorsOperatorElementAt:withRxSubscriber:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorElementAt;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "currentIndex_", "I", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
-    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 9, -1 },
-  };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "setProducer", "LRxProducer;", "LRxInternalOperatorsOperatorElementAt;LRxSubscriber;", "(Lrx/internal/operators/OperatorElementAt;Lrx/Subscriber<-TT;>;)V", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorElementAt;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorElementAt_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 3, 10, -1, 11, 12, -1 };
-  return &_RxInternalOperatorsOperatorElementAt_$1;
-}
-
-@end
-
-void RxInternalOperatorsOperatorElementAt_$1_initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_(RxInternalOperatorsOperatorElementAt_$1 *self, RxInternalOperatorsOperatorElementAt *outer$, RxSubscriber *capture$0) {
-  JreStrongAssign(&self->this$0_, outer$);
-  JreStrongAssign(&self->val$child_, capture$0);
-  RxSubscriber_init(self);
-}
-
-RxInternalOperatorsOperatorElementAt_$1 *new_RxInternalOperatorsOperatorElementAt_$1_initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_(RxInternalOperatorsOperatorElementAt *outer$, RxSubscriber *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorElementAt_$1, initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_, outer$, capture$0)
-}
-
-RxInternalOperatorsOperatorElementAt_$1 *create_RxInternalOperatorsOperatorElementAt_$1_initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_(RxInternalOperatorsOperatorElementAt *outer$, RxSubscriber *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorElementAt_$1, initWithRxInternalOperatorsOperatorElementAt_withRxSubscriber_, outer$, capture$0)
-}

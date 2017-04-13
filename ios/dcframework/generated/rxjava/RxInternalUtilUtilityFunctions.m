@@ -24,25 +24,25 @@ __attribute__((unused)) static RxInternalUtilUtilityFunctions *new_RxInternalUti
 
 __attribute__((unused)) static RxInternalUtilUtilityFunctions *create_RxInternalUtilUtilityFunctions_init();
 
-__attribute__((unused)) static void RxInternalUtilUtilityFunctions_AlwaysTrue_initWithNSString_withInt_(RxInternalUtilUtilityFunctions_AlwaysTrue *self, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static void RxInternalUtilUtilityFunctions_AlwaysFalse_initWithNSString_withInt_(RxInternalUtilUtilityFunctions_AlwaysFalse *self, NSString *__name, jint __ordinal);
-
-@interface RxInternalUtilUtilityFunctions_$1 : NSObject < RxFunctionsFunc1 >
-
-- (id)callWithId:(id)o;
+@interface RxInternalUtilUtilityFunctions_1 : NSObject < RxFunctionsFunc1 >
 
 - (instancetype)init;
 
+- (id)callWithId:(id)o;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalUtilUtilityFunctions_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalUtilUtilityFunctions_1)
 
-__attribute__((unused)) static void RxInternalUtilUtilityFunctions_$1_init(RxInternalUtilUtilityFunctions_$1 *self);
+__attribute__((unused)) static void RxInternalUtilUtilityFunctions_1_init(RxInternalUtilUtilityFunctions_1 *self);
 
-__attribute__((unused)) static RxInternalUtilUtilityFunctions_$1 *new_RxInternalUtilUtilityFunctions_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalUtilUtilityFunctions_1 *new_RxInternalUtilUtilityFunctions_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalUtilUtilityFunctions_$1 *create_RxInternalUtilUtilityFunctions_$1_init();
+__attribute__((unused)) static RxInternalUtilUtilityFunctions_1 *create_RxInternalUtilUtilityFunctions_1_init();
+
+__attribute__((unused)) static void RxInternalUtilUtilityFunctions_AlwaysTrue_initWithNSString_withInt_(RxInternalUtilUtilityFunctions_AlwaysTrue *self, NSString *__name, jint __ordinal);
+
+__attribute__((unused)) static void RxInternalUtilUtilityFunctions_AlwaysFalse_initWithNSString_withInt_(RxInternalUtilUtilityFunctions_AlwaysFalse *self, NSString *__name, jint __ordinal);
 
 @implementation RxInternalUtilUtilityFunctions
 
@@ -111,10 +111,52 @@ id<RxFunctionsFunc1> RxInternalUtilUtilityFunctions_alwaysFalse() {
 
 id<RxFunctionsFunc1> RxInternalUtilUtilityFunctions_identity() {
   RxInternalUtilUtilityFunctions_initialize();
-  return create_RxInternalUtilUtilityFunctions_$1_init();
+  return create_RxInternalUtilUtilityFunctions_1_init();
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilUtilityFunctions)
+
+@implementation RxInternalUtilUtilityFunctions_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalUtilUtilityFunctions_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
+- (id)callWithId:(id)o {
+  return o;
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "call", "LNSObject;", "(TT;)TT;", "LRxInternalUtilUtilityFunctions;", "identity", "Ljava/lang/Object;Lrx/functions/Func1<TT;TT;>;" };
+  static const J2ObjcClassInfo _RxInternalUtilUtilityFunctions_1 = { "", "rx.internal.util", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, 4, 5, -1 };
+  return &_RxInternalUtilUtilityFunctions_1;
+}
+
+@end
+
+void RxInternalUtilUtilityFunctions_1_init(RxInternalUtilUtilityFunctions_1 *self) {
+  NSObject_init(self);
+}
+
+RxInternalUtilUtilityFunctions_1 *new_RxInternalUtilUtilityFunctions_1_init() {
+  J2OBJC_NEW_IMPL(RxInternalUtilUtilityFunctions_1, init)
+}
+
+RxInternalUtilUtilityFunctions_1 *create_RxInternalUtilUtilityFunctions_1_init() {
+  J2OBJC_CREATE_IMPL(RxInternalUtilUtilityFunctions_1, init)
+}
 
 J2OBJC_INITIALIZED_DEFN(RxInternalUtilUtilityFunctions_AlwaysTrue)
 
@@ -299,45 +341,3 @@ RxInternalUtilUtilityFunctions_AlwaysFalse *RxInternalUtilUtilityFunctions_Alway
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilUtilityFunctions_AlwaysFalse)
-
-@implementation RxInternalUtilUtilityFunctions_$1
-
-- (id)callWithId:(id)o {
-  return o;
-}
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalUtilUtilityFunctions_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
-  #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "call", "LNSObject;", "(TT;)TT;", "LRxInternalUtilUtilityFunctions;", "identity", "Ljava/lang/Object;Lrx/functions/Func1<TT;TT;>;" };
-  static const J2ObjcClassInfo _RxInternalUtilUtilityFunctions_$1 = { "", "rx.internal.util", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, 4, 5, -1 };
-  return &_RxInternalUtilUtilityFunctions_$1;
-}
-
-@end
-
-void RxInternalUtilUtilityFunctions_$1_init(RxInternalUtilUtilityFunctions_$1 *self) {
-  NSObject_init(self);
-}
-
-RxInternalUtilUtilityFunctions_$1 *new_RxInternalUtilUtilityFunctions_$1_init() {
-  J2OBJC_NEW_IMPL(RxInternalUtilUtilityFunctions_$1, init)
-}
-
-RxInternalUtilUtilityFunctions_$1 *create_RxInternalUtilUtilityFunctions_$1_init() {
-  J2OBJC_CREATE_IMPL(RxInternalUtilUtilityFunctions_$1, init)
-}

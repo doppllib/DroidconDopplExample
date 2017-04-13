@@ -63,6 +63,13 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleGsonInternalBindUtilISO8601Utils)
 
 @implementation ComGoogleGsonInternalBindUtilISO8601Utils
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindUtilISO8601Utils_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (NSString *)formatWithJavaUtilDate:(JavaUtilDate *)date {
   return ComGoogleGsonInternalBindUtilISO8601Utils_formatWithJavaUtilDate_(date);
 }
@@ -106,15 +113,9 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleGsonInternalBindUtilISO8601Utils)
   return ComGoogleGsonInternalBindUtilISO8601Utils_indexOfNonDigitWithNSString_withInt_(string, offset);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindUtilISO8601Utils_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x9, 0, 2, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x9, 0, 3, -1, -1, -1, -1 },
@@ -123,19 +124,18 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "I", 0xa, 9, 10, 11, -1, -1, -1 },
     { NULL, "V", 0xa, 12, 13, -1, -1, -1, -1 },
     { NULL, "I", 0xa, 14, 15, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(formatWithJavaUtilDate:);
-  methods[1].selector = @selector(formatWithJavaUtilDate:withBoolean:);
-  methods[2].selector = @selector(formatWithJavaUtilDate:withBoolean:withJavaUtilTimeZone:);
-  methods[3].selector = @selector(parseWithNSString:withJavaTextParsePosition:);
-  methods[4].selector = @selector(checkOffsetWithNSString:withInt:withChar:);
-  methods[5].selector = @selector(parseIntWithNSString:withInt:withInt:);
-  methods[6].selector = @selector(padIntWithJavaLangStringBuilder:withInt:withInt:);
-  methods[7].selector = @selector(indexOfNonDigitWithNSString:withInt:);
-  methods[8].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(formatWithJavaUtilDate:);
+  methods[2].selector = @selector(formatWithJavaUtilDate:withBoolean:);
+  methods[3].selector = @selector(formatWithJavaUtilDate:withBoolean:withJavaUtilTimeZone:);
+  methods[4].selector = @selector(parseWithNSString:withJavaTextParsePosition:);
+  methods[5].selector = @selector(checkOffsetWithNSString:withInt:withChar:);
+  methods[6].selector = @selector(parseIntWithNSString:withInt:withInt:);
+  methods[7].selector = @selector(padIntWithJavaLangStringBuilder:withInt:withInt:);
+  methods[8].selector = @selector(indexOfNonDigitWithNSString:withInt:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "UTC_ID", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 16, -1, -1 },
@@ -154,6 +154,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void ComGoogleGsonInternalBindUtilISO8601Utils_init(ComGoogleGsonInternalBindUtilISO8601Utils *self) {
+  NSObject_init(self);
+}
+
+ComGoogleGsonInternalBindUtilISO8601Utils *new_ComGoogleGsonInternalBindUtilISO8601Utils_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindUtilISO8601Utils, init)
+}
+
+ComGoogleGsonInternalBindUtilISO8601Utils *create_ComGoogleGsonInternalBindUtilISO8601Utils_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindUtilISO8601Utils, init)
+}
 
 NSString *ComGoogleGsonInternalBindUtilISO8601Utils_formatWithJavaUtilDate_(JavaUtilDate *date) {
   ComGoogleGsonInternalBindUtilISO8601Utils_initialize();
@@ -277,7 +289,7 @@ JavaUtilDate *ComGoogleGsonInternalBindUtilISO8601Utils_parseWithNSString_withJa
       offset += 1;
     }
     else if (timezoneIndicator == '+' || timezoneIndicator == '-') {
-      NSString *timezoneOffset = [date substring:offset];
+      NSString *timezoneOffset = [date java_substring:offset];
       timezoneOffset = ((jint) [((NSString *) nil_chk(timezoneOffset)) length]) >= 5 ? timezoneOffset : JreStrcat("$$", timezoneOffset, @"00");
       offset += ((jint) [timezoneOffset length]);
       if ([@"+0000" isEqual:timezoneOffset] || [@"+00:00" isEqual:timezoneOffset]) {
@@ -289,8 +301,8 @@ JavaUtilDate *ComGoogleGsonInternalBindUtilISO8601Utils_parseWithNSString_withJa
         NSString *act = [((JavaUtilTimeZone *) nil_chk(timezone)) getID];
         if (![((NSString *) nil_chk(act)) isEqual:timezoneId]) {
           [((JavaIoPrintStream *) nil_chk(JreLoadStatic(JavaLangSystem, out))) printlnWithNSString:JreStrcat("$$$$$@", @"act: ", act, @"/timezoneId: ", timezoneId, @"/timezone: ", timezone)];
-          NSString *cleaned = [act replace:@":" withSequence:@""];
-          NSString *tzIdCleaned = [timezoneId replace:@":" withSequence:@""];
+          NSString *cleaned = [act java_replace:@":" withSequence:@""];
+          NSString *tzIdCleaned = [timezoneId java_replace:@":" withSequence:@""];
           if (![((NSString *) nil_chk(cleaned)) isEqual:tzIdCleaned]) {
             @throw create_JavaLangIndexOutOfBoundsException_initWithNSString_(JreStrcat("$$$$", @"Mismatching time zone indicator: ", timezoneId, @" given, resolves to ", [timezone getID]));
           }
@@ -323,7 +335,7 @@ JavaUtilDate *ComGoogleGsonInternalBindUtilISO8601Utils_parseWithNSString_withJa
   }
   NSString *input = (date == nil) ? nil : (JreStrcat("C$C", '"', date, '\''));
   NSString *msg = [((JavaLangException *) nil_chk(fail)) getMessage];
-  if (msg == nil || [msg isEmpty]) {
+  if (msg == nil || [msg java_isEmpty]) {
     msg = JreStrcat("C$C", '(', [[fail java_getClass] getName], ')');
   }
   JavaTextParseException *ex = create_JavaTextParseException_initWithNSString_withInt_(JreStrcat("$$$$", @"Failed to parse date [", input, @"]: ", msg), [pos getIndex]);
@@ -347,14 +359,14 @@ jint ComGoogleGsonInternalBindUtilISO8601Utils_parseIntWithNSString_withInt_with
   if (i < endIndex) {
     digit = JavaLangCharacter_digitWithChar_withInt_([((NSString *) nil_chk(value)) charAtWithInt:i++], 10);
     if (digit < 0) {
-      @throw create_JavaLangNumberFormatException_initWithNSString_(JreStrcat("$$", @"Invalid number: ", [value substring:beginIndex endIndex:endIndex]));
+      @throw create_JavaLangNumberFormatException_initWithNSString_(JreStrcat("$$", @"Invalid number: ", [value java_substring:beginIndex endIndex:endIndex]));
     }
     result = -digit;
   }
   while (i < endIndex) {
     digit = JavaLangCharacter_digitWithChar_withInt_([((NSString *) nil_chk(value)) charAtWithInt:i++], 10);
     if (digit < 0) {
-      @throw create_JavaLangNumberFormatException_initWithNSString_(JreStrcat("$$", @"Invalid number: ", [value substring:beginIndex endIndex:endIndex]));
+      @throw create_JavaLangNumberFormatException_initWithNSString_(JreStrcat("$$", @"Invalid number: ", [value java_substring:beginIndex endIndex:endIndex]));
     }
     result *= 10;
     result -= digit;
@@ -378,18 +390,6 @@ jint ComGoogleGsonInternalBindUtilISO8601Utils_indexOfNonDigitWithNSString_withI
     if (c < '0' || c > '9') return i;
   }
   return ((jint) [string length]);
-}
-
-void ComGoogleGsonInternalBindUtilISO8601Utils_init(ComGoogleGsonInternalBindUtilISO8601Utils *self) {
-  NSObject_init(self);
-}
-
-ComGoogleGsonInternalBindUtilISO8601Utils *new_ComGoogleGsonInternalBindUtilISO8601Utils_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindUtilISO8601Utils, init)
-}
-
-ComGoogleGsonInternalBindUtilISO8601Utils *create_ComGoogleGsonInternalBindUtilISO8601Utils_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindUtilISO8601Utils, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalBindUtilISO8601Utils)

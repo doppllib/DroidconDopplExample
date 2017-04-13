@@ -192,7 +192,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeFromAsyncEmitter)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, NULL, 0x1, -1, 0, -1, 1, -1, -1 },
+    { NULL, NULL, 0x1, -1, 0, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
   };
@@ -205,8 +205,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeFromAsyncEmitter)
   static const J2ObjcFieldInfo fields[] = {
     { "serialVersionUID", "J", .constantValue.asLong = RxInternalOperatorsOnSubscribeFromAsyncEmitter_CancellableSubscription_serialVersionUID, 0x1a, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxAsyncEmitter_Cancellable;", "(Lrx/AsyncEmitter$Cancellable;)V", "LRxInternalOperatorsOnSubscribeFromAsyncEmitter;", "Ljava/util/concurrent/atomic/AtomicReference<Lrx/AsyncEmitter$Cancellable;>;Lrx/Subscription;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeFromAsyncEmitter_CancellableSubscription = { "CancellableSubscription", "rx.internal.operators", ptrTable, methods, fields, 7, 0x18, 3, 1, 2, -1, -1, 3, -1 };
+  static const void *ptrTable[] = { "LRxAsyncEmitter_Cancellable;", "LRxInternalOperatorsOnSubscribeFromAsyncEmitter;", "Ljava/util/concurrent/atomic/AtomicReference<Lrx/AsyncEmitter$Cancellable;>;Lrx/Subscription;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeFromAsyncEmitter_CancellableSubscription = { "CancellableSubscription", "rx.internal.operators", ptrTable, methods, fields, 7, 0x18, 3, 1, 1, -1, -1, 2, -1 };
   return &_RxInternalOperatorsOnSubscribeFromAsyncEmitter_CancellableSubscription;
 }
 

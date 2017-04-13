@@ -20,21 +20,21 @@ __attribute__((unused)) static RxSubscriptionsBooleanSubscription *new_RxSubscri
 
 __attribute__((unused)) static RxSubscriptionsBooleanSubscription *create_RxSubscriptionsBooleanSubscription_initWithRxFunctionsAction0_(id<RxFunctionsAction0> action);
 
-@interface RxSubscriptionsBooleanSubscription_$1 : NSObject < RxFunctionsAction0 >
-
-- (void)call;
+@interface RxSubscriptionsBooleanSubscription_1 : NSObject < RxFunctionsAction0 >
 
 - (instancetype)init;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxSubscriptionsBooleanSubscription_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxSubscriptionsBooleanSubscription_1)
 
-__attribute__((unused)) static void RxSubscriptionsBooleanSubscription_$1_init(RxSubscriptionsBooleanSubscription_$1 *self);
+__attribute__((unused)) static void RxSubscriptionsBooleanSubscription_1_init(RxSubscriptionsBooleanSubscription_1 *self);
 
-__attribute__((unused)) static RxSubscriptionsBooleanSubscription_$1 *new_RxSubscriptionsBooleanSubscription_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxSubscriptionsBooleanSubscription_1 *new_RxSubscriptionsBooleanSubscription_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxSubscriptionsBooleanSubscription_$1 *create_RxSubscriptionsBooleanSubscription_$1_init();
+__attribute__((unused)) static RxSubscriptionsBooleanSubscription_1 *create_RxSubscriptionsBooleanSubscription_1_init();
 
 J2OBJC_INITIALIZED_DEFN(RxSubscriptionsBooleanSubscription)
 
@@ -110,7 +110,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (void)initialize {
   if (self == [RxSubscriptionsBooleanSubscription class]) {
-    JreStrongAssignAndConsume(&RxSubscriptionsBooleanSubscription_EMPTY_ACTION, new_RxSubscriptionsBooleanSubscription_$1_init());
+    JreStrongAssignAndConsume(&RxSubscriptionsBooleanSubscription_EMPTY_ACTION, new_RxSubscriptionsBooleanSubscription_1_init());
     J2OBJC_SET_INITIALIZED(RxSubscriptionsBooleanSubscription)
   }
 }
@@ -155,43 +155,43 @@ RxSubscriptionsBooleanSubscription *RxSubscriptionsBooleanSubscription_createWit
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubscriptionsBooleanSubscription)
 
-@implementation RxSubscriptionsBooleanSubscription_$1
-
-- (void)call {
-}
+@implementation RxSubscriptionsBooleanSubscription_1
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
-  RxSubscriptionsBooleanSubscription_$1_init(self);
+  RxSubscriptionsBooleanSubscription_1_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (void)call {
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "LRxSubscriptionsBooleanSubscription;" };
-  static const J2ObjcClassInfo _RxSubscriptionsBooleanSubscription_$1 = { "", "rx.subscriptions", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 0, -1, -1, -1, -1 };
-  return &_RxSubscriptionsBooleanSubscription_$1;
+  static const J2ObjcClassInfo _RxSubscriptionsBooleanSubscription_1 = { "", "rx.subscriptions", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 0, -1, -1, -1, -1 };
+  return &_RxSubscriptionsBooleanSubscription_1;
 }
 
 @end
 
-void RxSubscriptionsBooleanSubscription_$1_init(RxSubscriptionsBooleanSubscription_$1 *self) {
+void RxSubscriptionsBooleanSubscription_1_init(RxSubscriptionsBooleanSubscription_1 *self) {
   NSObject_init(self);
 }
 
-RxSubscriptionsBooleanSubscription_$1 *new_RxSubscriptionsBooleanSubscription_$1_init() {
-  J2OBJC_NEW_IMPL(RxSubscriptionsBooleanSubscription_$1, init)
+RxSubscriptionsBooleanSubscription_1 *new_RxSubscriptionsBooleanSubscription_1_init() {
+  J2OBJC_NEW_IMPL(RxSubscriptionsBooleanSubscription_1, init)
 }
 
-RxSubscriptionsBooleanSubscription_$1 *create_RxSubscriptionsBooleanSubscription_$1_init() {
-  J2OBJC_CREATE_IMPL(RxSubscriptionsBooleanSubscription_$1, init)
+RxSubscriptionsBooleanSubscription_1 *create_RxSubscriptionsBooleanSubscription_1_init() {
+  J2OBJC_CREATE_IMPL(RxSubscriptionsBooleanSubscription_1, init)
 }

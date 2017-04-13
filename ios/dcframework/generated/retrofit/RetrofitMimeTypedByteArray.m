@@ -58,7 +58,7 @@ J2OBJC_FIELD_SETTER(RetrofitMimeTypedByteArray, bytes_, IOSByteArray *)
 
 - (jboolean)isEqual:(id)o {
   if (self == o) return true;
-  if (o == nil || [self java_getClass] != (id) [o java_getClass]) return false;
+  if (o == nil || [self java_getClass] != [o java_getClass]) return false;
   RetrofitMimeTypedByteArray *that = (RetrofitMimeTypedByteArray *) cast_chk(o, [RetrofitMimeTypedByteArray class]);
   if (!JavaUtilArrays_equalsWithByteArray_withByteArray_(bytes_, that->bytes_)) return false;
   if (![((NSString *) nil_chk(mimeType_)) isEqual:that->mimeType_]) return false;

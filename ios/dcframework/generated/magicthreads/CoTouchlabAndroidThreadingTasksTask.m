@@ -10,6 +10,13 @@
 
 @implementation CoTouchlabAndroidThreadingTasksTask
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabAndroidThreadingTasksTask_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (void)setMyQueueWithCoTouchlabAndroidThreadingTasksBaseTaskQueue:(CoTouchlabAndroidThreadingTasksBaseTaskQueue *)myQueue {
   JreStrongAssign(&self->myQueue_, myQueue);
 }
@@ -29,13 +36,6 @@
 - (void)onCompleteWithAndroidContentContext:(AndroidContentContext *)context {
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabAndroidThreadingTasksTask_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(myQueue_);
   [super dealloc];
@@ -43,19 +43,19 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x404, 2, 3, 4, -1, -1, -1 },
     { NULL, "Z", 0x404, 5, 6, -1, -1, -1, -1 },
     { NULL, "V", 0x4, 7, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(setMyQueueWithCoTouchlabAndroidThreadingTasksBaseTaskQueue:);
-  methods[1].selector = @selector(runWithAndroidContentContext:);
-  methods[2].selector = @selector(handleErrorWithAndroidContentContext:withNSException:);
-  methods[3].selector = @selector(onCompleteWithAndroidContentContext:);
-  methods[4].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(setMyQueueWithCoTouchlabAndroidThreadingTasksBaseTaskQueue:);
+  methods[2].selector = @selector(runWithAndroidContentContext:);
+  methods[3].selector = @selector(handleErrorWithAndroidContentContext:withNSException:);
+  methods[4].selector = @selector(onCompleteWithAndroidContentContext:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "myQueue_", "LCoTouchlabAndroidThreadingTasksBaseTaskQueue;", .constantValue.asLong = 0, 0x84, -1, -1, -1, -1 },

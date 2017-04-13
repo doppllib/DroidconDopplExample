@@ -119,7 +119,7 @@ ComGoogleGsonInternalBindTypeAdapterRuntimeTypeWrapper *create_ComGoogleGsonInte
 }
 
 id<JavaLangReflectType> ComGoogleGsonInternalBindTypeAdapterRuntimeTypeWrapper_getRuntimeTypeIfMoreSpecificWithJavaLangReflectType_withId_(ComGoogleGsonInternalBindTypeAdapterRuntimeTypeWrapper *self, id<JavaLangReflectType> type, id value) {
-  if (value != nil && (type == NSObject_class_() || [JavaLangReflectTypeVariable_class_() isInstance:type] || [type isKindOfClass:[IOSClass class]])) {
+  if (value != nil && (type == (id) NSObject_class_() || [JavaLangReflectTypeVariable_class_() isInstance:type] || [type isKindOfClass:[IOSClass class]])) {
     type = [value java_getClass];
   }
   return type;

@@ -263,9 +263,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorMerge_HolderDelayErr
   return [self addAndGetWithLong:-n];
 }
 
-- (void)dealloc {
-  RELEASE_(subscriber_);
-  [super dealloc];
+- (void)__javaClone:(RxInternalOperatorsOperatorMerge_MergeProducer *)original {
+  [super __javaClone:original];
+  [subscriber_ release];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -293,7 +293,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorMerge_HolderDelayErr
 
 void RxInternalOperatorsOperatorMerge_MergeProducer_initWithRxInternalOperatorsOperatorMerge_MergeSubscriber_(RxInternalOperatorsOperatorMerge_MergeProducer *self, RxInternalOperatorsOperatorMerge_MergeSubscriber *subscriber) {
   JavaUtilConcurrentAtomicAtomicLong_init(self);
-  JreStrongAssign(&self->subscriber_, subscriber);
+  self->subscriber_ = subscriber;
 }
 
 RxInternalOperatorsOperatorMerge_MergeProducer *new_RxInternalOperatorsOperatorMerge_MergeProducer_initWithRxInternalOperatorsOperatorMerge_MergeSubscriber_(RxInternalOperatorsOperatorMerge_MergeSubscriber *subscriber) {
@@ -356,7 +356,7 @@ IOSObjectArray *RxInternalOperatorsOperatorMerge_MergeSubscriber_EMPTY;
   if (t == nil) {
     return;
   }
-  if (t == (id) RxObservable_empty()) {
+  if (t == RxObservable_empty()) {
     [self emitEmpty];
   }
   else if ([t isKindOfClass:[RxInternalUtilScalarSynchronousObservable class]]) {
@@ -870,7 +870,6 @@ IOSObjectArray *RxInternalOperatorsOperatorMerge_MergeSubscriber_EMPTY;
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorMerge_MergeSubscriber class]);
   RELEASE_(child_);
   RELEASE_(producer_MergeSubscriber_);
   JreReleaseVolatile(&queue_);
@@ -1049,7 +1048,6 @@ jint RxInternalOperatorsOperatorMerge_InnerSubscriber_LIMIT;
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorMerge_InnerSubscriber class]);
   RELEASE_(parent_);
   JreReleaseVolatile(&queue_);
   [super dealloc];

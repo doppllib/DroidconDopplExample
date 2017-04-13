@@ -22,6 +22,7 @@
 
 @class ComGoogleGsonJsonElement;
 @class JavaIoReader;
+@protocol JavaUtilFunctionConsumer;
 
 @interface ComGoogleGsonJsonStreamParser : NSObject < JavaUtilIterator >
 

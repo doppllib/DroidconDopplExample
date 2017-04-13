@@ -28,29 +28,26 @@
 
 J2OBJC_FIELD_SETTER(DCTAddRsvpTask, eventId_, JavaLangLong *)
 
-@interface DCTAddRsvpTask_$1 : NSObject < JavaUtilConcurrentCallable > {
+@interface DCTAddRsvpTask_1 : NSObject < JavaUtilConcurrentCallable > {
  @public
   DCTAddRsvpTask *this$0_;
   AndroidContentContext *val$context_;
 }
 
-- (id)call;
-
 - (instancetype)initWithDCTAddRsvpTask:(DCTAddRsvpTask *)outer$
              withAndroidContentContext:(AndroidContentContext *)capture$0;
 
+- (JavaLangVoid *)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(DCTAddRsvpTask_$1)
+J2OBJC_EMPTY_STATIC_INIT(DCTAddRsvpTask_1)
 
-J2OBJC_FIELD_SETTER(DCTAddRsvpTask_$1, this$0_, DCTAddRsvpTask *)
-J2OBJC_FIELD_SETTER(DCTAddRsvpTask_$1, val$context_, AndroidContentContext *)
+__attribute__((unused)) static void DCTAddRsvpTask_1_initWithDCTAddRsvpTask_withAndroidContentContext_(DCTAddRsvpTask_1 *self, DCTAddRsvpTask *outer$, AndroidContentContext *capture$0);
 
-__attribute__((unused)) static void DCTAddRsvpTask_$1_initWithDCTAddRsvpTask_withAndroidContentContext_(DCTAddRsvpTask_$1 *self, DCTAddRsvpTask *outer$, AndroidContentContext *capture$0);
+__attribute__((unused)) static DCTAddRsvpTask_1 *new_DCTAddRsvpTask_1_initWithDCTAddRsvpTask_withAndroidContentContext_(DCTAddRsvpTask *outer$, AndroidContentContext *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static DCTAddRsvpTask_$1 *new_DCTAddRsvpTask_$1_initWithDCTAddRsvpTask_withAndroidContentContext_(DCTAddRsvpTask *outer$, AndroidContentContext *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static DCTAddRsvpTask_$1 *create_DCTAddRsvpTask_$1_initWithDCTAddRsvpTask_withAndroidContentContext_(DCTAddRsvpTask *outer$, AndroidContentContext *capture$0);
+__attribute__((unused)) static DCTAddRsvpTask_1 *create_DCTAddRsvpTask_1_initWithDCTAddRsvpTask_withAndroidContentContext_(DCTAddRsvpTask *outer$, AndroidContentContext *capture$0);
 
 @implementation DCTAddRsvpTask
 
@@ -60,7 +57,7 @@ __attribute__((unused)) static DCTAddRsvpTask_$1 *create_DCTAddRsvpTask_$1_initW
 }
 
 - (void)runWithAndroidContentContext:(AndroidContentContext *)context {
-  [((DCDDatabaseHelper *) nil_chk(DCDDatabaseHelper_getInstanceWithAndroidContentContext_(context))) performTransactionOrThrowRuntimeWithJavaUtilConcurrentCallable:create_DCTAddRsvpTask_$1_initWithDCTAddRsvpTask_withAndroidContentContext_(self, context)];
+  [((DCDDatabaseHelper *) nil_chk(DCDDatabaseHelper_getInstanceWithAndroidContentContext_(context))) performTransactionOrThrowRuntimeWithJavaUtilConcurrentCallable:create_DCTAddRsvpTask_1_initWithDCTAddRsvpTask_withAndroidContentContext_(self, context)];
 }
 
 - (jboolean)handleErrorWithAndroidContentContext:(AndroidContentContext *)context
@@ -116,9 +113,15 @@ DCTAddRsvpTask *create_DCTAddRsvpTask_initWithJavaLangLong_(JavaLangLong *eventI
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(DCTAddRsvpTask)
 
-@implementation DCTAddRsvpTask_$1
+@implementation DCTAddRsvpTask_1
 
-- (id)call {
+- (instancetype)initWithDCTAddRsvpTask:(DCTAddRsvpTask *)outer$
+             withAndroidContentContext:(AndroidContentContext *)capture$0 {
+  DCTAddRsvpTask_1_initWithDCTAddRsvpTask_withAndroidContentContext_(self, outer$, capture$0);
+  return self;
+}
+
+- (JavaLangVoid *)call {
   id<CoTouchlabSqueakyDaoDao> dao = [((DCDDatabaseHelper *) nil_chk(DCDDatabaseHelper_getInstanceWithAndroidContentContext_(val$context_))) getEventDao];
   DCDEvent *event = [((id<CoTouchlabSqueakyDaoDao>) nil_chk(dao)) queryForIdWithId:this$0_->eventId_];
   if (event != nil && event->rsvpUuid_ == nil) {
@@ -130,12 +133,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(DCTAddRsvpTask)
   return nil;
 }
 
-- (instancetype)initWithDCTAddRsvpTask:(DCTAddRsvpTask *)outer$
-             withAndroidContentContext:(AndroidContentContext *)capture$0 {
-  DCTAddRsvpTask_$1_initWithDCTAddRsvpTask_withAndroidContentContext_(self, outer$, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$context_);
@@ -144,35 +141,35 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(DCTAddRsvpTask)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaLangVoid;", 0x1, -1, -1, 0, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithDCTAddRsvpTask:withAndroidContentContext:);
+  methods[0].selector = @selector(initWithDCTAddRsvpTask:withAndroidContentContext:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LDCTAddRsvpTask;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$context_", "LAndroidContentContext;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LJavaLangException;", "LDCTAddRsvpTask;LAndroidContentContext;", "LDCTAddRsvpTask;", "runWithAndroidContentContext:", "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/Void;>;" };
-  static const J2ObjcClassInfo _DCTAddRsvpTask_$1 = { "", "co.touchlab.droidconandroid.tasks", ptrTable, methods, fields, 7, 0x8008, 2, 2, 2, -1, 3, 4, -1 };
-  return &_DCTAddRsvpTask_$1;
+  static const void *ptrTable[] = { "LJavaLangException;", "LDCTAddRsvpTask;", "runWithAndroidContentContext:", "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/Void;>;" };
+  static const J2ObjcClassInfo _DCTAddRsvpTask_1 = { "", "co.touchlab.droidconandroid.tasks", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, 3, -1 };
+  return &_DCTAddRsvpTask_1;
 }
 
 @end
 
-void DCTAddRsvpTask_$1_initWithDCTAddRsvpTask_withAndroidContentContext_(DCTAddRsvpTask_$1 *self, DCTAddRsvpTask *outer$, AndroidContentContext *capture$0) {
+void DCTAddRsvpTask_1_initWithDCTAddRsvpTask_withAndroidContentContext_(DCTAddRsvpTask_1 *self, DCTAddRsvpTask *outer$, AndroidContentContext *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$context_, capture$0);
   NSObject_init(self);
 }
 
-DCTAddRsvpTask_$1 *new_DCTAddRsvpTask_$1_initWithDCTAddRsvpTask_withAndroidContentContext_(DCTAddRsvpTask *outer$, AndroidContentContext *capture$0) {
-  J2OBJC_NEW_IMPL(DCTAddRsvpTask_$1, initWithDCTAddRsvpTask_withAndroidContentContext_, outer$, capture$0)
+DCTAddRsvpTask_1 *new_DCTAddRsvpTask_1_initWithDCTAddRsvpTask_withAndroidContentContext_(DCTAddRsvpTask *outer$, AndroidContentContext *capture$0) {
+  J2OBJC_NEW_IMPL(DCTAddRsvpTask_1, initWithDCTAddRsvpTask_withAndroidContentContext_, outer$, capture$0)
 }
 
-DCTAddRsvpTask_$1 *create_DCTAddRsvpTask_$1_initWithDCTAddRsvpTask_withAndroidContentContext_(DCTAddRsvpTask *outer$, AndroidContentContext *capture$0) {
-  J2OBJC_CREATE_IMPL(DCTAddRsvpTask_$1, initWithDCTAddRsvpTask_withAndroidContentContext_, outer$, capture$0)
+DCTAddRsvpTask_1 *create_DCTAddRsvpTask_1_initWithDCTAddRsvpTask_withAndroidContentContext_(DCTAddRsvpTask *outer$, AndroidContentContext *capture$0) {
+  J2OBJC_CREATE_IMPL(DCTAddRsvpTask_1, initWithDCTAddRsvpTask_withAndroidContentContext_, outer$, capture$0)
 }

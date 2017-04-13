@@ -95,15 +95,13 @@ __attribute__((unused)) static void CoTouchlabAndroidThreadingTasksPersistedPers
   CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue *this$0_;
 }
 
-- (void)run;
-
 - (instancetype)initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue:(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue *)outer$;
+
+- (void)run;
 
 @end
 
 J2OBJC_EMPTY_STATIC_INIT(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable)
-
-J2OBJC_FIELD_SETTER(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable, this$0_, CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue *)
 
 __attribute__((unused)) static void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable *self, CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue *outer$);
 
@@ -113,29 +111,26 @@ __attribute__((unused)) static CoTouchlabAndroidThreadingTasksPersistedPersisted
 
 J2OBJC_TYPE_LITERAL_HEADER(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable)
 
-@interface CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1 : NSObject < JavaLangRunnable > {
+@interface CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1 : NSObject < JavaLangRunnable > {
  @public
   CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable *this$0_;
   id<JavaUtilCollection> val$persistedTasks_;
 }
 
-- (void)run;
-
 - (instancetype)initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable:(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable *)outer$
                                                                             withJavaUtilCollection:(id<JavaUtilCollection>)capture$0;
 
+- (void)run;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1)
+J2OBJC_EMPTY_STATIC_INIT(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1)
 
-J2OBJC_FIELD_SETTER(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1, this$0_, CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable *)
-J2OBJC_FIELD_SETTER(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1, val$persistedTasks_, id<JavaUtilCollection>)
+__attribute__((unused)) static void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1 *self, CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable *outer$, id<JavaUtilCollection> capture$0);
 
-__attribute__((unused)) static void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1 *self, CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable *outer$, id<JavaUtilCollection> capture$0);
+__attribute__((unused)) static CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1 *new_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable *outer$, id<JavaUtilCollection> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1 *new_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable *outer$, id<JavaUtilCollection> capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1 *create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable *outer$, id<JavaUtilCollection> capture$0);
+__attribute__((unused)) static CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1 *create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable *outer$, id<JavaUtilCollection> capture$0);
 
 @interface CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_PersistTasksRunnable : NSObject < JavaLangRunnable > {
  @public
@@ -152,7 +147,6 @@ __attribute__((unused)) static CoTouchlabAndroidThreadingTasksPersistedPersisted
 
 J2OBJC_EMPTY_STATIC_INIT(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_PersistTasksRunnable)
 
-J2OBJC_FIELD_SETTER(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_PersistTasksRunnable, this$0_, CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue *)
 J2OBJC_FIELD_SETTER(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_PersistTasksRunnable, tasks_, id<JavaUtilList>)
 
 __attribute__((unused)) static void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_PersistTasksRunnable_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_withJavaUtilList_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_PersistTasksRunnable *self, CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue *outer$, id<JavaUtilList> tasks);
@@ -218,7 +212,6 @@ J2OBJC_TYPE_LITERAL_HEADER(CoTouchlabAndroidThreadingTasksPersistedPersistedTask
 
 J2OBJC_EMPTY_STATIC_INIT(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask)
 
-J2OBJC_FIELD_SETTER(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask, this$0_, CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue *)
 J2OBJC_FIELD_SETTER(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask, c_, CoTouchlabAndroidThreadingTasksPersistedPersistedTask *)
 
 __attribute__((unused)) static void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_withCoTouchlabAndroidThreadingTasksPersistedPersistedTask_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask *self, CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue *outer$, CoTouchlabAndroidThreadingTasksPersistedPersistedTask *task);
@@ -229,26 +222,24 @@ __attribute__((unused)) static CoTouchlabAndroidThreadingTasksPersistedPersisted
 
 J2OBJC_TYPE_LITERAL_HEADER(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask)
 
-@interface CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1 : NSObject < JavaLangRunnable > {
+@interface CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1 : NSObject < JavaLangRunnable > {
  @public
   CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask *this$0_;
 }
 
-- (void)run;
-
 - (instancetype)initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask:(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask *)outer$;
+
+- (void)run;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1)
+J2OBJC_EMPTY_STATIC_INIT(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1)
 
-J2OBJC_FIELD_SETTER(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1, this$0_, CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask *)
+__attribute__((unused)) static void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1 *self, CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask *outer$);
 
-__attribute__((unused)) static void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1 *self, CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask *outer$);
+__attribute__((unused)) static CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1 *new_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1 *new_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1 *create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask *outer$);
+__attribute__((unused)) static CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1 *create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask *outer$);
 
 @interface CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_FinishTaskContainer : NSObject {
  @public
@@ -286,26 +277,24 @@ J2OBJC_TYPE_LITERAL_HEADER(CoTouchlabAndroidThreadingTasksPersistedPersistedTask
 
 J2OBJC_FIELD_SETTER(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_PriorityQueueWrapper, priorityQueue_, JavaUtilPriorityQueue *)
 
-@interface CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1 : NSObject < JavaLangRunnable > {
+@interface CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1 : NSObject < JavaLangRunnable > {
  @public
   id<JavaLangRunnable> val$r_;
 }
 
-- (void)run;
-
 - (instancetype)initWithJavaLangRunnable:(id<JavaLangRunnable>)capture$0;
+
+- (void)run;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1)
+J2OBJC_EMPTY_STATIC_INIT(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1)
 
-J2OBJC_FIELD_SETTER(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1, val$r_, id<JavaLangRunnable>)
+__attribute__((unused)) static void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1_initWithJavaLangRunnable_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1 *self, id<JavaLangRunnable> capture$0);
 
-__attribute__((unused)) static void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1_initWithJavaLangRunnable_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1 *self, id<JavaLangRunnable> capture$0);
+__attribute__((unused)) static CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1 *new_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1 *new_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1 *create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0);
+__attribute__((unused)) static CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1 *create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0);
 
 J2OBJC_INITIALIZED_DEFN(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue)
 
@@ -600,23 +589,23 @@ void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_logPermanentExce
 }
 
 void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_runInBackgroundWithJavaLangRunnable_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue *self, id<JavaLangRunnable> r) {
-  [((id<JavaUtilConcurrentExecutorService>) nil_chk(self->executorService_)) executeWithJavaLangRunnable:create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1_initWithJavaLangRunnable_(r)];
+  [((id<JavaUtilConcurrentExecutorService>) nil_chk(self->executorService_)) executeWithJavaLangRunnable:create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1_initWithJavaLangRunnable_(r)];
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue)
 
 @implementation CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable
 
-- (void)run {
-  CoTouchlabAndroidThreadingUtilsUiThreadContext_assertBackgroundThread();
-  id<JavaUtilCollection> persistedTasks = [((id<CoTouchlabAndroidThreadingTasksPersistedPersistenceProvider>) nil_chk(this$0_->provider_)) loadPersistedCommands];
-  [((AndroidOsHandler *) nil_chk(this$0_->handler_)) postWithJavaLangRunnable:create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_(self, persistedTasks)];
-  [this$0_ resetPollRunnable];
-}
-
 - (instancetype)initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue:(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue *)outer$ {
   CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_(self, outer$);
   return self;
+}
+
+- (void)run {
+  CoTouchlabAndroidThreadingUtilsUiThreadContext_assertBackgroundThread();
+  id<JavaUtilCollection> persistedTasks = [((id<CoTouchlabAndroidThreadingTasksPersistedPersistenceProvider>) nil_chk(this$0_->provider_)) loadPersistedCommands];
+  [((AndroidOsHandler *) nil_chk(this$0_->handler_)) postWithJavaLangRunnable:create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_(self, persistedTasks)];
+  [this$0_ resetPollRunnable];
 }
 
 - (void)dealloc {
@@ -626,13 +615,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksPersistedPersist
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x2, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue:);
+  methods[0].selector = @selector(initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue:);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
@@ -659,18 +648,18 @@ CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable *crea
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable)
 
-@implementation CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1
+@implementation CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1
+
+- (instancetype)initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable:(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable *)outer$
+                                                                            withJavaUtilCollection:(id<JavaUtilCollection>)capture$0 {
+  CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)run {
   for (CoTouchlabAndroidThreadingTasksPersistedPersistedTask * __strong persistedTask in nil_chk(val$persistedTasks_)) {
     [this$0_->this$0_ insertTaskWithCoTouchlabAndroidThreadingTasksTask:persistedTask];
   }
-}
-
-- (instancetype)initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable:(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable *)outer$
-                                                                            withJavaUtilCollection:(id<JavaUtilCollection>)capture$0 {
-  CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_(self, outer$, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -681,37 +670,37 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksPersistedPersist
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable:withJavaUtilCollection:);
+  methods[0].selector = @selector(initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable:withJavaUtilCollection:);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$persistedTasks_", "LJavaUtilCollection;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+    { "val$persistedTasks_", "LJavaUtilCollection;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable;LJavaUtilCollection;", "(Lco/touchlab/android/threading/tasks/persisted/PersistedTaskQueue$LoadAllRunnable;Ljava/util/Collection<Lco/touchlab/android/threading/tasks/persisted/PersistedTask;>;)V", "Ljava/util/Collection<Lco/touchlab/android/threading/tasks/persisted/PersistedTask;>;", "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable;", "run" };
-  static const J2ObjcClassInfo _CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1 = { "", "co.touchlab.android.threading.tasks.persisted", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, -1, -1 };
-  return &_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1;
+  static const void *ptrTable[] = { "Ljava/util/Collection<Lco/touchlab/android/threading/tasks/persisted/PersistedTask;>;", "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable;", "run" };
+  static const J2ObjcClassInfo _CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1 = { "", "co.touchlab.android.threading.tasks.persisted", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
+  return &_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1;
 }
 
 @end
 
-void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1 *self, CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable *outer$, id<JavaUtilCollection> capture$0) {
+void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1 *self, CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable *outer$, id<JavaUtilCollection> capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$persistedTasks_, capture$0);
   NSObject_init(self);
 }
 
-CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1 *new_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable *outer$, id<JavaUtilCollection> capture$0) {
-  J2OBJC_NEW_IMPL(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1, initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_, outer$, capture$0)
+CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1 *new_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable *outer$, id<JavaUtilCollection> capture$0) {
+  J2OBJC_NEW_IMPL(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1, initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_, outer$, capture$0)
 }
 
-CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1 *create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable *outer$, id<JavaUtilCollection> capture$0) {
-  J2OBJC_CREATE_IMPL(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1, initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_, outer$, capture$0)
+CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1 *create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable *outer$, id<JavaUtilCollection> capture$0) {
+  J2OBJC_CREATE_IMPL(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_1, initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_withJavaUtilCollection_, outer$, capture$0)
 }
 
 @implementation CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_PersistTasksRunnable
@@ -751,7 +740,7 @@ CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_LoadAllRunnable_$1 *c
     { "this$0_", "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "tasks_", "LJavaUtilList;", .constantValue.asLong = 0, 0x2, -1, -1, 2, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue;LJavaUtilList;", "(Lco/touchlab/android/threading/tasks/persisted/PersistedTaskQueue;Ljava/util/List<Lco/touchlab/android/threading/tasks/persisted/PersistedTask;>;)V", "Ljava/util/List<Lco/touchlab/android/threading/tasks/persisted/PersistedTask;>;", "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue;" };
+  static const void *ptrTable[] = { "LJavaUtilList;", "(Ljava/util/List<Lco/touchlab/android/threading/tasks/persisted/PersistedTask;>;)V", "Ljava/util/List<Lco/touchlab/android/threading/tasks/persisted/PersistedTask;>;", "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue;" };
   static const J2ObjcClassInfo _CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_PersistTasksRunnable = { "PersistTasksRunnable", "co.touchlab.android.threading.tasks.persisted", ptrTable, methods, fields, 7, 0x2, 2, 2, 3, -1, -1, -1, -1 };
   return &_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_PersistTasksRunnable;
 }
@@ -872,7 +861,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksPersistedPersist
 
 - (void)run {
   CoTouchlabAndroidThreadingUtilsUiThreadContext_assertBackgroundThread();
-  id<JavaLangRunnable> taskRun = create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_(self);
+  id<JavaLangRunnable> taskRun = create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_(self);
   if ([((CoTouchlabAndroidThreadingTasksPersistedPersistedTask *) nil_chk(c_)) runAllInTransaction]) {
     [((id<CoTouchlabAndroidThreadingTasksPersistedPersistenceProvider>) nil_chk(this$0_->provider_)) runInTransactionWithJavaLangRunnable:taskRun];
   }
@@ -901,7 +890,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksPersistedPersist
     { "this$0_", "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "c_", "LCoTouchlabAndroidThreadingTasksPersistedPersistedTask;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue;LCoTouchlabAndroidThreadingTasksPersistedPersistedTask;", "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue;" };
+  static const void *ptrTable[] = { "LCoTouchlabAndroidThreadingTasksPersistedPersistedTask;", "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue;" };
   static const J2ObjcClassInfo _CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask = { "ExeTask", "co.touchlab.android.threading.tasks.persisted", ptrTable, methods, fields, 7, 0x2, 2, 2, 1, -1, -1, -1, -1 };
   return &_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask;
 }
@@ -924,7 +913,12 @@ CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask *create_CoTou
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask)
 
-@implementation CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1
+@implementation CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1
+
+- (instancetype)initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask:(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask *)outer$ {
+  CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_(self, outer$);
+  return self;
+}
 
 - (void)run {
   CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_CommandResult *commandResult;
@@ -962,11 +956,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksPersistedPersist
   [((AndroidOsHandler *) nil_chk(this$0_->this$0_->handler_)) sendMessageWithAndroidOsMessage:[this$0_->this$0_->handler_ obtainMessageWithInt:CoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueHandler_POST_EXE withId:create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_FinishTaskContainer_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTask_withCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_CommandResult_withNSException_(this$0_->c_, commandResult, cause)]];
 }
 
-- (instancetype)initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask:(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask *)outer$ {
-  CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -974,35 +963,35 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksPersistedPersist
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask:);
+  methods[0].selector = @selector(initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask:);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask;", "run" };
-  static const J2ObjcClassInfo _CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1 = { "", "co.touchlab.android.threading.tasks.persisted", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
-  return &_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1;
+  static const J2ObjcClassInfo _CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1 = { "", "co.touchlab.android.threading.tasks.persisted", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  return &_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1;
 }
 
 @end
 
-void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1 *self, CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask *outer$) {
+void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1 *self, CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1 *new_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask *outer$) {
-  J2OBJC_NEW_IMPL(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1, initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_, outer$)
+CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1 *new_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask *outer$) {
+  J2OBJC_NEW_IMPL(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1, initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_, outer$)
 }
 
-CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1 *create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask *outer$) {
-  J2OBJC_CREATE_IMPL(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_$1, initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_, outer$)
+CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1 *create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1_initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask *outer$) {
+  J2OBJC_CREATE_IMPL(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_1, initWithCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_ExeTask_, outer$)
 }
 
 @implementation CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_FinishTaskContainer
@@ -1060,6 +1049,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksPersistedPersist
 
 @implementation CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_PriorityQueueWrapper
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_PriorityQueueWrapper_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (CoTouchlabAndroidThreadingTasksTask *)poll {
   return [((JavaUtilPriorityQueue *) nil_chk(priorityQueue_)) poll];
 }
@@ -1076,13 +1072,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksPersistedPersist
   [((JavaUtilPriorityQueue *) nil_chk(priorityQueue_)) removeWithId:task];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_PriorityQueueWrapper_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(priorityQueue_);
   [super dealloc];
@@ -1090,19 +1079,19 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LCoTouchlabAndroidThreadingTasksTask;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "LJavaUtilCollection;", 0x1, -1, -1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(poll);
-  methods[1].selector = @selector(offerWithId:);
-  methods[2].selector = @selector(all);
-  methods[3].selector = @selector(removeWithId:);
-  methods[4].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(poll);
+  methods[2].selector = @selector(offerWithId:);
+  methods[3].selector = @selector(all);
+  methods[4].selector = @selector(removeWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "priorityQueue_", "LJavaUtilPriorityQueue;", .constantValue.asLong = 0, 0x12, -1, -1, 4, -1 },
@@ -1128,6 +1117,68 @@ CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_PriorityQueueWrapper 
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_PriorityQueueWrapper)
+
+@implementation CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1
+
+- (instancetype)initWithJavaLangRunnable:(id<JavaLangRunnable>)capture$0 {
+  CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1_initWithJavaLangRunnable_(self, capture$0);
+  return self;
+}
+
+- (void)run {
+  @try {
+    [((id<JavaLangRunnable>) nil_chk(val$r_)) run];
+  }
+  @catch (NSException *e) {
+    if ([e isKindOfClass:[JavaLangRuntimeException class]]) {
+      @throw (JavaLangRuntimeException *) cast_chk(e, [JavaLangRuntimeException class]);
+    }
+    else if ([e isKindOfClass:[JavaLangError class]]) {
+      @throw (JavaLangError *) cast_chk(e, [JavaLangError class]);
+    }
+    else {
+      @throw create_JavaLangRuntimeException_initWithNSException_(e);
+    }
+  }
+}
+
+- (void)dealloc {
+  RELEASE_(val$r_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithJavaLangRunnable:);
+  methods[1].selector = @selector(run);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$r_", "LJavaLangRunnable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue;", "runInBackgroundWithJavaLangRunnable:" };
+  static const J2ObjcClassInfo _CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1 = { "", "co.touchlab.android.threading.tasks.persisted", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  return &_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1;
+}
+
+@end
+
+void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1_initWithJavaLangRunnable_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1 *self, id<JavaLangRunnable> capture$0) {
+  JreStrongAssign(&self->val$r_, capture$0);
+  NSObject_init(self);
+}
+
+CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1 *new_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) {
+  J2OBJC_NEW_IMPL(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1, initWithJavaLangRunnable_, capture$0)
+}
+
+CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1 *create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) {
+  J2OBJC_CREATE_IMPL(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_1, initWithJavaLangRunnable_, capture$0)
+}
 
 @implementation CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_PersistedTaskQueueState
 
@@ -1209,65 +1260,3 @@ CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_PersistedTaskQueueSta
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_PersistedTaskQueueState)
-
-@implementation CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1
-
-- (void)run {
-  @try {
-    [((id<JavaLangRunnable>) nil_chk(val$r_)) run];
-  }
-  @catch (NSException *e) {
-    if ([e isKindOfClass:[JavaLangRuntimeException class]]) {
-      @throw (JavaLangRuntimeException *) cast_chk(e, [JavaLangRuntimeException class]);
-    }
-    else if ([e isKindOfClass:[JavaLangError class]]) {
-      @throw (JavaLangError *) cast_chk(e, [JavaLangError class]);
-    }
-    else {
-      @throw create_JavaLangRuntimeException_initWithNSException_(e);
-    }
-  }
-}
-
-- (instancetype)initWithJavaLangRunnable:(id<JavaLangRunnable>)capture$0 {
-  CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1_initWithJavaLangRunnable_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$r_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithJavaLangRunnable:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$r_", "LJavaLangRunnable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "LJavaLangRunnable;", "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue;", "runInBackgroundWithJavaLangRunnable:" };
-  static const J2ObjcClassInfo _CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1 = { "", "co.touchlab.android.threading.tasks.persisted", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
-  return &_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1;
-}
-
-@end
-
-void CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1_initWithJavaLangRunnable_(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1 *self, id<JavaLangRunnable> capture$0) {
-  JreStrongAssign(&self->val$r_, capture$0);
-  NSObject_init(self);
-}
-
-CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1 *new_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) {
-  J2OBJC_NEW_IMPL(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1, initWithJavaLangRunnable_, capture$0)
-}
-
-CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1 *create_CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) {
-  J2OBJC_CREATE_IMPL(CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue_$1, initWithJavaLangRunnable_, capture$0)
-}

@@ -25,28 +25,26 @@ J2OBJC_FIELD_SETTER(AndroidDatabaseMergeCursor, mObserver_, AndroidDatabaseDataS
 J2OBJC_FIELD_SETTER(AndroidDatabaseMergeCursor, mCursor_, id<AndroidDatabaseCursor>)
 J2OBJC_FIELD_SETTER(AndroidDatabaseMergeCursor, mCursors_, IOSObjectArray *)
 
-@interface AndroidDatabaseMergeCursor_$1 : AndroidDatabaseDataSetObserver {
+@interface AndroidDatabaseMergeCursor_1 : AndroidDatabaseDataSetObserver {
  @public
   AndroidDatabaseMergeCursor *this$0_;
 }
+
+- (instancetype)initWithAndroidDatabaseMergeCursor:(AndroidDatabaseMergeCursor *)outer$;
 
 - (void)onChanged;
 
 - (void)onInvalidated;
 
-- (instancetype)initWithAndroidDatabaseMergeCursor:(AndroidDatabaseMergeCursor *)outer$;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(AndroidDatabaseMergeCursor_$1)
+J2OBJC_EMPTY_STATIC_INIT(AndroidDatabaseMergeCursor_1)
 
-J2OBJC_FIELD_SETTER(AndroidDatabaseMergeCursor_$1, this$0_, AndroidDatabaseMergeCursor *)
+__attribute__((unused)) static void AndroidDatabaseMergeCursor_1_initWithAndroidDatabaseMergeCursor_(AndroidDatabaseMergeCursor_1 *self, AndroidDatabaseMergeCursor *outer$);
 
-__attribute__((unused)) static void AndroidDatabaseMergeCursor_$1_initWithAndroidDatabaseMergeCursor_(AndroidDatabaseMergeCursor_$1 *self, AndroidDatabaseMergeCursor *outer$);
+__attribute__((unused)) static AndroidDatabaseMergeCursor_1 *new_AndroidDatabaseMergeCursor_1_initWithAndroidDatabaseMergeCursor_(AndroidDatabaseMergeCursor *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static AndroidDatabaseMergeCursor_$1 *new_AndroidDatabaseMergeCursor_$1_initWithAndroidDatabaseMergeCursor_(AndroidDatabaseMergeCursor *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static AndroidDatabaseMergeCursor_$1 *create_AndroidDatabaseMergeCursor_$1_initWithAndroidDatabaseMergeCursor_(AndroidDatabaseMergeCursor *outer$);
+__attribute__((unused)) static AndroidDatabaseMergeCursor_1 *create_AndroidDatabaseMergeCursor_1_initWithAndroidDatabaseMergeCursor_(AndroidDatabaseMergeCursor *outer$);
 
 @implementation AndroidDatabaseMergeCursor
 
@@ -247,7 +245,7 @@ __attribute__((unused)) static AndroidDatabaseMergeCursor_$1 *create_AndroidData
 
 void AndroidDatabaseMergeCursor_initWithAndroidDatabaseCursorArray_(AndroidDatabaseMergeCursor *self, IOSObjectArray *cursors) {
   AndroidDatabaseAbstractCursor_init(self);
-  JreStrongAssignAndConsume(&self->mObserver_, new_AndroidDatabaseMergeCursor_$1_initWithAndroidDatabaseMergeCursor_(self));
+  JreStrongAssignAndConsume(&self->mObserver_, new_AndroidDatabaseMergeCursor_1_initWithAndroidDatabaseMergeCursor_(self));
   JreStrongAssign(&self->mCursors_, cursors);
   JreStrongAssign(&self->mCursor_, IOSObjectArray_Get(nil_chk(cursors), 0));
   for (jint i = 0; i < ((IOSObjectArray *) nil_chk(self->mCursors_))->size_; i++) {
@@ -266,7 +264,12 @@ AndroidDatabaseMergeCursor *create_AndroidDatabaseMergeCursor_initWithAndroidDat
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidDatabaseMergeCursor)
 
-@implementation AndroidDatabaseMergeCursor_$1
+@implementation AndroidDatabaseMergeCursor_1
+
+- (instancetype)initWithAndroidDatabaseMergeCursor:(AndroidDatabaseMergeCursor *)outer$ {
+  AndroidDatabaseMergeCursor_1_initWithAndroidDatabaseMergeCursor_(self, outer$);
+  return self;
+}
 
 - (void)onChanged {
   this$0_->mPos_ = -1;
@@ -276,11 +279,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidDatabaseMergeCursor)
   this$0_->mPos_ = -1;
 }
 
-- (instancetype)initWithAndroidDatabaseMergeCursor:(AndroidDatabaseMergeCursor *)outer$ {
-  AndroidDatabaseMergeCursor_$1_initWithAndroidDatabaseMergeCursor_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -288,35 +286,35 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidDatabaseMergeCursor)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onChanged);
-  methods[1].selector = @selector(onInvalidated);
-  methods[2].selector = @selector(initWithAndroidDatabaseMergeCursor:);
+  methods[0].selector = @selector(initWithAndroidDatabaseMergeCursor:);
+  methods[1].selector = @selector(onChanged);
+  methods[2].selector = @selector(onInvalidated);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LAndroidDatabaseMergeCursor;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LAndroidDatabaseMergeCursor;" };
-  static const J2ObjcClassInfo _AndroidDatabaseMergeCursor_$1 = { "", "android.database", ptrTable, methods, fields, 7, 0x8008, 3, 1, 0, -1, -1, -1, -1 };
-  return &_AndroidDatabaseMergeCursor_$1;
+  static const J2ObjcClassInfo _AndroidDatabaseMergeCursor_1 = { "", "android.database", ptrTable, methods, fields, 7, 0x8008, 3, 1, 0, -1, -1, -1, -1 };
+  return &_AndroidDatabaseMergeCursor_1;
 }
 
 @end
 
-void AndroidDatabaseMergeCursor_$1_initWithAndroidDatabaseMergeCursor_(AndroidDatabaseMergeCursor_$1 *self, AndroidDatabaseMergeCursor *outer$) {
+void AndroidDatabaseMergeCursor_1_initWithAndroidDatabaseMergeCursor_(AndroidDatabaseMergeCursor_1 *self, AndroidDatabaseMergeCursor *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   AndroidDatabaseDataSetObserver_init(self);
 }
 
-AndroidDatabaseMergeCursor_$1 *new_AndroidDatabaseMergeCursor_$1_initWithAndroidDatabaseMergeCursor_(AndroidDatabaseMergeCursor *outer$) {
-  J2OBJC_NEW_IMPL(AndroidDatabaseMergeCursor_$1, initWithAndroidDatabaseMergeCursor_, outer$)
+AndroidDatabaseMergeCursor_1 *new_AndroidDatabaseMergeCursor_1_initWithAndroidDatabaseMergeCursor_(AndroidDatabaseMergeCursor *outer$) {
+  J2OBJC_NEW_IMPL(AndroidDatabaseMergeCursor_1, initWithAndroidDatabaseMergeCursor_, outer$)
 }
 
-AndroidDatabaseMergeCursor_$1 *create_AndroidDatabaseMergeCursor_$1_initWithAndroidDatabaseMergeCursor_(AndroidDatabaseMergeCursor *outer$) {
-  J2OBJC_CREATE_IMPL(AndroidDatabaseMergeCursor_$1, initWithAndroidDatabaseMergeCursor_, outer$)
+AndroidDatabaseMergeCursor_1 *create_AndroidDatabaseMergeCursor_1_initWithAndroidDatabaseMergeCursor_(AndroidDatabaseMergeCursor *outer$) {
+  J2OBJC_CREATE_IMPL(AndroidDatabaseMergeCursor_1, initWithAndroidDatabaseMergeCursor_, outer$)
 }

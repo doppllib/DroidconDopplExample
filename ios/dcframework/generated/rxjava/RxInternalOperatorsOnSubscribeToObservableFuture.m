@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OnSubscribeToObservableFuture.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxExceptionsExceptions.h"
 #include "RxFunctionsAction0.h"
@@ -39,26 +38,24 @@ __attribute__((unused)) static RxInternalOperatorsOnSubscribeToObservableFuture 
 
 J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture, unit_, JavaUtilConcurrentTimeUnit *)
 
-@interface RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture *this$0_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture:(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture *)outer$;
+
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1, this$0_, RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture *)
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1_initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1 *self, RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1_initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1 *self, RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture *outer$);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1 *new_RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1_initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1 *new_RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1_initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1 *create_RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1_initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture *outer$);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1 *create_RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1_initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture *outer$);
 
 @implementation RxInternalOperatorsOnSubscribeToObservableFuture
 
@@ -138,12 +135,12 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeToObservableFutur
 }
 
 - (void)callWithId:(RxSubscriber *)subscriber {
-  [((RxSubscriber *) nil_chk(subscriber)) addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1_initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_(self))];
+  [((RxSubscriber *) nil_chk(subscriber)) addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1_initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_(self))];
   @try {
     if ([subscriber isUnsubscribed]) {
       return;
     }
-    id value = (unit_ == nil) ? [((id<JavaUtilConcurrentFuture>) nil_chk(that_)) get] : (id) [((id<JavaUtilConcurrentFuture>) nil_chk(that_)) getWithLong:time_ withJavaUtilConcurrentTimeUnit:unit_];
+    id value = (unit_ == nil) ? [((id<JavaUtilConcurrentFuture>) nil_chk(that_)) get] : [((id<JavaUtilConcurrentFuture>) nil_chk(that_)) getWithLong:time_ withJavaUtilConcurrentTimeUnit:unit_];
     [subscriber setProducerWithRxProducer:create_RxInternalProducersSingleProducer_initWithRxSubscriber_withId_(subscriber, value)];
   }
   @catch (NSException *e) {
@@ -216,15 +213,15 @@ RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture *create_RxIn
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture)
 
-@implementation RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1
+@implementation RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture:(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture *)outer$ {
+  RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1_initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_(self, outer$);
+  return self;
+}
 
 - (void)call {
   [((id<JavaUtilConcurrentFuture>) nil_chk(this$0_->that_)) cancelWithBoolean:true];
-}
-
-- (instancetype)initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture:(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture *)outer$ {
-  RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1_initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_(self, outer$);
-  return self;
 }
 
 - (void)dealloc {
@@ -234,33 +231,33 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeToObservableFutur
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
-  return &_RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1;
+  static const void *ptrTable[] = { "Lrx/internal/operators/OnSubscribeToObservableFuture$ToObservableFuture<TT;>;", "LRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture;", "callWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
+  return &_RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1;
 }
 
 @end
 
-void RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1_initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1 *self, RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture *outer$) {
+void RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1_initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1 *self, RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1 *new_RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1_initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1, initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_, outer$)
+RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1 *new_RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1_initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1, initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_, outer$)
 }
 
-RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1 *create_RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1_initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_$1, initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_, outer$)
+RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1 *create_RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1_initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_1, initWithRxInternalOperatorsOnSubscribeToObservableFuture_ToObservableFuture_, outer$)
 }

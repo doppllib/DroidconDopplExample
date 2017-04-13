@@ -46,7 +46,7 @@ J2OBJC_FIELD_SETTER(RxSchedulersTimestamped, value_, id)
     return false;
   }
   RxSchedulersTimestamped *other = (RxSchedulersTimestamped *) cast_chk(obj, [RxSchedulersTimestamped class]);
-  return timestampMillis_ == other->timestampMillis_ && ((value_ == (id) other->value_) || (value_ != nil && [value_ isEqual:other->value_]));
+  return timestampMillis_ == other->timestampMillis_ && ((value_ == other->value_) || (value_ != nil && [value_ isEqual:other->value_]));
 }
 
 - (NSUInteger)hash {
@@ -58,7 +58,7 @@ J2OBJC_FIELD_SETTER(RxSchedulersTimestamped, value_, id)
 }
 
 - (NSString *)description {
-  return NSString_formatWithNSString_withNSObjectArray_(@"Timestamped(timestampMillis = %d, value = %s)", [IOSObjectArray arrayWithObjects:(id[]){ JavaLangLong_valueOfWithLong_(timestampMillis_), [nil_chk(value_) description] } count:2 type:NSObject_class_()]);
+  return NSString_java_formatWithNSString_withNSObjectArray_(@"Timestamped(timestampMillis = %d, value = %s)", [IOSObjectArray arrayWithObjects:(id[]){ JavaLangLong_valueOfWithLong_(timestampMillis_), [nil_chk(value_) description] } count:2 type:NSObject_class_()]);
 }
 
 - (void)dealloc {

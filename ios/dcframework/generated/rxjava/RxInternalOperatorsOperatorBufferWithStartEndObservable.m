@@ -17,6 +17,29 @@
 #include "java/util/LinkedList.h"
 #include "java/util/List.h"
 
+@interface RxInternalOperatorsOperatorBufferWithStartEndObservable_1 : RxSubscriber {
+ @public
+  RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *val$s_;
+}
+
+- (instancetype)initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber:(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *)capture$0;
+
+- (void)onNextWithId:(id)t;
+
+- (void)onErrorWithNSException:(NSException *)e;
+
+- (void)onCompleted;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorBufferWithStartEndObservable_1)
+
+__attribute__((unused)) static void RxInternalOperatorsOperatorBufferWithStartEndObservable_1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithStartEndObservable_1 *self, RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *capture$0);
+
+__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithStartEndObservable_1 *new_RxInternalOperatorsOperatorBufferWithStartEndObservable_1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithStartEndObservable_1 *create_RxInternalOperatorsOperatorBufferWithStartEndObservable_1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *capture$0);
+
 @interface RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber () {
  @public
   RxInternalOperatorsOperatorBufferWithStartEndObservable *this$0_;
@@ -24,60 +47,30 @@
 
 @end
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber, this$0_, RxInternalOperatorsOperatorBufferWithStartEndObservable *)
-
-@interface RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *this$0_;
   id<JavaUtilList> val$chunk_;
 }
 
-- (void)onNextWithId:(id)t;
-
-- (void)onErrorWithNSException:(NSException *)e;
-
-- (void)onCompleted;
-
 - (instancetype)initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber:(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *)outer$
                                                                                    withJavaUtilList:(id<JavaUtilList>)capture$0;
 
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1)
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1, this$0_, RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1, val$chunk_, id<JavaUtilList>)
-
-__attribute__((unused)) static void RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1 *self, RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *outer$, id<JavaUtilList> capture$0);
-
-__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1 *new_RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *outer$, id<JavaUtilList> capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1 *create_RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *outer$, id<JavaUtilList> capture$0);
-
-@interface RxInternalOperatorsOperatorBufferWithStartEndObservable_$1 : RxSubscriber {
- @public
-  RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *val$s_;
-}
-
 - (void)onNextWithId:(id)t;
 
 - (void)onErrorWithNSException:(NSException *)e;
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber:(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorBufferWithStartEndObservable_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorBufferWithStartEndObservable_$1, val$s_, RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1 *self, RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *outer$, id<JavaUtilList> capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorBufferWithStartEndObservable_$1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithStartEndObservable_$1 *self, RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1 *new_RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *outer$, id<JavaUtilList> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithStartEndObservable_$1 *new_RxInternalOperatorsOperatorBufferWithStartEndObservable_$1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithStartEndObservable_$1 *create_RxInternalOperatorsOperatorBufferWithStartEndObservable_$1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1 *create_RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *outer$, id<JavaUtilList> capture$0);
 
 @implementation RxInternalOperatorsOperatorBufferWithStartEndObservable
 
@@ -89,7 +82,7 @@ __attribute__((unused)) static RxInternalOperatorsOperatorBufferWithStartEndObse
 
 - (RxSubscriber *)callWithId:(RxSubscriber *)child {
   RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *s = create_RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_withRxSubscriber_(self, create_RxObserversSerializedSubscriber_initWithRxSubscriber_(child));
-  RxSubscriber *openSubscriber = create_RxInternalOperatorsOperatorBufferWithStartEndObservable_$1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_(s);
+  RxSubscriber *openSubscriber = create_RxInternalOperatorsOperatorBufferWithStartEndObservable_1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_(s);
   [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:openSubscriber];
   [child addWithRxSubscription:s];
   [((RxObservable *) nil_chk(bufferOpening_)) unsafeSubscribeWithRxSubscriber:openSubscriber];
@@ -138,6 +131,67 @@ RxInternalOperatorsOperatorBufferWithStartEndObservable *create_RxInternalOperat
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithStartEndObservable)
+
+@implementation RxInternalOperatorsOperatorBufferWithStartEndObservable_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber:(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *)capture$0 {
+  RxInternalOperatorsOperatorBufferWithStartEndObservable_1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_(self, capture$0);
+  return self;
+}
+
+- (void)onNextWithId:(id)t {
+  [((RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *) nil_chk(val$s_)) startBufferWithId:t];
+}
+
+- (void)onErrorWithNSException:(NSException *)e {
+  [((RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *) nil_chk(val$s_)) onErrorWithNSException:e];
+}
+
+- (void)onCompleted {
+  [((RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *) nil_chk(val$s_)) onCompleted];
+}
+
+- (void)dealloc {
+  RELEASE_(val$s_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$s_", "LRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TTOpening;)V", "onError", "LNSException;", "LRxInternalOperatorsOperatorBufferWithStartEndObservable;", "callWithId:", "Lrx/Subscriber<TTOpening;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorBufferWithStartEndObservable_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 1, 5, -1, 6, 7, -1 };
+  return &_RxInternalOperatorsOperatorBufferWithStartEndObservable_1;
+}
+
+@end
+
+void RxInternalOperatorsOperatorBufferWithStartEndObservable_1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithStartEndObservable_1 *self, RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *capture$0) {
+  JreStrongAssign(&self->val$s_, capture$0);
+  RxSubscriber_init(self);
+}
+
+RxInternalOperatorsOperatorBufferWithStartEndObservable_1 *new_RxInternalOperatorsOperatorBufferWithStartEndObservable_1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorBufferWithStartEndObservable_1, initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_, capture$0)
+}
+
+RxInternalOperatorsOperatorBufferWithStartEndObservable_1 *create_RxInternalOperatorsOperatorBufferWithStartEndObservable_1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorBufferWithStartEndObservable_1, initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_, capture$0)
+}
 
 @implementation RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber
 
@@ -206,7 +260,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithStartEndOb
     RxExceptionsExceptions_throwOrReportWithNSException_withRxObserver_(t, self);
     return;
   }
-  RxSubscriber *closeSubscriber = create_RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_(self, chunk);
+  RxSubscriber *closeSubscriber = create_RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_(self, chunk);
   [((RxSubscriptionsCompositeSubscription *) nil_chk(closingSubscriptions_)) addWithRxSubscription:closeSubscriber];
   [((RxObservable *) nil_chk(cobs)) unsafeSubscribeWithRxSubscriber:closeSubscriber];
 }
@@ -233,7 +287,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithStartEndOb
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber class]);
   RELEASE_(this$0_);
   RELEASE_(child_);
   RELEASE_(chunks_);
@@ -260,14 +313,14 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithStartEndOb
   methods[5].selector = @selector(endBufferWithJavaUtilList:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorBufferWithStartEndObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x10, -1, -1, 12, -1 },
-    { "chunks_", "LJavaUtilList;", .constantValue.asLong = 0, 0x10, -1, -1, 13, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorBufferWithStartEndObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 12, -1 },
+    { "child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x10, -1, -1, 13, -1 },
+    { "chunks_", "LJavaUtilList;", .constantValue.asLong = 0, 0x10, -1, -1, 14, -1 },
     { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "closingSubscriptions_", "LRxSubscriptionsCompositeSubscription;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorBufferWithStartEndObservable;LRxSubscriber;", "(Lrx/internal/operators/OperatorBufferWithStartEndObservable;Lrx/Subscriber<-Ljava/util/List<TT;>;>;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "startBuffer", "(TTOpening;)V", "endBuffer", "LJavaUtilList;", "(Ljava/util/List<TT;>;)V", "Lrx/Subscriber<-Ljava/util/List<TT;>;>;", "Ljava/util/List<Ljava/util/List<TT;>;>;", "LRxInternalOperatorsOperatorBufferWithStartEndObservable;", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber = { "BufferingSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 6, 5, 14, -1, -1, 15, -1 };
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<-Ljava/util/List<TT;>;>;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "startBuffer", "(TTOpening;)V", "endBuffer", "LJavaUtilList;", "(Ljava/util/List<TT;>;)V", "Lrx/internal/operators/OperatorBufferWithStartEndObservable<TT;TTOpening;TTClosing;>;", "Lrx/Subscriber<-Ljava/util/List<TT;>;>;", "Ljava/util/List<Ljava/util/List<TT;>;>;", "LRxInternalOperatorsOperatorBufferWithStartEndObservable;", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber = { "BufferingSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 6, 5, 15, -1, -1, 16, -1 };
   return &_RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber;
 }
 
@@ -292,7 +345,13 @@ RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *cre
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber)
 
-@implementation RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1
+@implementation RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber:(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *)outer$
+                                                                                   withJavaUtilList:(id<JavaUtilList>)capture$0 {
+  RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   [((RxSubscriptionsCompositeSubscription *) nil_chk(this$0_->closingSubscriptions_)) removeWithRxSubscription:self];
@@ -308,14 +367,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithStartEndOb
   [this$0_ endBufferWithJavaUtilList:val$chunk_];
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber:(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *)outer$
-                                                                                   withJavaUtilList:(id<JavaUtilList>)capture$0 {
-  RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_(self, outer$, capture$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1 class]);
   RELEASE_(this$0_);
   RELEASE_(val$chunk_);
   [super dealloc];
@@ -323,101 +375,39 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithStartEndOb
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber:withJavaUtilList:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber:withJavaUtilList:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$chunk_", "LJavaUtilList;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$chunk_", "LJavaUtilList;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TTClosing;)V", "onError", "LNSException;", "LRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber;LJavaUtilList;", "(Lrx/internal/operators/OperatorBufferWithStartEndObservable$BufferingSubscriber;Ljava/util/List<TT;>;)V", "Ljava/util/List<TT;>;", "LRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber;", "startBufferWithId:", "Lrx/Subscriber<TTClosing;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 2, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1;
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TTClosing;)V", "onError", "LNSException;", "Ljava/util/List<TT;>;", "LRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber;", "startBufferWithId:", "Lrx/Subscriber<TTClosing;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 2, 6, -1, 7, 8, -1 };
+  return &_RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1 *self, RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *outer$, id<JavaUtilList> capture$0) {
+void RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1 *self, RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *outer$, id<JavaUtilList> capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$chunk_, capture$0);
   RxSubscriber_init(self);
 }
 
-RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1 *new_RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *outer$, id<JavaUtilList> capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1, initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_, outer$, capture$0)
+RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1 *new_RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *outer$, id<JavaUtilList> capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1, initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_, outer$, capture$0)
 }
 
-RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1 *create_RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *outer$, id<JavaUtilList> capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_$1, initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_, outer$, capture$0)
-}
-
-@implementation RxInternalOperatorsOperatorBufferWithStartEndObservable_$1
-
-- (void)onNextWithId:(id)t {
-  [((RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *) nil_chk(val$s_)) startBufferWithId:t];
-}
-
-- (void)onErrorWithNSException:(NSException *)e {
-  [((RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *) nil_chk(val$s_)) onErrorWithNSException:e];
-}
-
-- (void)onCompleted {
-  [((RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *) nil_chk(val$s_)) onCompleted];
-}
-
-- (instancetype)initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber:(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *)capture$0 {
-  RxInternalOperatorsOperatorBufferWithStartEndObservable_$1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorBufferWithStartEndObservable_$1 class]);
-  RELEASE_(val$s_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$s_", "LRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TTOpening;)V", "onError", "LNSException;", "LRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber;", "LRxInternalOperatorsOperatorBufferWithStartEndObservable;", "callWithId:", "Lrx/Subscriber<TTOpening;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorBufferWithStartEndObservable_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 1, 6, -1, 7, 8, -1 };
-  return &_RxInternalOperatorsOperatorBufferWithStartEndObservable_$1;
-}
-
-@end
-
-void RxInternalOperatorsOperatorBufferWithStartEndObservable_$1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithStartEndObservable_$1 *self, RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *capture$0) {
-  JreStrongAssign(&self->val$s_, capture$0);
-  RxSubscriber_init(self);
-}
-
-RxInternalOperatorsOperatorBufferWithStartEndObservable_$1 *new_RxInternalOperatorsOperatorBufferWithStartEndObservable_$1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorBufferWithStartEndObservable_$1, initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_, capture$0)
-}
-
-RxInternalOperatorsOperatorBufferWithStartEndObservable_$1 *create_RxInternalOperatorsOperatorBufferWithStartEndObservable_$1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorBufferWithStartEndObservable_$1, initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_, capture$0)
+RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1 *create_RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1_initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber *outer$, id<JavaUtilList> capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_1, initWithRxInternalOperatorsOperatorBufferWithStartEndObservable_BufferingSubscriber_withJavaUtilList_, outer$, capture$0)
 }

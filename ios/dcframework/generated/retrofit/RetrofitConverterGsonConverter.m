@@ -106,7 +106,7 @@ J2OBJC_TYPE_LITERAL_HEADER(RetrofitConverterGsonConverter_JsonTypedOutput)
 
 - (id<RetrofitMimeTypedOutput>)toBodyWithId:(id)object {
   @try {
-    return create_RetrofitConverterGsonConverter_JsonTypedOutput_initWithByteArray_withNSString_([((NSString *) nil_chk([((ComGoogleGsonGson *) nil_chk(gson_)) toJsonWithId:object])) getBytesWithCharsetName:charset_], charset_);
+    return create_RetrofitConverterGsonConverter_JsonTypedOutput_initWithByteArray_withNSString_([((NSString *) nil_chk([((ComGoogleGsonGson *) nil_chk(gson_)) toJsonWithId:object])) java_getBytesWithCharsetName:charset_], charset_);
   }
   @catch (JavaIoUnsupportedEncodingException *e) {
     @throw create_JavaLangAssertionError_initWithId_(e);

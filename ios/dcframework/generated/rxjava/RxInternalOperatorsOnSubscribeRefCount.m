@@ -34,39 +34,40 @@ __attribute__((unused)) static id<RxFunctionsAction1> RxInternalOperatorsOnSubsc
 
 __attribute__((unused)) static id<RxSubscription> RxInternalOperatorsOnSubscribeRefCount_disconnectWithRxSubscriptionsCompositeSubscription_(RxInternalOperatorsOnSubscribeRefCount *self, RxSubscriptionsCompositeSubscription *current);
 
-@interface RxInternalOperatorsOnSubscribeRefCount_$1 : NSObject < RxFunctionsAction1 > {
+@interface RxInternalOperatorsOnSubscribeRefCount_1 : NSObject < RxFunctionsAction1 > {
  @public
   RxInternalOperatorsOnSubscribeRefCount *this$0_;
   RxSubscriber *val$subscriber_;
   JavaUtilConcurrentAtomicAtomicBoolean *val$writeLocked_;
 }
 
-- (void)callWithId:(id<RxSubscription>)subscription;
-
 - (instancetype)initWithRxInternalOperatorsOnSubscribeRefCount:(RxInternalOperatorsOnSubscribeRefCount *)outer$
                                               withRxSubscriber:(RxSubscriber *)capture$0
                      withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$1;
 
+- (void)callWithId:(id<RxSubscription>)subscription;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRefCount_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRefCount_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRefCount_$1, this$0_, RxInternalOperatorsOnSubscribeRefCount *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRefCount_$1, val$subscriber_, RxSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRefCount_$1, val$writeLocked_, JavaUtilConcurrentAtomicAtomicBoolean *)
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRefCount_1_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsOnSubscribeRefCount_1 *self, RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1);
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRefCount_$1_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsOnSubscribeRefCount_$1 *self, RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRefCount_1 *new_RxInternalOperatorsOnSubscribeRefCount_1_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRefCount_$1 *new_RxInternalOperatorsOnSubscribeRefCount_$1_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRefCount_1 *create_RxInternalOperatorsOnSubscribeRefCount_1_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1);
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRefCount_$1 *create_RxInternalOperatorsOnSubscribeRefCount_$1_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1);
-
-@interface RxInternalOperatorsOnSubscribeRefCount_$2 : RxSubscriber {
+@interface RxInternalOperatorsOnSubscribeRefCount_2 : RxSubscriber {
  @public
   RxInternalOperatorsOnSubscribeRefCount *this$0_;
   RxSubscriber *val$subscriber_;
   RxSubscriptionsCompositeSubscription *val$currentBase_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeRefCount:(RxInternalOperatorsOnSubscribeRefCount *)outer$
+                                              withRxSubscriber:(RxSubscriber *)capture$0
+                      withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$1
+                                              withRxSubscriber:(RxSubscriber *)param0;
 
 - (void)onErrorWithNSException:(NSException *)e;
 
@@ -76,48 +77,36 @@ __attribute__((unused)) static RxInternalOperatorsOnSubscribeRefCount_$1 *create
 
 - (void)cleanup;
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeRefCount:(RxInternalOperatorsOnSubscribeRefCount *)outer$
-                                              withRxSubscriber:(RxSubscriber *)capture$0
-                      withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$1
-                                              withRxSubscriber:(RxSubscriber *)arg$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRefCount_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRefCount_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRefCount_$2, this$0_, RxInternalOperatorsOnSubscribeRefCount *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRefCount_$2, val$subscriber_, RxSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRefCount_$2, val$currentBase_, RxSubscriptionsCompositeSubscription *)
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRefCount_2_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_(RxInternalOperatorsOnSubscribeRefCount_2 *self, RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, RxSubscriptionsCompositeSubscription *capture$1, RxSubscriber *param0);
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRefCount_$2_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_(RxInternalOperatorsOnSubscribeRefCount_$2 *self, RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, RxSubscriptionsCompositeSubscription *capture$1, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRefCount_2 *new_RxInternalOperatorsOnSubscribeRefCount_2_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, RxSubscriptionsCompositeSubscription *capture$1, RxSubscriber *param0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRefCount_$2 *new_RxInternalOperatorsOnSubscribeRefCount_$2_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, RxSubscriptionsCompositeSubscription *capture$1, RxSubscriber *arg$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRefCount_2 *create_RxInternalOperatorsOnSubscribeRefCount_2_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, RxSubscriptionsCompositeSubscription *capture$1, RxSubscriber *param0);
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRefCount_$2 *create_RxInternalOperatorsOnSubscribeRefCount_$2_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, RxSubscriptionsCompositeSubscription *capture$1, RxSubscriber *arg$0);
-
-@interface RxInternalOperatorsOnSubscribeRefCount_$3 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOnSubscribeRefCount_3 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalOperatorsOnSubscribeRefCount *this$0_;
   RxSubscriptionsCompositeSubscription *val$current_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalOperatorsOnSubscribeRefCount:(RxInternalOperatorsOnSubscribeRefCount *)outer$
                       withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$0;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRefCount_$3)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRefCount_3)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRefCount_$3, this$0_, RxInternalOperatorsOnSubscribeRefCount *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRefCount_$3, val$current_, RxSubscriptionsCompositeSubscription *)
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRefCount_3_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_(RxInternalOperatorsOnSubscribeRefCount_3 *self, RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriptionsCompositeSubscription *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRefCount_$3_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_(RxInternalOperatorsOnSubscribeRefCount_$3 *self, RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriptionsCompositeSubscription *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRefCount_3 *new_RxInternalOperatorsOnSubscribeRefCount_3_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriptionsCompositeSubscription *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRefCount_$3 *new_RxInternalOperatorsOnSubscribeRefCount_$3_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriptionsCompositeSubscription *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRefCount_$3 *create_RxInternalOperatorsOnSubscribeRefCount_$3_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriptionsCompositeSubscription *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRefCount_3 *create_RxInternalOperatorsOnSubscribeRefCount_3_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriptionsCompositeSubscription *capture$0);
 
 @implementation RxInternalOperatorsOnSubscribeRefCount
 
@@ -157,7 +146,7 @@ __attribute__((unused)) static RxInternalOperatorsOnSubscribeRefCount_$3 *create
 - (void)doSubscribeWithRxSubscriber:(RxSubscriber *)subscriber
 withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)currentBase {
   [((RxSubscriber *) nil_chk(subscriber)) addWithRxSubscription:RxInternalOperatorsOnSubscribeRefCount_disconnectWithRxSubscriptionsCompositeSubscription_(self, currentBase)];
-  [((RxObservablesConnectableObservable *) nil_chk(source_)) unsafeSubscribeWithRxSubscriber:create_RxInternalOperatorsOnSubscribeRefCount_$2_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_(self, subscriber, currentBase, subscriber)];
+  [((RxObservablesConnectableObservable *) nil_chk(source_)) unsafeSubscribeWithRxSubscriber:create_RxInternalOperatorsOnSubscribeRefCount_2_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_(self, subscriber, currentBase, subscriber)];
 }
 
 - (id<RxSubscription>)disconnectWithRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)current {
@@ -208,7 +197,7 @@ withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *
 
 void RxInternalOperatorsOnSubscribeRefCount_initWithRxObservablesConnectableObservable_(RxInternalOperatorsOnSubscribeRefCount *self, RxObservablesConnectableObservable *source) {
   NSObject_init(self);
-  JreVolatileStrongAssignAndConsume(&self->baseSubscription_, new_RxSubscriptionsCompositeSubscription_init());
+  JreVolatileStrongAssign(&self->baseSubscription_, create_RxSubscriptionsCompositeSubscription_init());
   JreStrongAssignAndConsume(&self->subscriptionCount_, new_JavaUtilConcurrentAtomicAtomicInteger_initWithInt_(0));
   JreStrongAssignAndConsume(&self->lock_, new_JavaUtilConcurrentLocksReentrantLock_init());
   JreStrongAssign(&self->source_, source);
@@ -223,16 +212,23 @@ RxInternalOperatorsOnSubscribeRefCount *create_RxInternalOperatorsOnSubscribeRef
 }
 
 id<RxFunctionsAction1> RxInternalOperatorsOnSubscribeRefCount_onSubscribeWithRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsOnSubscribeRefCount *self, RxSubscriber *subscriber, JavaUtilConcurrentAtomicAtomicBoolean *writeLocked) {
-  return create_RxInternalOperatorsOnSubscribeRefCount_$1_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(self, subscriber, writeLocked);
+  return create_RxInternalOperatorsOnSubscribeRefCount_1_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(self, subscriber, writeLocked);
 }
 
 id<RxSubscription> RxInternalOperatorsOnSubscribeRefCount_disconnectWithRxSubscriptionsCompositeSubscription_(RxInternalOperatorsOnSubscribeRefCount *self, RxSubscriptionsCompositeSubscription *current) {
-  return RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOnSubscribeRefCount_$3_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_(self, current));
+  return RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOnSubscribeRefCount_3_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_(self, current));
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeRefCount)
 
-@implementation RxInternalOperatorsOnSubscribeRefCount_$1
+@implementation RxInternalOperatorsOnSubscribeRefCount_1
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeRefCount:(RxInternalOperatorsOnSubscribeRefCount *)outer$
+                                              withRxSubscriber:(RxSubscriber *)capture$0
+                     withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$1 {
+  RxInternalOperatorsOnSubscribeRefCount_1_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(self, outer$, capture$0, capture$1);
+  return self;
+}
 
 - (void)callWithId:(id<RxSubscription>)subscription {
   @try {
@@ -245,13 +241,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeRefCount)
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeRefCount:(RxInternalOperatorsOnSubscribeRefCount *)outer$
-                                              withRxSubscriber:(RxSubscriber *)capture$0
-                     withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$1 {
-  RxInternalOperatorsOnSubscribeRefCount_$1_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(self, outer$, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$subscriber_);
@@ -261,42 +250,50 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeRefCount)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, 3, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOnSubscribeRefCount:withRxSubscriber:withJavaUtilConcurrentAtomicAtomicBoolean:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOnSubscribeRefCount:withRxSubscriber:withJavaUtilConcurrentAtomicAtomicBoolean:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOnSubscribeRefCount;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+    { "this$0_", "LRxInternalOperatorsOnSubscribeRefCount;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+    { "val$subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
     { "val$writeLocked_", "LJavaUtilConcurrentAtomicAtomicBoolean;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxSubscription;", "LRxInternalOperatorsOnSubscribeRefCount;LRxSubscriber;LJavaUtilConcurrentAtomicAtomicBoolean;", "(Lrx/internal/operators/OnSubscribeRefCount;Lrx/Subscriber<-TT;>;Ljava/util/concurrent/atomic/AtomicBoolean;)V", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOnSubscribeRefCount;", "onSubscribeWithRxSubscriber:withJavaUtilConcurrentAtomicAtomicBoolean:", "Ljava/lang/Object;Lrx/functions/Action1<Lrx/Subscription;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRefCount_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 3, 5, -1, 6, 7, -1 };
-  return &_RxInternalOperatorsOnSubscribeRefCount_$1;
+  static const void *ptrTable[] = { "call", "LRxSubscription;", "Lrx/internal/operators/OnSubscribeRefCount<TT;>;", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOnSubscribeRefCount;", "onSubscribeWithRxSubscriber:withJavaUtilConcurrentAtomicAtomicBoolean:", "Ljava/lang/Object;Lrx/functions/Action1<Lrx/Subscription;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRefCount_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 3, 4, -1, 5, 6, -1 };
+  return &_RxInternalOperatorsOnSubscribeRefCount_1;
 }
 
 @end
 
-void RxInternalOperatorsOnSubscribeRefCount_$1_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsOnSubscribeRefCount_$1 *self, RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1) {
+void RxInternalOperatorsOnSubscribeRefCount_1_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsOnSubscribeRefCount_1 *self, RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$subscriber_, capture$0);
   JreStrongAssign(&self->val$writeLocked_, capture$1);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOnSubscribeRefCount_$1 *new_RxInternalOperatorsOnSubscribeRefCount_$1_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRefCount_$1, initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_, outer$, capture$0, capture$1)
+RxInternalOperatorsOnSubscribeRefCount_1 *new_RxInternalOperatorsOnSubscribeRefCount_1_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRefCount_1, initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_, outer$, capture$0, capture$1)
 }
 
-RxInternalOperatorsOnSubscribeRefCount_$1 *create_RxInternalOperatorsOnSubscribeRefCount_$1_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRefCount_$1, initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_, outer$, capture$0, capture$1)
+RxInternalOperatorsOnSubscribeRefCount_1 *create_RxInternalOperatorsOnSubscribeRefCount_1_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRefCount_1, initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_, outer$, capture$0, capture$1)
 }
 
-@implementation RxInternalOperatorsOnSubscribeRefCount_$2
+@implementation RxInternalOperatorsOnSubscribeRefCount_2
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeRefCount:(RxInternalOperatorsOnSubscribeRefCount *)outer$
+                                              withRxSubscriber:(RxSubscriber *)capture$0
+                      withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$1
+                                              withRxSubscriber:(RxSubscriber *)param0 {
+  RxInternalOperatorsOnSubscribeRefCount_2_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_(self, outer$, capture$0, capture$1, param0);
+  return self;
+}
 
 - (void)onErrorWithNSException:(NSException *)e {
   [self cleanup];
@@ -317,7 +314,7 @@ RxInternalOperatorsOnSubscribeRefCount_$1 *create_RxInternalOperatorsOnSubscribe
   @try {
     if (JreLoadVolatileId(&this$0_->baseSubscription_) == val$currentBase_) {
       [((RxSubscriptionsCompositeSubscription *) nil_chk(JreLoadVolatileId(&this$0_->baseSubscription_))) unsubscribe];
-      JreVolatileStrongAssignAndConsume(&this$0_->baseSubscription_, new_RxSubscriptionsCompositeSubscription_init());
+      JreVolatileStrongAssign(&this$0_->baseSubscription_, create_RxSubscriptionsCompositeSubscription_init());
       [((JavaUtilConcurrentAtomicAtomicInteger *) nil_chk(this$0_->subscriptionCount_)) setWithInt:0];
     }
   }
@@ -326,16 +323,7 @@ RxInternalOperatorsOnSubscribeRefCount_$1 *create_RxInternalOperatorsOnSubscribe
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeRefCount:(RxInternalOperatorsOnSubscribeRefCount *)outer$
-                                              withRxSubscriber:(RxSubscriber *)capture$0
-                      withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$1
-                                              withRxSubscriber:(RxSubscriber *)arg$0 {
-  RxInternalOperatorsOnSubscribeRefCount_$2_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_(self, outer$, capture$0, capture$1, arg$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribeRefCount_$2 class]);
   RELEASE_(this$0_);
   RELEASE_(val$subscriber_);
   RELEASE_(val$currentBase_);
@@ -344,48 +332,54 @@ RxInternalOperatorsOnSubscribeRefCount_$1 *create_RxInternalOperatorsOnSubscribe
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 4, 5, -1, 6, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x0, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onErrorWithNSException:);
-  methods[1].selector = @selector(onNextWithId:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(cleanup);
-  methods[4].selector = @selector(initWithRxInternalOperatorsOnSubscribeRefCount:withRxSubscriber:withRxSubscriptionsCompositeSubscription:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOnSubscribeRefCount:withRxSubscriber:withRxSubscriptionsCompositeSubscription:withRxSubscriber:);
+  methods[1].selector = @selector(onErrorWithNSException:);
+  methods[2].selector = @selector(onNextWithId:);
+  methods[3].selector = @selector(onCompleted);
+  methods[4].selector = @selector(cleanup);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOnSubscribeRefCount;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "this$0_", "LRxInternalOperatorsOnSubscribeRefCount;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
     { "val$currentBase_", "LRxSubscriptionsCompositeSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "LRxInternalOperatorsOnSubscribeRefCount;LRxSubscriber;LRxSubscriptionsCompositeSubscription;LRxSubscriber;", "(Lrx/internal/operators/OnSubscribeRefCount;Lrx/Subscriber<-TT;>;Lrx/subscriptions/CompositeSubscription;Lrx/Subscriber<*>;)V", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOnSubscribeRefCount;", "doSubscribeWithRxSubscriber:withRxSubscriptionsCompositeSubscription:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRefCount_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 3, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsOnSubscribeRefCount_$2;
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "Lrx/internal/operators/OnSubscribeRefCount<TT;>;", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOnSubscribeRefCount;", "doSubscribeWithRxSubscriber:withRxSubscriptionsCompositeSubscription:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRefCount_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 3, 9, -1, 10, 11, -1 };
+  return &_RxInternalOperatorsOnSubscribeRefCount_2;
 }
 
 @end
 
-void RxInternalOperatorsOnSubscribeRefCount_$2_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_(RxInternalOperatorsOnSubscribeRefCount_$2 *self, RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, RxSubscriptionsCompositeSubscription *capture$1, RxSubscriber *arg$0) {
+void RxInternalOperatorsOnSubscribeRefCount_2_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_(RxInternalOperatorsOnSubscribeRefCount_2 *self, RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, RxSubscriptionsCompositeSubscription *capture$1, RxSubscriber *param0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$subscriber_, capture$0);
   JreStrongAssign(&self->val$currentBase_, capture$1);
-  RxSubscriber_initWithRxSubscriber_(self, arg$0);
+  RxSubscriber_initWithRxSubscriber_(self, param0);
 }
 
-RxInternalOperatorsOnSubscribeRefCount_$2 *new_RxInternalOperatorsOnSubscribeRefCount_$2_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, RxSubscriptionsCompositeSubscription *capture$1, RxSubscriber *arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRefCount_$2, initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_, outer$, capture$0, capture$1, arg$0)
+RxInternalOperatorsOnSubscribeRefCount_2 *new_RxInternalOperatorsOnSubscribeRefCount_2_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, RxSubscriptionsCompositeSubscription *capture$1, RxSubscriber *param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRefCount_2, initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_, outer$, capture$0, capture$1, param0)
 }
 
-RxInternalOperatorsOnSubscribeRefCount_$2 *create_RxInternalOperatorsOnSubscribeRefCount_$2_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, RxSubscriptionsCompositeSubscription *capture$1, RxSubscriber *arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRefCount_$2, initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_, outer$, capture$0, capture$1, arg$0)
+RxInternalOperatorsOnSubscribeRefCount_2 *create_RxInternalOperatorsOnSubscribeRefCount_2_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriber *capture$0, RxSubscriptionsCompositeSubscription *capture$1, RxSubscriber *param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRefCount_2, initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriber_withRxSubscriptionsCompositeSubscription_withRxSubscriber_, outer$, capture$0, capture$1, param0)
 }
 
-@implementation RxInternalOperatorsOnSubscribeRefCount_$3
+@implementation RxInternalOperatorsOnSubscribeRefCount_3
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeRefCount:(RxInternalOperatorsOnSubscribeRefCount *)outer$
+                      withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$0 {
+  RxInternalOperatorsOnSubscribeRefCount_3_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)call {
   [((JavaUtilConcurrentLocksReentrantLock *) nil_chk(this$0_->lock_)) lock];
@@ -393,19 +387,13 @@ RxInternalOperatorsOnSubscribeRefCount_$2 *create_RxInternalOperatorsOnSubscribe
     if (JreLoadVolatileId(&this$0_->baseSubscription_) == val$current_) {
       if ([((JavaUtilConcurrentAtomicAtomicInteger *) nil_chk(this$0_->subscriptionCount_)) decrementAndGet] == 0) {
         [((RxSubscriptionsCompositeSubscription *) nil_chk(JreLoadVolatileId(&this$0_->baseSubscription_))) unsubscribe];
-        JreVolatileStrongAssignAndConsume(&this$0_->baseSubscription_, new_RxSubscriptionsCompositeSubscription_init());
+        JreVolatileStrongAssign(&this$0_->baseSubscription_, create_RxSubscriptionsCompositeSubscription_init());
       }
     }
   }
   @finally {
     [this$0_->lock_ unlock];
   }
-}
-
-- (instancetype)initWithRxInternalOperatorsOnSubscribeRefCount:(RxInternalOperatorsOnSubscribeRefCount *)outer$
-                      withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$0 {
-  RxInternalOperatorsOnSubscribeRefCount_$3_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_(self, outer$, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -416,35 +404,35 @@ RxInternalOperatorsOnSubscribeRefCount_$2 *create_RxInternalOperatorsOnSubscribe
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOnSubscribeRefCount:withRxSubscriptionsCompositeSubscription:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOnSubscribeRefCount:withRxSubscriptionsCompositeSubscription:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOnSubscribeRefCount;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOnSubscribeRefCount;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
     { "val$current_", "LRxSubscriptionsCompositeSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOnSubscribeRefCount;LRxSubscriptionsCompositeSubscription;", "LRxInternalOperatorsOnSubscribeRefCount;", "disconnectWithRxSubscriptionsCompositeSubscription:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRefCount_$3 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_RxInternalOperatorsOnSubscribeRefCount_$3;
+  static const void *ptrTable[] = { "Lrx/internal/operators/OnSubscribeRefCount<TT;>;", "LRxInternalOperatorsOnSubscribeRefCount;", "disconnectWithRxSubscriptionsCompositeSubscription:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRefCount_3 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
+  return &_RxInternalOperatorsOnSubscribeRefCount_3;
 }
 
 @end
 
-void RxInternalOperatorsOnSubscribeRefCount_$3_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_(RxInternalOperatorsOnSubscribeRefCount_$3 *self, RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriptionsCompositeSubscription *capture$0) {
+void RxInternalOperatorsOnSubscribeRefCount_3_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_(RxInternalOperatorsOnSubscribeRefCount_3 *self, RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriptionsCompositeSubscription *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$current_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOnSubscribeRefCount_$3 *new_RxInternalOperatorsOnSubscribeRefCount_$3_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriptionsCompositeSubscription *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRefCount_$3, initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_, outer$, capture$0)
+RxInternalOperatorsOnSubscribeRefCount_3 *new_RxInternalOperatorsOnSubscribeRefCount_3_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriptionsCompositeSubscription *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRefCount_3, initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_, outer$, capture$0)
 }
 
-RxInternalOperatorsOnSubscribeRefCount_$3 *create_RxInternalOperatorsOnSubscribeRefCount_$3_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriptionsCompositeSubscription *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRefCount_$3, initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_, outer$, capture$0)
+RxInternalOperatorsOnSubscribeRefCount_3 *create_RxInternalOperatorsOnSubscribeRefCount_3_initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_(RxInternalOperatorsOnSubscribeRefCount *outer$, RxSubscriptionsCompositeSubscription *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRefCount_3, initWithRxInternalOperatorsOnSubscribeRefCount_withRxSubscriptionsCompositeSubscription_, outer$, capture$0)
 }

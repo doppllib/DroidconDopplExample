@@ -55,26 +55,206 @@ __attribute__((unused)) static RxInternalOperatorsOperatorReplay *new_RxInternal
 
 __attribute__((unused)) static RxInternalOperatorsOperatorReplay *create_RxInternalOperatorsOperatorReplay_initWithRxObservable_OnSubscribe_withRxObservable_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_(id<RxObservable_OnSubscribe> onSubscribe, RxObservable *source, JavaUtilConcurrentAtomicAtomicReference *current, id<RxFunctionsFunc0> bufferFactory);
 
-@interface RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOperatorReplay_1 : NSObject < RxFunctionsFunc0 >
+
+- (instancetype)init;
+
+- (id)call;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_1)
+
+__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_1_init(RxInternalOperatorsOperatorReplay_1 *self);
+
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_1 *new_RxInternalOperatorsOperatorReplay_1_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_1 *create_RxInternalOperatorsOperatorReplay_1_init();
+
+@interface RxInternalOperatorsOperatorReplay_2 : NSObject < RxObservable_OnSubscribe > {
+ @public
+  id<RxFunctionsFunc0> val$connectableFactory_;
+  id<RxFunctionsFunc1> val$selector_;
+}
+
+- (instancetype)initWithRxFunctionsFunc0:(id<RxFunctionsFunc0>)capture$0
+                    withRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$1;
+
+- (void)callWithId:(RxSubscriber *)child;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_2)
+
+__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_2_initWithRxFunctionsFunc0_withRxFunctionsFunc1_(RxInternalOperatorsOperatorReplay_2 *self, id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1);
+
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_2 *new_RxInternalOperatorsOperatorReplay_2_initWithRxFunctionsFunc0_withRxFunctionsFunc1_(id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_2 *create_RxInternalOperatorsOperatorReplay_2_initWithRxFunctionsFunc0_withRxFunctionsFunc1_(id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1);
+
+@interface RxInternalOperatorsOperatorReplay_2_1 : NSObject < RxFunctionsAction1 > {
+ @public
+  RxSubscriber *val$child_;
+}
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0;
+
+- (void)callWithId:(id<RxSubscription>)t;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_2_1)
+
+__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_2_1_initWithRxSubscriber_(RxInternalOperatorsOperatorReplay_2_1 *self, RxSubscriber *capture$0);
+
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_2_1 *new_RxInternalOperatorsOperatorReplay_2_1_initWithRxSubscriber_(RxSubscriber *capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_2_1 *create_RxInternalOperatorsOperatorReplay_2_1_initWithRxSubscriber_(RxSubscriber *capture$0);
+
+@interface RxInternalOperatorsOperatorReplay_3 : NSObject < RxObservable_OnSubscribe > {
+ @public
+  RxObservable *val$observable_;
+}
+
+- (instancetype)initWithRxObservable:(RxObservable *)capture$0;
+
+- (void)callWithId:(RxSubscriber *)child;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_3)
+
+__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_3_initWithRxObservable_(RxInternalOperatorsOperatorReplay_3 *self, RxObservable *capture$0);
+
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_3 *new_RxInternalOperatorsOperatorReplay_3_initWithRxObservable_(RxObservable *capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_3 *create_RxInternalOperatorsOperatorReplay_3_initWithRxObservable_(RxObservable *capture$0);
+
+@interface RxInternalOperatorsOperatorReplay_3_1 : RxSubscriber {
+ @public
+  RxSubscriber *val$child_;
+}
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
+                    withRxSubscriber:(RxSubscriber *)param0;
+
+- (void)onNextWithId:(id)t;
+
+- (void)onErrorWithNSException:(NSException *)e;
+
+- (void)onCompleted;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_3_1)
+
+__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_3_1_initWithRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorReplay_3_1 *self, RxSubscriber *capture$0, RxSubscriber *param0);
+
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_3_1 *new_RxInternalOperatorsOperatorReplay_3_1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *param0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_3_1 *create_RxInternalOperatorsOperatorReplay_3_1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *param0);
+
+@interface RxInternalOperatorsOperatorReplay_4 : RxObservablesConnectableObservable {
+ @public
+  RxObservablesConnectableObservable *val$co_;
+}
+
+- (instancetype)initWithRxObservablesConnectableObservable:(RxObservablesConnectableObservable *)capture$0
+                              withRxObservable_OnSubscribe:(id<RxObservable_OnSubscribe>)param0;
+
+- (void)connectWithRxFunctionsAction1:(id<RxFunctionsAction1>)connection;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_4)
+
+__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_4_initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_(RxInternalOperatorsOperatorReplay_4 *self, RxObservablesConnectableObservable *capture$0, id<RxObservable_OnSubscribe> param0);
+
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_4 *new_RxInternalOperatorsOperatorReplay_4_initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_(RxObservablesConnectableObservable *capture$0, id<RxObservable_OnSubscribe> param0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_4 *create_RxInternalOperatorsOperatorReplay_4_initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_(RxObservablesConnectableObservable *capture$0, id<RxObservable_OnSubscribe> param0);
+
+@interface RxInternalOperatorsOperatorReplay_5 : NSObject < RxFunctionsFunc0 > {
+ @public
+  jint val$bufferSize_;
+}
+
+- (instancetype)initWithInt:(jint)capture$0;
+
+- (id<RxInternalOperatorsOperatorReplay_ReplayBuffer>)call;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_5)
+
+__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_5_initWithInt_(RxInternalOperatorsOperatorReplay_5 *self, jint capture$0);
+
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_5 *new_RxInternalOperatorsOperatorReplay_5_initWithInt_(jint capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_5 *create_RxInternalOperatorsOperatorReplay_5_initWithInt_(jint capture$0);
+
+@interface RxInternalOperatorsOperatorReplay_6 : NSObject < RxFunctionsFunc0 > {
+ @public
+  jint val$bufferSize_;
+  jlong val$maxAgeInMillis_;
+  RxScheduler *val$scheduler_;
+}
+
+- (instancetype)initWithInt:(jint)capture$0
+                   withLong:(jlong)capture$1
+            withRxScheduler:(RxScheduler *)capture$2;
+
+- (id<RxInternalOperatorsOperatorReplay_ReplayBuffer>)call;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_6)
+
+__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_6_initWithInt_withLong_withRxScheduler_(RxInternalOperatorsOperatorReplay_6 *self, jint capture$0, jlong capture$1, RxScheduler *capture$2);
+
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_6 *new_RxInternalOperatorsOperatorReplay_6_initWithInt_withLong_withRxScheduler_(jint capture$0, jlong capture$1, RxScheduler *capture$2) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_6 *create_RxInternalOperatorsOperatorReplay_6_initWithInt_withLong_withRxScheduler_(jint capture$0, jlong capture$1, RxScheduler *capture$2);
+
+@interface RxInternalOperatorsOperatorReplay_7 : NSObject < RxObservable_OnSubscribe > {
+ @public
+  JavaUtilConcurrentAtomicAtomicReference *val$curr_;
+  id<RxFunctionsFunc0> val$bufferFactory_;
+}
+
+- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
+                                           withRxFunctionsFunc0:(id<RxFunctionsFunc0>)capture$1;
+
+- (void)callWithId:(RxSubscriber *)child;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_7)
+
+__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_7_initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_(RxInternalOperatorsOperatorReplay_7 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, id<RxFunctionsFunc0> capture$1);
+
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_7 *new_RxInternalOperatorsOperatorReplay_7_initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_(JavaUtilConcurrentAtomicAtomicReference *capture$0, id<RxFunctionsFunc0> capture$1) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_7 *create_RxInternalOperatorsOperatorReplay_7_initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_(JavaUtilConcurrentAtomicAtomicReference *capture$0, id<RxFunctionsFunc0> capture$1);
+
+@interface RxInternalOperatorsOperatorReplay_ReplaySubscriber_1 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalOperatorsOperatorReplay_ReplaySubscriber *this$0_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber:(RxInternalOperatorsOperatorReplay_ReplaySubscriber *)outer$;
+
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_ReplaySubscriber_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1, this$0_, RxInternalOperatorsOperatorReplay_ReplaySubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_ReplaySubscriber_1_initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_(RxInternalOperatorsOperatorReplay_ReplaySubscriber_1 *self, RxInternalOperatorsOperatorReplay_ReplaySubscriber *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1_initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_(RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1 *self, RxInternalOperatorsOperatorReplay_ReplaySubscriber *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_ReplaySubscriber_1 *new_RxInternalOperatorsOperatorReplay_ReplaySubscriber_1_initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_(RxInternalOperatorsOperatorReplay_ReplaySubscriber *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1 *new_RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1_initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_(RxInternalOperatorsOperatorReplay_ReplaySubscriber *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1 *create_RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1_initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_(RxInternalOperatorsOperatorReplay_ReplaySubscriber *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorReplay_ReplaySubscriber_1 *create_RxInternalOperatorsOperatorReplay_ReplaySubscriber_1_initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_(RxInternalOperatorsOperatorReplay_ReplaySubscriber *outer$);
 
 inline jlong RxInternalOperatorsOperatorReplay_InnerProducer_get_serialVersionUID();
 #define RxInternalOperatorsOperatorReplay_InnerProducer_serialVersionUID -4453897557930727610LL
@@ -109,204 +289,6 @@ J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsOperatorReplay_SizeBoundReplayBu
 inline jlong RxInternalOperatorsOperatorReplay_SizeAndTimeBoundReplayBuffer_get_serialVersionUID();
 #define RxInternalOperatorsOperatorReplay_SizeAndTimeBoundReplayBuffer_serialVersionUID 3457957419649567404LL
 J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsOperatorReplay_SizeAndTimeBoundReplayBuffer, serialVersionUID, jlong)
-
-@interface RxInternalOperatorsOperatorReplay_$1 : NSObject < RxFunctionsFunc0 >
-
-- (id)call;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_$1)
-
-__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_$1_init(RxInternalOperatorsOperatorReplay_$1 *self);
-
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_$1 *new_RxInternalOperatorsOperatorReplay_$1_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_$1 *create_RxInternalOperatorsOperatorReplay_$1_init();
-
-@interface RxInternalOperatorsOperatorReplay_$2 : NSObject < RxObservable_OnSubscribe > {
- @public
-  id<RxFunctionsFunc0> val$connectableFactory_;
-  id<RxFunctionsFunc1> val$selector_;
-}
-
-- (void)callWithId:(RxSubscriber *)child;
-
-- (instancetype)initWithRxFunctionsFunc0:(id<RxFunctionsFunc0>)capture$0
-                    withRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$1;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_$2)
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorReplay_$2, val$connectableFactory_, id<RxFunctionsFunc0>)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorReplay_$2, val$selector_, id<RxFunctionsFunc1>)
-
-__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_$2_initWithRxFunctionsFunc0_withRxFunctionsFunc1_(RxInternalOperatorsOperatorReplay_$2 *self, id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1);
-
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_$2 *new_RxInternalOperatorsOperatorReplay_$2_initWithRxFunctionsFunc0_withRxFunctionsFunc1_(id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_$2 *create_RxInternalOperatorsOperatorReplay_$2_initWithRxFunctionsFunc0_withRxFunctionsFunc1_(id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1);
-
-@interface RxInternalOperatorsOperatorReplay_$2_$1 : NSObject < RxFunctionsAction1 > {
- @public
-  RxSubscriber *val$child_;
-}
-
-- (void)callWithId:(id<RxSubscription>)t;
-
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_$2_$1)
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorReplay_$2_$1, val$child_, RxSubscriber *)
-
-__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_$2_$1_initWithRxSubscriber_(RxInternalOperatorsOperatorReplay_$2_$1 *self, RxSubscriber *capture$0);
-
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_$2_$1 *new_RxInternalOperatorsOperatorReplay_$2_$1_initWithRxSubscriber_(RxSubscriber *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_$2_$1 *create_RxInternalOperatorsOperatorReplay_$2_$1_initWithRxSubscriber_(RxSubscriber *capture$0);
-
-@interface RxInternalOperatorsOperatorReplay_$3 : NSObject < RxObservable_OnSubscribe > {
- @public
-  RxObservable *val$observable_;
-}
-
-- (void)callWithId:(RxSubscriber *)child;
-
-- (instancetype)initWithRxObservable:(RxObservable *)capture$0;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_$3)
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorReplay_$3, val$observable_, RxObservable *)
-
-__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_$3_initWithRxObservable_(RxInternalOperatorsOperatorReplay_$3 *self, RxObservable *capture$0);
-
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_$3 *new_RxInternalOperatorsOperatorReplay_$3_initWithRxObservable_(RxObservable *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_$3 *create_RxInternalOperatorsOperatorReplay_$3_initWithRxObservable_(RxObservable *capture$0);
-
-@interface RxInternalOperatorsOperatorReplay_$3_$1 : RxSubscriber {
- @public
-  RxSubscriber *val$child_;
-}
-
-- (void)onNextWithId:(id)t;
-
-- (void)onErrorWithNSException:(NSException *)e;
-
-- (void)onCompleted;
-
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
-                    withRxSubscriber:(RxSubscriber *)arg$0;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_$3_$1)
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorReplay_$3_$1, val$child_, RxSubscriber *)
-
-__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_$3_$1_initWithRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorReplay_$3_$1 *self, RxSubscriber *capture$0, RxSubscriber *arg$0);
-
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_$3_$1 *new_RxInternalOperatorsOperatorReplay_$3_$1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *arg$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_$3_$1 *create_RxInternalOperatorsOperatorReplay_$3_$1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *arg$0);
-
-@interface RxInternalOperatorsOperatorReplay_$4 : RxObservablesConnectableObservable {
- @public
-  RxObservablesConnectableObservable *val$co_;
-}
-
-- (void)connectWithRxFunctionsAction1:(id<RxFunctionsAction1>)connection;
-
-- (instancetype)initWithRxObservablesConnectableObservable:(RxObservablesConnectableObservable *)capture$0
-                              withRxObservable_OnSubscribe:(id<RxObservable_OnSubscribe>)arg$0;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_$4)
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorReplay_$4, val$co_, RxObservablesConnectableObservable *)
-
-__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_$4_initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_(RxInternalOperatorsOperatorReplay_$4 *self, RxObservablesConnectableObservable *capture$0, id<RxObservable_OnSubscribe> arg$0);
-
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_$4 *new_RxInternalOperatorsOperatorReplay_$4_initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_(RxObservablesConnectableObservable *capture$0, id<RxObservable_OnSubscribe> arg$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_$4 *create_RxInternalOperatorsOperatorReplay_$4_initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_(RxObservablesConnectableObservable *capture$0, id<RxObservable_OnSubscribe> arg$0);
-
-@interface RxInternalOperatorsOperatorReplay_$5 : NSObject < RxFunctionsFunc0 > {
- @public
-  jint val$bufferSize_;
-}
-
-- (id<RxInternalOperatorsOperatorReplay_ReplayBuffer>)call;
-
-- (instancetype)initWithInt:(jint)capture$0;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_$5)
-
-__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_$5_initWithInt_(RxInternalOperatorsOperatorReplay_$5 *self, jint capture$0);
-
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_$5 *new_RxInternalOperatorsOperatorReplay_$5_initWithInt_(jint capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_$5 *create_RxInternalOperatorsOperatorReplay_$5_initWithInt_(jint capture$0);
-
-@interface RxInternalOperatorsOperatorReplay_$6 : NSObject < RxFunctionsFunc0 > {
- @public
-  jint val$bufferSize_;
-  jlong val$maxAgeInMillis_;
-  RxScheduler *val$scheduler_;
-}
-
-- (id<RxInternalOperatorsOperatorReplay_ReplayBuffer>)call;
-
-- (instancetype)initWithInt:(jint)capture$0
-                   withLong:(jlong)capture$1
-            withRxScheduler:(RxScheduler *)capture$2;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_$6)
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorReplay_$6, val$scheduler_, RxScheduler *)
-
-__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_$6_initWithInt_withLong_withRxScheduler_(RxInternalOperatorsOperatorReplay_$6 *self, jint capture$0, jlong capture$1, RxScheduler *capture$2);
-
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_$6 *new_RxInternalOperatorsOperatorReplay_$6_initWithInt_withLong_withRxScheduler_(jint capture$0, jlong capture$1, RxScheduler *capture$2) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_$6 *create_RxInternalOperatorsOperatorReplay_$6_initWithInt_withLong_withRxScheduler_(jint capture$0, jlong capture$1, RxScheduler *capture$2);
-
-@interface RxInternalOperatorsOperatorReplay_$7 : NSObject < RxObservable_OnSubscribe > {
- @public
-  JavaUtilConcurrentAtomicAtomicReference *val$curr_;
-  id<RxFunctionsFunc0> val$bufferFactory_;
-}
-
-- (void)callWithId:(RxSubscriber *)child;
-
-- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
-                                           withRxFunctionsFunc0:(id<RxFunctionsFunc0>)capture$1;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorReplay_$7)
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorReplay_$7, val$curr_, JavaUtilConcurrentAtomicAtomicReference *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorReplay_$7, val$bufferFactory_, id<RxFunctionsFunc0>)
-
-__attribute__((unused)) static void RxInternalOperatorsOperatorReplay_$7_initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_(RxInternalOperatorsOperatorReplay_$7 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, id<RxFunctionsFunc0> capture$1);
-
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_$7 *new_RxInternalOperatorsOperatorReplay_$7_initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_(JavaUtilConcurrentAtomicAtomicReference *capture$0, id<RxFunctionsFunc0> capture$1) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorReplay_$7 *create_RxInternalOperatorsOperatorReplay_$7_initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_(JavaUtilConcurrentAtomicAtomicReference *capture$0, id<RxFunctionsFunc0> capture$1);
 
 J2OBJC_INITIALIZED_DEFN(RxInternalOperatorsOperatorReplay)
 
@@ -427,7 +409,7 @@ id<RxFunctionsFunc0> RxInternalOperatorsOperatorReplay_DEFAULT_UNBOUNDED_FACTORY
 
 + (void)initialize {
   if (self == [RxInternalOperatorsOperatorReplay class]) {
-    JreStrongAssignAndConsume(&RxInternalOperatorsOperatorReplay_DEFAULT_UNBOUNDED_FACTORY, new_RxInternalOperatorsOperatorReplay_$1_init());
+    JreStrongAssignAndConsume(&RxInternalOperatorsOperatorReplay_DEFAULT_UNBOUNDED_FACTORY, new_RxInternalOperatorsOperatorReplay_1_init());
     J2OBJC_SET_INITIALIZED(RxInternalOperatorsOperatorReplay)
   }
 }
@@ -436,14 +418,14 @@ id<RxFunctionsFunc0> RxInternalOperatorsOperatorReplay_DEFAULT_UNBOUNDED_FACTORY
 
 RxObservable *RxInternalOperatorsOperatorReplay_multicastSelectorWithRxFunctionsFunc0_withRxFunctionsFunc1_(id<RxFunctionsFunc0> connectableFactory, id<RxFunctionsFunc1> selector) {
   RxInternalOperatorsOperatorReplay_initialize();
-  return RxObservable_createWithRxObservable_OnSubscribe_(create_RxInternalOperatorsOperatorReplay_$2_initWithRxFunctionsFunc0_withRxFunctionsFunc1_(connectableFactory, selector));
+  return RxObservable_createWithRxObservable_OnSubscribe_(create_RxInternalOperatorsOperatorReplay_2_initWithRxFunctionsFunc0_withRxFunctionsFunc1_(connectableFactory, selector));
 }
 
 RxObservablesConnectableObservable *RxInternalOperatorsOperatorReplay_observeOnWithRxObservablesConnectableObservable_withRxScheduler_(RxObservablesConnectableObservable *co, RxScheduler *scheduler) {
   RxInternalOperatorsOperatorReplay_initialize();
   RxObservable *observable = [((RxObservablesConnectableObservable *) nil_chk(co)) observeOnWithRxScheduler:scheduler];
-  id<RxObservable_OnSubscribe> onSubscribe = create_RxInternalOperatorsOperatorReplay_$3_initWithRxObservable_(observable);
-  return create_RxInternalOperatorsOperatorReplay_$4_initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_(co, onSubscribe);
+  id<RxObservable_OnSubscribe> onSubscribe = create_RxInternalOperatorsOperatorReplay_3_initWithRxObservable_(observable);
+  return create_RxInternalOperatorsOperatorReplay_4_initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_(co, onSubscribe);
 }
 
 RxObservablesConnectableObservable *RxInternalOperatorsOperatorReplay_createWithRxObservable_(RxObservable *source) {
@@ -456,7 +438,7 @@ RxObservablesConnectableObservable *RxInternalOperatorsOperatorReplay_createWith
   if (bufferSize == JavaLangInteger_MAX_VALUE) {
     return RxInternalOperatorsOperatorReplay_createWithRxObservable_(source);
   }
-  return RxInternalOperatorsOperatorReplay_createWithRxObservable_withRxFunctionsFunc0_(source, create_RxInternalOperatorsOperatorReplay_$5_initWithInt_(bufferSize));
+  return RxInternalOperatorsOperatorReplay_createWithRxObservable_withRxFunctionsFunc0_(source, create_RxInternalOperatorsOperatorReplay_5_initWithInt_(bufferSize));
 }
 
 RxObservablesConnectableObservable *RxInternalOperatorsOperatorReplay_createWithRxObservable_withLong_withJavaUtilConcurrentTimeUnit_withRxScheduler_(RxObservable *source, jlong maxAge, JavaUtilConcurrentTimeUnit *unit, RxScheduler *scheduler) {
@@ -467,13 +449,13 @@ RxObservablesConnectableObservable *RxInternalOperatorsOperatorReplay_createWith
 RxObservablesConnectableObservable *RxInternalOperatorsOperatorReplay_createWithRxObservable_withLong_withJavaUtilConcurrentTimeUnit_withRxScheduler_withInt_(RxObservable *source, jlong maxAge, JavaUtilConcurrentTimeUnit *unit, RxScheduler *scheduler, jint bufferSize) {
   RxInternalOperatorsOperatorReplay_initialize();
   jlong maxAgeInMillis = [((JavaUtilConcurrentTimeUnit *) nil_chk(unit)) toMillisWithLong:maxAge];
-  return RxInternalOperatorsOperatorReplay_createWithRxObservable_withRxFunctionsFunc0_(source, create_RxInternalOperatorsOperatorReplay_$6_initWithInt_withLong_withRxScheduler_(bufferSize, maxAgeInMillis, scheduler));
+  return RxInternalOperatorsOperatorReplay_createWithRxObservable_withRxFunctionsFunc0_(source, create_RxInternalOperatorsOperatorReplay_6_initWithInt_withLong_withRxScheduler_(bufferSize, maxAgeInMillis, scheduler));
 }
 
 RxObservablesConnectableObservable *RxInternalOperatorsOperatorReplay_createWithRxObservable_withRxFunctionsFunc0_(RxObservable *source, id<RxFunctionsFunc0> bufferFactory) {
   RxInternalOperatorsOperatorReplay_initialize();
   JavaUtilConcurrentAtomicAtomicReference *curr = create_JavaUtilConcurrentAtomicAtomicReference_init();
-  id<RxObservable_OnSubscribe> onSubscribe = create_RxInternalOperatorsOperatorReplay_$7_initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_(curr, bufferFactory);
+  id<RxObservable_OnSubscribe> onSubscribe = create_RxInternalOperatorsOperatorReplay_7_initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_(curr, bufferFactory);
   return create_RxInternalOperatorsOperatorReplay_initWithRxObservable_OnSubscribe_withRxObservable_withJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_(onSubscribe, source, curr, bufferFactory);
 }
 
@@ -494,6 +476,490 @@ RxInternalOperatorsOperatorReplay *create_RxInternalOperatorsOperatorReplay_init
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorReplay)
 
+@implementation RxInternalOperatorsOperatorReplay_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalOperatorsOperatorReplay_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
+- (id)call {
+  return create_RxInternalOperatorsOperatorReplay_UnboundedReplayBuffer_initWithInt_(16);
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, -1, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(call);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorReplay;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_1 = { "", "rx.internal.operators", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 0, -1, -1, -1, -1 };
+  return &_RxInternalOperatorsOperatorReplay_1;
+}
+
+@end
+
+void RxInternalOperatorsOperatorReplay_1_init(RxInternalOperatorsOperatorReplay_1 *self) {
+  NSObject_init(self);
+}
+
+RxInternalOperatorsOperatorReplay_1 *new_RxInternalOperatorsOperatorReplay_1_init() {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_1, init)
+}
+
+RxInternalOperatorsOperatorReplay_1 *create_RxInternalOperatorsOperatorReplay_1_init() {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_1, init)
+}
+
+@implementation RxInternalOperatorsOperatorReplay_2
+
+- (instancetype)initWithRxFunctionsFunc0:(id<RxFunctionsFunc0>)capture$0
+                    withRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$1 {
+  RxInternalOperatorsOperatorReplay_2_initWithRxFunctionsFunc0_withRxFunctionsFunc1_(self, capture$0, capture$1);
+  return self;
+}
+
+- (void)callWithId:(RxSubscriber *)child {
+  RxObservablesConnectableObservable *co;
+  RxObservable *observable;
+  @try {
+    co = [((id<RxFunctionsFunc0>) nil_chk(val$connectableFactory_)) call];
+    observable = [((id<RxFunctionsFunc1>) nil_chk(val$selector_)) callWithId:co];
+  }
+  @catch (NSException *e) {
+    RxExceptionsExceptions_throwOrReportWithNSException_withRxObserver_(e, child);
+    return;
+  }
+  [((RxObservable *) nil_chk(observable)) subscribeWithRxSubscriber:child];
+  [((RxObservablesConnectableObservable *) nil_chk(co)) connectWithRxFunctionsAction1:create_RxInternalOperatorsOperatorReplay_2_1_initWithRxSubscriber_(child)];
+}
+
+- (void)dealloc {
+  RELEASE_(val$connectableFactory_);
+  RELEASE_(val$selector_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxFunctionsFunc0:withRxFunctionsFunc1:);
+  methods[1].selector = @selector(callWithId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$connectableFactory_", "LRxFunctionsFunc0;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$selector_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-TR;>;)V", "Lrx/functions/Func0<+Lrx/observables/ConnectableObservable<TU;>;>;", "Lrx/functions/Func1<-Lrx/Observable<TU;>;+Lrx/Observable<TR;>;>;", "LRxInternalOperatorsOperatorReplay;", "multicastSelectorWithRxFunctionsFunc0:withRxFunctionsFunc1:", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<TR;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 5, -1, 6, 7, -1 };
+  return &_RxInternalOperatorsOperatorReplay_2;
+}
+
+@end
+
+void RxInternalOperatorsOperatorReplay_2_initWithRxFunctionsFunc0_withRxFunctionsFunc1_(RxInternalOperatorsOperatorReplay_2 *self, id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1) {
+  JreStrongAssign(&self->val$connectableFactory_, capture$0);
+  JreStrongAssign(&self->val$selector_, capture$1);
+  NSObject_init(self);
+}
+
+RxInternalOperatorsOperatorReplay_2 *new_RxInternalOperatorsOperatorReplay_2_initWithRxFunctionsFunc0_withRxFunctionsFunc1_(id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_2, initWithRxFunctionsFunc0_withRxFunctionsFunc1_, capture$0, capture$1)
+}
+
+RxInternalOperatorsOperatorReplay_2 *create_RxInternalOperatorsOperatorReplay_2_initWithRxFunctionsFunc0_withRxFunctionsFunc1_(id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_2, initWithRxFunctionsFunc0_withRxFunctionsFunc1_, capture$0, capture$1)
+}
+
+@implementation RxInternalOperatorsOperatorReplay_2_1
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0 {
+  RxInternalOperatorsOperatorReplay_2_1_initWithRxSubscriber_(self, capture$0);
+  return self;
+}
+
+- (void)callWithId:(id<RxSubscription>)t {
+  [((RxSubscriber *) nil_chk(val$child_)) addWithRxSubscription:t];
+}
+
+- (void)dealloc {
+  RELEASE_(val$child_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxSubscriber:);
+  methods[1].selector = @selector(callWithId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LRxSubscription;", "Lrx/Subscriber<-TR;>;", "LRxInternalOperatorsOperatorReplay_2;", "callWithId:", "Ljava/lang/Object;Lrx/functions/Action1<Lrx/Subscription;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_2_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, 5, -1 };
+  return &_RxInternalOperatorsOperatorReplay_2_1;
+}
+
+@end
+
+void RxInternalOperatorsOperatorReplay_2_1_initWithRxSubscriber_(RxInternalOperatorsOperatorReplay_2_1 *self, RxSubscriber *capture$0) {
+  JreStrongAssign(&self->val$child_, capture$0);
+  NSObject_init(self);
+}
+
+RxInternalOperatorsOperatorReplay_2_1 *new_RxInternalOperatorsOperatorReplay_2_1_initWithRxSubscriber_(RxSubscriber *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_2_1, initWithRxSubscriber_, capture$0)
+}
+
+RxInternalOperatorsOperatorReplay_2_1 *create_RxInternalOperatorsOperatorReplay_2_1_initWithRxSubscriber_(RxSubscriber *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_2_1, initWithRxSubscriber_, capture$0)
+}
+
+@implementation RxInternalOperatorsOperatorReplay_3
+
+- (instancetype)initWithRxObservable:(RxObservable *)capture$0 {
+  RxInternalOperatorsOperatorReplay_3_initWithRxObservable_(self, capture$0);
+  return self;
+}
+
+- (void)callWithId:(RxSubscriber *)child {
+  [((RxObservable *) nil_chk(val$observable_)) unsafeSubscribeWithRxSubscriber:create_RxInternalOperatorsOperatorReplay_3_1_initWithRxSubscriber_withRxSubscriber_(child, child)];
+}
+
+- (void)dealloc {
+  RELEASE_(val$observable_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxObservable:);
+  methods[1].selector = @selector(callWithId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$observable_", "LRxObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)V", "Lrx/Observable<TT;>;", "LRxInternalOperatorsOperatorReplay;", "observeOnWithRxObservablesConnectableObservable:withRxScheduler:", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_3 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
+  return &_RxInternalOperatorsOperatorReplay_3;
+}
+
+@end
+
+void RxInternalOperatorsOperatorReplay_3_initWithRxObservable_(RxInternalOperatorsOperatorReplay_3 *self, RxObservable *capture$0) {
+  JreStrongAssign(&self->val$observable_, capture$0);
+  NSObject_init(self);
+}
+
+RxInternalOperatorsOperatorReplay_3 *new_RxInternalOperatorsOperatorReplay_3_initWithRxObservable_(RxObservable *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_3, initWithRxObservable_, capture$0)
+}
+
+RxInternalOperatorsOperatorReplay_3 *create_RxInternalOperatorsOperatorReplay_3_initWithRxObservable_(RxObservable *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_3, initWithRxObservable_, capture$0)
+}
+
+@implementation RxInternalOperatorsOperatorReplay_3_1
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
+                    withRxSubscriber:(RxSubscriber *)param0 {
+  RxInternalOperatorsOperatorReplay_3_1_initWithRxSubscriber_withRxSubscriber_(self, capture$0, param0);
+  return self;
+}
+
+- (void)onNextWithId:(id)t {
+  [((RxSubscriber *) nil_chk(val$child_)) onNextWithId:t];
+}
+
+- (void)onErrorWithNSException:(NSException *)e {
+  [((RxSubscriber *) nil_chk(val$child_)) onErrorWithNSException:e];
+}
+
+- (void)onCompleted {
+  [((RxSubscriber *) nil_chk(val$child_)) onCompleted];
+}
+
+- (void)dealloc {
+  RELEASE_(val$child_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
+    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxSubscriber:withRxSubscriber:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+  };
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorReplay_3;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_3_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 1, 8, -1, 9, 10, -1 };
+  return &_RxInternalOperatorsOperatorReplay_3_1;
+}
+
+@end
+
+void RxInternalOperatorsOperatorReplay_3_1_initWithRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorReplay_3_1 *self, RxSubscriber *capture$0, RxSubscriber *param0) {
+  JreStrongAssign(&self->val$child_, capture$0);
+  RxSubscriber_initWithRxSubscriber_(self, param0);
+}
+
+RxInternalOperatorsOperatorReplay_3_1 *new_RxInternalOperatorsOperatorReplay_3_1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_3_1, initWithRxSubscriber_withRxSubscriber_, capture$0, param0)
+}
+
+RxInternalOperatorsOperatorReplay_3_1 *create_RxInternalOperatorsOperatorReplay_3_1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_3_1, initWithRxSubscriber_withRxSubscriber_, capture$0, param0)
+}
+
+@implementation RxInternalOperatorsOperatorReplay_4
+
+- (instancetype)initWithRxObservablesConnectableObservable:(RxObservablesConnectableObservable *)capture$0
+                              withRxObservable_OnSubscribe:(id<RxObservable_OnSubscribe>)param0 {
+  RxInternalOperatorsOperatorReplay_4_initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_(self, capture$0, param0);
+  return self;
+}
+
+- (void)connectWithRxFunctionsAction1:(id<RxFunctionsAction1>)connection {
+  [((RxObservablesConnectableObservable *) nil_chk(val$co_)) connectWithRxFunctionsAction1:connection];
+}
+
+- (void)dealloc {
+  RELEASE_(val$co_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxObservablesConnectableObservable:withRxObservable_OnSubscribe:);
+  methods[1].selector = @selector(connectWithRxFunctionsAction1:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$co_", "LRxObservablesConnectableObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+  };
+  static const void *ptrTable[] = { "LRxObservable_OnSubscribe;", "(Lrx/Observable$OnSubscribe<TT;>;)V", "connect", "LRxFunctionsAction1;", "(Lrx/functions/Action1<-Lrx/Subscription;>;)V", "Lrx/observables/ConnectableObservable<TT;>;", "LRxInternalOperatorsOperatorReplay;", "observeOnWithRxObservablesConnectableObservable:withRxScheduler:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_4 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 6, -1, 7, 5, -1 };
+  return &_RxInternalOperatorsOperatorReplay_4;
+}
+
+@end
+
+void RxInternalOperatorsOperatorReplay_4_initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_(RxInternalOperatorsOperatorReplay_4 *self, RxObservablesConnectableObservable *capture$0, id<RxObservable_OnSubscribe> param0) {
+  JreStrongAssign(&self->val$co_, capture$0);
+  RxObservablesConnectableObservable_initWithRxObservable_OnSubscribe_(self, param0);
+}
+
+RxInternalOperatorsOperatorReplay_4 *new_RxInternalOperatorsOperatorReplay_4_initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_(RxObservablesConnectableObservable *capture$0, id<RxObservable_OnSubscribe> param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_4, initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_, capture$0, param0)
+}
+
+RxInternalOperatorsOperatorReplay_4 *create_RxInternalOperatorsOperatorReplay_4_initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_(RxObservablesConnectableObservable *capture$0, id<RxObservable_OnSubscribe> param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_4, initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_, capture$0, param0)
+}
+
+@implementation RxInternalOperatorsOperatorReplay_5
+
+- (instancetype)initWithInt:(jint)capture$0 {
+  RxInternalOperatorsOperatorReplay_5_initWithInt_(self, capture$0);
+  return self;
+}
+
+- (id<RxInternalOperatorsOperatorReplay_ReplayBuffer>)call {
+  return create_RxInternalOperatorsOperatorReplay_SizeBoundReplayBuffer_initWithInt_(val$bufferSize_);
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxInternalOperatorsOperatorReplay_ReplayBuffer;", 0x1, -1, -1, -1, 0, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithInt:);
+  methods[1].selector = @selector(call);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$bufferSize_", "I", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "()Lrx/internal/operators/OperatorReplay$ReplayBuffer<TT;>;", "LRxInternalOperatorsOperatorReplay;", "createWithRxObservable:withInt:", "Ljava/lang/Object;Lrx/functions/Func0<Lrx/internal/operators/OperatorReplay$ReplayBuffer<TT;>;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_5 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, 3, -1 };
+  return &_RxInternalOperatorsOperatorReplay_5;
+}
+
+@end
+
+void RxInternalOperatorsOperatorReplay_5_initWithInt_(RxInternalOperatorsOperatorReplay_5 *self, jint capture$0) {
+  self->val$bufferSize_ = capture$0;
+  NSObject_init(self);
+}
+
+RxInternalOperatorsOperatorReplay_5 *new_RxInternalOperatorsOperatorReplay_5_initWithInt_(jint capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_5, initWithInt_, capture$0)
+}
+
+RxInternalOperatorsOperatorReplay_5 *create_RxInternalOperatorsOperatorReplay_5_initWithInt_(jint capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_5, initWithInt_, capture$0)
+}
+
+@implementation RxInternalOperatorsOperatorReplay_6
+
+- (instancetype)initWithInt:(jint)capture$0
+                   withLong:(jlong)capture$1
+            withRxScheduler:(RxScheduler *)capture$2 {
+  RxInternalOperatorsOperatorReplay_6_initWithInt_withLong_withRxScheduler_(self, capture$0, capture$1, capture$2);
+  return self;
+}
+
+- (id<RxInternalOperatorsOperatorReplay_ReplayBuffer>)call {
+  return create_RxInternalOperatorsOperatorReplay_SizeAndTimeBoundReplayBuffer_initWithInt_withLong_withRxScheduler_(val$bufferSize_, val$maxAgeInMillis_, val$scheduler_);
+}
+
+- (void)dealloc {
+  RELEASE_(val$scheduler_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxInternalOperatorsOperatorReplay_ReplayBuffer;", 0x1, -1, -1, -1, 0, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithInt:withLong:withRxScheduler:);
+  methods[1].selector = @selector(call);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$bufferSize_", "I", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "val$maxAgeInMillis_", "J", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "val$scheduler_", "LRxScheduler;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "()Lrx/internal/operators/OperatorReplay$ReplayBuffer<TT;>;", "LRxInternalOperatorsOperatorReplay;", "createWithRxObservable:withLong:withJavaUtilConcurrentTimeUnit:withRxScheduler:withInt:", "Ljava/lang/Object;Lrx/functions/Func0<Lrx/internal/operators/OperatorReplay$ReplayBuffer<TT;>;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_6 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 3, 1, -1, 2, 3, -1 };
+  return &_RxInternalOperatorsOperatorReplay_6;
+}
+
+@end
+
+void RxInternalOperatorsOperatorReplay_6_initWithInt_withLong_withRxScheduler_(RxInternalOperatorsOperatorReplay_6 *self, jint capture$0, jlong capture$1, RxScheduler *capture$2) {
+  self->val$bufferSize_ = capture$0;
+  self->val$maxAgeInMillis_ = capture$1;
+  JreStrongAssign(&self->val$scheduler_, capture$2);
+  NSObject_init(self);
+}
+
+RxInternalOperatorsOperatorReplay_6 *new_RxInternalOperatorsOperatorReplay_6_initWithInt_withLong_withRxScheduler_(jint capture$0, jlong capture$1, RxScheduler *capture$2) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_6, initWithInt_withLong_withRxScheduler_, capture$0, capture$1, capture$2)
+}
+
+RxInternalOperatorsOperatorReplay_6 *create_RxInternalOperatorsOperatorReplay_6_initWithInt_withLong_withRxScheduler_(jint capture$0, jlong capture$1, RxScheduler *capture$2) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_6, initWithInt_withLong_withRxScheduler_, capture$0, capture$1, capture$2)
+}
+
+@implementation RxInternalOperatorsOperatorReplay_7
+
+- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
+                                           withRxFunctionsFunc0:(id<RxFunctionsFunc0>)capture$1 {
+  RxInternalOperatorsOperatorReplay_7_initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_(self, capture$0, capture$1);
+  return self;
+}
+
+- (void)callWithId:(RxSubscriber *)child {
+  for (; ; ) {
+    RxInternalOperatorsOperatorReplay_ReplaySubscriber *r = [((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(val$curr_)) get];
+    if (r == nil) {
+      RxInternalOperatorsOperatorReplay_ReplaySubscriber *u = create_RxInternalOperatorsOperatorReplay_ReplaySubscriber_initWithRxInternalOperatorsOperatorReplay_ReplayBuffer_([((id<RxFunctionsFunc0>) nil_chk(val$bufferFactory_)) call]);
+      [u init__];
+      if (![val$curr_ compareAndSetWithId:r withId:u]) {
+        continue;
+      }
+      r = u;
+    }
+    RxInternalOperatorsOperatorReplay_InnerProducer *inner = create_RxInternalOperatorsOperatorReplay_InnerProducer_initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_withRxSubscriber_(r, child);
+    [r addWithRxInternalOperatorsOperatorReplay_InnerProducer:inner];
+    [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:inner];
+    [((id<RxInternalOperatorsOperatorReplay_ReplayBuffer>) nil_chk(r->buffer_)) replayWithRxInternalOperatorsOperatorReplay_InnerProducer:inner];
+    [child setProducerWithRxProducer:inner];
+    break;
+  }
+}
+
+- (void)dealloc {
+  RELEASE_(val$curr_);
+  RELEASE_(val$bufferFactory_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicReference:withRxFunctionsFunc0:);
+  methods[1].selector = @selector(callWithId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$curr_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$bufferFactory_", "LRxFunctionsFunc0;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)V", "Ljava/util/concurrent/atomic/AtomicReference<Lrx/internal/operators/OperatorReplay$ReplaySubscriber<TT;>;>;", "Lrx/functions/Func0<+Lrx/internal/operators/OperatorReplay$ReplayBuffer<TT;>;>;", "LRxInternalOperatorsOperatorReplay;", "createWithRxObservable:withRxFunctionsFunc0:", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_7 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 5, -1, 6, 7, -1 };
+  return &_RxInternalOperatorsOperatorReplay_7;
+}
+
+@end
+
+void RxInternalOperatorsOperatorReplay_7_initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_(RxInternalOperatorsOperatorReplay_7 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, id<RxFunctionsFunc0> capture$1) {
+  JreStrongAssign(&self->val$curr_, capture$0);
+  JreStrongAssign(&self->val$bufferFactory_, capture$1);
+  NSObject_init(self);
+}
+
+RxInternalOperatorsOperatorReplay_7 *new_RxInternalOperatorsOperatorReplay_7_initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_(JavaUtilConcurrentAtomicAtomicReference *capture$0, id<RxFunctionsFunc0> capture$1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_7, initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_, capture$0, capture$1)
+}
+
+RxInternalOperatorsOperatorReplay_7 *create_RxInternalOperatorsOperatorReplay_7_initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_(JavaUtilConcurrentAtomicAtomicReference *capture$0, id<RxFunctionsFunc0> capture$1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_7, initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_, capture$0, capture$1)
+}
+
 J2OBJC_INITIALIZED_DEFN(RxInternalOperatorsOperatorReplay_ReplaySubscriber)
 
 IOSObjectArray *RxInternalOperatorsOperatorReplay_ReplaySubscriber_EMPTY;
@@ -507,7 +973,7 @@ IOSObjectArray *RxInternalOperatorsOperatorReplay_ReplaySubscriber_TERMINATED;
 }
 
 - (void)init__ {
-  [self addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1_initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_(self))];
+  [self addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOperatorReplay_ReplaySubscriber_1_initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_(self))];
 }
 
 - (jboolean)addWithRxInternalOperatorsOperatorReplay_InnerProducer:(RxInternalOperatorsOperatorReplay_InnerProducer *)producer {
@@ -746,7 +1212,6 @@ IOSObjectArray *RxInternalOperatorsOperatorReplay_ReplaySubscriber_TERMINATED;
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorReplay_ReplaySubscriber class]);
   RELEASE_(buffer_);
   RELEASE_(producers_);
   RELEASE_(producersCache_);
@@ -767,8 +1232,8 @@ IOSObjectArray *RxInternalOperatorsOperatorReplay_ReplaySubscriber_TERMINATED;
     { NULL, "V", 0x1, 13, 14, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x0, 15, 4, -1, 7, -1, -1 },
-    { NULL, "[LRxInternalOperatorsOperatorReplay_InnerProducer;", 0x0, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x0, 16, 17, -1, -1, -1, -1 },
+    { NULL, "[LRxInternalOperatorsOperatorReplay_InnerProducer;", 0x0, -1, -1, -1, 16, -1, -1 },
+    { NULL, "V", 0x0, 17, 18, -1, -1, -1, -1 },
     { NULL, "V", 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
@@ -787,13 +1252,13 @@ IOSObjectArray *RxInternalOperatorsOperatorReplay_ReplaySubscriber_TERMINATED;
   methods[11].selector = @selector(replay);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "buffer_", "LRxInternalOperatorsOperatorReplay_ReplayBuffer;", .constantValue.asLong = 0, 0x10, -1, -1, 18, -1 },
+    { "buffer_", "LRxInternalOperatorsOperatorReplay_ReplayBuffer;", .constantValue.asLong = 0, 0x10, -1, -1, 19, -1 },
     { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
-    { "EMPTY", "[LRxInternalOperatorsOperatorReplay_InnerProducer;", .constantValue.asLong = 0, 0x18, -1, 19, -1, -1 },
-    { "TERMINATED", "[LRxInternalOperatorsOperatorReplay_InnerProducer;", .constantValue.asLong = 0, 0x18, -1, 20, -1, -1 },
+    { "EMPTY", "[LRxInternalOperatorsOperatorReplay_InnerProducer;", .constantValue.asLong = 0, 0x18, -1, 20, -1, -1 },
+    { "TERMINATED", "[LRxInternalOperatorsOperatorReplay_InnerProducer;", .constantValue.asLong = 0, 0x18, -1, 21, -1, -1 },
     { "terminated_", "Z", .constantValue.asLong = 0, 0x40, -1, -1, -1, -1 },
-    { "producers_", "LRxInternalUtilOpenHashSet;", .constantValue.asLong = 0, 0x10, -1, -1, 21, -1 },
-    { "producersCache_", "[LRxInternalOperatorsOperatorReplay_InnerProducer;", .constantValue.asLong = 0, 0x0, -1, -1, 22, -1 },
+    { "producers_", "LRxInternalUtilOpenHashSet;", .constantValue.asLong = 0, 0x10, -1, -1, 22, -1 },
+    { "producersCache_", "[LRxInternalOperatorsOperatorReplay_InnerProducer;", .constantValue.asLong = 0, 0x0, -1, -1, 23, -1 },
     { "producersVersion_", "J", .constantValue.asLong = 0, 0x40, -1, -1, -1, -1 },
     { "producersCacheVersion_", "J", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "shouldConnect_", "LJavaUtilConcurrentAtomicAtomicBoolean;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
@@ -801,12 +1266,12 @@ IOSObjectArray *RxInternalOperatorsOperatorReplay_ReplaySubscriber_TERMINATED;
     { "missed_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "maxChildRequested_", "J", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "maxUpstreamRequested_", "J", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
-    { "producer_ReplaySubscriber_", "LRxProducer;", .constantValue.asLong = 0, 0x40, 23, -1, -1, -1 },
-    { "coordinationQueue_", "LJavaUtilList;", .constantValue.asLong = 0, 0x0, -1, -1, 24, -1 },
+    { "producer_ReplaySubscriber_", "LRxProducer;", .constantValue.asLong = 0, 0x40, 24, -1, -1, -1 },
+    { "coordinationQueue_", "LJavaUtilList;", .constantValue.asLong = 0, 0x0, -1, -1, 25, -1 },
     { "coordinateAll_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorReplay_ReplayBuffer;", "(Lrx/internal/operators/OperatorReplay$ReplayBuffer<TT;>;)V", "init", "add", "LRxInternalOperatorsOperatorReplay_InnerProducer;", "(Lrx/internal/operators/OperatorReplay$InnerProducer<TT;>;)Z", "remove", "(Lrx/internal/operators/OperatorReplay$InnerProducer<TT;>;)V", "setProducer", "LRxProducer;", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "manageRequests", "makeRequest", "JJ", "Lrx/internal/operators/OperatorReplay$ReplayBuffer<TT;>;", &RxInternalOperatorsOperatorReplay_ReplaySubscriber_EMPTY, &RxInternalOperatorsOperatorReplay_ReplaySubscriber_TERMINATED, "Lrx/internal/util/OpenHashSet<Lrx/internal/operators/OperatorReplay$InnerProducer<TT;>;>;", "[Lrx/internal/operators/OperatorReplay$InnerProducer<TT;>;", "producer", "Ljava/util/List<Lrx/internal/operators/OperatorReplay$InnerProducer<TT;>;>;", "LRxInternalOperatorsOperatorReplay;", "<T:Ljava/lang/Object;>Lrx/Subscriber<TT;>;Lrx/Subscription;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_ReplaySubscriber = { "ReplaySubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x18, 12, 17, 25, -1, -1, 26, -1 };
+  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorReplay_ReplayBuffer;", "(Lrx/internal/operators/OperatorReplay$ReplayBuffer<TT;>;)V", "init", "add", "LRxInternalOperatorsOperatorReplay_InnerProducer;", "(Lrx/internal/operators/OperatorReplay$InnerProducer<TT;>;)Z", "remove", "(Lrx/internal/operators/OperatorReplay$InnerProducer<TT;>;)V", "setProducer", "LRxProducer;", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "manageRequests", "()[Lrx/internal/operators/OperatorReplay$InnerProducer<TT;>;", "makeRequest", "JJ", "Lrx/internal/operators/OperatorReplay$ReplayBuffer<TT;>;", &RxInternalOperatorsOperatorReplay_ReplaySubscriber_EMPTY, &RxInternalOperatorsOperatorReplay_ReplaySubscriber_TERMINATED, "Lrx/internal/util/OpenHashSet<Lrx/internal/operators/OperatorReplay$InnerProducer<TT;>;>;", "[Lrx/internal/operators/OperatorReplay$InnerProducer<TT;>;", "producer", "Ljava/util/List<Lrx/internal/operators/OperatorReplay$InnerProducer<TT;>;>;", "LRxInternalOperatorsOperatorReplay;", "<T:Ljava/lang/Object;>Lrx/Subscriber<TT;>;Lrx/Subscription;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_ReplaySubscriber = { "ReplaySubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x18, 12, 17, 26, -1, -1, 27, -1 };
   return &_RxInternalOperatorsOperatorReplay_ReplaySubscriber;
 }
 
@@ -839,7 +1304,12 @@ RxInternalOperatorsOperatorReplay_ReplaySubscriber *create_RxInternalOperatorsOp
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorReplay_ReplaySubscriber)
 
-@implementation RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1
+@implementation RxInternalOperatorsOperatorReplay_ReplaySubscriber_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber:(RxInternalOperatorsOperatorReplay_ReplaySubscriber *)outer$ {
+  RxInternalOperatorsOperatorReplay_ReplaySubscriber_1_initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_(self, outer$);
+  return self;
+}
 
 - (void)call {
   if (!JreLoadVolatileBoolean(&this$0_->terminated_)) {
@@ -853,11 +1323,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorReplay_ReplaySubscri
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber:(RxInternalOperatorsOperatorReplay_ReplaySubscriber *)outer$ {
-  RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1_initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -865,35 +1330,35 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorReplay_ReplaySubscri
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorReplay_ReplaySubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorReplay_ReplaySubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorReplay_ReplaySubscriber;", "init__" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
-  return &_RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1;
+  static const void *ptrTable[] = { "Lrx/internal/operators/OperatorReplay$ReplaySubscriber<TT;>;", "LRxInternalOperatorsOperatorReplay_ReplaySubscriber;", "init__" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_ReplaySubscriber_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
+  return &_RxInternalOperatorsOperatorReplay_ReplaySubscriber_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1_initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_(RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1 *self, RxInternalOperatorsOperatorReplay_ReplaySubscriber *outer$) {
+void RxInternalOperatorsOperatorReplay_ReplaySubscriber_1_initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_(RxInternalOperatorsOperatorReplay_ReplaySubscriber_1 *self, RxInternalOperatorsOperatorReplay_ReplaySubscriber *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1 *new_RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1_initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_(RxInternalOperatorsOperatorReplay_ReplaySubscriber *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1, initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_, outer$)
+RxInternalOperatorsOperatorReplay_ReplaySubscriber_1 *new_RxInternalOperatorsOperatorReplay_ReplaySubscriber_1_initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_(RxInternalOperatorsOperatorReplay_ReplaySubscriber *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_ReplaySubscriber_1, initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_, outer$)
 }
 
-RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1 *create_RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1_initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_(RxInternalOperatorsOperatorReplay_ReplaySubscriber *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1, initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_, outer$)
+RxInternalOperatorsOperatorReplay_ReplaySubscriber_1 *create_RxInternalOperatorsOperatorReplay_ReplaySubscriber_1_initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_(RxInternalOperatorsOperatorReplay_ReplaySubscriber *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_ReplaySubscriber_1, initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_, outer$)
 }
 
 @implementation RxInternalOperatorsOperatorReplay_InnerProducer
@@ -972,7 +1437,7 @@ RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1 *create_RxInternalOperator
     if (r != RxInternalOperatorsOperatorReplay_InnerProducer_UNSUBSCRIBED) {
       [((RxInternalOperatorsOperatorReplay_ReplaySubscriber *) nil_chk(parent_)) removeWithRxInternalOperatorsOperatorReplay_InnerProducer:self];
       [parent_ manageRequestsWithRxInternalOperatorsOperatorReplay_InnerProducer:self];
-      JreStrongAssign(&child_, nil);
+      child_ = nil;
     }
   }
 }
@@ -981,9 +1446,13 @@ RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1 *create_RxInternalOperator
   return index_;
 }
 
+- (void)__javaClone:(RxInternalOperatorsOperatorReplay_InnerProducer *)original {
+  [super __javaClone:original];
+  [child_ release];
+}
+
 - (void)dealloc {
   RELEASE_(parent_);
-  RELEASE_(child_);
   RELEASE_(index_);
   RELEASE_(totalRequested_);
   [super dealloc];
@@ -1029,7 +1498,7 @@ RxInternalOperatorsOperatorReplay_ReplaySubscriber_$1 *create_RxInternalOperator
 void RxInternalOperatorsOperatorReplay_InnerProducer_initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_withRxSubscriber_(RxInternalOperatorsOperatorReplay_InnerProducer *self, RxInternalOperatorsOperatorReplay_ReplaySubscriber *parent, RxSubscriber *child) {
   JavaUtilConcurrentAtomicAtomicLong_init(self);
   JreStrongAssign(&self->parent_, parent);
-  JreStrongAssign(&self->child_, child);
+  self->child_ = child;
   JreStrongAssignAndConsume(&self->totalRequested_, new_JavaUtilConcurrentAtomicAtomicLong_init());
 }
 
@@ -1697,488 +2166,3 @@ RxInternalOperatorsOperatorReplay_SizeAndTimeBoundReplayBuffer *create_RxInterna
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorReplay_SizeAndTimeBoundReplayBuffer)
-
-@implementation RxInternalOperatorsOperatorReplay_$1
-
-- (id)call {
-  return create_RxInternalOperatorsOperatorReplay_UnboundedReplayBuffer_initWithInt_(16);
-}
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalOperatorsOperatorReplay_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(init);
-  #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorReplay;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_$1 = { "", "rx.internal.operators", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 0, -1, -1, -1, -1 };
-  return &_RxInternalOperatorsOperatorReplay_$1;
-}
-
-@end
-
-void RxInternalOperatorsOperatorReplay_$1_init(RxInternalOperatorsOperatorReplay_$1 *self) {
-  NSObject_init(self);
-}
-
-RxInternalOperatorsOperatorReplay_$1 *new_RxInternalOperatorsOperatorReplay_$1_init() {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_$1, init)
-}
-
-RxInternalOperatorsOperatorReplay_$1 *create_RxInternalOperatorsOperatorReplay_$1_init() {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_$1, init)
-}
-
-@implementation RxInternalOperatorsOperatorReplay_$2
-
-- (void)callWithId:(RxSubscriber *)child {
-  RxObservablesConnectableObservable *co;
-  RxObservable *observable;
-  @try {
-    co = [((id<RxFunctionsFunc0>) nil_chk(val$connectableFactory_)) call];
-    observable = [((id<RxFunctionsFunc1>) nil_chk(val$selector_)) callWithId:co];
-  }
-  @catch (NSException *e) {
-    RxExceptionsExceptions_throwOrReportWithNSException_withRxObserver_(e, child);
-    return;
-  }
-  [((RxObservable *) nil_chk(observable)) subscribeWithRxSubscriber:child];
-  [((RxObservablesConnectableObservable *) nil_chk(co)) connectWithRxFunctionsAction1:create_RxInternalOperatorsOperatorReplay_$2_$1_initWithRxSubscriber_(child)];
-}
-
-- (instancetype)initWithRxFunctionsFunc0:(id<RxFunctionsFunc0>)capture$0
-                    withRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$1 {
-  RxInternalOperatorsOperatorReplay_$2_initWithRxFunctionsFunc0_withRxFunctionsFunc1_(self, capture$0, capture$1);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$connectableFactory_);
-  RELEASE_(val$selector_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxFunctionsFunc0:withRxFunctionsFunc1:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$connectableFactory_", "LRxFunctionsFunc0;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-    { "val$selector_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-TR;>;)V", "LRxFunctionsFunc0;LRxFunctionsFunc1;", "(Lrx/functions/Func0<+Lrx/observables/ConnectableObservable<TU;>;>;Lrx/functions/Func1<-Lrx/Observable<TU;>;+Lrx/Observable<TR;>;>;)V", "Lrx/functions/Func0<+Lrx/observables/ConnectableObservable<TU;>;>;", "Lrx/functions/Func1<-Lrx/Observable<TU;>;+Lrx/Observable<TR;>;>;", "LRxInternalOperatorsOperatorReplay;", "multicastSelectorWithRxFunctionsFunc0:withRxFunctionsFunc1:", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<TR;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 7, -1, 8, 9, -1 };
-  return &_RxInternalOperatorsOperatorReplay_$2;
-}
-
-@end
-
-void RxInternalOperatorsOperatorReplay_$2_initWithRxFunctionsFunc0_withRxFunctionsFunc1_(RxInternalOperatorsOperatorReplay_$2 *self, id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1) {
-  JreStrongAssign(&self->val$connectableFactory_, capture$0);
-  JreStrongAssign(&self->val$selector_, capture$1);
-  NSObject_init(self);
-}
-
-RxInternalOperatorsOperatorReplay_$2 *new_RxInternalOperatorsOperatorReplay_$2_initWithRxFunctionsFunc0_withRxFunctionsFunc1_(id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_$2, initWithRxFunctionsFunc0_withRxFunctionsFunc1_, capture$0, capture$1)
-}
-
-RxInternalOperatorsOperatorReplay_$2 *create_RxInternalOperatorsOperatorReplay_$2_initWithRxFunctionsFunc0_withRxFunctionsFunc1_(id<RxFunctionsFunc0> capture$0, id<RxFunctionsFunc1> capture$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_$2, initWithRxFunctionsFunc0_withRxFunctionsFunc1_, capture$0, capture$1)
-}
-
-@implementation RxInternalOperatorsOperatorReplay_$2_$1
-
-- (void)callWithId:(id<RxSubscription>)t {
-  [((RxSubscriber *) nil_chk(val$child_)) addWithRxSubscription:t];
-}
-
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0 {
-  RxInternalOperatorsOperatorReplay_$2_$1_initWithRxSubscriber_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$child_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, 3, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxSubscriber:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LRxSubscription;", "LRxSubscriber;", "(Lrx/Subscriber<-TR;>;)V", "Lrx/Subscriber<-TR;>;", "LRxInternalOperatorsOperatorReplay_$2;", "callWithId:", "Ljava/lang/Object;Lrx/functions/Action1<Lrx/Subscription;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_$2_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 5, -1, 6, 7, -1 };
-  return &_RxInternalOperatorsOperatorReplay_$2_$1;
-}
-
-@end
-
-void RxInternalOperatorsOperatorReplay_$2_$1_initWithRxSubscriber_(RxInternalOperatorsOperatorReplay_$2_$1 *self, RxSubscriber *capture$0) {
-  JreStrongAssign(&self->val$child_, capture$0);
-  NSObject_init(self);
-}
-
-RxInternalOperatorsOperatorReplay_$2_$1 *new_RxInternalOperatorsOperatorReplay_$2_$1_initWithRxSubscriber_(RxSubscriber *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_$2_$1, initWithRxSubscriber_, capture$0)
-}
-
-RxInternalOperatorsOperatorReplay_$2_$1 *create_RxInternalOperatorsOperatorReplay_$2_$1_initWithRxSubscriber_(RxSubscriber *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_$2_$1, initWithRxSubscriber_, capture$0)
-}
-
-@implementation RxInternalOperatorsOperatorReplay_$3
-
-- (void)callWithId:(RxSubscriber *)child {
-  [((RxObservable *) nil_chk(val$observable_)) unsafeSubscribeWithRxSubscriber:create_RxInternalOperatorsOperatorReplay_$3_$1_initWithRxSubscriber_withRxSubscriber_(child, child)];
-}
-
-- (instancetype)initWithRxObservable:(RxObservable *)capture$0 {
-  RxInternalOperatorsOperatorReplay_$3_initWithRxObservable_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$observable_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxObservable:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$observable_", "LRxObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)V", "LRxObservable;", "(Lrx/Observable<TT;>;)V", "Lrx/Observable<TT;>;", "LRxInternalOperatorsOperatorReplay;", "observeOnWithRxObservablesConnectableObservable:withRxScheduler:", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_$3 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 6, -1, 7, 8, -1 };
-  return &_RxInternalOperatorsOperatorReplay_$3;
-}
-
-@end
-
-void RxInternalOperatorsOperatorReplay_$3_initWithRxObservable_(RxInternalOperatorsOperatorReplay_$3 *self, RxObservable *capture$0) {
-  JreStrongAssign(&self->val$observable_, capture$0);
-  NSObject_init(self);
-}
-
-RxInternalOperatorsOperatorReplay_$3 *new_RxInternalOperatorsOperatorReplay_$3_initWithRxObservable_(RxObservable *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_$3, initWithRxObservable_, capture$0)
-}
-
-RxInternalOperatorsOperatorReplay_$3 *create_RxInternalOperatorsOperatorReplay_$3_initWithRxObservable_(RxObservable *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_$3, initWithRxObservable_, capture$0)
-}
-
-@implementation RxInternalOperatorsOperatorReplay_$3_$1
-
-- (void)onNextWithId:(id)t {
-  [((RxSubscriber *) nil_chk(val$child_)) onNextWithId:t];
-}
-
-- (void)onErrorWithNSException:(NSException *)e {
-  [((RxSubscriber *) nil_chk(val$child_)) onErrorWithNSException:e];
-}
-
-- (void)onCompleted {
-  [((RxSubscriber *) nil_chk(val$child_)) onCompleted];
-}
-
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
-                    withRxSubscriber:(RxSubscriber *)arg$0 {
-  RxInternalOperatorsOperatorReplay_$3_$1_initWithRxSubscriber_withRxSubscriber_(self, capture$0, arg$0);
-  return self;
-}
-
-- (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorReplay_$3_$1 class]);
-  RELEASE_(val$child_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxSubscriber:withRxSubscriber:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
-  };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxSubscriber;LRxSubscriber;", "(Lrx/Subscriber<-TT;>;Lrx/Subscriber<*>;)V", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorReplay_$3;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_$3_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 1, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsOperatorReplay_$3_$1;
-}
-
-@end
-
-void RxInternalOperatorsOperatorReplay_$3_$1_initWithRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorReplay_$3_$1 *self, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  JreStrongAssign(&self->val$child_, capture$0);
-  RxSubscriber_initWithRxSubscriber_(self, arg$0);
-}
-
-RxInternalOperatorsOperatorReplay_$3_$1 *new_RxInternalOperatorsOperatorReplay_$3_$1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_$3_$1, initWithRxSubscriber_withRxSubscriber_, capture$0, arg$0)
-}
-
-RxInternalOperatorsOperatorReplay_$3_$1 *create_RxInternalOperatorsOperatorReplay_$3_$1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_$3_$1, initWithRxSubscriber_withRxSubscriber_, capture$0, arg$0)
-}
-
-@implementation RxInternalOperatorsOperatorReplay_$4
-
-- (void)connectWithRxFunctionsAction1:(id<RxFunctionsAction1>)connection {
-  [((RxObservablesConnectableObservable *) nil_chk(val$co_)) connectWithRxFunctionsAction1:connection];
-}
-
-- (instancetype)initWithRxObservablesConnectableObservable:(RxObservablesConnectableObservable *)capture$0
-                              withRxObservable_OnSubscribe:(id<RxObservable_OnSubscribe>)arg$0 {
-  RxInternalOperatorsOperatorReplay_$4_initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_(self, capture$0, arg$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$co_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(connectWithRxFunctionsAction1:);
-  methods[1].selector = @selector(initWithRxObservablesConnectableObservable:withRxObservable_OnSubscribe:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$co_", "LRxObservablesConnectableObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-  };
-  static const void *ptrTable[] = { "connect", "LRxFunctionsAction1;", "(Lrx/functions/Action1<-Lrx/Subscription;>;)V", "LRxObservablesConnectableObservable;LRxObservable_OnSubscribe;", "(Lrx/observables/ConnectableObservable<TT;>;Lrx/Observable$OnSubscribe<TT;>;)V", "Lrx/observables/ConnectableObservable<TT;>;", "LRxInternalOperatorsOperatorReplay;", "observeOnWithRxObservablesConnectableObservable:withRxScheduler:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_$4 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 6, -1, 7, 5, -1 };
-  return &_RxInternalOperatorsOperatorReplay_$4;
-}
-
-@end
-
-void RxInternalOperatorsOperatorReplay_$4_initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_(RxInternalOperatorsOperatorReplay_$4 *self, RxObservablesConnectableObservable *capture$0, id<RxObservable_OnSubscribe> arg$0) {
-  JreStrongAssign(&self->val$co_, capture$0);
-  RxObservablesConnectableObservable_initWithRxObservable_OnSubscribe_(self, arg$0);
-}
-
-RxInternalOperatorsOperatorReplay_$4 *new_RxInternalOperatorsOperatorReplay_$4_initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_(RxObservablesConnectableObservable *capture$0, id<RxObservable_OnSubscribe> arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_$4, initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_, capture$0, arg$0)
-}
-
-RxInternalOperatorsOperatorReplay_$4 *create_RxInternalOperatorsOperatorReplay_$4_initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_(RxObservablesConnectableObservable *capture$0, id<RxObservable_OnSubscribe> arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_$4, initWithRxObservablesConnectableObservable_withRxObservable_OnSubscribe_, capture$0, arg$0)
-}
-
-@implementation RxInternalOperatorsOperatorReplay_$5
-
-- (id<RxInternalOperatorsOperatorReplay_ReplayBuffer>)call {
-  return create_RxInternalOperatorsOperatorReplay_SizeBoundReplayBuffer_initWithInt_(val$bufferSize_);
-}
-
-- (instancetype)initWithInt:(jint)capture$0 {
-  RxInternalOperatorsOperatorReplay_$5_initWithInt_(self, capture$0);
-  return self;
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxInternalOperatorsOperatorReplay_ReplayBuffer;", 0x1, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithInt:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$bufferSize_", "I", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "()Lrx/internal/operators/OperatorReplay$ReplayBuffer<TT;>;", "I", "LRxInternalOperatorsOperatorReplay;", "createWithRxObservable:withInt:", "Ljava/lang/Object;Lrx/functions/Func0<Lrx/internal/operators/OperatorReplay$ReplayBuffer<TT;>;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_$5 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, 4, -1 };
-  return &_RxInternalOperatorsOperatorReplay_$5;
-}
-
-@end
-
-void RxInternalOperatorsOperatorReplay_$5_initWithInt_(RxInternalOperatorsOperatorReplay_$5 *self, jint capture$0) {
-  self->val$bufferSize_ = capture$0;
-  NSObject_init(self);
-}
-
-RxInternalOperatorsOperatorReplay_$5 *new_RxInternalOperatorsOperatorReplay_$5_initWithInt_(jint capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_$5, initWithInt_, capture$0)
-}
-
-RxInternalOperatorsOperatorReplay_$5 *create_RxInternalOperatorsOperatorReplay_$5_initWithInt_(jint capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_$5, initWithInt_, capture$0)
-}
-
-@implementation RxInternalOperatorsOperatorReplay_$6
-
-- (id<RxInternalOperatorsOperatorReplay_ReplayBuffer>)call {
-  return create_RxInternalOperatorsOperatorReplay_SizeAndTimeBoundReplayBuffer_initWithInt_withLong_withRxScheduler_(val$bufferSize_, val$maxAgeInMillis_, val$scheduler_);
-}
-
-- (instancetype)initWithInt:(jint)capture$0
-                   withLong:(jlong)capture$1
-            withRxScheduler:(RxScheduler *)capture$2 {
-  RxInternalOperatorsOperatorReplay_$6_initWithInt_withLong_withRxScheduler_(self, capture$0, capture$1, capture$2);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$scheduler_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxInternalOperatorsOperatorReplay_ReplayBuffer;", 0x1, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithInt:withLong:withRxScheduler:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$bufferSize_", "I", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$maxAgeInMillis_", "J", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$scheduler_", "LRxScheduler;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "()Lrx/internal/operators/OperatorReplay$ReplayBuffer<TT;>;", "IJLRxScheduler;", "LRxInternalOperatorsOperatorReplay;", "createWithRxObservable:withLong:withJavaUtilConcurrentTimeUnit:withRxScheduler:withInt:", "Ljava/lang/Object;Lrx/functions/Func0<Lrx/internal/operators/OperatorReplay$ReplayBuffer<TT;>;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_$6 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 3, 2, -1, 3, 4, -1 };
-  return &_RxInternalOperatorsOperatorReplay_$6;
-}
-
-@end
-
-void RxInternalOperatorsOperatorReplay_$6_initWithInt_withLong_withRxScheduler_(RxInternalOperatorsOperatorReplay_$6 *self, jint capture$0, jlong capture$1, RxScheduler *capture$2) {
-  self->val$bufferSize_ = capture$0;
-  self->val$maxAgeInMillis_ = capture$1;
-  JreStrongAssign(&self->val$scheduler_, capture$2);
-  NSObject_init(self);
-}
-
-RxInternalOperatorsOperatorReplay_$6 *new_RxInternalOperatorsOperatorReplay_$6_initWithInt_withLong_withRxScheduler_(jint capture$0, jlong capture$1, RxScheduler *capture$2) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_$6, initWithInt_withLong_withRxScheduler_, capture$0, capture$1, capture$2)
-}
-
-RxInternalOperatorsOperatorReplay_$6 *create_RxInternalOperatorsOperatorReplay_$6_initWithInt_withLong_withRxScheduler_(jint capture$0, jlong capture$1, RxScheduler *capture$2) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_$6, initWithInt_withLong_withRxScheduler_, capture$0, capture$1, capture$2)
-}
-
-@implementation RxInternalOperatorsOperatorReplay_$7
-
-- (void)callWithId:(RxSubscriber *)child {
-  for (; ; ) {
-    RxInternalOperatorsOperatorReplay_ReplaySubscriber *r = [((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(val$curr_)) get];
-    if (r == nil) {
-      RxInternalOperatorsOperatorReplay_ReplaySubscriber *u = create_RxInternalOperatorsOperatorReplay_ReplaySubscriber_initWithRxInternalOperatorsOperatorReplay_ReplayBuffer_([((id<RxFunctionsFunc0>) nil_chk(val$bufferFactory_)) call]);
-      [u init__];
-      if (![val$curr_ compareAndSetWithId:r withId:u]) {
-        continue;
-      }
-      r = u;
-    }
-    RxInternalOperatorsOperatorReplay_InnerProducer *inner = create_RxInternalOperatorsOperatorReplay_InnerProducer_initWithRxInternalOperatorsOperatorReplay_ReplaySubscriber_withRxSubscriber_(r, child);
-    [r addWithRxInternalOperatorsOperatorReplay_InnerProducer:inner];
-    [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:inner];
-    [((id<RxInternalOperatorsOperatorReplay_ReplayBuffer>) nil_chk(r->buffer_)) replayWithRxInternalOperatorsOperatorReplay_InnerProducer:inner];
-    [child setProducerWithRxProducer:inner];
-    break;
-  }
-}
-
-- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
-                                           withRxFunctionsFunc0:(id<RxFunctionsFunc0>)capture$1 {
-  RxInternalOperatorsOperatorReplay_$7_initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_(self, capture$0, capture$1);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$curr_);
-  RELEASE_(val$bufferFactory_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicReference:withRxFunctionsFunc0:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$curr_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-    { "val$bufferFactory_", "LRxFunctionsFunc0;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)V", "LJavaUtilConcurrentAtomicAtomicReference;LRxFunctionsFunc0;", "(Ljava/util/concurrent/atomic/AtomicReference<Lrx/internal/operators/OperatorReplay$ReplaySubscriber<TT;>;>;Lrx/functions/Func0<+Lrx/internal/operators/OperatorReplay$ReplayBuffer<TT;>;>;)V", "Ljava/util/concurrent/atomic/AtomicReference<Lrx/internal/operators/OperatorReplay$ReplaySubscriber<TT;>;>;", "Lrx/functions/Func0<+Lrx/internal/operators/OperatorReplay$ReplayBuffer<TT;>;>;", "LRxInternalOperatorsOperatorReplay;", "createWithRxObservable:withRxFunctionsFunc0:", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorReplay_$7 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 7, -1, 8, 9, -1 };
-  return &_RxInternalOperatorsOperatorReplay_$7;
-}
-
-@end
-
-void RxInternalOperatorsOperatorReplay_$7_initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_(RxInternalOperatorsOperatorReplay_$7 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, id<RxFunctionsFunc0> capture$1) {
-  JreStrongAssign(&self->val$curr_, capture$0);
-  JreStrongAssign(&self->val$bufferFactory_, capture$1);
-  NSObject_init(self);
-}
-
-RxInternalOperatorsOperatorReplay_$7 *new_RxInternalOperatorsOperatorReplay_$7_initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_(JavaUtilConcurrentAtomicAtomicReference *capture$0, id<RxFunctionsFunc0> capture$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorReplay_$7, initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_, capture$0, capture$1)
-}
-
-RxInternalOperatorsOperatorReplay_$7 *create_RxInternalOperatorsOperatorReplay_$7_initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_(JavaUtilConcurrentAtomicAtomicReference *capture$0, id<RxFunctionsFunc0> capture$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorReplay_$7, initWithJavaUtilConcurrentAtomicAtomicReference_withRxFunctionsFunc0_, capture$0, capture$1)
-}

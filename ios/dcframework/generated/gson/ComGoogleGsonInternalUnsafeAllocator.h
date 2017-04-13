@@ -32,9 +32,9 @@
 
 J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalUnsafeAllocator)
 
-FOUNDATION_EXPORT ComGoogleGsonInternalUnsafeAllocator *ComGoogleGsonInternalUnsafeAllocator_create();
-
 FOUNDATION_EXPORT void ComGoogleGsonInternalUnsafeAllocator_init(ComGoogleGsonInternalUnsafeAllocator *self);
+
+FOUNDATION_EXPORT ComGoogleGsonInternalUnsafeAllocator *ComGoogleGsonInternalUnsafeAllocator_create();
 
 J2OBJC_TYPE_LITERAL_HEADER(ComGoogleGsonInternalUnsafeAllocator)
 

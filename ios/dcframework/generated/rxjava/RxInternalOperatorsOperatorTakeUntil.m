@@ -20,10 +20,14 @@
 
 J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorTakeUntil, other_, RxObservable *)
 
-@interface RxInternalOperatorsOperatorTakeUntil_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorTakeUntil_1 : RxSubscriber {
  @public
   RxSubscriber *val$serial_;
 }
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
+                    withRxSubscriber:(RxSubscriber *)param0
+                         withBoolean:(jboolean)param1;
 
 - (void)onNextWithId:(id)t;
 
@@ -31,26 +35,22 @@ J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorTakeUntil, other_, RxObservable *
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
-                    withRxSubscriber:(RxSubscriber *)arg$0
-                         withBoolean:(jboolean)arg$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTakeUntil_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTakeUntil_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorTakeUntil_$1, val$serial_, RxSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorTakeUntil_1_initWithRxSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorTakeUntil_1 *self, RxSubscriber *capture$0, RxSubscriber *param0, jboolean param1);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorTakeUntil_$1_initWithRxSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorTakeUntil_$1 *self, RxSubscriber *capture$0, RxSubscriber *arg$0, jboolean arg$1);
+__attribute__((unused)) static RxInternalOperatorsOperatorTakeUntil_1 *new_RxInternalOperatorsOperatorTakeUntil_1_initWithRxSubscriber_withRxSubscriber_withBoolean_(RxSubscriber *capture$0, RxSubscriber *param0, jboolean param1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorTakeUntil_$1 *new_RxInternalOperatorsOperatorTakeUntil_$1_initWithRxSubscriber_withRxSubscriber_withBoolean_(RxSubscriber *capture$0, RxSubscriber *arg$0, jboolean arg$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorTakeUntil_1 *create_RxInternalOperatorsOperatorTakeUntil_1_initWithRxSubscriber_withRxSubscriber_withBoolean_(RxSubscriber *capture$0, RxSubscriber *param0, jboolean param1);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorTakeUntil_$1 *create_RxInternalOperatorsOperatorTakeUntil_$1_initWithRxSubscriber_withRxSubscriber_withBoolean_(RxSubscriber *capture$0, RxSubscriber *arg$0, jboolean arg$1);
-
-@interface RxInternalOperatorsOperatorTakeUntil_$2 : RxSubscriber {
+@interface RxInternalOperatorsOperatorTakeUntil_2 : RxSubscriber {
  @public
   RxSubscriber *val$main_;
 }
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0;
 
 - (void)onStart;
 
@@ -60,19 +60,15 @@ __attribute__((unused)) static RxInternalOperatorsOperatorTakeUntil_$1 *create_R
 
 - (void)onNextWithId:(id)t;
 
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTakeUntil_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTakeUntil_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorTakeUntil_$2, val$main_, RxSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorTakeUntil_2_initWithRxSubscriber_(RxInternalOperatorsOperatorTakeUntil_2 *self, RxSubscriber *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorTakeUntil_$2_initWithRxSubscriber_(RxInternalOperatorsOperatorTakeUntil_$2 *self, RxSubscriber *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorTakeUntil_2 *new_RxInternalOperatorsOperatorTakeUntil_2_initWithRxSubscriber_(RxSubscriber *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorTakeUntil_$2 *new_RxInternalOperatorsOperatorTakeUntil_$2_initWithRxSubscriber_(RxSubscriber *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorTakeUntil_$2 *create_RxInternalOperatorsOperatorTakeUntil_$2_initWithRxSubscriber_(RxSubscriber *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorTakeUntil_2 *create_RxInternalOperatorsOperatorTakeUntil_2_initWithRxSubscriber_(RxSubscriber *capture$0);
 
 @implementation RxInternalOperatorsOperatorTakeUntil
 
@@ -83,8 +79,8 @@ __attribute__((unused)) static RxInternalOperatorsOperatorTakeUntil_$2 *create_R
 
 - (RxSubscriber *)callWithId:(RxSubscriber *)child {
   RxSubscriber *serial = create_RxObserversSerializedSubscriber_initWithRxSubscriber_withBoolean_(child, false);
-  RxSubscriber *main = create_RxInternalOperatorsOperatorTakeUntil_$1_initWithRxSubscriber_withRxSubscriber_withBoolean_(serial, serial, false);
-  RxSubscriber *so = create_RxInternalOperatorsOperatorTakeUntil_$2_initWithRxSubscriber_(main);
+  RxSubscriber *main = create_RxInternalOperatorsOperatorTakeUntil_1_initWithRxSubscriber_withRxSubscriber_withBoolean_(serial, serial, false);
+  RxSubscriber *so = create_RxInternalOperatorsOperatorTakeUntil_2_initWithRxSubscriber_(main);
   [serial addWithRxSubscription:main];
   [serial addWithRxSubscription:so];
   [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:serial];
@@ -132,7 +128,14 @@ RxInternalOperatorsOperatorTakeUntil *create_RxInternalOperatorsOperatorTakeUnti
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorTakeUntil)
 
-@implementation RxInternalOperatorsOperatorTakeUntil_$1
+@implementation RxInternalOperatorsOperatorTakeUntil_1
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
+                    withRxSubscriber:(RxSubscriber *)param0
+                         withBoolean:(jboolean)param1 {
+  RxInternalOperatorsOperatorTakeUntil_1_initWithRxSubscriber_withRxSubscriber_withBoolean_(self, capture$0, param0, param1);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   [((RxSubscriber *) nil_chk(val$serial_)) onNextWithId:t];
@@ -156,57 +159,54 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorTakeUntil)
   }
 }
 
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
-                    withRxSubscriber:(RxSubscriber *)arg$0
-                         withBoolean:(jboolean)arg$1 {
-  RxInternalOperatorsOperatorTakeUntil_$1_initWithRxSubscriber_withRxSubscriber_withBoolean_(self, capture$0, arg$0, arg$1);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorTakeUntil_$1 class]);
   RELEASE_(val$serial_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
+    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxSubscriber:withRxSubscriber:withBoolean:);
+  methods[0].selector = @selector(initWithRxSubscriber:withRxSubscriber:withBoolean:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$serial_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxSubscriber;LRxSubscriber;Z", "(Lrx/Subscriber<TT;>;Lrx/Subscriber<*>;Z)V", "Lrx/Subscriber<TT;>;", "LRxInternalOperatorsOperatorTakeUntil;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTakeUntil_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 1, 8, -1, 9, 7, -1 };
-  return &_RxInternalOperatorsOperatorTakeUntil_$1;
+  static const void *ptrTable[] = { "LRxSubscriber;Z", "(Lrx/Subscriber<*>;Z)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/Subscriber<TT;>;", "LRxInternalOperatorsOperatorTakeUntil;", "callWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTakeUntil_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 1, 8, -1, 9, 7, -1 };
+  return &_RxInternalOperatorsOperatorTakeUntil_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorTakeUntil_$1_initWithRxSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorTakeUntil_$1 *self, RxSubscriber *capture$0, RxSubscriber *arg$0, jboolean arg$1) {
+void RxInternalOperatorsOperatorTakeUntil_1_initWithRxSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorTakeUntil_1 *self, RxSubscriber *capture$0, RxSubscriber *param0, jboolean param1) {
   JreStrongAssign(&self->val$serial_, capture$0);
-  RxSubscriber_initWithRxSubscriber_withBoolean_(self, arg$0, arg$1);
+  RxSubscriber_initWithRxSubscriber_withBoolean_(self, param0, param1);
 }
 
-RxInternalOperatorsOperatorTakeUntil_$1 *new_RxInternalOperatorsOperatorTakeUntil_$1_initWithRxSubscriber_withRxSubscriber_withBoolean_(RxSubscriber *capture$0, RxSubscriber *arg$0, jboolean arg$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTakeUntil_$1, initWithRxSubscriber_withRxSubscriber_withBoolean_, capture$0, arg$0, arg$1)
+RxInternalOperatorsOperatorTakeUntil_1 *new_RxInternalOperatorsOperatorTakeUntil_1_initWithRxSubscriber_withRxSubscriber_withBoolean_(RxSubscriber *capture$0, RxSubscriber *param0, jboolean param1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTakeUntil_1, initWithRxSubscriber_withRxSubscriber_withBoolean_, capture$0, param0, param1)
 }
 
-RxInternalOperatorsOperatorTakeUntil_$1 *create_RxInternalOperatorsOperatorTakeUntil_$1_initWithRxSubscriber_withRxSubscriber_withBoolean_(RxSubscriber *capture$0, RxSubscriber *arg$0, jboolean arg$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTakeUntil_$1, initWithRxSubscriber_withRxSubscriber_withBoolean_, capture$0, arg$0, arg$1)
+RxInternalOperatorsOperatorTakeUntil_1 *create_RxInternalOperatorsOperatorTakeUntil_1_initWithRxSubscriber_withRxSubscriber_withBoolean_(RxSubscriber *capture$0, RxSubscriber *param0, jboolean param1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTakeUntil_1, initWithRxSubscriber_withRxSubscriber_withBoolean_, capture$0, param0, param1)
 }
 
-@implementation RxInternalOperatorsOperatorTakeUntil_$2
+@implementation RxInternalOperatorsOperatorTakeUntil_2
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0 {
+  RxInternalOperatorsOperatorTakeUntil_2_initWithRxSubscriber_(self, capture$0);
+  return self;
+}
 
 - (void)onStart {
   [self requestWithLong:JavaLangLong_MAX_VALUE];
@@ -224,52 +224,46 @@ RxInternalOperatorsOperatorTakeUntil_$1 *create_RxInternalOperatorsOperatorTakeU
   [self onCompleted];
 }
 
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0 {
-  RxInternalOperatorsOperatorTakeUntil_$2_initWithRxSubscriber_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorTakeUntil_$2 class]);
   RELEASE_(val$main_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onStart);
-  methods[1].selector = @selector(onCompleted);
-  methods[2].selector = @selector(onErrorWithNSException:);
-  methods[3].selector = @selector(onNextWithId:);
-  methods[4].selector = @selector(initWithRxSubscriber:);
+  methods[0].selector = @selector(initWithRxSubscriber:);
+  methods[1].selector = @selector(onStart);
+  methods[2].selector = @selector(onCompleted);
+  methods[3].selector = @selector(onErrorWithNSException:);
+  methods[4].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$main_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$main_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TE;)V", "LRxSubscriber;", "(Lrx/Subscriber<TT;>;)V", "Lrx/Subscriber<TT;>;", "LRxInternalOperatorsOperatorTakeUntil;", "callWithId:", "Lrx/Subscriber<TE;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTakeUntil_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 1, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsOperatorTakeUntil_$2;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TE;)V", "Lrx/Subscriber<TT;>;", "LRxInternalOperatorsOperatorTakeUntil;", "callWithId:", "Lrx/Subscriber<TE;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTakeUntil_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 1, 6, -1, 7, 8, -1 };
+  return &_RxInternalOperatorsOperatorTakeUntil_2;
 }
 
 @end
 
-void RxInternalOperatorsOperatorTakeUntil_$2_initWithRxSubscriber_(RxInternalOperatorsOperatorTakeUntil_$2 *self, RxSubscriber *capture$0) {
+void RxInternalOperatorsOperatorTakeUntil_2_initWithRxSubscriber_(RxInternalOperatorsOperatorTakeUntil_2 *self, RxSubscriber *capture$0) {
   JreStrongAssign(&self->val$main_, capture$0);
   RxSubscriber_init(self);
 }
 
-RxInternalOperatorsOperatorTakeUntil_$2 *new_RxInternalOperatorsOperatorTakeUntil_$2_initWithRxSubscriber_(RxSubscriber *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTakeUntil_$2, initWithRxSubscriber_, capture$0)
+RxInternalOperatorsOperatorTakeUntil_2 *new_RxInternalOperatorsOperatorTakeUntil_2_initWithRxSubscriber_(RxSubscriber *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTakeUntil_2, initWithRxSubscriber_, capture$0)
 }
 
-RxInternalOperatorsOperatorTakeUntil_$2 *create_RxInternalOperatorsOperatorTakeUntil_$2_initWithRxSubscriber_(RxSubscriber *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTakeUntil_$2, initWithRxSubscriber_, capture$0)
+RxInternalOperatorsOperatorTakeUntil_2 *create_RxInternalOperatorsOperatorTakeUntil_2_initWithRxSubscriber_(RxSubscriber *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTakeUntil_2, initWithRxSubscriber_, capture$0)
 }

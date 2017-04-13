@@ -32,17 +32,17 @@
 
 J2OBJC_EMPTY_STATIC_INIT(CoTouchlabDroidconandroidUtilsStringUtils)
 
-FOUNDATION_EXPORT jboolean CoTouchlabDroidconandroidUtilsStringUtils_isEmptyWithNSString_(NSString *s);
-
-FOUNDATION_EXPORT jboolean CoTouchlabDroidconandroidUtilsStringUtils_isNotEmptyWithNSString_(NSString *s);
-
-FOUNDATION_EXPORT NSString *CoTouchlabDroidconandroidUtilsStringUtils_trimToEmptyWithNSString_(NSString *s);
-
 FOUNDATION_EXPORT void CoTouchlabDroidconandroidUtilsStringUtils_init(CoTouchlabDroidconandroidUtilsStringUtils *self);
 
 FOUNDATION_EXPORT CoTouchlabDroidconandroidUtilsStringUtils *new_CoTouchlabDroidconandroidUtilsStringUtils_init() NS_RETURNS_RETAINED;
 
 FOUNDATION_EXPORT CoTouchlabDroidconandroidUtilsStringUtils *create_CoTouchlabDroidconandroidUtilsStringUtils_init();
+
+FOUNDATION_EXPORT jboolean CoTouchlabDroidconandroidUtilsStringUtils_isEmptyWithNSString_(NSString *s);
+
+FOUNDATION_EXPORT jboolean CoTouchlabDroidconandroidUtilsStringUtils_isNotEmptyWithNSString_(NSString *s);
+
+FOUNDATION_EXPORT NSString *CoTouchlabDroidconandroidUtilsStringUtils_trimToEmptyWithNSString_(NSString *s);
 
 J2OBJC_TYPE_LITERAL_HEADER(CoTouchlabDroidconandroidUtilsStringUtils)
 

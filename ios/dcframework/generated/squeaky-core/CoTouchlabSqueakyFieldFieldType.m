@@ -541,6 +541,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabSqueakyFieldFieldType)
 
 @implementation CoTouchlabSqueakyFieldFieldType_BooleanNumberFieldConverter
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabSqueakyFieldFieldType_BooleanNumberFieldConverter_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (CoTouchlabSqueakyFieldSqlType *)getSqlType {
   return JreLoadEnum(CoTouchlabSqueakyFieldSqlType, BOOLEAN);
 }
@@ -576,32 +583,25 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabSqueakyFieldFieldType)
   return [self sqlArgToJavaWithCoTouchlabSqueakyFieldFieldType:fieldType withId:[self resultToSqlArgWithCoTouchlabSqueakyFieldFieldType:fieldType withAndroidDatabaseCursor:results withInt:columnPos] withInt:columnPos];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabSqueakyFieldFieldType_BooleanNumberFieldConverter_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x4, -1, -1, -1, -1, -1, -1 },
     { NULL, "LCoTouchlabSqueakyFieldSqlType;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, 2, 3, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, 4, 5, 6, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, 7, 8, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, 9, 5, 6, -1, -1, -1 },
-    { NULL, NULL, 0x4, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getSqlType);
-  methods[1].selector = @selector(parseDefaultStringWithCoTouchlabSqueakyFieldFieldType:withNSString:);
-  methods[2].selector = @selector(javaToSqlArgWithCoTouchlabSqueakyFieldFieldType:withId:);
-  methods[3].selector = @selector(resultToSqlArgWithCoTouchlabSqueakyFieldFieldType:withAndroidDatabaseCursor:withInt:);
-  methods[4].selector = @selector(sqlArgToJavaWithCoTouchlabSqueakyFieldFieldType:withId:withInt:);
-  methods[5].selector = @selector(resultToJavaWithCoTouchlabSqueakyFieldFieldType:withAndroidDatabaseCursor:withInt:);
-  methods[6].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(getSqlType);
+  methods[2].selector = @selector(parseDefaultStringWithCoTouchlabSqueakyFieldFieldType:withNSString:);
+  methods[3].selector = @selector(javaToSqlArgWithCoTouchlabSqueakyFieldFieldType:withId:);
+  methods[4].selector = @selector(resultToSqlArgWithCoTouchlabSqueakyFieldFieldType:withAndroidDatabaseCursor:withInt:);
+  methods[5].selector = @selector(sqlArgToJavaWithCoTouchlabSqueakyFieldFieldType:withId:withInt:);
+  methods[6].selector = @selector(resultToJavaWithCoTouchlabSqueakyFieldFieldType:withAndroidDatabaseCursor:withInt:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "parseDefaultString", "LCoTouchlabSqueakyFieldFieldType;LNSString;", "javaToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LNSObject;", "resultToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LAndroidDatabaseCursor;I", "LJavaSqlSQLException;", "sqlArgToJava", "LCoTouchlabSqueakyFieldFieldType;LNSObject;I", "resultToJava", "LCoTouchlabSqueakyFieldFieldType;" };
   static const J2ObjcClassInfo _CoTouchlabSqueakyFieldFieldType_BooleanNumberFieldConverter = { "BooleanNumberFieldConverter", "co.touchlab.squeaky.field", ptrTable, methods, NULL, 7, 0xc, 7, 0, 10, -1, -1, -1, -1 };

@@ -19,7 +19,6 @@
 #include "DCPScheduleBlockHour.h"
 #include "DCTSeedScheduleDataTask.h"
 #include "DCTUpdateAlertsTask.h"
-#include "IOSClass.h"
 #include "IOSObjectArray.h"
 #include "J2ObjC_source.h"
 #include "android/text/TextUtils.h"
@@ -162,7 +161,7 @@ DCPConferenceDataPresenter *create_DCPConferenceDataPresenter_initWithAndroidCon
 
 void DCPConferenceDataPresenter_styleEventRowWithDCPScheduleBlockHour_withJavaUtilList_withDCPConferenceDataPresenter_EventRow_withBoolean_(DCPScheduleBlockHour *scheduleBlockHour, id<JavaUtilList> dataSet, id<DCPConferenceDataPresenter_EventRow> row, jboolean allEvents) {
   DCPConferenceDataPresenter_initialize();
-  jboolean isFirstInBlock = ![((NSString *) nil_chk(((DCPScheduleBlockHour *) nil_chk(scheduleBlockHour))->hourStringDisplay_)) isEmpty];
+  jboolean isFirstInBlock = ![((NSString *) nil_chk(((DCPScheduleBlockHour *) nil_chk(scheduleBlockHour))->hourStringDisplay_)) java_isEmpty];
   [((id<DCPConferenceDataPresenter_EventRow>) nil_chk(row)) setTimeGapWithBoolean:isFirstInBlock];
   if ([((id<DCDScheduleBlock>) nil_chk([scheduleBlockHour getScheduleBlock])) isBlock]) {
     DCDBlock *block = (DCDBlock *) cast_chk(scheduleBlockHour->scheduleBlock_, [DCDBlock class]);

@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/retrofit-doppl/retrofit/src/main/java/retrofit/RxSupport.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RetrofitErrorHandler.h"
 #include "RetrofitRequestInterceptor.h"
@@ -42,31 +41,28 @@ __attribute__((unused)) static id<JavaLangRunnable> RetrofitRxSupport_getRunnabl
 
 @end
 
-@interface RetrofitRxSupport_$1 : NSObject < RxObservable_OnSubscribe > {
+@interface RetrofitRxSupport_1 : NSObject < RxObservable_OnSubscribe > {
  @public
   RetrofitRxSupport *this$0_;
   id<RetrofitRxSupport_Invoker> val$invoker_;
 }
 
-- (void)callWithId:(RxSubscriber *)subscriber;
-
 - (instancetype)initWithRetrofitRxSupport:(RetrofitRxSupport *)outer$
             withRetrofitRxSupport_Invoker:(id<RetrofitRxSupport_Invoker>)capture$0;
 
+- (void)callWithId:(RxSubscriber *)subscriber;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RetrofitRxSupport_$1)
+J2OBJC_EMPTY_STATIC_INIT(RetrofitRxSupport_1)
 
-J2OBJC_FIELD_SETTER(RetrofitRxSupport_$1, this$0_, RetrofitRxSupport *)
-J2OBJC_FIELD_SETTER(RetrofitRxSupport_$1, val$invoker_, id<RetrofitRxSupport_Invoker>)
+__attribute__((unused)) static void RetrofitRxSupport_1_initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_(RetrofitRxSupport_1 *self, RetrofitRxSupport *outer$, id<RetrofitRxSupport_Invoker> capture$0);
 
-__attribute__((unused)) static void RetrofitRxSupport_$1_initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_(RetrofitRxSupport_$1 *self, RetrofitRxSupport *outer$, id<RetrofitRxSupport_Invoker> capture$0);
+__attribute__((unused)) static RetrofitRxSupport_1 *new_RetrofitRxSupport_1_initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_(RetrofitRxSupport *outer$, id<RetrofitRxSupport_Invoker> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RetrofitRxSupport_$1 *new_RetrofitRxSupport_$1_initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_(RetrofitRxSupport *outer$, id<RetrofitRxSupport_Invoker> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RetrofitRxSupport_1 *create_RetrofitRxSupport_1_initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_(RetrofitRxSupport *outer$, id<RetrofitRxSupport_Invoker> capture$0);
 
-__attribute__((unused)) static RetrofitRxSupport_$1 *create_RetrofitRxSupport_$1_initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_(RetrofitRxSupport *outer$, id<RetrofitRxSupport_Invoker> capture$0);
-
-@interface RetrofitRxSupport_$2 : NSObject < JavaLangRunnable > {
+@interface RetrofitRxSupport_2 : NSObject < JavaLangRunnable > {
  @public
   RetrofitRxSupport *this$0_;
   RxSubscriber *val$subscriber_;
@@ -74,27 +70,22 @@ __attribute__((unused)) static RetrofitRxSupport_$1 *create_RetrofitRxSupport_$1
   RetrofitRequestInterceptorTape *val$interceptorTape_;
 }
 
-- (void)run;
-
 - (instancetype)initWithRetrofitRxSupport:(RetrofitRxSupport *)outer$
                          withRxSubscriber:(RxSubscriber *)capture$0
             withRetrofitRxSupport_Invoker:(id<RetrofitRxSupport_Invoker>)capture$1
        withRetrofitRequestInterceptorTape:(RetrofitRequestInterceptorTape *)capture$2;
 
+- (void)run;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RetrofitRxSupport_$2)
+J2OBJC_EMPTY_STATIC_INIT(RetrofitRxSupport_2)
 
-J2OBJC_FIELD_SETTER(RetrofitRxSupport_$2, this$0_, RetrofitRxSupport *)
-J2OBJC_FIELD_SETTER(RetrofitRxSupport_$2, val$subscriber_, RxSubscriber *)
-J2OBJC_FIELD_SETTER(RetrofitRxSupport_$2, val$invoker_, id<RetrofitRxSupport_Invoker>)
-J2OBJC_FIELD_SETTER(RetrofitRxSupport_$2, val$interceptorTape_, RetrofitRequestInterceptorTape *)
+__attribute__((unused)) static void RetrofitRxSupport_2_initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_(RetrofitRxSupport_2 *self, RetrofitRxSupport *outer$, RxSubscriber *capture$0, id<RetrofitRxSupport_Invoker> capture$1, RetrofitRequestInterceptorTape *capture$2);
 
-__attribute__((unused)) static void RetrofitRxSupport_$2_initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_(RetrofitRxSupport_$2 *self, RetrofitRxSupport *outer$, RxSubscriber *capture$0, id<RetrofitRxSupport_Invoker> capture$1, RetrofitRequestInterceptorTape *capture$2);
+__attribute__((unused)) static RetrofitRxSupport_2 *new_RetrofitRxSupport_2_initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_(RetrofitRxSupport *outer$, RxSubscriber *capture$0, id<RetrofitRxSupport_Invoker> capture$1, RetrofitRequestInterceptorTape *capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RetrofitRxSupport_$2 *new_RetrofitRxSupport_$2_initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_(RetrofitRxSupport *outer$, RxSubscriber *capture$0, id<RetrofitRxSupport_Invoker> capture$1, RetrofitRequestInterceptorTape *capture$2) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RetrofitRxSupport_$2 *create_RetrofitRxSupport_$2_initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_(RetrofitRxSupport *outer$, RxSubscriber *capture$0, id<RetrofitRxSupport_Invoker> capture$1, RetrofitRequestInterceptorTape *capture$2);
+__attribute__((unused)) static RetrofitRxSupport_2 *create_RetrofitRxSupport_2_initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_(RetrofitRxSupport *outer$, RxSubscriber *capture$0, id<RetrofitRxSupport_Invoker> capture$1, RetrofitRequestInterceptorTape *capture$2);
 
 @implementation RetrofitRxSupport
 
@@ -106,7 +97,7 @@ __attribute__((unused)) static RetrofitRxSupport_$2 *create_RetrofitRxSupport_$2
 }
 
 - (RxObservable *)createRequestObservableWithRetrofitRxSupport_Invoker:(id<RetrofitRxSupport_Invoker>)invoker {
-  return RxObservable_createWithRxObservable_OnSubscribe_(create_RetrofitRxSupport_$1_initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_(self, invoker));
+  return RxObservable_createWithRxObservable_OnSubscribe_(create_RetrofitRxSupport_1_initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_(self, invoker));
 }
 
 - (id<JavaLangRunnable>)getRunnableWithRxSubscriber:(RxSubscriber *)subscriber
@@ -162,7 +153,7 @@ RetrofitRxSupport *create_RetrofitRxSupport_initWithJavaUtilConcurrentExecutor_w
 }
 
 id<JavaLangRunnable> RetrofitRxSupport_getRunnableWithRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_(RetrofitRxSupport *self, RxSubscriber *subscriber, id<RetrofitRxSupport_Invoker> invoker, RetrofitRequestInterceptorTape *interceptorTape) {
-  return create_RetrofitRxSupport_$2_initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_(self, subscriber, invoker, interceptorTape);
+  return create_RetrofitRxSupport_2_initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_(self, subscriber, invoker, interceptorTape);
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitRxSupport)
@@ -186,7 +177,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitRxSupport)
 
 J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(RetrofitRxSupport_Invoker)
 
-@implementation RetrofitRxSupport_$1
+@implementation RetrofitRxSupport_1
+
+- (instancetype)initWithRetrofitRxSupport:(RetrofitRxSupport *)outer$
+            withRetrofitRxSupport_Invoker:(id<RetrofitRxSupport_Invoker>)capture$0 {
+  RetrofitRxSupport_1_initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)callWithId:(RxSubscriber *)subscriber {
   RetrofitRequestInterceptorTape *interceptorTape = create_RetrofitRequestInterceptorTape_init();
@@ -197,12 +194,6 @@ J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(RetrofitRxSupport_Invoker)
   [((id<JavaUtilConcurrentExecutor>) nil_chk(this$0_->executor_)) executeWithJavaLangRunnable:task];
 }
 
-- (instancetype)initWithRetrofitRxSupport:(RetrofitRxSupport *)outer$
-            withRetrofitRxSupport_Invoker:(id<RetrofitRxSupport_Invoker>)capture$0 {
-  RetrofitRxSupport_$1_initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_(self, outer$, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$invoker_);
@@ -211,40 +202,48 @@ J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(RetrofitRxSupport_Invoker)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRetrofitRxSupport:withRetrofitRxSupport_Invoker:);
+  methods[0].selector = @selector(initWithRetrofitRxSupport:withRetrofitRxSupport_Invoker:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRetrofitRxSupport;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$invoker_", "LRetrofitRxSupport_Invoker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-Ljava/lang/Object;>;)V", "LRetrofitRxSupport;LRetrofitRxSupport_Invoker;", "LRetrofitRxSupport;", "createRequestObservableWithRetrofitRxSupport_Invoker:", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<Ljava/lang/Object;>;" };
-  static const J2ObjcClassInfo _RetrofitRxSupport_$1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 2, 4, -1, 5, 6, -1 };
-  return &_RetrofitRxSupport_$1;
+  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-Ljava/lang/Object;>;)V", "LRetrofitRxSupport;", "createRequestObservableWithRetrofitRxSupport_Invoker:", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<Ljava/lang/Object;>;" };
+  static const J2ObjcClassInfo _RetrofitRxSupport_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, 5, -1 };
+  return &_RetrofitRxSupport_1;
 }
 
 @end
 
-void RetrofitRxSupport_$1_initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_(RetrofitRxSupport_$1 *self, RetrofitRxSupport *outer$, id<RetrofitRxSupport_Invoker> capture$0) {
+void RetrofitRxSupport_1_initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_(RetrofitRxSupport_1 *self, RetrofitRxSupport *outer$, id<RetrofitRxSupport_Invoker> capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$invoker_, capture$0);
   NSObject_init(self);
 }
 
-RetrofitRxSupport_$1 *new_RetrofitRxSupport_$1_initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_(RetrofitRxSupport *outer$, id<RetrofitRxSupport_Invoker> capture$0) {
-  J2OBJC_NEW_IMPL(RetrofitRxSupport_$1, initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_, outer$, capture$0)
+RetrofitRxSupport_1 *new_RetrofitRxSupport_1_initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_(RetrofitRxSupport *outer$, id<RetrofitRxSupport_Invoker> capture$0) {
+  J2OBJC_NEW_IMPL(RetrofitRxSupport_1, initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_, outer$, capture$0)
 }
 
-RetrofitRxSupport_$1 *create_RetrofitRxSupport_$1_initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_(RetrofitRxSupport *outer$, id<RetrofitRxSupport_Invoker> capture$0) {
-  J2OBJC_CREATE_IMPL(RetrofitRxSupport_$1, initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_, outer$, capture$0)
+RetrofitRxSupport_1 *create_RetrofitRxSupport_1_initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_(RetrofitRxSupport *outer$, id<RetrofitRxSupport_Invoker> capture$0) {
+  J2OBJC_CREATE_IMPL(RetrofitRxSupport_1, initWithRetrofitRxSupport_withRetrofitRxSupport_Invoker_, outer$, capture$0)
 }
 
-@implementation RetrofitRxSupport_$2
+@implementation RetrofitRxSupport_2
+
+- (instancetype)initWithRetrofitRxSupport:(RetrofitRxSupport *)outer$
+                         withRxSubscriber:(RxSubscriber *)capture$0
+            withRetrofitRxSupport_Invoker:(id<RetrofitRxSupport_Invoker>)capture$1
+       withRetrofitRequestInterceptorTape:(RetrofitRequestInterceptorTape *)capture$2 {
+  RetrofitRxSupport_2_initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_(self, outer$, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)run {
   @try {
@@ -260,14 +259,6 @@ RetrofitRxSupport_$1 *create_RetrofitRxSupport_$1_initWithRetrofitRxSupport_with
   }
 }
 
-- (instancetype)initWithRetrofitRxSupport:(RetrofitRxSupport *)outer$
-                         withRxSubscriber:(RxSubscriber *)capture$0
-            withRetrofitRxSupport_Invoker:(id<RetrofitRxSupport_Invoker>)capture$1
-       withRetrofitRequestInterceptorTape:(RetrofitRequestInterceptorTape *)capture$2 {
-  RetrofitRxSupport_$2_initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_(self, outer$, capture$0, capture$1, capture$2);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$subscriber_);
@@ -278,28 +269,28 @@ RetrofitRxSupport_$1 *create_RetrofitRxSupport_$1_initWithRetrofitRxSupport_with
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithRetrofitRxSupport:withRxSubscriber:withRetrofitRxSupport_Invoker:withRetrofitRequestInterceptorTape:);
+  methods[0].selector = @selector(initWithRetrofitRxSupport:withRxSubscriber:withRetrofitRxSupport_Invoker:withRetrofitRequestInterceptorTape:);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRetrofitRxSupport;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+    { "val$subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
     { "val$invoker_", "LRetrofitRxSupport_Invoker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$interceptorTape_", "LRetrofitRequestInterceptorTape;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRetrofitRxSupport;LRxSubscriber;LRetrofitRxSupport_Invoker;LRetrofitRequestInterceptorTape;", "(Lretrofit/RxSupport;Lrx/Subscriber<-Ljava/lang/Object;>;Lretrofit/RxSupport$Invoker;Lretrofit/RequestInterceptorTape;)V", "Lrx/Subscriber<-Ljava/lang/Object;>;", "LRetrofitRxSupport;", "getRunnableWithRxSubscriber:withRetrofitRxSupport_Invoker:withRetrofitRequestInterceptorTape:" };
-  static const J2ObjcClassInfo _RetrofitRxSupport_$2 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 4, 3, -1, 4, -1, -1 };
-  return &_RetrofitRxSupport_$2;
+  static const void *ptrTable[] = { "Lrx/Subscriber<-Ljava/lang/Object;>;", "LRetrofitRxSupport;", "getRunnableWithRxSubscriber:withRetrofitRxSupport_Invoker:withRetrofitRequestInterceptorTape:" };
+  static const J2ObjcClassInfo _RetrofitRxSupport_2 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 4, 1, -1, 2, -1, -1 };
+  return &_RetrofitRxSupport_2;
 }
 
 @end
 
-void RetrofitRxSupport_$2_initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_(RetrofitRxSupport_$2 *self, RetrofitRxSupport *outer$, RxSubscriber *capture$0, id<RetrofitRxSupport_Invoker> capture$1, RetrofitRequestInterceptorTape *capture$2) {
+void RetrofitRxSupport_2_initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_(RetrofitRxSupport_2 *self, RetrofitRxSupport *outer$, RxSubscriber *capture$0, id<RetrofitRxSupport_Invoker> capture$1, RetrofitRequestInterceptorTape *capture$2) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$subscriber_, capture$0);
   JreStrongAssign(&self->val$invoker_, capture$1);
@@ -307,10 +298,10 @@ void RetrofitRxSupport_$2_initWithRetrofitRxSupport_withRxSubscriber_withRetrofi
   NSObject_init(self);
 }
 
-RetrofitRxSupport_$2 *new_RetrofitRxSupport_$2_initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_(RetrofitRxSupport *outer$, RxSubscriber *capture$0, id<RetrofitRxSupport_Invoker> capture$1, RetrofitRequestInterceptorTape *capture$2) {
-  J2OBJC_NEW_IMPL(RetrofitRxSupport_$2, initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_, outer$, capture$0, capture$1, capture$2)
+RetrofitRxSupport_2 *new_RetrofitRxSupport_2_initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_(RetrofitRxSupport *outer$, RxSubscriber *capture$0, id<RetrofitRxSupport_Invoker> capture$1, RetrofitRequestInterceptorTape *capture$2) {
+  J2OBJC_NEW_IMPL(RetrofitRxSupport_2, initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_, outer$, capture$0, capture$1, capture$2)
 }
 
-RetrofitRxSupport_$2 *create_RetrofitRxSupport_$2_initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_(RetrofitRxSupport *outer$, RxSubscriber *capture$0, id<RetrofitRxSupport_Invoker> capture$1, RetrofitRequestInterceptorTape *capture$2) {
-  J2OBJC_CREATE_IMPL(RetrofitRxSupport_$2, initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_, outer$, capture$0, capture$1, capture$2)
+RetrofitRxSupport_2 *create_RetrofitRxSupport_2_initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_(RetrofitRxSupport *outer$, RxSubscriber *capture$0, id<RetrofitRxSupport_Invoker> capture$1, RetrofitRequestInterceptorTape *capture$2) {
+  J2OBJC_CREATE_IMPL(RetrofitRxSupport_2, initWithRetrofitRxSupport_withRxSubscriber_withRetrofitRxSupport_Invoker_withRetrofitRequestInterceptorTape_, outer$, capture$0, capture$1, capture$2)
 }

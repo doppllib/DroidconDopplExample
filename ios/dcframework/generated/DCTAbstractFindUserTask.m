@@ -27,6 +27,13 @@
 
 @implementation DCTAbstractFindUserTask
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  DCTAbstractFindUserTask_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (jboolean)handleErrorWithAndroidContentContext:(AndroidContentContext *)context
                                  withNSException:(NSException *)e {
   CoTouchlabDroidconandroidCrashReport_logExceptionWithNSException_(e);
@@ -66,13 +73,6 @@
   return DCTAbstractFindUserTask_saveUserResponseWithAndroidContentContext_withDCDUserAccount_withCoTouchlabDroidconandroidNetworkDaoUserInfoResponse_(context, user, response);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  DCTAbstractFindUserTask_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(errorStringCode_);
   RELEASE_(user_);
@@ -81,21 +81,21 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x4, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x4, 2, 3, -1, -1, -1, -1 },
     { NULL, "V", 0x0, 4, 5, 6, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LDCDUserAccount;", 0x9, 7, 8, 6, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(handleErrorWithAndroidContentContext:withNSException:);
-  methods[1].selector = @selector(onCompleteWithAndroidContentContext:);
-  methods[2].selector = @selector(handleDataWithAndroidContentContext:withDCTAbstractFindUserTask_LoadFromDb:withDCTAbstractFindUserTask_LoadUserInfo:);
-  methods[3].selector = @selector(isError);
-  methods[4].selector = @selector(saveUserResponseWithAndroidContentContext:withDCDUserAccount:withCoTouchlabDroidconandroidNetworkDaoUserInfoResponse:);
-  methods[5].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(handleErrorWithAndroidContentContext:withNSException:);
+  methods[2].selector = @selector(onCompleteWithAndroidContentContext:);
+  methods[3].selector = @selector(handleDataWithAndroidContentContext:withDCTAbstractFindUserTask_LoadFromDb:withDCTAbstractFindUserTask_LoadUserInfo:);
+  methods[4].selector = @selector(isError);
+  methods[5].selector = @selector(saveUserResponseWithAndroidContentContext:withDCDUserAccount:withCoTouchlabDroidconandroidNetworkDaoUserInfoResponse:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "errorStringCode_", "LNSString;", .constantValue.asLong = 0, 0x1, -1, -1, -1, -1 },
@@ -108,6 +108,10 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 @end
 
+void DCTAbstractFindUserTask_init(DCTAbstractFindUserTask *self) {
+  CoTouchlabAndroidThreadingTasksTask_init(self);
+}
+
 DCDUserAccount *DCTAbstractFindUserTask_saveUserResponseWithAndroidContentContext_withDCDUserAccount_withCoTouchlabDroidconandroidNetworkDaoUserInfoResponse_(AndroidContentContext *context, DCDUserAccount *user, CoTouchlabDroidconandroidNetworkDaoUserInfoResponse *response) {
   DCTAbstractFindUserTask_initialize();
   DCDUserAccount *newDbUser = create_DCDUserAccount_init();
@@ -118,10 +122,6 @@ DCDUserAccount *DCTAbstractFindUserTask_saveUserResponseWithAndroidContentContex
     return newDbUser;
   }
   return nil;
-}
-
-void DCTAbstractFindUserTask_init(DCTAbstractFindUserTask *self) {
-  CoTouchlabAndroidThreadingTasksTask_init(self);
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(DCTAbstractFindUserTask)

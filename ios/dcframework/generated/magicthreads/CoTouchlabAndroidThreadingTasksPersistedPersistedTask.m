@@ -38,6 +38,13 @@ J2OBJC_INITIALIZED_DEFN(CoTouchlabAndroidThreadingTasksPersistedPersistedTask)
 
 @implementation CoTouchlabAndroidThreadingTasksPersistedPersistedTask
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabAndroidThreadingTasksPersistedPersistedTask_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (NSString *)logSummary {
   return [[self java_getClass] getSimpleName];
 }
@@ -141,13 +148,6 @@ withCoTouchlabAndroidThreadingErrorcontrolSoftException:(CoTouchlabAndroidThread
   return false;
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabAndroidThreadingTasksPersistedPersistedTask_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(id__);
   [super dealloc];
@@ -155,6 +155,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x4, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x4, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x404, 2, 3, 4, -1, -1, -1 },
@@ -177,33 +178,32 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "LJavaLangLong;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 21, 22, -1, -1, -1, -1 },
     { NULL, "Z", 0x4, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(logSummary);
-  methods[1].selector = @selector(sameWithCoTouchlabAndroidThreadingTasksPersistedPersistedTask:);
-  methods[2].selector = @selector(runWithAndroidContentContext:);
-  methods[3].selector = @selector(onTransientErrorWithAndroidContentContext:withCoTouchlabAndroidThreadingErrorcontrolSoftException:);
-  methods[4].selector = @selector(onPermanentErrorWithAndroidContentContext:withNSException:);
-  methods[5].selector = @selector(onCompleteWithAndroidContentContext:);
-  methods[6].selector = @selector(onRuntimeMessageWithAndroidContentContext:withNSString:);
-  methods[7].selector = @selector(onRuntimeMessageWithAndroidContentContext:withNSString:withJavaUtilMap:);
-  methods[8].selector = @selector(getLastUpdate);
-  methods[9].selector = @selector(setLastUpdateWithLong:);
-  methods[10].selector = @selector(getPriority);
-  methods[11].selector = @selector(setPriorityWithInt:);
-  methods[12].selector = @selector(getAdded);
-  methods[13].selector = @selector(setAddedWithLong:);
-  methods[14].selector = @selector(getOrderTie);
-  methods[15].selector = @selector(setOrderTieWithInt:);
-  methods[16].selector = @selector(getTransientExceptionCount);
-  methods[17].selector = @selector(setTransientExceptionCountWithInt:);
-  methods[18].selector = @selector(compareToWithId:);
-  methods[19].selector = @selector(getId);
-  methods[20].selector = @selector(setIdWithJavaLangLong:);
-  methods[21].selector = @selector(runAllInTransaction);
-  methods[22].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(logSummary);
+  methods[2].selector = @selector(sameWithCoTouchlabAndroidThreadingTasksPersistedPersistedTask:);
+  methods[3].selector = @selector(runWithAndroidContentContext:);
+  methods[4].selector = @selector(onTransientErrorWithAndroidContentContext:withCoTouchlabAndroidThreadingErrorcontrolSoftException:);
+  methods[5].selector = @selector(onPermanentErrorWithAndroidContentContext:withNSException:);
+  methods[6].selector = @selector(onCompleteWithAndroidContentContext:);
+  methods[7].selector = @selector(onRuntimeMessageWithAndroidContentContext:withNSString:);
+  methods[8].selector = @selector(onRuntimeMessageWithAndroidContentContext:withNSString:withJavaUtilMap:);
+  methods[9].selector = @selector(getLastUpdate);
+  methods[10].selector = @selector(setLastUpdateWithLong:);
+  methods[11].selector = @selector(getPriority);
+  methods[12].selector = @selector(setPriorityWithInt:);
+  methods[13].selector = @selector(getAdded);
+  methods[14].selector = @selector(setAddedWithLong:);
+  methods[15].selector = @selector(getOrderTie);
+  methods[16].selector = @selector(setOrderTieWithInt:);
+  methods[17].selector = @selector(getTransientExceptionCount);
+  methods[18].selector = @selector(setTransientExceptionCountWithInt:);
+  methods[19].selector = @selector(compareToWithId:);
+  methods[20].selector = @selector(getId);
+  methods[21].selector = @selector(setIdWithJavaLangLong:);
+  methods[22].selector = @selector(runAllInTransaction);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "MUCH_LOWER_PRIORITY", "I", .constantValue.asInt = CoTouchlabAndroidThreadingTasksPersistedPersistedTask_MUCH_LOWER_PRIORITY, 0x19, -1, -1, -1, -1 },

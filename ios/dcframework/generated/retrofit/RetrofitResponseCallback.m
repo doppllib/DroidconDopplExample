@@ -11,6 +11,13 @@
 
 @implementation RetrofitResponseCallback
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RetrofitResponseCallback_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (void)successWithId:(RetrofitClientResponse *)response
 withRetrofitClientResponse:(RetrofitClientResponse *)response2 {
   [self successWithRetrofitClientResponse:response];
@@ -21,24 +28,17 @@ withRetrofitClientResponse:(RetrofitClientResponse *)response2 {
   [self doesNotRecognizeSelector:_cmd];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RetrofitResponseCallback_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x401, 0, 2, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(successWithId:withRetrofitClientResponse:);
-  methods[1].selector = @selector(successWithRetrofitClientResponse:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(successWithId:withRetrofitClientResponse:);
+  methods[2].selector = @selector(successWithRetrofitClientResponse:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "success", "LRetrofitClientResponse;LRetrofitClientResponse;", "LRetrofitClientResponse;", "Ljava/lang/Object;Lretrofit/Callback<Lretrofit/client/Response;>;" };
   static const J2ObjcClassInfo _RetrofitResponseCallback = { "ResponseCallback", "retrofit", ptrTable, methods, NULL, 7, 0x401, 3, 0, -1, -1, -1, 3, -1 };

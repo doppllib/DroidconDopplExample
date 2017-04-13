@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/plugins/RxJavaHooks.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxCompletable.h"
 #include "RxFunctionsAction0.h"
@@ -45,312 +44,312 @@ __attribute__((unused)) static RxPluginsRxJavaHooks *new_RxPluginsRxJavaHooks_in
 
 __attribute__((unused)) static RxPluginsRxJavaHooks *create_RxPluginsRxJavaHooks_init();
 
-@interface RxPluginsRxJavaHooks_$1 : NSObject < RxFunctionsAction1 >
-
-- (void)callWithId:(NSException *)e;
+@interface RxPluginsRxJavaHooks_1 : NSObject < RxFunctionsAction1 >
 
 - (instancetype)init;
 
+- (void)callWithId:(NSException *)e;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_1)
 
-__attribute__((unused)) static void RxPluginsRxJavaHooks_$1_init(RxPluginsRxJavaHooks_$1 *self);
+__attribute__((unused)) static void RxPluginsRxJavaHooks_1_init(RxPluginsRxJavaHooks_1 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$1 *new_RxPluginsRxJavaHooks_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaHooks_1 *new_RxPluginsRxJavaHooks_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$1 *create_RxPluginsRxJavaHooks_$1_init();
+__attribute__((unused)) static RxPluginsRxJavaHooks_1 *create_RxPluginsRxJavaHooks_1_init();
 
-@interface RxPluginsRxJavaHooks_$2 : NSObject < RxFunctionsFunc2 >
+@interface RxPluginsRxJavaHooks_2 : NSObject < RxFunctionsFunc2 >
+
+- (instancetype)init;
 
 - (id<RxObservable_OnSubscribe>)callWithId:(RxObservable *)t1
                                     withId:(id<RxObservable_OnSubscribe>)t2;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_2)
 
-__attribute__((unused)) static void RxPluginsRxJavaHooks_$2_init(RxPluginsRxJavaHooks_$2 *self);
+__attribute__((unused)) static void RxPluginsRxJavaHooks_2_init(RxPluginsRxJavaHooks_2 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$2 *new_RxPluginsRxJavaHooks_$2_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaHooks_2 *new_RxPluginsRxJavaHooks_2_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$2 *create_RxPluginsRxJavaHooks_$2_init();
+__attribute__((unused)) static RxPluginsRxJavaHooks_2 *create_RxPluginsRxJavaHooks_2_init();
 
-@interface RxPluginsRxJavaHooks_$3 : NSObject < RxFunctionsFunc1 >
+@interface RxPluginsRxJavaHooks_3 : NSObject < RxFunctionsFunc1 >
+
+- (instancetype)init;
 
 - (id<RxSubscription>)callWithId:(id<RxSubscription>)f;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_$3)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_3)
 
-__attribute__((unused)) static void RxPluginsRxJavaHooks_$3_init(RxPluginsRxJavaHooks_$3 *self);
+__attribute__((unused)) static void RxPluginsRxJavaHooks_3_init(RxPluginsRxJavaHooks_3 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$3 *new_RxPluginsRxJavaHooks_$3_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaHooks_3 *new_RxPluginsRxJavaHooks_3_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$3 *create_RxPluginsRxJavaHooks_$3_init();
+__attribute__((unused)) static RxPluginsRxJavaHooks_3 *create_RxPluginsRxJavaHooks_3_init();
 
-@interface RxPluginsRxJavaHooks_$4 : NSObject < RxFunctionsFunc2 >
+@interface RxPluginsRxJavaHooks_4 : NSObject < RxFunctionsFunc2 >
+
+- (instancetype)init;
 
 - (id<RxSingle_OnSubscribe>)callWithId:(RxSingle *)t1
                                 withId:(id<RxSingle_OnSubscribe>)t2;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_$4)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_4)
 
-__attribute__((unused)) static void RxPluginsRxJavaHooks_$4_init(RxPluginsRxJavaHooks_$4 *self);
+__attribute__((unused)) static void RxPluginsRxJavaHooks_4_init(RxPluginsRxJavaHooks_4 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$4 *new_RxPluginsRxJavaHooks_$4_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaHooks_4 *new_RxPluginsRxJavaHooks_4_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$4 *create_RxPluginsRxJavaHooks_$4_init();
+__attribute__((unused)) static RxPluginsRxJavaHooks_4 *create_RxPluginsRxJavaHooks_4_init();
 
-@interface RxPluginsRxJavaHooks_$5 : NSObject < RxFunctionsFunc1 >
+@interface RxPluginsRxJavaHooks_5 : NSObject < RxFunctionsFunc1 >
+
+- (instancetype)init;
 
 - (id<RxSubscription>)callWithId:(id<RxSubscription>)f;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_$5)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_5)
 
-__attribute__((unused)) static void RxPluginsRxJavaHooks_$5_init(RxPluginsRxJavaHooks_$5 *self);
+__attribute__((unused)) static void RxPluginsRxJavaHooks_5_init(RxPluginsRxJavaHooks_5 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$5 *new_RxPluginsRxJavaHooks_$5_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaHooks_5 *new_RxPluginsRxJavaHooks_5_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$5 *create_RxPluginsRxJavaHooks_$5_init();
+__attribute__((unused)) static RxPluginsRxJavaHooks_5 *create_RxPluginsRxJavaHooks_5_init();
 
-@interface RxPluginsRxJavaHooks_$6 : NSObject < RxFunctionsFunc2 >
+@interface RxPluginsRxJavaHooks_6 : NSObject < RxFunctionsFunc2 >
+
+- (instancetype)init;
 
 - (id<RxCompletable_OnSubscribe>)callWithId:(RxCompletable *)t1
                                      withId:(id<RxCompletable_OnSubscribe>)t2;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_$6)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_6)
 
-__attribute__((unused)) static void RxPluginsRxJavaHooks_$6_init(RxPluginsRxJavaHooks_$6 *self);
+__attribute__((unused)) static void RxPluginsRxJavaHooks_6_init(RxPluginsRxJavaHooks_6 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$6 *new_RxPluginsRxJavaHooks_$6_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaHooks_6 *new_RxPluginsRxJavaHooks_6_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$6 *create_RxPluginsRxJavaHooks_$6_init();
+__attribute__((unused)) static RxPluginsRxJavaHooks_6 *create_RxPluginsRxJavaHooks_6_init();
 
-@interface RxPluginsRxJavaHooks_$7 : NSObject < RxFunctionsFunc1 >
+@interface RxPluginsRxJavaHooks_7 : NSObject < RxFunctionsFunc1 >
+
+- (instancetype)init;
 
 - (id<RxFunctionsAction0>)callWithId:(id<RxFunctionsAction0>)a;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_$7)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_7)
 
-__attribute__((unused)) static void RxPluginsRxJavaHooks_$7_init(RxPluginsRxJavaHooks_$7 *self);
+__attribute__((unused)) static void RxPluginsRxJavaHooks_7_init(RxPluginsRxJavaHooks_7 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$7 *new_RxPluginsRxJavaHooks_$7_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaHooks_7 *new_RxPluginsRxJavaHooks_7_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$7 *create_RxPluginsRxJavaHooks_$7_init();
+__attribute__((unused)) static RxPluginsRxJavaHooks_7 *create_RxPluginsRxJavaHooks_7_init();
 
-@interface RxPluginsRxJavaHooks_$8 : NSObject < RxFunctionsFunc1 >
+@interface RxPluginsRxJavaHooks_8 : NSObject < RxFunctionsFunc1 >
+
+- (instancetype)init;
 
 - (NSException *)callWithId:(NSException *)t;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_$8)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_8)
 
-__attribute__((unused)) static void RxPluginsRxJavaHooks_$8_init(RxPluginsRxJavaHooks_$8 *self);
+__attribute__((unused)) static void RxPluginsRxJavaHooks_8_init(RxPluginsRxJavaHooks_8 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$8 *new_RxPluginsRxJavaHooks_$8_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaHooks_8 *new_RxPluginsRxJavaHooks_8_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$8 *create_RxPluginsRxJavaHooks_$8_init();
+__attribute__((unused)) static RxPluginsRxJavaHooks_8 *create_RxPluginsRxJavaHooks_8_init();
 
-@interface RxPluginsRxJavaHooks_$9 : NSObject < RxFunctionsFunc1 >
+@interface RxPluginsRxJavaHooks_9 : NSObject < RxFunctionsFunc1 >
+
+- (instancetype)init;
 
 - (id<RxObservable_Operator>)callWithId:(id<RxObservable_Operator>)t;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_$9)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_9)
 
-__attribute__((unused)) static void RxPluginsRxJavaHooks_$9_init(RxPluginsRxJavaHooks_$9 *self);
+__attribute__((unused)) static void RxPluginsRxJavaHooks_9_init(RxPluginsRxJavaHooks_9 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$9 *new_RxPluginsRxJavaHooks_$9_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaHooks_9 *new_RxPluginsRxJavaHooks_9_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$9 *create_RxPluginsRxJavaHooks_$9_init();
+__attribute__((unused)) static RxPluginsRxJavaHooks_9 *create_RxPluginsRxJavaHooks_9_init();
 
-@interface RxPluginsRxJavaHooks_$10 : NSObject < RxFunctionsFunc1 >
+@interface RxPluginsRxJavaHooks_10 : NSObject < RxFunctionsFunc1 >
+
+- (instancetype)init;
 
 - (NSException *)callWithId:(NSException *)t;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_$10)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_10)
 
-__attribute__((unused)) static void RxPluginsRxJavaHooks_$10_init(RxPluginsRxJavaHooks_$10 *self);
+__attribute__((unused)) static void RxPluginsRxJavaHooks_10_init(RxPluginsRxJavaHooks_10 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$10 *new_RxPluginsRxJavaHooks_$10_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaHooks_10 *new_RxPluginsRxJavaHooks_10_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$10 *create_RxPluginsRxJavaHooks_$10_init();
+__attribute__((unused)) static RxPluginsRxJavaHooks_10 *create_RxPluginsRxJavaHooks_10_init();
 
-@interface RxPluginsRxJavaHooks_$11 : NSObject < RxFunctionsFunc1 >
+@interface RxPluginsRxJavaHooks_11 : NSObject < RxFunctionsFunc1 >
+
+- (instancetype)init;
 
 - (id<RxObservable_Operator>)callWithId:(id<RxObservable_Operator>)t;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_$11)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_11)
 
-__attribute__((unused)) static void RxPluginsRxJavaHooks_$11_init(RxPluginsRxJavaHooks_$11 *self);
+__attribute__((unused)) static void RxPluginsRxJavaHooks_11_init(RxPluginsRxJavaHooks_11 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$11 *new_RxPluginsRxJavaHooks_$11_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaHooks_11 *new_RxPluginsRxJavaHooks_11_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$11 *create_RxPluginsRxJavaHooks_$11_init();
+__attribute__((unused)) static RxPluginsRxJavaHooks_11 *create_RxPluginsRxJavaHooks_11_init();
 
-@interface RxPluginsRxJavaHooks_$12 : NSObject < RxFunctionsFunc1 >
+@interface RxPluginsRxJavaHooks_12 : NSObject < RxFunctionsFunc1 >
+
+- (instancetype)init;
 
 - (NSException *)callWithId:(NSException *)t;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_$12)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_12)
 
-__attribute__((unused)) static void RxPluginsRxJavaHooks_$12_init(RxPluginsRxJavaHooks_$12 *self);
+__attribute__((unused)) static void RxPluginsRxJavaHooks_12_init(RxPluginsRxJavaHooks_12 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$12 *new_RxPluginsRxJavaHooks_$12_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaHooks_12 *new_RxPluginsRxJavaHooks_12_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$12 *create_RxPluginsRxJavaHooks_$12_init();
+__attribute__((unused)) static RxPluginsRxJavaHooks_12 *create_RxPluginsRxJavaHooks_12_init();
 
-@interface RxPluginsRxJavaHooks_$13 : NSObject < RxFunctionsFunc1 >
+@interface RxPluginsRxJavaHooks_13 : NSObject < RxFunctionsFunc1 >
+
+- (instancetype)init;
 
 - (id<RxCompletable_Operator>)callWithId:(id<RxCompletable_Operator>)t;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_$13)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_13)
 
-__attribute__((unused)) static void RxPluginsRxJavaHooks_$13_init(RxPluginsRxJavaHooks_$13 *self);
+__attribute__((unused)) static void RxPluginsRxJavaHooks_13_init(RxPluginsRxJavaHooks_13 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$13 *new_RxPluginsRxJavaHooks_$13_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaHooks_13 *new_RxPluginsRxJavaHooks_13_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$13 *create_RxPluginsRxJavaHooks_$13_init();
+__attribute__((unused)) static RxPluginsRxJavaHooks_13 *create_RxPluginsRxJavaHooks_13_init();
 
-@interface RxPluginsRxJavaHooks_$14 : NSObject < RxFunctionsFunc1 >
+@interface RxPluginsRxJavaHooks_14 : NSObject < RxFunctionsFunc1 >
+
+- (instancetype)init;
 
 - (id<RxObservable_OnSubscribe>)callWithId:(id<RxObservable_OnSubscribe>)f;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_$14)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_14)
 
-__attribute__((unused)) static void RxPluginsRxJavaHooks_$14_init(RxPluginsRxJavaHooks_$14 *self);
+__attribute__((unused)) static void RxPluginsRxJavaHooks_14_init(RxPluginsRxJavaHooks_14 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$14 *new_RxPluginsRxJavaHooks_$14_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaHooks_14 *new_RxPluginsRxJavaHooks_14_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$14 *create_RxPluginsRxJavaHooks_$14_init();
+__attribute__((unused)) static RxPluginsRxJavaHooks_14 *create_RxPluginsRxJavaHooks_14_init();
 
-@interface RxPluginsRxJavaHooks_$15 : NSObject < RxFunctionsFunc1 >
+@interface RxPluginsRxJavaHooks_15 : NSObject < RxFunctionsFunc1 >
+
+- (instancetype)init;
 
 - (id<RxSingle_OnSubscribe>)callWithId:(id<RxSingle_OnSubscribe>)f;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_$15)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_15)
 
-__attribute__((unused)) static void RxPluginsRxJavaHooks_$15_init(RxPluginsRxJavaHooks_$15 *self);
+__attribute__((unused)) static void RxPluginsRxJavaHooks_15_init(RxPluginsRxJavaHooks_15 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$15 *new_RxPluginsRxJavaHooks_$15_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaHooks_15 *new_RxPluginsRxJavaHooks_15_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$15 *create_RxPluginsRxJavaHooks_$15_init();
+__attribute__((unused)) static RxPluginsRxJavaHooks_15 *create_RxPluginsRxJavaHooks_15_init();
 
-@interface RxPluginsRxJavaHooks_$16 : NSObject < RxFunctionsFunc1 >
+@interface RxPluginsRxJavaHooks_16 : NSObject < RxFunctionsFunc1 >
+
+- (instancetype)init;
 
 - (id<RxCompletable_OnSubscribe>)callWithId:(id<RxCompletable_OnSubscribe>)f;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_$16)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_16)
 
-__attribute__((unused)) static void RxPluginsRxJavaHooks_$16_init(RxPluginsRxJavaHooks_$16 *self);
+__attribute__((unused)) static void RxPluginsRxJavaHooks_16_init(RxPluginsRxJavaHooks_16 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$16 *new_RxPluginsRxJavaHooks_$16_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaHooks_16 *new_RxPluginsRxJavaHooks_16_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$16 *create_RxPluginsRxJavaHooks_$16_init();
+__attribute__((unused)) static RxPluginsRxJavaHooks_16 *create_RxPluginsRxJavaHooks_16_init();
 
-@interface RxPluginsRxJavaHooks_$17 : NSObject < RxFunctionsFunc1 >
+@interface RxPluginsRxJavaHooks_17 : NSObject < RxFunctionsFunc1 >
+
+- (instancetype)init;
 
 - (id<RxObservable_OnSubscribe>)callWithId:(id<RxObservable_OnSubscribe>)f;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_$17)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_17)
 
-__attribute__((unused)) static void RxPluginsRxJavaHooks_$17_init(RxPluginsRxJavaHooks_$17 *self);
+__attribute__((unused)) static void RxPluginsRxJavaHooks_17_init(RxPluginsRxJavaHooks_17 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$17 *new_RxPluginsRxJavaHooks_$17_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaHooks_17 *new_RxPluginsRxJavaHooks_17_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$17 *create_RxPluginsRxJavaHooks_$17_init();
+__attribute__((unused)) static RxPluginsRxJavaHooks_17 *create_RxPluginsRxJavaHooks_17_init();
 
-@interface RxPluginsRxJavaHooks_$18 : NSObject < RxFunctionsFunc1 >
+@interface RxPluginsRxJavaHooks_18 : NSObject < RxFunctionsFunc1 >
+
+- (instancetype)init;
 
 - (id<RxSingle_OnSubscribe>)callWithId:(id<RxSingle_OnSubscribe>)f;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_$18)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_18)
 
-__attribute__((unused)) static void RxPluginsRxJavaHooks_$18_init(RxPluginsRxJavaHooks_$18 *self);
+__attribute__((unused)) static void RxPluginsRxJavaHooks_18_init(RxPluginsRxJavaHooks_18 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$18 *new_RxPluginsRxJavaHooks_$18_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaHooks_18 *new_RxPluginsRxJavaHooks_18_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$18 *create_RxPluginsRxJavaHooks_$18_init();
+__attribute__((unused)) static RxPluginsRxJavaHooks_18 *create_RxPluginsRxJavaHooks_18_init();
 
-@interface RxPluginsRxJavaHooks_$19 : NSObject < RxFunctionsFunc1 >
+@interface RxPluginsRxJavaHooks_19 : NSObject < RxFunctionsFunc1 >
+
+- (instancetype)init;
 
 - (id<RxCompletable_OnSubscribe>)callWithId:(id<RxCompletable_OnSubscribe>)f;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_$19)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaHooks_19)
 
-__attribute__((unused)) static void RxPluginsRxJavaHooks_$19_init(RxPluginsRxJavaHooks_$19 *self);
+__attribute__((unused)) static void RxPluginsRxJavaHooks_19_init(RxPluginsRxJavaHooks_19 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$19 *new_RxPluginsRxJavaHooks_$19_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaHooks_19 *new_RxPluginsRxJavaHooks_19_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaHooks_$19 *create_RxPluginsRxJavaHooks_$19_init();
+__attribute__((unused)) static RxPluginsRxJavaHooks_19 *create_RxPluginsRxJavaHooks_19_init();
 
 J2OBJC_INITIALIZED_DEFN(RxPluginsRxJavaHooks)
 
@@ -841,7 +840,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 + (void)initialize {
   if (self == [RxPluginsRxJavaHooks class]) {
     {
-      [((JavaIoPrintStream *) nil_chk(JreLoadStatic(JavaLangSystem, out))) printlnWithNSString:@"In init YYYYYYYYYYYYYYYYYY"];
       RxPluginsRxJavaHooks_init__();
     }
     J2OBJC_SET_INITIALIZED(RxPluginsRxJavaHooks)
@@ -865,27 +863,27 @@ RxPluginsRxJavaHooks *create_RxPluginsRxJavaHooks_init() {
 
 void RxPluginsRxJavaHooks_init__() {
   RxPluginsRxJavaHooks_initialize();
-  JreVolatileStrongAssignAndConsume(&RxPluginsRxJavaHooks_onError, new_RxPluginsRxJavaHooks_$1_init());
-  JreVolatileStrongAssignAndConsume(&RxPluginsRxJavaHooks_onObservableStart, new_RxPluginsRxJavaHooks_$2_init());
-  JreVolatileStrongAssignAndConsume(&RxPluginsRxJavaHooks_onObservableReturn, new_RxPluginsRxJavaHooks_$3_init());
-  JreVolatileStrongAssignAndConsume(&RxPluginsRxJavaHooks_onSingleStart, new_RxPluginsRxJavaHooks_$4_init());
-  JreVolatileStrongAssignAndConsume(&RxPluginsRxJavaHooks_onSingleReturn, new_RxPluginsRxJavaHooks_$5_init());
-  JreVolatileStrongAssignAndConsume(&RxPluginsRxJavaHooks_onCompletableStart, new_RxPluginsRxJavaHooks_$6_init());
-  JreVolatileStrongAssignAndConsume(&RxPluginsRxJavaHooks_onScheduleAction, new_RxPluginsRxJavaHooks_$7_init());
-  JreVolatileStrongAssignAndConsume(&RxPluginsRxJavaHooks_onObservableSubscribeError, new_RxPluginsRxJavaHooks_$8_init());
-  JreVolatileStrongAssignAndConsume(&RxPluginsRxJavaHooks_onObservableLift, new_RxPluginsRxJavaHooks_$9_init());
-  JreVolatileStrongAssignAndConsume(&RxPluginsRxJavaHooks_onSingleSubscribeError, new_RxPluginsRxJavaHooks_$10_init());
-  JreVolatileStrongAssignAndConsume(&RxPluginsRxJavaHooks_onSingleLift, new_RxPluginsRxJavaHooks_$11_init());
-  JreVolatileStrongAssignAndConsume(&RxPluginsRxJavaHooks_onCompletableSubscribeError, new_RxPluginsRxJavaHooks_$12_init());
-  JreVolatileStrongAssignAndConsume(&RxPluginsRxJavaHooks_onCompletableLift, new_RxPluginsRxJavaHooks_$13_init());
+  JreVolatileStrongAssign(&RxPluginsRxJavaHooks_onError, create_RxPluginsRxJavaHooks_1_init());
+  JreVolatileStrongAssign(&RxPluginsRxJavaHooks_onObservableStart, create_RxPluginsRxJavaHooks_2_init());
+  JreVolatileStrongAssign(&RxPluginsRxJavaHooks_onObservableReturn, create_RxPluginsRxJavaHooks_3_init());
+  JreVolatileStrongAssign(&RxPluginsRxJavaHooks_onSingleStart, create_RxPluginsRxJavaHooks_4_init());
+  JreVolatileStrongAssign(&RxPluginsRxJavaHooks_onSingleReturn, create_RxPluginsRxJavaHooks_5_init());
+  JreVolatileStrongAssign(&RxPluginsRxJavaHooks_onCompletableStart, create_RxPluginsRxJavaHooks_6_init());
+  JreVolatileStrongAssign(&RxPluginsRxJavaHooks_onScheduleAction, create_RxPluginsRxJavaHooks_7_init());
+  JreVolatileStrongAssign(&RxPluginsRxJavaHooks_onObservableSubscribeError, create_RxPluginsRxJavaHooks_8_init());
+  JreVolatileStrongAssign(&RxPluginsRxJavaHooks_onObservableLift, create_RxPluginsRxJavaHooks_9_init());
+  JreVolatileStrongAssign(&RxPluginsRxJavaHooks_onSingleSubscribeError, create_RxPluginsRxJavaHooks_10_init());
+  JreVolatileStrongAssign(&RxPluginsRxJavaHooks_onSingleLift, create_RxPluginsRxJavaHooks_11_init());
+  JreVolatileStrongAssign(&RxPluginsRxJavaHooks_onCompletableSubscribeError, create_RxPluginsRxJavaHooks_12_init());
+  JreVolatileStrongAssign(&RxPluginsRxJavaHooks_onCompletableLift, create_RxPluginsRxJavaHooks_13_init());
   RxPluginsRxJavaHooks_initCreate();
 }
 
 void RxPluginsRxJavaHooks_initCreate() {
   RxPluginsRxJavaHooks_initialize();
-  JreVolatileStrongAssignAndConsume(&RxPluginsRxJavaHooks_onObservableCreate, new_RxPluginsRxJavaHooks_$14_init());
-  JreVolatileStrongAssignAndConsume(&RxPluginsRxJavaHooks_onSingleCreate, new_RxPluginsRxJavaHooks_$15_init());
-  JreVolatileStrongAssignAndConsume(&RxPluginsRxJavaHooks_onCompletableCreate, new_RxPluginsRxJavaHooks_$16_init());
+  JreVolatileStrongAssign(&RxPluginsRxJavaHooks_onObservableCreate, create_RxPluginsRxJavaHooks_14_init());
+  JreVolatileStrongAssign(&RxPluginsRxJavaHooks_onSingleCreate, create_RxPluginsRxJavaHooks_15_init());
+  JreVolatileStrongAssign(&RxPluginsRxJavaHooks_onCompletableCreate, create_RxPluginsRxJavaHooks_16_init());
 }
 
 void RxPluginsRxJavaHooks_reset() {
@@ -1393,9 +1391,9 @@ void RxPluginsRxJavaHooks_enableAssemblyTracking() {
   if (JreLoadVolatileBoolean(&RxPluginsRxJavaHooks_lockdown_)) {
     return;
   }
-  JreVolatileStrongAssignAndConsume(&RxPluginsRxJavaHooks_onObservableCreate, new_RxPluginsRxJavaHooks_$17_init());
-  JreVolatileStrongAssignAndConsume(&RxPluginsRxJavaHooks_onSingleCreate, new_RxPluginsRxJavaHooks_$18_init());
-  JreVolatileStrongAssignAndConsume(&RxPluginsRxJavaHooks_onCompletableCreate, new_RxPluginsRxJavaHooks_$19_init());
+  JreVolatileStrongAssign(&RxPluginsRxJavaHooks_onObservableCreate, create_RxPluginsRxJavaHooks_17_init());
+  JreVolatileStrongAssign(&RxPluginsRxJavaHooks_onSingleCreate, create_RxPluginsRxJavaHooks_18_init());
+  JreVolatileStrongAssign(&RxPluginsRxJavaHooks_onCompletableCreate, create_RxPluginsRxJavaHooks_19_init());
 }
 
 void RxPluginsRxJavaHooks_setOnGenericScheduledExecutorServiceWithRxFunctionsFunc0_(id<RxFunctionsFunc0> factory) {
@@ -1413,134 +1411,141 @@ id<RxFunctionsFunc0> RxPluginsRxJavaHooks_getOnGenericScheduledExecutorService()
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxPluginsRxJavaHooks)
 
-@implementation RxPluginsRxJavaHooks_$1
+@implementation RxPluginsRxJavaHooks_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaHooks_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)callWithId:(NSException *)e {
   [((RxPluginsRxJavaErrorHandler *) nil_chk([((RxPluginsRxJavaPlugins *) nil_chk(RxPluginsRxJavaPlugins_getInstance())) getErrorHandler])) handleErrorWithNSException:e];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaHooks_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LNSException;", "LRxPluginsRxJavaHooks;", "init__", "Ljava/lang/Object;Lrx/functions/Action1<Ljava/lang/Throwable;>;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_$1 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxPluginsRxJavaHooks_$1;
+  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_1 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxPluginsRxJavaHooks_1;
 }
 
 @end
 
-void RxPluginsRxJavaHooks_$1_init(RxPluginsRxJavaHooks_$1 *self) {
+void RxPluginsRxJavaHooks_1_init(RxPluginsRxJavaHooks_1 *self) {
   NSObject_init(self);
 }
 
-RxPluginsRxJavaHooks_$1 *new_RxPluginsRxJavaHooks_$1_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_$1, init)
+RxPluginsRxJavaHooks_1 *new_RxPluginsRxJavaHooks_1_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_1, init)
 }
 
-RxPluginsRxJavaHooks_$1 *create_RxPluginsRxJavaHooks_$1_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_$1, init)
+RxPluginsRxJavaHooks_1 *create_RxPluginsRxJavaHooks_1_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_1, init)
 }
 
-@implementation RxPluginsRxJavaHooks_$2
+@implementation RxPluginsRxJavaHooks_2
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaHooks_2_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<RxObservable_OnSubscribe>)callWithId:(RxObservable *)t1
                                     withId:(id<RxObservable_OnSubscribe>)t2 {
   return [((RxPluginsRxJavaObservableExecutionHook *) nil_chk([((RxPluginsRxJavaPlugins *) nil_chk(RxPluginsRxJavaPlugins_getInstance())) getObservableExecutionHook])) onSubscribeStartWithRxObservable:t1 withRxObservable_OnSubscribe:t2];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaHooks_$2_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxObservable_OnSubscribe;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxObservable_OnSubscribe;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:withId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LRxObservable;LRxObservable_OnSubscribe;", "LRxPluginsRxJavaHooks;", "init__", "Ljava/lang/Object;Lrx/functions/Func2<Lrx/Observable;Lrx/Observable$OnSubscribe;Lrx/Observable$OnSubscribe;>;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_$2 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxPluginsRxJavaHooks_$2;
+  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_2 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxPluginsRxJavaHooks_2;
 }
 
 @end
 
-void RxPluginsRxJavaHooks_$2_init(RxPluginsRxJavaHooks_$2 *self) {
+void RxPluginsRxJavaHooks_2_init(RxPluginsRxJavaHooks_2 *self) {
   NSObject_init(self);
 }
 
-RxPluginsRxJavaHooks_$2 *new_RxPluginsRxJavaHooks_$2_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_$2, init)
+RxPluginsRxJavaHooks_2 *new_RxPluginsRxJavaHooks_2_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_2, init)
 }
 
-RxPluginsRxJavaHooks_$2 *create_RxPluginsRxJavaHooks_$2_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_$2, init)
+RxPluginsRxJavaHooks_2 *create_RxPluginsRxJavaHooks_2_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_2, init)
 }
 
-@implementation RxPluginsRxJavaHooks_$3
+@implementation RxPluginsRxJavaHooks_3
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaHooks_3_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<RxSubscription>)callWithId:(id<RxSubscription>)f {
   return [((RxPluginsRxJavaObservableExecutionHook *) nil_chk([((RxPluginsRxJavaPlugins *) nil_chk(RxPluginsRxJavaPlugins_getInstance())) getObservableExecutionHook])) onSubscribeReturnWithRxSubscription:f];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaHooks_$3_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxSubscription;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxSubscription;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LRxSubscription;", "LRxPluginsRxJavaHooks;", "init__", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Subscription;Lrx/Subscription;>;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_$3 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxPluginsRxJavaHooks_$3;
+  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_3 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxPluginsRxJavaHooks_3;
 }
 
 @end
 
-void RxPluginsRxJavaHooks_$3_init(RxPluginsRxJavaHooks_$3 *self) {
+void RxPluginsRxJavaHooks_3_init(RxPluginsRxJavaHooks_3 *self) {
   NSObject_init(self);
 }
 
-RxPluginsRxJavaHooks_$3 *new_RxPluginsRxJavaHooks_$3_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_$3, init)
+RxPluginsRxJavaHooks_3 *new_RxPluginsRxJavaHooks_3_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_3, init)
 }
 
-RxPluginsRxJavaHooks_$3 *create_RxPluginsRxJavaHooks_$3_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_$3, init)
+RxPluginsRxJavaHooks_3 *create_RxPluginsRxJavaHooks_3_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_3, init)
 }
 
-@implementation RxPluginsRxJavaHooks_$4
+@implementation RxPluginsRxJavaHooks_4
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaHooks_4_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<RxSingle_OnSubscribe>)callWithId:(RxSingle *)t1
                                 withId:(id<RxSingle_OnSubscribe>)t2 {
@@ -1551,669 +1556,662 @@ RxPluginsRxJavaHooks_$3 *create_RxPluginsRxJavaHooks_$3_init() {
   return create_RxInternalOperatorsSingleFromObservable_initWithRxObservable_OnSubscribe_([((RxPluginsRxJavaSingleExecutionHook *) nil_chk(hook)) onSubscribeStartWithRxSingle:t1 withRxObservable_OnSubscribe:create_RxInternalOperatorsSingleToObservable_initWithRxSingle_OnSubscribe_(t2)]);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaHooks_$4_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxSingle_OnSubscribe;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxSingle_OnSubscribe;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:withId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LRxSingle;LRxSingle_OnSubscribe;", "LRxPluginsRxJavaHooks;", "init__", "Ljava/lang/Object;Lrx/functions/Func2<Lrx/Single;Lrx/Single$OnSubscribe;Lrx/Single$OnSubscribe;>;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_$4 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxPluginsRxJavaHooks_$4;
+  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_4 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxPluginsRxJavaHooks_4;
 }
 
 @end
 
-void RxPluginsRxJavaHooks_$4_init(RxPluginsRxJavaHooks_$4 *self) {
+void RxPluginsRxJavaHooks_4_init(RxPluginsRxJavaHooks_4 *self) {
   NSObject_init(self);
 }
 
-RxPluginsRxJavaHooks_$4 *new_RxPluginsRxJavaHooks_$4_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_$4, init)
+RxPluginsRxJavaHooks_4 *new_RxPluginsRxJavaHooks_4_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_4, init)
 }
 
-RxPluginsRxJavaHooks_$4 *create_RxPluginsRxJavaHooks_$4_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_$4, init)
+RxPluginsRxJavaHooks_4 *create_RxPluginsRxJavaHooks_4_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_4, init)
 }
 
-@implementation RxPluginsRxJavaHooks_$5
+@implementation RxPluginsRxJavaHooks_5
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaHooks_5_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<RxSubscription>)callWithId:(id<RxSubscription>)f {
   return [((RxPluginsRxJavaSingleExecutionHook *) nil_chk([((RxPluginsRxJavaPlugins *) nil_chk(RxPluginsRxJavaPlugins_getInstance())) getSingleExecutionHook])) onSubscribeReturnWithRxSubscription:f];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaHooks_$5_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxSubscription;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxSubscription;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LRxSubscription;", "LRxPluginsRxJavaHooks;", "init__", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Subscription;Lrx/Subscription;>;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_$5 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxPluginsRxJavaHooks_$5;
+  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_5 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxPluginsRxJavaHooks_5;
 }
 
 @end
 
-void RxPluginsRxJavaHooks_$5_init(RxPluginsRxJavaHooks_$5 *self) {
+void RxPluginsRxJavaHooks_5_init(RxPluginsRxJavaHooks_5 *self) {
   NSObject_init(self);
 }
 
-RxPluginsRxJavaHooks_$5 *new_RxPluginsRxJavaHooks_$5_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_$5, init)
+RxPluginsRxJavaHooks_5 *new_RxPluginsRxJavaHooks_5_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_5, init)
 }
 
-RxPluginsRxJavaHooks_$5 *create_RxPluginsRxJavaHooks_$5_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_$5, init)
+RxPluginsRxJavaHooks_5 *create_RxPluginsRxJavaHooks_5_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_5, init)
 }
 
-@implementation RxPluginsRxJavaHooks_$6
+@implementation RxPluginsRxJavaHooks_6
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaHooks_6_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<RxCompletable_OnSubscribe>)callWithId:(RxCompletable *)t1
                                      withId:(id<RxCompletable_OnSubscribe>)t2 {
   return [((RxPluginsRxJavaCompletableExecutionHook *) nil_chk([((RxPluginsRxJavaPlugins *) nil_chk(RxPluginsRxJavaPlugins_getInstance())) getCompletableExecutionHook])) onSubscribeStartWithRxCompletable:t1 withRxCompletable_OnSubscribe:t2];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaHooks_$6_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxCompletable_OnSubscribe;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxCompletable_OnSubscribe;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:withId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LRxCompletable;LRxCompletable_OnSubscribe;", "LRxPluginsRxJavaHooks;", "init__", "Ljava/lang/Object;Lrx/functions/Func2<Lrx/Completable;Lrx/Completable$OnSubscribe;Lrx/Completable$OnSubscribe;>;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_$6 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxPluginsRxJavaHooks_$6;
+  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_6 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxPluginsRxJavaHooks_6;
 }
 
 @end
 
-void RxPluginsRxJavaHooks_$6_init(RxPluginsRxJavaHooks_$6 *self) {
+void RxPluginsRxJavaHooks_6_init(RxPluginsRxJavaHooks_6 *self) {
   NSObject_init(self);
 }
 
-RxPluginsRxJavaHooks_$6 *new_RxPluginsRxJavaHooks_$6_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_$6, init)
+RxPluginsRxJavaHooks_6 *new_RxPluginsRxJavaHooks_6_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_6, init)
 }
 
-RxPluginsRxJavaHooks_$6 *create_RxPluginsRxJavaHooks_$6_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_$6, init)
+RxPluginsRxJavaHooks_6 *create_RxPluginsRxJavaHooks_6_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_6, init)
 }
 
-@implementation RxPluginsRxJavaHooks_$7
+@implementation RxPluginsRxJavaHooks_7
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaHooks_7_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<RxFunctionsAction0>)callWithId:(id<RxFunctionsAction0>)a {
   return [((RxPluginsRxJavaSchedulersHook *) nil_chk([((RxPluginsRxJavaPlugins *) nil_chk(RxPluginsRxJavaPlugins_getInstance())) getSchedulersHook])) onScheduleWithRxFunctionsAction0:a];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaHooks_$7_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxFunctionsAction0;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxFunctionsAction0;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LRxFunctionsAction0;", "LRxPluginsRxJavaHooks;", "init__", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/functions/Action0;Lrx/functions/Action0;>;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_$7 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxPluginsRxJavaHooks_$7;
+  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_7 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxPluginsRxJavaHooks_7;
 }
 
 @end
 
-void RxPluginsRxJavaHooks_$7_init(RxPluginsRxJavaHooks_$7 *self) {
+void RxPluginsRxJavaHooks_7_init(RxPluginsRxJavaHooks_7 *self) {
   NSObject_init(self);
 }
 
-RxPluginsRxJavaHooks_$7 *new_RxPluginsRxJavaHooks_$7_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_$7, init)
+RxPluginsRxJavaHooks_7 *new_RxPluginsRxJavaHooks_7_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_7, init)
 }
 
-RxPluginsRxJavaHooks_$7 *create_RxPluginsRxJavaHooks_$7_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_$7, init)
+RxPluginsRxJavaHooks_7 *create_RxPluginsRxJavaHooks_7_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_7, init)
 }
 
-@implementation RxPluginsRxJavaHooks_$8
+@implementation RxPluginsRxJavaHooks_8
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaHooks_8_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (NSException *)callWithId:(NSException *)t {
   return [((RxPluginsRxJavaObservableExecutionHook *) nil_chk([((RxPluginsRxJavaPlugins *) nil_chk(RxPluginsRxJavaPlugins_getInstance())) getObservableExecutionHook])) onSubscribeErrorWithNSException:t];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaHooks_$8_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSException;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSException;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LNSException;", "LRxPluginsRxJavaHooks;", "init__", "Ljava/lang/Object;Lrx/functions/Func1<Ljava/lang/Throwable;Ljava/lang/Throwable;>;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_$8 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxPluginsRxJavaHooks_$8;
+  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_8 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxPluginsRxJavaHooks_8;
 }
 
 @end
 
-void RxPluginsRxJavaHooks_$8_init(RxPluginsRxJavaHooks_$8 *self) {
+void RxPluginsRxJavaHooks_8_init(RxPluginsRxJavaHooks_8 *self) {
   NSObject_init(self);
 }
 
-RxPluginsRxJavaHooks_$8 *new_RxPluginsRxJavaHooks_$8_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_$8, init)
+RxPluginsRxJavaHooks_8 *new_RxPluginsRxJavaHooks_8_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_8, init)
 }
 
-RxPluginsRxJavaHooks_$8 *create_RxPluginsRxJavaHooks_$8_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_$8, init)
+RxPluginsRxJavaHooks_8 *create_RxPluginsRxJavaHooks_8_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_8, init)
 }
 
-@implementation RxPluginsRxJavaHooks_$9
+@implementation RxPluginsRxJavaHooks_9
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaHooks_9_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<RxObservable_Operator>)callWithId:(id<RxObservable_Operator>)t {
   return [((RxPluginsRxJavaObservableExecutionHook *) nil_chk([((RxPluginsRxJavaPlugins *) nil_chk(RxPluginsRxJavaPlugins_getInstance())) getObservableExecutionHook])) onLiftWithRxObservable_Operator:t];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaHooks_$9_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxObservable_Operator;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxObservable_Operator;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LRxObservable_Operator;", "LRxPluginsRxJavaHooks;", "init__", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Observable$Operator;Lrx/Observable$Operator;>;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_$9 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxPluginsRxJavaHooks_$9;
+  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_9 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxPluginsRxJavaHooks_9;
 }
 
 @end
 
-void RxPluginsRxJavaHooks_$9_init(RxPluginsRxJavaHooks_$9 *self) {
+void RxPluginsRxJavaHooks_9_init(RxPluginsRxJavaHooks_9 *self) {
   NSObject_init(self);
 }
 
-RxPluginsRxJavaHooks_$9 *new_RxPluginsRxJavaHooks_$9_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_$9, init)
+RxPluginsRxJavaHooks_9 *new_RxPluginsRxJavaHooks_9_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_9, init)
 }
 
-RxPluginsRxJavaHooks_$9 *create_RxPluginsRxJavaHooks_$9_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_$9, init)
+RxPluginsRxJavaHooks_9 *create_RxPluginsRxJavaHooks_9_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_9, init)
 }
 
-@implementation RxPluginsRxJavaHooks_$10
+@implementation RxPluginsRxJavaHooks_10
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaHooks_10_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (NSException *)callWithId:(NSException *)t {
   return [((RxPluginsRxJavaSingleExecutionHook *) nil_chk([((RxPluginsRxJavaPlugins *) nil_chk(RxPluginsRxJavaPlugins_getInstance())) getSingleExecutionHook])) onSubscribeErrorWithNSException:t];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaHooks_$10_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSException;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSException;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LNSException;", "LRxPluginsRxJavaHooks;", "init__", "Ljava/lang/Object;Lrx/functions/Func1<Ljava/lang/Throwable;Ljava/lang/Throwable;>;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_$10 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxPluginsRxJavaHooks_$10;
+  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_10 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxPluginsRxJavaHooks_10;
 }
 
 @end
 
-void RxPluginsRxJavaHooks_$10_init(RxPluginsRxJavaHooks_$10 *self) {
+void RxPluginsRxJavaHooks_10_init(RxPluginsRxJavaHooks_10 *self) {
   NSObject_init(self);
 }
 
-RxPluginsRxJavaHooks_$10 *new_RxPluginsRxJavaHooks_$10_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_$10, init)
+RxPluginsRxJavaHooks_10 *new_RxPluginsRxJavaHooks_10_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_10, init)
 }
 
-RxPluginsRxJavaHooks_$10 *create_RxPluginsRxJavaHooks_$10_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_$10, init)
+RxPluginsRxJavaHooks_10 *create_RxPluginsRxJavaHooks_10_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_10, init)
 }
 
-@implementation RxPluginsRxJavaHooks_$11
+@implementation RxPluginsRxJavaHooks_11
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaHooks_11_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<RxObservable_Operator>)callWithId:(id<RxObservable_Operator>)t {
   return [((RxPluginsRxJavaSingleExecutionHook *) nil_chk([((RxPluginsRxJavaPlugins *) nil_chk(RxPluginsRxJavaPlugins_getInstance())) getSingleExecutionHook])) onLiftWithRxObservable_Operator:t];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaHooks_$11_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxObservable_Operator;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxObservable_Operator;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LRxObservable_Operator;", "LRxPluginsRxJavaHooks;", "init__", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Observable$Operator;Lrx/Observable$Operator;>;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_$11 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxPluginsRxJavaHooks_$11;
+  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_11 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxPluginsRxJavaHooks_11;
 }
 
 @end
 
-void RxPluginsRxJavaHooks_$11_init(RxPluginsRxJavaHooks_$11 *self) {
+void RxPluginsRxJavaHooks_11_init(RxPluginsRxJavaHooks_11 *self) {
   NSObject_init(self);
 }
 
-RxPluginsRxJavaHooks_$11 *new_RxPluginsRxJavaHooks_$11_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_$11, init)
+RxPluginsRxJavaHooks_11 *new_RxPluginsRxJavaHooks_11_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_11, init)
 }
 
-RxPluginsRxJavaHooks_$11 *create_RxPluginsRxJavaHooks_$11_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_$11, init)
+RxPluginsRxJavaHooks_11 *create_RxPluginsRxJavaHooks_11_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_11, init)
 }
 
-@implementation RxPluginsRxJavaHooks_$12
+@implementation RxPluginsRxJavaHooks_12
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaHooks_12_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (NSException *)callWithId:(NSException *)t {
   return [((RxPluginsRxJavaCompletableExecutionHook *) nil_chk([((RxPluginsRxJavaPlugins *) nil_chk(RxPluginsRxJavaPlugins_getInstance())) getCompletableExecutionHook])) onSubscribeErrorWithNSException:t];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaHooks_$12_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSException;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSException;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LNSException;", "LRxPluginsRxJavaHooks;", "init__", "Ljava/lang/Object;Lrx/functions/Func1<Ljava/lang/Throwable;Ljava/lang/Throwable;>;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_$12 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxPluginsRxJavaHooks_$12;
+  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_12 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxPluginsRxJavaHooks_12;
 }
 
 @end
 
-void RxPluginsRxJavaHooks_$12_init(RxPluginsRxJavaHooks_$12 *self) {
+void RxPluginsRxJavaHooks_12_init(RxPluginsRxJavaHooks_12 *self) {
   NSObject_init(self);
 }
 
-RxPluginsRxJavaHooks_$12 *new_RxPluginsRxJavaHooks_$12_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_$12, init)
+RxPluginsRxJavaHooks_12 *new_RxPluginsRxJavaHooks_12_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_12, init)
 }
 
-RxPluginsRxJavaHooks_$12 *create_RxPluginsRxJavaHooks_$12_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_$12, init)
+RxPluginsRxJavaHooks_12 *create_RxPluginsRxJavaHooks_12_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_12, init)
 }
 
-@implementation RxPluginsRxJavaHooks_$13
+@implementation RxPluginsRxJavaHooks_13
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaHooks_13_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<RxCompletable_Operator>)callWithId:(id<RxCompletable_Operator>)t {
   return [((RxPluginsRxJavaCompletableExecutionHook *) nil_chk([((RxPluginsRxJavaPlugins *) nil_chk(RxPluginsRxJavaPlugins_getInstance())) getCompletableExecutionHook])) onLiftWithRxCompletable_Operator:t];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaHooks_$13_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxCompletable_Operator;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxCompletable_Operator;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LRxCompletable_Operator;", "LRxPluginsRxJavaHooks;", "init__", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Completable$Operator;Lrx/Completable$Operator;>;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_$13 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxPluginsRxJavaHooks_$13;
+  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_13 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxPluginsRxJavaHooks_13;
 }
 
 @end
 
-void RxPluginsRxJavaHooks_$13_init(RxPluginsRxJavaHooks_$13 *self) {
+void RxPluginsRxJavaHooks_13_init(RxPluginsRxJavaHooks_13 *self) {
   NSObject_init(self);
 }
 
-RxPluginsRxJavaHooks_$13 *new_RxPluginsRxJavaHooks_$13_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_$13, init)
+RxPluginsRxJavaHooks_13 *new_RxPluginsRxJavaHooks_13_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_13, init)
 }
 
-RxPluginsRxJavaHooks_$13 *create_RxPluginsRxJavaHooks_$13_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_$13, init)
+RxPluginsRxJavaHooks_13 *create_RxPluginsRxJavaHooks_13_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_13, init)
 }
 
-@implementation RxPluginsRxJavaHooks_$14
+@implementation RxPluginsRxJavaHooks_14
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaHooks_14_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<RxObservable_OnSubscribe>)callWithId:(id<RxObservable_OnSubscribe>)f {
   return [((RxPluginsRxJavaObservableExecutionHook *) nil_chk([((RxPluginsRxJavaPlugins *) nil_chk(RxPluginsRxJavaPlugins_getInstance())) getObservableExecutionHook])) onCreateWithRxObservable_OnSubscribe:f];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaHooks_$14_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxObservable_OnSubscribe;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxObservable_OnSubscribe;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LRxObservable_OnSubscribe;", "LRxPluginsRxJavaHooks;", "initCreate", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Observable$OnSubscribe;Lrx/Observable$OnSubscribe;>;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_$14 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxPluginsRxJavaHooks_$14;
+  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_14 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxPluginsRxJavaHooks_14;
 }
 
 @end
 
-void RxPluginsRxJavaHooks_$14_init(RxPluginsRxJavaHooks_$14 *self) {
+void RxPluginsRxJavaHooks_14_init(RxPluginsRxJavaHooks_14 *self) {
   NSObject_init(self);
 }
 
-RxPluginsRxJavaHooks_$14 *new_RxPluginsRxJavaHooks_$14_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_$14, init)
+RxPluginsRxJavaHooks_14 *new_RxPluginsRxJavaHooks_14_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_14, init)
 }
 
-RxPluginsRxJavaHooks_$14 *create_RxPluginsRxJavaHooks_$14_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_$14, init)
+RxPluginsRxJavaHooks_14 *create_RxPluginsRxJavaHooks_14_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_14, init)
 }
 
-@implementation RxPluginsRxJavaHooks_$15
+@implementation RxPluginsRxJavaHooks_15
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaHooks_15_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<RxSingle_OnSubscribe>)callWithId:(id<RxSingle_OnSubscribe>)f {
   return [((RxPluginsRxJavaSingleExecutionHook *) nil_chk([((RxPluginsRxJavaPlugins *) nil_chk(RxPluginsRxJavaPlugins_getInstance())) getSingleExecutionHook])) onCreateWithRxSingle_OnSubscribe:f];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaHooks_$15_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxSingle_OnSubscribe;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxSingle_OnSubscribe;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LRxSingle_OnSubscribe;", "LRxPluginsRxJavaHooks;", "initCreate", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Single$OnSubscribe;Lrx/Single$OnSubscribe;>;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_$15 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxPluginsRxJavaHooks_$15;
+  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_15 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxPluginsRxJavaHooks_15;
 }
 
 @end
 
-void RxPluginsRxJavaHooks_$15_init(RxPluginsRxJavaHooks_$15 *self) {
+void RxPluginsRxJavaHooks_15_init(RxPluginsRxJavaHooks_15 *self) {
   NSObject_init(self);
 }
 
-RxPluginsRxJavaHooks_$15 *new_RxPluginsRxJavaHooks_$15_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_$15, init)
+RxPluginsRxJavaHooks_15 *new_RxPluginsRxJavaHooks_15_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_15, init)
 }
 
-RxPluginsRxJavaHooks_$15 *create_RxPluginsRxJavaHooks_$15_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_$15, init)
+RxPluginsRxJavaHooks_15 *create_RxPluginsRxJavaHooks_15_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_15, init)
 }
 
-@implementation RxPluginsRxJavaHooks_$16
+@implementation RxPluginsRxJavaHooks_16
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaHooks_16_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<RxCompletable_OnSubscribe>)callWithId:(id<RxCompletable_OnSubscribe>)f {
   return [((RxPluginsRxJavaCompletableExecutionHook *) nil_chk([((RxPluginsRxJavaPlugins *) nil_chk(RxPluginsRxJavaPlugins_getInstance())) getCompletableExecutionHook])) onCreateWithRxCompletable_OnSubscribe:f];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaHooks_$16_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxCompletable_OnSubscribe;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxCompletable_OnSubscribe;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LRxCompletable_OnSubscribe;", "LRxPluginsRxJavaHooks;", "initCreate", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Completable$OnSubscribe;Lrx/Completable$OnSubscribe;>;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_$16 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxPluginsRxJavaHooks_$16;
+  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_16 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxPluginsRxJavaHooks_16;
 }
 
 @end
 
-void RxPluginsRxJavaHooks_$16_init(RxPluginsRxJavaHooks_$16 *self) {
+void RxPluginsRxJavaHooks_16_init(RxPluginsRxJavaHooks_16 *self) {
   NSObject_init(self);
 }
 
-RxPluginsRxJavaHooks_$16 *new_RxPluginsRxJavaHooks_$16_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_$16, init)
+RxPluginsRxJavaHooks_16 *new_RxPluginsRxJavaHooks_16_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_16, init)
 }
 
-RxPluginsRxJavaHooks_$16 *create_RxPluginsRxJavaHooks_$16_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_$16, init)
+RxPluginsRxJavaHooks_16 *create_RxPluginsRxJavaHooks_16_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_16, init)
 }
 
-@implementation RxPluginsRxJavaHooks_$17
+@implementation RxPluginsRxJavaHooks_17
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaHooks_17_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<RxObservable_OnSubscribe>)callWithId:(id<RxObservable_OnSubscribe>)f {
   return create_RxInternalOperatorsOnSubscribeOnAssembly_initWithRxObservable_OnSubscribe_(f);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaHooks_$17_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxObservable_OnSubscribe;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxObservable_OnSubscribe;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LRxObservable_OnSubscribe;", "LRxPluginsRxJavaHooks;", "enableAssemblyTracking", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Observable$OnSubscribe;Lrx/Observable$OnSubscribe;>;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_$17 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxPluginsRxJavaHooks_$17;
+  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_17 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxPluginsRxJavaHooks_17;
 }
 
 @end
 
-void RxPluginsRxJavaHooks_$17_init(RxPluginsRxJavaHooks_$17 *self) {
+void RxPluginsRxJavaHooks_17_init(RxPluginsRxJavaHooks_17 *self) {
   NSObject_init(self);
 }
 
-RxPluginsRxJavaHooks_$17 *new_RxPluginsRxJavaHooks_$17_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_$17, init)
+RxPluginsRxJavaHooks_17 *new_RxPluginsRxJavaHooks_17_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_17, init)
 }
 
-RxPluginsRxJavaHooks_$17 *create_RxPluginsRxJavaHooks_$17_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_$17, init)
+RxPluginsRxJavaHooks_17 *create_RxPluginsRxJavaHooks_17_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_17, init)
 }
 
-@implementation RxPluginsRxJavaHooks_$18
+@implementation RxPluginsRxJavaHooks_18
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaHooks_18_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<RxSingle_OnSubscribe>)callWithId:(id<RxSingle_OnSubscribe>)f {
   return create_RxInternalOperatorsOnSubscribeOnAssemblySingle_initWithRxSingle_OnSubscribe_(f);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaHooks_$18_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxSingle_OnSubscribe;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxSingle_OnSubscribe;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LRxSingle_OnSubscribe;", "LRxPluginsRxJavaHooks;", "enableAssemblyTracking", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Single$OnSubscribe;Lrx/Single$OnSubscribe;>;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_$18 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxPluginsRxJavaHooks_$18;
+  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_18 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxPluginsRxJavaHooks_18;
 }
 
 @end
 
-void RxPluginsRxJavaHooks_$18_init(RxPluginsRxJavaHooks_$18 *self) {
+void RxPluginsRxJavaHooks_18_init(RxPluginsRxJavaHooks_18 *self) {
   NSObject_init(self);
 }
 
-RxPluginsRxJavaHooks_$18 *new_RxPluginsRxJavaHooks_$18_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_$18, init)
+RxPluginsRxJavaHooks_18 *new_RxPluginsRxJavaHooks_18_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_18, init)
 }
 
-RxPluginsRxJavaHooks_$18 *create_RxPluginsRxJavaHooks_$18_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_$18, init)
+RxPluginsRxJavaHooks_18 *create_RxPluginsRxJavaHooks_18_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_18, init)
 }
 
-@implementation RxPluginsRxJavaHooks_$19
+@implementation RxPluginsRxJavaHooks_19
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaHooks_19_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<RxCompletable_OnSubscribe>)callWithId:(id<RxCompletable_OnSubscribe>)f {
   return create_RxInternalOperatorsOnSubscribeOnAssemblyCompletable_initWithRxCompletable_OnSubscribe_(f);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaHooks_$19_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxCompletable_OnSubscribe;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxCompletable_OnSubscribe;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LRxCompletable_OnSubscribe;", "LRxPluginsRxJavaHooks;", "enableAssemblyTracking", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Completable$OnSubscribe;Lrx/Completable$OnSubscribe;>;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_$19 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_RxPluginsRxJavaHooks_$19;
+  static const J2ObjcClassInfo _RxPluginsRxJavaHooks_19 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_RxPluginsRxJavaHooks_19;
 }
 
 @end
 
-void RxPluginsRxJavaHooks_$19_init(RxPluginsRxJavaHooks_$19 *self) {
+void RxPluginsRxJavaHooks_19_init(RxPluginsRxJavaHooks_19 *self) {
   NSObject_init(self);
 }
 
-RxPluginsRxJavaHooks_$19 *new_RxPluginsRxJavaHooks_$19_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_$19, init)
+RxPluginsRxJavaHooks_19 *new_RxPluginsRxJavaHooks_19_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaHooks_19, init)
 }
 
-RxPluginsRxJavaHooks_$19 *create_RxPluginsRxJavaHooks_$19_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_$19, init)
+RxPluginsRxJavaHooks_19 *create_RxPluginsRxJavaHooks_19_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaHooks_19, init)
 }

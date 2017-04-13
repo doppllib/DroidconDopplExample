@@ -11,11 +11,15 @@
 #include "RxSubscriber.h"
 #include "java/lang/NullPointerException.h"
 
-@interface RxInternalOperatorsOperatorDoAfterTerminate_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorDoAfterTerminate_1 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorDoAfterTerminate *this$0_;
   RxSubscriber *val$child_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorDoAfterTerminate:(RxInternalOperatorsOperatorDoAfterTerminate *)outer$
+                                                   withRxSubscriber:(RxSubscriber *)capture$0
+                                                   withRxSubscriber:(RxSubscriber *)param0;
 
 - (void)onNextWithId:(id)t;
 
@@ -25,22 +29,15 @@
 
 - (void)callAction;
 
-- (instancetype)initWithRxInternalOperatorsOperatorDoAfterTerminate:(RxInternalOperatorsOperatorDoAfterTerminate *)outer$
-                                                   withRxSubscriber:(RxSubscriber *)capture$0
-                                                   withRxSubscriber:(RxSubscriber *)arg$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorDoAfterTerminate_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorDoAfterTerminate_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDoAfterTerminate_$1, this$0_, RxInternalOperatorsOperatorDoAfterTerminate *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDoAfterTerminate_$1, val$child_, RxSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorDoAfterTerminate_1_initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDoAfterTerminate_1 *self, RxInternalOperatorsOperatorDoAfterTerminate *outer$, RxSubscriber *capture$0, RxSubscriber *param0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorDoAfterTerminate_$1_initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDoAfterTerminate_$1 *self, RxInternalOperatorsOperatorDoAfterTerminate *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorDoAfterTerminate_1 *new_RxInternalOperatorsOperatorDoAfterTerminate_1_initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDoAfterTerminate *outer$, RxSubscriber *capture$0, RxSubscriber *param0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorDoAfterTerminate_$1 *new_RxInternalOperatorsOperatorDoAfterTerminate_$1_initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDoAfterTerminate *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorDoAfterTerminate_$1 *create_RxInternalOperatorsOperatorDoAfterTerminate_$1_initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDoAfterTerminate *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorDoAfterTerminate_1 *create_RxInternalOperatorsOperatorDoAfterTerminate_1_initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDoAfterTerminate *outer$, RxSubscriber *capture$0, RxSubscriber *param0);
 
 @implementation RxInternalOperatorsOperatorDoAfterTerminate
 
@@ -50,7 +47,7 @@ __attribute__((unused)) static RxInternalOperatorsOperatorDoAfterTerminate_$1 *c
 }
 
 - (RxSubscriber *)callWithId:(RxSubscriber *)child {
-  return create_RxInternalOperatorsOperatorDoAfterTerminate_$1_initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_(self, child, child);
+  return create_RxInternalOperatorsOperatorDoAfterTerminate_1_initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_(self, child, child);
 }
 
 - (void)dealloc {
@@ -96,7 +93,14 @@ RxInternalOperatorsOperatorDoAfterTerminate *create_RxInternalOperatorsOperatorD
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorDoAfterTerminate)
 
-@implementation RxInternalOperatorsOperatorDoAfterTerminate_$1
+@implementation RxInternalOperatorsOperatorDoAfterTerminate_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorDoAfterTerminate:(RxInternalOperatorsOperatorDoAfterTerminate *)outer$
+                                                   withRxSubscriber:(RxSubscriber *)capture$0
+                                                   withRxSubscriber:(RxSubscriber *)param0 {
+  RxInternalOperatorsOperatorDoAfterTerminate_1_initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, param0);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   [((RxSubscriber *) nil_chk(val$child_)) onNextWithId:t];
@@ -130,15 +134,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorDoAfterTerminate)
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorDoAfterTerminate:(RxInternalOperatorsOperatorDoAfterTerminate *)outer$
-                                                   withRxSubscriber:(RxSubscriber *)capture$0
-                                                   withRxSubscriber:(RxSubscriber *)arg$0 {
-  RxInternalOperatorsOperatorDoAfterTerminate_$1_initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, arg$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorDoAfterTerminate_$1 class]);
   RELEASE_(this$0_);
   RELEASE_(val$child_);
   [super dealloc];
@@ -146,41 +142,41 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorDoAfterTerminate)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
+    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x0, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(callAction);
-  methods[4].selector = @selector(initWithRxInternalOperatorsOperatorDoAfterTerminate:withRxSubscriber:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorDoAfterTerminate:withRxSubscriber:withRxSubscriber:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
+  methods[4].selector = @selector(callAction);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorDoAfterTerminate;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorDoAfterTerminate;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxInternalOperatorsOperatorDoAfterTerminate;LRxSubscriber;LRxSubscriber;", "(Lrx/internal/operators/OperatorDoAfterTerminate;Lrx/Subscriber<-TT;>;Lrx/Subscriber<*>;)V", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorDoAfterTerminate;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorDoAfterTerminate_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 2, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsOperatorDoAfterTerminate_$1;
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/internal/operators/OperatorDoAfterTerminate<TT;>;", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorDoAfterTerminate;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorDoAfterTerminate_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 2, 9, -1, 10, 11, -1 };
+  return &_RxInternalOperatorsOperatorDoAfterTerminate_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorDoAfterTerminate_$1_initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDoAfterTerminate_$1 *self, RxInternalOperatorsOperatorDoAfterTerminate *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
+void RxInternalOperatorsOperatorDoAfterTerminate_1_initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDoAfterTerminate_1 *self, RxInternalOperatorsOperatorDoAfterTerminate *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$child_, capture$0);
-  RxSubscriber_initWithRxSubscriber_(self, arg$0);
+  RxSubscriber_initWithRxSubscriber_(self, param0);
 }
 
-RxInternalOperatorsOperatorDoAfterTerminate_$1 *new_RxInternalOperatorsOperatorDoAfterTerminate_$1_initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDoAfterTerminate *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorDoAfterTerminate_$1, initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_, outer$, capture$0, arg$0)
+RxInternalOperatorsOperatorDoAfterTerminate_1 *new_RxInternalOperatorsOperatorDoAfterTerminate_1_initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDoAfterTerminate *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorDoAfterTerminate_1, initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_, outer$, capture$0, param0)
 }
 
-RxInternalOperatorsOperatorDoAfterTerminate_$1 *create_RxInternalOperatorsOperatorDoAfterTerminate_$1_initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDoAfterTerminate *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorDoAfterTerminate_$1, initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_, outer$, capture$0, arg$0)
+RxInternalOperatorsOperatorDoAfterTerminate_1 *create_RxInternalOperatorsOperatorDoAfterTerminate_1_initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDoAfterTerminate *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorDoAfterTerminate_1, initWithRxInternalOperatorsOperatorDoAfterTerminate_withRxSubscriber_withRxSubscriber_, outer$, capture$0, param0)
 }

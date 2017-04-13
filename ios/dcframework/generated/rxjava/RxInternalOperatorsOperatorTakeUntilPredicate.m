@@ -11,6 +11,25 @@
 #include "RxSubscriber.h"
 #include "java/lang/Boolean.h"
 
+@interface RxInternalOperatorsOperatorTakeUntilPredicate_1 : NSObject < RxProducer > {
+ @public
+  RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *val$parent_;
+}
+
+- (instancetype)initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber:(RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *)capture$0;
+
+- (void)requestWithLong:(jlong)n;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTakeUntilPredicate_1)
+
+__attribute__((unused)) static void RxInternalOperatorsOperatorTakeUntilPredicate_1_initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_(RxInternalOperatorsOperatorTakeUntilPredicate_1 *self, RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *capture$0);
+
+__attribute__((unused)) static RxInternalOperatorsOperatorTakeUntilPredicate_1 *new_RxInternalOperatorsOperatorTakeUntilPredicate_1_initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_(RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalOperatorsOperatorTakeUntilPredicate_1 *create_RxInternalOperatorsOperatorTakeUntilPredicate_1_initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_(RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *capture$0);
+
 @interface RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber () {
  @public
   RxInternalOperatorsOperatorTakeUntilPredicate *this$0_;
@@ -20,29 +39,7 @@
 
 @end
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber, this$0_, RxInternalOperatorsOperatorTakeUntilPredicate *)
 J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber, child_, RxSubscriber *)
-
-@interface RxInternalOperatorsOperatorTakeUntilPredicate_$1 : NSObject < RxProducer > {
- @public
-  RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *val$parent_;
-}
-
-- (void)requestWithLong:(jlong)n;
-
-- (instancetype)initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber:(RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *)capture$0;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTakeUntilPredicate_$1)
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorTakeUntilPredicate_$1, val$parent_, RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *)
-
-__attribute__((unused)) static void RxInternalOperatorsOperatorTakeUntilPredicate_$1_initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_(RxInternalOperatorsOperatorTakeUntilPredicate_$1 *self, RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *capture$0);
-
-__attribute__((unused)) static RxInternalOperatorsOperatorTakeUntilPredicate_$1 *new_RxInternalOperatorsOperatorTakeUntilPredicate_$1_initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_(RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorTakeUntilPredicate_$1 *create_RxInternalOperatorsOperatorTakeUntilPredicate_$1_initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_(RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *capture$0);
 
 @implementation RxInternalOperatorsOperatorTakeUntilPredicate
 
@@ -54,7 +51,7 @@ __attribute__((unused)) static RxInternalOperatorsOperatorTakeUntilPredicate_$1 
 - (RxSubscriber *)callWithId:(RxSubscriber *)child {
   RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *parent = create_RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_initWithRxInternalOperatorsOperatorTakeUntilPredicate_withRxSubscriber_(self, child);
   [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:parent];
-  [child setProducerWithRxProducer:create_RxInternalOperatorsOperatorTakeUntilPredicate_$1_initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_(parent)];
+  [child setProducerWithRxProducer:create_RxInternalOperatorsOperatorTakeUntilPredicate_1_initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_(parent)];
   return parent;
 }
 
@@ -97,6 +94,55 @@ RxInternalOperatorsOperatorTakeUntilPredicate *create_RxInternalOperatorsOperato
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorTakeUntilPredicate)
+
+@implementation RxInternalOperatorsOperatorTakeUntilPredicate_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber:(RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *)capture$0 {
+  RxInternalOperatorsOperatorTakeUntilPredicate_1_initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_(self, capture$0);
+  return self;
+}
+
+- (void)requestWithLong:(jlong)n {
+  [((RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *) nil_chk(val$parent_)) downstreamRequestWithLong:n];
+}
+
+- (void)dealloc {
+  RELEASE_(val$parent_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber:);
+  methods[1].selector = @selector(requestWithLong:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$parent_", "LRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "request", "J", "LRxInternalOperatorsOperatorTakeUntilPredicate;", "callWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTakeUntilPredicate_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, -1, -1 };
+  return &_RxInternalOperatorsOperatorTakeUntilPredicate_1;
+}
+
+@end
+
+void RxInternalOperatorsOperatorTakeUntilPredicate_1_initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_(RxInternalOperatorsOperatorTakeUntilPredicate_1 *self, RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *capture$0) {
+  JreStrongAssign(&self->val$parent_, capture$0);
+  NSObject_init(self);
+}
+
+RxInternalOperatorsOperatorTakeUntilPredicate_1 *new_RxInternalOperatorsOperatorTakeUntilPredicate_1_initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_(RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTakeUntilPredicate_1, initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_, capture$0)
+}
+
+RxInternalOperatorsOperatorTakeUntilPredicate_1 *create_RxInternalOperatorsOperatorTakeUntilPredicate_1_initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_(RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTakeUntilPredicate_1, initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_, capture$0)
+}
 
 @implementation RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber
 
@@ -142,7 +188,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorTakeUntilPredicate)
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber class]);
   RELEASE_(this$0_);
   RELEASE_(child_);
   [super dealloc];
@@ -165,12 +210,12 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorTakeUntilPredicate)
   methods[4].selector = @selector(downstreamRequestWithLong:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorTakeUntilPredicate;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x12, -1, -1, 9, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorTakeUntilPredicate;", .constantValue.asLong = 0, 0x1012, -1, -1, 9, -1 },
+    { "child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x12, -1, -1, 10, -1 },
     { "done_", "Z", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorTakeUntilPredicate;LRxSubscriber;", "(Lrx/internal/operators/OperatorTakeUntilPredicate;Lrx/Subscriber<-TT;>;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "downstreamRequest", "J", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorTakeUntilPredicate;", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber = { "ParentSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 5, 3, 10, -1, -1, 11, -1 };
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "downstreamRequest", "J", "Lrx/internal/operators/OperatorTakeUntilPredicate<TT;>;", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorTakeUntilPredicate;", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber = { "ParentSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 5, 3, 11, -1, -1, 12, -1 };
   return &_RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber;
 }
 
@@ -191,52 +236,3 @@ RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *create_RxInterna
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber)
-
-@implementation RxInternalOperatorsOperatorTakeUntilPredicate_$1
-
-- (void)requestWithLong:(jlong)n {
-  [((RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *) nil_chk(val$parent_)) downstreamRequestWithLong:n];
-}
-
-- (instancetype)initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber:(RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *)capture$0 {
-  RxInternalOperatorsOperatorTakeUntilPredicate_$1_initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$parent_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(requestWithLong:);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$parent_", "LRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "request", "J", "LRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber;", "LRxInternalOperatorsOperatorTakeUntilPredicate;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTakeUntilPredicate_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
-  return &_RxInternalOperatorsOperatorTakeUntilPredicate_$1;
-}
-
-@end
-
-void RxInternalOperatorsOperatorTakeUntilPredicate_$1_initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_(RxInternalOperatorsOperatorTakeUntilPredicate_$1 *self, RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *capture$0) {
-  JreStrongAssign(&self->val$parent_, capture$0);
-  NSObject_init(self);
-}
-
-RxInternalOperatorsOperatorTakeUntilPredicate_$1 *new_RxInternalOperatorsOperatorTakeUntilPredicate_$1_initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_(RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTakeUntilPredicate_$1, initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_, capture$0)
-}
-
-RxInternalOperatorsOperatorTakeUntilPredicate_$1 *create_RxInternalOperatorsOperatorTakeUntilPredicate_$1_initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_(RxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTakeUntilPredicate_$1, initWithRxInternalOperatorsOperatorTakeUntilPredicate_ParentSubscriber_, capture$0)
-}

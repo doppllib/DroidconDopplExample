@@ -71,6 +71,8 @@
 
 J2OBJC_EMPTY_STATIC_INIT(RxObservablesSyncOnSubscribe)
 
+FOUNDATION_EXPORT void RxObservablesSyncOnSubscribe_init(RxObservablesSyncOnSubscribe *self);
+
 FOUNDATION_EXPORT RxObservablesSyncOnSubscribe *RxObservablesSyncOnSubscribe_createSingleStateWithRxFunctionsFunc0_withRxFunctionsAction2_(id<RxFunctionsFunc0> generator, id<RxFunctionsAction2> next);
 
 FOUNDATION_EXPORT RxObservablesSyncOnSubscribe *RxObservablesSyncOnSubscribe_createSingleStateWithRxFunctionsFunc0_withRxFunctionsAction2_withRxFunctionsAction1_(id<RxFunctionsFunc0> generator, id<RxFunctionsAction2> next, id<RxFunctionsAction1> onUnsubscribe);
@@ -82,8 +84,6 @@ FOUNDATION_EXPORT RxObservablesSyncOnSubscribe *RxObservablesSyncOnSubscribe_cre
 FOUNDATION_EXPORT RxObservablesSyncOnSubscribe *RxObservablesSyncOnSubscribe_createStatelessWithRxFunctionsAction1_(id<RxFunctionsAction1> next);
 
 FOUNDATION_EXPORT RxObservablesSyncOnSubscribe *RxObservablesSyncOnSubscribe_createStatelessWithRxFunctionsAction1_withRxFunctionsAction0_(id<RxFunctionsAction1> next, id<RxFunctionsAction0> onUnsubscribe);
-
-FOUNDATION_EXPORT void RxObservablesSyncOnSubscribe_init(RxObservablesSyncOnSubscribe *self);
 
 J2OBJC_TYPE_LITERAL_HEADER(RxObservablesSyncOnSubscribe)
 

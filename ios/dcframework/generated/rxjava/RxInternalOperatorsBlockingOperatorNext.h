@@ -44,6 +44,7 @@ J2OBJC_TYPE_LITERAL_HEADER(RxInternalOperatorsBlockingOperatorNext)
 
 @class RxInternalOperatorsBlockingOperatorNext_NextObserver;
 @class RxObservable;
+@protocol JavaUtilFunctionConsumer;
 
 @interface RxInternalOperatorsBlockingOperatorNext_NextIterator : NSObject < JavaUtilIterator >
 

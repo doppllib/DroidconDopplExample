@@ -9,6 +9,13 @@
 
 @implementation CoTouchlabAndroidThreadingTasksPersistedBusLogImpl
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabAndroidThreadingTasksPersistedBusLogImpl_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (jint)dWithNSString:(NSString *)tag
          withNSString:(NSString *)msg {
   return AndroidUtilLog_dWithNSString_withNSString_(tag, msg);
@@ -90,15 +97,9 @@
   AndroidUtilLog_eWithNSString_withNSString_withNSException_(tag, message, tr);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabAndroidThreadingTasksPersistedBusLogImpl_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "I", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "I", 0x1, 0, 2, -1, -1, -1, -1 },
     { NULL, "I", 0x1, 3, 1, -1, -1, -1, -1 },
@@ -114,26 +115,25 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "I", 0x1, 12, 2, -1, -1, -1, -1 },
     { NULL, "I", 0x1, 12, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 14, 2, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(dWithNSString:withNSString:);
-  methods[1].selector = @selector(dWithNSString:withNSString:withNSException:);
-  methods[2].selector = @selector(eWithNSString:withNSString:);
-  methods[3].selector = @selector(eWithNSString:withNSString:withNSException:);
-  methods[4].selector = @selector(getStackTraceStringWithNSException:);
-  methods[5].selector = @selector(iWithNSString:withNSString:);
-  methods[6].selector = @selector(iWithNSString:withNSString:withNSException:);
-  methods[7].selector = @selector(isLoggableWithNSString:withInt:);
-  methods[8].selector = @selector(printlnWithInt:withNSString:withNSString:);
-  methods[9].selector = @selector(vWithNSString:withNSString:);
-  methods[10].selector = @selector(vWithNSString:withNSString:withNSException:);
-  methods[11].selector = @selector(wWithNSString:withNSException:);
-  methods[12].selector = @selector(wWithNSString:withNSString:withNSException:);
-  methods[13].selector = @selector(wWithNSString:withNSString:);
-  methods[14].selector = @selector(logSoftExceptionWithNSString:withNSString:withNSException:);
-  methods[15].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(dWithNSString:withNSString:);
+  methods[2].selector = @selector(dWithNSString:withNSString:withNSException:);
+  methods[3].selector = @selector(eWithNSString:withNSString:);
+  methods[4].selector = @selector(eWithNSString:withNSString:withNSException:);
+  methods[5].selector = @selector(getStackTraceStringWithNSException:);
+  methods[6].selector = @selector(iWithNSString:withNSString:);
+  methods[7].selector = @selector(iWithNSString:withNSString:withNSException:);
+  methods[8].selector = @selector(isLoggableWithNSString:withInt:);
+  methods[9].selector = @selector(printlnWithInt:withNSString:withNSString:);
+  methods[10].selector = @selector(vWithNSString:withNSString:);
+  methods[11].selector = @selector(vWithNSString:withNSString:withNSException:);
+  methods[12].selector = @selector(wWithNSString:withNSException:);
+  methods[13].selector = @selector(wWithNSString:withNSString:withNSException:);
+  methods[14].selector = @selector(wWithNSString:withNSString:);
+  methods[15].selector = @selector(logSoftExceptionWithNSString:withNSString:withNSException:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "d", "LNSString;LNSString;", "LNSString;LNSString;LNSException;", "e", "getStackTraceString", "LNSException;", "i", "isLoggable", "LNSString;I", "println", "ILNSString;LNSString;", "v", "w", "LNSString;LNSException;", "logSoftException" };
   static const J2ObjcClassInfo _CoTouchlabAndroidThreadingTasksPersistedBusLogImpl = { "BusLogImpl", "co.touchlab.android.threading.tasks.persisted", ptrTable, methods, NULL, 7, 0x1, 16, 0, -1, -1, -1, -1, -1 };

@@ -17,13 +17,18 @@
 #include "java/util/Queue.h"
 #include "java/util/concurrent/atomic/AtomicInteger.h"
 
-@interface RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1 : NSObject < RxCompletableSubscriber > {
+@interface RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1 : NSObject < RxCompletableSubscriber > {
  @public
   RxSubscriptionsCompositeSubscription *val$set_;
   id<JavaUtilQueue> val$queue_;
   JavaUtilConcurrentAtomicAtomicInteger *val$wip_;
   id<RxCompletableSubscriber> val$s_;
 }
+
+- (instancetype)initWithRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$0
+                                           withJavaUtilQueue:(id<JavaUtilQueue>)capture$1
+                   withJavaUtilConcurrentAtomicAtomicInteger:(JavaUtilConcurrentAtomicAtomicInteger *)capture$2
+                                 withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$3;
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
@@ -33,25 +38,15 @@
 
 - (void)tryTerminate;
 
-- (instancetype)initWithRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$0
-                                           withJavaUtilQueue:(id<JavaUtilQueue>)capture$1
-                   withJavaUtilConcurrentAtomicAtomicInteger:(JavaUtilConcurrentAtomicAtomicInteger *)capture$2
-                                 withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$3;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1, val$set_, RxSubscriptionsCompositeSubscription *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1, val$queue_, id<JavaUtilQueue>)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1, val$wip_, JavaUtilConcurrentAtomicAtomicInteger *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1, val$s_, id<RxCompletableSubscriber>)
+__attribute__((unused)) static void RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1_initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1 *self, RxSubscriptionsCompositeSubscription *capture$0, id<JavaUtilQueue> capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, id<RxCompletableSubscriber> capture$3);
 
-__attribute__((unused)) static void RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1_initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1 *self, RxSubscriptionsCompositeSubscription *capture$0, id<JavaUtilQueue> capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, id<RxCompletableSubscriber> capture$3);
+__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1 *new_RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1_initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_(RxSubscriptionsCompositeSubscription *capture$0, id<JavaUtilQueue> capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, id<RxCompletableSubscriber> capture$3) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1 *new_RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1_initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_(RxSubscriptionsCompositeSubscription *capture$0, id<JavaUtilQueue> capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, id<RxCompletableSubscriber> capture$3) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1 *create_RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1_initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_(RxSubscriptionsCompositeSubscription *capture$0, id<JavaUtilQueue> capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, id<RxCompletableSubscriber> capture$3);
+__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1 *create_RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1_initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_(RxSubscriptionsCompositeSubscription *capture$0, id<JavaUtilQueue> capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, id<RxCompletableSubscriber> capture$3);
 
 @implementation RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable
 
@@ -136,7 +131,7 @@ __attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeMergeDel
       return;
     }
     [wip getAndIncrement];
-    [c unsafeSubscribeWithRxCompletableSubscriber:create_RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1_initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_(set, queue, wip, s)];
+    [c unsafeSubscribeWithRxCompletableSubscriber:create_RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1_initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_(set, queue, wip, s)];
   }
   if ([wip decrementAndGet] == 0) {
     if ([queue isEmpty]) {
@@ -188,7 +183,15 @@ RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable *create_RxInter
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable)
 
-@implementation RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1
+@implementation RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1
+
+- (instancetype)initWithRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$0
+                                           withJavaUtilQueue:(id<JavaUtilQueue>)capture$1
+                   withJavaUtilConcurrentAtomicAtomicInteger:(JavaUtilConcurrentAtomicAtomicInteger *)capture$2
+                                 withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$3 {
+  RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1_initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_(self, capture$0, capture$1, capture$2, capture$3);
+  return self;
+}
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d {
   [((RxSubscriptionsCompositeSubscription *) nil_chk(val$set_)) addWithRxSubscription:d];
@@ -214,14 +217,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCompletableOnSubscribeMergeD
   }
 }
 
-- (instancetype)initWithRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$0
-                                           withJavaUtilQueue:(id<JavaUtilQueue>)capture$1
-                   withJavaUtilConcurrentAtomicAtomicInteger:(JavaUtilConcurrentAtomicAtomicInteger *)capture$2
-                                 withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$3 {
-  RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1_initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_(self, capture$0, capture$1, capture$2, capture$3);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$set_);
   RELEASE_(val$queue_);
@@ -232,34 +227,34 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCompletableOnSubscribeMergeD
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x0, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, 5, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(tryTerminate);
-  methods[4].selector = @selector(initWithRxSubscriptionsCompositeSubscription:withJavaUtilQueue:withJavaUtilConcurrentAtomicAtomicInteger:withRxCompletableSubscriber:);
+  methods[0].selector = @selector(initWithRxSubscriptionsCompositeSubscription:withJavaUtilQueue:withJavaUtilConcurrentAtomicAtomicInteger:withRxCompletableSubscriber:);
+  methods[1].selector = @selector(onSubscribeWithRxSubscription:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
+  methods[4].selector = @selector(tryTerminate);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$set_", "LRxSubscriptionsCompositeSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$queue_", "LJavaUtilQueue;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
+    { "val$queue_", "LJavaUtilQueue;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
     { "val$wip_", "LJavaUtilConcurrentAtomicAtomicInteger;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$s_", "LRxCompletableSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onSubscribe", "LRxSubscription;", "onError", "LNSException;", "LRxSubscriptionsCompositeSubscription;LJavaUtilQueue;LJavaUtilConcurrentAtomicAtomicInteger;LRxCompletableSubscriber;", "(Lrx/subscriptions/CompositeSubscription;Ljava/util/Queue<Ljava/lang/Throwable;>;Ljava/util/concurrent/atomic/AtomicInteger;Lrx/CompletableSubscriber;)V", "Ljava/util/Queue<Ljava/lang/Throwable;>;", "LRxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 4, 7, -1, 8, -1, -1 };
-  return &_RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1;
+  static const void *ptrTable[] = { "onSubscribe", "LRxSubscription;", "onError", "LNSException;", "Ljava/util/Queue<Ljava/lang/Throwable;>;", "LRxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable;", "callWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 4, 5, -1, 6, -1, -1 };
+  return &_RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1;
 }
 
 @end
 
-void RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1_initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1 *self, RxSubscriptionsCompositeSubscription *capture$0, id<JavaUtilQueue> capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, id<RxCompletableSubscriber> capture$3) {
+void RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1_initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1 *self, RxSubscriptionsCompositeSubscription *capture$0, id<JavaUtilQueue> capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, id<RxCompletableSubscriber> capture$3) {
   JreStrongAssign(&self->val$set_, capture$0);
   JreStrongAssign(&self->val$queue_, capture$1);
   JreStrongAssign(&self->val$wip_, capture$2);
@@ -267,10 +262,10 @@ void RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1_initWit
   NSObject_init(self);
 }
 
-RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1 *new_RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1_initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_(RxSubscriptionsCompositeSubscription *capture$0, id<JavaUtilQueue> capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, id<RxCompletableSubscriber> capture$3) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1, initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_, capture$0, capture$1, capture$2, capture$3)
+RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1 *new_RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1_initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_(RxSubscriptionsCompositeSubscription *capture$0, id<JavaUtilQueue> capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, id<RxCompletableSubscriber> capture$3) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1, initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_, capture$0, capture$1, capture$2, capture$3)
 }
 
-RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1 *create_RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1_initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_(RxSubscriptionsCompositeSubscription *capture$0, id<JavaUtilQueue> capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, id<RxCompletableSubscriber> capture$3) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_$1, initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_, capture$0, capture$1, capture$2, capture$3)
+RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1 *create_RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1_initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_(RxSubscriptionsCompositeSubscription *capture$0, id<JavaUtilQueue> capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, id<RxCompletableSubscriber> capture$3) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable_1, initWithRxSubscriptionsCompositeSubscription_withJavaUtilQueue_withJavaUtilConcurrentAtomicAtomicInteger_withRxCompletableSubscriber_, capture$0, capture$1, capture$2, capture$3)
 }

@@ -15,91 +15,91 @@
 #include "java/lang/reflect/Method.h"
 #include "sun/misc/Unsafe.h"
 
-@interface ComGoogleGsonInternalUnsafeAllocator_$1 : ComGoogleGsonInternalUnsafeAllocator {
+@interface ComGoogleGsonInternalUnsafeAllocator_1 : ComGoogleGsonInternalUnsafeAllocator {
  @public
   JavaLangReflectMethod *val$allocateInstance_;
   id val$unsafe_;
 }
 
-- (id)newInstanceWithIOSClass:(IOSClass *)c OBJC_METHOD_FAMILY_NONE;
-
 - (instancetype)initWithJavaLangReflectMethod:(JavaLangReflectMethod *)capture$0
                                        withId:(id)capture$1;
 
+- (id)newInstanceWithIOSClass:(IOSClass *)c OBJC_METHOD_FAMILY_NONE;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalUnsafeAllocator_$1)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalUnsafeAllocator_1)
 
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalUnsafeAllocator_$1, val$allocateInstance_, JavaLangReflectMethod *)
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalUnsafeAllocator_$1, val$unsafe_, id)
+__attribute__((unused)) static void ComGoogleGsonInternalUnsafeAllocator_1_initWithJavaLangReflectMethod_withId_(ComGoogleGsonInternalUnsafeAllocator_1 *self, JavaLangReflectMethod *capture$0, id capture$1);
 
-__attribute__((unused)) static void ComGoogleGsonInternalUnsafeAllocator_$1_initWithJavaLangReflectMethod_withId_(ComGoogleGsonInternalUnsafeAllocator_$1 *self, JavaLangReflectMethod *capture$0, id capture$1);
+__attribute__((unused)) static ComGoogleGsonInternalUnsafeAllocator_1 *new_ComGoogleGsonInternalUnsafeAllocator_1_initWithJavaLangReflectMethod_withId_(JavaLangReflectMethod *capture$0, id capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalUnsafeAllocator_$1 *new_ComGoogleGsonInternalUnsafeAllocator_$1_initWithJavaLangReflectMethod_withId_(JavaLangReflectMethod *capture$0, id capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalUnsafeAllocator_1 *create_ComGoogleGsonInternalUnsafeAllocator_1_initWithJavaLangReflectMethod_withId_(JavaLangReflectMethod *capture$0, id capture$1);
 
-__attribute__((unused)) static ComGoogleGsonInternalUnsafeAllocator_$1 *create_ComGoogleGsonInternalUnsafeAllocator_$1_initWithJavaLangReflectMethod_withId_(JavaLangReflectMethod *capture$0, id capture$1);
-
-@interface ComGoogleGsonInternalUnsafeAllocator_$2 : ComGoogleGsonInternalUnsafeAllocator {
+@interface ComGoogleGsonInternalUnsafeAllocator_2 : ComGoogleGsonInternalUnsafeAllocator {
  @public
   JavaLangReflectMethod *val$newInstance_;
   jint val$constructorId_;
 }
 
-- (id)newInstanceWithIOSClass:(IOSClass *)c OBJC_METHOD_FAMILY_NONE;
-
 - (instancetype)initWithJavaLangReflectMethod:(JavaLangReflectMethod *)capture$0
                                       withInt:(jint)capture$1;
 
+- (id)newInstanceWithIOSClass:(IOSClass *)c OBJC_METHOD_FAMILY_NONE;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalUnsafeAllocator_$2)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalUnsafeAllocator_2)
 
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalUnsafeAllocator_$2, val$newInstance_, JavaLangReflectMethod *)
+__attribute__((unused)) static void ComGoogleGsonInternalUnsafeAllocator_2_initWithJavaLangReflectMethod_withInt_(ComGoogleGsonInternalUnsafeAllocator_2 *self, JavaLangReflectMethod *capture$0, jint capture$1);
 
-__attribute__((unused)) static void ComGoogleGsonInternalUnsafeAllocator_$2_initWithJavaLangReflectMethod_withInt_(ComGoogleGsonInternalUnsafeAllocator_$2 *self, JavaLangReflectMethod *capture$0, jint capture$1);
+__attribute__((unused)) static ComGoogleGsonInternalUnsafeAllocator_2 *new_ComGoogleGsonInternalUnsafeAllocator_2_initWithJavaLangReflectMethod_withInt_(JavaLangReflectMethod *capture$0, jint capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalUnsafeAllocator_$2 *new_ComGoogleGsonInternalUnsafeAllocator_$2_initWithJavaLangReflectMethod_withInt_(JavaLangReflectMethod *capture$0, jint capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalUnsafeAllocator_2 *create_ComGoogleGsonInternalUnsafeAllocator_2_initWithJavaLangReflectMethod_withInt_(JavaLangReflectMethod *capture$0, jint capture$1);
 
-__attribute__((unused)) static ComGoogleGsonInternalUnsafeAllocator_$2 *create_ComGoogleGsonInternalUnsafeAllocator_$2_initWithJavaLangReflectMethod_withInt_(JavaLangReflectMethod *capture$0, jint capture$1);
-
-@interface ComGoogleGsonInternalUnsafeAllocator_$3 : ComGoogleGsonInternalUnsafeAllocator {
+@interface ComGoogleGsonInternalUnsafeAllocator_3 : ComGoogleGsonInternalUnsafeAllocator {
  @public
   JavaLangReflectMethod *val$newInstance_;
 }
 
-- (id)newInstanceWithIOSClass:(IOSClass *)c OBJC_METHOD_FAMILY_NONE;
-
 - (instancetype)initWithJavaLangReflectMethod:(JavaLangReflectMethod *)capture$0;
+
+- (id)newInstanceWithIOSClass:(IOSClass *)c OBJC_METHOD_FAMILY_NONE;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalUnsafeAllocator_$3)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalUnsafeAllocator_3)
 
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalUnsafeAllocator_$3, val$newInstance_, JavaLangReflectMethod *)
+__attribute__((unused)) static void ComGoogleGsonInternalUnsafeAllocator_3_initWithJavaLangReflectMethod_(ComGoogleGsonInternalUnsafeAllocator_3 *self, JavaLangReflectMethod *capture$0);
 
-__attribute__((unused)) static void ComGoogleGsonInternalUnsafeAllocator_$3_initWithJavaLangReflectMethod_(ComGoogleGsonInternalUnsafeAllocator_$3 *self, JavaLangReflectMethod *capture$0);
+__attribute__((unused)) static ComGoogleGsonInternalUnsafeAllocator_3 *new_ComGoogleGsonInternalUnsafeAllocator_3_initWithJavaLangReflectMethod_(JavaLangReflectMethod *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalUnsafeAllocator_$3 *new_ComGoogleGsonInternalUnsafeAllocator_$3_initWithJavaLangReflectMethod_(JavaLangReflectMethod *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalUnsafeAllocator_3 *create_ComGoogleGsonInternalUnsafeAllocator_3_initWithJavaLangReflectMethod_(JavaLangReflectMethod *capture$0);
 
-__attribute__((unused)) static ComGoogleGsonInternalUnsafeAllocator_$3 *create_ComGoogleGsonInternalUnsafeAllocator_$3_initWithJavaLangReflectMethod_(JavaLangReflectMethod *capture$0);
-
-@interface ComGoogleGsonInternalUnsafeAllocator_$4 : ComGoogleGsonInternalUnsafeAllocator
-
-- (id)newInstanceWithIOSClass:(IOSClass *)c OBJC_METHOD_FAMILY_NONE;
+@interface ComGoogleGsonInternalUnsafeAllocator_4 : ComGoogleGsonInternalUnsafeAllocator
 
 - (instancetype)init;
 
+- (id)newInstanceWithIOSClass:(IOSClass *)c OBJC_METHOD_FAMILY_NONE;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalUnsafeAllocator_$4)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalUnsafeAllocator_4)
 
-__attribute__((unused)) static void ComGoogleGsonInternalUnsafeAllocator_$4_init(ComGoogleGsonInternalUnsafeAllocator_$4 *self);
+__attribute__((unused)) static void ComGoogleGsonInternalUnsafeAllocator_4_init(ComGoogleGsonInternalUnsafeAllocator_4 *self);
 
-__attribute__((unused)) static ComGoogleGsonInternalUnsafeAllocator_$4 *new_ComGoogleGsonInternalUnsafeAllocator_$4_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalUnsafeAllocator_4 *new_ComGoogleGsonInternalUnsafeAllocator_4_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalUnsafeAllocator_$4 *create_ComGoogleGsonInternalUnsafeAllocator_$4_init();
+__attribute__((unused)) static ComGoogleGsonInternalUnsafeAllocator_4 *create_ComGoogleGsonInternalUnsafeAllocator_4_init();
 
 @implementation ComGoogleGsonInternalUnsafeAllocator
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalUnsafeAllocator_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id)newInstanceWithIOSClass:(IOSClass *)c {
   // can't call an abstract method
@@ -111,24 +111,17 @@ __attribute__((unused)) static ComGoogleGsonInternalUnsafeAllocator_$4 *create_C
   return ComGoogleGsonInternalUnsafeAllocator_create();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalUnsafeAllocator_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x401, 0, 1, 2, 3, -1, -1 },
     { NULL, "LComGoogleGsonInternalUnsafeAllocator;", 0x9, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(newInstanceWithIOSClass:);
-  methods[1].selector = @selector(create);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(newInstanceWithIOSClass:);
+  methods[2].selector = @selector(create);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "newInstance", "LIOSClass;", "LJavaLangException;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)TT;" };
   static const J2ObjcClassInfo _ComGoogleGsonInternalUnsafeAllocator = { "UnsafeAllocator", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x401, 3, 0, -1, -1, -1, -1, -1 };
@@ -137,13 +130,17 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 @end
 
+void ComGoogleGsonInternalUnsafeAllocator_init(ComGoogleGsonInternalUnsafeAllocator *self) {
+  NSObject_init(self);
+}
+
 ComGoogleGsonInternalUnsafeAllocator *ComGoogleGsonInternalUnsafeAllocator_create() {
   ComGoogleGsonInternalUnsafeAllocator_initialize();
   @try {
     id unsafe = SunMiscUnsafe_getUnsafe();
     IOSClass *unsafeClass = [nil_chk(unsafe) java_getClass];
     JavaLangReflectMethod *allocateInstance = [unsafeClass getMethod:@"allocateInstance" parameterTypes:[IOSObjectArray arrayWithObjects:(id[]){ IOSClass_class_() } count:1 type:IOSClass_class_()]];
-    return create_ComGoogleGsonInternalUnsafeAllocator_$1_initWithJavaLangReflectMethod_withId_(allocateInstance, unsafe);
+    return create_ComGoogleGsonInternalUnsafeAllocator_1_initWithJavaLangReflectMethod_withId_(allocateInstance, unsafe);
   }
   @catch (JavaLangException *ignored) {
   }
@@ -153,36 +150,32 @@ ComGoogleGsonInternalUnsafeAllocator *ComGoogleGsonInternalUnsafeAllocator_creat
     jint constructorId = [((JavaLangInteger *) nil_chk((JavaLangInteger *) cast_chk([getConstructorId invokeWithId:nil withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ NSObject_class_() } count:1 type:NSObject_class_()]], [JavaLangInteger class]))) intValue];
     JavaLangReflectMethod *newInstance = [JavaIoObjectStreamClass_class_() getDeclaredMethod:@"newInstance" parameterTypes:[IOSObjectArray arrayWithObjects:(id[]){ IOSClass_class_(), [IOSClass intClass] } count:2 type:IOSClass_class_()]];
     [((JavaLangReflectMethod *) nil_chk(newInstance)) setAccessibleWithBoolean:true];
-    return create_ComGoogleGsonInternalUnsafeAllocator_$2_initWithJavaLangReflectMethod_withInt_(newInstance, constructorId);
+    return create_ComGoogleGsonInternalUnsafeAllocator_2_initWithJavaLangReflectMethod_withInt_(newInstance, constructorId);
   }
   @catch (JavaLangException *ignored) {
   }
   @try {
     JavaLangReflectMethod *newInstance = [JavaIoObjectInputStream_class_() getDeclaredMethod:@"newInstance" parameterTypes:[IOSObjectArray arrayWithObjects:(id[]){ IOSClass_class_(), IOSClass_class_() } count:2 type:IOSClass_class_()]];
     [((JavaLangReflectMethod *) nil_chk(newInstance)) setAccessibleWithBoolean:true];
-    return create_ComGoogleGsonInternalUnsafeAllocator_$3_initWithJavaLangReflectMethod_(newInstance);
+    return create_ComGoogleGsonInternalUnsafeAllocator_3_initWithJavaLangReflectMethod_(newInstance);
   }
   @catch (JavaLangException *ignored) {
   }
-  return create_ComGoogleGsonInternalUnsafeAllocator_$4_init();
-}
-
-void ComGoogleGsonInternalUnsafeAllocator_init(ComGoogleGsonInternalUnsafeAllocator *self) {
-  NSObject_init(self);
+  return create_ComGoogleGsonInternalUnsafeAllocator_4_init();
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalUnsafeAllocator)
 
-@implementation ComGoogleGsonInternalUnsafeAllocator_$1
-
-- (id)newInstanceWithIOSClass:(IOSClass *)c {
-  return [((JavaLangReflectMethod *) nil_chk(val$allocateInstance_)) invokeWithId:val$unsafe_ withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ c } count:1 type:NSObject_class_()]];
-}
+@implementation ComGoogleGsonInternalUnsafeAllocator_1
 
 - (instancetype)initWithJavaLangReflectMethod:(JavaLangReflectMethod *)capture$0
                                        withId:(id)capture$1 {
-  ComGoogleGsonInternalUnsafeAllocator_$1_initWithJavaLangReflectMethod_withId_(self, capture$0, capture$1);
+  ComGoogleGsonInternalUnsafeAllocator_1_initWithJavaLangReflectMethod_withId_(self, capture$0, capture$1);
   return self;
+}
+
+- (id)newInstanceWithIOSClass:(IOSClass *)c {
+  return [((JavaLangReflectMethod *) nil_chk(val$allocateInstance_)) invokeWithId:val$unsafe_ withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ c } count:1 type:NSObject_class_()]];
 }
 
 - (void)dealloc {
@@ -193,51 +186,51 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalUnsafeAllocator)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(newInstanceWithIOSClass:);
-  methods[1].selector = @selector(initWithJavaLangReflectMethod:withId:);
+  methods[0].selector = @selector(initWithJavaLangReflectMethod:withId:);
+  methods[1].selector = @selector(newInstanceWithIOSClass:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$allocateInstance_", "LJavaLangReflectMethod;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$unsafe_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "newInstance", "LIOSClass;", "LJavaLangException;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)TT;", "LJavaLangReflectMethod;LNSObject;", "LComGoogleGsonInternalUnsafeAllocator;", "create" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalUnsafeAllocator_$1 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 2, 2, 5, -1, 6, -1, -1 };
-  return &_ComGoogleGsonInternalUnsafeAllocator_$1;
+  static const void *ptrTable[] = { "newInstance", "LIOSClass;", "LJavaLangException;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)TT;", "LComGoogleGsonInternalUnsafeAllocator;", "create" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalUnsafeAllocator_1 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 2, 2, 4, -1, 5, -1, -1 };
+  return &_ComGoogleGsonInternalUnsafeAllocator_1;
 }
 
 @end
 
-void ComGoogleGsonInternalUnsafeAllocator_$1_initWithJavaLangReflectMethod_withId_(ComGoogleGsonInternalUnsafeAllocator_$1 *self, JavaLangReflectMethod *capture$0, id capture$1) {
+void ComGoogleGsonInternalUnsafeAllocator_1_initWithJavaLangReflectMethod_withId_(ComGoogleGsonInternalUnsafeAllocator_1 *self, JavaLangReflectMethod *capture$0, id capture$1) {
   JreStrongAssign(&self->val$allocateInstance_, capture$0);
   JreStrongAssign(&self->val$unsafe_, capture$1);
   ComGoogleGsonInternalUnsafeAllocator_init(self);
 }
 
-ComGoogleGsonInternalUnsafeAllocator_$1 *new_ComGoogleGsonInternalUnsafeAllocator_$1_initWithJavaLangReflectMethod_withId_(JavaLangReflectMethod *capture$0, id capture$1) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalUnsafeAllocator_$1, initWithJavaLangReflectMethod_withId_, capture$0, capture$1)
+ComGoogleGsonInternalUnsafeAllocator_1 *new_ComGoogleGsonInternalUnsafeAllocator_1_initWithJavaLangReflectMethod_withId_(JavaLangReflectMethod *capture$0, id capture$1) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalUnsafeAllocator_1, initWithJavaLangReflectMethod_withId_, capture$0, capture$1)
 }
 
-ComGoogleGsonInternalUnsafeAllocator_$1 *create_ComGoogleGsonInternalUnsafeAllocator_$1_initWithJavaLangReflectMethod_withId_(JavaLangReflectMethod *capture$0, id capture$1) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalUnsafeAllocator_$1, initWithJavaLangReflectMethod_withId_, capture$0, capture$1)
+ComGoogleGsonInternalUnsafeAllocator_1 *create_ComGoogleGsonInternalUnsafeAllocator_1_initWithJavaLangReflectMethod_withId_(JavaLangReflectMethod *capture$0, id capture$1) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalUnsafeAllocator_1, initWithJavaLangReflectMethod_withId_, capture$0, capture$1)
 }
 
-@implementation ComGoogleGsonInternalUnsafeAllocator_$2
+@implementation ComGoogleGsonInternalUnsafeAllocator_2
+
+- (instancetype)initWithJavaLangReflectMethod:(JavaLangReflectMethod *)capture$0
+                                      withInt:(jint)capture$1 {
+  ComGoogleGsonInternalUnsafeAllocator_2_initWithJavaLangReflectMethod_withInt_(self, capture$0, capture$1);
+  return self;
+}
 
 - (id)newInstanceWithIOSClass:(IOSClass *)c {
   return [((JavaLangReflectMethod *) nil_chk(val$newInstance_)) invokeWithId:nil withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ c, JavaLangInteger_valueOfWithInt_(val$constructorId_) } count:2 type:NSObject_class_()]];
 }
 
-- (instancetype)initWithJavaLangReflectMethod:(JavaLangReflectMethod *)capture$0
-                                      withInt:(jint)capture$1 {
-  ComGoogleGsonInternalUnsafeAllocator_$2_initWithJavaLangReflectMethod_withInt_(self, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$newInstance_);
   [super dealloc];
@@ -245,48 +238,48 @@ ComGoogleGsonInternalUnsafeAllocator_$1 *create_ComGoogleGsonInternalUnsafeAlloc
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(newInstanceWithIOSClass:);
-  methods[1].selector = @selector(initWithJavaLangReflectMethod:withInt:);
+  methods[0].selector = @selector(initWithJavaLangReflectMethod:withInt:);
+  methods[1].selector = @selector(newInstanceWithIOSClass:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$newInstance_", "LJavaLangReflectMethod;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$constructorId_", "I", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "newInstance", "LIOSClass;", "LJavaLangException;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)TT;", "LJavaLangReflectMethod;I", "LComGoogleGsonInternalUnsafeAllocator;", "create" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalUnsafeAllocator_$2 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 2, 2, 5, -1, 6, -1, -1 };
-  return &_ComGoogleGsonInternalUnsafeAllocator_$2;
+  static const void *ptrTable[] = { "newInstance", "LIOSClass;", "LJavaLangException;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)TT;", "LComGoogleGsonInternalUnsafeAllocator;", "create" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalUnsafeAllocator_2 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 2, 2, 4, -1, 5, -1, -1 };
+  return &_ComGoogleGsonInternalUnsafeAllocator_2;
 }
 
 @end
 
-void ComGoogleGsonInternalUnsafeAllocator_$2_initWithJavaLangReflectMethod_withInt_(ComGoogleGsonInternalUnsafeAllocator_$2 *self, JavaLangReflectMethod *capture$0, jint capture$1) {
+void ComGoogleGsonInternalUnsafeAllocator_2_initWithJavaLangReflectMethod_withInt_(ComGoogleGsonInternalUnsafeAllocator_2 *self, JavaLangReflectMethod *capture$0, jint capture$1) {
   JreStrongAssign(&self->val$newInstance_, capture$0);
   self->val$constructorId_ = capture$1;
   ComGoogleGsonInternalUnsafeAllocator_init(self);
 }
 
-ComGoogleGsonInternalUnsafeAllocator_$2 *new_ComGoogleGsonInternalUnsafeAllocator_$2_initWithJavaLangReflectMethod_withInt_(JavaLangReflectMethod *capture$0, jint capture$1) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalUnsafeAllocator_$2, initWithJavaLangReflectMethod_withInt_, capture$0, capture$1)
+ComGoogleGsonInternalUnsafeAllocator_2 *new_ComGoogleGsonInternalUnsafeAllocator_2_initWithJavaLangReflectMethod_withInt_(JavaLangReflectMethod *capture$0, jint capture$1) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalUnsafeAllocator_2, initWithJavaLangReflectMethod_withInt_, capture$0, capture$1)
 }
 
-ComGoogleGsonInternalUnsafeAllocator_$2 *create_ComGoogleGsonInternalUnsafeAllocator_$2_initWithJavaLangReflectMethod_withInt_(JavaLangReflectMethod *capture$0, jint capture$1) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalUnsafeAllocator_$2, initWithJavaLangReflectMethod_withInt_, capture$0, capture$1)
+ComGoogleGsonInternalUnsafeAllocator_2 *create_ComGoogleGsonInternalUnsafeAllocator_2_initWithJavaLangReflectMethod_withInt_(JavaLangReflectMethod *capture$0, jint capture$1) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalUnsafeAllocator_2, initWithJavaLangReflectMethod_withInt_, capture$0, capture$1)
 }
 
-@implementation ComGoogleGsonInternalUnsafeAllocator_$3
+@implementation ComGoogleGsonInternalUnsafeAllocator_3
+
+- (instancetype)initWithJavaLangReflectMethod:(JavaLangReflectMethod *)capture$0 {
+  ComGoogleGsonInternalUnsafeAllocator_3_initWithJavaLangReflectMethod_(self, capture$0);
+  return self;
+}
 
 - (id)newInstanceWithIOSClass:(IOSClass *)c {
   return [((JavaLangReflectMethod *) nil_chk(val$newInstance_)) invokeWithId:nil withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ c, NSObject_class_() } count:2 type:NSObject_class_()]];
-}
-
-- (instancetype)initWithJavaLangReflectMethod:(JavaLangReflectMethod *)capture$0 {
-  ComGoogleGsonInternalUnsafeAllocator_$3_initWithJavaLangReflectMethod_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -296,75 +289,75 @@ ComGoogleGsonInternalUnsafeAllocator_$2 *create_ComGoogleGsonInternalUnsafeAlloc
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(newInstanceWithIOSClass:);
-  methods[1].selector = @selector(initWithJavaLangReflectMethod:);
+  methods[0].selector = @selector(initWithJavaLangReflectMethod:);
+  methods[1].selector = @selector(newInstanceWithIOSClass:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$newInstance_", "LJavaLangReflectMethod;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "newInstance", "LIOSClass;", "LJavaLangException;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)TT;", "LJavaLangReflectMethod;", "LComGoogleGsonInternalUnsafeAllocator;", "create" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalUnsafeAllocator_$3 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 2, 1, 5, -1, 6, -1, -1 };
-  return &_ComGoogleGsonInternalUnsafeAllocator_$3;
+  static const void *ptrTable[] = { "newInstance", "LIOSClass;", "LJavaLangException;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)TT;", "LComGoogleGsonInternalUnsafeAllocator;", "create" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalUnsafeAllocator_3 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, -1, -1 };
+  return &_ComGoogleGsonInternalUnsafeAllocator_3;
 }
 
 @end
 
-void ComGoogleGsonInternalUnsafeAllocator_$3_initWithJavaLangReflectMethod_(ComGoogleGsonInternalUnsafeAllocator_$3 *self, JavaLangReflectMethod *capture$0) {
+void ComGoogleGsonInternalUnsafeAllocator_3_initWithJavaLangReflectMethod_(ComGoogleGsonInternalUnsafeAllocator_3 *self, JavaLangReflectMethod *capture$0) {
   JreStrongAssign(&self->val$newInstance_, capture$0);
   ComGoogleGsonInternalUnsafeAllocator_init(self);
 }
 
-ComGoogleGsonInternalUnsafeAllocator_$3 *new_ComGoogleGsonInternalUnsafeAllocator_$3_initWithJavaLangReflectMethod_(JavaLangReflectMethod *capture$0) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalUnsafeAllocator_$3, initWithJavaLangReflectMethod_, capture$0)
+ComGoogleGsonInternalUnsafeAllocator_3 *new_ComGoogleGsonInternalUnsafeAllocator_3_initWithJavaLangReflectMethod_(JavaLangReflectMethod *capture$0) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalUnsafeAllocator_3, initWithJavaLangReflectMethod_, capture$0)
 }
 
-ComGoogleGsonInternalUnsafeAllocator_$3 *create_ComGoogleGsonInternalUnsafeAllocator_$3_initWithJavaLangReflectMethod_(JavaLangReflectMethod *capture$0) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalUnsafeAllocator_$3, initWithJavaLangReflectMethod_, capture$0)
+ComGoogleGsonInternalUnsafeAllocator_3 *create_ComGoogleGsonInternalUnsafeAllocator_3_initWithJavaLangReflectMethod_(JavaLangReflectMethod *capture$0) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalUnsafeAllocator_3, initWithJavaLangReflectMethod_, capture$0)
 }
 
-@implementation ComGoogleGsonInternalUnsafeAllocator_$4
+@implementation ComGoogleGsonInternalUnsafeAllocator_4
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalUnsafeAllocator_4_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id)newInstanceWithIOSClass:(IOSClass *)c {
   @throw create_JavaLangUnsupportedOperationException_initWithNSString_(JreStrcat("$@", @"Cannot allocate ", c));
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalUnsafeAllocator_$4_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(newInstanceWithIOSClass:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(newInstanceWithIOSClass:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "newInstance", "LIOSClass;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)TT;", "LComGoogleGsonInternalUnsafeAllocator;", "create" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalUnsafeAllocator_$4 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, 4, -1, -1 };
-  return &_ComGoogleGsonInternalUnsafeAllocator_$4;
+  static const J2ObjcClassInfo _ComGoogleGsonInternalUnsafeAllocator_4 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, 4, -1, -1 };
+  return &_ComGoogleGsonInternalUnsafeAllocator_4;
 }
 
 @end
 
-void ComGoogleGsonInternalUnsafeAllocator_$4_init(ComGoogleGsonInternalUnsafeAllocator_$4 *self) {
+void ComGoogleGsonInternalUnsafeAllocator_4_init(ComGoogleGsonInternalUnsafeAllocator_4 *self) {
   ComGoogleGsonInternalUnsafeAllocator_init(self);
 }
 
-ComGoogleGsonInternalUnsafeAllocator_$4 *new_ComGoogleGsonInternalUnsafeAllocator_$4_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalUnsafeAllocator_$4, init)
+ComGoogleGsonInternalUnsafeAllocator_4 *new_ComGoogleGsonInternalUnsafeAllocator_4_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalUnsafeAllocator_4, init)
 }
 
-ComGoogleGsonInternalUnsafeAllocator_$4 *create_ComGoogleGsonInternalUnsafeAllocator_$4_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalUnsafeAllocator_$4, init)
+ComGoogleGsonInternalUnsafeAllocator_4 *create_ComGoogleGsonInternalUnsafeAllocator_4_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalUnsafeAllocator_4, init)
 }

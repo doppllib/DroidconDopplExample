@@ -11,6 +11,13 @@
 
 @implementation RxSubscriptionsMultipleAssignmentSubscription
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxSubscriptionsMultipleAssignmentSubscription_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (jboolean)isUnsubscribed {
   return [((RxInternalSubscriptionsSequentialSubscription *) nil_chk(state_)) isUnsubscribed];
 }
@@ -30,13 +37,6 @@
   return [((RxInternalSubscriptionsSequentialSubscription *) nil_chk(state_)) current];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxSubscriptionsMultipleAssignmentSubscription_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(state_);
   [super dealloc];
@@ -44,19 +44,19 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "LRxSubscription;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(isUnsubscribed);
-  methods[1].selector = @selector(unsubscribe);
-  methods[2].selector = @selector(setWithRxSubscription:);
-  methods[3].selector = @selector(get);
-  methods[4].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(isUnsubscribed);
+  methods[2].selector = @selector(unsubscribe);
+  methods[3].selector = @selector(setWithRxSubscription:);
+  methods[4].selector = @selector(get);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "state_", "LRxInternalSubscriptionsSequentialSubscription;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },

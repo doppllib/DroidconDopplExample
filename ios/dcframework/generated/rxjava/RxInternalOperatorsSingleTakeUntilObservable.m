@@ -21,8 +21,6 @@
 
 @end
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber_OtherSubscriber, this$0_, RxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber *)
-
 @implementation RxInternalOperatorsSingleTakeUntilObservable
 
 - (instancetype)initWithRxSingle_OnSubscribe:(id<RxSingle_OnSubscribe>)source
@@ -156,6 +154,11 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsSingleTakeUntilObservable_Ta
 
 @implementation RxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber_OtherSubscriber
 
+- (instancetype)initWithRxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber:(RxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber *)outer$ {
+  RxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber_OtherSubscriber_initWithRxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber_(self, outer$);
+  return self;
+}
+
 - (void)onNextWithId:(id)value {
   [self onCompleted];
 }
@@ -168,36 +171,30 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsSingleTakeUntilObservable_Ta
   [self onErrorWithNSException:create_JavaUtilConcurrentCancellationException_initWithNSString_(@"Stream was canceled before emitting a terminal event.")];
 }
 
-- (instancetype)initWithRxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber:(RxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber *)outer$ {
-  RxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber_OtherSubscriber_initWithRxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber_OtherSubscriber class]);
   RELEASE_(this$0_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TU;)V", "onError", "LNSException;", "LRxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber;", "Lrx/Subscriber<TU;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber_OtherSubscriber = { "OtherSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 4, 1, 5, -1, -1, 6, -1 };
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TU;)V", "onError", "LNSException;", "Lrx/internal/operators/SingleTakeUntilObservable$TakeUntilSourceSubscriber<TT;TU;>;", "LRxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber;", "Lrx/Subscriber<TU;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber_OtherSubscriber = { "OtherSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 4, 1, 6, -1, -1, 7, -1 };
   return &_RxInternalOperatorsSingleTakeUntilObservable_TakeUntilSourceSubscriber_OtherSubscriber;
 }
 

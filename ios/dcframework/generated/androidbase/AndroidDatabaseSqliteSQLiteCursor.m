@@ -107,11 +107,11 @@ NSString *AndroidDatabaseSqliteSQLiteCursor_TAG = @"SQLiteCursor";
     }
     JreStrongAssign(&mColumnNameMap_, map);
   }
-  jint periodIndex = [((NSString *) nil_chk(columnName)) lastIndexOf:'.'];
+  jint periodIndex = [((NSString *) nil_chk(columnName)) java_lastIndexOf:'.'];
   if (periodIndex != -1) {
     JavaLangException *e = create_JavaLangException_init();
     AndroidUtilLog_eWithNSString_withNSString_withNSException_(AndroidDatabaseSqliteSQLiteCursor_TAG, JreStrcat("$$", @"requesting column name with table name -- ", columnName), e);
-    columnName = [columnName substring:periodIndex + 1];
+    columnName = [columnName java_substring:periodIndex + 1];
   }
   JavaLangInteger *i = [((id<JavaUtilMap>) nil_chk(mColumnNameMap_)) getWithId:columnName];
   if (i != nil) {
@@ -172,13 +172,13 @@ NSString *AndroidDatabaseSqliteSQLiteCursor_TAG = @"SQLiteCursor";
   [((id<AndroidDatabaseSqliteSQLiteCursorDriver>) nil_chk(mDriver_)) setBindArgumentsWithNSStringArray:selectionArgs];
 }
 
-- (void)javaFinalize {
+- (void)java_finalize {
   @try {
     if (mWindow_ != nil) {
       if (mStackTrace_ != nil) {
         NSString *sql = [((AndroidDatabaseSqliteSQLiteQuery *) nil_chk(mQuery_)) getSql];
         jint len = ((jint) [((NSString *) nil_chk(sql)) length]);
-        [((JavaIoPrintStream *) nil_chk(JreLoadStatic(JavaLangSystem, out))) printlnWithNSString:JreStrcat("$$$$$$", @"Finalizing a Cursor that has not been deactivated or closed. database = ", [((AndroidDatabaseSqliteSQLiteDatabase *) nil_chk([mQuery_ getDatabase])) getLabel], @", table = ", mEditTable_, @", query = ", [sql substring:0 endIndex:(len > 1000) ? 1000 : len])];
+        [((JavaIoPrintStream *) nil_chk(JreLoadStatic(JavaLangSystem, out))) printlnWithNSString:JreStrcat("$$$$$$", @"Finalizing a Cursor that has not been deactivated or closed. database = ", [((AndroidDatabaseSqliteSQLiteDatabase *) nil_chk([mQuery_ getDatabase])) getLabel], @", table = ", mEditTable_, @", query = ", [sql java_substring:0 endIndex:(len > 1000) ? 1000 : len])];
         JavaIoStringWriter *stringWriter = create_JavaIoStringWriter_init();
         JavaIoPrintWriter *printWriter = create_JavaIoPrintWriter_initWithJavaIoWriter_(stringWriter);
         [mStackTrace_ printStackTraceWithJavaIoPrintWriter:printWriter];
@@ -189,7 +189,7 @@ NSString *AndroidDatabaseSqliteSQLiteCursor_TAG = @"SQLiteCursor";
     }
   }
   @finally {
-    [super javaFinalize];
+    [super java_finalize];
   }
 }
 
@@ -236,7 +236,7 @@ NSString *AndroidDatabaseSqliteSQLiteCursor_TAG = @"SQLiteCursor";
   methods[10].selector = @selector(requery);
   methods[11].selector = @selector(setWindowWithAndroidDatabaseCursorWindow:);
   methods[12].selector = @selector(setSelectionArgumentsWithNSStringArray:);
-  methods[13].selector = @selector(javaFinalize);
+  methods[13].selector = @selector(java_finalize);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "TAG", "LNSString;", .constantValue.asLong = 0, 0x18, -1, 14, -1, -1 },

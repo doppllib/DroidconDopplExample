@@ -28,53 +28,47 @@ J2OBJC_FIELD_SETTER(RetrofitCallbackRunnable, callback_, id<RetrofitCallback>)
 J2OBJC_FIELD_SETTER(RetrofitCallbackRunnable, callbackExecutor_, id<JavaUtilConcurrentExecutor>)
 J2OBJC_FIELD_SETTER(RetrofitCallbackRunnable, errorHandler_, id<RetrofitErrorHandler>)
 
-@interface RetrofitCallbackRunnable_$1 : NSObject < JavaLangRunnable > {
+@interface RetrofitCallbackRunnable_1 : NSObject < JavaLangRunnable > {
  @public
   RetrofitCallbackRunnable *this$0_;
   RetrofitResponseWrapper *val$wrapper_;
 }
 
-- (void)run;
-
 - (instancetype)initWithRetrofitCallbackRunnable:(RetrofitCallbackRunnable *)outer$
                      withRetrofitResponseWrapper:(RetrofitResponseWrapper *)capture$0;
 
+- (void)run;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RetrofitCallbackRunnable_$1)
+J2OBJC_EMPTY_STATIC_INIT(RetrofitCallbackRunnable_1)
 
-J2OBJC_FIELD_SETTER(RetrofitCallbackRunnable_$1, this$0_, RetrofitCallbackRunnable *)
-J2OBJC_FIELD_SETTER(RetrofitCallbackRunnable_$1, val$wrapper_, RetrofitResponseWrapper *)
+__attribute__((unused)) static void RetrofitCallbackRunnable_1_initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_(RetrofitCallbackRunnable_1 *self, RetrofitCallbackRunnable *outer$, RetrofitResponseWrapper *capture$0);
 
-__attribute__((unused)) static void RetrofitCallbackRunnable_$1_initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_(RetrofitCallbackRunnable_$1 *self, RetrofitCallbackRunnable *outer$, RetrofitResponseWrapper *capture$0);
+__attribute__((unused)) static RetrofitCallbackRunnable_1 *new_RetrofitCallbackRunnable_1_initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_(RetrofitCallbackRunnable *outer$, RetrofitResponseWrapper *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RetrofitCallbackRunnable_$1 *new_RetrofitCallbackRunnable_$1_initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_(RetrofitCallbackRunnable *outer$, RetrofitResponseWrapper *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RetrofitCallbackRunnable_1 *create_RetrofitCallbackRunnable_1_initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_(RetrofitCallbackRunnable *outer$, RetrofitResponseWrapper *capture$0);
 
-__attribute__((unused)) static RetrofitCallbackRunnable_$1 *create_RetrofitCallbackRunnable_$1_initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_(RetrofitCallbackRunnable *outer$, RetrofitResponseWrapper *capture$0);
-
-@interface RetrofitCallbackRunnable_$2 : NSObject < JavaLangRunnable > {
+@interface RetrofitCallbackRunnable_2 : NSObject < JavaLangRunnable > {
  @public
   RetrofitCallbackRunnable *this$0_;
   RetrofitRetrofitError *val$handled_;
 }
 
-- (void)run;
-
 - (instancetype)initWithRetrofitCallbackRunnable:(RetrofitCallbackRunnable *)outer$
                        withRetrofitRetrofitError:(RetrofitRetrofitError *)capture$0;
 
+- (void)run;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RetrofitCallbackRunnable_$2)
+J2OBJC_EMPTY_STATIC_INIT(RetrofitCallbackRunnable_2)
 
-J2OBJC_FIELD_SETTER(RetrofitCallbackRunnable_$2, this$0_, RetrofitCallbackRunnable *)
-J2OBJC_FIELD_SETTER(RetrofitCallbackRunnable_$2, val$handled_, RetrofitRetrofitError *)
+__attribute__((unused)) static void RetrofitCallbackRunnable_2_initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_(RetrofitCallbackRunnable_2 *self, RetrofitCallbackRunnable *outer$, RetrofitRetrofitError *capture$0);
 
-__attribute__((unused)) static void RetrofitCallbackRunnable_$2_initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_(RetrofitCallbackRunnable_$2 *self, RetrofitCallbackRunnable *outer$, RetrofitRetrofitError *capture$0);
+__attribute__((unused)) static RetrofitCallbackRunnable_2 *new_RetrofitCallbackRunnable_2_initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_(RetrofitCallbackRunnable *outer$, RetrofitRetrofitError *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RetrofitCallbackRunnable_$2 *new_RetrofitCallbackRunnable_$2_initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_(RetrofitCallbackRunnable *outer$, RetrofitRetrofitError *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RetrofitCallbackRunnable_$2 *create_RetrofitCallbackRunnable_$2_initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_(RetrofitCallbackRunnable *outer$, RetrofitRetrofitError *capture$0);
+__attribute__((unused)) static RetrofitCallbackRunnable_2 *create_RetrofitCallbackRunnable_2_initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_(RetrofitCallbackRunnable *outer$, RetrofitRetrofitError *capture$0);
 
 @implementation RetrofitCallbackRunnable
 
@@ -89,12 +83,12 @@ __attribute__((unused)) static RetrofitCallbackRunnable_$2 *create_RetrofitCallb
   @try {
     RetrofitResponseWrapper *wrapper = [self obtainResponse];
     [((JavaIoPrintStream *) nil_chk(JreLoadStatic(JavaLangSystem, out))) printlnWithNSString:JreStrcat("$@", @"Wrapper is :", wrapper)];
-    [((id<JavaUtilConcurrentExecutor>) nil_chk(callbackExecutor_)) executeWithJavaLangRunnable:create_RetrofitCallbackRunnable_$1_initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_(self, wrapper)];
+    [((id<JavaUtilConcurrentExecutor>) nil_chk(callbackExecutor_)) executeWithJavaLangRunnable:create_RetrofitCallbackRunnable_1_initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_(self, wrapper)];
   }
   @catch (RetrofitRetrofitError *e) {
     NSException *cause = [((id<RetrofitErrorHandler>) nil_chk(errorHandler_)) handleErrorWithRetrofitRetrofitError:e];
     RetrofitRetrofitError *handled = cause == e ? e : RetrofitRetrofitError_unexpectedErrorWithNSString_withNSException_([((RetrofitRetrofitError *) nil_chk(e)) getUrl], cause);
-    [((id<JavaUtilConcurrentExecutor>) nil_chk(callbackExecutor_)) executeWithJavaLangRunnable:create_RetrofitCallbackRunnable_$2_initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_(self, handled)];
+    [((id<JavaUtilConcurrentExecutor>) nil_chk(callbackExecutor_)) executeWithJavaLangRunnable:create_RetrofitCallbackRunnable_2_initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_(self, handled)];
   }
 }
 
@@ -144,16 +138,16 @@ void RetrofitCallbackRunnable_initWithRetrofitCallback_withJavaUtilConcurrentExe
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitCallbackRunnable)
 
-@implementation RetrofitCallbackRunnable_$1
-
-- (void)run {
-  [((id<RetrofitCallback>) nil_chk(this$0_->callback_)) successWithId:((RetrofitResponseWrapper *) nil_chk(val$wrapper_))->responseBody_ withRetrofitClientResponse:val$wrapper_->response_];
-}
+@implementation RetrofitCallbackRunnable_1
 
 - (instancetype)initWithRetrofitCallbackRunnable:(RetrofitCallbackRunnable *)outer$
                      withRetrofitResponseWrapper:(RetrofitResponseWrapper *)capture$0 {
-  RetrofitCallbackRunnable_$1_initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_(self, outer$, capture$0);
+  RetrofitCallbackRunnable_1_initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_(self, outer$, capture$0);
   return self;
+}
+
+- (void)run {
+  [((id<RetrofitCallback>) nil_chk(this$0_->callback_)) successWithId:((RetrofitResponseWrapper *) nil_chk(val$wrapper_))->responseBody_ withRetrofitClientResponse:val$wrapper_->response_];
 }
 
 - (void)dealloc {
@@ -164,49 +158,49 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitCallbackRunnable)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithRetrofitCallbackRunnable:withRetrofitResponseWrapper:);
+  methods[0].selector = @selector(initWithRetrofitCallbackRunnable:withRetrofitResponseWrapper:);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRetrofitCallbackRunnable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRetrofitCallbackRunnable;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
     { "val$wrapper_", "LRetrofitResponseWrapper;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRetrofitCallbackRunnable;LRetrofitResponseWrapper;", "LRetrofitCallbackRunnable;", "run" };
-  static const J2ObjcClassInfo _RetrofitCallbackRunnable_$1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_RetrofitCallbackRunnable_$1;
+  static const void *ptrTable[] = { "Lretrofit/CallbackRunnable<TT;>;", "LRetrofitCallbackRunnable;", "run" };
+  static const J2ObjcClassInfo _RetrofitCallbackRunnable_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
+  return &_RetrofitCallbackRunnable_1;
 }
 
 @end
 
-void RetrofitCallbackRunnable_$1_initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_(RetrofitCallbackRunnable_$1 *self, RetrofitCallbackRunnable *outer$, RetrofitResponseWrapper *capture$0) {
+void RetrofitCallbackRunnable_1_initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_(RetrofitCallbackRunnable_1 *self, RetrofitCallbackRunnable *outer$, RetrofitResponseWrapper *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$wrapper_, capture$0);
   NSObject_init(self);
 }
 
-RetrofitCallbackRunnable_$1 *new_RetrofitCallbackRunnable_$1_initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_(RetrofitCallbackRunnable *outer$, RetrofitResponseWrapper *capture$0) {
-  J2OBJC_NEW_IMPL(RetrofitCallbackRunnable_$1, initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_, outer$, capture$0)
+RetrofitCallbackRunnable_1 *new_RetrofitCallbackRunnable_1_initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_(RetrofitCallbackRunnable *outer$, RetrofitResponseWrapper *capture$0) {
+  J2OBJC_NEW_IMPL(RetrofitCallbackRunnable_1, initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_, outer$, capture$0)
 }
 
-RetrofitCallbackRunnable_$1 *create_RetrofitCallbackRunnable_$1_initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_(RetrofitCallbackRunnable *outer$, RetrofitResponseWrapper *capture$0) {
-  J2OBJC_CREATE_IMPL(RetrofitCallbackRunnable_$1, initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_, outer$, capture$0)
+RetrofitCallbackRunnable_1 *create_RetrofitCallbackRunnable_1_initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_(RetrofitCallbackRunnable *outer$, RetrofitResponseWrapper *capture$0) {
+  J2OBJC_CREATE_IMPL(RetrofitCallbackRunnable_1, initWithRetrofitCallbackRunnable_withRetrofitResponseWrapper_, outer$, capture$0)
 }
 
-@implementation RetrofitCallbackRunnable_$2
-
-- (void)run {
-  [((id<RetrofitCallback>) nil_chk(this$0_->callback_)) failureWithRetrofitRetrofitError:val$handled_];
-}
+@implementation RetrofitCallbackRunnable_2
 
 - (instancetype)initWithRetrofitCallbackRunnable:(RetrofitCallbackRunnable *)outer$
                        withRetrofitRetrofitError:(RetrofitRetrofitError *)capture$0 {
-  RetrofitCallbackRunnable_$2_initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_(self, outer$, capture$0);
+  RetrofitCallbackRunnable_2_initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_(self, outer$, capture$0);
   return self;
+}
+
+- (void)run {
+  [((id<RetrofitCallback>) nil_chk(this$0_->callback_)) failureWithRetrofitRetrofitError:val$handled_];
 }
 
 - (void)dealloc {
@@ -217,35 +211,35 @@ RetrofitCallbackRunnable_$1 *create_RetrofitCallbackRunnable_$1_initWithRetrofit
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithRetrofitCallbackRunnable:withRetrofitRetrofitError:);
+  methods[0].selector = @selector(initWithRetrofitCallbackRunnable:withRetrofitRetrofitError:);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRetrofitCallbackRunnable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRetrofitCallbackRunnable;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
     { "val$handled_", "LRetrofitRetrofitError;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRetrofitCallbackRunnable;LRetrofitRetrofitError;", "LRetrofitCallbackRunnable;", "run" };
-  static const J2ObjcClassInfo _RetrofitCallbackRunnable_$2 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_RetrofitCallbackRunnable_$2;
+  static const void *ptrTable[] = { "Lretrofit/CallbackRunnable<TT;>;", "LRetrofitCallbackRunnable;", "run" };
+  static const J2ObjcClassInfo _RetrofitCallbackRunnable_2 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
+  return &_RetrofitCallbackRunnable_2;
 }
 
 @end
 
-void RetrofitCallbackRunnable_$2_initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_(RetrofitCallbackRunnable_$2 *self, RetrofitCallbackRunnable *outer$, RetrofitRetrofitError *capture$0) {
+void RetrofitCallbackRunnable_2_initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_(RetrofitCallbackRunnable_2 *self, RetrofitCallbackRunnable *outer$, RetrofitRetrofitError *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$handled_, capture$0);
   NSObject_init(self);
 }
 
-RetrofitCallbackRunnable_$2 *new_RetrofitCallbackRunnable_$2_initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_(RetrofitCallbackRunnable *outer$, RetrofitRetrofitError *capture$0) {
-  J2OBJC_NEW_IMPL(RetrofitCallbackRunnable_$2, initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_, outer$, capture$0)
+RetrofitCallbackRunnable_2 *new_RetrofitCallbackRunnable_2_initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_(RetrofitCallbackRunnable *outer$, RetrofitRetrofitError *capture$0) {
+  J2OBJC_NEW_IMPL(RetrofitCallbackRunnable_2, initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_, outer$, capture$0)
 }
 
-RetrofitCallbackRunnable_$2 *create_RetrofitCallbackRunnable_$2_initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_(RetrofitCallbackRunnable *outer$, RetrofitRetrofitError *capture$0) {
-  J2OBJC_CREATE_IMPL(RetrofitCallbackRunnable_$2, initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_, outer$, capture$0)
+RetrofitCallbackRunnable_2 *create_RetrofitCallbackRunnable_2_initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_(RetrofitCallbackRunnable *outer$, RetrofitRetrofitError *capture$0) {
+  J2OBJC_CREATE_IMPL(RetrofitCallbackRunnable_2, initWithRetrofitCallbackRunnable_withRetrofitRetrofitError_, outer$, capture$0)
 }

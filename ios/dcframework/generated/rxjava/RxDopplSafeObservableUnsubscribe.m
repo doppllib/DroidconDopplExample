@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/doppl/SafeObservableUnsubscribe.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxDopplSafeObservableUnsubscribe.h"
 #include "RxObservable.h"
@@ -20,7 +19,8 @@
 
 - (void)unsafeSubscribeWithRxSubscriber:(RxSubscriber *)subscriber {
   {
-    [((RxObservable *) nil_chk(hardRef_)) unsafeSubscribeWithRxSubscriber:subscriber];
+    RxObservable *observable = [((JavaLangRefWeakReference *) nil_chk(observableWeakReference_)) get];
+    if (observable != nil) [observable unsafeSubscribeWithRxSubscriber:subscriber];
   }
 }
 
@@ -53,8 +53,8 @@
 
 void RxDopplSafeObservableUnsubscribe_initWithRxObservable_(RxDopplSafeObservableUnsubscribe *self, RxObservable *observable) {
   NSObject_init(self);
-  JreStrongAssign(&self->observableWeakReference_, nil);
-  JreStrongAssign(&self->hardRef_, observable);
+  JreStrongAssignAndConsume(&self->observableWeakReference_, new_JavaLangRefWeakReference_initWithId_(observable));
+  JreStrongAssign(&self->hardRef_, nil);
 }
 
 RxDopplSafeObservableUnsubscribe *new_RxDopplSafeObservableUnsubscribe_initWithRxObservable_(RxObservable *observable) {

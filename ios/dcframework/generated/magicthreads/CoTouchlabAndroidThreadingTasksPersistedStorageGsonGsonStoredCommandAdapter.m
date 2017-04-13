@@ -23,6 +23,13 @@ __attribute__((unused)) static ComGoogleGsonGson *CoTouchlabAndroidThreadingTask
 
 @implementation CoTouchlabAndroidThreadingTasksPersistedStorageGsonGsonStoredCommandAdapter
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabAndroidThreadingTasksPersistedStorageGsonGsonStoredCommandAdapter_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (CoTouchlabAndroidThreadingTasksPersistedPersistedTask *)inflateCommandWithNSString:(NSString *)data
                                                                          withNSString:(NSString *)className_ {
   @try {
@@ -51,13 +58,6 @@ __attribute__((unused)) static ComGoogleGsonGson *CoTouchlabAndroidThreadingTask
   }
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabAndroidThreadingTasksPersistedStorageGsonGsonStoredCommandAdapter_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(gsonThreadLocal_);
   [super dealloc];
@@ -65,17 +65,17 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LCoTouchlabAndroidThreadingTasksPersistedPersistedTask;", 0x1, 0, 1, 2, -1, -1, -1 },
     { NULL, "LComGoogleGsonGson;", 0x2, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, 3, 4, 5, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(inflateCommandWithNSString:withNSString:);
-  methods[1].selector = @selector(gsonForThread);
-  methods[2].selector = @selector(storeCommandWithCoTouchlabAndroidThreadingTasksPersistedPersistedTask:);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(inflateCommandWithNSString:withNSString:);
+  methods[2].selector = @selector(gsonForThread);
+  methods[3].selector = @selector(storeCommandWithCoTouchlabAndroidThreadingTasksPersistedPersistedTask:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "gsonThreadLocal_", "LJavaLangThreadLocal;", .constantValue.asLong = 0, 0x0, -1, -1, 6, -1 },
@@ -86,15 +86,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
-
-ComGoogleGsonGson *CoTouchlabAndroidThreadingTasksPersistedStorageGsonGsonStoredCommandAdapter_gsonForThread(CoTouchlabAndroidThreadingTasksPersistedStorageGsonGsonStoredCommandAdapter *self) {
-  ComGoogleGsonGson *gson = [((JavaLangThreadLocal *) nil_chk(self->gsonThreadLocal_)) get];
-  if (gson == nil) {
-    gson = create_ComGoogleGsonGson_init();
-    [((JavaLangThreadLocal *) nil_chk(self->gsonThreadLocal_)) setWithId:gson];
-  }
-  return gson;
-}
 
 void CoTouchlabAndroidThreadingTasksPersistedStorageGsonGsonStoredCommandAdapter_init(CoTouchlabAndroidThreadingTasksPersistedStorageGsonGsonStoredCommandAdapter *self) {
   NSObject_init(self);
@@ -107,6 +98,15 @@ CoTouchlabAndroidThreadingTasksPersistedStorageGsonGsonStoredCommandAdapter *new
 
 CoTouchlabAndroidThreadingTasksPersistedStorageGsonGsonStoredCommandAdapter *create_CoTouchlabAndroidThreadingTasksPersistedStorageGsonGsonStoredCommandAdapter_init() {
   J2OBJC_CREATE_IMPL(CoTouchlabAndroidThreadingTasksPersistedStorageGsonGsonStoredCommandAdapter, init)
+}
+
+ComGoogleGsonGson *CoTouchlabAndroidThreadingTasksPersistedStorageGsonGsonStoredCommandAdapter_gsonForThread(CoTouchlabAndroidThreadingTasksPersistedStorageGsonGsonStoredCommandAdapter *self) {
+  ComGoogleGsonGson *gson = [((JavaLangThreadLocal *) nil_chk(self->gsonThreadLocal_)) get];
+  if (gson == nil) {
+    gson = create_ComGoogleGsonGson_init();
+    [((JavaLangThreadLocal *) nil_chk(self->gsonThreadLocal_)) setWithId:gson];
+  }
+  return gson;
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksPersistedStorageGsonGsonStoredCommandAdapter)

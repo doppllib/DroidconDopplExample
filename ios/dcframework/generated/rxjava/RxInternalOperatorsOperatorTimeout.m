@@ -13,104 +13,94 @@
 #include "java/lang/Long.h"
 #include "java/util/concurrent/TimeUnit.h"
 
-@interface RxInternalOperatorsOperatorTimeout_$1 : NSObject < RxInternalOperatorsOperatorTimeoutBase_FirstTimeoutStub > {
+@interface RxInternalOperatorsOperatorTimeout_1 : NSObject < RxInternalOperatorsOperatorTimeoutBase_FirstTimeoutStub > {
  @public
   jlong val$timeout_;
   JavaUtilConcurrentTimeUnit *val$timeUnit_;
 }
+
+- (instancetype)initWithLong:(jlong)capture$0
+withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)capture$1;
 
 - (id<RxSubscription>)callWithId:(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *)timeoutSubscriber
                           withId:(JavaLangLong *)seqId
                           withId:(RxScheduler_Worker *)inner;
 
-- (instancetype)initWithLong:(jlong)capture$0
-withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTimeout_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTimeout_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorTimeout_$1, val$timeUnit_, JavaUtilConcurrentTimeUnit *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorTimeout_1_initWithLong_withJavaUtilConcurrentTimeUnit_(RxInternalOperatorsOperatorTimeout_1 *self, jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorTimeout_$1_initWithLong_withJavaUtilConcurrentTimeUnit_(RxInternalOperatorsOperatorTimeout_$1 *self, jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1);
+__attribute__((unused)) static RxInternalOperatorsOperatorTimeout_1 *new_RxInternalOperatorsOperatorTimeout_1_initWithLong_withJavaUtilConcurrentTimeUnit_(jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorTimeout_$1 *new_RxInternalOperatorsOperatorTimeout_$1_initWithLong_withJavaUtilConcurrentTimeUnit_(jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorTimeout_1 *create_RxInternalOperatorsOperatorTimeout_1_initWithLong_withJavaUtilConcurrentTimeUnit_(jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorTimeout_$1 *create_RxInternalOperatorsOperatorTimeout_$1_initWithLong_withJavaUtilConcurrentTimeUnit_(jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1);
-
-@interface RxInternalOperatorsOperatorTimeout_$1_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOperatorTimeout_1_1 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *val$timeoutSubscriber_;
   JavaLangLong *val$seqId_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber:(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *)capture$0
                                                                 withJavaLangLong:(JavaLangLong *)capture$1;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTimeout_$1_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTimeout_1_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorTimeout_$1_$1, val$timeoutSubscriber_, RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorTimeout_$1_$1, val$seqId_, JavaLangLong *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorTimeout_1_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeout_1_1 *self, RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorTimeout_$1_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeout_$1_$1 *self, RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1);
+__attribute__((unused)) static RxInternalOperatorsOperatorTimeout_1_1 *new_RxInternalOperatorsOperatorTimeout_1_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorTimeout_$1_$1 *new_RxInternalOperatorsOperatorTimeout_$1_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorTimeout_1_1 *create_RxInternalOperatorsOperatorTimeout_1_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorTimeout_$1_$1 *create_RxInternalOperatorsOperatorTimeout_$1_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1);
-
-@interface RxInternalOperatorsOperatorTimeout_$2 : NSObject < RxInternalOperatorsOperatorTimeoutBase_TimeoutStub > {
+@interface RxInternalOperatorsOperatorTimeout_2 : NSObject < RxInternalOperatorsOperatorTimeoutBase_TimeoutStub > {
  @public
   jlong val$timeout_;
   JavaUtilConcurrentTimeUnit *val$timeUnit_;
 }
+
+- (instancetype)initWithLong:(jlong)capture$0
+withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)capture$1;
 
 - (id<RxSubscription>)callWithId:(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *)timeoutSubscriber
                           withId:(JavaLangLong *)seqId
                           withId:(id)value
                           withId:(RxScheduler_Worker *)inner;
 
-- (instancetype)initWithLong:(jlong)capture$0
-withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTimeout_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTimeout_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorTimeout_$2, val$timeUnit_, JavaUtilConcurrentTimeUnit *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorTimeout_2_initWithLong_withJavaUtilConcurrentTimeUnit_(RxInternalOperatorsOperatorTimeout_2 *self, jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorTimeout_$2_initWithLong_withJavaUtilConcurrentTimeUnit_(RxInternalOperatorsOperatorTimeout_$2 *self, jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1);
+__attribute__((unused)) static RxInternalOperatorsOperatorTimeout_2 *new_RxInternalOperatorsOperatorTimeout_2_initWithLong_withJavaUtilConcurrentTimeUnit_(jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorTimeout_$2 *new_RxInternalOperatorsOperatorTimeout_$2_initWithLong_withJavaUtilConcurrentTimeUnit_(jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorTimeout_2 *create_RxInternalOperatorsOperatorTimeout_2_initWithLong_withJavaUtilConcurrentTimeUnit_(jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorTimeout_$2 *create_RxInternalOperatorsOperatorTimeout_$2_initWithLong_withJavaUtilConcurrentTimeUnit_(jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1);
-
-@interface RxInternalOperatorsOperatorTimeout_$2_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOperatorTimeout_2_1 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *val$timeoutSubscriber_;
   JavaLangLong *val$seqId_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber:(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *)capture$0
                                                                 withJavaLangLong:(JavaLangLong *)capture$1;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTimeout_$2_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTimeout_2_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorTimeout_$2_$1, val$timeoutSubscriber_, RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorTimeout_$2_$1, val$seqId_, JavaLangLong *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorTimeout_2_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeout_2_1 *self, RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorTimeout_$2_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeout_$2_$1 *self, RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1);
+__attribute__((unused)) static RxInternalOperatorsOperatorTimeout_2_1 *new_RxInternalOperatorsOperatorTimeout_2_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorTimeout_$2_$1 *new_RxInternalOperatorsOperatorTimeout_$2_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorTimeout_$2_$1 *create_RxInternalOperatorsOperatorTimeout_$2_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1);
+__attribute__((unused)) static RxInternalOperatorsOperatorTimeout_2_1 *create_RxInternalOperatorsOperatorTimeout_2_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1);
 
 @implementation RxInternalOperatorsOperatorTimeout
 
@@ -138,7 +128,7 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)timeUnit
 @end
 
 void RxInternalOperatorsOperatorTimeout_initWithLong_withJavaUtilConcurrentTimeUnit_withRxObservable_withRxScheduler_(RxInternalOperatorsOperatorTimeout *self, jlong timeout, JavaUtilConcurrentTimeUnit *timeUnit, RxObservable *other, RxScheduler *scheduler) {
-  RxInternalOperatorsOperatorTimeoutBase_initWithRxInternalOperatorsOperatorTimeoutBase_FirstTimeoutStub_withRxInternalOperatorsOperatorTimeoutBase_TimeoutStub_withRxObservable_withRxScheduler_(self, create_RxInternalOperatorsOperatorTimeout_$1_initWithLong_withJavaUtilConcurrentTimeUnit_(timeout, timeUnit), create_RxInternalOperatorsOperatorTimeout_$2_initWithLong_withJavaUtilConcurrentTimeUnit_(timeout, timeUnit), other, scheduler);
+  RxInternalOperatorsOperatorTimeoutBase_initWithRxInternalOperatorsOperatorTimeoutBase_FirstTimeoutStub_withRxInternalOperatorsOperatorTimeoutBase_TimeoutStub_withRxObservable_withRxScheduler_(self, create_RxInternalOperatorsOperatorTimeout_1_initWithLong_withJavaUtilConcurrentTimeUnit_(timeout, timeUnit), create_RxInternalOperatorsOperatorTimeout_2_initWithLong_withJavaUtilConcurrentTimeUnit_(timeout, timeUnit), other, scheduler);
 }
 
 RxInternalOperatorsOperatorTimeout *new_RxInternalOperatorsOperatorTimeout_initWithLong_withJavaUtilConcurrentTimeUnit_withRxObservable_withRxScheduler_(jlong timeout, JavaUtilConcurrentTimeUnit *timeUnit, RxObservable *other, RxScheduler *scheduler) {
@@ -151,18 +141,18 @@ RxInternalOperatorsOperatorTimeout *create_RxInternalOperatorsOperatorTimeout_in
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorTimeout)
 
-@implementation RxInternalOperatorsOperatorTimeout_$1
+@implementation RxInternalOperatorsOperatorTimeout_1
+
+- (instancetype)initWithLong:(jlong)capture$0
+withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)capture$1 {
+  RxInternalOperatorsOperatorTimeout_1_initWithLong_withJavaUtilConcurrentTimeUnit_(self, capture$0, capture$1);
+  return self;
+}
 
 - (id<RxSubscription>)callWithId:(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *)timeoutSubscriber
                           withId:(JavaLangLong *)seqId
                           withId:(RxScheduler_Worker *)inner {
-  return [((RxScheduler_Worker *) nil_chk(inner)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsOperatorTimeout_$1_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(timeoutSubscriber, seqId) withLong:val$timeout_ withJavaUtilConcurrentTimeUnit:val$timeUnit_];
-}
-
-- (instancetype)initWithLong:(jlong)capture$0
-withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)capture$1 {
-  RxInternalOperatorsOperatorTimeout_$1_initWithLong_withJavaUtilConcurrentTimeUnit_(self, capture$0, capture$1);
-  return self;
+  return [((RxScheduler_Worker *) nil_chk(inner)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsOperatorTimeout_1_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(timeoutSubscriber, seqId) withLong:val$timeout_ withJavaUtilConcurrentTimeUnit:val$timeUnit_];
 }
 
 - (void)dealloc {
@@ -172,49 +162,49 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)capture$1 {
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxSubscription;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:withId:);
-  methods[1].selector = @selector(initWithLong:withJavaUtilConcurrentTimeUnit:);
+  methods[0].selector = @selector(initWithLong:withJavaUtilConcurrentTimeUnit:);
+  methods[1].selector = @selector(callWithId:withId:withId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$timeout_", "J", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$timeUnit_", "LJavaUtilConcurrentTimeUnit;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber;LJavaLangLong;LRxScheduler_Worker;", "(Lrx/internal/operators/OperatorTimeoutBase$TimeoutSubscriber<TT;>;Ljava/lang/Long;Lrx/Scheduler$Worker;)Lrx/Subscription;", "JLJavaUtilConcurrentTimeUnit;", "LRxInternalOperatorsOperatorTimeout;", "initWithLong:withJavaUtilConcurrentTimeUnit:withRxObservable:withRxScheduler:", "Ljava/lang/Object;Lrx/internal/operators/OperatorTimeoutBase$FirstTimeoutStub<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTimeout_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 4, -1, 5, 6, -1 };
-  return &_RxInternalOperatorsOperatorTimeout_$1;
+  static const void *ptrTable[] = { "call", "LRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber;LJavaLangLong;LRxScheduler_Worker;", "(Lrx/internal/operators/OperatorTimeoutBase$TimeoutSubscriber<TT;>;Ljava/lang/Long;Lrx/Scheduler$Worker;)Lrx/Subscription;", "LRxInternalOperatorsOperatorTimeout;", "initWithLong:withJavaUtilConcurrentTimeUnit:withRxObservable:withRxScheduler:", "Ljava/lang/Object;Lrx/internal/operators/OperatorTimeoutBase$FirstTimeoutStub<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTimeout_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, 5, -1 };
+  return &_RxInternalOperatorsOperatorTimeout_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorTimeout_$1_initWithLong_withJavaUtilConcurrentTimeUnit_(RxInternalOperatorsOperatorTimeout_$1 *self, jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1) {
+void RxInternalOperatorsOperatorTimeout_1_initWithLong_withJavaUtilConcurrentTimeUnit_(RxInternalOperatorsOperatorTimeout_1 *self, jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1) {
   self->val$timeout_ = capture$0;
   JreStrongAssign(&self->val$timeUnit_, capture$1);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorTimeout_$1 *new_RxInternalOperatorsOperatorTimeout_$1_initWithLong_withJavaUtilConcurrentTimeUnit_(jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTimeout_$1, initWithLong_withJavaUtilConcurrentTimeUnit_, capture$0, capture$1)
+RxInternalOperatorsOperatorTimeout_1 *new_RxInternalOperatorsOperatorTimeout_1_initWithLong_withJavaUtilConcurrentTimeUnit_(jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTimeout_1, initWithLong_withJavaUtilConcurrentTimeUnit_, capture$0, capture$1)
 }
 
-RxInternalOperatorsOperatorTimeout_$1 *create_RxInternalOperatorsOperatorTimeout_$1_initWithLong_withJavaUtilConcurrentTimeUnit_(jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTimeout_$1, initWithLong_withJavaUtilConcurrentTimeUnit_, capture$0, capture$1)
+RxInternalOperatorsOperatorTimeout_1 *create_RxInternalOperatorsOperatorTimeout_1_initWithLong_withJavaUtilConcurrentTimeUnit_(jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTimeout_1, initWithLong_withJavaUtilConcurrentTimeUnit_, capture$0, capture$1)
 }
 
-@implementation RxInternalOperatorsOperatorTimeout_$1_$1
-
-- (void)call {
-  [((RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *) nil_chk(val$timeoutSubscriber_)) onTimeoutWithLong:[((JavaLangLong *) nil_chk(val$seqId_)) longLongValue]];
-}
+@implementation RxInternalOperatorsOperatorTimeout_1_1
 
 - (instancetype)initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber:(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *)capture$0
                                                                 withJavaLangLong:(JavaLangLong *)capture$1 {
-  RxInternalOperatorsOperatorTimeout_$1_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(self, capture$0, capture$1);
+  RxInternalOperatorsOperatorTimeout_1_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(self, capture$0, capture$1);
   return self;
+}
+
+- (void)call {
+  [((RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *) nil_chk(val$timeoutSubscriber_)) onTimeoutWithLong:[((JavaLangLong *) nil_chk(val$seqId_)) longLongValue]];
 }
 
 - (void)dealloc {
@@ -225,52 +215,52 @@ RxInternalOperatorsOperatorTimeout_$1 *create_RxInternalOperatorsOperatorTimeout
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber:withJavaLangLong:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber:withJavaLangLong:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$timeoutSubscriber_", "LRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+    { "val$timeoutSubscriber_", "LRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
     { "val$seqId_", "LJavaLangLong;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber;LJavaLangLong;", "(Lrx/internal/operators/OperatorTimeoutBase$TimeoutSubscriber<TT;>;Ljava/lang/Long;)V", "Lrx/internal/operators/OperatorTimeoutBase$TimeoutSubscriber<TT;>;", "LRxInternalOperatorsOperatorTimeout_$1;", "callWithId:withId:withId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTimeout_$1_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, -1, -1 };
-  return &_RxInternalOperatorsOperatorTimeout_$1_$1;
+  static const void *ptrTable[] = { "Lrx/internal/operators/OperatorTimeoutBase$TimeoutSubscriber<TT;>;", "LRxInternalOperatorsOperatorTimeout_1;", "callWithId:withId:withId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTimeout_1_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
+  return &_RxInternalOperatorsOperatorTimeout_1_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorTimeout_$1_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeout_$1_$1 *self, RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1) {
+void RxInternalOperatorsOperatorTimeout_1_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeout_1_1 *self, RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1) {
   JreStrongAssign(&self->val$timeoutSubscriber_, capture$0);
   JreStrongAssign(&self->val$seqId_, capture$1);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorTimeout_$1_$1 *new_RxInternalOperatorsOperatorTimeout_$1_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTimeout_$1_$1, initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_, capture$0, capture$1)
+RxInternalOperatorsOperatorTimeout_1_1 *new_RxInternalOperatorsOperatorTimeout_1_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTimeout_1_1, initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_, capture$0, capture$1)
 }
 
-RxInternalOperatorsOperatorTimeout_$1_$1 *create_RxInternalOperatorsOperatorTimeout_$1_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTimeout_$1_$1, initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_, capture$0, capture$1)
+RxInternalOperatorsOperatorTimeout_1_1 *create_RxInternalOperatorsOperatorTimeout_1_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTimeout_1_1, initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_, capture$0, capture$1)
 }
 
-@implementation RxInternalOperatorsOperatorTimeout_$2
+@implementation RxInternalOperatorsOperatorTimeout_2
+
+- (instancetype)initWithLong:(jlong)capture$0
+withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)capture$1 {
+  RxInternalOperatorsOperatorTimeout_2_initWithLong_withJavaUtilConcurrentTimeUnit_(self, capture$0, capture$1);
+  return self;
+}
 
 - (id<RxSubscription>)callWithId:(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *)timeoutSubscriber
                           withId:(JavaLangLong *)seqId
                           withId:(id)value
                           withId:(RxScheduler_Worker *)inner {
-  return [((RxScheduler_Worker *) nil_chk(inner)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsOperatorTimeout_$2_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(timeoutSubscriber, seqId) withLong:val$timeout_ withJavaUtilConcurrentTimeUnit:val$timeUnit_];
-}
-
-- (instancetype)initWithLong:(jlong)capture$0
-withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)capture$1 {
-  RxInternalOperatorsOperatorTimeout_$2_initWithLong_withJavaUtilConcurrentTimeUnit_(self, capture$0, capture$1);
-  return self;
+  return [((RxScheduler_Worker *) nil_chk(inner)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsOperatorTimeout_2_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(timeoutSubscriber, seqId) withLong:val$timeout_ withJavaUtilConcurrentTimeUnit:val$timeUnit_];
 }
 
 - (void)dealloc {
@@ -280,49 +270,49 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)capture$1 {
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxSubscription;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:withId:withId:);
-  methods[1].selector = @selector(initWithLong:withJavaUtilConcurrentTimeUnit:);
+  methods[0].selector = @selector(initWithLong:withJavaUtilConcurrentTimeUnit:);
+  methods[1].selector = @selector(callWithId:withId:withId:withId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$timeout_", "J", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$timeUnit_", "LJavaUtilConcurrentTimeUnit;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber;LJavaLangLong;LNSObject;LRxScheduler_Worker;", "(Lrx/internal/operators/OperatorTimeoutBase$TimeoutSubscriber<TT;>;Ljava/lang/Long;TT;Lrx/Scheduler$Worker;)Lrx/Subscription;", "JLJavaUtilConcurrentTimeUnit;", "LRxInternalOperatorsOperatorTimeout;", "initWithLong:withJavaUtilConcurrentTimeUnit:withRxObservable:withRxScheduler:", "Ljava/lang/Object;Lrx/internal/operators/OperatorTimeoutBase$TimeoutStub<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTimeout_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 4, -1, 5, 6, -1 };
-  return &_RxInternalOperatorsOperatorTimeout_$2;
+  static const void *ptrTable[] = { "call", "LRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber;LJavaLangLong;LNSObject;LRxScheduler_Worker;", "(Lrx/internal/operators/OperatorTimeoutBase$TimeoutSubscriber<TT;>;Ljava/lang/Long;TT;Lrx/Scheduler$Worker;)Lrx/Subscription;", "LRxInternalOperatorsOperatorTimeout;", "initWithLong:withJavaUtilConcurrentTimeUnit:withRxObservable:withRxScheduler:", "Ljava/lang/Object;Lrx/internal/operators/OperatorTimeoutBase$TimeoutStub<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTimeout_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, 5, -1 };
+  return &_RxInternalOperatorsOperatorTimeout_2;
 }
 
 @end
 
-void RxInternalOperatorsOperatorTimeout_$2_initWithLong_withJavaUtilConcurrentTimeUnit_(RxInternalOperatorsOperatorTimeout_$2 *self, jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1) {
+void RxInternalOperatorsOperatorTimeout_2_initWithLong_withJavaUtilConcurrentTimeUnit_(RxInternalOperatorsOperatorTimeout_2 *self, jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1) {
   self->val$timeout_ = capture$0;
   JreStrongAssign(&self->val$timeUnit_, capture$1);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorTimeout_$2 *new_RxInternalOperatorsOperatorTimeout_$2_initWithLong_withJavaUtilConcurrentTimeUnit_(jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTimeout_$2, initWithLong_withJavaUtilConcurrentTimeUnit_, capture$0, capture$1)
+RxInternalOperatorsOperatorTimeout_2 *new_RxInternalOperatorsOperatorTimeout_2_initWithLong_withJavaUtilConcurrentTimeUnit_(jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTimeout_2, initWithLong_withJavaUtilConcurrentTimeUnit_, capture$0, capture$1)
 }
 
-RxInternalOperatorsOperatorTimeout_$2 *create_RxInternalOperatorsOperatorTimeout_$2_initWithLong_withJavaUtilConcurrentTimeUnit_(jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTimeout_$2, initWithLong_withJavaUtilConcurrentTimeUnit_, capture$0, capture$1)
+RxInternalOperatorsOperatorTimeout_2 *create_RxInternalOperatorsOperatorTimeout_2_initWithLong_withJavaUtilConcurrentTimeUnit_(jlong capture$0, JavaUtilConcurrentTimeUnit *capture$1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTimeout_2, initWithLong_withJavaUtilConcurrentTimeUnit_, capture$0, capture$1)
 }
 
-@implementation RxInternalOperatorsOperatorTimeout_$2_$1
-
-- (void)call {
-  [((RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *) nil_chk(val$timeoutSubscriber_)) onTimeoutWithLong:[((JavaLangLong *) nil_chk(val$seqId_)) longLongValue]];
-}
+@implementation RxInternalOperatorsOperatorTimeout_2_1
 
 - (instancetype)initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber:(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *)capture$0
                                                                 withJavaLangLong:(JavaLangLong *)capture$1 {
-  RxInternalOperatorsOperatorTimeout_$2_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(self, capture$0, capture$1);
+  RxInternalOperatorsOperatorTimeout_2_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(self, capture$0, capture$1);
   return self;
+}
+
+- (void)call {
+  [((RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *) nil_chk(val$timeoutSubscriber_)) onTimeoutWithLong:[((JavaLangLong *) nil_chk(val$seqId_)) longLongValue]];
 }
 
 - (void)dealloc {
@@ -333,35 +323,35 @@ RxInternalOperatorsOperatorTimeout_$2 *create_RxInternalOperatorsOperatorTimeout
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber:withJavaLangLong:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber:withJavaLangLong:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$timeoutSubscriber_", "LRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+    { "val$timeoutSubscriber_", "LRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
     { "val$seqId_", "LJavaLangLong;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber;LJavaLangLong;", "(Lrx/internal/operators/OperatorTimeoutBase$TimeoutSubscriber<TT;>;Ljava/lang/Long;)V", "Lrx/internal/operators/OperatorTimeoutBase$TimeoutSubscriber<TT;>;", "LRxInternalOperatorsOperatorTimeout_$2;", "callWithId:withId:withId:withId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTimeout_$2_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, -1, -1 };
-  return &_RxInternalOperatorsOperatorTimeout_$2_$1;
+  static const void *ptrTable[] = { "Lrx/internal/operators/OperatorTimeoutBase$TimeoutSubscriber<TT;>;", "LRxInternalOperatorsOperatorTimeout_2;", "callWithId:withId:withId:withId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTimeout_2_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
+  return &_RxInternalOperatorsOperatorTimeout_2_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorTimeout_$2_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeout_$2_$1 *self, RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1) {
+void RxInternalOperatorsOperatorTimeout_2_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeout_2_1 *self, RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1) {
   JreStrongAssign(&self->val$timeoutSubscriber_, capture$0);
   JreStrongAssign(&self->val$seqId_, capture$1);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorTimeout_$2_$1 *new_RxInternalOperatorsOperatorTimeout_$2_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTimeout_$2_$1, initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_, capture$0, capture$1)
+RxInternalOperatorsOperatorTimeout_2_1 *new_RxInternalOperatorsOperatorTimeout_2_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTimeout_2_1, initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_, capture$0, capture$1)
 }
 
-RxInternalOperatorsOperatorTimeout_$2_$1 *create_RxInternalOperatorsOperatorTimeout_$2_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTimeout_$2_$1, initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_, capture$0, capture$1)
+RxInternalOperatorsOperatorTimeout_2_1 *create_RxInternalOperatorsOperatorTimeout_2_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *capture$0, JavaLangLong *capture$1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTimeout_2_1, initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_withJavaLangLong_, capture$0, capture$1)
 }

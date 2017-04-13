@@ -24,6 +24,13 @@ __attribute__((unused)) static id<JavaUtilMap> CoTouchlabSqueakyTableTransientCa
 
 @implementation CoTouchlabSqueakyTableTransientCache
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabSqueakyTableTransientCache_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (void)putWithIOSClass:(IOSClass *)c
                  withId:(id)id_
                  withId:(id)data {
@@ -41,13 +48,6 @@ __attribute__((unused)) static id<JavaUtilMap> CoTouchlabSqueakyTableTransientCa
   return CoTouchlabSqueakyTableTransientCache_primeCacheWithIOSClass_(self, c);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabSqueakyTableTransientCache_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(cache_);
   [super dealloc];
@@ -55,17 +55,17 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, 2, 3, -1, -1, -1, -1 },
     { NULL, "LJavaUtilMap;", 0x2, 4, 5, -1, 6, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(putWithIOSClass:withId:withId:);
-  methods[1].selector = @selector(getWithIOSClass:withId:);
-  methods[2].selector = @selector(primeCacheWithIOSClass:);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(putWithIOSClass:withId:withId:);
+  methods[2].selector = @selector(getWithIOSClass:withId:);
+  methods[3].selector = @selector(primeCacheWithIOSClass:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "cache_", "LJavaUtilMap;", .constantValue.asLong = 0, 0x2, -1, -1, 7, -1 },
@@ -76,15 +76,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
-
-id<JavaUtilMap> CoTouchlabSqueakyTableTransientCache_primeCacheWithIOSClass_(CoTouchlabSqueakyTableTransientCache *self, IOSClass *c) {
-  id<JavaUtilMap> objectObjectMap = [((id<JavaUtilMap>) nil_chk(self->cache_)) getWithId:c];
-  if (objectObjectMap == nil) {
-    objectObjectMap = create_JavaUtilHashMap_init();
-    [((id<JavaUtilMap>) nil_chk(self->cache_)) putWithId:c withId:objectObjectMap];
-  }
-  return objectObjectMap;
-}
 
 void CoTouchlabSqueakyTableTransientCache_init(CoTouchlabSqueakyTableTransientCache *self) {
   NSObject_init(self);
@@ -97,6 +88,15 @@ CoTouchlabSqueakyTableTransientCache *new_CoTouchlabSqueakyTableTransientCache_i
 
 CoTouchlabSqueakyTableTransientCache *create_CoTouchlabSqueakyTableTransientCache_init() {
   J2OBJC_CREATE_IMPL(CoTouchlabSqueakyTableTransientCache, init)
+}
+
+id<JavaUtilMap> CoTouchlabSqueakyTableTransientCache_primeCacheWithIOSClass_(CoTouchlabSqueakyTableTransientCache *self, IOSClass *c) {
+  id<JavaUtilMap> objectObjectMap = [((id<JavaUtilMap>) nil_chk(self->cache_)) getWithId:c];
+  if (objectObjectMap == nil) {
+    objectObjectMap = create_JavaUtilHashMap_init();
+    [((id<JavaUtilMap>) nil_chk(self->cache_)) putWithId:c withId:objectObjectMap];
+  }
+  return objectObjectMap;
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabSqueakyTableTransientCache)

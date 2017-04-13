@@ -233,6 +233,12 @@ inline jint AndroidDatabaseDatabaseUtils_get_STATEMENT_OTHER();
 #define AndroidDatabaseDatabaseUtils_STATEMENT_OTHER 99
 J2OBJC_STATIC_FIELD_CONSTANT(AndroidDatabaseDatabaseUtils, STATEMENT_OTHER, jint)
 
+FOUNDATION_EXPORT void AndroidDatabaseDatabaseUtils_init(AndroidDatabaseDatabaseUtils *self);
+
+FOUNDATION_EXPORT AndroidDatabaseDatabaseUtils *new_AndroidDatabaseDatabaseUtils_init() NS_RETURNS_RETAINED;
+
+FOUNDATION_EXPORT AndroidDatabaseDatabaseUtils *create_AndroidDatabaseDatabaseUtils_init();
+
 FOUNDATION_EXPORT void AndroidDatabaseDatabaseUtils_bindObjectToProgramWithAndroidDatabaseSqliteSQLiteProgram_withInt_withId_(AndroidDatabaseSqliteSQLiteProgram *prog, jint index, id value);
 
 FOUNDATION_EXPORT jint AndroidDatabaseDatabaseUtils_getTypeOfObjectWithId_(id obj);
@@ -322,12 +328,6 @@ FOUNDATION_EXPORT jint AndroidDatabaseDatabaseUtils_getSqlStatementTypeWithNSStr
 FOUNDATION_EXPORT IOSObjectArray *AndroidDatabaseDatabaseUtils_appendSelectionArgsWithNSStringArray_withNSStringArray_(IOSObjectArray *originalValues, IOSObjectArray *newValues);
 
 FOUNDATION_EXPORT jint AndroidDatabaseDatabaseUtils_findRowIdColumnIndexWithNSStringArray_(IOSObjectArray *columnNames);
-
-FOUNDATION_EXPORT void AndroidDatabaseDatabaseUtils_init(AndroidDatabaseDatabaseUtils *self);
-
-FOUNDATION_EXPORT AndroidDatabaseDatabaseUtils *new_AndroidDatabaseDatabaseUtils_init() NS_RETURNS_RETAINED;
-
-FOUNDATION_EXPORT AndroidDatabaseDatabaseUtils *create_AndroidDatabaseDatabaseUtils_init();
 
 J2OBJC_TYPE_LITERAL_HEADER(AndroidDatabaseDatabaseUtils)
 

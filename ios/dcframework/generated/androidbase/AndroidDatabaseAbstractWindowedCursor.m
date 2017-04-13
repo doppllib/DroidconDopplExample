@@ -26,6 +26,13 @@ __attribute__((unused)) static IOSObjectArray *AndroidDatabaseAbstractWindowedCu
 
 @implementation AndroidDatabaseAbstractWindowedCursor
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  AndroidDatabaseAbstractWindowedCursor_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (IOSByteArray *)getBlobWithInt:(jint)columnIndex {
   [self checkPosition];
   return [((AndroidDatabaseCursorWindow *) nil_chk(mWindow_)) getBlobWithInt:mPos_ withInt:columnIndex];
@@ -136,13 +143,6 @@ withAndroidDatabaseCharArrayBuffer:(AndroidDatabaseCharArrayBuffer *)buffer {
   [self closeWindow];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  AndroidDatabaseAbstractWindowedCursor_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   JreCheckFinalize(self, [AndroidDatabaseAbstractWindowedCursor class]);
   RELEASE_(mWindow_);
@@ -151,6 +151,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "[B", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, 2, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
@@ -172,32 +173,31 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "V", 0x4, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x4, 22, 23, -1, -1, -1, -1 },
     { NULL, "V", 0x4, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getBlobWithInt:);
-  methods[1].selector = @selector(getStringWithInt:);
-  methods[2].selector = @selector(copyStringToBufferWithInt:withAndroidDatabaseCharArrayBuffer:);
-  methods[3].selector = @selector(getShortWithInt:);
-  methods[4].selector = @selector(getIntWithInt:);
-  methods[5].selector = @selector(getLongWithInt:);
-  methods[6].selector = @selector(getFloatWithInt:);
-  methods[7].selector = @selector(getDoubleWithInt:);
-  methods[8].selector = @selector(isNullWithInt:);
-  methods[9].selector = @selector(isBlobWithInt:);
-  methods[10].selector = @selector(isStringWithInt:);
-  methods[11].selector = @selector(isLongWithInt:);
-  methods[12].selector = @selector(isFloatWithInt:);
-  methods[13].selector = @selector(getTypeWithInt:);
-  methods[14].selector = @selector(checkPosition);
-  methods[15].selector = @selector(getWindow);
-  methods[16].selector = @selector(setWindowWithAndroidDatabaseCursorWindow:);
-  methods[17].selector = @selector(hasWindow);
-  methods[18].selector = @selector(closeWindow);
-  methods[19].selector = @selector(clearOrCreateWindowWithNSString:);
-  methods[20].selector = @selector(onDeactivateOrClose);
-  methods[21].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(getBlobWithInt:);
+  methods[2].selector = @selector(getStringWithInt:);
+  methods[3].selector = @selector(copyStringToBufferWithInt:withAndroidDatabaseCharArrayBuffer:);
+  methods[4].selector = @selector(getShortWithInt:);
+  methods[5].selector = @selector(getIntWithInt:);
+  methods[6].selector = @selector(getLongWithInt:);
+  methods[7].selector = @selector(getFloatWithInt:);
+  methods[8].selector = @selector(getDoubleWithInt:);
+  methods[9].selector = @selector(isNullWithInt:);
+  methods[10].selector = @selector(isBlobWithInt:);
+  methods[11].selector = @selector(isStringWithInt:);
+  methods[12].selector = @selector(isLongWithInt:);
+  methods[13].selector = @selector(isFloatWithInt:);
+  methods[14].selector = @selector(getTypeWithInt:);
+  methods[15].selector = @selector(checkPosition);
+  methods[16].selector = @selector(getWindow);
+  methods[17].selector = @selector(setWindowWithAndroidDatabaseCursorWindow:);
+  methods[18].selector = @selector(hasWindow);
+  methods[19].selector = @selector(closeWindow);
+  methods[20].selector = @selector(clearOrCreateWindowWithNSString:);
+  methods[21].selector = @selector(onDeactivateOrClose);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "mWindow_", "LAndroidDatabaseCursorWindow;", .constantValue.asLong = 0, 0x4, -1, -1, -1, -1 },

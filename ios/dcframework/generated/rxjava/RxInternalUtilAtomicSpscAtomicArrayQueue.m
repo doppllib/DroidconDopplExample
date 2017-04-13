@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/util/atomic/SpscAtomicArrayQueue.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxInternalUtilAtomicAtomicReferenceArrayQueue.h"
 #include "RxInternalUtilAtomicSpscAtomicArrayQueue.h"

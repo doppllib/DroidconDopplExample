@@ -14,25 +14,25 @@
 
 __attribute__((unused)) static void ComGoogleGsonLongSerializationPolicy_initWithNSString_withInt_(ComGoogleGsonLongSerializationPolicy *self, NSString *__name, jint __ordinal);
 
-@interface ComGoogleGsonLongSerializationPolicy_$1 : ComGoogleGsonLongSerializationPolicy < NSCopying >
+@interface ComGoogleGsonLongSerializationPolicy_1 : ComGoogleGsonLongSerializationPolicy < NSCopying >
 
 - (ComGoogleGsonJsonElement *)serializeWithJavaLangLong:(JavaLangLong *)value;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonLongSerializationPolicy_$1)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonLongSerializationPolicy_1)
 
-__attribute__((unused)) static void ComGoogleGsonLongSerializationPolicy_$1_initWithNSString_withInt_(ComGoogleGsonLongSerializationPolicy_$1 *self, NSString *__name, jint __ordinal);
+__attribute__((unused)) static void ComGoogleGsonLongSerializationPolicy_1_initWithNSString_withInt_(ComGoogleGsonLongSerializationPolicy_1 *self, NSString *__name, jint __ordinal);
 
-@interface ComGoogleGsonLongSerializationPolicy_$2 : ComGoogleGsonLongSerializationPolicy < NSCopying >
+@interface ComGoogleGsonLongSerializationPolicy_2 : ComGoogleGsonLongSerializationPolicy < NSCopying >
 
 - (ComGoogleGsonJsonElement *)serializeWithJavaLangLong:(JavaLangLong *)value;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonLongSerializationPolicy_$2)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonLongSerializationPolicy_2)
 
-__attribute__((unused)) static void ComGoogleGsonLongSerializationPolicy_$2_initWithNSString_withInt_(ComGoogleGsonLongSerializationPolicy_$2 *self, NSString *__name, jint __ordinal);
+__attribute__((unused)) static void ComGoogleGsonLongSerializationPolicy_2_initWithNSString_withInt_(ComGoogleGsonLongSerializationPolicy_2 *self, NSString *__name, jint __ordinal);
 
 J2OBJC_INITIALIZED_DEFN(ComGoogleGsonLongSerializationPolicy)
 
@@ -82,16 +82,16 @@ ComGoogleGsonLongSerializationPolicy *ComGoogleGsonLongSerializationPolicy_value
 + (void)initialize {
   if (self == [ComGoogleGsonLongSerializationPolicy class]) {
     size_t allocSize = 0;
-    size_t objSize_DEFAULT = class_getInstanceSize([ComGoogleGsonLongSerializationPolicy_$1 class]);
+    size_t objSize_DEFAULT = class_getInstanceSize([ComGoogleGsonLongSerializationPolicy_1 class]);
     allocSize += objSize_DEFAULT;
-    size_t objSize_STRING = class_getInstanceSize([ComGoogleGsonLongSerializationPolicy_$2 class]);
+    size_t objSize_STRING = class_getInstanceSize([ComGoogleGsonLongSerializationPolicy_2 class]);
     allocSize += objSize_STRING;
     uintptr_t ptr = (uintptr_t)calloc(allocSize, 1);
     id e;
-    (JreEnum(ComGoogleGsonLongSerializationPolicy, DEFAULT) = e = objc_constructInstance([ComGoogleGsonLongSerializationPolicy_$1 class], (void *)ptr), ptr += objSize_DEFAULT);
-    ComGoogleGsonLongSerializationPolicy_$1_initWithNSString_withInt_(e, @"DEFAULT", 0);
-    (JreEnum(ComGoogleGsonLongSerializationPolicy, STRING) = e = objc_constructInstance([ComGoogleGsonLongSerializationPolicy_$2 class], (void *)ptr), ptr += objSize_STRING);
-    ComGoogleGsonLongSerializationPolicy_$2_initWithNSString_withInt_(e, @"STRING", 1);
+    (JreEnum(ComGoogleGsonLongSerializationPolicy, DEFAULT) = e = objc_constructInstance([ComGoogleGsonLongSerializationPolicy_1 class], (void *)ptr), ptr += objSize_DEFAULT);
+    ComGoogleGsonLongSerializationPolicy_1_initWithNSString_withInt_(e, @"DEFAULT", 0);
+    (JreEnum(ComGoogleGsonLongSerializationPolicy, STRING) = e = objc_constructInstance([ComGoogleGsonLongSerializationPolicy_2 class], (void *)ptr), ptr += objSize_STRING);
+    ComGoogleGsonLongSerializationPolicy_2_initWithNSString_withInt_(e, @"STRING", 1);
     J2OBJC_SET_INITIALIZED(ComGoogleGsonLongSerializationPolicy)
   }
 }
@@ -129,14 +129,14 @@ ComGoogleGsonLongSerializationPolicy *ComGoogleGsonLongSerializationPolicy_fromO
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonLongSerializationPolicy)
 
-@implementation ComGoogleGsonLongSerializationPolicy_$1
+@implementation ComGoogleGsonLongSerializationPolicy_1
 
 - (ComGoogleGsonJsonElement *)serializeWithJavaLangLong:(JavaLangLong *)value {
   return create_ComGoogleGsonJsonPrimitive_initWithNSNumber_(value);
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [ComGoogleGsonLongSerializationPolicy_$1 class]);
+  JreCheckFinalize(self, [ComGoogleGsonLongSerializationPolicy_1 class]);
   [super dealloc];
 }
 
@@ -149,24 +149,24 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonLongSerializationPolicy)
   methods[0].selector = @selector(serializeWithJavaLangLong:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "serialize", "LJavaLangLong;", "LComGoogleGsonLongSerializationPolicy;" };
-  static const J2ObjcClassInfo _ComGoogleGsonLongSerializationPolicy_$1 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
-  return &_ComGoogleGsonLongSerializationPolicy_$1;
+  static const J2ObjcClassInfo _ComGoogleGsonLongSerializationPolicy_1 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
+  return &_ComGoogleGsonLongSerializationPolicy_1;
 }
 
 @end
 
-void ComGoogleGsonLongSerializationPolicy_$1_initWithNSString_withInt_(ComGoogleGsonLongSerializationPolicy_$1 *self, NSString *__name, jint __ordinal) {
+void ComGoogleGsonLongSerializationPolicy_1_initWithNSString_withInt_(ComGoogleGsonLongSerializationPolicy_1 *self, NSString *__name, jint __ordinal) {
   ComGoogleGsonLongSerializationPolicy_initWithNSString_withInt_(self, __name, __ordinal);
 }
 
-@implementation ComGoogleGsonLongSerializationPolicy_$2
+@implementation ComGoogleGsonLongSerializationPolicy_2
 
 - (ComGoogleGsonJsonElement *)serializeWithJavaLangLong:(JavaLangLong *)value {
-  return create_ComGoogleGsonJsonPrimitive_initWithNSString_(NSString_valueOf_(value));
+  return create_ComGoogleGsonJsonPrimitive_initWithNSString_(NSString_java_valueOf_(value));
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [ComGoogleGsonLongSerializationPolicy_$2 class]);
+  JreCheckFinalize(self, [ComGoogleGsonLongSerializationPolicy_2 class]);
   [super dealloc];
 }
 
@@ -179,12 +179,12 @@ void ComGoogleGsonLongSerializationPolicy_$1_initWithNSString_withInt_(ComGoogle
   methods[0].selector = @selector(serializeWithJavaLangLong:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "serialize", "LJavaLangLong;", "LComGoogleGsonLongSerializationPolicy;" };
-  static const J2ObjcClassInfo _ComGoogleGsonLongSerializationPolicy_$2 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
-  return &_ComGoogleGsonLongSerializationPolicy_$2;
+  static const J2ObjcClassInfo _ComGoogleGsonLongSerializationPolicy_2 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
+  return &_ComGoogleGsonLongSerializationPolicy_2;
 }
 
 @end
 
-void ComGoogleGsonLongSerializationPolicy_$2_initWithNSString_withInt_(ComGoogleGsonLongSerializationPolicy_$2 *self, NSString *__name, jint __ordinal) {
+void ComGoogleGsonLongSerializationPolicy_2_initWithNSString_withInt_(ComGoogleGsonLongSerializationPolicy_2 *self, NSString *__name, jint __ordinal) {
   ComGoogleGsonLongSerializationPolicy_initWithNSString_withInt_(self, __name, __ordinal);
 }

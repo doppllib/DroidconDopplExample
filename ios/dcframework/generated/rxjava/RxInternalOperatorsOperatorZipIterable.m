@@ -12,13 +12,18 @@
 #include "java/lang/Iterable.h"
 #include "java/util/Iterator.h"
 
-@interface RxInternalOperatorsOperatorZipIterable_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorZipIterable_1 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorZipIterable *this$0_;
-  jboolean done_;
   RxSubscriber *val$subscriber_;
   id<JavaUtilIterator> val$iterator_;
+  jboolean done_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorZipIterable:(RxInternalOperatorsOperatorZipIterable *)outer$
+                                              withRxSubscriber:(RxSubscriber *)capture$0
+                                          withJavaUtilIterator:(id<JavaUtilIterator>)capture$1
+                                              withRxSubscriber:(RxSubscriber *)param0;
 
 - (void)onCompleted;
 
@@ -26,24 +31,15 @@
 
 - (void)onNextWithId:(id)t;
 
-- (instancetype)initWithRxInternalOperatorsOperatorZipIterable:(RxInternalOperatorsOperatorZipIterable *)outer$
-                                              withRxSubscriber:(RxSubscriber *)capture$0
-                                          withJavaUtilIterator:(id<JavaUtilIterator>)capture$1
-                                              withRxSubscriber:(RxSubscriber *)arg$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorZipIterable_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorZipIterable_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorZipIterable_$1, this$0_, RxInternalOperatorsOperatorZipIterable *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorZipIterable_$1, val$subscriber_, RxSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorZipIterable_$1, val$iterator_, id<JavaUtilIterator>)
+__attribute__((unused)) static void RxInternalOperatorsOperatorZipIterable_1_initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_(RxInternalOperatorsOperatorZipIterable_1 *self, RxInternalOperatorsOperatorZipIterable *outer$, RxSubscriber *capture$0, id<JavaUtilIterator> capture$1, RxSubscriber *param0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorZipIterable_$1_initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_(RxInternalOperatorsOperatorZipIterable_$1 *self, RxInternalOperatorsOperatorZipIterable *outer$, RxSubscriber *capture$0, id<JavaUtilIterator> capture$1, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorZipIterable_1 *new_RxInternalOperatorsOperatorZipIterable_1_initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_(RxInternalOperatorsOperatorZipIterable *outer$, RxSubscriber *capture$0, id<JavaUtilIterator> capture$1, RxSubscriber *param0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorZipIterable_$1 *new_RxInternalOperatorsOperatorZipIterable_$1_initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_(RxInternalOperatorsOperatorZipIterable *outer$, RxSubscriber *capture$0, id<JavaUtilIterator> capture$1, RxSubscriber *arg$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorZipIterable_$1 *create_RxInternalOperatorsOperatorZipIterable_$1_initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_(RxInternalOperatorsOperatorZipIterable *outer$, RxSubscriber *capture$0, id<JavaUtilIterator> capture$1, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorZipIterable_1 *create_RxInternalOperatorsOperatorZipIterable_1_initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_(RxInternalOperatorsOperatorZipIterable *outer$, RxSubscriber *capture$0, id<JavaUtilIterator> capture$1, RxSubscriber *param0);
 
 @implementation RxInternalOperatorsOperatorZipIterable
 
@@ -65,7 +61,7 @@ __attribute__((unused)) static RxInternalOperatorsOperatorZipIterable_$1 *create
     RxExceptionsExceptions_throwOrReportWithNSException_withRxObserver_(e, subscriber);
     return RxObserversSubscribers_empty();
   }
-  return create_RxInternalOperatorsOperatorZipIterable_$1_initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_(self, subscriber, iterator, subscriber);
+  return create_RxInternalOperatorsOperatorZipIterable_1_initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_(self, subscriber, iterator, subscriber);
 }
 
 - (void)dealloc {
@@ -111,7 +107,15 @@ RxInternalOperatorsOperatorZipIterable *create_RxInternalOperatorsOperatorZipIte
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorZipIterable)
 
-@implementation RxInternalOperatorsOperatorZipIterable_$1
+@implementation RxInternalOperatorsOperatorZipIterable_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorZipIterable:(RxInternalOperatorsOperatorZipIterable *)outer$
+                                              withRxSubscriber:(RxSubscriber *)capture$0
+                                          withJavaUtilIterator:(id<JavaUtilIterator>)capture$1
+                                              withRxSubscriber:(RxSubscriber *)param0 {
+  RxInternalOperatorsOperatorZipIterable_1_initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_(self, outer$, capture$0, capture$1, param0);
+  return self;
+}
 
 - (void)onCompleted {
   if (done_) {
@@ -145,16 +149,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorZipIterable)
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorZipIterable:(RxInternalOperatorsOperatorZipIterable *)outer$
-                                              withRxSubscriber:(RxSubscriber *)capture$0
-                                          withJavaUtilIterator:(id<JavaUtilIterator>)capture$1
-                                              withRxSubscriber:(RxSubscriber *)arg$0 {
-  RxInternalOperatorsOperatorZipIterable_$1_initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_(self, outer$, capture$0, capture$1, arg$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorZipIterable_$1 class]);
   RELEASE_(this$0_);
   RELEASE_(val$subscriber_);
   RELEASE_(val$iterator_);
@@ -163,42 +158,42 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorZipIterable)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 4, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(initWithRxInternalOperatorsOperatorZipIterable:withRxSubscriber:withJavaUtilIterator:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorZipIterable:withRxSubscriber:withJavaUtilIterator:withRxSubscriber:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorZipIterable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorZipIterable;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "val$iterator_", "LJavaUtilIterator;", .constantValue.asLong = 0, 0x1012, -1, -1, 9, -1 },
     { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
-    { "val$subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
-    { "val$iterator_", "LJavaUtilIterator;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT1;)V", "LRxInternalOperatorsOperatorZipIterable;LRxSubscriber;LJavaUtilIterator;LRxSubscriber;", "(Lrx/internal/operators/OperatorZipIterable;Lrx/Subscriber<-TR;>;Ljava/util/Iterator<+TT2;>;Lrx/Subscriber<*>;)V", "Lrx/Subscriber<-TR;>;", "Ljava/util/Iterator<+TT2;>;", "LRxInternalOperatorsOperatorZipIterable;", "callWithId:", "Lrx/Subscriber<TT1;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorZipIterable_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 4, 9, -1, 10, 11, -1 };
-  return &_RxInternalOperatorsOperatorZipIterable_$1;
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "onError", "LNSException;", "onNext", "LNSObject;", "(TT1;)V", "Lrx/internal/operators/OperatorZipIterable<TT1;TT2;TR;>;", "Lrx/Subscriber<-TR;>;", "Ljava/util/Iterator<+TT2;>;", "LRxInternalOperatorsOperatorZipIterable;", "callWithId:", "Lrx/Subscriber<TT1;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorZipIterable_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 4, 10, -1, 11, 12, -1 };
+  return &_RxInternalOperatorsOperatorZipIterable_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorZipIterable_$1_initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_(RxInternalOperatorsOperatorZipIterable_$1 *self, RxInternalOperatorsOperatorZipIterable *outer$, RxSubscriber *capture$0, id<JavaUtilIterator> capture$1, RxSubscriber *arg$0) {
+void RxInternalOperatorsOperatorZipIterable_1_initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_(RxInternalOperatorsOperatorZipIterable_1 *self, RxInternalOperatorsOperatorZipIterable *outer$, RxSubscriber *capture$0, id<JavaUtilIterator> capture$1, RxSubscriber *param0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$subscriber_, capture$0);
   JreStrongAssign(&self->val$iterator_, capture$1);
-  RxSubscriber_initWithRxSubscriber_(self, arg$0);
+  RxSubscriber_initWithRxSubscriber_(self, param0);
 }
 
-RxInternalOperatorsOperatorZipIterable_$1 *new_RxInternalOperatorsOperatorZipIterable_$1_initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_(RxInternalOperatorsOperatorZipIterable *outer$, RxSubscriber *capture$0, id<JavaUtilIterator> capture$1, RxSubscriber *arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorZipIterable_$1, initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_, outer$, capture$0, capture$1, arg$0)
+RxInternalOperatorsOperatorZipIterable_1 *new_RxInternalOperatorsOperatorZipIterable_1_initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_(RxInternalOperatorsOperatorZipIterable *outer$, RxSubscriber *capture$0, id<JavaUtilIterator> capture$1, RxSubscriber *param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorZipIterable_1, initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_, outer$, capture$0, capture$1, param0)
 }
 
-RxInternalOperatorsOperatorZipIterable_$1 *create_RxInternalOperatorsOperatorZipIterable_$1_initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_(RxInternalOperatorsOperatorZipIterable *outer$, RxSubscriber *capture$0, id<JavaUtilIterator> capture$1, RxSubscriber *arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorZipIterable_$1, initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_, outer$, capture$0, capture$1, arg$0)
+RxInternalOperatorsOperatorZipIterable_1 *create_RxInternalOperatorsOperatorZipIterable_1_initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_(RxInternalOperatorsOperatorZipIterable *outer$, RxSubscriber *capture$0, id<JavaUtilIterator> capture$1, RxSubscriber *param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorZipIterable_1, initWithRxInternalOperatorsOperatorZipIterable_withRxSubscriber_withJavaUtilIterator_withRxSubscriber_, outer$, capture$0, capture$1, param0)
 }

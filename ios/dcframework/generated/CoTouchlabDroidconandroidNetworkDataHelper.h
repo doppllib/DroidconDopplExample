@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_CoTouchlabDroidconandroidNetworkDataHelper
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (CoTouchlabDroidconandroidNetworkDataHelper_) && (INCLUDE_ALL_CoTouchlabDroidconandroidNetworkDataHelper || defined(INCLUDE_CoTouchlabDroidconandroidNetworkDataHelper))
 #define CoTouchlabDroidconandroidNetworkDataHelper_
 
@@ -47,6 +52,12 @@
 
 J2OBJC_EMPTY_STATIC_INIT(CoTouchlabDroidconandroidNetworkDataHelper)
 
+FOUNDATION_EXPORT void CoTouchlabDroidconandroidNetworkDataHelper_init(CoTouchlabDroidconandroidNetworkDataHelper *self);
+
+FOUNDATION_EXPORT CoTouchlabDroidconandroidNetworkDataHelper *new_CoTouchlabDroidconandroidNetworkDataHelper_init() NS_RETURNS_RETAINED;
+
+FOUNDATION_EXPORT CoTouchlabDroidconandroidNetworkDataHelper *create_CoTouchlabDroidconandroidNetworkDataHelper_init();
+
 FOUNDATION_EXPORT RetrofitRestAdapter *CoTouchlabDroidconandroidNetworkDataHelper_makeRequestAdapterWithAndroidContentContext_withDCPPlatformClient_(AndroidContentContext *context, id<DCPPlatformClient> platformClient);
 
 FOUNDATION_EXPORT RetrofitRestAdapter_Builder *CoTouchlabDroidconandroidNetworkDataHelper_makeRequestAdapterBuilderWithAndroidContentContext_withDCPPlatformClient_(AndroidContentContext *context, id<DCPPlatformClient> platformClient);
@@ -55,14 +66,12 @@ FOUNDATION_EXPORT RetrofitRestAdapter_Builder *CoTouchlabDroidconandroidNetworkD
 
 FOUNDATION_EXPORT RetrofitRestAdapter_Builder *CoTouchlabDroidconandroidNetworkDataHelper_makeRequestAdapterBuilderWithAndroidContentContext_withDCPPlatformClient_withNSString_withRetrofitErrorHandler_(AndroidContentContext *context, id<DCPPlatformClient> platformClient, NSString *baseUrl, id<RetrofitErrorHandler> errorHandler);
 
-FOUNDATION_EXPORT void CoTouchlabDroidconandroidNetworkDataHelper_init(CoTouchlabDroidconandroidNetworkDataHelper *self);
-
-FOUNDATION_EXPORT CoTouchlabDroidconandroidNetworkDataHelper *new_CoTouchlabDroidconandroidNetworkDataHelper_init() NS_RETURNS_RETAINED;
-
-FOUNDATION_EXPORT CoTouchlabDroidconandroidNetworkDataHelper *create_CoTouchlabDroidconandroidNetworkDataHelper_init();
-
 J2OBJC_TYPE_LITERAL_HEADER(CoTouchlabDroidconandroidNetworkDataHelper)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_CoTouchlabDroidconandroidNetworkDataHelper")

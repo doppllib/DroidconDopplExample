@@ -110,13 +110,13 @@ inline NSString *DCDUserAccount_get_HTTPS_S3_AMAZONAWS_COM_DROIDCONIMAGES();
 FOUNDATION_EXPORT NSString *DCDUserAccount_HTTPS_S3_AMAZONAWS_COM_DROIDCONIMAGES;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(DCDUserAccount, HTTPS_S3_AMAZONAWS_COM_DROIDCONIMAGES, NSString *)
 
-FOUNDATION_EXPORT DCDUserAccount *DCDUserAccount_findByCodeWithDCDDatabaseHelper_withNSString_(DCDDatabaseHelper *databaseHelper, NSString *code);
-
 FOUNDATION_EXPORT void DCDUserAccount_init(DCDUserAccount *self);
 
 FOUNDATION_EXPORT DCDUserAccount *new_DCDUserAccount_init() NS_RETURNS_RETAINED;
 
 FOUNDATION_EXPORT DCDUserAccount *create_DCDUserAccount_init();
+
+FOUNDATION_EXPORT DCDUserAccount *DCDUserAccount_findByCodeWithDCDDatabaseHelper_withNSString_(DCDDatabaseHelper *databaseHelper, NSString *code);
 
 J2OBJC_TYPE_LITERAL_HEADER(DCDUserAccount)
 

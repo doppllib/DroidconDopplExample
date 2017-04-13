@@ -16,18 +16,16 @@
 
 #pragma clang diagnostic ignored "-Wprotocol"
 
-@interface RxScheduler_Worker_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxScheduler_Worker_1 : NSObject < RxFunctionsAction0 > {
  @public
   RxScheduler_Worker *this$0_;
-  jlong count_;
-  jlong lastNowNanos_;
-  jlong startInNanos_;
   id<RxFunctionsAction0> val$action_;
   RxInternalSubscriptionsSequentialSubscription *val$mas_;
   jlong val$periodInNanos_;
+  jlong count_;
+  jlong lastNowNanos_;
+  jlong startInNanos_;
 }
-
-- (void)call;
 
 - (instancetype)initWithRxScheduler_Worker:(RxScheduler_Worker *)outer$
                                   withLong:(jlong)capture$0
@@ -36,25 +34,30 @@
 withRxInternalSubscriptionsSequentialSubscription:(RxInternalSubscriptionsSequentialSubscription *)capture$3
                                   withLong:(jlong)capture$4;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxScheduler_Worker_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxScheduler_Worker_1)
 
-J2OBJC_FIELD_SETTER(RxScheduler_Worker_$1, this$0_, RxScheduler_Worker *)
-J2OBJC_FIELD_SETTER(RxScheduler_Worker_$1, val$action_, id<RxFunctionsAction0>)
-J2OBJC_FIELD_SETTER(RxScheduler_Worker_$1, val$mas_, RxInternalSubscriptionsSequentialSubscription *)
+__attribute__((unused)) static void RxScheduler_Worker_1_initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_(RxScheduler_Worker_1 *self, RxScheduler_Worker *outer$, jlong capture$0, jlong capture$1, id<RxFunctionsAction0> capture$2, RxInternalSubscriptionsSequentialSubscription *capture$3, jlong capture$4);
 
-__attribute__((unused)) static void RxScheduler_Worker_$1_initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_(RxScheduler_Worker_$1 *self, RxScheduler_Worker *outer$, jlong capture$0, jlong capture$1, id<RxFunctionsAction0> capture$2, RxInternalSubscriptionsSequentialSubscription *capture$3, jlong capture$4);
+__attribute__((unused)) static RxScheduler_Worker_1 *new_RxScheduler_Worker_1_initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_(RxScheduler_Worker *outer$, jlong capture$0, jlong capture$1, id<RxFunctionsAction0> capture$2, RxInternalSubscriptionsSequentialSubscription *capture$3, jlong capture$4) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxScheduler_Worker_$1 *new_RxScheduler_Worker_$1_initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_(RxScheduler_Worker *outer$, jlong capture$0, jlong capture$1, id<RxFunctionsAction0> capture$2, RxInternalSubscriptionsSequentialSubscription *capture$3, jlong capture$4) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxScheduler_Worker_$1 *create_RxScheduler_Worker_$1_initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_(RxScheduler_Worker *outer$, jlong capture$0, jlong capture$1, id<RxFunctionsAction0> capture$2, RxInternalSubscriptionsSequentialSubscription *capture$3, jlong capture$4);
+__attribute__((unused)) static RxScheduler_Worker_1 *create_RxScheduler_Worker_1_initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_(RxScheduler_Worker *outer$, jlong capture$0, jlong capture$1, id<RxFunctionsAction0> capture$2, RxInternalSubscriptionsSequentialSubscription *capture$3, jlong capture$4);
 
 J2OBJC_INITIALIZED_DEFN(RxScheduler)
 
 jlong RxScheduler_CLOCK_DRIFT_TOLERANCE_NANOS;
 
 @implementation RxScheduler
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxScheduler_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (RxScheduler_Worker *)createWorker {
   // can't call an abstract method
@@ -70,26 +73,19 @@ jlong RxScheduler_CLOCK_DRIFT_TOLERANCE_NANOS;
   return create_RxInternalSchedulersSchedulerWhen_initWithRxFunctionsFunc1_withRxScheduler_(combine, self);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxScheduler_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxScheduler_Worker;", 0x401, -1, -1, -1, -1, -1, -1 },
     { NULL, "J", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxScheduler;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(createWorker);
-  methods[1].selector = @selector(now);
-  methods[2].selector = @selector(whenWithRxFunctionsFunc1:);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(createWorker);
+  methods[2].selector = @selector(now);
+  methods[3].selector = @selector(whenWithRxFunctionsFunc1:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "CLOCK_DRIFT_TOLERANCE_NANOS", "J", .constantValue.asLong = 0, 0x18, -1, 3, -1, -1 },
@@ -118,6 +114,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxScheduler)
 
 @implementation RxScheduler_Worker
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxScheduler_Worker_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (id<RxSubscription>)scheduleWithRxFunctionsAction0:(id<RxFunctionsAction0>)action {
   // can't call an abstract method
   [self doesNotRecognizeSelector:_cmd];
@@ -141,7 +144,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxScheduler)
   jlong firstStartInNanos = firstNowNanos + [unit toNanosWithLong:initialDelay];
   RxInternalSubscriptionsSequentialSubscription *first = create_RxInternalSubscriptionsSequentialSubscription_init();
   RxInternalSubscriptionsSequentialSubscription *mas = create_RxInternalSubscriptionsSequentialSubscription_initWithRxSubscription_(first);
-  id<RxFunctionsAction0> recursiveAction = create_RxScheduler_Worker_$1_initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_(self, firstNowNanos, firstStartInNanos, action, mas, periodInNanos);
+  id<RxFunctionsAction0> recursiveAction = create_RxScheduler_Worker_1_initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_(self, firstNowNanos, firstStartInNanos, action, mas, periodInNanos);
   [first replaceWithRxSubscription:[self scheduleWithRxFunctionsAction0:recursiveAction withLong:initialDelay withJavaUtilConcurrentTimeUnit:unit]];
   return mas;
 }
@@ -150,28 +153,21 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxScheduler)
   return JavaLangSystem_currentTimeMillis();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxScheduler_Worker_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxSubscription;", 0x401, 0, 1, -1, -1, -1, -1 },
     { NULL, "LRxSubscription;", 0x401, 0, 2, -1, -1, -1, -1 },
     { NULL, "LRxSubscription;", 0x1, 3, 4, -1, -1, -1, -1 },
     { NULL, "J", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(scheduleWithRxFunctionsAction0:);
-  methods[1].selector = @selector(scheduleWithRxFunctionsAction0:withLong:withJavaUtilConcurrentTimeUnit:);
-  methods[2].selector = @selector(schedulePeriodicallyWithRxFunctionsAction0:withLong:withLong:withJavaUtilConcurrentTimeUnit:);
-  methods[3].selector = @selector(now);
-  methods[4].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(scheduleWithRxFunctionsAction0:);
+  methods[2].selector = @selector(scheduleWithRxFunctionsAction0:withLong:withJavaUtilConcurrentTimeUnit:);
+  methods[3].selector = @selector(schedulePeriodicallyWithRxFunctionsAction0:withLong:withLong:withJavaUtilConcurrentTimeUnit:);
+  methods[4].selector = @selector(now);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "schedule", "LRxFunctionsAction0;", "LRxFunctionsAction0;JLJavaUtilConcurrentTimeUnit;", "schedulePeriodically", "LRxFunctionsAction0;JJLJavaUtilConcurrentTimeUnit;", "LRxScheduler;" };
   static const J2ObjcClassInfo _RxScheduler_Worker = { "Worker", "rx", ptrTable, methods, NULL, 7, 0x409, 5, 0, 5, -1, -1, -1, -1 };
@@ -186,7 +182,17 @@ void RxScheduler_Worker_init(RxScheduler_Worker *self) {
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxScheduler_Worker)
 
-@implementation RxScheduler_Worker_$1
+@implementation RxScheduler_Worker_1
+
+- (instancetype)initWithRxScheduler_Worker:(RxScheduler_Worker *)outer$
+                                  withLong:(jlong)capture$0
+                                  withLong:(jlong)capture$1
+                    withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$2
+withRxInternalSubscriptionsSequentialSubscription:(RxInternalSubscriptionsSequentialSubscription *)capture$3
+                                  withLong:(jlong)capture$4 {
+  RxScheduler_Worker_1_initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_(self, outer$, capture$0, capture$1, capture$2, capture$3, capture$4);
+  return self;
+}
 
 - (void)call {
   [((id<RxFunctionsAction0>) nil_chk(val$action_)) call];
@@ -206,16 +212,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxScheduler_Worker)
   }
 }
 
-- (instancetype)initWithRxScheduler_Worker:(RxScheduler_Worker *)outer$
-                                  withLong:(jlong)capture$0
-                                  withLong:(jlong)capture$1
-                    withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$2
-withRxInternalSubscriptionsSequentialSubscription:(RxInternalSubscriptionsSequentialSubscription *)capture$3
-                                  withLong:(jlong)capture$4 {
-  RxScheduler_Worker_$1_initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_(self, outer$, capture$0, capture$1, capture$2, capture$3, capture$4);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$action_);
@@ -225,31 +221,31 @@ withRxInternalSubscriptionsSequentialSubscription:(RxInternalSubscriptionsSequen
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxScheduler_Worker:withLong:withLong:withRxFunctionsAction0:withRxInternalSubscriptionsSequentialSubscription:withLong:);
+  methods[0].selector = @selector(initWithRxScheduler_Worker:withLong:withLong:withRxFunctionsAction0:withRxInternalSubscriptionsSequentialSubscription:withLong:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "count_", "J", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
-    { "lastNowNanos_", "J", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
-    { "startInNanos_", "J", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "val$action_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$mas_", "LRxInternalSubscriptionsSequentialSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$periodInNanos_", "J", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "count_", "J", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
+    { "lastNowNanos_", "J", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
+    { "startInNanos_", "J", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxScheduler_Worker;JJLRxFunctionsAction0;LRxInternalSubscriptionsSequentialSubscription;J", "LRxScheduler_Worker;", "schedulePeriodicallyWithRxFunctionsAction0:withLong:withLong:withJavaUtilConcurrentTimeUnit:" };
-  static const J2ObjcClassInfo _RxScheduler_Worker_$1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 7, 1, -1, 2, -1, -1 };
-  return &_RxScheduler_Worker_$1;
+  static const void *ptrTable[] = { "LRxScheduler_Worker;", "schedulePeriodicallyWithRxFunctionsAction0:withLong:withLong:withJavaUtilConcurrentTimeUnit:" };
+  static const J2ObjcClassInfo _RxScheduler_Worker_1 = { "", "rx", ptrTable, methods, fields, 7, 0x8008, 2, 7, 0, -1, 1, -1, -1 };
+  return &_RxScheduler_Worker_1;
 }
 
 @end
 
-void RxScheduler_Worker_$1_initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_(RxScheduler_Worker_$1 *self, RxScheduler_Worker *outer$, jlong capture$0, jlong capture$1, id<RxFunctionsAction0> capture$2, RxInternalSubscriptionsSequentialSubscription *capture$3, jlong capture$4) {
+void RxScheduler_Worker_1_initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_(RxScheduler_Worker_1 *self, RxScheduler_Worker *outer$, jlong capture$0, jlong capture$1, id<RxFunctionsAction0> capture$2, RxInternalSubscriptionsSequentialSubscription *capture$3, jlong capture$4) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$action_, capture$2);
   JreStrongAssign(&self->val$mas_, capture$3);
@@ -259,10 +255,10 @@ void RxScheduler_Worker_$1_initWithRxScheduler_Worker_withLong_withLong_withRxFu
   self->startInNanos_ = capture$1;
 }
 
-RxScheduler_Worker_$1 *new_RxScheduler_Worker_$1_initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_(RxScheduler_Worker *outer$, jlong capture$0, jlong capture$1, id<RxFunctionsAction0> capture$2, RxInternalSubscriptionsSequentialSubscription *capture$3, jlong capture$4) {
-  J2OBJC_NEW_IMPL(RxScheduler_Worker_$1, initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_, outer$, capture$0, capture$1, capture$2, capture$3, capture$4)
+RxScheduler_Worker_1 *new_RxScheduler_Worker_1_initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_(RxScheduler_Worker *outer$, jlong capture$0, jlong capture$1, id<RxFunctionsAction0> capture$2, RxInternalSubscriptionsSequentialSubscription *capture$3, jlong capture$4) {
+  J2OBJC_NEW_IMPL(RxScheduler_Worker_1, initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_, outer$, capture$0, capture$1, capture$2, capture$3, capture$4)
 }
 
-RxScheduler_Worker_$1 *create_RxScheduler_Worker_$1_initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_(RxScheduler_Worker *outer$, jlong capture$0, jlong capture$1, id<RxFunctionsAction0> capture$2, RxInternalSubscriptionsSequentialSubscription *capture$3, jlong capture$4) {
-  J2OBJC_CREATE_IMPL(RxScheduler_Worker_$1, initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_, outer$, capture$0, capture$1, capture$2, capture$3, capture$4)
+RxScheduler_Worker_1 *create_RxScheduler_Worker_1_initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_(RxScheduler_Worker *outer$, jlong capture$0, jlong capture$1, id<RxFunctionsAction0> capture$2, RxInternalSubscriptionsSequentialSubscription *capture$3, jlong capture$4) {
+  J2OBJC_CREATE_IMPL(RxScheduler_Worker_1, initWithRxScheduler_Worker_withLong_withLong_withRxFunctionsAction0_withRxInternalSubscriptionsSequentialSubscription_withLong_, outer$, capture$0, capture$1, capture$2, capture$3, capture$4)
 }

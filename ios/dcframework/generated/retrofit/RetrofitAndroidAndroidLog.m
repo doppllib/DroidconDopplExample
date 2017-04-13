@@ -31,7 +31,7 @@ J2OBJC_STATIC_FIELD_CONSTANT(RetrofitAndroidAndroidLog, LOG_CHUNK_SIZE, jint)
 - (void)logWithNSString:(NSString *)message {
   for (jint i = 0, len = ((jint) [((NSString *) nil_chk(message)) length]); i < len; i += RetrofitAndroidAndroidLog_LOG_CHUNK_SIZE) {
     jint end = JavaLangMath_minWithInt_withInt_(len, i + RetrofitAndroidAndroidLog_LOG_CHUNK_SIZE);
-    [self logChunkWithNSString:[message substring:i endIndex:end]];
+    [self logChunkWithNSString:[message java_substring:i endIndex:end]];
   }
 }
 

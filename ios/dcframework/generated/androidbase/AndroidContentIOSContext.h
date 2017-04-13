@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_AndroidContentIOSContext
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (AndroidContentIOSContext_) && (INCLUDE_ALL_AndroidContentIOSContext || defined(INCLUDE_AndroidContentIOSContext))
 #define AndroidContentIOSContext_
 
@@ -80,9 +85,13 @@
                     withAndroidDatabaseSqliteSQLiteDatabase_CursorFactory:(id<AndroidDatabaseSqliteSQLiteDatabase_CursorFactory>)factory
                                   withAndroidDatabaseDatabaseErrorHandler:(id<AndroidDatabaseDatabaseErrorHandler>)errorHandler;
 
+#pragma mark Protected
+
+- (JavaIoFile *)getRootDir;
+
 @end
 
-J2OBJC_STATIC_INIT(AndroidContentIOSContext)
+J2OBJC_EMPTY_STATIC_INIT(AndroidContentIOSContext)
 
 inline NSString *AndroidContentIOSContext_get_DATABASES();
 /*! INTERNAL ONLY - Use accessor function from above. */
@@ -104,4 +113,8 @@ J2OBJC_TYPE_LITERAL_HEADER(AndroidContentIOSContext)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_AndroidContentIOSContext")

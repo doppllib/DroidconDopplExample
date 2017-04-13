@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/doppl/J2objcWeakReference.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxDopplJ2objcWeakReference.h"
 #include "java/lang/ref/WeakReference.h"
@@ -27,7 +26,7 @@ J2OBJC_FIELD_SETTER(RxDopplJ2objcWeakReference, hardRef_, id)
 }
 
 - (id)get {
-  return hardRef_;
+  return [((JavaLangRefWeakReference *) nil_chk(weakReference_)) get];
 }
 
 - (void)dealloc {
@@ -60,8 +59,8 @@ J2OBJC_FIELD_SETTER(RxDopplJ2objcWeakReference, hardRef_, id)
 
 void RxDopplJ2objcWeakReference_initWithId_(RxDopplJ2objcWeakReference *self, id val) {
   NSObject_init(self);
-  JreStrongAssign(&self->weakReference_, nil);
-  JreStrongAssign(&self->hardRef_, val);
+  JreStrongAssignAndConsume(&self->weakReference_, new_JavaLangRefWeakReference_initWithId_(val));
+  JreStrongAssign(&self->hardRef_, nil);
 }
 
 RxDopplJ2objcWeakReference *new_RxDopplJ2objcWeakReference_initWithId_(id val) {

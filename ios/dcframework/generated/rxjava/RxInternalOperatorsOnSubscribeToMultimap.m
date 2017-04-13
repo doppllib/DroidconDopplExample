@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OnSubscribeToMultimap.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxExceptionsExceptions.h"
 #include "RxFunctionsFunc0.h"
@@ -70,11 +69,11 @@ J2OBJC_TYPE_LITERAL_HEADER(RxInternalOperatorsOnSubscribeToMultimap_ToMultimapSu
 
 @interface RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory : NSObject < RxFunctionsFunc1 >
 
+- (instancetype)init;
+
 + (RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory *)instance;
 
 - (id<JavaUtilCollection>)callWithId:(id)t1;
-
-- (instancetype)init;
 
 @end
 
@@ -84,13 +83,13 @@ inline RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory
 static RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory *RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory_INSTANCE;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory, INSTANCE, RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory *)
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory *RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory_instance();
-
 __attribute__((unused)) static void RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory_init(RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory *self);
 
 __attribute__((unused)) static RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory *new_RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory_init() NS_RETURNS_RETAINED;
 
 __attribute__((unused)) static RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory *create_RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory_init();
+
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory *RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory_instance();
 
 J2OBJC_TYPE_LITERAL_HEADER(RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory)
 
@@ -261,7 +260,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeToMultimap)
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribeToMultimap_ToMultimapSubscriber class]);
   RELEASE_(keySelector_);
   RELEASE_(valueSelector_);
   RELEASE_(collectionFactory_);
@@ -315,6 +313,13 @@ J2OBJC_INITIALIZED_DEFN(RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimap
 
 @implementation RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory *)instance {
   return RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory_instance();
 }
@@ -323,24 +328,17 @@ J2OBJC_INITIALIZED_DEFN(RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimap
   return create_JavaUtilArrayList_init();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory;", 0x8, -1, -1, -1, 0, -1, -1 },
     { NULL, "LJavaUtilCollection;", 0x1, 1, 2, -1, 3, -1, -1 },
-    { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(instance);
-  methods[1].selector = @selector(callWithId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(instance);
+  methods[2].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "INSTANCE", "LRxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory;", .constantValue.asLong = 0, 0x1a, -1, 4, 5, -1 },
@@ -359,11 +357,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 @end
 
-RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory *RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory_instance() {
-  RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory_initialize();
-  return RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory_INSTANCE;
-}
-
 void RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory_init(RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory *self) {
   NSObject_init(self);
 }
@@ -374,6 +367,11 @@ RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory *new_R
 
 RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory *create_RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory_init() {
   J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory, init)
+}
+
+RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory *RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory_instance() {
+  RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory_initialize();
+  return RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory_INSTANCE;
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeToMultimap_DefaultMultimapCollectionFactory)

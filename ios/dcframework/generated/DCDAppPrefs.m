@@ -7,7 +7,6 @@
 #include "AndroidContentSharedPreferences.h"
 #include "CoTouchlabDroidconandroidUtilsStringUtils.h"
 #include "DCDAppPrefs.h"
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "java/lang/Boolean.h"
 #include "java/lang/Long.h"
@@ -53,6 +52,13 @@ NSString *DCDAppPrefs_VIDEO_DEVICE_ID = @"VIDEO_DEVICE_ID";
 NSString *DCDAppPrefs_SHOW_SLACK_DIALOG = @"show_slack_dialog";
 
 @implementation DCDAppPrefs
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  DCDAppPrefs_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 + (DCDAppPrefs *)getInstanceWithAndroidContentContext:(AndroidContentContext *)context {
   return DCDAppPrefs_getInstanceWithAndroidContentContext_(context);
@@ -153,13 +159,6 @@ NSString *DCDAppPrefs_SHOW_SLACK_DIALOG = @"show_slack_dialog";
   DCDAppPrefs_setLongWithNSString_withJavaLangLong_(self, key, value);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  DCDAppPrefs_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(prefs_);
   [super dealloc];
@@ -167,6 +166,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LDCDAppPrefs;", 0x29, 0, 1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, 2, 3, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
@@ -189,33 +189,32 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "V", 0x2, 13, 14, -1, -1, -1, -1 },
     { NULL, "V", 0x2, 15, 16, -1, -1, -1, -1 },
     { NULL, "V", 0x2, 17, 18, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getInstanceWithAndroidContentContext:);
-  methods[1].selector = @selector(onceWithNSString:);
-  methods[2].selector = @selector(getHasSeenWelcome);
-  methods[3].selector = @selector(setHasSeenWelcome);
-  methods[4].selector = @selector(setEventbriteEmailWithNSString:);
-  methods[5].selector = @selector(getEventbriteEmail);
-  methods[6].selector = @selector(setConventionStartDateWithNSString:);
-  methods[7].selector = @selector(getConventionStartDate);
-  methods[8].selector = @selector(setConventionEndDateWithNSString:);
-  methods[9].selector = @selector(getVideoDeviceId);
-  methods[10].selector = @selector(getConventionEndDate);
-  methods[11].selector = @selector(setRefreshTimeWithLong:);
-  methods[12].selector = @selector(getRefreshTime);
-  methods[13].selector = @selector(getShowSlackDialog);
-  methods[14].selector = @selector(setShowSlackDialogWithBoolean:);
-  methods[15].selector = @selector(getAllowNotifications);
-  methods[16].selector = @selector(setAllowNotificationsWithBoolean:);
-  methods[17].selector = @selector(getShowNotifCard);
-  methods[18].selector = @selector(setShowNotifCardWithBoolean:);
-  methods[19].selector = @selector(setBooleanWithNSString:withJavaLangBoolean:);
-  methods[20].selector = @selector(setStringWithNSString:withNSString:);
-  methods[21].selector = @selector(setLongWithNSString:withJavaLangLong:);
-  methods[22].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(getInstanceWithAndroidContentContext:);
+  methods[2].selector = @selector(onceWithNSString:);
+  methods[3].selector = @selector(getHasSeenWelcome);
+  methods[4].selector = @selector(setHasSeenWelcome);
+  methods[5].selector = @selector(setEventbriteEmailWithNSString:);
+  methods[6].selector = @selector(getEventbriteEmail);
+  methods[7].selector = @selector(setConventionStartDateWithNSString:);
+  methods[8].selector = @selector(getConventionStartDate);
+  methods[9].selector = @selector(setConventionEndDateWithNSString:);
+  methods[10].selector = @selector(getVideoDeviceId);
+  methods[11].selector = @selector(getConventionEndDate);
+  methods[12].selector = @selector(setRefreshTimeWithLong:);
+  methods[13].selector = @selector(getRefreshTime);
+  methods[14].selector = @selector(getShowSlackDialog);
+  methods[15].selector = @selector(setShowSlackDialogWithBoolean:);
+  methods[16].selector = @selector(getAllowNotifications);
+  methods[17].selector = @selector(setAllowNotificationsWithBoolean:);
+  methods[18].selector = @selector(getShowNotifCard);
+  methods[19].selector = @selector(setShowNotifCardWithBoolean:);
+  methods[20].selector = @selector(setBooleanWithNSString:withJavaLangBoolean:);
+  methods[21].selector = @selector(setStringWithNSString:withNSString:);
+  methods[22].selector = @selector(setLongWithNSString:withJavaLangLong:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "SEEN_WELCOME", "LNSString;", .constantValue.asLong = 0, 0x19, -1, 19, -1, -1 },
@@ -236,6 +235,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void DCDAppPrefs_init(DCDAppPrefs *self) {
+  NSObject_init(self);
+}
+
+DCDAppPrefs *new_DCDAppPrefs_init() {
+  J2OBJC_NEW_IMPL(DCDAppPrefs, init)
+}
+
+DCDAppPrefs *create_DCDAppPrefs_init() {
+  J2OBJC_CREATE_IMPL(DCDAppPrefs, init)
+}
 
 DCDAppPrefs *DCDAppPrefs_getInstanceWithAndroidContentContext_(AndroidContentContext *context) {
   DCDAppPrefs_initialize();
@@ -258,18 +269,6 @@ void DCDAppPrefs_setStringWithNSString_withNSString_(DCDAppPrefs *self, NSString
 
 void DCDAppPrefs_setLongWithNSString_withJavaLangLong_(DCDAppPrefs *self, NSString *key, JavaLangLong *value) {
   [((id<AndroidContentSharedPreferences_Editor>) nil_chk([((id<AndroidContentSharedPreferences_Editor>) nil_chk([((id<AndroidContentSharedPreferences>) nil_chk(self->prefs_)) edit])) putLongWithNSString:key withLong:[((JavaLangLong *) nil_chk(value)) longLongValue]])) apply];
-}
-
-void DCDAppPrefs_init(DCDAppPrefs *self) {
-  NSObject_init(self);
-}
-
-DCDAppPrefs *new_DCDAppPrefs_init() {
-  J2OBJC_NEW_IMPL(DCDAppPrefs, init)
-}
-
-DCDAppPrefs *create_DCDAppPrefs_init() {
-  J2OBJC_CREATE_IMPL(DCDAppPrefs, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(DCDAppPrefs)

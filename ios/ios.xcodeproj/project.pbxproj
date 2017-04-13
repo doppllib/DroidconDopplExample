@@ -200,28 +200,10 @@
 		630AAF041DC7C42E009A4050 /* ComAndroidInternalUtilGrowingArrayUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA86E1DC7C428009A4050 /* ComAndroidInternalUtilGrowingArrayUtils.m */; };
 		630AAF051DC7C42E009A4050 /* CursorWindowNative.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA86F1DC7C428009A4050 /* CursorWindowNative.h */; };
 		630AAF061DC7C42E009A4050 /* CursorWindowNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8701DC7C428009A4050 /* CursorWindowNative.m */; };
-		630AAF071DC7C42E009A4050 /* RenameComAndroidInternalUtilFastXmlSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8841DC7C428009A4050 /* RenameComAndroidInternalUtilFastXmlSerializer.h */; };
-		630AAF081DC7C42E009A4050 /* RenameComAndroidInternalUtilFastXmlSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8851DC7C428009A4050 /* RenameComAndroidInternalUtilFastXmlSerializer.m */; };
-		630AAF091DC7C42E009A4050 /* RenameComAndroidInternalUtilXmlUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8861DC7C428009A4050 /* RenameComAndroidInternalUtilXmlUtils.h */; };
-		630AAF0A1DC7C42E009A4050 /* RenameComAndroidInternalUtilXmlUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8871DC7C428009A4050 /* RenameComAndroidInternalUtilXmlUtils.m */; };
 		630AAF0B1DC7C42E009A4050 /* RenameComGoogleAndroidCollectLists.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8881DC7C429009A4050 /* RenameComGoogleAndroidCollectLists.h */; };
 		630AAF0C1DC7C42E009A4050 /* RenameComGoogleAndroidCollectLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8891DC7C429009A4050 /* RenameComGoogleAndroidCollectLists.m */; };
-		630AAF0D1DC7C42E009A4050 /* RenameComGoogleAndroidCollectMaps.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA88A1DC7C429009A4050 /* RenameComGoogleAndroidCollectMaps.h */; };
-		630AAF0E1DC7C42E009A4050 /* RenameComGoogleAndroidCollectMaps.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA88B1DC7C429009A4050 /* RenameComGoogleAndroidCollectMaps.m */; };
 		630AAF0F1DC7C42E009A4050 /* RenameComGoogleAndroidCollectSets.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA88C1DC7C429009A4050 /* RenameComGoogleAndroidCollectSets.h */; };
 		630AAF101DC7C42E009A4050 /* RenameComGoogleAndroidCollectSets.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA88D1DC7C429009A4050 /* RenameComGoogleAndroidCollectSets.m */; };
-		630AAF111DC7C42E009A4050 /* RenameLibcoreInternalStringPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA88E1DC7C429009A4050 /* RenameLibcoreInternalStringPool.h */; };
-		630AAF121DC7C42E009A4050 /* RenameLibcoreInternalStringPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA88F1DC7C429009A4050 /* RenameLibcoreInternalStringPool.m */; };
-		630AAF131DC7C42E009A4050 /* RenameOrgKxml2IoKXmlParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8901DC7C429009A4050 /* RenameOrgKxml2IoKXmlParser.h */; };
-		630AAF141DC7C42E009A4050 /* RenameOrgKxml2IoKXmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8911DC7C429009A4050 /* RenameOrgKxml2IoKXmlParser.m */; };
-		630AAF151DC7C42E009A4050 /* RenameOrgKxml2IoKXmlSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8921DC7C429009A4050 /* RenameOrgKxml2IoKXmlSerializer.h */; };
-		630AAF161DC7C42E009A4050 /* RenameOrgKxml2IoKXmlSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8931DC7C429009A4050 /* RenameOrgKxml2IoKXmlSerializer.m */; };
-		630AAF171DC7C42E009A4050 /* RenameOrgKxml2KdomDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8941DC7C429009A4050 /* RenameOrgKxml2KdomDocument.h */; };
-		630AAF181DC7C42E009A4050 /* RenameOrgKxml2KdomDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8951DC7C429009A4050 /* RenameOrgKxml2KdomDocument.m */; };
-		630AAF191DC7C42E009A4050 /* RenameOrgKxml2KdomElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8961DC7C429009A4050 /* RenameOrgKxml2KdomElement.h */; };
-		630AAF1A1DC7C42E009A4050 /* RenameOrgKxml2KdomElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8971DC7C429009A4050 /* RenameOrgKxml2KdomElement.m */; };
-		630AAF1B1DC7C42E009A4050 /* RenameOrgKxml2KdomNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8981DC7C429009A4050 /* RenameOrgKxml2KdomNode.h */; };
-		630AAF1C1DC7C42E009A4050 /* RenameOrgKxml2KdomNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8991DC7C429009A4050 /* RenameOrgKxml2KdomNode.m */; };
 		630AAF1D1DC7C42E009A4050 /* SQLiteConnectionNative.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA89A1DC7C429009A4050 /* SQLiteConnectionNative.h */; };
 		630AAF1E1DC7C42E009A4050 /* SQLiteConnectionNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA89B1DC7C429009A4050 /* SQLiteConnectionNative.m */; };
 		630AAF1F1DC7C42E009A4050 /* SQLiteErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA89C1DC7C429009A4050 /* SQLiteErrors.h */; };
@@ -1612,6 +1594,30 @@
 		635989901DE46D5B002E0AEC /* RxDopplSafeObservableUnsubscribe.m in Sources */ = {isa = PBXBuildFile; fileRef = 6359898A1DE46D5B002E0AEC /* RxDopplSafeObservableUnsubscribe.m */; };
 		635989911DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 6359898B1DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.h */; };
 		635989921DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6359898C1DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.m */; };
+		63712CB71E2A02A400310FB0 /* AndroidOsBadParcelableException.h in Headers */ = {isa = PBXBuildFile; fileRef = 63712CA31E2A02A400310FB0 /* AndroidOsBadParcelableException.h */; };
+		63712CB81E2A02A400310FB0 /* AndroidOsBadParcelableException.m in Sources */ = {isa = PBXBuildFile; fileRef = 63712CA41E2A02A400310FB0 /* AndroidOsBadParcelableException.m */; };
+		63712CB91E2A02A400310FB0 /* AndroidOsIBinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 63712CA51E2A02A400310FB0 /* AndroidOsIBinder.h */; };
+		63712CBA1E2A02A400310FB0 /* AndroidOsIBinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 63712CA61E2A02A400310FB0 /* AndroidOsIBinder.m */; };
+		63712CBB1E2A02A400310FB0 /* AndroidOsIInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 63712CA71E2A02A400310FB0 /* AndroidOsIInterface.h */; };
+		63712CBC1E2A02A400310FB0 /* AndroidOsIInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 63712CA81E2A02A400310FB0 /* AndroidOsIInterface.m */; };
+		63712CBD1E2A02A400310FB0 /* AndroidOsParcel.h in Headers */ = {isa = PBXBuildFile; fileRef = 63712CA91E2A02A400310FB0 /* AndroidOsParcel.h */; };
+		63712CBE1E2A02A400310FB0 /* AndroidOsParcel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63712CAA1E2A02A400310FB0 /* AndroidOsParcel.m */; };
+		63712CBF1E2A02A400310FB0 /* AndroidOsParcelable.h in Headers */ = {isa = PBXBuildFile; fileRef = 63712CAB1E2A02A400310FB0 /* AndroidOsParcelable.h */; };
+		63712CC01E2A02A400310FB0 /* AndroidOsParcelable.m in Sources */ = {isa = PBXBuildFile; fileRef = 63712CAC1E2A02A400310FB0 /* AndroidOsParcelable.m */; };
+		63712CC11E2A02A400310FB0 /* AndroidOsParcelFileDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 63712CAD1E2A02A400310FB0 /* AndroidOsParcelFileDescriptor.h */; };
+		63712CC21E2A02A400310FB0 /* AndroidOsParcelFileDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 63712CAE1E2A02A400310FB0 /* AndroidOsParcelFileDescriptor.m */; };
+		63712CC31E2A02A400310FB0 /* AndroidOsRemoteException.h in Headers */ = {isa = PBXBuildFile; fileRef = 63712CAF1E2A02A400310FB0 /* AndroidOsRemoteException.h */; };
+		63712CC41E2A02A400310FB0 /* AndroidOsRemoteException.m in Sources */ = {isa = PBXBuildFile; fileRef = 63712CB01E2A02A400310FB0 /* AndroidOsRemoteException.m */; };
+		63712CC51E2A02A400310FB0 /* AndroidUtilAndroidException.h in Headers */ = {isa = PBXBuildFile; fileRef = 63712CB11E2A02A400310FB0 /* AndroidUtilAndroidException.h */; };
+		63712CC61E2A02A400310FB0 /* AndroidUtilAndroidException.m in Sources */ = {isa = PBXBuildFile; fileRef = 63712CB21E2A02A400310FB0 /* AndroidUtilAndroidException.m */; };
+		63712CC71E2A02A400310FB0 /* ComGoogleAutoValueAutoAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 63712CB31E2A02A400310FB0 /* ComGoogleAutoValueAutoAnnotation.h */; };
+		63712CC81E2A02A400310FB0 /* ComGoogleAutoValueAutoAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 63712CB41E2A02A400310FB0 /* ComGoogleAutoValueAutoAnnotation.m */; };
+		63712CC91E2A02A400310FB0 /* ComGoogleAutoValueAutoValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 63712CB51E2A02A400310FB0 /* ComGoogleAutoValueAutoValue.h */; };
+		63712CCA1E2A02A400310FB0 /* ComGoogleAutoValueAutoValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 63712CB61E2A02A400310FB0 /* ComGoogleAutoValueAutoValue.m */; };
+		63712CCF1E2A0BA100310FB0 /* AndroidInternalUtilFastXmlSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 63712CCB1E2A0BA100310FB0 /* AndroidInternalUtilFastXmlSerializer.h */; };
+		63712CD01E2A0BA100310FB0 /* AndroidInternalUtilFastXmlSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 63712CCC1E2A0BA100310FB0 /* AndroidInternalUtilFastXmlSerializer.m */; };
+		63712CD11E2A0BA100310FB0 /* AndroidInternalUtilXmlUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 63712CCD1E2A0BA100310FB0 /* AndroidInternalUtilXmlUtils.h */; };
+		63712CD21E2A0BA100310FB0 /* AndroidInternalUtilXmlUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 63712CCE1E2A0BA100310FB0 /* AndroidInternalUtilXmlUtils.m */; };
 		639320311D77FF700047224B /* dataseeds in Resources */ = {isa = PBXBuildFile; fileRef = 639320301D77FF700047224B /* dataseeds */; };
 		63EE30CC1CC5E1BD00B64D3D /* CheckLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30CB1CC5E1BD00B64D3D /* CheckLoginController.swift */; };
 		63EE30CE1CC6985800B64D3D /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30CD1CC6985800B64D3D /* StartScreenViewController.swift */; };
@@ -1881,28 +1887,10 @@
 		630AA86E1DC7C428009A4050 /* ComAndroidInternalUtilGrowingArrayUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComAndroidInternalUtilGrowingArrayUtils.m; sourceTree = "<group>"; };
 		630AA86F1DC7C428009A4050 /* CursorWindowNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CursorWindowNative.h; sourceTree = "<group>"; };
 		630AA8701DC7C428009A4050 /* CursorWindowNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CursorWindowNative.m; sourceTree = "<group>"; };
-		630AA8841DC7C428009A4050 /* RenameComAndroidInternalUtilFastXmlSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenameComAndroidInternalUtilFastXmlSerializer.h; sourceTree = "<group>"; };
-		630AA8851DC7C428009A4050 /* RenameComAndroidInternalUtilFastXmlSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenameComAndroidInternalUtilFastXmlSerializer.m; sourceTree = "<group>"; };
-		630AA8861DC7C428009A4050 /* RenameComAndroidInternalUtilXmlUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenameComAndroidInternalUtilXmlUtils.h; sourceTree = "<group>"; };
-		630AA8871DC7C428009A4050 /* RenameComAndroidInternalUtilXmlUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenameComAndroidInternalUtilXmlUtils.m; sourceTree = "<group>"; };
 		630AA8881DC7C429009A4050 /* RenameComGoogleAndroidCollectLists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenameComGoogleAndroidCollectLists.h; sourceTree = "<group>"; };
 		630AA8891DC7C429009A4050 /* RenameComGoogleAndroidCollectLists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenameComGoogleAndroidCollectLists.m; sourceTree = "<group>"; };
-		630AA88A1DC7C429009A4050 /* RenameComGoogleAndroidCollectMaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenameComGoogleAndroidCollectMaps.h; sourceTree = "<group>"; };
-		630AA88B1DC7C429009A4050 /* RenameComGoogleAndroidCollectMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenameComGoogleAndroidCollectMaps.m; sourceTree = "<group>"; };
 		630AA88C1DC7C429009A4050 /* RenameComGoogleAndroidCollectSets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenameComGoogleAndroidCollectSets.h; sourceTree = "<group>"; };
 		630AA88D1DC7C429009A4050 /* RenameComGoogleAndroidCollectSets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenameComGoogleAndroidCollectSets.m; sourceTree = "<group>"; };
-		630AA88E1DC7C429009A4050 /* RenameLibcoreInternalStringPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenameLibcoreInternalStringPool.h; sourceTree = "<group>"; };
-		630AA88F1DC7C429009A4050 /* RenameLibcoreInternalStringPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenameLibcoreInternalStringPool.m; sourceTree = "<group>"; };
-		630AA8901DC7C429009A4050 /* RenameOrgKxml2IoKXmlParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenameOrgKxml2IoKXmlParser.h; sourceTree = "<group>"; };
-		630AA8911DC7C429009A4050 /* RenameOrgKxml2IoKXmlParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenameOrgKxml2IoKXmlParser.m; sourceTree = "<group>"; };
-		630AA8921DC7C429009A4050 /* RenameOrgKxml2IoKXmlSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenameOrgKxml2IoKXmlSerializer.h; sourceTree = "<group>"; };
-		630AA8931DC7C429009A4050 /* RenameOrgKxml2IoKXmlSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenameOrgKxml2IoKXmlSerializer.m; sourceTree = "<group>"; };
-		630AA8941DC7C429009A4050 /* RenameOrgKxml2KdomDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenameOrgKxml2KdomDocument.h; sourceTree = "<group>"; };
-		630AA8951DC7C429009A4050 /* RenameOrgKxml2KdomDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenameOrgKxml2KdomDocument.m; sourceTree = "<group>"; };
-		630AA8961DC7C429009A4050 /* RenameOrgKxml2KdomElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenameOrgKxml2KdomElement.h; sourceTree = "<group>"; };
-		630AA8971DC7C429009A4050 /* RenameOrgKxml2KdomElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenameOrgKxml2KdomElement.m; sourceTree = "<group>"; };
-		630AA8981DC7C429009A4050 /* RenameOrgKxml2KdomNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenameOrgKxml2KdomNode.h; sourceTree = "<group>"; };
-		630AA8991DC7C429009A4050 /* RenameOrgKxml2KdomNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenameOrgKxml2KdomNode.m; sourceTree = "<group>"; };
 		630AA89A1DC7C429009A4050 /* SQLiteConnectionNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteConnectionNative.h; sourceTree = "<group>"; };
 		630AA89B1DC7C429009A4050 /* SQLiteConnectionNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteConnectionNative.m; sourceTree = "<group>"; };
 		630AA89C1DC7C429009A4050 /* SQLiteErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteErrors.h; sourceTree = "<group>"; };
@@ -3301,6 +3289,30 @@
 		6359898A1DE46D5B002E0AEC /* RxDopplSafeObservableUnsubscribe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxDopplSafeObservableUnsubscribe.m; sourceTree = "<group>"; };
 		6359898B1DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxDopplWeakReferenceHelper.h; sourceTree = "<group>"; };
 		6359898C1DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxDopplWeakReferenceHelper.m; sourceTree = "<group>"; };
+		63712CA31E2A02A400310FB0 /* AndroidOsBadParcelableException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidOsBadParcelableException.h; sourceTree = "<group>"; };
+		63712CA41E2A02A400310FB0 /* AndroidOsBadParcelableException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidOsBadParcelableException.m; sourceTree = "<group>"; };
+		63712CA51E2A02A400310FB0 /* AndroidOsIBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidOsIBinder.h; sourceTree = "<group>"; };
+		63712CA61E2A02A400310FB0 /* AndroidOsIBinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidOsIBinder.m; sourceTree = "<group>"; };
+		63712CA71E2A02A400310FB0 /* AndroidOsIInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidOsIInterface.h; sourceTree = "<group>"; };
+		63712CA81E2A02A400310FB0 /* AndroidOsIInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidOsIInterface.m; sourceTree = "<group>"; };
+		63712CA91E2A02A400310FB0 /* AndroidOsParcel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidOsParcel.h; sourceTree = "<group>"; };
+		63712CAA1E2A02A400310FB0 /* AndroidOsParcel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidOsParcel.m; sourceTree = "<group>"; };
+		63712CAB1E2A02A400310FB0 /* AndroidOsParcelable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidOsParcelable.h; sourceTree = "<group>"; };
+		63712CAC1E2A02A400310FB0 /* AndroidOsParcelable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidOsParcelable.m; sourceTree = "<group>"; };
+		63712CAD1E2A02A400310FB0 /* AndroidOsParcelFileDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidOsParcelFileDescriptor.h; sourceTree = "<group>"; };
+		63712CAE1E2A02A400310FB0 /* AndroidOsParcelFileDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidOsParcelFileDescriptor.m; sourceTree = "<group>"; };
+		63712CAF1E2A02A400310FB0 /* AndroidOsRemoteException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidOsRemoteException.h; sourceTree = "<group>"; };
+		63712CB01E2A02A400310FB0 /* AndroidOsRemoteException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidOsRemoteException.m; sourceTree = "<group>"; };
+		63712CB11E2A02A400310FB0 /* AndroidUtilAndroidException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidUtilAndroidException.h; sourceTree = "<group>"; };
+		63712CB21E2A02A400310FB0 /* AndroidUtilAndroidException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidUtilAndroidException.m; sourceTree = "<group>"; };
+		63712CB31E2A02A400310FB0 /* ComGoogleAutoValueAutoAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComGoogleAutoValueAutoAnnotation.h; sourceTree = "<group>"; };
+		63712CB41E2A02A400310FB0 /* ComGoogleAutoValueAutoAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComGoogleAutoValueAutoAnnotation.m; sourceTree = "<group>"; };
+		63712CB51E2A02A400310FB0 /* ComGoogleAutoValueAutoValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComGoogleAutoValueAutoValue.h; sourceTree = "<group>"; };
+		63712CB61E2A02A400310FB0 /* ComGoogleAutoValueAutoValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComGoogleAutoValueAutoValue.m; sourceTree = "<group>"; };
+		63712CCB1E2A0BA100310FB0 /* AndroidInternalUtilFastXmlSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidInternalUtilFastXmlSerializer.h; sourceTree = "<group>"; };
+		63712CCC1E2A0BA100310FB0 /* AndroidInternalUtilFastXmlSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidInternalUtilFastXmlSerializer.m; sourceTree = "<group>"; };
+		63712CCD1E2A0BA100310FB0 /* AndroidInternalUtilXmlUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidInternalUtilXmlUtils.h; sourceTree = "<group>"; };
+		63712CCE1E2A0BA100310FB0 /* AndroidInternalUtilXmlUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidInternalUtilXmlUtils.m; sourceTree = "<group>"; };
 		639320301D77FF700047224B /* dataseeds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dataseeds; sourceTree = "<group>"; };
 		63EE30CB1CC5E1BD00B64D3D /* CheckLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckLoginController.swift; sourceTree = "<group>"; };
 		63EE30CD1CC6985800B64D3D /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
@@ -3544,6 +3556,30 @@
 		630AA7A41DC7C428009A4050 /* androidbase */ = {
 			isa = PBXGroup;
 			children = (
+				63712CCB1E2A0BA100310FB0 /* AndroidInternalUtilFastXmlSerializer.h */,
+				63712CCC1E2A0BA100310FB0 /* AndroidInternalUtilFastXmlSerializer.m */,
+				63712CCD1E2A0BA100310FB0 /* AndroidInternalUtilXmlUtils.h */,
+				63712CCE1E2A0BA100310FB0 /* AndroidInternalUtilXmlUtils.m */,
+				63712CA31E2A02A400310FB0 /* AndroidOsBadParcelableException.h */,
+				63712CA41E2A02A400310FB0 /* AndroidOsBadParcelableException.m */,
+				63712CA51E2A02A400310FB0 /* AndroidOsIBinder.h */,
+				63712CA61E2A02A400310FB0 /* AndroidOsIBinder.m */,
+				63712CA71E2A02A400310FB0 /* AndroidOsIInterface.h */,
+				63712CA81E2A02A400310FB0 /* AndroidOsIInterface.m */,
+				63712CA91E2A02A400310FB0 /* AndroidOsParcel.h */,
+				63712CAA1E2A02A400310FB0 /* AndroidOsParcel.m */,
+				63712CAB1E2A02A400310FB0 /* AndroidOsParcelable.h */,
+				63712CAC1E2A02A400310FB0 /* AndroidOsParcelable.m */,
+				63712CAD1E2A02A400310FB0 /* AndroidOsParcelFileDescriptor.h */,
+				63712CAE1E2A02A400310FB0 /* AndroidOsParcelFileDescriptor.m */,
+				63712CAF1E2A02A400310FB0 /* AndroidOsRemoteException.h */,
+				63712CB01E2A02A400310FB0 /* AndroidOsRemoteException.m */,
+				63712CB11E2A02A400310FB0 /* AndroidUtilAndroidException.h */,
+				63712CB21E2A02A400310FB0 /* AndroidUtilAndroidException.m */,
+				63712CB31E2A02A400310FB0 /* ComGoogleAutoValueAutoAnnotation.h */,
+				63712CB41E2A02A400310FB0 /* ComGoogleAutoValueAutoAnnotation.m */,
+				63712CB51E2A02A400310FB0 /* ComGoogleAutoValueAutoValue.h */,
+				63712CB61E2A02A400310FB0 /* ComGoogleAutoValueAutoValue.m */,
 				630AA7A51DC7C428009A4050 /* android */,
 				630AA7B11DC7C428009A4050 /* AndroidAnnotationNonNull.h */,
 				630AA7B21DC7C428009A4050 /* AndroidAnnotationNonNull.m */,
@@ -3736,28 +3772,10 @@
 				630AA8701DC7C428009A4050 /* CursorWindowNative.m */,
 				630AA8711DC7C428009A4050 /* org */,
 				630AA8731DC7C428009A4050 /* rename */,
-				630AA8841DC7C428009A4050 /* RenameComAndroidInternalUtilFastXmlSerializer.h */,
-				630AA8851DC7C428009A4050 /* RenameComAndroidInternalUtilFastXmlSerializer.m */,
-				630AA8861DC7C428009A4050 /* RenameComAndroidInternalUtilXmlUtils.h */,
-				630AA8871DC7C428009A4050 /* RenameComAndroidInternalUtilXmlUtils.m */,
 				630AA8881DC7C429009A4050 /* RenameComGoogleAndroidCollectLists.h */,
 				630AA8891DC7C429009A4050 /* RenameComGoogleAndroidCollectLists.m */,
-				630AA88A1DC7C429009A4050 /* RenameComGoogleAndroidCollectMaps.h */,
-				630AA88B1DC7C429009A4050 /* RenameComGoogleAndroidCollectMaps.m */,
 				630AA88C1DC7C429009A4050 /* RenameComGoogleAndroidCollectSets.h */,
 				630AA88D1DC7C429009A4050 /* RenameComGoogleAndroidCollectSets.m */,
-				630AA88E1DC7C429009A4050 /* RenameLibcoreInternalStringPool.h */,
-				630AA88F1DC7C429009A4050 /* RenameLibcoreInternalStringPool.m */,
-				630AA8901DC7C429009A4050 /* RenameOrgKxml2IoKXmlParser.h */,
-				630AA8911DC7C429009A4050 /* RenameOrgKxml2IoKXmlParser.m */,
-				630AA8921DC7C429009A4050 /* RenameOrgKxml2IoKXmlSerializer.h */,
-				630AA8931DC7C429009A4050 /* RenameOrgKxml2IoKXmlSerializer.m */,
-				630AA8941DC7C429009A4050 /* RenameOrgKxml2KdomDocument.h */,
-				630AA8951DC7C429009A4050 /* RenameOrgKxml2KdomDocument.m */,
-				630AA8961DC7C429009A4050 /* RenameOrgKxml2KdomElement.h */,
-				630AA8971DC7C429009A4050 /* RenameOrgKxml2KdomElement.m */,
-				630AA8981DC7C429009A4050 /* RenameOrgKxml2KdomNode.h */,
-				630AA8991DC7C429009A4050 /* RenameOrgKxml2KdomNode.m */,
 				630AA89A1DC7C429009A4050 /* SQLiteConnectionNative.h */,
 				630AA89B1DC7C429009A4050 /* SQLiteConnectionNative.m */,
 				630AA89C1DC7C429009A4050 /* SQLiteErrors.h */,
@@ -6189,7 +6207,6 @@
 				630AB41B1DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesEnumStringType.h in Headers */,
 				630AAF571DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsIOUtils.h in Headers */,
 				630AB32B1DC7C433009A4050 /* RxInternalUtilUnsafeMpmcArrayQueue.h in Headers */,
-				630AAF0D1DC7C42E009A4050 /* RenameComGoogleAndroidCollectMaps.h in Headers */,
 				630AB4311DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesStringBytesType.h in Headers */,
 				630AB1AD1DC7C431009A4050 /* RxInternalOperatorsOnSubscribeCollect.h in Headers */,
 				630AAF911DC7C42E009A4050 /* DCPScheduleBlockHour.h in Headers */,
@@ -6284,7 +6301,6 @@
 				630AAEAB1DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteDiskIOException.h in Headers */,
 				630AB40D1DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesDateLongType.h in Headers */,
 				630AAE771DC7C42E009A4050 /* AndroidDatabaseDataSetObserver.h in Headers */,
-				630AAF151DC7C42E009A4050 /* RenameOrgKxml2IoKXmlSerializer.h in Headers */,
 				630AB2D11DC7C432009A4050 /* RxInternalSchedulersImmediateScheduler.h in Headers */,
 				630AB4131DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesDateType.h in Headers */,
 				630AB4691DC7C435009A4050 /* CoTouchlabSqueakyStmtQueryQueryable.h in Headers */,
@@ -6301,7 +6317,6 @@
 				630AB42B1DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesSerializableType.h in Headers */,
 				630AAF2F1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock.h in Headers */,
 				630AAED91DC7C42E009A4050 /* AndroidOsMessage.h in Headers */,
-				630AAF091DC7C42E009A4050 /* RenameComAndroidInternalUtilXmlUtils.h in Headers */,
 				630AB42F1DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesShortType.h in Headers */,
 				630AB2931DC7C432009A4050 /* RxInternalOperatorsSingleDoAfterTerminate.h in Headers */,
 				630AB1A71DC7C431009A4050 /* RxInternalOperatorsNotificationLite.h in Headers */,
@@ -6343,6 +6358,7 @@
 				630AAF7D1DC7C42E009A4050 /* DCPAbstractEventBusPresenter.h in Headers */,
 				630AAE511DC7C42D009A4050 /* AndroidAppQueuedWork.h in Headers */,
 				630AB2DF1DC7C433009A4050 /* RxInternalSchedulersTrampolineScheduler.h in Headers */,
+				63712CC31E2A02A400310FB0 /* AndroidOsRemoteException.h in Headers */,
 				630AB0391DC7C42E009A4050 /* ComGoogleGsonJsonSerializationContext.h in Headers */,
 				630AB4711DC7C435009A4050 /* CoTouchlabSqueakyStmtQuerySimpleComparison.h in Headers */,
 				630AB00D1DC7C42E009A4050 /* ComGoogleGsonInternalBindUtilISO8601Utils.h in Headers */,
@@ -6356,7 +6372,6 @@
 				630AAFF71DC7C42E009A4050 /* ComGoogleGsonInternalBindDateTypeAdapter.h in Headers */,
 				630AB1671DC7C430009A4050 /* RxFunctionsFunc5.h in Headers */,
 				630AB1031DC7C42F009A4050 /* RetrofitProfiler.h in Headers */,
-				630AAF171DC7C42E009A4050 /* RenameOrgKxml2KdomDocument.h in Headers */,
 				630AAF211DC7C42E009A4050 /* SQLitePreparedStatement.h in Headers */,
 				630AB2F51DC7C433009A4050 /* RxInternalUtilAtomicSpscExactAtomicArrayQueue.h in Headers */,
 				630AB2411DC7C431009A4050 /* RxInternalOperatorsOperatorRetryWithPredicate.h in Headers */,
@@ -6394,6 +6409,7 @@
 				630AB2311DC7C431009A4050 /* RxInternalOperatorsOperatorMulticast.h in Headers */,
 				630AAF231DC7C42E009A4050 /* CoTouchlabDroidconandroidCrashReport.h in Headers */,
 				630AB1DF1DC7C431009A4050 /* RxInternalOperatorsOnSubscribeRedo.h in Headers */,
+				63712CC91E2A02A400310FB0 /* ComGoogleAutoValueAutoValue.h in Headers */,
 				630AB2771DC7C432009A4050 /* RxInternalOperatorsOperatorTimestamp.h in Headers */,
 				630AB4391DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesVoidType.h in Headers */,
 				630AAE611DC7C42D009A4050 /* AndroidDatabaseCharArrayBuffer.h in Headers */,
@@ -6456,7 +6472,9 @@
 				630AB1A31DC7C430009A4050 /* RxInternalOperatorsEmptyObservableHolder.h in Headers */,
 				630AB3111DC7C433009A4050 /* RxInternalUtilRxRingBuffer.h in Headers */,
 				630AAEB11DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteFullException.h in Headers */,
+				63712CBF1E2A02A400310FB0 /* AndroidOsParcelable.h in Headers */,
 				630AB45B1DC7C434009A4050 /* CoTouchlabSqueakyStmtQueryClause.h in Headers */,
+				63712CCF1E2A0BA100310FB0 /* AndroidInternalUtilFastXmlSerializer.h in Headers */,
 				630AAF431DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkNetworkErrorHandler.h in Headers */,
 				630AAEB71DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteOpenHelper.h in Headers */,
 				630AB06F1DC7C42E009A4050 /* CoTouchlabAndroidThreadingTasksPersistedPersistedTask.h in Headers */,
@@ -6475,6 +6493,7 @@
 				630AB2D31DC7C432009A4050 /* RxInternalSchedulersNewThreadScheduler.h in Headers */,
 				630AB19B1DC7C430009A4050 /* RxInternalOperatorsCompletableOnSubscribeMergeIterable.h in Headers */,
 				630AB2AB1DC7C432009A4050 /* RxInternalOperatorsSingleOnSubscribeUsing.h in Headers */,
+				63712CBD1E2A02A400310FB0 /* AndroidOsParcel.h in Headers */,
 				630AB13F1DC7C430009A4050 /* RxExceptionsUnsubscribeFailedException.h in Headers */,
 				630AB2B71DC7C432009A4050 /* RxInternalOperatorsSingleTimeout.h in Headers */,
 				630AAF8D1DC7C42E009A4050 /* DCPLoadConferenceDataTask.h in Headers */,
@@ -6543,11 +6562,13 @@
 				630AAF7B1DC7C42E009A4050 /* DCDVenue.h in Headers */,
 				630AB0591DC7C42E009A4050 /* CoTouchlabAndroidThreadingErrorcontrolNetworkException.h in Headers */,
 				630AB0811DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedStorageSqliteSQLiteDatabaseFactory.h in Headers */,
+				63712CB71E2A02A400310FB0 /* AndroidOsBadParcelableException.h in Headers */,
 				630AB2671DC7C432009A4050 /* RxInternalOperatorsOperatorTakeUntil.h in Headers */,
 				630AB2E91DC7C433009A4050 /* RxInternalUtilActionSubscriber.h in Headers */,
 				630AAEB51DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteMisuseException.h in Headers */,
 				630AB2071DC7C431009A4050 /* RxInternalOperatorsOperatorBufferWithTime.h in Headers */,
 				630AB1D51DC7C431009A4050 /* RxInternalOperatorsOnSubscribeOnAssembly.h in Headers */,
+				63712CC51E2A02A400310FB0 /* AndroidUtilAndroidException.h in Headers */,
 				630AAFCF1DC7C42E009A4050 /* DeGreenrobotEventUtilHasExecutionScope.h in Headers */,
 				630AB3C51DC7C434009A4050 /* CoTouchlabSqueakyDaoManagedModel.h in Headers */,
 				630AB0991DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper.h in Headers */,
@@ -6639,7 +6660,6 @@
 				630AB3DD1DC7C434009A4050 /* CoTouchlabSqueakyFieldDatabaseField.h in Headers */,
 				630AB3E31DC7C434009A4050 /* CoTouchlabSqueakyFieldFieldConverter.h in Headers */,
 				630AB41F1DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesFloatType.h in Headers */,
-				630AAF111DC7C42E009A4050 /* RenameLibcoreInternalStringPool.h in Headers */,
 				630AB1991DC7C430009A4050 /* RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable.h in Headers */,
 				630AB15B1DC7C430009A4050 /* RxFunctionsCancellable.h in Headers */,
 				635989911DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.h in Headers */,
@@ -6662,6 +6682,7 @@
 				630AB2271DC7C431009A4050 /* RxInternalOperatorsOperatorIgnoreElements.h in Headers */,
 				630AB24F1DC7C432009A4050 /* RxInternalOperatorsOperatorSkip.h in Headers */,
 				630AAF511DC7C42E009A4050 /* CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData.h in Headers */,
+				63712CBB1E2A02A400310FB0 /* AndroidOsIInterface.h in Headers */,
 				630AB1691DC7C430009A4050 /* RxFunctionsFunc6.h in Headers */,
 				630AAF811DC7C42E009A4050 /* DCPConferenceDataHelper.h in Headers */,
 				630AB4331DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesStringType.h in Headers */,
@@ -6672,6 +6693,7 @@
 				630AB37F1DC7C433009A4050 /* RxSchedulersImmediateScheduler.h in Headers */,
 				630AB2651DC7C432009A4050 /* RxInternalOperatorsOperatorTakeTimed.h in Headers */,
 				630AAF031DC7C42E009A4050 /* ComAndroidInternalUtilGrowingArrayUtils.h in Headers */,
+				63712CD11E2A0BA100310FB0 /* AndroidInternalUtilXmlUtils.h in Headers */,
 				630AAEB31DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteGlobal.h in Headers */,
 				630AB07D1DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedStorageSqliteCursorIntf.h in Headers */,
 				630AAF791DC7C42E009A4050 /* DCDVenue$Configuration.h in Headers */,
@@ -6699,7 +6721,6 @@
 				630AB0071DC7C42E009A4050 /* ComGoogleGsonInternalBindTimeTypeAdapter.h in Headers */,
 				630AB1931DC7C430009A4050 /* RxInternalOperatorsCompletableOnSubscribeMerge.h in Headers */,
 				630AB35D1DC7C433009A4050 /* RxObserversSerializedSubscriber.h in Headers */,
-				630AAF1B1DC7C42E009A4050 /* RenameOrgKxml2KdomNode.h in Headers */,
 				630AB1B91DC7C431009A4050 /* RxInternalOperatorsOnSubscribeDelaySubscriptionWithSelector.h in Headers */,
 				630AAEA31DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteDatabaseLockedException.h in Headers */,
 				630AAF851DC7C42E009A4050 /* DCPConferenceDataPresenter.h in Headers */,
@@ -6768,7 +6789,6 @@
 				630AB0E51DC7C42F009A4050 /* RetrofitHttpPUT.h in Headers */,
 				630AB3131DC7C433009A4050 /* RxInternalUtilRxThreadFactory.h in Headers */,
 				630AB0571DC7C42E009A4050 /* ComGoogleGsonTypeAdapterFactory.h in Headers */,
-				630AAF131DC7C42E009A4050 /* RenameOrgKxml2IoKXmlParser.h in Headers */,
 				630AB4631DC7C435009A4050 /* CoTouchlabSqueakyStmtQueryIsNull.h in Headers */,
 				630AB3671DC7C433009A4050 /* RxPluginspackage-info.h in Headers */,
 				630AB05F1DC7C42E009A4050 /* CoTouchlabAndroidThreadingTasksBaseTaskQueue.h in Headers */,
@@ -6780,7 +6800,6 @@
 				630AAE6B1DC7C42E009A4050 /* AndroidDatabaseCursorWindow.h in Headers */,
 				630AB0E11DC7C42F009A4050 /* RetrofitHttpPath.h in Headers */,
 				630AAF0B1DC7C42E009A4050 /* RenameComGoogleAndroidCollectLists.h in Headers */,
-				630AAF071DC7C42E009A4050 /* RenameComAndroidInternalUtilFastXmlSerializer.h in Headers */,
 				630AB1AB1DC7C431009A4050 /* RxInternalOperatorsOnSubscribeAutoConnect.h in Headers */,
 				630AB3691DC7C433009A4050 /* RxPluginsRxJavaCompletableExecutionHook.h in Headers */,
 				630AB01B1DC7C42E009A4050 /* ComGoogleGsonInternalObjectConstructor.h in Headers */,
@@ -6790,6 +6809,7 @@
 				630AB28D1DC7C432009A4050 /* RxInternalOperatorsOperatorZip.h in Headers */,
 				630AB2911DC7C432009A4050 /* RxInternalOperatorsSingleDelay.h in Headers */,
 				630AB1EF1DC7C431009A4050 /* RxInternalOperatorsOnSubscribeTimerOnce.h in Headers */,
+				63712CC71E2A02A400310FB0 /* ComGoogleAutoValueAutoAnnotation.h in Headers */,
 				630AB2451DC7C431009A4050 /* RxInternalOperatorsOperatorSampleWithTime.h in Headers */,
 				630AB1951DC7C430009A4050 /* RxInternalOperatorsCompletableOnSubscribeMergeArray.h in Headers */,
 				630AB1351DC7C430009A4050 /* RxExceptionsOnCompletedFailedException.h in Headers */,
@@ -6813,6 +6833,7 @@
 				630AB1611DC7C430009A4050 /* RxFunctionsFunc2.h in Headers */,
 				630AAF291DC7C42E009A4050 /* CoTouchlabDroidconandroidIosIosFirebase.h in Headers */,
 				630AAFC91DC7C42E009A4050 /* DeGreenrobotEventThreadMode.h in Headers */,
+				63712CB91E2A02A400310FB0 /* AndroidOsIBinder.h in Headers */,
 				630AB1DD1DC7C431009A4050 /* RxInternalOperatorsOnSubscribeRange.h in Headers */,
 				630AAEC11DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteReadOnlyDatabaseException.h in Headers */,
 				630AAEBF1DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteQueryBuilder.h in Headers */,
@@ -6859,13 +6880,13 @@
 				630AB1911DC7C430009A4050 /* RxInternalOperatorsCompletableOnSubscribeConcatIterable.h in Headers */,
 				630AB0BB1DC7C42F009A4050 /* RetrofitErrorHandler.h in Headers */,
 				630AAE5F1DC7C42D009A4050 /* AndroidDatabaseAbstractWindowedCursor.h in Headers */,
+				63712CC11E2A02A400310FB0 /* AndroidOsParcelFileDescriptor.h in Headers */,
 				630AB0531DC7C42E009A4050 /* ComGoogleGsonTreeTypeAdapter.h in Headers */,
 				630AB04F1DC7C42E009A4050 /* ComGoogleGsonStreamJsonWriter.h in Headers */,
 				630AAEDB1DC7C42E009A4050 /* AndroidOsMessageQueue.h in Headers */,
 				630AB0F51DC7C42F009A4050 /* RetrofitMimeTypedByteArray.h in Headers */,
 				630AAE631DC7C42D009A4050 /* AndroidDatabaseCrossProcessCursor.h in Headers */,
 				630AAFB51DC7C42E009A4050 /* DeGreenrobotEventEventBusBuilder.h in Headers */,
-				630AAF191DC7C42E009A4050 /* RenameOrgKxml2KdomElement.h in Headers */,
 				630AB2471DC7C431009A4050 /* RxInternalOperatorsOperatorScan.h in Headers */,
 				630AB24B1DC7C431009A4050 /* RxInternalOperatorsOperatorSerialize.h in Headers */,
 				630AB2291DC7C431009A4050 /* RxInternalOperatorsOperatorMapNotification.h in Headers */,
@@ -7465,6 +7486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63712CB81E2A02A400310FB0 /* AndroidOsBadParcelableException.m in Sources */,
 				630AAF541DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsAnalyticsEvents.m in Sources */,
 				630AB2C41DC7C432009A4050 /* RxInternalProducersSingleDelayedProducer.m in Sources */,
 				630AAFAA1DC7C42E009A4050 /* DCTSponsorsTask.m in Sources */,
@@ -7518,7 +7540,6 @@
 				630AB0341DC7C42E009A4050 /* ComGoogleGsonJsonParseException.m in Sources */,
 				630AB1241DC7C430009A4050 /* RxBackpressureOverflow.m in Sources */,
 				630AB1381DC7C430009A4050 /* RxExceptionsOnErrorFailedException.m in Sources */,
-				630AAF181DC7C42E009A4050 /* RenameOrgKxml2KdomDocument.m in Sources */,
 				630AAE701DC7C42E009A4050 /* AndroidDatabaseCursorWrapper.m in Sources */,
 				630AB3F41DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesBaseDateType.m in Sources */,
 				630AB4461DC7C434009A4050 /* CoTouchlabSqueakySqlSqlHelper.m in Sources */,
@@ -7581,7 +7602,6 @@
 				630AB1B61DC7C431009A4050 /* RxInternalOperatorsOnSubscribeDelaySubscription.m in Sources */,
 				630AB3661DC7C433009A4050 /* Rxpackage-info.m in Sources */,
 				630AB1861DC7C430009A4050 /* RxInternalOperatorsBufferUntilSubscriber.m in Sources */,
-				630AAF1C1DC7C42E009A4050 /* RenameOrgKxml2KdomNode.m in Sources */,
 				630AB0C81DC7C42F009A4050 /* RetrofitHttpEncodedQueryMap.m in Sources */,
 				630AB2721DC7C432009A4050 /* RxInternalOperatorsOperatorTimeout.m in Sources */,
 				630AB1FA1DC7C431009A4050 /* RxInternalOperatorsOnSubscribeUsing.m in Sources */,
@@ -7637,7 +7657,6 @@
 				630AB1C61DC7C431009A4050 /* RxInternalOperatorsOnSubscribeFromAsyncEmitter.m in Sources */,
 				630AAFB81DC7C42E009A4050 /* DeGreenrobotEventEventBusException.m in Sources */,
 				630AB1E01DC7C431009A4050 /* RxInternalOperatorsOnSubscribeRedo.m in Sources */,
-				630AAF161DC7C42E009A4050 /* RenameOrgKxml2IoKXmlSerializer.m in Sources */,
 				630AB0021DC7C42E009A4050 /* ComGoogleGsonInternalBindObjectTypeAdapter.m in Sources */,
 				630AB0421DC7C42E009A4050 /* ComGoogleGsonLongSerializationPolicy.m in Sources */,
 				630AB1B41DC7C431009A4050 /* RxInternalOperatorsOnSubscribeDefer.m in Sources */,
@@ -7693,6 +7712,7 @@
 				630AAE7A1DC7C42E009A4050 /* AndroidDatabaseDefaultDatabaseErrorHandler.m in Sources */,
 				630AB37A1DC7C433009A4050 /* RxPluginsRxJavaSingleExecutionHookDefault.m in Sources */,
 				630AB11E1DC7C430009A4050 /* RxAnnotationsExperimental.m in Sources */,
+				63712CCA1E2A02A400310FB0 /* ComGoogleAutoValueAutoValue.m in Sources */,
 				630AB24C1DC7C431009A4050 /* RxInternalOperatorsOperatorSerialize.m in Sources */,
 				630AB05C1DC7C42E009A4050 /* CoTouchlabAndroidThreadingErrorcontrolSoftException.m in Sources */,
 				630AB1DC1DC7C431009A4050 /* RxInternalOperatorsOnSubscribePublishMulticast.m in Sources */,
@@ -7708,7 +7728,6 @@
 				630AB0EE1DC7C42F009A4050 /* RetrofitHttpStreaming.m in Sources */,
 				630AB3481DC7C433009A4050 /* RxObservablesConnectableObservable.m in Sources */,
 				630AB4021DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesBooleanType.m in Sources */,
-				630AAF0A1DC7C42E009A4050 /* RenameComAndroidInternalUtilXmlUtils.m in Sources */,
 				630AB44A1DC7C434009A4050 /* CoTouchlabSqueakyTableDatabaseTable.m in Sources */,
 				630AAFC01DC7C42E009A4050 /* DeGreenrobotEventPendingPostQueue.m in Sources */,
 				630AB0C21DC7C42F009A4050 /* RetrofitHttpDELETE.m in Sources */,
@@ -7750,7 +7769,6 @@
 				630AAF5C1DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsStringUtils.m in Sources */,
 				630AAF761DC7C42E009A4050 /* DCDUserAccount$Configuration.m in Sources */,
 				630AAEA81DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteDebug.m in Sources */,
-				630AAF1A1DC7C42E009A4050 /* RenameOrgKxml2KdomElement.m in Sources */,
 				630AAF2C1DC7C42E009A4050 /* CoTouchlabDroidconandroidIosIosPlatformClient.m in Sources */,
 				630AB1841DC7C430009A4050 /* RxInternalOperatorsBlockingOperatorToIterator.m in Sources */,
 				630AB10A1DC7C42F009A4050 /* RetrofitRequestInterceptorTape.m in Sources */,
@@ -7837,13 +7855,15 @@
 				630AB19A1DC7C430009A4050 /* RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorIterable.m in Sources */,
 				630AB0921DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksTask.m in Sources */,
 				630AB44E1DC7C434009A4050 /* CoTouchlabSqueakyTableGeneratedTableMapper.m in Sources */,
+				63712CBE1E2A02A400310FB0 /* AndroidOsParcel.m in Sources */,
 				630AB1961DC7C430009A4050 /* RxInternalOperatorsCompletableOnSubscribeMergeArray.m in Sources */,
 				630AB2501DC7C432009A4050 /* RxInternalOperatorsOperatorSkip.m in Sources */,
 				630AAFA81DC7C42E009A4050 /* DCTSeedScheduleDataTask.m in Sources */,
 				630AB11A1DC7C430009A4050 /* RetrofitUtils.m in Sources */,
+				63712CD21E2A0BA100310FB0 /* AndroidInternalUtilXmlUtils.m in Sources */,
 				630AAFD21DC7C42E009A4050 /* DeGreenrobotEventUtilThrowableFailureEvent.m in Sources */,
-				630AAF081DC7C42E009A4050 /* RenameComAndroidInternalUtilFastXmlSerializer.m in Sources */,
 				630AB31C1DC7C433009A4050 /* RxInternalUtilSuppressAnimalSniffer.m in Sources */,
+				63712CC21E2A02A400310FB0 /* AndroidOsParcelFileDescriptor.m in Sources */,
 				630AB2121DC7C431009A4050 /* RxInternalOperatorsOperatorDelayWithSelector.m in Sources */,
 				630AAFF81DC7C42E009A4050 /* ComGoogleGsonInternalBindDateTypeAdapter.m in Sources */,
 				630AB2521DC7C432009A4050 /* RxInternalOperatorsOperatorSkipLast.m in Sources */,
@@ -7875,6 +7895,7 @@
 				630AAF7C1DC7C42E009A4050 /* DCDVenue.m in Sources */,
 				630AB22E1DC7C431009A4050 /* RxInternalOperatorsOperatorMaterialize.m in Sources */,
 				630AB0581DC7C42E009A4050 /* ComGoogleGsonTypeAdapterFactory.m in Sources */,
+				63712CC41E2A02A400310FB0 /* AndroidOsRemoteException.m in Sources */,
 				630AB24A1DC7C431009A4050 /* RxInternalOperatorsOperatorSequenceEqual.m in Sources */,
 				630AB1D01DC7C431009A4050 /* RxInternalOperatorsOnSubscribeJoin.m in Sources */,
 				630AB1A01DC7C430009A4050 /* RxInternalOperatorsDeferredScalarSubscriber.m in Sources */,
@@ -7921,7 +7942,6 @@
 				630AAEB01DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteException.m in Sources */,
 				630AB3DA1DC7C434009A4050 /* CoTouchlabSqueakyDbSQLiteStatement.m in Sources */,
 				630AB2A21DC7C432009A4050 /* RxInternalOperatorsSingleLiftObservableOperator.m in Sources */,
-				630AAF121DC7C42E009A4050 /* RenameLibcoreInternalStringPool.m in Sources */,
 				630AB3FA1DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesBigIntegerType.m in Sources */,
 				630AB23A1DC7C431009A4050 /* RxInternalOperatorsOperatorOnBackpressureLatest.m in Sources */,
 				630AB02A1DC7C42E009A4050 /* ComGoogleGsonJsonDeserializer.m in Sources */,
@@ -7968,6 +7988,7 @@
 				630AB1041DC7C42F009A4050 /* RetrofitProfiler.m in Sources */,
 				630AB4361DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesTimeStampStringType.m in Sources */,
 				630AAFFA1DC7C42E009A4050 /* ComGoogleGsonInternalBindJsonAdapterAnnotationTypeAdapterFactory.m in Sources */,
+				63712CC01E2A02A400310FB0 /* AndroidOsParcelable.m in Sources */,
 				630AB28A1DC7C432009A4050 /* RxInternalOperatorsOperatorWithLatestFrom.m in Sources */,
 				630AAE961DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteConstraintException.m in Sources */,
 				630AB0481DC7C42E009A4050 /* ComGoogleGsonReflectTypeToken.m in Sources */,
@@ -8061,10 +8082,11 @@
 				630AB3821DC7C433009A4050 /* RxSchedulersNewThreadScheduler.m in Sources */,
 				630AB3461DC7C433009A4050 /* RxObservablesBlockingObservable.m in Sources */,
 				630AB1A21DC7C430009A4050 /* RxInternalOperatorsDeferredScalarSubscriberSafe.m in Sources */,
-				630AAF141DC7C42E009A4050 /* RenameOrgKxml2IoKXmlParser.m in Sources */,
 				630AB1441DC7C430009A4050 /* RxFunctionsAction0.m in Sources */,
 				630AAFD01DC7C42E009A4050 /* DeGreenrobotEventUtilHasExecutionScope.m in Sources */,
 				630AB0841DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedStorageSqliteSQLiteDatabaseIntf.m in Sources */,
+				63712CC61E2A02A400310FB0 /* AndroidUtilAndroidException.m in Sources */,
+				63712CBC1E2A02A400310FB0 /* AndroidOsIInterface.m in Sources */,
 				630AB0541DC7C42E009A4050 /* ComGoogleGsonTreeTypeAdapter.m in Sources */,
 				630AAEFC1DC7C42E009A4050 /* AndroidUtilSize.m in Sources */,
 				630AAFFC1DC7C42E009A4050 /* ComGoogleGsonInternalBindJsonTreeReader.m in Sources */,
@@ -8113,11 +8135,11 @@
 				630AB2FE1DC7C433009A4050 /* RxInternalUtilBackpressureDrainManager.m in Sources */,
 				630AB15A1DC7C430009A4050 /* RxFunctionsActions.m in Sources */,
 				630AB26A1DC7C432009A4050 /* RxInternalOperatorsOperatorTakeUntilPredicate.m in Sources */,
+				63712CD01E2A0BA100310FB0 /* AndroidInternalUtilFastXmlSerializer.m in Sources */,
 				630AB3C01DC7C434009A4050 /* CoTouchlabSqueakyDaoCloseableIterator.m in Sources */,
 				630AAFB41DC7C42E009A4050 /* DeGreenrobotEventEventBus.m in Sources */,
 				630AAEAA1DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteDirectCursorDriver.m in Sources */,
 				630AB16C1DC7C430009A4050 /* RxFunctionsFunc7.m in Sources */,
-				630AAF0E1DC7C42E009A4050 /* RenameComGoogleAndroidCollectMaps.m in Sources */,
 				630AB2DC1DC7C433009A4050 /* RxInternalSchedulersSchedulerWhen.m in Sources */,
 				630AB0F01DC7C42F009A4050 /* RetrofitMimeFormUrlEncodedTypedOutput.m in Sources */,
 				630AB23C1DC7C431009A4050 /* RxInternalOperatorsOperatorOnErrorResumeNextViaFunction.m in Sources */,
@@ -8154,6 +8176,7 @@
 				630AB4141DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesDateType.m in Sources */,
 				630AAEDA1DC7C42E009A4050 /* AndroidOsMessage.m in Sources */,
 				630AB36E1DC7C433009A4050 /* RxPluginsRxJavaHooks.m in Sources */,
+				63712CBA1E2A02A400310FB0 /* AndroidOsIBinder.m in Sources */,
 				630AB18E1DC7C430009A4050 /* RxInternalOperatorsCompletableOnSubscribeConcat.m in Sources */,
 				630AB2701DC7C432009A4050 /* RxInternalOperatorsOperatorTimeInterval.m in Sources */,
 				630AB16E1DC7C430009A4050 /* RxFunctionsFunc8.m in Sources */,
@@ -8193,6 +8216,7 @@
 				630AB1E41DC7C431009A4050 /* RxInternalOperatorsOnSubscribeReduceSeed.m in Sources */,
 				630AB0861DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedStorageStoredCommandAdapter.m in Sources */,
 				630AB33E1DC7C433009A4050 /* RxInternalUtilUtilityFunctions.m in Sources */,
+				63712CC81E2A02A400310FB0 /* ComGoogleAutoValueAutoAnnotation.m in Sources */,
 				630AAFC81DC7C42E009A4050 /* DeGreenrobotEventSubscription.m in Sources */,
 				630AB4501DC7C434009A4050 /* CoTouchlabSqueakyTableTableInfo.m in Sources */,
 				630AB2B01DC7C432009A4050 /* RxInternalOperatorsSingleOperatorZip.m in Sources */,
@@ -8564,7 +8588,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "";
-				OTHER_LDFLAGS = "-lsqlite3";
+				OTHER_LDFLAGS = (
+					"-lsqlite3",
+					"-lz",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.touchlab.dcframework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -8603,7 +8630,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "";
-				OTHER_LDFLAGS = "-lsqlite3";
+				OTHER_LDFLAGS = (
+					"-lsqlite3",
+					"-lz",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.touchlab.dcframework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

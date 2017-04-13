@@ -12,14 +12,18 @@
 #include "RxSubscriber.h"
 #include "java/lang/Boolean.h"
 
-@interface RxInternalOperatorsOperatorAny_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorAny_1 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorAny *this$0_;
-  jboolean hasElements_;
-  jboolean done_;
   RxInternalProducersSingleDelayedProducer *val$producer_;
   RxSubscriber *val$child_;
+  jboolean hasElements_;
+  jboolean done_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorAny:(RxInternalOperatorsOperatorAny *)outer$
+          withRxInternalProducersSingleDelayedProducer:(RxInternalProducersSingleDelayedProducer *)capture$0
+                                      withRxSubscriber:(RxSubscriber *)capture$1;
 
 - (void)onNextWithId:(id)t;
 
@@ -27,23 +31,15 @@
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxInternalOperatorsOperatorAny:(RxInternalOperatorsOperatorAny *)outer$
-          withRxInternalProducersSingleDelayedProducer:(RxInternalProducersSingleDelayedProducer *)capture$0
-                                      withRxSubscriber:(RxSubscriber *)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorAny_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorAny_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorAny_$1, this$0_, RxInternalOperatorsOperatorAny *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorAny_$1, val$producer_, RxInternalProducersSingleDelayedProducer *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorAny_$1, val$child_, RxSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorAny_1_initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorAny_1 *self, RxInternalOperatorsOperatorAny *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorAny_$1_initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorAny_$1 *self, RxInternalOperatorsOperatorAny *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1);
+__attribute__((unused)) static RxInternalOperatorsOperatorAny_1 *new_RxInternalOperatorsOperatorAny_1_initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorAny *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorAny_$1 *new_RxInternalOperatorsOperatorAny_$1_initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorAny *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorAny_$1 *create_RxInternalOperatorsOperatorAny_$1_initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorAny *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1);
+__attribute__((unused)) static RxInternalOperatorsOperatorAny_1 *create_RxInternalOperatorsOperatorAny_1_initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorAny *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1);
 
 @implementation RxInternalOperatorsOperatorAny
 
@@ -55,7 +51,7 @@ __attribute__((unused)) static RxInternalOperatorsOperatorAny_$1 *create_RxInter
 
 - (RxSubscriber *)callWithId:(RxSubscriber *)child {
   RxInternalProducersSingleDelayedProducer *producer = create_RxInternalProducersSingleDelayedProducer_initWithRxSubscriber_(child);
-  RxSubscriber *s = create_RxInternalOperatorsOperatorAny_$1_initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(self, producer, child);
+  RxSubscriber *s = create_RxInternalOperatorsOperatorAny_1_initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(self, producer, child);
   [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:s];
   [child setProducerWithRxProducer:producer];
   return s;
@@ -103,7 +99,14 @@ RxInternalOperatorsOperatorAny *create_RxInternalOperatorsOperatorAny_initWithRx
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorAny)
 
-@implementation RxInternalOperatorsOperatorAny_$1
+@implementation RxInternalOperatorsOperatorAny_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorAny:(RxInternalOperatorsOperatorAny *)outer$
+          withRxInternalProducersSingleDelayedProducer:(RxInternalProducersSingleDelayedProducer *)capture$0
+                                      withRxSubscriber:(RxSubscriber *)capture$1 {
+  RxInternalOperatorsOperatorAny_1_initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(self, outer$, capture$0, capture$1);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   if (done_) {
@@ -147,15 +150,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorAny)
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorAny:(RxInternalOperatorsOperatorAny *)outer$
-          withRxInternalProducersSingleDelayedProducer:(RxInternalProducersSingleDelayedProducer *)capture$0
-                                      withRxSubscriber:(RxSubscriber *)capture$1 {
-  RxInternalOperatorsOperatorAny_$1_initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(self, outer$, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorAny_$1 class]);
   RELEASE_(this$0_);
   RELEASE_(val$producer_);
   RELEASE_(val$child_);
@@ -164,43 +159,43 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorAny)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxInternalOperatorsOperatorAny:withRxInternalProducersSingleDelayedProducer:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorAny:withRxInternalProducersSingleDelayedProducer:withRxSubscriber:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorAny;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorAny;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$producer_", "LRxInternalProducersSingleDelayedProducer;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
+    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
     { "hasElements_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
-    { "val$producer_", "LRxInternalProducersSingleDelayedProducer;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
-    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxInternalOperatorsOperatorAny;LRxInternalProducersSingleDelayedProducer;LRxSubscriber;", "(Lrx/internal/operators/OperatorAny;Lrx/internal/producers/SingleDelayedProducer<Ljava/lang/Boolean;>;Lrx/Subscriber<-Ljava/lang/Boolean;>;)V", "Lrx/internal/producers/SingleDelayedProducer<Ljava/lang/Boolean;>;", "Lrx/Subscriber<-Ljava/lang/Boolean;>;", "LRxInternalOperatorsOperatorAny;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorAny_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 5, 9, -1, 10, 11, -1 };
-  return &_RxInternalOperatorsOperatorAny_$1;
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/internal/operators/OperatorAny<TT;>;", "Lrx/internal/producers/SingleDelayedProducer<Ljava/lang/Boolean;>;", "Lrx/Subscriber<-Ljava/lang/Boolean;>;", "LRxInternalOperatorsOperatorAny;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorAny_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 5, 8, -1, 9, 10, -1 };
+  return &_RxInternalOperatorsOperatorAny_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorAny_$1_initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorAny_$1 *self, RxInternalOperatorsOperatorAny *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) {
+void RxInternalOperatorsOperatorAny_1_initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorAny_1 *self, RxInternalOperatorsOperatorAny *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$producer_, capture$0);
   JreStrongAssign(&self->val$child_, capture$1);
   RxSubscriber_init(self);
 }
 
-RxInternalOperatorsOperatorAny_$1 *new_RxInternalOperatorsOperatorAny_$1_initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorAny *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorAny_$1, initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_, outer$, capture$0, capture$1)
+RxInternalOperatorsOperatorAny_1 *new_RxInternalOperatorsOperatorAny_1_initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorAny *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorAny_1, initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_, outer$, capture$0, capture$1)
 }
 
-RxInternalOperatorsOperatorAny_$1 *create_RxInternalOperatorsOperatorAny_$1_initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorAny *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorAny_$1, initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_, outer$, capture$0, capture$1)
+RxInternalOperatorsOperatorAny_1 *create_RxInternalOperatorsOperatorAny_1_initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorAny *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorAny_1, initWithRxInternalOperatorsOperatorAny_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_, outer$, capture$0, capture$1)
 }

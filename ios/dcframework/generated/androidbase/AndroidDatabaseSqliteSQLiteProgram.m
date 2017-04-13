@@ -221,7 +221,7 @@ J2OBJC_INITIALIZED_DEFN(AndroidDatabaseSqliteSQLiteProgram)
 void AndroidDatabaseSqliteSQLiteProgram_initWithAndroidDatabaseSqliteSQLiteDatabase_withNSString_withNSObjectArray_(AndroidDatabaseSqliteSQLiteProgram *self, AndroidDatabaseSqliteSQLiteDatabase *db, NSString *sql, IOSObjectArray *bindArgs) {
   AndroidDatabaseSqliteSQLiteClosable_init(self);
   JreStrongAssign(&self->mDatabase_, db);
-  JreStrongAssign(&self->mSql_, [((NSString *) nil_chk(sql)) trim]);
+  JreStrongAssign(&self->mSql_, [((NSString *) nil_chk(sql)) java_trim]);
   jint n = AndroidDatabaseDatabaseUtils_getSqlStatementTypeWithNSString_(self->mSql_);
   {
     jboolean assumeReadOnly;

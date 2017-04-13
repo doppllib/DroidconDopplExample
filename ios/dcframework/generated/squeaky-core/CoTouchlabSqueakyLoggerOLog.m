@@ -17,6 +17,13 @@ J2OBJC_INITIALIZED_DEFN(CoTouchlabSqueakyLoggerOLog)
 
 @implementation CoTouchlabSqueakyLoggerOLog
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabSqueakyLoggerOLog_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (void)setLogWithCoTouchlabSqueakyLoggerOLogImpl:(id<CoTouchlabSqueakyLoggerOLogImpl>)log {
   CoTouchlabSqueakyLoggerOLog_setLogWithCoTouchlabSqueakyLoggerOLogImpl_(log);
 }
@@ -65,15 +72,9 @@ J2OBJC_INITIALIZED_DEFN(CoTouchlabSqueakyLoggerOLog)
   CoTouchlabSqueakyLoggerOLog_eWithNSString_withNSString_withNSException_(tag, message, t);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabSqueakyLoggerOLog_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x9, 2, 3, -1, -1, -1, -1 },
     { NULL, "V", 0x9, 2, 4, -1, -1, -1, -1 },
@@ -83,20 +84,19 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "V", 0x9, 6, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x9, 7, 3, -1, -1, -1, -1 },
     { NULL, "V", 0x9, 7, 4, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(setLogWithCoTouchlabSqueakyLoggerOLogImpl:);
-  methods[1].selector = @selector(dWithNSString:withNSString:);
-  methods[2].selector = @selector(dWithNSString:withNSString:withNSException:);
-  methods[3].selector = @selector(iWithNSString:withNSString:);
-  methods[4].selector = @selector(iWithNSString:withNSString:withNSException:);
-  methods[5].selector = @selector(wWithNSString:withNSString:);
-  methods[6].selector = @selector(wWithNSString:withNSString:withNSException:);
-  methods[7].selector = @selector(eWithNSString:withNSString:);
-  methods[8].selector = @selector(eWithNSString:withNSString:withNSException:);
-  methods[9].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(setLogWithCoTouchlabSqueakyLoggerOLogImpl:);
+  methods[2].selector = @selector(dWithNSString:withNSString:);
+  methods[3].selector = @selector(dWithNSString:withNSString:withNSException:);
+  methods[4].selector = @selector(iWithNSString:withNSString:);
+  methods[5].selector = @selector(iWithNSString:withNSString:withNSException:);
+  methods[6].selector = @selector(wWithNSString:withNSString:);
+  methods[7].selector = @selector(wWithNSString:withNSString:withNSException:);
+  methods[8].selector = @selector(eWithNSString:withNSString:);
+  methods[9].selector = @selector(eWithNSString:withNSString:withNSException:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "log", "LCoTouchlabSqueakyLoggerOLogImpl;", .constantValue.asLong = 0, 0xa, -1, 8, -1, -1 },
@@ -116,6 +116,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void CoTouchlabSqueakyLoggerOLog_init(CoTouchlabSqueakyLoggerOLog *self) {
+  NSObject_init(self);
+}
+
+CoTouchlabSqueakyLoggerOLog *new_CoTouchlabSqueakyLoggerOLog_init() {
+  J2OBJC_NEW_IMPL(CoTouchlabSqueakyLoggerOLog, init)
+}
+
+CoTouchlabSqueakyLoggerOLog *create_CoTouchlabSqueakyLoggerOLog_init() {
+  J2OBJC_CREATE_IMPL(CoTouchlabSqueakyLoggerOLog, init)
+}
 
 void CoTouchlabSqueakyLoggerOLog_setLogWithCoTouchlabSqueakyLoggerOLogImpl_(id<CoTouchlabSqueakyLoggerOLogImpl> log) {
   CoTouchlabSqueakyLoggerOLog_initialize();
@@ -160,18 +172,6 @@ void CoTouchlabSqueakyLoggerOLog_eWithNSString_withNSString_(NSString *tag, NSSt
 void CoTouchlabSqueakyLoggerOLog_eWithNSString_withNSString_withNSException_(NSString *tag, NSString *message, NSException *t) {
   CoTouchlabSqueakyLoggerOLog_initialize();
   [((id<CoTouchlabSqueakyLoggerOLogImpl>) nil_chk(CoTouchlabSqueakyLoggerOLog_log)) eWithNSString:tag withNSString:message withNSException:t];
-}
-
-void CoTouchlabSqueakyLoggerOLog_init(CoTouchlabSqueakyLoggerOLog *self) {
-  NSObject_init(self);
-}
-
-CoTouchlabSqueakyLoggerOLog *new_CoTouchlabSqueakyLoggerOLog_init() {
-  J2OBJC_NEW_IMPL(CoTouchlabSqueakyLoggerOLog, init)
-}
-
-CoTouchlabSqueakyLoggerOLog *create_CoTouchlabSqueakyLoggerOLog_init() {
-  J2OBJC_CREATE_IMPL(CoTouchlabSqueakyLoggerOLog, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabSqueakyLoggerOLog)

@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/functions/Actions.java
 //
 
-#include "IOSClass.h"
 #include "IOSObjectArray.h"
 #include "J2ObjC_source.h"
 #include "RxFunctionsAction0.h"
@@ -47,137 +46,125 @@ __attribute__((unused)) static RxFunctionsActions *new_RxFunctionsActions_init()
 
 __attribute__((unused)) static RxFunctionsActions *create_RxFunctionsActions_init();
 
-@interface RxFunctionsActions_$1 : NSObject < RxFunctionsFunc0 > {
+@interface RxFunctionsActions_1 : NSObject < RxFunctionsFunc0 > {
  @public
   id<RxFunctionsAction0> val$action_;
   id val$result_;
 }
 
-- (id)call;
-
 - (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0
                                     withId:(id)capture$1;
 
+- (id)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_1)
 
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$1, val$action_, id<RxFunctionsAction0>)
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$1, val$result_, id)
+__attribute__((unused)) static void RxFunctionsActions_1_initWithRxFunctionsAction0_withId_(RxFunctionsActions_1 *self, id<RxFunctionsAction0> capture$0, id capture$1);
 
-__attribute__((unused)) static void RxFunctionsActions_$1_initWithRxFunctionsAction0_withId_(RxFunctionsActions_$1 *self, id<RxFunctionsAction0> capture$0, id capture$1);
+__attribute__((unused)) static RxFunctionsActions_1 *new_RxFunctionsActions_1_initWithRxFunctionsAction0_withId_(id<RxFunctionsAction0> capture$0, id capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxFunctionsActions_$1 *new_RxFunctionsActions_$1_initWithRxFunctionsAction0_withId_(id<RxFunctionsAction0> capture$0, id capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxFunctionsActions_1 *create_RxFunctionsActions_1_initWithRxFunctionsAction0_withId_(id<RxFunctionsAction0> capture$0, id capture$1);
 
-__attribute__((unused)) static RxFunctionsActions_$1 *create_RxFunctionsActions_$1_initWithRxFunctionsAction0_withId_(id<RxFunctionsAction0> capture$0, id capture$1);
-
-@interface RxFunctionsActions_$2 : NSObject < RxFunctionsFunc1 > {
+@interface RxFunctionsActions_2 : NSObject < RxFunctionsFunc1 > {
  @public
   id<RxFunctionsAction1> val$action_;
   id val$result_;
 }
 
-- (id)callWithId:(id)t1;
-
 - (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0
                                     withId:(id)capture$1;
 
+- (id)callWithId:(id)t1;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_2)
 
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$2, val$action_, id<RxFunctionsAction1>)
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$2, val$result_, id)
+__attribute__((unused)) static void RxFunctionsActions_2_initWithRxFunctionsAction1_withId_(RxFunctionsActions_2 *self, id<RxFunctionsAction1> capture$0, id capture$1);
 
-__attribute__((unused)) static void RxFunctionsActions_$2_initWithRxFunctionsAction1_withId_(RxFunctionsActions_$2 *self, id<RxFunctionsAction1> capture$0, id capture$1);
+__attribute__((unused)) static RxFunctionsActions_2 *new_RxFunctionsActions_2_initWithRxFunctionsAction1_withId_(id<RxFunctionsAction1> capture$0, id capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxFunctionsActions_$2 *new_RxFunctionsActions_$2_initWithRxFunctionsAction1_withId_(id<RxFunctionsAction1> capture$0, id capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxFunctionsActions_2 *create_RxFunctionsActions_2_initWithRxFunctionsAction1_withId_(id<RxFunctionsAction1> capture$0, id capture$1);
 
-__attribute__((unused)) static RxFunctionsActions_$2 *create_RxFunctionsActions_$2_initWithRxFunctionsAction1_withId_(id<RxFunctionsAction1> capture$0, id capture$1);
-
-@interface RxFunctionsActions_$3 : NSObject < RxFunctionsFunc2 > {
+@interface RxFunctionsActions_3 : NSObject < RxFunctionsFunc2 > {
  @public
   id<RxFunctionsAction2> val$action_;
   id val$result_;
 }
 
-- (id)callWithId:(id)t1
-          withId:(id)t2;
-
 - (instancetype)initWithRxFunctionsAction2:(id<RxFunctionsAction2>)capture$0
                                     withId:(id)capture$1;
 
+- (id)callWithId:(id)t1
+          withId:(id)t2;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_$3)
+J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_3)
 
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$3, val$action_, id<RxFunctionsAction2>)
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$3, val$result_, id)
+__attribute__((unused)) static void RxFunctionsActions_3_initWithRxFunctionsAction2_withId_(RxFunctionsActions_3 *self, id<RxFunctionsAction2> capture$0, id capture$1);
 
-__attribute__((unused)) static void RxFunctionsActions_$3_initWithRxFunctionsAction2_withId_(RxFunctionsActions_$3 *self, id<RxFunctionsAction2> capture$0, id capture$1);
+__attribute__((unused)) static RxFunctionsActions_3 *new_RxFunctionsActions_3_initWithRxFunctionsAction2_withId_(id<RxFunctionsAction2> capture$0, id capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxFunctionsActions_$3 *new_RxFunctionsActions_$3_initWithRxFunctionsAction2_withId_(id<RxFunctionsAction2> capture$0, id capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxFunctionsActions_3 *create_RxFunctionsActions_3_initWithRxFunctionsAction2_withId_(id<RxFunctionsAction2> capture$0, id capture$1);
 
-__attribute__((unused)) static RxFunctionsActions_$3 *create_RxFunctionsActions_$3_initWithRxFunctionsAction2_withId_(id<RxFunctionsAction2> capture$0, id capture$1);
-
-@interface RxFunctionsActions_$4 : NSObject < RxFunctionsFunc3 > {
+@interface RxFunctionsActions_4 : NSObject < RxFunctionsFunc3 > {
  @public
   id<RxFunctionsAction3> val$action_;
   id val$result_;
 }
 
+- (instancetype)initWithRxFunctionsAction3:(id<RxFunctionsAction3>)capture$0
+                                    withId:(id)capture$1;
+
 - (id)callWithId:(id)t1
           withId:(id)t2
           withId:(id)t3;
 
-- (instancetype)initWithRxFunctionsAction3:(id<RxFunctionsAction3>)capture$0
-                                    withId:(id)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_$4)
+J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_4)
 
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$4, val$action_, id<RxFunctionsAction3>)
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$4, val$result_, id)
+__attribute__((unused)) static void RxFunctionsActions_4_initWithRxFunctionsAction3_withId_(RxFunctionsActions_4 *self, id<RxFunctionsAction3> capture$0, id capture$1);
 
-__attribute__((unused)) static void RxFunctionsActions_$4_initWithRxFunctionsAction3_withId_(RxFunctionsActions_$4 *self, id<RxFunctionsAction3> capture$0, id capture$1);
+__attribute__((unused)) static RxFunctionsActions_4 *new_RxFunctionsActions_4_initWithRxFunctionsAction3_withId_(id<RxFunctionsAction3> capture$0, id capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxFunctionsActions_$4 *new_RxFunctionsActions_$4_initWithRxFunctionsAction3_withId_(id<RxFunctionsAction3> capture$0, id capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxFunctionsActions_4 *create_RxFunctionsActions_4_initWithRxFunctionsAction3_withId_(id<RxFunctionsAction3> capture$0, id capture$1);
 
-__attribute__((unused)) static RxFunctionsActions_$4 *create_RxFunctionsActions_$4_initWithRxFunctionsAction3_withId_(id<RxFunctionsAction3> capture$0, id capture$1);
-
-@interface RxFunctionsActions_$5 : NSObject < RxFunctionsFunc4 > {
+@interface RxFunctionsActions_5 : NSObject < RxFunctionsFunc4 > {
  @public
   id<RxFunctionsAction4> val$action_;
   id val$result_;
 }
+
+- (instancetype)initWithRxFunctionsAction4:(id<RxFunctionsAction4>)capture$0
+                                    withId:(id)capture$1;
 
 - (id)callWithId:(id)t1
           withId:(id)t2
           withId:(id)t3
           withId:(id)t4;
 
-- (instancetype)initWithRxFunctionsAction4:(id<RxFunctionsAction4>)capture$0
-                                    withId:(id)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_$5)
+J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_5)
 
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$5, val$action_, id<RxFunctionsAction4>)
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$5, val$result_, id)
+__attribute__((unused)) static void RxFunctionsActions_5_initWithRxFunctionsAction4_withId_(RxFunctionsActions_5 *self, id<RxFunctionsAction4> capture$0, id capture$1);
 
-__attribute__((unused)) static void RxFunctionsActions_$5_initWithRxFunctionsAction4_withId_(RxFunctionsActions_$5 *self, id<RxFunctionsAction4> capture$0, id capture$1);
+__attribute__((unused)) static RxFunctionsActions_5 *new_RxFunctionsActions_5_initWithRxFunctionsAction4_withId_(id<RxFunctionsAction4> capture$0, id capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxFunctionsActions_$5 *new_RxFunctionsActions_$5_initWithRxFunctionsAction4_withId_(id<RxFunctionsAction4> capture$0, id capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxFunctionsActions_5 *create_RxFunctionsActions_5_initWithRxFunctionsAction4_withId_(id<RxFunctionsAction4> capture$0, id capture$1);
 
-__attribute__((unused)) static RxFunctionsActions_$5 *create_RxFunctionsActions_$5_initWithRxFunctionsAction4_withId_(id<RxFunctionsAction4> capture$0, id capture$1);
-
-@interface RxFunctionsActions_$6 : NSObject < RxFunctionsFunc5 > {
+@interface RxFunctionsActions_6 : NSObject < RxFunctionsFunc5 > {
  @public
   id<RxFunctionsAction5> val$action_;
   id val$result_;
 }
+
+- (instancetype)initWithRxFunctionsAction5:(id<RxFunctionsAction5>)capture$0
+                                    withId:(id)capture$1;
 
 - (id)callWithId:(id)t1
           withId:(id)t2
@@ -185,27 +172,24 @@ __attribute__((unused)) static RxFunctionsActions_$5 *create_RxFunctionsActions_
           withId:(id)t4
           withId:(id)t5;
 
-- (instancetype)initWithRxFunctionsAction5:(id<RxFunctionsAction5>)capture$0
-                                    withId:(id)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_$6)
+J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_6)
 
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$6, val$action_, id<RxFunctionsAction5>)
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$6, val$result_, id)
+__attribute__((unused)) static void RxFunctionsActions_6_initWithRxFunctionsAction5_withId_(RxFunctionsActions_6 *self, id<RxFunctionsAction5> capture$0, id capture$1);
 
-__attribute__((unused)) static void RxFunctionsActions_$6_initWithRxFunctionsAction5_withId_(RxFunctionsActions_$6 *self, id<RxFunctionsAction5> capture$0, id capture$1);
+__attribute__((unused)) static RxFunctionsActions_6 *new_RxFunctionsActions_6_initWithRxFunctionsAction5_withId_(id<RxFunctionsAction5> capture$0, id capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxFunctionsActions_$6 *new_RxFunctionsActions_$6_initWithRxFunctionsAction5_withId_(id<RxFunctionsAction5> capture$0, id capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxFunctionsActions_6 *create_RxFunctionsActions_6_initWithRxFunctionsAction5_withId_(id<RxFunctionsAction5> capture$0, id capture$1);
 
-__attribute__((unused)) static RxFunctionsActions_$6 *create_RxFunctionsActions_$6_initWithRxFunctionsAction5_withId_(id<RxFunctionsAction5> capture$0, id capture$1);
-
-@interface RxFunctionsActions_$7 : NSObject < RxFunctionsFunc6 > {
+@interface RxFunctionsActions_7 : NSObject < RxFunctionsFunc6 > {
  @public
   id<RxFunctionsAction6> val$action_;
   id val$result_;
 }
+
+- (instancetype)initWithRxFunctionsAction6:(id<RxFunctionsAction6>)capture$0
+                                    withId:(id)capture$1;
 
 - (id)callWithId:(id)t1
           withId:(id)t2
@@ -214,27 +198,24 @@ __attribute__((unused)) static RxFunctionsActions_$6 *create_RxFunctionsActions_
           withId:(id)t5
           withId:(id)t6;
 
-- (instancetype)initWithRxFunctionsAction6:(id<RxFunctionsAction6>)capture$0
-                                    withId:(id)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_$7)
+J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_7)
 
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$7, val$action_, id<RxFunctionsAction6>)
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$7, val$result_, id)
+__attribute__((unused)) static void RxFunctionsActions_7_initWithRxFunctionsAction6_withId_(RxFunctionsActions_7 *self, id<RxFunctionsAction6> capture$0, id capture$1);
 
-__attribute__((unused)) static void RxFunctionsActions_$7_initWithRxFunctionsAction6_withId_(RxFunctionsActions_$7 *self, id<RxFunctionsAction6> capture$0, id capture$1);
+__attribute__((unused)) static RxFunctionsActions_7 *new_RxFunctionsActions_7_initWithRxFunctionsAction6_withId_(id<RxFunctionsAction6> capture$0, id capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxFunctionsActions_$7 *new_RxFunctionsActions_$7_initWithRxFunctionsAction6_withId_(id<RxFunctionsAction6> capture$0, id capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxFunctionsActions_7 *create_RxFunctionsActions_7_initWithRxFunctionsAction6_withId_(id<RxFunctionsAction6> capture$0, id capture$1);
 
-__attribute__((unused)) static RxFunctionsActions_$7 *create_RxFunctionsActions_$7_initWithRxFunctionsAction6_withId_(id<RxFunctionsAction6> capture$0, id capture$1);
-
-@interface RxFunctionsActions_$8 : NSObject < RxFunctionsFunc7 > {
+@interface RxFunctionsActions_8 : NSObject < RxFunctionsFunc7 > {
  @public
   id<RxFunctionsAction7> val$action_;
   id val$result_;
 }
+
+- (instancetype)initWithRxFunctionsAction7:(id<RxFunctionsAction7>)capture$0
+                                    withId:(id)capture$1;
 
 - (id)callWithId:(id)t1
           withId:(id)t2
@@ -244,27 +225,24 @@ __attribute__((unused)) static RxFunctionsActions_$7 *create_RxFunctionsActions_
           withId:(id)t6
           withId:(id)t7;
 
-- (instancetype)initWithRxFunctionsAction7:(id<RxFunctionsAction7>)capture$0
-                                    withId:(id)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_$8)
+J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_8)
 
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$8, val$action_, id<RxFunctionsAction7>)
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$8, val$result_, id)
+__attribute__((unused)) static void RxFunctionsActions_8_initWithRxFunctionsAction7_withId_(RxFunctionsActions_8 *self, id<RxFunctionsAction7> capture$0, id capture$1);
 
-__attribute__((unused)) static void RxFunctionsActions_$8_initWithRxFunctionsAction7_withId_(RxFunctionsActions_$8 *self, id<RxFunctionsAction7> capture$0, id capture$1);
+__attribute__((unused)) static RxFunctionsActions_8 *new_RxFunctionsActions_8_initWithRxFunctionsAction7_withId_(id<RxFunctionsAction7> capture$0, id capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxFunctionsActions_$8 *new_RxFunctionsActions_$8_initWithRxFunctionsAction7_withId_(id<RxFunctionsAction7> capture$0, id capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxFunctionsActions_8 *create_RxFunctionsActions_8_initWithRxFunctionsAction7_withId_(id<RxFunctionsAction7> capture$0, id capture$1);
 
-__attribute__((unused)) static RxFunctionsActions_$8 *create_RxFunctionsActions_$8_initWithRxFunctionsAction7_withId_(id<RxFunctionsAction7> capture$0, id capture$1);
-
-@interface RxFunctionsActions_$9 : NSObject < RxFunctionsFunc8 > {
+@interface RxFunctionsActions_9 : NSObject < RxFunctionsFunc8 > {
  @public
   id<RxFunctionsAction8> val$action_;
   id val$result_;
 }
+
+- (instancetype)initWithRxFunctionsAction8:(id<RxFunctionsAction8>)capture$0
+                                    withId:(id)capture$1;
 
 - (id)callWithId:(id)t1
           withId:(id)t2
@@ -275,27 +253,24 @@ __attribute__((unused)) static RxFunctionsActions_$8 *create_RxFunctionsActions_
           withId:(id)t7
           withId:(id)t8;
 
-- (instancetype)initWithRxFunctionsAction8:(id<RxFunctionsAction8>)capture$0
-                                    withId:(id)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_$9)
+J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_9)
 
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$9, val$action_, id<RxFunctionsAction8>)
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$9, val$result_, id)
+__attribute__((unused)) static void RxFunctionsActions_9_initWithRxFunctionsAction8_withId_(RxFunctionsActions_9 *self, id<RxFunctionsAction8> capture$0, id capture$1);
 
-__attribute__((unused)) static void RxFunctionsActions_$9_initWithRxFunctionsAction8_withId_(RxFunctionsActions_$9 *self, id<RxFunctionsAction8> capture$0, id capture$1);
+__attribute__((unused)) static RxFunctionsActions_9 *new_RxFunctionsActions_9_initWithRxFunctionsAction8_withId_(id<RxFunctionsAction8> capture$0, id capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxFunctionsActions_$9 *new_RxFunctionsActions_$9_initWithRxFunctionsAction8_withId_(id<RxFunctionsAction8> capture$0, id capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxFunctionsActions_9 *create_RxFunctionsActions_9_initWithRxFunctionsAction8_withId_(id<RxFunctionsAction8> capture$0, id capture$1);
 
-__attribute__((unused)) static RxFunctionsActions_$9 *create_RxFunctionsActions_$9_initWithRxFunctionsAction8_withId_(id<RxFunctionsAction8> capture$0, id capture$1);
-
-@interface RxFunctionsActions_$10 : NSObject < RxFunctionsFunc9 > {
+@interface RxFunctionsActions_10 : NSObject < RxFunctionsFunc9 > {
  @public
   id<RxFunctionsAction9> val$action_;
   id val$result_;
 }
+
+- (instancetype)initWithRxFunctionsAction9:(id<RxFunctionsAction9>)capture$0
+                                    withId:(id)capture$1;
 
 - (id)callWithId:(id)t1
           withId:(id)t2
@@ -307,45 +282,36 @@ __attribute__((unused)) static RxFunctionsActions_$9 *create_RxFunctionsActions_
           withId:(id)t8
           withId:(id)t9;
 
-- (instancetype)initWithRxFunctionsAction9:(id<RxFunctionsAction9>)capture$0
-                                    withId:(id)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_$10)
+J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_10)
 
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$10, val$action_, id<RxFunctionsAction9>)
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$10, val$result_, id)
+__attribute__((unused)) static void RxFunctionsActions_10_initWithRxFunctionsAction9_withId_(RxFunctionsActions_10 *self, id<RxFunctionsAction9> capture$0, id capture$1);
 
-__attribute__((unused)) static void RxFunctionsActions_$10_initWithRxFunctionsAction9_withId_(RxFunctionsActions_$10 *self, id<RxFunctionsAction9> capture$0, id capture$1);
+__attribute__((unused)) static RxFunctionsActions_10 *new_RxFunctionsActions_10_initWithRxFunctionsAction9_withId_(id<RxFunctionsAction9> capture$0, id capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxFunctionsActions_$10 *new_RxFunctionsActions_$10_initWithRxFunctionsAction9_withId_(id<RxFunctionsAction9> capture$0, id capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxFunctionsActions_10 *create_RxFunctionsActions_10_initWithRxFunctionsAction9_withId_(id<RxFunctionsAction9> capture$0, id capture$1);
 
-__attribute__((unused)) static RxFunctionsActions_$10 *create_RxFunctionsActions_$10_initWithRxFunctionsAction9_withId_(id<RxFunctionsAction9> capture$0, id capture$1);
-
-@interface RxFunctionsActions_$11 : NSObject < RxFunctionsFuncN > {
+@interface RxFunctionsActions_11 : NSObject < RxFunctionsFuncN > {
  @public
   id<RxFunctionsActionN> val$action_;
   id val$result_;
 }
 
-- (id)callWithNSObjectArray:(IOSObjectArray *)args;
-
 - (instancetype)initWithRxFunctionsActionN:(id<RxFunctionsActionN>)capture$0
                                     withId:(id)capture$1;
 
+- (id)callWithNSObjectArray:(IOSObjectArray *)args;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_$11)
+J2OBJC_EMPTY_STATIC_INIT(RxFunctionsActions_11)
 
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$11, val$action_, id<RxFunctionsActionN>)
-J2OBJC_FIELD_SETTER(RxFunctionsActions_$11, val$result_, id)
+__attribute__((unused)) static void RxFunctionsActions_11_initWithRxFunctionsActionN_withId_(RxFunctionsActions_11 *self, id<RxFunctionsActionN> capture$0, id capture$1);
 
-__attribute__((unused)) static void RxFunctionsActions_$11_initWithRxFunctionsActionN_withId_(RxFunctionsActions_$11 *self, id<RxFunctionsActionN> capture$0, id capture$1);
+__attribute__((unused)) static RxFunctionsActions_11 *new_RxFunctionsActions_11_initWithRxFunctionsActionN_withId_(id<RxFunctionsActionN> capture$0, id capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxFunctionsActions_$11 *new_RxFunctionsActions_$11_initWithRxFunctionsActionN_withId_(id<RxFunctionsActionN> capture$0, id capture$1) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxFunctionsActions_$11 *create_RxFunctionsActions_$11_initWithRxFunctionsActionN_withId_(id<RxFunctionsActionN> capture$0, id capture$1);
+__attribute__((unused)) static RxFunctionsActions_11 *create_RxFunctionsActions_11_initWithRxFunctionsActionN_withId_(id<RxFunctionsActionN> capture$0, id capture$1);
 
 J2OBJC_INITIALIZED_DEFN(RxFunctionsActions)
 
@@ -613,57 +579,57 @@ id<RxFunctionsFuncN> RxFunctionsActions_toFuncWithRxFunctionsActionN_(id<RxFunct
 
 id<RxFunctionsFunc0> RxFunctionsActions_toFuncWithRxFunctionsAction0_withId_(id<RxFunctionsAction0> action, id result) {
   RxFunctionsActions_initialize();
-  return create_RxFunctionsActions_$1_initWithRxFunctionsAction0_withId_(action, result);
+  return create_RxFunctionsActions_1_initWithRxFunctionsAction0_withId_(action, result);
 }
 
 id<RxFunctionsFunc1> RxFunctionsActions_toFuncWithRxFunctionsAction1_withId_(id<RxFunctionsAction1> action, id result) {
   RxFunctionsActions_initialize();
-  return create_RxFunctionsActions_$2_initWithRxFunctionsAction1_withId_(action, result);
+  return create_RxFunctionsActions_2_initWithRxFunctionsAction1_withId_(action, result);
 }
 
 id<RxFunctionsFunc2> RxFunctionsActions_toFuncWithRxFunctionsAction2_withId_(id<RxFunctionsAction2> action, id result) {
   RxFunctionsActions_initialize();
-  return create_RxFunctionsActions_$3_initWithRxFunctionsAction2_withId_(action, result);
+  return create_RxFunctionsActions_3_initWithRxFunctionsAction2_withId_(action, result);
 }
 
 id<RxFunctionsFunc3> RxFunctionsActions_toFuncWithRxFunctionsAction3_withId_(id<RxFunctionsAction3> action, id result) {
   RxFunctionsActions_initialize();
-  return create_RxFunctionsActions_$4_initWithRxFunctionsAction3_withId_(action, result);
+  return create_RxFunctionsActions_4_initWithRxFunctionsAction3_withId_(action, result);
 }
 
 id<RxFunctionsFunc4> RxFunctionsActions_toFuncWithRxFunctionsAction4_withId_(id<RxFunctionsAction4> action, id result) {
   RxFunctionsActions_initialize();
-  return create_RxFunctionsActions_$5_initWithRxFunctionsAction4_withId_(action, result);
+  return create_RxFunctionsActions_5_initWithRxFunctionsAction4_withId_(action, result);
 }
 
 id<RxFunctionsFunc5> RxFunctionsActions_toFuncWithRxFunctionsAction5_withId_(id<RxFunctionsAction5> action, id result) {
   RxFunctionsActions_initialize();
-  return create_RxFunctionsActions_$6_initWithRxFunctionsAction5_withId_(action, result);
+  return create_RxFunctionsActions_6_initWithRxFunctionsAction5_withId_(action, result);
 }
 
 id<RxFunctionsFunc6> RxFunctionsActions_toFuncWithRxFunctionsAction6_withId_(id<RxFunctionsAction6> action, id result) {
   RxFunctionsActions_initialize();
-  return create_RxFunctionsActions_$7_initWithRxFunctionsAction6_withId_(action, result);
+  return create_RxFunctionsActions_7_initWithRxFunctionsAction6_withId_(action, result);
 }
 
 id<RxFunctionsFunc7> RxFunctionsActions_toFuncWithRxFunctionsAction7_withId_(id<RxFunctionsAction7> action, id result) {
   RxFunctionsActions_initialize();
-  return create_RxFunctionsActions_$8_initWithRxFunctionsAction7_withId_(action, result);
+  return create_RxFunctionsActions_8_initWithRxFunctionsAction7_withId_(action, result);
 }
 
 id<RxFunctionsFunc8> RxFunctionsActions_toFuncWithRxFunctionsAction8_withId_(id<RxFunctionsAction8> action, id result) {
   RxFunctionsActions_initialize();
-  return create_RxFunctionsActions_$9_initWithRxFunctionsAction8_withId_(action, result);
+  return create_RxFunctionsActions_9_initWithRxFunctionsAction8_withId_(action, result);
 }
 
 id<RxFunctionsFunc9> RxFunctionsActions_toFuncWithRxFunctionsAction9_withId_(id<RxFunctionsAction9> action, id result) {
   RxFunctionsActions_initialize();
-  return create_RxFunctionsActions_$10_initWithRxFunctionsAction9_withId_(action, result);
+  return create_RxFunctionsActions_10_initWithRxFunctionsAction9_withId_(action, result);
 }
 
 id<RxFunctionsFuncN> RxFunctionsActions_toFuncWithRxFunctionsActionN_withId_(id<RxFunctionsActionN> action, id result) {
   RxFunctionsActions_initialize();
-  return create_RxFunctionsActions_$11_initWithRxFunctionsActionN_withId_(action, result);
+  return create_RxFunctionsActions_11_initWithRxFunctionsActionN_withId_(action, result);
 }
 
 id<RxFunctionsAction1> RxFunctionsActions_toAction1WithRxFunctionsAction0_(id<RxFunctionsAction0> action) {
@@ -674,6 +640,13 @@ id<RxFunctionsAction1> RxFunctionsActions_toAction1WithRxFunctionsAction0_(id<Rx
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxFunctionsActions)
 
 @implementation RxFunctionsActions_EmptyAction
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxFunctionsActions_EmptyAction_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)call {
 }
@@ -744,15 +717,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxFunctionsActions)
 - (void)callWithNSObjectArray:(IOSObjectArray *)args {
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxFunctionsActions_EmptyAction_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 0, 3, -1, 4, -1, -1 },
@@ -764,22 +731,21 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "V", 0x1, 0, 15, -1, 16, -1, -1 },
     { NULL, "V", 0x1, 0, 17, -1, 18, -1, -1 },
     { NULL, "V", 0x81, 0, 19, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(callWithId:);
-  methods[2].selector = @selector(callWithId:withId:);
-  methods[3].selector = @selector(callWithId:withId:withId:);
-  methods[4].selector = @selector(callWithId:withId:withId:withId:);
-  methods[5].selector = @selector(callWithId:withId:withId:withId:withId:);
-  methods[6].selector = @selector(callWithId:withId:withId:withId:withId:withId:);
-  methods[7].selector = @selector(callWithId:withId:withId:withId:withId:withId:withId:);
-  methods[8].selector = @selector(callWithId:withId:withId:withId:withId:withId:withId:withId:);
-  methods[9].selector = @selector(callWithId:withId:withId:withId:withId:withId:withId:withId:withId:);
-  methods[10].selector = @selector(callWithNSObjectArray:);
-  methods[11].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(call);
+  methods[2].selector = @selector(callWithId:);
+  methods[3].selector = @selector(callWithId:withId:);
+  methods[4].selector = @selector(callWithId:withId:withId:);
+  methods[5].selector = @selector(callWithId:withId:withId:withId:);
+  methods[6].selector = @selector(callWithId:withId:withId:withId:withId:);
+  methods[7].selector = @selector(callWithId:withId:withId:withId:withId:withId:);
+  methods[8].selector = @selector(callWithId:withId:withId:withId:withId:withId:withId:);
+  methods[9].selector = @selector(callWithId:withId:withId:withId:withId:withId:withId:withId:);
+  methods[10].selector = @selector(callWithId:withId:withId:withId:withId:withId:withId:withId:withId:);
+  methods[11].selector = @selector(callWithNSObjectArray:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LNSObject;", "(TT0;)V", "LNSObject;LNSObject;", "(TT0;TT1;)V", "LNSObject;LNSObject;LNSObject;", "(TT0;TT1;TT2;)V", "LNSObject;LNSObject;LNSObject;LNSObject;", "(TT0;TT1;TT2;TT3;)V", "LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;", "(TT0;TT1;TT2;TT3;TT4;)V", "LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;", "(TT0;TT1;TT2;TT3;TT4;TT5;)V", "LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;", "(TT0;TT1;TT2;TT3;TT4;TT5;TT6;)V", "LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;", "(TT0;TT1;TT2;TT3;TT4;TT5;TT6;TT7;)V", "LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;", "(TT0;TT1;TT2;TT3;TT4;TT5;TT6;TT7;TT8;)V", "[LNSObject;", "LRxFunctionsActions;", "<T0:Ljava/lang/Object;T1:Ljava/lang/Object;T2:Ljava/lang/Object;T3:Ljava/lang/Object;T4:Ljava/lang/Object;T5:Ljava/lang/Object;T6:Ljava/lang/Object;T7:Ljava/lang/Object;T8:Ljava/lang/Object;>Ljava/lang/Object;Lrx/functions/Action0;Lrx/functions/Action1<TT0;>;Lrx/functions/Action2<TT0;TT1;>;Lrx/functions/Action3<TT0;TT1;TT2;>;Lrx/functions/Action4<TT0;TT1;TT2;TT3;>;Lrx/functions/Action5<TT0;TT1;TT2;TT3;TT4;>;Lrx/functions/Action6<TT0;TT1;TT2;TT3;TT4;TT5;>;Lrx/functions/Action7<TT0;TT1;TT2;TT3;TT4;TT5;TT6;>;Lrx/functions/Action8<TT0;TT1;TT2;TT3;TT4;TT5;TT6;TT7;>;Lrx/functions/Action9<TT0;TT1;TT2;TT3;TT4;TT5;TT6;TT7;TT8;>;Lrx/functions/ActionN;" };
   static const J2ObjcClassInfo _RxFunctionsActions_EmptyAction = { "EmptyAction", "rx.functions", ptrTable, methods, NULL, 7, 0x18, 12, 0, 20, -1, -1, 21, -1 };
@@ -801,6 +767,636 @@ RxFunctionsActions_EmptyAction *create_RxFunctionsActions_EmptyAction_init() {
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxFunctionsActions_EmptyAction)
+
+@implementation RxFunctionsActions_1
+
+- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0
+                                    withId:(id)capture$1 {
+  RxFunctionsActions_1_initWithRxFunctionsAction0_withId_(self, capture$0, capture$1);
+  return self;
+}
+
+- (id)call {
+  [((id<RxFunctionsAction0>) nil_chk(val$action_)) call];
+  return val$result_;
+}
+
+- (void)dealloc {
+  RELEASE_(val$action_);
+  RELEASE_(val$result_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxFunctionsAction0:withId:);
+  methods[1].selector = @selector(call);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$action_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 1, -1 },
+  };
+  static const void *ptrTable[] = { "()TR;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction0:withId:", "Ljava/lang/Object;Lrx/functions/Func0<TR;>;" };
+  static const J2ObjcClassInfo _RxFunctionsActions_1 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 2, -1, 3, 4, -1 };
+  return &_RxFunctionsActions_1;
+}
+
+@end
+
+void RxFunctionsActions_1_initWithRxFunctionsAction0_withId_(RxFunctionsActions_1 *self, id<RxFunctionsAction0> capture$0, id capture$1) {
+  JreStrongAssign(&self->val$action_, capture$0);
+  JreStrongAssign(&self->val$result_, capture$1);
+  NSObject_init(self);
+}
+
+RxFunctionsActions_1 *new_RxFunctionsActions_1_initWithRxFunctionsAction0_withId_(id<RxFunctionsAction0> capture$0, id capture$1) {
+  J2OBJC_NEW_IMPL(RxFunctionsActions_1, initWithRxFunctionsAction0_withId_, capture$0, capture$1)
+}
+
+RxFunctionsActions_1 *create_RxFunctionsActions_1_initWithRxFunctionsAction0_withId_(id<RxFunctionsAction0> capture$0, id capture$1) {
+  J2OBJC_CREATE_IMPL(RxFunctionsActions_1, initWithRxFunctionsAction0_withId_, capture$0, capture$1)
+}
+
+@implementation RxFunctionsActions_2
+
+- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0
+                                    withId:(id)capture$1 {
+  RxFunctionsActions_2_initWithRxFunctionsAction1_withId_(self, capture$0, capture$1);
+  return self;
+}
+
+- (id)callWithId:(id)t1 {
+  [((id<RxFunctionsAction1>) nil_chk(val$action_)) callWithId:t1];
+  return val$result_;
+}
+
+- (void)dealloc {
+  RELEASE_(val$action_);
+  RELEASE_(val$result_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxFunctionsAction1:withId:);
+  methods[1].selector = @selector(callWithId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$action_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LNSObject;", "(TT1;)TR;", "Lrx/functions/Action1<TT1;>;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction1:withId:", "Ljava/lang/Object;Lrx/functions/Func1<TT1;TR;>;" };
+  static const J2ObjcClassInfo _RxFunctionsActions_2 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 5, -1, 6, 7, -1 };
+  return &_RxFunctionsActions_2;
+}
+
+@end
+
+void RxFunctionsActions_2_initWithRxFunctionsAction1_withId_(RxFunctionsActions_2 *self, id<RxFunctionsAction1> capture$0, id capture$1) {
+  JreStrongAssign(&self->val$action_, capture$0);
+  JreStrongAssign(&self->val$result_, capture$1);
+  NSObject_init(self);
+}
+
+RxFunctionsActions_2 *new_RxFunctionsActions_2_initWithRxFunctionsAction1_withId_(id<RxFunctionsAction1> capture$0, id capture$1) {
+  J2OBJC_NEW_IMPL(RxFunctionsActions_2, initWithRxFunctionsAction1_withId_, capture$0, capture$1)
+}
+
+RxFunctionsActions_2 *create_RxFunctionsActions_2_initWithRxFunctionsAction1_withId_(id<RxFunctionsAction1> capture$0, id capture$1) {
+  J2OBJC_CREATE_IMPL(RxFunctionsActions_2, initWithRxFunctionsAction1_withId_, capture$0, capture$1)
+}
+
+@implementation RxFunctionsActions_3
+
+- (instancetype)initWithRxFunctionsAction2:(id<RxFunctionsAction2>)capture$0
+                                    withId:(id)capture$1 {
+  RxFunctionsActions_3_initWithRxFunctionsAction2_withId_(self, capture$0, capture$1);
+  return self;
+}
+
+- (id)callWithId:(id)t1
+          withId:(id)t2 {
+  [((id<RxFunctionsAction2>) nil_chk(val$action_)) callWithId:t1 withId:t2];
+  return val$result_;
+}
+
+- (void)dealloc {
+  RELEASE_(val$action_);
+  RELEASE_(val$result_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxFunctionsAction2:withId:);
+  methods[1].selector = @selector(callWithId:withId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$action_", "LRxFunctionsAction2;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LNSObject;LNSObject;", "(TT1;TT2;)TR;", "Lrx/functions/Action2<TT1;TT2;>;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction2:withId:", "Ljava/lang/Object;Lrx/functions/Func2<TT1;TT2;TR;>;" };
+  static const J2ObjcClassInfo _RxFunctionsActions_3 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 5, -1, 6, 7, -1 };
+  return &_RxFunctionsActions_3;
+}
+
+@end
+
+void RxFunctionsActions_3_initWithRxFunctionsAction2_withId_(RxFunctionsActions_3 *self, id<RxFunctionsAction2> capture$0, id capture$1) {
+  JreStrongAssign(&self->val$action_, capture$0);
+  JreStrongAssign(&self->val$result_, capture$1);
+  NSObject_init(self);
+}
+
+RxFunctionsActions_3 *new_RxFunctionsActions_3_initWithRxFunctionsAction2_withId_(id<RxFunctionsAction2> capture$0, id capture$1) {
+  J2OBJC_NEW_IMPL(RxFunctionsActions_3, initWithRxFunctionsAction2_withId_, capture$0, capture$1)
+}
+
+RxFunctionsActions_3 *create_RxFunctionsActions_3_initWithRxFunctionsAction2_withId_(id<RxFunctionsAction2> capture$0, id capture$1) {
+  J2OBJC_CREATE_IMPL(RxFunctionsActions_3, initWithRxFunctionsAction2_withId_, capture$0, capture$1)
+}
+
+@implementation RxFunctionsActions_4
+
+- (instancetype)initWithRxFunctionsAction3:(id<RxFunctionsAction3>)capture$0
+                                    withId:(id)capture$1 {
+  RxFunctionsActions_4_initWithRxFunctionsAction3_withId_(self, capture$0, capture$1);
+  return self;
+}
+
+- (id)callWithId:(id)t1
+          withId:(id)t2
+          withId:(id)t3 {
+  [((id<RxFunctionsAction3>) nil_chk(val$action_)) callWithId:t1 withId:t2 withId:t3];
+  return val$result_;
+}
+
+- (void)dealloc {
+  RELEASE_(val$action_);
+  RELEASE_(val$result_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxFunctionsAction3:withId:);
+  methods[1].selector = @selector(callWithId:withId:withId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$action_", "LRxFunctionsAction3;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LNSObject;LNSObject;LNSObject;", "(TT1;TT2;TT3;)TR;", "Lrx/functions/Action3<TT1;TT2;TT3;>;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction3:withId:", "Ljava/lang/Object;Lrx/functions/Func3<TT1;TT2;TT3;TR;>;" };
+  static const J2ObjcClassInfo _RxFunctionsActions_4 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 5, -1, 6, 7, -1 };
+  return &_RxFunctionsActions_4;
+}
+
+@end
+
+void RxFunctionsActions_4_initWithRxFunctionsAction3_withId_(RxFunctionsActions_4 *self, id<RxFunctionsAction3> capture$0, id capture$1) {
+  JreStrongAssign(&self->val$action_, capture$0);
+  JreStrongAssign(&self->val$result_, capture$1);
+  NSObject_init(self);
+}
+
+RxFunctionsActions_4 *new_RxFunctionsActions_4_initWithRxFunctionsAction3_withId_(id<RxFunctionsAction3> capture$0, id capture$1) {
+  J2OBJC_NEW_IMPL(RxFunctionsActions_4, initWithRxFunctionsAction3_withId_, capture$0, capture$1)
+}
+
+RxFunctionsActions_4 *create_RxFunctionsActions_4_initWithRxFunctionsAction3_withId_(id<RxFunctionsAction3> capture$0, id capture$1) {
+  J2OBJC_CREATE_IMPL(RxFunctionsActions_4, initWithRxFunctionsAction3_withId_, capture$0, capture$1)
+}
+
+@implementation RxFunctionsActions_5
+
+- (instancetype)initWithRxFunctionsAction4:(id<RxFunctionsAction4>)capture$0
+                                    withId:(id)capture$1 {
+  RxFunctionsActions_5_initWithRxFunctionsAction4_withId_(self, capture$0, capture$1);
+  return self;
+}
+
+- (id)callWithId:(id)t1
+          withId:(id)t2
+          withId:(id)t3
+          withId:(id)t4 {
+  [((id<RxFunctionsAction4>) nil_chk(val$action_)) callWithId:t1 withId:t2 withId:t3 withId:t4];
+  return val$result_;
+}
+
+- (void)dealloc {
+  RELEASE_(val$action_);
+  RELEASE_(val$result_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxFunctionsAction4:withId:);
+  methods[1].selector = @selector(callWithId:withId:withId:withId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$action_", "LRxFunctionsAction4;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LNSObject;LNSObject;LNSObject;LNSObject;", "(TT1;TT2;TT3;TT4;)TR;", "Lrx/functions/Action4<TT1;TT2;TT3;TT4;>;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction4:withId:", "Ljava/lang/Object;Lrx/functions/Func4<TT1;TT2;TT3;TT4;TR;>;" };
+  static const J2ObjcClassInfo _RxFunctionsActions_5 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 5, -1, 6, 7, -1 };
+  return &_RxFunctionsActions_5;
+}
+
+@end
+
+void RxFunctionsActions_5_initWithRxFunctionsAction4_withId_(RxFunctionsActions_5 *self, id<RxFunctionsAction4> capture$0, id capture$1) {
+  JreStrongAssign(&self->val$action_, capture$0);
+  JreStrongAssign(&self->val$result_, capture$1);
+  NSObject_init(self);
+}
+
+RxFunctionsActions_5 *new_RxFunctionsActions_5_initWithRxFunctionsAction4_withId_(id<RxFunctionsAction4> capture$0, id capture$1) {
+  J2OBJC_NEW_IMPL(RxFunctionsActions_5, initWithRxFunctionsAction4_withId_, capture$0, capture$1)
+}
+
+RxFunctionsActions_5 *create_RxFunctionsActions_5_initWithRxFunctionsAction4_withId_(id<RxFunctionsAction4> capture$0, id capture$1) {
+  J2OBJC_CREATE_IMPL(RxFunctionsActions_5, initWithRxFunctionsAction4_withId_, capture$0, capture$1)
+}
+
+@implementation RxFunctionsActions_6
+
+- (instancetype)initWithRxFunctionsAction5:(id<RxFunctionsAction5>)capture$0
+                                    withId:(id)capture$1 {
+  RxFunctionsActions_6_initWithRxFunctionsAction5_withId_(self, capture$0, capture$1);
+  return self;
+}
+
+- (id)callWithId:(id)t1
+          withId:(id)t2
+          withId:(id)t3
+          withId:(id)t4
+          withId:(id)t5 {
+  [((id<RxFunctionsAction5>) nil_chk(val$action_)) callWithId:t1 withId:t2 withId:t3 withId:t4 withId:t5];
+  return val$result_;
+}
+
+- (void)dealloc {
+  RELEASE_(val$action_);
+  RELEASE_(val$result_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxFunctionsAction5:withId:);
+  methods[1].selector = @selector(callWithId:withId:withId:withId:withId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$action_", "LRxFunctionsAction5;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;", "(TT1;TT2;TT3;TT4;TT5;)TR;", "Lrx/functions/Action5<TT1;TT2;TT3;TT4;TT5;>;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction5:withId:", "Ljava/lang/Object;Lrx/functions/Func5<TT1;TT2;TT3;TT4;TT5;TR;>;" };
+  static const J2ObjcClassInfo _RxFunctionsActions_6 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 5, -1, 6, 7, -1 };
+  return &_RxFunctionsActions_6;
+}
+
+@end
+
+void RxFunctionsActions_6_initWithRxFunctionsAction5_withId_(RxFunctionsActions_6 *self, id<RxFunctionsAction5> capture$0, id capture$1) {
+  JreStrongAssign(&self->val$action_, capture$0);
+  JreStrongAssign(&self->val$result_, capture$1);
+  NSObject_init(self);
+}
+
+RxFunctionsActions_6 *new_RxFunctionsActions_6_initWithRxFunctionsAction5_withId_(id<RxFunctionsAction5> capture$0, id capture$1) {
+  J2OBJC_NEW_IMPL(RxFunctionsActions_6, initWithRxFunctionsAction5_withId_, capture$0, capture$1)
+}
+
+RxFunctionsActions_6 *create_RxFunctionsActions_6_initWithRxFunctionsAction5_withId_(id<RxFunctionsAction5> capture$0, id capture$1) {
+  J2OBJC_CREATE_IMPL(RxFunctionsActions_6, initWithRxFunctionsAction5_withId_, capture$0, capture$1)
+}
+
+@implementation RxFunctionsActions_7
+
+- (instancetype)initWithRxFunctionsAction6:(id<RxFunctionsAction6>)capture$0
+                                    withId:(id)capture$1 {
+  RxFunctionsActions_7_initWithRxFunctionsAction6_withId_(self, capture$0, capture$1);
+  return self;
+}
+
+- (id)callWithId:(id)t1
+          withId:(id)t2
+          withId:(id)t3
+          withId:(id)t4
+          withId:(id)t5
+          withId:(id)t6 {
+  [((id<RxFunctionsAction6>) nil_chk(val$action_)) callWithId:t1 withId:t2 withId:t3 withId:t4 withId:t5 withId:t6];
+  return val$result_;
+}
+
+- (void)dealloc {
+  RELEASE_(val$action_);
+  RELEASE_(val$result_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxFunctionsAction6:withId:);
+  methods[1].selector = @selector(callWithId:withId:withId:withId:withId:withId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$action_", "LRxFunctionsAction6;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;", "(TT1;TT2;TT3;TT4;TT5;TT6;)TR;", "Lrx/functions/Action6<TT1;TT2;TT3;TT4;TT5;TT6;>;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction6:withId:", "Ljava/lang/Object;Lrx/functions/Func6<TT1;TT2;TT3;TT4;TT5;TT6;TR;>;" };
+  static const J2ObjcClassInfo _RxFunctionsActions_7 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 5, -1, 6, 7, -1 };
+  return &_RxFunctionsActions_7;
+}
+
+@end
+
+void RxFunctionsActions_7_initWithRxFunctionsAction6_withId_(RxFunctionsActions_7 *self, id<RxFunctionsAction6> capture$0, id capture$1) {
+  JreStrongAssign(&self->val$action_, capture$0);
+  JreStrongAssign(&self->val$result_, capture$1);
+  NSObject_init(self);
+}
+
+RxFunctionsActions_7 *new_RxFunctionsActions_7_initWithRxFunctionsAction6_withId_(id<RxFunctionsAction6> capture$0, id capture$1) {
+  J2OBJC_NEW_IMPL(RxFunctionsActions_7, initWithRxFunctionsAction6_withId_, capture$0, capture$1)
+}
+
+RxFunctionsActions_7 *create_RxFunctionsActions_7_initWithRxFunctionsAction6_withId_(id<RxFunctionsAction6> capture$0, id capture$1) {
+  J2OBJC_CREATE_IMPL(RxFunctionsActions_7, initWithRxFunctionsAction6_withId_, capture$0, capture$1)
+}
+
+@implementation RxFunctionsActions_8
+
+- (instancetype)initWithRxFunctionsAction7:(id<RxFunctionsAction7>)capture$0
+                                    withId:(id)capture$1 {
+  RxFunctionsActions_8_initWithRxFunctionsAction7_withId_(self, capture$0, capture$1);
+  return self;
+}
+
+- (id)callWithId:(id)t1
+          withId:(id)t2
+          withId:(id)t3
+          withId:(id)t4
+          withId:(id)t5
+          withId:(id)t6
+          withId:(id)t7 {
+  [((id<RxFunctionsAction7>) nil_chk(val$action_)) callWithId:t1 withId:t2 withId:t3 withId:t4 withId:t5 withId:t6 withId:t7];
+  return val$result_;
+}
+
+- (void)dealloc {
+  RELEASE_(val$action_);
+  RELEASE_(val$result_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxFunctionsAction7:withId:);
+  methods[1].selector = @selector(callWithId:withId:withId:withId:withId:withId:withId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$action_", "LRxFunctionsAction7;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;", "(TT1;TT2;TT3;TT4;TT5;TT6;TT7;)TR;", "Lrx/functions/Action7<TT1;TT2;TT3;TT4;TT5;TT6;TT7;>;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction7:withId:", "Ljava/lang/Object;Lrx/functions/Func7<TT1;TT2;TT3;TT4;TT5;TT6;TT7;TR;>;" };
+  static const J2ObjcClassInfo _RxFunctionsActions_8 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 5, -1, 6, 7, -1 };
+  return &_RxFunctionsActions_8;
+}
+
+@end
+
+void RxFunctionsActions_8_initWithRxFunctionsAction7_withId_(RxFunctionsActions_8 *self, id<RxFunctionsAction7> capture$0, id capture$1) {
+  JreStrongAssign(&self->val$action_, capture$0);
+  JreStrongAssign(&self->val$result_, capture$1);
+  NSObject_init(self);
+}
+
+RxFunctionsActions_8 *new_RxFunctionsActions_8_initWithRxFunctionsAction7_withId_(id<RxFunctionsAction7> capture$0, id capture$1) {
+  J2OBJC_NEW_IMPL(RxFunctionsActions_8, initWithRxFunctionsAction7_withId_, capture$0, capture$1)
+}
+
+RxFunctionsActions_8 *create_RxFunctionsActions_8_initWithRxFunctionsAction7_withId_(id<RxFunctionsAction7> capture$0, id capture$1) {
+  J2OBJC_CREATE_IMPL(RxFunctionsActions_8, initWithRxFunctionsAction7_withId_, capture$0, capture$1)
+}
+
+@implementation RxFunctionsActions_9
+
+- (instancetype)initWithRxFunctionsAction8:(id<RxFunctionsAction8>)capture$0
+                                    withId:(id)capture$1 {
+  RxFunctionsActions_9_initWithRxFunctionsAction8_withId_(self, capture$0, capture$1);
+  return self;
+}
+
+- (id)callWithId:(id)t1
+          withId:(id)t2
+          withId:(id)t3
+          withId:(id)t4
+          withId:(id)t5
+          withId:(id)t6
+          withId:(id)t7
+          withId:(id)t8 {
+  [((id<RxFunctionsAction8>) nil_chk(val$action_)) callWithId:t1 withId:t2 withId:t3 withId:t4 withId:t5 withId:t6 withId:t7 withId:t8];
+  return val$result_;
+}
+
+- (void)dealloc {
+  RELEASE_(val$action_);
+  RELEASE_(val$result_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxFunctionsAction8:withId:);
+  methods[1].selector = @selector(callWithId:withId:withId:withId:withId:withId:withId:withId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$action_", "LRxFunctionsAction8;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;", "(TT1;TT2;TT3;TT4;TT5;TT6;TT7;TT8;)TR;", "Lrx/functions/Action8<TT1;TT2;TT3;TT4;TT5;TT6;TT7;TT8;>;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction8:withId:", "Ljava/lang/Object;Lrx/functions/Func8<TT1;TT2;TT3;TT4;TT5;TT6;TT7;TT8;TR;>;" };
+  static const J2ObjcClassInfo _RxFunctionsActions_9 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 5, -1, 6, 7, -1 };
+  return &_RxFunctionsActions_9;
+}
+
+@end
+
+void RxFunctionsActions_9_initWithRxFunctionsAction8_withId_(RxFunctionsActions_9 *self, id<RxFunctionsAction8> capture$0, id capture$1) {
+  JreStrongAssign(&self->val$action_, capture$0);
+  JreStrongAssign(&self->val$result_, capture$1);
+  NSObject_init(self);
+}
+
+RxFunctionsActions_9 *new_RxFunctionsActions_9_initWithRxFunctionsAction8_withId_(id<RxFunctionsAction8> capture$0, id capture$1) {
+  J2OBJC_NEW_IMPL(RxFunctionsActions_9, initWithRxFunctionsAction8_withId_, capture$0, capture$1)
+}
+
+RxFunctionsActions_9 *create_RxFunctionsActions_9_initWithRxFunctionsAction8_withId_(id<RxFunctionsAction8> capture$0, id capture$1) {
+  J2OBJC_CREATE_IMPL(RxFunctionsActions_9, initWithRxFunctionsAction8_withId_, capture$0, capture$1)
+}
+
+@implementation RxFunctionsActions_10
+
+- (instancetype)initWithRxFunctionsAction9:(id<RxFunctionsAction9>)capture$0
+                                    withId:(id)capture$1 {
+  RxFunctionsActions_10_initWithRxFunctionsAction9_withId_(self, capture$0, capture$1);
+  return self;
+}
+
+- (id)callWithId:(id)t1
+          withId:(id)t2
+          withId:(id)t3
+          withId:(id)t4
+          withId:(id)t5
+          withId:(id)t6
+          withId:(id)t7
+          withId:(id)t8
+          withId:(id)t9 {
+  [((id<RxFunctionsAction9>) nil_chk(val$action_)) callWithId:t1 withId:t2 withId:t3 withId:t4 withId:t5 withId:t6 withId:t7 withId:t8 withId:t9];
+  return val$result_;
+}
+
+- (void)dealloc {
+  RELEASE_(val$action_);
+  RELEASE_(val$result_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxFunctionsAction9:withId:);
+  methods[1].selector = @selector(callWithId:withId:withId:withId:withId:withId:withId:withId:withId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$action_", "LRxFunctionsAction9;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;", "(TT1;TT2;TT3;TT4;TT5;TT6;TT7;TT8;TT9;)TR;", "Lrx/functions/Action9<TT1;TT2;TT3;TT4;TT5;TT6;TT7;TT8;TT9;>;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction9:withId:", "Ljava/lang/Object;Lrx/functions/Func9<TT1;TT2;TT3;TT4;TT5;TT6;TT7;TT8;TT9;TR;>;" };
+  static const J2ObjcClassInfo _RxFunctionsActions_10 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 5, -1, 6, 7, -1 };
+  return &_RxFunctionsActions_10;
+}
+
+@end
+
+void RxFunctionsActions_10_initWithRxFunctionsAction9_withId_(RxFunctionsActions_10 *self, id<RxFunctionsAction9> capture$0, id capture$1) {
+  JreStrongAssign(&self->val$action_, capture$0);
+  JreStrongAssign(&self->val$result_, capture$1);
+  NSObject_init(self);
+}
+
+RxFunctionsActions_10 *new_RxFunctionsActions_10_initWithRxFunctionsAction9_withId_(id<RxFunctionsAction9> capture$0, id capture$1) {
+  J2OBJC_NEW_IMPL(RxFunctionsActions_10, initWithRxFunctionsAction9_withId_, capture$0, capture$1)
+}
+
+RxFunctionsActions_10 *create_RxFunctionsActions_10_initWithRxFunctionsAction9_withId_(id<RxFunctionsAction9> capture$0, id capture$1) {
+  J2OBJC_CREATE_IMPL(RxFunctionsActions_10, initWithRxFunctionsAction9_withId_, capture$0, capture$1)
+}
+
+@implementation RxFunctionsActions_11
+
+- (instancetype)initWithRxFunctionsActionN:(id<RxFunctionsActionN>)capture$0
+                                    withId:(id)capture$1 {
+  RxFunctionsActions_11_initWithRxFunctionsActionN_withId_(self, capture$0, capture$1);
+  return self;
+}
+
+- (id)callWithNSObjectArray:(IOSObjectArray *)args {
+  [((id<RxFunctionsActionN>) nil_chk(val$action_)) callWithNSObjectArray:args];
+  return val$result_;
+}
+
+- (void)dealloc {
+  RELEASE_(val$action_);
+  RELEASE_(val$result_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x81, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxFunctionsActionN:withId:);
+  methods[1].selector = @selector(callWithNSObjectArray:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$action_", "LRxFunctionsActionN;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+  };
+  static const void *ptrTable[] = { "call", "[LNSObject;", "([Ljava/lang/Object;)TR;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsActionN:withId:", "Ljava/lang/Object;Lrx/functions/FuncN<TR;>;" };
+  static const J2ObjcClassInfo _RxFunctionsActions_11 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 4, -1, 5, 6, -1 };
+  return &_RxFunctionsActions_11;
+}
+
+@end
+
+void RxFunctionsActions_11_initWithRxFunctionsActionN_withId_(RxFunctionsActions_11 *self, id<RxFunctionsActionN> capture$0, id capture$1) {
+  JreStrongAssign(&self->val$action_, capture$0);
+  JreStrongAssign(&self->val$result_, capture$1);
+  NSObject_init(self);
+}
+
+RxFunctionsActions_11 *new_RxFunctionsActions_11_initWithRxFunctionsActionN_withId_(id<RxFunctionsActionN> capture$0, id capture$1) {
+  J2OBJC_NEW_IMPL(RxFunctionsActions_11, initWithRxFunctionsActionN_withId_, capture$0, capture$1)
+}
+
+RxFunctionsActions_11 *create_RxFunctionsActions_11_initWithRxFunctionsActionN_withId_(id<RxFunctionsActionN> capture$0, id capture$1) {
+  J2OBJC_CREATE_IMPL(RxFunctionsActions_11, initWithRxFunctionsActionN_withId_, capture$0, capture$1)
+}
 
 @implementation RxFunctionsActions_Action1CallsAction0
 
@@ -852,633 +1448,3 @@ RxFunctionsActions_Action1CallsAction0 *create_RxFunctionsActions_Action1CallsAc
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxFunctionsActions_Action1CallsAction0)
-
-@implementation RxFunctionsActions_$1
-
-- (id)call {
-  [((id<RxFunctionsAction0>) nil_chk(val$action_)) call];
-  return val$result_;
-}
-
-- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0
-                                    withId:(id)capture$1 {
-  RxFunctionsActions_$1_initWithRxFunctionsAction0_withId_(self, capture$0, capture$1);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$action_);
-  RELEASE_(val$result_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, 2, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxFunctionsAction0:withId:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$action_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
-  };
-  static const void *ptrTable[] = { "()TR;", "LRxFunctionsAction0;LNSObject;", "(Lrx/functions/Action0;TR;)V", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction0:withId:", "Ljava/lang/Object;Lrx/functions/Func0<TR;>;" };
-  static const J2ObjcClassInfo _RxFunctionsActions_$1 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 4, -1, 5, 6, -1 };
-  return &_RxFunctionsActions_$1;
-}
-
-@end
-
-void RxFunctionsActions_$1_initWithRxFunctionsAction0_withId_(RxFunctionsActions_$1 *self, id<RxFunctionsAction0> capture$0, id capture$1) {
-  JreStrongAssign(&self->val$action_, capture$0);
-  JreStrongAssign(&self->val$result_, capture$1);
-  NSObject_init(self);
-}
-
-RxFunctionsActions_$1 *new_RxFunctionsActions_$1_initWithRxFunctionsAction0_withId_(id<RxFunctionsAction0> capture$0, id capture$1) {
-  J2OBJC_NEW_IMPL(RxFunctionsActions_$1, initWithRxFunctionsAction0_withId_, capture$0, capture$1)
-}
-
-RxFunctionsActions_$1 *create_RxFunctionsActions_$1_initWithRxFunctionsAction0_withId_(id<RxFunctionsAction0> capture$0, id capture$1) {
-  J2OBJC_CREATE_IMPL(RxFunctionsActions_$1, initWithRxFunctionsAction0_withId_, capture$0, capture$1)
-}
-
-@implementation RxFunctionsActions_$2
-
-- (id)callWithId:(id)t1 {
-  [((id<RxFunctionsAction1>) nil_chk(val$action_)) callWithId:t1];
-  return val$result_;
-}
-
-- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0
-                                    withId:(id)capture$1 {
-  RxFunctionsActions_$2_initWithRxFunctionsAction1_withId_(self, capture$0, capture$1);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$action_);
-  RELEASE_(val$result_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxFunctionsAction1:withId:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$action_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LNSObject;", "(TT1;)TR;", "LRxFunctionsAction1;LNSObject;", "(Lrx/functions/Action1<TT1;>;TR;)V", "Lrx/functions/Action1<TT1;>;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction1:withId:", "Ljava/lang/Object;Lrx/functions/Func1<TT1;TR;>;" };
-  static const J2ObjcClassInfo _RxFunctionsActions_$2 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 7, -1, 8, 9, -1 };
-  return &_RxFunctionsActions_$2;
-}
-
-@end
-
-void RxFunctionsActions_$2_initWithRxFunctionsAction1_withId_(RxFunctionsActions_$2 *self, id<RxFunctionsAction1> capture$0, id capture$1) {
-  JreStrongAssign(&self->val$action_, capture$0);
-  JreStrongAssign(&self->val$result_, capture$1);
-  NSObject_init(self);
-}
-
-RxFunctionsActions_$2 *new_RxFunctionsActions_$2_initWithRxFunctionsAction1_withId_(id<RxFunctionsAction1> capture$0, id capture$1) {
-  J2OBJC_NEW_IMPL(RxFunctionsActions_$2, initWithRxFunctionsAction1_withId_, capture$0, capture$1)
-}
-
-RxFunctionsActions_$2 *create_RxFunctionsActions_$2_initWithRxFunctionsAction1_withId_(id<RxFunctionsAction1> capture$0, id capture$1) {
-  J2OBJC_CREATE_IMPL(RxFunctionsActions_$2, initWithRxFunctionsAction1_withId_, capture$0, capture$1)
-}
-
-@implementation RxFunctionsActions_$3
-
-- (id)callWithId:(id)t1
-          withId:(id)t2 {
-  [((id<RxFunctionsAction2>) nil_chk(val$action_)) callWithId:t1 withId:t2];
-  return val$result_;
-}
-
-- (instancetype)initWithRxFunctionsAction2:(id<RxFunctionsAction2>)capture$0
-                                    withId:(id)capture$1 {
-  RxFunctionsActions_$3_initWithRxFunctionsAction2_withId_(self, capture$0, capture$1);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$action_);
-  RELEASE_(val$result_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:);
-  methods[1].selector = @selector(initWithRxFunctionsAction2:withId:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$action_", "LRxFunctionsAction2;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LNSObject;LNSObject;", "(TT1;TT2;)TR;", "LRxFunctionsAction2;LNSObject;", "(Lrx/functions/Action2<TT1;TT2;>;TR;)V", "Lrx/functions/Action2<TT1;TT2;>;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction2:withId:", "Ljava/lang/Object;Lrx/functions/Func2<TT1;TT2;TR;>;" };
-  static const J2ObjcClassInfo _RxFunctionsActions_$3 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 7, -1, 8, 9, -1 };
-  return &_RxFunctionsActions_$3;
-}
-
-@end
-
-void RxFunctionsActions_$3_initWithRxFunctionsAction2_withId_(RxFunctionsActions_$3 *self, id<RxFunctionsAction2> capture$0, id capture$1) {
-  JreStrongAssign(&self->val$action_, capture$0);
-  JreStrongAssign(&self->val$result_, capture$1);
-  NSObject_init(self);
-}
-
-RxFunctionsActions_$3 *new_RxFunctionsActions_$3_initWithRxFunctionsAction2_withId_(id<RxFunctionsAction2> capture$0, id capture$1) {
-  J2OBJC_NEW_IMPL(RxFunctionsActions_$3, initWithRxFunctionsAction2_withId_, capture$0, capture$1)
-}
-
-RxFunctionsActions_$3 *create_RxFunctionsActions_$3_initWithRxFunctionsAction2_withId_(id<RxFunctionsAction2> capture$0, id capture$1) {
-  J2OBJC_CREATE_IMPL(RxFunctionsActions_$3, initWithRxFunctionsAction2_withId_, capture$0, capture$1)
-}
-
-@implementation RxFunctionsActions_$4
-
-- (id)callWithId:(id)t1
-          withId:(id)t2
-          withId:(id)t3 {
-  [((id<RxFunctionsAction3>) nil_chk(val$action_)) callWithId:t1 withId:t2 withId:t3];
-  return val$result_;
-}
-
-- (instancetype)initWithRxFunctionsAction3:(id<RxFunctionsAction3>)capture$0
-                                    withId:(id)capture$1 {
-  RxFunctionsActions_$4_initWithRxFunctionsAction3_withId_(self, capture$0, capture$1);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$action_);
-  RELEASE_(val$result_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:withId:);
-  methods[1].selector = @selector(initWithRxFunctionsAction3:withId:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$action_", "LRxFunctionsAction3;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LNSObject;LNSObject;LNSObject;", "(TT1;TT2;TT3;)TR;", "LRxFunctionsAction3;LNSObject;", "(Lrx/functions/Action3<TT1;TT2;TT3;>;TR;)V", "Lrx/functions/Action3<TT1;TT2;TT3;>;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction3:withId:", "Ljava/lang/Object;Lrx/functions/Func3<TT1;TT2;TT3;TR;>;" };
-  static const J2ObjcClassInfo _RxFunctionsActions_$4 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 7, -1, 8, 9, -1 };
-  return &_RxFunctionsActions_$4;
-}
-
-@end
-
-void RxFunctionsActions_$4_initWithRxFunctionsAction3_withId_(RxFunctionsActions_$4 *self, id<RxFunctionsAction3> capture$0, id capture$1) {
-  JreStrongAssign(&self->val$action_, capture$0);
-  JreStrongAssign(&self->val$result_, capture$1);
-  NSObject_init(self);
-}
-
-RxFunctionsActions_$4 *new_RxFunctionsActions_$4_initWithRxFunctionsAction3_withId_(id<RxFunctionsAction3> capture$0, id capture$1) {
-  J2OBJC_NEW_IMPL(RxFunctionsActions_$4, initWithRxFunctionsAction3_withId_, capture$0, capture$1)
-}
-
-RxFunctionsActions_$4 *create_RxFunctionsActions_$4_initWithRxFunctionsAction3_withId_(id<RxFunctionsAction3> capture$0, id capture$1) {
-  J2OBJC_CREATE_IMPL(RxFunctionsActions_$4, initWithRxFunctionsAction3_withId_, capture$0, capture$1)
-}
-
-@implementation RxFunctionsActions_$5
-
-- (id)callWithId:(id)t1
-          withId:(id)t2
-          withId:(id)t3
-          withId:(id)t4 {
-  [((id<RxFunctionsAction4>) nil_chk(val$action_)) callWithId:t1 withId:t2 withId:t3 withId:t4];
-  return val$result_;
-}
-
-- (instancetype)initWithRxFunctionsAction4:(id<RxFunctionsAction4>)capture$0
-                                    withId:(id)capture$1 {
-  RxFunctionsActions_$5_initWithRxFunctionsAction4_withId_(self, capture$0, capture$1);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$action_);
-  RELEASE_(val$result_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:withId:withId:);
-  methods[1].selector = @selector(initWithRxFunctionsAction4:withId:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$action_", "LRxFunctionsAction4;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LNSObject;LNSObject;LNSObject;LNSObject;", "(TT1;TT2;TT3;TT4;)TR;", "LRxFunctionsAction4;LNSObject;", "(Lrx/functions/Action4<TT1;TT2;TT3;TT4;>;TR;)V", "Lrx/functions/Action4<TT1;TT2;TT3;TT4;>;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction4:withId:", "Ljava/lang/Object;Lrx/functions/Func4<TT1;TT2;TT3;TT4;TR;>;" };
-  static const J2ObjcClassInfo _RxFunctionsActions_$5 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 7, -1, 8, 9, -1 };
-  return &_RxFunctionsActions_$5;
-}
-
-@end
-
-void RxFunctionsActions_$5_initWithRxFunctionsAction4_withId_(RxFunctionsActions_$5 *self, id<RxFunctionsAction4> capture$0, id capture$1) {
-  JreStrongAssign(&self->val$action_, capture$0);
-  JreStrongAssign(&self->val$result_, capture$1);
-  NSObject_init(self);
-}
-
-RxFunctionsActions_$5 *new_RxFunctionsActions_$5_initWithRxFunctionsAction4_withId_(id<RxFunctionsAction4> capture$0, id capture$1) {
-  J2OBJC_NEW_IMPL(RxFunctionsActions_$5, initWithRxFunctionsAction4_withId_, capture$0, capture$1)
-}
-
-RxFunctionsActions_$5 *create_RxFunctionsActions_$5_initWithRxFunctionsAction4_withId_(id<RxFunctionsAction4> capture$0, id capture$1) {
-  J2OBJC_CREATE_IMPL(RxFunctionsActions_$5, initWithRxFunctionsAction4_withId_, capture$0, capture$1)
-}
-
-@implementation RxFunctionsActions_$6
-
-- (id)callWithId:(id)t1
-          withId:(id)t2
-          withId:(id)t3
-          withId:(id)t4
-          withId:(id)t5 {
-  [((id<RxFunctionsAction5>) nil_chk(val$action_)) callWithId:t1 withId:t2 withId:t3 withId:t4 withId:t5];
-  return val$result_;
-}
-
-- (instancetype)initWithRxFunctionsAction5:(id<RxFunctionsAction5>)capture$0
-                                    withId:(id)capture$1 {
-  RxFunctionsActions_$6_initWithRxFunctionsAction5_withId_(self, capture$0, capture$1);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$action_);
-  RELEASE_(val$result_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:withId:withId:withId:);
-  methods[1].selector = @selector(initWithRxFunctionsAction5:withId:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$action_", "LRxFunctionsAction5;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;", "(TT1;TT2;TT3;TT4;TT5;)TR;", "LRxFunctionsAction5;LNSObject;", "(Lrx/functions/Action5<TT1;TT2;TT3;TT4;TT5;>;TR;)V", "Lrx/functions/Action5<TT1;TT2;TT3;TT4;TT5;>;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction5:withId:", "Ljava/lang/Object;Lrx/functions/Func5<TT1;TT2;TT3;TT4;TT5;TR;>;" };
-  static const J2ObjcClassInfo _RxFunctionsActions_$6 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 7, -1, 8, 9, -1 };
-  return &_RxFunctionsActions_$6;
-}
-
-@end
-
-void RxFunctionsActions_$6_initWithRxFunctionsAction5_withId_(RxFunctionsActions_$6 *self, id<RxFunctionsAction5> capture$0, id capture$1) {
-  JreStrongAssign(&self->val$action_, capture$0);
-  JreStrongAssign(&self->val$result_, capture$1);
-  NSObject_init(self);
-}
-
-RxFunctionsActions_$6 *new_RxFunctionsActions_$6_initWithRxFunctionsAction5_withId_(id<RxFunctionsAction5> capture$0, id capture$1) {
-  J2OBJC_NEW_IMPL(RxFunctionsActions_$6, initWithRxFunctionsAction5_withId_, capture$0, capture$1)
-}
-
-RxFunctionsActions_$6 *create_RxFunctionsActions_$6_initWithRxFunctionsAction5_withId_(id<RxFunctionsAction5> capture$0, id capture$1) {
-  J2OBJC_CREATE_IMPL(RxFunctionsActions_$6, initWithRxFunctionsAction5_withId_, capture$0, capture$1)
-}
-
-@implementation RxFunctionsActions_$7
-
-- (id)callWithId:(id)t1
-          withId:(id)t2
-          withId:(id)t3
-          withId:(id)t4
-          withId:(id)t5
-          withId:(id)t6 {
-  [((id<RxFunctionsAction6>) nil_chk(val$action_)) callWithId:t1 withId:t2 withId:t3 withId:t4 withId:t5 withId:t6];
-  return val$result_;
-}
-
-- (instancetype)initWithRxFunctionsAction6:(id<RxFunctionsAction6>)capture$0
-                                    withId:(id)capture$1 {
-  RxFunctionsActions_$7_initWithRxFunctionsAction6_withId_(self, capture$0, capture$1);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$action_);
-  RELEASE_(val$result_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:withId:withId:withId:withId:);
-  methods[1].selector = @selector(initWithRxFunctionsAction6:withId:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$action_", "LRxFunctionsAction6;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;", "(TT1;TT2;TT3;TT4;TT5;TT6;)TR;", "LRxFunctionsAction6;LNSObject;", "(Lrx/functions/Action6<TT1;TT2;TT3;TT4;TT5;TT6;>;TR;)V", "Lrx/functions/Action6<TT1;TT2;TT3;TT4;TT5;TT6;>;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction6:withId:", "Ljava/lang/Object;Lrx/functions/Func6<TT1;TT2;TT3;TT4;TT5;TT6;TR;>;" };
-  static const J2ObjcClassInfo _RxFunctionsActions_$7 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 7, -1, 8, 9, -1 };
-  return &_RxFunctionsActions_$7;
-}
-
-@end
-
-void RxFunctionsActions_$7_initWithRxFunctionsAction6_withId_(RxFunctionsActions_$7 *self, id<RxFunctionsAction6> capture$0, id capture$1) {
-  JreStrongAssign(&self->val$action_, capture$0);
-  JreStrongAssign(&self->val$result_, capture$1);
-  NSObject_init(self);
-}
-
-RxFunctionsActions_$7 *new_RxFunctionsActions_$7_initWithRxFunctionsAction6_withId_(id<RxFunctionsAction6> capture$0, id capture$1) {
-  J2OBJC_NEW_IMPL(RxFunctionsActions_$7, initWithRxFunctionsAction6_withId_, capture$0, capture$1)
-}
-
-RxFunctionsActions_$7 *create_RxFunctionsActions_$7_initWithRxFunctionsAction6_withId_(id<RxFunctionsAction6> capture$0, id capture$1) {
-  J2OBJC_CREATE_IMPL(RxFunctionsActions_$7, initWithRxFunctionsAction6_withId_, capture$0, capture$1)
-}
-
-@implementation RxFunctionsActions_$8
-
-- (id)callWithId:(id)t1
-          withId:(id)t2
-          withId:(id)t3
-          withId:(id)t4
-          withId:(id)t5
-          withId:(id)t6
-          withId:(id)t7 {
-  [((id<RxFunctionsAction7>) nil_chk(val$action_)) callWithId:t1 withId:t2 withId:t3 withId:t4 withId:t5 withId:t6 withId:t7];
-  return val$result_;
-}
-
-- (instancetype)initWithRxFunctionsAction7:(id<RxFunctionsAction7>)capture$0
-                                    withId:(id)capture$1 {
-  RxFunctionsActions_$8_initWithRxFunctionsAction7_withId_(self, capture$0, capture$1);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$action_);
-  RELEASE_(val$result_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:withId:withId:withId:withId:withId:);
-  methods[1].selector = @selector(initWithRxFunctionsAction7:withId:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$action_", "LRxFunctionsAction7;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;", "(TT1;TT2;TT3;TT4;TT5;TT6;TT7;)TR;", "LRxFunctionsAction7;LNSObject;", "(Lrx/functions/Action7<TT1;TT2;TT3;TT4;TT5;TT6;TT7;>;TR;)V", "Lrx/functions/Action7<TT1;TT2;TT3;TT4;TT5;TT6;TT7;>;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction7:withId:", "Ljava/lang/Object;Lrx/functions/Func7<TT1;TT2;TT3;TT4;TT5;TT6;TT7;TR;>;" };
-  static const J2ObjcClassInfo _RxFunctionsActions_$8 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 7, -1, 8, 9, -1 };
-  return &_RxFunctionsActions_$8;
-}
-
-@end
-
-void RxFunctionsActions_$8_initWithRxFunctionsAction7_withId_(RxFunctionsActions_$8 *self, id<RxFunctionsAction7> capture$0, id capture$1) {
-  JreStrongAssign(&self->val$action_, capture$0);
-  JreStrongAssign(&self->val$result_, capture$1);
-  NSObject_init(self);
-}
-
-RxFunctionsActions_$8 *new_RxFunctionsActions_$8_initWithRxFunctionsAction7_withId_(id<RxFunctionsAction7> capture$0, id capture$1) {
-  J2OBJC_NEW_IMPL(RxFunctionsActions_$8, initWithRxFunctionsAction7_withId_, capture$0, capture$1)
-}
-
-RxFunctionsActions_$8 *create_RxFunctionsActions_$8_initWithRxFunctionsAction7_withId_(id<RxFunctionsAction7> capture$0, id capture$1) {
-  J2OBJC_CREATE_IMPL(RxFunctionsActions_$8, initWithRxFunctionsAction7_withId_, capture$0, capture$1)
-}
-
-@implementation RxFunctionsActions_$9
-
-- (id)callWithId:(id)t1
-          withId:(id)t2
-          withId:(id)t3
-          withId:(id)t4
-          withId:(id)t5
-          withId:(id)t6
-          withId:(id)t7
-          withId:(id)t8 {
-  [((id<RxFunctionsAction8>) nil_chk(val$action_)) callWithId:t1 withId:t2 withId:t3 withId:t4 withId:t5 withId:t6 withId:t7 withId:t8];
-  return val$result_;
-}
-
-- (instancetype)initWithRxFunctionsAction8:(id<RxFunctionsAction8>)capture$0
-                                    withId:(id)capture$1 {
-  RxFunctionsActions_$9_initWithRxFunctionsAction8_withId_(self, capture$0, capture$1);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$action_);
-  RELEASE_(val$result_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:withId:withId:withId:withId:withId:withId:);
-  methods[1].selector = @selector(initWithRxFunctionsAction8:withId:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$action_", "LRxFunctionsAction8;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;", "(TT1;TT2;TT3;TT4;TT5;TT6;TT7;TT8;)TR;", "LRxFunctionsAction8;LNSObject;", "(Lrx/functions/Action8<TT1;TT2;TT3;TT4;TT5;TT6;TT7;TT8;>;TR;)V", "Lrx/functions/Action8<TT1;TT2;TT3;TT4;TT5;TT6;TT7;TT8;>;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction8:withId:", "Ljava/lang/Object;Lrx/functions/Func8<TT1;TT2;TT3;TT4;TT5;TT6;TT7;TT8;TR;>;" };
-  static const J2ObjcClassInfo _RxFunctionsActions_$9 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 7, -1, 8, 9, -1 };
-  return &_RxFunctionsActions_$9;
-}
-
-@end
-
-void RxFunctionsActions_$9_initWithRxFunctionsAction8_withId_(RxFunctionsActions_$9 *self, id<RxFunctionsAction8> capture$0, id capture$1) {
-  JreStrongAssign(&self->val$action_, capture$0);
-  JreStrongAssign(&self->val$result_, capture$1);
-  NSObject_init(self);
-}
-
-RxFunctionsActions_$9 *new_RxFunctionsActions_$9_initWithRxFunctionsAction8_withId_(id<RxFunctionsAction8> capture$0, id capture$1) {
-  J2OBJC_NEW_IMPL(RxFunctionsActions_$9, initWithRxFunctionsAction8_withId_, capture$0, capture$1)
-}
-
-RxFunctionsActions_$9 *create_RxFunctionsActions_$9_initWithRxFunctionsAction8_withId_(id<RxFunctionsAction8> capture$0, id capture$1) {
-  J2OBJC_CREATE_IMPL(RxFunctionsActions_$9, initWithRxFunctionsAction8_withId_, capture$0, capture$1)
-}
-
-@implementation RxFunctionsActions_$10
-
-- (id)callWithId:(id)t1
-          withId:(id)t2
-          withId:(id)t3
-          withId:(id)t4
-          withId:(id)t5
-          withId:(id)t6
-          withId:(id)t7
-          withId:(id)t8
-          withId:(id)t9 {
-  [((id<RxFunctionsAction9>) nil_chk(val$action_)) callWithId:t1 withId:t2 withId:t3 withId:t4 withId:t5 withId:t6 withId:t7 withId:t8 withId:t9];
-  return val$result_;
-}
-
-- (instancetype)initWithRxFunctionsAction9:(id<RxFunctionsAction9>)capture$0
-                                    withId:(id)capture$1 {
-  RxFunctionsActions_$10_initWithRxFunctionsAction9_withId_(self, capture$0, capture$1);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$action_);
-  RELEASE_(val$result_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:withId:withId:withId:withId:withId:withId:withId:);
-  methods[1].selector = @selector(initWithRxFunctionsAction9:withId:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$action_", "LRxFunctionsAction9;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;LNSObject;", "(TT1;TT2;TT3;TT4;TT5;TT6;TT7;TT8;TT9;)TR;", "LRxFunctionsAction9;LNSObject;", "(Lrx/functions/Action9<TT1;TT2;TT3;TT4;TT5;TT6;TT7;TT8;TT9;>;TR;)V", "Lrx/functions/Action9<TT1;TT2;TT3;TT4;TT5;TT6;TT7;TT8;TT9;>;", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsAction9:withId:", "Ljava/lang/Object;Lrx/functions/Func9<TT1;TT2;TT3;TT4;TT5;TT6;TT7;TT8;TT9;TR;>;" };
-  static const J2ObjcClassInfo _RxFunctionsActions_$10 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 7, -1, 8, 9, -1 };
-  return &_RxFunctionsActions_$10;
-}
-
-@end
-
-void RxFunctionsActions_$10_initWithRxFunctionsAction9_withId_(RxFunctionsActions_$10 *self, id<RxFunctionsAction9> capture$0, id capture$1) {
-  JreStrongAssign(&self->val$action_, capture$0);
-  JreStrongAssign(&self->val$result_, capture$1);
-  NSObject_init(self);
-}
-
-RxFunctionsActions_$10 *new_RxFunctionsActions_$10_initWithRxFunctionsAction9_withId_(id<RxFunctionsAction9> capture$0, id capture$1) {
-  J2OBJC_NEW_IMPL(RxFunctionsActions_$10, initWithRxFunctionsAction9_withId_, capture$0, capture$1)
-}
-
-RxFunctionsActions_$10 *create_RxFunctionsActions_$10_initWithRxFunctionsAction9_withId_(id<RxFunctionsAction9> capture$0, id capture$1) {
-  J2OBJC_CREATE_IMPL(RxFunctionsActions_$10, initWithRxFunctionsAction9_withId_, capture$0, capture$1)
-}
-
-@implementation RxFunctionsActions_$11
-
-- (id)callWithNSObjectArray:(IOSObjectArray *)args {
-  [((id<RxFunctionsActionN>) nil_chk(val$action_)) callWithNSObjectArray:args];
-  return val$result_;
-}
-
-- (instancetype)initWithRxFunctionsActionN:(id<RxFunctionsActionN>)capture$0
-                                    withId:(id)capture$1 {
-  RxFunctionsActions_$11_initWithRxFunctionsActionN_withId_(self, capture$0, capture$1);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$action_);
-  RELEASE_(val$result_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x81, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithNSObjectArray:);
-  methods[1].selector = @selector(initWithRxFunctionsActionN:withId:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$action_", "LRxFunctionsActionN;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$result_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-  };
-  static const void *ptrTable[] = { "call", "[LNSObject;", "([Ljava/lang/Object;)TR;", "LRxFunctionsActionN;LNSObject;", "(Lrx/functions/ActionN;TR;)V", "TR;", "LRxFunctionsActions;", "toFuncWithRxFunctionsActionN:withId:", "Ljava/lang/Object;Lrx/functions/FuncN<TR;>;" };
-  static const J2ObjcClassInfo _RxFunctionsActions_$11 = { "", "rx.functions", ptrTable, methods, fields, 7, 0x8008, 2, 2, 6, -1, 7, 8, -1 };
-  return &_RxFunctionsActions_$11;
-}
-
-@end
-
-void RxFunctionsActions_$11_initWithRxFunctionsActionN_withId_(RxFunctionsActions_$11 *self, id<RxFunctionsActionN> capture$0, id capture$1) {
-  JreStrongAssign(&self->val$action_, capture$0);
-  JreStrongAssign(&self->val$result_, capture$1);
-  NSObject_init(self);
-}
-
-RxFunctionsActions_$11 *new_RxFunctionsActions_$11_initWithRxFunctionsActionN_withId_(id<RxFunctionsActionN> capture$0, id capture$1) {
-  J2OBJC_NEW_IMPL(RxFunctionsActions_$11, initWithRxFunctionsActionN_withId_, capture$0, capture$1)
-}
-
-RxFunctionsActions_$11 *create_RxFunctionsActions_$11_initWithRxFunctionsActionN_withId_(id<RxFunctionsActionN> capture$0, id capture$1) {
-  J2OBJC_CREATE_IMPL(RxFunctionsActions_$11, initWithRxFunctionsActionN_withId_, capture$0, capture$1)
-}

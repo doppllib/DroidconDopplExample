@@ -9,12 +9,6 @@
 
 @implementation RetrofitAndroidMainThreadExecutor
 
-- (void)executeWithJavaLangRunnable:(id<JavaLangRunnable>)r {
-  [[NSOperationQueue mainQueue] addOperation:[NSBlockOperation blockOperationWithBlock:^{
-    [r run];
-  }]];
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   RetrofitAndroidMainThreadExecutor_init(self);
@@ -22,15 +16,21 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (void)executeWithJavaLangRunnable:(id<JavaLangRunnable>)r {
+  [[NSOperationQueue mainQueue] addOperation:[NSBlockOperation blockOperationWithBlock:^{
+    [r run];
+  }]];
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x101, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x101, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(executeWithJavaLangRunnable:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(executeWithJavaLangRunnable:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "execute", "LJavaLangRunnable;" };
   static const J2ObjcClassInfo _RetrofitAndroidMainThreadExecutor = { "MainThreadExecutor", "retrofit.android", ptrTable, methods, NULL, 7, 0x11, 2, 0, -1, -1, -1, -1, -1 };

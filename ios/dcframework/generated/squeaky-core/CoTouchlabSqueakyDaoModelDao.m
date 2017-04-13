@@ -49,6 +49,8 @@
 #include "java/util/Set.h"
 #include "java/util/concurrent/ConcurrentHashMap.h"
 
+#pragma clang diagnostic ignored "-Wincomplete-implementation"
+
 @interface CoTouchlabSqueakyDaoModelDao () {
  @public
   IOSClass *entityClass_;
@@ -119,6 +121,52 @@ __attribute__((unused)) static id<CoTouchlabSqueakyDbSQLiteStatement> CoTouchlab
 
 __attribute__((unused)) static IOSObjectArray *CoTouchlabSqueakyDaoModelDao_generateDefaultForeignRefreshMap(CoTouchlabSqueakyDaoModelDao *self);
 
+@interface CoTouchlabSqueakyDaoModelDao_1 : JavaLangThreadLocal {
+ @public
+  CoTouchlabSqueakyDaoModelDao *this$0_;
+}
+
+- (instancetype)initWithCoTouchlabSqueakyDaoModelDao:(CoTouchlabSqueakyDaoModelDao *)outer$;
+
+- (id<CoTouchlabSqueakyDbSQLiteStatement>)initialValue OBJC_METHOD_FAMILY_NONE;
+
+- (id<CoTouchlabSqueakyDbSQLiteStatement>)get;
+
+- (id<CoTouchlabSqueakyDbSQLiteStatement>)childValueWithId:(id<CoTouchlabSqueakyDbSQLiteStatement>)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(CoTouchlabSqueakyDaoModelDao_1)
+
+__attribute__((unused)) static void CoTouchlabSqueakyDaoModelDao_1_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao_1 *self, CoTouchlabSqueakyDaoModelDao *outer$);
+
+__attribute__((unused)) static CoTouchlabSqueakyDaoModelDao_1 *new_CoTouchlabSqueakyDaoModelDao_1_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static CoTouchlabSqueakyDaoModelDao_1 *create_CoTouchlabSqueakyDaoModelDao_1_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$);
+
+@interface CoTouchlabSqueakyDaoModelDao_2 : JavaLangThreadLocal {
+ @public
+  CoTouchlabSqueakyDaoModelDao *this$0_;
+}
+
+- (instancetype)initWithCoTouchlabSqueakyDaoModelDao:(CoTouchlabSqueakyDaoModelDao *)outer$;
+
+- (id<CoTouchlabSqueakyDbSQLiteStatement>)initialValue OBJC_METHOD_FAMILY_NONE;
+
+- (id<CoTouchlabSqueakyDbSQLiteStatement>)get;
+
+- (id<CoTouchlabSqueakyDbSQLiteStatement>)childValueWithId:(id<CoTouchlabSqueakyDbSQLiteStatement>)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(CoTouchlabSqueakyDaoModelDao_2)
+
+__attribute__((unused)) static void CoTouchlabSqueakyDaoModelDao_2_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao_2 *self, CoTouchlabSqueakyDaoModelDao *outer$);
+
+__attribute__((unused)) static CoTouchlabSqueakyDaoModelDao_2 *new_CoTouchlabSqueakyDaoModelDao_2_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static CoTouchlabSqueakyDaoModelDao_2 *create_CoTouchlabSqueakyDaoModelDao_2_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$);
+
 @interface CoTouchlabSqueakyDaoModelDao_QueryModifiersImpl () {
  @public
   CoTouchlabSqueakyDaoModelDao *this$0_;
@@ -133,7 +181,6 @@ __attribute__((unused)) static IOSObjectArray *CoTouchlabSqueakyDaoModelDao_gene
 
 @end
 
-J2OBJC_FIELD_SETTER(CoTouchlabSqueakyDaoModelDao_QueryModifiersImpl, this$0_, CoTouchlabSqueakyDaoModelDao *)
 J2OBJC_FIELD_SETTER(CoTouchlabSqueakyDaoModelDao_QueryModifiersImpl, from_, NSString *)
 J2OBJC_FIELD_SETTER(CoTouchlabSqueakyDaoModelDao_QueryModifiersImpl, where_, NSString *)
 J2OBJC_FIELD_SETTER(CoTouchlabSqueakyDaoModelDao_QueryModifiersImpl, args_, IOSObjectArray *)
@@ -142,100 +189,53 @@ J2OBJC_FIELD_SETTER(CoTouchlabSqueakyDaoModelDao_QueryModifiersImpl, limit_, Jav
 J2OBJC_FIELD_SETTER(CoTouchlabSqueakyDaoModelDao_QueryModifiersImpl, offset_, JavaLangInteger *)
 J2OBJC_FIELD_SETTER(CoTouchlabSqueakyDaoModelDao_QueryModifiersImpl, foreignRefreshMap_, IOSObjectArray *)
 
-@interface CoTouchlabSqueakyDaoModelDao_$1 : JavaLangThreadLocal {
- @public
-  CoTouchlabSqueakyDaoModelDao *this$0_;
-}
-
-- (id<CoTouchlabSqueakyDbSQLiteStatement>)initialValue OBJC_METHOD_FAMILY_NONE;
-
-- (instancetype)initWithCoTouchlabSqueakyDaoModelDao:(CoTouchlabSqueakyDaoModelDao *)outer$;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(CoTouchlabSqueakyDaoModelDao_$1)
-
-J2OBJC_FIELD_SETTER(CoTouchlabSqueakyDaoModelDao_$1, this$0_, CoTouchlabSqueakyDaoModelDao *)
-
-__attribute__((unused)) static void CoTouchlabSqueakyDaoModelDao_$1_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao_$1 *self, CoTouchlabSqueakyDaoModelDao *outer$);
-
-__attribute__((unused)) static CoTouchlabSqueakyDaoModelDao_$1 *new_CoTouchlabSqueakyDaoModelDao_$1_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static CoTouchlabSqueakyDaoModelDao_$1 *create_CoTouchlabSqueakyDaoModelDao_$1_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$);
-
-@interface CoTouchlabSqueakyDaoModelDao_$2 : JavaLangThreadLocal {
- @public
-  CoTouchlabSqueakyDaoModelDao *this$0_;
-}
-
-- (id<CoTouchlabSqueakyDbSQLiteStatement>)initialValue OBJC_METHOD_FAMILY_NONE;
-
-- (instancetype)initWithCoTouchlabSqueakyDaoModelDao:(CoTouchlabSqueakyDaoModelDao *)outer$;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(CoTouchlabSqueakyDaoModelDao_$2)
-
-J2OBJC_FIELD_SETTER(CoTouchlabSqueakyDaoModelDao_$2, this$0_, CoTouchlabSqueakyDaoModelDao *)
-
-__attribute__((unused)) static void CoTouchlabSqueakyDaoModelDao_$2_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao_$2 *self, CoTouchlabSqueakyDaoModelDao *outer$);
-
-__attribute__((unused)) static CoTouchlabSqueakyDaoModelDao_$2 *new_CoTouchlabSqueakyDaoModelDao_$2_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static CoTouchlabSqueakyDaoModelDao_$2 *create_CoTouchlabSqueakyDaoModelDao_$2_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$);
-
-@interface CoTouchlabSqueakyDaoModelDao_$3 : NSObject < CoTouchlabSqueakyDaoQuery > {
+@interface CoTouchlabSqueakyDaoModelDao_3 : NSObject < CoTouchlabSqueakyDaoQuery > {
  @public
   CoTouchlabSqueakyDaoModelDao *this$0_;
   JavaLangStringBuilder *val$sb_;
 }
 
+- (instancetype)initWithCoTouchlabSqueakyDaoModelDao:(CoTouchlabSqueakyDaoModelDao *)outer$
+                           withJavaLangStringBuilder:(JavaLangStringBuilder *)capture$0;
+
 - (NSString *)getWhereStatementWithBoolean:(jboolean)joinsAllowed;
 
 - (IOSObjectArray *)getParameters;
 
 - (NSString *)getFromStatementWithBoolean:(jboolean)joinsAllowed;
 
-- (instancetype)initWithCoTouchlabSqueakyDaoModelDao:(CoTouchlabSqueakyDaoModelDao *)outer$
-                           withJavaLangStringBuilder:(JavaLangStringBuilder *)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(CoTouchlabSqueakyDaoModelDao_$3)
+J2OBJC_EMPTY_STATIC_INIT(CoTouchlabSqueakyDaoModelDao_3)
 
-J2OBJC_FIELD_SETTER(CoTouchlabSqueakyDaoModelDao_$3, this$0_, CoTouchlabSqueakyDaoModelDao *)
-J2OBJC_FIELD_SETTER(CoTouchlabSqueakyDaoModelDao_$3, val$sb_, JavaLangStringBuilder *)
+__attribute__((unused)) static void CoTouchlabSqueakyDaoModelDao_3_initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_(CoTouchlabSqueakyDaoModelDao_3 *self, CoTouchlabSqueakyDaoModelDao *outer$, JavaLangStringBuilder *capture$0);
 
-__attribute__((unused)) static void CoTouchlabSqueakyDaoModelDao_$3_initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_(CoTouchlabSqueakyDaoModelDao_$3 *self, CoTouchlabSqueakyDaoModelDao *outer$, JavaLangStringBuilder *capture$0);
+__attribute__((unused)) static CoTouchlabSqueakyDaoModelDao_3 *new_CoTouchlabSqueakyDaoModelDao_3_initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_(CoTouchlabSqueakyDaoModelDao *outer$, JavaLangStringBuilder *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static CoTouchlabSqueakyDaoModelDao_$3 *new_CoTouchlabSqueakyDaoModelDao_$3_initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_(CoTouchlabSqueakyDaoModelDao *outer$, JavaLangStringBuilder *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static CoTouchlabSqueakyDaoModelDao_3 *create_CoTouchlabSqueakyDaoModelDao_3_initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_(CoTouchlabSqueakyDaoModelDao *outer$, JavaLangStringBuilder *capture$0);
 
-__attribute__((unused)) static CoTouchlabSqueakyDaoModelDao_$3 *create_CoTouchlabSqueakyDaoModelDao_$3_initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_(CoTouchlabSqueakyDaoModelDao *outer$, JavaLangStringBuilder *capture$0);
-
-@interface CoTouchlabSqueakyDaoModelDao_$4 : NSObject < CoTouchlabSqueakyDaoQuery > {
+@interface CoTouchlabSqueakyDaoModelDao_4 : NSObject < CoTouchlabSqueakyDaoQuery > {
  @public
   CoTouchlabSqueakyDaoModelDao *this$0_;
 }
 
+- (instancetype)initWithCoTouchlabSqueakyDaoModelDao:(CoTouchlabSqueakyDaoModelDao *)outer$;
+
 - (NSString *)getFromStatementWithBoolean:(jboolean)joinsAllowed;
 
 - (NSString *)getWhereStatementWithBoolean:(jboolean)joinsAllowed;
 
 - (IOSObjectArray *)getParameters;
 
-- (instancetype)initWithCoTouchlabSqueakyDaoModelDao:(CoTouchlabSqueakyDaoModelDao *)outer$;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(CoTouchlabSqueakyDaoModelDao_$4)
+J2OBJC_EMPTY_STATIC_INIT(CoTouchlabSqueakyDaoModelDao_4)
 
-J2OBJC_FIELD_SETTER(CoTouchlabSqueakyDaoModelDao_$4, this$0_, CoTouchlabSqueakyDaoModelDao *)
+__attribute__((unused)) static void CoTouchlabSqueakyDaoModelDao_4_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao_4 *self, CoTouchlabSqueakyDaoModelDao *outer$);
 
-__attribute__((unused)) static void CoTouchlabSqueakyDaoModelDao_$4_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao_$4 *self, CoTouchlabSqueakyDaoModelDao *outer$);
+__attribute__((unused)) static CoTouchlabSqueakyDaoModelDao_4 *new_CoTouchlabSqueakyDaoModelDao_4_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static CoTouchlabSqueakyDaoModelDao_$4 *new_CoTouchlabSqueakyDaoModelDao_$4_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static CoTouchlabSqueakyDaoModelDao_$4 *create_CoTouchlabSqueakyDaoModelDao_$4_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$);
+__attribute__((unused)) static CoTouchlabSqueakyDaoModelDao_4 *create_CoTouchlabSqueakyDaoModelDao_4_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$);
 
 NSString *CoTouchlabSqueakyDaoModelDao_DEFAULT_TABLE_PREFIX = @"t";
 NSString *CoTouchlabSqueakyDaoModelDao_EQ_OPERATION = @"= ?";
@@ -456,7 +456,7 @@ withCoTouchlabSqueakyDaoDao_ForeignRefreshArray:(IOSObjectArray *)foreignRefresh
     else [sb appendWithNSString:[nil_chk(id_) description]];
   }
   [sb appendWithNSString:@")"];
-  return [self delete__WithCoTouchlabSqueakyDaoQuery:create_CoTouchlabSqueakyDaoModelDao_$3_initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_(self, sb)];
+  return [self delete__WithCoTouchlabSqueakyDaoQuery:create_CoTouchlabSqueakyDaoModelDao_3_initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_(self, sb)];
 }
 
 - (jint)delete__WithCoTouchlabSqueakyDaoQuery:(id<CoTouchlabSqueakyDaoQuery>)where {
@@ -535,7 +535,7 @@ withCoTouchlabSqueakyDaoDao_ForeignRefreshArray:(IOSObjectArray *)foreignRefresh
 }
 
 - (id<CoTouchlabSqueakyDaoQuery>)all {
-  return create_CoTouchlabSqueakyDaoModelDao_$4_initWithCoTouchlabSqueakyDaoModelDao_(self);
+  return create_CoTouchlabSqueakyDaoModelDao_4_initWithCoTouchlabSqueakyDaoModelDao_(self);
 }
 
 - (id<CoTouchlabSqueakyTableGeneratedTableMapper>)getGeneratedTableMapper {
@@ -698,8 +698,8 @@ void CoTouchlabSqueakyDaoModelDao_initWithCoTouchlabSqueakyDaoSqueakyContext_wit
   NSObject_init(self);
   JreStrongAssign(&self->daoObserverSet_, JavaUtilCollections_newSetFromMapWithJavaUtilMap_(create_JavaUtilConcurrentConcurrentHashMap_init()));
   JreStrongAssign(&self->statementList_, JavaUtilCollections_synchronizedListWithJavaUtilList_(create_JavaUtilArrayList_init()));
-  JreStrongAssignAndConsume(&self->createStatement_, new_CoTouchlabSqueakyDaoModelDao_$1_initWithCoTouchlabSqueakyDaoModelDao_(self));
-  JreStrongAssignAndConsume(&self->updateStatement_, new_CoTouchlabSqueakyDaoModelDao_$2_initWithCoTouchlabSqueakyDaoModelDao_(self));
+  JreStrongAssignAndConsume(&self->createStatement_, new_CoTouchlabSqueakyDaoModelDao_1_initWithCoTouchlabSqueakyDaoModelDao_(self));
+  JreStrongAssignAndConsume(&self->updateStatement_, new_CoTouchlabSqueakyDaoModelDao_2_initWithCoTouchlabSqueakyDaoModelDao_(self));
   JreStrongAssign(&self->squeakyContext_, openHelper);
   JreStrongAssign(&self->entityClass_, entityClass);
   @try {
@@ -866,6 +866,108 @@ IOSObjectArray *CoTouchlabSqueakyDaoModelDao_generateDefaultForeignRefreshMap(Co
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabSqueakyDaoModelDao)
 
+@implementation CoTouchlabSqueakyDaoModelDao_1
+
+- (instancetype)initWithCoTouchlabSqueakyDaoModelDao:(CoTouchlabSqueakyDaoModelDao *)outer$ {
+  CoTouchlabSqueakyDaoModelDao_1_initWithCoTouchlabSqueakyDaoModelDao_(self, outer$);
+  return self;
+}
+
+- (id<CoTouchlabSqueakyDbSQLiteStatement>)initialValue {
+  id<CoTouchlabSqueakyDbSQLiteStatement> sqLiteStatement = CoTouchlabSqueakyDaoModelDao_makeCreateStatement(this$0_);
+  [((id<JavaUtilList>) nil_chk(this$0_->statementList_)) addWithId:sqLiteStatement];
+  return sqLiteStatement;
+}
+
+- (void)dealloc {
+  RELEASE_(this$0_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LCoTouchlabSqueakyDbSQLiteStatement;", 0x4, -1, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithCoTouchlabSqueakyDaoModelDao:);
+  methods[1].selector = @selector(initialValue);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "this$0_", "LCoTouchlabSqueakyDaoModelDao;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
+  };
+  static const void *ptrTable[] = { "Lco/touchlab/squeaky/dao/ModelDao<TT;>;", "LCoTouchlabSqueakyDaoModelDao;", "Ljava/lang/ThreadLocal<Lco/touchlab/squeaky/db/SQLiteStatement;>;" };
+  static const J2ObjcClassInfo _CoTouchlabSqueakyDaoModelDao_1 = { "", "co.touchlab.squeaky.dao", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, -1, 2, -1 };
+  return &_CoTouchlabSqueakyDaoModelDao_1;
+}
+
+@end
+
+void CoTouchlabSqueakyDaoModelDao_1_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao_1 *self, CoTouchlabSqueakyDaoModelDao *outer$) {
+  JreStrongAssign(&self->this$0_, outer$);
+  JavaLangThreadLocal_init(self);
+}
+
+CoTouchlabSqueakyDaoModelDao_1 *new_CoTouchlabSqueakyDaoModelDao_1_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$) {
+  J2OBJC_NEW_IMPL(CoTouchlabSqueakyDaoModelDao_1, initWithCoTouchlabSqueakyDaoModelDao_, outer$)
+}
+
+CoTouchlabSqueakyDaoModelDao_1 *create_CoTouchlabSqueakyDaoModelDao_1_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$) {
+  J2OBJC_CREATE_IMPL(CoTouchlabSqueakyDaoModelDao_1, initWithCoTouchlabSqueakyDaoModelDao_, outer$)
+}
+
+@implementation CoTouchlabSqueakyDaoModelDao_2
+
+- (instancetype)initWithCoTouchlabSqueakyDaoModelDao:(CoTouchlabSqueakyDaoModelDao *)outer$ {
+  CoTouchlabSqueakyDaoModelDao_2_initWithCoTouchlabSqueakyDaoModelDao_(self, outer$);
+  return self;
+}
+
+- (id<CoTouchlabSqueakyDbSQLiteStatement>)initialValue {
+  id<CoTouchlabSqueakyDbSQLiteStatement> sqLiteStatement = CoTouchlabSqueakyDaoModelDao_makeUpdateStatement(this$0_);
+  [((id<JavaUtilList>) nil_chk(this$0_->statementList_)) addWithId:sqLiteStatement];
+  return sqLiteStatement;
+}
+
+- (void)dealloc {
+  RELEASE_(this$0_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LCoTouchlabSqueakyDbSQLiteStatement;", 0x4, -1, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithCoTouchlabSqueakyDaoModelDao:);
+  methods[1].selector = @selector(initialValue);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "this$0_", "LCoTouchlabSqueakyDaoModelDao;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
+  };
+  static const void *ptrTable[] = { "Lco/touchlab/squeaky/dao/ModelDao<TT;>;", "LCoTouchlabSqueakyDaoModelDao;", "Ljava/lang/ThreadLocal<Lco/touchlab/squeaky/db/SQLiteStatement;>;" };
+  static const J2ObjcClassInfo _CoTouchlabSqueakyDaoModelDao_2 = { "", "co.touchlab.squeaky.dao", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, -1, 2, -1 };
+  return &_CoTouchlabSqueakyDaoModelDao_2;
+}
+
+@end
+
+void CoTouchlabSqueakyDaoModelDao_2_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao_2 *self, CoTouchlabSqueakyDaoModelDao *outer$) {
+  JreStrongAssign(&self->this$0_, outer$);
+  JavaLangThreadLocal_init(self);
+}
+
+CoTouchlabSqueakyDaoModelDao_2 *new_CoTouchlabSqueakyDaoModelDao_2_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$) {
+  J2OBJC_NEW_IMPL(CoTouchlabSqueakyDaoModelDao_2, initWithCoTouchlabSqueakyDaoModelDao_, outer$)
+}
+
+CoTouchlabSqueakyDaoModelDao_2 *create_CoTouchlabSqueakyDaoModelDao_2_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$) {
+  J2OBJC_CREATE_IMPL(CoTouchlabSqueakyDaoModelDao_2, initWithCoTouchlabSqueakyDaoModelDao_, outer$)
+}
+
 @implementation CoTouchlabSqueakyDaoModelDao_QueryModifiersImpl
 
 - (instancetype)initWithCoTouchlabSqueakyDaoModelDao:(CoTouchlabSqueakyDaoModelDao *)outer$
@@ -931,7 +1033,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabSqueakyDaoModelDao)
   methods[5].selector = @selector(list);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LCoTouchlabSqueakyDaoModelDao;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LCoTouchlabSqueakyDaoModelDao;", .constantValue.asLong = 0, 0x1012, -1, -1, 13, -1 },
     { "from_", "LNSString;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
     { "where_", "LNSString;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
     { "args_", "[LNSString;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
@@ -940,8 +1042,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabSqueakyDaoModelDao)
     { "offset_", "LJavaLangInteger;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "foreignRefreshMap_", "[LCoTouchlabSqueakyDaoDao_ForeignRefresh;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabSqueakyDaoModelDao;LNSString;LNSString;[LNSString;", "orderBy", "LNSString;", "(Ljava/lang/String;)Lco/touchlab/squeaky/dao/Dao$QueryModifiers<TT;>;", "limit", "LJavaLangInteger;", "(Ljava/lang/Integer;)Lco/touchlab/squeaky/dao/Dao$QueryModifiers<TT;>;", "offset", "foreignRefreshMap", "[LCoTouchlabSqueakyDaoDao_ForeignRefresh;", "([Lco/touchlab/squeaky/dao/Dao$ForeignRefresh;)Lco/touchlab/squeaky/dao/Dao$QueryModifiers<TT;>;", "LJavaSqlSQLException;", "()Ljava/util/List<TT;>;", "LCoTouchlabSqueakyDaoModelDao;", "Ljava/lang/Object;Lco/touchlab/squeaky/dao/Dao$QueryModifiers<TT;>;" };
-  static const J2ObjcClassInfo _CoTouchlabSqueakyDaoModelDao_QueryModifiersImpl = { "QueryModifiersImpl", "co.touchlab.squeaky.dao", ptrTable, methods, fields, 7, 0x0, 6, 8, 13, -1, -1, 14, -1 };
+  static const void *ptrTable[] = { "LNSString;LNSString;[LNSString;", "orderBy", "LNSString;", "(Ljava/lang/String;)Lco/touchlab/squeaky/dao/Dao$QueryModifiers<TT;>;", "limit", "LJavaLangInteger;", "(Ljava/lang/Integer;)Lco/touchlab/squeaky/dao/Dao$QueryModifiers<TT;>;", "offset", "foreignRefreshMap", "[LCoTouchlabSqueakyDaoDao_ForeignRefresh;", "([Lco/touchlab/squeaky/dao/Dao$ForeignRefresh;)Lco/touchlab/squeaky/dao/Dao$QueryModifiers<TT;>;", "LJavaSqlSQLException;", "()Ljava/util/List<TT;>;", "Lco/touchlab/squeaky/dao/ModelDao<TT;>;", "LCoTouchlabSqueakyDaoModelDao;", "Ljava/lang/Object;Lco/touchlab/squeaky/dao/Dao$QueryModifiers<TT;>;" };
+  static const J2ObjcClassInfo _CoTouchlabSqueakyDaoModelDao_QueryModifiersImpl = { "QueryModifiersImpl", "co.touchlab.squeaky.dao", ptrTable, methods, fields, 7, 0x0, 6, 8, 14, -1, -1, 15, -1 };
   return &_CoTouchlabSqueakyDaoModelDao_QueryModifiersImpl;
 }
 
@@ -965,109 +1067,13 @@ CoTouchlabSqueakyDaoModelDao_QueryModifiersImpl *create_CoTouchlabSqueakyDaoMode
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabSqueakyDaoModelDao_QueryModifiersImpl)
 
-@implementation CoTouchlabSqueakyDaoModelDao_$1
+@implementation CoTouchlabSqueakyDaoModelDao_3
 
-- (id<CoTouchlabSqueakyDbSQLiteStatement>)initialValue {
-  id<CoTouchlabSqueakyDbSQLiteStatement> sqLiteStatement = CoTouchlabSqueakyDaoModelDao_makeCreateStatement(this$0_);
-  [((id<JavaUtilList>) nil_chk(this$0_->statementList_)) addWithId:sqLiteStatement];
-  return sqLiteStatement;
-}
-
-- (instancetype)initWithCoTouchlabSqueakyDaoModelDao:(CoTouchlabSqueakyDaoModelDao *)outer$ {
-  CoTouchlabSqueakyDaoModelDao_$1_initWithCoTouchlabSqueakyDaoModelDao_(self, outer$);
+- (instancetype)initWithCoTouchlabSqueakyDaoModelDao:(CoTouchlabSqueakyDaoModelDao *)outer$
+                           withJavaLangStringBuilder:(JavaLangStringBuilder *)capture$0 {
+  CoTouchlabSqueakyDaoModelDao_3_initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_(self, outer$, capture$0);
   return self;
 }
-
-- (void)dealloc {
-  RELEASE_(this$0_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LCoTouchlabSqueakyDbSQLiteStatement;", 0x4, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(initialValue);
-  methods[1].selector = @selector(initWithCoTouchlabSqueakyDaoModelDao:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LCoTouchlabSqueakyDaoModelDao;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "()Lco/touchlab/squeaky/db/SQLiteStatement;", "LCoTouchlabSqueakyDaoModelDao;", "Ljava/lang/ThreadLocal<Lco/touchlab/squeaky/db/SQLiteStatement;>;" };
-  static const J2ObjcClassInfo _CoTouchlabSqueakyDaoModelDao_$1 = { "", "co.touchlab.squeaky.dao", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, -1, 2, -1 };
-  return &_CoTouchlabSqueakyDaoModelDao_$1;
-}
-
-@end
-
-void CoTouchlabSqueakyDaoModelDao_$1_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao_$1 *self, CoTouchlabSqueakyDaoModelDao *outer$) {
-  JreStrongAssign(&self->this$0_, outer$);
-  JavaLangThreadLocal_init(self);
-}
-
-CoTouchlabSqueakyDaoModelDao_$1 *new_CoTouchlabSqueakyDaoModelDao_$1_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$) {
-  J2OBJC_NEW_IMPL(CoTouchlabSqueakyDaoModelDao_$1, initWithCoTouchlabSqueakyDaoModelDao_, outer$)
-}
-
-CoTouchlabSqueakyDaoModelDao_$1 *create_CoTouchlabSqueakyDaoModelDao_$1_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$) {
-  J2OBJC_CREATE_IMPL(CoTouchlabSqueakyDaoModelDao_$1, initWithCoTouchlabSqueakyDaoModelDao_, outer$)
-}
-
-@implementation CoTouchlabSqueakyDaoModelDao_$2
-
-- (id<CoTouchlabSqueakyDbSQLiteStatement>)initialValue {
-  id<CoTouchlabSqueakyDbSQLiteStatement> sqLiteStatement = CoTouchlabSqueakyDaoModelDao_makeUpdateStatement(this$0_);
-  [((id<JavaUtilList>) nil_chk(this$0_->statementList_)) addWithId:sqLiteStatement];
-  return sqLiteStatement;
-}
-
-- (instancetype)initWithCoTouchlabSqueakyDaoModelDao:(CoTouchlabSqueakyDaoModelDao *)outer$ {
-  CoTouchlabSqueakyDaoModelDao_$2_initWithCoTouchlabSqueakyDaoModelDao_(self, outer$);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(this$0_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LCoTouchlabSqueakyDbSQLiteStatement;", 0x4, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(initialValue);
-  methods[1].selector = @selector(initWithCoTouchlabSqueakyDaoModelDao:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LCoTouchlabSqueakyDaoModelDao;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "()Lco/touchlab/squeaky/db/SQLiteStatement;", "LCoTouchlabSqueakyDaoModelDao;", "Ljava/lang/ThreadLocal<Lco/touchlab/squeaky/db/SQLiteStatement;>;" };
-  static const J2ObjcClassInfo _CoTouchlabSqueakyDaoModelDao_$2 = { "", "co.touchlab.squeaky.dao", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, -1, 2, -1 };
-  return &_CoTouchlabSqueakyDaoModelDao_$2;
-}
-
-@end
-
-void CoTouchlabSqueakyDaoModelDao_$2_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao_$2 *self, CoTouchlabSqueakyDaoModelDao *outer$) {
-  JreStrongAssign(&self->this$0_, outer$);
-  JavaLangThreadLocal_init(self);
-}
-
-CoTouchlabSqueakyDaoModelDao_$2 *new_CoTouchlabSqueakyDaoModelDao_$2_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$) {
-  J2OBJC_NEW_IMPL(CoTouchlabSqueakyDaoModelDao_$2, initWithCoTouchlabSqueakyDaoModelDao_, outer$)
-}
-
-CoTouchlabSqueakyDaoModelDao_$2 *create_CoTouchlabSqueakyDaoModelDao_$2_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$) {
-  J2OBJC_CREATE_IMPL(CoTouchlabSqueakyDaoModelDao_$2, initWithCoTouchlabSqueakyDaoModelDao_, outer$)
-}
-
-@implementation CoTouchlabSqueakyDaoModelDao_$3
 
 - (NSString *)getWhereStatementWithBoolean:(jboolean)joinsAllowed {
   return [((JavaLangStringBuilder *) nil_chk(val$sb_)) description];
@@ -1081,12 +1087,6 @@ CoTouchlabSqueakyDaoModelDao_$2 *create_CoTouchlabSqueakyDaoModelDao_$2_initWith
   return [((CoTouchlabSqueakyTableTableInfo *) nil_chk([((id<CoTouchlabSqueakyTableGeneratedTableMapper>) nil_chk(this$0_->generatedTableMapper_)) getTableConfig])) getTableName];
 }
 
-- (instancetype)initWithCoTouchlabSqueakyDaoModelDao:(CoTouchlabSqueakyDaoModelDao *)outer$
-                           withJavaLangStringBuilder:(JavaLangStringBuilder *)capture$0 {
-  CoTouchlabSqueakyDaoModelDao_$3_initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_(self, outer$, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$sb_);
@@ -1095,44 +1095,49 @@ CoTouchlabSqueakyDaoModelDao_$2 *create_CoTouchlabSqueakyDaoModelDao_$2_initWith
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "[LNSString;", 0x1, -1, -1, 2, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, 3, 1, 2, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getWhereStatementWithBoolean:);
-  methods[1].selector = @selector(getParameters);
-  methods[2].selector = @selector(getFromStatementWithBoolean:);
-  methods[3].selector = @selector(initWithCoTouchlabSqueakyDaoModelDao:withJavaLangStringBuilder:);
+  methods[0].selector = @selector(initWithCoTouchlabSqueakyDaoModelDao:withJavaLangStringBuilder:);
+  methods[1].selector = @selector(getWhereStatementWithBoolean:);
+  methods[2].selector = @selector(getParameters);
+  methods[3].selector = @selector(getFromStatementWithBoolean:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LCoTouchlabSqueakyDaoModelDao;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LCoTouchlabSqueakyDaoModelDao;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
     { "val$sb_", "LJavaLangStringBuilder;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "getWhereStatement", "Z", "LJavaSqlSQLException;", "getFromStatement", "LCoTouchlabSqueakyDaoModelDao;LJavaLangStringBuilder;", "LCoTouchlabSqueakyDaoModelDao;", "deleteIdsWithJavaUtilCollection:" };
-  static const J2ObjcClassInfo _CoTouchlabSqueakyDaoModelDao_$3 = { "", "co.touchlab.squeaky.dao", ptrTable, methods, fields, 7, 0x8008, 4, 2, 5, -1, 6, -1, -1 };
-  return &_CoTouchlabSqueakyDaoModelDao_$3;
+  static const void *ptrTable[] = { "getWhereStatement", "Z", "LJavaSqlSQLException;", "getFromStatement", "Lco/touchlab/squeaky/dao/ModelDao<TT;>;", "LCoTouchlabSqueakyDaoModelDao;", "deleteIdsWithJavaUtilCollection:" };
+  static const J2ObjcClassInfo _CoTouchlabSqueakyDaoModelDao_3 = { "", "co.touchlab.squeaky.dao", ptrTable, methods, fields, 7, 0x8008, 4, 2, 5, -1, 6, -1, -1 };
+  return &_CoTouchlabSqueakyDaoModelDao_3;
 }
 
 @end
 
-void CoTouchlabSqueakyDaoModelDao_$3_initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_(CoTouchlabSqueakyDaoModelDao_$3 *self, CoTouchlabSqueakyDaoModelDao *outer$, JavaLangStringBuilder *capture$0) {
+void CoTouchlabSqueakyDaoModelDao_3_initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_(CoTouchlabSqueakyDaoModelDao_3 *self, CoTouchlabSqueakyDaoModelDao *outer$, JavaLangStringBuilder *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$sb_, capture$0);
   NSObject_init(self);
 }
 
-CoTouchlabSqueakyDaoModelDao_$3 *new_CoTouchlabSqueakyDaoModelDao_$3_initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_(CoTouchlabSqueakyDaoModelDao *outer$, JavaLangStringBuilder *capture$0) {
-  J2OBJC_NEW_IMPL(CoTouchlabSqueakyDaoModelDao_$3, initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_, outer$, capture$0)
+CoTouchlabSqueakyDaoModelDao_3 *new_CoTouchlabSqueakyDaoModelDao_3_initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_(CoTouchlabSqueakyDaoModelDao *outer$, JavaLangStringBuilder *capture$0) {
+  J2OBJC_NEW_IMPL(CoTouchlabSqueakyDaoModelDao_3, initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_, outer$, capture$0)
 }
 
-CoTouchlabSqueakyDaoModelDao_$3 *create_CoTouchlabSqueakyDaoModelDao_$3_initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_(CoTouchlabSqueakyDaoModelDao *outer$, JavaLangStringBuilder *capture$0) {
-  J2OBJC_CREATE_IMPL(CoTouchlabSqueakyDaoModelDao_$3, initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_, outer$, capture$0)
+CoTouchlabSqueakyDaoModelDao_3 *create_CoTouchlabSqueakyDaoModelDao_3_initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_(CoTouchlabSqueakyDaoModelDao *outer$, JavaLangStringBuilder *capture$0) {
+  J2OBJC_CREATE_IMPL(CoTouchlabSqueakyDaoModelDao_3, initWithCoTouchlabSqueakyDaoModelDao_withJavaLangStringBuilder_, outer$, capture$0)
 }
 
-@implementation CoTouchlabSqueakyDaoModelDao_$4
+@implementation CoTouchlabSqueakyDaoModelDao_4
+
+- (instancetype)initWithCoTouchlabSqueakyDaoModelDao:(CoTouchlabSqueakyDaoModelDao *)outer$ {
+  CoTouchlabSqueakyDaoModelDao_4_initWithCoTouchlabSqueakyDaoModelDao_(self, outer$);
+  return self;
+}
 
 - (NSString *)getFromStatementWithBoolean:(jboolean)joinsAllowed {
   JavaLangStringBuilder *sb = create_JavaLangStringBuilder_init();
@@ -1149,11 +1154,6 @@ CoTouchlabSqueakyDaoModelDao_$3 *create_CoTouchlabSqueakyDaoModelDao_$3_initWith
   return nil;
 }
 
-- (instancetype)initWithCoTouchlabSqueakyDaoModelDao:(CoTouchlabSqueakyDaoModelDao *)outer$ {
-  CoTouchlabSqueakyDaoModelDao_$4_initWithCoTouchlabSqueakyDaoModelDao_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -1161,37 +1161,37 @@ CoTouchlabSqueakyDaoModelDao_$3 *create_CoTouchlabSqueakyDaoModelDao_$3_initWith
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, 0, 1, 2, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, 3, 1, 2, -1, -1, -1 },
     { NULL, "[LNSString;", 0x1, -1, -1, 2, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getFromStatementWithBoolean:);
-  methods[1].selector = @selector(getWhereStatementWithBoolean:);
-  methods[2].selector = @selector(getParameters);
-  methods[3].selector = @selector(initWithCoTouchlabSqueakyDaoModelDao:);
+  methods[0].selector = @selector(initWithCoTouchlabSqueakyDaoModelDao:);
+  methods[1].selector = @selector(getFromStatementWithBoolean:);
+  methods[2].selector = @selector(getWhereStatementWithBoolean:);
+  methods[3].selector = @selector(getParameters);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LCoTouchlabSqueakyDaoModelDao;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LCoTouchlabSqueakyDaoModelDao;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
   };
-  static const void *ptrTable[] = { "getFromStatement", "Z", "LJavaSqlSQLException;", "getWhereStatement", "LCoTouchlabSqueakyDaoModelDao;", "all" };
-  static const J2ObjcClassInfo _CoTouchlabSqueakyDaoModelDao_$4 = { "", "co.touchlab.squeaky.dao", ptrTable, methods, fields, 7, 0x8008, 4, 1, 4, -1, 5, -1, -1 };
-  return &_CoTouchlabSqueakyDaoModelDao_$4;
+  static const void *ptrTable[] = { "getFromStatement", "Z", "LJavaSqlSQLException;", "getWhereStatement", "Lco/touchlab/squeaky/dao/ModelDao<TT;>;", "LCoTouchlabSqueakyDaoModelDao;", "all" };
+  static const J2ObjcClassInfo _CoTouchlabSqueakyDaoModelDao_4 = { "", "co.touchlab.squeaky.dao", ptrTable, methods, fields, 7, 0x8008, 4, 1, 5, -1, 6, -1, -1 };
+  return &_CoTouchlabSqueakyDaoModelDao_4;
 }
 
 @end
 
-void CoTouchlabSqueakyDaoModelDao_$4_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao_$4 *self, CoTouchlabSqueakyDaoModelDao *outer$) {
+void CoTouchlabSqueakyDaoModelDao_4_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao_4 *self, CoTouchlabSqueakyDaoModelDao *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-CoTouchlabSqueakyDaoModelDao_$4 *new_CoTouchlabSqueakyDaoModelDao_$4_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$) {
-  J2OBJC_NEW_IMPL(CoTouchlabSqueakyDaoModelDao_$4, initWithCoTouchlabSqueakyDaoModelDao_, outer$)
+CoTouchlabSqueakyDaoModelDao_4 *new_CoTouchlabSqueakyDaoModelDao_4_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$) {
+  J2OBJC_NEW_IMPL(CoTouchlabSqueakyDaoModelDao_4, initWithCoTouchlabSqueakyDaoModelDao_, outer$)
 }
 
-CoTouchlabSqueakyDaoModelDao_$4 *create_CoTouchlabSqueakyDaoModelDao_$4_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$) {
-  J2OBJC_CREATE_IMPL(CoTouchlabSqueakyDaoModelDao_$4, initWithCoTouchlabSqueakyDaoModelDao_, outer$)
+CoTouchlabSqueakyDaoModelDao_4 *create_CoTouchlabSqueakyDaoModelDao_4_initWithCoTouchlabSqueakyDaoModelDao_(CoTouchlabSqueakyDaoModelDao *outer$) {
+  J2OBJC_CREATE_IMPL(CoTouchlabSqueakyDaoModelDao_4, initWithCoTouchlabSqueakyDaoModelDao_, outer$)
 }

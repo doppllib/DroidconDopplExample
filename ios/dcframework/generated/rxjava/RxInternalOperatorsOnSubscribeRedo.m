@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OnSubscribeRedo.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxFunctionsAction0.h"
 #include "RxFunctionsFunc1.h"
@@ -53,83 +52,79 @@ __attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo *new_RxInterna
 
 __attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo *create_RxInternalOperatorsOnSubscribeRedo_initWithRxObservable_withRxFunctionsFunc1_withBoolean_withBoolean_withRxScheduler_(RxObservable *source, id<RxFunctionsFunc1> f, jboolean stopOnComplete, jboolean stopOnError, RxScheduler *scheduler);
 
-@interface RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1 : NSObject < RxFunctionsFunc1 > {
+@interface RxInternalOperatorsOnSubscribeRedo_1 : NSObject < RxFunctionsFunc1 >
+
+- (instancetype)init;
+
+- (RxObservable *)callWithId:(RxObservable *)ts;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_1)
+
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_1_init(RxInternalOperatorsOnSubscribeRedo_1 *self);
+
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_1 *new_RxInternalOperatorsOnSubscribeRedo_1_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_1 *create_RxInternalOperatorsOnSubscribeRedo_1_init();
+
+@interface RxInternalOperatorsOnSubscribeRedo_1_1 : NSObject < RxFunctionsFunc1 >
+
+- (instancetype)init;
+
+- (RxNotification *)callWithId:(RxNotification *)terminal;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_1_1)
+
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_1_1_init(RxInternalOperatorsOnSubscribeRedo_1_1 *self);
+
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_1_1 *new_RxInternalOperatorsOnSubscribeRedo_1_1_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_1_1 *create_RxInternalOperatorsOnSubscribeRedo_1_1_init();
+
+@interface RxInternalOperatorsOnSubscribeRedo_RedoFinite_1 : NSObject < RxFunctionsFunc1 > {
  @public
   RxInternalOperatorsOnSubscribeRedo_RedoFinite *this$0_;
   jint num_;
 }
 
-- (RxNotification *)callWithId:(RxNotification *)terminalNotification;
-
 - (instancetype)initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite:(RxInternalOperatorsOnSubscribeRedo_RedoFinite *)outer$;
+
+- (RxNotification *)callWithId:(RxNotification *)terminalNotification;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_RedoFinite_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1, this$0_, RxInternalOperatorsOnSubscribeRedo_RedoFinite *)
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_RedoFinite_1_initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_(RxInternalOperatorsOnSubscribeRedo_RedoFinite_1 *self, RxInternalOperatorsOnSubscribeRedo_RedoFinite *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1_initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_(RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1 *self, RxInternalOperatorsOnSubscribeRedo_RedoFinite *outer$);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_RedoFinite_1 *new_RxInternalOperatorsOnSubscribeRedo_RedoFinite_1_initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_(RxInternalOperatorsOnSubscribeRedo_RedoFinite *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1 *new_RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1_initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_(RxInternalOperatorsOnSubscribeRedo_RedoFinite *outer$) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_RedoFinite_1 *create_RxInternalOperatorsOnSubscribeRedo_RedoFinite_1_initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_(RxInternalOperatorsOnSubscribeRedo_RedoFinite *outer$);
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1 *create_RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1_initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_(RxInternalOperatorsOnSubscribeRedo_RedoFinite *outer$);
-
-@interface RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1 : NSObject < RxFunctionsFunc2 > {
+@interface RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1 : NSObject < RxFunctionsFunc2 > {
  @public
   RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate *this$0_;
 }
 
+- (instancetype)initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate:(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate *)outer$;
+
 - (RxNotification *)callWithId:(RxNotification *)n
                         withId:(RxNotification *)term;
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate:(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate *)outer$;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1, this$0_, RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate *)
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1_initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1 *self, RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1_initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1 *self, RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate *outer$);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1 *new_RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1_initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1 *new_RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1_initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate *outer$) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1 *create_RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1_initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate *outer$);
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1 *create_RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1_initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate *outer$);
-
-@interface RxInternalOperatorsOnSubscribeRedo_$1 : NSObject < RxFunctionsFunc1 >
-
-- (RxObservable *)callWithId:(RxObservable *)ts;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_$1)
-
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_$1_init(RxInternalOperatorsOnSubscribeRedo_$1 *self);
-
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$1 *new_RxInternalOperatorsOnSubscribeRedo_$1_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$1 *create_RxInternalOperatorsOnSubscribeRedo_$1_init();
-
-@interface RxInternalOperatorsOnSubscribeRedo_$1_$1 : NSObject < RxFunctionsFunc1 >
-
-- (RxNotification *)callWithId:(RxNotification *)terminal;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_$1_$1)
-
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_$1_$1_init(RxInternalOperatorsOnSubscribeRedo_$1_$1 *self);
-
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$1_$1 *new_RxInternalOperatorsOnSubscribeRedo_$1_$1_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$1_$1 *create_RxInternalOperatorsOnSubscribeRedo_$1_$1_init();
-
-@interface RxInternalOperatorsOnSubscribeRedo_$2 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOnSubscribeRedo_2 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalOperatorsOnSubscribeRedo *this$0_;
   RxSubscriber *val$child_;
@@ -139,8 +134,6 @@ __attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$1_$1 *create_
   RxSubscriptionsSerialSubscription *val$sourceSubscriptions_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalOperatorsOnSubscribeRedo:(RxInternalOperatorsOnSubscribeRedo *)outer$
                                           withRxSubscriber:(RxSubscriber *)capture$0
                                      withRxSubjectsSubject:(RxSubjectsSubject *)capture$1
@@ -148,28 +141,25 @@ __attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$1_$1 *create_
                     withJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)capture$3
                      withRxSubscriptionsSerialSubscription:(RxSubscriptionsSerialSubscription *)capture$4;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$2, this$0_, RxInternalOperatorsOnSubscribeRedo *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$2, val$child_, RxSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$2, val$terminals_, RxSubjectsSubject *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$2, val$arbiter_, RxInternalProducersProducerArbiter *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$2, val$consumerCapacity_, JavaUtilConcurrentAtomicAtomicLong *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$2, val$sourceSubscriptions_, RxSubscriptionsSerialSubscription *)
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_2_initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeRedo_2 *self, RxInternalOperatorsOnSubscribeRedo *outer$, RxSubscriber *capture$0, RxSubjectsSubject *capture$1, RxInternalProducersProducerArbiter *capture$2, JavaUtilConcurrentAtomicAtomicLong *capture$3, RxSubscriptionsSerialSubscription *capture$4);
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_$2_initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeRedo_$2 *self, RxInternalOperatorsOnSubscribeRedo *outer$, RxSubscriber *capture$0, RxSubjectsSubject *capture$1, RxInternalProducersProducerArbiter *capture$2, JavaUtilConcurrentAtomicAtomicLong *capture$3, RxSubscriptionsSerialSubscription *capture$4);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_2 *new_RxInternalOperatorsOnSubscribeRedo_2_initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeRedo *outer$, RxSubscriber *capture$0, RxSubjectsSubject *capture$1, RxInternalProducersProducerArbiter *capture$2, JavaUtilConcurrentAtomicAtomicLong *capture$3, RxSubscriptionsSerialSubscription *capture$4) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$2 *new_RxInternalOperatorsOnSubscribeRedo_$2_initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeRedo *outer$, RxSubscriber *capture$0, RxSubjectsSubject *capture$1, RxInternalProducersProducerArbiter *capture$2, JavaUtilConcurrentAtomicAtomicLong *capture$3, RxSubscriptionsSerialSubscription *capture$4) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_2 *create_RxInternalOperatorsOnSubscribeRedo_2_initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeRedo *outer$, RxSubscriber *capture$0, RxSubjectsSubject *capture$1, RxInternalProducersProducerArbiter *capture$2, JavaUtilConcurrentAtomicAtomicLong *capture$3, RxSubscriptionsSerialSubscription *capture$4);
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$2 *create_RxInternalOperatorsOnSubscribeRedo_$2_initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeRedo *outer$, RxSubscriber *capture$0, RxSubjectsSubject *capture$1, RxInternalProducersProducerArbiter *capture$2, JavaUtilConcurrentAtomicAtomicLong *capture$3, RxSubscriptionsSerialSubscription *capture$4);
-
-@interface RxInternalOperatorsOnSubscribeRedo_$2_$1 : RxSubscriber {
+@interface RxInternalOperatorsOnSubscribeRedo_2_1 : RxSubscriber {
  @public
-  RxInternalOperatorsOnSubscribeRedo_$2 *this$0_;
+  RxInternalOperatorsOnSubscribeRedo_2 *this$0_;
   jboolean done_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeRedo_2:(RxInternalOperatorsOnSubscribeRedo_2 *)outer$;
 
 - (void)onCompleted;
 
@@ -181,48 +171,46 @@ __attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$2 *create_RxI
 
 - (void)setProducerWithRxProducer:(id<RxProducer>)producer;
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeRedo_$2:(RxInternalOperatorsOnSubscribeRedo_$2 *)outer$;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_$2_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_2_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$2_$1, this$0_, RxInternalOperatorsOnSubscribeRedo_$2 *)
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_2_1_initWithRxInternalOperatorsOnSubscribeRedo_2_(RxInternalOperatorsOnSubscribeRedo_2_1 *self, RxInternalOperatorsOnSubscribeRedo_2 *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_$2_$1_decrementConsumerCapacity(RxInternalOperatorsOnSubscribeRedo_$2_$1 *self);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_2_1 *new_RxInternalOperatorsOnSubscribeRedo_2_1_initWithRxInternalOperatorsOnSubscribeRedo_2_(RxInternalOperatorsOnSubscribeRedo_2 *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_$2_$1_initWithRxInternalOperatorsOnSubscribeRedo_$2_(RxInternalOperatorsOnSubscribeRedo_$2_$1 *self, RxInternalOperatorsOnSubscribeRedo_$2 *outer$);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_2_1 *create_RxInternalOperatorsOnSubscribeRedo_2_1_initWithRxInternalOperatorsOnSubscribeRedo_2_(RxInternalOperatorsOnSubscribeRedo_2 *outer$);
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$2_$1 *new_RxInternalOperatorsOnSubscribeRedo_$2_$1_initWithRxInternalOperatorsOnSubscribeRedo_$2_(RxInternalOperatorsOnSubscribeRedo_$2 *outer$) NS_RETURNS_RETAINED;
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_2_1_decrementConsumerCapacity(RxInternalOperatorsOnSubscribeRedo_2_1 *self);
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$2_$1 *create_RxInternalOperatorsOnSubscribeRedo_$2_$1_initWithRxInternalOperatorsOnSubscribeRedo_$2_(RxInternalOperatorsOnSubscribeRedo_$2 *outer$);
-
-@interface RxInternalOperatorsOnSubscribeRedo_$3 : NSObject < RxObservable_Operator > {
+@interface RxInternalOperatorsOnSubscribeRedo_3 : NSObject < RxObservable_Operator > {
  @public
   RxInternalOperatorsOnSubscribeRedo *this$0_;
 }
 
-- (RxSubscriber *)callWithId:(RxSubscriber *)filteredTerminals;
-
 - (instancetype)initWithRxInternalOperatorsOnSubscribeRedo:(RxInternalOperatorsOnSubscribeRedo *)outer$;
+
+- (RxSubscriber *)callWithId:(RxSubscriber *)filteredTerminals;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_$3)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_3)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$3, this$0_, RxInternalOperatorsOnSubscribeRedo *)
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_3_initWithRxInternalOperatorsOnSubscribeRedo_(RxInternalOperatorsOnSubscribeRedo_3 *self, RxInternalOperatorsOnSubscribeRedo *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_$3_initWithRxInternalOperatorsOnSubscribeRedo_(RxInternalOperatorsOnSubscribeRedo_$3 *self, RxInternalOperatorsOnSubscribeRedo *outer$);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_3 *new_RxInternalOperatorsOnSubscribeRedo_3_initWithRxInternalOperatorsOnSubscribeRedo_(RxInternalOperatorsOnSubscribeRedo *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$3 *new_RxInternalOperatorsOnSubscribeRedo_$3_initWithRxInternalOperatorsOnSubscribeRedo_(RxInternalOperatorsOnSubscribeRedo *outer$) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_3 *create_RxInternalOperatorsOnSubscribeRedo_3_initWithRxInternalOperatorsOnSubscribeRedo_(RxInternalOperatorsOnSubscribeRedo *outer$);
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$3 *create_RxInternalOperatorsOnSubscribeRedo_$3_initWithRxInternalOperatorsOnSubscribeRedo_(RxInternalOperatorsOnSubscribeRedo *outer$);
-
-@interface RxInternalOperatorsOnSubscribeRedo_$3_$1 : RxSubscriber {
+@interface RxInternalOperatorsOnSubscribeRedo_3_1 : RxSubscriber {
  @public
-  RxInternalOperatorsOnSubscribeRedo_$3 *this$0_;
+  RxInternalOperatorsOnSubscribeRedo_3 *this$0_;
   RxSubscriber *val$filteredTerminals_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeRedo_3:(RxInternalOperatorsOnSubscribeRedo_3 *)outer$
+                                            withRxSubscriber:(RxSubscriber *)capture$0
+                                            withRxSubscriber:(RxSubscriber *)param0;
 
 - (void)onCompleted;
 
@@ -232,24 +220,17 @@ __attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$3 *create_RxI
 
 - (void)setProducerWithRxProducer:(id<RxProducer>)producer;
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeRedo_$3:(RxInternalOperatorsOnSubscribeRedo_$3 *)outer$
-                                             withRxSubscriber:(RxSubscriber *)capture$0
-                                             withRxSubscriber:(RxSubscriber *)arg$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_$3_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_3_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$3_$1, this$0_, RxInternalOperatorsOnSubscribeRedo_$3 *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$3_$1, val$filteredTerminals_, RxSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_3_1_initWithRxInternalOperatorsOnSubscribeRedo_3_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_3_1 *self, RxInternalOperatorsOnSubscribeRedo_3 *outer$, RxSubscriber *capture$0, RxSubscriber *param0);
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_$3_$1_initWithRxInternalOperatorsOnSubscribeRedo_$3_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_$3_$1 *self, RxInternalOperatorsOnSubscribeRedo_$3 *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_3_1 *new_RxInternalOperatorsOnSubscribeRedo_3_1_initWithRxInternalOperatorsOnSubscribeRedo_3_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_3 *outer$, RxSubscriber *capture$0, RxSubscriber *param0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$3_$1 *new_RxInternalOperatorsOnSubscribeRedo_$3_$1_initWithRxInternalOperatorsOnSubscribeRedo_$3_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_$3 *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_3_1 *create_RxInternalOperatorsOnSubscribeRedo_3_1_initWithRxInternalOperatorsOnSubscribeRedo_3_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_3 *outer$, RxSubscriber *capture$0, RxSubscriber *param0);
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$3_$1 *create_RxInternalOperatorsOnSubscribeRedo_$3_$1_initWithRxInternalOperatorsOnSubscribeRedo_$3_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_$3 *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0);
-
-@interface RxInternalOperatorsOnSubscribeRedo_$4 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOnSubscribeRedo_4 : NSObject < RxFunctionsAction0 > {
  @public
   RxObservable *val$restarts_;
   RxSubscriber *val$child_;
@@ -259,8 +240,6 @@ __attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$3_$1 *create_
   JavaUtilConcurrentAtomicAtomicBoolean *val$resumeBoundary_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxObservable:(RxObservable *)capture$0
                     withRxSubscriber:(RxSubscriber *)capture$1
 withJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)capture$2
@@ -268,27 +247,25 @@ withJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)cap
               withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$4
 withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$5;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_$4)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_4)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$4, val$restarts_, RxObservable *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$4, val$child_, RxSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$4, val$consumerCapacity_, JavaUtilConcurrentAtomicAtomicLong *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$4, val$worker_, RxScheduler_Worker *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$4, val$subscribeToSource_, id<RxFunctionsAction0>)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$4, val$resumeBoundary_, JavaUtilConcurrentAtomicAtomicBoolean *)
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_4_initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsOnSubscribeRedo_4 *self, RxObservable *capture$0, RxSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicLong *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4, JavaUtilConcurrentAtomicAtomicBoolean *capture$5);
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_$4_initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsOnSubscribeRedo_$4 *self, RxObservable *capture$0, RxSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicLong *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4, JavaUtilConcurrentAtomicAtomicBoolean *capture$5);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_4 *new_RxInternalOperatorsOnSubscribeRedo_4_initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_(RxObservable *capture$0, RxSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicLong *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4, JavaUtilConcurrentAtomicAtomicBoolean *capture$5) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$4 *new_RxInternalOperatorsOnSubscribeRedo_$4_initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_(RxObservable *capture$0, RxSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicLong *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4, JavaUtilConcurrentAtomicAtomicBoolean *capture$5) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_4 *create_RxInternalOperatorsOnSubscribeRedo_4_initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_(RxObservable *capture$0, RxSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicLong *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4, JavaUtilConcurrentAtomicAtomicBoolean *capture$5);
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$4 *create_RxInternalOperatorsOnSubscribeRedo_$4_initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_(RxObservable *capture$0, RxSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicLong *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4, JavaUtilConcurrentAtomicAtomicBoolean *capture$5);
-
-@interface RxInternalOperatorsOnSubscribeRedo_$4_$1 : RxSubscriber {
+@interface RxInternalOperatorsOnSubscribeRedo_4_1 : RxSubscriber {
  @public
-  RxInternalOperatorsOnSubscribeRedo_$4 *this$0_;
+  RxInternalOperatorsOnSubscribeRedo_4 *this$0_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeRedo_4:(RxInternalOperatorsOnSubscribeRedo_4 *)outer$
+                                            withRxSubscriber:(RxSubscriber *)param0;
 
 - (void)onCompleted;
 
@@ -298,22 +275,17 @@ __attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$4 *create_RxI
 
 - (void)setProducerWithRxProducer:(id<RxProducer>)producer;
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeRedo_$4:(RxInternalOperatorsOnSubscribeRedo_$4 *)outer$
-                                             withRxSubscriber:(RxSubscriber *)arg$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_$4_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_4_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$4_$1, this$0_, RxInternalOperatorsOnSubscribeRedo_$4 *)
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_4_1_initWithRxInternalOperatorsOnSubscribeRedo_4_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_4_1 *self, RxInternalOperatorsOnSubscribeRedo_4 *outer$, RxSubscriber *param0);
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_$4_$1_initWithRxInternalOperatorsOnSubscribeRedo_$4_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_$4_$1 *self, RxInternalOperatorsOnSubscribeRedo_$4 *outer$, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_4_1 *new_RxInternalOperatorsOnSubscribeRedo_4_1_initWithRxInternalOperatorsOnSubscribeRedo_4_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_4 *outer$, RxSubscriber *param0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$4_$1 *new_RxInternalOperatorsOnSubscribeRedo_$4_$1_initWithRxInternalOperatorsOnSubscribeRedo_$4_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_$4 *outer$, RxSubscriber *arg$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_4_1 *create_RxInternalOperatorsOnSubscribeRedo_4_1_initWithRxInternalOperatorsOnSubscribeRedo_4_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_4 *outer$, RxSubscriber *param0);
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$4_$1 *create_RxInternalOperatorsOnSubscribeRedo_$4_$1_initWithRxInternalOperatorsOnSubscribeRedo_$4_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_$4 *outer$, RxSubscriber *arg$0);
-
-@interface RxInternalOperatorsOnSubscribeRedo_$5 : NSObject < RxProducer > {
+@interface RxInternalOperatorsOnSubscribeRedo_5 : NSObject < RxProducer > {
  @public
   JavaUtilConcurrentAtomicAtomicLong *val$consumerCapacity_;
   RxInternalProducersProducerArbiter *val$arbiter_;
@@ -322,29 +294,23 @@ __attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$4_$1 *create_
   id<RxFunctionsAction0> val$subscribeToSource_;
 }
 
-- (void)requestWithLong:(jlong)n;
-
 - (instancetype)initWithJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)capture$0
                     withRxInternalProducersProducerArbiter:(RxInternalProducersProducerArbiter *)capture$1
                  withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$2
                                     withRxScheduler_Worker:(RxScheduler_Worker *)capture$3
                                     withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$4;
 
+- (void)requestWithLong:(jlong)n;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_$5)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeRedo_5)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$5, val$consumerCapacity_, JavaUtilConcurrentAtomicAtomicLong *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$5, val$arbiter_, RxInternalProducersProducerArbiter *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$5, val$resumeBoundary_, JavaUtilConcurrentAtomicAtomicBoolean *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$5, val$worker_, RxScheduler_Worker *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeRedo_$5, val$subscribeToSource_, id<RxFunctionsAction0>)
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_5_initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_(RxInternalOperatorsOnSubscribeRedo_5 *self, JavaUtilConcurrentAtomicAtomicLong *capture$0, RxInternalProducersProducerArbiter *capture$1, JavaUtilConcurrentAtomicAtomicBoolean *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4);
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeRedo_$5_initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_(RxInternalOperatorsOnSubscribeRedo_$5 *self, JavaUtilConcurrentAtomicAtomicLong *capture$0, RxInternalProducersProducerArbiter *capture$1, JavaUtilConcurrentAtomicAtomicBoolean *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_5 *new_RxInternalOperatorsOnSubscribeRedo_5_initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_(JavaUtilConcurrentAtomicAtomicLong *capture$0, RxInternalProducersProducerArbiter *capture$1, JavaUtilConcurrentAtomicAtomicBoolean *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$5 *new_RxInternalOperatorsOnSubscribeRedo_$5_initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_(JavaUtilConcurrentAtomicAtomicLong *capture$0, RxInternalProducersProducerArbiter *capture$1, JavaUtilConcurrentAtomicAtomicBoolean *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_$5 *create_RxInternalOperatorsOnSubscribeRedo_$5_initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_(JavaUtilConcurrentAtomicAtomicLong *capture$0, RxInternalProducersProducerArbiter *capture$1, JavaUtilConcurrentAtomicAtomicBoolean *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeRedo_5 *create_RxInternalOperatorsOnSubscribeRedo_5_initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_(JavaUtilConcurrentAtomicAtomicLong *capture$0, RxInternalProducersProducerArbiter *capture$1, JavaUtilConcurrentAtomicAtomicBoolean *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4);
 
 J2OBJC_INITIALIZED_DEFN(RxInternalOperatorsOnSubscribeRedo)
 
@@ -429,10 +395,10 @@ id<RxFunctionsFunc1> RxInternalOperatorsOnSubscribeRedo_REDO_INFINITE;
   RxSubscriber *dummySubscriber = RxObserversSubscribers_empty();
   [((RxSubjectsSubject *) nil_chk(terminals)) subscribeWithRxSubscriber:dummySubscriber];
   RxInternalProducersProducerArbiter *arbiter = create_RxInternalProducersProducerArbiter_init();
-  id<RxFunctionsAction0> subscribeToSource = create_RxInternalOperatorsOnSubscribeRedo_$2_initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_(self, child, terminals, arbiter, consumerCapacity, sourceSubscriptions);
-  RxObservable *restarts = [((id<RxFunctionsFunc1>) nil_chk(controlHandlerFunction_)) callWithId:[terminals liftWithRxObservable_Operator:create_RxInternalOperatorsOnSubscribeRedo_$3_initWithRxInternalOperatorsOnSubscribeRedo_(self)]];
-  [((RxScheduler_Worker *) nil_chk(worker)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsOnSubscribeRedo_$4_initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_(restarts, child, consumerCapacity, worker, subscribeToSource, resumeBoundary)];
-  [child setProducerWithRxProducer:create_RxInternalOperatorsOnSubscribeRedo_$5_initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_(consumerCapacity, arbiter, resumeBoundary, worker, subscribeToSource)];
+  id<RxFunctionsAction0> subscribeToSource = create_RxInternalOperatorsOnSubscribeRedo_2_initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_(self, child, terminals, arbiter, consumerCapacity, sourceSubscriptions);
+  RxObservable *restarts = [((id<RxFunctionsFunc1>) nil_chk(controlHandlerFunction_)) callWithId:[terminals liftWithRxObservable_Operator:create_RxInternalOperatorsOnSubscribeRedo_3_initWithRxInternalOperatorsOnSubscribeRedo_(self)]];
+  [((RxScheduler_Worker *) nil_chk(worker)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsOnSubscribeRedo_4_initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_(restarts, child, consumerCapacity, worker, subscribeToSource, resumeBoundary)];
+  [child setProducerWithRxProducer:create_RxInternalOperatorsOnSubscribeRedo_5_initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_(consumerCapacity, arbiter, resumeBoundary, worker, subscribeToSource)];
 }
 
 - (void)dealloc {
@@ -482,14 +448,14 @@ id<RxFunctionsFunc1> RxInternalOperatorsOnSubscribeRedo_REDO_INFINITE;
     { "scheduler_", "LRxScheduler;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
     { "REDO_INFINITE", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x18, -1, 22, 23, -1 },
   };
-  static const void *ptrTable[] = { "retry", "LRxObservable;", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;)Lrx/Observable<TT;>;", "LRxObservable;J", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;J)Lrx/Observable<TT;>;", "LRxObservable;LRxFunctionsFunc1;", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;Lrx/functions/Func1<+Lrx/Observable<+Lrx/Notification<*>;>;+Lrx/Observable<*>;>;)Lrx/Observable<TT;>;", "LRxObservable;LRxFunctionsFunc1;LRxScheduler;", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;Lrx/functions/Func1<+Lrx/Observable<+Lrx/Notification<*>;>;+Lrx/Observable<*>;>;Lrx/Scheduler;)Lrx/Observable<TT;>;", "repeat", "LRxObservable;LRxScheduler;", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;Lrx/Scheduler;)Lrx/Observable<TT;>;", "LRxObservable;JLRxScheduler;", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;JLrx/Scheduler;)Lrx/Observable<TT;>;", "redo", "LRxObservable;LRxFunctionsFunc1;ZZLRxScheduler;", "(Lrx/Observable<TT;>;Lrx/functions/Func1<+Lrx/Observable<+Lrx/Notification<*>;>;+Lrx/Observable<*>;>;ZZLrx/Scheduler;)V", "call", "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)V", "Lrx/Observable<TT;>;", "Lrx/functions/Func1<+Lrx/Observable<+Lrx/Notification<*>;>;+Lrx/Observable<*>;>;", &RxInternalOperatorsOnSubscribeRedo_REDO_INFINITE, "Lrx/functions/Func1<Lrx/Observable<+Lrx/Notification<*>;>;Lrx/Observable<*>;>;", "LRxInternalOperatorsOnSubscribeRedo_RedoFinite;LRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Lrx/Observable$OnSubscribe<TT;>;" };
+  static const void *ptrTable[] = { "retry", "LRxObservable;", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;)Lrx/Observable<TT;>;", "LRxObservable;J", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;J)Lrx/Observable<TT;>;", "LRxObservable;LRxFunctionsFunc1;", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;Lrx/functions/Func1<-Lrx/Observable<+Lrx/Notification<*>;>;+Lrx/Observable<*>;>;)Lrx/Observable<TT;>;", "LRxObservable;LRxFunctionsFunc1;LRxScheduler;", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;Lrx/functions/Func1<-Lrx/Observable<+Lrx/Notification<*>;>;+Lrx/Observable<*>;>;Lrx/Scheduler;)Lrx/Observable<TT;>;", "repeat", "LRxObservable;LRxScheduler;", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;Lrx/Scheduler;)Lrx/Observable<TT;>;", "LRxObservable;JLRxScheduler;", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;JLrx/Scheduler;)Lrx/Observable<TT;>;", "redo", "LRxObservable;LRxFunctionsFunc1;ZZLRxScheduler;", "(Lrx/Observable<TT;>;Lrx/functions/Func1<-Lrx/Observable<+Lrx/Notification<*>;>;+Lrx/Observable<*>;>;ZZLrx/Scheduler;)V", "call", "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)V", "Lrx/Observable<TT;>;", "Lrx/functions/Func1<-Lrx/Observable<+Lrx/Notification<*>;>;+Lrx/Observable<*>;>;", &RxInternalOperatorsOnSubscribeRedo_REDO_INFINITE, "Lrx/functions/Func1<Lrx/Observable<+Lrx/Notification<*>;>;Lrx/Observable<*>;>;", "LRxInternalOperatorsOnSubscribeRedo_RedoFinite;LRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Lrx/Observable$OnSubscribe<TT;>;" };
   static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo = { "OnSubscribeRedo", "rx.internal.operators", ptrTable, methods, fields, 7, 0x11, 13, 6, -1, 24, -1, 25, -1 };
   return &_RxInternalOperatorsOnSubscribeRedo;
 }
 
 + (void)initialize {
   if (self == [RxInternalOperatorsOnSubscribeRedo class]) {
-    JreStrongAssignAndConsume(&RxInternalOperatorsOnSubscribeRedo_REDO_INFINITE, new_RxInternalOperatorsOnSubscribeRedo_$1_init());
+    JreStrongAssignAndConsume(&RxInternalOperatorsOnSubscribeRedo_REDO_INFINITE, new_RxInternalOperatorsOnSubscribeRedo_1_init());
     J2OBJC_SET_INITIALIZED(RxInternalOperatorsOnSubscribeRedo)
   }
 }
@@ -582,6 +548,90 @@ RxInternalOperatorsOnSubscribeRedo *create_RxInternalOperatorsOnSubscribeRedo_in
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeRedo)
 
+@implementation RxInternalOperatorsOnSubscribeRedo_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalOperatorsOnSubscribeRedo_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
+- (RxObservable *)callWithId:(RxObservable *)ts {
+  return [((RxObservable *) nil_chk(ts)) mapWithRxFunctionsFunc1:create_RxInternalOperatorsOnSubscribeRedo_1_1_init()];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxObservable;", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "call", "LRxObservable;", "(Lrx/Observable<+Lrx/Notification<*>;>;)Lrx/Observable<*>;", "LRxInternalOperatorsOnSubscribeRedo;", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Observable<+Lrx/Notification<*>;>;Lrx/Observable<*>;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_1 = { "", "rx.internal.operators", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, -1, 4, -1 };
+  return &_RxInternalOperatorsOnSubscribeRedo_1;
+}
+
+@end
+
+void RxInternalOperatorsOnSubscribeRedo_1_init(RxInternalOperatorsOnSubscribeRedo_1 *self) {
+  NSObject_init(self);
+}
+
+RxInternalOperatorsOnSubscribeRedo_1 *new_RxInternalOperatorsOnSubscribeRedo_1_init() {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_1, init)
+}
+
+RxInternalOperatorsOnSubscribeRedo_1 *create_RxInternalOperatorsOnSubscribeRedo_1_init() {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_1, init)
+}
+
+@implementation RxInternalOperatorsOnSubscribeRedo_1_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalOperatorsOnSubscribeRedo_1_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
+- (RxNotification *)callWithId:(RxNotification *)terminal {
+  return RxNotification_createOnNextWithId_(nil);
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxNotification;", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "call", "LRxNotification;", "(Lrx/Notification<*>;)Lrx/Notification<*>;", "LRxInternalOperatorsOnSubscribeRedo_1;", "callWithId:", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Notification<*>;Lrx/Notification<*>;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_1_1 = { "", "rx.internal.operators", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, 4, 5, -1 };
+  return &_RxInternalOperatorsOnSubscribeRedo_1_1;
+}
+
+@end
+
+void RxInternalOperatorsOnSubscribeRedo_1_1_init(RxInternalOperatorsOnSubscribeRedo_1_1 *self) {
+  NSObject_init(self);
+}
+
+RxInternalOperatorsOnSubscribeRedo_1_1 *new_RxInternalOperatorsOnSubscribeRedo_1_1_init() {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_1_1, init)
+}
+
+RxInternalOperatorsOnSubscribeRedo_1_1 *create_RxInternalOperatorsOnSubscribeRedo_1_1_init() {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_1_1, init)
+}
+
 @implementation RxInternalOperatorsOnSubscribeRedo_RedoFinite
 
 - (instancetype)initWithLong:(jlong)count {
@@ -590,7 +640,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeRedo)
 }
 
 - (RxObservable *)callWithId:(RxObservable *)ts {
-  return [((RxObservable *) nil_chk([((RxObservable *) nil_chk(ts)) mapWithRxFunctionsFunc1:create_RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1_initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_(self)])) dematerialize];
+  return [((RxObservable *) nil_chk([((RxObservable *) nil_chk(ts)) mapWithRxFunctionsFunc1:create_RxInternalOperatorsOnSubscribeRedo_RedoFinite_1_initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_(self)])) dematerialize];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -628,7 +678,12 @@ RxInternalOperatorsOnSubscribeRedo_RedoFinite *create_RxInternalOperatorsOnSubsc
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeRedo_RedoFinite)
 
-@implementation RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1
+@implementation RxInternalOperatorsOnSubscribeRedo_RedoFinite_1
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite:(RxInternalOperatorsOnSubscribeRedo_RedoFinite *)outer$ {
+  RxInternalOperatorsOnSubscribeRedo_RedoFinite_1_initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_(self, outer$);
+  return self;
+}
 
 - (RxNotification *)callWithId:(RxNotification *)terminalNotification {
   if (this$0_->count_ == 0) {
@@ -643,11 +698,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeRedo_RedoFinite)
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite:(RxInternalOperatorsOnSubscribeRedo_RedoFinite *)outer$ {
-  RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1_initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -655,36 +705,36 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeRedo_RedoFinite)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxNotification;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalOperatorsOnSubscribeRedo_RedoFinite;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "num_", "I", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "call", "LRxNotification;", "(Lrx/Notification<*>;)Lrx/Notification<*>;", "LRxInternalOperatorsOnSubscribeRedo_RedoFinite;", "callWithId:", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Notification<*>;Lrx/Notification<*>;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, 5, -1 };
-  return &_RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1;
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_RedoFinite_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, 5, -1 };
+  return &_RxInternalOperatorsOnSubscribeRedo_RedoFinite_1;
 }
 
 @end
 
-void RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1_initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_(RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1 *self, RxInternalOperatorsOnSubscribeRedo_RedoFinite *outer$) {
+void RxInternalOperatorsOnSubscribeRedo_RedoFinite_1_initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_(RxInternalOperatorsOnSubscribeRedo_RedoFinite_1 *self, RxInternalOperatorsOnSubscribeRedo_RedoFinite *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1 *new_RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1_initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_(RxInternalOperatorsOnSubscribeRedo_RedoFinite *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1, initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_, outer$)
+RxInternalOperatorsOnSubscribeRedo_RedoFinite_1 *new_RxInternalOperatorsOnSubscribeRedo_RedoFinite_1_initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_(RxInternalOperatorsOnSubscribeRedo_RedoFinite *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_RedoFinite_1, initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_, outer$)
 }
 
-RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1 *create_RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1_initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_(RxInternalOperatorsOnSubscribeRedo_RedoFinite *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1, initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_, outer$)
+RxInternalOperatorsOnSubscribeRedo_RedoFinite_1 *create_RxInternalOperatorsOnSubscribeRedo_RedoFinite_1_initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_(RxInternalOperatorsOnSubscribeRedo_RedoFinite *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_RedoFinite_1, initWithRxInternalOperatorsOnSubscribeRedo_RedoFinite_, outer$)
 }
 
 @implementation RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate
@@ -695,7 +745,7 @@ RxInternalOperatorsOnSubscribeRedo_RedoFinite_$1 *create_RxInternalOperatorsOnSu
 }
 
 - (RxObservable *)callWithId:(RxObservable *)ts {
-  return [((RxObservable *) nil_chk(ts)) scanWithId:RxNotification_createOnNextWithId_(JavaLangInteger_valueOfWithInt_(0)) withRxFunctionsFunc2:create_RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1_initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_(self)];
+  return [((RxObservable *) nil_chk(ts)) scanWithId:RxNotification_createOnNextWithId_(JavaLangInteger_valueOfWithInt_(0)) withRxFunctionsFunc2:create_RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1_initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_(self)];
 }
 
 - (void)dealloc {
@@ -738,7 +788,12 @@ RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate *create_RxInternalOperator
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate)
 
-@implementation RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1
+@implementation RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate:(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate *)outer$ {
+  RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1_initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_(self, outer$);
+  return self;
+}
 
 - (RxNotification *)callWithId:(RxNotification *)n
                         withId:(RxNotification *)term {
@@ -751,11 +806,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeRedo_RetryWithPre
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate:(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate *)outer$ {
-  RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1_initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -763,131 +813,38 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeRedo_RetryWithPre
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxNotification;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate:);
+  methods[1].selector = @selector(callWithId:withId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "call", "LRxNotification;LRxNotification;", "(Lrx/Notification<Ljava/lang/Integer;>;Lrx/Notification<*>;)Lrx/Notification<Ljava/lang/Integer;>;", "LRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate;", "callWithId:", "Ljava/lang/Object;Lrx/functions/Func2<Lrx/Notification<Ljava/lang/Integer;>;Lrx/Notification<*>;Lrx/Notification<Ljava/lang/Integer;>;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, 5, -1 };
-  return &_RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1;
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, 5, -1 };
+  return &_RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1;
 }
 
 @end
 
-void RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1_initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1 *self, RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate *outer$) {
+void RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1_initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1 *self, RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1 *new_RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1_initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1, initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_, outer$)
+RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1 *new_RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1_initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1, initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_, outer$)
 }
 
-RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1 *create_RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1_initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_$1, initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_, outer$)
+RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1 *create_RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1_initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_1, initWithRxInternalOperatorsOnSubscribeRedo_RetryWithPredicate_, outer$)
 }
 
-@implementation RxInternalOperatorsOnSubscribeRedo_$1
-
-- (RxObservable *)callWithId:(RxObservable *)ts {
-  return [((RxObservable *) nil_chk(ts)) mapWithRxFunctionsFunc1:create_RxInternalOperatorsOnSubscribeRedo_$1_$1_init()];
-}
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalOperatorsOnSubscribeRedo_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxObservable;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
-  #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "call", "LRxObservable;", "(Lrx/Observable<+Lrx/Notification<*>;>;)Lrx/Observable<*>;", "LRxInternalOperatorsOnSubscribeRedo;", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Observable<+Lrx/Notification<*>;>;Lrx/Observable<*>;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_$1 = { "", "rx.internal.operators", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, -1, 4, -1 };
-  return &_RxInternalOperatorsOnSubscribeRedo_$1;
-}
-
-@end
-
-void RxInternalOperatorsOnSubscribeRedo_$1_init(RxInternalOperatorsOnSubscribeRedo_$1 *self) {
-  NSObject_init(self);
-}
-
-RxInternalOperatorsOnSubscribeRedo_$1 *new_RxInternalOperatorsOnSubscribeRedo_$1_init() {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_$1, init)
-}
-
-RxInternalOperatorsOnSubscribeRedo_$1 *create_RxInternalOperatorsOnSubscribeRedo_$1_init() {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_$1, init)
-}
-
-@implementation RxInternalOperatorsOnSubscribeRedo_$1_$1
-
-- (RxNotification *)callWithId:(RxNotification *)terminal {
-  return RxNotification_createOnNextWithId_(nil);
-}
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalOperatorsOnSubscribeRedo_$1_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxNotification;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
-  #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "call", "LRxNotification;", "(Lrx/Notification<*>;)Lrx/Notification<*>;", "LRxInternalOperatorsOnSubscribeRedo_$1;", "callWithId:", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Notification<*>;Lrx/Notification<*>;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_$1_$1 = { "", "rx.internal.operators", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, 4, 5, -1 };
-  return &_RxInternalOperatorsOnSubscribeRedo_$1_$1;
-}
-
-@end
-
-void RxInternalOperatorsOnSubscribeRedo_$1_$1_init(RxInternalOperatorsOnSubscribeRedo_$1_$1 *self) {
-  NSObject_init(self);
-}
-
-RxInternalOperatorsOnSubscribeRedo_$1_$1 *new_RxInternalOperatorsOnSubscribeRedo_$1_$1_init() {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_$1_$1, init)
-}
-
-RxInternalOperatorsOnSubscribeRedo_$1_$1 *create_RxInternalOperatorsOnSubscribeRedo_$1_$1_init() {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_$1_$1, init)
-}
-
-@implementation RxInternalOperatorsOnSubscribeRedo_$2
-
-- (void)call {
-  if ([((RxSubscriber *) nil_chk(val$child_)) isUnsubscribed]) {
-    return;
-  }
-  RxSubscriber *terminalDelegatingSubscriber = create_RxInternalOperatorsOnSubscribeRedo_$2_$1_initWithRxInternalOperatorsOnSubscribeRedo_$2_(self);
-  [((RxSubscriptionsSerialSubscription *) nil_chk(val$sourceSubscriptions_)) setWithRxSubscription:terminalDelegatingSubscriber];
-  [((RxObservable *) nil_chk(this$0_->source_)) unsafeSubscribeWithRxSubscriber:terminalDelegatingSubscriber];
-}
+@implementation RxInternalOperatorsOnSubscribeRedo_2
 
 - (instancetype)initWithRxInternalOperatorsOnSubscribeRedo:(RxInternalOperatorsOnSubscribeRedo *)outer$
                                           withRxSubscriber:(RxSubscriber *)capture$0
@@ -895,8 +852,17 @@ RxInternalOperatorsOnSubscribeRedo_$1_$1 *create_RxInternalOperatorsOnSubscribeR
                     withRxInternalProducersProducerArbiter:(RxInternalProducersProducerArbiter *)capture$2
                     withJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)capture$3
                      withRxSubscriptionsSerialSubscription:(RxSubscriptionsSerialSubscription *)capture$4 {
-  RxInternalOperatorsOnSubscribeRedo_$2_initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_(self, outer$, capture$0, capture$1, capture$2, capture$3, capture$4);
+  RxInternalOperatorsOnSubscribeRedo_2_initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_(self, outer$, capture$0, capture$1, capture$2, capture$3, capture$4);
   return self;
+}
+
+- (void)call {
+  if ([((RxSubscriber *) nil_chk(val$child_)) isUnsubscribed]) {
+    return;
+  }
+  RxSubscriber *terminalDelegatingSubscriber = create_RxInternalOperatorsOnSubscribeRedo_2_1_initWithRxInternalOperatorsOnSubscribeRedo_2_(self);
+  [((RxSubscriptionsSerialSubscription *) nil_chk(val$sourceSubscriptions_)) setWithRxSubscription:terminalDelegatingSubscriber];
+  [((RxObservable *) nil_chk(this$0_->source_)) unsafeSubscribeWithRxSubscriber:terminalDelegatingSubscriber];
 }
 
 - (void)dealloc {
@@ -911,30 +877,30 @@ RxInternalOperatorsOnSubscribeRedo_$1_$1 *create_RxInternalOperatorsOnSubscribeR
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOnSubscribeRedo:withRxSubscriber:withRxSubjectsSubject:withRxInternalProducersProducerArbiter:withJavaUtilConcurrentAtomicAtomicLong:withRxSubscriptionsSerialSubscription:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOnSubscribeRedo:withRxSubscriber:withRxSubjectsSubject:withRxInternalProducersProducerArbiter:withJavaUtilConcurrentAtomicAtomicLong:withRxSubscriptionsSerialSubscription:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOnSubscribeRedo;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
-    { "val$terminals_", "LRxSubjectsSubject;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "this$0_", "LRxInternalOperatorsOnSubscribeRedo;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
+    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 1, -1 },
+    { "val$terminals_", "LRxSubjectsSubject;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
     { "val$arbiter_", "LRxInternalProducersProducerArbiter;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$consumerCapacity_", "LJavaUtilConcurrentAtomicAtomicLong;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$sourceSubscriptions_", "LRxSubscriptionsSerialSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOnSubscribeRedo;LRxSubscriber;LRxSubjectsSubject;LRxInternalProducersProducerArbiter;LJavaUtilConcurrentAtomicAtomicLong;LRxSubscriptionsSerialSubscription;", "(Lrx/internal/operators/OnSubscribeRedo;Lrx/Subscriber<-TT;>;Lrx/subjects/Subject<Lrx/Notification<*>;Lrx/Notification<*>;>;Lrx/internal/producers/ProducerArbiter;Ljava/util/concurrent/atomic/AtomicLong;Lrx/subscriptions/SerialSubscription;)V", "Lrx/Subscriber<-TT;>;", "Lrx/subjects/Subject<Lrx/Notification<*>;Lrx/Notification<*>;>;", "LRxInternalOperatorsOnSubscribeRedo;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 6, 4, -1, 5, -1, -1 };
-  return &_RxInternalOperatorsOnSubscribeRedo_$2;
+  static const void *ptrTable[] = { "Lrx/internal/operators/OnSubscribeRedo<TT;>;", "Lrx/Subscriber<-TT;>;", "Lrx/subjects/Subject<Lrx/Notification<*>;Lrx/Notification<*>;>;", "LRxInternalOperatorsOnSubscribeRedo;", "callWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 6, 3, -1, 4, -1, -1 };
+  return &_RxInternalOperatorsOnSubscribeRedo_2;
 }
 
 @end
 
-void RxInternalOperatorsOnSubscribeRedo_$2_initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeRedo_$2 *self, RxInternalOperatorsOnSubscribeRedo *outer$, RxSubscriber *capture$0, RxSubjectsSubject *capture$1, RxInternalProducersProducerArbiter *capture$2, JavaUtilConcurrentAtomicAtomicLong *capture$3, RxSubscriptionsSerialSubscription *capture$4) {
+void RxInternalOperatorsOnSubscribeRedo_2_initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeRedo_2 *self, RxInternalOperatorsOnSubscribeRedo *outer$, RxSubscriber *capture$0, RxSubjectsSubject *capture$1, RxInternalProducersProducerArbiter *capture$2, JavaUtilConcurrentAtomicAtomicLong *capture$3, RxSubscriptionsSerialSubscription *capture$4) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$child_, capture$0);
   JreStrongAssign(&self->val$terminals_, capture$1);
@@ -944,15 +910,20 @@ void RxInternalOperatorsOnSubscribeRedo_$2_initWithRxInternalOperatorsOnSubscrib
   NSObject_init(self);
 }
 
-RxInternalOperatorsOnSubscribeRedo_$2 *new_RxInternalOperatorsOnSubscribeRedo_$2_initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeRedo *outer$, RxSubscriber *capture$0, RxSubjectsSubject *capture$1, RxInternalProducersProducerArbiter *capture$2, JavaUtilConcurrentAtomicAtomicLong *capture$3, RxSubscriptionsSerialSubscription *capture$4) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_$2, initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_, outer$, capture$0, capture$1, capture$2, capture$3, capture$4)
+RxInternalOperatorsOnSubscribeRedo_2 *new_RxInternalOperatorsOnSubscribeRedo_2_initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeRedo *outer$, RxSubscriber *capture$0, RxSubjectsSubject *capture$1, RxInternalProducersProducerArbiter *capture$2, JavaUtilConcurrentAtomicAtomicLong *capture$3, RxSubscriptionsSerialSubscription *capture$4) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_2, initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_, outer$, capture$0, capture$1, capture$2, capture$3, capture$4)
 }
 
-RxInternalOperatorsOnSubscribeRedo_$2 *create_RxInternalOperatorsOnSubscribeRedo_$2_initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeRedo *outer$, RxSubscriber *capture$0, RxSubjectsSubject *capture$1, RxInternalProducersProducerArbiter *capture$2, JavaUtilConcurrentAtomicAtomicLong *capture$3, RxSubscriptionsSerialSubscription *capture$4) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_$2, initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_, outer$, capture$0, capture$1, capture$2, capture$3, capture$4)
+RxInternalOperatorsOnSubscribeRedo_2 *create_RxInternalOperatorsOnSubscribeRedo_2_initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeRedo *outer$, RxSubscriber *capture$0, RxSubjectsSubject *capture$1, RxInternalProducersProducerArbiter *capture$2, JavaUtilConcurrentAtomicAtomicLong *capture$3, RxSubscriptionsSerialSubscription *capture$4) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_2, initWithRxInternalOperatorsOnSubscribeRedo_withRxSubscriber_withRxSubjectsSubject_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriptionsSerialSubscription_, outer$, capture$0, capture$1, capture$2, capture$3, capture$4)
 }
 
-@implementation RxInternalOperatorsOnSubscribeRedo_$2_$1
+@implementation RxInternalOperatorsOnSubscribeRedo_2_1
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeRedo_2:(RxInternalOperatorsOnSubscribeRedo_2 *)outer$ {
+  RxInternalOperatorsOnSubscribeRedo_2_1_initWithRxInternalOperatorsOnSubscribeRedo_2_(self, outer$);
+  return self;
+}
 
 - (void)onCompleted {
   if (!done_) {
@@ -973,60 +944,67 @@ RxInternalOperatorsOnSubscribeRedo_$2 *create_RxInternalOperatorsOnSubscribeRedo
 - (void)onNextWithId:(id)v {
   if (!done_) {
     [((RxSubscriber *) nil_chk(this$0_->val$child_)) onNextWithId:v];
-    RxInternalOperatorsOnSubscribeRedo_$2_$1_decrementConsumerCapacity(self);
+    RxInternalOperatorsOnSubscribeRedo_2_1_decrementConsumerCapacity(self);
     [((RxInternalProducersProducerArbiter *) nil_chk(this$0_->val$arbiter_)) producedWithLong:1];
   }
 }
 
 - (void)decrementConsumerCapacity {
-  RxInternalOperatorsOnSubscribeRedo_$2_$1_decrementConsumerCapacity(self);
+  RxInternalOperatorsOnSubscribeRedo_2_1_decrementConsumerCapacity(self);
 }
 
 - (void)setProducerWithRxProducer:(id<RxProducer>)producer {
   [((RxInternalProducersProducerArbiter *) nil_chk(this$0_->val$arbiter_)) setProducerWithRxProducer:producer];
 }
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeRedo_$2:(RxInternalOperatorsOnSubscribeRedo_$2 *)outer$ {
-  RxInternalOperatorsOnSubscribeRedo_$2_$1_initWithRxInternalOperatorsOnSubscribeRedo_$2_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribeRedo_$2_$1 class]);
   RELEASE_(this$0_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
     { NULL, "V", 0x2, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 7, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(decrementConsumerCapacity);
-  methods[4].selector = @selector(setProducerWithRxProducer:);
-  methods[5].selector = @selector(initWithRxInternalOperatorsOnSubscribeRedo_$2:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOnSubscribeRedo_2:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
+  methods[4].selector = @selector(decrementConsumerCapacity);
+  methods[5].selector = @selector(setProducerWithRxProducer:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOnSubscribeRedo_$2;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOnSubscribeRedo_2;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "setProducer", "LRxProducer;", "LRxInternalOperatorsOnSubscribeRedo_$2;", "call", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_$2_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 6, 2, 7, -1, 8, 9, -1 };
-  return &_RxInternalOperatorsOnSubscribeRedo_$2_$1;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "setProducer", "LRxProducer;", "LRxInternalOperatorsOnSubscribeRedo_2;", "call", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_2_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 6, 2, 7, -1, 8, 9, -1 };
+  return &_RxInternalOperatorsOnSubscribeRedo_2_1;
 }
 
 @end
 
-void RxInternalOperatorsOnSubscribeRedo_$2_$1_decrementConsumerCapacity(RxInternalOperatorsOnSubscribeRedo_$2_$1 *self) {
+void RxInternalOperatorsOnSubscribeRedo_2_1_initWithRxInternalOperatorsOnSubscribeRedo_2_(RxInternalOperatorsOnSubscribeRedo_2_1 *self, RxInternalOperatorsOnSubscribeRedo_2 *outer$) {
+  JreStrongAssign(&self->this$0_, outer$);
+  RxSubscriber_init(self);
+}
+
+RxInternalOperatorsOnSubscribeRedo_2_1 *new_RxInternalOperatorsOnSubscribeRedo_2_1_initWithRxInternalOperatorsOnSubscribeRedo_2_(RxInternalOperatorsOnSubscribeRedo_2 *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_2_1, initWithRxInternalOperatorsOnSubscribeRedo_2_, outer$)
+}
+
+RxInternalOperatorsOnSubscribeRedo_2_1 *create_RxInternalOperatorsOnSubscribeRedo_2_1_initWithRxInternalOperatorsOnSubscribeRedo_2_(RxInternalOperatorsOnSubscribeRedo_2 *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_2_1, initWithRxInternalOperatorsOnSubscribeRedo_2_, outer$)
+}
+
+void RxInternalOperatorsOnSubscribeRedo_2_1_decrementConsumerCapacity(RxInternalOperatorsOnSubscribeRedo_2_1 *self) {
   while (true) {
     jlong cc = [((JavaUtilConcurrentAtomicAtomicLong *) nil_chk(self->this$0_->val$consumerCapacity_)) get];
     if (cc != JavaLangLong_MAX_VALUE) {
@@ -1040,28 +1018,15 @@ void RxInternalOperatorsOnSubscribeRedo_$2_$1_decrementConsumerCapacity(RxIntern
   }
 }
 
-void RxInternalOperatorsOnSubscribeRedo_$2_$1_initWithRxInternalOperatorsOnSubscribeRedo_$2_(RxInternalOperatorsOnSubscribeRedo_$2_$1 *self, RxInternalOperatorsOnSubscribeRedo_$2 *outer$) {
-  JreStrongAssign(&self->this$0_, outer$);
-  RxSubscriber_init(self);
-}
-
-RxInternalOperatorsOnSubscribeRedo_$2_$1 *new_RxInternalOperatorsOnSubscribeRedo_$2_$1_initWithRxInternalOperatorsOnSubscribeRedo_$2_(RxInternalOperatorsOnSubscribeRedo_$2 *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_$2_$1, initWithRxInternalOperatorsOnSubscribeRedo_$2_, outer$)
-}
-
-RxInternalOperatorsOnSubscribeRedo_$2_$1 *create_RxInternalOperatorsOnSubscribeRedo_$2_$1_initWithRxInternalOperatorsOnSubscribeRedo_$2_(RxInternalOperatorsOnSubscribeRedo_$2 *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_$2_$1, initWithRxInternalOperatorsOnSubscribeRedo_$2_, outer$)
-}
-
-@implementation RxInternalOperatorsOnSubscribeRedo_$3
-
-- (RxSubscriber *)callWithId:(RxSubscriber *)filteredTerminals {
-  return create_RxInternalOperatorsOnSubscribeRedo_$3_$1_initWithRxInternalOperatorsOnSubscribeRedo_$3_withRxSubscriber_withRxSubscriber_(self, filteredTerminals, filteredTerminals);
-}
+@implementation RxInternalOperatorsOnSubscribeRedo_3
 
 - (instancetype)initWithRxInternalOperatorsOnSubscribeRedo:(RxInternalOperatorsOnSubscribeRedo *)outer$ {
-  RxInternalOperatorsOnSubscribeRedo_$3_initWithRxInternalOperatorsOnSubscribeRedo_(self, outer$);
+  RxInternalOperatorsOnSubscribeRedo_3_initWithRxInternalOperatorsOnSubscribeRedo_(self, outer$);
   return self;
+}
+
+- (RxSubscriber *)callWithId:(RxSubscriber *)filteredTerminals {
+  return create_RxInternalOperatorsOnSubscribeRedo_3_1_initWithRxInternalOperatorsOnSubscribeRedo_3_withRxSubscriber_withRxSubscriber_(self, filteredTerminals, filteredTerminals);
 }
 
 - (void)dealloc {
@@ -1071,38 +1036,45 @@ RxInternalOperatorsOnSubscribeRedo_$2_$1 *create_RxInternalOperatorsOnSubscribeR
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxSubscriber;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOnSubscribeRedo:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOnSubscribeRedo:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOnSubscribeRedo;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOnSubscribeRedo;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-Lrx/Notification<*>;>;)Lrx/Subscriber<-Lrx/Notification<*>;>;", "LRxInternalOperatorsOnSubscribeRedo;", "callWithId:", "Ljava/lang/Object;Lrx/Observable$Operator<Lrx/Notification<*>;Lrx/Notification<*>;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_$3 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, 5, -1 };
-  return &_RxInternalOperatorsOnSubscribeRedo_$3;
+  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-Lrx/Notification<*>;>;)Lrx/Subscriber<-Lrx/Notification<*>;>;", "Lrx/internal/operators/OnSubscribeRedo<TT;>;", "LRxInternalOperatorsOnSubscribeRedo;", "callWithId:", "Ljava/lang/Object;Lrx/Observable$Operator<Lrx/Notification<*>;Lrx/Notification<*>;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_3 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
+  return &_RxInternalOperatorsOnSubscribeRedo_3;
 }
 
 @end
 
-void RxInternalOperatorsOnSubscribeRedo_$3_initWithRxInternalOperatorsOnSubscribeRedo_(RxInternalOperatorsOnSubscribeRedo_$3 *self, RxInternalOperatorsOnSubscribeRedo *outer$) {
+void RxInternalOperatorsOnSubscribeRedo_3_initWithRxInternalOperatorsOnSubscribeRedo_(RxInternalOperatorsOnSubscribeRedo_3 *self, RxInternalOperatorsOnSubscribeRedo *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOnSubscribeRedo_$3 *new_RxInternalOperatorsOnSubscribeRedo_$3_initWithRxInternalOperatorsOnSubscribeRedo_(RxInternalOperatorsOnSubscribeRedo *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_$3, initWithRxInternalOperatorsOnSubscribeRedo_, outer$)
+RxInternalOperatorsOnSubscribeRedo_3 *new_RxInternalOperatorsOnSubscribeRedo_3_initWithRxInternalOperatorsOnSubscribeRedo_(RxInternalOperatorsOnSubscribeRedo *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_3, initWithRxInternalOperatorsOnSubscribeRedo_, outer$)
 }
 
-RxInternalOperatorsOnSubscribeRedo_$3 *create_RxInternalOperatorsOnSubscribeRedo_$3_initWithRxInternalOperatorsOnSubscribeRedo_(RxInternalOperatorsOnSubscribeRedo *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_$3, initWithRxInternalOperatorsOnSubscribeRedo_, outer$)
+RxInternalOperatorsOnSubscribeRedo_3 *create_RxInternalOperatorsOnSubscribeRedo_3_initWithRxInternalOperatorsOnSubscribeRedo_(RxInternalOperatorsOnSubscribeRedo *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_3, initWithRxInternalOperatorsOnSubscribeRedo_, outer$)
 }
 
-@implementation RxInternalOperatorsOnSubscribeRedo_$3_$1
+@implementation RxInternalOperatorsOnSubscribeRedo_3_1
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeRedo_3:(RxInternalOperatorsOnSubscribeRedo_3 *)outer$
+                                            withRxSubscriber:(RxSubscriber *)capture$0
+                                            withRxSubscriber:(RxSubscriber *)param0 {
+  RxInternalOperatorsOnSubscribeRedo_3_1_initWithRxInternalOperatorsOnSubscribeRedo_3_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, param0);
+  return self;
+}
 
 - (void)onCompleted {
   [((RxSubscriber *) nil_chk(val$filteredTerminals_)) onCompleted];
@@ -1128,15 +1100,7 @@ RxInternalOperatorsOnSubscribeRedo_$3 *create_RxInternalOperatorsOnSubscribeRedo
   [((id<RxProducer>) nil_chk(producer)) requestWithLong:JavaLangLong_MAX_VALUE];
 }
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeRedo_$3:(RxInternalOperatorsOnSubscribeRedo_$3 *)outer$
-                                             withRxSubscriber:(RxSubscriber *)capture$0
-                                             withRxSubscriber:(RxSubscriber *)arg$0 {
-  RxInternalOperatorsOnSubscribeRedo_$3_$1_initWithRxInternalOperatorsOnSubscribeRedo_$3_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, arg$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribeRedo_$3_$1 class]);
   RELEASE_(this$0_);
   RELEASE_(val$filteredTerminals_);
   [super dealloc];
@@ -1144,50 +1108,46 @@ RxInternalOperatorsOnSubscribeRedo_$3 *create_RxInternalOperatorsOnSubscribeRedo
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
-    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 7, -1, 8, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 4, 5, -1, 6, -1, -1 },
+    { NULL, "V", 0x1, 7, 8, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(setProducerWithRxProducer:);
-  methods[4].selector = @selector(initWithRxInternalOperatorsOnSubscribeRedo_$3:withRxSubscriber:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOnSubscribeRedo_3:withRxSubscriber:withRxSubscriber:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
+  methods[4].selector = @selector(setProducerWithRxProducer:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOnSubscribeRedo_$3;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOnSubscribeRedo_3;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$filteredTerminals_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 9, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LRxNotification;", "(Lrx/Notification<*>;)V", "setProducer", "LRxProducer;", "LRxInternalOperatorsOnSubscribeRedo_$3;LRxSubscriber;LRxSubscriber;", "(Lrx/internal/operators/OnSubscribeRedo$3;Lrx/Subscriber<-Lrx/Notification<*>;>;Lrx/Subscriber<*>;)V", "Lrx/Subscriber<-Lrx/Notification<*>;>;", "LRxInternalOperatorsOnSubscribeRedo_$3;", "callWithId:", "Lrx/Subscriber<Lrx/Notification<*>;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_$3_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 2, 10, -1, 11, 12, -1 };
-  return &_RxInternalOperatorsOnSubscribeRedo_$3_$1;
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "onError", "LNSException;", "onNext", "LRxNotification;", "(Lrx/Notification<*>;)V", "setProducer", "LRxProducer;", "Lrx/Subscriber<-Lrx/Notification<*>;>;", "LRxInternalOperatorsOnSubscribeRedo_3;", "callWithId:", "Lrx/Subscriber<Lrx/Notification<*>;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_3_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 2, 10, -1, 11, 12, -1 };
+  return &_RxInternalOperatorsOnSubscribeRedo_3_1;
 }
 
 @end
 
-void RxInternalOperatorsOnSubscribeRedo_$3_$1_initWithRxInternalOperatorsOnSubscribeRedo_$3_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_$3_$1 *self, RxInternalOperatorsOnSubscribeRedo_$3 *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
+void RxInternalOperatorsOnSubscribeRedo_3_1_initWithRxInternalOperatorsOnSubscribeRedo_3_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_3_1 *self, RxInternalOperatorsOnSubscribeRedo_3 *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$filteredTerminals_, capture$0);
-  RxSubscriber_initWithRxSubscriber_(self, arg$0);
+  RxSubscriber_initWithRxSubscriber_(self, param0);
 }
 
-RxInternalOperatorsOnSubscribeRedo_$3_$1 *new_RxInternalOperatorsOnSubscribeRedo_$3_$1_initWithRxInternalOperatorsOnSubscribeRedo_$3_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_$3 *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_$3_$1, initWithRxInternalOperatorsOnSubscribeRedo_$3_withRxSubscriber_withRxSubscriber_, outer$, capture$0, arg$0)
+RxInternalOperatorsOnSubscribeRedo_3_1 *new_RxInternalOperatorsOnSubscribeRedo_3_1_initWithRxInternalOperatorsOnSubscribeRedo_3_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_3 *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_3_1, initWithRxInternalOperatorsOnSubscribeRedo_3_withRxSubscriber_withRxSubscriber_, outer$, capture$0, param0)
 }
 
-RxInternalOperatorsOnSubscribeRedo_$3_$1 *create_RxInternalOperatorsOnSubscribeRedo_$3_$1_initWithRxInternalOperatorsOnSubscribeRedo_$3_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_$3 *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_$3_$1, initWithRxInternalOperatorsOnSubscribeRedo_$3_withRxSubscriber_withRxSubscriber_, outer$, capture$0, arg$0)
+RxInternalOperatorsOnSubscribeRedo_3_1 *create_RxInternalOperatorsOnSubscribeRedo_3_1_initWithRxInternalOperatorsOnSubscribeRedo_3_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_3 *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_3_1, initWithRxInternalOperatorsOnSubscribeRedo_3_withRxSubscriber_withRxSubscriber_, outer$, capture$0, param0)
 }
 
-@implementation RxInternalOperatorsOnSubscribeRedo_$4
-
-- (void)call {
-  [((RxObservable *) nil_chk(val$restarts_)) unsafeSubscribeWithRxSubscriber:create_RxInternalOperatorsOnSubscribeRedo_$4_$1_initWithRxInternalOperatorsOnSubscribeRedo_$4_withRxSubscriber_(self, val$child_)];
-}
+@implementation RxInternalOperatorsOnSubscribeRedo_4
 
 - (instancetype)initWithRxObservable:(RxObservable *)capture$0
                     withRxSubscriber:(RxSubscriber *)capture$1
@@ -1195,8 +1155,12 @@ withJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)cap
               withRxScheduler_Worker:(RxScheduler_Worker *)capture$3
               withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$4
 withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$5 {
-  RxInternalOperatorsOnSubscribeRedo_$4_initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_(self, capture$0, capture$1, capture$2, capture$3, capture$4, capture$5);
+  RxInternalOperatorsOnSubscribeRedo_4_initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_(self, capture$0, capture$1, capture$2, capture$3, capture$4, capture$5);
   return self;
+}
+
+- (void)call {
+  [((RxObservable *) nil_chk(val$restarts_)) unsafeSubscribeWithRxSubscriber:create_RxInternalOperatorsOnSubscribeRedo_4_1_initWithRxInternalOperatorsOnSubscribeRedo_4_withRxSubscriber_(self, val$child_)];
 }
 
 - (void)dealloc {
@@ -1211,30 +1175,30 @@ withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxObservable:withRxSubscriber:withJavaUtilConcurrentAtomicAtomicLong:withRxScheduler_Worker:withRxFunctionsAction0:withJavaUtilConcurrentAtomicAtomicBoolean:);
+  methods[0].selector = @selector(initWithRxObservable:withRxSubscriber:withJavaUtilConcurrentAtomicAtomicLong:withRxScheduler_Worker:withRxFunctionsAction0:withJavaUtilConcurrentAtomicAtomicBoolean:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$restarts_", "LRxObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
-    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$restarts_", "LRxObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
+    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 1, -1 },
     { "val$consumerCapacity_", "LJavaUtilConcurrentAtomicAtomicLong;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$worker_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$subscribeToSource_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$resumeBoundary_", "LJavaUtilConcurrentAtomicAtomicBoolean;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxObservable;LRxSubscriber;LJavaUtilConcurrentAtomicAtomicLong;LRxScheduler_Worker;LRxFunctionsAction0;LJavaUtilConcurrentAtomicAtomicBoolean;", "(Lrx/Observable<*>;Lrx/Subscriber<-TT;>;Ljava/util/concurrent/atomic/AtomicLong;Lrx/Scheduler$Worker;Lrx/functions/Action0;Ljava/util/concurrent/atomic/AtomicBoolean;)V", "Lrx/Observable<*>;", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOnSubscribeRedo;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_$4 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 6, 4, -1, 5, -1, -1 };
-  return &_RxInternalOperatorsOnSubscribeRedo_$4;
+  static const void *ptrTable[] = { "Lrx/Observable<*>;", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOnSubscribeRedo;", "callWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_4 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 6, 2, -1, 3, -1, -1 };
+  return &_RxInternalOperatorsOnSubscribeRedo_4;
 }
 
 @end
 
-void RxInternalOperatorsOnSubscribeRedo_$4_initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsOnSubscribeRedo_$4 *self, RxObservable *capture$0, RxSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicLong *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4, JavaUtilConcurrentAtomicAtomicBoolean *capture$5) {
+void RxInternalOperatorsOnSubscribeRedo_4_initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsOnSubscribeRedo_4 *self, RxObservable *capture$0, RxSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicLong *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4, JavaUtilConcurrentAtomicAtomicBoolean *capture$5) {
   JreStrongAssign(&self->val$restarts_, capture$0);
   JreStrongAssign(&self->val$child_, capture$1);
   JreStrongAssign(&self->val$consumerCapacity_, capture$2);
@@ -1244,15 +1208,21 @@ void RxInternalOperatorsOnSubscribeRedo_$4_initWithRxObservable_withRxSubscriber
   NSObject_init(self);
 }
 
-RxInternalOperatorsOnSubscribeRedo_$4 *new_RxInternalOperatorsOnSubscribeRedo_$4_initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_(RxObservable *capture$0, RxSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicLong *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4, JavaUtilConcurrentAtomicAtomicBoolean *capture$5) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_$4, initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_, capture$0, capture$1, capture$2, capture$3, capture$4, capture$5)
+RxInternalOperatorsOnSubscribeRedo_4 *new_RxInternalOperatorsOnSubscribeRedo_4_initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_(RxObservable *capture$0, RxSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicLong *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4, JavaUtilConcurrentAtomicAtomicBoolean *capture$5) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_4, initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_, capture$0, capture$1, capture$2, capture$3, capture$4, capture$5)
 }
 
-RxInternalOperatorsOnSubscribeRedo_$4 *create_RxInternalOperatorsOnSubscribeRedo_$4_initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_(RxObservable *capture$0, RxSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicLong *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4, JavaUtilConcurrentAtomicAtomicBoolean *capture$5) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_$4, initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_, capture$0, capture$1, capture$2, capture$3, capture$4, capture$5)
+RxInternalOperatorsOnSubscribeRedo_4 *create_RxInternalOperatorsOnSubscribeRedo_4_initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_(RxObservable *capture$0, RxSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicLong *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4, JavaUtilConcurrentAtomicAtomicBoolean *capture$5) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_4, initWithRxObservable_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxScheduler_Worker_withRxFunctionsAction0_withJavaUtilConcurrentAtomicAtomicBoolean_, capture$0, capture$1, capture$2, capture$3, capture$4, capture$5)
 }
 
-@implementation RxInternalOperatorsOnSubscribeRedo_$4_$1
+@implementation RxInternalOperatorsOnSubscribeRedo_4_1
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeRedo_4:(RxInternalOperatorsOnSubscribeRedo_4 *)outer$
+                                            withRxSubscriber:(RxSubscriber *)param0 {
+  RxInternalOperatorsOnSubscribeRedo_4_1_initWithRxInternalOperatorsOnSubscribeRedo_4_withRxSubscriber_(self, outer$, param0);
+  return self;
+}
 
 - (void)onCompleted {
   [((RxSubscriber *) nil_chk(this$0_->val$child_)) onCompleted];
@@ -1277,58 +1247,60 @@ RxInternalOperatorsOnSubscribeRedo_$4 *create_RxInternalOperatorsOnSubscribeRedo
   [((id<RxProducer>) nil_chk(producer)) requestWithLong:JavaLangLong_MAX_VALUE];
 }
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeRedo_$4:(RxInternalOperatorsOnSubscribeRedo_$4 *)outer$
-                                             withRxSubscriber:(RxSubscriber *)arg$0 {
-  RxInternalOperatorsOnSubscribeRedo_$4_$1_initWithRxInternalOperatorsOnSubscribeRedo_$4_withRxSubscriber_(self, outer$, arg$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribeRedo_$4_$1 class]);
   RELEASE_(this$0_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 4, 5, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 6, -1, 7, -1, -1 },
+    { NULL, "V", 0x1, 6, 7, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(setProducerWithRxProducer:);
-  methods[4].selector = @selector(initWithRxInternalOperatorsOnSubscribeRedo_$4:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOnSubscribeRedo_4:withRxSubscriber:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
+  methods[4].selector = @selector(setProducerWithRxProducer:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOnSubscribeRedo_$4;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOnSubscribeRedo_4;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "setProducer", "LRxProducer;", "LRxInternalOperatorsOnSubscribeRedo_$4;LRxSubscriber;", "(Lrx/internal/operators/OnSubscribeRedo$4;Lrx/Subscriber<*>;)V", "LRxInternalOperatorsOnSubscribeRedo_$4;", "call", "Lrx/Subscriber<Ljava/lang/Object;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_$4_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 1, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsOnSubscribeRedo_$4_$1;
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "onError", "LNSException;", "onNext", "LNSObject;", "setProducer", "LRxProducer;", "LRxInternalOperatorsOnSubscribeRedo_4;", "call", "Lrx/Subscriber<Ljava/lang/Object;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_4_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 1, 8, -1, 9, 10, -1 };
+  return &_RxInternalOperatorsOnSubscribeRedo_4_1;
 }
 
 @end
 
-void RxInternalOperatorsOnSubscribeRedo_$4_$1_initWithRxInternalOperatorsOnSubscribeRedo_$4_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_$4_$1 *self, RxInternalOperatorsOnSubscribeRedo_$4 *outer$, RxSubscriber *arg$0) {
+void RxInternalOperatorsOnSubscribeRedo_4_1_initWithRxInternalOperatorsOnSubscribeRedo_4_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_4_1 *self, RxInternalOperatorsOnSubscribeRedo_4 *outer$, RxSubscriber *param0) {
   JreStrongAssign(&self->this$0_, outer$);
-  RxSubscriber_initWithRxSubscriber_(self, arg$0);
+  RxSubscriber_initWithRxSubscriber_(self, param0);
 }
 
-RxInternalOperatorsOnSubscribeRedo_$4_$1 *new_RxInternalOperatorsOnSubscribeRedo_$4_$1_initWithRxInternalOperatorsOnSubscribeRedo_$4_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_$4 *outer$, RxSubscriber *arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_$4_$1, initWithRxInternalOperatorsOnSubscribeRedo_$4_withRxSubscriber_, outer$, arg$0)
+RxInternalOperatorsOnSubscribeRedo_4_1 *new_RxInternalOperatorsOnSubscribeRedo_4_1_initWithRxInternalOperatorsOnSubscribeRedo_4_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_4 *outer$, RxSubscriber *param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_4_1, initWithRxInternalOperatorsOnSubscribeRedo_4_withRxSubscriber_, outer$, param0)
 }
 
-RxInternalOperatorsOnSubscribeRedo_$4_$1 *create_RxInternalOperatorsOnSubscribeRedo_$4_$1_initWithRxInternalOperatorsOnSubscribeRedo_$4_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_$4 *outer$, RxSubscriber *arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_$4_$1, initWithRxInternalOperatorsOnSubscribeRedo_$4_withRxSubscriber_, outer$, arg$0)
+RxInternalOperatorsOnSubscribeRedo_4_1 *create_RxInternalOperatorsOnSubscribeRedo_4_1_initWithRxInternalOperatorsOnSubscribeRedo_4_withRxSubscriber_(RxInternalOperatorsOnSubscribeRedo_4 *outer$, RxSubscriber *param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_4_1, initWithRxInternalOperatorsOnSubscribeRedo_4_withRxSubscriber_, outer$, param0)
 }
 
-@implementation RxInternalOperatorsOnSubscribeRedo_$5
+@implementation RxInternalOperatorsOnSubscribeRedo_5
+
+- (instancetype)initWithJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)capture$0
+                    withRxInternalProducersProducerArbiter:(RxInternalProducersProducerArbiter *)capture$1
+                 withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$2
+                                    withRxScheduler_Worker:(RxScheduler_Worker *)capture$3
+                                    withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$4 {
+  RxInternalOperatorsOnSubscribeRedo_5_initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_(self, capture$0, capture$1, capture$2, capture$3, capture$4);
+  return self;
+}
 
 - (void)requestWithLong:(jlong)n {
   if (n > 0) {
@@ -1338,15 +1310,6 @@ RxInternalOperatorsOnSubscribeRedo_$4_$1 *create_RxInternalOperatorsOnSubscribeR
       [((RxScheduler_Worker *) nil_chk(val$worker_)) scheduleWithRxFunctionsAction0:val$subscribeToSource_];
     }
   }
-}
-
-- (instancetype)initWithJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)capture$0
-                    withRxInternalProducersProducerArbiter:(RxInternalProducersProducerArbiter *)capture$1
-                 withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$2
-                                    withRxScheduler_Worker:(RxScheduler_Worker *)capture$3
-                                    withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$4 {
-  RxInternalOperatorsOnSubscribeRedo_$5_initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_(self, capture$0, capture$1, capture$2, capture$3, capture$4);
-  return self;
 }
 
 - (void)dealloc {
@@ -1360,13 +1323,13 @@ RxInternalOperatorsOnSubscribeRedo_$4_$1 *create_RxInternalOperatorsOnSubscribeR
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(requestWithLong:);
-  methods[1].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicLong:withRxInternalProducersProducerArbiter:withJavaUtilConcurrentAtomicAtomicBoolean:withRxScheduler_Worker:withRxFunctionsAction0:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicLong:withRxInternalProducersProducerArbiter:withJavaUtilConcurrentAtomicAtomicBoolean:withRxScheduler_Worker:withRxFunctionsAction0:);
+  methods[1].selector = @selector(requestWithLong:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$consumerCapacity_", "LJavaUtilConcurrentAtomicAtomicLong;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
@@ -1375,14 +1338,14 @@ RxInternalOperatorsOnSubscribeRedo_$4_$1 *create_RxInternalOperatorsOnSubscribeR
     { "val$worker_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$subscribeToSource_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "request", "J", "LJavaUtilConcurrentAtomicAtomicLong;LRxInternalProducersProducerArbiter;LJavaUtilConcurrentAtomicAtomicBoolean;LRxScheduler_Worker;LRxFunctionsAction0;", "LRxInternalOperatorsOnSubscribeRedo;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_$5 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 5, 3, -1, 4, -1, -1 };
-  return &_RxInternalOperatorsOnSubscribeRedo_$5;
+  static const void *ptrTable[] = { "request", "J", "LRxInternalOperatorsOnSubscribeRedo;", "callWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeRedo_5 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 5, 2, -1, 3, -1, -1 };
+  return &_RxInternalOperatorsOnSubscribeRedo_5;
 }
 
 @end
 
-void RxInternalOperatorsOnSubscribeRedo_$5_initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_(RxInternalOperatorsOnSubscribeRedo_$5 *self, JavaUtilConcurrentAtomicAtomicLong *capture$0, RxInternalProducersProducerArbiter *capture$1, JavaUtilConcurrentAtomicAtomicBoolean *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4) {
+void RxInternalOperatorsOnSubscribeRedo_5_initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_(RxInternalOperatorsOnSubscribeRedo_5 *self, JavaUtilConcurrentAtomicAtomicLong *capture$0, RxInternalProducersProducerArbiter *capture$1, JavaUtilConcurrentAtomicAtomicBoolean *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4) {
   JreStrongAssign(&self->val$consumerCapacity_, capture$0);
   JreStrongAssign(&self->val$arbiter_, capture$1);
   JreStrongAssign(&self->val$resumeBoundary_, capture$2);
@@ -1391,10 +1354,10 @@ void RxInternalOperatorsOnSubscribeRedo_$5_initWithJavaUtilConcurrentAtomicAtomi
   NSObject_init(self);
 }
 
-RxInternalOperatorsOnSubscribeRedo_$5 *new_RxInternalOperatorsOnSubscribeRedo_$5_initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_(JavaUtilConcurrentAtomicAtomicLong *capture$0, RxInternalProducersProducerArbiter *capture$1, JavaUtilConcurrentAtomicAtomicBoolean *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_$5, initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_, capture$0, capture$1, capture$2, capture$3, capture$4)
+RxInternalOperatorsOnSubscribeRedo_5 *new_RxInternalOperatorsOnSubscribeRedo_5_initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_(JavaUtilConcurrentAtomicAtomicLong *capture$0, RxInternalProducersProducerArbiter *capture$1, JavaUtilConcurrentAtomicAtomicBoolean *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeRedo_5, initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_, capture$0, capture$1, capture$2, capture$3, capture$4)
 }
 
-RxInternalOperatorsOnSubscribeRedo_$5 *create_RxInternalOperatorsOnSubscribeRedo_$5_initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_(JavaUtilConcurrentAtomicAtomicLong *capture$0, RxInternalProducersProducerArbiter *capture$1, JavaUtilConcurrentAtomicAtomicBoolean *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_$5, initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_, capture$0, capture$1, capture$2, capture$3, capture$4)
+RxInternalOperatorsOnSubscribeRedo_5 *create_RxInternalOperatorsOnSubscribeRedo_5_initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_(JavaUtilConcurrentAtomicAtomicLong *capture$0, RxInternalProducersProducerArbiter *capture$1, JavaUtilConcurrentAtomicAtomicBoolean *capture$2, RxScheduler_Worker *capture$3, id<RxFunctionsAction0> capture$4) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeRedo_5, initWithJavaUtilConcurrentAtomicAtomicLong_withRxInternalProducersProducerArbiter_withJavaUtilConcurrentAtomicAtomicBoolean_withRxScheduler_Worker_withRxFunctionsAction0_, capture$0, capture$1, capture$2, capture$3, capture$4)
 }

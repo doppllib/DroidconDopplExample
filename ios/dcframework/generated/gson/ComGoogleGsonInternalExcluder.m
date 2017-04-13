@@ -70,15 +70,21 @@ __attribute__((unused)) static jboolean ComGoogleGsonInternalExcluder_isValidSin
 
 __attribute__((unused)) static jboolean ComGoogleGsonInternalExcluder_isValidUntilWithComGoogleGsonAnnotationsUntil_(ComGoogleGsonInternalExcluder *self, id<ComGoogleGsonAnnotationsUntil> annotation);
 
-@interface ComGoogleGsonInternalExcluder_$1 : ComGoogleGsonTypeAdapter {
+@interface ComGoogleGsonInternalExcluder_1 : ComGoogleGsonTypeAdapter {
  @public
   ComGoogleGsonInternalExcluder *this$0_;
-  ComGoogleGsonTypeAdapter *delegate_;
   jboolean val$skipDeserialize_;
   jboolean val$skipSerialize_;
   ComGoogleGsonGson *val$gson_;
   ComGoogleGsonReflectTypeToken *val$type_;
+  ComGoogleGsonTypeAdapter *delegate_;
 }
+
+- (instancetype)initWithComGoogleGsonInternalExcluder:(ComGoogleGsonInternalExcluder *)outer$
+                                          withBoolean:(jboolean)capture$0
+                                          withBoolean:(jboolean)capture$1
+                                withComGoogleGsonGson:(ComGoogleGsonGson *)capture$2
+                    withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)capture$3;
 
 - (id)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
 
@@ -87,28 +93,19 @@ __attribute__((unused)) static jboolean ComGoogleGsonInternalExcluder_isValidUnt
 
 - (ComGoogleGsonTypeAdapter *)delegate;
 
-- (instancetype)initWithComGoogleGsonInternalExcluder:(ComGoogleGsonInternalExcluder *)outer$
-                                          withBoolean:(jboolean)capture$0
-                                          withBoolean:(jboolean)capture$1
-                                withComGoogleGsonGson:(ComGoogleGsonGson *)capture$2
-                    withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)capture$3;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalExcluder_$1)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalExcluder_1)
 
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalExcluder_$1, this$0_, ComGoogleGsonInternalExcluder *)
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalExcluder_$1, delegate_, ComGoogleGsonTypeAdapter *)
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalExcluder_$1, val$gson_, ComGoogleGsonGson *)
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalExcluder_$1, val$type_, ComGoogleGsonReflectTypeToken *)
+J2OBJC_FIELD_SETTER(ComGoogleGsonInternalExcluder_1, delegate_, ComGoogleGsonTypeAdapter *)
 
-__attribute__((unused)) static ComGoogleGsonTypeAdapter *ComGoogleGsonInternalExcluder_$1_delegate(ComGoogleGsonInternalExcluder_$1 *self);
+__attribute__((unused)) static void ComGoogleGsonInternalExcluder_1_initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_(ComGoogleGsonInternalExcluder_1 *self, ComGoogleGsonInternalExcluder *outer$, jboolean capture$0, jboolean capture$1, ComGoogleGsonGson *capture$2, ComGoogleGsonReflectTypeToken *capture$3);
 
-__attribute__((unused)) static void ComGoogleGsonInternalExcluder_$1_initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_(ComGoogleGsonInternalExcluder_$1 *self, ComGoogleGsonInternalExcluder *outer$, jboolean capture$0, jboolean capture$1, ComGoogleGsonGson *capture$2, ComGoogleGsonReflectTypeToken *capture$3);
+__attribute__((unused)) static ComGoogleGsonInternalExcluder_1 *new_ComGoogleGsonInternalExcluder_1_initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_(ComGoogleGsonInternalExcluder *outer$, jboolean capture$0, jboolean capture$1, ComGoogleGsonGson *capture$2, ComGoogleGsonReflectTypeToken *capture$3) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalExcluder_$1 *new_ComGoogleGsonInternalExcluder_$1_initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_(ComGoogleGsonInternalExcluder *outer$, jboolean capture$0, jboolean capture$1, ComGoogleGsonGson *capture$2, ComGoogleGsonReflectTypeToken *capture$3) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalExcluder_1 *create_ComGoogleGsonInternalExcluder_1_initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_(ComGoogleGsonInternalExcluder *outer$, jboolean capture$0, jboolean capture$1, ComGoogleGsonGson *capture$2, ComGoogleGsonReflectTypeToken *capture$3);
 
-__attribute__((unused)) static ComGoogleGsonInternalExcluder_$1 *create_ComGoogleGsonInternalExcluder_$1_initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_(ComGoogleGsonInternalExcluder *outer$, jboolean capture$0, jboolean capture$1, ComGoogleGsonGson *capture$2, ComGoogleGsonReflectTypeToken *capture$3);
+__attribute__((unused)) static ComGoogleGsonTypeAdapter *ComGoogleGsonInternalExcluder_1_delegate(ComGoogleGsonInternalExcluder_1 *self);
 
 J2OBJC_INITIALIZED_DEFN(ComGoogleGsonInternalExcluder)
 
@@ -116,9 +113,16 @@ ComGoogleGsonInternalExcluder *ComGoogleGsonInternalExcluder_DEFAULT;
 
 @implementation ComGoogleGsonInternalExcluder
 
-- (ComGoogleGsonInternalExcluder *)clone {
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalExcluder_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
+- (ComGoogleGsonInternalExcluder *)java_clone {
   @try {
-    return (ComGoogleGsonInternalExcluder *) cast_chk([super clone], [ComGoogleGsonInternalExcluder class]);
+    return (ComGoogleGsonInternalExcluder *) cast_chk([super java_clone], [ComGoogleGsonInternalExcluder class]);
   }
   @catch (JavaLangCloneNotSupportedException *e) {
     @throw create_JavaLangAssertionError_initWithId_(e);
@@ -126,13 +130,13 @@ ComGoogleGsonInternalExcluder *ComGoogleGsonInternalExcluder_DEFAULT;
 }
 
 - (ComGoogleGsonInternalExcluder *)withVersionWithDouble:(jdouble)ignoreVersionsAfter {
-  ComGoogleGsonInternalExcluder *result = [self clone];
+  ComGoogleGsonInternalExcluder *result = [self java_clone];
   ((ComGoogleGsonInternalExcluder *) nil_chk(result))->version__ = ignoreVersionsAfter;
   return result;
 }
 
 - (ComGoogleGsonInternalExcluder *)withModifiersWithIntArray:(IOSIntArray *)modifiers {
-  ComGoogleGsonInternalExcluder *result = [self clone];
+  ComGoogleGsonInternalExcluder *result = [self java_clone];
   ((ComGoogleGsonInternalExcluder *) nil_chk(result))->modifiers_ = 0;
   {
     IOSIntArray *a__ = modifiers;
@@ -147,13 +151,13 @@ ComGoogleGsonInternalExcluder *ComGoogleGsonInternalExcluder_DEFAULT;
 }
 
 - (ComGoogleGsonInternalExcluder *)disableInnerClassSerialization {
-  ComGoogleGsonInternalExcluder *result = [self clone];
+  ComGoogleGsonInternalExcluder *result = [self java_clone];
   ((ComGoogleGsonInternalExcluder *) nil_chk(result))->serializeInnerClasses_ = false;
   return result;
 }
 
 - (ComGoogleGsonInternalExcluder *)excludeFieldsWithoutExposeAnnotation {
-  ComGoogleGsonInternalExcluder *result = [self clone];
+  ComGoogleGsonInternalExcluder *result = [self java_clone];
   ((ComGoogleGsonInternalExcluder *) nil_chk(result))->requireExpose_ = true;
   return result;
 }
@@ -161,7 +165,7 @@ ComGoogleGsonInternalExcluder *ComGoogleGsonInternalExcluder_DEFAULT;
 - (ComGoogleGsonInternalExcluder *)withExclusionStrategyWithComGoogleGsonExclusionStrategy:(id<ComGoogleGsonExclusionStrategy>)exclusionStrategy
                                                                                withBoolean:(jboolean)serialization
                                                                                withBoolean:(jboolean)deserialization {
-  ComGoogleGsonInternalExcluder *result = [self clone];
+  ComGoogleGsonInternalExcluder *result = [self java_clone];
   if (serialization) {
     JreStrongAssignAndConsume(&((ComGoogleGsonInternalExcluder *) nil_chk(result))->serializationStrategies_, new_JavaUtilArrayList_initWithJavaUtilCollection_(serializationStrategies_));
     [result->serializationStrategies_ addWithId:exclusionStrategy];
@@ -181,7 +185,7 @@ ComGoogleGsonInternalExcluder *ComGoogleGsonInternalExcluder_DEFAULT;
   if (!skipSerialize && !skipDeserialize) {
     return nil;
   }
-  return create_ComGoogleGsonInternalExcluder_$1_initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_(self, skipDeserialize, skipSerialize, gson, type);
+  return create_ComGoogleGsonInternalExcluder_1_initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_(self, skipDeserialize, skipSerialize, gson, type);
 }
 
 - (jboolean)excludeFieldWithJavaLangReflectField:(JavaLangReflectField *)field
@@ -264,13 +268,6 @@ ComGoogleGsonInternalExcluder *ComGoogleGsonInternalExcluder_DEFAULT;
   return ComGoogleGsonInternalExcluder_isValidUntilWithComGoogleGsonAnnotationsUntil_(self, annotation);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalExcluder_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(serializationStrategies_);
   RELEASE_(deserializationStrategies_);
@@ -279,59 +276,59 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LComGoogleGsonInternalExcluder;", 0x4, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LComGoogleGsonInternalExcluder;", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, "LComGoogleGsonInternalExcluder;", 0x81, 2, 3, -1, -1, -1, -1 },
-    { NULL, "LComGoogleGsonInternalExcluder;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LComGoogleGsonInternalExcluder;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LComGoogleGsonInternalExcluder;", 0x1, 4, 5, -1, -1, -1, -1 },
-    { NULL, "LComGoogleGsonTypeAdapter;", 0x1, 6, 7, -1, 8, -1, -1 },
-    { NULL, "Z", 0x1, 9, 10, -1, -1, -1, -1 },
-    { NULL, "Z", 0x1, 11, 12, -1, 13, -1, -1 },
-    { NULL, "Z", 0x2, 14, 15, -1, 16, -1, -1 },
-    { NULL, "Z", 0x2, 17, 15, -1, 16, -1, -1 },
-    { NULL, "Z", 0x2, 18, 15, -1, 16, -1, -1 },
-    { NULL, "Z", 0x2, 19, 20, -1, -1, -1, -1 },
-    { NULL, "Z", 0x2, 21, 22, -1, -1, -1, -1 },
-    { NULL, "Z", 0x2, 23, 24, -1, -1, -1, -1 },
     { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LComGoogleGsonInternalExcluder;", 0x4, 0, -1, -1, -1, -1, -1 },
+    { NULL, "LComGoogleGsonInternalExcluder;", 0x1, 1, 2, -1, -1, -1, -1 },
+    { NULL, "LComGoogleGsonInternalExcluder;", 0x81, 3, 4, -1, -1, -1, -1 },
+    { NULL, "LComGoogleGsonInternalExcluder;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LComGoogleGsonInternalExcluder;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LComGoogleGsonInternalExcluder;", 0x1, 5, 6, -1, -1, -1, -1 },
+    { NULL, "LComGoogleGsonTypeAdapter;", 0x1, 7, 8, -1, 9, -1, -1 },
+    { NULL, "Z", 0x1, 10, 11, -1, -1, -1, -1 },
+    { NULL, "Z", 0x1, 12, 13, -1, 14, -1, -1 },
+    { NULL, "Z", 0x2, 15, 16, -1, 17, -1, -1 },
+    { NULL, "Z", 0x2, 18, 16, -1, 17, -1, -1 },
+    { NULL, "Z", 0x2, 19, 16, -1, 17, -1, -1 },
+    { NULL, "Z", 0x2, 20, 21, -1, -1, -1, -1 },
+    { NULL, "Z", 0x2, 22, 23, -1, -1, -1, -1 },
+    { NULL, "Z", 0x2, 24, 25, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(clone);
-  methods[1].selector = @selector(withVersionWithDouble:);
-  methods[2].selector = @selector(withModifiersWithIntArray:);
-  methods[3].selector = @selector(disableInnerClassSerialization);
-  methods[4].selector = @selector(excludeFieldsWithoutExposeAnnotation);
-  methods[5].selector = @selector(withExclusionStrategyWithComGoogleGsonExclusionStrategy:withBoolean:withBoolean:);
-  methods[6].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
-  methods[7].selector = @selector(excludeFieldWithJavaLangReflectField:withBoolean:);
-  methods[8].selector = @selector(excludeClassWithIOSClass:withBoolean:);
-  methods[9].selector = @selector(isAnonymousOrLocalWithIOSClass:);
-  methods[10].selector = @selector(isInnerClassWithIOSClass:);
-  methods[11].selector = @selector(isStaticWithIOSClass:);
-  methods[12].selector = @selector(isValidVersionWithComGoogleGsonAnnotationsSince:withComGoogleGsonAnnotationsUntil:);
-  methods[13].selector = @selector(isValidSinceWithComGoogleGsonAnnotationsSince:);
-  methods[14].selector = @selector(isValidUntilWithComGoogleGsonAnnotationsUntil:);
-  methods[15].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(java_clone);
+  methods[2].selector = @selector(withVersionWithDouble:);
+  methods[3].selector = @selector(withModifiersWithIntArray:);
+  methods[4].selector = @selector(disableInnerClassSerialization);
+  methods[5].selector = @selector(excludeFieldsWithoutExposeAnnotation);
+  methods[6].selector = @selector(withExclusionStrategyWithComGoogleGsonExclusionStrategy:withBoolean:withBoolean:);
+  methods[7].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
+  methods[8].selector = @selector(excludeFieldWithJavaLangReflectField:withBoolean:);
+  methods[9].selector = @selector(excludeClassWithIOSClass:withBoolean:);
+  methods[10].selector = @selector(isAnonymousOrLocalWithIOSClass:);
+  methods[11].selector = @selector(isInnerClassWithIOSClass:);
+  methods[12].selector = @selector(isStaticWithIOSClass:);
+  methods[13].selector = @selector(isValidVersionWithComGoogleGsonAnnotationsSince:withComGoogleGsonAnnotationsUntil:);
+  methods[14].selector = @selector(isValidSinceWithComGoogleGsonAnnotationsSince:);
+  methods[15].selector = @selector(isValidUntilWithComGoogleGsonAnnotationsUntil:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "IGNORE_VERSIONS", "D", .constantValue.asDouble = ComGoogleGsonInternalExcluder_IGNORE_VERSIONS, 0x1a, -1, -1, -1, -1 },
-    { "DEFAULT", "LComGoogleGsonInternalExcluder;", .constantValue.asLong = 0, 0x19, -1, 25, -1, -1 },
-    { "version__", "D", .constantValue.asLong = 0, 0x2, 26, -1, -1, -1 },
+    { "DEFAULT", "LComGoogleGsonInternalExcluder;", .constantValue.asLong = 0, 0x19, -1, 26, -1, -1 },
+    { "version__", "D", .constantValue.asLong = 0, 0x2, 27, -1, -1, -1 },
     { "modifiers_", "I", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "serializeInnerClasses_", "Z", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "requireExpose_", "Z", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
-    { "serializationStrategies_", "LJavaUtilList;", .constantValue.asLong = 0, 0x2, -1, -1, 27, -1 },
-    { "deserializationStrategies_", "LJavaUtilList;", .constantValue.asLong = 0, 0x2, -1, -1, 27, -1 },
+    { "serializationStrategies_", "LJavaUtilList;", .constantValue.asLong = 0, 0x2, -1, -1, 28, -1 },
+    { "deserializationStrategies_", "LJavaUtilList;", .constantValue.asLong = 0, 0x2, -1, -1, 28, -1 },
   };
-  static const void *ptrTable[] = { "withVersion", "D", "withModifiers", "[I", "withExclusionStrategy", "LComGoogleGsonExclusionStrategy;ZZ", "create", "LComGoogleGsonGson;LComGoogleGsonReflectTypeToken;", "<T:Ljava/lang/Object;>(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken<TT;>;)Lcom/google/gson/TypeAdapter<TT;>;", "excludeField", "LJavaLangReflectField;Z", "excludeClass", "LIOSClass;Z", "(Ljava/lang/Class<*>;Z)Z", "isAnonymousOrLocal", "LIOSClass;", "(Ljava/lang/Class<*>;)Z", "isInnerClass", "isStatic", "isValidVersion", "LComGoogleGsonAnnotationsSince;LComGoogleGsonAnnotationsUntil;", "isValidSince", "LComGoogleGsonAnnotationsSince;", "isValidUntil", "LComGoogleGsonAnnotationsUntil;", &ComGoogleGsonInternalExcluder_DEFAULT, "version", "Ljava/util/List<Lcom/google/gson/ExclusionStrategy;>;" };
+  static const void *ptrTable[] = { "clone", "withVersion", "D", "withModifiers", "[I", "withExclusionStrategy", "LComGoogleGsonExclusionStrategy;ZZ", "create", "LComGoogleGsonGson;LComGoogleGsonReflectTypeToken;", "<T:Ljava/lang/Object;>(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken<TT;>;)Lcom/google/gson/TypeAdapter<TT;>;", "excludeField", "LJavaLangReflectField;Z", "excludeClass", "LIOSClass;Z", "(Ljava/lang/Class<*>;Z)Z", "isAnonymousOrLocal", "LIOSClass;", "(Ljava/lang/Class<*>;)Z", "isInnerClass", "isStatic", "isValidVersion", "LComGoogleGsonAnnotationsSince;LComGoogleGsonAnnotationsUntil;", "isValidSince", "LComGoogleGsonAnnotationsSince;", "isValidUntil", "LComGoogleGsonAnnotationsUntil;", &ComGoogleGsonInternalExcluder_DEFAULT, "version", "Ljava/util/List<Lcom/google/gson/ExclusionStrategy;>;" };
   static const J2ObjcClassInfo _ComGoogleGsonInternalExcluder = { "Excluder", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x11, 16, 8, -1, -1, -1, -1, -1 };
   return &_ComGoogleGsonInternalExcluder;
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-  return [[self clone] retain];
+  return [[self java_clone] retain];
 }
 
 + (void)initialize {
@@ -342,6 +339,23 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void ComGoogleGsonInternalExcluder_init(ComGoogleGsonInternalExcluder *self) {
+  NSObject_init(self);
+  self->version__ = ComGoogleGsonInternalExcluder_IGNORE_VERSIONS;
+  self->modifiers_ = JavaLangReflectModifier_TRANSIENT | JavaLangReflectModifier_STATIC;
+  self->serializeInnerClasses_ = true;
+  JreStrongAssign(&self->serializationStrategies_, JavaUtilCollections_emptyList());
+  JreStrongAssign(&self->deserializationStrategies_, JavaUtilCollections_emptyList());
+}
+
+ComGoogleGsonInternalExcluder *new_ComGoogleGsonInternalExcluder_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalExcluder, init)
+}
+
+ComGoogleGsonInternalExcluder *create_ComGoogleGsonInternalExcluder_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalExcluder, init)
+}
 
 jboolean ComGoogleGsonInternalExcluder_isAnonymousOrLocalWithIOSClass_(ComGoogleGsonInternalExcluder *self, IOSClass *clazz) {
   return ![JavaLangEnum_class_() isAssignableFrom:clazz] && ([((IOSClass *) nil_chk(clazz)) isAnonymousClass] || [clazz isLocalClass]);
@@ -379,33 +393,25 @@ jboolean ComGoogleGsonInternalExcluder_isValidUntilWithComGoogleGsonAnnotationsU
   return true;
 }
 
-void ComGoogleGsonInternalExcluder_init(ComGoogleGsonInternalExcluder *self) {
-  NSObject_init(self);
-  self->version__ = ComGoogleGsonInternalExcluder_IGNORE_VERSIONS;
-  self->modifiers_ = JavaLangReflectModifier_TRANSIENT | JavaLangReflectModifier_STATIC;
-  self->serializeInnerClasses_ = true;
-  JreStrongAssign(&self->serializationStrategies_, JavaUtilCollections_emptyList());
-  JreStrongAssign(&self->deserializationStrategies_, JavaUtilCollections_emptyList());
-}
-
-ComGoogleGsonInternalExcluder *new_ComGoogleGsonInternalExcluder_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalExcluder, init)
-}
-
-ComGoogleGsonInternalExcluder *create_ComGoogleGsonInternalExcluder_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalExcluder, init)
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalExcluder)
 
-@implementation ComGoogleGsonInternalExcluder_$1
+@implementation ComGoogleGsonInternalExcluder_1
+
+- (instancetype)initWithComGoogleGsonInternalExcluder:(ComGoogleGsonInternalExcluder *)outer$
+                                          withBoolean:(jboolean)capture$0
+                                          withBoolean:(jboolean)capture$1
+                                withComGoogleGsonGson:(ComGoogleGsonGson *)capture$2
+                    withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)capture$3 {
+  ComGoogleGsonInternalExcluder_1_initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_(self, outer$, capture$0, capture$1, capture$2, capture$3);
+  return self;
+}
 
 - (id)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if (val$skipDeserialize_) {
     [((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) skipValue];
     return nil;
   }
-  return [((ComGoogleGsonTypeAdapter *) nil_chk(ComGoogleGsonInternalExcluder_$1_delegate(self))) readWithComGoogleGsonStreamJsonReader:inArg];
+  return [((ComGoogleGsonTypeAdapter *) nil_chk(ComGoogleGsonInternalExcluder_1_delegate(self))) readWithComGoogleGsonStreamJsonReader:inArg];
 }
 
 - (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
@@ -414,65 +420,51 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalExcluder)
     [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) nullValue];
     return;
   }
-  [((ComGoogleGsonTypeAdapter *) nil_chk(ComGoogleGsonInternalExcluder_$1_delegate(self))) writeWithComGoogleGsonStreamJsonWriter:outArg withId:value];
+  [((ComGoogleGsonTypeAdapter *) nil_chk(ComGoogleGsonInternalExcluder_1_delegate(self))) writeWithComGoogleGsonStreamJsonWriter:outArg withId:value];
 }
 
 - (ComGoogleGsonTypeAdapter *)delegate {
-  return ComGoogleGsonInternalExcluder_$1_delegate(self);
-}
-
-- (instancetype)initWithComGoogleGsonInternalExcluder:(ComGoogleGsonInternalExcluder *)outer$
-                                          withBoolean:(jboolean)capture$0
-                                          withBoolean:(jboolean)capture$1
-                                withComGoogleGsonGson:(ComGoogleGsonGson *)capture$2
-                    withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)capture$3 {
-  ComGoogleGsonInternalExcluder_$1_initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_(self, outer$, capture$0, capture$1, capture$2, capture$3);
-  return self;
+  return ComGoogleGsonInternalExcluder_1_delegate(self);
 }
 
 - (void)dealloc {
   RELEASE_(this$0_);
-  RELEASE_(delegate_);
   RELEASE_(val$gson_);
   RELEASE_(val$type_);
+  RELEASE_(delegate_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, 0, 1, 2, 3, -1, -1 },
     { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, "LComGoogleGsonTypeAdapter;", 0x2, -1, -1, -1, 7, -1, -1 },
-    { NULL, NULL, 0x0, -1, 8, -1, 9, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(delegate);
-  methods[3].selector = @selector(initWithComGoogleGsonInternalExcluder:withBoolean:withBoolean:withComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
+  methods[0].selector = @selector(initWithComGoogleGsonInternalExcluder:withBoolean:withBoolean:withComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
+  methods[3].selector = @selector(delegate);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LComGoogleGsonInternalExcluder;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "delegate_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x2, -1, -1, 10, -1 },
     { "val$skipDeserialize_", "Z", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$skipSerialize_", "Z", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$gson_", "LComGoogleGsonGson;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$type_", "LComGoogleGsonReflectTypeToken;", .constantValue.asLong = 0, 0x1012, -1, -1, 11, -1 },
+    { "val$type_", "LComGoogleGsonReflectTypeToken;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "delegate_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x2, -1, -1, 9, -1 },
   };
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)TT;", "write", "LComGoogleGsonStreamJsonWriter;LNSObject;", "(Lcom/google/gson/stream/JsonWriter;TT;)V", "()Lcom/google/gson/TypeAdapter<TT;>;", "LComGoogleGsonInternalExcluder;ZZLComGoogleGsonGson;LComGoogleGsonReflectTypeToken;", "(Lcom/google/gson/internal/Excluder;ZZLcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken<TT;>;)V", "Lcom/google/gson/TypeAdapter<TT;>;", "Lcom/google/gson/reflect/TypeToken<TT;>;", "LComGoogleGsonInternalExcluder;", "createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalExcluder_$1 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 4, 6, 12, -1, 13, 10, -1 };
-  return &_ComGoogleGsonInternalExcluder_$1;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)TT;", "write", "LComGoogleGsonStreamJsonWriter;LNSObject;", "(Lcom/google/gson/stream/JsonWriter;TT;)V", "()Lcom/google/gson/TypeAdapter<TT;>;", "Lcom/google/gson/reflect/TypeToken<TT;>;", "Lcom/google/gson/TypeAdapter<TT;>;", "LComGoogleGsonInternalExcluder;", "createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalExcluder_1 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 4, 6, 10, -1, 11, 9, -1 };
+  return &_ComGoogleGsonInternalExcluder_1;
 }
 
 @end
 
-ComGoogleGsonTypeAdapter *ComGoogleGsonInternalExcluder_$1_delegate(ComGoogleGsonInternalExcluder_$1 *self) {
-  ComGoogleGsonTypeAdapter *d = self->delegate_;
-  return d != nil ? d : (JreStrongAssign(&self->delegate_, [((ComGoogleGsonGson *) nil_chk(self->val$gson_)) getDelegateAdapterWithComGoogleGsonTypeAdapterFactory:self->this$0_ withComGoogleGsonReflectTypeToken:self->val$type_]));
-}
-
-void ComGoogleGsonInternalExcluder_$1_initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_(ComGoogleGsonInternalExcluder_$1 *self, ComGoogleGsonInternalExcluder *outer$, jboolean capture$0, jboolean capture$1, ComGoogleGsonGson *capture$2, ComGoogleGsonReflectTypeToken *capture$3) {
+void ComGoogleGsonInternalExcluder_1_initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_(ComGoogleGsonInternalExcluder_1 *self, ComGoogleGsonInternalExcluder *outer$, jboolean capture$0, jboolean capture$1, ComGoogleGsonGson *capture$2, ComGoogleGsonReflectTypeToken *capture$3) {
   JreStrongAssign(&self->this$0_, outer$);
   self->val$skipDeserialize_ = capture$0;
   self->val$skipSerialize_ = capture$1;
@@ -481,10 +473,15 @@ void ComGoogleGsonInternalExcluder_$1_initWithComGoogleGsonInternalExcluder_with
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalExcluder_$1 *new_ComGoogleGsonInternalExcluder_$1_initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_(ComGoogleGsonInternalExcluder *outer$, jboolean capture$0, jboolean capture$1, ComGoogleGsonGson *capture$2, ComGoogleGsonReflectTypeToken *capture$3) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalExcluder_$1, initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_, outer$, capture$0, capture$1, capture$2, capture$3)
+ComGoogleGsonInternalExcluder_1 *new_ComGoogleGsonInternalExcluder_1_initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_(ComGoogleGsonInternalExcluder *outer$, jboolean capture$0, jboolean capture$1, ComGoogleGsonGson *capture$2, ComGoogleGsonReflectTypeToken *capture$3) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalExcluder_1, initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_, outer$, capture$0, capture$1, capture$2, capture$3)
 }
 
-ComGoogleGsonInternalExcluder_$1 *create_ComGoogleGsonInternalExcluder_$1_initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_(ComGoogleGsonInternalExcluder *outer$, jboolean capture$0, jboolean capture$1, ComGoogleGsonGson *capture$2, ComGoogleGsonReflectTypeToken *capture$3) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalExcluder_$1, initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_, outer$, capture$0, capture$1, capture$2, capture$3)
+ComGoogleGsonInternalExcluder_1 *create_ComGoogleGsonInternalExcluder_1_initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_(ComGoogleGsonInternalExcluder *outer$, jboolean capture$0, jboolean capture$1, ComGoogleGsonGson *capture$2, ComGoogleGsonReflectTypeToken *capture$3) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalExcluder_1, initWithComGoogleGsonInternalExcluder_withBoolean_withBoolean_withComGoogleGsonGson_withComGoogleGsonReflectTypeToken_, outer$, capture$0, capture$1, capture$2, capture$3)
+}
+
+ComGoogleGsonTypeAdapter *ComGoogleGsonInternalExcluder_1_delegate(ComGoogleGsonInternalExcluder_1 *self) {
+  ComGoogleGsonTypeAdapter *d = self->delegate_;
+  return d != nil ? d : (JreStrongAssign(&self->delegate_, [((ComGoogleGsonGson *) nil_chk(self->val$gson_)) getDelegateAdapterWithComGoogleGsonTypeAdapterFactory:self->this$0_ withComGoogleGsonReflectTypeToken:self->val$type_]));
 }

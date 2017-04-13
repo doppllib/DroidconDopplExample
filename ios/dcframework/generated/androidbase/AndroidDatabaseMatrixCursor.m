@@ -57,8 +57,6 @@ __attribute__((unused)) static void AndroidDatabaseMatrixCursor_ensureCapacityWi
 
 @end
 
-J2OBJC_FIELD_SETTER(AndroidDatabaseMatrixCursor_RowBuilder, this$0_, AndroidDatabaseMatrixCursor *)
-
 @implementation AndroidDatabaseMatrixCursor
 
 - (instancetype)initWithNSStringArray:(IOSObjectArray *)columnNames
@@ -368,7 +366,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidDatabaseMatrixCursor)
     { "endIndex_", "I", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
     { "index_", "I", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LAndroidDatabaseMatrixCursor;I", "add", "LNSObject;", "LNSString;LNSObject;", "LAndroidDatabaseMatrixCursor;" };
+  static const void *ptrTable[] = { "I", "add", "LNSObject;", "LNSString;LNSObject;", "LAndroidDatabaseMatrixCursor;" };
   static const J2ObjcClassInfo _AndroidDatabaseMatrixCursor_RowBuilder = { "RowBuilder", "android.database", ptrTable, methods, fields, 7, 0x1, 3, 4, 4, -1, -1, -1, -1 };
   return &_AndroidDatabaseMatrixCursor_RowBuilder;
 }

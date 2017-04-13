@@ -25,26 +25,24 @@ inline CoTouchlabAndroidThreadingEventbusEventBusExt *CoTouchlabAndroidThreading
 static CoTouchlabAndroidThreadingEventbusEventBusExt *CoTouchlabAndroidThreadingEventbusEventBusExt_instance;
 J2OBJC_STATIC_FIELD_OBJ(CoTouchlabAndroidThreadingEventbusEventBusExt, instance, CoTouchlabAndroidThreadingEventbusEventBusExt *)
 
-@interface CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1 : JavaLangThread {
+@interface CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1 : JavaLangThread {
  @public
   NSException *val$throwable_;
 }
 
-- (void)run;
-
 - (instancetype)initWithNSException:(NSException *)capture$0;
+
+- (void)run;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1)
+J2OBJC_EMPTY_STATIC_INIT(CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1)
 
-J2OBJC_FIELD_SETTER(CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1, val$throwable_, NSException *)
+__attribute__((unused)) static void CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1_initWithNSException_(CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1 *self, NSException *capture$0);
 
-__attribute__((unused)) static void CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1_initWithNSException_(CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1 *self, NSException *capture$0);
+__attribute__((unused)) static CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1 *new_CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1_initWithNSException_(NSException *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1 *new_CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1_initWithNSException_(NSException *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1 *create_CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1_initWithNSException_(NSException *capture$0);
+__attribute__((unused)) static CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1 *create_CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1_initWithNSException_(NSException *capture$0);
 
 J2OBJC_INITIALIZED_DEFN(CoTouchlabAndroidThreadingEventbusEventBusExt)
 
@@ -117,11 +115,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingEventbusEventBusExt)
 
 @implementation CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener
 
-- (void)onEventWithDeGreenrobotEventSubscriberExceptionEvent:(DeGreenrobotEventSubscriberExceptionEvent *)exceptionEvent {
-  NSException *throwable = ((DeGreenrobotEventSubscriberExceptionEvent *) nil_chk(exceptionEvent))->throwable_;
-  [create_CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1_initWithNSException_(throwable) start];
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_init(self);
@@ -129,15 +122,20 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (void)onEventWithDeGreenrobotEventSubscriberExceptionEvent:(DeGreenrobotEventSubscriberExceptionEvent *)exceptionEvent {
+  NSException *throwable = ((DeGreenrobotEventSubscriberExceptionEvent *) nil_chk(exceptionEvent))->throwable_;
+  [create_CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1_initWithNSException_(throwable) start];
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onEventWithDeGreenrobotEventSubscriberExceptionEvent:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(onEventWithDeGreenrobotEventSubscriberExceptionEvent:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "onEvent", "LDeGreenrobotEventSubscriberExceptionEvent;", "LCoTouchlabAndroidThreadingEventbusEventBusExt;" };
   static const J2ObjcClassInfo _CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener = { "ErrorListener", "co.touchlab.android.threading.eventbus", ptrTable, methods, NULL, 7, 0x9, 2, 0, 2, -1, -1, -1, -1 };
@@ -160,7 +158,12 @@ CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener *create_CoTouchlabAn
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener)
 
-@implementation CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1
+@implementation CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1
+
+- (instancetype)initWithNSException:(NSException *)capture$0 {
+  CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1_initWithNSException_(self, capture$0);
+  return self;
+}
 
 - (void)run {
   if ([val$throwable_ isKindOfClass:[JavaLangRuntimeException class]]) {
@@ -174,11 +177,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingEventbusEventBusExt_E
   }
 }
 
-- (instancetype)initWithNSException:(NSException *)capture$0 {
-  CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1_initWithNSException_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$throwable_);
   [super dealloc];
@@ -186,33 +184,33 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingEventbusEventBusExt_E
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithNSException:);
+  methods[0].selector = @selector(initWithNSException:);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$throwable_", "LNSException;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LNSException;", "LCoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener;", "onEventWithDeGreenrobotEventSubscriberExceptionEvent:" };
-  static const J2ObjcClassInfo _CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1 = { "", "co.touchlab.android.threading.eventbus", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
-  return &_CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1;
+  static const void *ptrTable[] = { "LCoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener;", "onEventWithDeGreenrobotEventSubscriberExceptionEvent:" };
+  static const J2ObjcClassInfo _CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1 = { "", "co.touchlab.android.threading.eventbus", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  return &_CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1;
 }
 
 @end
 
-void CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1_initWithNSException_(CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1 *self, NSException *capture$0) {
+void CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1_initWithNSException_(CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1 *self, NSException *capture$0) {
   JreStrongAssign(&self->val$throwable_, capture$0);
   JavaLangThread_init(self);
 }
 
-CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1 *new_CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1_initWithNSException_(NSException *capture$0) {
-  J2OBJC_NEW_IMPL(CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1, initWithNSException_, capture$0)
+CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1 *new_CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1_initWithNSException_(NSException *capture$0) {
+  J2OBJC_NEW_IMPL(CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1, initWithNSException_, capture$0)
 }
 
-CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1 *create_CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1_initWithNSException_(NSException *capture$0) {
-  J2OBJC_CREATE_IMPL(CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_$1, initWithNSException_, capture$0)
+CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1 *create_CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1_initWithNSException_(NSException *capture$0) {
+  J2OBJC_CREATE_IMPL(CoTouchlabAndroidThreadingEventbusEventBusExt_ErrorListener_1, initWithNSException_, capture$0)
 }

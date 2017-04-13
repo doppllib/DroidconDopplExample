@@ -129,7 +129,7 @@ withAndroidDatabaseCursorWindow:(AndroidDatabaseCursorWindow *)window;
 
 - (void)checkPosition;
 
-- (void)javaFinalize;
+- (void)java_finalize;
 
 - (id)getUpdatedFieldWithInt:(jint)columnIndex;
 

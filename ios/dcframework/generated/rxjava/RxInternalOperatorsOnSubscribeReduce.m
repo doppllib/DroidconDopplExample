@@ -16,26 +16,24 @@
 #include "java/lang/Long.h"
 #include "java/util/NoSuchElementException.h"
 
-@interface RxInternalOperatorsOnSubscribeReduce_$1 : NSObject < RxProducer > {
+@interface RxInternalOperatorsOnSubscribeReduce_1 : NSObject < RxProducer > {
  @public
   RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *val$parent_;
 }
 
-- (void)requestWithLong:(jlong)n;
-
 - (instancetype)initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber:(RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *)capture$0;
+
+- (void)requestWithLong:(jlong)n;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeReduce_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeReduce_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeReduce_$1, val$parent_, RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeReduce_1_initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_(RxInternalOperatorsOnSubscribeReduce_1 *self, RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeReduce_$1_initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_(RxInternalOperatorsOnSubscribeReduce_$1 *self, RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeReduce_1 *new_RxInternalOperatorsOnSubscribeReduce_1_initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_(RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeReduce_$1 *new_RxInternalOperatorsOnSubscribeReduce_$1_initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_(RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeReduce_$1 *create_RxInternalOperatorsOnSubscribeReduce_$1_initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_(RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeReduce_1 *create_RxInternalOperatorsOnSubscribeReduce_1_initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_(RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *capture$0);
 
 @implementation RxInternalOperatorsOnSubscribeReduce
 
@@ -48,7 +46,7 @@ __attribute__((unused)) static RxInternalOperatorsOnSubscribeReduce_$1 *create_R
 - (void)callWithId:(RxSubscriber *)t {
   RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *parent = create_RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_initWithRxSubscriber_withRxFunctionsFunc2_(t, reducer_);
   [((RxSubscriber *) nil_chk(t)) addWithRxSubscription:parent];
-  [t setProducerWithRxProducer:create_RxInternalOperatorsOnSubscribeReduce_$1_initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_(parent)];
+  [t setProducerWithRxProducer:create_RxInternalOperatorsOnSubscribeReduce_1_initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_(parent)];
   [((RxObservable *) nil_chk(source_)) unsafeSubscribeWithRxSubscriber:parent];
 }
 
@@ -94,6 +92,55 @@ RxInternalOperatorsOnSubscribeReduce *create_RxInternalOperatorsOnSubscribeReduc
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeReduce)
+
+@implementation RxInternalOperatorsOnSubscribeReduce_1
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber:(RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *)capture$0 {
+  RxInternalOperatorsOnSubscribeReduce_1_initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_(self, capture$0);
+  return self;
+}
+
+- (void)requestWithLong:(jlong)n {
+  [((RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *) nil_chk(val$parent_)) downstreamRequestWithLong:n];
+}
+
+- (void)dealloc {
+  RELEASE_(val$parent_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber:);
+  methods[1].selector = @selector(requestWithLong:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$parent_", "LRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+  };
+  static const void *ptrTable[] = { "request", "J", "Lrx/internal/operators/OnSubscribeReduce$ReduceSubscriber<TT;>;", "LRxInternalOperatorsOnSubscribeReduce;", "callWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeReduce_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
+  return &_RxInternalOperatorsOnSubscribeReduce_1;
+}
+
+@end
+
+void RxInternalOperatorsOnSubscribeReduce_1_initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_(RxInternalOperatorsOnSubscribeReduce_1 *self, RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *capture$0) {
+  JreStrongAssign(&self->val$parent_, capture$0);
+  NSObject_init(self);
+}
+
+RxInternalOperatorsOnSubscribeReduce_1 *new_RxInternalOperatorsOnSubscribeReduce_1_initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_(RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeReduce_1, initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_, capture$0)
+}
+
+RxInternalOperatorsOnSubscribeReduce_1 *create_RxInternalOperatorsOnSubscribeReduce_1_initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_(RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeReduce_1, initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_, capture$0)
+}
 
 J2OBJC_INITIALIZED_DEFN(RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber)
 
@@ -162,7 +209,6 @@ id RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_EMPTY;
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber class]);
   RELEASE_(actual_);
   RELEASE_(reducer_);
   RELEASE_(value_);
@@ -223,52 +269,3 @@ RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *create_RxInternalOperator
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber)
-
-@implementation RxInternalOperatorsOnSubscribeReduce_$1
-
-- (void)requestWithLong:(jlong)n {
-  [((RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *) nil_chk(val$parent_)) downstreamRequestWithLong:n];
-}
-
-- (instancetype)initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber:(RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *)capture$0 {
-  RxInternalOperatorsOnSubscribeReduce_$1_initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$parent_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, 3, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(requestWithLong:);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$parent_", "LRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
-  };
-  static const void *ptrTable[] = { "request", "J", "LRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber;", "(Lrx/internal/operators/OnSubscribeReduce$ReduceSubscriber<TT;>;)V", "Lrx/internal/operators/OnSubscribeReduce$ReduceSubscriber<TT;>;", "LRxInternalOperatorsOnSubscribeReduce;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeReduce_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 5, -1, 6, -1, -1 };
-  return &_RxInternalOperatorsOnSubscribeReduce_$1;
-}
-
-@end
-
-void RxInternalOperatorsOnSubscribeReduce_$1_initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_(RxInternalOperatorsOnSubscribeReduce_$1 *self, RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *capture$0) {
-  JreStrongAssign(&self->val$parent_, capture$0);
-  NSObject_init(self);
-}
-
-RxInternalOperatorsOnSubscribeReduce_$1 *new_RxInternalOperatorsOnSubscribeReduce_$1_initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_(RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeReduce_$1, initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_, capture$0)
-}
-
-RxInternalOperatorsOnSubscribeReduce_$1 *create_RxInternalOperatorsOnSubscribeReduce_$1_initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_(RxInternalOperatorsOnSubscribeReduce_ReduceSubscriber *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeReduce_$1, initWithRxInternalOperatorsOnSubscribeReduce_ReduceSubscriber_, capture$0)
-}

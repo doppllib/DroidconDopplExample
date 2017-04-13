@@ -29,7 +29,7 @@
   AndroidOsLooper_prepare();
   @synchronized(self) {
     JreStrongAssign(&mLooper_, AndroidOsLooper_myLooper());
-    [self notifyAll];
+    [self java_notifyAll];
   }
   [self onLooperPrepared];
   AndroidOsLooper_loop();
@@ -42,7 +42,7 @@
   @synchronized(self) {
     while ([self isAlive] && mLooper_ == nil) {
       @try {
-        [self wait];
+        [self java_wait];
       }
       @catch (JavaLangInterruptedException *e) {
       }

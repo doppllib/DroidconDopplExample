@@ -90,6 +90,10 @@ RxInternalUtilExceptionsUtils *RxInternalUtilExceptionsUtils_values_[0];
 
 @end
 
+void RxInternalUtilExceptionsUtils_initWithNSString_withInt_(RxInternalUtilExceptionsUtils *self, NSString *__name, jint __ordinal) {
+  JavaLangEnum_initWithNSString_withInt_(self, __name, __ordinal);
+}
+
 jboolean RxInternalUtilExceptionsUtils_addThrowableWithJavaUtilConcurrentAtomicAtomicReference_withNSException_(JavaUtilConcurrentAtomicAtomicReference *field, NSException *error) {
   RxInternalUtilExceptionsUtils_initialize();
   for (; ; ) {
@@ -132,10 +136,6 @@ jboolean RxInternalUtilExceptionsUtils_isTerminatedWithJavaUtilConcurrentAtomicA
 jboolean RxInternalUtilExceptionsUtils_isTerminatedWithNSException_(NSException *error) {
   RxInternalUtilExceptionsUtils_initialize();
   return error == RxInternalUtilExceptionsUtils_TERMINATED;
-}
-
-void RxInternalUtilExceptionsUtils_initWithNSString_withInt_(RxInternalUtilExceptionsUtils *self, NSString *__name, jint __ordinal) {
-  JavaLangEnum_initWithNSString_withInt_(self, __name, __ordinal);
 }
 
 IOSObjectArray *RxInternalUtilExceptionsUtils_values() {

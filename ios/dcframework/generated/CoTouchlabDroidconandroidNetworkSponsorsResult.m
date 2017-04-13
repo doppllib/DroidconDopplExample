@@ -86,7 +86,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabDroidconandroidNetworkSponsorsResult)
     { "sponsorImage_", "LNSString;", .constantValue.asLong = 0, 0x1, -1, -1, -1, -1 },
     { "sponsorLink_", "LNSString;", .constantValue.asLong = 0, 0x1, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabDroidconandroidNetworkSponsorsResult;ILNSString;LNSString;LNSString;", "LCoTouchlabDroidconandroidNetworkSponsorsResult;" };
+  static const void *ptrTable[] = { "ILNSString;LNSString;LNSString;", "LCoTouchlabDroidconandroidNetworkSponsorsResult;" };
   static const J2ObjcClassInfo _CoTouchlabDroidconandroidNetworkSponsorsResult_Sponsor = { "Sponsor", "co.touchlab.droidconandroid.network", ptrTable, methods, fields, 7, 0x1, 1, 4, 1, -1, -1, -1, -1 };
   return &_CoTouchlabDroidconandroidNetworkSponsorsResult_Sponsor;
 }

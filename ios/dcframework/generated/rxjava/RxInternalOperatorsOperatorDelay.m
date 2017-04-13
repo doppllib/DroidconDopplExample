@@ -11,13 +11,18 @@
 #include "RxSubscription.h"
 #include "java/util/concurrent/TimeUnit.h"
 
-@interface RxInternalOperatorsOperatorDelay_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorDelay_1 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorDelay *this$0_;
-  jboolean done_;
   RxScheduler_Worker *val$worker_;
   RxSubscriber *val$child_;
+  jboolean done_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorDelay:(RxInternalOperatorsOperatorDelay *)outer$
+                                  withRxScheduler_Worker:(RxScheduler_Worker *)capture$0
+                                        withRxSubscriber:(RxSubscriber *)capture$1
+                                        withRxSubscriber:(RxSubscriber *)param0;
 
 - (void)onCompleted;
 
@@ -25,93 +30,76 @@
 
 - (void)onNextWithId:(id)t;
 
-- (instancetype)initWithRxInternalOperatorsOperatorDelay:(RxInternalOperatorsOperatorDelay *)outer$
-                                  withRxScheduler_Worker:(RxScheduler_Worker *)capture$0
-                                        withRxSubscriber:(RxSubscriber *)capture$1
-                                        withRxSubscriber:(RxSubscriber *)arg$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorDelay_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorDelay_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDelay_$1, this$0_, RxInternalOperatorsOperatorDelay *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDelay_$1, val$worker_, RxScheduler_Worker *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDelay_$1, val$child_, RxSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorDelay_1_initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDelay_1 *self, RxInternalOperatorsOperatorDelay *outer$, RxScheduler_Worker *capture$0, RxSubscriber *capture$1, RxSubscriber *param0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorDelay_$1_initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDelay_$1 *self, RxInternalOperatorsOperatorDelay *outer$, RxScheduler_Worker *capture$0, RxSubscriber *capture$1, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorDelay_1 *new_RxInternalOperatorsOperatorDelay_1_initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDelay *outer$, RxScheduler_Worker *capture$0, RxSubscriber *capture$1, RxSubscriber *param0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorDelay_$1 *new_RxInternalOperatorsOperatorDelay_$1_initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDelay *outer$, RxScheduler_Worker *capture$0, RxSubscriber *capture$1, RxSubscriber *arg$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorDelay_1 *create_RxInternalOperatorsOperatorDelay_1_initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDelay *outer$, RxScheduler_Worker *capture$0, RxSubscriber *capture$1, RxSubscriber *param0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorDelay_$1 *create_RxInternalOperatorsOperatorDelay_$1_initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDelay *outer$, RxScheduler_Worker *capture$0, RxSubscriber *capture$1, RxSubscriber *arg$0);
-
-@interface RxInternalOperatorsOperatorDelay_$1_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOperatorDelay_1_1 : NSObject < RxFunctionsAction0 > {
  @public
-  RxInternalOperatorsOperatorDelay_$1 *this$0_;
+  RxInternalOperatorsOperatorDelay_1 *this$0_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorDelay_1:(RxInternalOperatorsOperatorDelay_1 *)outer$;
 
 - (void)call;
 
-- (instancetype)initWithRxInternalOperatorsOperatorDelay_$1:(RxInternalOperatorsOperatorDelay_$1 *)outer$;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorDelay_$1_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorDelay_1_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDelay_$1_$1, this$0_, RxInternalOperatorsOperatorDelay_$1 *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorDelay_1_1_initWithRxInternalOperatorsOperatorDelay_1_(RxInternalOperatorsOperatorDelay_1_1 *self, RxInternalOperatorsOperatorDelay_1 *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorDelay_$1_$1_initWithRxInternalOperatorsOperatorDelay_$1_(RxInternalOperatorsOperatorDelay_$1_$1 *self, RxInternalOperatorsOperatorDelay_$1 *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorDelay_1_1 *new_RxInternalOperatorsOperatorDelay_1_1_initWithRxInternalOperatorsOperatorDelay_1_(RxInternalOperatorsOperatorDelay_1 *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorDelay_$1_$1 *new_RxInternalOperatorsOperatorDelay_$1_$1_initWithRxInternalOperatorsOperatorDelay_$1_(RxInternalOperatorsOperatorDelay_$1 *outer$) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorDelay_1_1 *create_RxInternalOperatorsOperatorDelay_1_1_initWithRxInternalOperatorsOperatorDelay_1_(RxInternalOperatorsOperatorDelay_1 *outer$);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorDelay_$1_$1 *create_RxInternalOperatorsOperatorDelay_$1_$1_initWithRxInternalOperatorsOperatorDelay_$1_(RxInternalOperatorsOperatorDelay_$1 *outer$);
-
-@interface RxInternalOperatorsOperatorDelay_$1_$2 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOperatorDelay_1_2 : NSObject < RxFunctionsAction0 > {
  @public
-  RxInternalOperatorsOperatorDelay_$1 *this$0_;
+  RxInternalOperatorsOperatorDelay_1 *this$0_;
   NSException *val$e_;
 }
 
-- (void)call;
+- (instancetype)initWithRxInternalOperatorsOperatorDelay_1:(RxInternalOperatorsOperatorDelay_1 *)outer$
+                                           withNSException:(NSException *)capture$0;
 
-- (instancetype)initWithRxInternalOperatorsOperatorDelay_$1:(RxInternalOperatorsOperatorDelay_$1 *)outer$
-                                            withNSException:(NSException *)capture$0;
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorDelay_$1_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorDelay_1_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDelay_$1_$2, this$0_, RxInternalOperatorsOperatorDelay_$1 *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDelay_$1_$2, val$e_, NSException *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorDelay_1_2_initWithRxInternalOperatorsOperatorDelay_1_withNSException_(RxInternalOperatorsOperatorDelay_1_2 *self, RxInternalOperatorsOperatorDelay_1 *outer$, NSException *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorDelay_$1_$2_initWithRxInternalOperatorsOperatorDelay_$1_withNSException_(RxInternalOperatorsOperatorDelay_$1_$2 *self, RxInternalOperatorsOperatorDelay_$1 *outer$, NSException *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorDelay_1_2 *new_RxInternalOperatorsOperatorDelay_1_2_initWithRxInternalOperatorsOperatorDelay_1_withNSException_(RxInternalOperatorsOperatorDelay_1 *outer$, NSException *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorDelay_$1_$2 *new_RxInternalOperatorsOperatorDelay_$1_$2_initWithRxInternalOperatorsOperatorDelay_$1_withNSException_(RxInternalOperatorsOperatorDelay_$1 *outer$, NSException *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorDelay_1_2 *create_RxInternalOperatorsOperatorDelay_1_2_initWithRxInternalOperatorsOperatorDelay_1_withNSException_(RxInternalOperatorsOperatorDelay_1 *outer$, NSException *capture$0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorDelay_$1_$2 *create_RxInternalOperatorsOperatorDelay_$1_$2_initWithRxInternalOperatorsOperatorDelay_$1_withNSException_(RxInternalOperatorsOperatorDelay_$1 *outer$, NSException *capture$0);
-
-@interface RxInternalOperatorsOperatorDelay_$1_$3 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOperatorDelay_1_3 : NSObject < RxFunctionsAction0 > {
  @public
-  RxInternalOperatorsOperatorDelay_$1 *this$0_;
+  RxInternalOperatorsOperatorDelay_1 *this$0_;
   id val$t_;
 }
 
-- (void)call;
+- (instancetype)initWithRxInternalOperatorsOperatorDelay_1:(RxInternalOperatorsOperatorDelay_1 *)outer$
+                                                    withId:(id)capture$0;
 
-- (instancetype)initWithRxInternalOperatorsOperatorDelay_$1:(RxInternalOperatorsOperatorDelay_$1 *)outer$
-                                                     withId:(id)capture$0;
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorDelay_$1_$3)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorDelay_1_3)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDelay_$1_$3, this$0_, RxInternalOperatorsOperatorDelay_$1 *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDelay_$1_$3, val$t_, id)
+__attribute__((unused)) static void RxInternalOperatorsOperatorDelay_1_3_initWithRxInternalOperatorsOperatorDelay_1_withId_(RxInternalOperatorsOperatorDelay_1_3 *self, RxInternalOperatorsOperatorDelay_1 *outer$, id capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorDelay_$1_$3_initWithRxInternalOperatorsOperatorDelay_$1_withId_(RxInternalOperatorsOperatorDelay_$1_$3 *self, RxInternalOperatorsOperatorDelay_$1 *outer$, id capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorDelay_1_3 *new_RxInternalOperatorsOperatorDelay_1_3_initWithRxInternalOperatorsOperatorDelay_1_withId_(RxInternalOperatorsOperatorDelay_1 *outer$, id capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorDelay_$1_$3 *new_RxInternalOperatorsOperatorDelay_$1_$3_initWithRxInternalOperatorsOperatorDelay_$1_withId_(RxInternalOperatorsOperatorDelay_$1 *outer$, id capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorDelay_$1_$3 *create_RxInternalOperatorsOperatorDelay_$1_$3_initWithRxInternalOperatorsOperatorDelay_$1_withId_(RxInternalOperatorsOperatorDelay_$1 *outer$, id capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorDelay_1_3 *create_RxInternalOperatorsOperatorDelay_1_3_initWithRxInternalOperatorsOperatorDelay_1_withId_(RxInternalOperatorsOperatorDelay_1 *outer$, id capture$0);
 
 @implementation RxInternalOperatorsOperatorDelay
 
@@ -125,7 +113,7 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit
 - (RxSubscriber *)callWithId:(RxSubscriber *)child {
   RxScheduler_Worker *worker = [((RxScheduler *) nil_chk(scheduler_)) createWorker];
   [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:worker];
-  return create_RxInternalOperatorsOperatorDelay_$1_initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_(self, worker, child, child);
+  return create_RxInternalOperatorsOperatorDelay_1_initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_(self, worker, child, child);
 }
 
 - (void)dealloc {
@@ -173,30 +161,29 @@ RxInternalOperatorsOperatorDelay *create_RxInternalOperatorsOperatorDelay_initWi
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorDelay)
 
-@implementation RxInternalOperatorsOperatorDelay_$1
-
-- (void)onCompleted {
-  [((RxScheduler_Worker *) nil_chk(val$worker_)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsOperatorDelay_$1_$1_initWithRxInternalOperatorsOperatorDelay_$1_(self) withLong:this$0_->delay_ withJavaUtilConcurrentTimeUnit:this$0_->unit_];
-}
-
-- (void)onErrorWithNSException:(NSException *)e {
-  [((RxScheduler_Worker *) nil_chk(val$worker_)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsOperatorDelay_$1_$2_initWithRxInternalOperatorsOperatorDelay_$1_withNSException_(self, e)];
-}
-
-- (void)onNextWithId:(id)t {
-  [((RxScheduler_Worker *) nil_chk(val$worker_)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsOperatorDelay_$1_$3_initWithRxInternalOperatorsOperatorDelay_$1_withId_(self, t) withLong:this$0_->delay_ withJavaUtilConcurrentTimeUnit:this$0_->unit_];
-}
+@implementation RxInternalOperatorsOperatorDelay_1
 
 - (instancetype)initWithRxInternalOperatorsOperatorDelay:(RxInternalOperatorsOperatorDelay *)outer$
                                   withRxScheduler_Worker:(RxScheduler_Worker *)capture$0
                                         withRxSubscriber:(RxSubscriber *)capture$1
-                                        withRxSubscriber:(RxSubscriber *)arg$0 {
-  RxInternalOperatorsOperatorDelay_$1_initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, capture$1, arg$0);
+                                        withRxSubscriber:(RxSubscriber *)param0 {
+  RxInternalOperatorsOperatorDelay_1_initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, capture$1, param0);
   return self;
 }
 
+- (void)onCompleted {
+  [((RxScheduler_Worker *) nil_chk(val$worker_)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsOperatorDelay_1_1_initWithRxInternalOperatorsOperatorDelay_1_(self) withLong:this$0_->delay_ withJavaUtilConcurrentTimeUnit:this$0_->unit_];
+}
+
+- (void)onErrorWithNSException:(NSException *)e {
+  [((RxScheduler_Worker *) nil_chk(val$worker_)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsOperatorDelay_1_2_initWithRxInternalOperatorsOperatorDelay_1_withNSException_(self, e)];
+}
+
+- (void)onNextWithId:(id)t {
+  [((RxScheduler_Worker *) nil_chk(val$worker_)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsOperatorDelay_1_3_initWithRxInternalOperatorsOperatorDelay_1_withId_(self, t) withLong:this$0_->delay_ withJavaUtilConcurrentTimeUnit:this$0_->unit_];
+}
+
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorDelay_$1 class]);
   RELEASE_(this$0_);
   RELEASE_(val$worker_);
   RELEASE_(val$child_);
@@ -205,58 +192,58 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorDelay)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 4, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(initWithRxInternalOperatorsOperatorDelay:withRxScheduler_Worker:withRxSubscriber:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorDelay:withRxScheduler_Worker:withRxSubscriber:withRxSubscriber:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorDelay;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorDelay;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
     { "val$worker_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "LRxInternalOperatorsOperatorDelay;LRxScheduler_Worker;LRxSubscriber;LRxSubscriber;", "(Lrx/internal/operators/OperatorDelay;Lrx/Scheduler$Worker;Lrx/Subscriber<-TT;>;Lrx/Subscriber<*>;)V", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorDelay;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorDelay_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 4, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsOperatorDelay_$1;
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "Lrx/internal/operators/OperatorDelay<TT;>;", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorDelay;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorDelay_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 4, 9, -1, 10, 11, -1 };
+  return &_RxInternalOperatorsOperatorDelay_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorDelay_$1_initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDelay_$1 *self, RxInternalOperatorsOperatorDelay *outer$, RxScheduler_Worker *capture$0, RxSubscriber *capture$1, RxSubscriber *arg$0) {
+void RxInternalOperatorsOperatorDelay_1_initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDelay_1 *self, RxInternalOperatorsOperatorDelay *outer$, RxScheduler_Worker *capture$0, RxSubscriber *capture$1, RxSubscriber *param0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$worker_, capture$0);
   JreStrongAssign(&self->val$child_, capture$1);
-  RxSubscriber_initWithRxSubscriber_(self, arg$0);
+  RxSubscriber_initWithRxSubscriber_(self, param0);
 }
 
-RxInternalOperatorsOperatorDelay_$1 *new_RxInternalOperatorsOperatorDelay_$1_initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDelay *outer$, RxScheduler_Worker *capture$0, RxSubscriber *capture$1, RxSubscriber *arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorDelay_$1, initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_, outer$, capture$0, capture$1, arg$0)
+RxInternalOperatorsOperatorDelay_1 *new_RxInternalOperatorsOperatorDelay_1_initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDelay *outer$, RxScheduler_Worker *capture$0, RxSubscriber *capture$1, RxSubscriber *param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorDelay_1, initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_, outer$, capture$0, capture$1, param0)
 }
 
-RxInternalOperatorsOperatorDelay_$1 *create_RxInternalOperatorsOperatorDelay_$1_initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDelay *outer$, RxScheduler_Worker *capture$0, RxSubscriber *capture$1, RxSubscriber *arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorDelay_$1, initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_, outer$, capture$0, capture$1, arg$0)
+RxInternalOperatorsOperatorDelay_1 *create_RxInternalOperatorsOperatorDelay_1_initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDelay *outer$, RxScheduler_Worker *capture$0, RxSubscriber *capture$1, RxSubscriber *param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorDelay_1, initWithRxInternalOperatorsOperatorDelay_withRxScheduler_Worker_withRxSubscriber_withRxSubscriber_, outer$, capture$0, capture$1, param0)
 }
 
-@implementation RxInternalOperatorsOperatorDelay_$1_$1
+@implementation RxInternalOperatorsOperatorDelay_1_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorDelay_1:(RxInternalOperatorsOperatorDelay_1 *)outer$ {
+  RxInternalOperatorsOperatorDelay_1_1_initWithRxInternalOperatorsOperatorDelay_1_(self, outer$);
+  return self;
+}
 
 - (void)call {
   if (!this$0_->done_) {
     this$0_->done_ = true;
     [((RxSubscriber *) nil_chk(this$0_->val$child_)) onCompleted];
   }
-}
-
-- (instancetype)initWithRxInternalOperatorsOperatorDelay_$1:(RxInternalOperatorsOperatorDelay_$1 *)outer$ {
-  RxInternalOperatorsOperatorDelay_$1_$1_initWithRxInternalOperatorsOperatorDelay_$1_(self, outer$);
-  return self;
 }
 
 - (void)dealloc {
@@ -266,38 +253,44 @@ RxInternalOperatorsOperatorDelay_$1 *create_RxInternalOperatorsOperatorDelay_$1_
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorDelay_$1:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorDelay_1:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorDelay_$1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorDelay_1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorDelay_$1;", "onCompleted" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorDelay_$1_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
-  return &_RxInternalOperatorsOperatorDelay_$1_$1;
+  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorDelay_1;", "onCompleted" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorDelay_1_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  return &_RxInternalOperatorsOperatorDelay_1_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorDelay_$1_$1_initWithRxInternalOperatorsOperatorDelay_$1_(RxInternalOperatorsOperatorDelay_$1_$1 *self, RxInternalOperatorsOperatorDelay_$1 *outer$) {
+void RxInternalOperatorsOperatorDelay_1_1_initWithRxInternalOperatorsOperatorDelay_1_(RxInternalOperatorsOperatorDelay_1_1 *self, RxInternalOperatorsOperatorDelay_1 *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorDelay_$1_$1 *new_RxInternalOperatorsOperatorDelay_$1_$1_initWithRxInternalOperatorsOperatorDelay_$1_(RxInternalOperatorsOperatorDelay_$1 *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorDelay_$1_$1, initWithRxInternalOperatorsOperatorDelay_$1_, outer$)
+RxInternalOperatorsOperatorDelay_1_1 *new_RxInternalOperatorsOperatorDelay_1_1_initWithRxInternalOperatorsOperatorDelay_1_(RxInternalOperatorsOperatorDelay_1 *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorDelay_1_1, initWithRxInternalOperatorsOperatorDelay_1_, outer$)
 }
 
-RxInternalOperatorsOperatorDelay_$1_$1 *create_RxInternalOperatorsOperatorDelay_$1_$1_initWithRxInternalOperatorsOperatorDelay_$1_(RxInternalOperatorsOperatorDelay_$1 *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorDelay_$1_$1, initWithRxInternalOperatorsOperatorDelay_$1_, outer$)
+RxInternalOperatorsOperatorDelay_1_1 *create_RxInternalOperatorsOperatorDelay_1_1_initWithRxInternalOperatorsOperatorDelay_1_(RxInternalOperatorsOperatorDelay_1 *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorDelay_1_1, initWithRxInternalOperatorsOperatorDelay_1_, outer$)
 }
 
-@implementation RxInternalOperatorsOperatorDelay_$1_$2
+@implementation RxInternalOperatorsOperatorDelay_1_2
+
+- (instancetype)initWithRxInternalOperatorsOperatorDelay_1:(RxInternalOperatorsOperatorDelay_1 *)outer$
+                                           withNSException:(NSException *)capture$0 {
+  RxInternalOperatorsOperatorDelay_1_2_initWithRxInternalOperatorsOperatorDelay_1_withNSException_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)call {
   if (!this$0_->done_) {
@@ -305,12 +298,6 @@ RxInternalOperatorsOperatorDelay_$1_$1 *create_RxInternalOperatorsOperatorDelay_
     [((RxSubscriber *) nil_chk(this$0_->val$child_)) onErrorWithNSException:val$e_];
     [((RxScheduler_Worker *) nil_chk(this$0_->val$worker_)) unsubscribe];
   }
-}
-
-- (instancetype)initWithRxInternalOperatorsOperatorDelay_$1:(RxInternalOperatorsOperatorDelay_$1 *)outer$
-                                            withNSException:(NSException *)capture$0 {
-  RxInternalOperatorsOperatorDelay_$1_$2_initWithRxInternalOperatorsOperatorDelay_$1_withNSException_(self, outer$, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -321,51 +308,51 @@ RxInternalOperatorsOperatorDelay_$1_$1 *create_RxInternalOperatorsOperatorDelay_
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorDelay_$1:withNSException:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorDelay_1:withNSException:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorDelay_$1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorDelay_1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$e_", "LNSException;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorDelay_$1;LNSException;", "LRxInternalOperatorsOperatorDelay_$1;", "onErrorWithNSException:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorDelay_$1_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_RxInternalOperatorsOperatorDelay_$1_$2;
+  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorDelay_1;", "onErrorWithNSException:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorDelay_1_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 0, -1, 1, -1, -1 };
+  return &_RxInternalOperatorsOperatorDelay_1_2;
 }
 
 @end
 
-void RxInternalOperatorsOperatorDelay_$1_$2_initWithRxInternalOperatorsOperatorDelay_$1_withNSException_(RxInternalOperatorsOperatorDelay_$1_$2 *self, RxInternalOperatorsOperatorDelay_$1 *outer$, NSException *capture$0) {
+void RxInternalOperatorsOperatorDelay_1_2_initWithRxInternalOperatorsOperatorDelay_1_withNSException_(RxInternalOperatorsOperatorDelay_1_2 *self, RxInternalOperatorsOperatorDelay_1 *outer$, NSException *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$e_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorDelay_$1_$2 *new_RxInternalOperatorsOperatorDelay_$1_$2_initWithRxInternalOperatorsOperatorDelay_$1_withNSException_(RxInternalOperatorsOperatorDelay_$1 *outer$, NSException *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorDelay_$1_$2, initWithRxInternalOperatorsOperatorDelay_$1_withNSException_, outer$, capture$0)
+RxInternalOperatorsOperatorDelay_1_2 *new_RxInternalOperatorsOperatorDelay_1_2_initWithRxInternalOperatorsOperatorDelay_1_withNSException_(RxInternalOperatorsOperatorDelay_1 *outer$, NSException *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorDelay_1_2, initWithRxInternalOperatorsOperatorDelay_1_withNSException_, outer$, capture$0)
 }
 
-RxInternalOperatorsOperatorDelay_$1_$2 *create_RxInternalOperatorsOperatorDelay_$1_$2_initWithRxInternalOperatorsOperatorDelay_$1_withNSException_(RxInternalOperatorsOperatorDelay_$1 *outer$, NSException *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorDelay_$1_$2, initWithRxInternalOperatorsOperatorDelay_$1_withNSException_, outer$, capture$0)
+RxInternalOperatorsOperatorDelay_1_2 *create_RxInternalOperatorsOperatorDelay_1_2_initWithRxInternalOperatorsOperatorDelay_1_withNSException_(RxInternalOperatorsOperatorDelay_1 *outer$, NSException *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorDelay_1_2, initWithRxInternalOperatorsOperatorDelay_1_withNSException_, outer$, capture$0)
 }
 
-@implementation RxInternalOperatorsOperatorDelay_$1_$3
+@implementation RxInternalOperatorsOperatorDelay_1_3
+
+- (instancetype)initWithRxInternalOperatorsOperatorDelay_1:(RxInternalOperatorsOperatorDelay_1 *)outer$
+                                                    withId:(id)capture$0 {
+  RxInternalOperatorsOperatorDelay_1_3_initWithRxInternalOperatorsOperatorDelay_1_withId_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)call {
   if (!this$0_->done_) {
     [((RxSubscriber *) nil_chk(this$0_->val$child_)) onNextWithId:val$t_];
   }
-}
-
-- (instancetype)initWithRxInternalOperatorsOperatorDelay_$1:(RxInternalOperatorsOperatorDelay_$1 *)outer$
-                                                     withId:(id)capture$0 {
-  RxInternalOperatorsOperatorDelay_$1_$3_initWithRxInternalOperatorsOperatorDelay_$1_withId_(self, outer$, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -376,35 +363,35 @@ RxInternalOperatorsOperatorDelay_$1_$2 *create_RxInternalOperatorsOperatorDelay_
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorDelay_$1:withId:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorDelay_1:withId:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorDelay_$1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$t_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorDelay_1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "val$t_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorDelay_$1;LNSObject;", "(Lrx/internal/operators/OperatorDelay$1;TT;)V", "TT;", "LRxInternalOperatorsOperatorDelay_$1;", "onNextWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorDelay_$1_$3 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, -1, -1 };
-  return &_RxInternalOperatorsOperatorDelay_$1_$3;
+  static const void *ptrTable[] = { "TT;", "LRxInternalOperatorsOperatorDelay_1;", "onNextWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorDelay_1_3 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
+  return &_RxInternalOperatorsOperatorDelay_1_3;
 }
 
 @end
 
-void RxInternalOperatorsOperatorDelay_$1_$3_initWithRxInternalOperatorsOperatorDelay_$1_withId_(RxInternalOperatorsOperatorDelay_$1_$3 *self, RxInternalOperatorsOperatorDelay_$1 *outer$, id capture$0) {
+void RxInternalOperatorsOperatorDelay_1_3_initWithRxInternalOperatorsOperatorDelay_1_withId_(RxInternalOperatorsOperatorDelay_1_3 *self, RxInternalOperatorsOperatorDelay_1 *outer$, id capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$t_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorDelay_$1_$3 *new_RxInternalOperatorsOperatorDelay_$1_$3_initWithRxInternalOperatorsOperatorDelay_$1_withId_(RxInternalOperatorsOperatorDelay_$1 *outer$, id capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorDelay_$1_$3, initWithRxInternalOperatorsOperatorDelay_$1_withId_, outer$, capture$0)
+RxInternalOperatorsOperatorDelay_1_3 *new_RxInternalOperatorsOperatorDelay_1_3_initWithRxInternalOperatorsOperatorDelay_1_withId_(RxInternalOperatorsOperatorDelay_1 *outer$, id capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorDelay_1_3, initWithRxInternalOperatorsOperatorDelay_1_withId_, outer$, capture$0)
 }
 
-RxInternalOperatorsOperatorDelay_$1_$3 *create_RxInternalOperatorsOperatorDelay_$1_$3_initWithRxInternalOperatorsOperatorDelay_$1_withId_(RxInternalOperatorsOperatorDelay_$1 *outer$, id capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorDelay_$1_$3, initWithRxInternalOperatorsOperatorDelay_$1_withId_, outer$, capture$0)
+RxInternalOperatorsOperatorDelay_1_3 *create_RxInternalOperatorsOperatorDelay_1_3_initWithRxInternalOperatorsOperatorDelay_1_withId_(RxInternalOperatorsOperatorDelay_1 *outer$, id capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorDelay_1_3, initWithRxInternalOperatorsOperatorDelay_1_withId_, outer$, capture$0)
 }

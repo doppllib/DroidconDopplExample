@@ -68,8 +68,8 @@ J2OBJC_IGNORE_DESIGNATED_END
   static J2ObjcMethodInfo methods[] = {
     { NULL, "LCoTouchlabSqueakyFieldTypesCharType;", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x4, -1, 0, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 1, 2, -1, -1, -1, -1 },
+    { NULL, NULL, 0x4, -1, 0, -1, 1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 2, 3, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
@@ -81,9 +81,9 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[4].selector = @selector(isPrimitive);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "singleTon", "LCoTouchlabSqueakyFieldTypesCharType;", .constantValue.asLong = 0, 0x1a, -1, 3, -1, -1 },
+    { "singleTon", "LCoTouchlabSqueakyFieldTypesCharType;", .constantValue.asLong = 0, 0x1a, -1, 4, -1, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "javaToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LNSObject;", &CoTouchlabSqueakyFieldTypesCharType_singleTon };
+  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "(Lco/touchlab/squeaky/field/SqlType;[Ljava/lang/Class<*>;)V", "javaToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LNSObject;", &CoTouchlabSqueakyFieldTypesCharType_singleTon };
   static const J2ObjcClassInfo _CoTouchlabSqueakyFieldTypesCharType = { "CharType", "co.touchlab.squeaky.field.types", ptrTable, methods, fields, 7, 0x1, 5, 1, -1, -1, -1, -1, -1 };
   return &_CoTouchlabSqueakyFieldTypesCharType;
 }

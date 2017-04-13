@@ -79,6 +79,23 @@ __attribute__((unused)) static void ComGoogleGsonInternalLinkedHashTreeMap_rotat
 
 __attribute__((unused)) static void ComGoogleGsonInternalLinkedHashTreeMap_doubleCapacity(ComGoogleGsonInternalLinkedHashTreeMap *self);
 
+@interface ComGoogleGsonInternalLinkedHashTreeMap_1 : NSObject < JavaUtilComparator >
+
+- (instancetype)init;
+
+- (jint)compareWithId:(id<JavaLangComparable>)a
+               withId:(id<JavaLangComparable>)b;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalLinkedHashTreeMap_1)
+
+__attribute__((unused)) static void ComGoogleGsonInternalLinkedHashTreeMap_1_init(ComGoogleGsonInternalLinkedHashTreeMap_1 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalLinkedHashTreeMap_1 *new_ComGoogleGsonInternalLinkedHashTreeMap_1_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalLinkedHashTreeMap_1 *create_ComGoogleGsonInternalLinkedHashTreeMap_1_init();
+
 @interface ComGoogleGsonInternalLinkedHashTreeMap_AvlIterator () {
  @public
   ComGoogleGsonInternalLinkedHashTreeMap_Node *stackTop_;
@@ -120,7 +137,6 @@ J2OBJC_FIELD_SETTER(ComGoogleGsonInternalLinkedHashTreeMap_AvlBuilder, stack_, C
 
 J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalLinkedHashTreeMap_LinkedTreeMapIterator)
 
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalLinkedHashTreeMap_LinkedTreeMapIterator, this$0_, ComGoogleGsonInternalLinkedHashTreeMap *)
 J2OBJC_FIELD_SETTER(ComGoogleGsonInternalLinkedHashTreeMap_LinkedTreeMapIterator, next_, ComGoogleGsonInternalLinkedHashTreeMap_Node *)
 J2OBJC_FIELD_SETTER(ComGoogleGsonInternalLinkedHashTreeMap_LinkedTreeMapIterator, lastReturned_, ComGoogleGsonInternalLinkedHashTreeMap_Node *)
 
@@ -137,21 +153,21 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleGsonInternalLinkedHashTreeMap_LinkedTreeMapI
 
 @end
 
-@interface ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1 : ComGoogleGsonInternalLinkedHashTreeMap_LinkedTreeMapIterator
-
-- (id<JavaUtilMap_Entry>)next;
+@interface ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1 : ComGoogleGsonInternalLinkedHashTreeMap_LinkedTreeMapIterator
 
 - (instancetype)initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet:(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet *)outer$;
 
+- (id<JavaUtilMap_Entry>)next;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1)
 
-__attribute__((unused)) static void ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1_initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1 *self, ComGoogleGsonInternalLinkedHashTreeMap_EntrySet *outer$);
+__attribute__((unused)) static void ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1_initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1 *self, ComGoogleGsonInternalLinkedHashTreeMap_EntrySet *outer$);
 
-__attribute__((unused)) static ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1 *new_ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1_initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet *outer$) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1 *new_ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1_initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1 *create_ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1_initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet *outer$);
+__attribute__((unused)) static ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1 *create_ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1_initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet *outer$);
 
 @interface ComGoogleGsonInternalLinkedHashTreeMap_KeySet () {
  @public
@@ -160,38 +176,21 @@ __attribute__((unused)) static ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$
 
 @end
 
-@interface ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1 : ComGoogleGsonInternalLinkedHashTreeMap_LinkedTreeMapIterator
-
-- (id)next;
+@interface ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1 : ComGoogleGsonInternalLinkedHashTreeMap_LinkedTreeMapIterator
 
 - (instancetype)initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet:(ComGoogleGsonInternalLinkedHashTreeMap_KeySet *)outer$;
 
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1)
-
-__attribute__((unused)) static void ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1_initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_(ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1 *self, ComGoogleGsonInternalLinkedHashTreeMap_KeySet *outer$);
-
-__attribute__((unused)) static ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1 *new_ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1_initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_(ComGoogleGsonInternalLinkedHashTreeMap_KeySet *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1 *create_ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1_initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_(ComGoogleGsonInternalLinkedHashTreeMap_KeySet *outer$);
-
-@interface ComGoogleGsonInternalLinkedHashTreeMap_$1 : NSObject < JavaUtilComparator >
-
-- (jint)compareWithId:(id<JavaLangComparable>)a
-               withId:(id<JavaLangComparable>)b;
-
-- (instancetype)init;
+- (id)next;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalLinkedHashTreeMap_$1)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1)
 
-__attribute__((unused)) static void ComGoogleGsonInternalLinkedHashTreeMap_$1_init(ComGoogleGsonInternalLinkedHashTreeMap_$1 *self);
+__attribute__((unused)) static void ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1_initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_(ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1 *self, ComGoogleGsonInternalLinkedHashTreeMap_KeySet *outer$);
 
-__attribute__((unused)) static ComGoogleGsonInternalLinkedHashTreeMap_$1 *new_ComGoogleGsonInternalLinkedHashTreeMap_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1 *new_ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1_initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_(ComGoogleGsonInternalLinkedHashTreeMap_KeySet *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalLinkedHashTreeMap_$1 *create_ComGoogleGsonInternalLinkedHashTreeMap_$1_init();
+__attribute__((unused)) static ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1 *create_ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1_initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_(ComGoogleGsonInternalLinkedHashTreeMap_KeySet *outer$);
 
 J2OBJC_INITIALIZED_DEFN(ComGoogleGsonInternalLinkedHashTreeMap)
 
@@ -260,7 +259,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   ComGoogleGsonInternalLinkedHashTreeMap_Node *nearest = IOSObjectArray_Get(table, index);
   jint comparison = 0;
   if (nearest != nil) {
-    id<JavaLangComparable> comparableKey = (comparator == (id) ComGoogleGsonInternalLinkedHashTreeMap_NATURAL_ORDER) ? (id<JavaLangComparable>) cast_check(key, JavaLangComparable_class_()) : nil;
+    id<JavaLangComparable> comparableKey = (comparator == ComGoogleGsonInternalLinkedHashTreeMap_NATURAL_ORDER) ? (id<JavaLangComparable>) cast_check(key, JavaLangComparable_class_()) : nil;
     while (true) {
       comparison = (comparableKey != nil) ? [comparableKey compareToWithId:nearest->key_] : [((id<JavaUtilComparator>) nil_chk(comparator)) compareWithId:key withId:nearest->key_];
       if (comparison == 0) {
@@ -279,7 +278,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   ComGoogleGsonInternalLinkedHashTreeMap_Node *header = self->header_;
   ComGoogleGsonInternalLinkedHashTreeMap_Node *created;
   if (nearest == nil) {
-    if (comparator == (id) ComGoogleGsonInternalLinkedHashTreeMap_NATURAL_ORDER && !([JavaLangComparable_class_() isInstance:key])) {
+    if (comparator == ComGoogleGsonInternalLinkedHashTreeMap_NATURAL_ORDER && !([JavaLangComparable_class_() isInstance:key])) {
       @throw create_JavaLangClassCastException_initWithNSString_(JreStrcat("$$", [[key java_getClass] getName], @" is not Comparable"));
     }
     created = create_ComGoogleGsonInternalLinkedHashTreeMap_Node_initWithComGoogleGsonInternalLinkedHashTreeMap_Node_withId_withInt_withComGoogleGsonInternalLinkedHashTreeMap_Node_withComGoogleGsonInternalLinkedHashTreeMap_Node_(nearest, key, hash_, header, ((ComGoogleGsonInternalLinkedHashTreeMap_Node *) nil_chk(header))->prev_);
@@ -504,7 +503,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (void)initialize {
   if (self == [ComGoogleGsonInternalLinkedHashTreeMap class]) {
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalLinkedHashTreeMap_NATURAL_ORDER, new_ComGoogleGsonInternalLinkedHashTreeMap_$1_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalLinkedHashTreeMap_NATURAL_ORDER, new_ComGoogleGsonInternalLinkedHashTreeMap_1_init());
     J2OBJC_SET_INITIALIZED(ComGoogleGsonInternalLinkedHashTreeMap)
   }
 }
@@ -527,7 +526,7 @@ void ComGoogleGsonInternalLinkedHashTreeMap_initWithJavaUtilComparator_(ComGoogl
   JavaUtilAbstractMap_init(self);
   self->size_ = 0;
   self->modCount_ = 0;
-  JreStrongAssign(&self->comparator_, comparator != nil ? comparator : (id) ComGoogleGsonInternalLinkedHashTreeMap_NATURAL_ORDER);
+  JreStrongAssign(&self->comparator_, comparator != nil ? comparator : ComGoogleGsonInternalLinkedHashTreeMap_NATURAL_ORDER);
   JreStrongAssignAndConsume(&self->header_, new_ComGoogleGsonInternalLinkedHashTreeMap_Node_init());
   JreStrongAssignAndConsume(&self->table_, [IOSObjectArray newArrayWithLength:16 type:ComGoogleGsonInternalLinkedHashTreeMap_Node_class_()]);
   self->threshold_ = (self->table_->size_ / 2) + (self->table_->size_ / 4);
@@ -710,6 +709,78 @@ IOSObjectArray *ComGoogleGsonInternalLinkedHashTreeMap_doubleCapacityWithComGoog
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalLinkedHashTreeMap)
 
+@implementation ComGoogleGsonInternalLinkedHashTreeMap_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalLinkedHashTreeMap_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
+- (jint)compareWithId:(id<JavaLangComparable>)a
+               withId:(id<JavaLangComparable>)b {
+  return [((id<JavaLangComparable>) nil_chk(a)) compareToWithId:b];
+}
+
+- (id<JavaUtilComparator>)reversed {
+  return JavaUtilComparator_reversed(self);
+}
+
+- (id<JavaUtilComparator>)thenComparingWithJavaUtilComparator:(id<JavaUtilComparator>)arg0 {
+  return JavaUtilComparator_thenComparingWithJavaUtilComparator_(self, arg0);
+}
+
+- (id<JavaUtilComparator>)thenComparingWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)arg0 {
+  return JavaUtilComparator_thenComparingWithJavaUtilFunctionFunction_(self, arg0);
+}
+
+- (id<JavaUtilComparator>)thenComparingWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)arg0
+                                             withJavaUtilComparator:(id<JavaUtilComparator>)arg1 {
+  return JavaUtilComparator_thenComparingWithJavaUtilFunctionFunction_withJavaUtilComparator_(self, arg0, arg1);
+}
+
+- (id<JavaUtilComparator>)thenComparingDoubleWithJavaUtilFunctionToDoubleFunction:(id<JavaUtilFunctionToDoubleFunction>)arg0 {
+  return JavaUtilComparator_thenComparingDoubleWithJavaUtilFunctionToDoubleFunction_(self, arg0);
+}
+
+- (id<JavaUtilComparator>)thenComparingIntWithJavaUtilFunctionToIntFunction:(id<JavaUtilFunctionToIntFunction>)arg0 {
+  return JavaUtilComparator_thenComparingIntWithJavaUtilFunctionToIntFunction_(self, arg0);
+}
+
+- (id<JavaUtilComparator>)thenComparingLongWithJavaUtilFunctionToLongFunction:(id<JavaUtilFunctionToLongFunction>)arg0 {
+  return JavaUtilComparator_thenComparingLongWithJavaUtilFunctionToLongFunction_(self, arg0);
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "I", 0x1, 0, 1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(compareWithId:withId:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "compare", "LJavaLangComparable;LJavaLangComparable;", "LComGoogleGsonInternalLinkedHashTreeMap;", "Ljava/lang/Object;Ljava/util/Comparator<Ljava/lang/Comparable;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedHashTreeMap_1 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, -1, 3, -1 };
+  return &_ComGoogleGsonInternalLinkedHashTreeMap_1;
+}
+
+@end
+
+void ComGoogleGsonInternalLinkedHashTreeMap_1_init(ComGoogleGsonInternalLinkedHashTreeMap_1 *self) {
+  NSObject_init(self);
+}
+
+ComGoogleGsonInternalLinkedHashTreeMap_1 *new_ComGoogleGsonInternalLinkedHashTreeMap_1_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalLinkedHashTreeMap_1, init)
+}
+
+ComGoogleGsonInternalLinkedHashTreeMap_1 *create_ComGoogleGsonInternalLinkedHashTreeMap_1_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalLinkedHashTreeMap_1, init)
+}
+
 @implementation ComGoogleGsonInternalLinkedHashTreeMap_Node
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
@@ -872,6 +943,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalLinkedHashTreeMap_Node)
 
 @implementation ComGoogleGsonInternalLinkedHashTreeMap_AvlIterator
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalLinkedHashTreeMap_AvlIterator_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (void)resetWithComGoogleGsonInternalLinkedHashTreeMap_Node:(ComGoogleGsonInternalLinkedHashTreeMap_Node *)root {
   ComGoogleGsonInternalLinkedHashTreeMap_Node *stackTop = nil;
   for (ComGoogleGsonInternalLinkedHashTreeMap_Node *n = root; n != nil; n = n->left_) {
@@ -897,13 +975,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalLinkedHashTreeMap_Node)
   return result;
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalLinkedHashTreeMap_AvlIterator_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(stackTop_);
   [super dealloc];
@@ -911,15 +982,15 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x0, 0, 1, -1, 2, -1, -1 },
     { NULL, "LComGoogleGsonInternalLinkedHashTreeMap_Node;", 0x1, -1, -1, -1, 3, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(resetWithComGoogleGsonInternalLinkedHashTreeMap_Node:);
-  methods[1].selector = @selector(next);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(resetWithComGoogleGsonInternalLinkedHashTreeMap_Node:);
+  methods[2].selector = @selector(next);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "stackTop_", "LComGoogleGsonInternalLinkedHashTreeMap_Node;", .constantValue.asLong = 0, 0x2, -1, -1, 4, -1 },
@@ -946,6 +1017,13 @@ ComGoogleGsonInternalLinkedHashTreeMap_AvlIterator *create_ComGoogleGsonInternal
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalLinkedHashTreeMap_AvlIterator)
 
 @implementation ComGoogleGsonInternalLinkedHashTreeMap_AvlBuilder
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalLinkedHashTreeMap_AvlBuilder_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)resetWithInt:(jint)targetSize {
   jint treeCapacity = JavaLangInteger_highestOneBitWithInt_(targetSize) * 2 - 1;
@@ -1007,13 +1085,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalLinkedHashTreeMap_AvlItera
   return stackTop;
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalLinkedHashTreeMap_AvlBuilder_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(stack_);
   [super dealloc];
@@ -1021,17 +1092,17 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x0, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x0, 2, 3, -1, 4, -1, -1 },
     { NULL, "LComGoogleGsonInternalLinkedHashTreeMap_Node;", 0x0, -1, -1, -1, 5, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(resetWithInt:);
-  methods[1].selector = @selector(addWithComGoogleGsonInternalLinkedHashTreeMap_Node:);
-  methods[2].selector = @selector(root);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(resetWithInt:);
+  methods[2].selector = @selector(addWithComGoogleGsonInternalLinkedHashTreeMap_Node:);
+  methods[3].selector = @selector(root);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "stack_", "LComGoogleGsonInternalLinkedHashTreeMap_Node;", .constantValue.asLong = 0, 0x2, -1, -1, 6, -1 },
@@ -1097,9 +1168,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalLinkedHashTreeMap_AvlBuild
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x11, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LComGoogleGsonInternalLinkedHashTreeMap_Node;", 0x10, -1, -1, -1, 1, -1, -1 },
+    { NULL, "LComGoogleGsonInternalLinkedHashTreeMap_Node;", 0x10, -1, -1, -1, 0, -1, -1 },
     { NULL, "V", 0x11, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
@@ -1110,13 +1181,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalLinkedHashTreeMap_AvlBuild
   methods[3].selector = @selector(remove);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LComGoogleGsonInternalLinkedHashTreeMap;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LComGoogleGsonInternalLinkedHashTreeMap;", .constantValue.asLong = 0, 0x1012, -1, -1, 1, -1 },
     { "next_", "LComGoogleGsonInternalLinkedHashTreeMap_Node;", .constantValue.asLong = 0, 0x0, -1, -1, 2, -1 },
     { "lastReturned_", "LComGoogleGsonInternalLinkedHashTreeMap_Node;", .constantValue.asLong = 0, 0x0, -1, -1, 2, -1 },
     { "expectedModCount_", "I", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LComGoogleGsonInternalLinkedHashTreeMap;", "()Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;", "Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Ljava/util/Iterator<TT;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedHashTreeMap_LinkedTreeMapIterator = { "LinkedTreeMapIterator", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x402, 4, 4, 0, -1, -1, 3, -1 };
+  static const void *ptrTable[] = { "()Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;", "Lcom/google/gson/internal/LinkedHashTreeMap<TK;TV;>;", "Lcom/google/gson/internal/LinkedHashTreeMap$Node<TK;TV;>;", "LComGoogleGsonInternalLinkedHashTreeMap;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Ljava/util/Iterator<TT;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedHashTreeMap_LinkedTreeMapIterator = { "LinkedTreeMapIterator", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x402, 4, 4, 3, -1, -1, 4, -1 };
   return &_ComGoogleGsonInternalLinkedHashTreeMap_LinkedTreeMapIterator;
 }
 
@@ -1146,12 +1217,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalLinkedHashTreeMap_LinkedTr
 
 @implementation ComGoogleGsonInternalLinkedHashTreeMap_EntrySet
 
+- (instancetype)initWithComGoogleGsonInternalLinkedHashTreeMap:(ComGoogleGsonInternalLinkedHashTreeMap *)outer$ {
+  ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_initWithComGoogleGsonInternalLinkedHashTreeMap_(self, outer$);
+  return self;
+}
+
 - (jint)size {
   return this$0_->size_;
 }
 
 - (id<JavaUtilIterator>)iterator {
-  return create_ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1_initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_(self);
+  return create_ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1_initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_(self);
 }
 
 - (jboolean)containsWithId:(id)o {
@@ -1174,11 +1250,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalLinkedHashTreeMap_LinkedTr
   [this$0_ clear];
 }
 
-- (instancetype)initWithComGoogleGsonInternalLinkedHashTreeMap:(ComGoogleGsonInternalLinkedHashTreeMap *)outer$ {
-  ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_initWithComGoogleGsonInternalLinkedHashTreeMap_(self, outer$);
-  return self;
-}
-
 - (void)__javaClone:(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet *)original {
   [super __javaClone:original];
   [this$0_ release];
@@ -1190,27 +1261,27 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalLinkedHashTreeMap_LinkedTr
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "I", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaUtilIterator;", 0x1, -1, -1, -1, 0, -1, -1 },
     { NULL, "Z", 0x1, 1, 2, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, 3, 2, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(size);
-  methods[1].selector = @selector(iterator);
-  methods[2].selector = @selector(containsWithId:);
-  methods[3].selector = @selector(removeWithId:);
-  methods[4].selector = @selector(clear);
-  methods[5].selector = @selector(initWithComGoogleGsonInternalLinkedHashTreeMap:);
+  methods[0].selector = @selector(initWithComGoogleGsonInternalLinkedHashTreeMap:);
+  methods[1].selector = @selector(size);
+  methods[2].selector = @selector(iterator);
+  methods[3].selector = @selector(containsWithId:);
+  methods[4].selector = @selector(removeWithId:);
+  methods[5].selector = @selector(clear);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LComGoogleGsonInternalLinkedHashTreeMap;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LComGoogleGsonInternalLinkedHashTreeMap;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
   };
-  static const void *ptrTable[] = { "()Ljava/util/Iterator<Ljava/util/Map$Entry<TK;TV;>;>;", "contains", "LNSObject;", "remove", "LComGoogleGsonInternalLinkedHashTreeMap;", "Ljava/util/AbstractSet<Ljava/util/Map$Entry<TK;TV;>;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedHashTreeMap_EntrySet = { "EntrySet", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x10, 6, 1, 4, -1, -1, 5, -1 };
+  static const void *ptrTable[] = { "()Ljava/util/Iterator<Ljava/util/Map$Entry<TK;TV;>;>;", "contains", "LNSObject;", "remove", "Lcom/google/gson/internal/LinkedHashTreeMap<TK;TV;>;", "LComGoogleGsonInternalLinkedHashTreeMap;", "Ljava/util/AbstractSet<Ljava/util/Map$Entry<TK;TV;>;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedHashTreeMap_EntrySet = { "EntrySet", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x10, 6, 1, 5, -1, -1, 6, -1 };
   return &_ComGoogleGsonInternalLinkedHashTreeMap_EntrySet;
 }
 
@@ -1231,54 +1302,59 @@ ComGoogleGsonInternalLinkedHashTreeMap_EntrySet *create_ComGoogleGsonInternalLin
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet)
 
-@implementation ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1
+@implementation ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1
+
+- (instancetype)initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet:(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet *)outer$ {
+  ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1_initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_(self, outer$);
+  return self;
+}
 
 - (id<JavaUtilMap_Entry>)next {
   return ComGoogleGsonInternalLinkedHashTreeMap_LinkedTreeMapIterator_nextNode(self);
 }
 
-- (instancetype)initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet:(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet *)outer$ {
-  ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1_initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_(self, outer$);
-  return self;
-}
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaUtilMap_Entry;", 0x1, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(next);
-  methods[1].selector = @selector(initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet:);
+  methods[0].selector = @selector(initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet:);
+  methods[1].selector = @selector(next);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "()Ljava/util/Map$Entry<TK;TV;>;", "LComGoogleGsonInternalLinkedHashTreeMap_EntrySet;", "iterator", "Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator<Ljava/util/Map$Entry<TK;TV;>;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
-  return &_ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1;
+  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
+  return &_ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1;
 }
 
 @end
 
-void ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1_initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1 *self, ComGoogleGsonInternalLinkedHashTreeMap_EntrySet *outer$) {
+void ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1_initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1 *self, ComGoogleGsonInternalLinkedHashTreeMap_EntrySet *outer$) {
   ComGoogleGsonInternalLinkedHashTreeMap_LinkedTreeMapIterator_initWithComGoogleGsonInternalLinkedHashTreeMap_(self, outer$->this$0_);
 }
 
-ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1 *new_ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1_initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet *outer$) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1, initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_, outer$)
+ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1 *new_ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1_initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet *outer$) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1, initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_, outer$)
 }
 
-ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1 *create_ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1_initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet *outer$) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1, initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_, outer$)
+ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1 *create_ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1_initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet *outer$) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1, initWithComGoogleGsonInternalLinkedHashTreeMap_EntrySet_, outer$)
 }
 
 @implementation ComGoogleGsonInternalLinkedHashTreeMap_KeySet
+
+- (instancetype)initWithComGoogleGsonInternalLinkedHashTreeMap:(ComGoogleGsonInternalLinkedHashTreeMap *)outer$ {
+  ComGoogleGsonInternalLinkedHashTreeMap_KeySet_initWithComGoogleGsonInternalLinkedHashTreeMap_(self, outer$);
+  return self;
+}
 
 - (jint)size {
   return this$0_->size_;
 }
 
 - (id<JavaUtilIterator>)iterator {
-  return create_ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1_initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_(self);
+  return create_ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1_initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_(self);
 }
 
 - (jboolean)containsWithId:(id)o {
@@ -1293,11 +1369,6 @@ ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1 *create_ComGoogleGsonInternal
   [this$0_ clear];
 }
 
-- (instancetype)initWithComGoogleGsonInternalLinkedHashTreeMap:(ComGoogleGsonInternalLinkedHashTreeMap *)outer$ {
-  ComGoogleGsonInternalLinkedHashTreeMap_KeySet_initWithComGoogleGsonInternalLinkedHashTreeMap_(self, outer$);
-  return self;
-}
-
 - (void)__javaClone:(ComGoogleGsonInternalLinkedHashTreeMap_KeySet *)original {
   [super __javaClone:original];
   [this$0_ release];
@@ -1309,27 +1380,27 @@ ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_$1 *create_ComGoogleGsonInternal
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "I", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaUtilIterator;", 0x1, -1, -1, -1, 0, -1, -1 },
     { NULL, "Z", 0x1, 1, 2, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, 3, 2, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(size);
-  methods[1].selector = @selector(iterator);
-  methods[2].selector = @selector(containsWithId:);
-  methods[3].selector = @selector(removeWithId:);
-  methods[4].selector = @selector(clear);
-  methods[5].selector = @selector(initWithComGoogleGsonInternalLinkedHashTreeMap:);
+  methods[0].selector = @selector(initWithComGoogleGsonInternalLinkedHashTreeMap:);
+  methods[1].selector = @selector(size);
+  methods[2].selector = @selector(iterator);
+  methods[3].selector = @selector(containsWithId:);
+  methods[4].selector = @selector(removeWithId:);
+  methods[5].selector = @selector(clear);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LComGoogleGsonInternalLinkedHashTreeMap;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LComGoogleGsonInternalLinkedHashTreeMap;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
   };
-  static const void *ptrTable[] = { "()Ljava/util/Iterator<TK;>;", "contains", "LNSObject;", "remove", "LComGoogleGsonInternalLinkedHashTreeMap;", "Ljava/util/AbstractSet<TK;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedHashTreeMap_KeySet = { "KeySet", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x10, 6, 1, 4, -1, -1, 5, -1 };
+  static const void *ptrTable[] = { "()Ljava/util/Iterator<TK;>;", "contains", "LNSObject;", "remove", "Lcom/google/gson/internal/LinkedHashTreeMap<TK;TV;>;", "LComGoogleGsonInternalLinkedHashTreeMap;", "Ljava/util/AbstractSet<TK;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedHashTreeMap_KeySet = { "KeySet", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x10, 6, 1, 5, -1, -1, 6, -1 };
   return &_ComGoogleGsonInternalLinkedHashTreeMap_KeySet;
 }
 
@@ -1350,114 +1421,42 @@ ComGoogleGsonInternalLinkedHashTreeMap_KeySet *create_ComGoogleGsonInternalLinke
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalLinkedHashTreeMap_KeySet)
 
-@implementation ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1
+@implementation ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1
+
+- (instancetype)initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet:(ComGoogleGsonInternalLinkedHashTreeMap_KeySet *)outer$ {
+  ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1_initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_(self, outer$);
+  return self;
+}
 
 - (id)next {
   return ((ComGoogleGsonInternalLinkedHashTreeMap_Node *) nil_chk(ComGoogleGsonInternalLinkedHashTreeMap_LinkedTreeMapIterator_nextNode(self)))->key_;
 }
 
-- (instancetype)initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet:(ComGoogleGsonInternalLinkedHashTreeMap_KeySet *)outer$ {
-  ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1_initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_(self, outer$);
-  return self;
-}
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(next);
-  methods[1].selector = @selector(initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet:);
+  methods[0].selector = @selector(initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet:);
+  methods[1].selector = @selector(next);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "()TK;", "LComGoogleGsonInternalLinkedHashTreeMap_KeySet;", "iterator", "Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator<TK;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
-  return &_ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1;
+  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
+  return &_ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1;
 }
 
 @end
 
-void ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1_initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_(ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1 *self, ComGoogleGsonInternalLinkedHashTreeMap_KeySet *outer$) {
+void ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1_initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_(ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1 *self, ComGoogleGsonInternalLinkedHashTreeMap_KeySet *outer$) {
   ComGoogleGsonInternalLinkedHashTreeMap_LinkedTreeMapIterator_initWithComGoogleGsonInternalLinkedHashTreeMap_(self, outer$->this$0_);
 }
 
-ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1 *new_ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1_initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_(ComGoogleGsonInternalLinkedHashTreeMap_KeySet *outer$) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1, initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_, outer$)
+ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1 *new_ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1_initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_(ComGoogleGsonInternalLinkedHashTreeMap_KeySet *outer$) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1, initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_, outer$)
 }
 
-ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1 *create_ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1_initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_(ComGoogleGsonInternalLinkedHashTreeMap_KeySet *outer$) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalLinkedHashTreeMap_KeySet_$1, initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_, outer$)
-}
-
-@implementation ComGoogleGsonInternalLinkedHashTreeMap_$1
-
-- (jint)compareWithId:(id<JavaLangComparable>)a
-               withId:(id<JavaLangComparable>)b {
-  return [((id<JavaLangComparable>) nil_chk(a)) compareToWithId:b];
-}
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalLinkedHashTreeMap_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
-- (id<JavaUtilComparator>)reversed {
-  return JavaUtilComparator_reversed(self);
-}
-
-- (id<JavaUtilComparator>)thenComparingWithJavaUtilComparator:(id<JavaUtilComparator>)arg0 {
-  return JavaUtilComparator_thenComparingWithJavaUtilComparator_(self, arg0);
-}
-
-- (id<JavaUtilComparator>)thenComparingWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)arg0 {
-  return JavaUtilComparator_thenComparingWithJavaUtilFunctionFunction_(self, arg0);
-}
-
-- (id<JavaUtilComparator>)thenComparingWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)arg0
-                                             withJavaUtilComparator:(id<JavaUtilComparator>)arg1 {
-  return JavaUtilComparator_thenComparingWithJavaUtilFunctionFunction_withJavaUtilComparator_(self, arg0, arg1);
-}
-
-- (id<JavaUtilComparator>)thenComparingDoubleWithJavaUtilFunctionToDoubleFunction:(id<JavaUtilFunctionToDoubleFunction>)arg0 {
-  return JavaUtilComparator_thenComparingDoubleWithJavaUtilFunctionToDoubleFunction_(self, arg0);
-}
-
-- (id<JavaUtilComparator>)thenComparingIntWithJavaUtilFunctionToIntFunction:(id<JavaUtilFunctionToIntFunction>)arg0 {
-  return JavaUtilComparator_thenComparingIntWithJavaUtilFunctionToIntFunction_(self, arg0);
-}
-
-- (id<JavaUtilComparator>)thenComparingLongWithJavaUtilFunctionToLongFunction:(id<JavaUtilFunctionToLongFunction>)arg0 {
-  return JavaUtilComparator_thenComparingLongWithJavaUtilFunctionToLongFunction_(self, arg0);
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "I", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(compareWithId:withId:);
-  methods[1].selector = @selector(init);
-  #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "compare", "LJavaLangComparable;LJavaLangComparable;", "LComGoogleGsonInternalLinkedHashTreeMap;", "Ljava/lang/Object;Ljava/util/Comparator<Ljava/lang/Comparable;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedHashTreeMap_$1 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, -1, 3, -1 };
-  return &_ComGoogleGsonInternalLinkedHashTreeMap_$1;
-}
-
-@end
-
-void ComGoogleGsonInternalLinkedHashTreeMap_$1_init(ComGoogleGsonInternalLinkedHashTreeMap_$1 *self) {
-  NSObject_init(self);
-}
-
-ComGoogleGsonInternalLinkedHashTreeMap_$1 *new_ComGoogleGsonInternalLinkedHashTreeMap_$1_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalLinkedHashTreeMap_$1, init)
-}
-
-ComGoogleGsonInternalLinkedHashTreeMap_$1 *create_ComGoogleGsonInternalLinkedHashTreeMap_$1_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalLinkedHashTreeMap_$1, init)
+ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1 *create_ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1_initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_(ComGoogleGsonInternalLinkedHashTreeMap_KeySet *outer$) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1, initWithComGoogleGsonInternalLinkedHashTreeMap_KeySet_, outer$)
 }

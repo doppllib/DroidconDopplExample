@@ -276,7 +276,7 @@ J2OBJC_TYPE_LITERAL_HEADER(RxSubjectsReplaySubject_ReplayBuffer)
 
 #pragma mark Protected
 
-- (void)javaFinalize;
+- (void)java_finalize;
 
 @end
 
@@ -377,7 +377,7 @@ J2OBJC_TYPE_LITERAL_HEADER(RxSubjectsReplaySubject_ReplaySizeBoundBuffer)
 
 #pragma mark Protected
 
-- (void)javaFinalize;
+- (void)java_finalize;
 
 @end
 
@@ -490,7 +490,7 @@ J2OBJC_TYPE_LITERAL_HEADER(RxSubjectsReplaySubject_ReplaySizeAndTimeBoundBuffer)
 
 #pragma mark Protected
 
-- (void)javaFinalize;
+- (void)java_finalize;
 
 @end
 

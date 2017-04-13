@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OperatorWindowWithTime.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxFunctionsAction0.h"
 #include "RxInternalOperatorsNotificationLite.h"
@@ -32,49 +31,43 @@
 
 @end
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber, this$0_, RxInternalOperatorsOperatorWindowWithTime *)
-
-@interface RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *this$0_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber:(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *)outer$;
+
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1, this$0_, RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1 *self, RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1 *self, RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1 *new_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1 *new_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1 *create_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1 *create_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$);
-
-@interface RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *this$0_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber:(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *)outer$;
+
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2, this$0_, RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2 *self, RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2 *self, RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2 *new_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2 *new_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2 *create_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2 *create_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$);
 
 @interface RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber () {
  @public
@@ -83,52 +76,45 @@ __attribute__((unused)) static RxInternalOperatorsOperatorWindowWithTime_ExactSu
 
 @end
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber, this$0_, RxInternalOperatorsOperatorWindowWithTime *)
-
-@interface RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *this$0_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber:(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *)outer$;
+
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1, this$0_, RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1 *self, RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1 *self, RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1 *new_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1 *new_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1 *create_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1 *create_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$);
-
-@interface RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *this$0_;
   RxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject *val$chunk_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber:(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *)outer$
              withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject:(RxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject *)capture$0;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2, this$0_, RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2, val$chunk_, RxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2 *self, RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$, RxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2 *self, RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$, RxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2 *new_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$, RxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2 *new_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$, RxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2 *create_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$, RxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2 *create_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$, RxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject *capture$0);
 
 J2OBJC_INITIALIZED_DEFN(RxInternalOperatorsOperatorWindowWithTime)
 
@@ -486,7 +472,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithTime_State
 }
 
 - (void)scheduleExact {
-  [((RxScheduler_Worker *) nil_chk(worker_)) schedulePeriodicallyWithRxFunctionsAction0:create_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(self) withLong:0 withLong:this$0_->timespan_ withJavaUtilConcurrentTimeUnit:this$0_->unit_];
+  [((RxScheduler_Worker *) nil_chk(worker_)) schedulePeriodicallyWithRxFunctionsAction0:create_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(self) withLong:0 withLong:this$0_->timespan_ withJavaUtilConcurrentTimeUnit:this$0_->unit_];
 }
 
 - (void)nextWindow {
@@ -536,7 +522,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithTime_State
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber class]);
   RELEASE_(this$0_);
   RELEASE_(child_);
   RELEASE_(worker_);
@@ -577,16 +562,16 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithTime_State
   methods[11].selector = @selector(nextWindow);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorWindowWithTime;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x10, -1, -1, 13, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorWindowWithTime;", .constantValue.asLong = 0, 0x1012, -1, -1, 13, -1 },
+    { "child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x10, -1, -1, 14, -1 },
     { "worker_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
     { "guard_", "LNSObject;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
-    { "queue_", "LJavaUtilList;", .constantValue.asLong = 0, 0x0, -1, -1, 14, -1 },
+    { "queue_", "LJavaUtilList;", .constantValue.asLong = 0, 0x0, -1, -1, 15, -1 },
     { "emitting_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
-    { "state_", "LRxInternalOperatorsOperatorWindowWithTime_State;", .constantValue.asLong = 0, 0x40, -1, -1, 15, -1 },
+    { "state_", "LRxInternalOperatorsOperatorWindowWithTime_State;", .constantValue.asLong = 0, 0x40, -1, -1, 16, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorWindowWithTime;LRxSubscriber;LRxScheduler_Worker;", "(Lrx/internal/operators/OperatorWindowWithTime;Lrx/Subscriber<-Lrx/Observable<TT;>;>;Lrx/Scheduler$Worker;)V", "onNext", "LNSObject;", "(TT;)V", "drain", "LJavaUtilList;", "(Ljava/util/List<Ljava/lang/Object;>;)Z", "emitValue", "(TT;)Z", "onError", "LNSException;", "error", "Lrx/Subscriber<-Lrx/Observable<TT;>;>;", "Ljava/util/List<Ljava/lang/Object;>;", "Lrx/internal/operators/OperatorWindowWithTime$State<TT;>;", "LRxInternalOperatorsOperatorWindowWithTime;", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber = { "ExactSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 12, 7, 16, -1, -1, 17, -1 };
+  static const void *ptrTable[] = { "LRxSubscriber;LRxScheduler_Worker;", "(Lrx/Subscriber<-Lrx/Observable<TT;>;>;Lrx/Scheduler$Worker;)V", "onNext", "LNSObject;", "(TT;)V", "drain", "LJavaUtilList;", "(Ljava/util/List<Ljava/lang/Object;>;)Z", "emitValue", "(TT;)Z", "onError", "LNSException;", "error", "Lrx/internal/operators/OperatorWindowWithTime<TT;>;", "Lrx/Subscriber<-Lrx/Observable<TT;>;>;", "Ljava/util/List<Ljava/lang/Object;>;", "Lrx/internal/operators/OperatorWindowWithTime$State<TT;>;", "LRxInternalOperatorsOperatorWindowWithTime;", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber = { "ExactSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 12, 7, 17, -1, -1, 18, -1 };
   return &_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber;
 }
 
@@ -599,7 +584,7 @@ void RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_initWithRxInterna
   JreStrongAssign(&self->worker_, worker);
   JreStrongAssignAndConsume(&self->guard_, new_NSObject_init());
   JreVolatileStrongAssign(&self->state_, RxInternalOperatorsOperatorWindowWithTime_State_empty());
-  [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(self))];
+  [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(self))];
 }
 
 RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *new_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_initWithRxInternalOperatorsOperatorWindowWithTime_withRxSubscriber_withRxScheduler_Worker_(RxInternalOperatorsOperatorWindowWithTime *outer$, RxSubscriber *child, RxScheduler_Worker *worker) {
@@ -612,7 +597,12 @@ RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *create_RxInternalOper
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber)
 
-@implementation RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1
+@implementation RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber:(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *)outer$ {
+  RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(self, outer$);
+  return self;
+}
 
 - (void)call {
   if (((RxInternalOperatorsOperatorWindowWithTime_State *) nil_chk(JreLoadVolatileId(&this$0_->state_)))->consumer_ == nil) {
@@ -620,11 +610,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithTime_Exact
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber:(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *)outer$ {
-  RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -632,48 +617,48 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithTime_Exact
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber;", "initWithRxSubscriber:withRxScheduler_Worker:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
-  return &_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1;
+  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber;", "initWithRxInternalOperatorsOperatorWindowWithTime:withRxSubscriber:withRxScheduler_Worker:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  return &_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1 *self, RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$) {
+void RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1 *self, RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1 *new_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1, initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_, outer$)
+RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1 *new_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1, initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_, outer$)
 }
 
-RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1 *create_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1, initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_, outer$)
+RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1 *create_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_1, initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_, outer$)
 }
 
-@implementation RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2
+@implementation RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2
+
+- (instancetype)initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber:(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *)outer$ {
+  RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(self, outer$);
+  return self;
+}
 
 - (void)call {
   [this$0_ nextWindow];
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber:(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *)outer$ {
-  RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -681,35 +666,35 @@ RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$1 *create_RxInternalO
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber;", "scheduleExact" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
-  return &_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2;
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  return &_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2;
 }
 
 @end
 
-void RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2 *self, RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$) {
+void RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2 *self, RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2 *new_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2, initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_, outer$)
+RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2 *new_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2, initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_, outer$)
 }
 
-RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2 *create_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_$2, initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_, outer$)
+RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2 *create_RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2_initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_2, initWithRxInternalOperatorsOperatorWindowWithTime_ExactSubscriber_, outer$)
 }
 
 @implementation RxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject
@@ -831,7 +816,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithTime_Count
 }
 
 - (void)scheduleChunk {
-  [((RxScheduler_Worker *) nil_chk(worker_)) schedulePeriodicallyWithRxFunctionsAction0:create_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_(self) withLong:this$0_->timeshift_ withLong:this$0_->timeshift_ withJavaUtilConcurrentTimeUnit:this$0_->unit_];
+  [((RxScheduler_Worker *) nil_chk(worker_)) schedulePeriodicallyWithRxFunctionsAction0:create_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_(self) withLong:this$0_->timeshift_ withLong:this$0_->timeshift_ withJavaUtilConcurrentTimeUnit:this$0_->unit_];
 }
 
 - (void)startNewChunk {
@@ -849,7 +834,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithTime_Count
     [self onErrorWithNSException:e];
     return;
   }
-  [((RxScheduler_Worker *) nil_chk(worker_)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_(self, chunk) withLong:this$0_->timespan_ withJavaUtilConcurrentTimeUnit:this$0_->unit_];
+  [((RxScheduler_Worker *) nil_chk(worker_)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_(self, chunk) withLong:this$0_->timespan_ withJavaUtilConcurrentTimeUnit:this$0_->unit_];
 }
 
 - (void)terminateChunkWithRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject:(RxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject *)chunk {
@@ -879,7 +864,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithTime_Count
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber class]);
   RELEASE_(this$0_);
   RELEASE_(child_);
   RELEASE_(worker_);
@@ -913,15 +897,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithTime_Count
   methods[8].selector = @selector(createCountedSerializedSubject);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorWindowWithTime;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x10, -1, -1, 11, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorWindowWithTime;", .constantValue.asLong = 0, 0x1012, -1, -1, 11, -1 },
+    { "child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x10, -1, -1, 12, -1 },
     { "worker_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
     { "guard_", "LNSObject;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
-    { "chunks_", "LJavaUtilList;", .constantValue.asLong = 0, 0x10, -1, -1, 12, -1 },
+    { "chunks_", "LJavaUtilList;", .constantValue.asLong = 0, 0x10, -1, -1, 13, -1 },
     { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorWindowWithTime;LRxSubscriber;LRxScheduler_Worker;", "(Lrx/internal/operators/OperatorWindowWithTime;Lrx/Subscriber<-Lrx/Observable<TT;>;>;Lrx/Scheduler$Worker;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "terminateChunk", "LRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject;", "(Lrx/internal/operators/OperatorWindowWithTime$CountedSerializedSubject<TT;>;)V", "()Lrx/internal/operators/OperatorWindowWithTime$CountedSerializedSubject<TT;>;", "Lrx/Subscriber<-Lrx/Observable<TT;>;>;", "Ljava/util/List<Lrx/internal/operators/OperatorWindowWithTime$CountedSerializedSubject<TT;>;>;", "LRxInternalOperatorsOperatorWindowWithTime;", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber = { "InexactSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 9, 6, 13, -1, -1, 14, -1 };
+  static const void *ptrTable[] = { "LRxSubscriber;LRxScheduler_Worker;", "(Lrx/Subscriber<-Lrx/Observable<TT;>;>;Lrx/Scheduler$Worker;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "terminateChunk", "LRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject;", "(Lrx/internal/operators/OperatorWindowWithTime$CountedSerializedSubject<TT;>;)V", "()Lrx/internal/operators/OperatorWindowWithTime$CountedSerializedSubject<TT;>;", "Lrx/internal/operators/OperatorWindowWithTime<TT;>;", "Lrx/Subscriber<-Lrx/Observable<TT;>;>;", "Ljava/util/List<Lrx/internal/operators/OperatorWindowWithTime$CountedSerializedSubject<TT;>;>;", "LRxInternalOperatorsOperatorWindowWithTime;", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber = { "InexactSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 9, 6, 14, -1, -1, 15, -1 };
   return &_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber;
 }
 
@@ -946,15 +930,15 @@ RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *create_RxInternalOp
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber)
 
-@implementation RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1
+@implementation RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber:(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *)outer$ {
+  RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_(self, outer$);
+  return self;
+}
 
 - (void)call {
   [this$0_ startNewChunk];
-}
-
-- (instancetype)initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber:(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *)outer$ {
-  RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_(self, outer$);
-  return self;
 }
 
 - (void)dealloc {
@@ -964,47 +948,47 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithTime_Inexa
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber;", "scheduleChunk" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
-  return &_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1;
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  return &_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1 *self, RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$) {
+void RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1 *self, RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1 *new_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1, initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_, outer$)
+RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1 *new_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1, initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_, outer$)
 }
 
-RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1 *create_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1, initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_, outer$)
+RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1 *create_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_1, initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_, outer$)
 }
 
-@implementation RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2
-
-- (void)call {
-  [this$0_ terminateChunkWithRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject:val$chunk_];
-}
+@implementation RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2
 
 - (instancetype)initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber:(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *)outer$
              withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject:(RxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject *)capture$0 {
-  RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_(self, outer$, capture$0);
+  RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_(self, outer$, capture$0);
   return self;
+}
+
+- (void)call {
+  [this$0_ terminateChunkWithRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject:val$chunk_];
 }
 
 - (void)dealloc {
@@ -1015,35 +999,35 @@ RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$1 *create_RxInterna
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber:withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber:withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$chunk_", "LRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+    { "val$chunk_", "LRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber;LRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject;", "(Lrx/internal/operators/OperatorWindowWithTime$InexactSubscriber;Lrx/internal/operators/OperatorWindowWithTime$CountedSerializedSubject<TT;>;)V", "Lrx/internal/operators/OperatorWindowWithTime$CountedSerializedSubject<TT;>;", "LRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber;", "startNewChunk" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, -1, -1 };
-  return &_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2;
+  static const void *ptrTable[] = { "Lrx/internal/operators/OperatorWindowWithTime$CountedSerializedSubject<TT;>;", "LRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber;", "startNewChunk" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
+  return &_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2;
 }
 
 @end
 
-void RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2 *self, RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$, RxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject *capture$0) {
+void RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2 *self, RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$, RxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$chunk_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2 *new_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$, RxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2, initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_, outer$, capture$0)
+RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2 *new_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$, RxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2, initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_, outer$, capture$0)
 }
 
-RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2 *create_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$, RxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_$2, initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_, outer$, capture$0)
+RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2 *create_RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2_initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber *outer$, RxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_2, initWithRxInternalOperatorsOperatorWindowWithTime_InexactSubscriber_withRxInternalOperatorsOperatorWindowWithTime_CountedSerializedSubject_, outer$, capture$0)
 }

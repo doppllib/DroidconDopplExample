@@ -56,7 +56,7 @@ NSString *AndroidDatabaseSqliteSQLiteDatabaseConfiguration_MEMORY_DB_PATH = @":m
 }
 
 - (jboolean)isInMemoryDb {
-  return [((NSString *) nil_chk(path_)) equalsIgnoreCase:AndroidDatabaseSqliteSQLiteDatabaseConfiguration_MEMORY_DB_PATH];
+  return [((NSString *) nil_chk(path_)) java_equalsIgnoreCase:AndroidDatabaseSqliteSQLiteDatabaseConfiguration_MEMORY_DB_PATH];
 }
 
 + (NSString *)stripPathForLogsWithNSString:(NSString *)path {
@@ -154,7 +154,7 @@ AndroidDatabaseSqliteSQLiteDatabaseConfiguration *create_AndroidDatabaseSqliteSQ
 
 NSString *AndroidDatabaseSqliteSQLiteDatabaseConfiguration_stripPathForLogsWithNSString_(NSString *path) {
   AndroidDatabaseSqliteSQLiteDatabaseConfiguration_initialize();
-  if ([((NSString *) nil_chk(path)) indexOf:'@'] == -1) {
+  if ([((NSString *) nil_chk(path)) java_indexOf:'@'] == -1) {
     return path;
   }
   return [((JavaUtilRegexMatcher *) nil_chk([((JavaUtilRegexPattern *) nil_chk(AndroidDatabaseSqliteSQLiteDatabaseConfiguration_EMAIL_IN_DB_PATTERN)) matcherWithJavaLangCharSequence:path])) replaceAllWithNSString:@"XX@YY"];

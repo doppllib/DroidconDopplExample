@@ -42,8 +42,11 @@ __attribute__((unused)) static IOSObjectArray *RetrofitHttpDELETE__Annotations$0
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
   methods[0].selector = @selector(value);
   #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "value_", "LNSString;", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+  };
   static const void *ptrTable[] = { (void *)&RetrofitHttpDELETE__Annotations$0 };
-  static const J2ObjcClassInfo _RetrofitHttpDELETE = { "DELETE", "retrofit.http", ptrTable, methods, NULL, 7, 0x2609, 1, 0, -1, -1, -1, -1, 0 };
+  static const J2ObjcClassInfo _RetrofitHttpDELETE = { "DELETE", "retrofit.http", ptrTable, methods, fields, 7, 0x2609, 1, 1, -1, -1, -1, -1, 0 };
   return &_RetrofitHttpDELETE;
 }
 
@@ -56,7 +59,7 @@ id<RetrofitHttpDELETE> create_RetrofitHttpDELETE(NSString *value) {
 }
 
 IOSObjectArray *RetrofitHttpDELETE__Annotations$0() {
-  return [IOSObjectArray arrayWithObjects:(id[]){ create_JavaLangAnnotationDocumented(), create_JavaLangAnnotationTarget([IOSObjectArray arrayWithObjects:(id[]){ JreLoadEnum(JavaLangAnnotationElementType, METHOD) } count:1 type:NSObject_class_()]), create_JavaLangAnnotationRetention(JreLoadEnum(JavaLangAnnotationRetentionPolicy, RUNTIME)), create_RetrofitHttpRestMethod(false, @"DELETE") } count:4 type:JavaLangAnnotationAnnotation_class_()];
+  return [IOSObjectArray arrayWithObjects:(id[]){ create_JavaLangAnnotationDocumented(), create_JavaLangAnnotationTarget([IOSObjectArray arrayWithObjects:(id[]){ JreLoadEnum(JavaLangAnnotationElementType, METHOD) } count:1 type:JavaLangAnnotationElementType_class_()]), create_JavaLangAnnotationRetention(JreLoadEnum(JavaLangAnnotationRetentionPolicy, RUNTIME)), create_RetrofitHttpRestMethod(false, @"DELETE") } count:4 type:JavaLangAnnotationAnnotation_class_()];
 }
 
 J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(RetrofitHttpDELETE)

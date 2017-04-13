@@ -38,6 +38,12 @@
 
 J2OBJC_EMPTY_STATIC_INIT(RenameComGoogleAndroidCollectSets)
 
+FOUNDATION_EXPORT void RenameComGoogleAndroidCollectSets_init(RenameComGoogleAndroidCollectSets *self);
+
+FOUNDATION_EXPORT RenameComGoogleAndroidCollectSets *new_RenameComGoogleAndroidCollectSets_init() NS_RETURNS_RETAINED;
+
+FOUNDATION_EXPORT RenameComGoogleAndroidCollectSets *create_RenameComGoogleAndroidCollectSets_init();
+
 FOUNDATION_EXPORT JavaUtilHashSet *RenameComGoogleAndroidCollectSets_newHashSet();
 
 FOUNDATION_EXPORT JavaUtilHashSet *RenameComGoogleAndroidCollectSets_newHashSetWithNSObjectArray_(IOSObjectArray *elements);
@@ -45,12 +51,6 @@ FOUNDATION_EXPORT JavaUtilHashSet *RenameComGoogleAndroidCollectSets_newHashSetW
 FOUNDATION_EXPORT id<JavaUtilSortedSet> RenameComGoogleAndroidCollectSets_newSortedSet();
 
 FOUNDATION_EXPORT id<JavaUtilSortedSet> RenameComGoogleAndroidCollectSets_newSortedSetWithNSObjectArray_(IOSObjectArray *elements);
-
-FOUNDATION_EXPORT void RenameComGoogleAndroidCollectSets_init(RenameComGoogleAndroidCollectSets *self);
-
-FOUNDATION_EXPORT RenameComGoogleAndroidCollectSets *new_RenameComGoogleAndroidCollectSets_init() NS_RETURNS_RETAINED;
-
-FOUNDATION_EXPORT RenameComGoogleAndroidCollectSets *create_RenameComGoogleAndroidCollectSets_init();
 
 J2OBJC_TYPE_LITERAL_HEADER(RenameComGoogleAndroidCollectSets)
 

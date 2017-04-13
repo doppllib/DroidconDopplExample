@@ -24,27 +24,25 @@ __attribute__((unused)) static RxInternalOperatorsOperatorSequenceEqual *new_RxI
 
 __attribute__((unused)) static RxInternalOperatorsOperatorSequenceEqual *create_RxInternalOperatorsOperatorSequenceEqual_init();
 
-@interface RxInternalOperatorsOperatorSequenceEqual_$1 : NSObject < RxFunctionsFunc2 > {
+@interface RxInternalOperatorsOperatorSequenceEqual_1 : NSObject < RxFunctionsFunc2 > {
  @public
   id<RxFunctionsFunc2> val$equality_;
 }
 
+- (instancetype)initWithRxFunctionsFunc2:(id<RxFunctionsFunc2>)capture$0;
+
 - (JavaLangBoolean *)callWithId:(id)t1
                          withId:(id)t2;
 
-- (instancetype)initWithRxFunctionsFunc2:(id<RxFunctionsFunc2>)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSequenceEqual_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSequenceEqual_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSequenceEqual_$1, val$equality_, id<RxFunctionsFunc2>)
+__attribute__((unused)) static void RxInternalOperatorsOperatorSequenceEqual_1_initWithRxFunctionsFunc2_(RxInternalOperatorsOperatorSequenceEqual_1 *self, id<RxFunctionsFunc2> capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorSequenceEqual_$1_initWithRxFunctionsFunc2_(RxInternalOperatorsOperatorSequenceEqual_$1 *self, id<RxFunctionsFunc2> capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorSequenceEqual_1 *new_RxInternalOperatorsOperatorSequenceEqual_1_initWithRxFunctionsFunc2_(id<RxFunctionsFunc2> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorSequenceEqual_$1 *new_RxInternalOperatorsOperatorSequenceEqual_$1_initWithRxFunctionsFunc2_(id<RxFunctionsFunc2> capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorSequenceEqual_$1 *create_RxInternalOperatorsOperatorSequenceEqual_$1_initWithRxFunctionsFunc2_(id<RxFunctionsFunc2> capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorSequenceEqual_1 *create_RxInternalOperatorsOperatorSequenceEqual_1_initWithRxFunctionsFunc2_(id<RxFunctionsFunc2> capture$0);
 
 J2OBJC_INITIALIZED_DEFN(RxInternalOperatorsOperatorSequenceEqual)
 
@@ -120,12 +118,17 @@ RxObservable *RxInternalOperatorsOperatorSequenceEqual_sequenceEqualWithRxObserv
   RxInternalOperatorsOperatorSequenceEqual_initialize();
   RxObservable *firstObservable = RxInternalOperatorsOperatorSequenceEqual_materializeLiteWithRxObservable_(first);
   RxObservable *secondObservable = RxInternalOperatorsOperatorSequenceEqual_materializeLiteWithRxObservable_(second);
-  return [((RxObservable *) nil_chk(RxObservable_zipWithRxObservable_withRxObservable_withRxFunctionsFunc2_(firstObservable, secondObservable, create_RxInternalOperatorsOperatorSequenceEqual_$1_initWithRxFunctionsFunc2_(equality)))) allWithRxFunctionsFunc1:RxInternalUtilUtilityFunctions_identity()];
+  return [((RxObservable *) nil_chk(RxObservable_zipWithRxObservable_withRxObservable_withRxFunctionsFunc2_(firstObservable, secondObservable, create_RxInternalOperatorsOperatorSequenceEqual_1_initWithRxFunctionsFunc2_(equality)))) allWithRxFunctionsFunc1:RxInternalUtilUtilityFunctions_identity()];
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorSequenceEqual)
 
-@implementation RxInternalOperatorsOperatorSequenceEqual_$1
+@implementation RxInternalOperatorsOperatorSequenceEqual_1
+
+- (instancetype)initWithRxFunctionsFunc2:(id<RxFunctionsFunc2>)capture$0 {
+  RxInternalOperatorsOperatorSequenceEqual_1_initWithRxFunctionsFunc2_(self, capture$0);
+  return self;
+}
 
 - (JavaLangBoolean *)callWithId:(id)t1
                          withId:(id)t2 {
@@ -140,11 +143,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorSequenceEqual)
   return [((id<RxFunctionsFunc2>) nil_chk(val$equality_)) callWithId:t1 withId:t2];
 }
 
-- (instancetype)initWithRxFunctionsFunc2:(id<RxFunctionsFunc2>)capture$0 {
-  RxInternalOperatorsOperatorSequenceEqual_$1_initWithRxFunctionsFunc2_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$equality_);
   [super dealloc];
@@ -152,33 +150,33 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorSequenceEqual)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaLangBoolean;", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, 3, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:);
-  methods[1].selector = @selector(initWithRxFunctionsFunc2:);
+  methods[0].selector = @selector(initWithRxFunctionsFunc2:);
+  methods[1].selector = @selector(callWithId:withId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$equality_", "LRxFunctionsFunc2;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+    { "val$equality_", "LRxFunctionsFunc2;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
   };
-  static const void *ptrTable[] = { "call", "LNSObject;LNSObject;", "LRxFunctionsFunc2;", "(Lrx/functions/Func2<-TT;-TT;Ljava/lang/Boolean;>;)V", "Lrx/functions/Func2<-TT;-TT;Ljava/lang/Boolean;>;", "LRxInternalOperatorsOperatorSequenceEqual;", "sequenceEqualWithRxObservable:withRxObservable:withRxFunctionsFunc2:", "Ljava/lang/Object;Lrx/functions/Func2<Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Boolean;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSequenceEqual_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 5, -1, 6, 7, -1 };
-  return &_RxInternalOperatorsOperatorSequenceEqual_$1;
+  static const void *ptrTable[] = { "call", "LNSObject;LNSObject;", "Lrx/functions/Func2<-TT;-TT;Ljava/lang/Boolean;>;", "LRxInternalOperatorsOperatorSequenceEqual;", "sequenceEqualWithRxObservable:withRxObservable:withRxFunctionsFunc2:", "Ljava/lang/Object;Lrx/functions/Func2<Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Boolean;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSequenceEqual_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, 5, -1 };
+  return &_RxInternalOperatorsOperatorSequenceEqual_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorSequenceEqual_$1_initWithRxFunctionsFunc2_(RxInternalOperatorsOperatorSequenceEqual_$1 *self, id<RxFunctionsFunc2> capture$0) {
+void RxInternalOperatorsOperatorSequenceEqual_1_initWithRxFunctionsFunc2_(RxInternalOperatorsOperatorSequenceEqual_1 *self, id<RxFunctionsFunc2> capture$0) {
   JreStrongAssign(&self->val$equality_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorSequenceEqual_$1 *new_RxInternalOperatorsOperatorSequenceEqual_$1_initWithRxFunctionsFunc2_(id<RxFunctionsFunc2> capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSequenceEqual_$1, initWithRxFunctionsFunc2_, capture$0)
+RxInternalOperatorsOperatorSequenceEqual_1 *new_RxInternalOperatorsOperatorSequenceEqual_1_initWithRxFunctionsFunc2_(id<RxFunctionsFunc2> capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSequenceEqual_1, initWithRxFunctionsFunc2_, capture$0)
 }
 
-RxInternalOperatorsOperatorSequenceEqual_$1 *create_RxInternalOperatorsOperatorSequenceEqual_$1_initWithRxFunctionsFunc2_(id<RxFunctionsFunc2> capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSequenceEqual_$1, initWithRxFunctionsFunc2_, capture$0)
+RxInternalOperatorsOperatorSequenceEqual_1 *create_RxInternalOperatorsOperatorSequenceEqual_1_initWithRxFunctionsFunc2_(id<RxFunctionsFunc2> capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSequenceEqual_1, initWithRxFunctionsFunc2_, capture$0)
 }

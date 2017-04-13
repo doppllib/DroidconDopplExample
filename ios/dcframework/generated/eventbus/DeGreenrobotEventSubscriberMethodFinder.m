@@ -91,7 +91,7 @@ J2OBJC_INITIALIZED_DEFN(DeGreenrobotEventSubscriberMethodFinder)
           if ((modifiers & JavaLangReflectModifier_PUBLIC) != 0 && (modifiers & DeGreenrobotEventSubscriberMethodFinder_MODIFIERS_IGNORE) == 0) {
             IOSObjectArray *parameterTypes = [method getParameterTypes];
             if (((IOSObjectArray *) nil_chk(parameterTypes))->size_ == 1) {
-              NSString *modifierString = [methodName substring:((jint) [((NSString *) nil_chk(DeGreenrobotEventSubscriberMethodFinder_ON_EVENT_METHOD_NAME)) length])];
+              NSString *modifierString = [methodName java_substring:((jint) [((NSString *) nil_chk(DeGreenrobotEventSubscriberMethodFinder_ON_EVENT_METHOD_NAME)) length])];
               DeGreenrobotEventThreadMode *threadMode;
               if (((jint) [((NSString *) nil_chk(modifierString)) length]) == 0) {
                 threadMode = JreLoadEnum(DeGreenrobotEventThreadMode, PostThread);

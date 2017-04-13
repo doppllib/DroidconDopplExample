@@ -10,21 +10,21 @@
 
 @end
 
-@interface RetrofitRequestInterceptor_$1 : NSObject < RetrofitRequestInterceptor >
-
-- (void)interceptWithRetrofitRequestInterceptor_RequestFacade:(id<RetrofitRequestInterceptor_RequestFacade>)request;
+@interface RetrofitRequestInterceptor_1 : NSObject < RetrofitRequestInterceptor >
 
 - (instancetype)init;
 
+- (void)interceptWithRetrofitRequestInterceptor_RequestFacade:(id<RetrofitRequestInterceptor_RequestFacade>)request;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RetrofitRequestInterceptor_$1)
+J2OBJC_EMPTY_STATIC_INIT(RetrofitRequestInterceptor_1)
 
-__attribute__((unused)) static void RetrofitRequestInterceptor_$1_init(RetrofitRequestInterceptor_$1 *self);
+__attribute__((unused)) static void RetrofitRequestInterceptor_1_init(RetrofitRequestInterceptor_1 *self);
 
-__attribute__((unused)) static RetrofitRequestInterceptor_$1 *new_RetrofitRequestInterceptor_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RetrofitRequestInterceptor_1 *new_RetrofitRequestInterceptor_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RetrofitRequestInterceptor_$1 *create_RetrofitRequestInterceptor_$1_init();
+__attribute__((unused)) static RetrofitRequestInterceptor_1 *create_RetrofitRequestInterceptor_1_init();
 
 J2OBJC_INITIALIZED_DEFN(RetrofitRequestInterceptor)
 
@@ -50,7 +50,7 @@ id<RetrofitRequestInterceptor> RetrofitRequestInterceptor_NONE;
 
 + (void)initialize {
   if (self == [RetrofitRequestInterceptor class]) {
-    JreStrongAssignAndConsume(&RetrofitRequestInterceptor_NONE, new_RetrofitRequestInterceptor_$1_init());
+    JreStrongAssignAndConsume(&RetrofitRequestInterceptor_NONE, new_RetrofitRequestInterceptor_1_init());
     J2OBJC_SET_INITIALIZED(RetrofitRequestInterceptor)
   }
 }
@@ -86,43 +86,43 @@ J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(RetrofitRequestInterceptor)
 
 J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(RetrofitRequestInterceptor_RequestFacade)
 
-@implementation RetrofitRequestInterceptor_$1
-
-- (void)interceptWithRetrofitRequestInterceptor_RequestFacade:(id<RetrofitRequestInterceptor_RequestFacade>)request {
-}
+@implementation RetrofitRequestInterceptor_1
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
-  RetrofitRequestInterceptor_$1_init(self);
+  RetrofitRequestInterceptor_1_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (void)interceptWithRetrofitRequestInterceptor_RequestFacade:(id<RetrofitRequestInterceptor_RequestFacade>)request {
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(interceptWithRetrofitRequestInterceptor_RequestFacade:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(interceptWithRetrofitRequestInterceptor_RequestFacade:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "intercept", "LRetrofitRequestInterceptor_RequestFacade;", "LRetrofitRequestInterceptor;" };
-  static const J2ObjcClassInfo _RetrofitRequestInterceptor_$1 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, -1, -1, -1 };
-  return &_RetrofitRequestInterceptor_$1;
+  static const J2ObjcClassInfo _RetrofitRequestInterceptor_1 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, -1, -1, -1 };
+  return &_RetrofitRequestInterceptor_1;
 }
 
 @end
 
-void RetrofitRequestInterceptor_$1_init(RetrofitRequestInterceptor_$1 *self) {
+void RetrofitRequestInterceptor_1_init(RetrofitRequestInterceptor_1 *self) {
   NSObject_init(self);
 }
 
-RetrofitRequestInterceptor_$1 *new_RetrofitRequestInterceptor_$1_init() {
-  J2OBJC_NEW_IMPL(RetrofitRequestInterceptor_$1, init)
+RetrofitRequestInterceptor_1 *new_RetrofitRequestInterceptor_1_init() {
+  J2OBJC_NEW_IMPL(RetrofitRequestInterceptor_1, init)
 }
 
-RetrofitRequestInterceptor_$1 *create_RetrofitRequestInterceptor_$1_init() {
-  J2OBJC_CREATE_IMPL(RetrofitRequestInterceptor_$1, init)
+RetrofitRequestInterceptor_1 *create_RetrofitRequestInterceptor_1_init() {
+  J2OBJC_CREATE_IMPL(RetrofitRequestInterceptor_1, init)
 }

@@ -127,12 +127,12 @@ J2OBJC_IGNORE_DESIGNATED_END
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
     { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, 0, -1, 1, -1, -1 },
+    { NULL, NULL, 0x1, -1, 0, -1, -1, -1, -1 },
     { NULL, "LRxSubscription;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "Z", 0x1, 1, 0, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, 2, 0, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, 3, 0, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, 4, 0, -1, -1, -1, -1 },
-    { NULL, "Z", 0x1, 5, 0, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
   };
@@ -151,8 +151,8 @@ J2OBJC_IGNORE_DESIGNATED_END
   static const J2ObjcFieldInfo fields[] = {
     { "serialVersionUID", "J", .constantValue.asLong = RxInternalSubscriptionsSequentialSubscription_serialVersionUID, 0x1a, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxSubscription;", "(Lrx/Subscription;)V", "update", "replace", "updateWeak", "replaceWeak", "Ljava/util/concurrent/atomic/AtomicReference<Lrx/Subscription;>;Lrx/Subscription;" };
-  static const J2ObjcClassInfo _RxInternalSubscriptionsSequentialSubscription = { "SequentialSubscription", "rx.internal.subscriptions", ptrTable, methods, fields, 7, 0x11, 9, 1, -1, -1, -1, 6, -1 };
+  static const void *ptrTable[] = { "LRxSubscription;", "update", "replace", "updateWeak", "replaceWeak", "Ljava/util/concurrent/atomic/AtomicReference<Lrx/Subscription;>;Lrx/Subscription;" };
+  static const J2ObjcClassInfo _RxInternalSubscriptionsSequentialSubscription = { "SequentialSubscription", "rx.internal.subscriptions", ptrTable, methods, fields, 7, 0x11, 9, 1, -1, -1, -1, 5, -1 };
   return &_RxInternalSubscriptionsSequentialSubscription;
 }
 

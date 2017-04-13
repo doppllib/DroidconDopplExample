@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/util/atomic/LinkedQueueNode.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxInternalUtilAtomicLinkedQueueNode.h"
 #include "java/util/concurrent/atomic/AtomicReference.h"

@@ -28,6 +28,13 @@ __attribute__((unused)) static IOSObjectArray *DCDEventSpeaker__Annotations$4();
 
 @implementation DCDEventSpeaker
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  DCDEventSpeaker_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (DCDEvent *)getEvent {
   return event_;
 }
@@ -40,13 +47,6 @@ __attribute__((unused)) static IOSObjectArray *DCDEventSpeaker__Annotations$4();
   return displayOrder_;
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  DCDEventSpeaker_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(id__);
   RELEASE_(event_);
@@ -56,17 +56,17 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LDCDEvent;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LDCDUserAccount;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "I", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getEvent);
-  methods[1].selector = @selector(getUserAccount);
-  methods[2].selector = @selector(getDisplayOrder);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(getEvent);
+  methods[2].selector = @selector(getUserAccount);
+  methods[3].selector = @selector(getDisplayOrder);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "id__", "LJavaLangInteger;", .constantValue.asLong = 0, 0x1, 0, -1, -1, 1 },

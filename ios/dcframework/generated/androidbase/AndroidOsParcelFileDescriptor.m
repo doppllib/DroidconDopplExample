@@ -59,23 +59,23 @@ J2OBJC_FIELD_SETTER(AndroidOsParcelFileDescriptor_AutoCloseInputStream, mFd_, An
 
 J2OBJC_FIELD_SETTER(AndroidOsParcelFileDescriptor_AutoCloseOutputStream, mFd_, AndroidOsParcelFileDescriptor *)
 
-@interface AndroidOsParcelFileDescriptor_$1 : NSObject < AndroidOsParcelable_Creator >
+@interface AndroidOsParcelFileDescriptor_1 : NSObject < AndroidOsParcelable_Creator >
+
+- (instancetype)init;
 
 - (AndroidOsParcelFileDescriptor *)createFromParcelWithAndroidOsParcel:(AndroidOsParcel *)inArg;
 
 - (IOSObjectArray *)newArrayWithInt:(jint)size OBJC_METHOD_FAMILY_NONE;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(AndroidOsParcelFileDescriptor_$1)
+J2OBJC_EMPTY_STATIC_INIT(AndroidOsParcelFileDescriptor_1)
 
-__attribute__((unused)) static void AndroidOsParcelFileDescriptor_$1_init(AndroidOsParcelFileDescriptor_$1 *self);
+__attribute__((unused)) static void AndroidOsParcelFileDescriptor_1_init(AndroidOsParcelFileDescriptor_1 *self);
 
-__attribute__((unused)) static AndroidOsParcelFileDescriptor_$1 *new_AndroidOsParcelFileDescriptor_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static AndroidOsParcelFileDescriptor_1 *new_AndroidOsParcelFileDescriptor_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static AndroidOsParcelFileDescriptor_$1 *create_AndroidOsParcelFileDescriptor_$1_init();
+__attribute__((unused)) static AndroidOsParcelFileDescriptor_1 *create_AndroidOsParcelFileDescriptor_1_init();
 
 J2OBJC_INITIALIZED_DEFN(AndroidOsParcelFileDescriptor)
 
@@ -133,14 +133,14 @@ id<AndroidOsParcelable_Creator> AndroidOsParcelFileDescriptor_CREATOR;
   return JreStrcat("$@C", @"{ParcelFileDescriptor: ", mFileDescriptor_, '}');
 }
 
-- (void)javaFinalize {
+- (void)java_finalize {
   @try {
     if (!mClosed_) {
       [self close];
     }
   }
   @finally {
-    [super javaFinalize];
+    [super java_finalize];
   }
 }
 
@@ -207,7 +207,7 @@ id<AndroidOsParcelable_Creator> AndroidOsParcelFileDescriptor_CREATOR;
   methods[7].selector = @selector(seekToWithLong:);
   methods[8].selector = @selector(close);
   methods[9].selector = @selector(description);
-  methods[10].selector = @selector(javaFinalize);
+  methods[10].selector = @selector(java_finalize);
   methods[11].selector = @selector(initWithAndroidOsParcelFileDescriptor:);
   methods[12].selector = @selector(initWithJavaIoFileDescriptor:);
   methods[13].selector = @selector(describeContents);
@@ -234,7 +234,7 @@ id<AndroidOsParcelable_Creator> AndroidOsParcelFileDescriptor_CREATOR;
 
 + (void)initialize {
   if (self == [AndroidOsParcelFileDescriptor class]) {
-    JreStrongAssignAndConsume(&AndroidOsParcelFileDescriptor_CREATOR, new_AndroidOsParcelFileDescriptor_$1_init());
+    JreStrongAssignAndConsume(&AndroidOsParcelFileDescriptor_CREATOR, new_AndroidOsParcelFileDescriptor_1_init());
     J2OBJC_SET_INITIALIZED(AndroidOsParcelFileDescriptor)
   }
 }
@@ -424,7 +424,14 @@ AndroidOsParcelFileDescriptor_AutoCloseOutputStream *create_AndroidOsParcelFileD
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidOsParcelFileDescriptor_AutoCloseOutputStream)
 
-@implementation AndroidOsParcelFileDescriptor_$1
+@implementation AndroidOsParcelFileDescriptor_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  AndroidOsParcelFileDescriptor_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (AndroidOsParcelFileDescriptor *)createFromParcelWithAndroidOsParcel:(AndroidOsParcel *)inArg {
   return [((AndroidOsParcel *) nil_chk(inArg)) readFileDescriptor];
@@ -434,40 +441,33 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidOsParcelFileDescriptor_AutoCloseOutputSt
   return [IOSObjectArray arrayWithLength:size type:AndroidOsParcelFileDescriptor_class_()];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  AndroidOsParcelFileDescriptor_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LAndroidOsParcelFileDescriptor;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "[LAndroidOsParcelFileDescriptor;", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(createFromParcelWithAndroidOsParcel:);
-  methods[1].selector = @selector(newArrayWithInt:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(createFromParcelWithAndroidOsParcel:);
+  methods[2].selector = @selector(newArrayWithInt:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "createFromParcel", "LAndroidOsParcel;", "newArray", "I", "LAndroidOsParcelFileDescriptor;", "Ljava/lang/Object;Landroid/os/Parcelable$Creator<Landroid/os/ParcelFileDescriptor;>;" };
-  static const J2ObjcClassInfo _AndroidOsParcelFileDescriptor_$1 = { "", "android.os", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 4, -1, -1, 5, -1 };
-  return &_AndroidOsParcelFileDescriptor_$1;
+  static const J2ObjcClassInfo _AndroidOsParcelFileDescriptor_1 = { "", "android.os", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 4, -1, -1, 5, -1 };
+  return &_AndroidOsParcelFileDescriptor_1;
 }
 
 @end
 
-void AndroidOsParcelFileDescriptor_$1_init(AndroidOsParcelFileDescriptor_$1 *self) {
+void AndroidOsParcelFileDescriptor_1_init(AndroidOsParcelFileDescriptor_1 *self) {
   NSObject_init(self);
 }
 
-AndroidOsParcelFileDescriptor_$1 *new_AndroidOsParcelFileDescriptor_$1_init() {
-  J2OBJC_NEW_IMPL(AndroidOsParcelFileDescriptor_$1, init)
+AndroidOsParcelFileDescriptor_1 *new_AndroidOsParcelFileDescriptor_1_init() {
+  J2OBJC_NEW_IMPL(AndroidOsParcelFileDescriptor_1, init)
 }
 
-AndroidOsParcelFileDescriptor_$1 *create_AndroidOsParcelFileDescriptor_$1_init() {
-  J2OBJC_CREATE_IMPL(AndroidOsParcelFileDescriptor_$1, init)
+AndroidOsParcelFileDescriptor_1 *create_AndroidOsParcelFileDescriptor_1_init() {
+  J2OBJC_CREATE_IMPL(AndroidOsParcelFileDescriptor_1, init)
 }

@@ -32,6 +32,13 @@ __attribute__((unused)) static IOSObjectArray *DCDBlock__Annotations$5();
 
 @implementation DCDBlock
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  DCDBlock_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (jboolean)isBlock {
   return true;
 }
@@ -52,13 +59,6 @@ __attribute__((unused)) static IOSObjectArray *DCDBlock__Annotations$5();
   return [((JavaTextDateFormat *) nil_chk([((JavaLangThreadLocal *) nil_chk(JreLoadStatic(CoTouchlabDroidconandroidUtilsTimeUtils, DATE_FORMAT))) get])) formatWithJavaUtilDate:create_JavaUtilDate_initWithLong_([((JavaLangLong *) nil_chk(endDateLong_)) longLongValue])];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  DCDBlock_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(name_);
   RELEASE_(description__);
@@ -69,21 +69,21 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaLangLong;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaLangLong;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(isBlock);
-  methods[1].selector = @selector(getStartLong);
-  methods[2].selector = @selector(getEndLong);
-  methods[3].selector = @selector(getStartFormatted);
-  methods[4].selector = @selector(getEndFormatted);
-  methods[5].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(isBlock);
+  methods[2].selector = @selector(getStartLong);
+  methods[3].selector = @selector(getEndLong);
+  methods[4].selector = @selector(getStartFormatted);
+  methods[5].selector = @selector(getEndFormatted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "id__", "J", .constantValue.asLong = 0, 0x1, 0, -1, -1, 1 },

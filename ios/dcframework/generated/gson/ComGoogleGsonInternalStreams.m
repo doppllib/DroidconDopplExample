@@ -79,14 +79,14 @@ J2OBJC_TYPE_LITERAL_HEADER(ComGoogleGsonInternalStreams_AppendableWriter)
   IOSCharArray *chars_;
 }
 
+- (instancetype)init;
+
 - (jint)length;
 
 - (jchar)charAtWithInt:(jint)i;
 
 - (id<JavaLangCharSequence>)subSequenceFrom:(jint)start
                                          to:(jint)end;
-
-- (instancetype)init;
 
 @end
 
@@ -270,6 +270,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalStreams_AppendableWriter)
 
 @implementation ComGoogleGsonInternalStreams_AppendableWriter_CurrentWrite
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalStreams_AppendableWriter_CurrentWrite_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (jint)length {
   return ((IOSCharArray *) nil_chk(chars_))->size_;
 }
@@ -280,15 +287,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalStreams_AppendableWriter)
 
 - (id<JavaLangCharSequence>)subSequenceFrom:(jint)start
                                          to:(jint)end {
-  return [NSString stringWithCharacters:chars_ offset:start length:end - start];
+  return [NSString java_stringWithCharacters:chars_ offset:start length:end - start];
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalStreams_AppendableWriter_CurrentWrite_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<JavaUtilStreamIntStream>)chars {
   return JavaLangCharSequence_chars(self);
@@ -305,17 +305,17 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "I", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "C", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "LJavaLangCharSequence;", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(length);
-  methods[1].selector = @selector(charAtWithInt:);
-  methods[2].selector = @selector(subSequenceFrom:to:);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(length);
+  methods[2].selector = @selector(charAtWithInt:);
+  methods[3].selector = @selector(subSequenceFrom:to:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "chars_", "[C", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },

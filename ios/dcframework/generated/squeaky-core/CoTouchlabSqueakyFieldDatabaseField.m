@@ -48,7 +48,7 @@ NSString *CoTouchlabSqueakyFieldDatabaseField_DEFAULT_STRING = @"__ormlite__ no 
 }
 
 + (NSString *)defaultValueDefault {
-  return CoTouchlabSqueakyFieldDatabaseField_DEFAULT_STRING;
+  return @"__ormlite__ no default value string was specified";
 }
 
 + (jboolean)canBeNullDefault {
@@ -168,9 +168,26 @@ NSString *CoTouchlabSqueakyFieldDatabaseField_DEFAULT_STRING = @"__ormlite__ no 
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "DEFAULT_STRING", "LNSString;", .constantValue.asLong = 0, 0x19, -1, 0, -1, -1 },
+    { "columnName_", "LNSString;", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+    { "dataType_", "LCoTouchlabSqueakyFieldDataType;", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+    { "defaultValue_", "LNSString;", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+    { "canBeNull_", "Z", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+    { "id___", "Z", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+    { "generatedId_", "Z", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+    { "foreign_", "Z", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+    { "useGetSet_", "Z", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+    { "format_", "LNSString;", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+    { "unique_", "Z", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+    { "uniqueCombo_", "Z", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+    { "index_", "Z", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+    { "uniqueIndex_", "Z", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+    { "indexName_", "LNSString;", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+    { "uniqueIndexName_", "LNSString;", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+    { "foreignAutoRefresh_", "Z", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+    { "persisterClass_", "LIOSClass;", .constantValue.asLong = 0, 0x1000, -1, -1, 1, -1 },
   };
-  static const void *ptrTable[] = { &CoTouchlabSqueakyFieldDatabaseField_DEFAULT_STRING, (void *)&CoTouchlabSqueakyFieldDatabaseField__Annotations$0 };
-  static const J2ObjcClassInfo _CoTouchlabSqueakyFieldDatabaseField = { "DatabaseField", "co.touchlab.squeaky.field", ptrTable, methods, fields, 7, 0x2609, 17, 1, -1, -1, -1, -1, 1 };
+  static const void *ptrTable[] = { &CoTouchlabSqueakyFieldDatabaseField_DEFAULT_STRING, "Ljava/lang/Class<+Lco/touchlab/squeaky/field/DataPersister;>;", (void *)&CoTouchlabSqueakyFieldDatabaseField__Annotations$0 };
+  static const J2ObjcClassInfo _CoTouchlabSqueakyFieldDatabaseField = { "DatabaseField", "co.touchlab.squeaky.field", ptrTable, methods, fields, 7, 0x2609, 17, 18, -1, -1, -1, -1, 2 };
   return &_CoTouchlabSqueakyFieldDatabaseField;
 }
 
@@ -199,7 +216,7 @@ id<CoTouchlabSqueakyFieldDatabaseField> create_CoTouchlabSqueakyFieldDatabaseFie
 }
 
 IOSObjectArray *CoTouchlabSqueakyFieldDatabaseField__Annotations$0() {
-  return [IOSObjectArray arrayWithObjects:(id[]){ create_JavaLangAnnotationTarget([IOSObjectArray arrayWithObjects:(id[]){ JreLoadEnum(JavaLangAnnotationElementType, FIELD) } count:1 type:NSObject_class_()]), create_JavaLangAnnotationRetention(JreLoadEnum(JavaLangAnnotationRetentionPolicy, RUNTIME)) } count:2 type:JavaLangAnnotationAnnotation_class_()];
+  return [IOSObjectArray arrayWithObjects:(id[]){ create_JavaLangAnnotationTarget([IOSObjectArray arrayWithObjects:(id[]){ JreLoadEnum(JavaLangAnnotationElementType, FIELD) } count:1 type:JavaLangAnnotationElementType_class_()]), create_JavaLangAnnotationRetention(JreLoadEnum(JavaLangAnnotationRetentionPolicy, RUNTIME)) } count:2 type:JavaLangAnnotationAnnotation_class_()];
 }
 
 J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(CoTouchlabSqueakyFieldDatabaseField)

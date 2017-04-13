@@ -40,21 +40,21 @@ __attribute__((unused)) static RxInternalUtilPlatformDependent *create_RxInterna
 
 __attribute__((unused)) static jint RxInternalUtilPlatformDependent_resolveAndroidApiVersion();
 
-@interface RxInternalUtilPlatformDependent_$1 : NSObject < JavaSecurityPrivilegedAction >
-
-- (JavaLangClassLoader *)run;
+@interface RxInternalUtilPlatformDependent_1 : NSObject < JavaSecurityPrivilegedAction >
 
 - (instancetype)init;
 
+- (JavaLangClassLoader *)run;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalUtilPlatformDependent_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalUtilPlatformDependent_1)
 
-__attribute__((unused)) static void RxInternalUtilPlatformDependent_$1_init(RxInternalUtilPlatformDependent_$1 *self);
+__attribute__((unused)) static void RxInternalUtilPlatformDependent_1_init(RxInternalUtilPlatformDependent_1 *self);
 
-__attribute__((unused)) static RxInternalUtilPlatformDependent_$1 *new_RxInternalUtilPlatformDependent_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalUtilPlatformDependent_1 *new_RxInternalUtilPlatformDependent_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalUtilPlatformDependent_$1 *create_RxInternalUtilPlatformDependent_$1_init();
+__attribute__((unused)) static RxInternalUtilPlatformDependent_1 *create_RxInternalUtilPlatformDependent_1_init();
 
 J2OBJC_INITIALIZED_DEFN(RxInternalUtilPlatformDependent)
 
@@ -134,7 +134,7 @@ RxInternalUtilPlatformDependent *create_RxInternalUtilPlatformDependent_init() {
 
 jboolean RxInternalUtilPlatformDependent_isAndroid() {
   RxInternalUtilPlatformDependent_initialize();
-  return RxInternalUtilPlatformDependent_IS_ANDROID;
+  return false;
 }
 
 jint RxInternalUtilPlatformDependent_getAndroidApiVersion() {
@@ -158,50 +158,50 @@ JavaLangClassLoader *RxInternalUtilPlatformDependent_getSystemClassLoader() {
     return JavaLangClassLoader_getSystemClassLoader();
   }
   else {
-    return JavaSecurityAccessController_doPrivilegedWithJavaSecurityPrivilegedAction_(create_RxInternalUtilPlatformDependent_$1_init());
+    return JavaSecurityAccessController_doPrivilegedWithJavaSecurityPrivilegedAction_(create_RxInternalUtilPlatformDependent_1_init());
   }
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilPlatformDependent)
 
-@implementation RxInternalUtilPlatformDependent_$1
+@implementation RxInternalUtilPlatformDependent_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalUtilPlatformDependent_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaLangClassLoader *)run {
   return JavaLangClassLoader_getSystemClassLoader();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalUtilPlatformDependent_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaLangClassLoader;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaLangClassLoader;", 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "LRxInternalUtilPlatformDependent;", "getSystemClassLoader", "Ljava/lang/Object;Ljava/security/PrivilegedAction<Ljava/lang/ClassLoader;>;" };
-  static const J2ObjcClassInfo _RxInternalUtilPlatformDependent_$1 = { "", "rx.internal.util", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 0, -1, 1, 2, -1 };
-  return &_RxInternalUtilPlatformDependent_$1;
+  static const J2ObjcClassInfo _RxInternalUtilPlatformDependent_1 = { "", "rx.internal.util", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 0, -1, 1, 2, -1 };
+  return &_RxInternalUtilPlatformDependent_1;
 }
 
 @end
 
-void RxInternalUtilPlatformDependent_$1_init(RxInternalUtilPlatformDependent_$1 *self) {
+void RxInternalUtilPlatformDependent_1_init(RxInternalUtilPlatformDependent_1 *self) {
   NSObject_init(self);
 }
 
-RxInternalUtilPlatformDependent_$1 *new_RxInternalUtilPlatformDependent_$1_init() {
-  J2OBJC_NEW_IMPL(RxInternalUtilPlatformDependent_$1, init)
+RxInternalUtilPlatformDependent_1 *new_RxInternalUtilPlatformDependent_1_init() {
+  J2OBJC_NEW_IMPL(RxInternalUtilPlatformDependent_1, init)
 }
 
-RxInternalUtilPlatformDependent_$1 *create_RxInternalUtilPlatformDependent_$1_init() {
-  J2OBJC_CREATE_IMPL(RxInternalUtilPlatformDependent_$1, init)
+RxInternalUtilPlatformDependent_1 *create_RxInternalUtilPlatformDependent_1_init() {
+  J2OBJC_CREATE_IMPL(RxInternalUtilPlatformDependent_1, init)
 }

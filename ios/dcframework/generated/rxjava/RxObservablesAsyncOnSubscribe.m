@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/observables/AsyncOnSubscribe.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxFunctionsAction0.h"
 #include "RxFunctionsAction1.h"
@@ -29,6 +28,109 @@
 #include "java/util/List.h"
 #include "java/util/concurrent/atomic/AtomicBoolean.h"
 
+@interface RxObservablesAsyncOnSubscribe_1 : NSObject < RxFunctionsFunc3 > {
+ @public
+  id<RxFunctionsAction3> val$next_;
+}
+
+- (instancetype)initWithRxFunctionsAction3:(id<RxFunctionsAction3>)capture$0;
+
+- (id)callWithId:(id)state
+          withId:(JavaLangLong *)requested
+          withId:(id<RxObserver>)subscriber;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxObservablesAsyncOnSubscribe_1)
+
+__attribute__((unused)) static void RxObservablesAsyncOnSubscribe_1_initWithRxFunctionsAction3_(RxObservablesAsyncOnSubscribe_1 *self, id<RxFunctionsAction3> capture$0);
+
+__attribute__((unused)) static RxObservablesAsyncOnSubscribe_1 *new_RxObservablesAsyncOnSubscribe_1_initWithRxFunctionsAction3_(id<RxFunctionsAction3> capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxObservablesAsyncOnSubscribe_1 *create_RxObservablesAsyncOnSubscribe_1_initWithRxFunctionsAction3_(id<RxFunctionsAction3> capture$0);
+
+@interface RxObservablesAsyncOnSubscribe_2 : NSObject < RxFunctionsFunc3 > {
+ @public
+  id<RxFunctionsAction3> val$next_;
+}
+
+- (instancetype)initWithRxFunctionsAction3:(id<RxFunctionsAction3>)capture$0;
+
+- (id)callWithId:(id)state
+          withId:(JavaLangLong *)requested
+          withId:(id<RxObserver>)subscriber;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxObservablesAsyncOnSubscribe_2)
+
+__attribute__((unused)) static void RxObservablesAsyncOnSubscribe_2_initWithRxFunctionsAction3_(RxObservablesAsyncOnSubscribe_2 *self, id<RxFunctionsAction3> capture$0);
+
+__attribute__((unused)) static RxObservablesAsyncOnSubscribe_2 *new_RxObservablesAsyncOnSubscribe_2_initWithRxFunctionsAction3_(id<RxFunctionsAction3> capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxObservablesAsyncOnSubscribe_2 *create_RxObservablesAsyncOnSubscribe_2_initWithRxFunctionsAction3_(id<RxFunctionsAction3> capture$0);
+
+@interface RxObservablesAsyncOnSubscribe_3 : NSObject < RxFunctionsFunc3 > {
+ @public
+  id<RxFunctionsAction2> val$next_;
+}
+
+- (instancetype)initWithRxFunctionsAction2:(id<RxFunctionsAction2>)capture$0;
+
+- (JavaLangVoid *)callWithId:(JavaLangVoid *)state
+                      withId:(JavaLangLong *)requested
+                      withId:(id<RxObserver>)subscriber;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxObservablesAsyncOnSubscribe_3)
+
+__attribute__((unused)) static void RxObservablesAsyncOnSubscribe_3_initWithRxFunctionsAction2_(RxObservablesAsyncOnSubscribe_3 *self, id<RxFunctionsAction2> capture$0);
+
+__attribute__((unused)) static RxObservablesAsyncOnSubscribe_3 *new_RxObservablesAsyncOnSubscribe_3_initWithRxFunctionsAction2_(id<RxFunctionsAction2> capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxObservablesAsyncOnSubscribe_3 *create_RxObservablesAsyncOnSubscribe_3_initWithRxFunctionsAction2_(id<RxFunctionsAction2> capture$0);
+
+@interface RxObservablesAsyncOnSubscribe_4 : NSObject < RxFunctionsFunc3 > {
+ @public
+  id<RxFunctionsAction2> val$next_;
+}
+
+- (instancetype)initWithRxFunctionsAction2:(id<RxFunctionsAction2>)capture$0;
+
+- (JavaLangVoid *)callWithId:(JavaLangVoid *)state
+                      withId:(JavaLangLong *)requested
+                      withId:(id<RxObserver>)subscriber;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxObservablesAsyncOnSubscribe_4)
+
+__attribute__((unused)) static void RxObservablesAsyncOnSubscribe_4_initWithRxFunctionsAction2_(RxObservablesAsyncOnSubscribe_4 *self, id<RxFunctionsAction2> capture$0);
+
+__attribute__((unused)) static RxObservablesAsyncOnSubscribe_4 *new_RxObservablesAsyncOnSubscribe_4_initWithRxFunctionsAction2_(id<RxFunctionsAction2> capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxObservablesAsyncOnSubscribe_4 *create_RxObservablesAsyncOnSubscribe_4_initWithRxFunctionsAction2_(id<RxFunctionsAction2> capture$0);
+
+@interface RxObservablesAsyncOnSubscribe_5 : NSObject < RxFunctionsAction1 > {
+ @public
+  id<RxFunctionsAction0> val$onUnsubscribe_;
+}
+
+- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0;
+
+- (void)callWithId:(JavaLangVoid *)t;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxObservablesAsyncOnSubscribe_5)
+
+__attribute__((unused)) static void RxObservablesAsyncOnSubscribe_5_initWithRxFunctionsAction0_(RxObservablesAsyncOnSubscribe_5 *self, id<RxFunctionsAction0> capture$0);
+
+__attribute__((unused)) static RxObservablesAsyncOnSubscribe_5 *new_RxObservablesAsyncOnSubscribe_5_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxObservablesAsyncOnSubscribe_5 *create_RxObservablesAsyncOnSubscribe_5_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0);
+
 @interface RxObservablesAsyncOnSubscribe_AsyncOnSubscribeImpl () {
  @public
   id<RxFunctionsFunc0> generator_;
@@ -41,6 +143,49 @@
 J2OBJC_FIELD_SETTER(RxObservablesAsyncOnSubscribe_AsyncOnSubscribeImpl, generator_, id<RxFunctionsFunc0>)
 J2OBJC_FIELD_SETTER(RxObservablesAsyncOnSubscribe_AsyncOnSubscribeImpl, next_, id<RxFunctionsFunc3>)
 J2OBJC_FIELD_SETTER(RxObservablesAsyncOnSubscribe_AsyncOnSubscribeImpl, onUnsubscribe_, id<RxFunctionsAction1>)
+
+@interface RxObservablesAsyncOnSubscribe_6 : RxSubscriber {
+ @public
+  RxSubscriber *val$actualSubscriber_;
+  RxObservablesAsyncOnSubscribe_AsyncOuterManager *val$outerProducer_;
+}
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
+withRxObservablesAsyncOnSubscribe_AsyncOuterManager:(RxObservablesAsyncOnSubscribe_AsyncOuterManager *)capture$1;
+
+- (void)onNextWithId:(id)t;
+
+- (void)onErrorWithNSException:(NSException *)e;
+
+- (void)onCompleted;
+
+- (void)setProducerWithRxProducer:(id<RxProducer>)p;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxObservablesAsyncOnSubscribe_6)
+
+__attribute__((unused)) static void RxObservablesAsyncOnSubscribe_6_initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_(RxObservablesAsyncOnSubscribe_6 *self, RxSubscriber *capture$0, RxObservablesAsyncOnSubscribe_AsyncOuterManager *capture$1);
+
+__attribute__((unused)) static RxObservablesAsyncOnSubscribe_6 *new_RxObservablesAsyncOnSubscribe_6_initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_(RxSubscriber *capture$0, RxObservablesAsyncOnSubscribe_AsyncOuterManager *capture$1) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxObservablesAsyncOnSubscribe_6 *create_RxObservablesAsyncOnSubscribe_6_initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_(RxSubscriber *capture$0, RxObservablesAsyncOnSubscribe_AsyncOuterManager *capture$1);
+
+@interface RxObservablesAsyncOnSubscribe_7 : NSObject < RxFunctionsFunc1 >
+
+- (instancetype)init;
+
+- (RxObservable *)callWithId:(RxObservable *)v;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxObservablesAsyncOnSubscribe_7)
+
+__attribute__((unused)) static void RxObservablesAsyncOnSubscribe_7_init(RxObservablesAsyncOnSubscribe_7 *self);
+
+__attribute__((unused)) static RxObservablesAsyncOnSubscribe_7 *new_RxObservablesAsyncOnSubscribe_7_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxObservablesAsyncOnSubscribe_7 *create_RxObservablesAsyncOnSubscribe_7_init();
 
 @interface RxObservablesAsyncOnSubscribe_AsyncOuterManager () {
  @public
@@ -67,12 +212,16 @@ __attribute__((unused)) static void RxObservablesAsyncOnSubscribe_AsyncOuterMana
 
 __attribute__((unused)) static void RxObservablesAsyncOnSubscribe_AsyncOuterManager_subscribeBufferToObservableWithRxObservable_(RxObservablesAsyncOnSubscribe_AsyncOuterManager *self, RxObservable *t);
 
-@interface RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1 : RxSubscriber {
+@interface RxObservablesAsyncOnSubscribe_AsyncOuterManager_1 : RxSubscriber {
  @public
   RxObservablesAsyncOnSubscribe_AsyncOuterManager *this$0_;
-  jlong remaining_;
   RxInternalOperatorsBufferUntilSubscriber *val$buffer_;
+  jlong remaining_;
 }
+
+- (instancetype)initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager:(RxObservablesAsyncOnSubscribe_AsyncOuterManager *)outer$
+                                                               withLong:(jlong)capture$0
+                           withRxInternalOperatorsBufferUntilSubscriber:(RxInternalOperatorsBufferUntilSubscriber *)capture$1;
 
 - (void)onNextWithId:(id)t;
 
@@ -80,46 +229,36 @@ __attribute__((unused)) static void RxObservablesAsyncOnSubscribe_AsyncOuterMana
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager:(RxObservablesAsyncOnSubscribe_AsyncOuterManager *)outer$
-                                                               withLong:(jlong)capture$0
-                           withRxInternalOperatorsBufferUntilSubscriber:(RxInternalOperatorsBufferUntilSubscriber *)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxObservablesAsyncOnSubscribe_AsyncOuterManager_1)
 
-J2OBJC_FIELD_SETTER(RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1, this$0_, RxObservablesAsyncOnSubscribe_AsyncOuterManager *)
-J2OBJC_FIELD_SETTER(RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1, val$buffer_, RxInternalOperatorsBufferUntilSubscriber *)
+__attribute__((unused)) static void RxObservablesAsyncOnSubscribe_AsyncOuterManager_1_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager_1 *self, RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, jlong capture$0, RxInternalOperatorsBufferUntilSubscriber *capture$1);
 
-__attribute__((unused)) static void RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1 *self, RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, jlong capture$0, RxInternalOperatorsBufferUntilSubscriber *capture$1);
+__attribute__((unused)) static RxObservablesAsyncOnSubscribe_AsyncOuterManager_1 *new_RxObservablesAsyncOnSubscribe_AsyncOuterManager_1_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, jlong capture$0, RxInternalOperatorsBufferUntilSubscriber *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1 *new_RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, jlong capture$0, RxInternalOperatorsBufferUntilSubscriber *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxObservablesAsyncOnSubscribe_AsyncOuterManager_1 *create_RxObservablesAsyncOnSubscribe_AsyncOuterManager_1_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, jlong capture$0, RxInternalOperatorsBufferUntilSubscriber *capture$1);
 
-__attribute__((unused)) static RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1 *create_RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, jlong capture$0, RxInternalOperatorsBufferUntilSubscriber *capture$1);
-
-@interface RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2 : NSObject < RxFunctionsAction0 > {
+@interface RxObservablesAsyncOnSubscribe_AsyncOuterManager_2 : NSObject < RxFunctionsAction0 > {
  @public
   RxObservablesAsyncOnSubscribe_AsyncOuterManager *this$0_;
   RxSubscriber *val$s_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager:(RxObservablesAsyncOnSubscribe_AsyncOuterManager *)outer$
                                                        withRxSubscriber:(RxSubscriber *)capture$0;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxObservablesAsyncOnSubscribe_AsyncOuterManager_2)
 
-J2OBJC_FIELD_SETTER(RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2, this$0_, RxObservablesAsyncOnSubscribe_AsyncOuterManager *)
-J2OBJC_FIELD_SETTER(RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2, val$s_, RxSubscriber *)
+__attribute__((unused)) static void RxObservablesAsyncOnSubscribe_AsyncOuterManager_2_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager_2 *self, RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, RxSubscriber *capture$0);
 
-__attribute__((unused)) static void RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2 *self, RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, RxSubscriber *capture$0);
+__attribute__((unused)) static RxObservablesAsyncOnSubscribe_AsyncOuterManager_2 *new_RxObservablesAsyncOnSubscribe_AsyncOuterManager_2_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, RxSubscriber *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2 *new_RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, RxSubscriber *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2 *create_RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, RxSubscriber *capture$0);
+__attribute__((unused)) static RxObservablesAsyncOnSubscribe_AsyncOuterManager_2 *create_RxObservablesAsyncOnSubscribe_AsyncOuterManager_2_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, RxSubscriber *capture$0);
 
 @interface RxObservablesAsyncOnSubscribe_UnicastSubject () {
  @public
@@ -130,166 +269,14 @@ __attribute__((unused)) static RxObservablesAsyncOnSubscribe_AsyncOuterManager_$
 
 J2OBJC_FIELD_SETTER(RxObservablesAsyncOnSubscribe_UnicastSubject, state_, RxObservablesAsyncOnSubscribe_UnicastSubject_State *)
 
-@interface RxObservablesAsyncOnSubscribe_$1 : NSObject < RxFunctionsFunc3 > {
- @public
-  id<RxFunctionsAction3> val$next_;
-}
-
-- (id)callWithId:(id)state
-          withId:(JavaLangLong *)requested
-          withId:(id<RxObserver>)subscriber;
-
-- (instancetype)initWithRxFunctionsAction3:(id<RxFunctionsAction3>)capture$0;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxObservablesAsyncOnSubscribe_$1)
-
-J2OBJC_FIELD_SETTER(RxObservablesAsyncOnSubscribe_$1, val$next_, id<RxFunctionsAction3>)
-
-__attribute__((unused)) static void RxObservablesAsyncOnSubscribe_$1_initWithRxFunctionsAction3_(RxObservablesAsyncOnSubscribe_$1 *self, id<RxFunctionsAction3> capture$0);
-
-__attribute__((unused)) static RxObservablesAsyncOnSubscribe_$1 *new_RxObservablesAsyncOnSubscribe_$1_initWithRxFunctionsAction3_(id<RxFunctionsAction3> capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxObservablesAsyncOnSubscribe_$1 *create_RxObservablesAsyncOnSubscribe_$1_initWithRxFunctionsAction3_(id<RxFunctionsAction3> capture$0);
-
-@interface RxObservablesAsyncOnSubscribe_$2 : NSObject < RxFunctionsFunc3 > {
- @public
-  id<RxFunctionsAction3> val$next_;
-}
-
-- (id)callWithId:(id)state
-          withId:(JavaLangLong *)requested
-          withId:(id<RxObserver>)subscriber;
-
-- (instancetype)initWithRxFunctionsAction3:(id<RxFunctionsAction3>)capture$0;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxObservablesAsyncOnSubscribe_$2)
-
-J2OBJC_FIELD_SETTER(RxObservablesAsyncOnSubscribe_$2, val$next_, id<RxFunctionsAction3>)
-
-__attribute__((unused)) static void RxObservablesAsyncOnSubscribe_$2_initWithRxFunctionsAction3_(RxObservablesAsyncOnSubscribe_$2 *self, id<RxFunctionsAction3> capture$0);
-
-__attribute__((unused)) static RxObservablesAsyncOnSubscribe_$2 *new_RxObservablesAsyncOnSubscribe_$2_initWithRxFunctionsAction3_(id<RxFunctionsAction3> capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxObservablesAsyncOnSubscribe_$2 *create_RxObservablesAsyncOnSubscribe_$2_initWithRxFunctionsAction3_(id<RxFunctionsAction3> capture$0);
-
-@interface RxObservablesAsyncOnSubscribe_$3 : NSObject < RxFunctionsFunc3 > {
- @public
-  id<RxFunctionsAction2> val$next_;
-}
-
-- (id)callWithId:(id)state
-          withId:(JavaLangLong *)requested
-          withId:(id<RxObserver>)subscriber;
-
-- (instancetype)initWithRxFunctionsAction2:(id<RxFunctionsAction2>)capture$0;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxObservablesAsyncOnSubscribe_$3)
-
-J2OBJC_FIELD_SETTER(RxObservablesAsyncOnSubscribe_$3, val$next_, id<RxFunctionsAction2>)
-
-__attribute__((unused)) static void RxObservablesAsyncOnSubscribe_$3_initWithRxFunctionsAction2_(RxObservablesAsyncOnSubscribe_$3 *self, id<RxFunctionsAction2> capture$0);
-
-__attribute__((unused)) static RxObservablesAsyncOnSubscribe_$3 *new_RxObservablesAsyncOnSubscribe_$3_initWithRxFunctionsAction2_(id<RxFunctionsAction2> capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxObservablesAsyncOnSubscribe_$3 *create_RxObservablesAsyncOnSubscribe_$3_initWithRxFunctionsAction2_(id<RxFunctionsAction2> capture$0);
-
-@interface RxObservablesAsyncOnSubscribe_$4 : NSObject < RxFunctionsFunc3 > {
- @public
-  id<RxFunctionsAction2> val$next_;
-}
-
-- (id)callWithId:(id)state
-          withId:(JavaLangLong *)requested
-          withId:(id<RxObserver>)subscriber;
-
-- (instancetype)initWithRxFunctionsAction2:(id<RxFunctionsAction2>)capture$0;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxObservablesAsyncOnSubscribe_$4)
-
-J2OBJC_FIELD_SETTER(RxObservablesAsyncOnSubscribe_$4, val$next_, id<RxFunctionsAction2>)
-
-__attribute__((unused)) static void RxObservablesAsyncOnSubscribe_$4_initWithRxFunctionsAction2_(RxObservablesAsyncOnSubscribe_$4 *self, id<RxFunctionsAction2> capture$0);
-
-__attribute__((unused)) static RxObservablesAsyncOnSubscribe_$4 *new_RxObservablesAsyncOnSubscribe_$4_initWithRxFunctionsAction2_(id<RxFunctionsAction2> capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxObservablesAsyncOnSubscribe_$4 *create_RxObservablesAsyncOnSubscribe_$4_initWithRxFunctionsAction2_(id<RxFunctionsAction2> capture$0);
-
-@interface RxObservablesAsyncOnSubscribe_$5 : NSObject < RxFunctionsAction1 > {
- @public
-  id<RxFunctionsAction0> val$onUnsubscribe_;
-}
-
-- (void)callWithId:(id)t;
-
-- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxObservablesAsyncOnSubscribe_$5)
-
-J2OBJC_FIELD_SETTER(RxObservablesAsyncOnSubscribe_$5, val$onUnsubscribe_, id<RxFunctionsAction0>)
-
-__attribute__((unused)) static void RxObservablesAsyncOnSubscribe_$5_initWithRxFunctionsAction0_(RxObservablesAsyncOnSubscribe_$5 *self, id<RxFunctionsAction0> capture$0);
-
-__attribute__((unused)) static RxObservablesAsyncOnSubscribe_$5 *new_RxObservablesAsyncOnSubscribe_$5_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxObservablesAsyncOnSubscribe_$5 *create_RxObservablesAsyncOnSubscribe_$5_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0);
-
-@interface RxObservablesAsyncOnSubscribe_$6 : RxSubscriber {
- @public
-  RxSubscriber *val$actualSubscriber_;
-  RxObservablesAsyncOnSubscribe_AsyncOuterManager *val$outerProducer_;
-}
-
-- (void)onNextWithId:(id)t;
-
-- (void)onErrorWithNSException:(NSException *)e;
-
-- (void)onCompleted;
-
-- (void)setProducerWithRxProducer:(id<RxProducer>)p;
-
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
-withRxObservablesAsyncOnSubscribe_AsyncOuterManager:(RxObservablesAsyncOnSubscribe_AsyncOuterManager *)capture$1;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxObservablesAsyncOnSubscribe_$6)
-
-J2OBJC_FIELD_SETTER(RxObservablesAsyncOnSubscribe_$6, val$actualSubscriber_, RxSubscriber *)
-J2OBJC_FIELD_SETTER(RxObservablesAsyncOnSubscribe_$6, val$outerProducer_, RxObservablesAsyncOnSubscribe_AsyncOuterManager *)
-
-__attribute__((unused)) static void RxObservablesAsyncOnSubscribe_$6_initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_(RxObservablesAsyncOnSubscribe_$6 *self, RxSubscriber *capture$0, RxObservablesAsyncOnSubscribe_AsyncOuterManager *capture$1);
-
-__attribute__((unused)) static RxObservablesAsyncOnSubscribe_$6 *new_RxObservablesAsyncOnSubscribe_$6_initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_(RxSubscriber *capture$0, RxObservablesAsyncOnSubscribe_AsyncOuterManager *capture$1) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxObservablesAsyncOnSubscribe_$6 *create_RxObservablesAsyncOnSubscribe_$6_initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_(RxSubscriber *capture$0, RxObservablesAsyncOnSubscribe_AsyncOuterManager *capture$1);
-
-@interface RxObservablesAsyncOnSubscribe_$7 : NSObject < RxFunctionsFunc1 >
-
-- (RxObservable *)callWithId:(RxObservable *)v;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxObservablesAsyncOnSubscribe_$7)
-
-__attribute__((unused)) static void RxObservablesAsyncOnSubscribe_$7_init(RxObservablesAsyncOnSubscribe_$7 *self);
-
-__attribute__((unused)) static RxObservablesAsyncOnSubscribe_$7 *new_RxObservablesAsyncOnSubscribe_$7_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxObservablesAsyncOnSubscribe_$7 *create_RxObservablesAsyncOnSubscribe_$7_init();
-
 @implementation RxObservablesAsyncOnSubscribe
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxObservablesAsyncOnSubscribe_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id)generateState {
   // can't call an abstract method
@@ -350,22 +337,16 @@ __attribute__((unused)) static RxObservablesAsyncOnSubscribe_$7 *create_RxObserv
   }
   RxObservablesAsyncOnSubscribe_UnicastSubject *subject = RxObservablesAsyncOnSubscribe_UnicastSubject_create();
   RxObservablesAsyncOnSubscribe_AsyncOuterManager *outerProducer = create_RxObservablesAsyncOnSubscribe_AsyncOuterManager_initWithRxObservablesAsyncOnSubscribe_withId_withRxObservablesAsyncOnSubscribe_UnicastSubject_(self, state, subject);
-  RxSubscriber *concatSubscriber = create_RxObservablesAsyncOnSubscribe_$6_initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_(actualSubscriber, outerProducer);
-  [((RxObservable *) nil_chk([((RxObservable *) nil_chk([((RxObservablesAsyncOnSubscribe_UnicastSubject *) nil_chk(subject)) onBackpressureBuffer])) concatMapWithRxFunctionsFunc1:create_RxObservablesAsyncOnSubscribe_$7_init()])) unsafeSubscribeWithRxSubscriber:concatSubscriber];
+  RxSubscriber *concatSubscriber = create_RxObservablesAsyncOnSubscribe_6_initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_(actualSubscriber, outerProducer);
+  [((RxObservable *) nil_chk([((RxObservable *) nil_chk([((RxObservablesAsyncOnSubscribe_UnicastSubject *) nil_chk(subject)) onBackpressureBuffer])) concatMapWithRxFunctionsFunc1:create_RxObservablesAsyncOnSubscribe_7_init()])) unsafeSubscribeWithRxSubscriber:concatSubscriber];
   [((RxSubscriber *) nil_chk(actualSubscriber)) addWithRxSubscription:concatSubscriber];
   [actualSubscriber addWithRxSubscription:outerProducer];
   [actualSubscriber setProducerWithRxProducer:outerProducer];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxObservablesAsyncOnSubscribe_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x404, -1, -1, -1, 0, -1, -1 },
     { NULL, "LNSObject;", 0x404, 1, 2, -1, 3, -1, -1 },
     { NULL, "V", 0x4, 4, 5, -1, 6, -1, -1 },
@@ -376,38 +357,41 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "LRxObservablesAsyncOnSubscribe;", 0x9, 17, 18, -1, 19, -1, -1 },
     { NULL, "LRxObservablesAsyncOnSubscribe;", 0x9, 17, 20, -1, 21, -1, -1 },
     { NULL, "V", 0x11, 22, 23, -1, 24, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(generateState);
-  methods[1].selector = @selector(nextWithId:withLong:withRxObserver:);
-  methods[2].selector = @selector(onUnsubscribeWithId:);
-  methods[3].selector = @selector(createSingleStateWithRxFunctionsFunc0:withRxFunctionsAction3:);
-  methods[4].selector = @selector(createSingleStateWithRxFunctionsFunc0:withRxFunctionsAction3:withRxFunctionsAction1:);
-  methods[5].selector = @selector(createStatefulWithRxFunctionsFunc0:withRxFunctionsFunc3:withRxFunctionsAction1:);
-  methods[6].selector = @selector(createStatefulWithRxFunctionsFunc0:withRxFunctionsFunc3:);
-  methods[7].selector = @selector(createStatelessWithRxFunctionsAction2:);
-  methods[8].selector = @selector(createStatelessWithRxFunctionsAction2:withRxFunctionsAction0:);
-  methods[9].selector = @selector(callWithId:);
-  methods[10].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(generateState);
+  methods[2].selector = @selector(nextWithId:withLong:withRxObserver:);
+  methods[3].selector = @selector(onUnsubscribeWithId:);
+  methods[4].selector = @selector(createSingleStateWithRxFunctionsFunc0:withRxFunctionsAction3:);
+  methods[5].selector = @selector(createSingleStateWithRxFunctionsFunc0:withRxFunctionsAction3:withRxFunctionsAction1:);
+  methods[6].selector = @selector(createStatefulWithRxFunctionsFunc0:withRxFunctionsFunc3:withRxFunctionsAction1:);
+  methods[7].selector = @selector(createStatefulWithRxFunctionsFunc0:withRxFunctionsFunc3:);
+  methods[8].selector = @selector(createStatelessWithRxFunctionsAction2:);
+  methods[9].selector = @selector(createStatelessWithRxFunctionsAction2:withRxFunctionsAction0:);
+  methods[10].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "()TS;", "next", "LNSObject;JLRxObserver;", "(TS;JLrx/Observer<Lrx/Observable<+TT;>;>;)TS;", "onUnsubscribe", "LNSObject;", "(TS;)V", "createSingleState", "LRxFunctionsFunc0;LRxFunctionsAction3;", "<S:Ljava/lang/Object;T:Ljava/lang/Object;>(Lrx/functions/Func0<+TS;>;Lrx/functions/Action3<-TS;Ljava/lang/Long;+Lrx/Observer<Lrx/Observable<+TT;>;>;>;)Lrx/observables/AsyncOnSubscribe<TS;TT;>;", "LRxFunctionsFunc0;LRxFunctionsAction3;LRxFunctionsAction1;", "<S:Ljava/lang/Object;T:Ljava/lang/Object;>(Lrx/functions/Func0<+TS;>;Lrx/functions/Action3<-TS;Ljava/lang/Long;+Lrx/Observer<Lrx/Observable<+TT;>;>;>;Lrx/functions/Action1<-TS;>;)Lrx/observables/AsyncOnSubscribe<TS;TT;>;", "createStateful", "LRxFunctionsFunc0;LRxFunctionsFunc3;LRxFunctionsAction1;", "<S:Ljava/lang/Object;T:Ljava/lang/Object;>(Lrx/functions/Func0<+TS;>;Lrx/functions/Func3<-TS;Ljava/lang/Long;+Lrx/Observer<Lrx/Observable<+TT;>;>;+TS;>;Lrx/functions/Action1<-TS;>;)Lrx/observables/AsyncOnSubscribe<TS;TT;>;", "LRxFunctionsFunc0;LRxFunctionsFunc3;", "<S:Ljava/lang/Object;T:Ljava/lang/Object;>(Lrx/functions/Func0<+TS;>;Lrx/functions/Func3<-TS;Ljava/lang/Long;+Lrx/Observer<Lrx/Observable<+TT;>;>;+TS;>;)Lrx/observables/AsyncOnSubscribe<TS;TT;>;", "createStateless", "LRxFunctionsAction2;", "<T:Ljava/lang/Object;>(Lrx/functions/Action2<Ljava/lang/Long;+Lrx/Observer<Lrx/Observable<+TT;>;>;>;)Lrx/observables/AsyncOnSubscribe<Ljava/lang/Void;TT;>;", "LRxFunctionsAction2;LRxFunctionsAction0;", "<T:Ljava/lang/Object;>(Lrx/functions/Action2<Ljava/lang/Long;+Lrx/Observer<Lrx/Observable<+TT;>;>;>;Lrx/functions/Action0;)Lrx/observables/AsyncOnSubscribe<Ljava/lang/Void;TT;>;", "call", "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)V", "LRxObservablesAsyncOnSubscribe_AsyncOnSubscribeImpl;LRxObservablesAsyncOnSubscribe_AsyncOuterManager;LRxObservablesAsyncOnSubscribe_UnicastSubject;", "<S:Ljava/lang/Object;T:Ljava/lang/Object;>Ljava/lang/Object;Lrx/Observable$OnSubscribe<TT;>;" };
+  static const void *ptrTable[] = { "()TS;", "next", "LNSObject;JLRxObserver;", "(TS;JLrx/Observer<Lrx/Observable<+TT;>;>;)TS;", "onUnsubscribe", "LNSObject;", "(TS;)V", "createSingleState", "LRxFunctionsFunc0;LRxFunctionsAction3;", "<S:Ljava/lang/Object;T:Ljava/lang/Object;>(Lrx/functions/Func0<+TS;>;Lrx/functions/Action3<-TS;Ljava/lang/Long;-Lrx/Observer<Lrx/Observable<+TT;>;>;>;)Lrx/observables/AsyncOnSubscribe<TS;TT;>;", "LRxFunctionsFunc0;LRxFunctionsAction3;LRxFunctionsAction1;", "<S:Ljava/lang/Object;T:Ljava/lang/Object;>(Lrx/functions/Func0<+TS;>;Lrx/functions/Action3<-TS;Ljava/lang/Long;-Lrx/Observer<Lrx/Observable<+TT;>;>;>;Lrx/functions/Action1<-TS;>;)Lrx/observables/AsyncOnSubscribe<TS;TT;>;", "createStateful", "LRxFunctionsFunc0;LRxFunctionsFunc3;LRxFunctionsAction1;", "<S:Ljava/lang/Object;T:Ljava/lang/Object;>(Lrx/functions/Func0<+TS;>;Lrx/functions/Func3<-TS;Ljava/lang/Long;-Lrx/Observer<Lrx/Observable<+TT;>;>;+TS;>;Lrx/functions/Action1<-TS;>;)Lrx/observables/AsyncOnSubscribe<TS;TT;>;", "LRxFunctionsFunc0;LRxFunctionsFunc3;", "<S:Ljava/lang/Object;T:Ljava/lang/Object;>(Lrx/functions/Func0<+TS;>;Lrx/functions/Func3<-TS;Ljava/lang/Long;-Lrx/Observer<Lrx/Observable<+TT;>;>;+TS;>;)Lrx/observables/AsyncOnSubscribe<TS;TT;>;", "createStateless", "LRxFunctionsAction2;", "<T:Ljava/lang/Object;>(Lrx/functions/Action2<Ljava/lang/Long;-Lrx/Observer<Lrx/Observable<+TT;>;>;>;)Lrx/observables/AsyncOnSubscribe<Ljava/lang/Void;TT;>;", "LRxFunctionsAction2;LRxFunctionsAction0;", "<T:Ljava/lang/Object;>(Lrx/functions/Action2<Ljava/lang/Long;-Lrx/Observer<Lrx/Observable<+TT;>;>;>;Lrx/functions/Action0;)Lrx/observables/AsyncOnSubscribe<Ljava/lang/Void;TT;>;", "call", "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)V", "LRxObservablesAsyncOnSubscribe_AsyncOnSubscribeImpl;LRxObservablesAsyncOnSubscribe_AsyncOuterManager;LRxObservablesAsyncOnSubscribe_UnicastSubject;", "<S:Ljava/lang/Object;T:Ljava/lang/Object;>Ljava/lang/Object;Lrx/Observable$OnSubscribe<TT;>;" };
   static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe = { "AsyncOnSubscribe", "rx.observables", ptrTable, methods, NULL, 7, 0x401, 11, 0, -1, 25, -1, 26, -1 };
   return &_RxObservablesAsyncOnSubscribe;
 }
 
 @end
 
+void RxObservablesAsyncOnSubscribe_init(RxObservablesAsyncOnSubscribe *self) {
+  NSObject_init(self);
+}
+
 RxObservablesAsyncOnSubscribe *RxObservablesAsyncOnSubscribe_createSingleStateWithRxFunctionsFunc0_withRxFunctionsAction3_(id<RxFunctionsFunc0> generator, id<RxFunctionsAction3> next) {
   RxObservablesAsyncOnSubscribe_initialize();
-  id<RxFunctionsFunc3> nextFunc = create_RxObservablesAsyncOnSubscribe_$1_initWithRxFunctionsAction3_(next);
+  id<RxFunctionsFunc3> nextFunc = create_RxObservablesAsyncOnSubscribe_1_initWithRxFunctionsAction3_(next);
   return create_RxObservablesAsyncOnSubscribe_AsyncOnSubscribeImpl_initWithRxFunctionsFunc0_withRxFunctionsFunc3_(generator, nextFunc);
 }
 
 RxObservablesAsyncOnSubscribe *RxObservablesAsyncOnSubscribe_createSingleStateWithRxFunctionsFunc0_withRxFunctionsAction3_withRxFunctionsAction1_(id<RxFunctionsFunc0> generator, id<RxFunctionsAction3> next, id<RxFunctionsAction1> onUnsubscribe) {
   RxObservablesAsyncOnSubscribe_initialize();
-  id<RxFunctionsFunc3> nextFunc = create_RxObservablesAsyncOnSubscribe_$2_initWithRxFunctionsAction3_(next);
+  id<RxFunctionsFunc3> nextFunc = create_RxObservablesAsyncOnSubscribe_2_initWithRxFunctionsAction3_(next);
   return create_RxObservablesAsyncOnSubscribe_AsyncOnSubscribeImpl_initWithRxFunctionsFunc0_withRxFunctionsFunc3_withRxFunctionsAction1_(generator, nextFunc, onUnsubscribe);
 }
 
@@ -423,22 +407,275 @@ RxObservablesAsyncOnSubscribe *RxObservablesAsyncOnSubscribe_createStatefulWithR
 
 RxObservablesAsyncOnSubscribe *RxObservablesAsyncOnSubscribe_createStatelessWithRxFunctionsAction2_(id<RxFunctionsAction2> next) {
   RxObservablesAsyncOnSubscribe_initialize();
-  id<RxFunctionsFunc3> nextFunc = create_RxObservablesAsyncOnSubscribe_$3_initWithRxFunctionsAction2_(next);
+  id<RxFunctionsFunc3> nextFunc = create_RxObservablesAsyncOnSubscribe_3_initWithRxFunctionsAction2_(next);
   return create_RxObservablesAsyncOnSubscribe_AsyncOnSubscribeImpl_initWithRxFunctionsFunc3_(nextFunc);
 }
 
 RxObservablesAsyncOnSubscribe *RxObservablesAsyncOnSubscribe_createStatelessWithRxFunctionsAction2_withRxFunctionsAction0_(id<RxFunctionsAction2> next, id<RxFunctionsAction0> onUnsubscribe) {
   RxObservablesAsyncOnSubscribe_initialize();
-  id<RxFunctionsFunc3> nextFunc = create_RxObservablesAsyncOnSubscribe_$4_initWithRxFunctionsAction2_(next);
-  id<RxFunctionsAction1> wrappedOnUnsubscribe = create_RxObservablesAsyncOnSubscribe_$5_initWithRxFunctionsAction0_(onUnsubscribe);
+  id<RxFunctionsFunc3> nextFunc = create_RxObservablesAsyncOnSubscribe_4_initWithRxFunctionsAction2_(next);
+  id<RxFunctionsAction1> wrappedOnUnsubscribe = create_RxObservablesAsyncOnSubscribe_5_initWithRxFunctionsAction0_(onUnsubscribe);
   return create_RxObservablesAsyncOnSubscribe_AsyncOnSubscribeImpl_initWithRxFunctionsFunc3_withRxFunctionsAction1_(nextFunc, wrappedOnUnsubscribe);
 }
 
-void RxObservablesAsyncOnSubscribe_init(RxObservablesAsyncOnSubscribe *self) {
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObservablesAsyncOnSubscribe)
+
+@implementation RxObservablesAsyncOnSubscribe_1
+
+- (instancetype)initWithRxFunctionsAction3:(id<RxFunctionsAction3>)capture$0 {
+  RxObservablesAsyncOnSubscribe_1_initWithRxFunctionsAction3_(self, capture$0);
+  return self;
+}
+
+- (id)callWithId:(id)state
+          withId:(JavaLangLong *)requested
+          withId:(id<RxObserver>)subscriber {
+  [((id<RxFunctionsAction3>) nil_chk(val$next_)) callWithId:state withId:requested withId:subscriber];
+  return state;
+}
+
+- (void)dealloc {
+  RELEASE_(val$next_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxFunctionsAction3:);
+  methods[1].selector = @selector(callWithId:withId:withId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$next_", "LRxFunctionsAction3;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LNSObject;LJavaLangLong;LRxObserver;", "(TS;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;)TS;", "Lrx/functions/Action3<-TS;Ljava/lang/Long;-Lrx/Observer<Lrx/Observable<+TT;>;>;>;", "LRxObservablesAsyncOnSubscribe;", "createSingleStateWithRxFunctionsFunc0:withRxFunctionsAction3:", "Ljava/lang/Object;Lrx/functions/Func3<TS;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;TS;>;" };
+  static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe_1 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
+  return &_RxObservablesAsyncOnSubscribe_1;
+}
+
+@end
+
+void RxObservablesAsyncOnSubscribe_1_initWithRxFunctionsAction3_(RxObservablesAsyncOnSubscribe_1 *self, id<RxFunctionsAction3> capture$0) {
+  JreStrongAssign(&self->val$next_, capture$0);
   NSObject_init(self);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObservablesAsyncOnSubscribe)
+RxObservablesAsyncOnSubscribe_1 *new_RxObservablesAsyncOnSubscribe_1_initWithRxFunctionsAction3_(id<RxFunctionsAction3> capture$0) {
+  J2OBJC_NEW_IMPL(RxObservablesAsyncOnSubscribe_1, initWithRxFunctionsAction3_, capture$0)
+}
+
+RxObservablesAsyncOnSubscribe_1 *create_RxObservablesAsyncOnSubscribe_1_initWithRxFunctionsAction3_(id<RxFunctionsAction3> capture$0) {
+  J2OBJC_CREATE_IMPL(RxObservablesAsyncOnSubscribe_1, initWithRxFunctionsAction3_, capture$0)
+}
+
+@implementation RxObservablesAsyncOnSubscribe_2
+
+- (instancetype)initWithRxFunctionsAction3:(id<RxFunctionsAction3>)capture$0 {
+  RxObservablesAsyncOnSubscribe_2_initWithRxFunctionsAction3_(self, capture$0);
+  return self;
+}
+
+- (id)callWithId:(id)state
+          withId:(JavaLangLong *)requested
+          withId:(id<RxObserver>)subscriber {
+  [((id<RxFunctionsAction3>) nil_chk(val$next_)) callWithId:state withId:requested withId:subscriber];
+  return state;
+}
+
+- (void)dealloc {
+  RELEASE_(val$next_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxFunctionsAction3:);
+  methods[1].selector = @selector(callWithId:withId:withId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$next_", "LRxFunctionsAction3;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LNSObject;LJavaLangLong;LRxObserver;", "(TS;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;)TS;", "Lrx/functions/Action3<-TS;Ljava/lang/Long;-Lrx/Observer<Lrx/Observable<+TT;>;>;>;", "LRxObservablesAsyncOnSubscribe;", "createSingleStateWithRxFunctionsFunc0:withRxFunctionsAction3:withRxFunctionsAction1:", "Ljava/lang/Object;Lrx/functions/Func3<TS;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;TS;>;" };
+  static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe_2 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
+  return &_RxObservablesAsyncOnSubscribe_2;
+}
+
+@end
+
+void RxObservablesAsyncOnSubscribe_2_initWithRxFunctionsAction3_(RxObservablesAsyncOnSubscribe_2 *self, id<RxFunctionsAction3> capture$0) {
+  JreStrongAssign(&self->val$next_, capture$0);
+  NSObject_init(self);
+}
+
+RxObservablesAsyncOnSubscribe_2 *new_RxObservablesAsyncOnSubscribe_2_initWithRxFunctionsAction3_(id<RxFunctionsAction3> capture$0) {
+  J2OBJC_NEW_IMPL(RxObservablesAsyncOnSubscribe_2, initWithRxFunctionsAction3_, capture$0)
+}
+
+RxObservablesAsyncOnSubscribe_2 *create_RxObservablesAsyncOnSubscribe_2_initWithRxFunctionsAction3_(id<RxFunctionsAction3> capture$0) {
+  J2OBJC_CREATE_IMPL(RxObservablesAsyncOnSubscribe_2, initWithRxFunctionsAction3_, capture$0)
+}
+
+@implementation RxObservablesAsyncOnSubscribe_3
+
+- (instancetype)initWithRxFunctionsAction2:(id<RxFunctionsAction2>)capture$0 {
+  RxObservablesAsyncOnSubscribe_3_initWithRxFunctionsAction2_(self, capture$0);
+  return self;
+}
+
+- (JavaLangVoid *)callWithId:(JavaLangVoid *)state
+                      withId:(JavaLangLong *)requested
+                      withId:(id<RxObserver>)subscriber {
+  [((id<RxFunctionsAction2>) nil_chk(val$next_)) callWithId:requested withId:subscriber];
+  return state;
+}
+
+- (void)dealloc {
+  RELEASE_(val$next_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaLangVoid;", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxFunctionsAction2:);
+  methods[1].selector = @selector(callWithId:withId:withId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$next_", "LRxFunctionsAction2;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LJavaLangVoid;LJavaLangLong;LRxObserver;", "(Ljava/lang/Void;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;)Ljava/lang/Void;", "Lrx/functions/Action2<Ljava/lang/Long;-Lrx/Observer<Lrx/Observable<+TT;>;>;>;", "LRxObservablesAsyncOnSubscribe;", "createStatelessWithRxFunctionsAction2:", "Ljava/lang/Object;Lrx/functions/Func3<Ljava/lang/Void;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;Ljava/lang/Void;>;" };
+  static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe_3 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
+  return &_RxObservablesAsyncOnSubscribe_3;
+}
+
+@end
+
+void RxObservablesAsyncOnSubscribe_3_initWithRxFunctionsAction2_(RxObservablesAsyncOnSubscribe_3 *self, id<RxFunctionsAction2> capture$0) {
+  JreStrongAssign(&self->val$next_, capture$0);
+  NSObject_init(self);
+}
+
+RxObservablesAsyncOnSubscribe_3 *new_RxObservablesAsyncOnSubscribe_3_initWithRxFunctionsAction2_(id<RxFunctionsAction2> capture$0) {
+  J2OBJC_NEW_IMPL(RxObservablesAsyncOnSubscribe_3, initWithRxFunctionsAction2_, capture$0)
+}
+
+RxObservablesAsyncOnSubscribe_3 *create_RxObservablesAsyncOnSubscribe_3_initWithRxFunctionsAction2_(id<RxFunctionsAction2> capture$0) {
+  J2OBJC_CREATE_IMPL(RxObservablesAsyncOnSubscribe_3, initWithRxFunctionsAction2_, capture$0)
+}
+
+@implementation RxObservablesAsyncOnSubscribe_4
+
+- (instancetype)initWithRxFunctionsAction2:(id<RxFunctionsAction2>)capture$0 {
+  RxObservablesAsyncOnSubscribe_4_initWithRxFunctionsAction2_(self, capture$0);
+  return self;
+}
+
+- (JavaLangVoid *)callWithId:(JavaLangVoid *)state
+                      withId:(JavaLangLong *)requested
+                      withId:(id<RxObserver>)subscriber {
+  [((id<RxFunctionsAction2>) nil_chk(val$next_)) callWithId:requested withId:subscriber];
+  return nil;
+}
+
+- (void)dealloc {
+  RELEASE_(val$next_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaLangVoid;", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxFunctionsAction2:);
+  methods[1].selector = @selector(callWithId:withId:withId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$next_", "LRxFunctionsAction2;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LJavaLangVoid;LJavaLangLong;LRxObserver;", "(Ljava/lang/Void;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;)Ljava/lang/Void;", "Lrx/functions/Action2<Ljava/lang/Long;-Lrx/Observer<Lrx/Observable<+TT;>;>;>;", "LRxObservablesAsyncOnSubscribe;", "createStatelessWithRxFunctionsAction2:withRxFunctionsAction0:", "Ljava/lang/Object;Lrx/functions/Func3<Ljava/lang/Void;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;Ljava/lang/Void;>;" };
+  static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe_4 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
+  return &_RxObservablesAsyncOnSubscribe_4;
+}
+
+@end
+
+void RxObservablesAsyncOnSubscribe_4_initWithRxFunctionsAction2_(RxObservablesAsyncOnSubscribe_4 *self, id<RxFunctionsAction2> capture$0) {
+  JreStrongAssign(&self->val$next_, capture$0);
+  NSObject_init(self);
+}
+
+RxObservablesAsyncOnSubscribe_4 *new_RxObservablesAsyncOnSubscribe_4_initWithRxFunctionsAction2_(id<RxFunctionsAction2> capture$0) {
+  J2OBJC_NEW_IMPL(RxObservablesAsyncOnSubscribe_4, initWithRxFunctionsAction2_, capture$0)
+}
+
+RxObservablesAsyncOnSubscribe_4 *create_RxObservablesAsyncOnSubscribe_4_initWithRxFunctionsAction2_(id<RxFunctionsAction2> capture$0) {
+  J2OBJC_CREATE_IMPL(RxObservablesAsyncOnSubscribe_4, initWithRxFunctionsAction2_, capture$0)
+}
+
+@implementation RxObservablesAsyncOnSubscribe_5
+
+- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0 {
+  RxObservablesAsyncOnSubscribe_5_initWithRxFunctionsAction0_(self, capture$0);
+  return self;
+}
+
+- (void)callWithId:(JavaLangVoid *)t {
+  [((id<RxFunctionsAction0>) nil_chk(val$onUnsubscribe_)) call];
+}
+
+- (void)dealloc {
+  RELEASE_(val$onUnsubscribe_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxFunctionsAction0:);
+  methods[1].selector = @selector(callWithId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$onUnsubscribe_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LJavaLangVoid;", "LRxObservablesAsyncOnSubscribe;", "createStatelessWithRxFunctionsAction2:withRxFunctionsAction0:", "Ljava/lang/Object;Lrx/functions/Action1<Ljava/lang/Void;>;" };
+  static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe_5 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, 4, -1 };
+  return &_RxObservablesAsyncOnSubscribe_5;
+}
+
+@end
+
+void RxObservablesAsyncOnSubscribe_5_initWithRxFunctionsAction0_(RxObservablesAsyncOnSubscribe_5 *self, id<RxFunctionsAction0> capture$0) {
+  JreStrongAssign(&self->val$onUnsubscribe_, capture$0);
+  NSObject_init(self);
+}
+
+RxObservablesAsyncOnSubscribe_5 *new_RxObservablesAsyncOnSubscribe_5_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0) {
+  J2OBJC_NEW_IMPL(RxObservablesAsyncOnSubscribe_5, initWithRxFunctionsAction0_, capture$0)
+}
+
+RxObservablesAsyncOnSubscribe_5 *create_RxObservablesAsyncOnSubscribe_5_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0) {
+  J2OBJC_CREATE_IMPL(RxObservablesAsyncOnSubscribe_5, initWithRxFunctionsAction0_, capture$0)
+}
 
 @implementation RxObservablesAsyncOnSubscribe_AsyncOnSubscribeImpl
 
@@ -514,7 +751,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObservablesAsyncOnSubscribe)
     { "next_", "LRxFunctionsFunc3;", .constantValue.asLong = 0, 0x12, -1, -1, 16, -1 },
     { "onUnsubscribe_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x12, -1, -1, 17, -1 },
   };
-  static const void *ptrTable[] = { "LRxFunctionsFunc0;LRxFunctionsFunc3;LRxFunctionsAction1;", "(Lrx/functions/Func0<+TS;>;Lrx/functions/Func3<-TS;Ljava/lang/Long;+Lrx/Observer<Lrx/Observable<+TT;>;>;+TS;>;Lrx/functions/Action1<-TS;>;)V", "LRxFunctionsFunc0;LRxFunctionsFunc3;", "(Lrx/functions/Func0<+TS;>;Lrx/functions/Func3<-TS;Ljava/lang/Long;+Lrx/Observer<Lrx/Observable<+TT;>;>;+TS;>;)V", "LRxFunctionsFunc3;LRxFunctionsAction1;", "(Lrx/functions/Func3<TS;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;TS;>;Lrx/functions/Action1<-TS;>;)V", "LRxFunctionsFunc3;", "(Lrx/functions/Func3<TS;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;TS;>;)V", "()TS;", "next", "LNSObject;JLRxObserver;", "(TS;JLrx/Observer<Lrx/Observable<+TT;>;>;)TS;", "onUnsubscribe", "LNSObject;", "(TS;)V", "Lrx/functions/Func0<+TS;>;", "Lrx/functions/Func3<-TS;Ljava/lang/Long;+Lrx/Observer<Lrx/Observable<+TT;>;>;+TS;>;", "Lrx/functions/Action1<-TS;>;", "LRxObservablesAsyncOnSubscribe;", "<S:Ljava/lang/Object;T:Ljava/lang/Object;>Lrx/observables/AsyncOnSubscribe<TS;TT;>;" };
+  static const void *ptrTable[] = { "LRxFunctionsFunc0;LRxFunctionsFunc3;LRxFunctionsAction1;", "(Lrx/functions/Func0<+TS;>;Lrx/functions/Func3<-TS;Ljava/lang/Long;-Lrx/Observer<Lrx/Observable<+TT;>;>;+TS;>;Lrx/functions/Action1<-TS;>;)V", "LRxFunctionsFunc0;LRxFunctionsFunc3;", "(Lrx/functions/Func0<+TS;>;Lrx/functions/Func3<-TS;Ljava/lang/Long;-Lrx/Observer<Lrx/Observable<+TT;>;>;+TS;>;)V", "LRxFunctionsFunc3;LRxFunctionsAction1;", "(Lrx/functions/Func3<TS;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;TS;>;Lrx/functions/Action1<-TS;>;)V", "LRxFunctionsFunc3;", "(Lrx/functions/Func3<TS;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;TS;>;)V", "()TS;", "next", "LNSObject;JLRxObserver;", "(TS;JLrx/Observer<Lrx/Observable<+TT;>;>;)TS;", "onUnsubscribe", "LNSObject;", "(TS;)V", "Lrx/functions/Func0<+TS;>;", "Lrx/functions/Func3<-TS;Ljava/lang/Long;-Lrx/Observer<Lrx/Observable<+TT;>;>;+TS;>;", "Lrx/functions/Action1<-TS;>;", "LRxObservablesAsyncOnSubscribe;", "<S:Ljava/lang/Object;T:Ljava/lang/Object;>Lrx/observables/AsyncOnSubscribe<TS;TT;>;" };
   static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe_AsyncOnSubscribeImpl = { "AsyncOnSubscribeImpl", "rx.observables", ptrTable, methods, fields, 7, 0x18, 7, 3, 18, -1, -1, 19, -1 };
   return &_RxObservablesAsyncOnSubscribe_AsyncOnSubscribeImpl;
 }
@@ -573,6 +810,119 @@ RxObservablesAsyncOnSubscribe_AsyncOnSubscribeImpl *create_RxObservablesAsyncOnS
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObservablesAsyncOnSubscribe_AsyncOnSubscribeImpl)
+
+@implementation RxObservablesAsyncOnSubscribe_6
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
+withRxObservablesAsyncOnSubscribe_AsyncOuterManager:(RxObservablesAsyncOnSubscribe_AsyncOuterManager *)capture$1 {
+  RxObservablesAsyncOnSubscribe_6_initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_(self, capture$0, capture$1);
+  return self;
+}
+
+- (void)onNextWithId:(id)t {
+  [((RxSubscriber *) nil_chk(val$actualSubscriber_)) onNextWithId:t];
+}
+
+- (void)onErrorWithNSException:(NSException *)e {
+  [((RxSubscriber *) nil_chk(val$actualSubscriber_)) onErrorWithNSException:e];
+}
+
+- (void)onCompleted {
+  [((RxSubscriber *) nil_chk(val$actualSubscriber_)) onCompleted];
+}
+
+- (void)setProducerWithRxProducer:(id<RxProducer>)p {
+  [((RxObservablesAsyncOnSubscribe_AsyncOuterManager *) nil_chk(val$outerProducer_)) setConcatProducerWithRxProducer:p];
+}
+
+- (void)dealloc {
+  RELEASE_(val$actualSubscriber_);
+  RELEASE_(val$outerProducer_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxSubscriber:withRxObservablesAsyncOnSubscribe_AsyncOuterManager:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
+  methods[4].selector = @selector(setProducerWithRxProducer:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$actualSubscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$outerProducer_", "LRxObservablesAsyncOnSubscribe_AsyncOuterManager;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+  };
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "setProducer", "LRxProducer;", "Lrx/Subscriber<-TT;>;", "Lrx/observables/AsyncOnSubscribe$AsyncOuterManager<TS;TT;>;", "LRxObservablesAsyncOnSubscribe;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe_6 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 5, 2, 9, -1, 10, 11, -1 };
+  return &_RxObservablesAsyncOnSubscribe_6;
+}
+
+@end
+
+void RxObservablesAsyncOnSubscribe_6_initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_(RxObservablesAsyncOnSubscribe_6 *self, RxSubscriber *capture$0, RxObservablesAsyncOnSubscribe_AsyncOuterManager *capture$1) {
+  JreStrongAssign(&self->val$actualSubscriber_, capture$0);
+  JreStrongAssign(&self->val$outerProducer_, capture$1);
+  RxSubscriber_init(self);
+}
+
+RxObservablesAsyncOnSubscribe_6 *new_RxObservablesAsyncOnSubscribe_6_initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_(RxSubscriber *capture$0, RxObservablesAsyncOnSubscribe_AsyncOuterManager *capture$1) {
+  J2OBJC_NEW_IMPL(RxObservablesAsyncOnSubscribe_6, initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_, capture$0, capture$1)
+}
+
+RxObservablesAsyncOnSubscribe_6 *create_RxObservablesAsyncOnSubscribe_6_initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_(RxSubscriber *capture$0, RxObservablesAsyncOnSubscribe_AsyncOuterManager *capture$1) {
+  J2OBJC_CREATE_IMPL(RxObservablesAsyncOnSubscribe_6, initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_, capture$0, capture$1)
+}
+
+@implementation RxObservablesAsyncOnSubscribe_7
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxObservablesAsyncOnSubscribe_7_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
+- (RxObservable *)callWithId:(RxObservable *)v {
+  return [((RxObservable *) nil_chk(v)) onBackpressureBuffer];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxObservable;", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "call", "LRxObservable;", "(Lrx/Observable<TT;>;)Lrx/Observable<TT;>;", "LRxObservablesAsyncOnSubscribe;", "callWithId:", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Observable<TT;>;Lrx/Observable<TT;>;>;" };
+  static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe_7 = { "", "rx.observables", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, 4, 5, -1 };
+  return &_RxObservablesAsyncOnSubscribe_7;
+}
+
+@end
+
+void RxObservablesAsyncOnSubscribe_7_init(RxObservablesAsyncOnSubscribe_7 *self) {
+  NSObject_init(self);
+}
+
+RxObservablesAsyncOnSubscribe_7 *new_RxObservablesAsyncOnSubscribe_7_init() {
+  J2OBJC_NEW_IMPL(RxObservablesAsyncOnSubscribe_7, init)
+}
+
+RxObservablesAsyncOnSubscribe_7 *create_RxObservablesAsyncOnSubscribe_7_init() {
+  J2OBJC_CREATE_IMPL(RxObservablesAsyncOnSubscribe_7, init)
+}
 
 @implementation RxObservablesAsyncOnSubscribe_AsyncOuterManager
 
@@ -870,16 +1220,23 @@ void RxObservablesAsyncOnSubscribe_AsyncOuterManager_handleThrownErrorWithNSExce
 void RxObservablesAsyncOnSubscribe_AsyncOuterManager_subscribeBufferToObservableWithRxObservable_(RxObservablesAsyncOnSubscribe_AsyncOuterManager *self, RxObservable *t) {
   RxInternalOperatorsBufferUntilSubscriber *buffer = RxInternalOperatorsBufferUntilSubscriber_create();
   jlong expected = self->expectedDelivery_;
-  RxSubscriber *s = create_RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_(self, expected, buffer);
+  RxSubscriber *s = create_RxObservablesAsyncOnSubscribe_AsyncOuterManager_1_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_(self, expected, buffer);
   [((RxSubscriptionsCompositeSubscription *) nil_chk(self->subscriptions_)) addWithRxSubscription:s];
-  RxObservable *doOnTerminate = [((RxObservable *) nil_chk(t)) doOnTerminateWithRxFunctionsAction0:create_RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_(self, s)];
+  RxObservable *doOnTerminate = [((RxObservable *) nil_chk(t)) doOnTerminateWithRxFunctionsAction0:create_RxObservablesAsyncOnSubscribe_AsyncOuterManager_2_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_(self, s)];
   [((RxObservable *) nil_chk((doOnTerminate))) subscribeWithRxSubscriber:s];
   [((RxObservablesAsyncOnSubscribe_UnicastSubject *) nil_chk(self->merger_)) onNextWithId:buffer];
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObservablesAsyncOnSubscribe_AsyncOuterManager)
 
-@implementation RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1
+@implementation RxObservablesAsyncOnSubscribe_AsyncOuterManager_1
+
+- (instancetype)initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager:(RxObservablesAsyncOnSubscribe_AsyncOuterManager *)outer$
+                                                               withLong:(jlong)capture$0
+                           withRxInternalOperatorsBufferUntilSubscriber:(RxInternalOperatorsBufferUntilSubscriber *)capture$1 {
+  RxObservablesAsyncOnSubscribe_AsyncOuterManager_1_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_(self, outer$, capture$0, capture$1);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   remaining_--;
@@ -898,15 +1255,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObservablesAsyncOnSubscribe_AsyncOuterManager
   }
 }
 
-- (instancetype)initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager:(RxObservablesAsyncOnSubscribe_AsyncOuterManager *)outer$
-                                                               withLong:(jlong)capture$0
-                           withRxInternalOperatorsBufferUntilSubscriber:(RxInternalOperatorsBufferUntilSubscriber *)capture$1 {
-  RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_(self, outer$, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1 class]);
   RELEASE_(this$0_);
   RELEASE_(val$buffer_);
   [super dealloc];
@@ -914,55 +1263,55 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObservablesAsyncOnSubscribe_AsyncOuterManager
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager:withLong:withRxInternalOperatorsBufferUntilSubscriber:);
+  methods[0].selector = @selector(initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager:withLong:withRxInternalOperatorsBufferUntilSubscriber:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxObservablesAsyncOnSubscribe_AsyncOuterManager;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxObservablesAsyncOnSubscribe_AsyncOuterManager;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$buffer_", "LRxInternalOperatorsBufferUntilSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
     { "remaining_", "J", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
-    { "val$buffer_", "LRxInternalOperatorsBufferUntilSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxObservablesAsyncOnSubscribe_AsyncOuterManager;JLRxInternalOperatorsBufferUntilSubscriber;", "(Lrx/observables/AsyncOnSubscribe$AsyncOuterManager;JLrx/internal/operators/BufferUntilSubscriber<TT;>;)V", "Lrx/internal/operators/BufferUntilSubscriber<TT;>;", "LRxObservablesAsyncOnSubscribe_AsyncOuterManager;", "subscribeBufferToObservableWithRxObservable:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 4, 3, 8, -1, 9, 10, -1 };
-  return &_RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1;
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/observables/AsyncOnSubscribe$AsyncOuterManager<TS;TT;>;", "Lrx/internal/operators/BufferUntilSubscriber<TT;>;", "LRxObservablesAsyncOnSubscribe_AsyncOuterManager;", "subscribeBufferToObservableWithRxObservable:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe_AsyncOuterManager_1 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 4, 3, 7, -1, 8, 9, -1 };
+  return &_RxObservablesAsyncOnSubscribe_AsyncOuterManager_1;
 }
 
 @end
 
-void RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1 *self, RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, jlong capture$0, RxInternalOperatorsBufferUntilSubscriber *capture$1) {
+void RxObservablesAsyncOnSubscribe_AsyncOuterManager_1_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager_1 *self, RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, jlong capture$0, RxInternalOperatorsBufferUntilSubscriber *capture$1) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$buffer_, capture$1);
   RxSubscriber_init(self);
   self->remaining_ = capture$0;
 }
 
-RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1 *new_RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, jlong capture$0, RxInternalOperatorsBufferUntilSubscriber *capture$1) {
-  J2OBJC_NEW_IMPL(RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1, initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_, outer$, capture$0, capture$1)
+RxObservablesAsyncOnSubscribe_AsyncOuterManager_1 *new_RxObservablesAsyncOnSubscribe_AsyncOuterManager_1_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, jlong capture$0, RxInternalOperatorsBufferUntilSubscriber *capture$1) {
+  J2OBJC_NEW_IMPL(RxObservablesAsyncOnSubscribe_AsyncOuterManager_1, initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_, outer$, capture$0, capture$1)
 }
 
-RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1 *create_RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, jlong capture$0, RxInternalOperatorsBufferUntilSubscriber *capture$1) {
-  J2OBJC_CREATE_IMPL(RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1, initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_, outer$, capture$0, capture$1)
+RxObservablesAsyncOnSubscribe_AsyncOuterManager_1 *create_RxObservablesAsyncOnSubscribe_AsyncOuterManager_1_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, jlong capture$0, RxInternalOperatorsBufferUntilSubscriber *capture$1) {
+  J2OBJC_CREATE_IMPL(RxObservablesAsyncOnSubscribe_AsyncOuterManager_1, initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withLong_withRxInternalOperatorsBufferUntilSubscriber_, outer$, capture$0, capture$1)
 }
 
-@implementation RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2
-
-- (void)call {
-  [((RxSubscriptionsCompositeSubscription *) nil_chk(this$0_->subscriptions_)) removeWithRxSubscription:val$s_];
-}
+@implementation RxObservablesAsyncOnSubscribe_AsyncOuterManager_2
 
 - (instancetype)initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager:(RxObservablesAsyncOnSubscribe_AsyncOuterManager *)outer$
                                                        withRxSubscriber:(RxSubscriber *)capture$0 {
-  RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_(self, outer$, capture$0);
+  RxObservablesAsyncOnSubscribe_AsyncOuterManager_2_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_(self, outer$, capture$0);
   return self;
+}
+
+- (void)call {
+  [((RxSubscriptionsCompositeSubscription *) nil_chk(this$0_->subscriptions_)) removeWithRxSubscription:val$s_];
 }
 
 - (void)dealloc {
@@ -973,37 +1322,37 @@ RxObservablesAsyncOnSubscribe_AsyncOuterManager_$1 *create_RxObservablesAsyncOnS
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager:withRxSubscriber:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxObservablesAsyncOnSubscribe_AsyncOuterManager;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$s_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+    { "this$0_", "LRxObservablesAsyncOnSubscribe_AsyncOuterManager;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
+    { "val$s_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 1, -1 },
   };
-  static const void *ptrTable[] = { "LRxObservablesAsyncOnSubscribe_AsyncOuterManager;LRxSubscriber;", "(Lrx/observables/AsyncOnSubscribe$AsyncOuterManager;Lrx/Subscriber<TT;>;)V", "Lrx/Subscriber<TT;>;", "LRxObservablesAsyncOnSubscribe_AsyncOuterManager;", "subscribeBufferToObservableWithRxObservable:" };
-  static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, -1, -1 };
-  return &_RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2;
+  static const void *ptrTable[] = { "Lrx/observables/AsyncOnSubscribe$AsyncOuterManager<TS;TT;>;", "Lrx/Subscriber<TT;>;", "LRxObservablesAsyncOnSubscribe_AsyncOuterManager;", "subscribeBufferToObservableWithRxObservable:" };
+  static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe_AsyncOuterManager_2 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 2, 2, 2, -1, 3, -1, -1 };
+  return &_RxObservablesAsyncOnSubscribe_AsyncOuterManager_2;
 }
 
 @end
 
-void RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2 *self, RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, RxSubscriber *capture$0) {
+void RxObservablesAsyncOnSubscribe_AsyncOuterManager_2_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager_2 *self, RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, RxSubscriber *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$s_, capture$0);
   NSObject_init(self);
 }
 
-RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2 *new_RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, RxSubscriber *capture$0) {
-  J2OBJC_NEW_IMPL(RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2, initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_, outer$, capture$0)
+RxObservablesAsyncOnSubscribe_AsyncOuterManager_2 *new_RxObservablesAsyncOnSubscribe_AsyncOuterManager_2_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, RxSubscriber *capture$0) {
+  J2OBJC_NEW_IMPL(RxObservablesAsyncOnSubscribe_AsyncOuterManager_2, initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_, outer$, capture$0)
 }
 
-RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2 *create_RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, RxSubscriber *capture$0) {
-  J2OBJC_CREATE_IMPL(RxObservablesAsyncOnSubscribe_AsyncOuterManager_$2, initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_, outer$, capture$0)
+RxObservablesAsyncOnSubscribe_AsyncOuterManager_2 *create_RxObservablesAsyncOnSubscribe_AsyncOuterManager_2_initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_(RxObservablesAsyncOnSubscribe_AsyncOuterManager *outer$, RxSubscriber *capture$0) {
+  J2OBJC_CREATE_IMPL(RxObservablesAsyncOnSubscribe_AsyncOuterManager_2, initWithRxObservablesAsyncOnSubscribe_AsyncOuterManager_withRxSubscriber_, outer$, capture$0)
 }
 
 @implementation RxObservablesAsyncOnSubscribe_UnicastSubject
@@ -1082,6 +1431,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObservablesAsyncOnSubscribe_UnicastSubject)
 
 @implementation RxObservablesAsyncOnSubscribe_UnicastSubject_State
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxObservablesAsyncOnSubscribe_UnicastSubject_State_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (void)callWithId:(RxSubscriber *)s {
   @synchronized(self) {
     if (subscriber_ == nil) {
@@ -1092,13 +1448,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObservablesAsyncOnSubscribe_UnicastSubject)
   [((RxSubscriber *) nil_chk(s)) onErrorWithNSException:create_JavaLangIllegalStateException_initWithNSString_(@"There can be only one subscriber")];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxObservablesAsyncOnSubscribe_UnicastSubject_State_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(subscriber_);
   [super dealloc];
@@ -1106,13 +1455,13 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x0, -1, -1, 3, -1 },
@@ -1137,374 +1486,3 @@ RxObservablesAsyncOnSubscribe_UnicastSubject_State *create_RxObservablesAsyncOnS
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObservablesAsyncOnSubscribe_UnicastSubject_State)
-
-@implementation RxObservablesAsyncOnSubscribe_$1
-
-- (id)callWithId:(id)state
-          withId:(JavaLangLong *)requested
-          withId:(id<RxObserver>)subscriber {
-  [((id<RxFunctionsAction3>) nil_chk(val$next_)) callWithId:state withId:requested withId:subscriber];
-  return state;
-}
-
-- (instancetype)initWithRxFunctionsAction3:(id<RxFunctionsAction3>)capture$0 {
-  RxObservablesAsyncOnSubscribe_$1_initWithRxFunctionsAction3_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$next_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:withId:);
-  methods[1].selector = @selector(initWithRxFunctionsAction3:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$next_", "LRxFunctionsAction3;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LNSObject;LJavaLangLong;LRxObserver;", "(TS;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;)TS;", "LRxFunctionsAction3;", "(Lrx/functions/Action3<-TS;Ljava/lang/Long;+Lrx/Observer<Lrx/Observable<+TT;>;>;>;)V", "Lrx/functions/Action3<-TS;Ljava/lang/Long;+Lrx/Observer<Lrx/Observable<+TT;>;>;>;", "LRxObservablesAsyncOnSubscribe;", "createSingleStateWithRxFunctionsFunc0:withRxFunctionsAction3:", "Ljava/lang/Object;Lrx/functions/Func3<TS;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;TS;>;" };
-  static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe_$1 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 2, 1, 6, -1, 7, 8, -1 };
-  return &_RxObservablesAsyncOnSubscribe_$1;
-}
-
-@end
-
-void RxObservablesAsyncOnSubscribe_$1_initWithRxFunctionsAction3_(RxObservablesAsyncOnSubscribe_$1 *self, id<RxFunctionsAction3> capture$0) {
-  JreStrongAssign(&self->val$next_, capture$0);
-  NSObject_init(self);
-}
-
-RxObservablesAsyncOnSubscribe_$1 *new_RxObservablesAsyncOnSubscribe_$1_initWithRxFunctionsAction3_(id<RxFunctionsAction3> capture$0) {
-  J2OBJC_NEW_IMPL(RxObservablesAsyncOnSubscribe_$1, initWithRxFunctionsAction3_, capture$0)
-}
-
-RxObservablesAsyncOnSubscribe_$1 *create_RxObservablesAsyncOnSubscribe_$1_initWithRxFunctionsAction3_(id<RxFunctionsAction3> capture$0) {
-  J2OBJC_CREATE_IMPL(RxObservablesAsyncOnSubscribe_$1, initWithRxFunctionsAction3_, capture$0)
-}
-
-@implementation RxObservablesAsyncOnSubscribe_$2
-
-- (id)callWithId:(id)state
-          withId:(JavaLangLong *)requested
-          withId:(id<RxObserver>)subscriber {
-  [((id<RxFunctionsAction3>) nil_chk(val$next_)) callWithId:state withId:requested withId:subscriber];
-  return state;
-}
-
-- (instancetype)initWithRxFunctionsAction3:(id<RxFunctionsAction3>)capture$0 {
-  RxObservablesAsyncOnSubscribe_$2_initWithRxFunctionsAction3_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$next_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:withId:);
-  methods[1].selector = @selector(initWithRxFunctionsAction3:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$next_", "LRxFunctionsAction3;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LNSObject;LJavaLangLong;LRxObserver;", "(TS;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;)TS;", "LRxFunctionsAction3;", "(Lrx/functions/Action3<-TS;Ljava/lang/Long;+Lrx/Observer<Lrx/Observable<+TT;>;>;>;)V", "Lrx/functions/Action3<-TS;Ljava/lang/Long;+Lrx/Observer<Lrx/Observable<+TT;>;>;>;", "LRxObservablesAsyncOnSubscribe;", "createSingleStateWithRxFunctionsFunc0:withRxFunctionsAction3:withRxFunctionsAction1:", "Ljava/lang/Object;Lrx/functions/Func3<TS;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;TS;>;" };
-  static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe_$2 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 2, 1, 6, -1, 7, 8, -1 };
-  return &_RxObservablesAsyncOnSubscribe_$2;
-}
-
-@end
-
-void RxObservablesAsyncOnSubscribe_$2_initWithRxFunctionsAction3_(RxObservablesAsyncOnSubscribe_$2 *self, id<RxFunctionsAction3> capture$0) {
-  JreStrongAssign(&self->val$next_, capture$0);
-  NSObject_init(self);
-}
-
-RxObservablesAsyncOnSubscribe_$2 *new_RxObservablesAsyncOnSubscribe_$2_initWithRxFunctionsAction3_(id<RxFunctionsAction3> capture$0) {
-  J2OBJC_NEW_IMPL(RxObservablesAsyncOnSubscribe_$2, initWithRxFunctionsAction3_, capture$0)
-}
-
-RxObservablesAsyncOnSubscribe_$2 *create_RxObservablesAsyncOnSubscribe_$2_initWithRxFunctionsAction3_(id<RxFunctionsAction3> capture$0) {
-  J2OBJC_CREATE_IMPL(RxObservablesAsyncOnSubscribe_$2, initWithRxFunctionsAction3_, capture$0)
-}
-
-@implementation RxObservablesAsyncOnSubscribe_$3
-
-- (id)callWithId:(id)state
-          withId:(JavaLangLong *)requested
-          withId:(id<RxObserver>)subscriber {
-  [((id<RxFunctionsAction2>) nil_chk(val$next_)) callWithId:requested withId:subscriber];
-  return state;
-}
-
-- (instancetype)initWithRxFunctionsAction2:(id<RxFunctionsAction2>)capture$0 {
-  RxObservablesAsyncOnSubscribe_$3_initWithRxFunctionsAction2_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$next_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaLangVoid;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:withId:);
-  methods[1].selector = @selector(initWithRxFunctionsAction2:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$next_", "LRxFunctionsAction2;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LJavaLangVoid;LJavaLangLong;LRxObserver;", "(Ljava/lang/Void;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;)Ljava/lang/Void;", "LRxFunctionsAction2;", "(Lrx/functions/Action2<Ljava/lang/Long;+Lrx/Observer<Lrx/Observable<+TT;>;>;>;)V", "Lrx/functions/Action2<Ljava/lang/Long;+Lrx/Observer<Lrx/Observable<+TT;>;>;>;", "LRxObservablesAsyncOnSubscribe;", "createStatelessWithRxFunctionsAction2:", "Ljava/lang/Object;Lrx/functions/Func3<Ljava/lang/Void;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;Ljava/lang/Void;>;" };
-  static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe_$3 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 2, 1, 6, -1, 7, 8, -1 };
-  return &_RxObservablesAsyncOnSubscribe_$3;
-}
-
-@end
-
-void RxObservablesAsyncOnSubscribe_$3_initWithRxFunctionsAction2_(RxObservablesAsyncOnSubscribe_$3 *self, id<RxFunctionsAction2> capture$0) {
-  JreStrongAssign(&self->val$next_, capture$0);
-  NSObject_init(self);
-}
-
-RxObservablesAsyncOnSubscribe_$3 *new_RxObservablesAsyncOnSubscribe_$3_initWithRxFunctionsAction2_(id<RxFunctionsAction2> capture$0) {
-  J2OBJC_NEW_IMPL(RxObservablesAsyncOnSubscribe_$3, initWithRxFunctionsAction2_, capture$0)
-}
-
-RxObservablesAsyncOnSubscribe_$3 *create_RxObservablesAsyncOnSubscribe_$3_initWithRxFunctionsAction2_(id<RxFunctionsAction2> capture$0) {
-  J2OBJC_CREATE_IMPL(RxObservablesAsyncOnSubscribe_$3, initWithRxFunctionsAction2_, capture$0)
-}
-
-@implementation RxObservablesAsyncOnSubscribe_$4
-
-- (id)callWithId:(id)state
-          withId:(JavaLangLong *)requested
-          withId:(id<RxObserver>)subscriber {
-  [((id<RxFunctionsAction2>) nil_chk(val$next_)) callWithId:requested withId:subscriber];
-  return nil;
-}
-
-- (instancetype)initWithRxFunctionsAction2:(id<RxFunctionsAction2>)capture$0 {
-  RxObservablesAsyncOnSubscribe_$4_initWithRxFunctionsAction2_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$next_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaLangVoid;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:withId:);
-  methods[1].selector = @selector(initWithRxFunctionsAction2:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$next_", "LRxFunctionsAction2;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LJavaLangVoid;LJavaLangLong;LRxObserver;", "(Ljava/lang/Void;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;)Ljava/lang/Void;", "LRxFunctionsAction2;", "(Lrx/functions/Action2<Ljava/lang/Long;+Lrx/Observer<Lrx/Observable<+TT;>;>;>;)V", "Lrx/functions/Action2<Ljava/lang/Long;+Lrx/Observer<Lrx/Observable<+TT;>;>;>;", "LRxObservablesAsyncOnSubscribe;", "createStatelessWithRxFunctionsAction2:withRxFunctionsAction0:", "Ljava/lang/Object;Lrx/functions/Func3<Ljava/lang/Void;Ljava/lang/Long;Lrx/Observer<Lrx/Observable<+TT;>;>;Ljava/lang/Void;>;" };
-  static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe_$4 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 2, 1, 6, -1, 7, 8, -1 };
-  return &_RxObservablesAsyncOnSubscribe_$4;
-}
-
-@end
-
-void RxObservablesAsyncOnSubscribe_$4_initWithRxFunctionsAction2_(RxObservablesAsyncOnSubscribe_$4 *self, id<RxFunctionsAction2> capture$0) {
-  JreStrongAssign(&self->val$next_, capture$0);
-  NSObject_init(self);
-}
-
-RxObservablesAsyncOnSubscribe_$4 *new_RxObservablesAsyncOnSubscribe_$4_initWithRxFunctionsAction2_(id<RxFunctionsAction2> capture$0) {
-  J2OBJC_NEW_IMPL(RxObservablesAsyncOnSubscribe_$4, initWithRxFunctionsAction2_, capture$0)
-}
-
-RxObservablesAsyncOnSubscribe_$4 *create_RxObservablesAsyncOnSubscribe_$4_initWithRxFunctionsAction2_(id<RxFunctionsAction2> capture$0) {
-  J2OBJC_CREATE_IMPL(RxObservablesAsyncOnSubscribe_$4, initWithRxFunctionsAction2_, capture$0)
-}
-
-@implementation RxObservablesAsyncOnSubscribe_$5
-
-- (void)callWithId:(id)t {
-  [((id<RxFunctionsAction0>) nil_chk(val$onUnsubscribe_)) call];
-}
-
-- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0 {
-  RxObservablesAsyncOnSubscribe_$5_initWithRxFunctionsAction0_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$onUnsubscribe_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxFunctionsAction0:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$onUnsubscribe_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LJavaLangVoid;", "LRxFunctionsAction0;", "LRxObservablesAsyncOnSubscribe;", "createStatelessWithRxFunctionsAction2:withRxFunctionsAction0:", "Ljava/lang/Object;Lrx/functions/Action1<Ljava/lang/Void;>;" };
-  static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe_$5 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, 5, -1 };
-  return &_RxObservablesAsyncOnSubscribe_$5;
-}
-
-@end
-
-void RxObservablesAsyncOnSubscribe_$5_initWithRxFunctionsAction0_(RxObservablesAsyncOnSubscribe_$5 *self, id<RxFunctionsAction0> capture$0) {
-  JreStrongAssign(&self->val$onUnsubscribe_, capture$0);
-  NSObject_init(self);
-}
-
-RxObservablesAsyncOnSubscribe_$5 *new_RxObservablesAsyncOnSubscribe_$5_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0) {
-  J2OBJC_NEW_IMPL(RxObservablesAsyncOnSubscribe_$5, initWithRxFunctionsAction0_, capture$0)
-}
-
-RxObservablesAsyncOnSubscribe_$5 *create_RxObservablesAsyncOnSubscribe_$5_initWithRxFunctionsAction0_(id<RxFunctionsAction0> capture$0) {
-  J2OBJC_CREATE_IMPL(RxObservablesAsyncOnSubscribe_$5, initWithRxFunctionsAction0_, capture$0)
-}
-
-@implementation RxObservablesAsyncOnSubscribe_$6
-
-- (void)onNextWithId:(id)t {
-  [((RxSubscriber *) nil_chk(val$actualSubscriber_)) onNextWithId:t];
-}
-
-- (void)onErrorWithNSException:(NSException *)e {
-  [((RxSubscriber *) nil_chk(val$actualSubscriber_)) onErrorWithNSException:e];
-}
-
-- (void)onCompleted {
-  [((RxSubscriber *) nil_chk(val$actualSubscriber_)) onCompleted];
-}
-
-- (void)setProducerWithRxProducer:(id<RxProducer>)p {
-  [((RxObservablesAsyncOnSubscribe_AsyncOuterManager *) nil_chk(val$outerProducer_)) setConcatProducerWithRxProducer:p];
-}
-
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
-withRxObservablesAsyncOnSubscribe_AsyncOuterManager:(RxObservablesAsyncOnSubscribe_AsyncOuterManager *)capture$1 {
-  RxObservablesAsyncOnSubscribe_$6_initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_(self, capture$0, capture$1);
-  return self;
-}
-
-- (void)dealloc {
-  JreCheckFinalize(self, [RxObservablesAsyncOnSubscribe_$6 class]);
-  RELEASE_(val$actualSubscriber_);
-  RELEASE_(val$outerProducer_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 7, -1, 8, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(setProducerWithRxProducer:);
-  methods[4].selector = @selector(initWithRxSubscriber:withRxObservablesAsyncOnSubscribe_AsyncOuterManager:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$actualSubscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 9, -1 },
-    { "val$outerProducer_", "LRxObservablesAsyncOnSubscribe_AsyncOuterManager;", .constantValue.asLong = 0, 0x1012, -1, -1, 10, -1 },
-  };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "setProducer", "LRxProducer;", "LRxSubscriber;LRxObservablesAsyncOnSubscribe_AsyncOuterManager;", "(Lrx/Subscriber<-TT;>;Lrx/observables/AsyncOnSubscribe$AsyncOuterManager<TS;TT;>;)V", "Lrx/Subscriber<-TT;>;", "Lrx/observables/AsyncOnSubscribe$AsyncOuterManager<TS;TT;>;", "LRxObservablesAsyncOnSubscribe;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe_$6 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 5, 2, 11, -1, 12, 13, -1 };
-  return &_RxObservablesAsyncOnSubscribe_$6;
-}
-
-@end
-
-void RxObservablesAsyncOnSubscribe_$6_initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_(RxObservablesAsyncOnSubscribe_$6 *self, RxSubscriber *capture$0, RxObservablesAsyncOnSubscribe_AsyncOuterManager *capture$1) {
-  JreStrongAssign(&self->val$actualSubscriber_, capture$0);
-  JreStrongAssign(&self->val$outerProducer_, capture$1);
-  RxSubscriber_init(self);
-}
-
-RxObservablesAsyncOnSubscribe_$6 *new_RxObservablesAsyncOnSubscribe_$6_initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_(RxSubscriber *capture$0, RxObservablesAsyncOnSubscribe_AsyncOuterManager *capture$1) {
-  J2OBJC_NEW_IMPL(RxObservablesAsyncOnSubscribe_$6, initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_, capture$0, capture$1)
-}
-
-RxObservablesAsyncOnSubscribe_$6 *create_RxObservablesAsyncOnSubscribe_$6_initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_(RxSubscriber *capture$0, RxObservablesAsyncOnSubscribe_AsyncOuterManager *capture$1) {
-  J2OBJC_CREATE_IMPL(RxObservablesAsyncOnSubscribe_$6, initWithRxSubscriber_withRxObservablesAsyncOnSubscribe_AsyncOuterManager_, capture$0, capture$1)
-}
-
-@implementation RxObservablesAsyncOnSubscribe_$7
-
-- (RxObservable *)callWithId:(RxObservable *)v {
-  return [((RxObservable *) nil_chk(v)) onBackpressureBuffer];
-}
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxObservablesAsyncOnSubscribe_$7_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxObservable;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
-  #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "call", "LRxObservable;", "(Lrx/Observable<TT;>;)Lrx/Observable<TT;>;", "LRxObservablesAsyncOnSubscribe;", "callWithId:", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Observable<TT;>;Lrx/Observable<TT;>;>;" };
-  static const J2ObjcClassInfo _RxObservablesAsyncOnSubscribe_$7 = { "", "rx.observables", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, 4, 5, -1 };
-  return &_RxObservablesAsyncOnSubscribe_$7;
-}
-
-@end
-
-void RxObservablesAsyncOnSubscribe_$7_init(RxObservablesAsyncOnSubscribe_$7 *self) {
-  NSObject_init(self);
-}
-
-RxObservablesAsyncOnSubscribe_$7 *new_RxObservablesAsyncOnSubscribe_$7_init() {
-  J2OBJC_NEW_IMPL(RxObservablesAsyncOnSubscribe_$7, init)
-}
-
-RxObservablesAsyncOnSubscribe_$7 *create_RxObservablesAsyncOnSubscribe_$7_init() {
-  J2OBJC_CREATE_IMPL(RxObservablesAsyncOnSubscribe_$7, init)
-}

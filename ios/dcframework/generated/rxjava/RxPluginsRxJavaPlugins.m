@@ -50,33 +50,33 @@ J2OBJC_STATIC_FIELD_OBJ_FINAL(RxPluginsRxJavaPlugins, INSTANCE, RxPluginsRxJavaP
 
 __attribute__((unused)) static IOSObjectArray *RxPluginsRxJavaPlugins__Annotations$0();
 
-@interface RxPluginsRxJavaPlugins_$1 : RxPluginsRxJavaErrorHandler
+@interface RxPluginsRxJavaPlugins_1 : RxPluginsRxJavaErrorHandler
 
 - (instancetype)init;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaPlugins_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaPlugins_1)
 
-__attribute__((unused)) static void RxPluginsRxJavaPlugins_$1_init(RxPluginsRxJavaPlugins_$1 *self);
+__attribute__((unused)) static void RxPluginsRxJavaPlugins_1_init(RxPluginsRxJavaPlugins_1 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaPlugins_$1 *new_RxPluginsRxJavaPlugins_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaPlugins_1 *new_RxPluginsRxJavaPlugins_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaPlugins_$1 *create_RxPluginsRxJavaPlugins_$1_init();
+__attribute__((unused)) static RxPluginsRxJavaPlugins_1 *create_RxPluginsRxJavaPlugins_1_init();
 
-@interface RxPluginsRxJavaPlugins_$2 : RxPluginsRxJavaCompletableExecutionHook
+@interface RxPluginsRxJavaPlugins_2 : RxPluginsRxJavaCompletableExecutionHook
 
 - (instancetype)init;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaPlugins_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxPluginsRxJavaPlugins_2)
 
-__attribute__((unused)) static void RxPluginsRxJavaPlugins_$2_init(RxPluginsRxJavaPlugins_$2 *self);
+__attribute__((unused)) static void RxPluginsRxJavaPlugins_2_init(RxPluginsRxJavaPlugins_2 *self);
 
-__attribute__((unused)) static RxPluginsRxJavaPlugins_$2 *new_RxPluginsRxJavaPlugins_$2_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxPluginsRxJavaPlugins_2 *new_RxPluginsRxJavaPlugins_2_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxPluginsRxJavaPlugins_$2 *create_RxPluginsRxJavaPlugins_$2_init();
+__attribute__((unused)) static RxPluginsRxJavaPlugins_2 *create_RxPluginsRxJavaPlugins_2_init();
 
 J2OBJC_INITIALIZED_DEFN(RxPluginsRxJavaPlugins)
 
@@ -164,7 +164,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   if ([((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(completableExecutionHook_)) get] == nil) {
     id impl = RxPluginsRxJavaPlugins_getPluginImplementationViaPropertyWithIOSClass_withJavaUtilProperties_(RxPluginsRxJavaCompletableExecutionHook_class_(), JavaLangSystem_getProperties());
     if (impl == nil) {
-      [completableExecutionHook_ compareAndSetWithId:nil withId:create_RxPluginsRxJavaPlugins_$2_init()];
+      [completableExecutionHook_ compareAndSetWithId:nil withId:create_RxPluginsRxJavaPlugins_2_init()];
     }
     else {
       [completableExecutionHook_ compareAndSetWithId:nil withId:(RxPluginsRxJavaCompletableExecutionHook *) cast_chk(impl, [RxPluginsRxJavaCompletableExecutionHook class])];
@@ -263,7 +263,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 + (void)initialize {
   if (self == [RxPluginsRxJavaPlugins class]) {
     JreStrongAssignAndConsume(&RxPluginsRxJavaPlugins_INSTANCE, new_RxPluginsRxJavaPlugins_init());
-    JreStrongAssignAndConsume(&RxPluginsRxJavaPlugins_DEFAULT_ERROR_HANDLER, new_RxPluginsRxJavaPlugins_$1_init());
+    JreStrongAssignAndConsume(&RxPluginsRxJavaPlugins_DEFAULT_ERROR_HANDLER, new_RxPluginsRxJavaPlugins_1_init());
     J2OBJC_SET_INITIALIZED(RxPluginsRxJavaPlugins)
   }
 }
@@ -294,7 +294,7 @@ RxPluginsRxJavaPlugins *create_RxPluginsRxJavaPlugins_init() {
 
 id RxPluginsRxJavaPlugins_getPluginImplementationViaPropertyWithIOSClass_withJavaUtilProperties_(IOSClass *pluginClass, JavaUtilProperties *propsIn) {
   RxPluginsRxJavaPlugins_initialize();
-  JavaUtilProperties *props = (JavaUtilProperties *) cast_chk([((JavaUtilProperties *) nil_chk(propsIn)) clone], [JavaUtilProperties class]);
+  JavaUtilProperties *props = (JavaUtilProperties *) cast_chk([((JavaUtilProperties *) nil_chk(propsIn)) java_clone], [JavaUtilProperties class]);
   NSString *classSimpleName = [((IOSClass *) nil_chk(pluginClass)) getSimpleName];
   NSString *pluginPrefix = @"rxjava.plugin.";
   NSString *defaultKey = JreStrcat("$$$", pluginPrefix, classSimpleName, @".implementation");
@@ -307,7 +307,7 @@ id RxPluginsRxJavaPlugins_getPluginImplementationViaPropertyWithIOSClass_withJav
       if ([((NSString *) nil_chk(key)) hasPrefix:pluginPrefix] && [key hasSuffix:classSuffix]) {
         NSString *value = [nil_chk([e getValue]) description];
         if ([((NSString *) nil_chk(classSimpleName)) isEqual:value]) {
-          NSString *index = [((NSString *) nil_chk([key substring:0 endIndex:((jint) [key length]) - ((jint) [classSuffix length])])) substring:((jint) [pluginPrefix length])];
+          NSString *index = [((NSString *) nil_chk([key java_substring:0 endIndex:((jint) [key length]) - ((jint) [classSuffix length])])) java_substring:((jint) [pluginPrefix length])];
           NSString *implKey = JreStrcat("$$$", pluginPrefix, index, implSuffix);
           implementingClass = [props getPropertyWithNSString:implKey];
           if (implementingClass == nil) {
@@ -346,11 +346,11 @@ IOSObjectArray *RxPluginsRxJavaPlugins__Annotations$0() {
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxPluginsRxJavaPlugins)
 
-@implementation RxPluginsRxJavaPlugins_$1
+@implementation RxPluginsRxJavaPlugins_1
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
-  RxPluginsRxJavaPlugins_$1_init(self);
+  RxPluginsRxJavaPlugins_1_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
@@ -364,29 +364,29 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[0].selector = @selector(init);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "LRxPluginsRxJavaPlugins;" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaPlugins_$1 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 1, 0, 0, -1, -1, -1, -1 };
-  return &_RxPluginsRxJavaPlugins_$1;
+  static const J2ObjcClassInfo _RxPluginsRxJavaPlugins_1 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 1, 0, 0, -1, -1, -1, -1 };
+  return &_RxPluginsRxJavaPlugins_1;
 }
 
 @end
 
-void RxPluginsRxJavaPlugins_$1_init(RxPluginsRxJavaPlugins_$1 *self) {
+void RxPluginsRxJavaPlugins_1_init(RxPluginsRxJavaPlugins_1 *self) {
   RxPluginsRxJavaErrorHandler_init(self);
 }
 
-RxPluginsRxJavaPlugins_$1 *new_RxPluginsRxJavaPlugins_$1_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaPlugins_$1, init)
+RxPluginsRxJavaPlugins_1 *new_RxPluginsRxJavaPlugins_1_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaPlugins_1, init)
 }
 
-RxPluginsRxJavaPlugins_$1 *create_RxPluginsRxJavaPlugins_$1_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaPlugins_$1, init)
+RxPluginsRxJavaPlugins_1 *create_RxPluginsRxJavaPlugins_1_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaPlugins_1, init)
 }
 
-@implementation RxPluginsRxJavaPlugins_$2
+@implementation RxPluginsRxJavaPlugins_2
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
-  RxPluginsRxJavaPlugins_$2_init(self);
+  RxPluginsRxJavaPlugins_2_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
@@ -400,20 +400,20 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[0].selector = @selector(init);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "LRxPluginsRxJavaPlugins;", "getCompletableExecutionHook" };
-  static const J2ObjcClassInfo _RxPluginsRxJavaPlugins_$2 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 1, 0, 0, -1, 1, -1, -1 };
-  return &_RxPluginsRxJavaPlugins_$2;
+  static const J2ObjcClassInfo _RxPluginsRxJavaPlugins_2 = { "", "rx.plugins", ptrTable, methods, NULL, 7, 0x8008, 1, 0, 0, -1, 1, -1, -1 };
+  return &_RxPluginsRxJavaPlugins_2;
 }
 
 @end
 
-void RxPluginsRxJavaPlugins_$2_init(RxPluginsRxJavaPlugins_$2 *self) {
+void RxPluginsRxJavaPlugins_2_init(RxPluginsRxJavaPlugins_2 *self) {
   RxPluginsRxJavaCompletableExecutionHook_init(self);
 }
 
-RxPluginsRxJavaPlugins_$2 *new_RxPluginsRxJavaPlugins_$2_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaPlugins_$2, init)
+RxPluginsRxJavaPlugins_2 *new_RxPluginsRxJavaPlugins_2_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaPlugins_2, init)
 }
 
-RxPluginsRxJavaPlugins_$2 *create_RxPluginsRxJavaPlugins_$2_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaPlugins_$2, init)
+RxPluginsRxJavaPlugins_2 *create_RxPluginsRxJavaPlugins_2_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaPlugins_2, init)
 }

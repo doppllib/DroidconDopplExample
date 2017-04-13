@@ -34,6 +34,8 @@
 #include "java/util/concurrent/CopyOnWriteArrayList.h"
 #include "java/util/concurrent/ExecutorService.h"
 
+#pragma clang diagnostic ignored "-Wincomplete-implementation"
+
 @interface DeGreenrobotEventEventBus () {
  @public
   id<JavaUtilMap> subscriptionsByEventType_;
@@ -118,25 +120,29 @@ __attribute__((unused)) static id<JavaUtilList> DeGreenrobotEventEventBus_lookup
 
 __attribute__((unused)) static void DeGreenrobotEventEventBus_handleSubscriberExceptionWithDeGreenrobotEventSubscription_withId_withNSException_(DeGreenrobotEventEventBus *self, DeGreenrobotEventSubscription *subscription, id event, NSException *cause);
 
-@interface DeGreenrobotEventEventBus_PostCallback : NSObject
-
-@end
-
-@interface DeGreenrobotEventEventBus_$1 : JavaLangThreadLocal
-
-- (DeGreenrobotEventEventBus_PostingThreadState *)initialValue OBJC_METHOD_FAMILY_NONE;
+@interface DeGreenrobotEventEventBus_1 : JavaLangThreadLocal
 
 - (instancetype)init;
 
+- (DeGreenrobotEventEventBus_PostingThreadState *)initialValue OBJC_METHOD_FAMILY_NONE;
+
+- (DeGreenrobotEventEventBus_PostingThreadState *)get;
+
+- (DeGreenrobotEventEventBus_PostingThreadState *)childValueWithId:(DeGreenrobotEventEventBus_PostingThreadState *)arg0;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(DeGreenrobotEventEventBus_$1)
+J2OBJC_EMPTY_STATIC_INIT(DeGreenrobotEventEventBus_1)
 
-__attribute__((unused)) static void DeGreenrobotEventEventBus_$1_init(DeGreenrobotEventEventBus_$1 *self);
+__attribute__((unused)) static void DeGreenrobotEventEventBus_1_init(DeGreenrobotEventEventBus_1 *self);
 
-__attribute__((unused)) static DeGreenrobotEventEventBus_$1 *new_DeGreenrobotEventEventBus_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static DeGreenrobotEventEventBus_1 *new_DeGreenrobotEventEventBus_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static DeGreenrobotEventEventBus_$1 *create_DeGreenrobotEventEventBus_$1_init();
+__attribute__((unused)) static DeGreenrobotEventEventBus_1 *create_DeGreenrobotEventEventBus_1_init();
+
+@interface DeGreenrobotEventEventBus_PostCallback : NSObject
+
+@end
 
 J2OBJC_INITIALIZED_DEFN(DeGreenrobotEventEventBus)
 
@@ -502,7 +508,7 @@ DeGreenrobotEventEventBus *DeGreenrobotEventEventBus_getDefault() {
   if (JreLoadVolatileId(&DeGreenrobotEventEventBus_defaultInstance) == nil) {
     @synchronized(DeGreenrobotEventEventBus_class_()) {
       if (JreLoadVolatileId(&DeGreenrobotEventEventBus_defaultInstance) == nil) {
-        JreVolatileStrongAssignAndConsume(&DeGreenrobotEventEventBus_defaultInstance, new_DeGreenrobotEventEventBus_init());
+        JreVolatileStrongAssign(&DeGreenrobotEventEventBus_defaultInstance, create_DeGreenrobotEventEventBus_init());
       }
     }
   }
@@ -534,7 +540,7 @@ DeGreenrobotEventEventBus *create_DeGreenrobotEventEventBus_init() {
 
 void DeGreenrobotEventEventBus_initWithDeGreenrobotEventEventBusBuilder_(DeGreenrobotEventEventBus *self, DeGreenrobotEventEventBusBuilder *builder) {
   NSObject_init(self);
-  JreStrongAssignAndConsume(&self->currentPostingThreadState_, new_DeGreenrobotEventEventBus_$1_init());
+  JreStrongAssignAndConsume(&self->currentPostingThreadState_, new_DeGreenrobotEventEventBus_1_init());
   JreStrongAssignAndConsume(&self->subscriptionsByEventType_, new_JavaUtilHashMap_init());
   JreStrongAssignAndConsume(&self->typesBySubscriber_, new_JavaUtilHashMap_init());
   JreStrongAssignAndConsume(&self->stickyEvents_, new_JavaUtilConcurrentConcurrentHashMap_init());
@@ -759,6 +765,48 @@ void DeGreenrobotEventEventBus_handleSubscriberExceptionWithDeGreenrobotEventSub
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(DeGreenrobotEventEventBus)
 
+@implementation DeGreenrobotEventEventBus_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  DeGreenrobotEventEventBus_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
+- (DeGreenrobotEventEventBus_PostingThreadState *)initialValue {
+  return create_DeGreenrobotEventEventBus_PostingThreadState_init();
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LDeGreenrobotEventEventBus_PostingThreadState;", 0x4, -1, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(initialValue);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "LDeGreenrobotEventEventBus;", "Ljava/lang/ThreadLocal<Lde/greenrobot/event/EventBus$PostingThreadState;>;" };
+  static const J2ObjcClassInfo _DeGreenrobotEventEventBus_1 = { "", "de.greenrobot.event", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 0, -1, -1, 1, -1 };
+  return &_DeGreenrobotEventEventBus_1;
+}
+
+@end
+
+void DeGreenrobotEventEventBus_1_init(DeGreenrobotEventEventBus_1 *self) {
+  JavaLangThreadLocal_init(self);
+}
+
+DeGreenrobotEventEventBus_1 *new_DeGreenrobotEventEventBus_1_init() {
+  J2OBJC_NEW_IMPL(DeGreenrobotEventEventBus_1, init)
+}
+
+DeGreenrobotEventEventBus_1 *create_DeGreenrobotEventEventBus_1_init() {
+  J2OBJC_CREATE_IMPL(DeGreenrobotEventEventBus_1, init)
+}
+
 @implementation DeGreenrobotEventEventBus_PostingThreadState
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
@@ -831,45 +879,3 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(DeGreenrobotEventEventBus_PostingThreadState)
 @end
 
 J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(DeGreenrobotEventEventBus_PostCallback)
-
-@implementation DeGreenrobotEventEventBus_$1
-
-- (DeGreenrobotEventEventBus_PostingThreadState *)initialValue {
-  return create_DeGreenrobotEventEventBus_PostingThreadState_init();
-}
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  DeGreenrobotEventEventBus_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LDeGreenrobotEventEventBus_PostingThreadState;", 0x4, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(initialValue);
-  methods[1].selector = @selector(init);
-  #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "()Lde/greenrobot/event/EventBus$PostingThreadState;", "LDeGreenrobotEventEventBus;", "Ljava/lang/ThreadLocal<Lde/greenrobot/event/EventBus$PostingThreadState;>;" };
-  static const J2ObjcClassInfo _DeGreenrobotEventEventBus_$1 = { "", "de.greenrobot.event", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, -1, 2, -1 };
-  return &_DeGreenrobotEventEventBus_$1;
-}
-
-@end
-
-void DeGreenrobotEventEventBus_$1_init(DeGreenrobotEventEventBus_$1 *self) {
-  JavaLangThreadLocal_init(self);
-}
-
-DeGreenrobotEventEventBus_$1 *new_DeGreenrobotEventEventBus_$1_init() {
-  J2OBJC_NEW_IMPL(DeGreenrobotEventEventBus_$1, init)
-}
-
-DeGreenrobotEventEventBus_$1 *create_DeGreenrobotEventEventBus_$1_init() {
-  J2OBJC_CREATE_IMPL(DeGreenrobotEventEventBus_$1, init)
-}

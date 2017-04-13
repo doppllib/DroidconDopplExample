@@ -57,7 +57,7 @@
 
 #pragma mark Protected
 
-- (ComGoogleGsonInternalExcluder *)clone;
+- (ComGoogleGsonInternalExcluder *)java_clone;
 
 @end
 

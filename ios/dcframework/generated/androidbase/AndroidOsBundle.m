@@ -128,7 +128,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   return orig;
 }
 
-- (id)clone {
+- (id)java_clone {
   return create_AndroidOsBundle_initWithAndroidOsBundle_(self);
 }
 
@@ -760,80 +760,80 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "V", 0x1, 5, 0, -1, -1, -1, -1 },
     { NULL, "LJavaLangClassLoader;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, 6, 7, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 8, -1, -1, -1, -1, -1 },
     { NULL, "I", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "Z", 0x1, 8, 9, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 10, 9, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 11, 9, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 12, 2, -1, -1, -1, -1 },
-    { NULL, "LJavaUtilSet;", 0x1, -1, -1, -1, 13, -1, -1 },
-    { NULL, "V", 0x1, 14, 15, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 16, 17, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 18, 19, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 20, 21, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 22, 23, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 24, 25, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 26, 27, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 28, 29, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 30, 4, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 31, 32, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 33, 34, -1, 35, -1, -1 },
-    { NULL, "V", 0x1, 36, 34, -1, 37, -1, -1 },
-    { NULL, "V", 0x1, 38, 34, -1, 39, -1, -1 },
-    { NULL, "V", 0x1, 40, 41, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 42, 43, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 44, 45, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 46, 47, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 48, 49, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 50, 51, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 52, 53, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 54, 55, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 56, 57, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 58, 59, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 60, 61, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 62, 63, -1, -1, -1, -1 },
-    { NULL, "Z", 0x1, 64, 9, -1, -1, -1, -1 },
-    { NULL, "V", 0x2, 65, 66, -1, -1, -1, -1 },
-    { NULL, "V", 0x2, 65, 67, -1, -1, -1, -1 },
-    { NULL, "Z", 0x1, 64, 15, -1, -1, -1, -1 },
-    { NULL, "B", 0x1, 68, 9, -1, -1, -1, -1 },
-    { NULL, "LJavaLangByte;", 0x1, 68, 17, -1, -1, -1, -1 },
-    { NULL, "C", 0x1, 69, 9, -1, -1, -1, -1 },
-    { NULL, "C", 0x1, 69, 19, -1, -1, -1, -1 },
-    { NULL, "S", 0x1, 70, 9, -1, -1, -1, -1 },
-    { NULL, "S", 0x1, 70, 21, -1, -1, -1, -1 },
-    { NULL, "I", 0x1, 71, 9, -1, -1, -1, -1 },
-    { NULL, "I", 0x1, 71, 23, -1, -1, -1, -1 },
-    { NULL, "J", 0x1, 72, 9, -1, -1, -1, -1 },
-    { NULL, "J", 0x1, 72, 25, -1, -1, -1, -1 },
-    { NULL, "F", 0x1, 73, 9, -1, -1, -1, -1 },
-    { NULL, "F", 0x1, 73, 27, -1, -1, -1, -1 },
-    { NULL, "D", 0x1, 74, 9, -1, -1, -1, -1 },
-    { NULL, "D", 0x1, 74, 29, -1, -1, -1, -1 },
-    { NULL, "LNSString;", 0x1, 75, 9, -1, -1, -1, -1 },
-    { NULL, "LNSString;", 0x1, 75, 4, -1, -1, -1, -1 },
-    { NULL, "LJavaLangCharSequence;", 0x1, 76, 9, -1, -1, -1, -1 },
-    { NULL, "LJavaLangCharSequence;", 0x1, 76, 32, -1, -1, -1, -1 },
-    { NULL, "LAndroidOsBundle;", 0x1, 77, 9, -1, -1, -1, -1 },
-    { NULL, "LJavaIoSerializable;", 0x1, 78, 9, -1, -1, -1, -1 },
-    { NULL, "LJavaUtilArrayList;", 0x1, 79, 9, -1, 80, -1, -1 },
-    { NULL, "LJavaUtilArrayList;", 0x1, 81, 9, -1, 82, -1, -1 },
-    { NULL, "LJavaUtilArrayList;", 0x1, 83, 9, -1, 84, -1, -1 },
-    { NULL, "[Z", 0x1, 85, 9, -1, -1, -1, -1 },
-    { NULL, "[B", 0x1, 86, 9, -1, -1, -1, -1 },
-    { NULL, "[S", 0x1, 87, 9, -1, -1, -1, -1 },
-    { NULL, "[C", 0x1, 88, 9, -1, -1, -1, -1 },
-    { NULL, "[I", 0x1, 89, 9, -1, -1, -1, -1 },
-    { NULL, "[J", 0x1, 90, 9, -1, -1, -1, -1 },
-    { NULL, "[F", 0x1, 91, 9, -1, -1, -1, -1 },
-    { NULL, "[D", 0x1, 92, 9, -1, -1, -1, -1 },
-    { NULL, "[LNSString;", 0x1, 93, 9, -1, -1, -1, -1 },
-    { NULL, "[LJavaLangCharSequence;", 0x1, 94, 9, -1, -1, -1, -1 },
-    { NULL, "LNSString;", 0x21, 95, -1, -1, -1, -1, -1 },
+    { NULL, "Z", 0x1, 9, 10, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 11, 10, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 12, 10, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 13, 2, -1, -1, -1, -1 },
+    { NULL, "LJavaUtilSet;", 0x1, -1, -1, -1, 14, -1, -1 },
+    { NULL, "V", 0x1, 15, 16, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 17, 18, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 19, 20, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 21, 22, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 23, 24, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 25, 26, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 27, 28, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 29, 30, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 31, 4, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 32, 33, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 34, 35, -1, 36, -1, -1 },
+    { NULL, "V", 0x1, 37, 35, -1, 38, -1, -1 },
+    { NULL, "V", 0x1, 39, 35, -1, 40, -1, -1 },
+    { NULL, "V", 0x1, 41, 42, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 43, 44, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 45, 46, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 47, 48, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 49, 50, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 51, 52, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 53, 54, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 55, 56, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 57, 58, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 59, 60, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 61, 62, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 63, 64, -1, -1, -1, -1 },
+    { NULL, "Z", 0x1, 65, 10, -1, -1, -1, -1 },
+    { NULL, "V", 0x2, 66, 67, -1, -1, -1, -1 },
+    { NULL, "V", 0x2, 66, 68, -1, -1, -1, -1 },
+    { NULL, "Z", 0x1, 65, 16, -1, -1, -1, -1 },
+    { NULL, "B", 0x1, 69, 10, -1, -1, -1, -1 },
+    { NULL, "LJavaLangByte;", 0x1, 69, 18, -1, -1, -1, -1 },
+    { NULL, "C", 0x1, 70, 10, -1, -1, -1, -1 },
+    { NULL, "C", 0x1, 70, 20, -1, -1, -1, -1 },
+    { NULL, "S", 0x1, 71, 10, -1, -1, -1, -1 },
+    { NULL, "S", 0x1, 71, 22, -1, -1, -1, -1 },
+    { NULL, "I", 0x1, 72, 10, -1, -1, -1, -1 },
+    { NULL, "I", 0x1, 72, 24, -1, -1, -1, -1 },
+    { NULL, "J", 0x1, 73, 10, -1, -1, -1, -1 },
+    { NULL, "J", 0x1, 73, 26, -1, -1, -1, -1 },
+    { NULL, "F", 0x1, 74, 10, -1, -1, -1, -1 },
+    { NULL, "F", 0x1, 74, 28, -1, -1, -1, -1 },
+    { NULL, "D", 0x1, 75, 10, -1, -1, -1, -1 },
+    { NULL, "D", 0x1, 75, 30, -1, -1, -1, -1 },
+    { NULL, "LNSString;", 0x1, 76, 10, -1, -1, -1, -1 },
+    { NULL, "LNSString;", 0x1, 76, 4, -1, -1, -1, -1 },
+    { NULL, "LJavaLangCharSequence;", 0x1, 77, 10, -1, -1, -1, -1 },
+    { NULL, "LJavaLangCharSequence;", 0x1, 77, 33, -1, -1, -1, -1 },
+    { NULL, "LAndroidOsBundle;", 0x1, 78, 10, -1, -1, -1, -1 },
+    { NULL, "LJavaIoSerializable;", 0x1, 79, 10, -1, -1, -1, -1 },
+    { NULL, "LJavaUtilArrayList;", 0x1, 80, 10, -1, 81, -1, -1 },
+    { NULL, "LJavaUtilArrayList;", 0x1, 82, 10, -1, 83, -1, -1 },
+    { NULL, "LJavaUtilArrayList;", 0x1, 84, 10, -1, 85, -1, -1 },
+    { NULL, "[Z", 0x1, 86, 10, -1, -1, -1, -1 },
+    { NULL, "[B", 0x1, 87, 10, -1, -1, -1, -1 },
+    { NULL, "[S", 0x1, 88, 10, -1, -1, -1, -1 },
+    { NULL, "[C", 0x1, 89, 10, -1, -1, -1, -1 },
+    { NULL, "[I", 0x1, 90, 10, -1, -1, -1, -1 },
+    { NULL, "[J", 0x1, 91, 10, -1, -1, -1, -1 },
+    { NULL, "[F", 0x1, 92, 10, -1, -1, -1, -1 },
+    { NULL, "[D", 0x1, 93, 10, -1, -1, -1, -1 },
+    { NULL, "[LNSString;", 0x1, 94, 10, -1, -1, -1, -1 },
+    { NULL, "[LJavaLangCharSequence;", 0x1, 95, 10, -1, -1, -1, -1 },
+    { NULL, "LNSString;", 0x21, 96, -1, -1, -1, -1, -1 },
     { NULL, "I", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 96, 97, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 97, 98, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -846,7 +846,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[6].selector = @selector(setClassLoaderWithJavaLangClassLoader:);
   methods[7].selector = @selector(getClassLoader);
   methods[8].selector = @selector(setAllowFdsWithBoolean:);
-  methods[9].selector = @selector(clone);
+  methods[9].selector = @selector(java_clone);
   methods[10].selector = @selector(size);
   methods[11].selector = @selector(isEmpty);
   methods[12].selector = @selector(clear);
@@ -922,21 +922,21 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[82].selector = @selector(writeToParcelWithAndroidOsParcel:withInt:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "LOG_TAG", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 98, -1, -1 },
-    { "EMPTY", "LAndroidOsBundle;", .constantValue.asLong = 0, 0x19, -1, 99, -1, -1 },
-    { "mMap_", "LJavaUtilMap;", .constantValue.asLong = 0, 0x0, -1, -1, 100, -1 },
+    { "LOG_TAG", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 99, -1, -1 },
+    { "EMPTY", "LAndroidOsBundle;", .constantValue.asLong = 0, 0x19, -1, 100, -1, -1 },
+    { "mMap_", "LJavaUtilMap;", .constantValue.asLong = 0, 0x0, -1, -1, 101, -1 },
     { "mHasFds_", "Z", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "mFdsKnown_", "Z", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "mAllowFds_", "Z", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "mClassLoader_", "LJavaLangClassLoader;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LJavaLangClassLoader;", "I", "LAndroidOsBundle;", "forPair", "LNSString;LNSString;", "setClassLoader", "setAllowFds", "Z", "containsKey", "LNSString;", "get", "remove", "putAll", "()Ljava/util/Set<Ljava/lang/String;>;", "putBoolean", "LNSString;Z", "putByte", "LNSString;B", "putChar", "LNSString;C", "putShort", "LNSString;S", "putInt", "LNSString;I", "putLong", "LNSString;J", "putFloat", "LNSString;F", "putDouble", "LNSString;D", "putString", "putCharSequence", "LNSString;LJavaLangCharSequence;", "putIntegerArrayList", "LNSString;LJavaUtilArrayList;", "(Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/Integer;>;)V", "putStringArrayList", "(Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/String;>;)V", "putCharSequenceArrayList", "(Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/CharSequence;>;)V", "putSerializable", "LNSString;LJavaIoSerializable;", "putBooleanArray", "LNSString;[Z", "putByteArray", "LNSString;[B", "putShortArray", "LNSString;[S", "putCharArray", "LNSString;[C", "putIntArray", "LNSString;[I", "putLongArray", "LNSString;[J", "putFloatArray", "LNSString;[F", "putDoubleArray", "LNSString;[D", "putStringArray", "LNSString;[LNSString;", "putCharSequenceArray", "LNSString;[LJavaLangCharSequence;", "putBundle", "LNSString;LAndroidOsBundle;", "getBoolean", "typeWarning", "LNSString;LNSObject;LNSString;LNSObject;LJavaLangClassCastException;", "LNSString;LNSObject;LNSString;LJavaLangClassCastException;", "getByte", "getChar", "getShort", "getInt", "getLong", "getFloat", "getDouble", "getString", "getCharSequence", "getBundle", "getSerializable", "getIntegerArrayList", "(Ljava/lang/String;)Ljava/util/ArrayList<Ljava/lang/Integer;>;", "getStringArrayList", "(Ljava/lang/String;)Ljava/util/ArrayList<Ljava/lang/String;>;", "getCharSequenceArrayList", "(Ljava/lang/String;)Ljava/util/ArrayList<Ljava/lang/CharSequence;>;", "getBooleanArray", "getByteArray", "getShortArray", "getCharArray", "getIntArray", "getLongArray", "getFloatArray", "getDoubleArray", "getStringArray", "getCharSequenceArray", "toString", "writeToParcel", "LAndroidOsParcel;I", &AndroidOsBundle_LOG_TAG, &AndroidOsBundle_EMPTY, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;" };
+  static const void *ptrTable[] = { "LJavaLangClassLoader;", "I", "LAndroidOsBundle;", "forPair", "LNSString;LNSString;", "setClassLoader", "setAllowFds", "Z", "clone", "containsKey", "LNSString;", "get", "remove", "putAll", "()Ljava/util/Set<Ljava/lang/String;>;", "putBoolean", "LNSString;Z", "putByte", "LNSString;B", "putChar", "LNSString;C", "putShort", "LNSString;S", "putInt", "LNSString;I", "putLong", "LNSString;J", "putFloat", "LNSString;F", "putDouble", "LNSString;D", "putString", "putCharSequence", "LNSString;LJavaLangCharSequence;", "putIntegerArrayList", "LNSString;LJavaUtilArrayList;", "(Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/Integer;>;)V", "putStringArrayList", "(Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/String;>;)V", "putCharSequenceArrayList", "(Ljava/lang/String;Ljava/util/ArrayList<Ljava/lang/CharSequence;>;)V", "putSerializable", "LNSString;LJavaIoSerializable;", "putBooleanArray", "LNSString;[Z", "putByteArray", "LNSString;[B", "putShortArray", "LNSString;[S", "putCharArray", "LNSString;[C", "putIntArray", "LNSString;[I", "putLongArray", "LNSString;[J", "putFloatArray", "LNSString;[F", "putDoubleArray", "LNSString;[D", "putStringArray", "LNSString;[LNSString;", "putCharSequenceArray", "LNSString;[LJavaLangCharSequence;", "putBundle", "LNSString;LAndroidOsBundle;", "getBoolean", "typeWarning", "LNSString;LNSObject;LNSString;LNSObject;LJavaLangClassCastException;", "LNSString;LNSObject;LNSString;LJavaLangClassCastException;", "getByte", "getChar", "getShort", "getInt", "getLong", "getFloat", "getDouble", "getString", "getCharSequence", "getBundle", "getSerializable", "getIntegerArrayList", "(Ljava/lang/String;)Ljava/util/ArrayList<Ljava/lang/Integer;>;", "getStringArrayList", "(Ljava/lang/String;)Ljava/util/ArrayList<Ljava/lang/String;>;", "getCharSequenceArrayList", "(Ljava/lang/String;)Ljava/util/ArrayList<Ljava/lang/CharSequence;>;", "getBooleanArray", "getByteArray", "getShortArray", "getCharArray", "getIntArray", "getLongArray", "getFloatArray", "getDoubleArray", "getStringArray", "getCharSequenceArray", "toString", "writeToParcel", "LAndroidOsParcel;I", &AndroidOsBundle_LOG_TAG, &AndroidOsBundle_EMPTY, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;" };
   static const J2ObjcClassInfo _AndroidOsBundle = { "Bundle", "android.os", ptrTable, methods, fields, 7, 0x11, 83, 7, -1, -1, -1, -1, -1 };
   return &_AndroidOsBundle;
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-  return [[self clone] retain];
+  return [[self java_clone] retain];
 }
 
 + (void)initialize {

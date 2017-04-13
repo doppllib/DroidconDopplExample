@@ -23,6 +23,7 @@
 @class CoTouchlabSqueakyDaoModelDao;
 @class IOSObjectArray;
 @protocol AndroidDatabaseCursor;
+@protocol JavaUtilFunctionConsumer;
 
 @interface CoTouchlabSqueakyDaoSelectIterator : NSObject < CoTouchlabSqueakyDaoCloseableIterator >
 

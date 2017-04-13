@@ -11,6 +11,13 @@
 
 @implementation AndroidDatabaseObservable
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  AndroidDatabaseObservable_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (void)registerObserverWithId:(id)observer {
   if (observer == nil) {
     @throw create_JavaLangIllegalArgumentException_initWithNSString_(@"The observer is null.");
@@ -42,13 +49,6 @@
   }
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  AndroidDatabaseObservable_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(mObservers_);
   [super dealloc];
@@ -56,17 +56,17 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(registerObserverWithId:);
-  methods[1].selector = @selector(unregisterObserverWithId:);
-  methods[2].selector = @selector(unregisterAll);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(registerObserverWithId:);
+  methods[2].selector = @selector(unregisterObserverWithId:);
+  methods[3].selector = @selector(unregisterAll);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "mObservers_", "LJavaUtilArrayList;", .constantValue.asLong = 0, 0x14, -1, -1, 4, -1 },

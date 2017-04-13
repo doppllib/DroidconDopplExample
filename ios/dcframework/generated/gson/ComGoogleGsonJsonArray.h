@@ -28,6 +28,7 @@
 @class JavaLangCharacter;
 @class JavaMathBigDecimal;
 @class JavaMathBigInteger;
+@protocol JavaUtilFunctionConsumer;
 @protocol JavaUtilIterator;
 @protocol JavaUtilSpliterator;
 

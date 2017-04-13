@@ -20,48 +20,12 @@
 #include "java/util/LinkedList.h"
 #include "java/util/List.h"
 
-@interface RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber () {
- @public
-  RxInternalOperatorsOperatorWindowWithStartEndObservable *this$0_;
-}
-
-@end
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber, this$0_, RxInternalOperatorsOperatorWindowWithStartEndObservable *)
-
-@interface RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1 : RxSubscriber {
- @public
-  RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *this$0_;
-  jboolean once_;
-  RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject *val$s_;
-}
-
-- (void)onNextWithId:(id)t;
-
-- (void)onErrorWithNSException:(NSException *)e;
-
-- (void)onCompleted;
-
-- (instancetype)initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber:(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *)outer$
-                   withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject:(RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject *)capture$0;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1)
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1, this$0_, RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1, val$s_, RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject *)
-
-__attribute__((unused)) static void RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1 *self, RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *outer$, RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject *capture$0);
-
-__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1 *new_RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *outer$, RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1 *create_RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *outer$, RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject *capture$0);
-
-@interface RxInternalOperatorsOperatorWindowWithStartEndObservable_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorWindowWithStartEndObservable_1 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *val$sub_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber:(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *)capture$0;
 
 - (void)onStart;
 
@@ -71,19 +35,48 @@ __attribute__((unused)) static RxInternalOperatorsOperatorWindowWithStartEndObse
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber:(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *)capture$0;
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorWindowWithStartEndObservable_1)
+
+__attribute__((unused)) static void RxInternalOperatorsOperatorWindowWithStartEndObservable_1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_(RxInternalOperatorsOperatorWindowWithStartEndObservable_1 *self, RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *capture$0);
+
+__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithStartEndObservable_1 *new_RxInternalOperatorsOperatorWindowWithStartEndObservable_1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithStartEndObservable_1 *create_RxInternalOperatorsOperatorWindowWithStartEndObservable_1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *capture$0);
+
+@interface RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber () {
+ @public
+  RxInternalOperatorsOperatorWindowWithStartEndObservable *this$0_;
+}
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorWindowWithStartEndObservable_$1)
+@interface RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1 : RxSubscriber {
+ @public
+  RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *this$0_;
+  RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject *val$s_;
+  jboolean once_;
+}
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorWindowWithStartEndObservable_$1, val$sub_, RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *)
+- (instancetype)initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber:(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *)outer$
+                   withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject:(RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject *)capture$0;
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorWindowWithStartEndObservable_$1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_(RxInternalOperatorsOperatorWindowWithStartEndObservable_$1 *self, RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *capture$0);
+- (void)onNextWithId:(id)t;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithStartEndObservable_$1 *new_RxInternalOperatorsOperatorWindowWithStartEndObservable_$1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *capture$0) NS_RETURNS_RETAINED;
+- (void)onErrorWithNSException:(NSException *)e;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithStartEndObservable_$1 *create_RxInternalOperatorsOperatorWindowWithStartEndObservable_$1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *capture$0);
+- (void)onCompleted;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1)
+
+__attribute__((unused)) static void RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1 *self, RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *outer$, RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject *capture$0);
+
+__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1 *new_RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *outer$, RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject *capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1 *create_RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *outer$, RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject *capture$0);
 
 @implementation RxInternalOperatorsOperatorWindowWithStartEndObservable
 
@@ -97,7 +90,7 @@ __attribute__((unused)) static RxInternalOperatorsOperatorWindowWithStartEndObse
   RxSubscriptionsCompositeSubscription *composite = create_RxSubscriptionsCompositeSubscription_init();
   [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:composite];
   RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *sub = create_RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_withRxSubscriber_withRxSubscriptionsCompositeSubscription_(self, child, composite);
-  RxSubscriber *open = create_RxInternalOperatorsOperatorWindowWithStartEndObservable_$1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_(sub);
+  RxSubscriber *open = create_RxInternalOperatorsOperatorWindowWithStartEndObservable_1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_(sub);
   [composite addWithRxSubscription:sub];
   [composite addWithRxSubscription:open];
   [((RxObservable *) nil_chk(windowOpenings_)) unsafeSubscribeWithRxSubscriber:open];
@@ -146,6 +139,73 @@ RxInternalOperatorsOperatorWindowWithStartEndObservable *create_RxInternalOperat
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithStartEndObservable)
+
+@implementation RxInternalOperatorsOperatorWindowWithStartEndObservable_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber:(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *)capture$0 {
+  RxInternalOperatorsOperatorWindowWithStartEndObservable_1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_(self, capture$0);
+  return self;
+}
+
+- (void)onStart {
+  [self requestWithLong:JavaLangLong_MAX_VALUE];
+}
+
+- (void)onNextWithId:(id)t {
+  [((RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *) nil_chk(val$sub_)) beginWindowWithId:t];
+}
+
+- (void)onErrorWithNSException:(NSException *)e {
+  [((RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *) nil_chk(val$sub_)) onErrorWithNSException:e];
+}
+
+- (void)onCompleted {
+  [((RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *) nil_chk(val$sub_)) onCompleted];
+}
+
+- (void)dealloc {
+  RELEASE_(val$sub_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber:);
+  methods[1].selector = @selector(onStart);
+  methods[2].selector = @selector(onNextWithId:);
+  methods[3].selector = @selector(onErrorWithNSException:);
+  methods[4].selector = @selector(onCompleted);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$sub_", "LRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TU;)V", "onError", "LNSException;", "LRxInternalOperatorsOperatorWindowWithStartEndObservable;", "callWithId:", "Lrx/Subscriber<TU;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithStartEndObservable_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 1, 5, -1, 6, 7, -1 };
+  return &_RxInternalOperatorsOperatorWindowWithStartEndObservable_1;
+}
+
+@end
+
+void RxInternalOperatorsOperatorWindowWithStartEndObservable_1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_(RxInternalOperatorsOperatorWindowWithStartEndObservable_1 *self, RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *capture$0) {
+  JreStrongAssign(&self->val$sub_, capture$0);
+  RxSubscriber_init(self);
+}
+
+RxInternalOperatorsOperatorWindowWithStartEndObservable_1 *new_RxInternalOperatorsOperatorWindowWithStartEndObservable_1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorWindowWithStartEndObservable_1, initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_, capture$0)
+}
+
+RxInternalOperatorsOperatorWindowWithStartEndObservable_1 *create_RxInternalOperatorsOperatorWindowWithStartEndObservable_1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorWindowWithStartEndObservable_1, initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_, capture$0)
+}
 
 @implementation RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject
 
@@ -281,7 +341,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithStartEndOb
     [self onErrorWithNSException:e];
     return;
   }
-  RxSubscriber *v = create_RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_(self, s);
+  RxSubscriber *v = create_RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_(self, s);
   [((RxSubscriptionsCompositeSubscription *) nil_chk(composite_)) addWithRxSubscription:v];
   [((RxObservable *) nil_chk(end)) unsafeSubscribeWithRxSubscriber:v];
 }
@@ -313,7 +373,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithStartEndOb
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber class]);
   RELEASE_(this$0_);
   RELEASE_(child_);
   RELEASE_(composite_);
@@ -345,15 +404,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithStartEndOb
   methods[7].selector = @selector(createSerializedSubject);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorWindowWithStartEndObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x10, -1, -1, 13, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorWindowWithStartEndObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 13, -1 },
+    { "child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x10, -1, -1, 14, -1 },
     { "composite_", "LRxSubscriptionsCompositeSubscription;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
     { "guard_", "LNSObject;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
-    { "chunks_", "LJavaUtilList;", .constantValue.asLong = 0, 0x10, -1, -1, 14, -1 },
+    { "chunks_", "LJavaUtilList;", .constantValue.asLong = 0, 0x10, -1, -1, 15, -1 },
     { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorWindowWithStartEndObservable;LRxSubscriber;LRxSubscriptionsCompositeSubscription;", "(Lrx/internal/operators/OperatorWindowWithStartEndObservable;Lrx/Subscriber<-Lrx/Observable<TT;>;>;Lrx/subscriptions/CompositeSubscription;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "beginWindow", "(TU;)V", "endWindow", "LRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject;", "(Lrx/internal/operators/OperatorWindowWithStartEndObservable$SerializedSubject<TT;>;)V", "()Lrx/internal/operators/OperatorWindowWithStartEndObservable$SerializedSubject<TT;>;", "Lrx/Subscriber<-Lrx/Observable<TT;>;>;", "Ljava/util/List<Lrx/internal/operators/OperatorWindowWithStartEndObservable$SerializedSubject<TT;>;>;", "LRxInternalOperatorsOperatorWindowWithStartEndObservable;", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber = { "SourceSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 8, 6, 15, -1, -1, 16, -1 };
+  static const void *ptrTable[] = { "LRxSubscriber;LRxSubscriptionsCompositeSubscription;", "(Lrx/Subscriber<-Lrx/Observable<TT;>;>;Lrx/subscriptions/CompositeSubscription;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "beginWindow", "(TU;)V", "endWindow", "LRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject;", "(Lrx/internal/operators/OperatorWindowWithStartEndObservable$SerializedSubject<TT;>;)V", "()Lrx/internal/operators/OperatorWindowWithStartEndObservable$SerializedSubject<TT;>;", "Lrx/internal/operators/OperatorWindowWithStartEndObservable<TT;TU;TV;>;", "Lrx/Subscriber<-Lrx/Observable<TT;>;>;", "Ljava/util/List<Lrx/internal/operators/OperatorWindowWithStartEndObservable$SerializedSubject<TT;>;>;", "LRxInternalOperatorsOperatorWindowWithStartEndObservable;", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber = { "SourceSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 8, 6, 16, -1, -1, 17, -1 };
   return &_RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber;
 }
 
@@ -378,7 +437,13 @@ RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *create
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber)
 
-@implementation RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1
+@implementation RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber:(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *)outer$
+                   withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject:(RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject *)capture$0 {
+  RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   [self onCompleted];
@@ -396,14 +461,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithStartEndOb
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber:(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *)outer$
-                   withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject:(RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject *)capture$0 {
-  RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_(self, outer$, capture$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1 class]);
   RELEASE_(this$0_);
   RELEASE_(val$s_);
   [super dealloc];
@@ -411,109 +469,41 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithStartEndOb
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber:withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber:withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "val$s_", "LRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
     { "once_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
-    { "val$s_", "LRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TV;)V", "onError", "LNSException;", "LRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber;LRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject;", "(Lrx/internal/operators/OperatorWindowWithStartEndObservable$SourceSubscriber;Lrx/internal/operators/OperatorWindowWithStartEndObservable$SerializedSubject<TT;>;)V", "Lrx/internal/operators/OperatorWindowWithStartEndObservable$SerializedSubject<TT;>;", "LRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber;", "beginWindowWithId:", "Lrx/Subscriber<TV;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1;
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TV;)V", "onError", "LNSException;", "Lrx/internal/operators/OperatorWindowWithStartEndObservable$SerializedSubject<TT;>;", "LRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber;", "beginWindowWithId:", "Lrx/Subscriber<TV;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 6, -1, 7, 8, -1 };
+  return &_RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1 *self, RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *outer$, RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject *capture$0) {
+void RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1 *self, RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *outer$, RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$s_, capture$0);
   RxSubscriber_init(self);
   self->once_ = true;
 }
 
-RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1 *new_RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *outer$, RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1, initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_, outer$, capture$0)
+RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1 *new_RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *outer$, RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1, initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_, outer$, capture$0)
 }
 
-RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1 *create_RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *outer$, RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_$1, initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_, outer$, capture$0)
-}
-
-@implementation RxInternalOperatorsOperatorWindowWithStartEndObservable_$1
-
-- (void)onStart {
-  [self requestWithLong:JavaLangLong_MAX_VALUE];
-}
-
-- (void)onNextWithId:(id)t {
-  [((RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *) nil_chk(val$sub_)) beginWindowWithId:t];
-}
-
-- (void)onErrorWithNSException:(NSException *)e {
-  [((RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *) nil_chk(val$sub_)) onErrorWithNSException:e];
-}
-
-- (void)onCompleted {
-  [((RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *) nil_chk(val$sub_)) onCompleted];
-}
-
-- (instancetype)initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber:(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *)capture$0 {
-  RxInternalOperatorsOperatorWindowWithStartEndObservable_$1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorWindowWithStartEndObservable_$1 class]);
-  RELEASE_(val$sub_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onStart);
-  methods[1].selector = @selector(onNextWithId:);
-  methods[2].selector = @selector(onErrorWithNSException:);
-  methods[3].selector = @selector(onCompleted);
-  methods[4].selector = @selector(initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$sub_", "LRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TU;)V", "onError", "LNSException;", "LRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber;", "LRxInternalOperatorsOperatorWindowWithStartEndObservable;", "callWithId:", "Lrx/Subscriber<TU;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithStartEndObservable_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 1, 6, -1, 7, 8, -1 };
-  return &_RxInternalOperatorsOperatorWindowWithStartEndObservable_$1;
-}
-
-@end
-
-void RxInternalOperatorsOperatorWindowWithStartEndObservable_$1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_(RxInternalOperatorsOperatorWindowWithStartEndObservable_$1 *self, RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *capture$0) {
-  JreStrongAssign(&self->val$sub_, capture$0);
-  RxSubscriber_init(self);
-}
-
-RxInternalOperatorsOperatorWindowWithStartEndObservable_$1 *new_RxInternalOperatorsOperatorWindowWithStartEndObservable_$1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorWindowWithStartEndObservable_$1, initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_, capture$0)
-}
-
-RxInternalOperatorsOperatorWindowWithStartEndObservable_$1 *create_RxInternalOperatorsOperatorWindowWithStartEndObservable_$1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorWindowWithStartEndObservable_$1, initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_, capture$0)
+RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1 *create_RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1_initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber *outer$, RxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_1, initWithRxInternalOperatorsOperatorWindowWithStartEndObservable_SourceSubscriber_withRxInternalOperatorsOperatorWindowWithStartEndObservable_SerializedSubject_, outer$, capture$0)
 }

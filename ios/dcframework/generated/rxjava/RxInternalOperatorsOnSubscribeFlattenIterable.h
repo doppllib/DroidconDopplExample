@@ -98,8 +98,6 @@ J2OBJC_TYPE_LITERAL_HEADER(RxInternalOperatorsOnSubscribeFlattenIterable)
                 withRxFunctionsFunc1:(id<RxFunctionsFunc1>)mapper
                              withInt:(jint)prefetch;
 
-- (void)j2objcCleanup;
-
 - (void)onCompleted;
 
 - (void)onErrorWithNSException:(NSException *)e;

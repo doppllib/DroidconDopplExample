@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OperatorOnBackpressureBuffer.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxBackpressureOverflow.h"
 #include "RxExceptionsExceptions.h"
@@ -321,7 +320,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorOnBackpressureBuffer
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorOnBackpressureBuffer_BufferSubscriber class]);
   RELEASE_(queue_);
   RELEASE_(capacity_);
   RELEASE_(child_);

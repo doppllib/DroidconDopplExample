@@ -15,6 +15,13 @@
 
 @implementation RetrofitMimeFormUrlEncodedTypedOutput
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RetrofitMimeFormUrlEncodedTypedOutput_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (void)addFieldWithNSString:(NSString *)name
                 withNSString:(NSString *)value {
   [self addFieldWithNSString:name withBoolean:true withNSString:value withBoolean:true];
@@ -40,9 +47,9 @@
     if (encodeValue) {
       value = JavaNetURLEncoder_encodeWithNSString_withNSString_(value, @"UTF-8");
     }
-    [content_ writeWithByteArray:[((NSString *) nil_chk(name)) getBytesWithCharsetName:@"UTF-8"]];
+    [content_ writeWithByteArray:[((NSString *) nil_chk(name)) java_getBytesWithCharsetName:@"UTF-8"]];
     [content_ writeWithInt:'='];
-    [content_ writeWithByteArray:[((NSString *) nil_chk(value)) getBytesWithCharsetName:@"UTF-8"]];
+    [content_ writeWithByteArray:[((NSString *) nil_chk(value)) java_getBytesWithCharsetName:@"UTF-8"]];
   }
   @catch (JavaIoIOException *e) {
     @throw create_JavaLangRuntimeException_initWithNSException_(e);
@@ -65,13 +72,6 @@
   [((JavaIoOutputStream *) nil_chk(outArg)) writeWithByteArray:[((JavaIoByteArrayOutputStream *) nil_chk(content_)) toByteArray]];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RetrofitMimeFormUrlEncodedTypedOutput_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(content_);
   [super dealloc];
@@ -79,23 +79,23 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 2, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "J", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 3, 4, 5, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(addFieldWithNSString:withNSString:);
-  methods[1].selector = @selector(addFieldWithNSString:withBoolean:withNSString:withBoolean:);
-  methods[2].selector = @selector(fileName);
-  methods[3].selector = @selector(mimeType);
-  methods[4].selector = @selector(length);
-  methods[5].selector = @selector(writeToWithJavaIoOutputStream:);
-  methods[6].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(addFieldWithNSString:withNSString:);
+  methods[2].selector = @selector(addFieldWithNSString:withBoolean:withNSString:withBoolean:);
+  methods[3].selector = @selector(fileName);
+  methods[4].selector = @selector(mimeType);
+  methods[5].selector = @selector(length);
+  methods[6].selector = @selector(writeToWithJavaIoOutputStream:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "content_", "LJavaIoByteArrayOutputStream;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },

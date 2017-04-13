@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_AndroidContentContext
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (AndroidContentContext_) && (INCLUDE_ALL_AndroidContentContext || defined(INCLUDE_AndroidContentContext))
 #define AndroidContentContext_
 
@@ -108,4 +113,8 @@ J2OBJC_TYPE_LITERAL_HEADER(AndroidContentContext)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_AndroidContentContext")

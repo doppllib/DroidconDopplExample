@@ -406,6 +406,8 @@ J2OBJC_TYPE_LITERAL_HEADER(AndroidDatabaseSqliteSQLiteConnection_PreparedStateme
   jint mGeneration_;
 }
 
+- (instancetype)init;
+
 - (jint)beginOperationWithNSString:(NSString *)kind
                       withNSString:(NSString *)sql
                  withNSObjectArray:(IOSObjectArray *)bindArgs;
@@ -434,8 +436,6 @@ J2OBJC_TYPE_LITERAL_HEADER(AndroidDatabaseSqliteSQLiteConnection_PreparedStateme
 - (void)dumpWithAndroidUtilPrinter:(id<AndroidUtilPrinter>)printer
                        withBoolean:(jboolean)verbose;
 
-- (instancetype)init;
-
 @end
 
 J2OBJC_EMPTY_STATIC_INIT(AndroidDatabaseSqliteSQLiteConnection_OperationLog)
@@ -454,6 +454,12 @@ inline jint AndroidDatabaseSqliteSQLiteConnection_OperationLog_get_COOKIE_INDEX_
 #define AndroidDatabaseSqliteSQLiteConnection_OperationLog_COOKIE_INDEX_MASK 255
 J2OBJC_STATIC_FIELD_CONSTANT(AndroidDatabaseSqliteSQLiteConnection_OperationLog, COOKIE_INDEX_MASK, jint)
 
+__attribute__((unused)) static void AndroidDatabaseSqliteSQLiteConnection_OperationLog_init(AndroidDatabaseSqliteSQLiteConnection_OperationLog *self);
+
+__attribute__((unused)) static AndroidDatabaseSqliteSQLiteConnection_OperationLog *new_AndroidDatabaseSqliteSQLiteConnection_OperationLog_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static AndroidDatabaseSqliteSQLiteConnection_OperationLog *create_AndroidDatabaseSqliteSQLiteConnection_OperationLog_init();
+
 __attribute__((unused)) static jboolean AndroidDatabaseSqliteSQLiteConnection_OperationLog_endOperationDeferLogLockedWithInt_(AndroidDatabaseSqliteSQLiteConnection_OperationLog *self, jint cookie);
 
 __attribute__((unused)) static void AndroidDatabaseSqliteSQLiteConnection_OperationLog_logOperationLockedWithInt_withNSString_(AndroidDatabaseSqliteSQLiteConnection_OperationLog *self, jint cookie, NSString *detail);
@@ -461,12 +467,6 @@ __attribute__((unused)) static void AndroidDatabaseSqliteSQLiteConnection_Operat
 __attribute__((unused)) static jint AndroidDatabaseSqliteSQLiteConnection_OperationLog_newOperationCookieLockedWithInt_(AndroidDatabaseSqliteSQLiteConnection_OperationLog *self, jint index);
 
 __attribute__((unused)) static AndroidDatabaseSqliteSQLiteConnection_Operation *AndroidDatabaseSqliteSQLiteConnection_OperationLog_getOperationLockedWithInt_(AndroidDatabaseSqliteSQLiteConnection_OperationLog *self, jint cookie);
-
-__attribute__((unused)) static void AndroidDatabaseSqliteSQLiteConnection_OperationLog_init(AndroidDatabaseSqliteSQLiteConnection_OperationLog *self);
-
-__attribute__((unused)) static AndroidDatabaseSqliteSQLiteConnection_OperationLog *new_AndroidDatabaseSqliteSQLiteConnection_OperationLog_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static AndroidDatabaseSqliteSQLiteConnection_OperationLog *create_AndroidDatabaseSqliteSQLiteConnection_OperationLog_init();
 
 J2OBJC_TYPE_LITERAL_HEADER(AndroidDatabaseSqliteSQLiteConnection_OperationLog)
 
@@ -482,14 +482,14 @@ J2OBJC_TYPE_LITERAL_HEADER(AndroidDatabaseSqliteSQLiteConnection_OperationLog)
   jint mCookie_;
 }
 
+- (instancetype)init;
+
 - (void)describeWithJavaLangStringBuilder:(JavaLangStringBuilder *)msg
                               withBoolean:(jboolean)verbose;
 
 - (NSString *)getStatus;
 
 - (NSString *)getFormattedStartTime;
-
-- (instancetype)init;
 
 @end
 
@@ -504,15 +504,15 @@ inline JavaTextSimpleDateFormat *AndroidDatabaseSqliteSQLiteConnection_Operation
 static JavaTextSimpleDateFormat *AndroidDatabaseSqliteSQLiteConnection_Operation_sDateFormat;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(AndroidDatabaseSqliteSQLiteConnection_Operation, sDateFormat, JavaTextSimpleDateFormat *)
 
-__attribute__((unused)) static NSString *AndroidDatabaseSqliteSQLiteConnection_Operation_getStatus(AndroidDatabaseSqliteSQLiteConnection_Operation *self);
-
-__attribute__((unused)) static NSString *AndroidDatabaseSqliteSQLiteConnection_Operation_getFormattedStartTime(AndroidDatabaseSqliteSQLiteConnection_Operation *self);
-
 __attribute__((unused)) static void AndroidDatabaseSqliteSQLiteConnection_Operation_init(AndroidDatabaseSqliteSQLiteConnection_Operation *self);
 
 __attribute__((unused)) static AndroidDatabaseSqliteSQLiteConnection_Operation *new_AndroidDatabaseSqliteSQLiteConnection_Operation_init() NS_RETURNS_RETAINED;
 
 __attribute__((unused)) static AndroidDatabaseSqliteSQLiteConnection_Operation *create_AndroidDatabaseSqliteSQLiteConnection_Operation_init();
+
+__attribute__((unused)) static NSString *AndroidDatabaseSqliteSQLiteConnection_Operation_getStatus(AndroidDatabaseSqliteSQLiteConnection_Operation *self);
+
+__attribute__((unused)) static NSString *AndroidDatabaseSqliteSQLiteConnection_Operation_getFormattedStartTime(AndroidDatabaseSqliteSQLiteConnection_Operation *self);
 
 J2OBJC_TYPE_LITERAL_HEADER(AndroidDatabaseSqliteSQLiteConnection_Operation)
 
@@ -658,7 +658,7 @@ withAndroidDatabaseSqliteSQLiteCustomFunction:(AndroidDatabaseSqliteSQLiteCustom
   return self;
 }
 
-- (void)javaFinalize {
+- (void)java_finalize {
   @try {
     if (mPool_ != nil && mConnectionPtr_ != nil) {
       [mPool_ onConnectionLeaked];
@@ -666,7 +666,7 @@ withAndroidDatabaseSqliteSQLiteCustomFunction:(AndroidDatabaseSqliteSQLiteCustom
     AndroidDatabaseSqliteSQLiteConnection_disposeWithBoolean_(self, true);
   }
   @finally {
-    [super javaFinalize];
+    [super java_finalize];
   }
 }
 
@@ -1094,7 +1094,7 @@ withAndroidDatabaseSqliteSQLiteStatementInfo:(AndroidDatabaseSqliteSQLiteStateme
       @catch (AndroidDatabaseSqliteSQLiteException *ex) {
       }
       NSString *label = JreStrcat("$$", @"  (attached) ", name);
-      if (![((NSString *) nil_chk(path)) isEmpty]) {
+      if (![((NSString *) nil_chk(path)) java_isEmpty]) {
         JreStrAppend(&label, "$$", @": ", path);
       }
       [dbStatsList addWithId:create_AndroidDatabaseSqliteSQLiteDebug_DbStats_initWithNSString_withLong_withLong_withInt_withInt_withInt_withInt_(label, pageCount, pageSize, 0, 0, 0, 0)];
@@ -1245,7 +1245,7 @@ withAndroidDatabaseSqliteSQLiteStatementInfo:(AndroidDatabaseSqliteSQLiteStateme
   methods[21].selector = @selector(nativeExecuteForCursorWindowWithId:withId:withId:withInt:withInt:withBoolean:);
   methods[22].selector = @selector(nativeGetDbLookasideWithId:);
   methods[23].selector = @selector(initWithAndroidDatabaseSqliteSQLiteConnectionPool:withAndroidDatabaseSqliteSQLiteDatabaseConfiguration:withInt:withBoolean:);
-  methods[24].selector = @selector(javaFinalize);
+  methods[24].selector = @selector(java_finalize);
   methods[25].selector = @selector(openWithAndroidDatabaseSqliteSQLiteConnectionPool:withAndroidDatabaseSqliteSQLiteDatabaseConfiguration:withInt:withBoolean:);
   methods[26].selector = @selector(close);
   methods[27].selector = @selector(open);
@@ -1568,7 +1568,7 @@ void AndroidDatabaseSqliteSQLiteConnection_setWalModeFromConfiguration(AndroidDa
 
 void AndroidDatabaseSqliteSQLiteConnection_setSyncModeWithNSString_(AndroidDatabaseSqliteSQLiteConnection *self, NSString *newValue) {
   NSString *value = [self executeForStringWithNSString:@"PRAGMA synchronous" withNSObjectArray:nil];
-  if (![((NSString *) nil_chk(AndroidDatabaseSqliteSQLiteConnection_canonicalizeSyncModeWithNSString_(value))) equalsIgnoreCase:AndroidDatabaseSqliteSQLiteConnection_canonicalizeSyncModeWithNSString_(newValue)]) {
+  if (![((NSString *) nil_chk(AndroidDatabaseSqliteSQLiteConnection_canonicalizeSyncModeWithNSString_(value))) java_equalsIgnoreCase:AndroidDatabaseSqliteSQLiteConnection_canonicalizeSyncModeWithNSString_(newValue)]) {
     [self executeWithNSString:JreStrcat("$$", @"PRAGMA synchronous=", newValue) withNSObjectArray:nil];
   }
 }
@@ -1589,10 +1589,10 @@ NSString *AndroidDatabaseSqliteSQLiteConnection_canonicalizeSyncModeWithNSString
 
 void AndroidDatabaseSqliteSQLiteConnection_setJournalModeWithNSString_(AndroidDatabaseSqliteSQLiteConnection *self, NSString *newValue) {
   NSString *value = [self executeForStringWithNSString:@"PRAGMA journal_mode" withNSObjectArray:nil];
-  if (![((NSString *) nil_chk(value)) equalsIgnoreCase:newValue]) {
+  if (![((NSString *) nil_chk(value)) java_equalsIgnoreCase:newValue]) {
     @try {
       NSString *result = [self executeForStringWithNSString:JreStrcat("$$", @"PRAGMA journal_mode=", newValue) withNSObjectArray:nil];
-      if ([((NSString *) nil_chk(result)) equalsIgnoreCase:newValue]) {
+      if ([((NSString *) nil_chk(result)) java_equalsIgnoreCase:newValue]) {
         return;
       }
     }
@@ -1884,8 +1884,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidDatabaseSqliteSQLiteConnection_PreparedS
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
     { NULL, NULL, 0x1, -1, 0, -1, -1, -1, -1 },
-    { NULL, "V", 0x4, 1, 2, -1, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, -1, -1, -1, -1 },
+    { NULL, "V", 0x4, 1, 2, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -1896,8 +1896,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidDatabaseSqliteSQLiteConnection_PreparedS
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LAndroidDatabaseSqliteSQLiteConnection;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LAndroidDatabaseSqliteSQLiteConnection;I", "entryRemoved", "ZLNSString;LAndroidDatabaseSqliteSQLiteConnection_PreparedStatement;LAndroidDatabaseSqliteSQLiteConnection_PreparedStatement;", "(ZLjava/lang/String;Landroid/database/sqlite/SQLiteConnection$PreparedStatement;Landroid/database/sqlite/SQLiteConnection$PreparedStatement;)V", "dump", "LAndroidUtilPrinter;", "LAndroidDatabaseSqliteSQLiteConnection;", "Landroid/util/LruCache<Ljava/lang/String;Landroid/database/sqlite/SQLiteConnection$PreparedStatement;>;" };
-  static const J2ObjcClassInfo _AndroidDatabaseSqliteSQLiteConnection_PreparedStatementCache = { "PreparedStatementCache", "android.database.sqlite", ptrTable, methods, fields, 7, 0x12, 3, 1, 6, -1, -1, 7, -1 };
+  static const void *ptrTable[] = { "I", "entryRemoved", "ZLNSString;LAndroidDatabaseSqliteSQLiteConnection_PreparedStatement;LAndroidDatabaseSqliteSQLiteConnection_PreparedStatement;", "dump", "LAndroidUtilPrinter;", "LAndroidDatabaseSqliteSQLiteConnection;", "Landroid/util/LruCache<Ljava/lang/String;Landroid/database/sqlite/SQLiteConnection$PreparedStatement;>;" };
+  static const J2ObjcClassInfo _AndroidDatabaseSqliteSQLiteConnection_PreparedStatementCache = { "PreparedStatementCache", "android.database.sqlite", ptrTable, methods, fields, 7, 0x12, 3, 1, 5, -1, -1, 6, -1 };
   return &_AndroidDatabaseSqliteSQLiteConnection_PreparedStatementCache;
 }
 
@@ -1919,6 +1919,13 @@ AndroidDatabaseSqliteSQLiteConnection_PreparedStatementCache *create_AndroidData
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidDatabaseSqliteSQLiteConnection_PreparedStatementCache)
 
 @implementation AndroidDatabaseSqliteSQLiteConnection_OperationLog
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  AndroidDatabaseSqliteSQLiteConnection_OperationLog_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (jint)beginOperationWithNSString:(NSString *)kind
                       withNSString:(NSString *)sql
@@ -2055,13 +2062,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidDatabaseSqliteSQLiteConnection_PreparedS
   }
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  AndroidDatabaseSqliteSQLiteConnection_OperationLog_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(mOperations_);
   [super dealloc];
@@ -2069,6 +2069,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
     { NULL, "I", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 4, 5, -1, -1, -1, -1 },
@@ -2080,22 +2081,21 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "LAndroidDatabaseSqliteSQLiteConnection_Operation;", 0x2, 12, 5, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 13, 14, -1, -1, -1, -1 },
-    { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(beginOperationWithNSString:withNSString:withNSObjectArray:);
-  methods[1].selector = @selector(failOperationWithInt:withJavaLangException:);
-  methods[2].selector = @selector(endOperationWithInt:);
-  methods[3].selector = @selector(endOperationDeferLogWithInt:);
-  methods[4].selector = @selector(logOperationWithInt:withNSString:);
-  methods[5].selector = @selector(endOperationDeferLogLockedWithInt:);
-  methods[6].selector = @selector(logOperationLockedWithInt:withNSString:);
-  methods[7].selector = @selector(newOperationCookieLockedWithInt:);
-  methods[8].selector = @selector(getOperationLockedWithInt:);
-  methods[9].selector = @selector(describeCurrentOperation);
-  methods[10].selector = @selector(dumpWithAndroidUtilPrinter:withBoolean:);
-  methods[11].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(beginOperationWithNSString:withNSString:withNSObjectArray:);
+  methods[2].selector = @selector(failOperationWithInt:withJavaLangException:);
+  methods[3].selector = @selector(endOperationWithInt:);
+  methods[4].selector = @selector(endOperationDeferLogWithInt:);
+  methods[5].selector = @selector(logOperationWithInt:withNSString:);
+  methods[6].selector = @selector(endOperationDeferLogLockedWithInt:);
+  methods[7].selector = @selector(logOperationLockedWithInt:withNSString:);
+  methods[8].selector = @selector(newOperationCookieLockedWithInt:);
+  methods[9].selector = @selector(getOperationLockedWithInt:);
+  methods[10].selector = @selector(describeCurrentOperation);
+  methods[11].selector = @selector(dumpWithAndroidUtilPrinter:withBoolean:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "MAX_RECENT_OPERATIONS", "I", .constantValue.asInt = AndroidDatabaseSqliteSQLiteConnection_OperationLog_MAX_RECENT_OPERATIONS, 0x1a, -1, -1, -1, -1 },
@@ -2111,6 +2111,19 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void AndroidDatabaseSqliteSQLiteConnection_OperationLog_init(AndroidDatabaseSqliteSQLiteConnection_OperationLog *self) {
+  NSObject_init(self);
+  JreStrongAssignAndConsume(&self->mOperations_, [IOSObjectArray newArrayWithLength:AndroidDatabaseSqliteSQLiteConnection_OperationLog_MAX_RECENT_OPERATIONS type:AndroidDatabaseSqliteSQLiteConnection_Operation_class_()]);
+}
+
+AndroidDatabaseSqliteSQLiteConnection_OperationLog *new_AndroidDatabaseSqliteSQLiteConnection_OperationLog_init() {
+  J2OBJC_NEW_IMPL(AndroidDatabaseSqliteSQLiteConnection_OperationLog, init)
+}
+
+AndroidDatabaseSqliteSQLiteConnection_OperationLog *create_AndroidDatabaseSqliteSQLiteConnection_OperationLog_init() {
+  J2OBJC_CREATE_IMPL(AndroidDatabaseSqliteSQLiteConnection_OperationLog, init)
+}
 
 jboolean AndroidDatabaseSqliteSQLiteConnection_OperationLog_endOperationDeferLogLockedWithInt_(AndroidDatabaseSqliteSQLiteConnection_OperationLog *self, jint cookie) {
   AndroidDatabaseSqliteSQLiteConnection_Operation *operation = AndroidDatabaseSqliteSQLiteConnection_OperationLog_getOperationLockedWithInt_(self, cookie);
@@ -2143,24 +2156,18 @@ AndroidDatabaseSqliteSQLiteConnection_Operation *AndroidDatabaseSqliteSQLiteConn
   return ((AndroidDatabaseSqliteSQLiteConnection_Operation *) nil_chk(operation))->mCookie_ == cookie ? operation : nil;
 }
 
-void AndroidDatabaseSqliteSQLiteConnection_OperationLog_init(AndroidDatabaseSqliteSQLiteConnection_OperationLog *self) {
-  NSObject_init(self);
-  JreStrongAssignAndConsume(&self->mOperations_, [IOSObjectArray newArrayWithLength:AndroidDatabaseSqliteSQLiteConnection_OperationLog_MAX_RECENT_OPERATIONS type:AndroidDatabaseSqliteSQLiteConnection_Operation_class_()]);
-}
-
-AndroidDatabaseSqliteSQLiteConnection_OperationLog *new_AndroidDatabaseSqliteSQLiteConnection_OperationLog_init() {
-  J2OBJC_NEW_IMPL(AndroidDatabaseSqliteSQLiteConnection_OperationLog, init)
-}
-
-AndroidDatabaseSqliteSQLiteConnection_OperationLog *create_AndroidDatabaseSqliteSQLiteConnection_OperationLog_init() {
-  J2OBJC_CREATE_IMPL(AndroidDatabaseSqliteSQLiteConnection_OperationLog, init)
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidDatabaseSqliteSQLiteConnection_OperationLog)
 
 J2OBJC_INITIALIZED_DEFN(AndroidDatabaseSqliteSQLiteConnection_Operation)
 
 @implementation AndroidDatabaseSqliteSQLiteConnection_Operation
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  AndroidDatabaseSqliteSQLiteConnection_Operation_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)describeWithJavaLangStringBuilder:(JavaLangStringBuilder *)msg
                               withBoolean:(jboolean)verbose {
@@ -2211,13 +2218,6 @@ J2OBJC_INITIALIZED_DEFN(AndroidDatabaseSqliteSQLiteConnection_Operation)
   return AndroidDatabaseSqliteSQLiteConnection_Operation_getFormattedStartTime(self);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  AndroidDatabaseSqliteSQLiteConnection_Operation_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(mKind_);
   RELEASE_(mSql_);
@@ -2228,17 +2228,17 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x2, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x2, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(describeWithJavaLangStringBuilder:withBoolean:);
-  methods[1].selector = @selector(getStatus);
-  methods[2].selector = @selector(getFormattedStartTime);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(describeWithJavaLangStringBuilder:withBoolean:);
+  methods[2].selector = @selector(getStatus);
+  methods[3].selector = @selector(getFormattedStartTime);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "sDateFormat", "LJavaTextSimpleDateFormat;", .constantValue.asLong = 0, 0x1a, -1, 2, -1, -1 },
@@ -2265,17 +2265,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 @end
 
-NSString *AndroidDatabaseSqliteSQLiteConnection_Operation_getStatus(AndroidDatabaseSqliteSQLiteConnection_Operation *self) {
-  if (!self->mFinished_) {
-    return @"running";
-  }
-  return self->mException_ != nil ? @"failed" : @"succeeded";
-}
-
-NSString *AndroidDatabaseSqliteSQLiteConnection_Operation_getFormattedStartTime(AndroidDatabaseSqliteSQLiteConnection_Operation *self) {
-  return [((JavaTextSimpleDateFormat *) nil_chk(AndroidDatabaseSqliteSQLiteConnection_Operation_sDateFormat)) formatWithJavaUtilDate:create_JavaUtilDate_initWithLong_(self->mStartTime_)];
-}
-
 void AndroidDatabaseSqliteSQLiteConnection_Operation_init(AndroidDatabaseSqliteSQLiteConnection_Operation *self) {
   NSObject_init(self);
 }
@@ -2286,6 +2275,17 @@ AndroidDatabaseSqliteSQLiteConnection_Operation *new_AndroidDatabaseSqliteSQLite
 
 AndroidDatabaseSqliteSQLiteConnection_Operation *create_AndroidDatabaseSqliteSQLiteConnection_Operation_init() {
   J2OBJC_CREATE_IMPL(AndroidDatabaseSqliteSQLiteConnection_Operation, init)
+}
+
+NSString *AndroidDatabaseSqliteSQLiteConnection_Operation_getStatus(AndroidDatabaseSqliteSQLiteConnection_Operation *self) {
+  if (!self->mFinished_) {
+    return @"running";
+  }
+  return self->mException_ != nil ? @"failed" : @"succeeded";
+}
+
+NSString *AndroidDatabaseSqliteSQLiteConnection_Operation_getFormattedStartTime(AndroidDatabaseSqliteSQLiteConnection_Operation *self) {
+  return [((JavaTextSimpleDateFormat *) nil_chk(AndroidDatabaseSqliteSQLiteConnection_Operation_sDateFormat)) formatWithJavaUtilDate:create_JavaUtilDate_initWithLong_(self->mStartTime_)];
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidDatabaseSqliteSQLiteConnection_Operation)

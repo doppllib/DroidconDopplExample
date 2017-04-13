@@ -87,13 +87,13 @@ J2OBJC_IGNORE_DESIGNATED_END
     @throw create_ComGoogleGsonJsonParseException_initWithNSString_(@"The date should be a string value");
   }
   JavaUtilDate *date = ComGoogleGsonDefaultDateTypeAdapter_deserializeToDateWithComGoogleGsonJsonElement_(self, json);
-  if (typeOfT == JavaUtilDate_class_()) {
+  if (typeOfT == (id) JavaUtilDate_class_()) {
     return date;
   }
-  else if (typeOfT == JavaSqlTimestamp_class_()) {
+  else if (typeOfT == (id) JavaSqlTimestamp_class_()) {
     return create_JavaSqlTimestamp_initWithLong_([((JavaUtilDate *) nil_chk(date)) getTime]);
   }
-  else if (typeOfT == JavaSqlDate_class_()) {
+  else if (typeOfT == (id) JavaSqlDate_class_()) {
     return create_JavaSqlDate_initWithLong_([((JavaUtilDate *) nil_chk(date)) getTime]);
   }
   else {

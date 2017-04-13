@@ -23,6 +23,13 @@
 
 @implementation ComGoogleGsonJsonElement
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonJsonElement_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (ComGoogleGsonJsonElement *)deepCopy {
   // can't call an abstract method
   [self doesNotRecognizeSelector:_cmd];
@@ -138,15 +145,9 @@
   }
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonJsonElement_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LComGoogleGsonJsonElement;", 0x400, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
@@ -170,34 +171,33 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "LJavaMathBigInteger;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "S", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, 0, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(deepCopy);
-  methods[1].selector = @selector(isJsonArray);
-  methods[2].selector = @selector(isJsonObject);
-  methods[3].selector = @selector(isJsonPrimitive);
-  methods[4].selector = @selector(isJsonNull);
-  methods[5].selector = @selector(getAsJsonObject);
-  methods[6].selector = @selector(getAsJsonArray);
-  methods[7].selector = @selector(getAsJsonPrimitive);
-  methods[8].selector = @selector(getAsJsonNull);
-  methods[9].selector = @selector(getAsBoolean);
-  methods[10].selector = @selector(getAsBooleanWrapper);
-  methods[11].selector = @selector(getAsNumber);
-  methods[12].selector = @selector(getAsString);
-  methods[13].selector = @selector(getAsDouble);
-  methods[14].selector = @selector(getAsFloat);
-  methods[15].selector = @selector(getAsLong);
-  methods[16].selector = @selector(getAsInt);
-  methods[17].selector = @selector(getAsByte);
-  methods[18].selector = @selector(getAsCharacter);
-  methods[19].selector = @selector(getAsBigDecimal);
-  methods[20].selector = @selector(getAsBigInteger);
-  methods[21].selector = @selector(getAsShort);
-  methods[22].selector = @selector(description);
-  methods[23].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(deepCopy);
+  methods[2].selector = @selector(isJsonArray);
+  methods[3].selector = @selector(isJsonObject);
+  methods[4].selector = @selector(isJsonPrimitive);
+  methods[5].selector = @selector(isJsonNull);
+  methods[6].selector = @selector(getAsJsonObject);
+  methods[7].selector = @selector(getAsJsonArray);
+  methods[8].selector = @selector(getAsJsonPrimitive);
+  methods[9].selector = @selector(getAsJsonNull);
+  methods[10].selector = @selector(getAsBoolean);
+  methods[11].selector = @selector(getAsBooleanWrapper);
+  methods[12].selector = @selector(getAsNumber);
+  methods[13].selector = @selector(getAsString);
+  methods[14].selector = @selector(getAsDouble);
+  methods[15].selector = @selector(getAsFloat);
+  methods[16].selector = @selector(getAsLong);
+  methods[17].selector = @selector(getAsInt);
+  methods[18].selector = @selector(getAsByte);
+  methods[19].selector = @selector(getAsCharacter);
+  methods[20].selector = @selector(getAsBigDecimal);
+  methods[21].selector = @selector(getAsBigInteger);
+  methods[22].selector = @selector(getAsShort);
+  methods[23].selector = @selector(description);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "toString" };
   static const J2ObjcClassInfo _ComGoogleGsonJsonElement = { "JsonElement", "com.google.gson", ptrTable, methods, NULL, 7, 0x401, 24, 0, -1, -1, -1, -1, -1 };

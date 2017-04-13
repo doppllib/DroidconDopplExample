@@ -14,26 +14,24 @@
 #include "RxObservablesConnectableObservable.h"
 #include "RxSubscription.h"
 
-@interface RxObservablesConnectableObservable_$1 : NSObject < RxFunctionsAction1 > {
+@interface RxObservablesConnectableObservable_1 : NSObject < RxFunctionsAction1 > {
  @public
   IOSObjectArray *val$out_;
 }
 
-- (void)callWithId:(id<RxSubscription>)t1;
-
 - (instancetype)initWithRxSubscriptionArray:(IOSObjectArray *)capture$0;
+
+- (void)callWithId:(id<RxSubscription>)t1;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxObservablesConnectableObservable_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxObservablesConnectableObservable_1)
 
-J2OBJC_FIELD_SETTER(RxObservablesConnectableObservable_$1, val$out_, IOSObjectArray *)
+__attribute__((unused)) static void RxObservablesConnectableObservable_1_initWithRxSubscriptionArray_(RxObservablesConnectableObservable_1 *self, IOSObjectArray *capture$0);
 
-__attribute__((unused)) static void RxObservablesConnectableObservable_$1_initWithRxSubscriptionArray_(RxObservablesConnectableObservable_$1 *self, IOSObjectArray *capture$0);
+__attribute__((unused)) static RxObservablesConnectableObservable_1 *new_RxObservablesConnectableObservable_1_initWithRxSubscriptionArray_(IOSObjectArray *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxObservablesConnectableObservable_$1 *new_RxObservablesConnectableObservable_$1_initWithRxSubscriptionArray_(IOSObjectArray *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxObservablesConnectableObservable_$1 *create_RxObservablesConnectableObservable_$1_initWithRxSubscriptionArray_(IOSObjectArray *capture$0);
+__attribute__((unused)) static RxObservablesConnectableObservable_1 *create_RxObservablesConnectableObservable_1_initWithRxSubscriptionArray_(IOSObjectArray *capture$0);
 
 @implementation RxObservablesConnectableObservable
 
@@ -44,7 +42,7 @@ __attribute__((unused)) static RxObservablesConnectableObservable_$1 *create_RxO
 
 - (id<RxSubscription>)connect {
   IOSObjectArray *out = [IOSObjectArray arrayWithLength:1 type:RxSubscription_class_()];
-  [self connectWithRxFunctionsAction1:create_RxObservablesConnectableObservable_$1_initWithRxSubscriptionArray_(out)];
+  [self connectWithRxFunctionsAction1:create_RxObservablesConnectableObservable_1_initWithRxSubscriptionArray_(out)];
   return IOSObjectArray_Get(out, 0);
 }
 
@@ -107,15 +105,15 @@ void RxObservablesConnectableObservable_initWithRxObservable_OnSubscribe_(RxObse
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObservablesConnectableObservable)
 
-@implementation RxObservablesConnectableObservable_$1
+@implementation RxObservablesConnectableObservable_1
+
+- (instancetype)initWithRxSubscriptionArray:(IOSObjectArray *)capture$0 {
+  RxObservablesConnectableObservable_1_initWithRxSubscriptionArray_(self, capture$0);
+  return self;
+}
 
 - (void)callWithId:(id<RxSubscription>)t1 {
   IOSObjectArray_Set(nil_chk(val$out_), 0, t1);
-}
-
-- (instancetype)initWithRxSubscriptionArray:(IOSObjectArray *)capture$0 {
-  RxObservablesConnectableObservable_$1_initWithRxSubscriptionArray_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -125,33 +123,33 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObservablesConnectableObservable)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxSubscriptionArray:);
+  methods[0].selector = @selector(initWithRxSubscriptionArray:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$out_", "[LRxSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxSubscription;", "[LRxSubscription;", "LRxObservablesConnectableObservable;", "connect", "Ljava/lang/Object;Lrx/functions/Action1<Lrx/Subscription;>;" };
-  static const J2ObjcClassInfo _RxObservablesConnectableObservable_$1 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, 5, -1 };
-  return &_RxObservablesConnectableObservable_$1;
+  static const void *ptrTable[] = { "call", "LRxSubscription;", "LRxObservablesConnectableObservable;", "connect", "Ljava/lang/Object;Lrx/functions/Action1<Lrx/Subscription;>;" };
+  static const J2ObjcClassInfo _RxObservablesConnectableObservable_1 = { "", "rx.observables", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, 4, -1 };
+  return &_RxObservablesConnectableObservable_1;
 }
 
 @end
 
-void RxObservablesConnectableObservable_$1_initWithRxSubscriptionArray_(RxObservablesConnectableObservable_$1 *self, IOSObjectArray *capture$0) {
+void RxObservablesConnectableObservable_1_initWithRxSubscriptionArray_(RxObservablesConnectableObservable_1 *self, IOSObjectArray *capture$0) {
   JreStrongAssign(&self->val$out_, capture$0);
   NSObject_init(self);
 }
 
-RxObservablesConnectableObservable_$1 *new_RxObservablesConnectableObservable_$1_initWithRxSubscriptionArray_(IOSObjectArray *capture$0) {
-  J2OBJC_NEW_IMPL(RxObservablesConnectableObservable_$1, initWithRxSubscriptionArray_, capture$0)
+RxObservablesConnectableObservable_1 *new_RxObservablesConnectableObservable_1_initWithRxSubscriptionArray_(IOSObjectArray *capture$0) {
+  J2OBJC_NEW_IMPL(RxObservablesConnectableObservable_1, initWithRxSubscriptionArray_, capture$0)
 }
 
-RxObservablesConnectableObservable_$1 *create_RxObservablesConnectableObservable_$1_initWithRxSubscriptionArray_(IOSObjectArray *capture$0) {
-  J2OBJC_CREATE_IMPL(RxObservablesConnectableObservable_$1, initWithRxSubscriptionArray_, capture$0)
+RxObservablesConnectableObservable_1 *create_RxObservablesConnectableObservable_1_initWithRxSubscriptionArray_(IOSObjectArray *capture$0) {
+  J2OBJC_CREATE_IMPL(RxObservablesConnectableObservable_1, initWithRxSubscriptionArray_, capture$0)
 }

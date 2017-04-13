@@ -8,10 +8,13 @@
 #include "RxObserversSerializedSubscriber.h"
 #include "RxSubscriber.h"
 
-@interface RxInternalOperatorsOperatorSerialize_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorSerialize_1 : RxSubscriber {
  @public
   RxSubscriber *val$s_;
 }
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
+                    withRxSubscriber:(RxSubscriber *)param0;
 
 - (void)onCompleted;
 
@@ -19,20 +22,15 @@
 
 - (void)onNextWithId:(id)t;
 
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
-                    withRxSubscriber:(RxSubscriber *)arg$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSerialize_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSerialize_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSerialize_$1, val$s_, RxSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorSerialize_1_initWithRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSerialize_1 *self, RxSubscriber *capture$0, RxSubscriber *param0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorSerialize_$1_initWithRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSerialize_$1 *self, RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorSerialize_1 *new_RxInternalOperatorsOperatorSerialize_1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *param0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorSerialize_$1 *new_RxInternalOperatorsOperatorSerialize_$1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *arg$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorSerialize_$1 *create_RxInternalOperatorsOperatorSerialize_$1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorSerialize_1 *create_RxInternalOperatorsOperatorSerialize_1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *param0);
 
 @implementation RxInternalOperatorsOperatorSerialize
 
@@ -48,7 +46,7 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 J2OBJC_IGNORE_DESIGNATED_END
 
 - (RxSubscriber *)callWithId:(RxSubscriber *)s {
-  return create_RxObserversSerializedSubscriber_initWithRxSubscriber_(create_RxInternalOperatorsOperatorSerialize_$1_initWithRxSubscriber_withRxSubscriber_(s, s));
+  return create_RxObserversSerializedSubscriber_initWithRxSubscriber_(create_RxInternalOperatorsOperatorSerialize_1_initWithRxSubscriber_withRxSubscriber_(s, s));
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -141,7 +139,13 @@ RxInternalOperatorsOperatorSerialize_Holder *create_RxInternalOperatorsOperatorS
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorSerialize_Holder)
 
-@implementation RxInternalOperatorsOperatorSerialize_$1
+@implementation RxInternalOperatorsOperatorSerialize_1
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
+                    withRxSubscriber:(RxSubscriber *)param0 {
+  RxInternalOperatorsOperatorSerialize_1_initWithRxSubscriber_withRxSubscriber_(self, capture$0, param0);
+  return self;
+}
 
 - (void)onCompleted {
   [((RxSubscriber *) nil_chk(val$s_)) onCompleted];
@@ -155,51 +159,44 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorSerialize_Holder)
   [((RxSubscriber *) nil_chk(val$s_)) onNextWithId:t];
 }
 
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
-                    withRxSubscriber:(RxSubscriber *)arg$0 {
-  RxInternalOperatorsOperatorSerialize_$1_initWithRxSubscriber_withRxSubscriber_(self, capture$0, arg$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorSerialize_$1 class]);
   RELEASE_(val$s_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 4, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(initWithRxSubscriber:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxSubscriber:withRxSubscriber:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$s_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "LRxSubscriber;LRxSubscriber;", "(Lrx/Subscriber<-TT;>;Lrx/Subscriber<*>;)V", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorSerialize;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSerialize_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 1, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsOperatorSerialize_$1;
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorSerialize;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSerialize_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 1, 8, -1, 9, 10, -1 };
+  return &_RxInternalOperatorsOperatorSerialize_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorSerialize_$1_initWithRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSerialize_$1 *self, RxSubscriber *capture$0, RxSubscriber *arg$0) {
+void RxInternalOperatorsOperatorSerialize_1_initWithRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSerialize_1 *self, RxSubscriber *capture$0, RxSubscriber *param0) {
   JreStrongAssign(&self->val$s_, capture$0);
-  RxSubscriber_initWithRxSubscriber_(self, arg$0);
+  RxSubscriber_initWithRxSubscriber_(self, param0);
 }
 
-RxInternalOperatorsOperatorSerialize_$1 *new_RxInternalOperatorsOperatorSerialize_$1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSerialize_$1, initWithRxSubscriber_withRxSubscriber_, capture$0, arg$0)
+RxInternalOperatorsOperatorSerialize_1 *new_RxInternalOperatorsOperatorSerialize_1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSerialize_1, initWithRxSubscriber_withRxSubscriber_, capture$0, param0)
 }
 
-RxInternalOperatorsOperatorSerialize_$1 *create_RxInternalOperatorsOperatorSerialize_$1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSerialize_$1, initWithRxSubscriber_withRxSubscriber_, capture$0, arg$0)
+RxInternalOperatorsOperatorSerialize_1 *create_RxInternalOperatorsOperatorSerialize_1_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSerialize_1, initWithRxSubscriber_withRxSubscriber_, capture$0, param0)
 }

@@ -183,13 +183,13 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "Z", 0xa, 5, 12, -1, -1, -1, -1 },
     { NULL, "Z", 0xa, 5, 13, -1, 14, -1, -1 },
     { NULL, "Z", 0xa, 15, 16, -1, 17, -1, -1 },
-    { NULL, "LJavaLangAssertionError;", 0x8a, 18, 19, -1, -1, -1, -1 },
-    { NULL, "Z", 0xa, 20, 21, -1, 22, -1, -1 },
-    { NULL, "I", 0x11, 23, -1, -1, -1, -1, -1 },
-    { NULL, "Z", 0x11, 24, 25, -1, -1, -1, -1 },
-    { NULL, "LNSString;", 0x11, 26, -1, -1, -1, -1, -1 },
-    { NULL, "LComGoogleGsonReflectTypeToken;", 0x9, 27, 0, -1, 28, -1, -1 },
-    { NULL, "LComGoogleGsonReflectTypeToken;", 0x9, 27, 2, -1, 29, -1, -1 },
+    { NULL, "LJavaLangAssertionError;", 0x8a, 18, 19, -1, 20, -1, -1 },
+    { NULL, "Z", 0xa, 21, 22, -1, 23, -1, -1 },
+    { NULL, "I", 0x11, 24, -1, -1, -1, -1, -1 },
+    { NULL, "Z", 0x11, 25, 26, -1, -1, -1, -1 },
+    { NULL, "LNSString;", 0x11, 27, -1, -1, -1, -1, -1 },
+    { NULL, "LComGoogleGsonReflectTypeToken;", 0x9, 28, 0, -1, 29, -1, -1 },
+    { NULL, "LComGoogleGsonReflectTypeToken;", 0x9, 28, 2, -1, 30, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -213,12 +213,12 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[17].selector = @selector(getWithIOSClass:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "rawType_", "LIOSClass;", .constantValue.asLong = 0, 0x10, -1, -1, 30, -1 },
+    { "rawType_", "LIOSClass;", .constantValue.asLong = 0, 0x10, -1, -1, 31, -1 },
     { "type_", "LJavaLangReflectType;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
     { "hashCode_", "I", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LJavaLangReflectType;", "getSuperclassTypeParameter", "LIOSClass;", "(Ljava/lang/Class<*>;)Ljava/lang/reflect/Type;", "()Ljava/lang/Class<-TT;>;", "isAssignableFrom", "(Ljava/lang/Class<*>;)Z", (void *)&ComGoogleGsonReflectTypeToken__Annotations$0, (void *)&ComGoogleGsonReflectTypeToken__Annotations$1, "LComGoogleGsonReflectTypeToken;", "(Lcom/google/gson/reflect/TypeToken<*>;)Z", (void *)&ComGoogleGsonReflectTypeToken__Annotations$2, "LJavaLangReflectType;LJavaLangReflectGenericArrayType;", "LJavaLangReflectType;LJavaLangReflectParameterizedType;LJavaUtilMap;", "(Ljava/lang/reflect/Type;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Type;>;)Z", "typeEquals", "LJavaLangReflectParameterizedType;LJavaLangReflectParameterizedType;LJavaUtilMap;", "(Ljava/lang/reflect/ParameterizedType;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Type;>;)Z", "buildUnexpectedTypeError", "LJavaLangReflectType;[LIOSClass;", "matches", "LJavaLangReflectType;LJavaLangReflectType;LJavaUtilMap;", "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Type;>;)Z", "hashCode", "equals", "LNSObject;", "toString", "get", "(Ljava/lang/reflect/Type;)Lcom/google/gson/reflect/TypeToken<*>;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)Lcom/google/gson/reflect/TypeToken<TT;>;", "Ljava/lang/Class<-TT;>;", "<T:Ljava/lang/Object;>Ljava/lang/Object;" };
-  static const J2ObjcClassInfo _ComGoogleGsonReflectTypeToken = { "TypeToken", "com.google.gson.reflect", ptrTable, methods, fields, 7, 0x1, 18, 3, -1, -1, -1, 31, -1 };
+  static const void *ptrTable[] = { "LJavaLangReflectType;", "getSuperclassTypeParameter", "LIOSClass;", "(Ljava/lang/Class<*>;)Ljava/lang/reflect/Type;", "()Ljava/lang/Class<-TT;>;", "isAssignableFrom", "(Ljava/lang/Class<*>;)Z", (void *)&ComGoogleGsonReflectTypeToken__Annotations$0, (void *)&ComGoogleGsonReflectTypeToken__Annotations$1, "LComGoogleGsonReflectTypeToken;", "(Lcom/google/gson/reflect/TypeToken<*>;)Z", (void *)&ComGoogleGsonReflectTypeToken__Annotations$2, "LJavaLangReflectType;LJavaLangReflectGenericArrayType;", "LJavaLangReflectType;LJavaLangReflectParameterizedType;LJavaUtilMap;", "(Ljava/lang/reflect/Type;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Type;>;)Z", "typeEquals", "LJavaLangReflectParameterizedType;LJavaLangReflectParameterizedType;LJavaUtilMap;", "(Ljava/lang/reflect/ParameterizedType;Ljava/lang/reflect/ParameterizedType;Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Type;>;)Z", "buildUnexpectedTypeError", "LJavaLangReflectType;[LIOSClass;", "(Ljava/lang/reflect/Type;[Ljava/lang/Class<*>;)Ljava/lang/AssertionError;", "matches", "LJavaLangReflectType;LJavaLangReflectType;LJavaUtilMap;", "(Ljava/lang/reflect/Type;Ljava/lang/reflect/Type;Ljava/util/Map<Ljava/lang/String;Ljava/lang/reflect/Type;>;)Z", "hashCode", "equals", "LNSObject;", "toString", "get", "(Ljava/lang/reflect/Type;)Lcom/google/gson/reflect/TypeToken<*>;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)Lcom/google/gson/reflect/TypeToken<TT;>;", "Ljava/lang/Class<-TT;>;", "<T:Ljava/lang/Object;>Ljava/lang/Object;" };
+  static const J2ObjcClassInfo _ComGoogleGsonReflectTypeToken = { "TypeToken", "com.google.gson.reflect", ptrTable, methods, fields, 7, 0x1, 18, 3, -1, -1, -1, 32, -1 };
   return &_ComGoogleGsonReflectTypeToken;
 }
 

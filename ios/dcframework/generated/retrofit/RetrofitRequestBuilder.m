@@ -147,7 +147,7 @@ J2OBJC_TYPE_LITERAL_HEADER(RetrofitRequestBuilder_MimeOverridingTypedOutput)
   if (name == nil) {
     @throw create_JavaLangIllegalArgumentException_initWithNSString_(@"Header name must not be null.");
   }
-  if ([@"Content-Type" equalsIgnoreCase:name]) {
+  if ([@"Content-Type" java_equalsIgnoreCase:name]) {
     JreStrongAssign(&contentTypeHeader_, value);
     return;
   }
@@ -218,7 +218,7 @@ J2OBJC_TYPE_LITERAL_HEADER(RetrofitRequestBuilder_MimeOverridingTypedOutput)
     id<JavaLangAnnotationAnnotation> annotation = IOSObjectArray_Get(nil_chk(paramAnnotations_), i);
     IOSClass *annotationType = [((id<JavaLangAnnotationAnnotation>) nil_chk(annotation)) annotationType];
     if (annotationType == RetrofitHttpPath_class_()) {
-      id<RetrofitHttpPath> path = (id<RetrofitHttpPath>) cast_chk(annotation, [RetrofitHttpPath class]);
+      id<RetrofitHttpPath> path = (id<RetrofitHttpPath>) cast_check(annotation, RetrofitHttpPath_class_());
       NSString *name = [path value];
       if (value == nil) {
         @throw create_JavaLangIllegalArgumentException_initWithNSString_(JreStrcat("$$$", @"Path parameter \"", name, @"\" value must not be null."));
@@ -226,7 +226,7 @@ J2OBJC_TYPE_LITERAL_HEADER(RetrofitRequestBuilder_MimeOverridingTypedOutput)
       RetrofitRequestBuilder_addPathParamWithNSString_withNSString_withBoolean_(self, name, [value description], [path encode]);
     }
     else if (annotationType == RetrofitHttpEncodedPath_class_()) {
-      NSString *name = [((id<RetrofitHttpEncodedPath>) cast_chk(annotation, [RetrofitHttpEncodedPath class])) value];
+      NSString *name = [((id<RetrofitHttpEncodedPath>) cast_check(annotation, RetrofitHttpEncodedPath_class_())) value];
       if (value == nil) {
         @throw create_JavaLangIllegalArgumentException_initWithNSString_(JreStrcat("$$$", @"Path parameter \"", name, @"\" value must not be null."));
       }
@@ -234,19 +234,19 @@ J2OBJC_TYPE_LITERAL_HEADER(RetrofitRequestBuilder_MimeOverridingTypedOutput)
     }
     else if (annotationType == RetrofitHttpQuery_class_()) {
       if (value != nil) {
-        id<RetrofitHttpQuery> query = (id<RetrofitHttpQuery>) cast_chk(annotation, [RetrofitHttpQuery class]);
+        id<RetrofitHttpQuery> query = (id<RetrofitHttpQuery>) cast_check(annotation, RetrofitHttpQuery_class_());
         RetrofitRequestBuilder_addQueryParamWithNSString_withId_withBoolean_withBoolean_(self, [query value], value, [query encodeName], [query encodeValue]);
       }
     }
     else if (annotationType == RetrofitHttpEncodedQuery_class_()) {
       if (value != nil) {
-        id<RetrofitHttpEncodedQuery> query = (id<RetrofitHttpEncodedQuery>) cast_chk(annotation, [RetrofitHttpEncodedQuery class]);
+        id<RetrofitHttpEncodedQuery> query = (id<RetrofitHttpEncodedQuery>) cast_check(annotation, RetrofitHttpEncodedQuery_class_());
         RetrofitRequestBuilder_addQueryParamWithNSString_withId_withBoolean_withBoolean_(self, [query value], value, false, false);
       }
     }
     else if (annotationType == RetrofitHttpQueryMap_class_()) {
       if (value != nil) {
-        id<RetrofitHttpQueryMap> queryMap = (id<RetrofitHttpQueryMap>) cast_chk(annotation, [RetrofitHttpQueryMap class]);
+        id<RetrofitHttpQueryMap> queryMap = (id<RetrofitHttpQueryMap>) cast_check(annotation, RetrofitHttpQueryMap_class_());
         RetrofitRequestBuilder_addQueryParamMapWithInt_withJavaUtilMap_withBoolean_withBoolean_(self, i, (id<JavaUtilMap>) cast_check(value, JavaUtilMap_class_()), [queryMap encodeNames], [queryMap encodeValues]);
       }
     }
@@ -257,7 +257,7 @@ J2OBJC_TYPE_LITERAL_HEADER(RetrofitRequestBuilder_MimeOverridingTypedOutput)
     }
     else if (annotationType == RetrofitHttpHeader_class_()) {
       if (value != nil) {
-        NSString *name = [((id<RetrofitHttpHeader>) cast_chk(annotation, [RetrofitHttpHeader class])) value];
+        NSString *name = [((id<RetrofitHttpHeader>) cast_check(annotation, RetrofitHttpHeader_class_())) value];
         if ([JavaLangIterable_class_() isInstance:value]) {
           for (id __strong iterableValue in (id<JavaLangIterable>) cast_check(value, JavaLangIterable_class_())) {
             if (iterableValue != nil) {
@@ -280,7 +280,7 @@ J2OBJC_TYPE_LITERAL_HEADER(RetrofitRequestBuilder_MimeOverridingTypedOutput)
     }
     else if (annotationType == RetrofitHttpField_class_()) {
       if (value != nil) {
-        id<RetrofitHttpField> field = (id<RetrofitHttpField>) cast_chk(annotation, [RetrofitHttpField class]);
+        id<RetrofitHttpField> field = (id<RetrofitHttpField>) cast_check(annotation, RetrofitHttpField_class_());
         NSString *name = [field value];
         jboolean encodeName = [field encodeName];
         jboolean encodeValue = [field encodeValue];
@@ -306,7 +306,7 @@ J2OBJC_TYPE_LITERAL_HEADER(RetrofitRequestBuilder_MimeOverridingTypedOutput)
     }
     else if (annotationType == RetrofitHttpFieldMap_class_()) {
       if (value != nil) {
-        id<RetrofitHttpFieldMap> fieldMap = (id<RetrofitHttpFieldMap>) cast_chk(annotation, [RetrofitHttpFieldMap class]);
+        id<RetrofitHttpFieldMap> fieldMap = (id<RetrofitHttpFieldMap>) cast_check(annotation, RetrofitHttpFieldMap_class_());
         jboolean encodeNames = [fieldMap encodeNames];
         jboolean encodeValues = [fieldMap encodeValues];
         for (id<JavaUtilMap_Entry> __strong entry_ in nil_chk([((id<JavaUtilMap>) cast_check(value, JavaUtilMap_class_())) entrySet])) {
@@ -323,8 +323,8 @@ J2OBJC_TYPE_LITERAL_HEADER(RetrofitRequestBuilder_MimeOverridingTypedOutput)
     }
     else if (annotationType == RetrofitHttpPart_class_()) {
       if (value != nil) {
-        NSString *name = [((id<RetrofitHttpPart>) cast_chk(annotation, [RetrofitHttpPart class])) value];
-        NSString *transferEncoding = [((id<RetrofitHttpPart>) cast_chk(annotation, [RetrofitHttpPart class])) encoding];
+        NSString *name = [((id<RetrofitHttpPart>) cast_check(annotation, RetrofitHttpPart_class_())) value];
+        NSString *transferEncoding = [((id<RetrofitHttpPart>) cast_check(annotation, RetrofitHttpPart_class_())) encoding];
         if ([RetrofitMimeTypedOutput_class_() isInstance:value]) {
           [((RetrofitMimeMultipartTypedOutput *) nil_chk(multipartBody_)) addPartWithNSString:name withNSString:transferEncoding withRetrofitMimeTypedOutput:(id<RetrofitMimeTypedOutput>) cast_check(value, RetrofitMimeTypedOutput_class_())];
         }
@@ -338,7 +338,7 @@ J2OBJC_TYPE_LITERAL_HEADER(RetrofitRequestBuilder_MimeOverridingTypedOutput)
     }
     else if (annotationType == RetrofitHttpPartMap_class_()) {
       if (value != nil) {
-        NSString *transferEncoding = [((id<RetrofitHttpPartMap>) cast_chk(annotation, [RetrofitHttpPartMap class])) encoding];
+        NSString *transferEncoding = [((id<RetrofitHttpPartMap>) cast_check(annotation, RetrofitHttpPartMap_class_())) encoding];
         for (id<JavaUtilMap_Entry> __strong entry_ in nil_chk([((id<JavaUtilMap>) cast_check(value, JavaUtilMap_class_())) entrySet])) {
           id entryKey = [((id<JavaUtilMap_Entry>) nil_chk(entry_)) getKey];
           if (entryKey == nil) {
@@ -531,12 +531,12 @@ void RetrofitRequestBuilder_addPathParamWithNSString_withNSString_withBoolean_(R
   }
   @try {
     if (urlEncodeValue) {
-      NSString *encodedValue = JavaNetURLEncoder_encodeWithNSString_withNSString_(NSString_valueOf_(value), @"UTF-8");
-      encodedValue = [((NSString *) nil_chk(encodedValue)) replace:@"+" withSequence:@"%20"];
-      JreStrongAssign(&self->relativeUrl_, [((NSString *) nil_chk(self->relativeUrl_)) replace:JreStrcat("C$C", '{', name, '}') withSequence:encodedValue]);
+      NSString *encodedValue = JavaNetURLEncoder_encodeWithNSString_withNSString_(NSString_java_valueOf_(value), @"UTF-8");
+      encodedValue = [((NSString *) nil_chk(encodedValue)) java_replace:@"+" withSequence:@"%20"];
+      JreStrongAssign(&self->relativeUrl_, [((NSString *) nil_chk(self->relativeUrl_)) java_replace:JreStrcat("C$C", '{', name, '}') withSequence:encodedValue]);
     }
     else {
-      JreStrongAssign(&self->relativeUrl_, [((NSString *) nil_chk(self->relativeUrl_)) replace:JreStrcat("C$C", '{', name, '}') withSequence:NSString_valueOf_(value)]);
+      JreStrongAssign(&self->relativeUrl_, [((NSString *) nil_chk(self->relativeUrl_)) java_replace:JreStrcat("C$C", '{', name, '}') withSequence:NSString_java_valueOf_(value)]);
     }
   }
   @catch (JavaIoUnsupportedEncodingException *e) {

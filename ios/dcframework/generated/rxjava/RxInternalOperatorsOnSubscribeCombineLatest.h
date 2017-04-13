@@ -96,7 +96,7 @@ J2OBJC_TYPE_LITERAL_HEADER(RxInternalOperatorsOnSubscribeCombineLatest)
 
 @interface RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator : JavaUtilConcurrentAtomicAtomicInteger < RxProducer, RxSubscription > {
  @public
-  __unsafe_unretained RxSubscriber *actual_;
+  RxSubscriber *actual_;
   id<RxFunctionsFuncN> combiner_;
   IOSObjectArray *subscribers_;
   jint bufferSize_;
@@ -148,6 +148,7 @@ J2OBJC_TYPE_LITERAL_HEADER(RxInternalOperatorsOnSubscribeCombineLatest)
 
 J2OBJC_STATIC_INIT(RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator)
 
+J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator, actual_, RxSubscriber *)
 J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator, combiner_, id<RxFunctionsFuncN>)
 J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator, subscribers_, IOSObjectArray *)
 J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator, latest_, IOSObjectArray *)

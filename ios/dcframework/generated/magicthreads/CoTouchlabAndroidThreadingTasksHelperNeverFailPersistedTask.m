@@ -12,6 +12,13 @@
 
 @implementation CoTouchlabAndroidThreadingTasksHelperNeverFailPersistedTask
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabAndroidThreadingTasksHelperNeverFailPersistedTask_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (void)runWithAndroidContentContext:(AndroidContentContext *)context {
   @try {
     [self runTaskWithAndroidContentContext:context];
@@ -37,28 +44,21 @@
   return false;
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabAndroidThreadingTasksHelperNeverFailPersistedTask_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x14, 0, 1, 2, -1, -1, -1 },
     { NULL, "V", 0x404, 3, 1, 4, -1, -1, -1 },
     { NULL, "V", 0x404, 5, 4, -1, -1, -1, -1 },
     { NULL, "Z", 0x4, 6, 7, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(runWithAndroidContentContext:);
-  methods[1].selector = @selector(runTaskWithAndroidContentContext:);
-  methods[2].selector = @selector(reportErrorWithJavaLangException:);
-  methods[3].selector = @selector(handleErrorWithAndroidContentContext:withNSException:);
-  methods[4].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(runWithAndroidContentContext:);
+  methods[2].selector = @selector(runTaskWithAndroidContentContext:);
+  methods[3].selector = @selector(reportErrorWithJavaLangException:);
+  methods[4].selector = @selector(handleErrorWithAndroidContentContext:withNSException:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "run", "LAndroidContentContext;", "LCoTouchlabAndroidThreadingErrorcontrolSoftException;LNSException;", "runTask", "LJavaLangException;", "reportError", "handleError", "LAndroidContentContext;LNSException;" };
   static const J2ObjcClassInfo _CoTouchlabAndroidThreadingTasksHelperNeverFailPersistedTask = { "NeverFailPersistedTask", "co.touchlab.android.threading.tasks.helper", ptrTable, methods, NULL, 7, 0x401, 5, 0, -1, -1, -1, -1, -1 };

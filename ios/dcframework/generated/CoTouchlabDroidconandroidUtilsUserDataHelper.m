@@ -12,11 +12,6 @@
 
 @implementation CoTouchlabDroidconandroidUtilsUserDataHelper
 
-+ (void)userAccountToDbWithCoTouchlabDroidconandroidNetworkDaoUserAccount:(CoTouchlabDroidconandroidNetworkDaoUserAccount *)ua
-                                                       withDCDUserAccount:(DCDUserAccount *)dbUa {
-  CoTouchlabDroidconandroidUtilsUserDataHelper_userAccountToDbWithCoTouchlabDroidconandroidNetworkDaoUserAccount_withDCDUserAccount_(ua, dbUa);
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   CoTouchlabDroidconandroidUtilsUserDataHelper_init(self);
@@ -24,15 +19,20 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
++ (void)userAccountToDbWithCoTouchlabDroidconandroidNetworkDaoUserAccount:(CoTouchlabDroidconandroidNetworkDaoUserAccount *)ua
+                                                       withDCDUserAccount:(DCDUserAccount *)dbUa {
+  CoTouchlabDroidconandroidUtilsUserDataHelper_userAccountToDbWithCoTouchlabDroidconandroidNetworkDaoUserAccount_withDCDUserAccount_(ua, dbUa);
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x9, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(userAccountToDbWithCoTouchlabDroidconandroidNetworkDaoUserAccount:withDCDUserAccount:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(userAccountToDbWithCoTouchlabDroidconandroidNetworkDaoUserAccount:withDCDUserAccount:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "userAccountToDb", "LCoTouchlabDroidconandroidNetworkDaoUserAccount;LDCDUserAccount;" };
   static const J2ObjcClassInfo _CoTouchlabDroidconandroidUtilsUserDataHelper = { "UserDataHelper", "co.touchlab.droidconandroid.utils", ptrTable, methods, NULL, 7, 0x1, 2, 0, -1, -1, -1, -1, -1 };
@@ -40,6 +40,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void CoTouchlabDroidconandroidUtilsUserDataHelper_init(CoTouchlabDroidconandroidUtilsUserDataHelper *self) {
+  NSObject_init(self);
+}
+
+CoTouchlabDroidconandroidUtilsUserDataHelper *new_CoTouchlabDroidconandroidUtilsUserDataHelper_init() {
+  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidUtilsUserDataHelper, init)
+}
+
+CoTouchlabDroidconandroidUtilsUserDataHelper *create_CoTouchlabDroidconandroidUtilsUserDataHelper_init() {
+  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidUtilsUserDataHelper, init)
+}
 
 void CoTouchlabDroidconandroidUtilsUserDataHelper_userAccountToDbWithCoTouchlabDroidconandroidNetworkDaoUserAccount_withDCDUserAccount_(CoTouchlabDroidconandroidNetworkDaoUserAccount *ua, DCDUserAccount *dbUa) {
   CoTouchlabDroidconandroidUtilsUserDataHelper_initialize();
@@ -59,18 +71,6 @@ void CoTouchlabDroidconandroidUtilsUserDataHelper_userAccountToDbWithCoTouchlabD
   JreStrongAssign(&dbUa->coverKey_, ua->coverKey_);
   JreStrongAssign(&dbUa->facebook_, ua->facebook_);
   JreStrongAssign(&dbUa->emailPublic_, ua->emailPublic_);
-}
-
-void CoTouchlabDroidconandroidUtilsUserDataHelper_init(CoTouchlabDroidconandroidUtilsUserDataHelper *self) {
-  NSObject_init(self);
-}
-
-CoTouchlabDroidconandroidUtilsUserDataHelper *new_CoTouchlabDroidconandroidUtilsUserDataHelper_init() {
-  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidUtilsUserDataHelper, init)
-}
-
-CoTouchlabDroidconandroidUtilsUserDataHelper *create_CoTouchlabDroidconandroidUtilsUserDataHelper_init() {
-  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidUtilsUserDataHelper, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabDroidconandroidUtilsUserDataHelper)

@@ -10,7 +10,6 @@
 #include "AndroidDatabaseSqliteSQLiteSession.h"
 #include "AndroidDatabaseSqliteSQLiteStatementInfo.h"
 #include "AndroidDatabaseSqliteSQLiteTransactionListener.h"
-#include "IOSClass.h"
 #include "IOSObjectArray.h"
 #include "J2ObjC_source.h"
 #include "java/lang/IllegalArgumentException.h"

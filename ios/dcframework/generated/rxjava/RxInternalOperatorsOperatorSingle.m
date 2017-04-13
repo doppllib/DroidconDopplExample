@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OperatorSingle.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxInternalOperatorsOperatorSingle.h"
 #include "RxInternalProducersSingleProducer.h"
@@ -254,7 +253,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorSingle_Holder)
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorSingle_ParentSubscriber class]);
   RELEASE_(child_);
   RELEASE_(defaultValue_);
   RELEASE_(value_);

@@ -15,21 +15,27 @@
 #include "java/util/Locale.h"
 #include "java/util/TimeZone.h"
 
-@interface CoTouchlabDroidconandroidUtilsTimeUtils_$1 : JavaLangThreadLocal
+#pragma clang diagnostic ignored "-Wincomplete-implementation"
 
-- (JavaTextDateFormat *)initialValue OBJC_METHOD_FAMILY_NONE;
+@interface CoTouchlabDroidconandroidUtilsTimeUtils_1 : JavaLangThreadLocal
 
 - (instancetype)init;
 
+- (JavaTextDateFormat *)initialValue OBJC_METHOD_FAMILY_NONE;
+
+- (JavaTextDateFormat *)get;
+
+- (JavaTextDateFormat *)childValueWithId:(JavaTextDateFormat *)arg0;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(CoTouchlabDroidconandroidUtilsTimeUtils_$1)
+J2OBJC_EMPTY_STATIC_INIT(CoTouchlabDroidconandroidUtilsTimeUtils_1)
 
-__attribute__((unused)) static void CoTouchlabDroidconandroidUtilsTimeUtils_$1_init(CoTouchlabDroidconandroidUtilsTimeUtils_$1 *self);
+__attribute__((unused)) static void CoTouchlabDroidconandroidUtilsTimeUtils_1_init(CoTouchlabDroidconandroidUtilsTimeUtils_1 *self);
 
-__attribute__((unused)) static CoTouchlabDroidconandroidUtilsTimeUtils_$1 *new_CoTouchlabDroidconandroidUtilsTimeUtils_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static CoTouchlabDroidconandroidUtilsTimeUtils_1 *new_CoTouchlabDroidconandroidUtilsTimeUtils_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static CoTouchlabDroidconandroidUtilsTimeUtils_$1 *create_CoTouchlabDroidconandroidUtilsTimeUtils_$1_init();
+__attribute__((unused)) static CoTouchlabDroidconandroidUtilsTimeUtils_1 *create_CoTouchlabDroidconandroidUtilsTimeUtils_1_init();
 
 J2OBJC_INITIALIZED_DEFN(CoTouchlabDroidconandroidUtilsTimeUtils)
 
@@ -37,6 +43,13 @@ JavaUtilTimeZone *CoTouchlabDroidconandroidUtilsTimeUtils_TIME_ZONE;
 JavaLangThreadLocal *CoTouchlabDroidconandroidUtilsTimeUtils_DATE_FORMAT;
 
 @implementation CoTouchlabDroidconandroidUtilsTimeUtils
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabDroidconandroidUtilsTimeUtils_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 + (JavaTextSimpleDateFormat *)makeDateFormatWithNSString:(NSString *)format {
   return CoTouchlabDroidconandroidUtilsTimeUtils_makeDateFormatWithNSString_(format);
@@ -46,24 +59,17 @@ JavaLangThreadLocal *CoTouchlabDroidconandroidUtilsTimeUtils_DATE_FORMAT;
   return CoTouchlabDroidconandroidUtilsTimeUtils_sanitizeWithJavaUtilDate_(date);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabDroidconandroidUtilsTimeUtils_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaTextSimpleDateFormat;", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, "LJavaLangLong;", 0x9, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(makeDateFormatWithNSString:);
-  methods[1].selector = @selector(sanitizeWithJavaUtilDate:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(makeDateFormatWithNSString:);
+  methods[2].selector = @selector(sanitizeWithJavaUtilDate:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "TIME_ZONE", "LJavaUtilTimeZone;", .constantValue.asLong = 0, 0x19, -1, 4, -1, -1 },
@@ -77,12 +83,24 @@ J2OBJC_IGNORE_DESIGNATED_END
 + (void)initialize {
   if (self == [CoTouchlabDroidconandroidUtilsTimeUtils class]) {
     JreStrongAssign(&CoTouchlabDroidconandroidUtilsTimeUtils_TIME_ZONE, JavaUtilTimeZone_getTimeZoneWithNSString_(@"America/New_York"));
-    JreStrongAssignAndConsume(&CoTouchlabDroidconandroidUtilsTimeUtils_DATE_FORMAT, new_CoTouchlabDroidconandroidUtilsTimeUtils_$1_init());
+    JreStrongAssignAndConsume(&CoTouchlabDroidconandroidUtilsTimeUtils_DATE_FORMAT, new_CoTouchlabDroidconandroidUtilsTimeUtils_1_init());
     J2OBJC_SET_INITIALIZED(CoTouchlabDroidconandroidUtilsTimeUtils)
   }
 }
 
 @end
+
+void CoTouchlabDroidconandroidUtilsTimeUtils_init(CoTouchlabDroidconandroidUtilsTimeUtils *self) {
+  NSObject_init(self);
+}
+
+CoTouchlabDroidconandroidUtilsTimeUtils *new_CoTouchlabDroidconandroidUtilsTimeUtils_init() {
+  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidUtilsTimeUtils, init)
+}
+
+CoTouchlabDroidconandroidUtilsTimeUtils *create_CoTouchlabDroidconandroidUtilsTimeUtils_init() {
+  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidUtilsTimeUtils, init)
+}
 
 JavaTextSimpleDateFormat *CoTouchlabDroidconandroidUtilsTimeUtils_makeDateFormatWithNSString_(NSString *format) {
   CoTouchlabDroidconandroidUtilsTimeUtils_initialize();
@@ -103,58 +121,46 @@ JavaLangLong *CoTouchlabDroidconandroidUtilsTimeUtils_sanitizeWithJavaUtilDate_(
   return JavaLangLong_valueOfWithLong_([calendar getTimeInMillis]);
 }
 
-void CoTouchlabDroidconandroidUtilsTimeUtils_init(CoTouchlabDroidconandroidUtilsTimeUtils *self) {
-  NSObject_init(self);
-}
-
-CoTouchlabDroidconandroidUtilsTimeUtils *new_CoTouchlabDroidconandroidUtilsTimeUtils_init() {
-  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidUtilsTimeUtils, init)
-}
-
-CoTouchlabDroidconandroidUtilsTimeUtils *create_CoTouchlabDroidconandroidUtilsTimeUtils_init() {
-  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidUtilsTimeUtils, init)
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabDroidconandroidUtilsTimeUtils)
 
-@implementation CoTouchlabDroidconandroidUtilsTimeUtils_$1
+@implementation CoTouchlabDroidconandroidUtilsTimeUtils_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabDroidconandroidUtilsTimeUtils_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaTextDateFormat *)initialValue {
   return CoTouchlabDroidconandroidUtilsTimeUtils_makeDateFormatWithNSString_(@"MM/dd/yyyy hh:mma");
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabDroidconandroidUtilsTimeUtils_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaTextDateFormat;", 0x4, -1, -1, -1, 0, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaTextDateFormat;", 0x4, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(initialValue);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(initialValue);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "()Ljava/text/DateFormat;", "LCoTouchlabDroidconandroidUtilsTimeUtils;", "Ljava/lang/ThreadLocal<Ljava/text/DateFormat;>;" };
-  static const J2ObjcClassInfo _CoTouchlabDroidconandroidUtilsTimeUtils_$1 = { "", "co.touchlab.droidconandroid.utils", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, -1, 2, -1 };
-  return &_CoTouchlabDroidconandroidUtilsTimeUtils_$1;
+  static const void *ptrTable[] = { "LCoTouchlabDroidconandroidUtilsTimeUtils;", "Ljava/lang/ThreadLocal<Ljava/text/DateFormat;>;" };
+  static const J2ObjcClassInfo _CoTouchlabDroidconandroidUtilsTimeUtils_1 = { "", "co.touchlab.droidconandroid.utils", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 0, -1, -1, 1, -1 };
+  return &_CoTouchlabDroidconandroidUtilsTimeUtils_1;
 }
 
 @end
 
-void CoTouchlabDroidconandroidUtilsTimeUtils_$1_init(CoTouchlabDroidconandroidUtilsTimeUtils_$1 *self) {
+void CoTouchlabDroidconandroidUtilsTimeUtils_1_init(CoTouchlabDroidconandroidUtilsTimeUtils_1 *self) {
   JavaLangThreadLocal_init(self);
 }
 
-CoTouchlabDroidconandroidUtilsTimeUtils_$1 *new_CoTouchlabDroidconandroidUtilsTimeUtils_$1_init() {
-  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidUtilsTimeUtils_$1, init)
+CoTouchlabDroidconandroidUtilsTimeUtils_1 *new_CoTouchlabDroidconandroidUtilsTimeUtils_1_init() {
+  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidUtilsTimeUtils_1, init)
 }
 
-CoTouchlabDroidconandroidUtilsTimeUtils_$1 *create_CoTouchlabDroidconandroidUtilsTimeUtils_$1_init() {
-  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidUtilsTimeUtils_$1, init)
+CoTouchlabDroidconandroidUtilsTimeUtils_1 *create_CoTouchlabDroidconandroidUtilsTimeUtils_1_init() {
+  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidUtilsTimeUtils_1, init)
 }

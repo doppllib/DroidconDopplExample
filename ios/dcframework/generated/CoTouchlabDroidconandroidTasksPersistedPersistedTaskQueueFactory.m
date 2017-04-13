@@ -20,10 +20,6 @@ J2OBJC_STATIC_FIELD_OBJ(CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueu
 
 @implementation CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory
 
-+ (CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue *)getInstanceWithAndroidContentContext:(AndroidContentContext *)context {
-  return CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory_getInstanceWithAndroidContentContext_(context);
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory_init(self);
@@ -31,15 +27,19 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
++ (CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue *)getInstanceWithAndroidContentContext:(AndroidContentContext *)context {
+  return CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory_getInstanceWithAndroidContentContext_(context);
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue;", 0x29, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue;", 0x29, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getInstanceWithAndroidContentContext:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(getInstanceWithAndroidContentContext:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "INSTANCE", "LCoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue;", .constantValue.asLong = 0, 0xa, -1, 2, -1, -1 },
@@ -50,6 +50,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory_init(CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory *self) {
+  NSObject_init(self);
+}
+
+CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory *new_CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory_init() {
+  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory, init)
+}
+
+CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory *create_CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory_init() {
+  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory, init)
+}
 
 CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue *CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory_getInstanceWithAndroidContentContext_(AndroidContentContext *context) {
   CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory_initialize();
@@ -66,18 +78,6 @@ CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue *CoTouchlabDroidconan
     }
     return CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory_INSTANCE;
   }
-}
-
-void CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory_init(CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory *self) {
-  NSObject_init(self);
-}
-
-CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory *new_CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory_init() {
-  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory, init)
-}
-
-CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory *create_CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory_init() {
-  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory)

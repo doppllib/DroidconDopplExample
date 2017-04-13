@@ -24,6 +24,7 @@
 #import "CursorWindowNative.h"
 #import "java/lang/IllegalStateException.h"
 #import "NSString+JavaString.h"
+#import "android/util/Log.h"
 
 @implementation CursorWindowNative {
     void *data;
@@ -54,8 +55,15 @@ CursorWindowNative* ret = [[CursorWindowNative alloc] initWithName:name size:cur
 }
 
 - (void)hardDump {
+    AndroidUtilLog_wWithNSString_withNSString_(@"SQLITE",
+            [NSString stringWithFormat:@"Closing %d", data]);
+    if(data == NULL)
+    {
+        AndroidUtilLog_wWithNSString_withNSString_(@"SQLITE",
+                [NSString stringWithFormat:@"IS NULL!!! %d", data]);
+    }
     free(data);
-        data = NULL;
+    data = NULL;
 }
 
 + (void) nativeClear:(id<NSObject>)windowPtr {
@@ -170,7 +178,7 @@ const void* getFieldSlotValueBlob(CursorWindowNative *window, struct FieldSlot* 
         }
 
         IOSByteArray *bytes = [IOSByteArray newArrayWithBytes:(const jbyte *)value count:sizeIncludingNull - 1];
-        NSString *result = [NSString stringWithBytes:bytes offset:0 length:[bytes count] encoding:NSUTF8StringEncoding];
+        NSString *result = [NSString java_stringWithBytes:bytes offset:0 length:[bytes count] encoding:NSUTF8StringEncoding];
 
 #if ! __has_feature(objc_arc)
 [bytes release];
@@ -333,7 +341,6 @@ const void* getFieldSlotValueBlob(CursorWindowNative *window, struct FieldSlot* 
 }
 
 // Instance methods
-@synthesize mName;
 @synthesize mSize;
 @synthesize mIsReadOnly;
 
@@ -343,7 +350,6 @@ const void* getFieldSlotValueBlob(CursorWindowNative *window, struct FieldSlot* 
 
 - (id)initWithName:(NSString *)_name size:(uint32_t)_size isReadOnly:(BOOL)readOnly {
     if (self = [super init]) {
-        self.mName = [@"CursorWindow: " stringByAppendingString:_name];
         self.mIsReadOnly = readOnly;
         self.mSize = _size;
         data = malloc(_size);
@@ -351,6 +357,10 @@ const void* getFieldSlotValueBlob(CursorWindowNative *window, struct FieldSlot* 
         if (data == NULL) {
             return nil;
         }
+    }
+    else {
+        AndroidUtilLog_wWithNSString_withNSString_(@"SQLITE", @"FAILED CURSOR INIT");
+        data = NULL;
     }
     return self;
 }
@@ -377,6 +387,8 @@ const void* getFieldSlotValueBlob(CursorWindowNative *window, struct FieldSlot* 
 
     uint32_t cur = mHeader->numColumns;
     if ((cur > 0 || mHeader->numRows > 0) && cur != numColumns) {
+    AndroidUtilLog_wWithNSString_withNSString_(@"SQLITE",
+        [NSString stringWithFormat:@"Trying to go from %d columns to %d", cur, numColumns]);
 //        ALOGE("Trying to go from %d columns to %d", cur, numColumns);
         return INVALID_OPERATION;
     }
@@ -488,6 +500,9 @@ const void* getFieldSlotValueBlob(CursorWindowNative *window, struct FieldSlot* 
 
 - (struct FieldSlot *) getFieldSlot:(uint32_t)row column:(uint32_t)column {
     if (row >= mHeader->numRows || column >= mHeader->numColumns) {
+    AndroidUtilLog_wWithNSString_withNSString_(@"SQLITE",
+    [NSString stringWithFormat:@"Failed to read row %d, column %d from a CursorWindow which has %d rows, %d columns.",
+                                                                                                        row, column, mHeader->numRows, mHeader->numColumns]);
 //        ALOGE("Failed to read row %d, column %d from a CursorWindow which "
 //              "has %d rows, %d columns.",
 //              row, column, mHeader->numRows, mHeader->numColumns);
@@ -495,6 +510,8 @@ const void* getFieldSlotValueBlob(CursorWindowNative *window, struct FieldSlot* 
     }
     struct RowSlot* rowSlot = [self getRowSlot:row];
     if (!rowSlot) {
+    AndroidUtilLog_wWithNSString_withNSString_(@"SQLITE",
+        [NSString stringWithFormat:@"Failed to find rowSlot for row %d.", row]);
 //        ALOGE("Failed to find rowSlot for row %d.", row);
         return NULL;
     }
@@ -582,7 +599,6 @@ const void* getFieldSlotValueBlob(CursorWindowNative *window, struct FieldSlot* 
 }
 
 - (void)dealloc {
-RELEASE_(mName);
     mHeader = NULL;
     [super dealloc];
 }

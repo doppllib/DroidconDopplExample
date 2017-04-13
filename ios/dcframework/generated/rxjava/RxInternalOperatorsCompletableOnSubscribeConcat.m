@@ -25,8 +25,6 @@
 
 @end
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsCompletableOnSubscribeConcat_CompletableConcatSubscriber_ConcatInnerSubscriber, this$0_, RxInternalOperatorsCompletableOnSubscribeConcat_CompletableConcatSubscriber *)
-
 @implementation RxInternalOperatorsCompletableOnSubscribeConcat
 
 - (instancetype)initWithRxObservable:(RxObservable *)sources
@@ -150,7 +148,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCompletableOnSubscribeConcat
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsCompletableOnSubscribeConcat_CompletableConcatSubscriber class]);
   RELEASE_(actual_);
   RELEASE_(sr_);
   RELEASE_(queue_);
@@ -220,6 +217,11 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCompletableOnSubscribeConcat
 
 @implementation RxInternalOperatorsCompletableOnSubscribeConcat_CompletableConcatSubscriber_ConcatInnerSubscriber
 
+- (instancetype)initWithRxInternalOperatorsCompletableOnSubscribeConcat_CompletableConcatSubscriber:(RxInternalOperatorsCompletableOnSubscribeConcat_CompletableConcatSubscriber *)outer$ {
+  RxInternalOperatorsCompletableOnSubscribeConcat_CompletableConcatSubscriber_ConcatInnerSubscriber_initWithRxInternalOperatorsCompletableOnSubscribeConcat_CompletableConcatSubscriber_(self, outer$);
+  return self;
+}
+
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d {
   [((RxSubscriptionsSerialSubscription *) nil_chk(this$0_->sr_)) setWithRxSubscription:d];
 }
@@ -232,11 +234,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCompletableOnSubscribeConcat
   [this$0_ innerComplete];
 }
 
-- (instancetype)initWithRxInternalOperatorsCompletableOnSubscribeConcat_CompletableConcatSubscriber:(RxInternalOperatorsCompletableOnSubscribeConcat_CompletableConcatSubscriber *)outer$ {
-  RxInternalOperatorsCompletableOnSubscribeConcat_CompletableConcatSubscriber_ConcatInnerSubscriber_initWithRxInternalOperatorsCompletableOnSubscribeConcat_CompletableConcatSubscriber_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -244,17 +241,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCompletableOnSubscribeConcat
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxInternalOperatorsCompletableOnSubscribeConcat_CompletableConcatSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsCompletableOnSubscribeConcat_CompletableConcatSubscriber:);
+  methods[1].selector = @selector(onSubscribeWithRxSubscription:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalOperatorsCompletableOnSubscribeConcat_CompletableConcatSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },

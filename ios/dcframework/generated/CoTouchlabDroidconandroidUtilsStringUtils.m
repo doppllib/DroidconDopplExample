@@ -9,6 +9,13 @@
 
 @implementation CoTouchlabDroidconandroidUtilsStringUtils
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabDroidconandroidUtilsStringUtils_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (jboolean)isEmptyWithNSString:(NSString *)s {
   return CoTouchlabDroidconandroidUtilsStringUtils_isEmptyWithNSString_(s);
 }
@@ -21,26 +28,19 @@
   return CoTouchlabDroidconandroidUtilsStringUtils_trimToEmptyWithNSString_(s);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabDroidconandroidUtilsStringUtils_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, "Z", 0x9, 2, 1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x9, 3, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(isEmptyWithNSString:);
-  methods[1].selector = @selector(isNotEmptyWithNSString:);
-  methods[2].selector = @selector(trimToEmptyWithNSString:);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(isEmptyWithNSString:);
+  methods[2].selector = @selector(isNotEmptyWithNSString:);
+  methods[3].selector = @selector(trimToEmptyWithNSString:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "isEmpty", "LNSString;", "isNotEmpty", "trimToEmpty" };
   static const J2ObjcClassInfo _CoTouchlabDroidconandroidUtilsStringUtils = { "StringUtils", "co.touchlab.droidconandroid.utils", ptrTable, methods, NULL, 7, 0x1, 4, 0, -1, -1, -1, -1, -1 };
@@ -48,6 +48,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void CoTouchlabDroidconandroidUtilsStringUtils_init(CoTouchlabDroidconandroidUtilsStringUtils *self) {
+  NSObject_init(self);
+}
+
+CoTouchlabDroidconandroidUtilsStringUtils *new_CoTouchlabDroidconandroidUtilsStringUtils_init() {
+  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidUtilsStringUtils, init)
+}
+
+CoTouchlabDroidconandroidUtilsStringUtils *create_CoTouchlabDroidconandroidUtilsStringUtils_init() {
+  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidUtilsStringUtils, init)
+}
 
 jboolean CoTouchlabDroidconandroidUtilsStringUtils_isEmptyWithNSString_(NSString *s) {
   CoTouchlabDroidconandroidUtilsStringUtils_initialize();
@@ -62,19 +74,7 @@ jboolean CoTouchlabDroidconandroidUtilsStringUtils_isNotEmptyWithNSString_(NSStr
 NSString *CoTouchlabDroidconandroidUtilsStringUtils_trimToEmptyWithNSString_(NSString *s) {
   CoTouchlabDroidconandroidUtilsStringUtils_initialize();
   if (s == nil) return @"";
-  else return [s trim];
-}
-
-void CoTouchlabDroidconandroidUtilsStringUtils_init(CoTouchlabDroidconandroidUtilsStringUtils *self) {
-  NSObject_init(self);
-}
-
-CoTouchlabDroidconandroidUtilsStringUtils *new_CoTouchlabDroidconandroidUtilsStringUtils_init() {
-  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidUtilsStringUtils, init)
-}
-
-CoTouchlabDroidconandroidUtilsStringUtils *create_CoTouchlabDroidconandroidUtilsStringUtils_init() {
-  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidUtilsStringUtils, init)
+  else return [s java_trim];
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabDroidconandroidUtilsStringUtils)

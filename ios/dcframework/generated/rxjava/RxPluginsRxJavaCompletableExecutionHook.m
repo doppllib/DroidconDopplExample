@@ -21,6 +21,13 @@ __attribute__((unused)) static IOSObjectArray *RxPluginsRxJavaCompletableExecuti
 
 @implementation RxPluginsRxJavaCompletableExecutionHook
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaCompletableExecutionHook_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (id<RxCompletable_OnSubscribe>)onCreateWithRxCompletable_OnSubscribe:(id<RxCompletable_OnSubscribe>)f {
   return f;
 }
@@ -38,28 +45,21 @@ __attribute__((unused)) static IOSObjectArray *RxPluginsRxJavaCompletableExecuti
   return lift;
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaCompletableExecutionHook_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxCompletable_OnSubscribe;", 0x1, 0, 1, -1, -1, 2, -1 },
     { NULL, "LRxCompletable_OnSubscribe;", 0x1, 3, 4, -1, -1, 5, -1 },
     { NULL, "LNSException;", 0x1, 6, 7, -1, -1, 8, -1 },
     { NULL, "LRxCompletable_Operator;", 0x1, 9, 10, -1, -1, 11, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCreateWithRxCompletable_OnSubscribe:);
-  methods[1].selector = @selector(onSubscribeStartWithRxCompletable:withRxCompletable_OnSubscribe:);
-  methods[2].selector = @selector(onSubscribeErrorWithNSException:);
-  methods[3].selector = @selector(onLiftWithRxCompletable_Operator:);
-  methods[4].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(onCreateWithRxCompletable_OnSubscribe:);
+  methods[2].selector = @selector(onSubscribeStartWithRxCompletable:withRxCompletable_OnSubscribe:);
+  methods[3].selector = @selector(onSubscribeErrorWithNSException:);
+  methods[4].selector = @selector(onLiftWithRxCompletable_Operator:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "onCreate", "LRxCompletable_OnSubscribe;", (void *)&RxPluginsRxJavaCompletableExecutionHook__Annotations$0, "onSubscribeStart", "LRxCompletable;LRxCompletable_OnSubscribe;", (void *)&RxPluginsRxJavaCompletableExecutionHook__Annotations$1, "onSubscribeError", "LNSException;", (void *)&RxPluginsRxJavaCompletableExecutionHook__Annotations$2, "onLift", "LRxCompletable_Operator;", (void *)&RxPluginsRxJavaCompletableExecutionHook__Annotations$3 };
   static const J2ObjcClassInfo _RxPluginsRxJavaCompletableExecutionHook = { "RxJavaCompletableExecutionHook", "rx.plugins", ptrTable, methods, NULL, 7, 0x401, 5, 0, -1, -1, -1, -1, -1 };

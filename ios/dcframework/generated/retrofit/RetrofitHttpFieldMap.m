@@ -47,8 +47,12 @@ __attribute__((unused)) static IOSObjectArray *RetrofitHttpFieldMap__Annotations
   methods[0].selector = @selector(encodeNames);
   methods[1].selector = @selector(encodeValues);
   #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "encodeNames_", "Z", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+    { "encodeValues_", "Z", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+  };
   static const void *ptrTable[] = { (void *)&RetrofitHttpFieldMap__Annotations$0 };
-  static const J2ObjcClassInfo _RetrofitHttpFieldMap = { "FieldMap", "retrofit.http", ptrTable, methods, NULL, 7, 0x2609, 2, 0, -1, -1, -1, -1, 0 };
+  static const J2ObjcClassInfo _RetrofitHttpFieldMap = { "FieldMap", "retrofit.http", ptrTable, methods, fields, 7, 0x2609, 2, 2, -1, -1, -1, -1, 0 };
   return &_RetrofitHttpFieldMap;
 }
 
@@ -62,7 +66,7 @@ id<RetrofitHttpFieldMap> create_RetrofitHttpFieldMap(jboolean encodeNames, jbool
 }
 
 IOSObjectArray *RetrofitHttpFieldMap__Annotations$0() {
-  return [IOSObjectArray arrayWithObjects:(id[]){ create_JavaLangAnnotationDocumented(), create_JavaLangAnnotationTarget([IOSObjectArray arrayWithObjects:(id[]){ JreLoadEnum(JavaLangAnnotationElementType, PARAMETER) } count:1 type:NSObject_class_()]), create_JavaLangAnnotationRetention(JreLoadEnum(JavaLangAnnotationRetentionPolicy, RUNTIME)) } count:3 type:JavaLangAnnotationAnnotation_class_()];
+  return [IOSObjectArray arrayWithObjects:(id[]){ create_JavaLangAnnotationDocumented(), create_JavaLangAnnotationTarget([IOSObjectArray arrayWithObjects:(id[]){ JreLoadEnum(JavaLangAnnotationElementType, PARAMETER) } count:1 type:JavaLangAnnotationElementType_class_()]), create_JavaLangAnnotationRetention(JreLoadEnum(JavaLangAnnotationRetentionPolicy, RUNTIME)) } count:3 type:JavaLangAnnotationAnnotation_class_()];
 }
 
 J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(RetrofitHttpFieldMap)

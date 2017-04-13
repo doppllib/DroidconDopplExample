@@ -44,29 +44,26 @@ J2OBJC_FIELD_SETTER(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadSc
 
 __attribute__((unused)) static id<RxSubscription> RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_enqueueWithRxFunctionsAction0_withLong_(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *self, id<RxFunctionsAction0> action, jlong execTime);
 
-@interface RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *this$0_;
   RxInternalSchedulersTrampolineScheduler_TimedAction *val$timedAction_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler:(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *)outer$
                                     withRxInternalSchedulersTrampolineScheduler_TimedAction:(RxInternalSchedulersTrampolineScheduler_TimedAction *)capture$0;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1)
 
-J2OBJC_FIELD_SETTER(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1, this$0_, RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *)
-J2OBJC_FIELD_SETTER(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1, val$timedAction_, RxInternalSchedulersTrampolineScheduler_TimedAction *)
+__attribute__((unused)) static void RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1_initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1 *self, RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *outer$, RxInternalSchedulersTrampolineScheduler_TimedAction *capture$0);
 
-__attribute__((unused)) static void RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1_initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1 *self, RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *outer$, RxInternalSchedulersTrampolineScheduler_TimedAction *capture$0);
+__attribute__((unused)) static RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1 *new_RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1_initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *outer$, RxInternalSchedulersTrampolineScheduler_TimedAction *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1 *new_RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1_initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *outer$, RxInternalSchedulersTrampolineScheduler_TimedAction *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1 *create_RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1_initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *outer$, RxInternalSchedulersTrampolineScheduler_TimedAction *capture$0);
+__attribute__((unused)) static RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1 *create_RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1_initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *outer$, RxInternalSchedulersTrampolineScheduler_TimedAction *capture$0);
 
 J2OBJC_INITIALIZED_DEFN(RxInternalSchedulersTrampolineScheduler)
 
@@ -140,6 +137,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersTrampolineScheduler)
 
 @implementation RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (id<RxSubscription>)scheduleWithRxFunctionsAction0:(id<RxFunctionsAction0>)action {
   return RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_enqueueWithRxFunctionsAction0_withLong_(self, action, [self now]);
 }
@@ -164,13 +168,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersTrampolineScheduler)
   return [((RxSubscriptionsBooleanSubscription *) nil_chk(innerSubscription_)) isUnsubscribed];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(counter_);
   RELEASE_(queue_);
@@ -181,21 +178,21 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxSubscription;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "LRxSubscription;", 0x1, 0, 2, -1, -1, -1, -1 },
     { NULL, "LRxSubscription;", 0x2, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(scheduleWithRxFunctionsAction0:);
-  methods[1].selector = @selector(scheduleWithRxFunctionsAction0:withLong:withJavaUtilConcurrentTimeUnit:);
-  methods[2].selector = @selector(enqueueWithRxFunctionsAction0:withLong:);
-  methods[3].selector = @selector(unsubscribe);
-  methods[4].selector = @selector(isUnsubscribed);
-  methods[5].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(scheduleWithRxFunctionsAction0:);
+  methods[2].selector = @selector(scheduleWithRxFunctionsAction0:withLong:withJavaUtilConcurrentTimeUnit:);
+  methods[3].selector = @selector(enqueueWithRxFunctionsAction0:withLong:);
+  methods[4].selector = @selector(unsubscribe);
+  methods[5].selector = @selector(isUnsubscribed);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "counter_", "LJavaUtilConcurrentAtomicAtomicInteger;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
@@ -209,6 +206,22 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_init(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *self) {
+  RxScheduler_Worker_init(self);
+  JreStrongAssignAndConsume(&self->counter_, new_JavaUtilConcurrentAtomicAtomicInteger_init());
+  JreStrongAssignAndConsume(&self->queue_, new_JavaUtilConcurrentPriorityBlockingQueue_init());
+  JreStrongAssignAndConsume(&self->innerSubscription_, new_RxSubscriptionsBooleanSubscription_init());
+  JreStrongAssignAndConsume(&self->wip_, new_JavaUtilConcurrentAtomicAtomicInteger_init());
+}
+
+RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *new_RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_init() {
+  J2OBJC_NEW_IMPL(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler, init)
+}
+
+RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *create_RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_init() {
+  J2OBJC_CREATE_IMPL(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler, init)
+}
 
 id<RxSubscription> RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_enqueueWithRxFunctionsAction0_withLong_(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *self, id<RxFunctionsAction0> action, jlong execTime) {
   if ([((RxSubscriptionsBooleanSubscription *) nil_chk(self->innerSubscription_)) isUnsubscribed]) {
@@ -227,38 +240,22 @@ id<RxSubscription> RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadSch
     return RxSubscriptionsSubscriptions_unsubscribed();
   }
   else {
-    return RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1_initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_(self, timedAction));
+    return RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1_initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_(self, timedAction));
   }
-}
-
-void RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_init(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *self) {
-  RxScheduler_Worker_init(self);
-  JreStrongAssignAndConsume(&self->counter_, new_JavaUtilConcurrentAtomicAtomicInteger_init());
-  JreStrongAssignAndConsume(&self->queue_, new_JavaUtilConcurrentPriorityBlockingQueue_init());
-  JreStrongAssignAndConsume(&self->innerSubscription_, new_RxSubscriptionsBooleanSubscription_init());
-  JreStrongAssignAndConsume(&self->wip_, new_JavaUtilConcurrentAtomicAtomicInteger_init());
-}
-
-RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *new_RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_init() {
-  J2OBJC_NEW_IMPL(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler, init)
-}
-
-RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *create_RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_init() {
-  J2OBJC_CREATE_IMPL(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler)
 
-@implementation RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1
-
-- (void)call {
-  [((JavaUtilConcurrentPriorityBlockingQueue *) nil_chk(this$0_->queue_)) removeWithId:val$timedAction_];
-}
+@implementation RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1
 
 - (instancetype)initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler:(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *)outer$
                                     withRxInternalSchedulersTrampolineScheduler_TimedAction:(RxInternalSchedulersTrampolineScheduler_TimedAction *)capture$0 {
-  RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1_initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_(self, outer$, capture$0);
+  RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1_initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_(self, outer$, capture$0);
   return self;
+}
+
+- (void)call {
+  [((JavaUtilConcurrentPriorityBlockingQueue *) nil_chk(this$0_->queue_)) removeWithId:val$timedAction_];
 }
 
 - (void)dealloc {
@@ -269,37 +266,37 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersTrampolineScheduler_InnerCu
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler:withRxInternalSchedulersTrampolineScheduler_TimedAction:);
+  methods[0].selector = @selector(initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler:withRxInternalSchedulersTrampolineScheduler_TimedAction:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$timedAction_", "LRxInternalSchedulersTrampolineScheduler_TimedAction;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler;LRxInternalSchedulersTrampolineScheduler_TimedAction;", "LRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler;", "enqueueWithRxFunctionsAction0:withLong:" };
-  static const J2ObjcClassInfo _RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1;
+  static const void *ptrTable[] = { "LRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler;", "enqueueWithRxFunctionsAction0:withLong:" };
+  static const J2ObjcClassInfo _RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 2, 0, -1, 1, -1, -1 };
+  return &_RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1;
 }
 
 @end
 
-void RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1_initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1 *self, RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *outer$, RxInternalSchedulersTrampolineScheduler_TimedAction *capture$0) {
+void RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1_initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1 *self, RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *outer$, RxInternalSchedulersTrampolineScheduler_TimedAction *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$timedAction_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1 *new_RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1_initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *outer$, RxInternalSchedulersTrampolineScheduler_TimedAction *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1, initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_, outer$, capture$0)
+RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1 *new_RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1_initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *outer$, RxInternalSchedulersTrampolineScheduler_TimedAction *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1, initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_, outer$, capture$0)
 }
 
-RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1 *create_RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1_initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *outer$, RxInternalSchedulersTrampolineScheduler_TimedAction *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_$1, initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_, outer$, capture$0)
+RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1 *create_RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1_initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler *outer$, RxInternalSchedulersTrampolineScheduler_TimedAction *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_1, initWithRxInternalSchedulersTrampolineScheduler_InnerCurrentThreadScheduler_withRxInternalSchedulersTrampolineScheduler_TimedAction_, outer$, capture$0)
 }
 
 @implementation RxInternalSchedulersTrampolineScheduler_TimedAction

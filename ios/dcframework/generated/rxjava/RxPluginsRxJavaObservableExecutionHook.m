@@ -24,6 +24,13 @@ __attribute__((unused)) static IOSObjectArray *RxPluginsRxJavaObservableExecutio
 
 @implementation RxPluginsRxJavaObservableExecutionHook
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaObservableExecutionHook_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (id<RxObservable_OnSubscribe>)onCreateWithRxObservable_OnSubscribe:(id<RxObservable_OnSubscribe>)f {
   return f;
 }
@@ -45,30 +52,23 @@ __attribute__((unused)) static IOSObjectArray *RxPluginsRxJavaObservableExecutio
   return lift;
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaObservableExecutionHook_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxObservable_OnSubscribe;", 0x1, 0, 1, -1, 2, 3, -1 },
     { NULL, "LRxObservable_OnSubscribe;", 0x1, 4, 5, -1, 6, 7, -1 },
     { NULL, "LRxSubscription;", 0x1, 8, 9, -1, 10, 11, -1 },
     { NULL, "LNSException;", 0x1, 12, 13, -1, 14, 15, -1 },
     { NULL, "LRxObservable_Operator;", 0x1, 16, 17, -1, 18, 19, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCreateWithRxObservable_OnSubscribe:);
-  methods[1].selector = @selector(onSubscribeStartWithRxObservable:withRxObservable_OnSubscribe:);
-  methods[2].selector = @selector(onSubscribeReturnWithRxSubscription:);
-  methods[3].selector = @selector(onSubscribeErrorWithNSException:);
-  methods[4].selector = @selector(onLiftWithRxObservable_Operator:);
-  methods[5].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(onCreateWithRxObservable_OnSubscribe:);
+  methods[2].selector = @selector(onSubscribeStartWithRxObservable:withRxObservable_OnSubscribe:);
+  methods[3].selector = @selector(onSubscribeReturnWithRxSubscription:);
+  methods[4].selector = @selector(onSubscribeErrorWithNSException:);
+  methods[5].selector = @selector(onLiftWithRxObservable_Operator:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "onCreate", "LRxObservable_OnSubscribe;", "<T:Ljava/lang/Object;>(Lrx/Observable$OnSubscribe<TT;>;)Lrx/Observable$OnSubscribe<TT;>;", (void *)&RxPluginsRxJavaObservableExecutionHook__Annotations$0, "onSubscribeStart", "LRxObservable;LRxObservable_OnSubscribe;", "<T:Ljava/lang/Object;>(Lrx/Observable<+TT;>;Lrx/Observable$OnSubscribe<TT;>;)Lrx/Observable$OnSubscribe<TT;>;", (void *)&RxPluginsRxJavaObservableExecutionHook__Annotations$1, "onSubscribeReturn", "LRxSubscription;", "<T:Ljava/lang/Object;>(Lrx/Subscription;)Lrx/Subscription;", (void *)&RxPluginsRxJavaObservableExecutionHook__Annotations$2, "onSubscribeError", "LNSException;", "<T:Ljava/lang/Object;>(Ljava/lang/Throwable;)Ljava/lang/Throwable;", (void *)&RxPluginsRxJavaObservableExecutionHook__Annotations$3, "onLift", "LRxObservable_Operator;", "<T:Ljava/lang/Object;R:Ljava/lang/Object;>(Lrx/Observable$Operator<+TR;-TT;>;)Lrx/Observable$Operator<+TR;-TT;>;", (void *)&RxPluginsRxJavaObservableExecutionHook__Annotations$4 };
   static const J2ObjcClassInfo _RxPluginsRxJavaObservableExecutionHook = { "RxJavaObservableExecutionHook", "rx.plugins", ptrTable, methods, NULL, 7, 0x401, 6, 0, -1, -1, -1, -1, -1 };

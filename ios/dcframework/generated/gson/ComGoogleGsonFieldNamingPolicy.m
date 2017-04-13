@@ -23,59 +23,59 @@
 
 @end
 
-__attribute__((unused)) static NSString *ComGoogleGsonFieldNamingPolicy_modifyStringWithChar_withNSString_withInt_(jchar firstCharacter, NSString *srcString, jint indexOfSubstring);
-
 __attribute__((unused)) static void ComGoogleGsonFieldNamingPolicy_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy *self, NSString *__name, jint __ordinal);
 
-@interface ComGoogleGsonFieldNamingPolicy_$1 : ComGoogleGsonFieldNamingPolicy < NSCopying >
+__attribute__((unused)) static NSString *ComGoogleGsonFieldNamingPolicy_modifyStringWithChar_withNSString_withInt_(jchar firstCharacter, NSString *srcString, jint indexOfSubstring);
+
+@interface ComGoogleGsonFieldNamingPolicy_1 : ComGoogleGsonFieldNamingPolicy < NSCopying >
 
 - (NSString *)translateNameWithJavaLangReflectField:(JavaLangReflectField *)f;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonFieldNamingPolicy_$1)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonFieldNamingPolicy_1)
 
-__attribute__((unused)) static void ComGoogleGsonFieldNamingPolicy_$1_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_$1 *self, NSString *__name, jint __ordinal);
+__attribute__((unused)) static void ComGoogleGsonFieldNamingPolicy_1_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_1 *self, NSString *__name, jint __ordinal);
 
-@interface ComGoogleGsonFieldNamingPolicy_$2 : ComGoogleGsonFieldNamingPolicy < NSCopying >
-
-- (NSString *)translateNameWithJavaLangReflectField:(JavaLangReflectField *)f;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonFieldNamingPolicy_$2)
-
-__attribute__((unused)) static void ComGoogleGsonFieldNamingPolicy_$2_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_$2 *self, NSString *__name, jint __ordinal);
-
-@interface ComGoogleGsonFieldNamingPolicy_$3 : ComGoogleGsonFieldNamingPolicy < NSCopying >
+@interface ComGoogleGsonFieldNamingPolicy_2 : ComGoogleGsonFieldNamingPolicy < NSCopying >
 
 - (NSString *)translateNameWithJavaLangReflectField:(JavaLangReflectField *)f;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonFieldNamingPolicy_$3)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonFieldNamingPolicy_2)
 
-__attribute__((unused)) static void ComGoogleGsonFieldNamingPolicy_$3_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_$3 *self, NSString *__name, jint __ordinal);
+__attribute__((unused)) static void ComGoogleGsonFieldNamingPolicy_2_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_2 *self, NSString *__name, jint __ordinal);
 
-@interface ComGoogleGsonFieldNamingPolicy_$4 : ComGoogleGsonFieldNamingPolicy < NSCopying >
-
-- (NSString *)translateNameWithJavaLangReflectField:(JavaLangReflectField *)f;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonFieldNamingPolicy_$4)
-
-__attribute__((unused)) static void ComGoogleGsonFieldNamingPolicy_$4_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_$4 *self, NSString *__name, jint __ordinal);
-
-@interface ComGoogleGsonFieldNamingPolicy_$5 : ComGoogleGsonFieldNamingPolicy < NSCopying >
+@interface ComGoogleGsonFieldNamingPolicy_3 : ComGoogleGsonFieldNamingPolicy < NSCopying >
 
 - (NSString *)translateNameWithJavaLangReflectField:(JavaLangReflectField *)f;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonFieldNamingPolicy_$5)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonFieldNamingPolicy_3)
 
-__attribute__((unused)) static void ComGoogleGsonFieldNamingPolicy_$5_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_$5 *self, NSString *__name, jint __ordinal);
+__attribute__((unused)) static void ComGoogleGsonFieldNamingPolicy_3_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_3 *self, NSString *__name, jint __ordinal);
+
+@interface ComGoogleGsonFieldNamingPolicy_4 : ComGoogleGsonFieldNamingPolicy < NSCopying >
+
+- (NSString *)translateNameWithJavaLangReflectField:(JavaLangReflectField *)f;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonFieldNamingPolicy_4)
+
+__attribute__((unused)) static void ComGoogleGsonFieldNamingPolicy_4_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_4 *self, NSString *__name, jint __ordinal);
+
+@interface ComGoogleGsonFieldNamingPolicy_5 : ComGoogleGsonFieldNamingPolicy < NSCopying >
+
+- (NSString *)translateNameWithJavaLangReflectField:(JavaLangReflectField *)f;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonFieldNamingPolicy_5)
+
+__attribute__((unused)) static void ComGoogleGsonFieldNamingPolicy_5_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_5 *self, NSString *__name, jint __ordinal);
 
 J2OBJC_INITIALIZED_DEFN(ComGoogleGsonFieldNamingPolicy)
 
@@ -141,33 +141,37 @@ ComGoogleGsonFieldNamingPolicy *ComGoogleGsonFieldNamingPolicy_values_[5];
 + (void)initialize {
   if (self == [ComGoogleGsonFieldNamingPolicy class]) {
     size_t allocSize = 0;
-    size_t objSize_IDENTITY = class_getInstanceSize([ComGoogleGsonFieldNamingPolicy_$1 class]);
+    size_t objSize_IDENTITY = class_getInstanceSize([ComGoogleGsonFieldNamingPolicy_1 class]);
     allocSize += objSize_IDENTITY;
-    size_t objSize_UPPER_CAMEL_CASE = class_getInstanceSize([ComGoogleGsonFieldNamingPolicy_$2 class]);
+    size_t objSize_UPPER_CAMEL_CASE = class_getInstanceSize([ComGoogleGsonFieldNamingPolicy_2 class]);
     allocSize += objSize_UPPER_CAMEL_CASE;
-    size_t objSize_UPPER_CAMEL_CASE_WITH_SPACES = class_getInstanceSize([ComGoogleGsonFieldNamingPolicy_$3 class]);
+    size_t objSize_UPPER_CAMEL_CASE_WITH_SPACES = class_getInstanceSize([ComGoogleGsonFieldNamingPolicy_3 class]);
     allocSize += objSize_UPPER_CAMEL_CASE_WITH_SPACES;
-    size_t objSize_LOWER_CASE_WITH_UNDERSCORES = class_getInstanceSize([ComGoogleGsonFieldNamingPolicy_$4 class]);
+    size_t objSize_LOWER_CASE_WITH_UNDERSCORES = class_getInstanceSize([ComGoogleGsonFieldNamingPolicy_4 class]);
     allocSize += objSize_LOWER_CASE_WITH_UNDERSCORES;
-    size_t objSize_LOWER_CASE_WITH_DASHES = class_getInstanceSize([ComGoogleGsonFieldNamingPolicy_$5 class]);
+    size_t objSize_LOWER_CASE_WITH_DASHES = class_getInstanceSize([ComGoogleGsonFieldNamingPolicy_5 class]);
     allocSize += objSize_LOWER_CASE_WITH_DASHES;
     uintptr_t ptr = (uintptr_t)calloc(allocSize, 1);
     id e;
-    (JreEnum(ComGoogleGsonFieldNamingPolicy, IDENTITY) = e = objc_constructInstance([ComGoogleGsonFieldNamingPolicy_$1 class], (void *)ptr), ptr += objSize_IDENTITY);
-    ComGoogleGsonFieldNamingPolicy_$1_initWithNSString_withInt_(e, @"IDENTITY", 0);
-    (JreEnum(ComGoogleGsonFieldNamingPolicy, UPPER_CAMEL_CASE) = e = objc_constructInstance([ComGoogleGsonFieldNamingPolicy_$2 class], (void *)ptr), ptr += objSize_UPPER_CAMEL_CASE);
-    ComGoogleGsonFieldNamingPolicy_$2_initWithNSString_withInt_(e, @"UPPER_CAMEL_CASE", 1);
-    (JreEnum(ComGoogleGsonFieldNamingPolicy, UPPER_CAMEL_CASE_WITH_SPACES) = e = objc_constructInstance([ComGoogleGsonFieldNamingPolicy_$3 class], (void *)ptr), ptr += objSize_UPPER_CAMEL_CASE_WITH_SPACES);
-    ComGoogleGsonFieldNamingPolicy_$3_initWithNSString_withInt_(e, @"UPPER_CAMEL_CASE_WITH_SPACES", 2);
-    (JreEnum(ComGoogleGsonFieldNamingPolicy, LOWER_CASE_WITH_UNDERSCORES) = e = objc_constructInstance([ComGoogleGsonFieldNamingPolicy_$4 class], (void *)ptr), ptr += objSize_LOWER_CASE_WITH_UNDERSCORES);
-    ComGoogleGsonFieldNamingPolicy_$4_initWithNSString_withInt_(e, @"LOWER_CASE_WITH_UNDERSCORES", 3);
-    (JreEnum(ComGoogleGsonFieldNamingPolicy, LOWER_CASE_WITH_DASHES) = e = objc_constructInstance([ComGoogleGsonFieldNamingPolicy_$5 class], (void *)ptr), ptr += objSize_LOWER_CASE_WITH_DASHES);
-    ComGoogleGsonFieldNamingPolicy_$5_initWithNSString_withInt_(e, @"LOWER_CASE_WITH_DASHES", 4);
+    (JreEnum(ComGoogleGsonFieldNamingPolicy, IDENTITY) = e = objc_constructInstance([ComGoogleGsonFieldNamingPolicy_1 class], (void *)ptr), ptr += objSize_IDENTITY);
+    ComGoogleGsonFieldNamingPolicy_1_initWithNSString_withInt_(e, @"IDENTITY", 0);
+    (JreEnum(ComGoogleGsonFieldNamingPolicy, UPPER_CAMEL_CASE) = e = objc_constructInstance([ComGoogleGsonFieldNamingPolicy_2 class], (void *)ptr), ptr += objSize_UPPER_CAMEL_CASE);
+    ComGoogleGsonFieldNamingPolicy_2_initWithNSString_withInt_(e, @"UPPER_CAMEL_CASE", 1);
+    (JreEnum(ComGoogleGsonFieldNamingPolicy, UPPER_CAMEL_CASE_WITH_SPACES) = e = objc_constructInstance([ComGoogleGsonFieldNamingPolicy_3 class], (void *)ptr), ptr += objSize_UPPER_CAMEL_CASE_WITH_SPACES);
+    ComGoogleGsonFieldNamingPolicy_3_initWithNSString_withInt_(e, @"UPPER_CAMEL_CASE_WITH_SPACES", 2);
+    (JreEnum(ComGoogleGsonFieldNamingPolicy, LOWER_CASE_WITH_UNDERSCORES) = e = objc_constructInstance([ComGoogleGsonFieldNamingPolicy_4 class], (void *)ptr), ptr += objSize_LOWER_CASE_WITH_UNDERSCORES);
+    ComGoogleGsonFieldNamingPolicy_4_initWithNSString_withInt_(e, @"LOWER_CASE_WITH_UNDERSCORES", 3);
+    (JreEnum(ComGoogleGsonFieldNamingPolicy, LOWER_CASE_WITH_DASHES) = e = objc_constructInstance([ComGoogleGsonFieldNamingPolicy_5 class], (void *)ptr), ptr += objSize_LOWER_CASE_WITH_DASHES);
+    ComGoogleGsonFieldNamingPolicy_5_initWithNSString_withInt_(e, @"LOWER_CASE_WITH_DASHES", 4);
     J2OBJC_SET_INITIALIZED(ComGoogleGsonFieldNamingPolicy)
   }
 }
 
 @end
+
+void ComGoogleGsonFieldNamingPolicy_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy *self, NSString *__name, jint __ordinal) {
+  JavaLangEnum_initWithNSString_withInt_(self, __name, __ordinal);
+}
 
 NSString *ComGoogleGsonFieldNamingPolicy_separateCamelCaseWithNSString_withNSString_(NSString *name, NSString *separator) {
   ComGoogleGsonFieldNamingPolicy_initialize();
@@ -208,11 +212,7 @@ NSString *ComGoogleGsonFieldNamingPolicy_upperCaseFirstLetterWithNSString_(NSStr
 
 NSString *ComGoogleGsonFieldNamingPolicy_modifyStringWithChar_withNSString_withInt_(jchar firstCharacter, NSString *srcString, jint indexOfSubstring) {
   ComGoogleGsonFieldNamingPolicy_initialize();
-  return (indexOfSubstring < ((jint) [((NSString *) nil_chk(srcString)) length])) ? JreStrcat("C$", firstCharacter, [srcString substring:indexOfSubstring]) : NSString_valueOfChar_(firstCharacter);
-}
-
-void ComGoogleGsonFieldNamingPolicy_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy *self, NSString *__name, jint __ordinal) {
-  JavaLangEnum_initWithNSString_withInt_(self, __name, __ordinal);
+  return (indexOfSubstring < ((jint) [((NSString *) nil_chk(srcString)) length])) ? JreStrcat("C$", firstCharacter, [srcString java_substring:indexOfSubstring]) : NSString_java_valueOfChar_(firstCharacter);
 }
 
 IOSObjectArray *ComGoogleGsonFieldNamingPolicy_values() {
@@ -242,14 +242,14 @@ ComGoogleGsonFieldNamingPolicy *ComGoogleGsonFieldNamingPolicy_fromOrdinal(NSUIn
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonFieldNamingPolicy)
 
-@implementation ComGoogleGsonFieldNamingPolicy_$1
+@implementation ComGoogleGsonFieldNamingPolicy_1
 
 - (NSString *)translateNameWithJavaLangReflectField:(JavaLangReflectField *)f {
   return [((JavaLangReflectField *) nil_chk(f)) getName];
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [ComGoogleGsonFieldNamingPolicy_$1 class]);
+  JreCheckFinalize(self, [ComGoogleGsonFieldNamingPolicy_1 class]);
   [super dealloc];
 }
 
@@ -262,24 +262,24 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonFieldNamingPolicy)
   methods[0].selector = @selector(translateNameWithJavaLangReflectField:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "translateName", "LJavaLangReflectField;", "LComGoogleGsonFieldNamingPolicy;" };
-  static const J2ObjcClassInfo _ComGoogleGsonFieldNamingPolicy_$1 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
-  return &_ComGoogleGsonFieldNamingPolicy_$1;
+  static const J2ObjcClassInfo _ComGoogleGsonFieldNamingPolicy_1 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
+  return &_ComGoogleGsonFieldNamingPolicy_1;
 }
 
 @end
 
-void ComGoogleGsonFieldNamingPolicy_$1_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_$1 *self, NSString *__name, jint __ordinal) {
+void ComGoogleGsonFieldNamingPolicy_1_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_1 *self, NSString *__name, jint __ordinal) {
   ComGoogleGsonFieldNamingPolicy_initWithNSString_withInt_(self, __name, __ordinal);
 }
 
-@implementation ComGoogleGsonFieldNamingPolicy_$2
+@implementation ComGoogleGsonFieldNamingPolicy_2
 
 - (NSString *)translateNameWithJavaLangReflectField:(JavaLangReflectField *)f {
   return ComGoogleGsonFieldNamingPolicy_upperCaseFirstLetterWithNSString_([((JavaLangReflectField *) nil_chk(f)) getName]);
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [ComGoogleGsonFieldNamingPolicy_$2 class]);
+  JreCheckFinalize(self, [ComGoogleGsonFieldNamingPolicy_2 class]);
   [super dealloc];
 }
 
@@ -292,24 +292,24 @@ void ComGoogleGsonFieldNamingPolicy_$1_initWithNSString_withInt_(ComGoogleGsonFi
   methods[0].selector = @selector(translateNameWithJavaLangReflectField:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "translateName", "LJavaLangReflectField;", "LComGoogleGsonFieldNamingPolicy;" };
-  static const J2ObjcClassInfo _ComGoogleGsonFieldNamingPolicy_$2 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
-  return &_ComGoogleGsonFieldNamingPolicy_$2;
+  static const J2ObjcClassInfo _ComGoogleGsonFieldNamingPolicy_2 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
+  return &_ComGoogleGsonFieldNamingPolicy_2;
 }
 
 @end
 
-void ComGoogleGsonFieldNamingPolicy_$2_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_$2 *self, NSString *__name, jint __ordinal) {
+void ComGoogleGsonFieldNamingPolicy_2_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_2 *self, NSString *__name, jint __ordinal) {
   ComGoogleGsonFieldNamingPolicy_initWithNSString_withInt_(self, __name, __ordinal);
 }
 
-@implementation ComGoogleGsonFieldNamingPolicy_$3
+@implementation ComGoogleGsonFieldNamingPolicy_3
 
 - (NSString *)translateNameWithJavaLangReflectField:(JavaLangReflectField *)f {
   return ComGoogleGsonFieldNamingPolicy_upperCaseFirstLetterWithNSString_(ComGoogleGsonFieldNamingPolicy_separateCamelCaseWithNSString_withNSString_([((JavaLangReflectField *) nil_chk(f)) getName], @" "));
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [ComGoogleGsonFieldNamingPolicy_$3 class]);
+  JreCheckFinalize(self, [ComGoogleGsonFieldNamingPolicy_3 class]);
   [super dealloc];
 }
 
@@ -322,24 +322,24 @@ void ComGoogleGsonFieldNamingPolicy_$2_initWithNSString_withInt_(ComGoogleGsonFi
   methods[0].selector = @selector(translateNameWithJavaLangReflectField:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "translateName", "LJavaLangReflectField;", "LComGoogleGsonFieldNamingPolicy;" };
-  static const J2ObjcClassInfo _ComGoogleGsonFieldNamingPolicy_$3 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
-  return &_ComGoogleGsonFieldNamingPolicy_$3;
+  static const J2ObjcClassInfo _ComGoogleGsonFieldNamingPolicy_3 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
+  return &_ComGoogleGsonFieldNamingPolicy_3;
 }
 
 @end
 
-void ComGoogleGsonFieldNamingPolicy_$3_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_$3 *self, NSString *__name, jint __ordinal) {
+void ComGoogleGsonFieldNamingPolicy_3_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_3 *self, NSString *__name, jint __ordinal) {
   ComGoogleGsonFieldNamingPolicy_initWithNSString_withInt_(self, __name, __ordinal);
 }
 
-@implementation ComGoogleGsonFieldNamingPolicy_$4
+@implementation ComGoogleGsonFieldNamingPolicy_4
 
 - (NSString *)translateNameWithJavaLangReflectField:(JavaLangReflectField *)f {
-  return [((NSString *) nil_chk(ComGoogleGsonFieldNamingPolicy_separateCamelCaseWithNSString_withNSString_([((JavaLangReflectField *) nil_chk(f)) getName], @"_"))) lowercaseStringWithJRELocale:JreLoadStatic(JavaUtilLocale, ENGLISH)];
+  return [((NSString *) nil_chk(ComGoogleGsonFieldNamingPolicy_separateCamelCaseWithNSString_withNSString_([((JavaLangReflectField *) nil_chk(f)) getName], @"_"))) java_lowercaseStringWithJRELocale:JreLoadStatic(JavaUtilLocale, ENGLISH)];
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [ComGoogleGsonFieldNamingPolicy_$4 class]);
+  JreCheckFinalize(self, [ComGoogleGsonFieldNamingPolicy_4 class]);
   [super dealloc];
 }
 
@@ -352,24 +352,24 @@ void ComGoogleGsonFieldNamingPolicy_$3_initWithNSString_withInt_(ComGoogleGsonFi
   methods[0].selector = @selector(translateNameWithJavaLangReflectField:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "translateName", "LJavaLangReflectField;", "LComGoogleGsonFieldNamingPolicy;" };
-  static const J2ObjcClassInfo _ComGoogleGsonFieldNamingPolicy_$4 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
-  return &_ComGoogleGsonFieldNamingPolicy_$4;
+  static const J2ObjcClassInfo _ComGoogleGsonFieldNamingPolicy_4 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
+  return &_ComGoogleGsonFieldNamingPolicy_4;
 }
 
 @end
 
-void ComGoogleGsonFieldNamingPolicy_$4_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_$4 *self, NSString *__name, jint __ordinal) {
+void ComGoogleGsonFieldNamingPolicy_4_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_4 *self, NSString *__name, jint __ordinal) {
   ComGoogleGsonFieldNamingPolicy_initWithNSString_withInt_(self, __name, __ordinal);
 }
 
-@implementation ComGoogleGsonFieldNamingPolicy_$5
+@implementation ComGoogleGsonFieldNamingPolicy_5
 
 - (NSString *)translateNameWithJavaLangReflectField:(JavaLangReflectField *)f {
-  return [((NSString *) nil_chk(ComGoogleGsonFieldNamingPolicy_separateCamelCaseWithNSString_withNSString_([((JavaLangReflectField *) nil_chk(f)) getName], @"-"))) lowercaseStringWithJRELocale:JreLoadStatic(JavaUtilLocale, ENGLISH)];
+  return [((NSString *) nil_chk(ComGoogleGsonFieldNamingPolicy_separateCamelCaseWithNSString_withNSString_([((JavaLangReflectField *) nil_chk(f)) getName], @"-"))) java_lowercaseStringWithJRELocale:JreLoadStatic(JavaUtilLocale, ENGLISH)];
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [ComGoogleGsonFieldNamingPolicy_$5 class]);
+  JreCheckFinalize(self, [ComGoogleGsonFieldNamingPolicy_5 class]);
   [super dealloc];
 }
 
@@ -382,12 +382,12 @@ void ComGoogleGsonFieldNamingPolicy_$4_initWithNSString_withInt_(ComGoogleGsonFi
   methods[0].selector = @selector(translateNameWithJavaLangReflectField:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "translateName", "LJavaLangReflectField;", "LComGoogleGsonFieldNamingPolicy;" };
-  static const J2ObjcClassInfo _ComGoogleGsonFieldNamingPolicy_$5 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
-  return &_ComGoogleGsonFieldNamingPolicy_$5;
+  static const J2ObjcClassInfo _ComGoogleGsonFieldNamingPolicy_5 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 2, -1, -1, -1, -1 };
+  return &_ComGoogleGsonFieldNamingPolicy_5;
 }
 
 @end
 
-void ComGoogleGsonFieldNamingPolicy_$5_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_$5 *self, NSString *__name, jint __ordinal) {
+void ComGoogleGsonFieldNamingPolicy_5_initWithNSString_withInt_(ComGoogleGsonFieldNamingPolicy_5 *self, NSString *__name, jint __ordinal) {
   ComGoogleGsonFieldNamingPolicy_initWithNSString_withInt_(self, __name, __ordinal);
 }

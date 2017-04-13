@@ -153,6 +153,12 @@ inline jint AndroidTelephonyPhoneNumberUtils_get_MIN_MATCH();
 #define AndroidTelephonyPhoneNumberUtils_MIN_MATCH 7
 J2OBJC_STATIC_FIELD_CONSTANT(AndroidTelephonyPhoneNumberUtils, MIN_MATCH, jint)
 
+FOUNDATION_EXPORT void AndroidTelephonyPhoneNumberUtils_init(AndroidTelephonyPhoneNumberUtils *self);
+
+FOUNDATION_EXPORT AndroidTelephonyPhoneNumberUtils *new_AndroidTelephonyPhoneNumberUtils_init() NS_RETURNS_RETAINED;
+
+FOUNDATION_EXPORT AndroidTelephonyPhoneNumberUtils *create_AndroidTelephonyPhoneNumberUtils_init();
+
 FOUNDATION_EXPORT jboolean AndroidTelephonyPhoneNumberUtils_isISODigitWithChar_(jchar c);
 
 FOUNDATION_EXPORT jboolean AndroidTelephonyPhoneNumberUtils_is12KeyWithChar_(jchar c);
@@ -220,12 +226,6 @@ FOUNDATION_EXPORT void AndroidTelephonyPhoneNumberUtils_formatJapaneseNumberWith
 FOUNDATION_EXPORT NSString *AndroidTelephonyPhoneNumberUtils_convertKeypadLettersToDigitsWithNSString_(NSString *input);
 
 FOUNDATION_EXPORT jboolean AndroidTelephonyPhoneNumberUtils_isUriNumberWithNSString_(NSString *number);
-
-FOUNDATION_EXPORT void AndroidTelephonyPhoneNumberUtils_init(AndroidTelephonyPhoneNumberUtils *self);
-
-FOUNDATION_EXPORT AndroidTelephonyPhoneNumberUtils *new_AndroidTelephonyPhoneNumberUtils_init() NS_RETURNS_RETAINED;
-
-FOUNDATION_EXPORT AndroidTelephonyPhoneNumberUtils *create_AndroidTelephonyPhoneNumberUtils_init();
 
 J2OBJC_TYPE_LITERAL_HEADER(AndroidTelephonyPhoneNumberUtils)
 

@@ -35,7 +35,7 @@ J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsOperatorZip_ZipProducer, serialV
 @interface RxInternalOperatorsOperatorZip_Zip () {
  @public
   id<RxFunctionsFuncN> zipFunction_;
-  __unsafe_unretained RxSubscriptionsCompositeSubscription *childSubscription_;
+  RxSubscriptionsCompositeSubscription *childSubscription_;
   volatile_id subscribers_;
   JavaUtilConcurrentAtomicAtomicLong *requested_;
 }
@@ -43,6 +43,7 @@ J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsOperatorZip_ZipProducer, serialV
 @end
 
 J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorZip_Zip, zipFunction_, id<RxFunctionsFuncN>)
+J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorZip_Zip, childSubscription_, RxSubscriptionsCompositeSubscription *)
 J2OBJC_VOLATILE_FIELD_SETTER(RxInternalOperatorsOperatorZip_Zip, subscribers_, IOSObjectArray *)
 J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorZip_Zip, requested_, JavaUtilConcurrentAtomicAtomicLong *)
 
@@ -56,8 +57,6 @@ J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsOperatorZip_Zip, serialVersionUI
 }
 
 @end
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorZip_Zip_InnerSubscriber, this$0_, RxInternalOperatorsOperatorZip_Zip *)
 
 @implementation RxInternalOperatorsOperatorZip
 
@@ -306,7 +305,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorZip)
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorZip_ZipSubscriber class]);
   RELEASE_(child_);
   RELEASE_(zipper_);
   RELEASE_(producer_ZipSubscriber_);
@@ -333,7 +331,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorZip)
     { "producer_ZipSubscriber_", "LRxInternalOperatorsOperatorZip_ZipProducer;", .constantValue.asLong = 0, 0x10, 8, -1, 9, -1 },
     { "started_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorZip;LRxSubscriber;LRxInternalOperatorsOperatorZip_Zip;LRxInternalOperatorsOperatorZip_ZipProducer;", "(Lrx/internal/operators/OperatorZip;Lrx/Subscriber<-TR;>;Lrx/internal/operators/OperatorZip$Zip<TR;>;Lrx/internal/operators/OperatorZip$ZipProducer<TR;>;)V", "onError", "LNSException;", "onNext", "[LRxObservable;", "Lrx/Subscriber<-TR;>;", "Lrx/internal/operators/OperatorZip$Zip<TR;>;", "producer", "Lrx/internal/operators/OperatorZip$ZipProducer<TR;>;", "LRxInternalOperatorsOperatorZip;", "Lrx/Subscriber<[Lrx/Observable;>;" };
+  static const void *ptrTable[] = { "LRxSubscriber;LRxInternalOperatorsOperatorZip_Zip;LRxInternalOperatorsOperatorZip_ZipProducer;", "(Lrx/Subscriber<-TR;>;Lrx/internal/operators/OperatorZip$Zip<TR;>;Lrx/internal/operators/OperatorZip$ZipProducer<TR;>;)V", "onError", "LNSException;", "onNext", "[LRxObservable;", "Lrx/Subscriber<-TR;>;", "Lrx/internal/operators/OperatorZip$Zip<TR;>;", "producer", "Lrx/internal/operators/OperatorZip$ZipProducer<TR;>;", "LRxInternalOperatorsOperatorZip;", "Lrx/Subscriber<[Lrx/Observable;>;" };
   static const J2ObjcClassInfo _RxInternalOperatorsOperatorZip_ZipSubscriber = { "ZipSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 4, 4, 10, -1, -1, 11, -1 };
   return &_RxInternalOperatorsOperatorZip_ZipSubscriber;
 }
@@ -369,9 +367,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorZip_ZipSubscriber)
   [((RxInternalOperatorsOperatorZip_Zip *) nil_chk(zipper_)) tick];
 }
 
-- (void)dealloc {
-  RELEASE_(zipper_);
-  [super dealloc];
+- (void)__javaClone:(RxInternalOperatorsOperatorZip_ZipProducer *)original {
+  [super __javaClone:original];
+  [zipper_ release];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -397,7 +395,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorZip_ZipSubscriber)
 
 void RxInternalOperatorsOperatorZip_ZipProducer_initWithRxInternalOperatorsOperatorZip_Zip_(RxInternalOperatorsOperatorZip_ZipProducer *self, RxInternalOperatorsOperatorZip_Zip *zipper) {
   JavaUtilConcurrentAtomicAtomicLong_init(self);
-  JreStrongAssign(&self->zipper_, zipper);
+  self->zipper_ = zipper;
 }
 
 RxInternalOperatorsOperatorZip_ZipProducer *new_RxInternalOperatorsOperatorZip_ZipProducer_initWithRxInternalOperatorsOperatorZip_Zip_(RxInternalOperatorsOperatorZip_Zip *zipper) {
@@ -515,13 +513,13 @@ withJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)req
 
 - (void)__javaClone:(RxInternalOperatorsOperatorZip_Zip *)original {
   [super __javaClone:original];
-  [childSubscription_ release];
   JreCloneVolatileStrong(&subscribers_, &original->subscribers_);
 }
 
 - (void)dealloc {
   RELEASE_(child_);
   RELEASE_(zipFunction_);
+  RELEASE_(childSubscription_);
   JreReleaseVolatile(&subscribers_);
   RELEASE_(requested_);
   [super dealloc];
@@ -565,7 +563,7 @@ withJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)req
 
 void RxInternalOperatorsOperatorZip_Zip_initWithRxSubscriber_withRxFunctionsFuncN_(RxInternalOperatorsOperatorZip_Zip *self, RxSubscriber *child, id<RxFunctionsFuncN> zipFunction) {
   JavaUtilConcurrentAtomicAtomicLong_init(self);
-  self->childSubscription_ = create_RxSubscriptionsCompositeSubscription_init();
+  JreStrongAssignAndConsume(&self->childSubscription_, new_RxSubscriptionsCompositeSubscription_init());
   JreStrongAssign(&self->child_, child);
   JreStrongAssign(&self->zipFunction_, zipFunction);
   [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:self->childSubscription_];
@@ -582,6 +580,11 @@ RxInternalOperatorsOperatorZip_Zip *create_RxInternalOperatorsOperatorZip_Zip_in
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorZip_Zip)
 
 @implementation RxInternalOperatorsOperatorZip_Zip_InnerSubscriber
+
+- (instancetype)initWithRxInternalOperatorsOperatorZip_Zip:(RxInternalOperatorsOperatorZip_Zip *)outer$ {
+  RxInternalOperatorsOperatorZip_Zip_InnerSubscriber_initWithRxInternalOperatorsOperatorZip_Zip_(self, outer$);
+  return self;
+}
 
 - (void)onStart {
   [self requestWithLong:JreLoadStatic(RxInternalUtilRxRingBuffer, SIZE)];
@@ -610,13 +613,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorZip_Zip)
   [this$0_ tick];
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorZip_Zip:(RxInternalOperatorsOperatorZip_Zip *)outer$ {
-  RxInternalOperatorsOperatorZip_Zip_InnerSubscriber_initWithRxInternalOperatorsOperatorZip_Zip_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorZip_Zip_InnerSubscriber class]);
   RELEASE_(this$0_);
   RELEASE_(items_);
   [super dealloc];
@@ -624,28 +621,28 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorZip_Zip)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 4, 5, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 6, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onStart);
-  methods[1].selector = @selector(requestMoreWithLong:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(onErrorWithNSException:);
-  methods[4].selector = @selector(onNextWithId:);
-  methods[5].selector = @selector(initWithRxInternalOperatorsOperatorZip_Zip:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorZip_Zip:);
+  methods[1].selector = @selector(onStart);
+  methods[2].selector = @selector(requestMoreWithLong:);
+  methods[3].selector = @selector(onCompleted);
+  methods[4].selector = @selector(onErrorWithNSException:);
+  methods[5].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorZip_Zip;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorZip_Zip;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
     { "items_", "LRxInternalUtilRxRingBuffer;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "requestMore", "J", "onError", "LNSException;", "onNext", "LNSObject;", "LRxInternalOperatorsOperatorZip_Zip;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorZip_Zip_InnerSubscriber = { "InnerSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 6, 2, 6, -1, -1, -1, -1 };
+  static const void *ptrTable[] = { "requestMore", "J", "onError", "LNSException;", "onNext", "LNSObject;", "Lrx/internal/operators/OperatorZip$Zip<TR;>;", "LRxInternalOperatorsOperatorZip_Zip;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorZip_Zip_InnerSubscriber = { "InnerSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 6, 2, 7, -1, -1, -1, -1 };
   return &_RxInternalOperatorsOperatorZip_Zip_InnerSubscriber;
 }
 

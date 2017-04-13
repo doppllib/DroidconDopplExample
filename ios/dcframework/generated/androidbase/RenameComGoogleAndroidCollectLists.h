@@ -33,15 +33,15 @@
 
 J2OBJC_EMPTY_STATIC_INIT(RenameComGoogleAndroidCollectLists)
 
-FOUNDATION_EXPORT JavaUtilArrayList *RenameComGoogleAndroidCollectLists_newArrayList();
-
-FOUNDATION_EXPORT JavaUtilArrayList *RenameComGoogleAndroidCollectLists_newArrayListWithNSObjectArray_(IOSObjectArray *elements);
-
 FOUNDATION_EXPORT void RenameComGoogleAndroidCollectLists_init(RenameComGoogleAndroidCollectLists *self);
 
 FOUNDATION_EXPORT RenameComGoogleAndroidCollectLists *new_RenameComGoogleAndroidCollectLists_init() NS_RETURNS_RETAINED;
 
 FOUNDATION_EXPORT RenameComGoogleAndroidCollectLists *create_RenameComGoogleAndroidCollectLists_init();
+
+FOUNDATION_EXPORT JavaUtilArrayList *RenameComGoogleAndroidCollectLists_newArrayList();
+
+FOUNDATION_EXPORT JavaUtilArrayList *RenameComGoogleAndroidCollectLists_newArrayListWithNSObjectArray_(IOSObjectArray *elements);
 
 J2OBJC_TYPE_LITERAL_HEADER(RenameComGoogleAndroidCollectLists)
 

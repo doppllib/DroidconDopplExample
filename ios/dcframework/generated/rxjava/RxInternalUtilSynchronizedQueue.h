@@ -22,6 +22,8 @@
 
 @class IOSObjectArray;
 @protocol JavaUtilCollection;
+@protocol JavaUtilFunctionConsumer;
+@protocol JavaUtilFunctionPredicate;
 @protocol JavaUtilIterator;
 @protocol JavaUtilSpliterator;
 @protocol JavaUtilStreamStream;
@@ -40,7 +42,7 @@
 
 - (void)clear;
 
-- (id)clone;
+- (id)java_clone;
 
 - (jboolean)containsWithId:(id)o;
 

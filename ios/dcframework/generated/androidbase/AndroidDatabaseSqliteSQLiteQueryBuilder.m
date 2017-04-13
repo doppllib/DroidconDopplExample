@@ -440,7 +440,7 @@ IOSObjectArray *AndroidDatabaseSqliteSQLiteQueryBuilder_computeProjectionWithNSS
           IOSObjectArray_Set(projection, i, column);
           continue;
         }
-        if (!self->mStrict_ && ([((NSString *) nil_chk(userColumn)) contains:@" AS "] || [userColumn contains:@" as "])) {
+        if (!self->mStrict_ && ([((NSString *) nil_chk(userColumn)) java_contains:@" AS "] || [userColumn java_contains:@" as "])) {
           IOSObjectArray_Set(projection, i, userColumn);
           continue;
         }

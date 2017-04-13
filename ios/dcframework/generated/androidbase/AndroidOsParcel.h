@@ -274,7 +274,7 @@
 
 #pragma mark Protected
 
-- (void)javaFinalize;
+- (void)java_finalize;
 
 + (AndroidOsParcel *)obtainWithInt:(jint)obj;
 

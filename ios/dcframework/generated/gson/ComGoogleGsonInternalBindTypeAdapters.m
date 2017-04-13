@@ -64,6 +64,8 @@
 #include "java/util/concurrent/atomic/AtomicInteger.h"
 #include "java/util/concurrent/atomic/AtomicIntegerArray.h"
 
+@class JavaIoReader;
+
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
 
 @interface ComGoogleGsonInternalBindTypeAdapters ()
@@ -77,6 +79,775 @@ __attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_init(C
 __attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters *new_ComGoogleGsonInternalBindTypeAdapters_init() NS_RETURNS_RETAINED;
 
 __attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters *create_ComGoogleGsonInternalBindTypeAdapters_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_1 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(IOSClass *)value;
+
+- (IOSClass *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (IOSClass *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (IOSClass *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (IOSClass *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_1)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_1_init(ComGoogleGsonInternalBindTypeAdapters_1 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_1 *new_ComGoogleGsonInternalBindTypeAdapters_1_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_1 *create_ComGoogleGsonInternalBindTypeAdapters_1_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_2 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaUtilBitSet *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaUtilBitSet *)src;
+
+- (JavaUtilBitSet *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaUtilBitSet *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaUtilBitSet *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_2)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_2_init(ComGoogleGsonInternalBindTypeAdapters_2 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_2 *new_ComGoogleGsonInternalBindTypeAdapters_2_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_2 *create_ComGoogleGsonInternalBindTypeAdapters_2_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_3 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaLangBoolean *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaLangBoolean *)value;
+
+- (JavaLangBoolean *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaLangBoolean *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaLangBoolean *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_3)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_3_init(ComGoogleGsonInternalBindTypeAdapters_3 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_3 *new_ComGoogleGsonInternalBindTypeAdapters_3_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_3 *create_ComGoogleGsonInternalBindTypeAdapters_3_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_4 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaLangBoolean *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaLangBoolean *)value;
+
+- (JavaLangBoolean *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaLangBoolean *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaLangBoolean *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_4)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_4_init(ComGoogleGsonInternalBindTypeAdapters_4 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_4 *new_ComGoogleGsonInternalBindTypeAdapters_4_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_4 *create_ComGoogleGsonInternalBindTypeAdapters_4_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_5 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(NSNumber *)value;
+
+- (NSNumber *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (NSNumber *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (NSNumber *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_5)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_5_init(ComGoogleGsonInternalBindTypeAdapters_5 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_5 *new_ComGoogleGsonInternalBindTypeAdapters_5_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_5 *create_ComGoogleGsonInternalBindTypeAdapters_5_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_6 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(NSNumber *)value;
+
+- (NSNumber *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (NSNumber *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (NSNumber *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_6)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_6_init(ComGoogleGsonInternalBindTypeAdapters_6 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_6 *new_ComGoogleGsonInternalBindTypeAdapters_6_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_6 *create_ComGoogleGsonInternalBindTypeAdapters_6_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_7 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(NSNumber *)value;
+
+- (NSNumber *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (NSNumber *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (NSNumber *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_7)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_7_init(ComGoogleGsonInternalBindTypeAdapters_7 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_7 *new_ComGoogleGsonInternalBindTypeAdapters_7_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_7 *create_ComGoogleGsonInternalBindTypeAdapters_7_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_8 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaUtilConcurrentAtomicAtomicInteger *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaUtilConcurrentAtomicAtomicInteger *)value;
+
+- (JavaUtilConcurrentAtomicAtomicInteger *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaUtilConcurrentAtomicAtomicInteger *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaUtilConcurrentAtomicAtomicInteger *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_8)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_8_init(ComGoogleGsonInternalBindTypeAdapters_8 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_8 *new_ComGoogleGsonInternalBindTypeAdapters_8_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_8 *create_ComGoogleGsonInternalBindTypeAdapters_8_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_9 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaUtilConcurrentAtomicAtomicBoolean *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaUtilConcurrentAtomicAtomicBoolean *)value;
+
+- (JavaUtilConcurrentAtomicAtomicBoolean *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaUtilConcurrentAtomicAtomicBoolean *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaUtilConcurrentAtomicAtomicBoolean *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_9)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_9_init(ComGoogleGsonInternalBindTypeAdapters_9 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_9 *new_ComGoogleGsonInternalBindTypeAdapters_9_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_9 *create_ComGoogleGsonInternalBindTypeAdapters_9_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_10 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaUtilConcurrentAtomicAtomicIntegerArray *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaUtilConcurrentAtomicAtomicIntegerArray *)value;
+
+- (JavaUtilConcurrentAtomicAtomicIntegerArray *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaUtilConcurrentAtomicAtomicIntegerArray *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaUtilConcurrentAtomicAtomicIntegerArray *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_10)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_10_init(ComGoogleGsonInternalBindTypeAdapters_10 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_10 *new_ComGoogleGsonInternalBindTypeAdapters_10_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_10 *create_ComGoogleGsonInternalBindTypeAdapters_10_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_11 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(NSNumber *)value;
+
+- (NSNumber *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (NSNumber *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (NSNumber *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_11)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_11_init(ComGoogleGsonInternalBindTypeAdapters_11 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_11 *new_ComGoogleGsonInternalBindTypeAdapters_11_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_11 *create_ComGoogleGsonInternalBindTypeAdapters_11_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_12 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(NSNumber *)value;
+
+- (NSNumber *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (NSNumber *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (NSNumber *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_12)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_12_init(ComGoogleGsonInternalBindTypeAdapters_12 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_12 *new_ComGoogleGsonInternalBindTypeAdapters_12_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_12 *create_ComGoogleGsonInternalBindTypeAdapters_12_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_13 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(NSNumber *)value;
+
+- (NSNumber *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (NSNumber *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (NSNumber *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_13)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_13_init(ComGoogleGsonInternalBindTypeAdapters_13 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_13 *new_ComGoogleGsonInternalBindTypeAdapters_13_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_13 *create_ComGoogleGsonInternalBindTypeAdapters_13_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_14 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(NSNumber *)value;
+
+- (NSNumber *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (NSNumber *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (NSNumber *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_14)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_14_init(ComGoogleGsonInternalBindTypeAdapters_14 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_14 *new_ComGoogleGsonInternalBindTypeAdapters_14_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_14 *create_ComGoogleGsonInternalBindTypeAdapters_14_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_15 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaLangCharacter *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaLangCharacter *)value;
+
+- (JavaLangCharacter *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaLangCharacter *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaLangCharacter *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_15)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_15_init(ComGoogleGsonInternalBindTypeAdapters_15 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_15 *new_ComGoogleGsonInternalBindTypeAdapters_15_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_15 *create_ComGoogleGsonInternalBindTypeAdapters_15_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_16 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (NSString *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(NSString *)value;
+
+- (NSString *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (NSString *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (NSString *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_16)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_16_init(ComGoogleGsonInternalBindTypeAdapters_16 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_16 *new_ComGoogleGsonInternalBindTypeAdapters_16_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_16 *create_ComGoogleGsonInternalBindTypeAdapters_16_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_17 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaMathBigDecimal *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaMathBigDecimal *)value;
+
+- (JavaMathBigDecimal *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaMathBigDecimal *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaMathBigDecimal *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_17)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_17_init(ComGoogleGsonInternalBindTypeAdapters_17 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_17 *new_ComGoogleGsonInternalBindTypeAdapters_17_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_17 *create_ComGoogleGsonInternalBindTypeAdapters_17_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_18 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaMathBigInteger *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaMathBigInteger *)value;
+
+- (JavaMathBigInteger *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaMathBigInteger *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaMathBigInteger *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_18)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_18_init(ComGoogleGsonInternalBindTypeAdapters_18 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_18 *new_ComGoogleGsonInternalBindTypeAdapters_18_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_18 *create_ComGoogleGsonInternalBindTypeAdapters_18_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_19 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaLangStringBuilder *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaLangStringBuilder *)value;
+
+- (JavaLangStringBuilder *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaLangStringBuilder *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaLangStringBuilder *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_19)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_19_init(ComGoogleGsonInternalBindTypeAdapters_19 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_19 *new_ComGoogleGsonInternalBindTypeAdapters_19_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_19 *create_ComGoogleGsonInternalBindTypeAdapters_19_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_20 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaLangStringBuffer *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaLangStringBuffer *)value;
+
+- (JavaLangStringBuffer *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaLangStringBuffer *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaLangStringBuffer *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_20)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_20_init(ComGoogleGsonInternalBindTypeAdapters_20 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_20 *new_ComGoogleGsonInternalBindTypeAdapters_20_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_20 *create_ComGoogleGsonInternalBindTypeAdapters_20_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_21 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaNetURL *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaNetURL *)value;
+
+- (JavaNetURL *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaNetURL *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaNetURL *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_21)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_21_init(ComGoogleGsonInternalBindTypeAdapters_21 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_21 *new_ComGoogleGsonInternalBindTypeAdapters_21_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_21 *create_ComGoogleGsonInternalBindTypeAdapters_21_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_22 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaNetURI *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaNetURI *)value;
+
+- (JavaNetURI *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaNetURI *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaNetURI *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_22)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_22_init(ComGoogleGsonInternalBindTypeAdapters_22 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_22 *new_ComGoogleGsonInternalBindTypeAdapters_22_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_22 *create_ComGoogleGsonInternalBindTypeAdapters_22_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_23 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaNetInetAddress *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaNetInetAddress *)value;
+
+- (JavaNetInetAddress *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaNetInetAddress *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaNetInetAddress *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_23)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_23_init(ComGoogleGsonInternalBindTypeAdapters_23 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_23 *new_ComGoogleGsonInternalBindTypeAdapters_23_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_23 *create_ComGoogleGsonInternalBindTypeAdapters_23_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_24 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaUtilUUID *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaUtilUUID *)value;
+
+- (JavaUtilUUID *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaUtilUUID *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaUtilUUID *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_24)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_24_init(ComGoogleGsonInternalBindTypeAdapters_24 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_24 *new_ComGoogleGsonInternalBindTypeAdapters_24_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_24 *create_ComGoogleGsonInternalBindTypeAdapters_24_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_25 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaUtilCurrency *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaUtilCurrency *)value;
+
+- (JavaUtilCurrency *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaUtilCurrency *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaUtilCurrency *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_25)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_25_init(ComGoogleGsonInternalBindTypeAdapters_25 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_25 *new_ComGoogleGsonInternalBindTypeAdapters_25_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_25 *create_ComGoogleGsonInternalBindTypeAdapters_25_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_26 : NSObject < ComGoogleGsonTypeAdapterFactory >
+
+- (instancetype)init;
+
+- (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
+                        withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_26)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_26_init(ComGoogleGsonInternalBindTypeAdapters_26 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_26 *new_ComGoogleGsonInternalBindTypeAdapters_26_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_26 *create_ComGoogleGsonInternalBindTypeAdapters_26_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_26_1 : ComGoogleGsonTypeAdapter {
+ @public
+  ComGoogleGsonTypeAdapter *val$dateTypeAdapter_;
+}
+
+- (instancetype)initWithComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$0;
+
+- (JavaSqlTimestamp *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaSqlTimestamp *)value;
+
+- (JavaSqlTimestamp *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaSqlTimestamp *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaSqlTimestamp *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_26_1)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_26_1_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_26_1 *self, ComGoogleGsonTypeAdapter *capture$0);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_26_1 *new_ComGoogleGsonInternalBindTypeAdapters_26_1_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_26_1 *create_ComGoogleGsonInternalBindTypeAdapters_26_1_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0);
+
+@interface ComGoogleGsonInternalBindTypeAdapters_27 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaUtilCalendar *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaUtilCalendar *)value;
+
+- (JavaUtilCalendar *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaUtilCalendar *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaUtilCalendar *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_27)
+
+inline NSString *ComGoogleGsonInternalBindTypeAdapters_27_get_YEAR();
+static NSString *ComGoogleGsonInternalBindTypeAdapters_27_YEAR = @"year";
+J2OBJC_STATIC_FIELD_OBJ_FINAL(ComGoogleGsonInternalBindTypeAdapters_27, YEAR, NSString *)
+
+inline NSString *ComGoogleGsonInternalBindTypeAdapters_27_get_MONTH();
+static NSString *ComGoogleGsonInternalBindTypeAdapters_27_MONTH = @"month";
+J2OBJC_STATIC_FIELD_OBJ_FINAL(ComGoogleGsonInternalBindTypeAdapters_27, MONTH, NSString *)
+
+inline NSString *ComGoogleGsonInternalBindTypeAdapters_27_get_DAY_OF_MONTH();
+static NSString *ComGoogleGsonInternalBindTypeAdapters_27_DAY_OF_MONTH = @"dayOfMonth";
+J2OBJC_STATIC_FIELD_OBJ_FINAL(ComGoogleGsonInternalBindTypeAdapters_27, DAY_OF_MONTH, NSString *)
+
+inline NSString *ComGoogleGsonInternalBindTypeAdapters_27_get_HOUR_OF_DAY();
+static NSString *ComGoogleGsonInternalBindTypeAdapters_27_HOUR_OF_DAY = @"hourOfDay";
+J2OBJC_STATIC_FIELD_OBJ_FINAL(ComGoogleGsonInternalBindTypeAdapters_27, HOUR_OF_DAY, NSString *)
+
+inline NSString *ComGoogleGsonInternalBindTypeAdapters_27_get_MINUTE();
+static NSString *ComGoogleGsonInternalBindTypeAdapters_27_MINUTE = @"minute";
+J2OBJC_STATIC_FIELD_OBJ_FINAL(ComGoogleGsonInternalBindTypeAdapters_27, MINUTE, NSString *)
+
+inline NSString *ComGoogleGsonInternalBindTypeAdapters_27_get_SECOND();
+static NSString *ComGoogleGsonInternalBindTypeAdapters_27_SECOND = @"second";
+J2OBJC_STATIC_FIELD_OBJ_FINAL(ComGoogleGsonInternalBindTypeAdapters_27, SECOND, NSString *)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_27_init(ComGoogleGsonInternalBindTypeAdapters_27 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_27 *new_ComGoogleGsonInternalBindTypeAdapters_27_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_27 *create_ComGoogleGsonInternalBindTypeAdapters_27_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_28 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaUtilLocale *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaUtilLocale *)value;
+
+- (JavaUtilLocale *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaUtilLocale *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaUtilLocale *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_28)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_28_init(ComGoogleGsonInternalBindTypeAdapters_28 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_28 *new_ComGoogleGsonInternalBindTypeAdapters_28_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_28 *create_ComGoogleGsonInternalBindTypeAdapters_28_init();
+
+@interface ComGoogleGsonInternalBindTypeAdapters_29 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (ComGoogleGsonJsonElement *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(ComGoogleGsonJsonElement *)value;
+
+- (ComGoogleGsonJsonElement *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (ComGoogleGsonJsonElement *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (ComGoogleGsonJsonElement *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_29)
+
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_29_init(ComGoogleGsonInternalBindTypeAdapters_29 *self);
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_29 *new_ComGoogleGsonInternalBindTypeAdapters_29_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_29 *create_ComGoogleGsonInternalBindTypeAdapters_29_init();
 
 @interface ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter : ComGoogleGsonTypeAdapter {
  @public
@@ -112,785 +883,168 @@ __attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_EnumTypeAda
 
 J2OBJC_TYPE_LITERAL_HEADER(ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter)
 
-@interface ComGoogleGsonInternalBindTypeAdapters_$1 : ComGoogleGsonTypeAdapter
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(IOSClass *)value;
-
-- (IOSClass *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+@interface ComGoogleGsonInternalBindTypeAdapters_30 : NSObject < ComGoogleGsonTypeAdapterFactory >
 
 - (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$1)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$1_init(ComGoogleGsonInternalBindTypeAdapters_$1 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$1 *new_ComGoogleGsonInternalBindTypeAdapters_$1_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$1 *create_ComGoogleGsonInternalBindTypeAdapters_$1_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$2 : ComGoogleGsonTypeAdapter
-
-- (JavaUtilBitSet *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaUtilBitSet *)src;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$2)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$2_init(ComGoogleGsonInternalBindTypeAdapters_$2 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$2 *new_ComGoogleGsonInternalBindTypeAdapters_$2_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$2 *create_ComGoogleGsonInternalBindTypeAdapters_$2_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$3 : ComGoogleGsonTypeAdapter
-
-- (JavaLangBoolean *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaLangBoolean *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$3)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$3_init(ComGoogleGsonInternalBindTypeAdapters_$3 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$3 *new_ComGoogleGsonInternalBindTypeAdapters_$3_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$3 *create_ComGoogleGsonInternalBindTypeAdapters_$3_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$4 : ComGoogleGsonTypeAdapter
-
-- (JavaLangBoolean *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaLangBoolean *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$4)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$4_init(ComGoogleGsonInternalBindTypeAdapters_$4 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$4 *new_ComGoogleGsonInternalBindTypeAdapters_$4_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$4 *create_ComGoogleGsonInternalBindTypeAdapters_$4_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$5 : ComGoogleGsonTypeAdapter
-
-- (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(NSNumber *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$5)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$5_init(ComGoogleGsonInternalBindTypeAdapters_$5 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$5 *new_ComGoogleGsonInternalBindTypeAdapters_$5_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$5 *create_ComGoogleGsonInternalBindTypeAdapters_$5_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$6 : ComGoogleGsonTypeAdapter
-
-- (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(NSNumber *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$6)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$6_init(ComGoogleGsonInternalBindTypeAdapters_$6 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$6 *new_ComGoogleGsonInternalBindTypeAdapters_$6_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$6 *create_ComGoogleGsonInternalBindTypeAdapters_$6_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$7 : ComGoogleGsonTypeAdapter
-
-- (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(NSNumber *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$7)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$7_init(ComGoogleGsonInternalBindTypeAdapters_$7 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$7 *new_ComGoogleGsonInternalBindTypeAdapters_$7_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$7 *create_ComGoogleGsonInternalBindTypeAdapters_$7_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$8 : ComGoogleGsonTypeAdapter
-
-- (JavaUtilConcurrentAtomicAtomicInteger *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaUtilConcurrentAtomicAtomicInteger *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$8)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$8_init(ComGoogleGsonInternalBindTypeAdapters_$8 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$8 *new_ComGoogleGsonInternalBindTypeAdapters_$8_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$8 *create_ComGoogleGsonInternalBindTypeAdapters_$8_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$9 : ComGoogleGsonTypeAdapter
-
-- (JavaUtilConcurrentAtomicAtomicBoolean *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaUtilConcurrentAtomicAtomicBoolean *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$9)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$9_init(ComGoogleGsonInternalBindTypeAdapters_$9 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$9 *new_ComGoogleGsonInternalBindTypeAdapters_$9_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$9 *create_ComGoogleGsonInternalBindTypeAdapters_$9_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$10 : ComGoogleGsonTypeAdapter
-
-- (JavaUtilConcurrentAtomicAtomicIntegerArray *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaUtilConcurrentAtomicAtomicIntegerArray *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$10)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$10_init(ComGoogleGsonInternalBindTypeAdapters_$10 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$10 *new_ComGoogleGsonInternalBindTypeAdapters_$10_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$10 *create_ComGoogleGsonInternalBindTypeAdapters_$10_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$11 : ComGoogleGsonTypeAdapter
-
-- (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(NSNumber *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$11)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$11_init(ComGoogleGsonInternalBindTypeAdapters_$11 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$11 *new_ComGoogleGsonInternalBindTypeAdapters_$11_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$11 *create_ComGoogleGsonInternalBindTypeAdapters_$11_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$12 : ComGoogleGsonTypeAdapter
-
-- (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(NSNumber *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$12)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$12_init(ComGoogleGsonInternalBindTypeAdapters_$12 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$12 *new_ComGoogleGsonInternalBindTypeAdapters_$12_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$12 *create_ComGoogleGsonInternalBindTypeAdapters_$12_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$13 : ComGoogleGsonTypeAdapter
-
-- (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(NSNumber *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$13)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$13_init(ComGoogleGsonInternalBindTypeAdapters_$13 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$13 *new_ComGoogleGsonInternalBindTypeAdapters_$13_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$13 *create_ComGoogleGsonInternalBindTypeAdapters_$13_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$14 : ComGoogleGsonTypeAdapter
-
-- (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(NSNumber *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$14)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$14_init(ComGoogleGsonInternalBindTypeAdapters_$14 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$14 *new_ComGoogleGsonInternalBindTypeAdapters_$14_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$14 *create_ComGoogleGsonInternalBindTypeAdapters_$14_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$15 : ComGoogleGsonTypeAdapter
-
-- (JavaLangCharacter *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaLangCharacter *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$15)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$15_init(ComGoogleGsonInternalBindTypeAdapters_$15 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$15 *new_ComGoogleGsonInternalBindTypeAdapters_$15_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$15 *create_ComGoogleGsonInternalBindTypeAdapters_$15_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$16 : ComGoogleGsonTypeAdapter
-
-- (NSString *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(NSString *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$16)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$16_init(ComGoogleGsonInternalBindTypeAdapters_$16 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$16 *new_ComGoogleGsonInternalBindTypeAdapters_$16_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$16 *create_ComGoogleGsonInternalBindTypeAdapters_$16_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$17 : ComGoogleGsonTypeAdapter
-
-- (JavaMathBigDecimal *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaMathBigDecimal *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$17)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$17_init(ComGoogleGsonInternalBindTypeAdapters_$17 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$17 *new_ComGoogleGsonInternalBindTypeAdapters_$17_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$17 *create_ComGoogleGsonInternalBindTypeAdapters_$17_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$18 : ComGoogleGsonTypeAdapter
-
-- (JavaMathBigInteger *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaMathBigInteger *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$18)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$18_init(ComGoogleGsonInternalBindTypeAdapters_$18 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$18 *new_ComGoogleGsonInternalBindTypeAdapters_$18_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$18 *create_ComGoogleGsonInternalBindTypeAdapters_$18_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$19 : ComGoogleGsonTypeAdapter
-
-- (JavaLangStringBuilder *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaLangStringBuilder *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$19)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$19_init(ComGoogleGsonInternalBindTypeAdapters_$19 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$19 *new_ComGoogleGsonInternalBindTypeAdapters_$19_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$19 *create_ComGoogleGsonInternalBindTypeAdapters_$19_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$20 : ComGoogleGsonTypeAdapter
-
-- (JavaLangStringBuffer *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaLangStringBuffer *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$20)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$20_init(ComGoogleGsonInternalBindTypeAdapters_$20 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$20 *new_ComGoogleGsonInternalBindTypeAdapters_$20_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$20 *create_ComGoogleGsonInternalBindTypeAdapters_$20_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$21 : ComGoogleGsonTypeAdapter
-
-- (JavaNetURL *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaNetURL *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$21)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$21_init(ComGoogleGsonInternalBindTypeAdapters_$21 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$21 *new_ComGoogleGsonInternalBindTypeAdapters_$21_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$21 *create_ComGoogleGsonInternalBindTypeAdapters_$21_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$22 : ComGoogleGsonTypeAdapter
-
-- (JavaNetURI *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaNetURI *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$22)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$22_init(ComGoogleGsonInternalBindTypeAdapters_$22 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$22 *new_ComGoogleGsonInternalBindTypeAdapters_$22_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$22 *create_ComGoogleGsonInternalBindTypeAdapters_$22_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$23 : ComGoogleGsonTypeAdapter
-
-- (JavaNetInetAddress *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaNetInetAddress *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$23)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$23_init(ComGoogleGsonInternalBindTypeAdapters_$23 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$23 *new_ComGoogleGsonInternalBindTypeAdapters_$23_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$23 *create_ComGoogleGsonInternalBindTypeAdapters_$23_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$24 : ComGoogleGsonTypeAdapter
-
-- (JavaUtilUUID *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaUtilUUID *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$24)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$24_init(ComGoogleGsonInternalBindTypeAdapters_$24 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$24 *new_ComGoogleGsonInternalBindTypeAdapters_$24_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$24 *create_ComGoogleGsonInternalBindTypeAdapters_$24_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$25 : ComGoogleGsonTypeAdapter
-
-- (JavaUtilCurrency *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaUtilCurrency *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$25)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$25_init(ComGoogleGsonInternalBindTypeAdapters_$25 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$25 *new_ComGoogleGsonInternalBindTypeAdapters_$25_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$25 *create_ComGoogleGsonInternalBindTypeAdapters_$25_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$26 : NSObject < ComGoogleGsonTypeAdapterFactory >
 
 - (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
                         withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$26)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_30)
 
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$26_init(ComGoogleGsonInternalBindTypeAdapters_$26 *self);
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_30_init(ComGoogleGsonInternalBindTypeAdapters_30 *self);
 
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$26 *new_ComGoogleGsonInternalBindTypeAdapters_$26_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_30 *new_ComGoogleGsonInternalBindTypeAdapters_30_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$26 *create_ComGoogleGsonInternalBindTypeAdapters_$26_init();
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_30 *create_ComGoogleGsonInternalBindTypeAdapters_30_init();
 
-@interface ComGoogleGsonInternalBindTypeAdapters_$26_$1 : ComGoogleGsonTypeAdapter {
- @public
-  ComGoogleGsonTypeAdapter *val$dateTypeAdapter_;
-}
-
-- (JavaSqlTimestamp *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaSqlTimestamp *)value;
-
-- (instancetype)initWithComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$0;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$26_$1)
-
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindTypeAdapters_$26_$1, val$dateTypeAdapter_, ComGoogleGsonTypeAdapter *)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$26_$1_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_$26_$1 *self, ComGoogleGsonTypeAdapter *capture$0);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$26_$1 *new_ComGoogleGsonInternalBindTypeAdapters_$26_$1_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$26_$1 *create_ComGoogleGsonInternalBindTypeAdapters_$26_$1_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0);
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$27 : ComGoogleGsonTypeAdapter
-
-- (JavaUtilCalendar *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaUtilCalendar *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$27)
-
-inline NSString *ComGoogleGsonInternalBindTypeAdapters_$27_get_YEAR();
-static NSString *ComGoogleGsonInternalBindTypeAdapters_$27_YEAR = @"year";
-J2OBJC_STATIC_FIELD_OBJ_FINAL(ComGoogleGsonInternalBindTypeAdapters_$27, YEAR, NSString *)
-
-inline NSString *ComGoogleGsonInternalBindTypeAdapters_$27_get_MONTH();
-static NSString *ComGoogleGsonInternalBindTypeAdapters_$27_MONTH = @"month";
-J2OBJC_STATIC_FIELD_OBJ_FINAL(ComGoogleGsonInternalBindTypeAdapters_$27, MONTH, NSString *)
-
-inline NSString *ComGoogleGsonInternalBindTypeAdapters_$27_get_DAY_OF_MONTH();
-static NSString *ComGoogleGsonInternalBindTypeAdapters_$27_DAY_OF_MONTH = @"dayOfMonth";
-J2OBJC_STATIC_FIELD_OBJ_FINAL(ComGoogleGsonInternalBindTypeAdapters_$27, DAY_OF_MONTH, NSString *)
-
-inline NSString *ComGoogleGsonInternalBindTypeAdapters_$27_get_HOUR_OF_DAY();
-static NSString *ComGoogleGsonInternalBindTypeAdapters_$27_HOUR_OF_DAY = @"hourOfDay";
-J2OBJC_STATIC_FIELD_OBJ_FINAL(ComGoogleGsonInternalBindTypeAdapters_$27, HOUR_OF_DAY, NSString *)
-
-inline NSString *ComGoogleGsonInternalBindTypeAdapters_$27_get_MINUTE();
-static NSString *ComGoogleGsonInternalBindTypeAdapters_$27_MINUTE = @"minute";
-J2OBJC_STATIC_FIELD_OBJ_FINAL(ComGoogleGsonInternalBindTypeAdapters_$27, MINUTE, NSString *)
-
-inline NSString *ComGoogleGsonInternalBindTypeAdapters_$27_get_SECOND();
-static NSString *ComGoogleGsonInternalBindTypeAdapters_$27_SECOND = @"second";
-J2OBJC_STATIC_FIELD_OBJ_FINAL(ComGoogleGsonInternalBindTypeAdapters_$27, SECOND, NSString *)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$27_init(ComGoogleGsonInternalBindTypeAdapters_$27 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$27 *new_ComGoogleGsonInternalBindTypeAdapters_$27_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$27 *create_ComGoogleGsonInternalBindTypeAdapters_$27_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$28 : ComGoogleGsonTypeAdapter
-
-- (JavaUtilLocale *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaUtilLocale *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$28)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$28_init(ComGoogleGsonInternalBindTypeAdapters_$28 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$28 *new_ComGoogleGsonInternalBindTypeAdapters_$28_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$28 *create_ComGoogleGsonInternalBindTypeAdapters_$28_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$29 : ComGoogleGsonTypeAdapter
-
-- (ComGoogleGsonJsonElement *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(ComGoogleGsonJsonElement *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$29)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$29_init(ComGoogleGsonInternalBindTypeAdapters_$29 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$29 *new_ComGoogleGsonInternalBindTypeAdapters_$29_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$29 *create_ComGoogleGsonInternalBindTypeAdapters_$29_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$30 : NSObject < ComGoogleGsonTypeAdapterFactory >
-
-- (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
-                        withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$30)
-
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$30_init(ComGoogleGsonInternalBindTypeAdapters_$30 *self);
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$30 *new_ComGoogleGsonInternalBindTypeAdapters_$30_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$30 *create_ComGoogleGsonInternalBindTypeAdapters_$30_init();
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$31 : NSObject < ComGoogleGsonTypeAdapterFactory > {
+@interface ComGoogleGsonInternalBindTypeAdapters_31 : NSObject < ComGoogleGsonTypeAdapterFactory > {
  @public
   ComGoogleGsonReflectTypeToken *val$type_;
   ComGoogleGsonTypeAdapter *val$typeAdapter_;
 }
 
-- (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
-                        withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken;
-
 - (instancetype)initWithComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)capture$0
                          withComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$1;
 
+- (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
+                        withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$31)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_31)
 
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindTypeAdapters_$31, val$type_, ComGoogleGsonReflectTypeToken *)
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindTypeAdapters_$31, val$typeAdapter_, ComGoogleGsonTypeAdapter *)
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_31_initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_31 *self, ComGoogleGsonReflectTypeToken *capture$0, ComGoogleGsonTypeAdapter *capture$1);
 
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$31_initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_$31 *self, ComGoogleGsonReflectTypeToken *capture$0, ComGoogleGsonTypeAdapter *capture$1);
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_31 *new_ComGoogleGsonInternalBindTypeAdapters_31_initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_(ComGoogleGsonReflectTypeToken *capture$0, ComGoogleGsonTypeAdapter *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$31 *new_ComGoogleGsonInternalBindTypeAdapters_$31_initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_(ComGoogleGsonReflectTypeToken *capture$0, ComGoogleGsonTypeAdapter *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_31 *create_ComGoogleGsonInternalBindTypeAdapters_31_initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_(ComGoogleGsonReflectTypeToken *capture$0, ComGoogleGsonTypeAdapter *capture$1);
 
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$31 *create_ComGoogleGsonInternalBindTypeAdapters_$31_initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_(ComGoogleGsonReflectTypeToken *capture$0, ComGoogleGsonTypeAdapter *capture$1);
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$32 : NSObject < ComGoogleGsonTypeAdapterFactory > {
+@interface ComGoogleGsonInternalBindTypeAdapters_32 : NSObject < ComGoogleGsonTypeAdapterFactory > {
  @public
   IOSClass *val$type_;
   ComGoogleGsonTypeAdapter *val$typeAdapter_;
 }
+
+- (instancetype)initWithIOSClass:(IOSClass *)capture$0
+    withComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$1;
 
 - (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
                         withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken;
 
 - (NSString *)description;
 
-- (instancetype)initWithIOSClass:(IOSClass *)capture$0
-    withComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$32)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_32)
 
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindTypeAdapters_$32, val$type_, IOSClass *)
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindTypeAdapters_$32, val$typeAdapter_, ComGoogleGsonTypeAdapter *)
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_32_initWithIOSClass_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_32 *self, IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1);
 
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$32_initWithIOSClass_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_$32 *self, IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1);
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_32 *new_ComGoogleGsonInternalBindTypeAdapters_32_initWithIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$32 *new_ComGoogleGsonInternalBindTypeAdapters_$32_initWithIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_32 *create_ComGoogleGsonInternalBindTypeAdapters_32_initWithIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1);
 
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$32 *create_ComGoogleGsonInternalBindTypeAdapters_$32_initWithIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1);
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$33 : NSObject < ComGoogleGsonTypeAdapterFactory > {
+@interface ComGoogleGsonInternalBindTypeAdapters_33 : NSObject < ComGoogleGsonTypeAdapterFactory > {
  @public
   IOSClass *val$unboxed_;
   IOSClass *val$boxed_;
   ComGoogleGsonTypeAdapter *val$typeAdapter_;
 }
 
+- (instancetype)initWithIOSClass:(IOSClass *)capture$0
+                    withIOSClass:(IOSClass *)capture$1
+    withComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$2;
+
 - (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
                         withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken;
 
 - (NSString *)description;
 
-- (instancetype)initWithIOSClass:(IOSClass *)capture$0
-                    withIOSClass:(IOSClass *)capture$1
-    withComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$2;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$33)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_33)
 
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindTypeAdapters_$33, val$unboxed_, IOSClass *)
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindTypeAdapters_$33, val$boxed_, IOSClass *)
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindTypeAdapters_$33, val$typeAdapter_, ComGoogleGsonTypeAdapter *)
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_33_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_33 *self, IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2);
 
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$33_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_$33 *self, IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2);
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_33 *new_ComGoogleGsonInternalBindTypeAdapters_33_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$33 *new_ComGoogleGsonInternalBindTypeAdapters_$33_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_33 *create_ComGoogleGsonInternalBindTypeAdapters_33_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2);
 
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$33 *create_ComGoogleGsonInternalBindTypeAdapters_$33_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2);
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$34 : NSObject < ComGoogleGsonTypeAdapterFactory > {
+@interface ComGoogleGsonInternalBindTypeAdapters_34 : NSObject < ComGoogleGsonTypeAdapterFactory > {
  @public
   IOSClass *val$base_;
   IOSClass *val$sub_;
   ComGoogleGsonTypeAdapter *val$typeAdapter_;
 }
 
+- (instancetype)initWithIOSClass:(IOSClass *)capture$0
+                    withIOSClass:(IOSClass *)capture$1
+    withComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$2;
+
 - (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
                         withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken;
 
 - (NSString *)description;
 
-- (instancetype)initWithIOSClass:(IOSClass *)capture$0
-                    withIOSClass:(IOSClass *)capture$1
-    withComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$2;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$34)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_34)
 
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindTypeAdapters_$34, val$base_, IOSClass *)
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindTypeAdapters_$34, val$sub_, IOSClass *)
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindTypeAdapters_$34, val$typeAdapter_, ComGoogleGsonTypeAdapter *)
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_34_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_34 *self, IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2);
 
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$34_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_$34 *self, IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2);
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_34 *new_ComGoogleGsonInternalBindTypeAdapters_34_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$34 *new_ComGoogleGsonInternalBindTypeAdapters_$34_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_34 *create_ComGoogleGsonInternalBindTypeAdapters_34_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2);
 
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$34 *create_ComGoogleGsonInternalBindTypeAdapters_$34_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2);
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$35 : NSObject < ComGoogleGsonTypeAdapterFactory > {
+@interface ComGoogleGsonInternalBindTypeAdapters_35 : NSObject < ComGoogleGsonTypeAdapterFactory > {
  @public
   IOSClass *val$clazz_;
   ComGoogleGsonTypeAdapter *val$typeAdapter_;
 }
 
+- (instancetype)initWithIOSClass:(IOSClass *)capture$0
+    withComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$1;
+
 - (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
                         withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken;
 
 - (NSString *)description;
 
-- (instancetype)initWithIOSClass:(IOSClass *)capture$0
-    withComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$35)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_35)
 
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindTypeAdapters_$35, val$clazz_, IOSClass *)
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindTypeAdapters_$35, val$typeAdapter_, ComGoogleGsonTypeAdapter *)
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_35_initWithIOSClass_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_35 *self, IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1);
 
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$35_initWithIOSClass_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_$35 *self, IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1);
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_35 *new_ComGoogleGsonInternalBindTypeAdapters_35_initWithIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$35 *new_ComGoogleGsonInternalBindTypeAdapters_$35_initWithIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_35 *create_ComGoogleGsonInternalBindTypeAdapters_35_initWithIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1);
 
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$35 *create_ComGoogleGsonInternalBindTypeAdapters_$35_initWithIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1);
-
-@interface ComGoogleGsonInternalBindTypeAdapters_$35_$1 : ComGoogleGsonTypeAdapter {
+@interface ComGoogleGsonInternalBindTypeAdapters_35_1 : ComGoogleGsonTypeAdapter {
  @public
-  ComGoogleGsonInternalBindTypeAdapters_$35 *this$0_;
+  ComGoogleGsonInternalBindTypeAdapters_35 *this$0_;
   IOSClass *val$requestedType_;
 }
+
+- (instancetype)initWithComGoogleGsonInternalBindTypeAdapters_35:(ComGoogleGsonInternalBindTypeAdapters_35 *)outer$
+                                                    withIOSClass:(IOSClass *)capture$0;
 
 - (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
                                         withId:(id)value;
 
 - (id)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
 
-- (instancetype)initWithComGoogleGsonInternalBindTypeAdapters_$35:(ComGoogleGsonInternalBindTypeAdapters_$35 *)outer$
-                                                     withIOSClass:(IOSClass *)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_$35_$1)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindTypeAdapters_35_1)
 
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindTypeAdapters_$35_$1, this$0_, ComGoogleGsonInternalBindTypeAdapters_$35 *)
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindTypeAdapters_$35_$1, val$requestedType_, IOSClass *)
+__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_35_1_initWithComGoogleGsonInternalBindTypeAdapters_35_withIOSClass_(ComGoogleGsonInternalBindTypeAdapters_35_1 *self, ComGoogleGsonInternalBindTypeAdapters_35 *outer$, IOSClass *capture$0);
 
-__attribute__((unused)) static void ComGoogleGsonInternalBindTypeAdapters_$35_$1_initWithComGoogleGsonInternalBindTypeAdapters_$35_withIOSClass_(ComGoogleGsonInternalBindTypeAdapters_$35_$1 *self, ComGoogleGsonInternalBindTypeAdapters_$35 *outer$, IOSClass *capture$0);
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_35_1 *new_ComGoogleGsonInternalBindTypeAdapters_35_1_initWithComGoogleGsonInternalBindTypeAdapters_35_withIOSClass_(ComGoogleGsonInternalBindTypeAdapters_35 *outer$, IOSClass *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$35_$1 *new_ComGoogleGsonInternalBindTypeAdapters_$35_$1_initWithComGoogleGsonInternalBindTypeAdapters_$35_withIOSClass_(ComGoogleGsonInternalBindTypeAdapters_$35 *outer$, IOSClass *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_$35_$1 *create_ComGoogleGsonInternalBindTypeAdapters_$35_$1_initWithComGoogleGsonInternalBindTypeAdapters_$35_withIOSClass_(ComGoogleGsonInternalBindTypeAdapters_$35 *outer$, IOSClass *capture$0);
+__attribute__((unused)) static ComGoogleGsonInternalBindTypeAdapters_35_1 *create_ComGoogleGsonInternalBindTypeAdapters_35_1_initWithComGoogleGsonInternalBindTypeAdapters_35_withIOSClass_(ComGoogleGsonInternalBindTypeAdapters_35 *outer$, IOSClass *capture$0);
 
 J2OBJC_INITIALIZED_DEFN(ComGoogleGsonInternalBindTypeAdapters)
 
@@ -1062,58 +1216,58 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (void)initialize {
   if (self == [ComGoogleGsonInternalBindTypeAdapters class]) {
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_CLASS, new_ComGoogleGsonInternalBindTypeAdapters_$1_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_CLASS, new_ComGoogleGsonInternalBindTypeAdapters_1_init());
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_CLASS_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withComGoogleGsonTypeAdapter_(IOSClass_class_(), ComGoogleGsonInternalBindTypeAdapters_CLASS));
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_BIT_SET, new_ComGoogleGsonInternalBindTypeAdapters_$2_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_BIT_SET, new_ComGoogleGsonInternalBindTypeAdapters_2_init());
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_BIT_SET_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withComGoogleGsonTypeAdapter_(JavaUtilBitSet_class_(), ComGoogleGsonInternalBindTypeAdapters_BIT_SET));
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_BOOLEAN, new_ComGoogleGsonInternalBindTypeAdapters_$3_init());
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_BOOLEAN_AS_STRING, new_ComGoogleGsonInternalBindTypeAdapters_$4_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_BOOLEAN, new_ComGoogleGsonInternalBindTypeAdapters_3_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_BOOLEAN_AS_STRING, new_ComGoogleGsonInternalBindTypeAdapters_4_init());
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_BOOLEAN_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_([IOSClass booleanClass], JavaLangBoolean_class_(), ComGoogleGsonInternalBindTypeAdapters_BOOLEAN));
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_BYTE, new_ComGoogleGsonInternalBindTypeAdapters_$5_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_BYTE, new_ComGoogleGsonInternalBindTypeAdapters_5_init());
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_BYTE_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_([IOSClass byteClass], JavaLangByte_class_(), ComGoogleGsonInternalBindTypeAdapters_BYTE));
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_SHORT, new_ComGoogleGsonInternalBindTypeAdapters_$6_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_SHORT, new_ComGoogleGsonInternalBindTypeAdapters_6_init());
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_SHORT_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_([IOSClass shortClass], JavaLangShort_class_(), ComGoogleGsonInternalBindTypeAdapters_SHORT));
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_INTEGER, new_ComGoogleGsonInternalBindTypeAdapters_$7_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_INTEGER, new_ComGoogleGsonInternalBindTypeAdapters_7_init());
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_INTEGER_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_([IOSClass intClass], JavaLangInteger_class_(), ComGoogleGsonInternalBindTypeAdapters_INTEGER));
-    JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_ATOMIC_INTEGER, [create_ComGoogleGsonInternalBindTypeAdapters_$8_init() nullSafe]);
+    JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_ATOMIC_INTEGER, [create_ComGoogleGsonInternalBindTypeAdapters_8_init() nullSafe]);
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_ATOMIC_INTEGER_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withComGoogleGsonTypeAdapter_(JavaUtilConcurrentAtomicAtomicInteger_class_(), ComGoogleGsonInternalBindTypeAdapters_ATOMIC_INTEGER));
-    JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_ATOMIC_BOOLEAN, [create_ComGoogleGsonInternalBindTypeAdapters_$9_init() nullSafe]);
+    JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_ATOMIC_BOOLEAN, [create_ComGoogleGsonInternalBindTypeAdapters_9_init() nullSafe]);
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_ATOMIC_BOOLEAN_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withComGoogleGsonTypeAdapter_(JavaUtilConcurrentAtomicAtomicBoolean_class_(), ComGoogleGsonInternalBindTypeAdapters_ATOMIC_BOOLEAN));
-    JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_ATOMIC_INTEGER_ARRAY, [create_ComGoogleGsonInternalBindTypeAdapters_$10_init() nullSafe]);
+    JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_ATOMIC_INTEGER_ARRAY, [create_ComGoogleGsonInternalBindTypeAdapters_10_init() nullSafe]);
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_ATOMIC_INTEGER_ARRAY_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withComGoogleGsonTypeAdapter_(JavaUtilConcurrentAtomicAtomicIntegerArray_class_(), ComGoogleGsonInternalBindTypeAdapters_ATOMIC_INTEGER_ARRAY));
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_LONG, new_ComGoogleGsonInternalBindTypeAdapters_$11_init());
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_FLOAT, new_ComGoogleGsonInternalBindTypeAdapters_$12_init());
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_DOUBLE, new_ComGoogleGsonInternalBindTypeAdapters_$13_init());
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_NUMBER, new_ComGoogleGsonInternalBindTypeAdapters_$14_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_LONG, new_ComGoogleGsonInternalBindTypeAdapters_11_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_FLOAT, new_ComGoogleGsonInternalBindTypeAdapters_12_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_DOUBLE, new_ComGoogleGsonInternalBindTypeAdapters_13_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_NUMBER, new_ComGoogleGsonInternalBindTypeAdapters_14_init());
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_NUMBER_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withComGoogleGsonTypeAdapter_(NSNumber_class_(), ComGoogleGsonInternalBindTypeAdapters_NUMBER));
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_CHARACTER, new_ComGoogleGsonInternalBindTypeAdapters_$15_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_CHARACTER, new_ComGoogleGsonInternalBindTypeAdapters_15_init());
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_CHARACTER_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_([IOSClass charClass], JavaLangCharacter_class_(), ComGoogleGsonInternalBindTypeAdapters_CHARACTER));
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_STRING, new_ComGoogleGsonInternalBindTypeAdapters_$16_init());
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_BIG_DECIMAL, new_ComGoogleGsonInternalBindTypeAdapters_$17_init());
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_BIG_INTEGER, new_ComGoogleGsonInternalBindTypeAdapters_$18_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_STRING, new_ComGoogleGsonInternalBindTypeAdapters_16_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_BIG_DECIMAL, new_ComGoogleGsonInternalBindTypeAdapters_17_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_BIG_INTEGER, new_ComGoogleGsonInternalBindTypeAdapters_18_init());
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_STRING_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withComGoogleGsonTypeAdapter_(NSString_class_(), ComGoogleGsonInternalBindTypeAdapters_STRING));
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_STRING_BUILDER, new_ComGoogleGsonInternalBindTypeAdapters_$19_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_STRING_BUILDER, new_ComGoogleGsonInternalBindTypeAdapters_19_init());
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_STRING_BUILDER_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withComGoogleGsonTypeAdapter_(JavaLangStringBuilder_class_(), ComGoogleGsonInternalBindTypeAdapters_STRING_BUILDER));
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_STRING_BUFFER, new_ComGoogleGsonInternalBindTypeAdapters_$20_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_STRING_BUFFER, new_ComGoogleGsonInternalBindTypeAdapters_20_init());
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_STRING_BUFFER_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withComGoogleGsonTypeAdapter_(JavaLangStringBuffer_class_(), ComGoogleGsonInternalBindTypeAdapters_STRING_BUFFER));
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_URL, new_ComGoogleGsonInternalBindTypeAdapters_$21_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_URL, new_ComGoogleGsonInternalBindTypeAdapters_21_init());
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_URL_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withComGoogleGsonTypeAdapter_(JavaNetURL_class_(), ComGoogleGsonInternalBindTypeAdapters_URL));
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_URI, new_ComGoogleGsonInternalBindTypeAdapters_$22_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_URI, new_ComGoogleGsonInternalBindTypeAdapters_22_init());
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_URI_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withComGoogleGsonTypeAdapter_(JavaNetURI_class_(), ComGoogleGsonInternalBindTypeAdapters_URI));
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_INET_ADDRESS, new_ComGoogleGsonInternalBindTypeAdapters_$23_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_INET_ADDRESS, new_ComGoogleGsonInternalBindTypeAdapters_23_init());
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_INET_ADDRESS_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newTypeHierarchyFactoryWithIOSClass_withComGoogleGsonTypeAdapter_(JavaNetInetAddress_class_(), ComGoogleGsonInternalBindTypeAdapters_INET_ADDRESS));
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_UUID, new_ComGoogleGsonInternalBindTypeAdapters_$24_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_UUID, new_ComGoogleGsonInternalBindTypeAdapters_24_init());
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_UUID_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withComGoogleGsonTypeAdapter_(JavaUtilUUID_class_(), ComGoogleGsonInternalBindTypeAdapters_UUID));
-    JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_CURRENCY, [create_ComGoogleGsonInternalBindTypeAdapters_$25_init() nullSafe]);
+    JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_CURRENCY, [create_ComGoogleGsonInternalBindTypeAdapters_25_init() nullSafe]);
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_CURRENCY_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withComGoogleGsonTypeAdapter_(JavaUtilCurrency_class_(), ComGoogleGsonInternalBindTypeAdapters_CURRENCY));
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_TIMESTAMP_FACTORY, new_ComGoogleGsonInternalBindTypeAdapters_$26_init());
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_CALENDAR, new_ComGoogleGsonInternalBindTypeAdapters_$27_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_TIMESTAMP_FACTORY, new_ComGoogleGsonInternalBindTypeAdapters_26_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_CALENDAR, new_ComGoogleGsonInternalBindTypeAdapters_27_init());
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_CALENDAR_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryForMultipleTypesWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(JavaUtilCalendar_class_(), JavaUtilGregorianCalendar_class_(), ComGoogleGsonInternalBindTypeAdapters_CALENDAR));
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_LOCALE, new_ComGoogleGsonInternalBindTypeAdapters_$28_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_LOCALE, new_ComGoogleGsonInternalBindTypeAdapters_28_init());
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_LOCALE_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withComGoogleGsonTypeAdapter_(JavaUtilLocale_class_(), ComGoogleGsonInternalBindTypeAdapters_LOCALE));
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_JSON_ELEMENT, new_ComGoogleGsonInternalBindTypeAdapters_$29_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_JSON_ELEMENT, new_ComGoogleGsonInternalBindTypeAdapters_29_init());
     JreStrongAssign(&ComGoogleGsonInternalBindTypeAdapters_JSON_ELEMENT_FACTORY, ComGoogleGsonInternalBindTypeAdapters_newTypeHierarchyFactoryWithIOSClass_withComGoogleGsonTypeAdapter_(ComGoogleGsonJsonElement_class_(), ComGoogleGsonInternalBindTypeAdapters_JSON_ELEMENT));
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_ENUM_FACTORY, new_ComGoogleGsonInternalBindTypeAdapters_$30_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindTypeAdapters_ENUM_FACTORY, new_ComGoogleGsonInternalBindTypeAdapters_30_init());
     J2OBJC_SET_INITIALIZED(ComGoogleGsonInternalBindTypeAdapters)
   }
 }
@@ -1135,126 +1289,39 @@ ComGoogleGsonInternalBindTypeAdapters *create_ComGoogleGsonInternalBindTypeAdapt
 
 id<ComGoogleGsonTypeAdapterFactory> ComGoogleGsonInternalBindTypeAdapters_newFactoryWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_(ComGoogleGsonReflectTypeToken *type, ComGoogleGsonTypeAdapter *typeAdapter) {
   ComGoogleGsonInternalBindTypeAdapters_initialize();
-  return create_ComGoogleGsonInternalBindTypeAdapters_$31_initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_(type, typeAdapter);
+  return create_ComGoogleGsonInternalBindTypeAdapters_31_initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_(type, typeAdapter);
 }
 
 id<ComGoogleGsonTypeAdapterFactory> ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *type, ComGoogleGsonTypeAdapter *typeAdapter) {
   ComGoogleGsonInternalBindTypeAdapters_initialize();
-  return create_ComGoogleGsonInternalBindTypeAdapters_$32_initWithIOSClass_withComGoogleGsonTypeAdapter_(type, typeAdapter);
+  return create_ComGoogleGsonInternalBindTypeAdapters_32_initWithIOSClass_withComGoogleGsonTypeAdapter_(type, typeAdapter);
 }
 
 id<ComGoogleGsonTypeAdapterFactory> ComGoogleGsonInternalBindTypeAdapters_newFactoryWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *unboxed, IOSClass *boxed, ComGoogleGsonTypeAdapter *typeAdapter) {
   ComGoogleGsonInternalBindTypeAdapters_initialize();
-  return create_ComGoogleGsonInternalBindTypeAdapters_$33_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(unboxed, boxed, typeAdapter);
+  return create_ComGoogleGsonInternalBindTypeAdapters_33_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(unboxed, boxed, typeAdapter);
 }
 
 id<ComGoogleGsonTypeAdapterFactory> ComGoogleGsonInternalBindTypeAdapters_newFactoryForMultipleTypesWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *base, IOSClass *sub, ComGoogleGsonTypeAdapter *typeAdapter) {
   ComGoogleGsonInternalBindTypeAdapters_initialize();
-  return create_ComGoogleGsonInternalBindTypeAdapters_$34_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(base, sub, typeAdapter);
+  return create_ComGoogleGsonInternalBindTypeAdapters_34_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(base, sub, typeAdapter);
 }
 
 id<ComGoogleGsonTypeAdapterFactory> ComGoogleGsonInternalBindTypeAdapters_newTypeHierarchyFactoryWithIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *clazz, ComGoogleGsonTypeAdapter *typeAdapter) {
   ComGoogleGsonInternalBindTypeAdapters_initialize();
-  return create_ComGoogleGsonInternalBindTypeAdapters_$35_initWithIOSClass_withComGoogleGsonTypeAdapter_(clazz, typeAdapter);
+  return create_ComGoogleGsonInternalBindTypeAdapters_35_initWithIOSClass_withComGoogleGsonTypeAdapter_(clazz, typeAdapter);
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalBindTypeAdapters)
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter
+@implementation ComGoogleGsonInternalBindTypeAdapters_1
 
-- (instancetype)initWithIOSClass:(IOSClass *)classOfT {
-  ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter_initWithIOSClass_(self, classOfT);
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_1_init(self);
   return self;
 }
-
-- (JavaLangEnum *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
-  if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
-    [inArg nextNull];
-    return nil;
-  }
-  return [((id<JavaUtilMap>) nil_chk(nameToConstant_)) getWithId:[inArg nextString]];
-}
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaLangEnum *)value {
-  [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSString:value == nil ? nil : [((id<JavaUtilMap>) nil_chk(constantToName_)) getWithId:value]];
-}
-
-- (void)dealloc {
-  RELEASE_(nameToConstant_);
-  RELEASE_(constantToName_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, NULL, 0x1, -1, 0, -1, 1, -1, -1 },
-    { NULL, "LJavaLangEnum;", 0x1, 2, 3, 4, 5, -1, -1 },
-    { NULL, "V", 0x1, 6, 7, 4, 8, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(initWithIOSClass:);
-  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "nameToConstant_", "LJavaUtilMap;", .constantValue.asLong = 0, 0x12, -1, -1, 9, -1 },
-    { "constantToName_", "LJavaUtilMap;", .constantValue.asLong = 0, 0x12, -1, -1, 10, -1 },
-  };
-  static const void *ptrTable[] = { "LIOSClass;", "(Ljava/lang/Class<TT;>;)V", "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)TT;", "write", "LComGoogleGsonStreamJsonWriter;LJavaLangEnum;", "(Lcom/google/gson/stream/JsonWriter;TT;)V", "Ljava/util/Map<Ljava/lang/String;TT;>;", "Ljava/util/Map<TT;Ljava/lang/String;>;", "LComGoogleGsonInternalBindTypeAdapters;", "<T:Ljava/lang/Enum<TT;>;>Lcom/google/gson/TypeAdapter<TT;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter = { "EnumTypeAdapter", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x1a, 3, 2, 11, -1, -1, 12, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter;
-}
-
-@end
-
-void ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter_initWithIOSClass_(ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter *self, IOSClass *classOfT) {
-  ComGoogleGsonTypeAdapter_init(self);
-  JreStrongAssignAndConsume(&self->nameToConstant_, new_JavaUtilHashMap_init());
-  JreStrongAssignAndConsume(&self->constantToName_, new_JavaUtilHashMap_init());
-  @try {
-    {
-      IOSObjectArray *a__ = [((IOSClass *) nil_chk(classOfT)) getEnumConstants];
-      JavaLangEnum * const *b__ = ((IOSObjectArray *) nil_chk(a__))->buffer_;
-      JavaLangEnum * const *e__ = b__ + a__->size_;
-      while (b__ < e__) {
-        JavaLangEnum *constant = *b__++;
-        NSString *name = [((JavaLangEnum *) nil_chk(constant)) name];
-        id<ComGoogleGsonAnnotationsSerializedName> annotation = ((id<ComGoogleGsonAnnotationsSerializedName>) [((JavaLangReflectField *) nil_chk([classOfT getField:name])) getAnnotationWithIOSClass:ComGoogleGsonAnnotationsSerializedName_class_()]);
-        if (annotation != nil) {
-          name = [annotation value];
-          {
-            IOSObjectArray *a__ = [annotation alternate];
-            NSString * const *b__ = ((IOSObjectArray *) nil_chk(a__))->buffer_;
-            NSString * const *e__ = b__ + a__->size_;
-            while (b__ < e__) {
-              NSString *alternate = *b__++;
-              [((id<JavaUtilMap>) nil_chk(self->nameToConstant_)) putWithId:alternate withId:constant];
-            }
-          }
-        }
-        [((id<JavaUtilMap>) nil_chk(self->nameToConstant_)) putWithId:name withId:constant];
-        [((id<JavaUtilMap>) nil_chk(self->constantToName_)) putWithId:constant withId:name];
-      }
-    }
-  }
-  @catch (JavaLangNoSuchFieldException *e) {
-    @throw create_JavaLangAssertionError_initWithNSString_withNSException_(JreStrcat("$$", @"Missing field in ", [classOfT getName]), e);
-  }
-}
-
-ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter *new_ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter_initWithIOSClass_(IOSClass *classOfT) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter, initWithIOSClass_, classOfT)
-}
-
-ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter *create_ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter_initWithIOSClass_(IOSClass *classOfT) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter, initWithIOSClass_, classOfT)
-}
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter)
-
-@implementation ComGoogleGsonInternalBindTypeAdapters_$1
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
                                         withId:(IOSClass *)value {
@@ -1276,45 +1343,45 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalBindTypeAdapters_EnumTypeA
   }
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "LIOSClass;", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "LIOSClass;", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
+  methods[2].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "write", "LComGoogleGsonStreamJsonWriter;LIOSClass;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Class;)V", "read", "LComGoogleGsonStreamJsonReader;", "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Class;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Class;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$1 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$1;
+  static const void *ptrTable[] = { "write", "LComGoogleGsonStreamJsonWriter;LIOSClass;", "LJavaIoIOException;", "read", "LComGoogleGsonStreamJsonReader;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Class;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_1 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_1;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$1_init(ComGoogleGsonInternalBindTypeAdapters_$1 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_1_init(ComGoogleGsonInternalBindTypeAdapters_1 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$1 *new_ComGoogleGsonInternalBindTypeAdapters_$1_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$1, init)
+ComGoogleGsonInternalBindTypeAdapters_1 *new_ComGoogleGsonInternalBindTypeAdapters_1_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_1, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$1 *create_ComGoogleGsonInternalBindTypeAdapters_$1_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$1, init)
+ComGoogleGsonInternalBindTypeAdapters_1 *create_ComGoogleGsonInternalBindTypeAdapters_1_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_1, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$2
+@implementation ComGoogleGsonInternalBindTypeAdapters_2
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_2_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaUtilBitSet *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -1373,45 +1440,45 @@ ComGoogleGsonInternalBindTypeAdapters_$1 *create_ComGoogleGsonInternalBindTypeAd
   [outArg endArray];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$2_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaUtilBitSet;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaUtilBitSet;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/util/BitSet;", "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilBitSet;", "(Lcom/google/gson/stream/JsonWriter;Ljava/util/BitSet;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/util/BitSet;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$2 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$2;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilBitSet;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/util/BitSet;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_2 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_2;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$2_init(ComGoogleGsonInternalBindTypeAdapters_$2 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_2_init(ComGoogleGsonInternalBindTypeAdapters_2 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$2 *new_ComGoogleGsonInternalBindTypeAdapters_$2_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$2, init)
+ComGoogleGsonInternalBindTypeAdapters_2 *new_ComGoogleGsonInternalBindTypeAdapters_2_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_2, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$2 *create_ComGoogleGsonInternalBindTypeAdapters_$2_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$2, init)
+ComGoogleGsonInternalBindTypeAdapters_2 *create_ComGoogleGsonInternalBindTypeAdapters_2_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_2, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$3
+@implementation ComGoogleGsonInternalBindTypeAdapters_3
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_3_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaLangBoolean *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -1433,45 +1500,45 @@ ComGoogleGsonInternalBindTypeAdapters_$2 *create_ComGoogleGsonInternalBindTypeAd
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithBoolean:[value booleanValue]];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$3_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaLangBoolean;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaLangBoolean;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Boolean;", "write", "LComGoogleGsonStreamJsonWriter;LJavaLangBoolean;", "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Boolean;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Boolean;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$3 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$3;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaLangBoolean;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Boolean;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_3 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_3;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$3_init(ComGoogleGsonInternalBindTypeAdapters_$3 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_3_init(ComGoogleGsonInternalBindTypeAdapters_3 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$3 *new_ComGoogleGsonInternalBindTypeAdapters_$3_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$3, init)
+ComGoogleGsonInternalBindTypeAdapters_3 *new_ComGoogleGsonInternalBindTypeAdapters_3_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_3, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$3 *create_ComGoogleGsonInternalBindTypeAdapters_$3_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$3, init)
+ComGoogleGsonInternalBindTypeAdapters_3 *create_ComGoogleGsonInternalBindTypeAdapters_3_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_3, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$4
+@implementation ComGoogleGsonInternalBindTypeAdapters_4
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_4_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaLangBoolean *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -1486,45 +1553,45 @@ ComGoogleGsonInternalBindTypeAdapters_$3 *create_ComGoogleGsonInternalBindTypeAd
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSString:value == nil ? @"null" : [value description]];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$4_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaLangBoolean;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaLangBoolean;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Boolean;", "write", "LComGoogleGsonStreamJsonWriter;LJavaLangBoolean;", "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Boolean;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Boolean;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$4 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$4;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaLangBoolean;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Boolean;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_4 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_4;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$4_init(ComGoogleGsonInternalBindTypeAdapters_$4 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_4_init(ComGoogleGsonInternalBindTypeAdapters_4 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$4 *new_ComGoogleGsonInternalBindTypeAdapters_$4_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$4, init)
+ComGoogleGsonInternalBindTypeAdapters_4 *new_ComGoogleGsonInternalBindTypeAdapters_4_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_4, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$4 *create_ComGoogleGsonInternalBindTypeAdapters_$4_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$4, init)
+ComGoogleGsonInternalBindTypeAdapters_4 *create_ComGoogleGsonInternalBindTypeAdapters_4_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_4, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$5
+@implementation ComGoogleGsonInternalBindTypeAdapters_5
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_5_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -1545,45 +1612,45 @@ ComGoogleGsonInternalBindTypeAdapters_$4 *create_ComGoogleGsonInternalBindTypeAd
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSNumber:value];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$5_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSNumber;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSNumber;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$5 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$5;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_5 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_5;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$5_init(ComGoogleGsonInternalBindTypeAdapters_$5 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_5_init(ComGoogleGsonInternalBindTypeAdapters_5 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$5 *new_ComGoogleGsonInternalBindTypeAdapters_$5_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$5, init)
+ComGoogleGsonInternalBindTypeAdapters_5 *new_ComGoogleGsonInternalBindTypeAdapters_5_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_5, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$5 *create_ComGoogleGsonInternalBindTypeAdapters_$5_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$5, init)
+ComGoogleGsonInternalBindTypeAdapters_5 *create_ComGoogleGsonInternalBindTypeAdapters_5_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_5, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$6
+@implementation ComGoogleGsonInternalBindTypeAdapters_6
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_6_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -1603,45 +1670,45 @@ ComGoogleGsonInternalBindTypeAdapters_$5 *create_ComGoogleGsonInternalBindTypeAd
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSNumber:value];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$6_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSNumber;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSNumber;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$6 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$6;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_6 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_6;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$6_init(ComGoogleGsonInternalBindTypeAdapters_$6 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_6_init(ComGoogleGsonInternalBindTypeAdapters_6 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$6 *new_ComGoogleGsonInternalBindTypeAdapters_$6_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$6, init)
+ComGoogleGsonInternalBindTypeAdapters_6 *new_ComGoogleGsonInternalBindTypeAdapters_6_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_6, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$6 *create_ComGoogleGsonInternalBindTypeAdapters_$6_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$6, init)
+ComGoogleGsonInternalBindTypeAdapters_6 *create_ComGoogleGsonInternalBindTypeAdapters_6_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_6, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$7
+@implementation ComGoogleGsonInternalBindTypeAdapters_7
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_7_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -1661,45 +1728,45 @@ ComGoogleGsonInternalBindTypeAdapters_$6 *create_ComGoogleGsonInternalBindTypeAd
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSNumber:value];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$7_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSNumber;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSNumber;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$7 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$7;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_7 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_7;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$7_init(ComGoogleGsonInternalBindTypeAdapters_$7 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_7_init(ComGoogleGsonInternalBindTypeAdapters_7 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$7 *new_ComGoogleGsonInternalBindTypeAdapters_$7_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$7, init)
+ComGoogleGsonInternalBindTypeAdapters_7 *new_ComGoogleGsonInternalBindTypeAdapters_7_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_7, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$7 *create_ComGoogleGsonInternalBindTypeAdapters_$7_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$7, init)
+ComGoogleGsonInternalBindTypeAdapters_7 *create_ComGoogleGsonInternalBindTypeAdapters_7_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_7, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$8
+@implementation ComGoogleGsonInternalBindTypeAdapters_8
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_8_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaUtilConcurrentAtomicAtomicInteger *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   @try {
@@ -1715,45 +1782,45 @@ ComGoogleGsonInternalBindTypeAdapters_$7 *create_ComGoogleGsonInternalBindTypeAd
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithLong:[((JavaUtilConcurrentAtomicAtomicInteger *) nil_chk(value)) get]];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$8_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaUtilConcurrentAtomicAtomicInteger;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaUtilConcurrentAtomicAtomicInteger;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/util/concurrent/atomic/AtomicInteger;", "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilConcurrentAtomicAtomicInteger;", "(Lcom/google/gson/stream/JsonWriter;Ljava/util/concurrent/atomic/AtomicInteger;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/util/concurrent/atomic/AtomicInteger;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$8 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$8;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilConcurrentAtomicAtomicInteger;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/util/concurrent/atomic/AtomicInteger;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_8 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_8;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$8_init(ComGoogleGsonInternalBindTypeAdapters_$8 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_8_init(ComGoogleGsonInternalBindTypeAdapters_8 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$8 *new_ComGoogleGsonInternalBindTypeAdapters_$8_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$8, init)
+ComGoogleGsonInternalBindTypeAdapters_8 *new_ComGoogleGsonInternalBindTypeAdapters_8_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_8, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$8 *create_ComGoogleGsonInternalBindTypeAdapters_$8_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$8, init)
+ComGoogleGsonInternalBindTypeAdapters_8 *create_ComGoogleGsonInternalBindTypeAdapters_8_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_8, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$9
+@implementation ComGoogleGsonInternalBindTypeAdapters_9
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_9_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaUtilConcurrentAtomicAtomicBoolean *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   return create_JavaUtilConcurrentAtomicAtomicBoolean_initWithBoolean_([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) nextBoolean]);
@@ -1764,45 +1831,45 @@ ComGoogleGsonInternalBindTypeAdapters_$8 *create_ComGoogleGsonInternalBindTypeAd
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithBoolean:[((JavaUtilConcurrentAtomicAtomicBoolean *) nil_chk(value)) get]];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$9_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaUtilConcurrentAtomicAtomicBoolean;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaUtilConcurrentAtomicAtomicBoolean;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/util/concurrent/atomic/AtomicBoolean;", "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilConcurrentAtomicAtomicBoolean;", "(Lcom/google/gson/stream/JsonWriter;Ljava/util/concurrent/atomic/AtomicBoolean;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/util/concurrent/atomic/AtomicBoolean;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$9 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$9;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilConcurrentAtomicAtomicBoolean;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/util/concurrent/atomic/AtomicBoolean;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_9 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_9;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$9_init(ComGoogleGsonInternalBindTypeAdapters_$9 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_9_init(ComGoogleGsonInternalBindTypeAdapters_9 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$9 *new_ComGoogleGsonInternalBindTypeAdapters_$9_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$9, init)
+ComGoogleGsonInternalBindTypeAdapters_9 *new_ComGoogleGsonInternalBindTypeAdapters_9_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_9, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$9 *create_ComGoogleGsonInternalBindTypeAdapters_$9_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$9, init)
+ComGoogleGsonInternalBindTypeAdapters_9 *create_ComGoogleGsonInternalBindTypeAdapters_9_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_9, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$10
+@implementation ComGoogleGsonInternalBindTypeAdapters_10
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_10_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaUtilConcurrentAtomicAtomicIntegerArray *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   id<JavaUtilList> list = create_JavaUtilArrayList_init();
@@ -1834,45 +1901,45 @@ ComGoogleGsonInternalBindTypeAdapters_$9 *create_ComGoogleGsonInternalBindTypeAd
   [outArg endArray];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$10_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaUtilConcurrentAtomicAtomicIntegerArray;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaUtilConcurrentAtomicAtomicIntegerArray;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/util/concurrent/atomic/AtomicIntegerArray;", "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilConcurrentAtomicAtomicIntegerArray;", "(Lcom/google/gson/stream/JsonWriter;Ljava/util/concurrent/atomic/AtomicIntegerArray;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/util/concurrent/atomic/AtomicIntegerArray;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$10 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$10;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilConcurrentAtomicAtomicIntegerArray;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/util/concurrent/atomic/AtomicIntegerArray;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_10 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_10;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$10_init(ComGoogleGsonInternalBindTypeAdapters_$10 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_10_init(ComGoogleGsonInternalBindTypeAdapters_10 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$10 *new_ComGoogleGsonInternalBindTypeAdapters_$10_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$10, init)
+ComGoogleGsonInternalBindTypeAdapters_10 *new_ComGoogleGsonInternalBindTypeAdapters_10_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_10, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$10 *create_ComGoogleGsonInternalBindTypeAdapters_$10_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$10, init)
+ComGoogleGsonInternalBindTypeAdapters_10 *create_ComGoogleGsonInternalBindTypeAdapters_10_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_10, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$11
+@implementation ComGoogleGsonInternalBindTypeAdapters_11
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_11_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -1892,45 +1959,45 @@ ComGoogleGsonInternalBindTypeAdapters_$10 *create_ComGoogleGsonInternalBindTypeA
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSNumber:value];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$11_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSNumber;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSNumber;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$11 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$11;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_11 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_11;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$11_init(ComGoogleGsonInternalBindTypeAdapters_$11 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_11_init(ComGoogleGsonInternalBindTypeAdapters_11 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$11 *new_ComGoogleGsonInternalBindTypeAdapters_$11_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$11, init)
+ComGoogleGsonInternalBindTypeAdapters_11 *new_ComGoogleGsonInternalBindTypeAdapters_11_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_11, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$11 *create_ComGoogleGsonInternalBindTypeAdapters_$11_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$11, init)
+ComGoogleGsonInternalBindTypeAdapters_11 *create_ComGoogleGsonInternalBindTypeAdapters_11_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_11, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$12
+@implementation ComGoogleGsonInternalBindTypeAdapters_12
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_12_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -1945,45 +2012,45 @@ ComGoogleGsonInternalBindTypeAdapters_$11 *create_ComGoogleGsonInternalBindTypeA
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSNumber:value];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$12_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSNumber;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSNumber;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$12 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$12;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_12 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_12;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$12_init(ComGoogleGsonInternalBindTypeAdapters_$12 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_12_init(ComGoogleGsonInternalBindTypeAdapters_12 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$12 *new_ComGoogleGsonInternalBindTypeAdapters_$12_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$12, init)
+ComGoogleGsonInternalBindTypeAdapters_12 *new_ComGoogleGsonInternalBindTypeAdapters_12_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_12, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$12 *create_ComGoogleGsonInternalBindTypeAdapters_$12_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$12, init)
+ComGoogleGsonInternalBindTypeAdapters_12 *create_ComGoogleGsonInternalBindTypeAdapters_12_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_12, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$13
+@implementation ComGoogleGsonInternalBindTypeAdapters_13
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_13_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -1998,45 +2065,45 @@ ComGoogleGsonInternalBindTypeAdapters_$12 *create_ComGoogleGsonInternalBindTypeA
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSNumber:value];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$13_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSNumber;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSNumber;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$13 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$13;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_13 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_13;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$13_init(ComGoogleGsonInternalBindTypeAdapters_$13 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_13_init(ComGoogleGsonInternalBindTypeAdapters_13 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$13 *new_ComGoogleGsonInternalBindTypeAdapters_$13_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$13, init)
+ComGoogleGsonInternalBindTypeAdapters_13 *new_ComGoogleGsonInternalBindTypeAdapters_13_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_13, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$13 *create_ComGoogleGsonInternalBindTypeAdapters_$13_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$13, init)
+ComGoogleGsonInternalBindTypeAdapters_13 *create_ComGoogleGsonInternalBindTypeAdapters_13_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_13, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$14
+@implementation ComGoogleGsonInternalBindTypeAdapters_14
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_14_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   ComGoogleGsonStreamJsonToken *jsonToken = [((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek];
@@ -2056,45 +2123,45 @@ ComGoogleGsonInternalBindTypeAdapters_$13 *create_ComGoogleGsonInternalBindTypeA
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSNumber:value];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$14_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSNumber;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSNumber;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$14 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$14;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_14 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_14;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$14_init(ComGoogleGsonInternalBindTypeAdapters_$14 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_14_init(ComGoogleGsonInternalBindTypeAdapters_14 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$14 *new_ComGoogleGsonInternalBindTypeAdapters_$14_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$14, init)
+ComGoogleGsonInternalBindTypeAdapters_14 *new_ComGoogleGsonInternalBindTypeAdapters_14_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_14, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$14 *create_ComGoogleGsonInternalBindTypeAdapters_$14_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$14, init)
+ComGoogleGsonInternalBindTypeAdapters_14 *create_ComGoogleGsonInternalBindTypeAdapters_14_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_14, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$15
+@implementation ComGoogleGsonInternalBindTypeAdapters_15
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_15_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaLangCharacter *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -2110,48 +2177,48 @@ ComGoogleGsonInternalBindTypeAdapters_$14 *create_ComGoogleGsonInternalBindTypeA
 
 - (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
                                         withId:(JavaLangCharacter *)value {
-  [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSString:value == nil ? nil : NSString_valueOf_(value)];
+  [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSString:value == nil ? nil : NSString_java_valueOf_(value)];
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$15_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaLangCharacter;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaLangCharacter;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Character;", "write", "LComGoogleGsonStreamJsonWriter;LJavaLangCharacter;", "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Character;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Character;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$15 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$15;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaLangCharacter;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Character;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_15 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_15;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$15_init(ComGoogleGsonInternalBindTypeAdapters_$15 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_15_init(ComGoogleGsonInternalBindTypeAdapters_15 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$15 *new_ComGoogleGsonInternalBindTypeAdapters_$15_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$15, init)
+ComGoogleGsonInternalBindTypeAdapters_15 *new_ComGoogleGsonInternalBindTypeAdapters_15_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_15, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$15 *create_ComGoogleGsonInternalBindTypeAdapters_$15_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$15, init)
+ComGoogleGsonInternalBindTypeAdapters_15 *create_ComGoogleGsonInternalBindTypeAdapters_15_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_15, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$16
+@implementation ComGoogleGsonInternalBindTypeAdapters_16
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_16_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (NSString *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   ComGoogleGsonStreamJsonToken *peek = [((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek];
@@ -2170,45 +2237,45 @@ ComGoogleGsonInternalBindTypeAdapters_$15 *create_ComGoogleGsonInternalBindTypeA
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSString:value];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$16_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSString;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSString;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/String;", "write", "LComGoogleGsonStreamJsonWriter;LNSString;", "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/String;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/String;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$16 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$16;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LNSString;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/String;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_16 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_16;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$16_init(ComGoogleGsonInternalBindTypeAdapters_$16 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_16_init(ComGoogleGsonInternalBindTypeAdapters_16 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$16 *new_ComGoogleGsonInternalBindTypeAdapters_$16_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$16, init)
+ComGoogleGsonInternalBindTypeAdapters_16 *new_ComGoogleGsonInternalBindTypeAdapters_16_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_16, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$16 *create_ComGoogleGsonInternalBindTypeAdapters_$16_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$16, init)
+ComGoogleGsonInternalBindTypeAdapters_16 *create_ComGoogleGsonInternalBindTypeAdapters_16_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_16, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$17
+@implementation ComGoogleGsonInternalBindTypeAdapters_17
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_17_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaMathBigDecimal *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -2228,45 +2295,45 @@ ComGoogleGsonInternalBindTypeAdapters_$16 *create_ComGoogleGsonInternalBindTypeA
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSNumber:value];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$17_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaMathBigDecimal;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaMathBigDecimal;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/math/BigDecimal;", "write", "LComGoogleGsonStreamJsonWriter;LJavaMathBigDecimal;", "(Lcom/google/gson/stream/JsonWriter;Ljava/math/BigDecimal;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/math/BigDecimal;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$17 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$17;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaMathBigDecimal;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/math/BigDecimal;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_17 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_17;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$17_init(ComGoogleGsonInternalBindTypeAdapters_$17 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_17_init(ComGoogleGsonInternalBindTypeAdapters_17 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$17 *new_ComGoogleGsonInternalBindTypeAdapters_$17_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$17, init)
+ComGoogleGsonInternalBindTypeAdapters_17 *new_ComGoogleGsonInternalBindTypeAdapters_17_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_17, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$17 *create_ComGoogleGsonInternalBindTypeAdapters_$17_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$17, init)
+ComGoogleGsonInternalBindTypeAdapters_17 *create_ComGoogleGsonInternalBindTypeAdapters_17_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_17, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$18
+@implementation ComGoogleGsonInternalBindTypeAdapters_18
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_18_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaMathBigInteger *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -2286,45 +2353,45 @@ ComGoogleGsonInternalBindTypeAdapters_$17 *create_ComGoogleGsonInternalBindTypeA
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSNumber:value];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$18_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaMathBigInteger;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaMathBigInteger;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/math/BigInteger;", "write", "LComGoogleGsonStreamJsonWriter;LJavaMathBigInteger;", "(Lcom/google/gson/stream/JsonWriter;Ljava/math/BigInteger;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/math/BigInteger;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$18 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$18;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaMathBigInteger;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/math/BigInteger;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_18 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_18;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$18_init(ComGoogleGsonInternalBindTypeAdapters_$18 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_18_init(ComGoogleGsonInternalBindTypeAdapters_18 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$18 *new_ComGoogleGsonInternalBindTypeAdapters_$18_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$18, init)
+ComGoogleGsonInternalBindTypeAdapters_18 *new_ComGoogleGsonInternalBindTypeAdapters_18_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_18, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$18 *create_ComGoogleGsonInternalBindTypeAdapters_$18_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$18, init)
+ComGoogleGsonInternalBindTypeAdapters_18 *create_ComGoogleGsonInternalBindTypeAdapters_18_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_18, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$19
+@implementation ComGoogleGsonInternalBindTypeAdapters_19
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_19_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaLangStringBuilder *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -2339,45 +2406,45 @@ ComGoogleGsonInternalBindTypeAdapters_$18 *create_ComGoogleGsonInternalBindTypeA
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSString:value == nil ? nil : [value description]];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$19_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaLangStringBuilder;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaLangStringBuilder;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/StringBuilder;", "write", "LComGoogleGsonStreamJsonWriter;LJavaLangStringBuilder;", "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/StringBuilder;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/StringBuilder;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$19 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$19;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaLangStringBuilder;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/StringBuilder;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_19 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_19;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$19_init(ComGoogleGsonInternalBindTypeAdapters_$19 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_19_init(ComGoogleGsonInternalBindTypeAdapters_19 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$19 *new_ComGoogleGsonInternalBindTypeAdapters_$19_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$19, init)
+ComGoogleGsonInternalBindTypeAdapters_19 *new_ComGoogleGsonInternalBindTypeAdapters_19_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_19, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$19 *create_ComGoogleGsonInternalBindTypeAdapters_$19_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$19, init)
+ComGoogleGsonInternalBindTypeAdapters_19 *create_ComGoogleGsonInternalBindTypeAdapters_19_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_19, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$20
+@implementation ComGoogleGsonInternalBindTypeAdapters_20
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_20_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaLangStringBuffer *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -2392,45 +2459,45 @@ ComGoogleGsonInternalBindTypeAdapters_$19 *create_ComGoogleGsonInternalBindTypeA
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSString:value == nil ? nil : [value description]];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$20_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaLangStringBuffer;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaLangStringBuffer;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/StringBuffer;", "write", "LComGoogleGsonStreamJsonWriter;LJavaLangStringBuffer;", "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/StringBuffer;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/StringBuffer;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$20 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$20;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaLangStringBuffer;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/lang/StringBuffer;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_20 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_20;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$20_init(ComGoogleGsonInternalBindTypeAdapters_$20 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_20_init(ComGoogleGsonInternalBindTypeAdapters_20 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$20 *new_ComGoogleGsonInternalBindTypeAdapters_$20_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$20, init)
+ComGoogleGsonInternalBindTypeAdapters_20 *new_ComGoogleGsonInternalBindTypeAdapters_20_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_20, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$20 *create_ComGoogleGsonInternalBindTypeAdapters_$20_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$20, init)
+ComGoogleGsonInternalBindTypeAdapters_20 *create_ComGoogleGsonInternalBindTypeAdapters_20_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_20, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$21
+@implementation ComGoogleGsonInternalBindTypeAdapters_21
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_21_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaNetURL *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -2446,45 +2513,45 @@ ComGoogleGsonInternalBindTypeAdapters_$20 *create_ComGoogleGsonInternalBindTypeA
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSString:value == nil ? nil : [value toExternalForm]];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$21_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaNetURL;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaNetURL;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/net/URL;", "write", "LComGoogleGsonStreamJsonWriter;LJavaNetURL;", "(Lcom/google/gson/stream/JsonWriter;Ljava/net/URL;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/net/URL;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$21 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$21;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaNetURL;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/net/URL;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_21 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_21;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$21_init(ComGoogleGsonInternalBindTypeAdapters_$21 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_21_init(ComGoogleGsonInternalBindTypeAdapters_21 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$21 *new_ComGoogleGsonInternalBindTypeAdapters_$21_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$21, init)
+ComGoogleGsonInternalBindTypeAdapters_21 *new_ComGoogleGsonInternalBindTypeAdapters_21_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_21, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$21 *create_ComGoogleGsonInternalBindTypeAdapters_$21_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$21, init)
+ComGoogleGsonInternalBindTypeAdapters_21 *create_ComGoogleGsonInternalBindTypeAdapters_21_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_21, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$22
+@implementation ComGoogleGsonInternalBindTypeAdapters_22
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_22_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaNetURI *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -2505,45 +2572,45 @@ ComGoogleGsonInternalBindTypeAdapters_$21 *create_ComGoogleGsonInternalBindTypeA
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSString:value == nil ? nil : [value toASCIIString]];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$22_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaNetURI;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaNetURI;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/net/URI;", "write", "LComGoogleGsonStreamJsonWriter;LJavaNetURI;", "(Lcom/google/gson/stream/JsonWriter;Ljava/net/URI;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/net/URI;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$22 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$22;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaNetURI;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/net/URI;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_22 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_22;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$22_init(ComGoogleGsonInternalBindTypeAdapters_$22 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_22_init(ComGoogleGsonInternalBindTypeAdapters_22 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$22 *new_ComGoogleGsonInternalBindTypeAdapters_$22_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$22, init)
+ComGoogleGsonInternalBindTypeAdapters_22 *new_ComGoogleGsonInternalBindTypeAdapters_22_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_22, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$22 *create_ComGoogleGsonInternalBindTypeAdapters_$22_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$22, init)
+ComGoogleGsonInternalBindTypeAdapters_22 *create_ComGoogleGsonInternalBindTypeAdapters_22_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_22, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$23
+@implementation ComGoogleGsonInternalBindTypeAdapters_23
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_23_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaNetInetAddress *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -2558,45 +2625,45 @@ ComGoogleGsonInternalBindTypeAdapters_$22 *create_ComGoogleGsonInternalBindTypeA
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSString:value == nil ? nil : [value getHostAddress]];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$23_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaNetInetAddress;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaNetInetAddress;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/net/InetAddress;", "write", "LComGoogleGsonStreamJsonWriter;LJavaNetInetAddress;", "(Lcom/google/gson/stream/JsonWriter;Ljava/net/InetAddress;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/net/InetAddress;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$23 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$23;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaNetInetAddress;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/net/InetAddress;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_23 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_23;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$23_init(ComGoogleGsonInternalBindTypeAdapters_$23 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_23_init(ComGoogleGsonInternalBindTypeAdapters_23 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$23 *new_ComGoogleGsonInternalBindTypeAdapters_$23_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$23, init)
+ComGoogleGsonInternalBindTypeAdapters_23 *new_ComGoogleGsonInternalBindTypeAdapters_23_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_23, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$23 *create_ComGoogleGsonInternalBindTypeAdapters_$23_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$23, init)
+ComGoogleGsonInternalBindTypeAdapters_23 *create_ComGoogleGsonInternalBindTypeAdapters_23_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_23, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$24
+@implementation ComGoogleGsonInternalBindTypeAdapters_24
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_24_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaUtilUUID *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -2611,45 +2678,45 @@ ComGoogleGsonInternalBindTypeAdapters_$23 *create_ComGoogleGsonInternalBindTypeA
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSString:value == nil ? nil : [value description]];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$24_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaUtilUUID;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaUtilUUID;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/util/UUID;", "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilUUID;", "(Lcom/google/gson/stream/JsonWriter;Ljava/util/UUID;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/util/UUID;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$24 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$24;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilUUID;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/util/UUID;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_24 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_24;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$24_init(ComGoogleGsonInternalBindTypeAdapters_$24 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_24_init(ComGoogleGsonInternalBindTypeAdapters_24 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$24 *new_ComGoogleGsonInternalBindTypeAdapters_$24_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$24, init)
+ComGoogleGsonInternalBindTypeAdapters_24 *new_ComGoogleGsonInternalBindTypeAdapters_24_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_24, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$24 *create_ComGoogleGsonInternalBindTypeAdapters_$24_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$24, init)
+ComGoogleGsonInternalBindTypeAdapters_24 *create_ComGoogleGsonInternalBindTypeAdapters_24_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_24, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$25
+@implementation ComGoogleGsonInternalBindTypeAdapters_25
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_25_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaUtilCurrency *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   return JavaUtilCurrency_getInstanceWithNSString_([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) nextString]);
@@ -2660,92 +2727,90 @@ ComGoogleGsonInternalBindTypeAdapters_$24 *create_ComGoogleGsonInternalBindTypeA
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSString:[((JavaUtilCurrency *) nil_chk(value)) getCurrencyCode]];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$25_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaUtilCurrency;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaUtilCurrency;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/util/Currency;", "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilCurrency;", "(Lcom/google/gson/stream/JsonWriter;Ljava/util/Currency;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/util/Currency;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$25 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$25;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilCurrency;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/util/Currency;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_25 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_25;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$25_init(ComGoogleGsonInternalBindTypeAdapters_$25 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_25_init(ComGoogleGsonInternalBindTypeAdapters_25 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$25 *new_ComGoogleGsonInternalBindTypeAdapters_$25_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$25, init)
+ComGoogleGsonInternalBindTypeAdapters_25 *new_ComGoogleGsonInternalBindTypeAdapters_25_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_25, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$25 *create_ComGoogleGsonInternalBindTypeAdapters_$25_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$25, init)
+ComGoogleGsonInternalBindTypeAdapters_25 *create_ComGoogleGsonInternalBindTypeAdapters_25_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_25, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$26
-
-- (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
-                        withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken {
-  if ([((ComGoogleGsonReflectTypeToken *) nil_chk(typeToken)) getRawType] != (id) JavaSqlTimestamp_class_()) {
-    return nil;
-  }
-  ComGoogleGsonTypeAdapter *dateTypeAdapter = [((ComGoogleGsonGson *) nil_chk(gson)) getAdapterWithIOSClass:JavaUtilDate_class_()];
-  return create_ComGoogleGsonInternalBindTypeAdapters_$26_$1_initWithComGoogleGsonTypeAdapter_(dateTypeAdapter);
-}
+@implementation ComGoogleGsonInternalBindTypeAdapters_26
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$26_init(self);
+  ComGoogleGsonInternalBindTypeAdapters_26_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
+                        withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken {
+  if ([((ComGoogleGsonReflectTypeToken *) nil_chk(typeToken)) getRawType] != JavaSqlTimestamp_class_()) {
+    return nil;
+  }
+  ComGoogleGsonTypeAdapter *dateTypeAdapter = [((ComGoogleGsonGson *) nil_chk(gson)) getAdapterWithIOSClass:JavaUtilDate_class_()];
+  return create_ComGoogleGsonInternalBindTypeAdapters_26_1_initWithComGoogleGsonTypeAdapter_(dateTypeAdapter);
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LComGoogleGsonTypeAdapter;", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LComGoogleGsonTypeAdapter;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "create", "LComGoogleGsonGson;LComGoogleGsonReflectTypeToken;", "<T:Ljava/lang/Object;>(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken<TT;>;)Lcom/google/gson/TypeAdapter<TT;>;", "LComGoogleGsonInternalBindTypeAdapters;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$26 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, -1, -1, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$26;
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_26 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, -1, -1, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_26;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$26_init(ComGoogleGsonInternalBindTypeAdapters_$26 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_26_init(ComGoogleGsonInternalBindTypeAdapters_26 *self) {
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$26 *new_ComGoogleGsonInternalBindTypeAdapters_$26_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$26, init)
+ComGoogleGsonInternalBindTypeAdapters_26 *new_ComGoogleGsonInternalBindTypeAdapters_26_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_26, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$26 *create_ComGoogleGsonInternalBindTypeAdapters_$26_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$26, init)
+ComGoogleGsonInternalBindTypeAdapters_26 *create_ComGoogleGsonInternalBindTypeAdapters_26_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_26, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$26_$1
+@implementation ComGoogleGsonInternalBindTypeAdapters_26_1
+
+- (instancetype)initWithComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$0 {
+  ComGoogleGsonInternalBindTypeAdapters_26_1_initWithComGoogleGsonTypeAdapter_(self, capture$0);
+  return self;
+}
 
 - (JavaSqlTimestamp *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   JavaUtilDate *date = [((ComGoogleGsonTypeAdapter *) nil_chk(val$dateTypeAdapter_)) readWithComGoogleGsonStreamJsonReader:inArg];
@@ -2757,11 +2822,6 @@ ComGoogleGsonInternalBindTypeAdapters_$26 *create_ComGoogleGsonInternalBindTypeA
   [((ComGoogleGsonTypeAdapter *) nil_chk(val$dateTypeAdapter_)) writeWithComGoogleGsonStreamJsonWriter:outArg withId:value];
 }
 
-- (instancetype)initWithComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$0 {
-  ComGoogleGsonInternalBindTypeAdapters_$26_$1_initWithComGoogleGsonTypeAdapter_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$dateTypeAdapter_);
   [super dealloc];
@@ -2769,40 +2829,47 @@ ComGoogleGsonInternalBindTypeAdapters_$26 *create_ComGoogleGsonInternalBindTypeA
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaSqlTimestamp;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
-    { NULL, NULL, 0x0, -1, 7, -1, 8, -1, -1 },
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaSqlTimestamp;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(initWithComGoogleGsonTypeAdapter:);
+  methods[0].selector = @selector(initWithComGoogleGsonTypeAdapter:);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$dateTypeAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x1012, -1, -1, 9, -1 },
+    { "val$dateTypeAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
   };
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/sql/Timestamp;", "write", "LComGoogleGsonStreamJsonWriter;LJavaSqlTimestamp;", "(Lcom/google/gson/stream/JsonWriter;Ljava/sql/Timestamp;)V", "LComGoogleGsonTypeAdapter;", "(Lcom/google/gson/TypeAdapter<Ljava/util/Date;>;)V", "Lcom/google/gson/TypeAdapter<Ljava/util/Date;>;", "LComGoogleGsonInternalBindTypeAdapters_$26;", "createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:", "Lcom/google/gson/TypeAdapter<Ljava/sql/Timestamp;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$26_$1 = { "", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x8008, 3, 1, 10, -1, 11, 12, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$26_$1;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaSqlTimestamp;", "Lcom/google/gson/TypeAdapter<Ljava/util/Date;>;", "LComGoogleGsonInternalBindTypeAdapters_26;", "createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:", "Lcom/google/gson/TypeAdapter<Ljava/sql/Timestamp;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_26_1 = { "", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x8008, 3, 1, 6, -1, 7, 8, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_26_1;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$26_$1_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_$26_$1 *self, ComGoogleGsonTypeAdapter *capture$0) {
+void ComGoogleGsonInternalBindTypeAdapters_26_1_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_26_1 *self, ComGoogleGsonTypeAdapter *capture$0) {
   JreStrongAssign(&self->val$dateTypeAdapter_, capture$0);
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$26_$1 *new_ComGoogleGsonInternalBindTypeAdapters_$26_$1_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$26_$1, initWithComGoogleGsonTypeAdapter_, capture$0)
+ComGoogleGsonInternalBindTypeAdapters_26_1 *new_ComGoogleGsonInternalBindTypeAdapters_26_1_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_26_1, initWithComGoogleGsonTypeAdapter_, capture$0)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$26_$1 *create_ComGoogleGsonInternalBindTypeAdapters_$26_$1_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$26_$1, initWithComGoogleGsonTypeAdapter_, capture$0)
+ComGoogleGsonInternalBindTypeAdapters_26_1 *create_ComGoogleGsonInternalBindTypeAdapters_26_1_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_26_1, initWithComGoogleGsonTypeAdapter_, capture$0)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$27
+@implementation ComGoogleGsonInternalBindTypeAdapters_27
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_27_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaUtilCalendar *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -2819,22 +2886,22 @@ ComGoogleGsonInternalBindTypeAdapters_$26_$1 *create_ComGoogleGsonInternalBindTy
   while ([inArg peek] != JreLoadEnum(ComGoogleGsonStreamJsonToken, END_OBJECT)) {
     NSString *name = [inArg nextName];
     jint value = [inArg nextInt];
-    if ([((NSString *) nil_chk(ComGoogleGsonInternalBindTypeAdapters_$27_YEAR)) isEqual:name]) {
+    if ([((NSString *) nil_chk(ComGoogleGsonInternalBindTypeAdapters_27_YEAR)) isEqual:name]) {
       year = value;
     }
-    else if ([((NSString *) nil_chk(ComGoogleGsonInternalBindTypeAdapters_$27_MONTH)) isEqual:name]) {
+    else if ([((NSString *) nil_chk(ComGoogleGsonInternalBindTypeAdapters_27_MONTH)) isEqual:name]) {
       month = value;
     }
-    else if ([((NSString *) nil_chk(ComGoogleGsonInternalBindTypeAdapters_$27_DAY_OF_MONTH)) isEqual:name]) {
+    else if ([((NSString *) nil_chk(ComGoogleGsonInternalBindTypeAdapters_27_DAY_OF_MONTH)) isEqual:name]) {
       dayOfMonth = value;
     }
-    else if ([((NSString *) nil_chk(ComGoogleGsonInternalBindTypeAdapters_$27_HOUR_OF_DAY)) isEqual:name]) {
+    else if ([((NSString *) nil_chk(ComGoogleGsonInternalBindTypeAdapters_27_HOUR_OF_DAY)) isEqual:name]) {
       hourOfDay = value;
     }
-    else if ([((NSString *) nil_chk(ComGoogleGsonInternalBindTypeAdapters_$27_MINUTE)) isEqual:name]) {
+    else if ([((NSString *) nil_chk(ComGoogleGsonInternalBindTypeAdapters_27_MINUTE)) isEqual:name]) {
       minute = value;
     }
-    else if ([((NSString *) nil_chk(ComGoogleGsonInternalBindTypeAdapters_$27_SECOND)) isEqual:name]) {
+    else if ([((NSString *) nil_chk(ComGoogleGsonInternalBindTypeAdapters_27_SECOND)) isEqual:name]) {
       second = value;
     }
   }
@@ -2849,68 +2916,68 @@ ComGoogleGsonInternalBindTypeAdapters_$26_$1 *create_ComGoogleGsonInternalBindTy
     return;
   }
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) beginObject];
-  [outArg nameWithNSString:ComGoogleGsonInternalBindTypeAdapters_$27_YEAR];
+  [outArg nameWithNSString:ComGoogleGsonInternalBindTypeAdapters_27_YEAR];
   [outArg valueWithLong:[value getWithInt:JavaUtilCalendar_YEAR]];
-  [outArg nameWithNSString:ComGoogleGsonInternalBindTypeAdapters_$27_MONTH];
+  [outArg nameWithNSString:ComGoogleGsonInternalBindTypeAdapters_27_MONTH];
   [outArg valueWithLong:[value getWithInt:JavaUtilCalendar_MONTH]];
-  [outArg nameWithNSString:ComGoogleGsonInternalBindTypeAdapters_$27_DAY_OF_MONTH];
+  [outArg nameWithNSString:ComGoogleGsonInternalBindTypeAdapters_27_DAY_OF_MONTH];
   [outArg valueWithLong:[value getWithInt:JavaUtilCalendar_DAY_OF_MONTH]];
-  [outArg nameWithNSString:ComGoogleGsonInternalBindTypeAdapters_$27_HOUR_OF_DAY];
+  [outArg nameWithNSString:ComGoogleGsonInternalBindTypeAdapters_27_HOUR_OF_DAY];
   [outArg valueWithLong:[value getWithInt:JavaUtilCalendar_HOUR_OF_DAY]];
-  [outArg nameWithNSString:ComGoogleGsonInternalBindTypeAdapters_$27_MINUTE];
+  [outArg nameWithNSString:ComGoogleGsonInternalBindTypeAdapters_27_MINUTE];
   [outArg valueWithLong:[value getWithInt:JavaUtilCalendar_MINUTE]];
-  [outArg nameWithNSString:ComGoogleGsonInternalBindTypeAdapters_$27_SECOND];
+  [outArg nameWithNSString:ComGoogleGsonInternalBindTypeAdapters_27_SECOND];
   [outArg valueWithLong:[value getWithInt:JavaUtilCalendar_SECOND]];
   [outArg endObject];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$27_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaUtilCalendar;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaUtilCalendar;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "YEAR", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 7, -1, -1 },
-    { "MONTH", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 8, -1, -1 },
-    { "DAY_OF_MONTH", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 9, -1, -1 },
-    { "HOUR_OF_DAY", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 10, -1, -1 },
-    { "MINUTE", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 11, -1, -1 },
-    { "SECOND", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 12, -1, -1 },
+    { "YEAR", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 5, -1, -1 },
+    { "MONTH", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 6, -1, -1 },
+    { "DAY_OF_MONTH", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 7, -1, -1 },
+    { "HOUR_OF_DAY", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 8, -1, -1 },
+    { "MINUTE", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 9, -1, -1 },
+    { "SECOND", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 10, -1, -1 },
   };
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/util/Calendar;", "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilCalendar;", "(Lcom/google/gson/stream/JsonWriter;Ljava/util/Calendar;)V", &ComGoogleGsonInternalBindTypeAdapters_$27_YEAR, &ComGoogleGsonInternalBindTypeAdapters_$27_MONTH, &ComGoogleGsonInternalBindTypeAdapters_$27_DAY_OF_MONTH, &ComGoogleGsonInternalBindTypeAdapters_$27_HOUR_OF_DAY, &ComGoogleGsonInternalBindTypeAdapters_$27_MINUTE, &ComGoogleGsonInternalBindTypeAdapters_$27_SECOND, "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/util/Calendar;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$27 = { "", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x8008, 3, 6, 13, -1, -1, 14, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$27;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilCalendar;", &ComGoogleGsonInternalBindTypeAdapters_27_YEAR, &ComGoogleGsonInternalBindTypeAdapters_27_MONTH, &ComGoogleGsonInternalBindTypeAdapters_27_DAY_OF_MONTH, &ComGoogleGsonInternalBindTypeAdapters_27_HOUR_OF_DAY, &ComGoogleGsonInternalBindTypeAdapters_27_MINUTE, &ComGoogleGsonInternalBindTypeAdapters_27_SECOND, "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/util/Calendar;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_27 = { "", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x8008, 3, 6, 11, -1, -1, 12, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_27;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$27_init(ComGoogleGsonInternalBindTypeAdapters_$27 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_27_init(ComGoogleGsonInternalBindTypeAdapters_27 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$27 *new_ComGoogleGsonInternalBindTypeAdapters_$27_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$27, init)
+ComGoogleGsonInternalBindTypeAdapters_27 *new_ComGoogleGsonInternalBindTypeAdapters_27_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_27, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$27 *create_ComGoogleGsonInternalBindTypeAdapters_$27_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$27, init)
+ComGoogleGsonInternalBindTypeAdapters_27 *create_ComGoogleGsonInternalBindTypeAdapters_27_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_27, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$28
+@implementation ComGoogleGsonInternalBindTypeAdapters_28
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_28_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaUtilLocale *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -2947,45 +3014,45 @@ ComGoogleGsonInternalBindTypeAdapters_$27 *create_ComGoogleGsonInternalBindTypeA
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSString:value == nil ? nil : [value description]];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$28_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaUtilLocale;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaUtilLocale;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/util/Locale;", "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilLocale;", "(Lcom/google/gson/stream/JsonWriter;Ljava/util/Locale;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/util/Locale;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$28 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$28;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilLocale;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Ljava/util/Locale;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_28 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_28;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$28_init(ComGoogleGsonInternalBindTypeAdapters_$28 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_28_init(ComGoogleGsonInternalBindTypeAdapters_28 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$28 *new_ComGoogleGsonInternalBindTypeAdapters_$28_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$28, init)
+ComGoogleGsonInternalBindTypeAdapters_28 *new_ComGoogleGsonInternalBindTypeAdapters_28_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_28, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$28 *create_ComGoogleGsonInternalBindTypeAdapters_$28_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$28, init)
+ComGoogleGsonInternalBindTypeAdapters_28 *create_ComGoogleGsonInternalBindTypeAdapters_28_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_28, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$29
+@implementation ComGoogleGsonInternalBindTypeAdapters_29
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_29_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (ComGoogleGsonJsonElement *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   {
@@ -3066,50 +3133,144 @@ ComGoogleGsonInternalBindTypeAdapters_$28 *create_ComGoogleGsonInternalBindTypeA
   }
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$29_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LComGoogleGsonJsonElement;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LComGoogleGsonJsonElement;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Lcom/google/gson/JsonElement;", "write", "LComGoogleGsonStreamJsonWriter;LComGoogleGsonJsonElement;", "(Lcom/google/gson/stream/JsonWriter;Lcom/google/gson/JsonElement;)V", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Lcom/google/gson/JsonElement;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$29 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, -1, 8, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$29;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LComGoogleGsonJsonElement;", "LComGoogleGsonInternalBindTypeAdapters;", "Lcom/google/gson/TypeAdapter<Lcom/google/gson/JsonElement;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_29 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, -1, 6, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_29;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$29_init(ComGoogleGsonInternalBindTypeAdapters_$29 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_29_init(ComGoogleGsonInternalBindTypeAdapters_29 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$29 *new_ComGoogleGsonInternalBindTypeAdapters_$29_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$29, init)
+ComGoogleGsonInternalBindTypeAdapters_29 *new_ComGoogleGsonInternalBindTypeAdapters_29_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_29, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$29 *create_ComGoogleGsonInternalBindTypeAdapters_$29_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$29, init)
+ComGoogleGsonInternalBindTypeAdapters_29 *create_ComGoogleGsonInternalBindTypeAdapters_29_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_29, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$30
+@implementation ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter
+
+- (instancetype)initWithIOSClass:(IOSClass *)classOfT {
+  ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter_initWithIOSClass_(self, classOfT);
+  return self;
+}
+
+- (JavaLangEnum *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
+  if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
+    [inArg nextNull];
+    return nil;
+  }
+  return [((id<JavaUtilMap>) nil_chk(nameToConstant_)) getWithId:[inArg nextString]];
+}
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaLangEnum *)value {
+  [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSString:value == nil ? nil : [((id<JavaUtilMap>) nil_chk(constantToName_)) getWithId:value]];
+}
+
+- (void)dealloc {
+  RELEASE_(nameToConstant_);
+  RELEASE_(constantToName_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, 0, -1, 1, -1, -1 },
+    { NULL, "LJavaLangEnum;", 0x1, 2, 3, 4, 5, -1, -1 },
+    { NULL, "V", 0x1, 6, 7, 4, 8, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithIOSClass:);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "nameToConstant_", "LJavaUtilMap;", .constantValue.asLong = 0, 0x12, -1, -1, 9, -1 },
+    { "constantToName_", "LJavaUtilMap;", .constantValue.asLong = 0, 0x12, -1, -1, 10, -1 },
+  };
+  static const void *ptrTable[] = { "LIOSClass;", "(Ljava/lang/Class<TT;>;)V", "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)TT;", "write", "LComGoogleGsonStreamJsonWriter;LJavaLangEnum;", "(Lcom/google/gson/stream/JsonWriter;TT;)V", "Ljava/util/Map<Ljava/lang/String;TT;>;", "Ljava/util/Map<TT;Ljava/lang/String;>;", "LComGoogleGsonInternalBindTypeAdapters;", "<T:Ljava/lang/Enum<TT;>;>Lcom/google/gson/TypeAdapter<TT;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter = { "EnumTypeAdapter", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x1a, 3, 2, 11, -1, -1, 12, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter;
+}
+
+@end
+
+void ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter_initWithIOSClass_(ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter *self, IOSClass *classOfT) {
+  ComGoogleGsonTypeAdapter_init(self);
+  JreStrongAssignAndConsume(&self->nameToConstant_, new_JavaUtilHashMap_init());
+  JreStrongAssignAndConsume(&self->constantToName_, new_JavaUtilHashMap_init());
+  @try {
+    {
+      IOSObjectArray *a__ = [((IOSClass *) nil_chk(classOfT)) getEnumConstants];
+      JavaLangEnum * const *b__ = ((IOSObjectArray *) nil_chk(a__))->buffer_;
+      JavaLangEnum * const *e__ = b__ + a__->size_;
+      while (b__ < e__) {
+        JavaLangEnum *constant = *b__++;
+        NSString *name = [((JavaLangEnum *) nil_chk(constant)) name];
+        id<ComGoogleGsonAnnotationsSerializedName> annotation = ((id<ComGoogleGsonAnnotationsSerializedName>) [((JavaLangReflectField *) nil_chk([classOfT getField:name])) getAnnotationWithIOSClass:ComGoogleGsonAnnotationsSerializedName_class_()]);
+        if (annotation != nil) {
+          name = [annotation value];
+          {
+            IOSObjectArray *a__ = [annotation alternate];
+            NSString * const *b__ = ((IOSObjectArray *) nil_chk(a__))->buffer_;
+            NSString * const *e__ = b__ + a__->size_;
+            while (b__ < e__) {
+              NSString *alternate = *b__++;
+              [self->nameToConstant_ putWithId:alternate withId:constant];
+            }
+          }
+        }
+        [self->nameToConstant_ putWithId:name withId:constant];
+        [self->constantToName_ putWithId:constant withId:name];
+      }
+    }
+  }
+  @catch (JavaLangNoSuchFieldException *e) {
+    @throw create_JavaLangAssertionError_initWithNSString_withNSException_(JreStrcat("$$", @"Missing field in ", [classOfT getName]), e);
+  }
+}
+
+ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter *new_ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter_initWithIOSClass_(IOSClass *classOfT) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter, initWithIOSClass_, classOfT)
+}
+
+ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter *create_ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter_initWithIOSClass_(IOSClass *classOfT) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter, initWithIOSClass_, classOfT)
+}
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter)
+
+@implementation ComGoogleGsonInternalBindTypeAdapters_30
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindTypeAdapters_30_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
                         withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken {
   IOSClass *rawType = [((ComGoogleGsonReflectTypeToken *) nil_chk(typeToken)) getRawType];
-  if (![JavaLangEnum_class_() isAssignableFrom:rawType] || rawType == (id) JavaLangEnum_class_()) {
+  if (![JavaLangEnum_class_() isAssignableFrom:rawType] || rawType == JavaLangEnum_class_()) {
     return nil;
   }
   if (![((IOSClass *) nil_chk(rawType)) isEnum]) {
@@ -3118,55 +3279,48 @@ ComGoogleGsonInternalBindTypeAdapters_$29 *create_ComGoogleGsonInternalBindTypeA
   return create_ComGoogleGsonInternalBindTypeAdapters_EnumTypeAdapter_initWithIOSClass_(rawType);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindTypeAdapters_$30_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LComGoogleGsonTypeAdapter;", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LComGoogleGsonTypeAdapter;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "create", "LComGoogleGsonGson;LComGoogleGsonReflectTypeToken;", "<T:Ljava/lang/Object;>(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken<TT;>;)Lcom/google/gson/TypeAdapter<TT;>;", "LComGoogleGsonInternalBindTypeAdapters;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$30 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, -1, -1, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$30;
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_30 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, -1, -1, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_30;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$30_init(ComGoogleGsonInternalBindTypeAdapters_$30 *self) {
+void ComGoogleGsonInternalBindTypeAdapters_30_init(ComGoogleGsonInternalBindTypeAdapters_30 *self) {
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$30 *new_ComGoogleGsonInternalBindTypeAdapters_$30_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$30, init)
+ComGoogleGsonInternalBindTypeAdapters_30 *new_ComGoogleGsonInternalBindTypeAdapters_30_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_30, init)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$30 *create_ComGoogleGsonInternalBindTypeAdapters_$30_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$30, init)
+ComGoogleGsonInternalBindTypeAdapters_30 *create_ComGoogleGsonInternalBindTypeAdapters_30_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_30, init)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$31
+@implementation ComGoogleGsonInternalBindTypeAdapters_31
+
+- (instancetype)initWithComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)capture$0
+                         withComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$1 {
+  ComGoogleGsonInternalBindTypeAdapters_31_initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_(self, capture$0, capture$1);
+  return self;
+}
 
 - (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
                         withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken {
   return [((ComGoogleGsonReflectTypeToken *) nil_chk(typeToken)) isEqual:val$type_] ? val$typeAdapter_ : nil;
 }
 
-- (instancetype)initWithComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)capture$0
-                         withComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$1 {
-  ComGoogleGsonInternalBindTypeAdapters_$31_initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_(self, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$type_);
   RELEASE_(val$typeAdapter_);
@@ -3175,56 +3329,56 @@ ComGoogleGsonInternalBindTypeAdapters_$30 *create_ComGoogleGsonInternalBindTypeA
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LComGoogleGsonTypeAdapter;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
-  methods[1].selector = @selector(initWithComGoogleGsonReflectTypeToken:withComGoogleGsonTypeAdapter:);
+  methods[0].selector = @selector(initWithComGoogleGsonReflectTypeToken:withComGoogleGsonTypeAdapter:);
+  methods[1].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$type_", "LComGoogleGsonReflectTypeToken;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-    { "val$typeAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
+    { "val$type_", "LComGoogleGsonReflectTypeToken;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$typeAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
   };
-  static const void *ptrTable[] = { "create", "LComGoogleGsonGson;LComGoogleGsonReflectTypeToken;", "<T:Ljava/lang/Object;>(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken<TT;>;)Lcom/google/gson/TypeAdapter<TT;>;", "LComGoogleGsonReflectTypeToken;LComGoogleGsonTypeAdapter;", "(Lcom/google/gson/reflect/TypeToken<TTT;>;Lcom/google/gson/TypeAdapter<TTT;>;)V", "Lcom/google/gson/reflect/TypeToken<TTT;>;", "Lcom/google/gson/TypeAdapter<TTT;>;", "LComGoogleGsonInternalBindTypeAdapters;", "newFactoryWithComGoogleGsonReflectTypeToken:withComGoogleGsonTypeAdapter:" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$31 = { "", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x8008, 2, 2, 7, -1, 8, -1, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$31;
+  static const void *ptrTable[] = { "create", "LComGoogleGsonGson;LComGoogleGsonReflectTypeToken;", "<T:Ljava/lang/Object;>(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken<TT;>;)Lcom/google/gson/TypeAdapter<TT;>;", "Lcom/google/gson/reflect/TypeToken<TTT;>;", "Lcom/google/gson/TypeAdapter<TTT;>;", "LComGoogleGsonInternalBindTypeAdapters;", "newFactoryWithComGoogleGsonReflectTypeToken:withComGoogleGsonTypeAdapter:" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_31 = { "", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x8008, 2, 2, 5, -1, 6, -1, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_31;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$31_initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_$31 *self, ComGoogleGsonReflectTypeToken *capture$0, ComGoogleGsonTypeAdapter *capture$1) {
+void ComGoogleGsonInternalBindTypeAdapters_31_initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_31 *self, ComGoogleGsonReflectTypeToken *capture$0, ComGoogleGsonTypeAdapter *capture$1) {
   JreStrongAssign(&self->val$type_, capture$0);
   JreStrongAssign(&self->val$typeAdapter_, capture$1);
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$31 *new_ComGoogleGsonInternalBindTypeAdapters_$31_initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_(ComGoogleGsonReflectTypeToken *capture$0, ComGoogleGsonTypeAdapter *capture$1) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$31, initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_, capture$0, capture$1)
+ComGoogleGsonInternalBindTypeAdapters_31 *new_ComGoogleGsonInternalBindTypeAdapters_31_initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_(ComGoogleGsonReflectTypeToken *capture$0, ComGoogleGsonTypeAdapter *capture$1) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_31, initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_, capture$0, capture$1)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$31 *create_ComGoogleGsonInternalBindTypeAdapters_$31_initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_(ComGoogleGsonReflectTypeToken *capture$0, ComGoogleGsonTypeAdapter *capture$1) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$31, initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_, capture$0, capture$1)
+ComGoogleGsonInternalBindTypeAdapters_31 *create_ComGoogleGsonInternalBindTypeAdapters_31_initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_(ComGoogleGsonReflectTypeToken *capture$0, ComGoogleGsonTypeAdapter *capture$1) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_31, initWithComGoogleGsonReflectTypeToken_withComGoogleGsonTypeAdapter_, capture$0, capture$1)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$32
+@implementation ComGoogleGsonInternalBindTypeAdapters_32
+
+- (instancetype)initWithIOSClass:(IOSClass *)capture$0
+    withComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$1 {
+  ComGoogleGsonInternalBindTypeAdapters_32_initWithIOSClass_withComGoogleGsonTypeAdapter_(self, capture$0, capture$1);
+  return self;
+}
 
 - (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
                         withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken {
-  return [((ComGoogleGsonReflectTypeToken *) nil_chk(typeToken)) getRawType] == (id) val$type_ ? val$typeAdapter_ : nil;
+  return [((ComGoogleGsonReflectTypeToken *) nil_chk(typeToken)) getRawType] == val$type_ ? val$typeAdapter_ : nil;
 }
 
 - (NSString *)description {
   return JreStrcat("$$$@C", @"Factory[type=", [((IOSClass *) nil_chk(val$type_)) getName], @",adapter=", val$typeAdapter_, ']');
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)capture$0
-    withComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$1 {
-  ComGoogleGsonInternalBindTypeAdapters_$32_initWithIOSClass_withComGoogleGsonTypeAdapter_(self, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$type_);
   RELEASE_(val$typeAdapter_);
@@ -3233,58 +3387,58 @@ ComGoogleGsonInternalBindTypeAdapters_$31 *create_ComGoogleGsonInternalBindTypeA
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LComGoogleGsonTypeAdapter;", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "LNSString;", 0x1, 3, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, 5, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
-  methods[1].selector = @selector(description);
-  methods[2].selector = @selector(initWithIOSClass:withComGoogleGsonTypeAdapter:);
+  methods[0].selector = @selector(initWithIOSClass:withComGoogleGsonTypeAdapter:);
+  methods[1].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
+  methods[2].selector = @selector(description);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$type_", "LIOSClass;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
-    { "val$typeAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$type_", "LIOSClass;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+    { "val$typeAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
   };
-  static const void *ptrTable[] = { "create", "LComGoogleGsonGson;LComGoogleGsonReflectTypeToken;", "<T:Ljava/lang/Object;>(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken<TT;>;)Lcom/google/gson/TypeAdapter<TT;>;", "toString", "LIOSClass;LComGoogleGsonTypeAdapter;", "(Ljava/lang/Class<TTT;>;Lcom/google/gson/TypeAdapter<TTT;>;)V", "Ljava/lang/Class<TTT;>;", "Lcom/google/gson/TypeAdapter<TTT;>;", "LComGoogleGsonInternalBindTypeAdapters;", "newFactoryWithIOSClass:withComGoogleGsonTypeAdapter:" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$32 = { "", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x8008, 3, 2, 8, -1, 9, -1, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$32;
+  static const void *ptrTable[] = { "create", "LComGoogleGsonGson;LComGoogleGsonReflectTypeToken;", "<T:Ljava/lang/Object;>(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken<TT;>;)Lcom/google/gson/TypeAdapter<TT;>;", "toString", "Ljava/lang/Class<TTT;>;", "Lcom/google/gson/TypeAdapter<TTT;>;", "LComGoogleGsonInternalBindTypeAdapters;", "newFactoryWithIOSClass:withComGoogleGsonTypeAdapter:" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_32 = { "", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x8008, 3, 2, 6, -1, 7, -1, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_32;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$32_initWithIOSClass_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_$32 *self, IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1) {
+void ComGoogleGsonInternalBindTypeAdapters_32_initWithIOSClass_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_32 *self, IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1) {
   JreStrongAssign(&self->val$type_, capture$0);
   JreStrongAssign(&self->val$typeAdapter_, capture$1);
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$32 *new_ComGoogleGsonInternalBindTypeAdapters_$32_initWithIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$32, initWithIOSClass_withComGoogleGsonTypeAdapter_, capture$0, capture$1)
+ComGoogleGsonInternalBindTypeAdapters_32 *new_ComGoogleGsonInternalBindTypeAdapters_32_initWithIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_32, initWithIOSClass_withComGoogleGsonTypeAdapter_, capture$0, capture$1)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$32 *create_ComGoogleGsonInternalBindTypeAdapters_$32_initWithIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$32, initWithIOSClass_withComGoogleGsonTypeAdapter_, capture$0, capture$1)
+ComGoogleGsonInternalBindTypeAdapters_32 *create_ComGoogleGsonInternalBindTypeAdapters_32_initWithIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_32, initWithIOSClass_withComGoogleGsonTypeAdapter_, capture$0, capture$1)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$33
-
-- (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
-                        withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken {
-  IOSClass *rawType = [((ComGoogleGsonReflectTypeToken *) nil_chk(typeToken)) getRawType];
-  return (rawType == (id) val$unboxed_ || rawType == (id) val$boxed_) ? val$typeAdapter_ : nil;
-}
-
-- (NSString *)description {
-  return JreStrcat("$$C$$@C", @"Factory[type=", [((IOSClass *) nil_chk(val$boxed_)) getName], '+', [((IOSClass *) nil_chk(val$unboxed_)) getName], @",adapter=", val$typeAdapter_, ']');
-}
+@implementation ComGoogleGsonInternalBindTypeAdapters_33
 
 - (instancetype)initWithIOSClass:(IOSClass *)capture$0
                     withIOSClass:(IOSClass *)capture$1
     withComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$2 {
-  ComGoogleGsonInternalBindTypeAdapters_$33_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(self, capture$0, capture$1, capture$2);
+  ComGoogleGsonInternalBindTypeAdapters_33_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(self, capture$0, capture$1, capture$2);
   return self;
+}
+
+- (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
+                        withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken {
+  IOSClass *rawType = [((ComGoogleGsonReflectTypeToken *) nil_chk(typeToken)) getRawType];
+  return (rawType == val$unboxed_ || rawType == val$boxed_) ? val$typeAdapter_ : nil;
+}
+
+- (NSString *)description {
+  return JreStrcat("$$C$$@C", @"Factory[type=", [((IOSClass *) nil_chk(val$boxed_)) getName], '+', [((IOSClass *) nil_chk(val$unboxed_)) getName], @",adapter=", val$typeAdapter_, ']');
 }
 
 - (void)dealloc {
@@ -3296,60 +3450,60 @@ ComGoogleGsonInternalBindTypeAdapters_$32 *create_ComGoogleGsonInternalBindTypeA
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LComGoogleGsonTypeAdapter;", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "LNSString;", 0x1, 3, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, 5, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
-  methods[1].selector = @selector(description);
-  methods[2].selector = @selector(initWithIOSClass:withIOSClass:withComGoogleGsonTypeAdapter:);
+  methods[0].selector = @selector(initWithIOSClass:withIOSClass:withComGoogleGsonTypeAdapter:);
+  methods[1].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
+  methods[2].selector = @selector(description);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$unboxed_", "LIOSClass;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
-    { "val$boxed_", "LIOSClass;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
-    { "val$typeAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$unboxed_", "LIOSClass;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+    { "val$boxed_", "LIOSClass;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+    { "val$typeAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
   };
-  static const void *ptrTable[] = { "create", "LComGoogleGsonGson;LComGoogleGsonReflectTypeToken;", "<T:Ljava/lang/Object;>(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken<TT;>;)Lcom/google/gson/TypeAdapter<TT;>;", "toString", "LIOSClass;LIOSClass;LComGoogleGsonTypeAdapter;", "(Ljava/lang/Class<TTT;>;Ljava/lang/Class<TTT;>;Lcom/google/gson/TypeAdapter<-TTT;>;)V", "Ljava/lang/Class<TTT;>;", "Lcom/google/gson/TypeAdapter<-TTT;>;", "LComGoogleGsonInternalBindTypeAdapters;", "newFactoryWithIOSClass:withIOSClass:withComGoogleGsonTypeAdapter:" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$33 = { "", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x8008, 3, 3, 8, -1, 9, -1, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$33;
+  static const void *ptrTable[] = { "create", "LComGoogleGsonGson;LComGoogleGsonReflectTypeToken;", "<T:Ljava/lang/Object;>(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken<TT;>;)Lcom/google/gson/TypeAdapter<TT;>;", "toString", "Ljava/lang/Class<TTT;>;", "Lcom/google/gson/TypeAdapter<-TTT;>;", "LComGoogleGsonInternalBindTypeAdapters;", "newFactoryWithIOSClass:withIOSClass:withComGoogleGsonTypeAdapter:" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_33 = { "", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x8008, 3, 3, 6, -1, 7, -1, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_33;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$33_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_$33 *self, IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2) {
+void ComGoogleGsonInternalBindTypeAdapters_33_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_33 *self, IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2) {
   JreStrongAssign(&self->val$unboxed_, capture$0);
   JreStrongAssign(&self->val$boxed_, capture$1);
   JreStrongAssign(&self->val$typeAdapter_, capture$2);
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$33 *new_ComGoogleGsonInternalBindTypeAdapters_$33_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$33, initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_, capture$0, capture$1, capture$2)
+ComGoogleGsonInternalBindTypeAdapters_33 *new_ComGoogleGsonInternalBindTypeAdapters_33_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_33, initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_, capture$0, capture$1, capture$2)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$33 *create_ComGoogleGsonInternalBindTypeAdapters_$33_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$33, initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_, capture$0, capture$1, capture$2)
+ComGoogleGsonInternalBindTypeAdapters_33 *create_ComGoogleGsonInternalBindTypeAdapters_33_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_33, initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_, capture$0, capture$1, capture$2)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$34
-
-- (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
-                        withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken {
-  IOSClass *rawType = [((ComGoogleGsonReflectTypeToken *) nil_chk(typeToken)) getRawType];
-  return (rawType == (id) val$base_ || rawType == (id) val$sub_) ? val$typeAdapter_ : nil;
-}
-
-- (NSString *)description {
-  return JreStrcat("$$C$$@C", @"Factory[type=", [((IOSClass *) nil_chk(val$base_)) getName], '+', [((IOSClass *) nil_chk(val$sub_)) getName], @",adapter=", val$typeAdapter_, ']');
-}
+@implementation ComGoogleGsonInternalBindTypeAdapters_34
 
 - (instancetype)initWithIOSClass:(IOSClass *)capture$0
                     withIOSClass:(IOSClass *)capture$1
     withComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$2 {
-  ComGoogleGsonInternalBindTypeAdapters_$34_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(self, capture$0, capture$1, capture$2);
+  ComGoogleGsonInternalBindTypeAdapters_34_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(self, capture$0, capture$1, capture$2);
   return self;
+}
+
+- (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
+                        withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken {
+  IOSClass *rawType = [((ComGoogleGsonReflectTypeToken *) nil_chk(typeToken)) getRawType];
+  return (rawType == val$base_ || rawType == val$sub_) ? val$typeAdapter_ : nil;
+}
+
+- (NSString *)description {
+  return JreStrcat("$$C$$@C", @"Factory[type=", [((IOSClass *) nil_chk(val$base_)) getName], '+', [((IOSClass *) nil_chk(val$sub_)) getName], @",adapter=", val$typeAdapter_, ']');
 }
 
 - (void)dealloc {
@@ -3361,44 +3515,50 @@ ComGoogleGsonInternalBindTypeAdapters_$33 *create_ComGoogleGsonInternalBindTypeA
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LComGoogleGsonTypeAdapter;", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "LNSString;", 0x1, 3, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, 5, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
-  methods[1].selector = @selector(description);
-  methods[2].selector = @selector(initWithIOSClass:withIOSClass:withComGoogleGsonTypeAdapter:);
+  methods[0].selector = @selector(initWithIOSClass:withIOSClass:withComGoogleGsonTypeAdapter:);
+  methods[1].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
+  methods[2].selector = @selector(description);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$base_", "LIOSClass;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
-    { "val$sub_", "LIOSClass;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
-    { "val$typeAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "val$base_", "LIOSClass;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+    { "val$sub_", "LIOSClass;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$typeAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
   };
-  static const void *ptrTable[] = { "create", "LComGoogleGsonGson;LComGoogleGsonReflectTypeToken;", "<T:Ljava/lang/Object;>(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken<TT;>;)Lcom/google/gson/TypeAdapter<TT;>;", "toString", "LIOSClass;LIOSClass;LComGoogleGsonTypeAdapter;", "(Ljava/lang/Class<TTT;>;Ljava/lang/Class<+TTT;>;Lcom/google/gson/TypeAdapter<-TTT;>;)V", "Ljava/lang/Class<TTT;>;", "Ljava/lang/Class<+TTT;>;", "Lcom/google/gson/TypeAdapter<-TTT;>;", "LComGoogleGsonInternalBindTypeAdapters;", "newFactoryForMultipleTypesWithIOSClass:withIOSClass:withComGoogleGsonTypeAdapter:" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$34 = { "", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x8008, 3, 3, 9, -1, 10, -1, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$34;
+  static const void *ptrTable[] = { "create", "LComGoogleGsonGson;LComGoogleGsonReflectTypeToken;", "<T:Ljava/lang/Object;>(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken<TT;>;)Lcom/google/gson/TypeAdapter<TT;>;", "toString", "Ljava/lang/Class<TTT;>;", "Ljava/lang/Class<+TTT;>;", "Lcom/google/gson/TypeAdapter<-TTT;>;", "LComGoogleGsonInternalBindTypeAdapters;", "newFactoryForMultipleTypesWithIOSClass:withIOSClass:withComGoogleGsonTypeAdapter:" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_34 = { "", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x8008, 3, 3, 7, -1, 8, -1, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_34;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$34_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_$34 *self, IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2) {
+void ComGoogleGsonInternalBindTypeAdapters_34_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_34 *self, IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2) {
   JreStrongAssign(&self->val$base_, capture$0);
   JreStrongAssign(&self->val$sub_, capture$1);
   JreStrongAssign(&self->val$typeAdapter_, capture$2);
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$34 *new_ComGoogleGsonInternalBindTypeAdapters_$34_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$34, initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_, capture$0, capture$1, capture$2)
+ComGoogleGsonInternalBindTypeAdapters_34 *new_ComGoogleGsonInternalBindTypeAdapters_34_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_34, initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_, capture$0, capture$1, capture$2)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$34 *create_ComGoogleGsonInternalBindTypeAdapters_$34_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$34, initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_, capture$0, capture$1, capture$2)
+ComGoogleGsonInternalBindTypeAdapters_34 *create_ComGoogleGsonInternalBindTypeAdapters_34_initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, IOSClass *capture$1, ComGoogleGsonTypeAdapter *capture$2) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_34, initWithIOSClass_withIOSClass_withComGoogleGsonTypeAdapter_, capture$0, capture$1, capture$2)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$35
+@implementation ComGoogleGsonInternalBindTypeAdapters_35
+
+- (instancetype)initWithIOSClass:(IOSClass *)capture$0
+    withComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$1 {
+  ComGoogleGsonInternalBindTypeAdapters_35_initWithIOSClass_withComGoogleGsonTypeAdapter_(self, capture$0, capture$1);
+  return self;
+}
 
 - (ComGoogleGsonTypeAdapter *)createWithComGoogleGsonGson:(ComGoogleGsonGson *)gson
                         withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)typeToken {
@@ -3406,17 +3566,11 @@ ComGoogleGsonInternalBindTypeAdapters_$34 *create_ComGoogleGsonInternalBindTypeA
   if (![((IOSClass *) nil_chk(val$clazz_)) isAssignableFrom:requestedType]) {
     return nil;
   }
-  return create_ComGoogleGsonInternalBindTypeAdapters_$35_$1_initWithComGoogleGsonInternalBindTypeAdapters_$35_withIOSClass_(self, requestedType);
+  return create_ComGoogleGsonInternalBindTypeAdapters_35_1_initWithComGoogleGsonInternalBindTypeAdapters_35_withIOSClass_(self, requestedType);
 }
 
 - (NSString *)description {
   return JreStrcat("$$$@C", @"Factory[typeHierarchy=", [((IOSClass *) nil_chk(val$clazz_)) getName], @",adapter=", val$typeAdapter_, ']');
-}
-
-- (instancetype)initWithIOSClass:(IOSClass *)capture$0
-    withComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$1 {
-  ComGoogleGsonInternalBindTypeAdapters_$35_initWithIOSClass_withComGoogleGsonTypeAdapter_(self, capture$0, capture$1);
-  return self;
 }
 
 - (void)dealloc {
@@ -3427,42 +3581,48 @@ ComGoogleGsonInternalBindTypeAdapters_$34 *create_ComGoogleGsonInternalBindTypeA
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LComGoogleGsonTypeAdapter;", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "LNSString;", 0x1, 3, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, 5, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
-  methods[1].selector = @selector(description);
-  methods[2].selector = @selector(initWithIOSClass:withComGoogleGsonTypeAdapter:);
+  methods[0].selector = @selector(initWithIOSClass:withComGoogleGsonTypeAdapter:);
+  methods[1].selector = @selector(createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:);
+  methods[2].selector = @selector(description);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$clazz_", "LIOSClass;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
-    { "val$typeAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$clazz_", "LIOSClass;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+    { "val$typeAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
   };
-  static const void *ptrTable[] = { "create", "LComGoogleGsonGson;LComGoogleGsonReflectTypeToken;", "<T2:Ljava/lang/Object;>(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken<TT2;>;)Lcom/google/gson/TypeAdapter<TT2;>;", "toString", "LIOSClass;LComGoogleGsonTypeAdapter;", "(Ljava/lang/Class<TT1;>;Lcom/google/gson/TypeAdapter<TT1;>;)V", "Ljava/lang/Class<TT1;>;", "Lcom/google/gson/TypeAdapter<TT1;>;", "LComGoogleGsonInternalBindTypeAdapters;", "newTypeHierarchyFactoryWithIOSClass:withComGoogleGsonTypeAdapter:" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$35 = { "", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x8008, 3, 2, 8, -1, 9, -1, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$35;
+  static const void *ptrTable[] = { "create", "LComGoogleGsonGson;LComGoogleGsonReflectTypeToken;", "<T2:Ljava/lang/Object;>(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken<TT2;>;)Lcom/google/gson/TypeAdapter<TT2;>;", "toString", "Ljava/lang/Class<TT1;>;", "Lcom/google/gson/TypeAdapter<TT1;>;", "LComGoogleGsonInternalBindTypeAdapters;", "newTypeHierarchyFactoryWithIOSClass:withComGoogleGsonTypeAdapter:" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_35 = { "", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x8008, 3, 2, 6, -1, 7, -1, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_35;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$35_initWithIOSClass_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_$35 *self, IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1) {
+void ComGoogleGsonInternalBindTypeAdapters_35_initWithIOSClass_withComGoogleGsonTypeAdapter_(ComGoogleGsonInternalBindTypeAdapters_35 *self, IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1) {
   JreStrongAssign(&self->val$clazz_, capture$0);
   JreStrongAssign(&self->val$typeAdapter_, capture$1);
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$35 *new_ComGoogleGsonInternalBindTypeAdapters_$35_initWithIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$35, initWithIOSClass_withComGoogleGsonTypeAdapter_, capture$0, capture$1)
+ComGoogleGsonInternalBindTypeAdapters_35 *new_ComGoogleGsonInternalBindTypeAdapters_35_initWithIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_35, initWithIOSClass_withComGoogleGsonTypeAdapter_, capture$0, capture$1)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$35 *create_ComGoogleGsonInternalBindTypeAdapters_$35_initWithIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$35, initWithIOSClass_withComGoogleGsonTypeAdapter_, capture$0, capture$1)
+ComGoogleGsonInternalBindTypeAdapters_35 *create_ComGoogleGsonInternalBindTypeAdapters_35_initWithIOSClass_withComGoogleGsonTypeAdapter_(IOSClass *capture$0, ComGoogleGsonTypeAdapter *capture$1) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_35, initWithIOSClass_withComGoogleGsonTypeAdapter_, capture$0, capture$1)
 }
 
-@implementation ComGoogleGsonInternalBindTypeAdapters_$35_$1
+@implementation ComGoogleGsonInternalBindTypeAdapters_35_1
+
+- (instancetype)initWithComGoogleGsonInternalBindTypeAdapters_35:(ComGoogleGsonInternalBindTypeAdapters_35 *)outer$
+                                                    withIOSClass:(IOSClass *)capture$0 {
+  ComGoogleGsonInternalBindTypeAdapters_35_1_initWithComGoogleGsonInternalBindTypeAdapters_35_withIOSClass_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
                                         withId:(id)value {
@@ -3477,12 +3637,6 @@ ComGoogleGsonInternalBindTypeAdapters_$35 *create_ComGoogleGsonInternalBindTypeA
   return result;
 }
 
-- (instancetype)initWithComGoogleGsonInternalBindTypeAdapters_$35:(ComGoogleGsonInternalBindTypeAdapters_$35 *)outer$
-                                                     withIOSClass:(IOSClass *)capture$0 {
-  ComGoogleGsonInternalBindTypeAdapters_$35_$1_initWithComGoogleGsonInternalBindTypeAdapters_$35_withIOSClass_(self, outer$, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$requestedType_);
@@ -3491,37 +3645,37 @@ ComGoogleGsonInternalBindTypeAdapters_$35 *create_ComGoogleGsonInternalBindTypeA
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, 2, 3, -1, -1 },
     { NULL, "LNSObject;", 0x1, 4, 5, 2, 6, -1, -1 },
-    { NULL, NULL, 0x0, -1, 7, -1, 8, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[2].selector = @selector(initWithComGoogleGsonInternalBindTypeAdapters_$35:withIOSClass:);
+  methods[0].selector = @selector(initWithComGoogleGsonInternalBindTypeAdapters_35:withIOSClass:);
+  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
+  methods[2].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LComGoogleGsonInternalBindTypeAdapters_$35;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$requestedType_", "LIOSClass;", .constantValue.asLong = 0, 0x1012, -1, -1, 9, -1 },
+    { "this$0_", "LComGoogleGsonInternalBindTypeAdapters_35;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "val$requestedType_", "LIOSClass;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
   };
-  static const void *ptrTable[] = { "write", "LComGoogleGsonStreamJsonWriter;LNSObject;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonWriter;TT1;)V", "read", "LComGoogleGsonStreamJsonReader;", "(Lcom/google/gson/stream/JsonReader;)TT1;", "LComGoogleGsonInternalBindTypeAdapters_$35;LIOSClass;", "(Lcom/google/gson/internal/bind/TypeAdapters$35;Ljava/lang/Class<-TT2;>;)V", "Ljava/lang/Class<-TT2;>;", "LComGoogleGsonInternalBindTypeAdapters_$35;", "createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:", "Lcom/google/gson/TypeAdapter<TT1;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_$35_$1 = { "", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x8008, 3, 2, 10, -1, 11, 12, -1 };
-  return &_ComGoogleGsonInternalBindTypeAdapters_$35_$1;
+  static const void *ptrTable[] = { "write", "LComGoogleGsonStreamJsonWriter;LNSObject;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonWriter;TT1;)V", "read", "LComGoogleGsonStreamJsonReader;", "(Lcom/google/gson/stream/JsonReader;)TT1;", "Ljava/lang/Class<-TT2;>;", "LComGoogleGsonInternalBindTypeAdapters_35;", "createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:", "Lcom/google/gson/TypeAdapter<TT1;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindTypeAdapters_35_1 = { "", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x8008, 3, 2, 8, -1, 9, 10, -1 };
+  return &_ComGoogleGsonInternalBindTypeAdapters_35_1;
 }
 
 @end
 
-void ComGoogleGsonInternalBindTypeAdapters_$35_$1_initWithComGoogleGsonInternalBindTypeAdapters_$35_withIOSClass_(ComGoogleGsonInternalBindTypeAdapters_$35_$1 *self, ComGoogleGsonInternalBindTypeAdapters_$35 *outer$, IOSClass *capture$0) {
+void ComGoogleGsonInternalBindTypeAdapters_35_1_initWithComGoogleGsonInternalBindTypeAdapters_35_withIOSClass_(ComGoogleGsonInternalBindTypeAdapters_35_1 *self, ComGoogleGsonInternalBindTypeAdapters_35 *outer$, IOSClass *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$requestedType_, capture$0);
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$35_$1 *new_ComGoogleGsonInternalBindTypeAdapters_$35_$1_initWithComGoogleGsonInternalBindTypeAdapters_$35_withIOSClass_(ComGoogleGsonInternalBindTypeAdapters_$35 *outer$, IOSClass *capture$0) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_$35_$1, initWithComGoogleGsonInternalBindTypeAdapters_$35_withIOSClass_, outer$, capture$0)
+ComGoogleGsonInternalBindTypeAdapters_35_1 *new_ComGoogleGsonInternalBindTypeAdapters_35_1_initWithComGoogleGsonInternalBindTypeAdapters_35_withIOSClass_(ComGoogleGsonInternalBindTypeAdapters_35 *outer$, IOSClass *capture$0) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindTypeAdapters_35_1, initWithComGoogleGsonInternalBindTypeAdapters_35_withIOSClass_, outer$, capture$0)
 }
 
-ComGoogleGsonInternalBindTypeAdapters_$35_$1 *create_ComGoogleGsonInternalBindTypeAdapters_$35_$1_initWithComGoogleGsonInternalBindTypeAdapters_$35_withIOSClass_(ComGoogleGsonInternalBindTypeAdapters_$35 *outer$, IOSClass *capture$0) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_$35_$1, initWithComGoogleGsonInternalBindTypeAdapters_$35_withIOSClass_, outer$, capture$0)
+ComGoogleGsonInternalBindTypeAdapters_35_1 *create_ComGoogleGsonInternalBindTypeAdapters_35_1_initWithComGoogleGsonInternalBindTypeAdapters_35_withIOSClass_(ComGoogleGsonInternalBindTypeAdapters_35 *outer$, IOSClass *capture$0) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindTypeAdapters_35_1, initWithComGoogleGsonInternalBindTypeAdapters_35_withIOSClass_, outer$, capture$0)
 }

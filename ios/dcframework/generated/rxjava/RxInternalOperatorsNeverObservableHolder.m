@@ -83,13 +83,13 @@ RxInternalOperatorsNeverObservableHolder *RxInternalOperatorsNeverObservableHold
 
 @end
 
+void RxInternalOperatorsNeverObservableHolder_initWithNSString_withInt_(RxInternalOperatorsNeverObservableHolder *self, NSString *__name, jint __ordinal) {
+  JavaLangEnum_initWithNSString_withInt_(self, __name, __ordinal);
+}
+
 RxObservable *RxInternalOperatorsNeverObservableHolder_instance() {
   RxInternalOperatorsNeverObservableHolder_initialize();
   return RxInternalOperatorsNeverObservableHolder_NEVER;
-}
-
-void RxInternalOperatorsNeverObservableHolder_initWithNSString_withInt_(RxInternalOperatorsNeverObservableHolder *self, NSString *__name, jint __ordinal) {
-  JavaLangEnum_initWithNSString_withInt_(self, __name, __ordinal);
 }
 
 IOSObjectArray *RxInternalOperatorsNeverObservableHolder_values() {

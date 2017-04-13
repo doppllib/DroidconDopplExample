@@ -7,7 +7,6 @@
 #include "AndroidOsLooper.h"
 #include "AndroidOsMessage.h"
 #include "AndroidOsMessageQueue.h"
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "android/util/Printer.h"
 #include "java/lang/Integer.h"

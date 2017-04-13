@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/CompletableOnSubscribeMerge.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxCompletable.h"
 #include "RxCompletableSubscriber.h"
@@ -24,12 +23,14 @@
 #include "java/util/concurrent/atomic/AtomicInteger.h"
 #include "java/util/concurrent/atomic/AtomicReference.h"
 
-@interface RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1 : NSObject < RxCompletableSubscriber > {
+@interface RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1 : NSObject < RxCompletableSubscriber > {
  @public
   RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber *this$0_;
   id<RxSubscription> d_;
   jboolean innerDone_;
 }
+
+- (instancetype)initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber:(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber *)outer$;
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
@@ -37,20 +38,17 @@
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber:(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber *)outer$;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1, this$0_, RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1, d_, id<RxSubscription>)
+J2OBJC_FIELD_SETTER(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1, d_, id<RxSubscription>)
 
-__attribute__((unused)) static void RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1_initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1 *self, RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber *outer$);
+__attribute__((unused)) static void RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1_initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1 *self, RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber *outer$);
 
-__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1 *new_RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1_initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber *outer$) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1 *new_RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1_initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1 *create_RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1_initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber *outer$);
+__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1 *create_RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1_initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber *outer$);
 
 @implementation RxInternalOperatorsCompletableOnSubscribeMerge
 
@@ -159,7 +157,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCompletableOnSubscribeMerge)
     return;
   }
   [((JavaUtilConcurrentAtomicAtomicInteger *) nil_chk(wip_)) getAndIncrement];
-  [((RxCompletable *) nil_chk(t)) unsafeSubscribeWithRxCompletableSubscriber:create_RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1_initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_(self)];
+  [((RxCompletable *) nil_chk(t)) unsafeSubscribeWithRxCompletableSubscriber:create_RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1_initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_(self)];
 }
 
 - (void)onErrorWithNSException:(NSException *)t {
@@ -211,7 +209,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCompletableOnSubscribeMerge)
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber class]);
   RELEASE_(actual_);
   RELEASE_(set_);
   RELEASE_(errors_);
@@ -280,7 +277,12 @@ RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber *creat
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber)
 
-@implementation RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1
+@implementation RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1
+
+- (instancetype)initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber:(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber *)outer$ {
+  RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1_initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_(self, outer$);
+  return self;
+}
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d {
   JreStrongAssign(&self->d_, d);
@@ -313,11 +315,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCompletableOnSubscribeMerge_
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber:(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber *)outer$ {
-  RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1_initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(d_);
@@ -326,17 +323,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCompletableOnSubscribeMerge_
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber:);
+  methods[1].selector = @selector(onSubscribeWithRxSubscription:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
@@ -344,21 +341,21 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCompletableOnSubscribeMerge_
     { "innerDone_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "onSubscribe", "LRxSubscription;", "onError", "LNSException;", "LRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber;", "onNextWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 4, -1, 5, -1, -1 };
-  return &_RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1;
+  static const J2ObjcClassInfo _RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 4, -1, 5, -1, -1 };
+  return &_RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1;
 }
 
 @end
 
-void RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1_initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1 *self, RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber *outer$) {
+void RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1_initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1 *self, RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1 *new_RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1_initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1, initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_, outer$)
+RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1 *new_RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1_initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1, initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_, outer$)
 }
 
-RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1 *create_RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1_initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_$1, initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_, outer$)
+RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1 *create_RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1_initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_1, initWithRxInternalOperatorsCompletableOnSubscribeMerge_CompletableMergeSubscriber_, outer$)
 }

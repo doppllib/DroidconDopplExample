@@ -64,265 +64,253 @@ __attribute__((unused)) static id<ComGoogleGsonInternalObjectConstructor> ComGoo
 
 __attribute__((unused)) static id<ComGoogleGsonInternalObjectConstructor> ComGoogleGsonInternalConstructorConstructor_newUnsafeAllocatorWithJavaLangReflectType_withIOSClass_(ComGoogleGsonInternalConstructorConstructor *self, id<JavaLangReflectType> type, IOSClass *rawType);
 
-@interface ComGoogleGsonInternalConstructorConstructor_$1 : NSObject < ComGoogleGsonInternalObjectConstructor > {
+@interface ComGoogleGsonInternalConstructorConstructor_1 : NSObject < ComGoogleGsonInternalObjectConstructor > {
  @public
   id<ComGoogleGsonInstanceCreator> val$typeCreator_;
   id<JavaLangReflectType> val$type_;
 }
 
-- (id)construct;
-
 - (instancetype)initWithComGoogleGsonInstanceCreator:(id<ComGoogleGsonInstanceCreator>)capture$0
                              withJavaLangReflectType:(id<JavaLangReflectType>)capture$1;
 
+- (id)construct;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_$1)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_1)
 
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalConstructorConstructor_$1, val$typeCreator_, id<ComGoogleGsonInstanceCreator>)
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalConstructorConstructor_$1, val$type_, id<JavaLangReflectType>)
+__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_1_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(ComGoogleGsonInternalConstructorConstructor_1 *self, id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1);
 
-__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_$1_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(ComGoogleGsonInternalConstructorConstructor_$1 *self, id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1);
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_1 *new_ComGoogleGsonInternalConstructorConstructor_1_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$1 *new_ComGoogleGsonInternalConstructorConstructor_$1_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_1 *create_ComGoogleGsonInternalConstructorConstructor_1_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1);
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$1 *create_ComGoogleGsonInternalConstructorConstructor_$1_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1);
-
-@interface ComGoogleGsonInternalConstructorConstructor_$2 : NSObject < ComGoogleGsonInternalObjectConstructor > {
+@interface ComGoogleGsonInternalConstructorConstructor_2 : NSObject < ComGoogleGsonInternalObjectConstructor > {
  @public
   id<ComGoogleGsonInstanceCreator> val$rawTypeCreator_;
   id<JavaLangReflectType> val$type_;
 }
 
-- (id)construct;
-
 - (instancetype)initWithComGoogleGsonInstanceCreator:(id<ComGoogleGsonInstanceCreator>)capture$0
                              withJavaLangReflectType:(id<JavaLangReflectType>)capture$1;
 
+- (id)construct;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_$2)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_2)
 
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalConstructorConstructor_$2, val$rawTypeCreator_, id<ComGoogleGsonInstanceCreator>)
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalConstructorConstructor_$2, val$type_, id<JavaLangReflectType>)
+__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_2_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(ComGoogleGsonInternalConstructorConstructor_2 *self, id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1);
 
-__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_$2_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(ComGoogleGsonInternalConstructorConstructor_$2 *self, id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1);
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_2 *new_ComGoogleGsonInternalConstructorConstructor_2_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$2 *new_ComGoogleGsonInternalConstructorConstructor_$2_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_2 *create_ComGoogleGsonInternalConstructorConstructor_2_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1);
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$2 *create_ComGoogleGsonInternalConstructorConstructor_$2_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1);
-
-@interface ComGoogleGsonInternalConstructorConstructor_$3 : NSObject < ComGoogleGsonInternalObjectConstructor > {
+@interface ComGoogleGsonInternalConstructorConstructor_3 : NSObject < ComGoogleGsonInternalObjectConstructor > {
  @public
   JavaLangReflectConstructor *val$constructor_;
 }
 
-- (id)construct;
-
 - (instancetype)initWithJavaLangReflectConstructor:(JavaLangReflectConstructor *)capture$0;
+
+- (id)construct;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_$3)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_3)
 
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalConstructorConstructor_$3, val$constructor_, JavaLangReflectConstructor *)
+__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_3_initWithJavaLangReflectConstructor_(ComGoogleGsonInternalConstructorConstructor_3 *self, JavaLangReflectConstructor *capture$0);
 
-__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_$3_initWithJavaLangReflectConstructor_(ComGoogleGsonInternalConstructorConstructor_$3 *self, JavaLangReflectConstructor *capture$0);
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_3 *new_ComGoogleGsonInternalConstructorConstructor_3_initWithJavaLangReflectConstructor_(JavaLangReflectConstructor *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$3 *new_ComGoogleGsonInternalConstructorConstructor_$3_initWithJavaLangReflectConstructor_(JavaLangReflectConstructor *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_3 *create_ComGoogleGsonInternalConstructorConstructor_3_initWithJavaLangReflectConstructor_(JavaLangReflectConstructor *capture$0);
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$3 *create_ComGoogleGsonInternalConstructorConstructor_$3_initWithJavaLangReflectConstructor_(JavaLangReflectConstructor *capture$0);
-
-@interface ComGoogleGsonInternalConstructorConstructor_$4 : NSObject < ComGoogleGsonInternalObjectConstructor >
-
-- (id)construct;
+@interface ComGoogleGsonInternalConstructorConstructor_4 : NSObject < ComGoogleGsonInternalObjectConstructor >
 
 - (instancetype)init;
 
+- (id)construct;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_$4)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_4)
 
-__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_$4_init(ComGoogleGsonInternalConstructorConstructor_$4 *self);
+__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_4_init(ComGoogleGsonInternalConstructorConstructor_4 *self);
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$4 *new_ComGoogleGsonInternalConstructorConstructor_$4_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_4 *new_ComGoogleGsonInternalConstructorConstructor_4_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$4 *create_ComGoogleGsonInternalConstructorConstructor_$4_init();
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_4 *create_ComGoogleGsonInternalConstructorConstructor_4_init();
 
-@interface ComGoogleGsonInternalConstructorConstructor_$5 : NSObject < ComGoogleGsonInternalObjectConstructor > {
+@interface ComGoogleGsonInternalConstructorConstructor_5 : NSObject < ComGoogleGsonInternalObjectConstructor > {
  @public
   id<JavaLangReflectType> val$type_;
 }
-
-- (id)construct;
 
 - (instancetype)initWithJavaLangReflectType:(id<JavaLangReflectType>)capture$0;
 
+- (id)construct;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_$5)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_5)
 
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalConstructorConstructor_$5, val$type_, id<JavaLangReflectType>)
+__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_5_initWithJavaLangReflectType_(ComGoogleGsonInternalConstructorConstructor_5 *self, id<JavaLangReflectType> capture$0);
 
-__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_$5_initWithJavaLangReflectType_(ComGoogleGsonInternalConstructorConstructor_$5 *self, id<JavaLangReflectType> capture$0);
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_5 *new_ComGoogleGsonInternalConstructorConstructor_5_initWithJavaLangReflectType_(id<JavaLangReflectType> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$5 *new_ComGoogleGsonInternalConstructorConstructor_$5_initWithJavaLangReflectType_(id<JavaLangReflectType> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_5 *create_ComGoogleGsonInternalConstructorConstructor_5_initWithJavaLangReflectType_(id<JavaLangReflectType> capture$0);
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$5 *create_ComGoogleGsonInternalConstructorConstructor_$5_initWithJavaLangReflectType_(id<JavaLangReflectType> capture$0);
-
-@interface ComGoogleGsonInternalConstructorConstructor_$6 : NSObject < ComGoogleGsonInternalObjectConstructor >
-
-- (id)construct;
+@interface ComGoogleGsonInternalConstructorConstructor_6 : NSObject < ComGoogleGsonInternalObjectConstructor >
 
 - (instancetype)init;
 
+- (id)construct;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_$6)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_6)
 
-__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_$6_init(ComGoogleGsonInternalConstructorConstructor_$6 *self);
+__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_6_init(ComGoogleGsonInternalConstructorConstructor_6 *self);
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$6 *new_ComGoogleGsonInternalConstructorConstructor_$6_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_6 *new_ComGoogleGsonInternalConstructorConstructor_6_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$6 *create_ComGoogleGsonInternalConstructorConstructor_$6_init();
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_6 *create_ComGoogleGsonInternalConstructorConstructor_6_init();
 
-@interface ComGoogleGsonInternalConstructorConstructor_$7 : NSObject < ComGoogleGsonInternalObjectConstructor >
-
-- (id)construct;
+@interface ComGoogleGsonInternalConstructorConstructor_7 : NSObject < ComGoogleGsonInternalObjectConstructor >
 
 - (instancetype)init;
 
+- (id)construct;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_$7)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_7)
 
-__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_$7_init(ComGoogleGsonInternalConstructorConstructor_$7 *self);
+__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_7_init(ComGoogleGsonInternalConstructorConstructor_7 *self);
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$7 *new_ComGoogleGsonInternalConstructorConstructor_$7_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_7 *new_ComGoogleGsonInternalConstructorConstructor_7_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$7 *create_ComGoogleGsonInternalConstructorConstructor_$7_init();
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_7 *create_ComGoogleGsonInternalConstructorConstructor_7_init();
 
-@interface ComGoogleGsonInternalConstructorConstructor_$8 : NSObject < ComGoogleGsonInternalObjectConstructor >
-
-- (id)construct;
+@interface ComGoogleGsonInternalConstructorConstructor_8 : NSObject < ComGoogleGsonInternalObjectConstructor >
 
 - (instancetype)init;
 
+- (id)construct;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_$8)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_8)
 
-__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_$8_init(ComGoogleGsonInternalConstructorConstructor_$8 *self);
+__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_8_init(ComGoogleGsonInternalConstructorConstructor_8 *self);
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$8 *new_ComGoogleGsonInternalConstructorConstructor_$8_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_8 *new_ComGoogleGsonInternalConstructorConstructor_8_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$8 *create_ComGoogleGsonInternalConstructorConstructor_$8_init();
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_8 *create_ComGoogleGsonInternalConstructorConstructor_8_init();
 
-@interface ComGoogleGsonInternalConstructorConstructor_$9 : NSObject < ComGoogleGsonInternalObjectConstructor >
-
-- (id)construct;
+@interface ComGoogleGsonInternalConstructorConstructor_9 : NSObject < ComGoogleGsonInternalObjectConstructor >
 
 - (instancetype)init;
 
+- (id)construct;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_$9)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_9)
 
-__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_$9_init(ComGoogleGsonInternalConstructorConstructor_$9 *self);
+__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_9_init(ComGoogleGsonInternalConstructorConstructor_9 *self);
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$9 *new_ComGoogleGsonInternalConstructorConstructor_$9_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_9 *new_ComGoogleGsonInternalConstructorConstructor_9_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$9 *create_ComGoogleGsonInternalConstructorConstructor_$9_init();
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_9 *create_ComGoogleGsonInternalConstructorConstructor_9_init();
 
-@interface ComGoogleGsonInternalConstructorConstructor_$10 : NSObject < ComGoogleGsonInternalObjectConstructor >
-
-- (id)construct;
+@interface ComGoogleGsonInternalConstructorConstructor_10 : NSObject < ComGoogleGsonInternalObjectConstructor >
 
 - (instancetype)init;
 
+- (id)construct;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_$10)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_10)
 
-__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_$10_init(ComGoogleGsonInternalConstructorConstructor_$10 *self);
+__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_10_init(ComGoogleGsonInternalConstructorConstructor_10 *self);
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$10 *new_ComGoogleGsonInternalConstructorConstructor_$10_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_10 *new_ComGoogleGsonInternalConstructorConstructor_10_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$10 *create_ComGoogleGsonInternalConstructorConstructor_$10_init();
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_10 *create_ComGoogleGsonInternalConstructorConstructor_10_init();
 
-@interface ComGoogleGsonInternalConstructorConstructor_$11 : NSObject < ComGoogleGsonInternalObjectConstructor >
-
-- (id)construct;
+@interface ComGoogleGsonInternalConstructorConstructor_11 : NSObject < ComGoogleGsonInternalObjectConstructor >
 
 - (instancetype)init;
 
+- (id)construct;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_$11)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_11)
 
-__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_$11_init(ComGoogleGsonInternalConstructorConstructor_$11 *self);
+__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_11_init(ComGoogleGsonInternalConstructorConstructor_11 *self);
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$11 *new_ComGoogleGsonInternalConstructorConstructor_$11_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_11 *new_ComGoogleGsonInternalConstructorConstructor_11_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$11 *create_ComGoogleGsonInternalConstructorConstructor_$11_init();
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_11 *create_ComGoogleGsonInternalConstructorConstructor_11_init();
 
-@interface ComGoogleGsonInternalConstructorConstructor_$12 : NSObject < ComGoogleGsonInternalObjectConstructor >
-
-- (id)construct;
+@interface ComGoogleGsonInternalConstructorConstructor_12 : NSObject < ComGoogleGsonInternalObjectConstructor >
 
 - (instancetype)init;
 
+- (id)construct;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_$12)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_12)
 
-__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_$12_init(ComGoogleGsonInternalConstructorConstructor_$12 *self);
+__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_12_init(ComGoogleGsonInternalConstructorConstructor_12 *self);
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$12 *new_ComGoogleGsonInternalConstructorConstructor_$12_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_12 *new_ComGoogleGsonInternalConstructorConstructor_12_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$12 *create_ComGoogleGsonInternalConstructorConstructor_$12_init();
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_12 *create_ComGoogleGsonInternalConstructorConstructor_12_init();
 
-@interface ComGoogleGsonInternalConstructorConstructor_$13 : NSObject < ComGoogleGsonInternalObjectConstructor >
-
-- (id)construct;
+@interface ComGoogleGsonInternalConstructorConstructor_13 : NSObject < ComGoogleGsonInternalObjectConstructor >
 
 - (instancetype)init;
 
+- (id)construct;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_$13)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_13)
 
-__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_$13_init(ComGoogleGsonInternalConstructorConstructor_$13 *self);
+__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_13_init(ComGoogleGsonInternalConstructorConstructor_13 *self);
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$13 *new_ComGoogleGsonInternalConstructorConstructor_$13_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_13 *new_ComGoogleGsonInternalConstructorConstructor_13_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$13 *create_ComGoogleGsonInternalConstructorConstructor_$13_init();
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_13 *create_ComGoogleGsonInternalConstructorConstructor_13_init();
 
-@interface ComGoogleGsonInternalConstructorConstructor_$14 : NSObject < ComGoogleGsonInternalObjectConstructor > {
+@interface ComGoogleGsonInternalConstructorConstructor_14 : NSObject < ComGoogleGsonInternalObjectConstructor > {
  @public
-  ComGoogleGsonInternalUnsafeAllocator *unsafeAllocator_;
   IOSClass *val$rawType_;
   id<JavaLangReflectType> val$type_;
+  ComGoogleGsonInternalUnsafeAllocator *unsafeAllocator_;
 }
-
-- (id)construct;
 
 - (instancetype)initWithIOSClass:(IOSClass *)capture$0
          withJavaLangReflectType:(id<JavaLangReflectType>)capture$1;
 
+- (id)construct;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_$14)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalConstructorConstructor_14)
 
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalConstructorConstructor_$14, unsafeAllocator_, ComGoogleGsonInternalUnsafeAllocator *)
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalConstructorConstructor_$14, val$rawType_, IOSClass *)
-J2OBJC_FIELD_SETTER(ComGoogleGsonInternalConstructorConstructor_$14, val$type_, id<JavaLangReflectType>)
+J2OBJC_FIELD_SETTER(ComGoogleGsonInternalConstructorConstructor_14, unsafeAllocator_, ComGoogleGsonInternalUnsafeAllocator *)
 
-__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_$14_initWithIOSClass_withJavaLangReflectType_(ComGoogleGsonInternalConstructorConstructor_$14 *self, IOSClass *capture$0, id<JavaLangReflectType> capture$1);
+__attribute__((unused)) static void ComGoogleGsonInternalConstructorConstructor_14_initWithIOSClass_withJavaLangReflectType_(ComGoogleGsonInternalConstructorConstructor_14 *self, IOSClass *capture$0, id<JavaLangReflectType> capture$1);
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$14 *new_ComGoogleGsonInternalConstructorConstructor_$14_initWithIOSClass_withJavaLangReflectType_(IOSClass *capture$0, id<JavaLangReflectType> capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_14 *new_ComGoogleGsonInternalConstructorConstructor_14_initWithIOSClass_withJavaLangReflectType_(IOSClass *capture$0, id<JavaLangReflectType> capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$14 *create_ComGoogleGsonInternalConstructorConstructor_$14_initWithIOSClass_withJavaLangReflectType_(IOSClass *capture$0, id<JavaLangReflectType> capture$1);
+__attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_14 *create_ComGoogleGsonInternalConstructorConstructor_14_initWithIOSClass_withJavaLangReflectType_(IOSClass *capture$0, id<JavaLangReflectType> capture$1);
 
 @implementation ComGoogleGsonInternalConstructorConstructor
 
@@ -336,11 +324,11 @@ __attribute__((unused)) static ComGoogleGsonInternalConstructorConstructor_$14 *
   IOSClass *rawType = [typeToken getRawType];
   id<ComGoogleGsonInstanceCreator> typeCreator = [((id<JavaUtilMap>) nil_chk(instanceCreators_)) getWithId:type];
   if (typeCreator != nil) {
-    return create_ComGoogleGsonInternalConstructorConstructor_$1_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(typeCreator, type);
+    return create_ComGoogleGsonInternalConstructorConstructor_1_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(typeCreator, type);
   }
   id<ComGoogleGsonInstanceCreator> rawTypeCreator = [instanceCreators_ getWithId:rawType];
   if (rawTypeCreator != nil) {
-    return create_ComGoogleGsonInternalConstructorConstructor_$2_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(rawTypeCreator, type);
+    return create_ComGoogleGsonInternalConstructorConstructor_2_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(rawTypeCreator, type);
   }
   id<ComGoogleGsonInternalObjectConstructor> defaultConstructor = ComGoogleGsonInternalConstructorConstructor_newDefaultConstructorWithIOSClass_(self, rawType);
   if (defaultConstructor != nil) {
@@ -423,7 +411,7 @@ id<ComGoogleGsonInternalObjectConstructor> ComGoogleGsonInternalConstructorConst
     if (![((JavaLangReflectConstructor *) nil_chk(constructor)) isAccessible]) {
       [constructor setAccessibleWithBoolean:true];
     }
-    return create_ComGoogleGsonInternalConstructorConstructor_$3_initWithJavaLangReflectConstructor_(constructor);
+    return create_ComGoogleGsonInternalConstructorConstructor_3_initWithJavaLangReflectConstructor_(constructor);
   }
   @catch (JavaLangNoSuchMethodException *e) {
     return nil;
@@ -433,57 +421,57 @@ id<ComGoogleGsonInternalObjectConstructor> ComGoogleGsonInternalConstructorConst
 id<ComGoogleGsonInternalObjectConstructor> ComGoogleGsonInternalConstructorConstructor_newDefaultImplementationConstructorWithJavaLangReflectType_withIOSClass_(ComGoogleGsonInternalConstructorConstructor *self, id<JavaLangReflectType> type, IOSClass *rawType) {
   if ([JavaUtilCollection_class_() isAssignableFrom:rawType]) {
     if ([JavaUtilSortedSet_class_() isAssignableFrom:rawType]) {
-      return create_ComGoogleGsonInternalConstructorConstructor_$4_init();
+      return create_ComGoogleGsonInternalConstructorConstructor_4_init();
     }
     else if ([JavaUtilEnumSet_class_() isAssignableFrom:rawType]) {
-      return create_ComGoogleGsonInternalConstructorConstructor_$5_initWithJavaLangReflectType_(type);
+      return create_ComGoogleGsonInternalConstructorConstructor_5_initWithJavaLangReflectType_(type);
     }
     else if ([JavaUtilSet_class_() isAssignableFrom:rawType]) {
-      return create_ComGoogleGsonInternalConstructorConstructor_$6_init();
+      return create_ComGoogleGsonInternalConstructorConstructor_6_init();
     }
     else if ([JavaUtilQueue_class_() isAssignableFrom:rawType]) {
-      return create_ComGoogleGsonInternalConstructorConstructor_$7_init();
+      return create_ComGoogleGsonInternalConstructorConstructor_7_init();
     }
     else {
-      return create_ComGoogleGsonInternalConstructorConstructor_$8_init();
+      return create_ComGoogleGsonInternalConstructorConstructor_8_init();
     }
   }
   if ([JavaUtilMap_class_() isAssignableFrom:rawType]) {
     if ([JavaUtilConcurrentConcurrentNavigableMap_class_() isAssignableFrom:rawType]) {
-      return create_ComGoogleGsonInternalConstructorConstructor_$9_init();
+      return create_ComGoogleGsonInternalConstructorConstructor_9_init();
     }
     else if ([JavaUtilConcurrentConcurrentMap_class_() isAssignableFrom:rawType]) {
-      return create_ComGoogleGsonInternalConstructorConstructor_$10_init();
+      return create_ComGoogleGsonInternalConstructorConstructor_10_init();
     }
     else if ([JavaUtilSortedMap_class_() isAssignableFrom:rawType]) {
-      return create_ComGoogleGsonInternalConstructorConstructor_$11_init();
+      return create_ComGoogleGsonInternalConstructorConstructor_11_init();
     }
     else if ([JavaLangReflectParameterizedType_class_() isInstance:type] && !([NSString_class_() isAssignableFrom:[((ComGoogleGsonReflectTypeToken *) nil_chk(ComGoogleGsonReflectTypeToken_getWithJavaLangReflectType_(IOSObjectArray_Get(nil_chk([((id<JavaLangReflectParameterizedType>) nil_chk(((id<JavaLangReflectParameterizedType>) cast_check(type, JavaLangReflectParameterizedType_class_())))) getActualTypeArguments]), 0)))) getRawType]])) {
-      return create_ComGoogleGsonInternalConstructorConstructor_$12_init();
+      return create_ComGoogleGsonInternalConstructorConstructor_12_init();
     }
     else {
-      return create_ComGoogleGsonInternalConstructorConstructor_$13_init();
+      return create_ComGoogleGsonInternalConstructorConstructor_13_init();
     }
   }
   return nil;
 }
 
 id<ComGoogleGsonInternalObjectConstructor> ComGoogleGsonInternalConstructorConstructor_newUnsafeAllocatorWithJavaLangReflectType_withIOSClass_(ComGoogleGsonInternalConstructorConstructor *self, id<JavaLangReflectType> type, IOSClass *rawType) {
-  return create_ComGoogleGsonInternalConstructorConstructor_$14_initWithIOSClass_withJavaLangReflectType_(rawType, type);
+  return create_ComGoogleGsonInternalConstructorConstructor_14_initWithIOSClass_withJavaLangReflectType_(rawType, type);
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalConstructorConstructor)
 
-@implementation ComGoogleGsonInternalConstructorConstructor_$1
-
-- (id)construct {
-  return [((id<ComGoogleGsonInstanceCreator>) nil_chk(val$typeCreator_)) createInstanceWithJavaLangReflectType:val$type_];
-}
+@implementation ComGoogleGsonInternalConstructorConstructor_1
 
 - (instancetype)initWithComGoogleGsonInstanceCreator:(id<ComGoogleGsonInstanceCreator>)capture$0
                              withJavaLangReflectType:(id<JavaLangReflectType>)capture$1 {
-  ComGoogleGsonInternalConstructorConstructor_$1_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(self, capture$0, capture$1);
+  ComGoogleGsonInternalConstructorConstructor_1_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(self, capture$0, capture$1);
   return self;
+}
+
+- (id)construct {
+  return [((id<ComGoogleGsonInstanceCreator>) nil_chk(val$typeCreator_)) createInstanceWithJavaLangReflectType:val$type_];
 }
 
 - (void)dealloc {
@@ -494,49 +482,49 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalConstructorConstructor)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, 2, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(construct);
-  methods[1].selector = @selector(initWithComGoogleGsonInstanceCreator:withJavaLangReflectType:);
+  methods[0].selector = @selector(initWithComGoogleGsonInstanceCreator:withJavaLangReflectType:);
+  methods[1].selector = @selector(construct);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$typeCreator_", "LComGoogleGsonInstanceCreator;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$typeCreator_", "LComGoogleGsonInstanceCreator;", .constantValue.asLong = 0, 0x1012, -1, -1, 1, -1 },
     { "val$type_", "LJavaLangReflectType;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "()TT;", "LComGoogleGsonInstanceCreator;LJavaLangReflectType;", "(Lcom/google/gson/InstanceCreator<TT;>;Ljava/lang/reflect/Type;)V", "Lcom/google/gson/InstanceCreator<TT;>;", "LComGoogleGsonInternalConstructorConstructor;", "getWithComGoogleGsonReflectTypeToken:", "Ljava/lang/Object;Lcom/google/gson/internal/ObjectConstructor<TT;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_$1 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 2, 2, 4, -1, 5, 6, -1 };
-  return &_ComGoogleGsonInternalConstructorConstructor_$1;
+  static const void *ptrTable[] = { "()TT;", "Lcom/google/gson/InstanceCreator<TT;>;", "LComGoogleGsonInternalConstructorConstructor;", "getWithComGoogleGsonReflectTypeToken:", "Ljava/lang/Object;Lcom/google/gson/internal/ObjectConstructor<TT;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_1 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 2, 2, 2, -1, 3, 4, -1 };
+  return &_ComGoogleGsonInternalConstructorConstructor_1;
 }
 
 @end
 
-void ComGoogleGsonInternalConstructorConstructor_$1_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(ComGoogleGsonInternalConstructorConstructor_$1 *self, id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1) {
+void ComGoogleGsonInternalConstructorConstructor_1_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(ComGoogleGsonInternalConstructorConstructor_1 *self, id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1) {
   JreStrongAssign(&self->val$typeCreator_, capture$0);
   JreStrongAssign(&self->val$type_, capture$1);
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalConstructorConstructor_$1 *new_ComGoogleGsonInternalConstructorConstructor_$1_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_$1, initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_, capture$0, capture$1)
+ComGoogleGsonInternalConstructorConstructor_1 *new_ComGoogleGsonInternalConstructorConstructor_1_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_1, initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_, capture$0, capture$1)
 }
 
-ComGoogleGsonInternalConstructorConstructor_$1 *create_ComGoogleGsonInternalConstructorConstructor_$1_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_$1, initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_, capture$0, capture$1)
+ComGoogleGsonInternalConstructorConstructor_1 *create_ComGoogleGsonInternalConstructorConstructor_1_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_1, initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_, capture$0, capture$1)
 }
 
-@implementation ComGoogleGsonInternalConstructorConstructor_$2
-
-- (id)construct {
-  return [((id<ComGoogleGsonInstanceCreator>) nil_chk(val$rawTypeCreator_)) createInstanceWithJavaLangReflectType:val$type_];
-}
+@implementation ComGoogleGsonInternalConstructorConstructor_2
 
 - (instancetype)initWithComGoogleGsonInstanceCreator:(id<ComGoogleGsonInstanceCreator>)capture$0
                              withJavaLangReflectType:(id<JavaLangReflectType>)capture$1 {
-  ComGoogleGsonInternalConstructorConstructor_$2_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(self, capture$0, capture$1);
+  ComGoogleGsonInternalConstructorConstructor_2_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(self, capture$0, capture$1);
   return self;
+}
+
+- (id)construct {
+  return [((id<ComGoogleGsonInstanceCreator>) nil_chk(val$rawTypeCreator_)) createInstanceWithJavaLangReflectType:val$type_];
 }
 
 - (void)dealloc {
@@ -547,40 +535,45 @@ ComGoogleGsonInternalConstructorConstructor_$1 *create_ComGoogleGsonInternalCons
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, 2, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(construct);
-  methods[1].selector = @selector(initWithComGoogleGsonInstanceCreator:withJavaLangReflectType:);
+  methods[0].selector = @selector(initWithComGoogleGsonInstanceCreator:withJavaLangReflectType:);
+  methods[1].selector = @selector(construct);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$rawTypeCreator_", "LComGoogleGsonInstanceCreator;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$rawTypeCreator_", "LComGoogleGsonInstanceCreator;", .constantValue.asLong = 0, 0x1012, -1, -1, 1, -1 },
     { "val$type_", "LJavaLangReflectType;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "()TT;", "LComGoogleGsonInstanceCreator;LJavaLangReflectType;", "(Lcom/google/gson/InstanceCreator<TT;>;Ljava/lang/reflect/Type;)V", "Lcom/google/gson/InstanceCreator<TT;>;", "LComGoogleGsonInternalConstructorConstructor;", "getWithComGoogleGsonReflectTypeToken:", "Ljava/lang/Object;Lcom/google/gson/internal/ObjectConstructor<TT;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_$2 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 2, 2, 4, -1, 5, 6, -1 };
-  return &_ComGoogleGsonInternalConstructorConstructor_$2;
+  static const void *ptrTable[] = { "()TT;", "Lcom/google/gson/InstanceCreator<TT;>;", "LComGoogleGsonInternalConstructorConstructor;", "getWithComGoogleGsonReflectTypeToken:", "Ljava/lang/Object;Lcom/google/gson/internal/ObjectConstructor<TT;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_2 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 2, 2, 2, -1, 3, 4, -1 };
+  return &_ComGoogleGsonInternalConstructorConstructor_2;
 }
 
 @end
 
-void ComGoogleGsonInternalConstructorConstructor_$2_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(ComGoogleGsonInternalConstructorConstructor_$2 *self, id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1) {
+void ComGoogleGsonInternalConstructorConstructor_2_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(ComGoogleGsonInternalConstructorConstructor_2 *self, id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1) {
   JreStrongAssign(&self->val$rawTypeCreator_, capture$0);
   JreStrongAssign(&self->val$type_, capture$1);
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalConstructorConstructor_$2 *new_ComGoogleGsonInternalConstructorConstructor_$2_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_$2, initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_, capture$0, capture$1)
+ComGoogleGsonInternalConstructorConstructor_2 *new_ComGoogleGsonInternalConstructorConstructor_2_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_2, initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_, capture$0, capture$1)
 }
 
-ComGoogleGsonInternalConstructorConstructor_$2 *create_ComGoogleGsonInternalConstructorConstructor_$2_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_$2, initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_, capture$0, capture$1)
+ComGoogleGsonInternalConstructorConstructor_2 *create_ComGoogleGsonInternalConstructorConstructor_2_initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_(id<ComGoogleGsonInstanceCreator> capture$0, id<JavaLangReflectType> capture$1) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_2, initWithComGoogleGsonInstanceCreator_withJavaLangReflectType_, capture$0, capture$1)
 }
 
-@implementation ComGoogleGsonInternalConstructorConstructor_$3
+@implementation ComGoogleGsonInternalConstructorConstructor_3
+
+- (instancetype)initWithJavaLangReflectConstructor:(JavaLangReflectConstructor *)capture$0 {
+  ComGoogleGsonInternalConstructorConstructor_3_initWithJavaLangReflectConstructor_(self, capture$0);
+  return self;
+}
 
 - (id)construct {
   @try {
@@ -598,11 +591,6 @@ ComGoogleGsonInternalConstructorConstructor_$2 *create_ComGoogleGsonInternalCons
   }
 }
 
-- (instancetype)initWithJavaLangReflectConstructor:(JavaLangReflectConstructor *)capture$0 {
-  ComGoogleGsonInternalConstructorConstructor_$3_initWithJavaLangReflectConstructor_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$constructor_);
   [super dealloc];
@@ -610,80 +598,85 @@ ComGoogleGsonInternalConstructorConstructor_$2 *create_ComGoogleGsonInternalCons
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, 2, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(construct);
-  methods[1].selector = @selector(initWithJavaLangReflectConstructor:);
+  methods[0].selector = @selector(initWithJavaLangReflectConstructor:);
+  methods[1].selector = @selector(construct);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$constructor_", "LJavaLangReflectConstructor;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$constructor_", "LJavaLangReflectConstructor;", .constantValue.asLong = 0, 0x1012, -1, -1, 1, -1 },
   };
-  static const void *ptrTable[] = { "()TT;", "LJavaLangReflectConstructor;", "(Ljava/lang/reflect/Constructor<-TT;>;)V", "Ljava/lang/reflect/Constructor<-TT;>;", "LComGoogleGsonInternalConstructorConstructor;", "newDefaultConstructorWithIOSClass:", "Ljava/lang/Object;Lcom/google/gson/internal/ObjectConstructor<TT;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_$3 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
-  return &_ComGoogleGsonInternalConstructorConstructor_$3;
+  static const void *ptrTable[] = { "()TT;", "Ljava/lang/reflect/Constructor<-TT;>;", "LComGoogleGsonInternalConstructorConstructor;", "newDefaultConstructorWithIOSClass:", "Ljava/lang/Object;Lcom/google/gson/internal/ObjectConstructor<TT;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_3 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, 4, -1 };
+  return &_ComGoogleGsonInternalConstructorConstructor_3;
 }
 
 @end
 
-void ComGoogleGsonInternalConstructorConstructor_$3_initWithJavaLangReflectConstructor_(ComGoogleGsonInternalConstructorConstructor_$3 *self, JavaLangReflectConstructor *capture$0) {
+void ComGoogleGsonInternalConstructorConstructor_3_initWithJavaLangReflectConstructor_(ComGoogleGsonInternalConstructorConstructor_3 *self, JavaLangReflectConstructor *capture$0) {
   JreStrongAssign(&self->val$constructor_, capture$0);
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalConstructorConstructor_$3 *new_ComGoogleGsonInternalConstructorConstructor_$3_initWithJavaLangReflectConstructor_(JavaLangReflectConstructor *capture$0) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_$3, initWithJavaLangReflectConstructor_, capture$0)
+ComGoogleGsonInternalConstructorConstructor_3 *new_ComGoogleGsonInternalConstructorConstructor_3_initWithJavaLangReflectConstructor_(JavaLangReflectConstructor *capture$0) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_3, initWithJavaLangReflectConstructor_, capture$0)
 }
 
-ComGoogleGsonInternalConstructorConstructor_$3 *create_ComGoogleGsonInternalConstructorConstructor_$3_initWithJavaLangReflectConstructor_(JavaLangReflectConstructor *capture$0) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_$3, initWithJavaLangReflectConstructor_, capture$0)
+ComGoogleGsonInternalConstructorConstructor_3 *create_ComGoogleGsonInternalConstructorConstructor_3_initWithJavaLangReflectConstructor_(JavaLangReflectConstructor *capture$0) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_3, initWithJavaLangReflectConstructor_, capture$0)
 }
 
-@implementation ComGoogleGsonInternalConstructorConstructor_$4
+@implementation ComGoogleGsonInternalConstructorConstructor_4
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalConstructorConstructor_4_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id)construct {
   return create_JavaUtilTreeSet_init();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalConstructorConstructor_$4_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(construct);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(construct);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "()TT;", "LComGoogleGsonInternalConstructorConstructor;", "newDefaultImplementationConstructorWithJavaLangReflectType:withIOSClass:", "Ljava/lang/Object;Lcom/google/gson/internal/ObjectConstructor<TT;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_$4 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
-  return &_ComGoogleGsonInternalConstructorConstructor_$4;
+  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_4 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
+  return &_ComGoogleGsonInternalConstructorConstructor_4;
 }
 
 @end
 
-void ComGoogleGsonInternalConstructorConstructor_$4_init(ComGoogleGsonInternalConstructorConstructor_$4 *self) {
+void ComGoogleGsonInternalConstructorConstructor_4_init(ComGoogleGsonInternalConstructorConstructor_4 *self) {
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalConstructorConstructor_$4 *new_ComGoogleGsonInternalConstructorConstructor_$4_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_$4, init)
+ComGoogleGsonInternalConstructorConstructor_4 *new_ComGoogleGsonInternalConstructorConstructor_4_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_4, init)
 }
 
-ComGoogleGsonInternalConstructorConstructor_$4 *create_ComGoogleGsonInternalConstructorConstructor_$4_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_$4, init)
+ComGoogleGsonInternalConstructorConstructor_4 *create_ComGoogleGsonInternalConstructorConstructor_4_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_4, init)
 }
 
-@implementation ComGoogleGsonInternalConstructorConstructor_$5
+@implementation ComGoogleGsonInternalConstructorConstructor_5
+
+- (instancetype)initWithJavaLangReflectType:(id<JavaLangReflectType>)capture$0 {
+  ComGoogleGsonInternalConstructorConstructor_5_initWithJavaLangReflectType_(self, capture$0);
+  return self;
+}
 
 - (id)construct {
   if ([JavaLangReflectParameterizedType_class_() isInstance:val$type_]) {
@@ -700,11 +693,6 @@ ComGoogleGsonInternalConstructorConstructor_$4 *create_ComGoogleGsonInternalCons
   }
 }
 
-- (instancetype)initWithJavaLangReflectType:(id<JavaLangReflectType>)capture$0 {
-  ComGoogleGsonInternalConstructorConstructor_$5_initWithJavaLangReflectType_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$type_);
   [super dealloc];
@@ -712,374 +700,380 @@ ComGoogleGsonInternalConstructorConstructor_$4 *create_ComGoogleGsonInternalCons
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(construct);
-  methods[1].selector = @selector(initWithJavaLangReflectType:);
+  methods[0].selector = @selector(initWithJavaLangReflectType:);
+  methods[1].selector = @selector(construct);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$type_", "LJavaLangReflectType;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "()TT;", "LJavaLangReflectType;", "LComGoogleGsonInternalConstructorConstructor;", "newDefaultImplementationConstructorWithJavaLangReflectType:withIOSClass:", "Ljava/lang/Object;Lcom/google/gson/internal/ObjectConstructor<TT;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_$5 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, 4, -1 };
-  return &_ComGoogleGsonInternalConstructorConstructor_$5;
+  static const void *ptrTable[] = { "()TT;", "LComGoogleGsonInternalConstructorConstructor;", "newDefaultImplementationConstructorWithJavaLangReflectType:withIOSClass:", "Ljava/lang/Object;Lcom/google/gson/internal/ObjectConstructor<TT;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_5 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, 3, -1 };
+  return &_ComGoogleGsonInternalConstructorConstructor_5;
 }
 
 @end
 
-void ComGoogleGsonInternalConstructorConstructor_$5_initWithJavaLangReflectType_(ComGoogleGsonInternalConstructorConstructor_$5 *self, id<JavaLangReflectType> capture$0) {
+void ComGoogleGsonInternalConstructorConstructor_5_initWithJavaLangReflectType_(ComGoogleGsonInternalConstructorConstructor_5 *self, id<JavaLangReflectType> capture$0) {
   JreStrongAssign(&self->val$type_, capture$0);
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalConstructorConstructor_$5 *new_ComGoogleGsonInternalConstructorConstructor_$5_initWithJavaLangReflectType_(id<JavaLangReflectType> capture$0) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_$5, initWithJavaLangReflectType_, capture$0)
+ComGoogleGsonInternalConstructorConstructor_5 *new_ComGoogleGsonInternalConstructorConstructor_5_initWithJavaLangReflectType_(id<JavaLangReflectType> capture$0) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_5, initWithJavaLangReflectType_, capture$0)
 }
 
-ComGoogleGsonInternalConstructorConstructor_$5 *create_ComGoogleGsonInternalConstructorConstructor_$5_initWithJavaLangReflectType_(id<JavaLangReflectType> capture$0) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_$5, initWithJavaLangReflectType_, capture$0)
+ComGoogleGsonInternalConstructorConstructor_5 *create_ComGoogleGsonInternalConstructorConstructor_5_initWithJavaLangReflectType_(id<JavaLangReflectType> capture$0) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_5, initWithJavaLangReflectType_, capture$0)
 }
 
-@implementation ComGoogleGsonInternalConstructorConstructor_$6
+@implementation ComGoogleGsonInternalConstructorConstructor_6
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalConstructorConstructor_6_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id)construct {
   return create_JavaUtilLinkedHashSet_init();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalConstructorConstructor_$6_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(construct);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(construct);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "()TT;", "LComGoogleGsonInternalConstructorConstructor;", "newDefaultImplementationConstructorWithJavaLangReflectType:withIOSClass:", "Ljava/lang/Object;Lcom/google/gson/internal/ObjectConstructor<TT;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_$6 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
-  return &_ComGoogleGsonInternalConstructorConstructor_$6;
+  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_6 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
+  return &_ComGoogleGsonInternalConstructorConstructor_6;
 }
 
 @end
 
-void ComGoogleGsonInternalConstructorConstructor_$6_init(ComGoogleGsonInternalConstructorConstructor_$6 *self) {
+void ComGoogleGsonInternalConstructorConstructor_6_init(ComGoogleGsonInternalConstructorConstructor_6 *self) {
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalConstructorConstructor_$6 *new_ComGoogleGsonInternalConstructorConstructor_$6_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_$6, init)
+ComGoogleGsonInternalConstructorConstructor_6 *new_ComGoogleGsonInternalConstructorConstructor_6_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_6, init)
 }
 
-ComGoogleGsonInternalConstructorConstructor_$6 *create_ComGoogleGsonInternalConstructorConstructor_$6_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_$6, init)
+ComGoogleGsonInternalConstructorConstructor_6 *create_ComGoogleGsonInternalConstructorConstructor_6_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_6, init)
 }
 
-@implementation ComGoogleGsonInternalConstructorConstructor_$7
+@implementation ComGoogleGsonInternalConstructorConstructor_7
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalConstructorConstructor_7_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id)construct {
   return create_JavaUtilLinkedList_init();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalConstructorConstructor_$7_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(construct);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(construct);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "()TT;", "LComGoogleGsonInternalConstructorConstructor;", "newDefaultImplementationConstructorWithJavaLangReflectType:withIOSClass:", "Ljava/lang/Object;Lcom/google/gson/internal/ObjectConstructor<TT;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_$7 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
-  return &_ComGoogleGsonInternalConstructorConstructor_$7;
+  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_7 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
+  return &_ComGoogleGsonInternalConstructorConstructor_7;
 }
 
 @end
 
-void ComGoogleGsonInternalConstructorConstructor_$7_init(ComGoogleGsonInternalConstructorConstructor_$7 *self) {
+void ComGoogleGsonInternalConstructorConstructor_7_init(ComGoogleGsonInternalConstructorConstructor_7 *self) {
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalConstructorConstructor_$7 *new_ComGoogleGsonInternalConstructorConstructor_$7_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_$7, init)
+ComGoogleGsonInternalConstructorConstructor_7 *new_ComGoogleGsonInternalConstructorConstructor_7_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_7, init)
 }
 
-ComGoogleGsonInternalConstructorConstructor_$7 *create_ComGoogleGsonInternalConstructorConstructor_$7_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_$7, init)
+ComGoogleGsonInternalConstructorConstructor_7 *create_ComGoogleGsonInternalConstructorConstructor_7_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_7, init)
 }
 
-@implementation ComGoogleGsonInternalConstructorConstructor_$8
+@implementation ComGoogleGsonInternalConstructorConstructor_8
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalConstructorConstructor_8_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id)construct {
   return create_JavaUtilArrayList_init();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalConstructorConstructor_$8_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(construct);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(construct);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "()TT;", "LComGoogleGsonInternalConstructorConstructor;", "newDefaultImplementationConstructorWithJavaLangReflectType:withIOSClass:", "Ljava/lang/Object;Lcom/google/gson/internal/ObjectConstructor<TT;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_$8 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
-  return &_ComGoogleGsonInternalConstructorConstructor_$8;
+  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_8 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
+  return &_ComGoogleGsonInternalConstructorConstructor_8;
 }
 
 @end
 
-void ComGoogleGsonInternalConstructorConstructor_$8_init(ComGoogleGsonInternalConstructorConstructor_$8 *self) {
+void ComGoogleGsonInternalConstructorConstructor_8_init(ComGoogleGsonInternalConstructorConstructor_8 *self) {
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalConstructorConstructor_$8 *new_ComGoogleGsonInternalConstructorConstructor_$8_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_$8, init)
+ComGoogleGsonInternalConstructorConstructor_8 *new_ComGoogleGsonInternalConstructorConstructor_8_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_8, init)
 }
 
-ComGoogleGsonInternalConstructorConstructor_$8 *create_ComGoogleGsonInternalConstructorConstructor_$8_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_$8, init)
+ComGoogleGsonInternalConstructorConstructor_8 *create_ComGoogleGsonInternalConstructorConstructor_8_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_8, init)
 }
 
-@implementation ComGoogleGsonInternalConstructorConstructor_$9
+@implementation ComGoogleGsonInternalConstructorConstructor_9
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalConstructorConstructor_9_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id)construct {
   return create_JavaUtilConcurrentConcurrentSkipListMap_init();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalConstructorConstructor_$9_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(construct);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(construct);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "()TT;", "LComGoogleGsonInternalConstructorConstructor;", "newDefaultImplementationConstructorWithJavaLangReflectType:withIOSClass:", "Ljava/lang/Object;Lcom/google/gson/internal/ObjectConstructor<TT;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_$9 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
-  return &_ComGoogleGsonInternalConstructorConstructor_$9;
+  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_9 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
+  return &_ComGoogleGsonInternalConstructorConstructor_9;
 }
 
 @end
 
-void ComGoogleGsonInternalConstructorConstructor_$9_init(ComGoogleGsonInternalConstructorConstructor_$9 *self) {
+void ComGoogleGsonInternalConstructorConstructor_9_init(ComGoogleGsonInternalConstructorConstructor_9 *self) {
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalConstructorConstructor_$9 *new_ComGoogleGsonInternalConstructorConstructor_$9_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_$9, init)
+ComGoogleGsonInternalConstructorConstructor_9 *new_ComGoogleGsonInternalConstructorConstructor_9_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_9, init)
 }
 
-ComGoogleGsonInternalConstructorConstructor_$9 *create_ComGoogleGsonInternalConstructorConstructor_$9_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_$9, init)
+ComGoogleGsonInternalConstructorConstructor_9 *create_ComGoogleGsonInternalConstructorConstructor_9_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_9, init)
 }
 
-@implementation ComGoogleGsonInternalConstructorConstructor_$10
+@implementation ComGoogleGsonInternalConstructorConstructor_10
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalConstructorConstructor_10_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id)construct {
   return create_JavaUtilConcurrentConcurrentHashMap_init();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalConstructorConstructor_$10_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(construct);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(construct);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "()TT;", "LComGoogleGsonInternalConstructorConstructor;", "newDefaultImplementationConstructorWithJavaLangReflectType:withIOSClass:", "Ljava/lang/Object;Lcom/google/gson/internal/ObjectConstructor<TT;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_$10 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
-  return &_ComGoogleGsonInternalConstructorConstructor_$10;
+  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_10 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
+  return &_ComGoogleGsonInternalConstructorConstructor_10;
 }
 
 @end
 
-void ComGoogleGsonInternalConstructorConstructor_$10_init(ComGoogleGsonInternalConstructorConstructor_$10 *self) {
+void ComGoogleGsonInternalConstructorConstructor_10_init(ComGoogleGsonInternalConstructorConstructor_10 *self) {
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalConstructorConstructor_$10 *new_ComGoogleGsonInternalConstructorConstructor_$10_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_$10, init)
+ComGoogleGsonInternalConstructorConstructor_10 *new_ComGoogleGsonInternalConstructorConstructor_10_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_10, init)
 }
 
-ComGoogleGsonInternalConstructorConstructor_$10 *create_ComGoogleGsonInternalConstructorConstructor_$10_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_$10, init)
+ComGoogleGsonInternalConstructorConstructor_10 *create_ComGoogleGsonInternalConstructorConstructor_10_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_10, init)
 }
 
-@implementation ComGoogleGsonInternalConstructorConstructor_$11
+@implementation ComGoogleGsonInternalConstructorConstructor_11
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalConstructorConstructor_11_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id)construct {
   return create_JavaUtilTreeMap_init();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalConstructorConstructor_$11_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(construct);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(construct);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "()TT;", "LComGoogleGsonInternalConstructorConstructor;", "newDefaultImplementationConstructorWithJavaLangReflectType:withIOSClass:", "Ljava/lang/Object;Lcom/google/gson/internal/ObjectConstructor<TT;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_$11 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
-  return &_ComGoogleGsonInternalConstructorConstructor_$11;
+  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_11 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
+  return &_ComGoogleGsonInternalConstructorConstructor_11;
 }
 
 @end
 
-void ComGoogleGsonInternalConstructorConstructor_$11_init(ComGoogleGsonInternalConstructorConstructor_$11 *self) {
+void ComGoogleGsonInternalConstructorConstructor_11_init(ComGoogleGsonInternalConstructorConstructor_11 *self) {
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalConstructorConstructor_$11 *new_ComGoogleGsonInternalConstructorConstructor_$11_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_$11, init)
+ComGoogleGsonInternalConstructorConstructor_11 *new_ComGoogleGsonInternalConstructorConstructor_11_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_11, init)
 }
 
-ComGoogleGsonInternalConstructorConstructor_$11 *create_ComGoogleGsonInternalConstructorConstructor_$11_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_$11, init)
+ComGoogleGsonInternalConstructorConstructor_11 *create_ComGoogleGsonInternalConstructorConstructor_11_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_11, init)
 }
 
-@implementation ComGoogleGsonInternalConstructorConstructor_$12
+@implementation ComGoogleGsonInternalConstructorConstructor_12
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalConstructorConstructor_12_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id)construct {
   return create_JavaUtilLinkedHashMap_init();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalConstructorConstructor_$12_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(construct);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(construct);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "()TT;", "LComGoogleGsonInternalConstructorConstructor;", "newDefaultImplementationConstructorWithJavaLangReflectType:withIOSClass:", "Ljava/lang/Object;Lcom/google/gson/internal/ObjectConstructor<TT;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_$12 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
-  return &_ComGoogleGsonInternalConstructorConstructor_$12;
+  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_12 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
+  return &_ComGoogleGsonInternalConstructorConstructor_12;
 }
 
 @end
 
-void ComGoogleGsonInternalConstructorConstructor_$12_init(ComGoogleGsonInternalConstructorConstructor_$12 *self) {
+void ComGoogleGsonInternalConstructorConstructor_12_init(ComGoogleGsonInternalConstructorConstructor_12 *self) {
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalConstructorConstructor_$12 *new_ComGoogleGsonInternalConstructorConstructor_$12_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_$12, init)
+ComGoogleGsonInternalConstructorConstructor_12 *new_ComGoogleGsonInternalConstructorConstructor_12_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_12, init)
 }
 
-ComGoogleGsonInternalConstructorConstructor_$12 *create_ComGoogleGsonInternalConstructorConstructor_$12_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_$12, init)
+ComGoogleGsonInternalConstructorConstructor_12 *create_ComGoogleGsonInternalConstructorConstructor_12_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_12, init)
 }
 
-@implementation ComGoogleGsonInternalConstructorConstructor_$13
+@implementation ComGoogleGsonInternalConstructorConstructor_13
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalConstructorConstructor_13_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id)construct {
   return create_ComGoogleGsonInternalLinkedTreeMap_init();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalConstructorConstructor_$13_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(construct);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(construct);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "()TT;", "LComGoogleGsonInternalConstructorConstructor;", "newDefaultImplementationConstructorWithJavaLangReflectType:withIOSClass:", "Ljava/lang/Object;Lcom/google/gson/internal/ObjectConstructor<TT;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_$13 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
-  return &_ComGoogleGsonInternalConstructorConstructor_$13;
+  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_13 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
+  return &_ComGoogleGsonInternalConstructorConstructor_13;
 }
 
 @end
 
-void ComGoogleGsonInternalConstructorConstructor_$13_init(ComGoogleGsonInternalConstructorConstructor_$13 *self) {
+void ComGoogleGsonInternalConstructorConstructor_13_init(ComGoogleGsonInternalConstructorConstructor_13 *self) {
   NSObject_init(self);
 }
 
-ComGoogleGsonInternalConstructorConstructor_$13 *new_ComGoogleGsonInternalConstructorConstructor_$13_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_$13, init)
+ComGoogleGsonInternalConstructorConstructor_13 *new_ComGoogleGsonInternalConstructorConstructor_13_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_13, init)
 }
 
-ComGoogleGsonInternalConstructorConstructor_$13 *create_ComGoogleGsonInternalConstructorConstructor_$13_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_$13, init)
+ComGoogleGsonInternalConstructorConstructor_13 *create_ComGoogleGsonInternalConstructorConstructor_13_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_13, init)
 }
 
-@implementation ComGoogleGsonInternalConstructorConstructor_$14
+@implementation ComGoogleGsonInternalConstructorConstructor_14
+
+- (instancetype)initWithIOSClass:(IOSClass *)capture$0
+         withJavaLangReflectType:(id<JavaLangReflectType>)capture$1 {
+  ComGoogleGsonInternalConstructorConstructor_14_initWithIOSClass_withJavaLangReflectType_(self, capture$0, capture$1);
+  return self;
+}
 
 - (id)construct {
   @try {
@@ -1091,52 +1085,46 @@ ComGoogleGsonInternalConstructorConstructor_$13 *create_ComGoogleGsonInternalCon
   }
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)capture$0
-         withJavaLangReflectType:(id<JavaLangReflectType>)capture$1 {
-  ComGoogleGsonInternalConstructorConstructor_$14_initWithIOSClass_withJavaLangReflectType_(self, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
-  RELEASE_(unsafeAllocator_);
   RELEASE_(val$rawType_);
   RELEASE_(val$type_);
+  RELEASE_(unsafeAllocator_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, 2, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(construct);
-  methods[1].selector = @selector(initWithIOSClass:withJavaLangReflectType:);
+  methods[0].selector = @selector(initWithIOSClass:withJavaLangReflectType:);
+  methods[1].selector = @selector(construct);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "unsafeAllocator_", "LComGoogleGsonInternalUnsafeAllocator;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
-    { "val$rawType_", "LIOSClass;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$rawType_", "LIOSClass;", .constantValue.asLong = 0, 0x1012, -1, -1, 1, -1 },
     { "val$type_", "LJavaLangReflectType;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "unsafeAllocator_", "LComGoogleGsonInternalUnsafeAllocator;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "()TT;", "LIOSClass;LJavaLangReflectType;", "(Ljava/lang/Class<-TT;>;Ljava/lang/reflect/Type;)V", "Ljava/lang/Class<-TT;>;", "LComGoogleGsonInternalConstructorConstructor;", "newUnsafeAllocatorWithJavaLangReflectType:withIOSClass:", "Ljava/lang/Object;Lcom/google/gson/internal/ObjectConstructor<TT;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_$14 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 2, 3, 4, -1, 5, 6, -1 };
-  return &_ComGoogleGsonInternalConstructorConstructor_$14;
+  static const void *ptrTable[] = { "()TT;", "Ljava/lang/Class<-TT;>;", "LComGoogleGsonInternalConstructorConstructor;", "newUnsafeAllocatorWithJavaLangReflectType:withIOSClass:", "Ljava/lang/Object;Lcom/google/gson/internal/ObjectConstructor<TT;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalConstructorConstructor_14 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 2, 3, 2, -1, 3, 4, -1 };
+  return &_ComGoogleGsonInternalConstructorConstructor_14;
 }
 
 @end
 
-void ComGoogleGsonInternalConstructorConstructor_$14_initWithIOSClass_withJavaLangReflectType_(ComGoogleGsonInternalConstructorConstructor_$14 *self, IOSClass *capture$0, id<JavaLangReflectType> capture$1) {
+void ComGoogleGsonInternalConstructorConstructor_14_initWithIOSClass_withJavaLangReflectType_(ComGoogleGsonInternalConstructorConstructor_14 *self, IOSClass *capture$0, id<JavaLangReflectType> capture$1) {
   JreStrongAssign(&self->val$rawType_, capture$0);
   JreStrongAssign(&self->val$type_, capture$1);
   NSObject_init(self);
   JreStrongAssign(&self->unsafeAllocator_, ComGoogleGsonInternalUnsafeAllocator_create());
 }
 
-ComGoogleGsonInternalConstructorConstructor_$14 *new_ComGoogleGsonInternalConstructorConstructor_$14_initWithIOSClass_withJavaLangReflectType_(IOSClass *capture$0, id<JavaLangReflectType> capture$1) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_$14, initWithIOSClass_withJavaLangReflectType_, capture$0, capture$1)
+ComGoogleGsonInternalConstructorConstructor_14 *new_ComGoogleGsonInternalConstructorConstructor_14_initWithIOSClass_withJavaLangReflectType_(IOSClass *capture$0, id<JavaLangReflectType> capture$1) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalConstructorConstructor_14, initWithIOSClass_withJavaLangReflectType_, capture$0, capture$1)
 }
 
-ComGoogleGsonInternalConstructorConstructor_$14 *create_ComGoogleGsonInternalConstructorConstructor_$14_initWithIOSClass_withJavaLangReflectType_(IOSClass *capture$0, id<JavaLangReflectType> capture$1) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_$14, initWithIOSClass_withJavaLangReflectType_, capture$0, capture$1)
+ComGoogleGsonInternalConstructorConstructor_14 *create_ComGoogleGsonInternalConstructorConstructor_14_initWithIOSClass_withJavaLangReflectType_(IOSClass *capture$0, id<JavaLangReflectType> capture$1) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalConstructorConstructor_14, initWithIOSClass_withJavaLangReflectType_, capture$0, capture$1)
 }

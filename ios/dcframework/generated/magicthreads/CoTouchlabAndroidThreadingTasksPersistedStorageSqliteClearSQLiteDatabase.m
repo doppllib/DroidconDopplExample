@@ -8,7 +8,6 @@
 #include "AndroidDatabaseSqliteSQLiteDatabase.h"
 #include "CoTouchlabAndroidThreadingTasksPersistedStorageSqliteClearSQLiteDatabase.h"
 #include "CoTouchlabAndroidThreadingTasksPersistedStorageSqliteCursorIntf.h"
-#include "IOSClass.h"
 #include "IOSObjectArray.h"
 #include "J2ObjC_source.h"
 

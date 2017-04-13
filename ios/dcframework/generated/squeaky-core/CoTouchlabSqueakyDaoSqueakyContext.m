@@ -86,7 +86,7 @@ J2OBJC_FIELD_SETTER(CoTouchlabSqueakyDaoSqueakyContext, generatedTableMapperMap_
     CoTouchlabSqueakyFieldFieldType * const *e__ = b__ + a__->size_;
     while (b__ < e__) {
       CoTouchlabSqueakyFieldFieldType *fieldType = *b__++;
-      if ([((NSString *) nil_chk([((CoTouchlabSqueakyFieldFieldType *) nil_chk(fieldType)) getFieldName])) equalsIgnoreCase:columnFieldName] || [((NSString *) nil_chk([fieldType getColumnName])) equalsIgnoreCase:columnFieldName]) {
+      if ([((NSString *) nil_chk([((CoTouchlabSqueakyFieldFieldType *) nil_chk(fieldType)) getFieldName])) java_equalsIgnoreCase:columnFieldName] || [((NSString *) nil_chk([fieldType getColumnName])) java_equalsIgnoreCase:columnFieldName]) {
         return fieldType;
       }
     }

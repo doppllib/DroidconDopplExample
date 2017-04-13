@@ -365,7 +365,7 @@ ComGoogleGsonGsonBuilder *create_ComGoogleGsonGsonBuilder_init() {
 
 void ComGoogleGsonGsonBuilder_addTypeAdaptersForDateWithNSString_withInt_withInt_withJavaUtilList_(ComGoogleGsonGsonBuilder *self, NSString *datePattern, jint dateStyle, jint timeStyle, id<JavaUtilList> factories) {
   ComGoogleGsonDefaultDateTypeAdapter *dateTypeAdapter;
-  if (datePattern != nil && ![@"" isEqual:[datePattern trim]]) {
+  if (datePattern != nil && ![@"" isEqual:[datePattern java_trim]]) {
     dateTypeAdapter = create_ComGoogleGsonDefaultDateTypeAdapter_initWithNSString_(datePattern);
   }
   else if (dateStyle != JavaTextDateFormat_DEFAULT && timeStyle != JavaTextDateFormat_DEFAULT) {

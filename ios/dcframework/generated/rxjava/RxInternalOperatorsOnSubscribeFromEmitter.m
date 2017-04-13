@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OnSubscribeFromEmitter.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxEmitter.h"
 #include "RxExceptionsExceptions.h"
@@ -184,7 +183,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeFromEmitter)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, NULL, 0x1, -1, 0, -1, 1, -1, -1 },
+    { NULL, NULL, 0x1, -1, 0, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
   };
@@ -197,8 +196,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeFromEmitter)
   static const J2ObjcFieldInfo fields[] = {
     { "serialVersionUID", "J", .constantValue.asLong = RxInternalOperatorsOnSubscribeFromEmitter_CancellableSubscription_serialVersionUID, 0x1a, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxFunctionsCancellable;", "(Lrx/functions/Cancellable;)V", "LRxInternalOperatorsOnSubscribeFromEmitter;", "Ljava/util/concurrent/atomic/AtomicReference<Lrx/functions/Cancellable;>;Lrx/Subscription;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeFromEmitter_CancellableSubscription = { "CancellableSubscription", "rx.internal.operators", ptrTable, methods, fields, 7, 0x18, 3, 1, 2, -1, -1, 3, -1 };
+  static const void *ptrTable[] = { "LRxFunctionsCancellable;", "LRxInternalOperatorsOnSubscribeFromEmitter;", "Ljava/util/concurrent/atomic/AtomicReference<Lrx/functions/Cancellable;>;Lrx/Subscription;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeFromEmitter_CancellableSubscription = { "CancellableSubscription", "rx.internal.operators", ptrTable, methods, fields, 7, 0x18, 3, 1, 1, -1, -1, 2, -1 };
   return &_RxInternalOperatorsOnSubscribeFromEmitter_CancellableSubscription;
 }
 

@@ -8,6 +8,13 @@
 
 @implementation CoTouchlabDroidconandroidNetworkDaoEventVideoDetails
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabDroidconandroidNetworkDaoEventVideoDetails_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (NSString *)getStreamLink {
   return streamLink_;
 }
@@ -24,13 +31,6 @@
   return streamArchiveStart_;
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabDroidconandroidNetworkDaoEventVideoDetails_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(streamLink_);
   RELEASE_(videoLink_);
@@ -40,19 +40,19 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "I", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getStreamLink);
-  methods[1].selector = @selector(getVideoLink);
-  methods[2].selector = @selector(getStreamArchiveLink);
-  methods[3].selector = @selector(getStreamArchiveStart);
-  methods[4].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(getStreamLink);
+  methods[2].selector = @selector(getVideoLink);
+  methods[3].selector = @selector(getStreamArchiveLink);
+  methods[4].selector = @selector(getStreamArchiveStart);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "streamLink_", "LNSString;", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },

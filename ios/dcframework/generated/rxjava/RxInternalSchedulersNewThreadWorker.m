@@ -80,21 +80,21 @@ inline id RxInternalSchedulersNewThreadWorker_get_SET_REMOVE_ON_CANCEL_POLICY_ME
 static id RxInternalSchedulersNewThreadWorker_SET_REMOVE_ON_CANCEL_POLICY_METHOD_NOT_SUPPORTED;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(RxInternalSchedulersNewThreadWorker, SET_REMOVE_ON_CANCEL_POLICY_METHOD_NOT_SUPPORTED, id)
 
-@interface RxInternalSchedulersNewThreadWorker_$1 : NSObject < JavaLangRunnable >
-
-- (void)run;
+@interface RxInternalSchedulersNewThreadWorker_1 : NSObject < JavaLangRunnable >
 
 - (instancetype)init;
 
+- (void)run;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersNewThreadWorker_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersNewThreadWorker_1)
 
-__attribute__((unused)) static void RxInternalSchedulersNewThreadWorker_$1_init(RxInternalSchedulersNewThreadWorker_$1 *self);
+__attribute__((unused)) static void RxInternalSchedulersNewThreadWorker_1_init(RxInternalSchedulersNewThreadWorker_1 *self);
 
-__attribute__((unused)) static RxInternalSchedulersNewThreadWorker_$1 *new_RxInternalSchedulersNewThreadWorker_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalSchedulersNewThreadWorker_1 *new_RxInternalSchedulersNewThreadWorker_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalSchedulersNewThreadWorker_$1 *create_RxInternalSchedulersNewThreadWorker_$1_init();
+__attribute__((unused)) static RxInternalSchedulersNewThreadWorker_1 *create_RxInternalSchedulersNewThreadWorker_1_init();
 
 J2OBJC_INITIALIZED_DEFN(RxInternalSchedulersNewThreadWorker)
 
@@ -283,7 +283,7 @@ void RxInternalSchedulersNewThreadWorker_registerExecutorWithJavaUtilConcurrentS
     }
     exec = JavaUtilConcurrentExecutors_newScheduledThreadPoolWithInt_withJavaUtilConcurrentThreadFactory_(1, create_RxInternalUtilRxThreadFactory_initWithNSString_(RxInternalSchedulersNewThreadWorker_PURGE_THREAD_PREFIX));
     if ([RxInternalSchedulersNewThreadWorker_PURGE compareAndSetWithId:nil withId:exec]) {
-      [((id<JavaUtilConcurrentScheduledExecutorService>) nil_chk(exec)) scheduleAtFixedRateWithJavaLangRunnable:create_RxInternalSchedulersNewThreadWorker_$1_init() withLong:RxInternalSchedulersNewThreadWorker_PURGE_FREQUENCY withLong:RxInternalSchedulersNewThreadWorker_PURGE_FREQUENCY withJavaUtilConcurrentTimeUnit:JreLoadEnum(JavaUtilConcurrentTimeUnit, MILLISECONDS)];
+      [((id<JavaUtilConcurrentScheduledExecutorService>) nil_chk(exec)) scheduleAtFixedRateWithJavaLangRunnable:create_RxInternalSchedulersNewThreadWorker_1_init() withLong:RxInternalSchedulersNewThreadWorker_PURGE_FREQUENCY withLong:RxInternalSchedulersNewThreadWorker_PURGE_FREQUENCY withJavaUtilConcurrentTimeUnit:JreLoadEnum(JavaUtilConcurrentTimeUnit, MILLISECONDS)];
       break;
     }
     else {
@@ -399,44 +399,44 @@ RxInternalSchedulersNewThreadWorker *create_RxInternalSchedulersNewThreadWorker_
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersNewThreadWorker)
 
-@implementation RxInternalSchedulersNewThreadWorker_$1
+@implementation RxInternalSchedulersNewThreadWorker_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalSchedulersNewThreadWorker_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)run {
   RxInternalSchedulersNewThreadWorker_purgeExecutors();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalSchedulersNewThreadWorker_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "LRxInternalSchedulersNewThreadWorker;", "registerExecutorWithJavaUtilConcurrentScheduledThreadPoolExecutor:" };
-  static const J2ObjcClassInfo _RxInternalSchedulersNewThreadWorker_$1 = { "", "rx.internal.schedulers", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 0, -1, 1, -1, -1 };
-  return &_RxInternalSchedulersNewThreadWorker_$1;
+  static const J2ObjcClassInfo _RxInternalSchedulersNewThreadWorker_1 = { "", "rx.internal.schedulers", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 0, -1, 1, -1, -1 };
+  return &_RxInternalSchedulersNewThreadWorker_1;
 }
 
 @end
 
-void RxInternalSchedulersNewThreadWorker_$1_init(RxInternalSchedulersNewThreadWorker_$1 *self) {
+void RxInternalSchedulersNewThreadWorker_1_init(RxInternalSchedulersNewThreadWorker_1 *self) {
   NSObject_init(self);
 }
 
-RxInternalSchedulersNewThreadWorker_$1 *new_RxInternalSchedulersNewThreadWorker_$1_init() {
-  J2OBJC_NEW_IMPL(RxInternalSchedulersNewThreadWorker_$1, init)
+RxInternalSchedulersNewThreadWorker_1 *new_RxInternalSchedulersNewThreadWorker_1_init() {
+  J2OBJC_NEW_IMPL(RxInternalSchedulersNewThreadWorker_1, init)
 }
 
-RxInternalSchedulersNewThreadWorker_$1 *create_RxInternalSchedulersNewThreadWorker_$1_init() {
-  J2OBJC_CREATE_IMPL(RxInternalSchedulersNewThreadWorker_$1, init)
+RxInternalSchedulersNewThreadWorker_1 *create_RxInternalSchedulersNewThreadWorker_1_init() {
+  J2OBJC_CREATE_IMPL(RxInternalSchedulersNewThreadWorker_1, init)
 }

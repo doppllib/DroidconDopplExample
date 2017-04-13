@@ -117,6 +117,10 @@ J2OBJC_TYPE_LITERAL_HEADER(RxSchedulersTestScheduler_TimedAction)
 #include "java/util/Comparator.h"
 
 @class RxSchedulersTestScheduler_TimedAction;
+@protocol JavaUtilFunctionFunction;
+@protocol JavaUtilFunctionToDoubleFunction;
+@protocol JavaUtilFunctionToIntFunction;
+@protocol JavaUtilFunctionToLongFunction;
 
 @interface RxSchedulersTestScheduler_CompareActionsByTime : NSObject < JavaUtilComparator >
 

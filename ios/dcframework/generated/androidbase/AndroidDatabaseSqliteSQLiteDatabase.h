@@ -239,7 +239,7 @@ withAndroidContentContentValues:(AndroidContentContentValues *)values
 
 #pragma mark Protected
 
-- (void)javaFinalize;
+- (void)java_finalize;
 
 - (void)onAllReferencesReleased;
 

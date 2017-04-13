@@ -32,7 +32,7 @@ __attribute__((unused)) static IOSByteArray *RetrofitMimeTypedString_convertToBy
 
 - (NSString *)description {
   @try {
-    return JreStrcat("$$C", @"TypedString[", [NSString stringWithBytes:[self getBytes] charsetName:@"UTF-8"], ']');
+    return JreStrcat("$$C", @"TypedString[", [NSString java_stringWithBytes:[self getBytes] charsetName:@"UTF-8"], ']');
   }
   @catch (JavaIoUnsupportedEncodingException *e) {
     @throw create_JavaLangAssertionError_initWithId_(@"Must be able to decode UTF-8");
@@ -73,7 +73,7 @@ RetrofitMimeTypedString *create_RetrofitMimeTypedString_initWithNSString_(NSStri
 IOSByteArray *RetrofitMimeTypedString_convertToBytesWithNSString_(NSString *string) {
   RetrofitMimeTypedString_initialize();
   @try {
-    return [((NSString *) nil_chk(string)) getBytesWithCharsetName:@"UTF-8"];
+    return [((NSString *) nil_chk(string)) java_getBytesWithCharsetName:@"UTF-8"];
   }
   @catch (JavaIoUnsupportedEncodingException *e) {
     @throw create_JavaLangRuntimeException_initWithNSException_(e);

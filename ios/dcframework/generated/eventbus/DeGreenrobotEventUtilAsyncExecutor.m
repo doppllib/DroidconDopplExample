@@ -71,29 +71,26 @@ __attribute__((unused)) static DeGreenrobotEventUtilAsyncExecutor_Builder *creat
 
 @end
 
-@interface DeGreenrobotEventUtilAsyncExecutor_$1 : NSObject < JavaLangRunnable > {
+@interface DeGreenrobotEventUtilAsyncExecutor_1 : NSObject < JavaLangRunnable > {
  @public
   DeGreenrobotEventUtilAsyncExecutor *this$0_;
   id<DeGreenrobotEventUtilAsyncExecutor_RunnableEx> val$runnable_;
 }
 
-- (void)run;
-
 - (instancetype)initWithDeGreenrobotEventUtilAsyncExecutor:(DeGreenrobotEventUtilAsyncExecutor *)outer$
          withDeGreenrobotEventUtilAsyncExecutor_RunnableEx:(id<DeGreenrobotEventUtilAsyncExecutor_RunnableEx>)capture$0;
 
+- (void)run;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(DeGreenrobotEventUtilAsyncExecutor_$1)
+J2OBJC_EMPTY_STATIC_INIT(DeGreenrobotEventUtilAsyncExecutor_1)
 
-J2OBJC_FIELD_SETTER(DeGreenrobotEventUtilAsyncExecutor_$1, this$0_, DeGreenrobotEventUtilAsyncExecutor *)
-J2OBJC_FIELD_SETTER(DeGreenrobotEventUtilAsyncExecutor_$1, val$runnable_, id<DeGreenrobotEventUtilAsyncExecutor_RunnableEx>)
+__attribute__((unused)) static void DeGreenrobotEventUtilAsyncExecutor_1_initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_(DeGreenrobotEventUtilAsyncExecutor_1 *self, DeGreenrobotEventUtilAsyncExecutor *outer$, id<DeGreenrobotEventUtilAsyncExecutor_RunnableEx> capture$0);
 
-__attribute__((unused)) static void DeGreenrobotEventUtilAsyncExecutor_$1_initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_(DeGreenrobotEventUtilAsyncExecutor_$1 *self, DeGreenrobotEventUtilAsyncExecutor *outer$, id<DeGreenrobotEventUtilAsyncExecutor_RunnableEx> capture$0);
+__attribute__((unused)) static DeGreenrobotEventUtilAsyncExecutor_1 *new_DeGreenrobotEventUtilAsyncExecutor_1_initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_(DeGreenrobotEventUtilAsyncExecutor *outer$, id<DeGreenrobotEventUtilAsyncExecutor_RunnableEx> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static DeGreenrobotEventUtilAsyncExecutor_$1 *new_DeGreenrobotEventUtilAsyncExecutor_$1_initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_(DeGreenrobotEventUtilAsyncExecutor *outer$, id<DeGreenrobotEventUtilAsyncExecutor_RunnableEx> capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static DeGreenrobotEventUtilAsyncExecutor_$1 *create_DeGreenrobotEventUtilAsyncExecutor_$1_initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_(DeGreenrobotEventUtilAsyncExecutor *outer$, id<DeGreenrobotEventUtilAsyncExecutor_RunnableEx> capture$0);
+__attribute__((unused)) static DeGreenrobotEventUtilAsyncExecutor_1 *create_DeGreenrobotEventUtilAsyncExecutor_1_initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_(DeGreenrobotEventUtilAsyncExecutor *outer$, id<DeGreenrobotEventUtilAsyncExecutor_RunnableEx> capture$0);
 
 @implementation DeGreenrobotEventUtilAsyncExecutor
 
@@ -114,7 +111,7 @@ __attribute__((unused)) static DeGreenrobotEventUtilAsyncExecutor_$1 *create_DeG
 }
 
 - (void)executeWithDeGreenrobotEventUtilAsyncExecutor_RunnableEx:(id<DeGreenrobotEventUtilAsyncExecutor_RunnableEx>)runnable {
-  [((id<JavaUtilConcurrentExecutor>) nil_chk(threadPool_)) executeWithJavaLangRunnable:create_DeGreenrobotEventUtilAsyncExecutor_$1_initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_(self, runnable)];
+  [((id<JavaUtilConcurrentExecutor>) nil_chk(threadPool_)) executeWithJavaLangRunnable:create_DeGreenrobotEventUtilAsyncExecutor_1_initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_(self, runnable)];
 }
 
 - (void)dealloc {
@@ -296,7 +293,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(DeGreenrobotEventUtilAsyncExecutor_Builder)
 
 J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(DeGreenrobotEventUtilAsyncExecutor_RunnableEx)
 
-@implementation DeGreenrobotEventUtilAsyncExecutor_$1
+@implementation DeGreenrobotEventUtilAsyncExecutor_1
+
+- (instancetype)initWithDeGreenrobotEventUtilAsyncExecutor:(DeGreenrobotEventUtilAsyncExecutor *)outer$
+         withDeGreenrobotEventUtilAsyncExecutor_RunnableEx:(id<DeGreenrobotEventUtilAsyncExecutor_RunnableEx>)capture$0 {
+  DeGreenrobotEventUtilAsyncExecutor_1_initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)run {
   @try {
@@ -318,12 +321,6 @@ J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(DeGreenrobotEventUtilAsyncExecutor_Runnable
   }
 }
 
-- (instancetype)initWithDeGreenrobotEventUtilAsyncExecutor:(DeGreenrobotEventUtilAsyncExecutor *)outer$
-         withDeGreenrobotEventUtilAsyncExecutor_RunnableEx:(id<DeGreenrobotEventUtilAsyncExecutor_RunnableEx>)capture$0 {
-  DeGreenrobotEventUtilAsyncExecutor_$1_initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_(self, outer$, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$runnable_);
@@ -332,35 +329,35 @@ J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(DeGreenrobotEventUtilAsyncExecutor_Runnable
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithDeGreenrobotEventUtilAsyncExecutor:withDeGreenrobotEventUtilAsyncExecutor_RunnableEx:);
+  methods[0].selector = @selector(initWithDeGreenrobotEventUtilAsyncExecutor:withDeGreenrobotEventUtilAsyncExecutor_RunnableEx:);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LDeGreenrobotEventUtilAsyncExecutor;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$runnable_", "LDeGreenrobotEventUtilAsyncExecutor_RunnableEx;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LDeGreenrobotEventUtilAsyncExecutor;LDeGreenrobotEventUtilAsyncExecutor_RunnableEx;", "LDeGreenrobotEventUtilAsyncExecutor;", "executeWithDeGreenrobotEventUtilAsyncExecutor_RunnableEx:" };
-  static const J2ObjcClassInfo _DeGreenrobotEventUtilAsyncExecutor_$1 = { "", "de.greenrobot.event.util", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_DeGreenrobotEventUtilAsyncExecutor_$1;
+  static const void *ptrTable[] = { "LDeGreenrobotEventUtilAsyncExecutor;", "executeWithDeGreenrobotEventUtilAsyncExecutor_RunnableEx:" };
+  static const J2ObjcClassInfo _DeGreenrobotEventUtilAsyncExecutor_1 = { "", "de.greenrobot.event.util", ptrTable, methods, fields, 7, 0x8008, 2, 2, 0, -1, 1, -1, -1 };
+  return &_DeGreenrobotEventUtilAsyncExecutor_1;
 }
 
 @end
 
-void DeGreenrobotEventUtilAsyncExecutor_$1_initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_(DeGreenrobotEventUtilAsyncExecutor_$1 *self, DeGreenrobotEventUtilAsyncExecutor *outer$, id<DeGreenrobotEventUtilAsyncExecutor_RunnableEx> capture$0) {
+void DeGreenrobotEventUtilAsyncExecutor_1_initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_(DeGreenrobotEventUtilAsyncExecutor_1 *self, DeGreenrobotEventUtilAsyncExecutor *outer$, id<DeGreenrobotEventUtilAsyncExecutor_RunnableEx> capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$runnable_, capture$0);
   NSObject_init(self);
 }
 
-DeGreenrobotEventUtilAsyncExecutor_$1 *new_DeGreenrobotEventUtilAsyncExecutor_$1_initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_(DeGreenrobotEventUtilAsyncExecutor *outer$, id<DeGreenrobotEventUtilAsyncExecutor_RunnableEx> capture$0) {
-  J2OBJC_NEW_IMPL(DeGreenrobotEventUtilAsyncExecutor_$1, initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_, outer$, capture$0)
+DeGreenrobotEventUtilAsyncExecutor_1 *new_DeGreenrobotEventUtilAsyncExecutor_1_initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_(DeGreenrobotEventUtilAsyncExecutor *outer$, id<DeGreenrobotEventUtilAsyncExecutor_RunnableEx> capture$0) {
+  J2OBJC_NEW_IMPL(DeGreenrobotEventUtilAsyncExecutor_1, initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_, outer$, capture$0)
 }
 
-DeGreenrobotEventUtilAsyncExecutor_$1 *create_DeGreenrobotEventUtilAsyncExecutor_$1_initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_(DeGreenrobotEventUtilAsyncExecutor *outer$, id<DeGreenrobotEventUtilAsyncExecutor_RunnableEx> capture$0) {
-  J2OBJC_CREATE_IMPL(DeGreenrobotEventUtilAsyncExecutor_$1, initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_, outer$, capture$0)
+DeGreenrobotEventUtilAsyncExecutor_1 *create_DeGreenrobotEventUtilAsyncExecutor_1_initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_(DeGreenrobotEventUtilAsyncExecutor *outer$, id<DeGreenrobotEventUtilAsyncExecutor_RunnableEx> capture$0) {
+  J2OBJC_CREATE_IMPL(DeGreenrobotEventUtilAsyncExecutor_1, initWithDeGreenrobotEventUtilAsyncExecutor_withDeGreenrobotEventUtilAsyncExecutor_RunnableEx_, outer$, capture$0)
 }

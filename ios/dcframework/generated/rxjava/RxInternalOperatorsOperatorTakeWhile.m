@@ -12,35 +12,38 @@
 #include "java/lang/Boolean.h"
 #include "java/lang/Integer.h"
 
-@interface RxInternalOperatorsOperatorTakeWhile_$1 : NSObject < RxFunctionsFunc2 > {
+@interface RxInternalOperatorsOperatorTakeWhile_1 : NSObject < RxFunctionsFunc2 > {
  @public
   id<RxFunctionsFunc1> val$underlying_;
 }
 
+- (instancetype)initWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$0;
+
 - (JavaLangBoolean *)callWithId:(id)input
                          withId:(JavaLangInteger *)index;
 
-- (instancetype)initWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTakeWhile_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTakeWhile_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorTakeWhile_$1, val$underlying_, id<RxFunctionsFunc1>)
+__attribute__((unused)) static void RxInternalOperatorsOperatorTakeWhile_1_initWithRxFunctionsFunc1_(RxInternalOperatorsOperatorTakeWhile_1 *self, id<RxFunctionsFunc1> capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorTakeWhile_$1_initWithRxFunctionsFunc1_(RxInternalOperatorsOperatorTakeWhile_$1 *self, id<RxFunctionsFunc1> capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorTakeWhile_1 *new_RxInternalOperatorsOperatorTakeWhile_1_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorTakeWhile_$1 *new_RxInternalOperatorsOperatorTakeWhile_$1_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorTakeWhile_1 *create_RxInternalOperatorsOperatorTakeWhile_1_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorTakeWhile_$1 *create_RxInternalOperatorsOperatorTakeWhile_$1_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0);
-
-@interface RxInternalOperatorsOperatorTakeWhile_$2 : RxSubscriber {
+@interface RxInternalOperatorsOperatorTakeWhile_2 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorTakeWhile *this$0_;
+  RxSubscriber *val$subscriber_;
   jint counter_;
   jboolean done_;
-  RxSubscriber *val$subscriber_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorTakeWhile:(RxInternalOperatorsOperatorTakeWhile *)outer$
+                                            withRxSubscriber:(RxSubscriber *)capture$0
+                                            withRxSubscriber:(RxSubscriber *)param0
+                                                 withBoolean:(jboolean)param1;
 
 - (void)onNextWithId:(id)t;
 
@@ -48,23 +51,15 @@ __attribute__((unused)) static RxInternalOperatorsOperatorTakeWhile_$1 *create_R
 
 - (void)onErrorWithNSException:(NSException *)e;
 
-- (instancetype)initWithRxInternalOperatorsOperatorTakeWhile:(RxInternalOperatorsOperatorTakeWhile *)outer$
-                                            withRxSubscriber:(RxSubscriber *)capture$0
-                                            withRxSubscriber:(RxSubscriber *)arg$0
-                                                 withBoolean:(jboolean)arg$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTakeWhile_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTakeWhile_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorTakeWhile_$2, this$0_, RxInternalOperatorsOperatorTakeWhile *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorTakeWhile_$2, val$subscriber_, RxSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorTakeWhile_2_initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorTakeWhile_2 *self, RxInternalOperatorsOperatorTakeWhile *outer$, RxSubscriber *capture$0, RxSubscriber *param0, jboolean param1);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorTakeWhile_$2_initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorTakeWhile_$2 *self, RxInternalOperatorsOperatorTakeWhile *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0, jboolean arg$1);
+__attribute__((unused)) static RxInternalOperatorsOperatorTakeWhile_2 *new_RxInternalOperatorsOperatorTakeWhile_2_initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorTakeWhile *outer$, RxSubscriber *capture$0, RxSubscriber *param0, jboolean param1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorTakeWhile_$2 *new_RxInternalOperatorsOperatorTakeWhile_$2_initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorTakeWhile *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0, jboolean arg$1) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorTakeWhile_$2 *create_RxInternalOperatorsOperatorTakeWhile_$2_initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorTakeWhile *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0, jboolean arg$1);
+__attribute__((unused)) static RxInternalOperatorsOperatorTakeWhile_2 *create_RxInternalOperatorsOperatorTakeWhile_2_initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorTakeWhile *outer$, RxSubscriber *capture$0, RxSubscriber *param0, jboolean param1);
 
 @implementation RxInternalOperatorsOperatorTakeWhile
 
@@ -79,7 +74,7 @@ __attribute__((unused)) static RxInternalOperatorsOperatorTakeWhile_$2 *create_R
 }
 
 - (RxSubscriber *)callWithId:(RxSubscriber *)subscriber {
-  RxSubscriber *s = create_RxInternalOperatorsOperatorTakeWhile_$2_initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_(self, subscriber, subscriber, false);
+  RxSubscriber *s = create_RxInternalOperatorsOperatorTakeWhile_2_initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_(self, subscriber, subscriber, false);
   [((RxSubscriber *) nil_chk(subscriber)) addWithRxSubscription:s];
   return s;
 }
@@ -112,7 +107,7 @@ __attribute__((unused)) static RxInternalOperatorsOperatorTakeWhile_$2 *create_R
 @end
 
 void RxInternalOperatorsOperatorTakeWhile_initWithRxFunctionsFunc1_(RxInternalOperatorsOperatorTakeWhile *self, id<RxFunctionsFunc1> underlying) {
-  RxInternalOperatorsOperatorTakeWhile_initWithRxFunctionsFunc2_(self, create_RxInternalOperatorsOperatorTakeWhile_$1_initWithRxFunctionsFunc1_(underlying));
+  RxInternalOperatorsOperatorTakeWhile_initWithRxFunctionsFunc2_(self, create_RxInternalOperatorsOperatorTakeWhile_1_initWithRxFunctionsFunc1_(underlying));
 }
 
 RxInternalOperatorsOperatorTakeWhile *new_RxInternalOperatorsOperatorTakeWhile_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> underlying) {
@@ -138,16 +133,16 @@ RxInternalOperatorsOperatorTakeWhile *create_RxInternalOperatorsOperatorTakeWhil
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorTakeWhile)
 
-@implementation RxInternalOperatorsOperatorTakeWhile_$1
+@implementation RxInternalOperatorsOperatorTakeWhile_1
+
+- (instancetype)initWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$0 {
+  RxInternalOperatorsOperatorTakeWhile_1_initWithRxFunctionsFunc1_(self, capture$0);
+  return self;
+}
 
 - (JavaLangBoolean *)callWithId:(id)input
                          withId:(JavaLangInteger *)index {
   return [((id<RxFunctionsFunc1>) nil_chk(val$underlying_)) callWithId:input];
-}
-
-- (instancetype)initWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$0 {
-  RxInternalOperatorsOperatorTakeWhile_$1_initWithRxFunctionsFunc1_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -157,38 +152,46 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorTakeWhile)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaLangBoolean;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:);
-  methods[1].selector = @selector(initWithRxFunctionsFunc1:);
+  methods[0].selector = @selector(initWithRxFunctionsFunc1:);
+  methods[1].selector = @selector(callWithId:withId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$underlying_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$underlying_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
   };
-  static const void *ptrTable[] = { "call", "LNSObject;LJavaLangInteger;", "(TT;Ljava/lang/Integer;)Ljava/lang/Boolean;", "LRxFunctionsFunc1;", "(Lrx/functions/Func1<-TT;Ljava/lang/Boolean;>;)V", "Lrx/functions/Func1<-TT;Ljava/lang/Boolean;>;", "LRxInternalOperatorsOperatorTakeWhile;", "initWithRxFunctionsFunc1:", "Ljava/lang/Object;Lrx/functions/Func2<TT;Ljava/lang/Integer;Ljava/lang/Boolean;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTakeWhile_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 6, -1, 7, 8, -1 };
-  return &_RxInternalOperatorsOperatorTakeWhile_$1;
+  static const void *ptrTable[] = { "call", "LNSObject;LJavaLangInteger;", "(TT;Ljava/lang/Integer;)Ljava/lang/Boolean;", "Lrx/functions/Func1<-TT;Ljava/lang/Boolean;>;", "LRxInternalOperatorsOperatorTakeWhile;", "initWithRxFunctionsFunc1:", "Ljava/lang/Object;Lrx/functions/Func2<TT;Ljava/lang/Integer;Ljava/lang/Boolean;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTakeWhile_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
+  return &_RxInternalOperatorsOperatorTakeWhile_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorTakeWhile_$1_initWithRxFunctionsFunc1_(RxInternalOperatorsOperatorTakeWhile_$1 *self, id<RxFunctionsFunc1> capture$0) {
+void RxInternalOperatorsOperatorTakeWhile_1_initWithRxFunctionsFunc1_(RxInternalOperatorsOperatorTakeWhile_1 *self, id<RxFunctionsFunc1> capture$0) {
   JreStrongAssign(&self->val$underlying_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorTakeWhile_$1 *new_RxInternalOperatorsOperatorTakeWhile_$1_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTakeWhile_$1, initWithRxFunctionsFunc1_, capture$0)
+RxInternalOperatorsOperatorTakeWhile_1 *new_RxInternalOperatorsOperatorTakeWhile_1_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTakeWhile_1, initWithRxFunctionsFunc1_, capture$0)
 }
 
-RxInternalOperatorsOperatorTakeWhile_$1 *create_RxInternalOperatorsOperatorTakeWhile_$1_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTakeWhile_$1, initWithRxFunctionsFunc1_, capture$0)
+RxInternalOperatorsOperatorTakeWhile_1 *create_RxInternalOperatorsOperatorTakeWhile_1_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTakeWhile_1, initWithRxFunctionsFunc1_, capture$0)
 }
 
-@implementation RxInternalOperatorsOperatorTakeWhile_$2
+@implementation RxInternalOperatorsOperatorTakeWhile_2
+
+- (instancetype)initWithRxInternalOperatorsOperatorTakeWhile:(RxInternalOperatorsOperatorTakeWhile *)outer$
+                                            withRxSubscriber:(RxSubscriber *)capture$0
+                                            withRxSubscriber:(RxSubscriber *)param0
+                                                 withBoolean:(jboolean)param1 {
+  RxInternalOperatorsOperatorTakeWhile_2_initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_(self, outer$, capture$0, param0, param1);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   jboolean isSelected;
@@ -223,16 +226,7 @@ RxInternalOperatorsOperatorTakeWhile_$1 *create_RxInternalOperatorsOperatorTakeW
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorTakeWhile:(RxInternalOperatorsOperatorTakeWhile *)outer$
-                                            withRxSubscriber:(RxSubscriber *)capture$0
-                                            withRxSubscriber:(RxSubscriber *)arg$0
-                                                 withBoolean:(jboolean)arg$1 {
-  RxInternalOperatorsOperatorTakeWhile_$2_initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_(self, outer$, capture$0, arg$0, arg$1);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorTakeWhile_$2 class]);
   RELEASE_(this$0_);
   RELEASE_(val$subscriber_);
   [super dealloc];
@@ -240,41 +234,41 @@ RxInternalOperatorsOperatorTakeWhile_$1 *create_RxInternalOperatorsOperatorTakeW
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
+    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onCompleted);
-  methods[2].selector = @selector(onErrorWithNSException:);
-  methods[3].selector = @selector(initWithRxInternalOperatorsOperatorTakeWhile:withRxSubscriber:withRxSubscriber:withBoolean:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorTakeWhile:withRxSubscriber:withRxSubscriber:withBoolean:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onCompleted);
+  methods[3].selector = @selector(onErrorWithNSException:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorTakeWhile;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorTakeWhile;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
     { "counter_", "I", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "done_", "Z", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
-    { "val$subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxInternalOperatorsOperatorTakeWhile;LRxSubscriber;LRxSubscriber;Z", "(Lrx/internal/operators/OperatorTakeWhile;Lrx/Subscriber<-TT;>;Lrx/Subscriber<*>;Z)V", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorTakeWhile;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTakeWhile_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 4, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsOperatorTakeWhile_$2;
+  static const void *ptrTable[] = { "LRxSubscriber;Z", "(Lrx/Subscriber<*>;Z)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/internal/operators/OperatorTakeWhile<TT;>;", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorTakeWhile;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTakeWhile_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 4, 9, -1, 10, 11, -1 };
+  return &_RxInternalOperatorsOperatorTakeWhile_2;
 }
 
 @end
 
-void RxInternalOperatorsOperatorTakeWhile_$2_initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorTakeWhile_$2 *self, RxInternalOperatorsOperatorTakeWhile *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0, jboolean arg$1) {
+void RxInternalOperatorsOperatorTakeWhile_2_initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorTakeWhile_2 *self, RxInternalOperatorsOperatorTakeWhile *outer$, RxSubscriber *capture$0, RxSubscriber *param0, jboolean param1) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$subscriber_, capture$0);
-  RxSubscriber_initWithRxSubscriber_withBoolean_(self, arg$0, arg$1);
+  RxSubscriber_initWithRxSubscriber_withBoolean_(self, param0, param1);
 }
 
-RxInternalOperatorsOperatorTakeWhile_$2 *new_RxInternalOperatorsOperatorTakeWhile_$2_initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorTakeWhile *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0, jboolean arg$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTakeWhile_$2, initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_, outer$, capture$0, arg$0, arg$1)
+RxInternalOperatorsOperatorTakeWhile_2 *new_RxInternalOperatorsOperatorTakeWhile_2_initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorTakeWhile *outer$, RxSubscriber *capture$0, RxSubscriber *param0, jboolean param1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTakeWhile_2, initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_, outer$, capture$0, param0, param1)
 }
 
-RxInternalOperatorsOperatorTakeWhile_$2 *create_RxInternalOperatorsOperatorTakeWhile_$2_initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorTakeWhile *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0, jboolean arg$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTakeWhile_$2, initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_, outer$, capture$0, arg$0, arg$1)
+RxInternalOperatorsOperatorTakeWhile_2 *create_RxInternalOperatorsOperatorTakeWhile_2_initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorTakeWhile *outer$, RxSubscriber *capture$0, RxSubscriber *param0, jboolean param1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTakeWhile_2, initWithRxInternalOperatorsOperatorTakeWhile_withRxSubscriber_withRxSubscriber_withBoolean_, outer$, capture$0, param0, param1)
 }

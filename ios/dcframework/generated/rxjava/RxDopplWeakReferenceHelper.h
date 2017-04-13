@@ -22,6 +22,8 @@
 
 - (instancetype)init;
 
++ (id)wrapWeakProxyWithId:(id)target;
+
 + (id)wrapWeakProxyIfSameWithId:(id)target
                          withId:(id)compare;
 
@@ -29,13 +31,15 @@
 
 J2OBJC_EMPTY_STATIC_INIT(RxDopplWeakReferenceHelper)
 
-FOUNDATION_EXPORT id RxDopplWeakReferenceHelper_wrapWeakProxyIfSameWithId_withId_(id target, id compare);
-
 FOUNDATION_EXPORT void RxDopplWeakReferenceHelper_init(RxDopplWeakReferenceHelper *self);
 
 FOUNDATION_EXPORT RxDopplWeakReferenceHelper *new_RxDopplWeakReferenceHelper_init() NS_RETURNS_RETAINED;
 
 FOUNDATION_EXPORT RxDopplWeakReferenceHelper *create_RxDopplWeakReferenceHelper_init();
+
+FOUNDATION_EXPORT id RxDopplWeakReferenceHelper_wrapWeakProxyIfSameWithId_withId_(id target, id compare);
+
+FOUNDATION_EXPORT id RxDopplWeakReferenceHelper_wrapWeakProxyWithId_(id target);
 
 J2OBJC_TYPE_LITERAL_HEADER(RxDopplWeakReferenceHelper)
 

@@ -229,21 +229,21 @@ __attribute__((unused)) static JavaIoIOException *ComGoogleGsonStreamJsonReader_
 
 __attribute__((unused)) static void ComGoogleGsonStreamJsonReader_consumeNonExecutePrefix(ComGoogleGsonStreamJsonReader *self);
 
-@interface ComGoogleGsonStreamJsonReader_$1 : ComGoogleGsonInternalJsonReaderInternalAccess
-
-- (void)promoteNameToValueWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)reader;
+@interface ComGoogleGsonStreamJsonReader_1 : ComGoogleGsonInternalJsonReaderInternalAccess
 
 - (instancetype)init;
 
+- (void)promoteNameToValueWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)reader;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonStreamJsonReader_$1)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonStreamJsonReader_1)
 
-__attribute__((unused)) static void ComGoogleGsonStreamJsonReader_$1_init(ComGoogleGsonStreamJsonReader_$1 *self);
+__attribute__((unused)) static void ComGoogleGsonStreamJsonReader_1_init(ComGoogleGsonStreamJsonReader_1 *self);
 
-__attribute__((unused)) static ComGoogleGsonStreamJsonReader_$1 *new_ComGoogleGsonStreamJsonReader_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonStreamJsonReader_1 *new_ComGoogleGsonStreamJsonReader_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonStreamJsonReader_$1 *create_ComGoogleGsonStreamJsonReader_$1_init();
+__attribute__((unused)) static ComGoogleGsonStreamJsonReader_1 *create_ComGoogleGsonStreamJsonReader_1_init();
 
 J2OBJC_INITIALIZED_DEFN(ComGoogleGsonStreamJsonReader)
 
@@ -562,7 +562,7 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleGsonStreamJsonReader)
     result = JavaLangLong_toStringWithLong_(peekedLong_);
   }
   else if (p == ComGoogleGsonStreamJsonReader_PEEKED_NUMBER) {
-    result = [NSString stringWithCharacters:buffer_ offset:pos_ length:peekedNumberLength_];
+    result = [NSString java_stringWithCharacters:buffer_ offset:pos_ length:peekedNumberLength_];
     pos_ += peekedNumberLength_;
   }
   else {
@@ -616,7 +616,7 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleGsonStreamJsonReader)
     return (jdouble) peekedLong_;
   }
   if (p == ComGoogleGsonStreamJsonReader_PEEKED_NUMBER) {
-    JreStrongAssign(&peekedString_, [NSString stringWithCharacters:buffer_ offset:pos_ length:peekedNumberLength_]);
+    JreStrongAssign(&peekedString_, [NSString java_stringWithCharacters:buffer_ offset:pos_ length:peekedNumberLength_]);
     pos_ += peekedNumberLength_;
   }
   else if (p == ComGoogleGsonStreamJsonReader_PEEKED_SINGLE_QUOTED || p == ComGoogleGsonStreamJsonReader_PEEKED_DOUBLE_QUOTED) {
@@ -650,7 +650,7 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleGsonStreamJsonReader)
     return peekedLong_;
   }
   if (p == ComGoogleGsonStreamJsonReader_PEEKED_NUMBER) {
-    JreStrongAssign(&peekedString_, [NSString stringWithCharacters:buffer_ offset:pos_ length:peekedNumberLength_]);
+    JreStrongAssign(&peekedString_, [NSString java_stringWithCharacters:buffer_ offset:pos_ length:peekedNumberLength_]);
     pos_ += peekedNumberLength_;
   }
   else if (p == ComGoogleGsonStreamJsonReader_PEEKED_SINGLE_QUOTED || p == ComGoogleGsonStreamJsonReader_PEEKED_DOUBLE_QUOTED) {
@@ -711,7 +711,7 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleGsonStreamJsonReader)
     return result;
   }
   if (p == ComGoogleGsonStreamJsonReader_PEEKED_NUMBER) {
-    JreStrongAssign(&peekedString_, [NSString stringWithCharacters:buffer_ offset:pos_ length:peekedNumberLength_]);
+    JreStrongAssign(&peekedString_, [NSString java_stringWithCharacters:buffer_ offset:pos_ length:peekedNumberLength_]);
     pos_ += peekedNumberLength_;
   }
   else if (p == ComGoogleGsonStreamJsonReader_PEEKED_SINGLE_QUOTED || p == ComGoogleGsonStreamJsonReader_PEEKED_DOUBLE_QUOTED) {
@@ -1008,9 +1008,9 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleGsonStreamJsonReader)
 
 + (void)initialize {
   if (self == [ComGoogleGsonStreamJsonReader class]) {
-    JreStrongAssign(&ComGoogleGsonStreamJsonReader_NON_EXECUTE_PREFIX, [@")]}'\n" toCharArray]);
+    JreStrongAssign(&ComGoogleGsonStreamJsonReader_NON_EXECUTE_PREFIX, [@")]}'\n" java_toCharArray]);
     {
-      JreStrongAssignAndConsume(JreLoadStaticRef(ComGoogleGsonInternalJsonReaderInternalAccess, INSTANCE), new_ComGoogleGsonStreamJsonReader_$1_init());
+      JreStrongAssignAndConsume(JreLoadStaticRef(ComGoogleGsonInternalJsonReaderInternalAccess, INSTANCE), new_ComGoogleGsonStreamJsonReader_1_init());
     }
     J2OBJC_SET_INITIALIZED(ComGoogleGsonStreamJsonReader)
   }
@@ -1289,7 +1289,7 @@ NSString *ComGoogleGsonStreamJsonReader_nextUnquotedValue(ComGoogleGsonStreamJso
   break_findNonLiteralCharacter: ;
   NSString *result;
   if (builder == nil) {
-    result = [NSString stringWithCharacters:self->buffer_ offset:self->pos_ length:i];
+    result = [NSString java_stringWithCharacters:self->buffer_ offset:self->pos_ length:i];
   }
   else {
     [builder appendWithCharArray:self->buffer_ withInt:self->pos_ withInt:i];
@@ -1538,7 +1538,7 @@ jchar ComGoogleGsonStreamJsonReader_readEscapeCharacter(ComGoogleGsonStreamJsonR
           result += (c - 'A' + 10);
         }
         else {
-          @throw create_JavaLangNumberFormatException_initWithNSString_(JreStrcat("$$", @"\\u", [NSString stringWithCharacters:self->buffer_ offset:self->pos_ length:4]));
+          @throw create_JavaLangNumberFormatException_initWithNSString_(JreStrcat("$$", @"\\u", [NSString java_stringWithCharacters:self->buffer_ offset:self->pos_ length:4]));
         }
       }
       self->pos_ += 4;
@@ -1585,7 +1585,14 @@ void ComGoogleGsonStreamJsonReader_consumeNonExecutePrefix(ComGoogleGsonStreamJs
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonStreamJsonReader)
 
-@implementation ComGoogleGsonStreamJsonReader_$1
+@implementation ComGoogleGsonStreamJsonReader_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonStreamJsonReader_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)promoteNameToValueWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)reader {
   if ([reader isKindOfClass:[ComGoogleGsonInternalBindJsonTreeReader class]]) {
@@ -1610,38 +1617,31 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonStreamJsonReader)
   }
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonStreamJsonReader_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, 2, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(promoteNameToValueWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(promoteNameToValueWithComGoogleGsonStreamJsonReader:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "promoteNameToValue", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;" };
-  static const J2ObjcClassInfo _ComGoogleGsonStreamJsonReader_$1 = { "", "com.google.gson.stream", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, -1, -1, -1 };
-  return &_ComGoogleGsonStreamJsonReader_$1;
+  static const J2ObjcClassInfo _ComGoogleGsonStreamJsonReader_1 = { "", "com.google.gson.stream", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, -1, -1, -1 };
+  return &_ComGoogleGsonStreamJsonReader_1;
 }
 
 @end
 
-void ComGoogleGsonStreamJsonReader_$1_init(ComGoogleGsonStreamJsonReader_$1 *self) {
+void ComGoogleGsonStreamJsonReader_1_init(ComGoogleGsonStreamJsonReader_1 *self) {
   ComGoogleGsonInternalJsonReaderInternalAccess_init(self);
 }
 
-ComGoogleGsonStreamJsonReader_$1 *new_ComGoogleGsonStreamJsonReader_$1_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonStreamJsonReader_$1, init)
+ComGoogleGsonStreamJsonReader_1 *new_ComGoogleGsonStreamJsonReader_1_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonStreamJsonReader_1, init)
 }
 
-ComGoogleGsonStreamJsonReader_$1 *create_ComGoogleGsonStreamJsonReader_$1_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonStreamJsonReader_$1, init)
+ComGoogleGsonStreamJsonReader_1 *create_ComGoogleGsonStreamJsonReader_1_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonStreamJsonReader_1, init)
 }

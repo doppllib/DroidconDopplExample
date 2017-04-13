@@ -9,7 +9,6 @@
 #include "CoTouchlabAndroidThreadingTasksPersistedCommandPersistenceProvider.h"
 #include "CoTouchlabAndroidThreadingTasksPersistedStorageSqliteClearSQLiteDatabase.h"
 #include "CoTouchlabAndroidThreadingTasksPersistedStorageSqliteSimpleDatabaseHelper.h"
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 
 inline jint CoTouchlabAndroidThreadingTasksPersistedStorageSqliteSimpleDatabaseHelper_get_VERSION();

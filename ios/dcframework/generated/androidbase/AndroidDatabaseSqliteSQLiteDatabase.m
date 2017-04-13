@@ -50,6 +50,8 @@
 #include "java/util/Set.h"
 #include "java/util/WeakHashMap.h"
 
+#pragma clang diagnostic ignored "-Wincomplete-implementation"
+
 @interface AndroidDatabaseSqliteSQLiteDatabase () {
  @public
   JavaLangThreadLocal *mThreadSession_;
@@ -170,6 +172,48 @@ __attribute__((unused)) static IOSObjectArray *AndroidDatabaseSqliteSQLiteDataba
 
 __attribute__((unused)) static IOSObjectArray *AndroidDatabaseSqliteSQLiteDatabase__Annotations$5();
 
+@interface AndroidDatabaseSqliteSQLiteDatabase_1 : JavaLangThreadLocal {
+ @public
+  AndroidDatabaseSqliteSQLiteDatabase *this$0_;
+}
+
+- (instancetype)initWithAndroidDatabaseSqliteSQLiteDatabase:(AndroidDatabaseSqliteSQLiteDatabase *)outer$;
+
+- (AndroidDatabaseSqliteSQLiteSession *)initialValue OBJC_METHOD_FAMILY_NONE;
+
+- (AndroidDatabaseSqliteSQLiteSession *)get;
+
+- (AndroidDatabaseSqliteSQLiteSession *)childValueWithId:(AndroidDatabaseSqliteSQLiteSession *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(AndroidDatabaseSqliteSQLiteDatabase_1)
+
+__attribute__((unused)) static void AndroidDatabaseSqliteSQLiteDatabase_1_initWithAndroidDatabaseSqliteSQLiteDatabase_(AndroidDatabaseSqliteSQLiteDatabase_1 *self, AndroidDatabaseSqliteSQLiteDatabase *outer$);
+
+__attribute__((unused)) static AndroidDatabaseSqliteSQLiteDatabase_1 *new_AndroidDatabaseSqliteSQLiteDatabase_1_initWithAndroidDatabaseSqliteSQLiteDatabase_(AndroidDatabaseSqliteSQLiteDatabase *outer$) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static AndroidDatabaseSqliteSQLiteDatabase_1 *create_AndroidDatabaseSqliteSQLiteDatabase_1_initWithAndroidDatabaseSqliteSQLiteDatabase_(AndroidDatabaseSqliteSQLiteDatabase *outer$);
+
+@interface AndroidDatabaseSqliteSQLiteDatabase_2 : NSObject < JavaIoFileFilter > {
+ @public
+  NSString *val$prefix_;
+}
+
+- (instancetype)initWithNSString:(NSString *)capture$0;
+
+- (jboolean)acceptWithJavaIoFile:(JavaIoFile *)candidate;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(AndroidDatabaseSqliteSQLiteDatabase_2)
+
+__attribute__((unused)) static void AndroidDatabaseSqliteSQLiteDatabase_2_initWithNSString_(AndroidDatabaseSqliteSQLiteDatabase_2 *self, NSString *capture$0);
+
+__attribute__((unused)) static AndroidDatabaseSqliteSQLiteDatabase_2 *new_AndroidDatabaseSqliteSQLiteDatabase_2_initWithNSString_(NSString *capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static AndroidDatabaseSqliteSQLiteDatabase_2 *create_AndroidDatabaseSqliteSQLiteDatabase_2_initWithNSString_(NSString *capture$0);
+
 @interface AndroidDatabaseSqliteSQLiteDatabase_CursorFactory : NSObject
 
 @end
@@ -177,48 +221,6 @@ __attribute__((unused)) static IOSObjectArray *AndroidDatabaseSqliteSQLiteDataba
 @interface AndroidDatabaseSqliteSQLiteDatabase_CustomFunction : NSObject
 
 @end
-
-@interface AndroidDatabaseSqliteSQLiteDatabase_$1 : JavaLangThreadLocal {
- @public
-  AndroidDatabaseSqliteSQLiteDatabase *this$0_;
-}
-
-- (AndroidDatabaseSqliteSQLiteSession *)initialValue OBJC_METHOD_FAMILY_NONE;
-
-- (instancetype)initWithAndroidDatabaseSqliteSQLiteDatabase:(AndroidDatabaseSqliteSQLiteDatabase *)outer$;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(AndroidDatabaseSqliteSQLiteDatabase_$1)
-
-J2OBJC_FIELD_SETTER(AndroidDatabaseSqliteSQLiteDatabase_$1, this$0_, AndroidDatabaseSqliteSQLiteDatabase *)
-
-__attribute__((unused)) static void AndroidDatabaseSqliteSQLiteDatabase_$1_initWithAndroidDatabaseSqliteSQLiteDatabase_(AndroidDatabaseSqliteSQLiteDatabase_$1 *self, AndroidDatabaseSqliteSQLiteDatabase *outer$);
-
-__attribute__((unused)) static AndroidDatabaseSqliteSQLiteDatabase_$1 *new_AndroidDatabaseSqliteSQLiteDatabase_$1_initWithAndroidDatabaseSqliteSQLiteDatabase_(AndroidDatabaseSqliteSQLiteDatabase *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static AndroidDatabaseSqliteSQLiteDatabase_$1 *create_AndroidDatabaseSqliteSQLiteDatabase_$1_initWithAndroidDatabaseSqliteSQLiteDatabase_(AndroidDatabaseSqliteSQLiteDatabase *outer$);
-
-@interface AndroidDatabaseSqliteSQLiteDatabase_$2 : NSObject < JavaIoFileFilter > {
- @public
-  NSString *val$prefix_;
-}
-
-- (jboolean)acceptWithJavaIoFile:(JavaIoFile *)candidate;
-
-- (instancetype)initWithNSString:(NSString *)capture$0;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(AndroidDatabaseSqliteSQLiteDatabase_$2)
-
-J2OBJC_FIELD_SETTER(AndroidDatabaseSqliteSQLiteDatabase_$2, val$prefix_, NSString *)
-
-__attribute__((unused)) static void AndroidDatabaseSqliteSQLiteDatabase_$2_initWithNSString_(AndroidDatabaseSqliteSQLiteDatabase_$2 *self, NSString *capture$0);
-
-__attribute__((unused)) static AndroidDatabaseSqliteSQLiteDatabase_$2 *new_AndroidDatabaseSqliteSQLiteDatabase_$2_initWithNSString_(NSString *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static AndroidDatabaseSqliteSQLiteDatabase_$2 *create_AndroidDatabaseSqliteSQLiteDatabase_$2_initWithNSString_(NSString *capture$0);
 
 J2OBJC_INITIALIZED_DEFN(AndroidDatabaseSqliteSQLiteDatabase)
 
@@ -232,12 +234,12 @@ withAndroidDatabaseDatabaseErrorHandler:(id<AndroidDatabaseDatabaseErrorHandler>
   return self;
 }
 
-- (void)javaFinalize {
+- (void)java_finalize {
   @try {
     AndroidDatabaseSqliteSQLiteDatabase_disposeWithBoolean_(self, true);
   }
   @finally {
-    [super javaFinalize];
+    [super java_finalize];
   }
 }
 
@@ -965,7 +967,7 @@ withAndroidContentContentValues:(AndroidContentContentValues *)values
       @try {
         prog = [self compileStatementWithNSString:JreStrcat("$$$", @"PRAGMA ", ((AndroidUtilPair *) nil_chk(p))->first_, @".integrity_check(1);")];
         NSString *rslt = [((AndroidDatabaseSqliteSQLiteStatement *) nil_chk(prog)) simpleQueryForString];
-        if (![((NSString *) nil_chk(rslt)) equalsIgnoreCase:@"ok"]) {
+        if (![((NSString *) nil_chk(rslt)) java_equalsIgnoreCase:@"ok"]) {
           AndroidUtilLog_eWithNSString_withNSString_(AndroidDatabaseSqliteSQLiteDatabase_TAG, JreStrcat("$$$$", @"PRAGMA integrity_check on ", p->second_, @" returned: ", rslt));
           return false;
         }
@@ -1093,7 +1095,7 @@ withAndroidContentContentValues:(AndroidContentContentValues *)values
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
   methods[0].selector = @selector(initWithNSString:withInt:withAndroidDatabaseSqliteSQLiteDatabase_CursorFactory:withAndroidDatabaseDatabaseErrorHandler:);
-  methods[1].selector = @selector(javaFinalize);
+  methods[1].selector = @selector(java_finalize);
   methods[2].selector = @selector(onAllReferencesReleased);
   methods[3].selector = @selector(disposeWithBoolean:);
   methods[4].selector = @selector(releaseMemory);
@@ -1224,7 +1226,7 @@ withAndroidContentContentValues:(AndroidContentContentValues *)values
 
 void AndroidDatabaseSqliteSQLiteDatabase_initWithNSString_withInt_withAndroidDatabaseSqliteSQLiteDatabase_CursorFactory_withAndroidDatabaseDatabaseErrorHandler_(AndroidDatabaseSqliteSQLiteDatabase *self, NSString *path, jint openFlags, id<AndroidDatabaseSqliteSQLiteDatabase_CursorFactory> cursorFactory, id<AndroidDatabaseDatabaseErrorHandler> errorHandler) {
   AndroidDatabaseSqliteSQLiteClosable_init(self);
-  JreStrongAssignAndConsume(&self->mThreadSession_, new_AndroidDatabaseSqliteSQLiteDatabase_$1_initWithAndroidDatabaseSqliteSQLiteDatabase_(self));
+  JreStrongAssignAndConsume(&self->mThreadSession_, new_AndroidDatabaseSqliteSQLiteDatabase_1_initWithAndroidDatabaseSqliteSQLiteDatabase_(self));
   JreStrongAssignAndConsume(&self->mLock_, new_NSObject_init());
   JreStrongAssign(&self->mCloseGuardLocked_, DalvikSystemCloseGuard_get());
   JreStrongAssign(&self->mCursorFactory_, cursorFactory);
@@ -1333,7 +1335,7 @@ jboolean AndroidDatabaseSqliteSQLiteDatabase_deleteDatabaseWithJavaIoFile_(JavaI
   JavaIoFile *dir = [file getParentFile];
   if (dir != nil) {
     NSString *prefix = JreStrcat("$$", [file getName], @"-mj");
-    IOSObjectArray *files = [dir listFilesWithJavaIoFileFilter:create_AndroidDatabaseSqliteSQLiteDatabase_$2_initWithNSString_(prefix)];
+    IOSObjectArray *files = [dir listFilesWithJavaIoFileFilter:create_AndroidDatabaseSqliteSQLiteDatabase_2_initWithNSString_(prefix)];
     if (files != nil) {
       {
         IOSObjectArray *a__ = files;
@@ -1385,13 +1387,13 @@ AndroidDatabaseSqliteSQLiteDatabase *AndroidDatabaseSqliteSQLiteDatabase_createW
 NSString *AndroidDatabaseSqliteSQLiteDatabase_findEditTableWithNSString_(NSString *tables) {
   AndroidDatabaseSqliteSQLiteDatabase_initialize();
   if (!AndroidTextTextUtils_isEmptyWithJavaLangCharSequence_(tables)) {
-    jint spacepos = [((NSString *) nil_chk(tables)) indexOf:' '];
-    jint commapos = [tables indexOf:','];
+    jint spacepos = [((NSString *) nil_chk(tables)) java_indexOf:' '];
+    jint commapos = [tables java_indexOf:','];
     if (spacepos > 0 && (spacepos < commapos || commapos < 0)) {
-      return [tables substring:0 endIndex:spacepos];
+      return [tables java_substring:0 endIndex:spacepos];
     }
     else if (commapos > 0 && (commapos < spacepos || spacepos < 0)) {
-      return [tables substring:0 endIndex:commapos];
+      return [tables java_substring:0 endIndex:commapos];
     }
     return tables;
   }
@@ -1512,6 +1514,104 @@ IOSObjectArray *AndroidDatabaseSqliteSQLiteDatabase__Annotations$5() {
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidDatabaseSqliteSQLiteDatabase)
 
+@implementation AndroidDatabaseSqliteSQLiteDatabase_1
+
+- (instancetype)initWithAndroidDatabaseSqliteSQLiteDatabase:(AndroidDatabaseSqliteSQLiteDatabase *)outer$ {
+  AndroidDatabaseSqliteSQLiteDatabase_1_initWithAndroidDatabaseSqliteSQLiteDatabase_(self, outer$);
+  return self;
+}
+
+- (AndroidDatabaseSqliteSQLiteSession *)initialValue {
+  return [this$0_ createSession];
+}
+
+- (void)dealloc {
+  RELEASE_(this$0_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LAndroidDatabaseSqliteSQLiteSession;", 0x4, -1, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithAndroidDatabaseSqliteSQLiteDatabase:);
+  methods[1].selector = @selector(initialValue);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "this$0_", "LAndroidDatabaseSqliteSQLiteDatabase;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "LAndroidDatabaseSqliteSQLiteDatabase;", "Ljava/lang/ThreadLocal<Landroid/database/sqlite/SQLiteSession;>;" };
+  static const J2ObjcClassInfo _AndroidDatabaseSqliteSQLiteDatabase_1 = { "", "android.database.sqlite", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, -1, 1, -1 };
+  return &_AndroidDatabaseSqliteSQLiteDatabase_1;
+}
+
+@end
+
+void AndroidDatabaseSqliteSQLiteDatabase_1_initWithAndroidDatabaseSqliteSQLiteDatabase_(AndroidDatabaseSqliteSQLiteDatabase_1 *self, AndroidDatabaseSqliteSQLiteDatabase *outer$) {
+  JreStrongAssign(&self->this$0_, outer$);
+  JavaLangThreadLocal_init(self);
+}
+
+AndroidDatabaseSqliteSQLiteDatabase_1 *new_AndroidDatabaseSqliteSQLiteDatabase_1_initWithAndroidDatabaseSqliteSQLiteDatabase_(AndroidDatabaseSqliteSQLiteDatabase *outer$) {
+  J2OBJC_NEW_IMPL(AndroidDatabaseSqliteSQLiteDatabase_1, initWithAndroidDatabaseSqliteSQLiteDatabase_, outer$)
+}
+
+AndroidDatabaseSqliteSQLiteDatabase_1 *create_AndroidDatabaseSqliteSQLiteDatabase_1_initWithAndroidDatabaseSqliteSQLiteDatabase_(AndroidDatabaseSqliteSQLiteDatabase *outer$) {
+  J2OBJC_CREATE_IMPL(AndroidDatabaseSqliteSQLiteDatabase_1, initWithAndroidDatabaseSqliteSQLiteDatabase_, outer$)
+}
+
+@implementation AndroidDatabaseSqliteSQLiteDatabase_2
+
+- (instancetype)initWithNSString:(NSString *)capture$0 {
+  AndroidDatabaseSqliteSQLiteDatabase_2_initWithNSString_(self, capture$0);
+  return self;
+}
+
+- (jboolean)acceptWithJavaIoFile:(JavaIoFile *)candidate {
+  return [((NSString *) nil_chk([((JavaIoFile *) nil_chk(candidate)) getName])) hasPrefix:val$prefix_];
+}
+
+- (void)dealloc {
+  RELEASE_(val$prefix_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "Z", 0x1, 0, 1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithNSString:);
+  methods[1].selector = @selector(acceptWithJavaIoFile:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$prefix_", "LNSString;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "accept", "LJavaIoFile;", "LAndroidDatabaseSqliteSQLiteDatabase;", "deleteDatabaseWithJavaIoFile:" };
+  static const J2ObjcClassInfo _AndroidDatabaseSqliteSQLiteDatabase_2 = { "", "android.database.sqlite", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, -1, -1 };
+  return &_AndroidDatabaseSqliteSQLiteDatabase_2;
+}
+
+@end
+
+void AndroidDatabaseSqliteSQLiteDatabase_2_initWithNSString_(AndroidDatabaseSqliteSQLiteDatabase_2 *self, NSString *capture$0) {
+  JreStrongAssign(&self->val$prefix_, capture$0);
+  NSObject_init(self);
+}
+
+AndroidDatabaseSqliteSQLiteDatabase_2 *new_AndroidDatabaseSqliteSQLiteDatabase_2_initWithNSString_(NSString *capture$0) {
+  J2OBJC_NEW_IMPL(AndroidDatabaseSqliteSQLiteDatabase_2, initWithNSString_, capture$0)
+}
+
+AndroidDatabaseSqliteSQLiteDatabase_2 *create_AndroidDatabaseSqliteSQLiteDatabase_2_initWithNSString_(NSString *capture$0) {
+  J2OBJC_CREATE_IMPL(AndroidDatabaseSqliteSQLiteDatabase_2, initWithNSString_, capture$0)
+}
+
 @implementation AndroidDatabaseSqliteSQLiteDatabase_CursorFactory
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1549,101 +1649,3 @@ J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(AndroidDatabaseSqliteSQLiteDatabase_CursorF
 @end
 
 J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(AndroidDatabaseSqliteSQLiteDatabase_CustomFunction)
-
-@implementation AndroidDatabaseSqliteSQLiteDatabase_$1
-
-- (AndroidDatabaseSqliteSQLiteSession *)initialValue {
-  return [this$0_ createSession];
-}
-
-- (instancetype)initWithAndroidDatabaseSqliteSQLiteDatabase:(AndroidDatabaseSqliteSQLiteDatabase *)outer$ {
-  AndroidDatabaseSqliteSQLiteDatabase_$1_initWithAndroidDatabaseSqliteSQLiteDatabase_(self, outer$);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(this$0_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LAndroidDatabaseSqliteSQLiteSession;", 0x4, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(initialValue);
-  methods[1].selector = @selector(initWithAndroidDatabaseSqliteSQLiteDatabase:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LAndroidDatabaseSqliteSQLiteDatabase;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "()Landroid/database/sqlite/SQLiteSession;", "LAndroidDatabaseSqliteSQLiteDatabase;", "Ljava/lang/ThreadLocal<Landroid/database/sqlite/SQLiteSession;>;" };
-  static const J2ObjcClassInfo _AndroidDatabaseSqliteSQLiteDatabase_$1 = { "", "android.database.sqlite", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, -1, 2, -1 };
-  return &_AndroidDatabaseSqliteSQLiteDatabase_$1;
-}
-
-@end
-
-void AndroidDatabaseSqliteSQLiteDatabase_$1_initWithAndroidDatabaseSqliteSQLiteDatabase_(AndroidDatabaseSqliteSQLiteDatabase_$1 *self, AndroidDatabaseSqliteSQLiteDatabase *outer$) {
-  JreStrongAssign(&self->this$0_, outer$);
-  JavaLangThreadLocal_init(self);
-}
-
-AndroidDatabaseSqliteSQLiteDatabase_$1 *new_AndroidDatabaseSqliteSQLiteDatabase_$1_initWithAndroidDatabaseSqliteSQLiteDatabase_(AndroidDatabaseSqliteSQLiteDatabase *outer$) {
-  J2OBJC_NEW_IMPL(AndroidDatabaseSqliteSQLiteDatabase_$1, initWithAndroidDatabaseSqliteSQLiteDatabase_, outer$)
-}
-
-AndroidDatabaseSqliteSQLiteDatabase_$1 *create_AndroidDatabaseSqliteSQLiteDatabase_$1_initWithAndroidDatabaseSqliteSQLiteDatabase_(AndroidDatabaseSqliteSQLiteDatabase *outer$) {
-  J2OBJC_CREATE_IMPL(AndroidDatabaseSqliteSQLiteDatabase_$1, initWithAndroidDatabaseSqliteSQLiteDatabase_, outer$)
-}
-
-@implementation AndroidDatabaseSqliteSQLiteDatabase_$2
-
-- (jboolean)acceptWithJavaIoFile:(JavaIoFile *)candidate {
-  return [((NSString *) nil_chk([((JavaIoFile *) nil_chk(candidate)) getName])) hasPrefix:val$prefix_];
-}
-
-- (instancetype)initWithNSString:(NSString *)capture$0 {
-  AndroidDatabaseSqliteSQLiteDatabase_$2_initWithNSString_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$prefix_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "Z", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(acceptWithJavaIoFile:);
-  methods[1].selector = @selector(initWithNSString:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$prefix_", "LNSString;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "accept", "LJavaIoFile;", "LNSString;", "LAndroidDatabaseSqliteSQLiteDatabase;", "deleteDatabaseWithJavaIoFile:" };
-  static const J2ObjcClassInfo _AndroidDatabaseSqliteSQLiteDatabase_$2 = { "", "android.database.sqlite", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
-  return &_AndroidDatabaseSqliteSQLiteDatabase_$2;
-}
-
-@end
-
-void AndroidDatabaseSqliteSQLiteDatabase_$2_initWithNSString_(AndroidDatabaseSqliteSQLiteDatabase_$2 *self, NSString *capture$0) {
-  JreStrongAssign(&self->val$prefix_, capture$0);
-  NSObject_init(self);
-}
-
-AndroidDatabaseSqliteSQLiteDatabase_$2 *new_AndroidDatabaseSqliteSQLiteDatabase_$2_initWithNSString_(NSString *capture$0) {
-  J2OBJC_NEW_IMPL(AndroidDatabaseSqliteSQLiteDatabase_$2, initWithNSString_, capture$0)
-}
-
-AndroidDatabaseSqliteSQLiteDatabase_$2 *create_AndroidDatabaseSqliteSQLiteDatabase_$2_initWithNSString_(NSString *capture$0) {
-  J2OBJC_CREATE_IMPL(AndroidDatabaseSqliteSQLiteDatabase_$2, initWithNSString_, capture$0)
-}

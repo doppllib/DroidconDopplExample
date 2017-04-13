@@ -5,7 +5,6 @@
 
 #include "DeGreenrobotEventPendingPost.h"
 #include "DeGreenrobotEventPendingPostQueue.h"
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "java/lang/IllegalStateException.h"
 #include "java/lang/NullPointerException.h"
@@ -23,6 +22,13 @@ J2OBJC_FIELD_SETTER(DeGreenrobotEventPendingPostQueue, tail_, DeGreenrobotEventP
 
 @implementation DeGreenrobotEventPendingPostQueue
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  DeGreenrobotEventPendingPostQueue_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (void)enqueueWithDeGreenrobotEventPendingPost:(DeGreenrobotEventPendingPost *)pendingPost {
   @synchronized(self) {
     if (pendingPost == nil) {
@@ -38,7 +44,7 @@ J2OBJC_FIELD_SETTER(DeGreenrobotEventPendingPostQueue, tail_, DeGreenrobotEventP
     else {
       @throw create_JavaLangIllegalStateException_initWithNSString_(@"Head present, but no tail");
     }
-    [self notifyAll];
+    [self java_notifyAll];
   }
 }
 
@@ -58,18 +64,11 @@ J2OBJC_FIELD_SETTER(DeGreenrobotEventPendingPostQueue, tail_, DeGreenrobotEventP
 - (DeGreenrobotEventPendingPost *)pollWithInt:(jint)maxMillisToWait {
   @synchronized(self) {
     if (head_ == nil) {
-      [self waitWithLong:maxMillisToWait];
+      [self java_waitWithLong:maxMillisToWait];
     }
     return [self poll];
   }
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  DeGreenrobotEventPendingPostQueue_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)dealloc {
   RELEASE_(head_);
@@ -79,17 +78,17 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x20, 0, 1, -1, -1, -1, -1 },
     { NULL, "LDeGreenrobotEventPendingPost;", 0x20, -1, -1, -1, -1, -1, -1 },
     { NULL, "LDeGreenrobotEventPendingPost;", 0x20, 2, 3, 4, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(enqueueWithDeGreenrobotEventPendingPost:);
-  methods[1].selector = @selector(poll);
-  methods[2].selector = @selector(pollWithInt:);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(enqueueWithDeGreenrobotEventPendingPost:);
+  methods[2].selector = @selector(poll);
+  methods[3].selector = @selector(pollWithInt:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "head_", "LDeGreenrobotEventPendingPost;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },

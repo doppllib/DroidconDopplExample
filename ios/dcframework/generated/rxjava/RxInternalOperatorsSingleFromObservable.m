@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/SingleFromObservable.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxInternalOperatorsSingleFromObservable.h"
 #include "RxObservable.h"
@@ -109,7 +108,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsSingleFromObservable)
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsSingleFromObservable_WrapSingleIntoSubscriber class]);
   RELEASE_(actual_);
   RELEASE_(value_);
   [super dealloc];

@@ -19,8 +19,6 @@
 
 @end
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber_OtherSubscriber, this$0_, RxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber *)
-
 @implementation RxInternalOperatorsSingleTakeUntilSingle
 
 - (instancetype)initWithRxSingle_OnSubscribe:(id<RxSingle_OnSubscribe>)source
@@ -154,17 +152,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsSingleTakeUntilSingle_TakeUn
 
 @implementation RxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber_OtherSubscriber
 
+- (instancetype)initWithRxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber:(RxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber *)outer$ {
+  RxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber_OtherSubscriber_initWithRxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber_(self, outer$);
+  return self;
+}
+
 - (void)onSuccessWithId:(id)value {
   [self onErrorWithNSException:create_JavaUtilConcurrentCancellationException_initWithNSString_(@"Stream was canceled before emitting a terminal event.")];
 }
 
 - (void)onErrorWithNSException:(NSException *)error {
   [this$0_ onErrorWithNSException:error];
-}
-
-- (instancetype)initWithRxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber:(RxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber *)outer$ {
-  RxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber_OtherSubscriber_initWithRxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber_(self, outer$);
-  return self;
 }
 
 - (void)dealloc {
@@ -174,21 +172,21 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsSingleTakeUntilSingle_TakeUn
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onSuccessWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(initWithRxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber:);
+  methods[1].selector = @selector(onSuccessWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
   };
-  static const void *ptrTable[] = { "onSuccess", "LNSObject;", "(TU;)V", "onError", "LNSException;", "LRxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber;", "Lrx/SingleSubscriber<TU;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber_OtherSubscriber = { "OtherSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 3, 1, 5, -1, -1, 6, -1 };
+  static const void *ptrTable[] = { "onSuccess", "LNSObject;", "(TU;)V", "onError", "LNSException;", "Lrx/internal/operators/SingleTakeUntilSingle$TakeUntilSourceSubscriber<TT;TU;>;", "LRxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber;", "Lrx/SingleSubscriber<TU;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber_OtherSubscriber = { "OtherSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 3, 1, 6, -1, -1, 7, -1 };
   return &_RxInternalOperatorsSingleTakeUntilSingle_TakeUntilSourceSubscriber_OtherSubscriber;
 }
 

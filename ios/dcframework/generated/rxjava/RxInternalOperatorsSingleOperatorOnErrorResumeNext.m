@@ -30,52 +30,47 @@ __attribute__((unused)) static RxInternalOperatorsSingleOperatorOnErrorResumeNex
 
 __attribute__((unused)) static RxInternalOperatorsSingleOperatorOnErrorResumeNext *create_RxInternalOperatorsSingleOperatorOnErrorResumeNext_initWithRxSingle_withRxFunctionsFunc1_(RxSingle *originalSingle, id<RxFunctionsFunc1> resumeFunctionInCaseOfError);
 
-@interface RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1 : NSObject < RxFunctionsFunc1 > {
+@interface RxInternalOperatorsSingleOperatorOnErrorResumeNext_1 : NSObject < RxFunctionsFunc1 > {
  @public
   RxSingle *val$resumeSingleInCaseOfError_;
 }
 
-- (RxSingle *)callWithId:(NSException *)throwable;
-
 - (instancetype)initWithRxSingle:(RxSingle *)capture$0;
+
+- (RxSingle *)callWithId:(NSException *)throwable;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsSingleOperatorOnErrorResumeNext_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1, val$resumeSingleInCaseOfError_, RxSingle *)
+__attribute__((unused)) static void RxInternalOperatorsSingleOperatorOnErrorResumeNext_1_initWithRxSingle_(RxInternalOperatorsSingleOperatorOnErrorResumeNext_1 *self, RxSingle *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1_initWithRxSingle_(RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1 *self, RxSingle *capture$0);
+__attribute__((unused)) static RxInternalOperatorsSingleOperatorOnErrorResumeNext_1 *new_RxInternalOperatorsSingleOperatorOnErrorResumeNext_1_initWithRxSingle_(RxSingle *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1 *new_RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1_initWithRxSingle_(RxSingle *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsSingleOperatorOnErrorResumeNext_1 *create_RxInternalOperatorsSingleOperatorOnErrorResumeNext_1_initWithRxSingle_(RxSingle *capture$0);
 
-__attribute__((unused)) static RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1 *create_RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1_initWithRxSingle_(RxSingle *capture$0);
-
-@interface RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2 : RxSingleSubscriber {
+@interface RxInternalOperatorsSingleOperatorOnErrorResumeNext_2 : RxSingleSubscriber {
  @public
   RxInternalOperatorsSingleOperatorOnErrorResumeNext *this$0_;
   RxSingleSubscriber *val$child_;
 }
 
+- (instancetype)initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext:(RxInternalOperatorsSingleOperatorOnErrorResumeNext *)outer$
+                                                    withRxSingleSubscriber:(RxSingleSubscriber *)capture$0;
+
 - (void)onSuccessWithId:(id)value;
 
 - (void)onErrorWithNSException:(NSException *)error;
 
-- (instancetype)initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext:(RxInternalOperatorsSingleOperatorOnErrorResumeNext *)outer$
-                                                    withRxSingleSubscriber:(RxSingleSubscriber *)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsSingleOperatorOnErrorResumeNext_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2, this$0_, RxInternalOperatorsSingleOperatorOnErrorResumeNext *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2, val$child_, RxSingleSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsSingleOperatorOnErrorResumeNext_2_initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_(RxInternalOperatorsSingleOperatorOnErrorResumeNext_2 *self, RxInternalOperatorsSingleOperatorOnErrorResumeNext *outer$, RxSingleSubscriber *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2_initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_(RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2 *self, RxInternalOperatorsSingleOperatorOnErrorResumeNext *outer$, RxSingleSubscriber *capture$0);
+__attribute__((unused)) static RxInternalOperatorsSingleOperatorOnErrorResumeNext_2 *new_RxInternalOperatorsSingleOperatorOnErrorResumeNext_2_initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_(RxInternalOperatorsSingleOperatorOnErrorResumeNext *outer$, RxSingleSubscriber *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2 *new_RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2_initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_(RxInternalOperatorsSingleOperatorOnErrorResumeNext *outer$, RxSingleSubscriber *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2 *create_RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2_initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_(RxInternalOperatorsSingleOperatorOnErrorResumeNext *outer$, RxSingleSubscriber *capture$0);
+__attribute__((unused)) static RxInternalOperatorsSingleOperatorOnErrorResumeNext_2 *create_RxInternalOperatorsSingleOperatorOnErrorResumeNext_2_initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_(RxInternalOperatorsSingleOperatorOnErrorResumeNext *outer$, RxSingleSubscriber *capture$0);
 
 @implementation RxInternalOperatorsSingleOperatorOnErrorResumeNext
 
@@ -96,7 +91,7 @@ __attribute__((unused)) static RxInternalOperatorsSingleOperatorOnErrorResumeNex
 }
 
 - (void)callWithId:(RxSingleSubscriber *)child {
-  RxSingleSubscriber *parent = create_RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2_initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_(self, child);
+  RxSingleSubscriber *parent = create_RxInternalOperatorsSingleOperatorOnErrorResumeNext_2_initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_(self, child);
   [((RxSingleSubscriber *) nil_chk(child)) addWithRxSubscription:parent];
   [((RxSingle *) nil_chk(originalSingle_)) subscribeWithRxSingleSubscriber:parent];
 }
@@ -162,20 +157,20 @@ RxInternalOperatorsSingleOperatorOnErrorResumeNext *RxInternalOperatorsSingleOpe
   if (resumeSingleInCaseOfError == nil) {
     @throw create_JavaLangNullPointerException_initWithNSString_(@"resumeSingleInCaseOfError must not be null");
   }
-  return create_RxInternalOperatorsSingleOperatorOnErrorResumeNext_initWithRxSingle_withRxFunctionsFunc1_(originalSingle, create_RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1_initWithRxSingle_(resumeSingleInCaseOfError));
+  return create_RxInternalOperatorsSingleOperatorOnErrorResumeNext_initWithRxSingle_withRxFunctionsFunc1_(originalSingle, create_RxInternalOperatorsSingleOperatorOnErrorResumeNext_1_initWithRxSingle_(resumeSingleInCaseOfError));
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsSingleOperatorOnErrorResumeNext)
 
-@implementation RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1
+@implementation RxInternalOperatorsSingleOperatorOnErrorResumeNext_1
+
+- (instancetype)initWithRxSingle:(RxSingle *)capture$0 {
+  RxInternalOperatorsSingleOperatorOnErrorResumeNext_1_initWithRxSingle_(self, capture$0);
+  return self;
+}
 
 - (RxSingle *)callWithId:(NSException *)throwable {
   return val$resumeSingleInCaseOfError_;
-}
-
-- (instancetype)initWithRxSingle:(RxSingle *)capture$0 {
-  RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1_initWithRxSingle_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -185,38 +180,44 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsSingleOperatorOnErrorResumeN
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxSingle;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxSingle:);
+  methods[0].selector = @selector(initWithRxSingle:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$resumeSingleInCaseOfError_", "LRxSingle;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$resumeSingleInCaseOfError_", "LRxSingle;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
   };
-  static const void *ptrTable[] = { "call", "LNSException;", "(Ljava/lang/Throwable;)Lrx/Single<+TT;>;", "LRxSingle;", "(Lrx/Single<+TT;>;)V", "Lrx/Single<+TT;>;", "LRxInternalOperatorsSingleOperatorOnErrorResumeNext;", "withOtherWithRxSingle:withRxSingle:", "Ljava/lang/Object;Lrx/functions/Func1<Ljava/lang/Throwable;Lrx/Single<+TT;>;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 6, -1, 7, 8, -1 };
-  return &_RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1;
+  static const void *ptrTable[] = { "call", "LNSException;", "(Ljava/lang/Throwable;)Lrx/Single<+TT;>;", "Lrx/Single<+TT;>;", "LRxInternalOperatorsSingleOperatorOnErrorResumeNext;", "withOtherWithRxSingle:withRxSingle:", "Ljava/lang/Object;Lrx/functions/Func1<Ljava/lang/Throwable;Lrx/Single<+TT;>;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsSingleOperatorOnErrorResumeNext_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
+  return &_RxInternalOperatorsSingleOperatorOnErrorResumeNext_1;
 }
 
 @end
 
-void RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1_initWithRxSingle_(RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1 *self, RxSingle *capture$0) {
+void RxInternalOperatorsSingleOperatorOnErrorResumeNext_1_initWithRxSingle_(RxInternalOperatorsSingleOperatorOnErrorResumeNext_1 *self, RxSingle *capture$0) {
   JreStrongAssign(&self->val$resumeSingleInCaseOfError_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1 *new_RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1_initWithRxSingle_(RxSingle *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1, initWithRxSingle_, capture$0)
+RxInternalOperatorsSingleOperatorOnErrorResumeNext_1 *new_RxInternalOperatorsSingleOperatorOnErrorResumeNext_1_initWithRxSingle_(RxSingle *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsSingleOperatorOnErrorResumeNext_1, initWithRxSingle_, capture$0)
 }
 
-RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1 *create_RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1_initWithRxSingle_(RxSingle *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1, initWithRxSingle_, capture$0)
+RxInternalOperatorsSingleOperatorOnErrorResumeNext_1 *create_RxInternalOperatorsSingleOperatorOnErrorResumeNext_1_initWithRxSingle_(RxSingle *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsSingleOperatorOnErrorResumeNext_1, initWithRxSingle_, capture$0)
 }
 
-@implementation RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2
+@implementation RxInternalOperatorsSingleOperatorOnErrorResumeNext_2
+
+- (instancetype)initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext:(RxInternalOperatorsSingleOperatorOnErrorResumeNext *)outer$
+                                                    withRxSingleSubscriber:(RxSingleSubscriber *)capture$0 {
+  RxInternalOperatorsSingleOperatorOnErrorResumeNext_2_initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)onSuccessWithId:(id)value {
   [((RxSingleSubscriber *) nil_chk(val$child_)) onSuccessWithId:value];
@@ -231,12 +232,6 @@ RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1 *create_RxInternalOperator
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext:(RxInternalOperatorsSingleOperatorOnErrorResumeNext *)outer$
-                                                    withRxSingleSubscriber:(RxSingleSubscriber *)capture$0 {
-  RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2_initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_(self, outer$, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$child_);
@@ -245,37 +240,37 @@ RxInternalOperatorsSingleOperatorOnErrorResumeNext_$1 *create_RxInternalOperator
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onSuccessWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext:withRxSingleSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext:withRxSingleSubscriber:);
+  methods[1].selector = @selector(onSuccessWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsSingleOperatorOnErrorResumeNext;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$child_", "LRxSingleSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "this$0_", "LRxInternalOperatorsSingleOperatorOnErrorResumeNext;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$child_", "LRxSingleSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
   };
-  static const void *ptrTable[] = { "onSuccess", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxInternalOperatorsSingleOperatorOnErrorResumeNext;LRxSingleSubscriber;", "(Lrx/internal/operators/SingleOperatorOnErrorResumeNext;Lrx/SingleSubscriber<-TT;>;)V", "Lrx/SingleSubscriber<-TT;>;", "LRxInternalOperatorsSingleOperatorOnErrorResumeNext;", "callWithId:", "Lrx/SingleSubscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 3, 2, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2;
+  static const void *ptrTable[] = { "onSuccess", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/internal/operators/SingleOperatorOnErrorResumeNext<TT;>;", "Lrx/SingleSubscriber<-TT;>;", "LRxInternalOperatorsSingleOperatorOnErrorResumeNext;", "callWithId:", "Lrx/SingleSubscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsSingleOperatorOnErrorResumeNext_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 3, 2, 7, -1, 8, 9, -1 };
+  return &_RxInternalOperatorsSingleOperatorOnErrorResumeNext_2;
 }
 
 @end
 
-void RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2_initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_(RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2 *self, RxInternalOperatorsSingleOperatorOnErrorResumeNext *outer$, RxSingleSubscriber *capture$0) {
+void RxInternalOperatorsSingleOperatorOnErrorResumeNext_2_initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_(RxInternalOperatorsSingleOperatorOnErrorResumeNext_2 *self, RxInternalOperatorsSingleOperatorOnErrorResumeNext *outer$, RxSingleSubscriber *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$child_, capture$0);
   RxSingleSubscriber_init(self);
 }
 
-RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2 *new_RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2_initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_(RxInternalOperatorsSingleOperatorOnErrorResumeNext *outer$, RxSingleSubscriber *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2, initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_, outer$, capture$0)
+RxInternalOperatorsSingleOperatorOnErrorResumeNext_2 *new_RxInternalOperatorsSingleOperatorOnErrorResumeNext_2_initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_(RxInternalOperatorsSingleOperatorOnErrorResumeNext *outer$, RxSingleSubscriber *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsSingleOperatorOnErrorResumeNext_2, initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_, outer$, capture$0)
 }
 
-RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2 *create_RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2_initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_(RxInternalOperatorsSingleOperatorOnErrorResumeNext *outer$, RxSingleSubscriber *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsSingleOperatorOnErrorResumeNext_$2, initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_, outer$, capture$0)
+RxInternalOperatorsSingleOperatorOnErrorResumeNext_2 *create_RxInternalOperatorsSingleOperatorOnErrorResumeNext_2_initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_(RxInternalOperatorsSingleOperatorOnErrorResumeNext *outer$, RxSingleSubscriber *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsSingleOperatorOnErrorResumeNext_2, initWithRxInternalOperatorsSingleOperatorOnErrorResumeNext_withRxSingleSubscriber_, outer$, capture$0)
 }

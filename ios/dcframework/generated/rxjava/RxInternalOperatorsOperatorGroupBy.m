@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OperatorGroupBy.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxExceptionsExceptions.h"
 #include "RxFunctionsAction0.h"
@@ -38,6 +37,25 @@
 #include "java/util/concurrent/atomic/AtomicLong.h"
 #include "java/util/concurrent/atomic/AtomicReference.h"
 
+@interface RxInternalOperatorsOperatorGroupBy_1 : NSObject < RxFunctionsAction0 > {
+ @public
+  RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *val$parent_;
+}
+
+- (instancetype)initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber:(RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *)capture$0;
+
+- (void)call;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorGroupBy_1)
+
+__attribute__((unused)) static void RxInternalOperatorsOperatorGroupBy_1_initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_(RxInternalOperatorsOperatorGroupBy_1 *self, RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *capture$0);
+
+__attribute__((unused)) static RxInternalOperatorsOperatorGroupBy_1 *new_RxInternalOperatorsOperatorGroupBy_1_initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_(RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalOperatorsOperatorGroupBy_1 *create_RxInternalOperatorsOperatorGroupBy_1_initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_(RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *capture$0);
+
 @interface RxInternalOperatorsOperatorGroupBy_GroupBySubscriber ()
 
 - (id<JavaUtilMap>)createMapWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)mapFactory
@@ -50,27 +68,6 @@ __attribute__((unused)) static id<JavaUtilMap> RxInternalOperatorsOperatorGroupB
 inline jlong RxInternalOperatorsOperatorGroupBy_State_get_serialVersionUID();
 #define RxInternalOperatorsOperatorGroupBy_State_serialVersionUID -3852313036005250360LL
 J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsOperatorGroupBy_State, serialVersionUID, jlong)
-
-@interface RxInternalOperatorsOperatorGroupBy_$1 : NSObject < RxFunctionsAction0 > {
- @public
-  RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *val$parent_;
-}
-
-- (void)call;
-
-- (instancetype)initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber:(RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *)capture$0;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorGroupBy_$1)
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorGroupBy_$1, val$parent_, RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *)
-
-__attribute__((unused)) static void RxInternalOperatorsOperatorGroupBy_$1_initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_(RxInternalOperatorsOperatorGroupBy_$1 *self, RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *capture$0);
-
-__attribute__((unused)) static RxInternalOperatorsOperatorGroupBy_$1 *new_RxInternalOperatorsOperatorGroupBy_$1_initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_(RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorGroupBy_$1 *create_RxInternalOperatorsOperatorGroupBy_$1_initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_(RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *capture$0);
 
 @implementation RxInternalOperatorsOperatorGroupBy
 
@@ -112,7 +109,7 @@ __attribute__((unused)) static RxInternalOperatorsOperatorGroupBy_$1 *create_RxI
     [((RxSubscriber *) nil_chk(parent2)) unsubscribe];
     return parent2;
   }
-  [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOperatorGroupBy_$1_initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_(parent))];
+  [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOperatorGroupBy_1_initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_(parent))];
   [child setProducerWithRxProducer:((RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *) nil_chk(parent))->producer_GroupBySubscriber_];
   return parent;
 }
@@ -209,6 +206,55 @@ RxInternalOperatorsOperatorGroupBy *create_RxInternalOperatorsOperatorGroupBy_in
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorGroupBy)
 
+@implementation RxInternalOperatorsOperatorGroupBy_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber:(RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *)capture$0 {
+  RxInternalOperatorsOperatorGroupBy_1_initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_(self, capture$0);
+  return self;
+}
+
+- (void)call {
+  [((RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *) nil_chk(val$parent_)) cancel];
+}
+
+- (void)dealloc {
+  RELEASE_(val$parent_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber:);
+  methods[1].selector = @selector(call);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$parent_", "LRxInternalOperatorsOperatorGroupBy_GroupBySubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
+  };
+  static const void *ptrTable[] = { "Lrx/internal/operators/OperatorGroupBy$GroupBySubscriber<TT;TK;TV;>;", "LRxInternalOperatorsOperatorGroupBy;", "callWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorGroupBy_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
+  return &_RxInternalOperatorsOperatorGroupBy_1;
+}
+
+@end
+
+void RxInternalOperatorsOperatorGroupBy_1_initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_(RxInternalOperatorsOperatorGroupBy_1 *self, RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *capture$0) {
+  JreStrongAssign(&self->val$parent_, capture$0);
+  NSObject_init(self);
+}
+
+RxInternalOperatorsOperatorGroupBy_1 *new_RxInternalOperatorsOperatorGroupBy_1_initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_(RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorGroupBy_1, initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_, capture$0)
+}
+
+RxInternalOperatorsOperatorGroupBy_1 *create_RxInternalOperatorsOperatorGroupBy_1_initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_(RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorGroupBy_1, initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_, capture$0)
+}
+
 @implementation RxInternalOperatorsOperatorGroupBy_GroupByProducer
 
 - (instancetype)initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber:(RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *)parent {
@@ -220,9 +266,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorGroupBy)
   [((RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *) nil_chk(parent_)) requestMoreWithLong:n];
 }
 
-- (void)dealloc {
-  RELEASE_(parent_);
-  [super dealloc];
+- (void)__javaClone:(RxInternalOperatorsOperatorGroupBy_GroupByProducer *)original {
+  [super __javaClone:original];
+  [parent_ release];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -247,7 +293,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorGroupBy)
 
 void RxInternalOperatorsOperatorGroupBy_GroupByProducer_initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_(RxInternalOperatorsOperatorGroupBy_GroupByProducer *self, RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *parent) {
   NSObject_init(self);
-  JreStrongAssign(&self->parent_, parent);
+  self->parent_ = parent;
 }
 
 RxInternalOperatorsOperatorGroupBy_GroupByProducer *new_RxInternalOperatorsOperatorGroupBy_GroupByProducer_initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_(RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *parent) {
@@ -465,7 +511,6 @@ id RxInternalOperatorsOperatorGroupBy_GroupBySubscriber_NULL_KEY;
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorGroupBy_GroupBySubscriber class]);
   RELEASE_(actual_);
   RELEASE_(keySelector_);
   RELEASE_(valueSelector_);
@@ -942,52 +987,3 @@ RxInternalOperatorsOperatorGroupBy_State *create_RxInternalOperatorsOperatorGrou
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorGroupBy_State)
-
-@implementation RxInternalOperatorsOperatorGroupBy_$1
-
-- (void)call {
-  [((RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *) nil_chk(val$parent_)) cancel];
-}
-
-- (instancetype)initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber:(RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *)capture$0 {
-  RxInternalOperatorsOperatorGroupBy_$1_initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$parent_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$parent_", "LRxInternalOperatorsOperatorGroupBy_GroupBySubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
-  };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorGroupBy_GroupBySubscriber;", "(Lrx/internal/operators/OperatorGroupBy$GroupBySubscriber<TT;TK;TV;>;)V", "Lrx/internal/operators/OperatorGroupBy$GroupBySubscriber<TT;TK;TV;>;", "LRxInternalOperatorsOperatorGroupBy;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorGroupBy_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
-  return &_RxInternalOperatorsOperatorGroupBy_$1;
-}
-
-@end
-
-void RxInternalOperatorsOperatorGroupBy_$1_initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_(RxInternalOperatorsOperatorGroupBy_$1 *self, RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *capture$0) {
-  JreStrongAssign(&self->val$parent_, capture$0);
-  NSObject_init(self);
-}
-
-RxInternalOperatorsOperatorGroupBy_$1 *new_RxInternalOperatorsOperatorGroupBy_$1_initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_(RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorGroupBy_$1, initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_, capture$0)
-}
-
-RxInternalOperatorsOperatorGroupBy_$1 *create_RxInternalOperatorsOperatorGroupBy_$1_initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_(RxInternalOperatorsOperatorGroupBy_GroupBySubscriber *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorGroupBy_$1, initWithRxInternalOperatorsOperatorGroupBy_GroupBySubscriber_, capture$0)
-}

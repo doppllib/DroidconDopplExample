@@ -49,83 +49,56 @@ __attribute__((unused)) static RxInternalOperatorsOperatorPublish *new_RxInterna
 
 __attribute__((unused)) static RxInternalOperatorsOperatorPublish *create_RxInternalOperatorsOperatorPublish_initWithRxObservable_OnSubscribe_withRxObservable_withJavaUtilConcurrentAtomicAtomicReference_(id<RxObservable_OnSubscribe> onSubscribe, RxObservable *source, JavaUtilConcurrentAtomicAtomicReference *current);
 
-@interface RxInternalOperatorsOperatorPublish_PublishSubscriber_$1 : NSObject < RxFunctionsAction0 > {
- @public
-  RxInternalOperatorsOperatorPublish_PublishSubscriber *this$0_;
-}
-
-- (void)call;
-
-- (instancetype)initWithRxInternalOperatorsOperatorPublish_PublishSubscriber:(RxInternalOperatorsOperatorPublish_PublishSubscriber *)outer$;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorPublish_PublishSubscriber_$1)
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorPublish_PublishSubscriber_$1, this$0_, RxInternalOperatorsOperatorPublish_PublishSubscriber *)
-
-__attribute__((unused)) static void RxInternalOperatorsOperatorPublish_PublishSubscriber_$1_initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_(RxInternalOperatorsOperatorPublish_PublishSubscriber_$1 *self, RxInternalOperatorsOperatorPublish_PublishSubscriber *outer$);
-
-__attribute__((unused)) static RxInternalOperatorsOperatorPublish_PublishSubscriber_$1 *new_RxInternalOperatorsOperatorPublish_PublishSubscriber_$1_initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_(RxInternalOperatorsOperatorPublish_PublishSubscriber *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorPublish_PublishSubscriber_$1 *create_RxInternalOperatorsOperatorPublish_PublishSubscriber_$1_initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_(RxInternalOperatorsOperatorPublish_PublishSubscriber *outer$);
-
-inline jlong RxInternalOperatorsOperatorPublish_InnerProducer_get_serialVersionUID();
-#define RxInternalOperatorsOperatorPublish_InnerProducer_serialVersionUID -4453897557930727610LL
-J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsOperatorPublish_InnerProducer, serialVersionUID, jlong)
-
-@interface RxInternalOperatorsOperatorPublish_$1 : NSObject < RxObservable_OnSubscribe > {
+@interface RxInternalOperatorsOperatorPublish_1 : NSObject < RxObservable_OnSubscribe > {
  @public
   JavaUtilConcurrentAtomicAtomicReference *val$curr_;
 }
 
-- (void)callWithId:(RxSubscriber *)child;
-
 - (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0;
+
+- (void)callWithId:(RxSubscriber *)child;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorPublish_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorPublish_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorPublish_$1, val$curr_, JavaUtilConcurrentAtomicAtomicReference *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorPublish_1_initWithJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorPublish_1 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorPublish_$1_initWithJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorPublish_$1 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorPublish_1 *new_RxInternalOperatorsOperatorPublish_1_initWithJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorPublish_$1 *new_RxInternalOperatorsOperatorPublish_$1_initWithJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorPublish_1 *create_RxInternalOperatorsOperatorPublish_1_initWithJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorPublish_$1 *create_RxInternalOperatorsOperatorPublish_$1_initWithJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0);
-
-@interface RxInternalOperatorsOperatorPublish_$2 : NSObject < RxObservable_OnSubscribe > {
+@interface RxInternalOperatorsOperatorPublish_2 : NSObject < RxObservable_OnSubscribe > {
  @public
   jboolean val$delayError_;
   id<RxFunctionsFunc1> val$selector_;
   RxObservable *val$source_;
 }
 
-- (void)callWithId:(RxSubscriber *)child;
-
 - (instancetype)initWithBoolean:(jboolean)capture$0
            withRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$1
                withRxObservable:(RxObservable *)capture$2;
 
+- (void)callWithId:(RxSubscriber *)child;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorPublish_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorPublish_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorPublish_$2, val$selector_, id<RxFunctionsFunc1>)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorPublish_$2, val$source_, RxObservable *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorPublish_2_initWithBoolean_withRxFunctionsFunc1_withRxObservable_(RxInternalOperatorsOperatorPublish_2 *self, jboolean capture$0, id<RxFunctionsFunc1> capture$1, RxObservable *capture$2);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorPublish_$2_initWithBoolean_withRxFunctionsFunc1_withRxObservable_(RxInternalOperatorsOperatorPublish_$2 *self, jboolean capture$0, id<RxFunctionsFunc1> capture$1, RxObservable *capture$2);
+__attribute__((unused)) static RxInternalOperatorsOperatorPublish_2 *new_RxInternalOperatorsOperatorPublish_2_initWithBoolean_withRxFunctionsFunc1_withRxObservable_(jboolean capture$0, id<RxFunctionsFunc1> capture$1, RxObservable *capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorPublish_$2 *new_RxInternalOperatorsOperatorPublish_$2_initWithBoolean_withRxFunctionsFunc1_withRxObservable_(jboolean capture$0, id<RxFunctionsFunc1> capture$1, RxObservable *capture$2) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorPublish_2 *create_RxInternalOperatorsOperatorPublish_2_initWithBoolean_withRxFunctionsFunc1_withRxObservable_(jboolean capture$0, id<RxFunctionsFunc1> capture$1, RxObservable *capture$2);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorPublish_$2 *create_RxInternalOperatorsOperatorPublish_$2_initWithBoolean_withRxFunctionsFunc1_withRxObservable_(jboolean capture$0, id<RxFunctionsFunc1> capture$1, RxObservable *capture$2);
-
-@interface RxInternalOperatorsOperatorPublish_$2_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorPublish_2_1 : RxSubscriber {
  @public
   RxSubscriber *val$child_;
   RxInternalOperatorsOnSubscribePublishMulticast *val$op_;
 }
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
+withRxInternalOperatorsOnSubscribePublishMulticast:(RxInternalOperatorsOnSubscribePublishMulticast *)capture$1;
 
 - (void)onNextWithId:(id)t;
 
@@ -135,21 +108,38 @@ __attribute__((unused)) static RxInternalOperatorsOperatorPublish_$2 *create_RxI
 
 - (void)setProducerWithRxProducer:(id<RxProducer>)p;
 
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
-withRxInternalOperatorsOnSubscribePublishMulticast:(RxInternalOperatorsOnSubscribePublishMulticast *)capture$1;
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorPublish_2_1)
+
+__attribute__((unused)) static void RxInternalOperatorsOperatorPublish_2_1_initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_(RxInternalOperatorsOperatorPublish_2_1 *self, RxSubscriber *capture$0, RxInternalOperatorsOnSubscribePublishMulticast *capture$1);
+
+__attribute__((unused)) static RxInternalOperatorsOperatorPublish_2_1 *new_RxInternalOperatorsOperatorPublish_2_1_initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_(RxSubscriber *capture$0, RxInternalOperatorsOnSubscribePublishMulticast *capture$1) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalOperatorsOperatorPublish_2_1 *create_RxInternalOperatorsOperatorPublish_2_1_initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_(RxSubscriber *capture$0, RxInternalOperatorsOnSubscribePublishMulticast *capture$1);
+
+@interface RxInternalOperatorsOperatorPublish_PublishSubscriber_1 : NSObject < RxFunctionsAction0 > {
+ @public
+  RxInternalOperatorsOperatorPublish_PublishSubscriber *this$0_;
+}
+
+- (instancetype)initWithRxInternalOperatorsOperatorPublish_PublishSubscriber:(RxInternalOperatorsOperatorPublish_PublishSubscriber *)outer$;
+
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorPublish_$2_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorPublish_PublishSubscriber_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorPublish_$2_$1, val$child_, RxSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorPublish_$2_$1, val$op_, RxInternalOperatorsOnSubscribePublishMulticast *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorPublish_PublishSubscriber_1_initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_(RxInternalOperatorsOperatorPublish_PublishSubscriber_1 *self, RxInternalOperatorsOperatorPublish_PublishSubscriber *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorPublish_$2_$1_initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_(RxInternalOperatorsOperatorPublish_$2_$1 *self, RxSubscriber *capture$0, RxInternalOperatorsOnSubscribePublishMulticast *capture$1);
+__attribute__((unused)) static RxInternalOperatorsOperatorPublish_PublishSubscriber_1 *new_RxInternalOperatorsOperatorPublish_PublishSubscriber_1_initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_(RxInternalOperatorsOperatorPublish_PublishSubscriber *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorPublish_$2_$1 *new_RxInternalOperatorsOperatorPublish_$2_$1_initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_(RxSubscriber *capture$0, RxInternalOperatorsOnSubscribePublishMulticast *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorPublish_PublishSubscriber_1 *create_RxInternalOperatorsOperatorPublish_PublishSubscriber_1_initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_(RxInternalOperatorsOperatorPublish_PublishSubscriber *outer$);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorPublish_$2_$1 *create_RxInternalOperatorsOperatorPublish_$2_$1_initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_(RxSubscriber *capture$0, RxInternalOperatorsOnSubscribePublishMulticast *capture$1);
+inline jlong RxInternalOperatorsOperatorPublish_InnerProducer_get_serialVersionUID();
+#define RxInternalOperatorsOperatorPublish_InnerProducer_serialVersionUID -4453897557930727610LL
+J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsOperatorPublish_InnerProducer, serialVersionUID, jlong)
 
 @implementation RxInternalOperatorsOperatorPublish
 
@@ -233,7 +223,7 @@ __attribute__((unused)) static RxInternalOperatorsOperatorPublish_$2_$1 *create_
 RxObservablesConnectableObservable *RxInternalOperatorsOperatorPublish_createWithRxObservable_(RxObservable *source) {
   RxInternalOperatorsOperatorPublish_initialize();
   JavaUtilConcurrentAtomicAtomicReference *curr = create_JavaUtilConcurrentAtomicAtomicReference_init();
-  id<RxObservable_OnSubscribe> onSubscribe = create_RxInternalOperatorsOperatorPublish_$1_initWithJavaUtilConcurrentAtomicAtomicReference_(curr);
+  id<RxObservable_OnSubscribe> onSubscribe = create_RxInternalOperatorsOperatorPublish_1_initWithJavaUtilConcurrentAtomicAtomicReference_(curr);
   return create_RxInternalOperatorsOperatorPublish_initWithRxObservable_OnSubscribe_withRxObservable_withJavaUtilConcurrentAtomicAtomicReference_(onSubscribe, source, curr);
 }
 
@@ -244,7 +234,7 @@ RxObservable *RxInternalOperatorsOperatorPublish_createWithRxObservable_withRxFu
 
 RxObservable *RxInternalOperatorsOperatorPublish_createWithRxObservable_withRxFunctionsFunc1_withBoolean_(RxObservable *source, id<RxFunctionsFunc1> selector, jboolean delayError) {
   RxInternalOperatorsOperatorPublish_initialize();
-  return RxObservable_createWithRxObservable_OnSubscribe_(create_RxInternalOperatorsOperatorPublish_$2_initWithBoolean_withRxFunctionsFunc1_withRxObservable_(delayError, selector, source));
+  return RxObservable_createWithRxObservable_OnSubscribe_(create_RxInternalOperatorsOperatorPublish_2_initWithBoolean_withRxFunctionsFunc1_withRxObservable_(delayError, selector, source));
 }
 
 void RxInternalOperatorsOperatorPublish_initWithRxObservable_OnSubscribe_withRxObservable_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorPublish *self, id<RxObservable_OnSubscribe> onSubscribe, RxObservable *source, JavaUtilConcurrentAtomicAtomicReference *current) {
@@ -263,6 +253,205 @@ RxInternalOperatorsOperatorPublish *create_RxInternalOperatorsOperatorPublish_in
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorPublish)
 
+@implementation RxInternalOperatorsOperatorPublish_1
+
+- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0 {
+  RxInternalOperatorsOperatorPublish_1_initWithJavaUtilConcurrentAtomicAtomicReference_(self, capture$0);
+  return self;
+}
+
+- (void)callWithId:(RxSubscriber *)child {
+  for (; ; ) {
+    RxInternalOperatorsOperatorPublish_PublishSubscriber *r = [((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(val$curr_)) get];
+    if (r == nil || [r isUnsubscribed]) {
+      RxInternalOperatorsOperatorPublish_PublishSubscriber *u = create_RxInternalOperatorsOperatorPublish_PublishSubscriber_initWithJavaUtilConcurrentAtomicAtomicReference_(val$curr_);
+      [u init__];
+      if (![val$curr_ compareAndSetWithId:r withId:u]) {
+        continue;
+      }
+      r = u;
+    }
+    RxInternalOperatorsOperatorPublish_InnerProducer *inner = create_RxInternalOperatorsOperatorPublish_InnerProducer_initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_withRxSubscriber_(r, child);
+    if ([r addWithRxInternalOperatorsOperatorPublish_InnerProducer:inner]) {
+      [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:inner];
+      [child setProducerWithRxProducer:inner];
+      break;
+    }
+  }
+}
+
+- (void)dealloc {
+  RELEASE_(val$curr_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicReference:);
+  methods[1].selector = @selector(callWithId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$curr_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)V", "Ljava/util/concurrent/atomic/AtomicReference<Lrx/internal/operators/OperatorPublish$PublishSubscriber<TT;>;>;", "LRxInternalOperatorsOperatorPublish;", "createWithRxObservable:", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorPublish_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
+  return &_RxInternalOperatorsOperatorPublish_1;
+}
+
+@end
+
+void RxInternalOperatorsOperatorPublish_1_initWithJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorPublish_1 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0) {
+  JreStrongAssign(&self->val$curr_, capture$0);
+  NSObject_init(self);
+}
+
+RxInternalOperatorsOperatorPublish_1 *new_RxInternalOperatorsOperatorPublish_1_initWithJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorPublish_1, initWithJavaUtilConcurrentAtomicAtomicReference_, capture$0)
+}
+
+RxInternalOperatorsOperatorPublish_1 *create_RxInternalOperatorsOperatorPublish_1_initWithJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorPublish_1, initWithJavaUtilConcurrentAtomicAtomicReference_, capture$0)
+}
+
+@implementation RxInternalOperatorsOperatorPublish_2
+
+- (instancetype)initWithBoolean:(jboolean)capture$0
+           withRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$1
+               withRxObservable:(RxObservable *)capture$2 {
+  RxInternalOperatorsOperatorPublish_2_initWithBoolean_withRxFunctionsFunc1_withRxObservable_(self, capture$0, capture$1, capture$2);
+  return self;
+}
+
+- (void)callWithId:(RxSubscriber *)child {
+  RxInternalOperatorsOnSubscribePublishMulticast *op = create_RxInternalOperatorsOnSubscribePublishMulticast_initWithInt_withBoolean_(JreLoadStatic(RxInternalUtilRxRingBuffer, SIZE), val$delayError_);
+  RxSubscriber *subscriber = create_RxInternalOperatorsOperatorPublish_2_1_initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_(child, op);
+  [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:op];
+  [child addWithRxSubscription:subscriber];
+  [((RxObservable *) nil_chk([((id<RxFunctionsFunc1>) nil_chk(val$selector_)) callWithId:RxObservable_createWithRxObservable_OnSubscribe_(op)])) unsafeSubscribeWithRxSubscriber:subscriber];
+  [((RxObservable *) nil_chk(val$source_)) unsafeSubscribeWithRxSubscriber:[op subscriber]];
+}
+
+- (void)dealloc {
+  RELEASE_(val$selector_);
+  RELEASE_(val$source_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithBoolean:withRxFunctionsFunc1:withRxObservable:);
+  methods[1].selector = @selector(callWithId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$delayError_", "Z", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "val$selector_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$source_", "LRxObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-TR;>;)V", "Lrx/functions/Func1<-Lrx/Observable<TT;>;+Lrx/Observable<TR;>;>;", "Lrx/Observable<+TT;>;", "LRxInternalOperatorsOperatorPublish;", "createWithRxObservable:withRxFunctionsFunc1:withBoolean:", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<TR;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorPublish_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 3, 5, -1, 6, 7, -1 };
+  return &_RxInternalOperatorsOperatorPublish_2;
+}
+
+@end
+
+void RxInternalOperatorsOperatorPublish_2_initWithBoolean_withRxFunctionsFunc1_withRxObservable_(RxInternalOperatorsOperatorPublish_2 *self, jboolean capture$0, id<RxFunctionsFunc1> capture$1, RxObservable *capture$2) {
+  self->val$delayError_ = capture$0;
+  JreStrongAssign(&self->val$selector_, capture$1);
+  JreStrongAssign(&self->val$source_, capture$2);
+  NSObject_init(self);
+}
+
+RxInternalOperatorsOperatorPublish_2 *new_RxInternalOperatorsOperatorPublish_2_initWithBoolean_withRxFunctionsFunc1_withRxObservable_(jboolean capture$0, id<RxFunctionsFunc1> capture$1, RxObservable *capture$2) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorPublish_2, initWithBoolean_withRxFunctionsFunc1_withRxObservable_, capture$0, capture$1, capture$2)
+}
+
+RxInternalOperatorsOperatorPublish_2 *create_RxInternalOperatorsOperatorPublish_2_initWithBoolean_withRxFunctionsFunc1_withRxObservable_(jboolean capture$0, id<RxFunctionsFunc1> capture$1, RxObservable *capture$2) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorPublish_2, initWithBoolean_withRxFunctionsFunc1_withRxObservable_, capture$0, capture$1, capture$2)
+}
+
+@implementation RxInternalOperatorsOperatorPublish_2_1
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
+withRxInternalOperatorsOnSubscribePublishMulticast:(RxInternalOperatorsOnSubscribePublishMulticast *)capture$1 {
+  RxInternalOperatorsOperatorPublish_2_1_initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_(self, capture$0, capture$1);
+  return self;
+}
+
+- (void)onNextWithId:(id)t {
+  [((RxSubscriber *) nil_chk(val$child_)) onNextWithId:t];
+}
+
+- (void)onErrorWithNSException:(NSException *)e {
+  [((RxInternalOperatorsOnSubscribePublishMulticast *) nil_chk(val$op_)) unsubscribe];
+  [((RxSubscriber *) nil_chk(val$child_)) onErrorWithNSException:e];
+}
+
+- (void)onCompleted {
+  [((RxInternalOperatorsOnSubscribePublishMulticast *) nil_chk(val$op_)) unsubscribe];
+  [((RxSubscriber *) nil_chk(val$child_)) onCompleted];
+}
+
+- (void)setProducerWithRxProducer:(id<RxProducer>)p {
+  [((RxSubscriber *) nil_chk(val$child_)) setProducerWithRxProducer:p];
+}
+
+- (void)dealloc {
+  RELEASE_(val$child_);
+  RELEASE_(val$op_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxSubscriber:withRxInternalOperatorsOnSubscribePublishMulticast:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
+  methods[4].selector = @selector(setProducerWithRxProducer:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$op_", "LRxInternalOperatorsOnSubscribePublishMulticast;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+  };
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TR;)V", "onError", "LNSException;", "setProducer", "LRxProducer;", "Lrx/Subscriber<-TR;>;", "Lrx/internal/operators/OnSubscribePublishMulticast<TT;>;", "LRxInternalOperatorsOperatorPublish_2;", "callWithId:", "Lrx/Subscriber<TR;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorPublish_2_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 2, 9, -1, 10, 11, -1 };
+  return &_RxInternalOperatorsOperatorPublish_2_1;
+}
+
+@end
+
+void RxInternalOperatorsOperatorPublish_2_1_initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_(RxInternalOperatorsOperatorPublish_2_1 *self, RxSubscriber *capture$0, RxInternalOperatorsOnSubscribePublishMulticast *capture$1) {
+  JreStrongAssign(&self->val$child_, capture$0);
+  JreStrongAssign(&self->val$op_, capture$1);
+  RxSubscriber_init(self);
+}
+
+RxInternalOperatorsOperatorPublish_2_1 *new_RxInternalOperatorsOperatorPublish_2_1_initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_(RxSubscriber *capture$0, RxInternalOperatorsOnSubscribePublishMulticast *capture$1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorPublish_2_1, initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_, capture$0, capture$1)
+}
+
+RxInternalOperatorsOperatorPublish_2_1 *create_RxInternalOperatorsOperatorPublish_2_1_initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_(RxSubscriber *capture$0, RxInternalOperatorsOnSubscribePublishMulticast *capture$1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorPublish_2_1, initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_, capture$0, capture$1)
+}
+
 J2OBJC_INITIALIZED_DEFN(RxInternalOperatorsOperatorPublish_PublishSubscriber)
 
 IOSObjectArray *RxInternalOperatorsOperatorPublish_PublishSubscriber_EMPTY;
@@ -276,7 +465,7 @@ IOSObjectArray *RxInternalOperatorsOperatorPublish_PublishSubscriber_TERMINATED;
 }
 
 - (void)init__ {
-  [self addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOperatorPublish_PublishSubscriber_$1_initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_(self))];
+  [self addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOperatorPublish_PublishSubscriber_1_initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_(self))];
 }
 
 - (void)onStart {
@@ -517,7 +706,6 @@ IOSObjectArray *RxInternalOperatorsOperatorPublish_PublishSubscriber_TERMINATED;
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorPublish_PublishSubscriber class]);
   RELEASE_(queue_);
   RELEASE_(current_);
   JreReleaseVolatile(&terminalEvent_);
@@ -596,16 +784,16 @@ RxInternalOperatorsOperatorPublish_PublishSubscriber *create_RxInternalOperators
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorPublish_PublishSubscriber)
 
-@implementation RxInternalOperatorsOperatorPublish_PublishSubscriber_$1
+@implementation RxInternalOperatorsOperatorPublish_PublishSubscriber_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorPublish_PublishSubscriber:(RxInternalOperatorsOperatorPublish_PublishSubscriber *)outer$ {
+  RxInternalOperatorsOperatorPublish_PublishSubscriber_1_initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_(self, outer$);
+  return self;
+}
 
 - (void)call {
   [((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(this$0_->producers_)) getAndSetWithId:JreLoadStatic(RxInternalOperatorsOperatorPublish_PublishSubscriber, TERMINATED)];
   [((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(this$0_->current_)) compareAndSetWithId:this$0_ withId:nil];
-}
-
-- (instancetype)initWithRxInternalOperatorsOperatorPublish_PublishSubscriber:(RxInternalOperatorsOperatorPublish_PublishSubscriber *)outer$ {
-  RxInternalOperatorsOperatorPublish_PublishSubscriber_$1_initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_(self, outer$);
-  return self;
 }
 
 - (void)dealloc {
@@ -615,35 +803,35 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorPublish_PublishSubsc
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorPublish_PublishSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorPublish_PublishSubscriber:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorPublish_PublishSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorPublish_PublishSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorPublish_PublishSubscriber;", "init__" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorPublish_PublishSubscriber_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
-  return &_RxInternalOperatorsOperatorPublish_PublishSubscriber_$1;
+  static const void *ptrTable[] = { "Lrx/internal/operators/OperatorPublish$PublishSubscriber<TT;>;", "LRxInternalOperatorsOperatorPublish_PublishSubscriber;", "init__" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorPublish_PublishSubscriber_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
+  return &_RxInternalOperatorsOperatorPublish_PublishSubscriber_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorPublish_PublishSubscriber_$1_initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_(RxInternalOperatorsOperatorPublish_PublishSubscriber_$1 *self, RxInternalOperatorsOperatorPublish_PublishSubscriber *outer$) {
+void RxInternalOperatorsOperatorPublish_PublishSubscriber_1_initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_(RxInternalOperatorsOperatorPublish_PublishSubscriber_1 *self, RxInternalOperatorsOperatorPublish_PublishSubscriber *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorPublish_PublishSubscriber_$1 *new_RxInternalOperatorsOperatorPublish_PublishSubscriber_$1_initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_(RxInternalOperatorsOperatorPublish_PublishSubscriber *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorPublish_PublishSubscriber_$1, initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_, outer$)
+RxInternalOperatorsOperatorPublish_PublishSubscriber_1 *new_RxInternalOperatorsOperatorPublish_PublishSubscriber_1_initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_(RxInternalOperatorsOperatorPublish_PublishSubscriber *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorPublish_PublishSubscriber_1, initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_, outer$)
 }
 
-RxInternalOperatorsOperatorPublish_PublishSubscriber_$1 *create_RxInternalOperatorsOperatorPublish_PublishSubscriber_$1_initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_(RxInternalOperatorsOperatorPublish_PublishSubscriber *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorPublish_PublishSubscriber_$1, initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_, outer$)
+RxInternalOperatorsOperatorPublish_PublishSubscriber_1 *create_RxInternalOperatorsOperatorPublish_PublishSubscriber_1_initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_(RxInternalOperatorsOperatorPublish_PublishSubscriber *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorPublish_PublishSubscriber_1, initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_, outer$)
 }
 
 @implementation RxInternalOperatorsOperatorPublish_InnerProducer
@@ -720,9 +908,13 @@ RxInternalOperatorsOperatorPublish_PublishSubscriber_$1 *create_RxInternalOperat
   }
 }
 
+- (void)__javaClone:(RxInternalOperatorsOperatorPublish_InnerProducer *)original {
+  [super __javaClone:original];
+  [child_ release];
+}
+
 - (void)dealloc {
   RELEASE_(parent_);
-  RELEASE_(child_);
   [super dealloc];
 }
 
@@ -759,7 +951,7 @@ RxInternalOperatorsOperatorPublish_PublishSubscriber_$1 *create_RxInternalOperat
 void RxInternalOperatorsOperatorPublish_InnerProducer_initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorPublish_InnerProducer *self, RxInternalOperatorsOperatorPublish_PublishSubscriber *parent, RxSubscriber *child) {
   JavaUtilConcurrentAtomicAtomicLong_init(self);
   JreStrongAssign(&self->parent_, parent);
-  JreStrongAssign(&self->child_, child);
+  self->child_ = child;
   [self lazySetWithLong:RxInternalOperatorsOperatorPublish_InnerProducer_NOT_REQUESTED];
 }
 
@@ -772,203 +964,3 @@ RxInternalOperatorsOperatorPublish_InnerProducer *create_RxInternalOperatorsOper
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorPublish_InnerProducer)
-
-@implementation RxInternalOperatorsOperatorPublish_$1
-
-- (void)callWithId:(RxSubscriber *)child {
-  for (; ; ) {
-    RxInternalOperatorsOperatorPublish_PublishSubscriber *r = [((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(val$curr_)) get];
-    if (r == nil || [r isUnsubscribed]) {
-      RxInternalOperatorsOperatorPublish_PublishSubscriber *u = create_RxInternalOperatorsOperatorPublish_PublishSubscriber_initWithJavaUtilConcurrentAtomicAtomicReference_(val$curr_);
-      [u init__];
-      if (![val$curr_ compareAndSetWithId:r withId:u]) {
-        continue;
-      }
-      r = u;
-    }
-    RxInternalOperatorsOperatorPublish_InnerProducer *inner = create_RxInternalOperatorsOperatorPublish_InnerProducer_initWithRxInternalOperatorsOperatorPublish_PublishSubscriber_withRxSubscriber_(r, child);
-    if ([r addWithRxInternalOperatorsOperatorPublish_InnerProducer:inner]) {
-      [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:inner];
-      [child setProducerWithRxProducer:inner];
-      break;
-    }
-  }
-}
-
-- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0 {
-  RxInternalOperatorsOperatorPublish_$1_initWithJavaUtilConcurrentAtomicAtomicReference_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$curr_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicReference:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$curr_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)V", "LJavaUtilConcurrentAtomicAtomicReference;", "(Ljava/util/concurrent/atomic/AtomicReference<Lrx/internal/operators/OperatorPublish$PublishSubscriber<TT;>;>;)V", "Ljava/util/concurrent/atomic/AtomicReference<Lrx/internal/operators/OperatorPublish$PublishSubscriber<TT;>;>;", "LRxInternalOperatorsOperatorPublish;", "createWithRxObservable:", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorPublish_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 6, -1, 7, 8, -1 };
-  return &_RxInternalOperatorsOperatorPublish_$1;
-}
-
-@end
-
-void RxInternalOperatorsOperatorPublish_$1_initWithJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorPublish_$1 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0) {
-  JreStrongAssign(&self->val$curr_, capture$0);
-  NSObject_init(self);
-}
-
-RxInternalOperatorsOperatorPublish_$1 *new_RxInternalOperatorsOperatorPublish_$1_initWithJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorPublish_$1, initWithJavaUtilConcurrentAtomicAtomicReference_, capture$0)
-}
-
-RxInternalOperatorsOperatorPublish_$1 *create_RxInternalOperatorsOperatorPublish_$1_initWithJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorPublish_$1, initWithJavaUtilConcurrentAtomicAtomicReference_, capture$0)
-}
-
-@implementation RxInternalOperatorsOperatorPublish_$2
-
-- (void)callWithId:(RxSubscriber *)child {
-  RxInternalOperatorsOnSubscribePublishMulticast *op = create_RxInternalOperatorsOnSubscribePublishMulticast_initWithInt_withBoolean_(JreLoadStatic(RxInternalUtilRxRingBuffer, SIZE), val$delayError_);
-  RxSubscriber *subscriber = create_RxInternalOperatorsOperatorPublish_$2_$1_initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_(child, op);
-  [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:op];
-  [child addWithRxSubscription:subscriber];
-  [((RxObservable *) nil_chk([((id<RxFunctionsFunc1>) nil_chk(val$selector_)) callWithId:RxObservable_createWithRxObservable_OnSubscribe_(op)])) unsafeSubscribeWithRxSubscriber:subscriber];
-  [((RxObservable *) nil_chk(val$source_)) unsafeSubscribeWithRxSubscriber:[op subscriber]];
-}
-
-- (instancetype)initWithBoolean:(jboolean)capture$0
-           withRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$1
-               withRxObservable:(RxObservable *)capture$2 {
-  RxInternalOperatorsOperatorPublish_$2_initWithBoolean_withRxFunctionsFunc1_withRxObservable_(self, capture$0, capture$1, capture$2);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$selector_);
-  RELEASE_(val$source_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithBoolean:withRxFunctionsFunc1:withRxObservable:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$delayError_", "Z", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$selector_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-    { "val$source_", "LRxObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-TR;>;)V", "ZLRxFunctionsFunc1;LRxObservable;", "(ZLrx/functions/Func1<-Lrx/Observable<TT;>;+Lrx/Observable<TR;>;>;Lrx/Observable<+TT;>;)V", "Lrx/functions/Func1<-Lrx/Observable<TT;>;+Lrx/Observable<TR;>;>;", "Lrx/Observable<+TT;>;", "LRxInternalOperatorsOperatorPublish;", "createWithRxObservable:withRxFunctionsFunc1:withBoolean:", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<TR;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorPublish_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 3, 7, -1, 8, 9, -1 };
-  return &_RxInternalOperatorsOperatorPublish_$2;
-}
-
-@end
-
-void RxInternalOperatorsOperatorPublish_$2_initWithBoolean_withRxFunctionsFunc1_withRxObservable_(RxInternalOperatorsOperatorPublish_$2 *self, jboolean capture$0, id<RxFunctionsFunc1> capture$1, RxObservable *capture$2) {
-  self->val$delayError_ = capture$0;
-  JreStrongAssign(&self->val$selector_, capture$1);
-  JreStrongAssign(&self->val$source_, capture$2);
-  NSObject_init(self);
-}
-
-RxInternalOperatorsOperatorPublish_$2 *new_RxInternalOperatorsOperatorPublish_$2_initWithBoolean_withRxFunctionsFunc1_withRxObservable_(jboolean capture$0, id<RxFunctionsFunc1> capture$1, RxObservable *capture$2) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorPublish_$2, initWithBoolean_withRxFunctionsFunc1_withRxObservable_, capture$0, capture$1, capture$2)
-}
-
-RxInternalOperatorsOperatorPublish_$2 *create_RxInternalOperatorsOperatorPublish_$2_initWithBoolean_withRxFunctionsFunc1_withRxObservable_(jboolean capture$0, id<RxFunctionsFunc1> capture$1, RxObservable *capture$2) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorPublish_$2, initWithBoolean_withRxFunctionsFunc1_withRxObservable_, capture$0, capture$1, capture$2)
-}
-
-@implementation RxInternalOperatorsOperatorPublish_$2_$1
-
-- (void)onNextWithId:(id)t {
-  [((RxSubscriber *) nil_chk(val$child_)) onNextWithId:t];
-}
-
-- (void)onErrorWithNSException:(NSException *)e {
-  [((RxInternalOperatorsOnSubscribePublishMulticast *) nil_chk(val$op_)) unsubscribe];
-  [((RxSubscriber *) nil_chk(val$child_)) onErrorWithNSException:e];
-}
-
-- (void)onCompleted {
-  [((RxInternalOperatorsOnSubscribePublishMulticast *) nil_chk(val$op_)) unsubscribe];
-  [((RxSubscriber *) nil_chk(val$child_)) onCompleted];
-}
-
-- (void)setProducerWithRxProducer:(id<RxProducer>)p {
-  [((RxSubscriber *) nil_chk(val$child_)) setProducerWithRxProducer:p];
-}
-
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
-withRxInternalOperatorsOnSubscribePublishMulticast:(RxInternalOperatorsOnSubscribePublishMulticast *)capture$1 {
-  RxInternalOperatorsOperatorPublish_$2_$1_initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_(self, capture$0, capture$1);
-  return self;
-}
-
-- (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorPublish_$2_$1 class]);
-  RELEASE_(val$child_);
-  RELEASE_(val$op_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 7, -1, 8, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(setProducerWithRxProducer:);
-  methods[4].selector = @selector(initWithRxSubscriber:withRxInternalOperatorsOnSubscribePublishMulticast:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 9, -1 },
-    { "val$op_", "LRxInternalOperatorsOnSubscribePublishMulticast;", .constantValue.asLong = 0, 0x1012, -1, -1, 10, -1 },
-  };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TR;)V", "onError", "LNSException;", "setProducer", "LRxProducer;", "LRxSubscriber;LRxInternalOperatorsOnSubscribePublishMulticast;", "(Lrx/Subscriber<-TR;>;Lrx/internal/operators/OnSubscribePublishMulticast<TT;>;)V", "Lrx/Subscriber<-TR;>;", "Lrx/internal/operators/OnSubscribePublishMulticast<TT;>;", "LRxInternalOperatorsOperatorPublish_$2;", "callWithId:", "Lrx/Subscriber<TR;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorPublish_$2_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 2, 11, -1, 12, 13, -1 };
-  return &_RxInternalOperatorsOperatorPublish_$2_$1;
-}
-
-@end
-
-void RxInternalOperatorsOperatorPublish_$2_$1_initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_(RxInternalOperatorsOperatorPublish_$2_$1 *self, RxSubscriber *capture$0, RxInternalOperatorsOnSubscribePublishMulticast *capture$1) {
-  JreStrongAssign(&self->val$child_, capture$0);
-  JreStrongAssign(&self->val$op_, capture$1);
-  RxSubscriber_init(self);
-}
-
-RxInternalOperatorsOperatorPublish_$2_$1 *new_RxInternalOperatorsOperatorPublish_$2_$1_initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_(RxSubscriber *capture$0, RxInternalOperatorsOnSubscribePublishMulticast *capture$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorPublish_$2_$1, initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_, capture$0, capture$1)
-}
-
-RxInternalOperatorsOperatorPublish_$2_$1 *create_RxInternalOperatorsOperatorPublish_$2_$1_initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_(RxSubscriber *capture$0, RxInternalOperatorsOnSubscribePublishMulticast *capture$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorPublish_$2_$1, initWithRxSubscriber_withRxInternalOperatorsOnSubscribePublishMulticast_, capture$0, capture$1)
-}

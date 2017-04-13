@@ -31,7 +31,6 @@ J2OBJC_STATIC_FIELD_CONSTANT(RxInternalSchedulersScheduledAction, serialVersionU
 
 @end
 
-J2OBJC_FIELD_SETTER(RxInternalSchedulersScheduledAction_FutureCompleter, this$0_, RxInternalSchedulersScheduledAction *)
 J2OBJC_FIELD_SETTER(RxInternalSchedulersScheduledAction_FutureCompleter, f_, id<JavaUtilConcurrentFuture>)
 
 inline jlong RxInternalSchedulersScheduledAction_Remover_get_serialVersionUID();
@@ -242,7 +241,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersScheduledAction)
     { "this$0_", "LRxInternalSchedulersScheduledAction;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "f_", "LJavaUtilConcurrentFuture;", .constantValue.asLong = 0, 0x12, -1, -1, 2, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalSchedulersScheduledAction;LJavaUtilConcurrentFuture;", "(Lrx/internal/schedulers/ScheduledAction;Ljava/util/concurrent/Future<*>;)V", "Ljava/util/concurrent/Future<*>;", "LRxInternalSchedulersScheduledAction;" };
+  static const void *ptrTable[] = { "LJavaUtilConcurrentFuture;", "(Ljava/util/concurrent/Future<*>;)V", "Ljava/util/concurrent/Future<*>;", "LRxInternalSchedulersScheduledAction;" };
   static const J2ObjcClassInfo _RxInternalSchedulersScheduledAction_FutureCompleter = { "FutureCompleter", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x10, 3, 2, 3, -1, -1, -1, -1 };
   return &_RxInternalSchedulersScheduledAction_FutureCompleter;
 }

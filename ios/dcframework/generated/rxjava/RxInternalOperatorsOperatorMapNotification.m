@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OperatorMapNotification.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxExceptionsExceptions.h"
 #include "RxFunctionsFunc0.h"
@@ -17,26 +16,24 @@
 #include "java/util/concurrent/atomic/AtomicLong.h"
 #include "java/util/concurrent/atomic/AtomicReference.h"
 
-@interface RxInternalOperatorsOperatorMapNotification_$1 : NSObject < RxProducer > {
+@interface RxInternalOperatorsOperatorMapNotification_1 : NSObject < RxProducer > {
  @public
   RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *val$parent_;
 }
 
-- (void)requestWithLong:(jlong)n;
-
 - (instancetype)initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber:(RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *)capture$0;
+
+- (void)requestWithLong:(jlong)n;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorMapNotification_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorMapNotification_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorMapNotification_$1, val$parent_, RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorMapNotification_1_initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_(RxInternalOperatorsOperatorMapNotification_1 *self, RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorMapNotification_$1_initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_(RxInternalOperatorsOperatorMapNotification_$1 *self, RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorMapNotification_1 *new_RxInternalOperatorsOperatorMapNotification_1_initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_(RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorMapNotification_$1 *new_RxInternalOperatorsOperatorMapNotification_$1_initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_(RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorMapNotification_$1 *create_RxInternalOperatorsOperatorMapNotification_$1_initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_(RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorMapNotification_1 *create_RxInternalOperatorsOperatorMapNotification_1_initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_(RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *capture$0);
 
 @implementation RxInternalOperatorsOperatorMapNotification
 
@@ -50,7 +47,7 @@ __attribute__((unused)) static RxInternalOperatorsOperatorMapNotification_$1 *cr
 - (RxSubscriber *)callWithId:(RxSubscriber *)child {
   RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *parent = create_RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_initWithRxSubscriber_withRxFunctionsFunc1_withRxFunctionsFunc1_withRxFunctionsFunc0_(child, onNext_, onError_, onCompleted_);
   [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:parent];
-  [child setProducerWithRxProducer:create_RxInternalOperatorsOperatorMapNotification_$1_initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_(parent)];
+  [child setProducerWithRxProducer:create_RxInternalOperatorsOperatorMapNotification_1_initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_(parent)];
   return parent;
 }
 
@@ -99,6 +96,55 @@ RxInternalOperatorsOperatorMapNotification *create_RxInternalOperatorsOperatorMa
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorMapNotification)
+
+@implementation RxInternalOperatorsOperatorMapNotification_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber:(RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *)capture$0 {
+  RxInternalOperatorsOperatorMapNotification_1_initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_(self, capture$0);
+  return self;
+}
+
+- (void)requestWithLong:(jlong)n {
+  [((RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *) nil_chk(val$parent_)) requestInnerWithLong:n];
+}
+
+- (void)dealloc {
+  RELEASE_(val$parent_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber:);
+  methods[1].selector = @selector(requestWithLong:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$parent_", "LRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+  };
+  static const void *ptrTable[] = { "request", "J", "Lrx/internal/operators/OperatorMapNotification$MapNotificationSubscriber<TT;TR;>;", "LRxInternalOperatorsOperatorMapNotification;", "callWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorMapNotification_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
+  return &_RxInternalOperatorsOperatorMapNotification_1;
+}
+
+@end
+
+void RxInternalOperatorsOperatorMapNotification_1_initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_(RxInternalOperatorsOperatorMapNotification_1 *self, RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *capture$0) {
+  JreStrongAssign(&self->val$parent_, capture$0);
+  NSObject_init(self);
+}
+
+RxInternalOperatorsOperatorMapNotification_1 *new_RxInternalOperatorsOperatorMapNotification_1_initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_(RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorMapNotification_1, initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_, capture$0)
+}
+
+RxInternalOperatorsOperatorMapNotification_1 *create_RxInternalOperatorsOperatorMapNotification_1_initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_(RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorMapNotification_1, initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_, capture$0)
+}
 
 @implementation RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber
 
@@ -230,7 +276,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorMapNotification)
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber class]);
   RELEASE_(actual_);
   RELEASE_(onNext_);
   RELEASE_(onError_);
@@ -304,52 +349,3 @@ RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *create_RxI
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber)
-
-@implementation RxInternalOperatorsOperatorMapNotification_$1
-
-- (void)requestWithLong:(jlong)n {
-  [((RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *) nil_chk(val$parent_)) requestInnerWithLong:n];
-}
-
-- (instancetype)initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber:(RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *)capture$0 {
-  RxInternalOperatorsOperatorMapNotification_$1_initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$parent_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, 3, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(requestWithLong:);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$parent_", "LRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
-  };
-  static const void *ptrTable[] = { "request", "J", "LRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber;", "(Lrx/internal/operators/OperatorMapNotification$MapNotificationSubscriber<TT;TR;>;)V", "Lrx/internal/operators/OperatorMapNotification$MapNotificationSubscriber<TT;TR;>;", "LRxInternalOperatorsOperatorMapNotification;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorMapNotification_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 5, -1, 6, -1, -1 };
-  return &_RxInternalOperatorsOperatorMapNotification_$1;
-}
-
-@end
-
-void RxInternalOperatorsOperatorMapNotification_$1_initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_(RxInternalOperatorsOperatorMapNotification_$1 *self, RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *capture$0) {
-  JreStrongAssign(&self->val$parent_, capture$0);
-  NSObject_init(self);
-}
-
-RxInternalOperatorsOperatorMapNotification_$1 *new_RxInternalOperatorsOperatorMapNotification_$1_initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_(RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorMapNotification_$1, initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_, capture$0)
-}
-
-RxInternalOperatorsOperatorMapNotification_$1 *create_RxInternalOperatorsOperatorMapNotification_$1_initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_(RxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorMapNotification_$1, initWithRxInternalOperatorsOperatorMapNotification_MapNotificationSubscriber_, capture$0)
-}

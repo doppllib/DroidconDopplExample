@@ -11,11 +11,6 @@ ComGoogleGsonInternalJsonReaderInternalAccess *ComGoogleGsonInternalJsonReaderIn
 
 @implementation ComGoogleGsonInternalJsonReaderInternalAccess
 
-- (void)promoteNameToValueWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)reader {
-  // can't call an abstract method
-  [self doesNotRecognizeSelector:_cmd];
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   ComGoogleGsonInternalJsonReaderInternalAccess_init(self);
@@ -23,15 +18,20 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (void)promoteNameToValueWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)reader {
+  // can't call an abstract method
+  [self doesNotRecognizeSelector:_cmd];
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x401, 0, 1, 2, -1, -1, -1 },
     { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x401, 0, 1, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(promoteNameToValueWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(promoteNameToValueWithComGoogleGsonStreamJsonReader:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "INSTANCE", "LComGoogleGsonInternalJsonReaderInternalAccess;", .constantValue.asLong = 0, 0x9, -1, 3, -1, -1 },

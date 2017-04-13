@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_DCDDatabaseHelper
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (DCDDatabaseHelper_) && (INCLUDE_ALL_DCDDatabaseHelper || defined(INCLUDE_DCDDatabaseHelper))
 #define DCDDatabaseHelper_
 
@@ -70,4 +75,8 @@ J2OBJC_TYPE_LITERAL_HEADER(DCDDatabaseHelper)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_DCDDatabaseHelper")

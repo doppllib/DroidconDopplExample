@@ -13,66 +13,59 @@
 #include "RxSubscription.h"
 #include "java/util/concurrent/atomic/AtomicReference.h"
 
-@interface RxInternalOperatorsOperatorWithLatestFrom_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorWithLatestFrom_1 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorWithLatestFrom *this$0_;
   JavaUtilConcurrentAtomicAtomicReference *val$current_;
   RxObserversSerializedSubscriber *val$s_;
 }
 
+- (instancetype)initWithRxInternalOperatorsOperatorWithLatestFrom:(RxInternalOperatorsOperatorWithLatestFrom *)outer$
+                      withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
+                              withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$1
+                                                 withRxSubscriber:(RxSubscriber *)param0
+                                                      withBoolean:(jboolean)param1;
+
 - (void)onNextWithId:(id)t;
 
 - (void)onErrorWithNSException:(NSException *)e;
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxInternalOperatorsOperatorWithLatestFrom:(RxInternalOperatorsOperatorWithLatestFrom *)outer$
-                      withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
-                              withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$1
-                                                 withRxSubscriber:(RxSubscriber *)arg$0
-                                                      withBoolean:(jboolean)arg$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorWithLatestFrom_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorWithLatestFrom_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorWithLatestFrom_$1, this$0_, RxInternalOperatorsOperatorWithLatestFrom *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorWithLatestFrom_$1, val$current_, JavaUtilConcurrentAtomicAtomicReference *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorWithLatestFrom_$1, val$s_, RxObserversSerializedSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorWithLatestFrom_1_initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorWithLatestFrom_1 *self, RxInternalOperatorsOperatorWithLatestFrom *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *param0, jboolean param1);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorWithLatestFrom_$1_initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorWithLatestFrom_$1 *self, RxInternalOperatorsOperatorWithLatestFrom *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *arg$0, jboolean arg$1);
+__attribute__((unused)) static RxInternalOperatorsOperatorWithLatestFrom_1 *new_RxInternalOperatorsOperatorWithLatestFrom_1_initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorWithLatestFrom *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *param0, jboolean param1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorWithLatestFrom_$1 *new_RxInternalOperatorsOperatorWithLatestFrom_$1_initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorWithLatestFrom *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *arg$0, jboolean arg$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorWithLatestFrom_1 *create_RxInternalOperatorsOperatorWithLatestFrom_1_initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorWithLatestFrom *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *param0, jboolean param1);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorWithLatestFrom_$1 *create_RxInternalOperatorsOperatorWithLatestFrom_$1_initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorWithLatestFrom *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *arg$0, jboolean arg$1);
-
-@interface RxInternalOperatorsOperatorWithLatestFrom_$2 : RxSubscriber {
+@interface RxInternalOperatorsOperatorWithLatestFrom_2 : RxSubscriber {
  @public
   JavaUtilConcurrentAtomicAtomicReference *val$current_;
   RxObserversSerializedSubscriber *val$s_;
 }
 
+- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
+                            withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$1;
+
 - (void)onNextWithId:(id)t;
 
 - (void)onErrorWithNSException:(NSException *)e;
 
 - (void)onCompleted;
 
-- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
-                            withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorWithLatestFrom_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorWithLatestFrom_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorWithLatestFrom_$2, val$current_, JavaUtilConcurrentAtomicAtomicReference *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorWithLatestFrom_$2, val$s_, RxObserversSerializedSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorWithLatestFrom_2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_(RxInternalOperatorsOperatorWithLatestFrom_2 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorWithLatestFrom_$2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_(RxInternalOperatorsOperatorWithLatestFrom_$2 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1);
+__attribute__((unused)) static RxInternalOperatorsOperatorWithLatestFrom_2 *new_RxInternalOperatorsOperatorWithLatestFrom_2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorWithLatestFrom_$2 *new_RxInternalOperatorsOperatorWithLatestFrom_$2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorWithLatestFrom_$2 *create_RxInternalOperatorsOperatorWithLatestFrom_$2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1);
+__attribute__((unused)) static RxInternalOperatorsOperatorWithLatestFrom_2 *create_RxInternalOperatorsOperatorWithLatestFrom_2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1);
 
 J2OBJC_INITIALIZED_DEFN(RxInternalOperatorsOperatorWithLatestFrom)
 
@@ -90,8 +83,8 @@ id RxInternalOperatorsOperatorWithLatestFrom_EMPTY;
   RxObserversSerializedSubscriber *s = create_RxObserversSerializedSubscriber_initWithRxSubscriber_withBoolean_(child, false);
   [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:s];
   JavaUtilConcurrentAtomicAtomicReference *current = create_JavaUtilConcurrentAtomicAtomicReference_initWithId_(RxInternalOperatorsOperatorWithLatestFrom_EMPTY);
-  RxSubscriber *subscriber = create_RxInternalOperatorsOperatorWithLatestFrom_$1_initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_(self, current, s, s, true);
-  RxSubscriber *otherSubscriber = create_RxInternalOperatorsOperatorWithLatestFrom_$2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_(current, s);
+  RxSubscriber *subscriber = create_RxInternalOperatorsOperatorWithLatestFrom_1_initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_(self, current, s, s, true);
+  RxSubscriber *otherSubscriber = create_RxInternalOperatorsOperatorWithLatestFrom_2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_(current, s);
   [s addWithRxSubscription:subscriber];
   [s addWithRxSubscription:otherSubscriber];
   [((RxObservable *) nil_chk(other_)) unsafeSubscribeWithRxSubscriber:otherSubscriber];
@@ -149,7 +142,16 @@ RxInternalOperatorsOperatorWithLatestFrom *create_RxInternalOperatorsOperatorWit
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWithLatestFrom)
 
-@implementation RxInternalOperatorsOperatorWithLatestFrom_$1
+@implementation RxInternalOperatorsOperatorWithLatestFrom_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorWithLatestFrom:(RxInternalOperatorsOperatorWithLatestFrom *)outer$
+                      withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
+                              withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$1
+                                                 withRxSubscriber:(RxSubscriber *)param0
+                                                      withBoolean:(jboolean)param1 {
+  RxInternalOperatorsOperatorWithLatestFrom_1_initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_(self, outer$, capture$0, capture$1, param0, param1);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   id o = [((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(val$current_)) get];
@@ -175,17 +177,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWithLatestFrom)
   [val$s_ unsubscribe];
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorWithLatestFrom:(RxInternalOperatorsOperatorWithLatestFrom *)outer$
-                      withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
-                              withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$1
-                                                 withRxSubscriber:(RxSubscriber *)arg$0
-                                                      withBoolean:(jboolean)arg$1 {
-  RxInternalOperatorsOperatorWithLatestFrom_$1_initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_(self, outer$, capture$0, capture$1, arg$0, arg$1);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorWithLatestFrom_$1 class]);
   RELEASE_(this$0_);
   RELEASE_(val$current_);
   RELEASE_(val$s_);
@@ -194,46 +186,52 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWithLatestFrom)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
+    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxInternalOperatorsOperatorWithLatestFrom:withJavaUtilConcurrentAtomicAtomicReference:withRxObserversSerializedSubscriber:withRxSubscriber:withBoolean:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorWithLatestFrom:withJavaUtilConcurrentAtomicAtomicReference:withRxObserversSerializedSubscriber:withRxSubscriber:withBoolean:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorWithLatestFrom;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$current_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
-    { "val$s_", "LRxObserversSerializedSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorWithLatestFrom;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$current_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "val$s_", "LRxObserversSerializedSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 9, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxInternalOperatorsOperatorWithLatestFrom;LJavaUtilConcurrentAtomicAtomicReference;LRxObserversSerializedSubscriber;LRxSubscriber;Z", "(Lrx/internal/operators/OperatorWithLatestFrom;Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Object;>;Lrx/observers/SerializedSubscriber<TR;>;Lrx/Subscriber<*>;Z)V", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Object;>;", "Lrx/observers/SerializedSubscriber<TR;>;", "LRxInternalOperatorsOperatorWithLatestFrom;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWithLatestFrom_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 9, -1, 10, 11, -1 };
-  return &_RxInternalOperatorsOperatorWithLatestFrom_$1;
+  static const void *ptrTable[] = { "LRxSubscriber;Z", "(Lrx/Subscriber<*>;Z)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/internal/operators/OperatorWithLatestFrom<TT;TU;TR;>;", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Object;>;", "Lrx/observers/SerializedSubscriber<TR;>;", "LRxInternalOperatorsOperatorWithLatestFrom;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWithLatestFrom_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 10, -1, 11, 12, -1 };
+  return &_RxInternalOperatorsOperatorWithLatestFrom_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorWithLatestFrom_$1_initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorWithLatestFrom_$1 *self, RxInternalOperatorsOperatorWithLatestFrom *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *arg$0, jboolean arg$1) {
+void RxInternalOperatorsOperatorWithLatestFrom_1_initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorWithLatestFrom_1 *self, RxInternalOperatorsOperatorWithLatestFrom *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *param0, jboolean param1) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$current_, capture$0);
   JreStrongAssign(&self->val$s_, capture$1);
-  RxSubscriber_initWithRxSubscriber_withBoolean_(self, arg$0, arg$1);
+  RxSubscriber_initWithRxSubscriber_withBoolean_(self, param0, param1);
 }
 
-RxInternalOperatorsOperatorWithLatestFrom_$1 *new_RxInternalOperatorsOperatorWithLatestFrom_$1_initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorWithLatestFrom *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *arg$0, jboolean arg$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorWithLatestFrom_$1, initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_, outer$, capture$0, capture$1, arg$0, arg$1)
+RxInternalOperatorsOperatorWithLatestFrom_1 *new_RxInternalOperatorsOperatorWithLatestFrom_1_initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorWithLatestFrom *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *param0, jboolean param1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorWithLatestFrom_1, initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_, outer$, capture$0, capture$1, param0, param1)
 }
 
-RxInternalOperatorsOperatorWithLatestFrom_$1 *create_RxInternalOperatorsOperatorWithLatestFrom_$1_initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorWithLatestFrom *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *arg$0, jboolean arg$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorWithLatestFrom_$1, initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_, outer$, capture$0, capture$1, arg$0, arg$1)
+RxInternalOperatorsOperatorWithLatestFrom_1 *create_RxInternalOperatorsOperatorWithLatestFrom_1_initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_(RxInternalOperatorsOperatorWithLatestFrom *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *param0, jboolean param1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorWithLatestFrom_1, initWithRxInternalOperatorsOperatorWithLatestFrom_withJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_withBoolean_, outer$, capture$0, capture$1, param0, param1)
 }
 
-@implementation RxInternalOperatorsOperatorWithLatestFrom_$2
+@implementation RxInternalOperatorsOperatorWithLatestFrom_2
+
+- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
+                            withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$1 {
+  RxInternalOperatorsOperatorWithLatestFrom_2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_(self, capture$0, capture$1);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   [((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(val$current_)) setWithId:t];
@@ -251,14 +249,7 @@ RxInternalOperatorsOperatorWithLatestFrom_$1 *create_RxInternalOperatorsOperator
   }
 }
 
-- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
-                            withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$1 {
-  RxInternalOperatorsOperatorWithLatestFrom_$2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_(self, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorWithLatestFrom_$2 class]);
   RELEASE_(val$current_);
   RELEASE_(val$s_);
   [super dealloc];
@@ -266,39 +257,39 @@ RxInternalOperatorsOperatorWithLatestFrom_$1 *create_RxInternalOperatorsOperator
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicReference:withRxObserversSerializedSubscriber:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicReference:withRxObserversSerializedSubscriber:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$current_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
-    { "val$s_", "LRxObserversSerializedSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "val$current_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$s_", "LRxObserversSerializedSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TU;)V", "onError", "LNSException;", "LJavaUtilConcurrentAtomicAtomicReference;LRxObserversSerializedSubscriber;", "(Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Object;>;Lrx/observers/SerializedSubscriber<TR;>;)V", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Object;>;", "Lrx/observers/SerializedSubscriber<TR;>;", "LRxInternalOperatorsOperatorWithLatestFrom;", "callWithId:", "Lrx/Subscriber<TU;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWithLatestFrom_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 2, 9, -1, 10, 11, -1 };
-  return &_RxInternalOperatorsOperatorWithLatestFrom_$2;
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TU;)V", "onError", "LNSException;", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Object;>;", "Lrx/observers/SerializedSubscriber<TR;>;", "LRxInternalOperatorsOperatorWithLatestFrom;", "callWithId:", "Lrx/Subscriber<TU;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWithLatestFrom_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 2, 7, -1, 8, 9, -1 };
+  return &_RxInternalOperatorsOperatorWithLatestFrom_2;
 }
 
 @end
 
-void RxInternalOperatorsOperatorWithLatestFrom_$2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_(RxInternalOperatorsOperatorWithLatestFrom_$2 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1) {
+void RxInternalOperatorsOperatorWithLatestFrom_2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_(RxInternalOperatorsOperatorWithLatestFrom_2 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1) {
   JreStrongAssign(&self->val$current_, capture$0);
   JreStrongAssign(&self->val$s_, capture$1);
   RxSubscriber_init(self);
 }
 
-RxInternalOperatorsOperatorWithLatestFrom_$2 *new_RxInternalOperatorsOperatorWithLatestFrom_$2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorWithLatestFrom_$2, initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_, capture$0, capture$1)
+RxInternalOperatorsOperatorWithLatestFrom_2 *new_RxInternalOperatorsOperatorWithLatestFrom_2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorWithLatestFrom_2, initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_, capture$0, capture$1)
 }
 
-RxInternalOperatorsOperatorWithLatestFrom_$2 *create_RxInternalOperatorsOperatorWithLatestFrom_$2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorWithLatestFrom_$2, initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_, capture$0, capture$1)
+RxInternalOperatorsOperatorWithLatestFrom_2 *create_RxInternalOperatorsOperatorWithLatestFrom_2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorWithLatestFrom_2, initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_, capture$0, capture$1)
 }

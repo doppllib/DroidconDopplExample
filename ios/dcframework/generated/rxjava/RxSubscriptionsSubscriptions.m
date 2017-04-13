@@ -194,13 +194,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubscriptionsSubscriptions_FutureSubscription
 
 @implementation RxSubscriptionsSubscriptions_Unsubscribed
 
-- (void)unsubscribe {
-}
-
-- (jboolean)isUnsubscribed {
-  return true;
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   RxSubscriptionsSubscriptions_Unsubscribed_init(self);
@@ -208,17 +201,24 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (void)unsubscribe {
+}
+
+- (jboolean)isUnsubscribed {
+  return true;
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(unsubscribe);
-  methods[1].selector = @selector(isUnsubscribed);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(unsubscribe);
+  methods[2].selector = @selector(isUnsubscribed);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "LRxSubscriptionsSubscriptions;" };
   static const J2ObjcClassInfo _RxSubscriptionsSubscriptions_Unsubscribed = { "Unsubscribed", "rx.subscriptions", ptrTable, methods, NULL, 7, 0x18, 3, 0, 0, -1, -1, -1, -1 };

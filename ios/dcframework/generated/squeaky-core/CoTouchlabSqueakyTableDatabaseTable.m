@@ -44,8 +44,11 @@ __attribute__((unused)) static IOSObjectArray *CoTouchlabSqueakyTableDatabaseTab
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
   methods[0].selector = @selector(tableName);
   #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "tableName_", "LNSString;", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+  };
   static const void *ptrTable[] = { (void *)&CoTouchlabSqueakyTableDatabaseTable__Annotations$0 };
-  static const J2ObjcClassInfo _CoTouchlabSqueakyTableDatabaseTable = { "DatabaseTable", "co.touchlab.squeaky.table", ptrTable, methods, NULL, 7, 0x2609, 1, 0, -1, -1, -1, -1, 0 };
+  static const J2ObjcClassInfo _CoTouchlabSqueakyTableDatabaseTable = { "DatabaseTable", "co.touchlab.squeaky.table", ptrTable, methods, fields, 7, 0x2609, 1, 1, -1, -1, -1, -1, 0 };
   return &_CoTouchlabSqueakyTableDatabaseTable;
 }
 
@@ -58,7 +61,7 @@ id<CoTouchlabSqueakyTableDatabaseTable> create_CoTouchlabSqueakyTableDatabaseTab
 }
 
 IOSObjectArray *CoTouchlabSqueakyTableDatabaseTable__Annotations$0() {
-  return [IOSObjectArray arrayWithObjects:(id[]){ create_JavaLangAnnotationTarget([IOSObjectArray arrayWithObjects:(id[]){ JreLoadEnum(JavaLangAnnotationElementType, TYPE) } count:1 type:NSObject_class_()]), create_JavaLangAnnotationRetention(JreLoadEnum(JavaLangAnnotationRetentionPolicy, RUNTIME)) } count:2 type:JavaLangAnnotationAnnotation_class_()];
+  return [IOSObjectArray arrayWithObjects:(id[]){ create_JavaLangAnnotationTarget([IOSObjectArray arrayWithObjects:(id[]){ JreLoadEnum(JavaLangAnnotationElementType, TYPE) } count:1 type:JavaLangAnnotationElementType_class_()]), create_JavaLangAnnotationRetention(JreLoadEnum(JavaLangAnnotationRetentionPolicy, RUNTIME)) } count:2 type:JavaLangAnnotationAnnotation_class_()];
 }
 
 J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(CoTouchlabSqueakyTableDatabaseTable)

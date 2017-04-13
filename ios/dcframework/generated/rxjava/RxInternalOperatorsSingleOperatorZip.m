@@ -31,33 +31,30 @@ __attribute__((unused)) static RxInternalOperatorsSingleOperatorZip *new_RxInter
 
 __attribute__((unused)) static RxInternalOperatorsSingleOperatorZip *create_RxInternalOperatorsSingleOperatorZip_init();
 
-@interface RxInternalOperatorsSingleOperatorZip_$1 : NSObject < RxSingle_OnSubscribe > {
+@interface RxInternalOperatorsSingleOperatorZip_1 : NSObject < RxSingle_OnSubscribe > {
  @public
   IOSObjectArray *val$singles_;
   id<RxFunctionsFuncN> val$zipper_;
 }
 
-- (void)callWithId:(RxSingleSubscriber *)subscriber;
-
 - (instancetype)initWithRxSingleArray:(IOSObjectArray *)capture$0
                  withRxFunctionsFuncN:(id<RxFunctionsFuncN>)capture$1;
 
+- (void)callWithId:(RxSingleSubscriber *)subscriber;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsSingleOperatorZip_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsSingleOperatorZip_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsSingleOperatorZip_$1, val$singles_, IOSObjectArray *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsSingleOperatorZip_$1, val$zipper_, id<RxFunctionsFuncN>)
+__attribute__((unused)) static void RxInternalOperatorsSingleOperatorZip_1_initWithRxSingleArray_withRxFunctionsFuncN_(RxInternalOperatorsSingleOperatorZip_1 *self, IOSObjectArray *capture$0, id<RxFunctionsFuncN> capture$1);
 
-__attribute__((unused)) static void RxInternalOperatorsSingleOperatorZip_$1_initWithRxSingleArray_withRxFunctionsFuncN_(RxInternalOperatorsSingleOperatorZip_$1 *self, IOSObjectArray *capture$0, id<RxFunctionsFuncN> capture$1);
+__attribute__((unused)) static RxInternalOperatorsSingleOperatorZip_1 *new_RxInternalOperatorsSingleOperatorZip_1_initWithRxSingleArray_withRxFunctionsFuncN_(IOSObjectArray *capture$0, id<RxFunctionsFuncN> capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsSingleOperatorZip_$1 *new_RxInternalOperatorsSingleOperatorZip_$1_initWithRxSingleArray_withRxFunctionsFuncN_(IOSObjectArray *capture$0, id<RxFunctionsFuncN> capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsSingleOperatorZip_1 *create_RxInternalOperatorsSingleOperatorZip_1_initWithRxSingleArray_withRxFunctionsFuncN_(IOSObjectArray *capture$0, id<RxFunctionsFuncN> capture$1);
 
-__attribute__((unused)) static RxInternalOperatorsSingleOperatorZip_$1 *create_RxInternalOperatorsSingleOperatorZip_$1_initWithRxSingleArray_withRxFunctionsFuncN_(IOSObjectArray *capture$0, id<RxFunctionsFuncN> capture$1);
-
-@interface RxInternalOperatorsSingleOperatorZip_$1_$1 : RxSingleSubscriber {
+@interface RxInternalOperatorsSingleOperatorZip_1_1 : RxSingleSubscriber {
  @public
-  RxInternalOperatorsSingleOperatorZip_$1 *this$0_;
+  RxInternalOperatorsSingleOperatorZip_1 *this$0_;
   IOSObjectArray *val$values_;
   jint val$j_;
   JavaUtilConcurrentAtomicAtomicInteger *val$wip_;
@@ -65,32 +62,26 @@ __attribute__((unused)) static RxInternalOperatorsSingleOperatorZip_$1 *create_R
   JavaUtilConcurrentAtomicAtomicBoolean *val$once_;
 }
 
+- (instancetype)initWithRxInternalOperatorsSingleOperatorZip_1:(RxInternalOperatorsSingleOperatorZip_1 *)outer$
+                                             withNSObjectArray:(IOSObjectArray *)capture$0
+                                                       withInt:(jint)capture$1
+                     withJavaUtilConcurrentAtomicAtomicInteger:(JavaUtilConcurrentAtomicAtomicInteger *)capture$2
+                                        withRxSingleSubscriber:(RxSingleSubscriber *)capture$3
+                     withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$4;
+
 - (void)onSuccessWithId:(id)value;
 
 - (void)onErrorWithNSException:(NSException *)error;
 
-- (instancetype)initWithRxInternalOperatorsSingleOperatorZip_$1:(RxInternalOperatorsSingleOperatorZip_$1 *)outer$
-                                              withNSObjectArray:(IOSObjectArray *)capture$0
-                                                        withInt:(jint)capture$1
-                      withJavaUtilConcurrentAtomicAtomicInteger:(JavaUtilConcurrentAtomicAtomicInteger *)capture$2
-                                         withRxSingleSubscriber:(RxSingleSubscriber *)capture$3
-                      withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$4;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsSingleOperatorZip_$1_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsSingleOperatorZip_1_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsSingleOperatorZip_$1_$1, this$0_, RxInternalOperatorsSingleOperatorZip_$1 *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsSingleOperatorZip_$1_$1, val$values_, IOSObjectArray *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsSingleOperatorZip_$1_$1, val$wip_, JavaUtilConcurrentAtomicAtomicInteger *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsSingleOperatorZip_$1_$1, val$subscriber_, RxSingleSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsSingleOperatorZip_$1_$1, val$once_, JavaUtilConcurrentAtomicAtomicBoolean *)
+__attribute__((unused)) static void RxInternalOperatorsSingleOperatorZip_1_1_initWithRxInternalOperatorsSingleOperatorZip_1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsSingleOperatorZip_1_1 *self, RxInternalOperatorsSingleOperatorZip_1 *outer$, IOSObjectArray *capture$0, jint capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, RxSingleSubscriber *capture$3, JavaUtilConcurrentAtomicAtomicBoolean *capture$4);
 
-__attribute__((unused)) static void RxInternalOperatorsSingleOperatorZip_$1_$1_initWithRxInternalOperatorsSingleOperatorZip_$1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsSingleOperatorZip_$1_$1 *self, RxInternalOperatorsSingleOperatorZip_$1 *outer$, IOSObjectArray *capture$0, jint capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, RxSingleSubscriber *capture$3, JavaUtilConcurrentAtomicAtomicBoolean *capture$4);
+__attribute__((unused)) static RxInternalOperatorsSingleOperatorZip_1_1 *new_RxInternalOperatorsSingleOperatorZip_1_1_initWithRxInternalOperatorsSingleOperatorZip_1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsSingleOperatorZip_1 *outer$, IOSObjectArray *capture$0, jint capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, RxSingleSubscriber *capture$3, JavaUtilConcurrentAtomicAtomicBoolean *capture$4) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsSingleOperatorZip_$1_$1 *new_RxInternalOperatorsSingleOperatorZip_$1_$1_initWithRxInternalOperatorsSingleOperatorZip_$1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsSingleOperatorZip_$1 *outer$, IOSObjectArray *capture$0, jint capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, RxSingleSubscriber *capture$3, JavaUtilConcurrentAtomicAtomicBoolean *capture$4) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsSingleOperatorZip_$1_$1 *create_RxInternalOperatorsSingleOperatorZip_$1_$1_initWithRxInternalOperatorsSingleOperatorZip_$1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsSingleOperatorZip_$1 *outer$, IOSObjectArray *capture$0, jint capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, RxSingleSubscriber *capture$3, JavaUtilConcurrentAtomicAtomicBoolean *capture$4);
+__attribute__((unused)) static RxInternalOperatorsSingleOperatorZip_1_1 *create_RxInternalOperatorsSingleOperatorZip_1_1_initWithRxInternalOperatorsSingleOperatorZip_1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsSingleOperatorZip_1 *outer$, IOSObjectArray *capture$0, jint capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, RxSingleSubscriber *capture$3, JavaUtilConcurrentAtomicAtomicBoolean *capture$4);
 
 @implementation RxInternalOperatorsSingleOperatorZip
 
@@ -138,12 +129,18 @@ RxInternalOperatorsSingleOperatorZip *create_RxInternalOperatorsSingleOperatorZi
 
 RxSingle *RxInternalOperatorsSingleOperatorZip_zipWithRxSingleArray_withRxFunctionsFuncN_(IOSObjectArray *singles, id<RxFunctionsFuncN> zipper) {
   RxInternalOperatorsSingleOperatorZip_initialize();
-  return RxSingle_createWithRxSingle_OnSubscribe_(create_RxInternalOperatorsSingleOperatorZip_$1_initWithRxSingleArray_withRxFunctionsFuncN_(singles, zipper));
+  return RxSingle_createWithRxSingle_OnSubscribe_(create_RxInternalOperatorsSingleOperatorZip_1_initWithRxSingleArray_withRxFunctionsFuncN_(singles, zipper));
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsSingleOperatorZip)
 
-@implementation RxInternalOperatorsSingleOperatorZip_$1
+@implementation RxInternalOperatorsSingleOperatorZip_1
+
+- (instancetype)initWithRxSingleArray:(IOSObjectArray *)capture$0
+                 withRxFunctionsFuncN:(id<RxFunctionsFuncN>)capture$1 {
+  RxInternalOperatorsSingleOperatorZip_1_initWithRxSingleArray_withRxFunctionsFuncN_(self, capture$0, capture$1);
+  return self;
+}
 
 - (void)callWithId:(RxSingleSubscriber *)subscriber {
   if (((IOSObjectArray *) nil_chk(val$singles_))->size_ == 0) {
@@ -160,19 +157,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsSingleOperatorZip)
       break;
     }
     jint j = i;
-    RxSingleSubscriber *singleSubscriber = create_RxInternalOperatorsSingleOperatorZip_$1_$1_initWithRxInternalOperatorsSingleOperatorZip_$1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(self, values, j, wip, subscriber, once);
+    RxSingleSubscriber *singleSubscriber = create_RxInternalOperatorsSingleOperatorZip_1_1_initWithRxInternalOperatorsSingleOperatorZip_1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(self, values, j, wip, subscriber, once);
     [compositeSubscription addWithRxSubscription:singleSubscriber];
     if ([compositeSubscription isUnsubscribed] || [once get]) {
       break;
     }
     [((RxSingle *) nil_chk(IOSObjectArray_Get(val$singles_, i))) subscribeWithRxSingleSubscriber:singleSubscriber];
   }
-}
-
-- (instancetype)initWithRxSingleArray:(IOSObjectArray *)capture$0
-                 withRxFunctionsFuncN:(id<RxFunctionsFuncN>)capture$1 {
-  RxInternalOperatorsSingleOperatorZip_$1_initWithRxSingleArray_withRxFunctionsFuncN_(self, capture$0, capture$1);
-  return self;
 }
 
 - (void)dealloc {
@@ -183,40 +174,50 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsSingleOperatorZip)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxSingleArray:withRxFunctionsFuncN:);
+  methods[0].selector = @selector(initWithRxSingleArray:withRxFunctionsFuncN:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$singles_", "[LRxSingle;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-    { "val$zipper_", "LRxFunctionsFuncN;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
+    { "val$singles_", "[LRxSingle;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$zipper_", "LRxFunctionsFuncN;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxSingleSubscriber;", "(Lrx/SingleSubscriber<-TR;>;)V", "[LRxSingle;LRxFunctionsFuncN;", "([Lrx/Single<+TT;>;Lrx/functions/FuncN<+TR;>;)V", "[Lrx/Single<+TT;>;", "Lrx/functions/FuncN<+TR;>;", "LRxInternalOperatorsSingleOperatorZip;", "zipWithRxSingleArray:withRxFunctionsFuncN:", "Ljava/lang/Object;Lrx/Single$OnSubscribe<TR;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsSingleOperatorZip_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 7, -1, 8, 9, -1 };
-  return &_RxInternalOperatorsSingleOperatorZip_$1;
+  static const void *ptrTable[] = { "call", "LRxSingleSubscriber;", "(Lrx/SingleSubscriber<-TR;>;)V", "[Lrx/Single<+TT;>;", "Lrx/functions/FuncN<+TR;>;", "LRxInternalOperatorsSingleOperatorZip;", "zipWithRxSingleArray:withRxFunctionsFuncN:", "Ljava/lang/Object;Lrx/Single$OnSubscribe<TR;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsSingleOperatorZip_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 5, -1, 6, 7, -1 };
+  return &_RxInternalOperatorsSingleOperatorZip_1;
 }
 
 @end
 
-void RxInternalOperatorsSingleOperatorZip_$1_initWithRxSingleArray_withRxFunctionsFuncN_(RxInternalOperatorsSingleOperatorZip_$1 *self, IOSObjectArray *capture$0, id<RxFunctionsFuncN> capture$1) {
+void RxInternalOperatorsSingleOperatorZip_1_initWithRxSingleArray_withRxFunctionsFuncN_(RxInternalOperatorsSingleOperatorZip_1 *self, IOSObjectArray *capture$0, id<RxFunctionsFuncN> capture$1) {
   JreStrongAssign(&self->val$singles_, capture$0);
   JreStrongAssign(&self->val$zipper_, capture$1);
   NSObject_init(self);
 }
 
-RxInternalOperatorsSingleOperatorZip_$1 *new_RxInternalOperatorsSingleOperatorZip_$1_initWithRxSingleArray_withRxFunctionsFuncN_(IOSObjectArray *capture$0, id<RxFunctionsFuncN> capture$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsSingleOperatorZip_$1, initWithRxSingleArray_withRxFunctionsFuncN_, capture$0, capture$1)
+RxInternalOperatorsSingleOperatorZip_1 *new_RxInternalOperatorsSingleOperatorZip_1_initWithRxSingleArray_withRxFunctionsFuncN_(IOSObjectArray *capture$0, id<RxFunctionsFuncN> capture$1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsSingleOperatorZip_1, initWithRxSingleArray_withRxFunctionsFuncN_, capture$0, capture$1)
 }
 
-RxInternalOperatorsSingleOperatorZip_$1 *create_RxInternalOperatorsSingleOperatorZip_$1_initWithRxSingleArray_withRxFunctionsFuncN_(IOSObjectArray *capture$0, id<RxFunctionsFuncN> capture$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsSingleOperatorZip_$1, initWithRxSingleArray_withRxFunctionsFuncN_, capture$0, capture$1)
+RxInternalOperatorsSingleOperatorZip_1 *create_RxInternalOperatorsSingleOperatorZip_1_initWithRxSingleArray_withRxFunctionsFuncN_(IOSObjectArray *capture$0, id<RxFunctionsFuncN> capture$1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsSingleOperatorZip_1, initWithRxSingleArray_withRxFunctionsFuncN_, capture$0, capture$1)
 }
 
-@implementation RxInternalOperatorsSingleOperatorZip_$1_$1
+@implementation RxInternalOperatorsSingleOperatorZip_1_1
+
+- (instancetype)initWithRxInternalOperatorsSingleOperatorZip_1:(RxInternalOperatorsSingleOperatorZip_1 *)outer$
+                                             withNSObjectArray:(IOSObjectArray *)capture$0
+                                                       withInt:(jint)capture$1
+                     withJavaUtilConcurrentAtomicAtomicInteger:(JavaUtilConcurrentAtomicAtomicInteger *)capture$2
+                                        withRxSingleSubscriber:(RxSingleSubscriber *)capture$3
+                     withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$4 {
+  RxInternalOperatorsSingleOperatorZip_1_1_initWithRxInternalOperatorsSingleOperatorZip_1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(self, outer$, capture$0, capture$1, capture$2, capture$3, capture$4);
+  return self;
+}
 
 - (void)onSuccessWithId:(id)value {
   IOSObjectArray_Set(nil_chk(val$values_), val$j_, value);
@@ -243,16 +244,6 @@ RxInternalOperatorsSingleOperatorZip_$1 *create_RxInternalOperatorsSingleOperato
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsSingleOperatorZip_$1:(RxInternalOperatorsSingleOperatorZip_$1 *)outer$
-                                              withNSObjectArray:(IOSObjectArray *)capture$0
-                                                        withInt:(jint)capture$1
-                      withJavaUtilConcurrentAtomicAtomicInteger:(JavaUtilConcurrentAtomicAtomicInteger *)capture$2
-                                         withRxSingleSubscriber:(RxSingleSubscriber *)capture$3
-                      withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$4 {
-  RxInternalOperatorsSingleOperatorZip_$1_$1_initWithRxInternalOperatorsSingleOperatorZip_$1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(self, outer$, capture$0, capture$1, capture$2, capture$3, capture$4);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$values_);
@@ -264,32 +255,32 @@ RxInternalOperatorsSingleOperatorZip_$1 *create_RxInternalOperatorsSingleOperato
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onSuccessWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(initWithRxInternalOperatorsSingleOperatorZip_$1:withNSObjectArray:withInt:withJavaUtilConcurrentAtomicAtomicInteger:withRxSingleSubscriber:withJavaUtilConcurrentAtomicAtomicBoolean:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsSingleOperatorZip_1:withNSObjectArray:withInt:withJavaUtilConcurrentAtomicAtomicInteger:withRxSingleSubscriber:withJavaUtilConcurrentAtomicAtomicBoolean:);
+  methods[1].selector = @selector(onSuccessWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsSingleOperatorZip_$1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsSingleOperatorZip_1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$values_", "[LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$j_", "I", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$wip_", "LJavaUtilConcurrentAtomicAtomicInteger;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$subscriber_", "LRxSingleSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$subscriber_", "LRxSingleSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
     { "val$once_", "LJavaUtilConcurrentAtomicAtomicBoolean;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onSuccess", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxInternalOperatorsSingleOperatorZip_$1;[LNSObject;ILJavaUtilConcurrentAtomicAtomicInteger;LRxSingleSubscriber;LJavaUtilConcurrentAtomicAtomicBoolean;", "(Lrx/internal/operators/SingleOperatorZip$1;[Ljava/lang/Object;ILjava/util/concurrent/atomic/AtomicInteger;Lrx/SingleSubscriber<-TR;>;Ljava/util/concurrent/atomic/AtomicBoolean;)V", "Lrx/SingleSubscriber<-TR;>;", "LRxInternalOperatorsSingleOperatorZip_$1;", "callWithId:", "Lrx/SingleSubscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsSingleOperatorZip_$1_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 3, 6, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsSingleOperatorZip_$1_$1;
+  static const void *ptrTable[] = { "onSuccess", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/SingleSubscriber<-TR;>;", "LRxInternalOperatorsSingleOperatorZip_1;", "callWithId:", "Lrx/SingleSubscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsSingleOperatorZip_1_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 3, 6, 6, -1, 7, 8, -1 };
+  return &_RxInternalOperatorsSingleOperatorZip_1_1;
 }
 
 @end
 
-void RxInternalOperatorsSingleOperatorZip_$1_$1_initWithRxInternalOperatorsSingleOperatorZip_$1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsSingleOperatorZip_$1_$1 *self, RxInternalOperatorsSingleOperatorZip_$1 *outer$, IOSObjectArray *capture$0, jint capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, RxSingleSubscriber *capture$3, JavaUtilConcurrentAtomicAtomicBoolean *capture$4) {
+void RxInternalOperatorsSingleOperatorZip_1_1_initWithRxInternalOperatorsSingleOperatorZip_1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsSingleOperatorZip_1_1 *self, RxInternalOperatorsSingleOperatorZip_1 *outer$, IOSObjectArray *capture$0, jint capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, RxSingleSubscriber *capture$3, JavaUtilConcurrentAtomicAtomicBoolean *capture$4) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$values_, capture$0);
   self->val$j_ = capture$1;
@@ -299,10 +290,10 @@ void RxInternalOperatorsSingleOperatorZip_$1_$1_initWithRxInternalOperatorsSingl
   RxSingleSubscriber_init(self);
 }
 
-RxInternalOperatorsSingleOperatorZip_$1_$1 *new_RxInternalOperatorsSingleOperatorZip_$1_$1_initWithRxInternalOperatorsSingleOperatorZip_$1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsSingleOperatorZip_$1 *outer$, IOSObjectArray *capture$0, jint capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, RxSingleSubscriber *capture$3, JavaUtilConcurrentAtomicAtomicBoolean *capture$4) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsSingleOperatorZip_$1_$1, initWithRxInternalOperatorsSingleOperatorZip_$1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_, outer$, capture$0, capture$1, capture$2, capture$3, capture$4)
+RxInternalOperatorsSingleOperatorZip_1_1 *new_RxInternalOperatorsSingleOperatorZip_1_1_initWithRxInternalOperatorsSingleOperatorZip_1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsSingleOperatorZip_1 *outer$, IOSObjectArray *capture$0, jint capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, RxSingleSubscriber *capture$3, JavaUtilConcurrentAtomicAtomicBoolean *capture$4) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsSingleOperatorZip_1_1, initWithRxInternalOperatorsSingleOperatorZip_1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_, outer$, capture$0, capture$1, capture$2, capture$3, capture$4)
 }
 
-RxInternalOperatorsSingleOperatorZip_$1_$1 *create_RxInternalOperatorsSingleOperatorZip_$1_$1_initWithRxInternalOperatorsSingleOperatorZip_$1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsSingleOperatorZip_$1 *outer$, IOSObjectArray *capture$0, jint capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, RxSingleSubscriber *capture$3, JavaUtilConcurrentAtomicAtomicBoolean *capture$4) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsSingleOperatorZip_$1_$1, initWithRxInternalOperatorsSingleOperatorZip_$1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_, outer$, capture$0, capture$1, capture$2, capture$3, capture$4)
+RxInternalOperatorsSingleOperatorZip_1_1 *create_RxInternalOperatorsSingleOperatorZip_1_1_initWithRxInternalOperatorsSingleOperatorZip_1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_(RxInternalOperatorsSingleOperatorZip_1 *outer$, IOSObjectArray *capture$0, jint capture$1, JavaUtilConcurrentAtomicAtomicInteger *capture$2, RxSingleSubscriber *capture$3, JavaUtilConcurrentAtomicAtomicBoolean *capture$4) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsSingleOperatorZip_1_1, initWithRxInternalOperatorsSingleOperatorZip_1_withNSObjectArray_withInt_withJavaUtilConcurrentAtomicAtomicInteger_withRxSingleSubscriber_withJavaUtilConcurrentAtomicAtomicBoolean_, outer$, capture$0, capture$1, capture$2, capture$3, capture$4)
 }

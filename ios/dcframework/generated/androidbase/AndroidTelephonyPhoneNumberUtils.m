@@ -225,6 +225,13 @@ NSString *AndroidTelephonyPhoneNumberUtils_LOG_TAG = @"PhoneNumberUtils";
 
 @implementation AndroidTelephonyPhoneNumberUtils
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  AndroidTelephonyPhoneNumberUtils_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (jboolean)isISODigitWithChar:(jchar)c {
   return AndroidTelephonyPhoneNumberUtils_isISODigitWithChar_(c);
 }
@@ -490,15 +497,9 @@ NSString *AndroidTelephonyPhoneNumberUtils_LOG_TAG = @"PhoneNumberUtils";
   return AndroidTelephonyPhoneNumberUtils_checkPrefixIsIgnorableWithNSString_withInt_withInt_(str, forwardIndex, backwardIndex);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  AndroidTelephonyPhoneNumberUtils_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, "Z", 0x19, 2, 1, -1, -1, -1, -1 },
     { NULL, "Z", 0x19, 3, 1, -1, -1, -1, -1 },
@@ -558,70 +559,69 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "LAndroidTelephonyPhoneNumberUtils_CountryCallingCodeAndNewIndex;", 0xa, 65, 42, -1, -1, -1, -1 },
     { NULL, "I", 0xa, 66, 25, -1, -1, -1, -1 },
     { NULL, "Z", 0xa, 67, 68, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(isISODigitWithChar:);
-  methods[1].selector = @selector(is12KeyWithChar:);
-  methods[2].selector = @selector(isDialableWithChar:);
-  methods[3].selector = @selector(isReallyDialableWithChar:);
-  methods[4].selector = @selector(isNonSeparatorWithChar:);
-  methods[5].selector = @selector(isStartsPostDialWithChar:);
-  methods[6].selector = @selector(isSeparatorWithChar:);
-  methods[7].selector = @selector(extractNetworkPortionWithNSString:);
-  methods[8].selector = @selector(extractNetworkPortionAltWithNSString:);
-  methods[9].selector = @selector(stripSeparatorsWithNSString:);
-  methods[10].selector = @selector(minPositiveWithInt:withInt:);
-  methods[11].selector = @selector(logWithNSString:);
-  methods[12].selector = @selector(indexOfLastNetworkCharWithNSString:);
-  methods[13].selector = @selector(extractPostDialPortionWithNSString:);
-  methods[14].selector = @selector(compareWithNSString:withNSString:);
-  methods[15].selector = @selector(compareWithNSString:withNSString:withBoolean:);
-  methods[16].selector = @selector(compareLooselyWithNSString:withNSString:);
-  methods[17].selector = @selector(compareStrictlyWithNSString:withNSString:);
-  methods[18].selector = @selector(compareStrictlyWithNSString:withNSString:withBoolean:);
-  methods[19].selector = @selector(toCallerIDMinMatchWithNSString:);
-  methods[20].selector = @selector(getStrippedReversedWithNSString:);
-  methods[21].selector = @selector(internalGetStrippedReversedWithNSString:withInt:);
-  methods[22].selector = @selector(stringFromStringAndTOAWithNSString:withInt:);
-  methods[23].selector = @selector(toaFromStringWithNSString:);
-  methods[24].selector = @selector(calledPartyBCDToStringWithByteArray:withInt:withInt:);
-  methods[25].selector = @selector(internalCalledPartyBCDFragmentToStringWithJavaLangStringBuilder:withByteArray:withInt:withInt:);
-  methods[26].selector = @selector(calledPartyBCDFragmentToStringWithByteArray:withInt:withInt:);
-  methods[27].selector = @selector(bcdToCharWithByte:);
-  methods[28].selector = @selector(charToBCDWithChar:);
-  methods[29].selector = @selector(isWellFormedSmsAddressWithNSString:);
-  methods[30].selector = @selector(isGlobalPhoneNumberWithNSString:);
-  methods[31].selector = @selector(isDialableWithNSString:);
-  methods[32].selector = @selector(isNonSeparatorWithNSString:);
-  methods[33].selector = @selector(networkPortionToCalledPartyBCDWithNSString:);
-  methods[34].selector = @selector(networkPortionToCalledPartyBCDWithLengthWithNSString:);
-  methods[35].selector = @selector(numberToCalledPartyBCDWithNSString:);
-  methods[36].selector = @selector(numberToCalledPartyBCDHelperWithNSString:withBoolean:);
-  methods[37].selector = @selector(formatNumberWithNSString:);
-  methods[38].selector = @selector(formatNumberWithNSString:withInt:);
-  methods[39].selector = @selector(getFormatTypeForLocaleWithJavaUtilLocale:);
-  methods[40].selector = @selector(formatNumberWithAndroidTextEditable:withInt:);
-  methods[41].selector = @selector(formatNanpNumberWithAndroidTextEditable:);
-  methods[42].selector = @selector(formatJapaneseNumberWithAndroidTextEditable:);
-  methods[43].selector = @selector(convertKeypadLettersToDigitsWithNSString:);
-  methods[44].selector = @selector(isTwoToNineWithChar:);
-  methods[45].selector = @selector(getFormatTypeFromCountryCodeWithNSString:);
-  methods[46].selector = @selector(isNanpWithNSString:);
-  methods[47].selector = @selector(isOneNanpWithNSString:);
-  methods[48].selector = @selector(isUriNumberWithNSString:);
-  methods[49].selector = @selector(findDialableIndexFromPostDialStrWithNSString:);
-  methods[50].selector = @selector(appendPwCharBackToOrigDialStrWithInt:withNSString:withNSString:);
-  methods[51].selector = @selector(matchIntlPrefixWithNSString:withInt:);
-  methods[52].selector = @selector(matchIntlPrefixAndCCWithNSString:withInt:);
-  methods[53].selector = @selector(matchTrunkPrefixWithNSString:withInt:);
-  methods[54].selector = @selector(isCountryCallingCodeWithInt:);
-  methods[55].selector = @selector(tryGetISODigitWithChar:);
-  methods[56].selector = @selector(tryGetCountryCallingCodeAndNewIndexWithNSString:withBoolean:);
-  methods[57].selector = @selector(tryGetTrunkPrefixOmittedIndexWithNSString:withInt:);
-  methods[58].selector = @selector(checkPrefixIsIgnorableWithNSString:withInt:withInt:);
-  methods[59].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(isISODigitWithChar:);
+  methods[2].selector = @selector(is12KeyWithChar:);
+  methods[3].selector = @selector(isDialableWithChar:);
+  methods[4].selector = @selector(isReallyDialableWithChar:);
+  methods[5].selector = @selector(isNonSeparatorWithChar:);
+  methods[6].selector = @selector(isStartsPostDialWithChar:);
+  methods[7].selector = @selector(isSeparatorWithChar:);
+  methods[8].selector = @selector(extractNetworkPortionWithNSString:);
+  methods[9].selector = @selector(extractNetworkPortionAltWithNSString:);
+  methods[10].selector = @selector(stripSeparatorsWithNSString:);
+  methods[11].selector = @selector(minPositiveWithInt:withInt:);
+  methods[12].selector = @selector(logWithNSString:);
+  methods[13].selector = @selector(indexOfLastNetworkCharWithNSString:);
+  methods[14].selector = @selector(extractPostDialPortionWithNSString:);
+  methods[15].selector = @selector(compareWithNSString:withNSString:);
+  methods[16].selector = @selector(compareWithNSString:withNSString:withBoolean:);
+  methods[17].selector = @selector(compareLooselyWithNSString:withNSString:);
+  methods[18].selector = @selector(compareStrictlyWithNSString:withNSString:);
+  methods[19].selector = @selector(compareStrictlyWithNSString:withNSString:withBoolean:);
+  methods[20].selector = @selector(toCallerIDMinMatchWithNSString:);
+  methods[21].selector = @selector(getStrippedReversedWithNSString:);
+  methods[22].selector = @selector(internalGetStrippedReversedWithNSString:withInt:);
+  methods[23].selector = @selector(stringFromStringAndTOAWithNSString:withInt:);
+  methods[24].selector = @selector(toaFromStringWithNSString:);
+  methods[25].selector = @selector(calledPartyBCDToStringWithByteArray:withInt:withInt:);
+  methods[26].selector = @selector(internalCalledPartyBCDFragmentToStringWithJavaLangStringBuilder:withByteArray:withInt:withInt:);
+  methods[27].selector = @selector(calledPartyBCDFragmentToStringWithByteArray:withInt:withInt:);
+  methods[28].selector = @selector(bcdToCharWithByte:);
+  methods[29].selector = @selector(charToBCDWithChar:);
+  methods[30].selector = @selector(isWellFormedSmsAddressWithNSString:);
+  methods[31].selector = @selector(isGlobalPhoneNumberWithNSString:);
+  methods[32].selector = @selector(isDialableWithNSString:);
+  methods[33].selector = @selector(isNonSeparatorWithNSString:);
+  methods[34].selector = @selector(networkPortionToCalledPartyBCDWithNSString:);
+  methods[35].selector = @selector(networkPortionToCalledPartyBCDWithLengthWithNSString:);
+  methods[36].selector = @selector(numberToCalledPartyBCDWithNSString:);
+  methods[37].selector = @selector(numberToCalledPartyBCDHelperWithNSString:withBoolean:);
+  methods[38].selector = @selector(formatNumberWithNSString:);
+  methods[39].selector = @selector(formatNumberWithNSString:withInt:);
+  methods[40].selector = @selector(getFormatTypeForLocaleWithJavaUtilLocale:);
+  methods[41].selector = @selector(formatNumberWithAndroidTextEditable:withInt:);
+  methods[42].selector = @selector(formatNanpNumberWithAndroidTextEditable:);
+  methods[43].selector = @selector(formatJapaneseNumberWithAndroidTextEditable:);
+  methods[44].selector = @selector(convertKeypadLettersToDigitsWithNSString:);
+  methods[45].selector = @selector(isTwoToNineWithChar:);
+  methods[46].selector = @selector(getFormatTypeFromCountryCodeWithNSString:);
+  methods[47].selector = @selector(isNanpWithNSString:);
+  methods[48].selector = @selector(isOneNanpWithNSString:);
+  methods[49].selector = @selector(isUriNumberWithNSString:);
+  methods[50].selector = @selector(findDialableIndexFromPostDialStrWithNSString:);
+  methods[51].selector = @selector(appendPwCharBackToOrigDialStrWithInt:withNSString:withNSString:);
+  methods[52].selector = @selector(matchIntlPrefixWithNSString:withInt:);
+  methods[53].selector = @selector(matchIntlPrefixAndCCWithNSString:withInt:);
+  methods[54].selector = @selector(matchTrunkPrefixWithNSString:withInt:);
+  methods[55].selector = @selector(isCountryCallingCodeWithInt:);
+  methods[56].selector = @selector(tryGetISODigitWithChar:);
+  methods[57].selector = @selector(tryGetCountryCallingCodeAndNewIndexWithNSString:withBoolean:);
+  methods[58].selector = @selector(tryGetTrunkPrefixOmittedIndexWithNSString:withInt:);
+  methods[59].selector = @selector(checkPrefixIsIgnorableWithNSString:withInt:withInt:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "PAUSE", "C", .constantValue.asUnichar = AndroidTelephonyPhoneNumberUtils_PAUSE, 0x19, -1, -1, -1, -1 },
@@ -720,6 +720,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void AndroidTelephonyPhoneNumberUtils_init(AndroidTelephonyPhoneNumberUtils *self) {
+  NSObject_init(self);
+}
+
+AndroidTelephonyPhoneNumberUtils *new_AndroidTelephonyPhoneNumberUtils_init() {
+  J2OBJC_NEW_IMPL(AndroidTelephonyPhoneNumberUtils, init)
+}
+
+AndroidTelephonyPhoneNumberUtils *create_AndroidTelephonyPhoneNumberUtils_init() {
+  J2OBJC_CREATE_IMPL(AndroidTelephonyPhoneNumberUtils, init)
+}
 
 jboolean AndroidTelephonyPhoneNumberUtils_isISODigitWithChar_(jchar c) {
   AndroidTelephonyPhoneNumberUtils_initialize();
@@ -846,8 +858,8 @@ jint AndroidTelephonyPhoneNumberUtils_indexOfLastNetworkCharWithNSString_(NSStri
   jint origLength;
   jint trimIndex;
   origLength = ((jint) [((NSString *) nil_chk(a)) length]);
-  pIndex = [a indexOf:AndroidTelephonyPhoneNumberUtils_PAUSE];
-  wIndex = [a indexOf:AndroidTelephonyPhoneNumberUtils_WAIT];
+  pIndex = [a java_indexOf:AndroidTelephonyPhoneNumberUtils_PAUSE];
+  wIndex = [a java_indexOf:AndroidTelephonyPhoneNumberUtils_WAIT];
   trimIndex = AndroidTelephonyPhoneNumberUtils_minPositiveWithInt_withInt_(pIndex, wIndex);
   if (trimIndex < 0) {
     return origLength - 1;
@@ -1293,7 +1305,7 @@ IOSByteArray *AndroidTelephonyPhoneNumberUtils_numberToCalledPartyBCDHelperWithN
   AndroidTelephonyPhoneNumberUtils_initialize();
   jint numberLenReal = ((jint) [((NSString *) nil_chk(number)) length]);
   jint numberLenEffective = numberLenReal;
-  jboolean hasPlus = [number indexOf:'+'] != -1;
+  jboolean hasPlus = [number java_indexOf:'+'] != -1;
   if (hasPlus) numberLenEffective--;
   if (numberLenEffective == 0) return nil;
   jint resultLen = (numberLenEffective + 1) / 2;
@@ -1460,12 +1472,12 @@ NSString *AndroidTelephonyPhoneNumberUtils_convertKeypadLettersToDigitsWithNSStr
   if (len == 0) {
     return input;
   }
-  IOSCharArray *out = [input toCharArray];
+  IOSCharArray *out = [input java_toCharArray];
   for (jint i = 0; i < len; i++) {
     jchar c = IOSCharArray_Get(nil_chk(out), i);
     *IOSCharArray_GetRef(out, i) = (jchar) [((AndroidUtilSparseIntArray *) nil_chk(AndroidTelephonyPhoneNumberUtils_KEYPAD_MAP)) getWithInt:c withInt:c];
   }
-  return [NSString stringWithCharacters:out];
+  return [NSString java_stringWithCharacters:out];
 }
 
 jboolean AndroidTelephonyPhoneNumberUtils_isTwoToNineWithChar_(jchar c) {
@@ -1482,11 +1494,11 @@ jint AndroidTelephonyPhoneNumberUtils_getFormatTypeFromCountryCodeWithNSString_(
   AndroidTelephonyPhoneNumberUtils_initialize();
   jint length = ((IOSObjectArray *) nil_chk(AndroidTelephonyPhoneNumberUtils_NANP_COUNTRIES))->size_;
   for (jint i = 0; i < length; i++) {
-    if ([((NSString *) nil_chk(IOSObjectArray_Get(AndroidTelephonyPhoneNumberUtils_NANP_COUNTRIES, i))) compareToIgnoreCase:country] == 0) {
+    if ([((NSString *) nil_chk(IOSObjectArray_Get(AndroidTelephonyPhoneNumberUtils_NANP_COUNTRIES, i))) java_compareToIgnoreCase:country] == 0) {
       return AndroidTelephonyPhoneNumberUtils_FORMAT_NANP;
     }
   }
-  if ([@"jp" compareToIgnoreCase:country] == 0) {
+  if ([@"jp" java_compareToIgnoreCase:country] == 0) {
     return AndroidTelephonyPhoneNumberUtils_FORMAT_JAPAN;
   }
   return AndroidTelephonyPhoneNumberUtils_FORMAT_UNKNOWN;
@@ -1519,7 +1531,7 @@ jboolean AndroidTelephonyPhoneNumberUtils_isOneNanpWithNSString_(NSString *dialS
   AndroidTelephonyPhoneNumberUtils_initialize();
   jboolean retVal = false;
   if (dialStr != nil) {
-    NSString *newDialStr = [dialStr substring:1];
+    NSString *newDialStr = [dialStr java_substring:1];
     if (([dialStr charAtWithInt:0] == '1') && AndroidTelephonyPhoneNumberUtils_isNanpWithNSString_(newDialStr)) {
       retVal = true;
     }
@@ -1532,7 +1544,7 @@ jboolean AndroidTelephonyPhoneNumberUtils_isOneNanpWithNSString_(NSString *dialS
 
 jboolean AndroidTelephonyPhoneNumberUtils_isUriNumberWithNSString_(NSString *number) {
   AndroidTelephonyPhoneNumberUtils_initialize();
-  return number != nil && ([number contains:@"@"] || [number contains:@"%40"]);
+  return number != nil && ([number java_contains:@"@"] || [number java_contains:@"%40"]);
 }
 
 jint AndroidTelephonyPhoneNumberUtils_findDialableIndexFromPostDialStrWithNSString_(NSString *postDialStr) {
@@ -1555,8 +1567,8 @@ NSString *AndroidTelephonyPhoneNumberUtils_appendPwCharBackToOrigDialStrWithInt_
     retStr = [((JavaLangStringBuilder *) nil_chk(ret)) description];
   }
   else {
-    NSString *nonDigitStr = [((NSString *) nil_chk(dialStr)) substring:0 endIndex:dialableIndex];
-    retStr = [((NSString *) nil_chk(origStr)) concat:nonDigitStr];
+    NSString *nonDigitStr = [((NSString *) nil_chk(dialStr)) java_substring:0 endIndex:dialableIndex];
+    retStr = [((NSString *) nil_chk(origStr)) java_concat:nonDigitStr];
   }
   return retStr;
 }
@@ -1771,18 +1783,6 @@ jboolean AndroidTelephonyPhoneNumberUtils_checkPrefixIsIgnorableWithNSString_wit
     backwardIndex--;
   }
   return true;
-}
-
-void AndroidTelephonyPhoneNumberUtils_init(AndroidTelephonyPhoneNumberUtils *self) {
-  NSObject_init(self);
-}
-
-AndroidTelephonyPhoneNumberUtils *new_AndroidTelephonyPhoneNumberUtils_init() {
-  J2OBJC_NEW_IMPL(AndroidTelephonyPhoneNumberUtils, init)
-}
-
-AndroidTelephonyPhoneNumberUtils *create_AndroidTelephonyPhoneNumberUtils_init() {
-  J2OBJC_CREATE_IMPL(AndroidTelephonyPhoneNumberUtils, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidTelephonyPhoneNumberUtils)

@@ -64,10 +64,6 @@ J2OBJC_TYPE_LITERAL_HEADER(RxInternalOperatorsOnSubscribeRange)
 
 - (void)requestWithLong:(jlong)requestedAmount;
 
-#pragma mark Protected
-
-- (void)javaFinalize;
-
 #pragma mark Package-Private
 
 - (instancetype)initWithRxSubscriber:(RxSubscriber *)childSubscriber

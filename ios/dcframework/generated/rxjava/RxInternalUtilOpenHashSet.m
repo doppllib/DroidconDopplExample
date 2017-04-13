@@ -180,13 +180,13 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, NULL, 0x1, -1, 1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, 2, 3, -1, 4, -1, -1 },
     { NULL, "Z", 0x1, 5, 3, -1, 4, -1, -1 },
-    { NULL, "Z", 0x0, 6, 7, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 8, 9, -1, 10, -1, -1 },
+    { NULL, "Z", 0x0, 6, 7, -1, 8, -1, -1 },
+    { NULL, "V", 0x1, 9, 10, -1, 11, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x0, -1, -1, -1, -1, -1, -1 },
-    { NULL, "I", 0x8, 11, 0, -1, -1, -1, -1 },
+    { NULL, "I", 0x8, 12, 0, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "[LNSObject;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "[LNSObject;", 0x1, -1, -1, -1, 13, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -208,11 +208,11 @@ J2OBJC_IGNORE_DESIGNATED_END
     { "mask_", "I", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "size_", "I", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "maxSize_", "I", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
-    { "keys_", "[LNSObject;", .constantValue.asLong = 0, 0x0, -1, -1, 12, -1 },
+    { "keys_", "[LNSObject;", .constantValue.asLong = 0, 0x0, -1, -1, 14, -1 },
     { "INT_PHI", "I", .constantValue.asInt = RxInternalUtilOpenHashSet_INT_PHI, 0x1a, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "I", "IF", "add", "LNSObject;", "(TT;)Z", "remove", "removeEntry", "I[LNSObject;I", "clear", "LRxFunctionsAction1;", "(Lrx/functions/Action1<-TT;>;)V", "mix", "[TT;", "<T:Ljava/lang/Object;>Ljava/lang/Object;" };
-  static const J2ObjcClassInfo _RxInternalUtilOpenHashSet = { "OpenHashSet", "rx.internal.util", ptrTable, methods, fields, 7, 0x11, 12, 6, -1, -1, -1, 13, -1 };
+  static const void *ptrTable[] = { "I", "IF", "add", "LNSObject;", "(TT;)Z", "remove", "removeEntry", "I[LNSObject;I", "(I[TT;I)Z", "clear", "LRxFunctionsAction1;", "(Lrx/functions/Action1<-TT;>;)V", "mix", "()[TT;", "[TT;", "<T:Ljava/lang/Object;>Ljava/lang/Object;" };
+  static const J2ObjcClassInfo _RxInternalUtilOpenHashSet = { "OpenHashSet", "rx.internal.util", ptrTable, methods, fields, 7, 0x11, 12, 6, -1, -1, -1, 15, -1 };
   return &_RxInternalUtilOpenHashSet;
 }
 

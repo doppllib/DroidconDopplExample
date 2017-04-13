@@ -401,7 +401,7 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleGsonStreamJsonWriter)
     {
       JreStrongAssignAndConsume(&ComGoogleGsonStreamJsonWriter_REPLACEMENT_CHARS, [IOSObjectArray newArrayWithLength:128 type:NSString_class_()]);
       for (jint i = 0; i <= (jint) 0x1f; i++) {
-        IOSObjectArray_Set(ComGoogleGsonStreamJsonWriter_REPLACEMENT_CHARS, i, NSString_formatWithNSString_withNSObjectArray_(@"\\u%04x", [IOSObjectArray arrayWithObjects:(id[]){ JavaLangInteger_valueOfWithInt_((jint) i) } count:1 type:NSObject_class_()]));
+        IOSObjectArray_Set(ComGoogleGsonStreamJsonWriter_REPLACEMENT_CHARS, i, NSString_java_formatWithNSString_withNSObjectArray_(@"\\u%04x", [IOSObjectArray arrayWithObjects:(id[]){ JavaLangInteger_valueOfWithInt_((jint) i) } count:1 type:NSObject_class_()]));
       }
       IOSObjectArray_Set(ComGoogleGsonStreamJsonWriter_REPLACEMENT_CHARS, '"', @"\\\"");
       IOSObjectArray_Set(ComGoogleGsonStreamJsonWriter_REPLACEMENT_CHARS, '\\', @"\\\\");
@@ -410,7 +410,7 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleGsonStreamJsonWriter)
       IOSObjectArray_Set(ComGoogleGsonStreamJsonWriter_REPLACEMENT_CHARS, 0x000a, @"\\n");
       IOSObjectArray_Set(ComGoogleGsonStreamJsonWriter_REPLACEMENT_CHARS, 0x000d, @"\\r");
       IOSObjectArray_Set(ComGoogleGsonStreamJsonWriter_REPLACEMENT_CHARS, 0x000c, @"\\f");
-      JreStrongAssign(&ComGoogleGsonStreamJsonWriter_HTML_SAFE_REPLACEMENT_CHARS, [ComGoogleGsonStreamJsonWriter_REPLACEMENT_CHARS clone]);
+      JreStrongAssign(&ComGoogleGsonStreamJsonWriter_HTML_SAFE_REPLACEMENT_CHARS, [ComGoogleGsonStreamJsonWriter_REPLACEMENT_CHARS java_clone]);
       IOSObjectArray_Set(nil_chk(ComGoogleGsonStreamJsonWriter_HTML_SAFE_REPLACEMENT_CHARS), '<', @"\\u003c");
       IOSObjectArray_Set(ComGoogleGsonStreamJsonWriter_HTML_SAFE_REPLACEMENT_CHARS, '>', @"\\u003e");
       IOSObjectArray_Set(ComGoogleGsonStreamJsonWriter_HTML_SAFE_REPLACEMENT_CHARS, '&', @"\\u0026");

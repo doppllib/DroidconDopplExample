@@ -146,11 +146,11 @@ J2OBJC_INITIALIZED_DEFN(RxNotification)
   if (self == obj) {
     return true;
   }
-  if ([obj java_getClass] != (id) [self java_getClass]) {
+  if ([obj java_getClass] != [self java_getClass]) {
     return false;
   }
   RxNotification *notification = (RxNotification *) cast_chk(obj, [RxNotification class]);
-  return [notification getKind] == [self getKind] && (value_ == (id) notification->value_ || (value_ != nil && [value_ isEqual:notification->value_])) && (throwable_ == notification->throwable_ || (throwable_ != nil && [throwable_ isEqual:notification->throwable_]));
+  return [notification getKind] == [self getKind] && (value_ == notification->value_ || (value_ != nil && [value_ isEqual:notification->value_])) && (throwable_ == notification->throwable_ || (throwable_ != nil && [throwable_ isEqual:notification->throwable_]));
 }
 
 - (void)dealloc {

@@ -34,6 +34,13 @@ NSString *DCPAppManager_FIRST_SEED = @"FIRST_SEED";
 
 @implementation DCPAppManager
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  DCPAppManager_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (void)initContextWithAndroidContentContext:(AndroidContentContext *)context
                        withDCPPlatformClient:(id<DCPPlatformClient>)platformClient
               withDCPAppManager_LoadDataSeed:(id<DCPAppManager_LoadDataSeed>)loadDataSeed {
@@ -56,30 +63,23 @@ NSString *DCPAppManager_FIRST_SEED = @"FIRST_SEED";
   return DCPAppManager_getAppPrefs();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  DCPAppManager_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, "LAndroidContentContext;", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, "LDCPPlatformClient;", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, "LDCPAppManager_AppScreens;", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, "LDCDAppPrefs;", 0x9, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(initContextWithAndroidContentContext:withDCPPlatformClient:withDCPAppManager_LoadDataSeed:);
-  methods[1].selector = @selector(getContext);
-  methods[2].selector = @selector(getPlatformClient);
-  methods[3].selector = @selector(findStartScreen);
-  methods[4].selector = @selector(getAppPrefs);
-  methods[5].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(initContextWithAndroidContentContext:withDCPPlatformClient:withDCPAppManager_LoadDataSeed:);
+  methods[2].selector = @selector(getContext);
+  methods[3].selector = @selector(getPlatformClient);
+  methods[4].selector = @selector(findStartScreen);
+  methods[5].selector = @selector(getAppPrefs);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "FIRST_SEED", "LNSString;", .constantValue.asLong = 0, 0x19, -1, 2, -1, -1 },
@@ -92,6 +92,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void DCPAppManager_init(DCPAppManager *self) {
+  NSObject_init(self);
+}
+
+DCPAppManager *new_DCPAppManager_init() {
+  J2OBJC_NEW_IMPL(DCPAppManager, init)
+}
+
+DCPAppManager *create_DCPAppManager_init() {
+  J2OBJC_CREATE_IMPL(DCPAppManager, init)
+}
 
 void DCPAppManager_initContextWithAndroidContentContext_withDCPPlatformClient_withDCPAppManager_LoadDataSeed_(AndroidContentContext *context, id<DCPPlatformClient> platformClient, id<DCPAppManager_LoadDataSeed> loadDataSeed) {
   DCPAppManager_initialize();
@@ -128,18 +140,6 @@ DCPAppManager_AppScreens *DCPAppManager_findStartScreen() {
 DCDAppPrefs *DCPAppManager_getAppPrefs() {
   DCPAppManager_initialize();
   return DCDAppPrefs_getInstanceWithAndroidContentContext_(DCPAppManager_context);
-}
-
-void DCPAppManager_init(DCPAppManager *self) {
-  NSObject_init(self);
-}
-
-DCPAppManager *new_DCPAppManager_init() {
-  J2OBJC_NEW_IMPL(DCPAppManager, init)
-}
-
-DCPAppManager *create_DCPAppManager_init() {
-  J2OBJC_CREATE_IMPL(DCPAppManager, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(DCPAppManager)

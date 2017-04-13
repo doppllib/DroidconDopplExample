@@ -110,7 +110,7 @@ J2OBJC_TYPE_LITERAL_HEADER(CoTouchlabDroidconandroidNetworkGsonConverter_JsonTyp
 
 - (id<RetrofitMimeTypedOutput>)toBodyWithId:(id)object {
   @try {
-    return create_CoTouchlabDroidconandroidNetworkGsonConverter_JsonTypedOutput_initWithByteArray_withNSString_([((NSString *) nil_chk([((ComGoogleGsonGson *) nil_chk(gson_)) toJsonWithId:object])) getBytesWithCharsetName:encoding_], encoding_);
+    return create_CoTouchlabDroidconandroidNetworkGsonConverter_JsonTypedOutput_initWithByteArray_withNSString_([((NSString *) nil_chk([((ComGoogleGsonGson *) nil_chk(gson_)) toJsonWithId:object])) java_getBytesWithCharsetName:encoding_], encoding_);
   }
   @catch (JavaIoUnsupportedEncodingException *e) {
     @throw create_JavaLangAssertionError_initWithId_(e);

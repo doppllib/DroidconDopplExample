@@ -68,6 +68,11 @@ J2OBJC_TYPE_LITERAL_HEADER(RxInternalOperatorsOperatorToObservableSortedList)
 #define INCLUDE_JavaUtilComparator 1
 #include "java/util/Comparator.h"
 
+@protocol JavaUtilFunctionFunction;
+@protocol JavaUtilFunctionToDoubleFunction;
+@protocol JavaUtilFunctionToIntFunction;
+@protocol JavaUtilFunctionToLongFunction;
+
 @interface RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction : NSObject < JavaUtilComparator >
 
 #pragma mark Public

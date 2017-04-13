@@ -49,6 +49,7 @@ J2OBJC_TYPE_LITERAL_HEADER(RxInternalOperatorsBlockingOperatorLatest)
 @class JavaUtilConcurrentAtomicAtomicReference;
 @class JavaUtilConcurrentSemaphore;
 @class RxNotification;
+@protocol JavaUtilFunctionConsumer;
 
 @interface RxInternalOperatorsBlockingOperatorLatest_LatestObserverIterator : RxSubscriber < JavaUtilIterator > {
  @public

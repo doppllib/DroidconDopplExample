@@ -105,7 +105,6 @@ struct FieldSlot {
 
 + (jboolean) nativePutNull:(id<NSObject>)windowPtr row:(jint)row column:(jint)column;
 
-@property(retain) NSString *mName;
 @property uint32_t mSize;
 @property BOOL mIsReadOnly;
 

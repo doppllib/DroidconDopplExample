@@ -27,6 +27,13 @@ __attribute__((unused)) static void AndroidDatabaseDefaultDatabaseErrorHandler_d
 
 @implementation AndroidDatabaseDefaultDatabaseErrorHandler
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  AndroidDatabaseDefaultDatabaseErrorHandler_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (void)onCorruptionWithAndroidDatabaseSqliteSQLiteDatabase:(AndroidDatabaseSqliteSQLiteDatabase *)dbObj {
   AndroidUtilLog_eWithNSString_withNSString_(AndroidDatabaseDefaultDatabaseErrorHandler_TAG, JreStrcat("$$", @"Corruption reported by sqlite on database: ", [((AndroidDatabaseSqliteSQLiteDatabase *) nil_chk(dbObj)) getPath]));
   if (![dbObj isOpen]) {
@@ -62,24 +69,17 @@ __attribute__((unused)) static void AndroidDatabaseDefaultDatabaseErrorHandler_d
   AndroidDatabaseDefaultDatabaseErrorHandler_deleteDatabaseFileWithNSString_(self, fileName);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  AndroidDatabaseDefaultDatabaseErrorHandler_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x2, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCorruptionWithAndroidDatabaseSqliteSQLiteDatabase:);
-  methods[1].selector = @selector(deleteDatabaseFileWithNSString:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(onCorruptionWithAndroidDatabaseSqliteSQLiteDatabase:);
+  methods[2].selector = @selector(deleteDatabaseFileWithNSString:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "TAG", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 4, -1, -1 },
@@ -91,19 +91,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 @end
 
-void AndroidDatabaseDefaultDatabaseErrorHandler_deleteDatabaseFileWithNSString_(AndroidDatabaseDefaultDatabaseErrorHandler *self, NSString *fileName) {
-  if ([((NSString *) nil_chk(fileName)) equalsIgnoreCase:@":memory:"] || ((jint) [((NSString *) nil_chk([fileName trim])) length]) == 0) {
-    return;
-  }
-  AndroidUtilLog_eWithNSString_withNSString_(AndroidDatabaseDefaultDatabaseErrorHandler_TAG, JreStrcat("$$", @"deleting the database file: ", fileName));
-  @try {
-    AndroidDatabaseSqliteSQLiteDatabase_deleteDatabaseWithJavaIoFile_(create_JavaIoFile_initWithNSString_(fileName));
-  }
-  @catch (JavaLangException *e) {
-    AndroidUtilLog_wWithNSString_withNSString_(AndroidDatabaseDefaultDatabaseErrorHandler_TAG, JreStrcat("$$", @"delete failed: ", [((JavaLangException *) nil_chk(e)) getMessage]));
-  }
-}
-
 void AndroidDatabaseDefaultDatabaseErrorHandler_init(AndroidDatabaseDefaultDatabaseErrorHandler *self) {
   NSObject_init(self);
 }
@@ -114,6 +101,19 @@ AndroidDatabaseDefaultDatabaseErrorHandler *new_AndroidDatabaseDefaultDatabaseEr
 
 AndroidDatabaseDefaultDatabaseErrorHandler *create_AndroidDatabaseDefaultDatabaseErrorHandler_init() {
   J2OBJC_CREATE_IMPL(AndroidDatabaseDefaultDatabaseErrorHandler, init)
+}
+
+void AndroidDatabaseDefaultDatabaseErrorHandler_deleteDatabaseFileWithNSString_(AndroidDatabaseDefaultDatabaseErrorHandler *self, NSString *fileName) {
+  if ([((NSString *) nil_chk(fileName)) java_equalsIgnoreCase:@":memory:"] || ((jint) [((NSString *) nil_chk([fileName java_trim])) length]) == 0) {
+    return;
+  }
+  AndroidUtilLog_eWithNSString_withNSString_(AndroidDatabaseDefaultDatabaseErrorHandler_TAG, JreStrcat("$$", @"deleting the database file: ", fileName));
+  @try {
+    AndroidDatabaseSqliteSQLiteDatabase_deleteDatabaseWithJavaIoFile_(create_JavaIoFile_initWithNSString_(fileName));
+  }
+  @catch (JavaLangException *e) {
+    AndroidUtilLog_wWithNSString_withNSString_(AndroidDatabaseDefaultDatabaseErrorHandler_TAG, JreStrcat("$$", @"delete failed: ", [((JavaLangException *) nil_chk(e)) getMessage]));
+  }
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidDatabaseDefaultDatabaseErrorHandler)

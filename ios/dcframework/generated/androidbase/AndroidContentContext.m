@@ -23,6 +23,13 @@ __attribute__((unused)) static IOSObjectArray *AndroidContentContext__Annotation
 
 @implementation AndroidContentContext
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  AndroidContentContext_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (AndroidOsLooper *)getMainLooper {
   // can't call an abstract method
   [self doesNotRecognizeSelector:_cmd];
@@ -143,15 +150,9 @@ __attribute__((unused)) static IOSObjectArray *AndroidContentContext__Annotation
   return self;
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  AndroidContentContext_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LAndroidOsLooper;", 0x401, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaIoFile;", 0x401, 0, 1, -1, -1, -1, -1 },
     { NULL, "LAndroidContentSharedPreferences;", 0x401, 2, 3, -1, -1, -1, -1 },
@@ -171,30 +172,29 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "LJavaIoFile;", 0x401, 16, 1, -1, -1, -1, -1 },
     { NULL, "[LNSString;", 0x401, -1, -1, -1, -1, -1, -1 },
     { NULL, "LAndroidContentContext;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getMainLooper);
-  methods[1].selector = @selector(getSharedPrefsFileWithNSString:);
-  methods[2].selector = @selector(getSharedPreferencesWithNSString:withInt:);
-  methods[3].selector = @selector(openFileInputWithNSString:);
-  methods[4].selector = @selector(openFileOutputWithNSString:withInt:);
-  methods[5].selector = @selector(deleteFileWithNSString:);
-  methods[6].selector = @selector(getFileStreamPathWithNSString:);
-  methods[7].selector = @selector(getFilesDir);
-  methods[8].selector = @selector(getExternalFilesDirWithNSString:);
-  methods[9].selector = @selector(getExternalFilesDirsWithNSString:);
-  methods[10].selector = @selector(getCacheDir);
-  methods[11].selector = @selector(fileList);
-  methods[12].selector = @selector(getDirWithNSString:withInt:);
-  methods[13].selector = @selector(openOrCreateDatabaseWithNSString:withInt:withAndroidDatabaseSqliteSQLiteDatabase_CursorFactory:);
-  methods[14].selector = @selector(openOrCreateDatabaseWithNSString:withInt:withAndroidDatabaseSqliteSQLiteDatabase_CursorFactory:withAndroidDatabaseDatabaseErrorHandler:);
-  methods[15].selector = @selector(deleteDatabaseWithNSString:);
-  methods[16].selector = @selector(getDatabasePathWithNSString:);
-  methods[17].selector = @selector(databaseList);
-  methods[18].selector = @selector(getApplicationContext);
-  methods[19].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(getMainLooper);
+  methods[2].selector = @selector(getSharedPrefsFileWithNSString:);
+  methods[3].selector = @selector(getSharedPreferencesWithNSString:withInt:);
+  methods[4].selector = @selector(openFileInputWithNSString:);
+  methods[5].selector = @selector(openFileOutputWithNSString:withInt:);
+  methods[6].selector = @selector(deleteFileWithNSString:);
+  methods[7].selector = @selector(getFileStreamPathWithNSString:);
+  methods[8].selector = @selector(getFilesDir);
+  methods[9].selector = @selector(getExternalFilesDirWithNSString:);
+  methods[10].selector = @selector(getExternalFilesDirsWithNSString:);
+  methods[11].selector = @selector(getCacheDir);
+  methods[12].selector = @selector(fileList);
+  methods[13].selector = @selector(getDirWithNSString:withInt:);
+  methods[14].selector = @selector(openOrCreateDatabaseWithNSString:withInt:withAndroidDatabaseSqliteSQLiteDatabase_CursorFactory:);
+  methods[15].selector = @selector(openOrCreateDatabaseWithNSString:withInt:withAndroidDatabaseSqliteSQLiteDatabase_CursorFactory:withAndroidDatabaseDatabaseErrorHandler:);
+  methods[16].selector = @selector(deleteDatabaseWithNSString:);
+  methods[17].selector = @selector(getDatabasePathWithNSString:);
+  methods[18].selector = @selector(databaseList);
+  methods[19].selector = @selector(getApplicationContext);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "MODE_PRIVATE", "I", .constantValue.asInt = AndroidContentContext_MODE_PRIVATE, 0x19, -1, -1, -1, -1 },

@@ -3,9 +3,9 @@
 //  source: /Users/kgalligan/devel-doppl/core-doppl/androidbase/src/main/java/android/os/RemoteException.java
 //
 
+#include "AndroidOsRemoteException.h"
 #include "AndroidUtilAndroidException.h"
 #include "J2ObjC_source.h"
-#include "RemoteException.h"
 
 @implementation AndroidOsRemoteException
 

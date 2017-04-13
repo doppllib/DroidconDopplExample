@@ -25,6 +25,13 @@
 
 @implementation DCTAbstractWatchVideoTask
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  DCTAbstractWatchVideoTask_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (void)onCompleteWithAndroidContentContext:(AndroidContentContext *)context {
   [((DeGreenrobotEventEventBus *) nil_chk(CoTouchlabAndroidThreadingEventbusEventBusExt_getDefault())) postWithId:self];
 }
@@ -70,28 +77,21 @@
   return true;
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  DCTAbstractWatchVideoTask_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x4, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x4, 2, 1, 3, -1, -1, -1 },
     { NULL, "LRetrofitClientResponse;", 0x400, 4, 5, -1, -1, -1, -1 },
     { NULL, "Z", 0x4, 6, 7, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleteWithAndroidContentContext:);
-  methods[1].selector = @selector(runWithAndroidContentContext:);
-  methods[2].selector = @selector(callVideoUrlWithCoTouchlabDroidconandroidNetworkWatchVideoRequest:withNSString:withNSString:withLong:);
-  methods[3].selector = @selector(handleErrorWithAndroidContentContext:withNSException:);
-  methods[4].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(onCompleteWithAndroidContentContext:);
+  methods[2].selector = @selector(runWithAndroidContentContext:);
+  methods[3].selector = @selector(callVideoUrlWithCoTouchlabDroidconandroidNetworkWatchVideoRequest:withNSString:withNSString:withLong:);
+  methods[4].selector = @selector(handleErrorWithAndroidContentContext:withNSException:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "videoOk_", "Z", .constantValue.asLong = 0, 0x1, -1, -1, -1, -1 },

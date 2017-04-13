@@ -7,14 +7,13 @@
 #include "AndroidAppSharedPreferencesImpl.h"
 #include "AndroidContentContext.h"
 #include "AndroidContentSharedPreferences.h"
+#include "AndroidInternalUtilXmlUtils.h"
 #include "AndroidOsFileUtils.h"
 #include "AndroidOsHandler.h"
 #include "AndroidOsLooper.h"
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
-#include "RenameComAndroidInternalUtilXmlUtils.h"
-#include "RenameComGoogleAndroidCollectMaps.h"
 #include "android/util/Log.h"
+#include "com/google/android/collect/Maps.h"
 #include "java/io/File.h"
 #include "java/io/FileNotFoundException.h"
 #include "java/io/FileOutputStream.h"
@@ -107,9 +106,9 @@ __attribute__((unused)) static void AndroidAppSharedPreferencesImpl_setFilePermi
   volatile_jboolean writeToDiskResult_;
 }
 
-- (void)setDiskWriteResultWithBoolean:(jboolean)result;
-
 - (instancetype)init;
+
+- (void)setDiskWriteResultWithBoolean:(jboolean)result;
 
 @end
 
@@ -141,105 +140,93 @@ J2OBJC_TYPE_LITERAL_HEADER(AndroidAppSharedPreferencesImpl_MemoryCommitResult)
 
 @end
 
-J2OBJC_FIELD_SETTER(AndroidAppSharedPreferencesImpl_EditorImpl, this$0_, AndroidAppSharedPreferencesImpl *)
 J2OBJC_FIELD_SETTER(AndroidAppSharedPreferencesImpl_EditorImpl, mModified_, id<JavaUtilMap>)
 
 __attribute__((unused)) static AndroidAppSharedPreferencesImpl_MemoryCommitResult *AndroidAppSharedPreferencesImpl_EditorImpl_commitToMemory(AndroidAppSharedPreferencesImpl_EditorImpl *self);
 
 __attribute__((unused)) static void AndroidAppSharedPreferencesImpl_EditorImpl_notifyListenersWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_EditorImpl *self, AndroidAppSharedPreferencesImpl_MemoryCommitResult *mcr);
 
-@interface AndroidAppSharedPreferencesImpl_EditorImpl_$1 : NSObject < JavaLangRunnable > {
+@interface AndroidAppSharedPreferencesImpl_EditorImpl_1 : NSObject < JavaLangRunnable > {
  @public
   AndroidAppSharedPreferencesImpl_MemoryCommitResult *val$mcr_;
 }
 
-- (void)run;
-
 - (instancetype)initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult:(AndroidAppSharedPreferencesImpl_MemoryCommitResult *)capture$0;
+
+- (void)run;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(AndroidAppSharedPreferencesImpl_EditorImpl_$1)
+J2OBJC_EMPTY_STATIC_INIT(AndroidAppSharedPreferencesImpl_EditorImpl_1)
 
-J2OBJC_FIELD_SETTER(AndroidAppSharedPreferencesImpl_EditorImpl_$1, val$mcr_, AndroidAppSharedPreferencesImpl_MemoryCommitResult *)
+__attribute__((unused)) static void AndroidAppSharedPreferencesImpl_EditorImpl_1_initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_EditorImpl_1 *self, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0);
 
-__attribute__((unused)) static void AndroidAppSharedPreferencesImpl_EditorImpl_$1_initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_EditorImpl_$1 *self, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0);
+__attribute__((unused)) static AndroidAppSharedPreferencesImpl_EditorImpl_1 *new_AndroidAppSharedPreferencesImpl_EditorImpl_1_initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static AndroidAppSharedPreferencesImpl_EditorImpl_$1 *new_AndroidAppSharedPreferencesImpl_EditorImpl_$1_initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static AndroidAppSharedPreferencesImpl_EditorImpl_1 *create_AndroidAppSharedPreferencesImpl_EditorImpl_1_initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0);
 
-__attribute__((unused)) static AndroidAppSharedPreferencesImpl_EditorImpl_$1 *create_AndroidAppSharedPreferencesImpl_EditorImpl_$1_initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0);
-
-@interface AndroidAppSharedPreferencesImpl_EditorImpl_$2 : NSObject < JavaLangRunnable > {
+@interface AndroidAppSharedPreferencesImpl_EditorImpl_2 : NSObject < JavaLangRunnable > {
  @public
   id<JavaLangRunnable> val$awaitCommit_;
 }
 
-- (void)run;
-
 - (instancetype)initWithJavaLangRunnable:(id<JavaLangRunnable>)capture$0;
+
+- (void)run;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(AndroidAppSharedPreferencesImpl_EditorImpl_$2)
+J2OBJC_EMPTY_STATIC_INIT(AndroidAppSharedPreferencesImpl_EditorImpl_2)
 
-J2OBJC_FIELD_SETTER(AndroidAppSharedPreferencesImpl_EditorImpl_$2, val$awaitCommit_, id<JavaLangRunnable>)
+__attribute__((unused)) static void AndroidAppSharedPreferencesImpl_EditorImpl_2_initWithJavaLangRunnable_(AndroidAppSharedPreferencesImpl_EditorImpl_2 *self, id<JavaLangRunnable> capture$0);
 
-__attribute__((unused)) static void AndroidAppSharedPreferencesImpl_EditorImpl_$2_initWithJavaLangRunnable_(AndroidAppSharedPreferencesImpl_EditorImpl_$2 *self, id<JavaLangRunnable> capture$0);
+__attribute__((unused)) static AndroidAppSharedPreferencesImpl_EditorImpl_2 *new_AndroidAppSharedPreferencesImpl_EditorImpl_2_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static AndroidAppSharedPreferencesImpl_EditorImpl_$2 *new_AndroidAppSharedPreferencesImpl_EditorImpl_$2_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static AndroidAppSharedPreferencesImpl_EditorImpl_2 *create_AndroidAppSharedPreferencesImpl_EditorImpl_2_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0);
 
-__attribute__((unused)) static AndroidAppSharedPreferencesImpl_EditorImpl_$2 *create_AndroidAppSharedPreferencesImpl_EditorImpl_$2_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0);
-
-@interface AndroidAppSharedPreferencesImpl_EditorImpl_$3 : NSObject < JavaLangRunnable > {
+@interface AndroidAppSharedPreferencesImpl_EditorImpl_3 : NSObject < JavaLangRunnable > {
  @public
   AndroidAppSharedPreferencesImpl_EditorImpl *this$0_;
   AndroidAppSharedPreferencesImpl_MemoryCommitResult *val$mcr_;
 }
 
-- (void)run;
-
 - (instancetype)initWithAndroidAppSharedPreferencesImpl_EditorImpl:(AndroidAppSharedPreferencesImpl_EditorImpl *)outer$
             withAndroidAppSharedPreferencesImpl_MemoryCommitResult:(AndroidAppSharedPreferencesImpl_MemoryCommitResult *)capture$0;
 
+- (void)run;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(AndroidAppSharedPreferencesImpl_EditorImpl_$3)
+J2OBJC_EMPTY_STATIC_INIT(AndroidAppSharedPreferencesImpl_EditorImpl_3)
 
-J2OBJC_FIELD_SETTER(AndroidAppSharedPreferencesImpl_EditorImpl_$3, this$0_, AndroidAppSharedPreferencesImpl_EditorImpl *)
-J2OBJC_FIELD_SETTER(AndroidAppSharedPreferencesImpl_EditorImpl_$3, val$mcr_, AndroidAppSharedPreferencesImpl_MemoryCommitResult *)
+__attribute__((unused)) static void AndroidAppSharedPreferencesImpl_EditorImpl_3_initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_EditorImpl_3 *self, AndroidAppSharedPreferencesImpl_EditorImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0);
 
-__attribute__((unused)) static void AndroidAppSharedPreferencesImpl_EditorImpl_$3_initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_EditorImpl_$3 *self, AndroidAppSharedPreferencesImpl_EditorImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0);
+__attribute__((unused)) static AndroidAppSharedPreferencesImpl_EditorImpl_3 *new_AndroidAppSharedPreferencesImpl_EditorImpl_3_initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_EditorImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static AndroidAppSharedPreferencesImpl_EditorImpl_$3 *new_AndroidAppSharedPreferencesImpl_EditorImpl_$3_initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_EditorImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static AndroidAppSharedPreferencesImpl_EditorImpl_3 *create_AndroidAppSharedPreferencesImpl_EditorImpl_3_initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_EditorImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0);
 
-__attribute__((unused)) static AndroidAppSharedPreferencesImpl_EditorImpl_$3 *create_AndroidAppSharedPreferencesImpl_EditorImpl_$3_initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_EditorImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0);
-
-@interface AndroidAppSharedPreferencesImpl_$1 : NSObject < JavaLangRunnable > {
+@interface AndroidAppSharedPreferencesImpl_1 : NSObject < JavaLangRunnable > {
  @public
   AndroidAppSharedPreferencesImpl *this$0_;
   AndroidAppSharedPreferencesImpl_MemoryCommitResult *val$mcr_;
   id<JavaLangRunnable> val$postWriteRunnable_;
 }
 
-- (void)run;
-
 - (instancetype)initWithAndroidAppSharedPreferencesImpl:(AndroidAppSharedPreferencesImpl *)outer$
  withAndroidAppSharedPreferencesImpl_MemoryCommitResult:(AndroidAppSharedPreferencesImpl_MemoryCommitResult *)capture$0
                                    withJavaLangRunnable:(id<JavaLangRunnable>)capture$1;
 
+- (void)run;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(AndroidAppSharedPreferencesImpl_$1)
+J2OBJC_EMPTY_STATIC_INIT(AndroidAppSharedPreferencesImpl_1)
 
-J2OBJC_FIELD_SETTER(AndroidAppSharedPreferencesImpl_$1, this$0_, AndroidAppSharedPreferencesImpl *)
-J2OBJC_FIELD_SETTER(AndroidAppSharedPreferencesImpl_$1, val$mcr_, AndroidAppSharedPreferencesImpl_MemoryCommitResult *)
-J2OBJC_FIELD_SETTER(AndroidAppSharedPreferencesImpl_$1, val$postWriteRunnable_, id<JavaLangRunnable>)
+__attribute__((unused)) static void AndroidAppSharedPreferencesImpl_1_initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_(AndroidAppSharedPreferencesImpl_1 *self, AndroidAppSharedPreferencesImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0, id<JavaLangRunnable> capture$1);
 
-__attribute__((unused)) static void AndroidAppSharedPreferencesImpl_$1_initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_(AndroidAppSharedPreferencesImpl_$1 *self, AndroidAppSharedPreferencesImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0, id<JavaLangRunnable> capture$1);
+__attribute__((unused)) static AndroidAppSharedPreferencesImpl_1 *new_AndroidAppSharedPreferencesImpl_1_initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_(AndroidAppSharedPreferencesImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0, id<JavaLangRunnable> capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static AndroidAppSharedPreferencesImpl_$1 *new_AndroidAppSharedPreferencesImpl_$1_initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_(AndroidAppSharedPreferencesImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0, id<JavaLangRunnable> capture$1) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static AndroidAppSharedPreferencesImpl_$1 *create_AndroidAppSharedPreferencesImpl_$1_initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_(AndroidAppSharedPreferencesImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0, id<JavaLangRunnable> capture$1);
+__attribute__((unused)) static AndroidAppSharedPreferencesImpl_1 *create_AndroidAppSharedPreferencesImpl_1_initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_(AndroidAppSharedPreferencesImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0, id<JavaLangRunnable> capture$1);
 
 J2OBJC_INITIALIZED_DEFN(AndroidAppSharedPreferencesImpl)
 
@@ -495,7 +482,7 @@ JavaIoFile *AndroidAppSharedPreferencesImpl_makeBackupFileWithJavaIoFile_(JavaIo
 }
 
 void AndroidAppSharedPreferencesImpl_enqueueDiskWriteWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_(AndroidAppSharedPreferencesImpl *self, AndroidAppSharedPreferencesImpl_MemoryCommitResult *mcr, id<JavaLangRunnable> postWriteRunnable) {
-  id<JavaLangRunnable> writeToDiskRunnable = create_AndroidAppSharedPreferencesImpl_$1_initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_(self, mcr, postWriteRunnable);
+  id<JavaLangRunnable> writeToDiskRunnable = create_AndroidAppSharedPreferencesImpl_1_initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_(self, mcr, postWriteRunnable);
   jboolean isFromSyncCommit = postWriteRunnable == nil;
   if (isFromSyncCommit) {
     jboolean wasEmpty = false;
@@ -556,7 +543,7 @@ void AndroidAppSharedPreferencesImpl_writeToFileWithAndroidAppSharedPreferencesI
       [((AndroidAppSharedPreferencesImpl_MemoryCommitResult *) nil_chk(mcr)) setDiskWriteResultWithBoolean:false];
       return;
     }
-    RenameComAndroidInternalUtilXmlUtils_writeMapXmlWithJavaUtilMap_withJavaIoOutputStream_(((AndroidAppSharedPreferencesImpl_MemoryCommitResult *) nil_chk(mcr))->mapToWriteToDisk_, str);
+    AndroidInternalUtilXmlUtils_writeMapXmlWithJavaUtilMap_withJavaIoOutputStream_(((AndroidAppSharedPreferencesImpl_MemoryCommitResult *) nil_chk(mcr))->mapToWriteToDisk_, str);
     AndroidOsFileUtils_syncWithJavaIoFileOutputStream_(str);
     [str close];
     AndroidAppSharedPreferencesImpl_setFilePermissionsFromModeWithNSString_withInt_withInt_([self->mFile_ getPath], self->mMode_, 0);
@@ -601,17 +588,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidAppSharedPreferencesImpl)
 
 @implementation AndroidAppSharedPreferencesImpl_MemoryCommitResult
 
-- (void)setDiskWriteResultWithBoolean:(jboolean)result {
-  JreAssignVolatileBoolean(&writeToDiskResult_, result);
-  [((JavaUtilConcurrentCountDownLatch *) nil_chk(writtenToDiskLatch_)) countDown];
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   AndroidAppSharedPreferencesImpl_MemoryCommitResult_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
+
+- (void)setDiskWriteResultWithBoolean:(jboolean)result {
+  JreAssignVolatileBoolean(&writeToDiskResult_, result);
+  [((JavaUtilConcurrentCountDownLatch *) nil_chk(writtenToDiskLatch_)) countDown];
+}
 
 - (void)dealloc {
   RELEASE_(keysModified_);
@@ -623,13 +610,13 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(setDiskWriteResultWithBoolean:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(setDiskWriteResultWithBoolean:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "changesMade_", "Z", .constantValue.asLong = 0, 0x1, -1, -1, -1, -1 },
@@ -663,6 +650,11 @@ AndroidAppSharedPreferencesImpl_MemoryCommitResult *create_AndroidAppSharedPrefe
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidAppSharedPreferencesImpl_MemoryCommitResult)
 
 @implementation AndroidAppSharedPreferencesImpl_EditorImpl
+
+- (instancetype)initWithAndroidAppSharedPreferencesImpl:(AndroidAppSharedPreferencesImpl *)outer$ {
+  AndroidAppSharedPreferencesImpl_EditorImpl_initWithAndroidAppSharedPreferencesImpl_(self, outer$);
+  return self;
+}
 
 - (id<AndroidContentSharedPreferences_Editor>)putStringWithNSString:(NSString *)key
                                                        withNSString:(NSString *)value {
@@ -720,9 +712,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidAppSharedPreferencesImpl_MemoryCommitRes
 
 - (void)apply {
   AndroidAppSharedPreferencesImpl_MemoryCommitResult *mcr = AndroidAppSharedPreferencesImpl_EditorImpl_commitToMemory(self);
-  id<JavaLangRunnable> awaitCommit = create_AndroidAppSharedPreferencesImpl_EditorImpl_$1_initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(mcr);
+  id<JavaLangRunnable> awaitCommit = create_AndroidAppSharedPreferencesImpl_EditorImpl_1_initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(mcr);
   AndroidAppQueuedWork_addWithJavaLangRunnable_(awaitCommit);
-  id<JavaLangRunnable> postWriteRunnable = create_AndroidAppSharedPreferencesImpl_EditorImpl_$2_initWithJavaLangRunnable_(awaitCommit);
+  id<JavaLangRunnable> postWriteRunnable = create_AndroidAppSharedPreferencesImpl_EditorImpl_2_initWithJavaLangRunnable_(awaitCommit);
   AndroidAppSharedPreferencesImpl_enqueueDiskWriteWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_(this$0_, mcr, postWriteRunnable);
   AndroidAppSharedPreferencesImpl_EditorImpl_notifyListenersWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(self, mcr);
 }
@@ -748,11 +740,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidAppSharedPreferencesImpl_MemoryCommitRes
   AndroidAppSharedPreferencesImpl_EditorImpl_notifyListenersWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(self, mcr);
 }
 
-- (instancetype)initWithAndroidAppSharedPreferencesImpl:(AndroidAppSharedPreferencesImpl *)outer$ {
-  AndroidAppSharedPreferencesImpl_EditorImpl_initWithAndroidAppSharedPreferencesImpl_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(mModified_);
@@ -761,6 +748,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidAppSharedPreferencesImpl_MemoryCommitRes
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LAndroidContentSharedPreferences_Editor;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "LAndroidContentSharedPreferences_Editor;", 0x1, 2, 3, -1, -1, -1, -1 },
     { NULL, "LAndroidContentSharedPreferences_Editor;", 0x1, 4, 5, -1, -1, -1, -1 },
@@ -772,34 +760,48 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidAppSharedPreferencesImpl_MemoryCommitRes
     { NULL, "LAndroidAppSharedPreferencesImpl_MemoryCommitResult;", 0x2, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x2, 12, 13, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, 14, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(putStringWithNSString:withNSString:);
-  methods[1].selector = @selector(putIntWithNSString:withInt:);
-  methods[2].selector = @selector(putLongWithNSString:withLong:);
-  methods[3].selector = @selector(putFloatWithNSString:withFloat:);
-  methods[4].selector = @selector(putBooleanWithNSString:withBoolean:);
-  methods[5].selector = @selector(removeWithNSString:);
-  methods[6].selector = @selector(clear);
-  methods[7].selector = @selector(apply);
-  methods[8].selector = @selector(commitToMemory);
-  methods[9].selector = @selector(commit);
-  methods[10].selector = @selector(notifyListenersWithAndroidAppSharedPreferencesImpl_MemoryCommitResult:);
-  methods[11].selector = @selector(initWithAndroidAppSharedPreferencesImpl:);
+  methods[0].selector = @selector(initWithAndroidAppSharedPreferencesImpl:);
+  methods[1].selector = @selector(putStringWithNSString:withNSString:);
+  methods[2].selector = @selector(putIntWithNSString:withInt:);
+  methods[3].selector = @selector(putLongWithNSString:withLong:);
+  methods[4].selector = @selector(putFloatWithNSString:withFloat:);
+  methods[5].selector = @selector(putBooleanWithNSString:withBoolean:);
+  methods[6].selector = @selector(removeWithNSString:);
+  methods[7].selector = @selector(clear);
+  methods[8].selector = @selector(apply);
+  methods[9].selector = @selector(commitToMemory);
+  methods[10].selector = @selector(commit);
+  methods[11].selector = @selector(notifyListenersWithAndroidAppSharedPreferencesImpl_MemoryCommitResult:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LAndroidAppSharedPreferencesImpl;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "mModified_", "LJavaUtilMap;", .constantValue.asLong = 0, 0x12, -1, -1, 15, -1 },
+    { "mModified_", "LJavaUtilMap;", .constantValue.asLong = 0, 0x12, -1, -1, 14, -1 },
     { "mClear_", "Z", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "putString", "LNSString;LNSString;", "putInt", "LNSString;I", "putLong", "LNSString;J", "putFloat", "LNSString;F", "putBoolean", "LNSString;Z", "remove", "LNSString;", "notifyListeners", "LAndroidAppSharedPreferencesImpl_MemoryCommitResult;", "LAndroidAppSharedPreferencesImpl;", "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;" };
-  static const J2ObjcClassInfo _AndroidAppSharedPreferencesImpl_EditorImpl = { "EditorImpl", "android.app", ptrTable, methods, fields, 7, 0x11, 12, 3, 14, -1, -1, -1, -1 };
+  static const void *ptrTable[] = { "putString", "LNSString;LNSString;", "putInt", "LNSString;I", "putLong", "LNSString;J", "putFloat", "LNSString;F", "putBoolean", "LNSString;Z", "remove", "LNSString;", "notifyListeners", "LAndroidAppSharedPreferencesImpl_MemoryCommitResult;", "Ljava/util/Map<Ljava/lang/String;Ljava/lang/Object;>;", "LAndroidAppSharedPreferencesImpl;" };
+  static const J2ObjcClassInfo _AndroidAppSharedPreferencesImpl_EditorImpl = { "EditorImpl", "android.app", ptrTable, methods, fields, 7, 0x11, 12, 3, 15, -1, -1, -1, -1 };
   return &_AndroidAppSharedPreferencesImpl_EditorImpl;
 }
 
 @end
+
+void AndroidAppSharedPreferencesImpl_EditorImpl_initWithAndroidAppSharedPreferencesImpl_(AndroidAppSharedPreferencesImpl_EditorImpl *self, AndroidAppSharedPreferencesImpl *outer$) {
+  JreStrongAssign(&self->this$0_, outer$);
+  NSObject_init(self);
+  JreStrongAssign(&self->mModified_, ComGoogleAndroidCollectMaps_newHashMap());
+  self->mClear_ = false;
+}
+
+AndroidAppSharedPreferencesImpl_EditorImpl *new_AndroidAppSharedPreferencesImpl_EditorImpl_initWithAndroidAppSharedPreferencesImpl_(AndroidAppSharedPreferencesImpl *outer$) {
+  J2OBJC_NEW_IMPL(AndroidAppSharedPreferencesImpl_EditorImpl, initWithAndroidAppSharedPreferencesImpl_, outer$)
+}
+
+AndroidAppSharedPreferencesImpl_EditorImpl *create_AndroidAppSharedPreferencesImpl_EditorImpl_initWithAndroidAppSharedPreferencesImpl_(AndroidAppSharedPreferencesImpl *outer$) {
+  J2OBJC_CREATE_IMPL(AndroidAppSharedPreferencesImpl_EditorImpl, initWithAndroidAppSharedPreferencesImpl_, outer$)
+}
 
 AndroidAppSharedPreferencesImpl_MemoryCommitResult *AndroidAppSharedPreferencesImpl_EditorImpl_commitToMemory(AndroidAppSharedPreferencesImpl_EditorImpl *self) {
   AndroidAppSharedPreferencesImpl_MemoryCommitResult *mcr = create_AndroidAppSharedPreferencesImpl_MemoryCommitResult_init();
@@ -867,28 +869,18 @@ void AndroidAppSharedPreferencesImpl_EditorImpl_notifyListenersWithAndroidAppSha
     }
   }
   else {
-    [((AndroidOsHandler *) nil_chk(self->this$0_->mainHandler_)) postWithJavaLangRunnable:create_AndroidAppSharedPreferencesImpl_EditorImpl_$3_initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_(self, mcr)];
+    [((AndroidOsHandler *) nil_chk(self->this$0_->mainHandler_)) postWithJavaLangRunnable:create_AndroidAppSharedPreferencesImpl_EditorImpl_3_initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_(self, mcr)];
   }
-}
-
-void AndroidAppSharedPreferencesImpl_EditorImpl_initWithAndroidAppSharedPreferencesImpl_(AndroidAppSharedPreferencesImpl_EditorImpl *self, AndroidAppSharedPreferencesImpl *outer$) {
-  JreStrongAssign(&self->this$0_, outer$);
-  NSObject_init(self);
-  JreStrongAssign(&self->mModified_, RenameComGoogleAndroidCollectMaps_newHashMap());
-  self->mClear_ = false;
-}
-
-AndroidAppSharedPreferencesImpl_EditorImpl *new_AndroidAppSharedPreferencesImpl_EditorImpl_initWithAndroidAppSharedPreferencesImpl_(AndroidAppSharedPreferencesImpl *outer$) {
-  J2OBJC_NEW_IMPL(AndroidAppSharedPreferencesImpl_EditorImpl, initWithAndroidAppSharedPreferencesImpl_, outer$)
-}
-
-AndroidAppSharedPreferencesImpl_EditorImpl *create_AndroidAppSharedPreferencesImpl_EditorImpl_initWithAndroidAppSharedPreferencesImpl_(AndroidAppSharedPreferencesImpl *outer$) {
-  J2OBJC_CREATE_IMPL(AndroidAppSharedPreferencesImpl_EditorImpl, initWithAndroidAppSharedPreferencesImpl_, outer$)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidAppSharedPreferencesImpl_EditorImpl)
 
-@implementation AndroidAppSharedPreferencesImpl_EditorImpl_$1
+@implementation AndroidAppSharedPreferencesImpl_EditorImpl_1
+
+- (instancetype)initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult:(AndroidAppSharedPreferencesImpl_MemoryCommitResult *)capture$0 {
+  AndroidAppSharedPreferencesImpl_EditorImpl_1_initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(self, capture$0);
+  return self;
+}
 
 - (void)run {
   @try {
@@ -898,11 +890,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidAppSharedPreferencesImpl_EditorImpl)
   }
 }
 
-- (instancetype)initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult:(AndroidAppSharedPreferencesImpl_MemoryCommitResult *)capture$0 {
-  AndroidAppSharedPreferencesImpl_EditorImpl_$1_initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$mcr_);
   [super dealloc];
@@ -910,47 +897,47 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidAppSharedPreferencesImpl_EditorImpl)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult:);
+  methods[0].selector = @selector(initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult:);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$mcr_", "LAndroidAppSharedPreferencesImpl_MemoryCommitResult;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LAndroidAppSharedPreferencesImpl_MemoryCommitResult;", "LAndroidAppSharedPreferencesImpl_EditorImpl;", "apply" };
-  static const J2ObjcClassInfo _AndroidAppSharedPreferencesImpl_EditorImpl_$1 = { "", "android.app", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
-  return &_AndroidAppSharedPreferencesImpl_EditorImpl_$1;
+  static const void *ptrTable[] = { "LAndroidAppSharedPreferencesImpl_EditorImpl;", "apply" };
+  static const J2ObjcClassInfo _AndroidAppSharedPreferencesImpl_EditorImpl_1 = { "", "android.app", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  return &_AndroidAppSharedPreferencesImpl_EditorImpl_1;
 }
 
 @end
 
-void AndroidAppSharedPreferencesImpl_EditorImpl_$1_initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_EditorImpl_$1 *self, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0) {
+void AndroidAppSharedPreferencesImpl_EditorImpl_1_initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_EditorImpl_1 *self, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0) {
   JreStrongAssign(&self->val$mcr_, capture$0);
   NSObject_init(self);
 }
 
-AndroidAppSharedPreferencesImpl_EditorImpl_$1 *new_AndroidAppSharedPreferencesImpl_EditorImpl_$1_initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0) {
-  J2OBJC_NEW_IMPL(AndroidAppSharedPreferencesImpl_EditorImpl_$1, initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_, capture$0)
+AndroidAppSharedPreferencesImpl_EditorImpl_1 *new_AndroidAppSharedPreferencesImpl_EditorImpl_1_initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0) {
+  J2OBJC_NEW_IMPL(AndroidAppSharedPreferencesImpl_EditorImpl_1, initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_, capture$0)
 }
 
-AndroidAppSharedPreferencesImpl_EditorImpl_$1 *create_AndroidAppSharedPreferencesImpl_EditorImpl_$1_initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0) {
-  J2OBJC_CREATE_IMPL(AndroidAppSharedPreferencesImpl_EditorImpl_$1, initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_, capture$0)
+AndroidAppSharedPreferencesImpl_EditorImpl_1 *create_AndroidAppSharedPreferencesImpl_EditorImpl_1_initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0) {
+  J2OBJC_CREATE_IMPL(AndroidAppSharedPreferencesImpl_EditorImpl_1, initWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_, capture$0)
 }
 
-@implementation AndroidAppSharedPreferencesImpl_EditorImpl_$2
+@implementation AndroidAppSharedPreferencesImpl_EditorImpl_2
+
+- (instancetype)initWithJavaLangRunnable:(id<JavaLangRunnable>)capture$0 {
+  AndroidAppSharedPreferencesImpl_EditorImpl_2_initWithJavaLangRunnable_(self, capture$0);
+  return self;
+}
 
 - (void)run {
   [((id<JavaLangRunnable>) nil_chk(val$awaitCommit_)) run];
   AndroidAppQueuedWork_removeWithJavaLangRunnable_(val$awaitCommit_);
-}
-
-- (instancetype)initWithJavaLangRunnable:(id<JavaLangRunnable>)capture$0 {
-  AndroidAppSharedPreferencesImpl_EditorImpl_$2_initWithJavaLangRunnable_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -960,47 +947,47 @@ AndroidAppSharedPreferencesImpl_EditorImpl_$1 *create_AndroidAppSharedPreference
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithJavaLangRunnable:);
+  methods[0].selector = @selector(initWithJavaLangRunnable:);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$awaitCommit_", "LJavaLangRunnable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LJavaLangRunnable;", "LAndroidAppSharedPreferencesImpl_EditorImpl;", "apply" };
-  static const J2ObjcClassInfo _AndroidAppSharedPreferencesImpl_EditorImpl_$2 = { "", "android.app", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
-  return &_AndroidAppSharedPreferencesImpl_EditorImpl_$2;
+  static const void *ptrTable[] = { "LAndroidAppSharedPreferencesImpl_EditorImpl;", "apply" };
+  static const J2ObjcClassInfo _AndroidAppSharedPreferencesImpl_EditorImpl_2 = { "", "android.app", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  return &_AndroidAppSharedPreferencesImpl_EditorImpl_2;
 }
 
 @end
 
-void AndroidAppSharedPreferencesImpl_EditorImpl_$2_initWithJavaLangRunnable_(AndroidAppSharedPreferencesImpl_EditorImpl_$2 *self, id<JavaLangRunnable> capture$0) {
+void AndroidAppSharedPreferencesImpl_EditorImpl_2_initWithJavaLangRunnable_(AndroidAppSharedPreferencesImpl_EditorImpl_2 *self, id<JavaLangRunnable> capture$0) {
   JreStrongAssign(&self->val$awaitCommit_, capture$0);
   NSObject_init(self);
 }
 
-AndroidAppSharedPreferencesImpl_EditorImpl_$2 *new_AndroidAppSharedPreferencesImpl_EditorImpl_$2_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) {
-  J2OBJC_NEW_IMPL(AndroidAppSharedPreferencesImpl_EditorImpl_$2, initWithJavaLangRunnable_, capture$0)
+AndroidAppSharedPreferencesImpl_EditorImpl_2 *new_AndroidAppSharedPreferencesImpl_EditorImpl_2_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) {
+  J2OBJC_NEW_IMPL(AndroidAppSharedPreferencesImpl_EditorImpl_2, initWithJavaLangRunnable_, capture$0)
 }
 
-AndroidAppSharedPreferencesImpl_EditorImpl_$2 *create_AndroidAppSharedPreferencesImpl_EditorImpl_$2_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) {
-  J2OBJC_CREATE_IMPL(AndroidAppSharedPreferencesImpl_EditorImpl_$2, initWithJavaLangRunnable_, capture$0)
+AndroidAppSharedPreferencesImpl_EditorImpl_2 *create_AndroidAppSharedPreferencesImpl_EditorImpl_2_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) {
+  J2OBJC_CREATE_IMPL(AndroidAppSharedPreferencesImpl_EditorImpl_2, initWithJavaLangRunnable_, capture$0)
 }
 
-@implementation AndroidAppSharedPreferencesImpl_EditorImpl_$3
-
-- (void)run {
-  AndroidAppSharedPreferencesImpl_EditorImpl_notifyListenersWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(this$0_, val$mcr_);
-}
+@implementation AndroidAppSharedPreferencesImpl_EditorImpl_3
 
 - (instancetype)initWithAndroidAppSharedPreferencesImpl_EditorImpl:(AndroidAppSharedPreferencesImpl_EditorImpl *)outer$
             withAndroidAppSharedPreferencesImpl_MemoryCommitResult:(AndroidAppSharedPreferencesImpl_MemoryCommitResult *)capture$0 {
-  AndroidAppSharedPreferencesImpl_EditorImpl_$3_initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_(self, outer$, capture$0);
+  AndroidAppSharedPreferencesImpl_EditorImpl_3_initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_(self, outer$, capture$0);
   return self;
+}
+
+- (void)run {
+  AndroidAppSharedPreferencesImpl_EditorImpl_notifyListenersWithAndroidAppSharedPreferencesImpl_MemoryCommitResult_(this$0_, val$mcr_);
 }
 
 - (void)dealloc {
@@ -1011,40 +998,47 @@ AndroidAppSharedPreferencesImpl_EditorImpl_$2 *create_AndroidAppSharedPreference
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithAndroidAppSharedPreferencesImpl_EditorImpl:withAndroidAppSharedPreferencesImpl_MemoryCommitResult:);
+  methods[0].selector = @selector(initWithAndroidAppSharedPreferencesImpl_EditorImpl:withAndroidAppSharedPreferencesImpl_MemoryCommitResult:);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LAndroidAppSharedPreferencesImpl_EditorImpl;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$mcr_", "LAndroidAppSharedPreferencesImpl_MemoryCommitResult;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LAndroidAppSharedPreferencesImpl_EditorImpl;LAndroidAppSharedPreferencesImpl_MemoryCommitResult;", "LAndroidAppSharedPreferencesImpl_EditorImpl;", "notifyListenersWithAndroidAppSharedPreferencesImpl_MemoryCommitResult:" };
-  static const J2ObjcClassInfo _AndroidAppSharedPreferencesImpl_EditorImpl_$3 = { "", "android.app", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_AndroidAppSharedPreferencesImpl_EditorImpl_$3;
+  static const void *ptrTable[] = { "LAndroidAppSharedPreferencesImpl_EditorImpl;", "notifyListenersWithAndroidAppSharedPreferencesImpl_MemoryCommitResult:" };
+  static const J2ObjcClassInfo _AndroidAppSharedPreferencesImpl_EditorImpl_3 = { "", "android.app", ptrTable, methods, fields, 7, 0x8008, 2, 2, 0, -1, 1, -1, -1 };
+  return &_AndroidAppSharedPreferencesImpl_EditorImpl_3;
 }
 
 @end
 
-void AndroidAppSharedPreferencesImpl_EditorImpl_$3_initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_EditorImpl_$3 *self, AndroidAppSharedPreferencesImpl_EditorImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0) {
+void AndroidAppSharedPreferencesImpl_EditorImpl_3_initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_EditorImpl_3 *self, AndroidAppSharedPreferencesImpl_EditorImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$mcr_, capture$0);
   NSObject_init(self);
 }
 
-AndroidAppSharedPreferencesImpl_EditorImpl_$3 *new_AndroidAppSharedPreferencesImpl_EditorImpl_$3_initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_EditorImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0) {
-  J2OBJC_NEW_IMPL(AndroidAppSharedPreferencesImpl_EditorImpl_$3, initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_, outer$, capture$0)
+AndroidAppSharedPreferencesImpl_EditorImpl_3 *new_AndroidAppSharedPreferencesImpl_EditorImpl_3_initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_EditorImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0) {
+  J2OBJC_NEW_IMPL(AndroidAppSharedPreferencesImpl_EditorImpl_3, initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_, outer$, capture$0)
 }
 
-AndroidAppSharedPreferencesImpl_EditorImpl_$3 *create_AndroidAppSharedPreferencesImpl_EditorImpl_$3_initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_EditorImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0) {
-  J2OBJC_CREATE_IMPL(AndroidAppSharedPreferencesImpl_EditorImpl_$3, initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_, outer$, capture$0)
+AndroidAppSharedPreferencesImpl_EditorImpl_3 *create_AndroidAppSharedPreferencesImpl_EditorImpl_3_initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_(AndroidAppSharedPreferencesImpl_EditorImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0) {
+  J2OBJC_CREATE_IMPL(AndroidAppSharedPreferencesImpl_EditorImpl_3, initWithAndroidAppSharedPreferencesImpl_EditorImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_, outer$, capture$0)
 }
 
-@implementation AndroidAppSharedPreferencesImpl_$1
+@implementation AndroidAppSharedPreferencesImpl_1
+
+- (instancetype)initWithAndroidAppSharedPreferencesImpl:(AndroidAppSharedPreferencesImpl *)outer$
+ withAndroidAppSharedPreferencesImpl_MemoryCommitResult:(AndroidAppSharedPreferencesImpl_MemoryCommitResult *)capture$0
+                                   withJavaLangRunnable:(id<JavaLangRunnable>)capture$1 {
+  AndroidAppSharedPreferencesImpl_1_initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_(self, outer$, capture$0, capture$1);
+  return self;
+}
 
 - (void)run {
   @synchronized(this$0_->mWritingToDiskLock_) {
@@ -1058,13 +1052,6 @@ AndroidAppSharedPreferencesImpl_EditorImpl_$3 *create_AndroidAppSharedPreference
   }
 }
 
-- (instancetype)initWithAndroidAppSharedPreferencesImpl:(AndroidAppSharedPreferencesImpl *)outer$
- withAndroidAppSharedPreferencesImpl_MemoryCommitResult:(AndroidAppSharedPreferencesImpl_MemoryCommitResult *)capture$0
-                                   withJavaLangRunnable:(id<JavaLangRunnable>)capture$1 {
-  AndroidAppSharedPreferencesImpl_$1_initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_(self, outer$, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$mcr_);
@@ -1074,37 +1061,37 @@ AndroidAppSharedPreferencesImpl_EditorImpl_$3 *create_AndroidAppSharedPreference
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithAndroidAppSharedPreferencesImpl:withAndroidAppSharedPreferencesImpl_MemoryCommitResult:withJavaLangRunnable:);
+  methods[0].selector = @selector(initWithAndroidAppSharedPreferencesImpl:withAndroidAppSharedPreferencesImpl_MemoryCommitResult:withJavaLangRunnable:);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LAndroidAppSharedPreferencesImpl;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$mcr_", "LAndroidAppSharedPreferencesImpl_MemoryCommitResult;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$postWriteRunnable_", "LJavaLangRunnable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LAndroidAppSharedPreferencesImpl;LAndroidAppSharedPreferencesImpl_MemoryCommitResult;LJavaLangRunnable;", "LAndroidAppSharedPreferencesImpl;", "enqueueDiskWriteWithAndroidAppSharedPreferencesImpl_MemoryCommitResult:withJavaLangRunnable:" };
-  static const J2ObjcClassInfo _AndroidAppSharedPreferencesImpl_$1 = { "", "android.app", ptrTable, methods, fields, 7, 0x8008, 2, 3, 1, -1, 2, -1, -1 };
-  return &_AndroidAppSharedPreferencesImpl_$1;
+  static const void *ptrTable[] = { "LAndroidAppSharedPreferencesImpl;", "enqueueDiskWriteWithAndroidAppSharedPreferencesImpl_MemoryCommitResult:withJavaLangRunnable:" };
+  static const J2ObjcClassInfo _AndroidAppSharedPreferencesImpl_1 = { "", "android.app", ptrTable, methods, fields, 7, 0x8008, 2, 3, 0, -1, 1, -1, -1 };
+  return &_AndroidAppSharedPreferencesImpl_1;
 }
 
 @end
 
-void AndroidAppSharedPreferencesImpl_$1_initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_(AndroidAppSharedPreferencesImpl_$1 *self, AndroidAppSharedPreferencesImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0, id<JavaLangRunnable> capture$1) {
+void AndroidAppSharedPreferencesImpl_1_initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_(AndroidAppSharedPreferencesImpl_1 *self, AndroidAppSharedPreferencesImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0, id<JavaLangRunnable> capture$1) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$mcr_, capture$0);
   JreStrongAssign(&self->val$postWriteRunnable_, capture$1);
   NSObject_init(self);
 }
 
-AndroidAppSharedPreferencesImpl_$1 *new_AndroidAppSharedPreferencesImpl_$1_initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_(AndroidAppSharedPreferencesImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0, id<JavaLangRunnable> capture$1) {
-  J2OBJC_NEW_IMPL(AndroidAppSharedPreferencesImpl_$1, initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_, outer$, capture$0, capture$1)
+AndroidAppSharedPreferencesImpl_1 *new_AndroidAppSharedPreferencesImpl_1_initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_(AndroidAppSharedPreferencesImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0, id<JavaLangRunnable> capture$1) {
+  J2OBJC_NEW_IMPL(AndroidAppSharedPreferencesImpl_1, initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_, outer$, capture$0, capture$1)
 }
 
-AndroidAppSharedPreferencesImpl_$1 *create_AndroidAppSharedPreferencesImpl_$1_initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_(AndroidAppSharedPreferencesImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0, id<JavaLangRunnable> capture$1) {
-  J2OBJC_CREATE_IMPL(AndroidAppSharedPreferencesImpl_$1, initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_, outer$, capture$0, capture$1)
+AndroidAppSharedPreferencesImpl_1 *create_AndroidAppSharedPreferencesImpl_1_initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_(AndroidAppSharedPreferencesImpl *outer$, AndroidAppSharedPreferencesImpl_MemoryCommitResult *capture$0, id<JavaLangRunnable> capture$1) {
+  J2OBJC_CREATE_IMPL(AndroidAppSharedPreferencesImpl_1, initWithAndroidAppSharedPreferencesImpl_withAndroidAppSharedPreferencesImpl_MemoryCommitResult_withJavaLangRunnable_, outer$, capture$0, capture$1)
 }

@@ -13,13 +13,17 @@
 #include "RxSubscriptionsSerialSubscription.h"
 #include "RxSubscriptionsSubscriptions.h"
 
-@interface RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1 : RxSubscriber {
+@interface RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1 : RxSubscriber {
  @public
   RxInternalOperatorsOnSubscribeDelaySubscriptionOther *this$0_;
-  jboolean done_;
   RxSubscriber *val$child_;
   RxSubscriptionsSerialSubscription *val$serial_;
+  jboolean done_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther:(RxInternalOperatorsOnSubscribeDelaySubscriptionOther *)outer$
+                                                            withRxSubscriber:(RxSubscriber *)capture$0
+                                       withRxSubscriptionsSerialSubscription:(RxSubscriptionsSerialSubscription *)capture$1;
 
 - (void)onNextWithId:(id)t;
 
@@ -27,23 +31,15 @@
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther:(RxInternalOperatorsOnSubscribeDelaySubscriptionOther *)outer$
-                                                            withRxSubscriber:(RxSubscriber *)capture$0
-                                       withRxSubscriptionsSerialSubscription:(RxSubscriptionsSerialSubscription *)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1, this$0_, RxInternalOperatorsOnSubscribeDelaySubscriptionOther *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1, val$child_, RxSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1, val$serial_, RxSubscriptionsSerialSubscription *)
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1_initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1 *self, RxInternalOperatorsOnSubscribeDelaySubscriptionOther *outer$, RxSubscriber *capture$0, RxSubscriptionsSerialSubscription *capture$1);
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1_initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1 *self, RxInternalOperatorsOnSubscribeDelaySubscriptionOther *outer$, RxSubscriber *capture$0, RxSubscriptionsSerialSubscription *capture$1);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1 *new_RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1_initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeDelaySubscriptionOther *outer$, RxSubscriber *capture$0, RxSubscriptionsSerialSubscription *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1 *new_RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1_initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeDelaySubscriptionOther *outer$, RxSubscriber *capture$0, RxSubscriptionsSerialSubscription *capture$1) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1 *create_RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1_initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeDelaySubscriptionOther *outer$, RxSubscriber *capture$0, RxSubscriptionsSerialSubscription *capture$1);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1 *create_RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1_initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeDelaySubscriptionOther *outer$, RxSubscriber *capture$0, RxSubscriptionsSerialSubscription *capture$1);
 
 @implementation RxInternalOperatorsOnSubscribeDelaySubscriptionOther
 
@@ -57,7 +53,7 @@ __attribute__((unused)) static RxInternalOperatorsOnSubscribeDelaySubscriptionOt
   RxSubscriptionsSerialSubscription *serial = create_RxSubscriptionsSerialSubscription_init();
   [((RxSubscriber *) nil_chk(t)) addWithRxSubscription:serial];
   RxSubscriber *child = RxObserversSubscribers_wrapWithRxSubscriber_(t);
-  RxSubscriber *otherSubscriber = create_RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1_initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_(self, child, serial);
+  RxSubscriber *otherSubscriber = create_RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1_initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_(self, child, serial);
   [serial setWithRxSubscription:otherSubscriber];
   [((RxObservable *) nil_chk(other_)) unsafeSubscribeWithRxSubscriber:otherSubscriber];
 }
@@ -105,7 +101,14 @@ RxInternalOperatorsOnSubscribeDelaySubscriptionOther *create_RxInternalOperators
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeDelaySubscriptionOther)
 
-@implementation RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1
+@implementation RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther:(RxInternalOperatorsOnSubscribeDelaySubscriptionOther *)outer$
+                                                            withRxSubscriber:(RxSubscriber *)capture$0
+                                       withRxSubscriptionsSerialSubscription:(RxSubscriptionsSerialSubscription *)capture$1 {
+  RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1_initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_(self, outer$, capture$0, capture$1);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   [self onCompleted];
@@ -129,15 +132,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeDelaySubscription
   [((RxObservable *) nil_chk(this$0_->main_)) unsafeSubscribeWithRxSubscriber:val$child_];
 }
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther:(RxInternalOperatorsOnSubscribeDelaySubscriptionOther *)outer$
-                                                            withRxSubscriber:(RxSubscriber *)capture$0
-                                       withRxSubscriptionsSerialSubscription:(RxSubscriptionsSerialSubscription *)capture$1 {
-  RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1_initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_(self, outer$, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1 class]);
   RELEASE_(this$0_);
   RELEASE_(val$child_);
   RELEASE_(val$serial_);
@@ -146,42 +141,42 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeDelaySubscription
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther:withRxSubscriber:withRxSubscriptionsSerialSubscription:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther:withRxSubscriber:withRxSubscriptionsSerialSubscription:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOnSubscribeDelaySubscriptionOther;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
-    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "this$0_", "LRxInternalOperatorsOnSubscribeDelaySubscriptionOther;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
     { "val$serial_", "LRxSubscriptionsSerialSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TU;)V", "onError", "LNSException;", "LRxInternalOperatorsOnSubscribeDelaySubscriptionOther;LRxSubscriber;LRxSubscriptionsSerialSubscription;", "(Lrx/internal/operators/OnSubscribeDelaySubscriptionOther;Lrx/Subscriber<TT;>;Lrx/subscriptions/SerialSubscription;)V", "Lrx/Subscriber<TT;>;", "LRxInternalOperatorsOnSubscribeDelaySubscriptionOther;", "callWithId:", "Lrx/Subscriber<TU;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 4, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1;
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TU;)V", "onError", "LNSException;", "Lrx/internal/operators/OnSubscribeDelaySubscriptionOther<TT;TU;>;", "Lrx/Subscriber<TT;>;", "LRxInternalOperatorsOnSubscribeDelaySubscriptionOther;", "callWithId:", "Lrx/Subscriber<TU;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 4, 7, -1, 8, 9, -1 };
+  return &_RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1;
 }
 
 @end
 
-void RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1_initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1 *self, RxInternalOperatorsOnSubscribeDelaySubscriptionOther *outer$, RxSubscriber *capture$0, RxSubscriptionsSerialSubscription *capture$1) {
+void RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1_initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1 *self, RxInternalOperatorsOnSubscribeDelaySubscriptionOther *outer$, RxSubscriber *capture$0, RxSubscriptionsSerialSubscription *capture$1) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$child_, capture$0);
   JreStrongAssign(&self->val$serial_, capture$1);
   RxSubscriber_init(self);
 }
 
-RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1 *new_RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1_initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeDelaySubscriptionOther *outer$, RxSubscriber *capture$0, RxSubscriptionsSerialSubscription *capture$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1, initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_, outer$, capture$0, capture$1)
+RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1 *new_RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1_initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeDelaySubscriptionOther *outer$, RxSubscriber *capture$0, RxSubscriptionsSerialSubscription *capture$1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1, initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_, outer$, capture$0, capture$1)
 }
 
-RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1 *create_RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1_initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeDelaySubscriptionOther *outer$, RxSubscriber *capture$0, RxSubscriptionsSerialSubscription *capture$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeDelaySubscriptionOther_$1, initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_, outer$, capture$0, capture$1)
+RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1 *create_RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1_initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_(RxInternalOperatorsOnSubscribeDelaySubscriptionOther *outer$, RxSubscriber *capture$0, RxSubscriptionsSerialSubscription *capture$1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeDelaySubscriptionOther_1, initWithRxInternalOperatorsOnSubscribeDelaySubscriptionOther_withRxSubscriber_withRxSubscriptionsSerialSubscription_, outer$, capture$0, capture$1)
 }

@@ -37,7 +37,6 @@
 #include "CoTouchlabSqueakyFieldTypesStringBytesType.h"
 #include "CoTouchlabSqueakyFieldTypesStringType.h"
 #include "CoTouchlabSqueakyFieldTypesTimeStampType.h"
-#include "IOSClass.h"
 #include "IOSObjectArray.h"
 #include "J2ObjC_source.h"
 #include "java/lang/Enum.h"

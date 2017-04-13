@@ -20,10 +20,6 @@ J2OBJC_INITIALIZED_DEFN(AndroidTelephonyJapanesePhoneNumberFormatter)
 
 @implementation AndroidTelephonyJapanesePhoneNumberFormatter
 
-+ (void)formatWithAndroidTextEditable:(id<AndroidTextEditable>)text {
-  AndroidTelephonyJapanesePhoneNumberFormatter_formatWithAndroidTextEditable_(text);
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   AndroidTelephonyJapanesePhoneNumberFormatter_init(self);
@@ -31,15 +27,19 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
++ (void)formatWithAndroidTextEditable:(id<AndroidTextEditable>)text {
+  AndroidTelephonyJapanesePhoneNumberFormatter_formatWithAndroidTextEditable_(text);
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x9, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(formatWithAndroidTextEditable:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(formatWithAndroidTextEditable:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "FORMAT_MAP", "[S", .constantValue.asLong = 0, 0xa, -1, 2, -1, -1 },
@@ -57,6 +57,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void AndroidTelephonyJapanesePhoneNumberFormatter_init(AndroidTelephonyJapanesePhoneNumberFormatter *self) {
+  NSObject_init(self);
+}
+
+AndroidTelephonyJapanesePhoneNumberFormatter *new_AndroidTelephonyJapanesePhoneNumberFormatter_init() {
+  J2OBJC_NEW_IMPL(AndroidTelephonyJapanesePhoneNumberFormatter, init)
+}
+
+AndroidTelephonyJapanesePhoneNumberFormatter *create_AndroidTelephonyJapanesePhoneNumberFormatter_init() {
+  J2OBJC_CREATE_IMPL(AndroidTelephonyJapanesePhoneNumberFormatter, init)
+}
 
 void AndroidTelephonyJapanesePhoneNumberFormatter_formatWithAndroidTextEditable_(id<AndroidTextEditable> text) {
   AndroidTelephonyJapanesePhoneNumberFormatter_initialize();
@@ -112,18 +124,6 @@ void AndroidTelephonyJapanesePhoneNumberFormatter_formatWithAndroidTextEditable_
   if (length > 3 && rootIndex == 3) {
     [text insertWithInt:rootIndex withJavaLangCharSequence:@"-"];
   }
-}
-
-void AndroidTelephonyJapanesePhoneNumberFormatter_init(AndroidTelephonyJapanesePhoneNumberFormatter *self) {
-  NSObject_init(self);
-}
-
-AndroidTelephonyJapanesePhoneNumberFormatter *new_AndroidTelephonyJapanesePhoneNumberFormatter_init() {
-  J2OBJC_NEW_IMPL(AndroidTelephonyJapanesePhoneNumberFormatter, init)
-}
-
-AndroidTelephonyJapanesePhoneNumberFormatter *create_AndroidTelephonyJapanesePhoneNumberFormatter_init() {
-  J2OBJC_CREATE_IMPL(AndroidTelephonyJapanesePhoneNumberFormatter, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidTelephonyJapanesePhoneNumberFormatter)

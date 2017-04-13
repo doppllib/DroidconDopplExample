@@ -12,12 +12,16 @@
 #include "java/util/Deque.h"
 #include "java/util/concurrent/TimeUnit.h"
 
-@interface RxInternalOperatorsOperatorSkipLastTimed_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorSkipLastTimed_1 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorSkipLastTimed *this$0_;
-  id<JavaUtilDeque> buffer_;
   RxSubscriber *val$subscriber_;
+  id<JavaUtilDeque> buffer_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorSkipLastTimed:(RxInternalOperatorsOperatorSkipLastTimed *)outer$
+                                                withRxSubscriber:(RxSubscriber *)capture$0
+                                                withRxSubscriber:(RxSubscriber *)param0;
 
 - (void)emitItemsOutOfWindowWithLong:(jlong)now;
 
@@ -27,25 +31,19 @@
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxInternalOperatorsOperatorSkipLastTimed:(RxInternalOperatorsOperatorSkipLastTimed *)outer$
-                                                withRxSubscriber:(RxSubscriber *)capture$0
-                                                withRxSubscriber:(RxSubscriber *)arg$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSkipLastTimed_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSkipLastTimed_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSkipLastTimed_$1, this$0_, RxInternalOperatorsOperatorSkipLastTimed *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSkipLastTimed_$1, buffer_, id<JavaUtilDeque>)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSkipLastTimed_$1, val$subscriber_, RxSubscriber *)
+J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSkipLastTimed_1, buffer_, id<JavaUtilDeque>)
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorSkipLastTimed_$1_emitItemsOutOfWindowWithLong_(RxInternalOperatorsOperatorSkipLastTimed_$1 *self, jlong now);
+__attribute__((unused)) static void RxInternalOperatorsOperatorSkipLastTimed_1_initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLastTimed_1 *self, RxInternalOperatorsOperatorSkipLastTimed *outer$, RxSubscriber *capture$0, RxSubscriber *param0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorSkipLastTimed_$1_initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLastTimed_$1 *self, RxInternalOperatorsOperatorSkipLastTimed *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorSkipLastTimed_1 *new_RxInternalOperatorsOperatorSkipLastTimed_1_initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLastTimed *outer$, RxSubscriber *capture$0, RxSubscriber *param0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorSkipLastTimed_$1 *new_RxInternalOperatorsOperatorSkipLastTimed_$1_initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLastTimed *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorSkipLastTimed_1 *create_RxInternalOperatorsOperatorSkipLastTimed_1_initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLastTimed *outer$, RxSubscriber *capture$0, RxSubscriber *param0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorSkipLastTimed_$1 *create_RxInternalOperatorsOperatorSkipLastTimed_$1_initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLastTimed *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static void RxInternalOperatorsOperatorSkipLastTimed_1_emitItemsOutOfWindowWithLong_(RxInternalOperatorsOperatorSkipLastTimed_1 *self, jlong now);
 
 @implementation RxInternalOperatorsOperatorSkipLastTimed
 
@@ -57,7 +55,7 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit
 }
 
 - (RxSubscriber *)callWithId:(RxSubscriber *)subscriber {
-  return create_RxInternalOperatorsOperatorSkipLastTimed_$1_initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_(self, subscriber, subscriber);
+  return create_RxInternalOperatorsOperatorSkipLastTimed_1_initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_(self, subscriber, subscriber);
 }
 
 - (void)dealloc {
@@ -102,15 +100,22 @@ RxInternalOperatorsOperatorSkipLastTimed *create_RxInternalOperatorsOperatorSkip
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorSkipLastTimed)
 
-@implementation RxInternalOperatorsOperatorSkipLastTimed_$1
+@implementation RxInternalOperatorsOperatorSkipLastTimed_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorSkipLastTimed:(RxInternalOperatorsOperatorSkipLastTimed *)outer$
+                                                withRxSubscriber:(RxSubscriber *)capture$0
+                                                withRxSubscriber:(RxSubscriber *)param0 {
+  RxInternalOperatorsOperatorSkipLastTimed_1_initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, param0);
+  return self;
+}
 
 - (void)emitItemsOutOfWindowWithLong:(jlong)now {
-  RxInternalOperatorsOperatorSkipLastTimed_$1_emitItemsOutOfWindowWithLong_(self, now);
+  RxInternalOperatorsOperatorSkipLastTimed_1_emitItemsOutOfWindowWithLong_(self, now);
 }
 
 - (void)onNextWithId:(id)value {
   jlong now = [((RxScheduler *) nil_chk(this$0_->scheduler_)) now];
-  RxInternalOperatorsOperatorSkipLastTimed_$1_emitItemsOutOfWindowWithLong_(self, now);
+  RxInternalOperatorsOperatorSkipLastTimed_1_emitItemsOutOfWindowWithLong_(self, now);
   [((id<JavaUtilDeque>) nil_chk(buffer_)) offerLastWithId:create_RxSchedulersTimestamped_initWithLong_withId_(now, value)];
 }
 
@@ -119,54 +124,61 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorSkipLastTimed)
 }
 
 - (void)onCompleted {
-  RxInternalOperatorsOperatorSkipLastTimed_$1_emitItemsOutOfWindowWithLong_(self, [((RxScheduler *) nil_chk(this$0_->scheduler_)) now]);
+  RxInternalOperatorsOperatorSkipLastTimed_1_emitItemsOutOfWindowWithLong_(self, [((RxScheduler *) nil_chk(this$0_->scheduler_)) now]);
   [((RxSubscriber *) nil_chk(val$subscriber_)) onCompleted];
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorSkipLastTimed:(RxInternalOperatorsOperatorSkipLastTimed *)outer$
-                                                withRxSubscriber:(RxSubscriber *)capture$0
-                                                withRxSubscriber:(RxSubscriber *)arg$0 {
-  RxInternalOperatorsOperatorSkipLastTimed_$1_initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, arg$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorSkipLastTimed_$1 class]);
   RELEASE_(this$0_);
-  RELEASE_(buffer_);
   RELEASE_(val$subscriber_);
+  RELEASE_(buffer_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x2, 0, 1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
-    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
+    { NULL, "V", 0x2, 2, 3, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 4, 5, -1, 6, -1, -1 },
+    { NULL, "V", 0x1, 7, 8, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 7, -1, 8, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(emitItemsOutOfWindowWithLong:);
-  methods[1].selector = @selector(onNextWithId:);
-  methods[2].selector = @selector(onErrorWithNSException:);
-  methods[3].selector = @selector(onCompleted);
-  methods[4].selector = @selector(initWithRxInternalOperatorsOperatorSkipLastTimed:withRxSubscriber:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorSkipLastTimed:withRxSubscriber:withRxSubscriber:);
+  methods[1].selector = @selector(emitItemsOutOfWindowWithLong:);
+  methods[2].selector = @selector(onNextWithId:);
+  methods[3].selector = @selector(onErrorWithNSException:);
+  methods[4].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorSkipLastTimed;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "buffer_", "LJavaUtilDeque;", .constantValue.asLong = 0, 0x2, -1, -1, 9, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorSkipLastTimed;", .constantValue.asLong = 0, 0x1012, -1, -1, 9, -1 },
     { "val$subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 10, -1 },
+    { "buffer_", "LJavaUtilDeque;", .constantValue.asLong = 0, 0x2, -1, -1, 11, -1 },
   };
-  static const void *ptrTable[] = { "emitItemsOutOfWindow", "J", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxInternalOperatorsOperatorSkipLastTimed;LRxSubscriber;LRxSubscriber;", "(Lrx/internal/operators/OperatorSkipLastTimed;Lrx/Subscriber<-TT;>;Lrx/Subscriber<*>;)V", "Ljava/util/Deque<Lrx/schedulers/Timestamped<TT;>;>;", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorSkipLastTimed;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSkipLastTimed_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 3, 11, -1, 12, 13, -1 };
-  return &_RxInternalOperatorsOperatorSkipLastTimed_$1;
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "emitItemsOutOfWindow", "J", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/internal/operators/OperatorSkipLastTimed<TT;>;", "Lrx/Subscriber<-TT;>;", "Ljava/util/Deque<Lrx/schedulers/Timestamped<TT;>;>;", "LRxInternalOperatorsOperatorSkipLastTimed;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSkipLastTimed_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 3, 12, -1, 13, 14, -1 };
+  return &_RxInternalOperatorsOperatorSkipLastTimed_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorSkipLastTimed_$1_emitItemsOutOfWindowWithLong_(RxInternalOperatorsOperatorSkipLastTimed_$1 *self, jlong now) {
+void RxInternalOperatorsOperatorSkipLastTimed_1_initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLastTimed_1 *self, RxInternalOperatorsOperatorSkipLastTimed *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  JreStrongAssign(&self->this$0_, outer$);
+  JreStrongAssign(&self->val$subscriber_, capture$0);
+  RxSubscriber_initWithRxSubscriber_(self, param0);
+  JreStrongAssignAndConsume(&self->buffer_, new_JavaUtilArrayDeque_init());
+}
+
+RxInternalOperatorsOperatorSkipLastTimed_1 *new_RxInternalOperatorsOperatorSkipLastTimed_1_initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLastTimed *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSkipLastTimed_1, initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_, outer$, capture$0, param0)
+}
+
+RxInternalOperatorsOperatorSkipLastTimed_1 *create_RxInternalOperatorsOperatorSkipLastTimed_1_initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLastTimed *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSkipLastTimed_1, initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_, outer$, capture$0, param0)
+}
+
+void RxInternalOperatorsOperatorSkipLastTimed_1_emitItemsOutOfWindowWithLong_(RxInternalOperatorsOperatorSkipLastTimed_1 *self, jlong now) {
   jlong limit = now - self->this$0_->timeInMillis_;
   while (![((id<JavaUtilDeque>) nil_chk(self->buffer_)) isEmpty]) {
     RxSchedulersTimestamped *v = [((id<JavaUtilDeque>) nil_chk(self->buffer_)) getFirst];
@@ -178,19 +190,4 @@ void RxInternalOperatorsOperatorSkipLastTimed_$1_emitItemsOutOfWindowWithLong_(R
       break;
     }
   }
-}
-
-void RxInternalOperatorsOperatorSkipLastTimed_$1_initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLastTimed_$1 *self, RxInternalOperatorsOperatorSkipLastTimed *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  JreStrongAssign(&self->this$0_, outer$);
-  JreStrongAssign(&self->val$subscriber_, capture$0);
-  RxSubscriber_initWithRxSubscriber_(self, arg$0);
-  JreStrongAssignAndConsume(&self->buffer_, new_JavaUtilArrayDeque_init());
-}
-
-RxInternalOperatorsOperatorSkipLastTimed_$1 *new_RxInternalOperatorsOperatorSkipLastTimed_$1_initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLastTimed *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSkipLastTimed_$1, initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_, outer$, capture$0, arg$0)
-}
-
-RxInternalOperatorsOperatorSkipLastTimed_$1 *create_RxInternalOperatorsOperatorSkipLastTimed_$1_initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLastTimed *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSkipLastTimed_$1, initWithRxInternalOperatorsOperatorSkipLastTimed_withRxSubscriber_withRxSubscriber_, outer$, capture$0, arg$0)
 }

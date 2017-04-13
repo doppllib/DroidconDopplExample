@@ -47,26 +47,24 @@ J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsOperatorEagerConcatMap_EagerOute
 
 J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber, sharedProducer_, RxInternalOperatorsOperatorEagerConcatMap_EagerOuterProducer *)
 
-@interface RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber *this$0_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber:(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber *)outer$;
+
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1, this$0_, RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1_initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1 *self, RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1_initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1 *self, RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1 *new_RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1_initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1 *new_RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1_initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1 *create_RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1_initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1 *create_RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1_initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber *outer$);
 
 @implementation RxInternalOperatorsOperatorEagerConcatMap
 
@@ -197,7 +195,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorEagerConcatMap_Eager
 
 - (void)init__ {
   JreStrongAssignAndConsume(&sharedProducer_, new_RxInternalOperatorsOperatorEagerConcatMap_EagerOuterProducer_initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_(self));
-  [self addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1_initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_(self))];
+  [self addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1_initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_(self))];
   [((RxSubscriber *) nil_chk(actual_)) addWithRxSubscription:self];
   [actual_ setProducerWithRxProducer:sharedProducer_];
 }
@@ -342,7 +340,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorEagerConcatMap_Eager
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber class]);
   RELEASE_(mapper_);
   RELEASE_(actual_);
   RELEASE_(subscribers_);
@@ -410,18 +407,18 @@ RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber *create_RxInterna
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber)
 
-@implementation RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1
+@implementation RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber:(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber *)outer$ {
+  RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1_initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_(self, outer$);
+  return self;
+}
 
 - (void)call {
   JreAssignVolatileBoolean(&this$0_->cancelled_, true);
   if ([((JavaUtilConcurrentAtomicAtomicInteger *) nil_chk(this$0_->wip_)) getAndIncrement] == 0) {
     [this$0_ cleanup];
   }
-}
-
-- (instancetype)initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber:(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber *)outer$ {
-  RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1_initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_(self, outer$);
-  return self;
 }
 
 - (void)dealloc {
@@ -431,35 +428,35 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorEagerConcatMap_Eager
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber;", "init__" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
-  return &_RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1;
+  static const void *ptrTable[] = { "Lrx/internal/operators/OperatorEagerConcatMap$EagerOuterSubscriber<TT;TR;>;", "LRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber;", "init__" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
+  return &_RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1_initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1 *self, RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber *outer$) {
+void RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1_initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1 *self, RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1 *new_RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1_initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1, initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_, outer$)
+RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1 *new_RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1_initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1, initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_, outer$)
 }
 
-RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1 *create_RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1_initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1, initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_, outer$)
+RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1 *create_RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1_initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_1, initWithRxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_, outer$)
 }
 
 @implementation RxInternalOperatorsOperatorEagerConcatMap_EagerInnerSubscriber
@@ -491,7 +488,6 @@ RxInternalOperatorsOperatorEagerConcatMap_EagerOuterSubscriber_$1 *create_RxInte
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorEagerConcatMap_EagerInnerSubscriber class]);
   RELEASE_(parent_);
   RELEASE_(queue_);
   RELEASE_(error_);

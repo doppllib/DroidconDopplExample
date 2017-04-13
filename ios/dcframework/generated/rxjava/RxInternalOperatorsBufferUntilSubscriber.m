@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/BufferUntilSubscriber.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxFunctionsAction0.h"
 #include "RxInternalOperatorsBufferUntilSubscriber.h"
@@ -42,28 +41,28 @@ inline jlong RxInternalOperatorsBufferUntilSubscriber_State_get_serialVersionUID
 #define RxInternalOperatorsBufferUntilSubscriber_State_serialVersionUID 8026705089538090368LL
 J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsBufferUntilSubscriber_State, serialVersionUID, jlong)
 
-@interface RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction *this$0_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction:(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction *)outer$;
+
+- (void)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1, this$0_, RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction *)
+__attribute__((unused)) static void RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1_initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1 *self, RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1_initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1 *self, RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction *outer$);
+__attribute__((unused)) static RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1 *new_RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1_initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1 *new_RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1_initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction *outer$) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1 *create_RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1_initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction *outer$);
 
-__attribute__((unused)) static RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1 *create_RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1_initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction *outer$);
+@interface RxInternalOperatorsBufferUntilSubscriber_1 : NSObject < RxObserver >
 
-@interface RxInternalOperatorsBufferUntilSubscriber_$1 : NSObject < RxObserver >
+- (instancetype)init;
 
 - (void)onCompleted;
 
@@ -71,17 +70,15 @@ __attribute__((unused)) static RxInternalOperatorsBufferUntilSubscriber_OnSubscr
 
 - (void)onNextWithId:(id)t;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsBufferUntilSubscriber_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsBufferUntilSubscriber_1)
 
-__attribute__((unused)) static void RxInternalOperatorsBufferUntilSubscriber_$1_init(RxInternalOperatorsBufferUntilSubscriber_$1 *self);
+__attribute__((unused)) static void RxInternalOperatorsBufferUntilSubscriber_1_init(RxInternalOperatorsBufferUntilSubscriber_1 *self);
 
-__attribute__((unused)) static RxInternalOperatorsBufferUntilSubscriber_$1 *new_RxInternalOperatorsBufferUntilSubscriber_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsBufferUntilSubscriber_1 *new_RxInternalOperatorsBufferUntilSubscriber_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsBufferUntilSubscriber_$1 *create_RxInternalOperatorsBufferUntilSubscriber_$1_init();
+__attribute__((unused)) static RxInternalOperatorsBufferUntilSubscriber_1 *create_RxInternalOperatorsBufferUntilSubscriber_1_init();
 
 J2OBJC_INITIALIZED_DEFN(RxInternalOperatorsBufferUntilSubscriber)
 
@@ -172,7 +169,7 @@ id<RxObserver> RxInternalOperatorsBufferUntilSubscriber_EMPTY_OBSERVER;
 
 + (void)initialize {
   if (self == [RxInternalOperatorsBufferUntilSubscriber class]) {
-    JreStrongAssignAndConsume(&RxInternalOperatorsBufferUntilSubscriber_EMPTY_OBSERVER, new_RxInternalOperatorsBufferUntilSubscriber_$1_init());
+    JreStrongAssignAndConsume(&RxInternalOperatorsBufferUntilSubscriber_EMPTY_OBSERVER, new_RxInternalOperatorsBufferUntilSubscriber_1_init());
     J2OBJC_SET_INITIALIZED(RxInternalOperatorsBufferUntilSubscriber)
   }
 }
@@ -218,17 +215,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsBufferUntilSubscriber)
 
 @implementation RxInternalOperatorsBufferUntilSubscriber_State
 
-- (jboolean)casObserverRefWithRxObserver:(id<RxObserver>)expected
-                          withRxObserver:(id<RxObserver>)next {
-  return [self compareAndSetWithId:expected withId:next];
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   RxInternalOperatorsBufferUntilSubscriber_State_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
+
+- (jboolean)casObserverRefWithRxObserver:(id<RxObserver>)expected
+                          withRxObserver:(id<RxObserver>)next {
+  return [self compareAndSetWithId:expected withId:next];
+}
 
 - (void)dealloc {
   RELEASE_(guard_);
@@ -238,13 +235,13 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "Z", 0x0, 0, 1, -1, 2, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "Z", 0x0, 0, 1, -1, 2, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(casObserverRefWithRxObserver:withRxObserver:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(casObserverRefWithRxObserver:withRxObserver:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "serialVersionUID", "J", .constantValue.asLong = RxInternalOperatorsBufferUntilSubscriber_State_serialVersionUID, 0x1a, -1, -1, -1, -1 },
@@ -284,7 +281,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsBufferUntilSubscriber_State)
 
 - (void)callWithId:(RxSubscriber *)s {
   if ([((RxInternalOperatorsBufferUntilSubscriber_State *) nil_chk(state_)) casObserverRefWithRxObserver:nil withRxObserver:s]) {
-    [((RxSubscriber *) nil_chk(s)) addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1_initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_(self))];
+    [((RxSubscriber *) nil_chk(s)) addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1_initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_(self))];
     jboolean win = false;
     @synchronized(state_->guard_) {
       if (!state_->emitting_) {
@@ -352,15 +349,15 @@ RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction *create_RxInternalOpe
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction)
 
-@implementation RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1
+@implementation RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1
+
+- (instancetype)initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction:(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction *)outer$ {
+  RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1_initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_(self, outer$);
+  return self;
+}
 
 - (void)call {
   [((RxInternalOperatorsBufferUntilSubscriber_State *) nil_chk(this$0_->state_)) setWithId:JreLoadStatic(RxInternalOperatorsBufferUntilSubscriber, EMPTY_OBSERVER)];
-}
-
-- (instancetype)initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction:(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction *)outer$ {
-  RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1_initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_(self, outer$);
-  return self;
 }
 
 - (void)dealloc {
@@ -370,38 +367,45 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsBufferUntilSubscriber_OnSubs
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
-  return &_RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1;
+  static const void *ptrTable[] = { "Lrx/internal/operators/BufferUntilSubscriber$OnSubscribeAction<TT;>;", "LRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction;", "callWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
+  return &_RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1;
 }
 
 @end
 
-void RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1_initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1 *self, RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction *outer$) {
+void RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1_initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1 *self, RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1 *new_RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1_initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1, initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_, outer$)
+RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1 *new_RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1_initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1, initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_, outer$)
 }
 
-RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1 *create_RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1_initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1, initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_, outer$)
+RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1 *create_RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1_initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_1, initWithRxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_, outer$)
 }
 
-@implementation RxInternalOperatorsBufferUntilSubscriber_$1
+@implementation RxInternalOperatorsBufferUntilSubscriber_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalOperatorsBufferUntilSubscriber_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)onCompleted {
 }
@@ -412,42 +416,35 @@ RxInternalOperatorsBufferUntilSubscriber_OnSubscribeAction_$1 *create_RxInternal
 - (void)onNextWithId:(id)t {
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalOperatorsBufferUntilSubscriber_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "LRxInternalOperatorsBufferUntilSubscriber;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsBufferUntilSubscriber_$1 = { "", "rx.internal.operators", ptrTable, methods, NULL, 7, 0x8008, 4, 0, 4, -1, -1, -1, -1 };
-  return &_RxInternalOperatorsBufferUntilSubscriber_$1;
+  static const J2ObjcClassInfo _RxInternalOperatorsBufferUntilSubscriber_1 = { "", "rx.internal.operators", ptrTable, methods, NULL, 7, 0x8008, 4, 0, 4, -1, -1, -1, -1 };
+  return &_RxInternalOperatorsBufferUntilSubscriber_1;
 }
 
 @end
 
-void RxInternalOperatorsBufferUntilSubscriber_$1_init(RxInternalOperatorsBufferUntilSubscriber_$1 *self) {
+void RxInternalOperatorsBufferUntilSubscriber_1_init(RxInternalOperatorsBufferUntilSubscriber_1 *self) {
   NSObject_init(self);
 }
 
-RxInternalOperatorsBufferUntilSubscriber_$1 *new_RxInternalOperatorsBufferUntilSubscriber_$1_init() {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsBufferUntilSubscriber_$1, init)
+RxInternalOperatorsBufferUntilSubscriber_1 *new_RxInternalOperatorsBufferUntilSubscriber_1_init() {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsBufferUntilSubscriber_1, init)
 }
 
-RxInternalOperatorsBufferUntilSubscriber_$1 *create_RxInternalOperatorsBufferUntilSubscriber_$1_init() {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsBufferUntilSubscriber_$1, init)
+RxInternalOperatorsBufferUntilSubscriber_1 *create_RxInternalOperatorsBufferUntilSubscriber_1_init() {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsBufferUntilSubscriber_1, init)
 }

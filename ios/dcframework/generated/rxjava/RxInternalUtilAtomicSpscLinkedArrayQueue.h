@@ -24,6 +24,8 @@
 @class JavaUtilConcurrentAtomicAtomicLong;
 @class JavaUtilConcurrentAtomicAtomicReferenceArray;
 @protocol JavaUtilCollection;
+@protocol JavaUtilFunctionConsumer;
+@protocol JavaUtilFunctionPredicate;
 @protocol JavaUtilIterator;
 @protocol JavaUtilSpliterator;
 @protocol JavaUtilStreamStream;

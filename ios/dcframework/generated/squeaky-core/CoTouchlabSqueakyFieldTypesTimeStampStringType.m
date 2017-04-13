@@ -66,9 +66,9 @@ J2OBJC_IGNORE_DESIGNATED_END
   static J2ObjcMethodInfo methods[] = {
     { NULL, "LCoTouchlabSqueakyFieldTypesTimeStampStringType;", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x4, -1, 0, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 1, 2, 3, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 4, 5, -1, -1, -1, -1 },
+    { NULL, NULL, 0x4, -1, 0, -1, 1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 2, 3, 4, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 5, 6, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -79,9 +79,9 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[4].selector = @selector(javaToSqlArgWithCoTouchlabSqueakyFieldFieldType:withId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "singleTon", "LCoTouchlabSqueakyFieldTypesTimeStampStringType;", .constantValue.asLong = 0, 0x1a, -1, 6, -1, -1 },
+    { "singleTon", "LCoTouchlabSqueakyFieldTypesTimeStampStringType;", .constantValue.asLong = 0, 0x1a, -1, 7, -1, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "sqlArgToJava", "LCoTouchlabSqueakyFieldFieldType;LNSObject;I", "LJavaSqlSQLException;", "javaToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LNSObject;", &CoTouchlabSqueakyFieldTypesTimeStampStringType_singleTon };
+  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "(Lco/touchlab/squeaky/field/SqlType;[Ljava/lang/Class<*>;)V", "sqlArgToJava", "LCoTouchlabSqueakyFieldFieldType;LNSObject;I", "LJavaSqlSQLException;", "javaToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LNSObject;", &CoTouchlabSqueakyFieldTypesTimeStampStringType_singleTon };
   static const J2ObjcClassInfo _CoTouchlabSqueakyFieldTypesTimeStampStringType = { "TimeStampStringType", "co.touchlab.squeaky.field.types", ptrTable, methods, fields, 7, 0x1, 5, 1, -1, -1, -1, -1, -1 };
   return &_CoTouchlabSqueakyFieldTypesTimeStampStringType;
 }

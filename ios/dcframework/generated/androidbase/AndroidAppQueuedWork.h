@@ -37,6 +37,12 @@
 
 J2OBJC_STATIC_INIT(AndroidAppQueuedWork)
 
+FOUNDATION_EXPORT void AndroidAppQueuedWork_init(AndroidAppQueuedWork *self);
+
+FOUNDATION_EXPORT AndroidAppQueuedWork *new_AndroidAppQueuedWork_init() NS_RETURNS_RETAINED;
+
+FOUNDATION_EXPORT AndroidAppQueuedWork *create_AndroidAppQueuedWork_init();
+
 FOUNDATION_EXPORT id<JavaUtilConcurrentExecutorService> AndroidAppQueuedWork_singleThreadExecutor();
 
 FOUNDATION_EXPORT void AndroidAppQueuedWork_addWithJavaLangRunnable_(id<JavaLangRunnable> finisher);
@@ -44,12 +50,6 @@ FOUNDATION_EXPORT void AndroidAppQueuedWork_addWithJavaLangRunnable_(id<JavaLang
 FOUNDATION_EXPORT void AndroidAppQueuedWork_removeWithJavaLangRunnable_(id<JavaLangRunnable> finisher);
 
 FOUNDATION_EXPORT void AndroidAppQueuedWork_waitToFinish();
-
-FOUNDATION_EXPORT void AndroidAppQueuedWork_init(AndroidAppQueuedWork *self);
-
-FOUNDATION_EXPORT AndroidAppQueuedWork *new_AndroidAppQueuedWork_init() NS_RETURNS_RETAINED;
-
-FOUNDATION_EXPORT AndroidAppQueuedWork *create_AndroidAppQueuedWork_init();
 
 J2OBJC_TYPE_LITERAL_HEADER(AndroidAppQueuedWork)
 

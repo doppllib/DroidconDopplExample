@@ -28,13 +28,13 @@
 
 J2OBJC_EMPTY_STATIC_INIT(CoTouchlabDroidconandroidCrashReport)
 
-FOUNDATION_EXPORT void CoTouchlabDroidconandroidCrashReport_logExceptionWithNSException_(NSException *t);
-
 FOUNDATION_EXPORT void CoTouchlabDroidconandroidCrashReport_init(CoTouchlabDroidconandroidCrashReport *self);
 
 FOUNDATION_EXPORT CoTouchlabDroidconandroidCrashReport *new_CoTouchlabDroidconandroidCrashReport_init() NS_RETURNS_RETAINED;
 
 FOUNDATION_EXPORT CoTouchlabDroidconandroidCrashReport *create_CoTouchlabDroidconandroidCrashReport_init();
+
+FOUNDATION_EXPORT void CoTouchlabDroidconandroidCrashReport_logExceptionWithNSException_(NSException *t);
 
 J2OBJC_TYPE_LITERAL_HEADER(CoTouchlabDroidconandroidCrashReport)
 

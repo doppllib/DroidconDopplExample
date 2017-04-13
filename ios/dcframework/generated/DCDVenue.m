@@ -23,6 +23,13 @@ __attribute__((unused)) static IOSObjectArray *DCDVenue__Annotations$3();
 
 @implementation DCDVenue
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  DCDVenue_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (jlong)getId {
   return id__;
 }
@@ -47,13 +54,6 @@ __attribute__((unused)) static IOSObjectArray *DCDVenue__Annotations$3();
   JreStrongAssign(&self->description__, description_);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  DCDVenue_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(name_);
   RELEASE_(description__);
@@ -62,23 +62,23 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "J", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 4, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getId);
-  methods[1].selector = @selector(setIdWithLong:);
-  methods[2].selector = @selector(getName);
-  methods[3].selector = @selector(setNameWithNSString:);
-  methods[4].selector = @selector(getDescription);
-  methods[5].selector = @selector(setDescriptionWithNSString:);
-  methods[6].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(getId);
+  methods[2].selector = @selector(setIdWithLong:);
+  methods[3].selector = @selector(getName);
+  methods[4].selector = @selector(setNameWithNSString:);
+  methods[5].selector = @selector(getDescription);
+  methods[6].selector = @selector(setDescriptionWithNSString:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "id__", "J", .constantValue.asLong = 0, 0x1, 5, -1, -1, 6 },

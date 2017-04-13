@@ -159,10 +159,10 @@ withAndroidDatabaseCharArrayBuffer:(AndroidDatabaseCharArrayBuffer *)buffer {
   if (result != nil) {
     IOSCharArray *data = ((AndroidDatabaseCharArrayBuffer *) nil_chk(buffer))->data_;
     if (data == nil || data->size_ < ((jint) [result length])) {
-      JreStrongAssign(&buffer->data_, [result toCharArray]);
+      JreStrongAssign(&buffer->data_, [result java_toCharArray]);
     }
     else {
-      [result getChars:0 sourceEnd:((jint) [result length]) destination:data destinationBegin:0];
+      [result java_getChars:0 sourceEnd:((jint) [result length]) destination:data destinationBegin:0];
     }
     buffer->sizeCopied_ = ((jint) [result length]);
   }
@@ -235,16 +235,16 @@ withAndroidDatabaseCursorWindow:(AndroidDatabaseCursorWindow *)window {
 }
 
 - (jint)getColumnIndexWithNSString:(NSString *)columnName {
-  jint periodIndex = [((NSString *) nil_chk(columnName)) lastIndexOf:'.'];
+  jint periodIndex = [((NSString *) nil_chk(columnName)) java_lastIndexOf:'.'];
   if (periodIndex != -1) {
     JavaLangException *e = create_JavaLangException_init();
     AndroidUtilLog_eWithNSString_withNSString_withNSException_(AndroidDatabaseAbstractCursor_TAG, JreStrcat("$$", @"requesting column name with table name -- ", columnName), e);
-    columnName = [columnName substring:periodIndex + 1];
+    columnName = [columnName java_substring:periodIndex + 1];
   }
   IOSObjectArray *columnNames = [self getColumnNames];
   jint length = ((IOSObjectArray *) nil_chk(columnNames))->size_;
   for (jint i = 0; i < length; i++) {
-    if ([((NSString *) nil_chk(IOSObjectArray_Get(columnNames, i))) equalsIgnoreCase:columnName]) {
+    if ([((NSString *) nil_chk(IOSObjectArray_Get(columnNames, i))) java_equalsIgnoreCase:columnName]) {
       return i;
     }
   }
@@ -301,7 +301,7 @@ withAndroidDatabaseCursorWindow:(AndroidDatabaseCursorWindow *)window {
   }
 }
 
-- (void)javaFinalize {
+- (void)java_finalize {
   @try {
     if (!mClosed_) [self close];
   }
@@ -415,7 +415,7 @@ withAndroidDatabaseCursorWindow:(AndroidDatabaseCursorWindow *)window {
   methods[42].selector = @selector(isFieldUpdatedWithInt:);
   methods[43].selector = @selector(getUpdatedFieldWithInt:);
   methods[44].selector = @selector(checkPosition);
-  methods[45].selector = @selector(javaFinalize);
+  methods[45].selector = @selector(java_finalize);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "TAG", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 33, -1, -1 },

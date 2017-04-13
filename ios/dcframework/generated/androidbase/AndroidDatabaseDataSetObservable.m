@@ -11,6 +11,13 @@
 
 @implementation AndroidDatabaseDataSetObservable
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  AndroidDatabaseDataSetObservable_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (void)notifyChanged {
   @synchronized(mObservers_) {
     for (jint i = [((JavaUtilArrayList *) nil_chk(mObservers_)) size] - 1; i >= 0; i--) {
@@ -27,24 +34,17 @@
   }
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  AndroidDatabaseDataSetObservable_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(notifyChanged);
-  methods[1].selector = @selector(notifyInvalidated);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(notifyChanged);
+  methods[2].selector = @selector(notifyInvalidated);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "Landroid/database/Observable<Landroid/database/DataSetObserver;>;" };
   static const J2ObjcClassInfo _AndroidDatabaseDataSetObservable = { "DataSetObservable", "android.database", ptrTable, methods, NULL, 7, 0x1, 3, 0, -1, -1, -1, 0, -1 };

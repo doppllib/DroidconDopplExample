@@ -14,7 +14,6 @@
 #include "DCPScheduleBlockHour.h"
 #include "DCTUpdateAlertsTask.h"
 #include "DeGreenrobotEventEventBus.h"
-#include "IOSClass.h"
 #include "IOSObjectArray.h"
 #include "J2ObjC_source.h"
 #include "java/lang/Long.h"
@@ -26,6 +25,13 @@ J2OBJC_INITIALIZED_DEFN(DCTUpdateAlertsTask)
 jlong DCTUpdateAlertsTask_ALERT_BUFFER;
 
 @implementation DCTUpdateAlertsTask
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  DCTUpdateAlertsTask_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)runWithAndroidContentContext:(AndroidContentContext *)context {
   if ([((DCDAppPrefs *) nil_chk(DCDAppPrefs_getInstanceWithAndroidContentContext_(context))) getAllowNotifications]) {
@@ -65,13 +71,6 @@ jlong DCTUpdateAlertsTask_ALERT_BUFFER;
   [((DeGreenrobotEventEventBus *) nil_chk(CoTouchlabAndroidThreadingEventbusEventBusExt_getDefault())) postWithId:self];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  DCTUpdateAlertsTask_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(nextEvent_);
   [super dealloc];
@@ -79,17 +78,17 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x4, 0, 1, 2, -1, -1, -1 },
     { NULL, "Z", 0x4, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x4, 5, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(runWithAndroidContentContext:);
-  methods[1].selector = @selector(handleErrorWithAndroidContentContext:withNSException:);
-  methods[2].selector = @selector(onCompleteWithAndroidContentContext:);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(runWithAndroidContentContext:);
+  methods[2].selector = @selector(handleErrorWithAndroidContentContext:withNSException:);
+  methods[3].selector = @selector(onCompleteWithAndroidContentContext:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "nextEvent_", "LDCDEvent;", .constantValue.asLong = 0, 0x1, -1, -1, -1, -1 },

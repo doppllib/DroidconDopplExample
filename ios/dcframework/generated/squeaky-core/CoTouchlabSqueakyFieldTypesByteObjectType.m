@@ -69,9 +69,9 @@ J2OBJC_IGNORE_DESIGNATED_END
   static J2ObjcMethodInfo methods[] = {
     { NULL, "LCoTouchlabSqueakyFieldTypesByteObjectType;", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x4, -1, 0, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 1, 2, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 3, 4, 5, -1, -1, -1 },
+    { NULL, NULL, 0x4, -1, 0, -1, 1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 2, 3, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 4, 5, 6, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
@@ -84,9 +84,9 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[5].selector = @selector(isEscapedValue);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "singleTon", "LCoTouchlabSqueakyFieldTypesByteObjectType;", .constantValue.asLong = 0, 0x1a, -1, 6, -1, -1 },
+    { "singleTon", "LCoTouchlabSqueakyFieldTypesByteObjectType;", .constantValue.asLong = 0, 0x1a, -1, 7, -1, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "parseDefaultString", "LCoTouchlabSqueakyFieldFieldType;LNSString;", "resultToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LAndroidDatabaseCursor;I", "LJavaSqlSQLException;", &CoTouchlabSqueakyFieldTypesByteObjectType_singleTon };
+  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "(Lco/touchlab/squeaky/field/SqlType;[Ljava/lang/Class<*>;)V", "parseDefaultString", "LCoTouchlabSqueakyFieldFieldType;LNSString;", "resultToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LAndroidDatabaseCursor;I", "LJavaSqlSQLException;", &CoTouchlabSqueakyFieldTypesByteObjectType_singleTon };
   static const J2ObjcClassInfo _CoTouchlabSqueakyFieldTypesByteObjectType = { "ByteObjectType", "co.touchlab.squeaky.field.types", ptrTable, methods, fields, 7, 0x1, 6, 1, -1, -1, -1, -1, -1 };
   return &_CoTouchlabSqueakyFieldTypesByteObjectType;
 }

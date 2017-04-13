@@ -21,7 +21,7 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleGsonAnnotationsSerialize
 @synthesize alternate = alternate_;
 
 + (IOSObjectArray *)alternateDefault {
-  return [IOSObjectArray arrayWithObjects:(id[]){  } count:0 type:NSString_class_()];
+  return [IOSObjectArray arrayWithLength:0 type:NSString_class_()];
 }
 
 - (IOSClass *)annotationType {
@@ -48,8 +48,12 @@ __attribute__((unused)) static IOSObjectArray *ComGoogleGsonAnnotationsSerialize
   methods[0].selector = @selector(value);
   methods[1].selector = @selector(alternate);
   #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "value_", "LNSString;", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+    { "alternate_", "[LNSString;", .constantValue.asLong = 0, 0x1000, -1, -1, -1, -1 },
+  };
   static const void *ptrTable[] = { (void *)&ComGoogleGsonAnnotationsSerializedName__Annotations$0 };
-  static const J2ObjcClassInfo _ComGoogleGsonAnnotationsSerializedName = { "SerializedName", "com.google.gson.annotations", ptrTable, methods, NULL, 7, 0x2609, 2, 0, -1, -1, -1, -1, 0 };
+  static const J2ObjcClassInfo _ComGoogleGsonAnnotationsSerializedName = { "SerializedName", "com.google.gson.annotations", ptrTable, methods, fields, 7, 0x2609, 2, 2, -1, -1, -1, -1, 0 };
   return &_ComGoogleGsonAnnotationsSerializedName;
 }
 
@@ -63,7 +67,7 @@ id<ComGoogleGsonAnnotationsSerializedName> create_ComGoogleGsonAnnotationsSerial
 }
 
 IOSObjectArray *ComGoogleGsonAnnotationsSerializedName__Annotations$0() {
-  return [IOSObjectArray arrayWithObjects:(id[]){ create_JavaLangAnnotationRetention(JreLoadEnum(JavaLangAnnotationRetentionPolicy, RUNTIME)), create_JavaLangAnnotationTarget([IOSObjectArray arrayWithObjects:(id[]){ JreLoadEnum(JavaLangAnnotationElementType, FIELD), JreLoadEnum(JavaLangAnnotationElementType, METHOD) } count:2 type:NSObject_class_()]) } count:2 type:JavaLangAnnotationAnnotation_class_()];
+  return [IOSObjectArray arrayWithObjects:(id[]){ create_JavaLangAnnotationRetention(JreLoadEnum(JavaLangAnnotationRetentionPolicy, RUNTIME)), create_JavaLangAnnotationTarget([IOSObjectArray arrayWithObjects:(id[]){ JreLoadEnum(JavaLangAnnotationElementType, FIELD), JreLoadEnum(JavaLangAnnotationElementType, METHOD) } count:2 type:JavaLangAnnotationElementType_class_()]) } count:2 type:JavaLangAnnotationAnnotation_class_()];
 }
 
 J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(ComGoogleGsonAnnotationsSerializedName)

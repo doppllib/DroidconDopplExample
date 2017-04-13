@@ -7,7 +7,6 @@
 #include "AndroidOsHandler.h"
 #include "AndroidOsMessage.h"
 #include "AndroidUtilTimeUtils.h"
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "android/os/SystemClock.h"
 #include "java/lang/Runnable.h"
@@ -97,7 +96,7 @@ J2OBJC_INITIALIZED_DEFN(AndroidOsMessage)
   self->arg2_ = o->arg2_;
   JreStrongAssign(&self->obj_, o->obj_);
   if (o->data_ != nil) {
-    JreStrongAssign(&self->data_, (AndroidOsBundle *) cast_chk([o->data_ clone], [AndroidOsBundle class]));
+    JreStrongAssign(&self->data_, (AndroidOsBundle *) cast_chk([o->data_ java_clone], [AndroidOsBundle class]));
   }
   else {
     JreStrongAssign(&self->data_, nil);

@@ -19,6 +19,9 @@
 #include "java/lang/reflect/Type.h"
 #include "java/util/Collection.h"
 
+@class ComGoogleGsonJsonElement;
+@class JavaIoReader;
+
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
 
 @interface ComGoogleGsonInternalBindCollectionTypeAdapterFactory () {

@@ -10,12 +10,16 @@
 #include "java/lang/Long.h"
 #include "java/util/concurrent/TimeUnit.h"
 
-@interface RxInternalOperatorsOperatorThrottleFirst_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorThrottleFirst_1 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorThrottleFirst *this$0_;
-  jlong lastOnNext_;
   RxSubscriber *val$subscriber_;
+  jlong lastOnNext_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorThrottleFirst:(RxInternalOperatorsOperatorThrottleFirst *)outer$
+                                                withRxSubscriber:(RxSubscriber *)capture$0
+                                                withRxSubscriber:(RxSubscriber *)param0;
 
 - (void)onStart;
 
@@ -25,22 +29,15 @@
 
 - (void)onErrorWithNSException:(NSException *)e;
 
-- (instancetype)initWithRxInternalOperatorsOperatorThrottleFirst:(RxInternalOperatorsOperatorThrottleFirst *)outer$
-                                                withRxSubscriber:(RxSubscriber *)capture$0
-                                                withRxSubscriber:(RxSubscriber *)arg$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorThrottleFirst_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorThrottleFirst_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorThrottleFirst_$1, this$0_, RxInternalOperatorsOperatorThrottleFirst *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorThrottleFirst_$1, val$subscriber_, RxSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorThrottleFirst_1_initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorThrottleFirst_1 *self, RxInternalOperatorsOperatorThrottleFirst *outer$, RxSubscriber *capture$0, RxSubscriber *param0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorThrottleFirst_$1_initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorThrottleFirst_$1 *self, RxInternalOperatorsOperatorThrottleFirst *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorThrottleFirst_1 *new_RxInternalOperatorsOperatorThrottleFirst_1_initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorThrottleFirst *outer$, RxSubscriber *capture$0, RxSubscriber *param0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorThrottleFirst_$1 *new_RxInternalOperatorsOperatorThrottleFirst_$1_initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorThrottleFirst *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorThrottleFirst_$1 *create_RxInternalOperatorsOperatorThrottleFirst_$1_initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorThrottleFirst *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorThrottleFirst_1 *create_RxInternalOperatorsOperatorThrottleFirst_1_initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorThrottleFirst *outer$, RxSubscriber *capture$0, RxSubscriber *param0);
 
 @implementation RxInternalOperatorsOperatorThrottleFirst
 
@@ -52,7 +49,7 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit
 }
 
 - (RxSubscriber *)callWithId:(RxSubscriber *)subscriber {
-  return create_RxInternalOperatorsOperatorThrottleFirst_$1_initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_(self, subscriber, subscriber);
+  return create_RxInternalOperatorsOperatorThrottleFirst_1_initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_(self, subscriber, subscriber);
 }
 
 - (void)dealloc {
@@ -97,7 +94,14 @@ RxInternalOperatorsOperatorThrottleFirst *create_RxInternalOperatorsOperatorThro
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorThrottleFirst)
 
-@implementation RxInternalOperatorsOperatorThrottleFirst_$1
+@implementation RxInternalOperatorsOperatorThrottleFirst_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorThrottleFirst:(RxInternalOperatorsOperatorThrottleFirst *)outer$
+                                                withRxSubscriber:(RxSubscriber *)capture$0
+                                                withRxSubscriber:(RxSubscriber *)param0 {
+  RxInternalOperatorsOperatorThrottleFirst_1_initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, param0);
+  return self;
+}
 
 - (void)onStart {
   [self requestWithLong:JavaLangLong_MAX_VALUE];
@@ -119,15 +123,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorThrottleFirst)
   [((RxSubscriber *) nil_chk(val$subscriber_)) onErrorWithNSException:e];
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorThrottleFirst:(RxInternalOperatorsOperatorThrottleFirst *)outer$
-                                                withRxSubscriber:(RxSubscriber *)capture$0
-                                                withRxSubscriber:(RxSubscriber *)arg$0 {
-  RxInternalOperatorsOperatorThrottleFirst_$1_initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, arg$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorThrottleFirst_$1 class]);
   RELEASE_(this$0_);
   RELEASE_(val$subscriber_);
   [super dealloc];
@@ -135,43 +131,43 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorThrottleFirst)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
+    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onStart);
-  methods[1].selector = @selector(onNextWithId:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(onErrorWithNSException:);
-  methods[4].selector = @selector(initWithRxInternalOperatorsOperatorThrottleFirst:withRxSubscriber:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorThrottleFirst:withRxSubscriber:withRxSubscriber:);
+  methods[1].selector = @selector(onStart);
+  methods[2].selector = @selector(onNextWithId:);
+  methods[3].selector = @selector(onCompleted);
+  methods[4].selector = @selector(onErrorWithNSException:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorThrottleFirst;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorThrottleFirst;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
     { "lastOnNext_", "J", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
-    { "val$subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxInternalOperatorsOperatorThrottleFirst;LRxSubscriber;LRxSubscriber;", "(Lrx/internal/operators/OperatorThrottleFirst;Lrx/Subscriber<-TT;>;Lrx/Subscriber<*>;)V", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorThrottleFirst;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorThrottleFirst_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 3, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsOperatorThrottleFirst_$1;
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/internal/operators/OperatorThrottleFirst<TT;>;", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorThrottleFirst;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorThrottleFirst_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 3, 9, -1, 10, 11, -1 };
+  return &_RxInternalOperatorsOperatorThrottleFirst_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorThrottleFirst_$1_initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorThrottleFirst_$1 *self, RxInternalOperatorsOperatorThrottleFirst *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
+void RxInternalOperatorsOperatorThrottleFirst_1_initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorThrottleFirst_1 *self, RxInternalOperatorsOperatorThrottleFirst *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$subscriber_, capture$0);
-  RxSubscriber_initWithRxSubscriber_(self, arg$0);
+  RxSubscriber_initWithRxSubscriber_(self, param0);
   self->lastOnNext_ = -1;
 }
 
-RxInternalOperatorsOperatorThrottleFirst_$1 *new_RxInternalOperatorsOperatorThrottleFirst_$1_initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorThrottleFirst *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorThrottleFirst_$1, initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_, outer$, capture$0, arg$0)
+RxInternalOperatorsOperatorThrottleFirst_1 *new_RxInternalOperatorsOperatorThrottleFirst_1_initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorThrottleFirst *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorThrottleFirst_1, initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_, outer$, capture$0, param0)
 }
 
-RxInternalOperatorsOperatorThrottleFirst_$1 *create_RxInternalOperatorsOperatorThrottleFirst_$1_initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorThrottleFirst *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorThrottleFirst_$1, initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_, outer$, capture$0, arg$0)
+RxInternalOperatorsOperatorThrottleFirst_1 *create_RxInternalOperatorsOperatorThrottleFirst_1_initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorThrottleFirst *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorThrottleFirst_1, initWithRxInternalOperatorsOperatorThrottleFirst_withRxSubscriber_withRxSubscriber_, outer$, capture$0, param0)
 }

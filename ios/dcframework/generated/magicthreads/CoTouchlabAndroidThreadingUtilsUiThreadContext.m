@@ -11,6 +11,13 @@
 
 @implementation CoTouchlabAndroidThreadingUtilsUiThreadContext
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabAndroidThreadingUtilsUiThreadContext_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (void)assertUiThread {
   CoTouchlabAndroidThreadingUtilsUiThreadContext_assertUiThread();
 }
@@ -27,34 +34,39 @@
   return CoTouchlabAndroidThreadingUtilsUiThreadContext_isInIosUiThread();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabAndroidThreadingUtilsUiThreadContext_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x109, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(assertUiThread);
-  methods[1].selector = @selector(isInUiThread);
-  methods[2].selector = @selector(assertBackgroundThread);
-  methods[3].selector = @selector(isInIosUiThread);
-  methods[4].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(assertUiThread);
+  methods[2].selector = @selector(isInUiThread);
+  methods[3].selector = @selector(assertBackgroundThread);
+  methods[4].selector = @selector(isInIosUiThread);
   #pragma clang diagnostic pop
   static const J2ObjcClassInfo _CoTouchlabAndroidThreadingUtilsUiThreadContext = { "UiThreadContext", "co.touchlab.android.threading.utils", NULL, methods, NULL, 7, 0x1, 5, 0, -1, -1, -1, -1, -1 };
   return &_CoTouchlabAndroidThreadingUtilsUiThreadContext;
 }
 
 @end
+
+void CoTouchlabAndroidThreadingUtilsUiThreadContext_init(CoTouchlabAndroidThreadingUtilsUiThreadContext *self) {
+  NSObject_init(self);
+}
+
+CoTouchlabAndroidThreadingUtilsUiThreadContext *new_CoTouchlabAndroidThreadingUtilsUiThreadContext_init() {
+  J2OBJC_NEW_IMPL(CoTouchlabAndroidThreadingUtilsUiThreadContext, init)
+}
+
+CoTouchlabAndroidThreadingUtilsUiThreadContext *create_CoTouchlabAndroidThreadingUtilsUiThreadContext_init() {
+  J2OBJC_CREATE_IMPL(CoTouchlabAndroidThreadingUtilsUiThreadContext, init)
+}
 
 void CoTouchlabAndroidThreadingUtilsUiThreadContext_assertUiThread() {
   CoTouchlabAndroidThreadingUtilsUiThreadContext_initialize();
@@ -82,18 +94,6 @@ void CoTouchlabAndroidThreadingUtilsUiThreadContext_assertBackgroundThread() {
 jboolean CoTouchlabAndroidThreadingUtilsUiThreadContext_isInIosUiThread() {
   CoTouchlabAndroidThreadingUtilsUiThreadContext_initialize();
   return [NSThread isMainThread];
-}
-
-void CoTouchlabAndroidThreadingUtilsUiThreadContext_init(CoTouchlabAndroidThreadingUtilsUiThreadContext *self) {
-  NSObject_init(self);
-}
-
-CoTouchlabAndroidThreadingUtilsUiThreadContext *new_CoTouchlabAndroidThreadingUtilsUiThreadContext_init() {
-  J2OBJC_NEW_IMPL(CoTouchlabAndroidThreadingUtilsUiThreadContext, init)
-}
-
-CoTouchlabAndroidThreadingUtilsUiThreadContext *create_CoTouchlabAndroidThreadingUtilsUiThreadContext_init() {
-  J2OBJC_CREATE_IMPL(CoTouchlabAndroidThreadingUtilsUiThreadContext, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingUtilsUiThreadContext)

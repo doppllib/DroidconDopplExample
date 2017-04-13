@@ -58,6 +58,12 @@
 
 J2OBJC_STATIC_INIT(CoTouchlabSqueakyLoggerOLog)
 
+FOUNDATION_EXPORT void CoTouchlabSqueakyLoggerOLog_init(CoTouchlabSqueakyLoggerOLog *self);
+
+FOUNDATION_EXPORT CoTouchlabSqueakyLoggerOLog *new_CoTouchlabSqueakyLoggerOLog_init() NS_RETURNS_RETAINED;
+
+FOUNDATION_EXPORT CoTouchlabSqueakyLoggerOLog *create_CoTouchlabSqueakyLoggerOLog_init();
+
 FOUNDATION_EXPORT void CoTouchlabSqueakyLoggerOLog_setLogWithCoTouchlabSqueakyLoggerOLogImpl_(id<CoTouchlabSqueakyLoggerOLogImpl> log);
 
 FOUNDATION_EXPORT void CoTouchlabSqueakyLoggerOLog_dWithNSString_withNSString_(NSString *tag, NSString *message);
@@ -75,12 +81,6 @@ FOUNDATION_EXPORT void CoTouchlabSqueakyLoggerOLog_wWithNSString_withNSString_wi
 FOUNDATION_EXPORT void CoTouchlabSqueakyLoggerOLog_eWithNSString_withNSString_(NSString *tag, NSString *message);
 
 FOUNDATION_EXPORT void CoTouchlabSqueakyLoggerOLog_eWithNSString_withNSString_withNSException_(NSString *tag, NSString *message, NSException *t);
-
-FOUNDATION_EXPORT void CoTouchlabSqueakyLoggerOLog_init(CoTouchlabSqueakyLoggerOLog *self);
-
-FOUNDATION_EXPORT CoTouchlabSqueakyLoggerOLog *new_CoTouchlabSqueakyLoggerOLog_init() NS_RETURNS_RETAINED;
-
-FOUNDATION_EXPORT CoTouchlabSqueakyLoggerOLog *create_CoTouchlabSqueakyLoggerOLog_init();
 
 J2OBJC_TYPE_LITERAL_HEADER(CoTouchlabSqueakyLoggerOLog)
 

@@ -27,6 +27,13 @@ J2OBJC_INITIALIZED_DEFN(AndroidOsFileUtils)
 
 @implementation AndroidOsFileUtils
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  AndroidOsFileUtils_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (jboolean)getFileStatusWithNSString:(NSString *)path
     withAndroidOsFileUtils_FileStatus:(AndroidOsFileUtils_FileStatus *)status {
   return AndroidOsFileUtils_getFileStatusWithNSString_withAndroidOsFileUtils_FileStatus_(path, status);
@@ -63,15 +70,9 @@ J2OBJC_INITIALIZED_DEFN(AndroidOsFileUtils)
   return AndroidOsFileUtils_readTextFileWithJavaIoFile_withInt_withNSString_(file, max, ellipsis);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  AndroidOsFileUtils_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x109, 0, 1, -1, -1, -1, -1 },
     { NULL, "I", 0x109, 2, 3, -1, -1, -1, -1 },
     { NULL, "Z", 0x9, 4, 5, -1, -1, -1, -1 },
@@ -79,18 +80,17 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "Z", 0x9, 8, 9, -1, -1, -1, -1 },
     { NULL, "Z", 0x9, 10, 11, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x9, 12, 13, 14, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getFileStatusWithNSString:withAndroidOsFileUtils_FileStatus:);
-  methods[1].selector = @selector(setPermissionsWithNSString:withInt:withInt:withInt:);
-  methods[2].selector = @selector(syncWithJavaIoFileOutputStream:);
-  methods[3].selector = @selector(copyFileWithJavaIoFile:withJavaIoFile:);
-  methods[4].selector = @selector(copyToFileWithJavaIoInputStream:withJavaIoFile:);
-  methods[5].selector = @selector(isFilenameSafeWithJavaIoFile:);
-  methods[6].selector = @selector(readTextFileWithJavaIoFile:withInt:withNSString:);
-  methods[7].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(getFileStatusWithNSString:withAndroidOsFileUtils_FileStatus:);
+  methods[2].selector = @selector(setPermissionsWithNSString:withInt:withInt:withInt:);
+  methods[3].selector = @selector(syncWithJavaIoFileOutputStream:);
+  methods[4].selector = @selector(copyFileWithJavaIoFile:withJavaIoFile:);
+  methods[5].selector = @selector(copyToFileWithJavaIoInputStream:withJavaIoFile:);
+  methods[6].selector = @selector(isFilenameSafeWithJavaIoFile:);
+  methods[7].selector = @selector(readTextFileWithJavaIoFile:withInt:withNSString:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "S_IRWXU", "I", .constantValue.asInt = AndroidOsFileUtils_S_IRWXU, 0x19, -1, -1, -1, -1 },
@@ -120,6 +120,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void AndroidOsFileUtils_init(AndroidOsFileUtils *self) {
+  NSObject_init(self);
+}
+
+AndroidOsFileUtils *new_AndroidOsFileUtils_init() {
+  J2OBJC_NEW_IMPL(AndroidOsFileUtils, init)
+}
+
+AndroidOsFileUtils *create_AndroidOsFileUtils_init() {
+  J2OBJC_CREATE_IMPL(AndroidOsFileUtils, init)
+}
 
 jboolean AndroidOsFileUtils_getFileStatusWithNSString_withAndroidOsFileUtils_FileStatus_(NSString *path, AndroidOsFileUtils_FileStatus *status) {
   AndroidOsFileUtils_initialize();
@@ -256,9 +268,9 @@ NSString *AndroidOsFileUtils_readTextFileWithJavaIoFile_withInt_withNSString_(Ja
       IOSByteArray *data = [IOSByteArray arrayWithLength:max + 1];
       jint length = [input readWithByteArray:data];
       if (length <= 0) return @"";
-      if (length <= max) return [NSString stringWithBytes:data offset:0 length:length];
-      if (ellipsis == nil) return [NSString stringWithBytes:data offset:0 length:max];
-      return JreStrcat("$$", [NSString stringWithBytes:data offset:0 length:max], ellipsis);
+      if (length <= max) return [NSString java_stringWithBytes:data offset:0 length:length];
+      if (ellipsis == nil) return [NSString java_stringWithBytes:data offset:0 length:max];
+      return JreStrcat("$$", [NSString java_stringWithBytes:data offset:0 length:max], ellipsis);
     }
     else if (max < 0) {
       jint len;
@@ -274,14 +286,14 @@ NSString *AndroidOsFileUtils_readTextFileWithJavaIoFile_withInt_withNSString_(Ja
       }
       while (len == data->size_);
       if (last == nil && len <= 0) return @"";
-      if (last == nil) return [NSString stringWithBytes:data offset:0 length:len];
+      if (last == nil) return [NSString java_stringWithBytes:data offset:0 length:len];
       if (len > 0) {
         rolled = true;
         JavaLangSystem_arraycopyWithId_withInt_withId_withInt_withInt_(last, len, last, 0, last->size_ - len);
         JavaLangSystem_arraycopyWithId_withInt_withId_withInt_withInt_(data, 0, last, last->size_ - len, len);
       }
-      if (ellipsis == nil || !rolled) return [NSString stringWithBytes:last];
-      return JreStrcat("$$", ellipsis, [NSString stringWithBytes:last]);
+      if (ellipsis == nil || !rolled) return [NSString java_stringWithBytes:last];
+      return JreStrcat("$$", ellipsis, [NSString java_stringWithBytes:last]);
     }
     else {
       JavaIoByteArrayOutputStream *contents = create_JavaIoByteArrayOutputStream_init();
@@ -298,18 +310,6 @@ NSString *AndroidOsFileUtils_readTextFileWithJavaIoFile_withInt_withNSString_(Ja
   @finally {
     [input close];
   }
-}
-
-void AndroidOsFileUtils_init(AndroidOsFileUtils *self) {
-  NSObject_init(self);
-}
-
-AndroidOsFileUtils *new_AndroidOsFileUtils_init() {
-  J2OBJC_NEW_IMPL(AndroidOsFileUtils, init)
-}
-
-AndroidOsFileUtils *create_AndroidOsFileUtils_init() {
-  J2OBJC_CREATE_IMPL(AndroidOsFileUtils, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidOsFileUtils)

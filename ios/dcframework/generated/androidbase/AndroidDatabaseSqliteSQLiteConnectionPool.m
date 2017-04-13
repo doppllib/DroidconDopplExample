@@ -9,7 +9,6 @@
 #include "AndroidDatabaseSqliteSQLiteDatabaseConfiguration.h"
 #include "AndroidDatabaseSqliteSQLiteGlobal.h"
 #include "AndroidUtilPrefixPrinter.h"
-#include "IOSClass.h"
 #include "IOSObjectArray.h"
 #include "J2ObjC_source.h"
 #include "android/os/SystemClock.h"
@@ -223,12 +222,12 @@ J2OBJC_TYPE_LITERAL_HEADER(AndroidDatabaseSqliteSQLiteConnectionPool_ConnectionW
   return self;
 }
 
-- (void)javaFinalize {
+- (void)java_finalize {
   @try {
     AndroidDatabaseSqliteSQLiteConnectionPool_disposeWithBoolean_(self, true);
   }
   @finally {
-    [super javaFinalize];
+    [super java_finalize];
   }
 }
 
@@ -558,7 +557,7 @@ J2OBJC_TYPE_LITERAL_HEADER(AndroidDatabaseSqliteSQLiteConnectionPool_ConnectionW
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
   methods[0].selector = @selector(initWithAndroidDatabaseSqliteSQLiteDatabaseConfiguration:);
-  methods[1].selector = @selector(javaFinalize);
+  methods[1].selector = @selector(java_finalize);
   methods[2].selector = @selector(openWithAndroidDatabaseSqliteSQLiteDatabaseConfiguration:);
   methods[3].selector = @selector(open);
   methods[4].selector = @selector(close);

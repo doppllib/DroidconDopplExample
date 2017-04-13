@@ -4,7 +4,6 @@
 //
 
 #include "AndroidUtilXml.h"
-#include "IOSClass.h"
 #include "IOSObjectArray.h"
 #include "J2ObjC_source.h"
 #include "java/io/UnsupportedEncodingException.h"
@@ -21,6 +20,13 @@ __attribute__((unused)) static void AndroidUtilXml_Encoding_initWithNSString_wit
 
 @implementation AndroidUtilXml
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  AndroidUtilXml_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (id<OrgXmlpullV1XmlPullParser>)newPullParser {
   return AndroidUtilXml_newPullParser();
 }
@@ -33,26 +39,19 @@ __attribute__((unused)) static void AndroidUtilXml_Encoding_initWithNSString_wit
   return AndroidUtilXml_findEncodingByNameWithNSString_(encodingName);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  AndroidUtilXml_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LOrgXmlpullV1XmlPullParser;", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, "LOrgXmlpullV1XmlSerializer;", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, "LAndroidUtilXml_Encoding;", 0x9, 0, 1, 2, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(newPullParser);
-  methods[1].selector = @selector(newSerializer);
-  methods[2].selector = @selector(findEncodingByNameWithNSString:);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(newPullParser);
+  methods[2].selector = @selector(newSerializer);
+  methods[3].selector = @selector(findEncodingByNameWithNSString:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "findEncodingByName", "LNSString;", "LJavaIoUnsupportedEncodingException;", "LAndroidUtilXml_XmlSerializerFactory;LAndroidUtilXml_Encoding;" };
   static const J2ObjcClassInfo _AndroidUtilXml = { "Xml", "android.util", ptrTable, methods, NULL, 7, 0x1, 4, 0, -1, 3, -1, -1, -1 };
@@ -60,6 +59,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void AndroidUtilXml_init(AndroidUtilXml *self) {
+  NSObject_init(self);
+}
+
+AndroidUtilXml *new_AndroidUtilXml_init() {
+  J2OBJC_NEW_IMPL(AndroidUtilXml, init)
+}
+
+AndroidUtilXml *create_AndroidUtilXml_init() {
+  J2OBJC_CREATE_IMPL(AndroidUtilXml, init)
+}
 
 id<OrgXmlpullV1XmlPullParser> AndroidUtilXml_newPullParser() {
   AndroidUtilXml_initialize();
@@ -93,22 +104,10 @@ AndroidUtilXml_Encoding *AndroidUtilXml_findEncodingByNameWithNSString_(NSString
     AndroidUtilXml_Encoding * const *e__ = b__ + a__->size_;
     while (b__ < e__) {
       AndroidUtilXml_Encoding *encoding = *b__++;
-      if ([((NSString *) nil_chk(((AndroidUtilXml_Encoding *) nil_chk(encoding))->expatName_)) equalsIgnoreCase:encodingName]) return encoding;
+      if ([((NSString *) nil_chk(((AndroidUtilXml_Encoding *) nil_chk(encoding))->expatName_)) java_equalsIgnoreCase:encodingName]) return encoding;
     }
   }
   @throw create_JavaIoUnsupportedEncodingException_initWithNSString_(encodingName);
-}
-
-void AndroidUtilXml_init(AndroidUtilXml *self) {
-  NSObject_init(self);
-}
-
-AndroidUtilXml *new_AndroidUtilXml_init() {
-  J2OBJC_NEW_IMPL(AndroidUtilXml, init)
-}
-
-AndroidUtilXml *create_AndroidUtilXml_init() {
-  J2OBJC_CREATE_IMPL(AndroidUtilXml, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidUtilXml)

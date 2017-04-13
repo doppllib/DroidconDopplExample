@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_CoTouchlabDroidconandroidUtilsSlackUtils
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (CoTouchlabDroidconandroidUtilsSlackUtils_) && (INCLUDE_ALL_CoTouchlabDroidconandroidUtilsSlackUtils || defined(INCLUDE_CoTouchlabDroidconandroidUtilsSlackUtils))
 #define CoTouchlabDroidconandroidUtilsSlackUtils_
 
@@ -78,18 +83,22 @@ inline NSString *CoTouchlabDroidconandroidUtilsSlackUtils_get_DEFAULT_SLACK_ID()
 FOUNDATION_EXPORT NSString *CoTouchlabDroidconandroidUtilsSlackUtils_DEFAULT_SLACK_ID;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(CoTouchlabDroidconandroidUtilsSlackUtils, DEFAULT_SLACK_ID, NSString *)
 
-FOUNDATION_EXPORT NSString *CoTouchlabDroidconandroidUtilsSlackUtils_createSlackLinkWithDCDVenue_(DCDVenue *venue);
-
-FOUNDATION_EXPORT NSString *CoTouchlabDroidconandroidUtilsSlackUtils_createSlackLinkHttpWithDCDVenue_(DCDVenue *venue);
-
 FOUNDATION_EXPORT void CoTouchlabDroidconandroidUtilsSlackUtils_init(CoTouchlabDroidconandroidUtilsSlackUtils *self);
 
 FOUNDATION_EXPORT CoTouchlabDroidconandroidUtilsSlackUtils *new_CoTouchlabDroidconandroidUtilsSlackUtils_init() NS_RETURNS_RETAINED;
 
 FOUNDATION_EXPORT CoTouchlabDroidconandroidUtilsSlackUtils *create_CoTouchlabDroidconandroidUtilsSlackUtils_init();
 
+FOUNDATION_EXPORT NSString *CoTouchlabDroidconandroidUtilsSlackUtils_createSlackLinkWithDCDVenue_(DCDVenue *venue);
+
+FOUNDATION_EXPORT NSString *CoTouchlabDroidconandroidUtilsSlackUtils_createSlackLinkHttpWithDCDVenue_(DCDVenue *venue);
+
 J2OBJC_TYPE_LITERAL_HEADER(CoTouchlabDroidconandroidUtilsSlackUtils)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_CoTouchlabDroidconandroidUtilsSlackUtils")

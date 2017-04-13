@@ -14,9 +14,9 @@
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "[LIOSClass;", 0x401, -1, -1, -1, -1, -1, -1 },
+    { NULL, "[LIOSClass;", 0x401, -1, -1, -1, 0, -1, -1 },
     { NULL, "[LNSString;", 0x401, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x401, 0, 1, 2, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x401, 1, 2, 3, -1, -1, -1 },
     { NULL, "Z", 0x401, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x401, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x401, -1, -1, -1, -1, -1, -1 },
@@ -32,7 +32,7 @@
   methods[5].selector = @selector(isPrimitive);
   methods[6].selector = @selector(isComparable);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "makeConfigObject", "LCoTouchlabSqueakyFieldFieldType;", "LJavaSqlSQLException;" };
+  static const void *ptrTable[] = { "()[Ljava/lang/Class<*>;", "makeConfigObject", "LCoTouchlabSqueakyFieldFieldType;", "LJavaSqlSQLException;" };
   static const J2ObjcClassInfo _CoTouchlabSqueakyFieldDataPersister = { "DataPersister", "co.touchlab.squeaky.field", ptrTable, methods, NULL, 7, 0x609, 7, 0, -1, -1, -1, -1, -1 };
   return &_CoTouchlabSqueakyFieldDataPersister;
 }

@@ -48,7 +48,7 @@ J2OBJC_FIELD_SETTER(RxSchedulersTimeInterval, value_, id)
   if (obj == nil) {
     return false;
   }
-  if ([self java_getClass] != (id) [obj java_getClass]) {
+  if ([self java_getClass] != [obj java_getClass]) {
     return false;
   }
   RxSchedulersTimeInterval *other = (RxSchedulersTimeInterval *) cast_chk(obj, [RxSchedulersTimeInterval class]);

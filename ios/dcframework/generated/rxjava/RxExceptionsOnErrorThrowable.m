@@ -282,10 +282,6 @@ id<JavaUtilSet> RxExceptionsOnErrorThrowable_OnNextValue_Primitives_INSTANCE;
 
 @implementation RxExceptionsOnErrorThrowable_OnNextValue_Primitives
 
-+ (id<JavaUtilSet>)create {
-  return RxExceptionsOnErrorThrowable_OnNextValue_Primitives_create();
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   RxExceptionsOnErrorThrowable_OnNextValue_Primitives_init(self);
@@ -293,15 +289,19 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
++ (id<JavaUtilSet>)create {
+  return RxExceptionsOnErrorThrowable_OnNextValue_Primitives_create();
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaUtilSet;", 0xa, -1, -1, -1, 0, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaUtilSet;", 0xa, -1, -1, -1, 0, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(create);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(create);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "INSTANCE", "LJavaUtilSet;", .constantValue.asLong = 0, 0x18, -1, 1, 2, -1 },
@@ -320,6 +320,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 @end
 
+void RxExceptionsOnErrorThrowable_OnNextValue_Primitives_init(RxExceptionsOnErrorThrowable_OnNextValue_Primitives *self) {
+  NSObject_init(self);
+}
+
+RxExceptionsOnErrorThrowable_OnNextValue_Primitives *new_RxExceptionsOnErrorThrowable_OnNextValue_Primitives_init() {
+  J2OBJC_NEW_IMPL(RxExceptionsOnErrorThrowable_OnNextValue_Primitives, init)
+}
+
+RxExceptionsOnErrorThrowable_OnNextValue_Primitives *create_RxExceptionsOnErrorThrowable_OnNextValue_Primitives_init() {
+  J2OBJC_CREATE_IMPL(RxExceptionsOnErrorThrowable_OnNextValue_Primitives, init)
+}
+
 id<JavaUtilSet> RxExceptionsOnErrorThrowable_OnNextValue_Primitives_create() {
   RxExceptionsOnErrorThrowable_OnNextValue_Primitives_initialize();
   id<JavaUtilSet> set = create_JavaUtilHashSet_init();
@@ -332,18 +344,6 @@ id<JavaUtilSet> RxExceptionsOnErrorThrowable_OnNextValue_Primitives_create() {
   [set addWithId:JavaLangFloat_class_()];
   [set addWithId:JavaLangDouble_class_()];
   return set;
-}
-
-void RxExceptionsOnErrorThrowable_OnNextValue_Primitives_init(RxExceptionsOnErrorThrowable_OnNextValue_Primitives *self) {
-  NSObject_init(self);
-}
-
-RxExceptionsOnErrorThrowable_OnNextValue_Primitives *new_RxExceptionsOnErrorThrowable_OnNextValue_Primitives_init() {
-  J2OBJC_NEW_IMPL(RxExceptionsOnErrorThrowable_OnNextValue_Primitives, init)
-}
-
-RxExceptionsOnErrorThrowable_OnNextValue_Primitives *create_RxExceptionsOnErrorThrowable_OnNextValue_Primitives_init() {
-  J2OBJC_CREATE_IMPL(RxExceptionsOnErrorThrowable_OnNextValue_Primitives, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxExceptionsOnErrorThrowable_OnNextValue_Primitives)

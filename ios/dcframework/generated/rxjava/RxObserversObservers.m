@@ -28,7 +28,9 @@ __attribute__((unused)) static RxObserversObservers *new_RxObserversObservers_in
 
 __attribute__((unused)) static RxObserversObservers *create_RxObserversObservers_init();
 
-@interface RxObserversObservers_$1 : NSObject < RxObserver >
+@interface RxObserversObservers_1 : NSObject < RxObserver >
+
+- (instancetype)init;
 
 - (void)onCompleted;
 
@@ -36,101 +38,90 @@ __attribute__((unused)) static RxObserversObservers *create_RxObserversObservers
 
 - (void)onNextWithId:(id)args;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxObserversObservers_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxObserversObservers_1)
 
-__attribute__((unused)) static void RxObserversObservers_$1_init(RxObserversObservers_$1 *self);
+__attribute__((unused)) static void RxObserversObservers_1_init(RxObserversObservers_1 *self);
 
-__attribute__((unused)) static RxObserversObservers_$1 *new_RxObserversObservers_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxObserversObservers_1 *new_RxObserversObservers_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxObserversObservers_$1 *create_RxObserversObservers_$1_init();
+__attribute__((unused)) static RxObserversObservers_1 *create_RxObserversObservers_1_init();
 
-@interface RxObserversObservers_$2 : NSObject < RxObserver > {
+@interface RxObserversObservers_2 : NSObject < RxObserver > {
  @public
   id<RxFunctionsAction1> val$onNext_;
 }
 
+- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0;
+
 - (void)onCompleted;
 
 - (void)onErrorWithNSException:(NSException *)e;
 
 - (void)onNextWithId:(id)args;
 
-- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxObserversObservers_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxObserversObservers_2)
 
-J2OBJC_FIELD_SETTER(RxObserversObservers_$2, val$onNext_, id<RxFunctionsAction1>)
+__attribute__((unused)) static void RxObserversObservers_2_initWithRxFunctionsAction1_(RxObserversObservers_2 *self, id<RxFunctionsAction1> capture$0);
 
-__attribute__((unused)) static void RxObserversObservers_$2_initWithRxFunctionsAction1_(RxObserversObservers_$2 *self, id<RxFunctionsAction1> capture$0);
+__attribute__((unused)) static RxObserversObservers_2 *new_RxObserversObservers_2_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxObserversObservers_$2 *new_RxObserversObservers_$2_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxObserversObservers_2 *create_RxObserversObservers_2_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0);
 
-__attribute__((unused)) static RxObserversObservers_$2 *create_RxObserversObservers_$2_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0);
-
-@interface RxObserversObservers_$3 : NSObject < RxObserver > {
+@interface RxObserversObservers_3 : NSObject < RxObserver > {
  @public
   id<RxFunctionsAction1> val$onError_;
   id<RxFunctionsAction1> val$onNext_;
 }
 
+- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0
+                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$1;
+
 - (void)onCompleted;
 
 - (void)onErrorWithNSException:(NSException *)e;
 
 - (void)onNextWithId:(id)args;
 
-- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0
-                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxObserversObservers_$3)
+J2OBJC_EMPTY_STATIC_INIT(RxObserversObservers_3)
 
-J2OBJC_FIELD_SETTER(RxObserversObservers_$3, val$onError_, id<RxFunctionsAction1>)
-J2OBJC_FIELD_SETTER(RxObserversObservers_$3, val$onNext_, id<RxFunctionsAction1>)
+__attribute__((unused)) static void RxObserversObservers_3_initWithRxFunctionsAction1_withRxFunctionsAction1_(RxObserversObservers_3 *self, id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1);
 
-__attribute__((unused)) static void RxObserversObservers_$3_initWithRxFunctionsAction1_withRxFunctionsAction1_(RxObserversObservers_$3 *self, id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1);
+__attribute__((unused)) static RxObserversObservers_3 *new_RxObserversObservers_3_initWithRxFunctionsAction1_withRxFunctionsAction1_(id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxObserversObservers_$3 *new_RxObserversObservers_$3_initWithRxFunctionsAction1_withRxFunctionsAction1_(id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxObserversObservers_3 *create_RxObserversObservers_3_initWithRxFunctionsAction1_withRxFunctionsAction1_(id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1);
 
-__attribute__((unused)) static RxObserversObservers_$3 *create_RxObserversObservers_$3_initWithRxFunctionsAction1_withRxFunctionsAction1_(id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1);
-
-@interface RxObserversObservers_$4 : NSObject < RxObserver > {
+@interface RxObserversObservers_4 : NSObject < RxObserver > {
  @public
   id<RxFunctionsAction0> val$onComplete_;
   id<RxFunctionsAction1> val$onError_;
   id<RxFunctionsAction1> val$onNext_;
 }
 
+- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0
+                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$1
+                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$2;
+
 - (void)onCompleted;
 
 - (void)onErrorWithNSException:(NSException *)e;
 
 - (void)onNextWithId:(id)args;
 
-- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0
-                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$1
-                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$2;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxObserversObservers_$4)
+J2OBJC_EMPTY_STATIC_INIT(RxObserversObservers_4)
 
-J2OBJC_FIELD_SETTER(RxObserversObservers_$4, val$onComplete_, id<RxFunctionsAction0>)
-J2OBJC_FIELD_SETTER(RxObserversObservers_$4, val$onError_, id<RxFunctionsAction1>)
-J2OBJC_FIELD_SETTER(RxObserversObservers_$4, val$onNext_, id<RxFunctionsAction1>)
+__attribute__((unused)) static void RxObserversObservers_4_initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_(RxObserversObservers_4 *self, id<RxFunctionsAction0> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction1> capture$2);
 
-__attribute__((unused)) static void RxObserversObservers_$4_initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_(RxObserversObservers_$4 *self, id<RxFunctionsAction0> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction1> capture$2);
+__attribute__((unused)) static RxObserversObservers_4 *new_RxObserversObservers_4_initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_(id<RxFunctionsAction0> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction1> capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxObserversObservers_$4 *new_RxObserversObservers_$4_initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_(id<RxFunctionsAction0> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction1> capture$2) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxObserversObservers_$4 *create_RxObserversObservers_$4_initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_(id<RxFunctionsAction0> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction1> capture$2);
+__attribute__((unused)) static RxObserversObservers_4 *create_RxObserversObservers_4_initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_(id<RxFunctionsAction0> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction1> capture$2);
 
 J2OBJC_INITIALIZED_DEFN(RxObserversObservers)
 
@@ -188,7 +179,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (void)initialize {
   if (self == [RxObserversObservers class]) {
-    JreStrongAssignAndConsume(&RxObserversObservers_EMPTY, new_RxObserversObservers_$1_init());
+    JreStrongAssignAndConsume(&RxObserversObservers_EMPTY, new_RxObserversObservers_1_init());
     J2OBJC_SET_INITIALIZED(RxObserversObservers)
   }
 }
@@ -218,7 +209,7 @@ id<RxObserver> RxObserversObservers_createWithRxFunctionsAction1_(id<RxFunctions
   if (onNext == nil) {
     @throw create_JavaLangIllegalArgumentException_initWithNSString_(@"onNext can not be null");
   }
-  return create_RxObserversObservers_$2_initWithRxFunctionsAction1_(onNext);
+  return create_RxObserversObservers_2_initWithRxFunctionsAction1_(onNext);
 }
 
 id<RxObserver> RxObserversObservers_createWithRxFunctionsAction1_withRxFunctionsAction1_(id<RxFunctionsAction1> onNext, id<RxFunctionsAction1> onError) {
@@ -229,7 +220,7 @@ id<RxObserver> RxObserversObservers_createWithRxFunctionsAction1_withRxFunctions
   if (onError == nil) {
     @throw create_JavaLangIllegalArgumentException_initWithNSString_(@"onError can not be null");
   }
-  return create_RxObserversObservers_$3_initWithRxFunctionsAction1_withRxFunctionsAction1_(onError, onNext);
+  return create_RxObserversObservers_3_initWithRxFunctionsAction1_withRxFunctionsAction1_(onError, onNext);
 }
 
 id<RxObserver> RxObserversObservers_createWithRxFunctionsAction1_withRxFunctionsAction1_withRxFunctionsAction0_(id<RxFunctionsAction1> onNext, id<RxFunctionsAction1> onError, id<RxFunctionsAction0> onComplete) {
@@ -243,12 +234,19 @@ id<RxObserver> RxObserversObservers_createWithRxFunctionsAction1_withRxFunctions
   if (onComplete == nil) {
     @throw create_JavaLangIllegalArgumentException_initWithNSString_(@"onComplete can not be null");
   }
-  return create_RxObserversObservers_$4_initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_(onComplete, onError, onNext);
+  return create_RxObserversObservers_4_initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_(onComplete, onError, onNext);
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObserversObservers)
 
-@implementation RxObserversObservers_$1
+@implementation RxObserversObservers_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxObserversObservers_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)onCompleted {
 }
@@ -260,47 +258,45 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObserversObservers)
 - (void)onNextWithId:(id)args {
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxObserversObservers_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x11, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x11, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x11, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "LRxObserversObservers;", "Ljava/lang/Object;Lrx/Observer<Ljava/lang/Object;>;" };
-  static const J2ObjcClassInfo _RxObserversObservers_$1 = { "", "rx.observers", ptrTable, methods, NULL, 7, 0x8008, 4, 0, 4, -1, -1, 5, -1 };
-  return &_RxObserversObservers_$1;
+  static const J2ObjcClassInfo _RxObserversObservers_1 = { "", "rx.observers", ptrTable, methods, NULL, 7, 0x8008, 4, 0, 4, -1, -1, 5, -1 };
+  return &_RxObserversObservers_1;
 }
 
 @end
 
-void RxObserversObservers_$1_init(RxObserversObservers_$1 *self) {
+void RxObserversObservers_1_init(RxObserversObservers_1 *self) {
   NSObject_init(self);
 }
 
-RxObserversObservers_$1 *new_RxObserversObservers_$1_init() {
-  J2OBJC_NEW_IMPL(RxObserversObservers_$1, init)
+RxObserversObservers_1 *new_RxObserversObservers_1_init() {
+  J2OBJC_NEW_IMPL(RxObserversObservers_1, init)
 }
 
-RxObserversObservers_$1 *create_RxObserversObservers_$1_init() {
-  J2OBJC_CREATE_IMPL(RxObserversObservers_$1, init)
+RxObserversObservers_1 *create_RxObserversObservers_1_init() {
+  J2OBJC_CREATE_IMPL(RxObserversObservers_1, init)
 }
 
-@implementation RxObserversObservers_$2
+@implementation RxObserversObservers_2
+
+- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0 {
+  RxObserversObservers_2_initWithRxFunctionsAction1_(self, capture$0);
+  return self;
+}
 
 - (void)onCompleted {
 }
@@ -313,11 +309,6 @@ RxObserversObservers_$1 *create_RxObserversObservers_$1_init() {
   [((id<RxFunctionsAction1>) nil_chk(val$onNext_)) callWithId:args];
 }
 
-- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0 {
-  RxObserversObservers_$2_initWithRxFunctionsAction1_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$onNext_);
   [super dealloc];
@@ -325,42 +316,48 @@ RxObserversObservers_$1 *create_RxObserversObservers_$1_init() {
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x11, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x11, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x11, 2, 3, -1, 4, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(initWithRxFunctionsAction1:);
+  methods[0].selector = @selector(initWithRxFunctionsAction1:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$onNext_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$onNext_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "LRxFunctionsAction1;", "(Lrx/functions/Action1<-TT;>;)V", "Lrx/functions/Action1<-TT;>;", "LRxObserversObservers;", "createWithRxFunctionsAction1:", "Ljava/lang/Object;Lrx/Observer<TT;>;" };
-  static const J2ObjcClassInfo _RxObserversObservers_$2 = { "", "rx.observers", ptrTable, methods, fields, 7, 0x8008, 4, 1, 8, -1, 9, 10, -1 };
-  return &_RxObserversObservers_$2;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "Lrx/functions/Action1<-TT;>;", "LRxObserversObservers;", "createWithRxFunctionsAction1:", "Ljava/lang/Object;Lrx/Observer<TT;>;" };
+  static const J2ObjcClassInfo _RxObserversObservers_2 = { "", "rx.observers", ptrTable, methods, fields, 7, 0x8008, 4, 1, 6, -1, 7, 8, -1 };
+  return &_RxObserversObservers_2;
 }
 
 @end
 
-void RxObserversObservers_$2_initWithRxFunctionsAction1_(RxObserversObservers_$2 *self, id<RxFunctionsAction1> capture$0) {
+void RxObserversObservers_2_initWithRxFunctionsAction1_(RxObserversObservers_2 *self, id<RxFunctionsAction1> capture$0) {
   JreStrongAssign(&self->val$onNext_, capture$0);
   NSObject_init(self);
 }
 
-RxObserversObservers_$2 *new_RxObserversObservers_$2_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0) {
-  J2OBJC_NEW_IMPL(RxObserversObservers_$2, initWithRxFunctionsAction1_, capture$0)
+RxObserversObservers_2 *new_RxObserversObservers_2_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0) {
+  J2OBJC_NEW_IMPL(RxObserversObservers_2, initWithRxFunctionsAction1_, capture$0)
 }
 
-RxObserversObservers_$2 *create_RxObserversObservers_$2_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0) {
-  J2OBJC_CREATE_IMPL(RxObserversObservers_$2, initWithRxFunctionsAction1_, capture$0)
+RxObserversObservers_2 *create_RxObserversObservers_2_initWithRxFunctionsAction1_(id<RxFunctionsAction1> capture$0) {
+  J2OBJC_CREATE_IMPL(RxObserversObservers_2, initWithRxFunctionsAction1_, capture$0)
 }
 
-@implementation RxObserversObservers_$3
+@implementation RxObserversObservers_3
+
+- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0
+                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$1 {
+  RxObserversObservers_3_initWithRxFunctionsAction1_withRxFunctionsAction1_(self, capture$0, capture$1);
+  return self;
+}
 
 - (void)onCompleted {
 }
@@ -373,12 +370,6 @@ RxObserversObservers_$2 *create_RxObserversObservers_$2_initWithRxFunctionsActio
   [((id<RxFunctionsAction1>) nil_chk(val$onNext_)) callWithId:args];
 }
 
-- (instancetype)initWithRxFunctionsAction1:(id<RxFunctionsAction1>)capture$0
-                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$1 {
-  RxObserversObservers_$3_initWithRxFunctionsAction1_withRxFunctionsAction1_(self, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$onError_);
   RELEASE_(val$onNext_);
@@ -387,44 +378,51 @@ RxObserversObservers_$2 *create_RxObserversObservers_$2_initWithRxFunctionsActio
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x11, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x11, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x11, 2, 3, -1, 4, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(initWithRxFunctionsAction1:withRxFunctionsAction1:);
+  methods[0].selector = @selector(initWithRxFunctionsAction1:withRxFunctionsAction1:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$onError_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
-    { "val$onNext_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "val$onError_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$onNext_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "LRxFunctionsAction1;LRxFunctionsAction1;", "(Lrx/functions/Action1<Ljava/lang/Throwable;>;Lrx/functions/Action1<-TT;>;)V", "Lrx/functions/Action1<Ljava/lang/Throwable;>;", "Lrx/functions/Action1<-TT;>;", "LRxObserversObservers;", "createWithRxFunctionsAction1:withRxFunctionsAction1:", "Ljava/lang/Object;Lrx/Observer<TT;>;" };
-  static const J2ObjcClassInfo _RxObserversObservers_$3 = { "", "rx.observers", ptrTable, methods, fields, 7, 0x8008, 4, 2, 9, -1, 10, 11, -1 };
-  return &_RxObserversObservers_$3;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "Lrx/functions/Action1<Ljava/lang/Throwable;>;", "Lrx/functions/Action1<-TT;>;", "LRxObserversObservers;", "createWithRxFunctionsAction1:withRxFunctionsAction1:", "Ljava/lang/Object;Lrx/Observer<TT;>;" };
+  static const J2ObjcClassInfo _RxObserversObservers_3 = { "", "rx.observers", ptrTable, methods, fields, 7, 0x8008, 4, 2, 7, -1, 8, 9, -1 };
+  return &_RxObserversObservers_3;
 }
 
 @end
 
-void RxObserversObservers_$3_initWithRxFunctionsAction1_withRxFunctionsAction1_(RxObserversObservers_$3 *self, id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1) {
+void RxObserversObservers_3_initWithRxFunctionsAction1_withRxFunctionsAction1_(RxObserversObservers_3 *self, id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1) {
   JreStrongAssign(&self->val$onError_, capture$0);
   JreStrongAssign(&self->val$onNext_, capture$1);
   NSObject_init(self);
 }
 
-RxObserversObservers_$3 *new_RxObserversObservers_$3_initWithRxFunctionsAction1_withRxFunctionsAction1_(id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1) {
-  J2OBJC_NEW_IMPL(RxObserversObservers_$3, initWithRxFunctionsAction1_withRxFunctionsAction1_, capture$0, capture$1)
+RxObserversObservers_3 *new_RxObserversObservers_3_initWithRxFunctionsAction1_withRxFunctionsAction1_(id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1) {
+  J2OBJC_NEW_IMPL(RxObserversObservers_3, initWithRxFunctionsAction1_withRxFunctionsAction1_, capture$0, capture$1)
 }
 
-RxObserversObservers_$3 *create_RxObserversObservers_$3_initWithRxFunctionsAction1_withRxFunctionsAction1_(id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1) {
-  J2OBJC_CREATE_IMPL(RxObserversObservers_$3, initWithRxFunctionsAction1_withRxFunctionsAction1_, capture$0, capture$1)
+RxObserversObservers_3 *create_RxObserversObservers_3_initWithRxFunctionsAction1_withRxFunctionsAction1_(id<RxFunctionsAction1> capture$0, id<RxFunctionsAction1> capture$1) {
+  J2OBJC_CREATE_IMPL(RxObserversObservers_3, initWithRxFunctionsAction1_withRxFunctionsAction1_, capture$0, capture$1)
 }
 
-@implementation RxObserversObservers_$4
+@implementation RxObserversObservers_4
+
+- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0
+                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$1
+                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$2 {
+  RxObserversObservers_4_initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_(self, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)onCompleted {
   [((id<RxFunctionsAction0>) nil_chk(val$onComplete_)) call];
@@ -438,13 +436,6 @@ RxObserversObservers_$3 *create_RxObserversObservers_$3_initWithRxFunctionsActio
   [((id<RxFunctionsAction1>) nil_chk(val$onNext_)) callWithId:args];
 }
 
-- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0
-                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$1
-                    withRxFunctionsAction1:(id<RxFunctionsAction1>)capture$2 {
-  RxObserversObservers_$4_initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_(self, capture$0, capture$1, capture$2);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$onComplete_);
   RELEASE_(val$onError_);
@@ -454,41 +445,41 @@ RxObserversObservers_$3 *create_RxObserversObservers_$3_initWithRxFunctionsActio
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x11, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x11, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x11, 2, 3, -1, 4, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(initWithRxFunctionsAction0:withRxFunctionsAction1:withRxFunctionsAction1:);
+  methods[0].selector = @selector(initWithRxFunctionsAction0:withRxFunctionsAction1:withRxFunctionsAction1:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$onComplete_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$onError_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
-    { "val$onNext_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "val$onError_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$onNext_", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "LRxFunctionsAction0;LRxFunctionsAction1;LRxFunctionsAction1;", "(Lrx/functions/Action0;Lrx/functions/Action1<Ljava/lang/Throwable;>;Lrx/functions/Action1<-TT;>;)V", "Lrx/functions/Action1<Ljava/lang/Throwable;>;", "Lrx/functions/Action1<-TT;>;", "LRxObserversObservers;", "createWithRxFunctionsAction1:withRxFunctionsAction1:withRxFunctionsAction0:", "Ljava/lang/Object;Lrx/Observer<TT;>;" };
-  static const J2ObjcClassInfo _RxObserversObservers_$4 = { "", "rx.observers", ptrTable, methods, fields, 7, 0x8008, 4, 3, 9, -1, 10, 11, -1 };
-  return &_RxObserversObservers_$4;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "Lrx/functions/Action1<Ljava/lang/Throwable;>;", "Lrx/functions/Action1<-TT;>;", "LRxObserversObservers;", "createWithRxFunctionsAction1:withRxFunctionsAction1:withRxFunctionsAction0:", "Ljava/lang/Object;Lrx/Observer<TT;>;" };
+  static const J2ObjcClassInfo _RxObserversObservers_4 = { "", "rx.observers", ptrTable, methods, fields, 7, 0x8008, 4, 3, 7, -1, 8, 9, -1 };
+  return &_RxObserversObservers_4;
 }
 
 @end
 
-void RxObserversObservers_$4_initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_(RxObserversObservers_$4 *self, id<RxFunctionsAction0> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction1> capture$2) {
+void RxObserversObservers_4_initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_(RxObserversObservers_4 *self, id<RxFunctionsAction0> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction1> capture$2) {
   JreStrongAssign(&self->val$onComplete_, capture$0);
   JreStrongAssign(&self->val$onError_, capture$1);
   JreStrongAssign(&self->val$onNext_, capture$2);
   NSObject_init(self);
 }
 
-RxObserversObservers_$4 *new_RxObserversObservers_$4_initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_(id<RxFunctionsAction0> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction1> capture$2) {
-  J2OBJC_NEW_IMPL(RxObserversObservers_$4, initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_, capture$0, capture$1, capture$2)
+RxObserversObservers_4 *new_RxObserversObservers_4_initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_(id<RxFunctionsAction0> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction1> capture$2) {
+  J2OBJC_NEW_IMPL(RxObserversObservers_4, initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_, capture$0, capture$1, capture$2)
 }
 
-RxObserversObservers_$4 *create_RxObserversObservers_$4_initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_(id<RxFunctionsAction0> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction1> capture$2) {
-  J2OBJC_CREATE_IMPL(RxObserversObservers_$4, initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_, capture$0, capture$1, capture$2)
+RxObserversObservers_4 *create_RxObserversObservers_4_initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_(id<RxFunctionsAction0> capture$0, id<RxFunctionsAction1> capture$1, id<RxFunctionsAction1> capture$2) {
+  J2OBJC_CREATE_IMPL(RxObserversObservers_4, initWithRxFunctionsAction0_withRxFunctionsAction1_withRxFunctionsAction1_, capture$0, capture$1, capture$2)
 }

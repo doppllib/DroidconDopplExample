@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OperatorToObservableList.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxExceptionsExceptions.h"
 #include "RxInternalOperatorsOperatorToObservableList.h"
@@ -14,13 +13,16 @@
 #include "java/util/LinkedList.h"
 #include "java/util/List.h"
 
-@interface RxInternalOperatorsOperatorToObservableList_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorToObservableList_1 : RxSubscriber {
  @public
-  jboolean completed_;
-  id<JavaUtilList> list_;
   RxInternalProducersSingleDelayedProducer *val$producer_;
   RxSubscriber *val$o_;
+  jboolean completed_;
+  id<JavaUtilList> list_;
 }
+
+- (instancetype)initWithRxInternalProducersSingleDelayedProducer:(RxInternalProducersSingleDelayedProducer *)capture$0
+                                                withRxSubscriber:(RxSubscriber *)capture$1;
 
 - (void)onStart;
 
@@ -30,22 +32,17 @@
 
 - (void)onNextWithId:(id)value;
 
-- (instancetype)initWithRxInternalProducersSingleDelayedProducer:(RxInternalProducersSingleDelayedProducer *)capture$0
-                                                withRxSubscriber:(RxSubscriber *)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorToObservableList_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorToObservableList_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorToObservableList_$1, list_, id<JavaUtilList>)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorToObservableList_$1, val$producer_, RxInternalProducersSingleDelayedProducer *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorToObservableList_$1, val$o_, RxSubscriber *)
+J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorToObservableList_1, list_, id<JavaUtilList>)
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorToObservableList_$1_initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorToObservableList_$1 *self, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1);
+__attribute__((unused)) static void RxInternalOperatorsOperatorToObservableList_1_initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorToObservableList_1 *self, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorToObservableList_$1 *new_RxInternalOperatorsOperatorToObservableList_$1_initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorToObservableList_1 *new_RxInternalOperatorsOperatorToObservableList_1_initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorToObservableList_$1 *create_RxInternalOperatorsOperatorToObservableList_$1_initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1);
+__attribute__((unused)) static RxInternalOperatorsOperatorToObservableList_1 *create_RxInternalOperatorsOperatorToObservableList_1_initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1);
 
 @implementation RxInternalOperatorsOperatorToObservableList
 
@@ -62,7 +59,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 - (RxSubscriber *)callWithId:(RxSubscriber *)o {
   RxInternalProducersSingleDelayedProducer *producer = create_RxInternalProducersSingleDelayedProducer_initWithRxSubscriber_(o);
-  RxSubscriber *result = create_RxInternalOperatorsOperatorToObservableList_$1_initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_(producer, o);
+  RxSubscriber *result = create_RxInternalOperatorsOperatorToObservableList_1_initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_(producer, o);
   [((RxSubscriber *) nil_chk(o)) addWithRxSubscription:result];
   [o setProducerWithRxProducer:producer];
   return result;
@@ -158,7 +155,13 @@ RxInternalOperatorsOperatorToObservableList_Holder *create_RxInternalOperatorsOp
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorToObservableList_Holder)
 
-@implementation RxInternalOperatorsOperatorToObservableList_$1
+@implementation RxInternalOperatorsOperatorToObservableList_1
+
+- (instancetype)initWithRxInternalProducersSingleDelayedProducer:(RxInternalProducersSingleDelayedProducer *)capture$0
+                                                withRxSubscriber:(RxSubscriber *)capture$1 {
+  RxInternalOperatorsOperatorToObservableList_1_initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_(self, capture$0, capture$1);
+  return self;
+}
 
 - (void)onStart {
   [self requestWithLong:JavaLangLong_MAX_VALUE];
@@ -190,60 +193,53 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorToObservableList_Hol
   }
 }
 
-- (instancetype)initWithRxInternalProducersSingleDelayedProducer:(RxInternalProducersSingleDelayedProducer *)capture$0
-                                                withRxSubscriber:(RxSubscriber *)capture$1 {
-  RxInternalOperatorsOperatorToObservableList_$1_initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_(self, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorToObservableList_$1 class]);
-  RELEASE_(list_);
   RELEASE_(val$producer_);
   RELEASE_(val$o_);
+  RELEASE_(list_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onStart);
-  methods[1].selector = @selector(onCompleted);
-  methods[2].selector = @selector(onErrorWithNSException:);
-  methods[3].selector = @selector(onNextWithId:);
-  methods[4].selector = @selector(initWithRxInternalProducersSingleDelayedProducer:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalProducersSingleDelayedProducer:withRxSubscriber:);
+  methods[1].selector = @selector(onStart);
+  methods[2].selector = @selector(onCompleted);
+  methods[3].selector = @selector(onErrorWithNSException:);
+  methods[4].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
+    { "val$producer_", "LRxInternalProducersSingleDelayedProducer;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$o_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
     { "completed_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "list_", "LJavaUtilList;", .constantValue.asLong = 0, 0x0, -1, -1, 7, -1 },
-    { "val$producer_", "LRxInternalProducersSingleDelayedProducer;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
-    { "val$o_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 9, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "LRxInternalProducersSingleDelayedProducer;LRxSubscriber;", "(Lrx/internal/producers/SingleDelayedProducer<Ljava/util/List<TT;>;>;Lrx/Subscriber<-Ljava/util/List<TT;>;>;)V", "Ljava/util/List<TT;>;", "Lrx/internal/producers/SingleDelayedProducer<Ljava/util/List<TT;>;>;", "Lrx/Subscriber<-Ljava/util/List<TT;>;>;", "LRxInternalOperatorsOperatorToObservableList;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorToObservableList_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 4, 10, -1, 11, 12, -1 };
-  return &_RxInternalOperatorsOperatorToObservableList_$1;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "Lrx/internal/producers/SingleDelayedProducer<Ljava/util/List<TT;>;>;", "Lrx/Subscriber<-Ljava/util/List<TT;>;>;", "Ljava/util/List<TT;>;", "LRxInternalOperatorsOperatorToObservableList;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorToObservableList_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 4, 8, -1, 9, 10, -1 };
+  return &_RxInternalOperatorsOperatorToObservableList_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorToObservableList_$1_initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorToObservableList_$1 *self, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) {
+void RxInternalOperatorsOperatorToObservableList_1_initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorToObservableList_1 *self, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) {
   JreStrongAssign(&self->val$producer_, capture$0);
   JreStrongAssign(&self->val$o_, capture$1);
   RxSubscriber_init(self);
   JreStrongAssignAndConsume(&self->list_, new_JavaUtilLinkedList_init());
 }
 
-RxInternalOperatorsOperatorToObservableList_$1 *new_RxInternalOperatorsOperatorToObservableList_$1_initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorToObservableList_$1, initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_, capture$0, capture$1)
+RxInternalOperatorsOperatorToObservableList_1 *new_RxInternalOperatorsOperatorToObservableList_1_initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorToObservableList_1, initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_, capture$0, capture$1)
 }
 
-RxInternalOperatorsOperatorToObservableList_$1 *create_RxInternalOperatorsOperatorToObservableList_$1_initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorToObservableList_$1, initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_, capture$0, capture$1)
+RxInternalOperatorsOperatorToObservableList_1 *create_RxInternalOperatorsOperatorToObservableList_1_initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorToObservableList_1, initWithRxInternalProducersSingleDelayedProducer_withRxSubscriber_, capture$0, capture$1)
 }

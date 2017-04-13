@@ -4,7 +4,6 @@
 //
 
 #include "CoTouchlabSqueakyDaoDao.h"
-#include "IOSClass.h"
 #include "IOSObjectArray.h"
 #include "J2ObjC_source.h"
 

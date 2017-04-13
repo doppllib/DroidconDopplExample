@@ -11,12 +11,16 @@
 #include "java/util/ArrayDeque.h"
 #include "java/util/Deque.h"
 
-@interface RxInternalOperatorsOperatorSkipLast_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorSkipLast_1 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorSkipLast *this$0_;
-  id<JavaUtilDeque> deque_;
   RxSubscriber *val$subscriber_;
+  id<JavaUtilDeque> deque_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorSkipLast:(RxInternalOperatorsOperatorSkipLast *)outer$
+                                           withRxSubscriber:(RxSubscriber *)capture$0
+                                           withRxSubscriber:(RxSubscriber *)param0;
 
 - (void)onCompleted;
 
@@ -24,23 +28,17 @@
 
 - (void)onNextWithId:(id)value;
 
-- (instancetype)initWithRxInternalOperatorsOperatorSkipLast:(RxInternalOperatorsOperatorSkipLast *)outer$
-                                           withRxSubscriber:(RxSubscriber *)capture$0
-                                           withRxSubscriber:(RxSubscriber *)arg$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSkipLast_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSkipLast_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSkipLast_$1, this$0_, RxInternalOperatorsOperatorSkipLast *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSkipLast_$1, deque_, id<JavaUtilDeque>)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSkipLast_$1, val$subscriber_, RxSubscriber *)
+J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSkipLast_1, deque_, id<JavaUtilDeque>)
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorSkipLast_$1_initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLast_$1 *self, RxInternalOperatorsOperatorSkipLast *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static void RxInternalOperatorsOperatorSkipLast_1_initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLast_1 *self, RxInternalOperatorsOperatorSkipLast *outer$, RxSubscriber *capture$0, RxSubscriber *param0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorSkipLast_$1 *new_RxInternalOperatorsOperatorSkipLast_$1_initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLast *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorSkipLast_1 *new_RxInternalOperatorsOperatorSkipLast_1_initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLast *outer$, RxSubscriber *capture$0, RxSubscriber *param0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorSkipLast_$1 *create_RxInternalOperatorsOperatorSkipLast_$1_initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLast *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorSkipLast_1 *create_RxInternalOperatorsOperatorSkipLast_1_initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLast *outer$, RxSubscriber *capture$0, RxSubscriber *param0);
 
 @implementation RxInternalOperatorsOperatorSkipLast
 
@@ -50,7 +48,7 @@ __attribute__((unused)) static RxInternalOperatorsOperatorSkipLast_$1 *create_Rx
 }
 
 - (RxSubscriber *)callWithId:(RxSubscriber *)subscriber {
-  return create_RxInternalOperatorsOperatorSkipLast_$1_initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_(self, subscriber, subscriber);
+  return create_RxInternalOperatorsOperatorSkipLast_1_initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_(self, subscriber, subscriber);
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -91,7 +89,14 @@ RxInternalOperatorsOperatorSkipLast *create_RxInternalOperatorsOperatorSkipLast_
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorSkipLast)
 
-@implementation RxInternalOperatorsOperatorSkipLast_$1
+@implementation RxInternalOperatorsOperatorSkipLast_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorSkipLast:(RxInternalOperatorsOperatorSkipLast *)outer$
+                                           withRxSubscriber:(RxSubscriber *)capture$0
+                                           withRxSubscriber:(RxSubscriber *)param0 {
+  RxInternalOperatorsOperatorSkipLast_1_initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, param0);
+  return self;
+}
 
 - (void)onCompleted {
   [((RxSubscriber *) nil_chk(val$subscriber_)) onCompleted];
@@ -115,58 +120,50 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorSkipLast)
   [deque_ offerLastWithId:RxInternalOperatorsNotificationLite_nextWithId_(value)];
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorSkipLast:(RxInternalOperatorsOperatorSkipLast *)outer$
-                                           withRxSubscriber:(RxSubscriber *)capture$0
-                                           withRxSubscriber:(RxSubscriber *)arg$0 {
-  RxInternalOperatorsOperatorSkipLast_$1_initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, arg$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorSkipLast_$1 class]);
   RELEASE_(this$0_);
-  RELEASE_(deque_);
   RELEASE_(val$subscriber_);
+  RELEASE_(deque_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 4, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(initWithRxInternalOperatorsOperatorSkipLast:withRxSubscriber:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorSkipLast:withRxSubscriber:withRxSubscriber:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorSkipLast;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "deque_", "LJavaUtilDeque;", .constantValue.asLong = 0, 0x12, -1, -1, 7, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorSkipLast;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
     { "val$subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "deque_", "LJavaUtilDeque;", .constantValue.asLong = 0, 0x12, -1, -1, 9, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "LRxInternalOperatorsOperatorSkipLast;LRxSubscriber;LRxSubscriber;", "(Lrx/internal/operators/OperatorSkipLast;Lrx/Subscriber<-TT;>;Lrx/Subscriber<*>;)V", "Ljava/util/Deque<Ljava/lang/Object;>;", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorSkipLast;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSkipLast_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 9, -1, 10, 11, -1 };
-  return &_RxInternalOperatorsOperatorSkipLast_$1;
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "Lrx/internal/operators/OperatorSkipLast<TT;>;", "Lrx/Subscriber<-TT;>;", "Ljava/util/Deque<Ljava/lang/Object;>;", "LRxInternalOperatorsOperatorSkipLast;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSkipLast_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 10, -1, 11, 12, -1 };
+  return &_RxInternalOperatorsOperatorSkipLast_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorSkipLast_$1_initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLast_$1 *self, RxInternalOperatorsOperatorSkipLast *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
+void RxInternalOperatorsOperatorSkipLast_1_initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLast_1 *self, RxInternalOperatorsOperatorSkipLast *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$subscriber_, capture$0);
-  RxSubscriber_initWithRxSubscriber_(self, arg$0);
+  RxSubscriber_initWithRxSubscriber_(self, param0);
   JreStrongAssignAndConsume(&self->deque_, new_JavaUtilArrayDeque_init());
 }
 
-RxInternalOperatorsOperatorSkipLast_$1 *new_RxInternalOperatorsOperatorSkipLast_$1_initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLast *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSkipLast_$1, initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_, outer$, capture$0, arg$0)
+RxInternalOperatorsOperatorSkipLast_1 *new_RxInternalOperatorsOperatorSkipLast_1_initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLast *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSkipLast_1, initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_, outer$, capture$0, param0)
 }
 
-RxInternalOperatorsOperatorSkipLast_$1 *create_RxInternalOperatorsOperatorSkipLast_$1_initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLast *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSkipLast_$1, initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_, outer$, capture$0, arg$0)
+RxInternalOperatorsOperatorSkipLast_1 *create_RxInternalOperatorsOperatorSkipLast_1_initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipLast *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSkipLast_1, initWithRxInternalOperatorsOperatorSkipLast_withRxSubscriber_withRxSubscriber_, outer$, capture$0, param0)
 }

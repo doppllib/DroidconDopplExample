@@ -54,6 +54,13 @@ __attribute__((unused)) static IOSObjectArray *DCDEvent__Annotations$12();
 
 @implementation DCDEvent
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  DCDEvent_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (jlong)getId {
   return id__;
 }
@@ -151,13 +158,6 @@ __attribute__((unused)) static IOSObjectArray *DCDEvent__Annotations$12();
   return AndroidTextTextUtils_joinWithJavaLangCharSequence_withJavaLangIterable_(@", ", names);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  DCDEvent_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(name_);
   RELEASE_(description__);
@@ -175,6 +175,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "J", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
@@ -198,34 +199,33 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 1, 2, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getId);
-  methods[1].selector = @selector(getName);
-  methods[2].selector = @selector(getDescription);
-  methods[3].selector = @selector(getCategory);
-  methods[4].selector = @selector(getVenue);
-  methods[5].selector = @selector(getStartDateLong);
-  methods[6].selector = @selector(getEndDateLong);
-  methods[7].selector = @selector(isPublicEvent);
-  methods[8].selector = @selector(getRsvpLimit);
-  methods[9].selector = @selector(getRsvpCount);
-  methods[10].selector = @selector(getSpeakerList);
-  methods[11].selector = @selector(getVote);
-  methods[12].selector = @selector(isRsvped);
-  methods[13].selector = @selector(isPast);
-  methods[14].selector = @selector(isNow);
-  methods[15].selector = @selector(isBlock);
-  methods[16].selector = @selector(getStartLong);
-  methods[17].selector = @selector(getEndLong);
-  methods[18].selector = @selector(getStartFormatted);
-  methods[19].selector = @selector(getEndFormatted);
-  methods[20].selector = @selector(getRsvpUuid);
-  methods[21].selector = @selector(setRsvpUuidWithNSString:);
-  methods[22].selector = @selector(allSpeakersString);
-  methods[23].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(getId);
+  methods[2].selector = @selector(getName);
+  methods[3].selector = @selector(getDescription);
+  methods[4].selector = @selector(getCategory);
+  methods[5].selector = @selector(getVenue);
+  methods[6].selector = @selector(getStartDateLong);
+  methods[7].selector = @selector(getEndDateLong);
+  methods[8].selector = @selector(isPublicEvent);
+  methods[9].selector = @selector(getRsvpLimit);
+  methods[10].selector = @selector(getRsvpCount);
+  methods[11].selector = @selector(getSpeakerList);
+  methods[12].selector = @selector(getVote);
+  methods[13].selector = @selector(isRsvped);
+  methods[14].selector = @selector(isPast);
+  methods[15].selector = @selector(isNow);
+  methods[16].selector = @selector(isBlock);
+  methods[17].selector = @selector(getStartLong);
+  methods[18].selector = @selector(getEndLong);
+  methods[19].selector = @selector(getStartFormatted);
+  methods[20].selector = @selector(getEndFormatted);
+  methods[21].selector = @selector(getRsvpUuid);
+  methods[22].selector = @selector(setRsvpUuidWithNSString:);
+  methods[23].selector = @selector(allSpeakersString);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "id__", "J", .constantValue.asLong = 0, 0x1, 3, -1, -1, 4 },

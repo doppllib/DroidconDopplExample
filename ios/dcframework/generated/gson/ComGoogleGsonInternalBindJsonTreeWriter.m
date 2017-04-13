@@ -10,7 +10,6 @@
 #include "ComGoogleGsonJsonObject.h"
 #include "ComGoogleGsonJsonPrimitive.h"
 #include "ComGoogleGsonStreamJsonWriter.h"
-#include "IOSClass.h"
 #include "IOSPrimitiveArray.h"
 #include "J2ObjC_source.h"
 #include "java/io/IOException.h"
@@ -53,7 +52,9 @@ __attribute__((unused)) static ComGoogleGsonJsonElement *ComGoogleGsonInternalBi
 
 __attribute__((unused)) static void ComGoogleGsonInternalBindJsonTreeWriter_putWithComGoogleGsonJsonElement_(ComGoogleGsonInternalBindJsonTreeWriter *self, ComGoogleGsonJsonElement *value);
 
-@interface ComGoogleGsonInternalBindJsonTreeWriter_$1 : JavaIoWriter
+@interface ComGoogleGsonInternalBindJsonTreeWriter_1 : JavaIoWriter
+
+- (instancetype)init;
 
 - (void)writeWithCharArray:(IOSCharArray *)buffer
                    withInt:(jint)offset
@@ -63,17 +64,15 @@ __attribute__((unused)) static void ComGoogleGsonInternalBindJsonTreeWriter_putW
 
 - (void)close;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindJsonTreeWriter_$1)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindJsonTreeWriter_1)
 
-__attribute__((unused)) static void ComGoogleGsonInternalBindJsonTreeWriter_$1_init(ComGoogleGsonInternalBindJsonTreeWriter_$1 *self);
+__attribute__((unused)) static void ComGoogleGsonInternalBindJsonTreeWriter_1_init(ComGoogleGsonInternalBindJsonTreeWriter_1 *self);
 
-__attribute__((unused)) static ComGoogleGsonInternalBindJsonTreeWriter_$1 *new_ComGoogleGsonInternalBindJsonTreeWriter_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalBindJsonTreeWriter_1 *new_ComGoogleGsonInternalBindJsonTreeWriter_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalBindJsonTreeWriter_$1 *create_ComGoogleGsonInternalBindJsonTreeWriter_$1_init();
+__attribute__((unused)) static ComGoogleGsonInternalBindJsonTreeWriter_1 *create_ComGoogleGsonInternalBindJsonTreeWriter_1_init();
 
 J2OBJC_INITIALIZED_DEFN(ComGoogleGsonInternalBindJsonTreeWriter)
 
@@ -267,7 +266,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (void)initialize {
   if (self == [ComGoogleGsonInternalBindJsonTreeWriter class]) {
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindJsonTreeWriter_UNWRITABLE_WRITER, new_ComGoogleGsonInternalBindJsonTreeWriter_$1_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindJsonTreeWriter_UNWRITABLE_WRITER, new_ComGoogleGsonInternalBindJsonTreeWriter_1_init());
     JreStrongAssignAndConsume(&ComGoogleGsonInternalBindJsonTreeWriter_SENTINEL_CLOSED, new_ComGoogleGsonJsonPrimitive_initWithNSString_(@"closed"));
     J2OBJC_SET_INITIALIZED(ComGoogleGsonInternalBindJsonTreeWriter)
   }
@@ -317,7 +316,14 @@ void ComGoogleGsonInternalBindJsonTreeWriter_putWithComGoogleGsonJsonElement_(Co
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalBindJsonTreeWriter)
 
-@implementation ComGoogleGsonInternalBindJsonTreeWriter_$1
+@implementation ComGoogleGsonInternalBindJsonTreeWriter_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindJsonTreeWriter_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)writeWithCharArray:(IOSCharArray *)buffer
                    withInt:(jint)offset
@@ -333,42 +339,35 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalBindJsonTreeWriter)
   @throw create_JavaLangAssertionError_init();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindJsonTreeWriter_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, 2, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, 2, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(writeWithCharArray:withInt:withInt:);
-  methods[1].selector = @selector(flush);
-  methods[2].selector = @selector(close);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(writeWithCharArray:withInt:withInt:);
+  methods[2].selector = @selector(flush);
+  methods[3].selector = @selector(close);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "write", "[CII", "LJavaIoIOException;", "LComGoogleGsonInternalBindJsonTreeWriter;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindJsonTreeWriter_$1 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 4, 0, 3, -1, -1, -1, -1 };
-  return &_ComGoogleGsonInternalBindJsonTreeWriter_$1;
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindJsonTreeWriter_1 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 4, 0, 3, -1, -1, -1, -1 };
+  return &_ComGoogleGsonInternalBindJsonTreeWriter_1;
 }
 
 @end
 
-void ComGoogleGsonInternalBindJsonTreeWriter_$1_init(ComGoogleGsonInternalBindJsonTreeWriter_$1 *self) {
+void ComGoogleGsonInternalBindJsonTreeWriter_1_init(ComGoogleGsonInternalBindJsonTreeWriter_1 *self) {
   JavaIoWriter_init(self);
 }
 
-ComGoogleGsonInternalBindJsonTreeWriter_$1 *new_ComGoogleGsonInternalBindJsonTreeWriter_$1_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindJsonTreeWriter_$1, init)
+ComGoogleGsonInternalBindJsonTreeWriter_1 *new_ComGoogleGsonInternalBindJsonTreeWriter_1_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindJsonTreeWriter_1, init)
 }
 
-ComGoogleGsonInternalBindJsonTreeWriter_$1 *create_ComGoogleGsonInternalBindJsonTreeWriter_$1_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindJsonTreeWriter_$1, init)
+ComGoogleGsonInternalBindJsonTreeWriter_1 *create_ComGoogleGsonInternalBindJsonTreeWriter_1_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindJsonTreeWriter_1, init)
 }

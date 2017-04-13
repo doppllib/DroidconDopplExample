@@ -35,34 +35,36 @@ inline id RxInternalOperatorsOperatorScan_get_NO_INITIAL_VALUE();
 static id RxInternalOperatorsOperatorScan_NO_INITIAL_VALUE;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(RxInternalOperatorsOperatorScan, NO_INITIAL_VALUE, id)
 
-@interface RxInternalOperatorsOperatorScan_$1 : NSObject < RxFunctionsFunc0 > {
+@interface RxInternalOperatorsOperatorScan_1 : NSObject < RxFunctionsFunc0 > {
  @public
   id val$initialValue_;
 }
 
-- (id)call;
-
 - (instancetype)initWithId:(id)capture$0;
+
+- (id)call;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorScan_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorScan_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorScan_$1, val$initialValue_, id)
+__attribute__((unused)) static void RxInternalOperatorsOperatorScan_1_initWithId_(RxInternalOperatorsOperatorScan_1 *self, id capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorScan_$1_initWithId_(RxInternalOperatorsOperatorScan_$1 *self, id capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorScan_1 *new_RxInternalOperatorsOperatorScan_1_initWithId_(id capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorScan_$1 *new_RxInternalOperatorsOperatorScan_$1_initWithId_(id capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorScan_1 *create_RxInternalOperatorsOperatorScan_1_initWithId_(id capture$0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorScan_$1 *create_RxInternalOperatorsOperatorScan_$1_initWithId_(id capture$0);
-
-@interface RxInternalOperatorsOperatorScan_$2 : RxSubscriber {
+@interface RxInternalOperatorsOperatorScan_2 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorScan *this$0_;
+  RxSubscriber *val$child_;
   jboolean once_;
   id value_;
-  RxSubscriber *val$child_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorScan:(RxInternalOperatorsOperatorScan *)outer$
+                                       withRxSubscriber:(RxSubscriber *)capture$0
+                                       withRxSubscriber:(RxSubscriber *)param0;
 
 - (void)onNextWithId:(id)t;
 
@@ -70,30 +72,28 @@ __attribute__((unused)) static RxInternalOperatorsOperatorScan_$1 *create_RxInte
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxInternalOperatorsOperatorScan:(RxInternalOperatorsOperatorScan *)outer$
-                                       withRxSubscriber:(RxSubscriber *)capture$0
-                                       withRxSubscriber:(RxSubscriber *)arg$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorScan_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorScan_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorScan_$2, this$0_, RxInternalOperatorsOperatorScan *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorScan_$2, value_, id)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorScan_$2, val$child_, RxSubscriber *)
+J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorScan_2, value_, id)
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorScan_$2_initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorScan_$2 *self, RxInternalOperatorsOperatorScan *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static void RxInternalOperatorsOperatorScan_2_initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorScan_2 *self, RxInternalOperatorsOperatorScan *outer$, RxSubscriber *capture$0, RxSubscriber *param0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorScan_$2 *new_RxInternalOperatorsOperatorScan_$2_initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorScan *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorScan_2 *new_RxInternalOperatorsOperatorScan_2_initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorScan *outer$, RxSubscriber *capture$0, RxSubscriber *param0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorScan_$2 *create_RxInternalOperatorsOperatorScan_$2_initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorScan *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorScan_2 *create_RxInternalOperatorsOperatorScan_2_initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorScan *outer$, RxSubscriber *capture$0, RxSubscriber *param0);
 
-@interface RxInternalOperatorsOperatorScan_$3 : RxSubscriber {
+@interface RxInternalOperatorsOperatorScan_3 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorScan *this$0_;
-  id value_;
   RxInternalOperatorsOperatorScan_InitialProducer *val$ip_;
+  id value_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorScan:(RxInternalOperatorsOperatorScan *)outer$
+                                                 withId:(id)capture$0
+    withRxInternalOperatorsOperatorScan_InitialProducer:(RxInternalOperatorsOperatorScan_InitialProducer *)capture$1;
 
 - (void)onNextWithId:(id)currentValue;
 
@@ -103,23 +103,17 @@ __attribute__((unused)) static RxInternalOperatorsOperatorScan_$2 *create_RxInte
 
 - (void)setProducerWithRxProducer:(id<RxProducer>)producer;
 
-- (instancetype)initWithRxInternalOperatorsOperatorScan:(RxInternalOperatorsOperatorScan *)outer$
-                                                 withId:(id)capture$0
-    withRxInternalOperatorsOperatorScan_InitialProducer:(RxInternalOperatorsOperatorScan_InitialProducer *)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorScan_$3)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorScan_3)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorScan_$3, this$0_, RxInternalOperatorsOperatorScan *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorScan_$3, value_, id)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorScan_$3, val$ip_, RxInternalOperatorsOperatorScan_InitialProducer *)
+J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorScan_3, value_, id)
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorScan_$3_initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_(RxInternalOperatorsOperatorScan_$3 *self, RxInternalOperatorsOperatorScan *outer$, id capture$0, RxInternalOperatorsOperatorScan_InitialProducer *capture$1);
+__attribute__((unused)) static void RxInternalOperatorsOperatorScan_3_initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_(RxInternalOperatorsOperatorScan_3 *self, RxInternalOperatorsOperatorScan *outer$, id capture$0, RxInternalOperatorsOperatorScan_InitialProducer *capture$1);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorScan_$3 *new_RxInternalOperatorsOperatorScan_$3_initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_(RxInternalOperatorsOperatorScan *outer$, id capture$0, RxInternalOperatorsOperatorScan_InitialProducer *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorScan_3 *new_RxInternalOperatorsOperatorScan_3_initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_(RxInternalOperatorsOperatorScan *outer$, id capture$0, RxInternalOperatorsOperatorScan_InitialProducer *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorScan_$3 *create_RxInternalOperatorsOperatorScan_$3_initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_(RxInternalOperatorsOperatorScan *outer$, id capture$0, RxInternalOperatorsOperatorScan_InitialProducer *capture$1);
+__attribute__((unused)) static RxInternalOperatorsOperatorScan_3 *create_RxInternalOperatorsOperatorScan_3_initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_(RxInternalOperatorsOperatorScan *outer$, id capture$0, RxInternalOperatorsOperatorScan_InitialProducer *capture$1);
 
 J2OBJC_INITIALIZED_DEFN(RxInternalOperatorsOperatorScan)
 
@@ -145,10 +139,10 @@ J2OBJC_INITIALIZED_DEFN(RxInternalOperatorsOperatorScan)
 - (RxSubscriber *)callWithId:(RxSubscriber *)child {
   id initialValue = [((id<RxFunctionsFunc0>) nil_chk(initialValueFactory_)) call];
   if (initialValue == RxInternalOperatorsOperatorScan_NO_INITIAL_VALUE) {
-    return create_RxInternalOperatorsOperatorScan_$2_initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_(self, child, child);
+    return create_RxInternalOperatorsOperatorScan_2_initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_(self, child, child);
   }
   RxInternalOperatorsOperatorScan_InitialProducer *ip = create_RxInternalOperatorsOperatorScan_InitialProducer_initWithId_withRxSubscriber_(initialValue, child);
-  RxSubscriber *parent = create_RxInternalOperatorsOperatorScan_$3_initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_(self, initialValue, ip);
+  RxSubscriber *parent = create_RxInternalOperatorsOperatorScan_3_initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_(self, initialValue, ip);
   [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:parent];
   [child setProducerWithRxProducer:ip];
   return parent;
@@ -194,7 +188,7 @@ J2OBJC_INITIALIZED_DEFN(RxInternalOperatorsOperatorScan)
 @end
 
 void RxInternalOperatorsOperatorScan_initWithId_withRxFunctionsFunc2_(RxInternalOperatorsOperatorScan *self, id initialValue, id<RxFunctionsFunc2> accumulator) {
-  RxInternalOperatorsOperatorScan_initWithRxFunctionsFunc0_withRxFunctionsFunc2_(self, create_RxInternalOperatorsOperatorScan_$1_initWithId_(initialValue), accumulator);
+  RxInternalOperatorsOperatorScan_initWithRxFunctionsFunc0_withRxFunctionsFunc2_(self, create_RxInternalOperatorsOperatorScan_1_initWithId_(initialValue), accumulator);
 }
 
 RxInternalOperatorsOperatorScan *new_RxInternalOperatorsOperatorScan_initWithId_withRxFunctionsFunc2_(id initialValue, id<RxFunctionsFunc2> accumulator) {
@@ -232,6 +226,224 @@ RxInternalOperatorsOperatorScan *create_RxInternalOperatorsOperatorScan_initWith
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorScan)
+
+@implementation RxInternalOperatorsOperatorScan_1
+
+- (instancetype)initWithId:(id)capture$0 {
+  RxInternalOperatorsOperatorScan_1_initWithId_(self, capture$0);
+  return self;
+}
+
+- (id)call {
+  return val$initialValue_;
+}
+
+- (void)dealloc {
+  RELEASE_(val$initialValue_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithId:);
+  methods[1].selector = @selector(call);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$initialValue_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 1, -1 },
+  };
+  static const void *ptrTable[] = { "()TR;", "TR;", "LRxInternalOperatorsOperatorScan;", "initWithId:withRxFunctionsFunc2:", "Ljava/lang/Object;Lrx/functions/Func0<TR;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorScan_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, 4, -1 };
+  return &_RxInternalOperatorsOperatorScan_1;
+}
+
+@end
+
+void RxInternalOperatorsOperatorScan_1_initWithId_(RxInternalOperatorsOperatorScan_1 *self, id capture$0) {
+  JreStrongAssign(&self->val$initialValue_, capture$0);
+  NSObject_init(self);
+}
+
+RxInternalOperatorsOperatorScan_1 *new_RxInternalOperatorsOperatorScan_1_initWithId_(id capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorScan_1, initWithId_, capture$0)
+}
+
+RxInternalOperatorsOperatorScan_1 *create_RxInternalOperatorsOperatorScan_1_initWithId_(id capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorScan_1, initWithId_, capture$0)
+}
+
+@implementation RxInternalOperatorsOperatorScan_2
+
+- (instancetype)initWithRxInternalOperatorsOperatorScan:(RxInternalOperatorsOperatorScan *)outer$
+                                       withRxSubscriber:(RxSubscriber *)capture$0
+                                       withRxSubscriber:(RxSubscriber *)param0 {
+  RxInternalOperatorsOperatorScan_2_initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, param0);
+  return self;
+}
+
+- (void)onNextWithId:(id)t {
+  id v;
+  if (!once_) {
+    once_ = true;
+    v = t;
+  }
+  else {
+    v = value_;
+    @try {
+      v = [((id<RxFunctionsFunc2>) nil_chk(this$0_->accumulator_)) callWithId:v withId:t];
+    }
+    @catch (NSException *e) {
+      RxExceptionsExceptions_throwOrReportWithNSException_withRxObserver_withId_(e, val$child_, t);
+      return;
+    }
+  }
+  JreStrongAssign(&value_, v);
+  [((RxSubscriber *) nil_chk(val$child_)) onNextWithId:v];
+}
+
+- (void)onErrorWithNSException:(NSException *)e {
+  [((RxSubscriber *) nil_chk(val$child_)) onErrorWithNSException:e];
+}
+
+- (void)onCompleted {
+  [((RxSubscriber *) nil_chk(val$child_)) onCompleted];
+}
+
+- (void)dealloc {
+  RELEASE_(this$0_);
+  RELEASE_(val$child_);
+  RELEASE_(value_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
+    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorScan:withRxSubscriber:withRxSubscriber:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "this$0_", "LRxInternalOperatorsOperatorScan;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "once_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
+    { "value_", "LNSObject;", .constantValue.asLong = 0, 0x0, -1, -1, 9, -1 },
+  };
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/internal/operators/OperatorScan<TR;TT;>;", "Lrx/Subscriber<-TR;>;", "TR;", "LRxInternalOperatorsOperatorScan;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorScan_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 4, 10, -1, 11, 12, -1 };
+  return &_RxInternalOperatorsOperatorScan_2;
+}
+
+@end
+
+void RxInternalOperatorsOperatorScan_2_initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorScan_2 *self, RxInternalOperatorsOperatorScan *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  JreStrongAssign(&self->this$0_, outer$);
+  JreStrongAssign(&self->val$child_, capture$0);
+  RxSubscriber_initWithRxSubscriber_(self, param0);
+}
+
+RxInternalOperatorsOperatorScan_2 *new_RxInternalOperatorsOperatorScan_2_initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorScan *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorScan_2, initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_, outer$, capture$0, param0)
+}
+
+RxInternalOperatorsOperatorScan_2 *create_RxInternalOperatorsOperatorScan_2_initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorScan *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorScan_2, initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_, outer$, capture$0, param0)
+}
+
+@implementation RxInternalOperatorsOperatorScan_3
+
+- (instancetype)initWithRxInternalOperatorsOperatorScan:(RxInternalOperatorsOperatorScan *)outer$
+                                                 withId:(id)capture$0
+    withRxInternalOperatorsOperatorScan_InitialProducer:(RxInternalOperatorsOperatorScan_InitialProducer *)capture$1 {
+  RxInternalOperatorsOperatorScan_3_initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_(self, outer$, capture$0, capture$1);
+  return self;
+}
+
+- (void)onNextWithId:(id)currentValue {
+  id v = value_;
+  @try {
+    v = [((id<RxFunctionsFunc2>) nil_chk(this$0_->accumulator_)) callWithId:v withId:currentValue];
+  }
+  @catch (NSException *e) {
+    RxExceptionsExceptions_throwOrReportWithNSException_withRxObserver_withId_(e, self, currentValue);
+    return;
+  }
+  JreStrongAssign(&value_, v);
+  [((RxInternalOperatorsOperatorScan_InitialProducer *) nil_chk(val$ip_)) onNextWithId:v];
+}
+
+- (void)onErrorWithNSException:(NSException *)e {
+  [((RxInternalOperatorsOperatorScan_InitialProducer *) nil_chk(val$ip_)) onErrorWithNSException:e];
+}
+
+- (void)onCompleted {
+  [((RxInternalOperatorsOperatorScan_InitialProducer *) nil_chk(val$ip_)) onCompleted];
+}
+
+- (void)setProducerWithRxProducer:(id<RxProducer>)producer {
+  [((RxInternalOperatorsOperatorScan_InitialProducer *) nil_chk(val$ip_)) setProducerWithRxProducer:producer];
+}
+
+- (void)dealloc {
+  RELEASE_(this$0_);
+  RELEASE_(val$ip_);
+  RELEASE_(value_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorScan:withId:withRxInternalOperatorsOperatorScan_InitialProducer:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
+  methods[4].selector = @selector(setProducerWithRxProducer:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "this$0_", "LRxInternalOperatorsOperatorScan;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$ip_", "LRxInternalOperatorsOperatorScan_InitialProducer;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "value_", "LNSObject;", .constantValue.asLong = 0, 0x2, -1, -1, 9, -1 },
+  };
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "setProducer", "LRxProducer;", "Lrx/internal/operators/OperatorScan<TR;TT;>;", "Lrx/internal/operators/OperatorScan$InitialProducer<TR;>;", "TR;", "LRxInternalOperatorsOperatorScan;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorScan_3 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 3, 10, -1, 11, 12, -1 };
+  return &_RxInternalOperatorsOperatorScan_3;
+}
+
+@end
+
+void RxInternalOperatorsOperatorScan_3_initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_(RxInternalOperatorsOperatorScan_3 *self, RxInternalOperatorsOperatorScan *outer$, id capture$0, RxInternalOperatorsOperatorScan_InitialProducer *capture$1) {
+  JreStrongAssign(&self->this$0_, outer$);
+  JreStrongAssign(&self->val$ip_, capture$1);
+  RxSubscriber_init(self);
+  JreStrongAssign(&self->value_, capture$0);
+}
+
+RxInternalOperatorsOperatorScan_3 *new_RxInternalOperatorsOperatorScan_3_initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_(RxInternalOperatorsOperatorScan *outer$, id capture$0, RxInternalOperatorsOperatorScan_InitialProducer *capture$1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorScan_3, initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_, outer$, capture$0, capture$1)
+}
+
+RxInternalOperatorsOperatorScan_3 *create_RxInternalOperatorsOperatorScan_3_initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_(RxInternalOperatorsOperatorScan *outer$, id capture$0, RxInternalOperatorsOperatorScan_InitialProducer *capture$1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorScan_3, initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_, outer$, capture$0, capture$1)
+}
 
 @implementation RxInternalOperatorsOperatorScan_InitialProducer
 
@@ -380,11 +592,11 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorScan)
 
 - (void)__javaClone:(RxInternalOperatorsOperatorScan_InitialProducer *)original {
   [super __javaClone:original];
+  [child_ release];
   JreCloneVolatileStrong(&producer_, &original->producer_);
 }
 
 - (void)dealloc {
-  RELEASE_(child_);
   RELEASE_(queue_);
   RELEASE_(requested_);
   JreReleaseVolatile(&producer_);
@@ -436,7 +648,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorScan)
 
 void RxInternalOperatorsOperatorScan_InitialProducer_initWithId_withRxSubscriber_(RxInternalOperatorsOperatorScan_InitialProducer *self, id initialValue, RxSubscriber *child) {
   NSObject_init(self);
-  JreStrongAssign(&self->child_, child);
+  self->child_ = child;
   id<JavaUtilQueue> q;
   if (RxInternalUtilUnsafeUnsafeAccess_isUnsafeAvailable()) {
     q = create_RxInternalUtilUnsafeSpscLinkedQueue_init();
@@ -458,223 +670,3 @@ RxInternalOperatorsOperatorScan_InitialProducer *create_RxInternalOperatorsOpera
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorScan_InitialProducer)
-
-@implementation RxInternalOperatorsOperatorScan_$1
-
-- (id)call {
-  return val$initialValue_;
-}
-
-- (instancetype)initWithId:(id)capture$0 {
-  RxInternalOperatorsOperatorScan_$1_initWithId_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$initialValue_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSObject;", 0x1, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, 2, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithId:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$initialValue_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
-  };
-  static const void *ptrTable[] = { "()TR;", "LNSObject;", "(TR;)V", "TR;", "LRxInternalOperatorsOperatorScan;", "initWithId:withRxFunctionsFunc2:", "Ljava/lang/Object;Lrx/functions/Func0<TR;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorScan_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
-  return &_RxInternalOperatorsOperatorScan_$1;
-}
-
-@end
-
-void RxInternalOperatorsOperatorScan_$1_initWithId_(RxInternalOperatorsOperatorScan_$1 *self, id capture$0) {
-  JreStrongAssign(&self->val$initialValue_, capture$0);
-  NSObject_init(self);
-}
-
-RxInternalOperatorsOperatorScan_$1 *new_RxInternalOperatorsOperatorScan_$1_initWithId_(id capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorScan_$1, initWithId_, capture$0)
-}
-
-RxInternalOperatorsOperatorScan_$1 *create_RxInternalOperatorsOperatorScan_$1_initWithId_(id capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorScan_$1, initWithId_, capture$0)
-}
-
-@implementation RxInternalOperatorsOperatorScan_$2
-
-- (void)onNextWithId:(id)t {
-  id v;
-  if (!once_) {
-    once_ = true;
-    v = t;
-  }
-  else {
-    v = value_;
-    @try {
-      v = [((id<RxFunctionsFunc2>) nil_chk(this$0_->accumulator_)) callWithId:v withId:t];
-    }
-    @catch (NSException *e) {
-      RxExceptionsExceptions_throwOrReportWithNSException_withRxObserver_withId_(e, val$child_, t);
-      return;
-    }
-  }
-  JreStrongAssign(&value_, v);
-  [((RxSubscriber *) nil_chk(val$child_)) onNextWithId:v];
-}
-
-- (void)onErrorWithNSException:(NSException *)e {
-  [((RxSubscriber *) nil_chk(val$child_)) onErrorWithNSException:e];
-}
-
-- (void)onCompleted {
-  [((RxSubscriber *) nil_chk(val$child_)) onCompleted];
-}
-
-- (instancetype)initWithRxInternalOperatorsOperatorScan:(RxInternalOperatorsOperatorScan *)outer$
-                                       withRxSubscriber:(RxSubscriber *)capture$0
-                                       withRxSubscriber:(RxSubscriber *)arg$0 {
-  RxInternalOperatorsOperatorScan_$2_initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, arg$0);
-  return self;
-}
-
-- (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorScan_$2 class]);
-  RELEASE_(this$0_);
-  RELEASE_(value_);
-  RELEASE_(val$child_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxInternalOperatorsOperatorScan:withRxSubscriber:withRxSubscriber:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorScan;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "once_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
-    { "value_", "LNSObject;", .constantValue.asLong = 0, 0x0, -1, -1, 7, -1 },
-    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
-  };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxInternalOperatorsOperatorScan;LRxSubscriber;LRxSubscriber;", "(Lrx/internal/operators/OperatorScan;Lrx/Subscriber<-TR;>;Lrx/Subscriber<*>;)V", "TR;", "Lrx/Subscriber<-TR;>;", "LRxInternalOperatorsOperatorScan;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorScan_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 4, 9, -1, 10, 11, -1 };
-  return &_RxInternalOperatorsOperatorScan_$2;
-}
-
-@end
-
-void RxInternalOperatorsOperatorScan_$2_initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorScan_$2 *self, RxInternalOperatorsOperatorScan *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  JreStrongAssign(&self->this$0_, outer$);
-  JreStrongAssign(&self->val$child_, capture$0);
-  RxSubscriber_initWithRxSubscriber_(self, arg$0);
-}
-
-RxInternalOperatorsOperatorScan_$2 *new_RxInternalOperatorsOperatorScan_$2_initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorScan *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorScan_$2, initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_, outer$, capture$0, arg$0)
-}
-
-RxInternalOperatorsOperatorScan_$2 *create_RxInternalOperatorsOperatorScan_$2_initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorScan *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorScan_$2, initWithRxInternalOperatorsOperatorScan_withRxSubscriber_withRxSubscriber_, outer$, capture$0, arg$0)
-}
-
-@implementation RxInternalOperatorsOperatorScan_$3
-
-- (void)onNextWithId:(id)currentValue {
-  id v = value_;
-  @try {
-    v = [((id<RxFunctionsFunc2>) nil_chk(this$0_->accumulator_)) callWithId:v withId:currentValue];
-  }
-  @catch (NSException *e) {
-    RxExceptionsExceptions_throwOrReportWithNSException_withRxObserver_withId_(e, self, currentValue);
-    return;
-  }
-  JreStrongAssign(&value_, v);
-  [((RxInternalOperatorsOperatorScan_InitialProducer *) nil_chk(val$ip_)) onNextWithId:v];
-}
-
-- (void)onErrorWithNSException:(NSException *)e {
-  [((RxInternalOperatorsOperatorScan_InitialProducer *) nil_chk(val$ip_)) onErrorWithNSException:e];
-}
-
-- (void)onCompleted {
-  [((RxInternalOperatorsOperatorScan_InitialProducer *) nil_chk(val$ip_)) onCompleted];
-}
-
-- (void)setProducerWithRxProducer:(id<RxProducer>)producer {
-  [((RxInternalOperatorsOperatorScan_InitialProducer *) nil_chk(val$ip_)) setProducerWithRxProducer:producer];
-}
-
-- (instancetype)initWithRxInternalOperatorsOperatorScan:(RxInternalOperatorsOperatorScan *)outer$
-                                                 withId:(id)capture$0
-    withRxInternalOperatorsOperatorScan_InitialProducer:(RxInternalOperatorsOperatorScan_InitialProducer *)capture$1 {
-  RxInternalOperatorsOperatorScan_$3_initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_(self, outer$, capture$0, capture$1);
-  return self;
-}
-
-- (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorScan_$3 class]);
-  RELEASE_(this$0_);
-  RELEASE_(value_);
-  RELEASE_(val$ip_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 7, -1, 8, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(setProducerWithRxProducer:);
-  methods[4].selector = @selector(initWithRxInternalOperatorsOperatorScan:withId:withRxInternalOperatorsOperatorScan_InitialProducer:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorScan;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "value_", "LNSObject;", .constantValue.asLong = 0, 0x2, -1, -1, 9, -1 },
-    { "val$ip_", "LRxInternalOperatorsOperatorScan_InitialProducer;", .constantValue.asLong = 0, 0x1012, -1, -1, 10, -1 },
-  };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "setProducer", "LRxProducer;", "LRxInternalOperatorsOperatorScan;LNSObject;LRxInternalOperatorsOperatorScan_InitialProducer;", "(Lrx/internal/operators/OperatorScan;TR;Lrx/internal/operators/OperatorScan$InitialProducer<TR;>;)V", "TR;", "Lrx/internal/operators/OperatorScan$InitialProducer<TR;>;", "LRxInternalOperatorsOperatorScan;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorScan_$3 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 3, 11, -1, 12, 13, -1 };
-  return &_RxInternalOperatorsOperatorScan_$3;
-}
-
-@end
-
-void RxInternalOperatorsOperatorScan_$3_initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_(RxInternalOperatorsOperatorScan_$3 *self, RxInternalOperatorsOperatorScan *outer$, id capture$0, RxInternalOperatorsOperatorScan_InitialProducer *capture$1) {
-  JreStrongAssign(&self->this$0_, outer$);
-  JreStrongAssign(&self->val$ip_, capture$1);
-  RxSubscriber_init(self);
-  JreStrongAssign(&self->value_, capture$0);
-}
-
-RxInternalOperatorsOperatorScan_$3 *new_RxInternalOperatorsOperatorScan_$3_initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_(RxInternalOperatorsOperatorScan *outer$, id capture$0, RxInternalOperatorsOperatorScan_InitialProducer *capture$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorScan_$3, initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_, outer$, capture$0, capture$1)
-}
-
-RxInternalOperatorsOperatorScan_$3 *create_RxInternalOperatorsOperatorScan_$3_initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_(RxInternalOperatorsOperatorScan *outer$, id capture$0, RxInternalOperatorsOperatorScan_InitialProducer *capture$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorScan_$3, initWithRxInternalOperatorsOperatorScan_withId_withRxInternalOperatorsOperatorScan_InitialProducer_, outer$, capture$0, capture$1)
-}

@@ -89,34 +89,34 @@ NSString *RxInternalOperatorsOnSubscribeOnAssembly_createStacktrace() {
         if ([e getLineNumber] <= 1) {
           continue;
         }
-        if ([((NSString *) nil_chk(row)) contains:@"RxJavaHooks."]) {
+        if ([((NSString *) nil_chk(row)) java_contains:@"RxJavaHooks."]) {
           continue;
         }
-        if ([row contains:@"OnSubscribeOnAssembly"]) {
+        if ([row java_contains:@"OnSubscribeOnAssembly"]) {
           continue;
         }
-        if ([row contains:@".junit.runner"]) {
+        if ([row java_contains:@".junit.runner"]) {
           continue;
         }
-        if ([row contains:@".junit4.runner"]) {
+        if ([row java_contains:@".junit4.runner"]) {
           continue;
         }
-        if ([row contains:@".junit.internal"]) {
+        if ([row java_contains:@".junit.internal"]) {
           continue;
         }
-        if ([row contains:@"sun.reflect"]) {
+        if ([row java_contains:@"sun.reflect"]) {
           continue;
         }
-        if ([row contains:@"java.lang.Thread."]) {
+        if ([row java_contains:@"java.lang.Thread."]) {
           continue;
         }
-        if ([row contains:@"ThreadPoolExecutor"]) {
+        if ([row java_contains:@"ThreadPoolExecutor"]) {
           continue;
         }
-        if ([row contains:@"org.apache.catalina."]) {
+        if ([row java_contains:@"org.apache.catalina."]) {
           continue;
         }
-        if ([row contains:@"org.apache.tomcat."]) {
+        if ([row java_contains:@"org.apache.tomcat."]) {
           continue;
         }
       }
@@ -150,7 +150,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeOnAssembly)
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribeOnAssembly_OnAssemblySubscriber class]);
   RELEASE_(actual_);
   RELEASE_(stacktrace_);
   [super dealloc];

@@ -414,7 +414,7 @@ J2OBJC_TYPE_LITERAL_HEADER(RxInternalUtilInternalObservableUtils_RepeatNotificat
 
 #pragma mark Public
 
-- (id)callWithId:(id)t;
+- (JavaLangVoid *)callWithId:(id)t;
 
 #pragma mark Package-Private
 

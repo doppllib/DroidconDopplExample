@@ -36,17 +36,17 @@
 
 J2OBJC_EMPTY_STATIC_INIT(AndroidUtilXml)
 
-FOUNDATION_EXPORT id<OrgXmlpullV1XmlPullParser> AndroidUtilXml_newPullParser();
-
-FOUNDATION_EXPORT id<OrgXmlpullV1XmlSerializer> AndroidUtilXml_newSerializer();
-
-FOUNDATION_EXPORT AndroidUtilXml_Encoding *AndroidUtilXml_findEncodingByNameWithNSString_(NSString *encodingName);
-
 FOUNDATION_EXPORT void AndroidUtilXml_init(AndroidUtilXml *self);
 
 FOUNDATION_EXPORT AndroidUtilXml *new_AndroidUtilXml_init() NS_RETURNS_RETAINED;
 
 FOUNDATION_EXPORT AndroidUtilXml *create_AndroidUtilXml_init();
+
+FOUNDATION_EXPORT id<OrgXmlpullV1XmlPullParser> AndroidUtilXml_newPullParser();
+
+FOUNDATION_EXPORT id<OrgXmlpullV1XmlSerializer> AndroidUtilXml_newSerializer();
+
+FOUNDATION_EXPORT AndroidUtilXml_Encoding *AndroidUtilXml_findEncodingByNameWithNSString_(NSString *encodingName);
 
 J2OBJC_TYPE_LITERAL_HEADER(AndroidUtilXml)
 

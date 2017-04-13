@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_CoTouchlabDroidconandroidUtilsTimeUtils
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (CoTouchlabDroidconandroidUtilsTimeUtils_) && (INCLUDE_ALL_CoTouchlabDroidconandroidUtilsTimeUtils || defined(INCLUDE_CoTouchlabDroidconandroidUtilsTimeUtils))
 #define CoTouchlabDroidconandroidUtilsTimeUtils_
 
@@ -47,18 +52,22 @@ inline JavaLangThreadLocal *CoTouchlabDroidconandroidUtilsTimeUtils_set_DATE_FOR
 FOUNDATION_EXPORT JavaLangThreadLocal *CoTouchlabDroidconandroidUtilsTimeUtils_DATE_FORMAT;
 J2OBJC_STATIC_FIELD_OBJ(CoTouchlabDroidconandroidUtilsTimeUtils, DATE_FORMAT, JavaLangThreadLocal *)
 
-FOUNDATION_EXPORT JavaTextSimpleDateFormat *CoTouchlabDroidconandroidUtilsTimeUtils_makeDateFormatWithNSString_(NSString *format);
-
-FOUNDATION_EXPORT JavaLangLong *CoTouchlabDroidconandroidUtilsTimeUtils_sanitizeWithJavaUtilDate_(JavaUtilDate *date);
-
 FOUNDATION_EXPORT void CoTouchlabDroidconandroidUtilsTimeUtils_init(CoTouchlabDroidconandroidUtilsTimeUtils *self);
 
 FOUNDATION_EXPORT CoTouchlabDroidconandroidUtilsTimeUtils *new_CoTouchlabDroidconandroidUtilsTimeUtils_init() NS_RETURNS_RETAINED;
 
 FOUNDATION_EXPORT CoTouchlabDroidconandroidUtilsTimeUtils *create_CoTouchlabDroidconandroidUtilsTimeUtils_init();
 
+FOUNDATION_EXPORT JavaTextSimpleDateFormat *CoTouchlabDroidconandroidUtilsTimeUtils_makeDateFormatWithNSString_(NSString *format);
+
+FOUNDATION_EXPORT JavaLangLong *CoTouchlabDroidconandroidUtilsTimeUtils_sanitizeWithJavaUtilDate_(JavaUtilDate *date);
+
 J2OBJC_TYPE_LITERAL_HEADER(CoTouchlabDroidconandroidUtilsTimeUtils)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_CoTouchlabDroidconandroidUtilsTimeUtils")

@@ -8,7 +8,6 @@
 #include "AndroidOsMessageQueue.h"
 #include "AndroidOsThreadNudger.h"
 #include "AndroidUtilAndroidRuntimeException.h"
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "android/os/SystemClock.h"
 #include "android/util/Log.h"
@@ -50,32 +49,30 @@ __attribute__((unused)) static void AndroidOsMessageQueue_dopNudgeThreadNow(Andr
 
 __attribute__((unused)) static void AndroidOsMessageQueue_dopNudgeThreadAtWithInt_(AndroidOsMessageQueue *self, jint timeoutMillis);
 
-@interface AndroidOsMessageQueue_IdleHandler : NSObject
-
-@end
-
-@interface AndroidOsMessageQueue_$1 : JavaLangThread {
+@interface AndroidOsMessageQueue_1 : JavaLangThread {
  @public
   AndroidOsMessageQueue *this$0_;
   jint val$timeout_;
 }
 
-- (void)run;
-
 - (instancetype)initWithAndroidOsMessageQueue:(AndroidOsMessageQueue *)outer$
                                       withInt:(jint)capture$0;
 
+- (void)run;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(AndroidOsMessageQueue_$1)
+J2OBJC_EMPTY_STATIC_INIT(AndroidOsMessageQueue_1)
 
-J2OBJC_FIELD_SETTER(AndroidOsMessageQueue_$1, this$0_, AndroidOsMessageQueue *)
+__attribute__((unused)) static void AndroidOsMessageQueue_1_initWithAndroidOsMessageQueue_withInt_(AndroidOsMessageQueue_1 *self, AndroidOsMessageQueue *outer$, jint capture$0);
 
-__attribute__((unused)) static void AndroidOsMessageQueue_$1_initWithAndroidOsMessageQueue_withInt_(AndroidOsMessageQueue_$1 *self, AndroidOsMessageQueue *outer$, jint capture$0);
+__attribute__((unused)) static AndroidOsMessageQueue_1 *new_AndroidOsMessageQueue_1_initWithAndroidOsMessageQueue_withInt_(AndroidOsMessageQueue *outer$, jint capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static AndroidOsMessageQueue_$1 *new_AndroidOsMessageQueue_$1_initWithAndroidOsMessageQueue_withInt_(AndroidOsMessageQueue *outer$, jint capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static AndroidOsMessageQueue_1 *create_AndroidOsMessageQueue_1_initWithAndroidOsMessageQueue_withInt_(AndroidOsMessageQueue *outer$, jint capture$0);
 
-__attribute__((unused)) static AndroidOsMessageQueue_$1 *create_AndroidOsMessageQueue_$1_initWithAndroidOsMessageQueue_withInt_(AndroidOsMessageQueue *outer$, jint capture$0);
+@interface AndroidOsMessageQueue_IdleHandler : NSObject
+
+@end
 
 @implementation AndroidOsMessageQueue
 
@@ -98,7 +95,7 @@ NSOperationQueue *opQueue;
 }
 
 - (void)testThreadTimerWithInt:(jint)timeout {
-  [create_AndroidOsMessageQueue_$1_initWithAndroidOsMessageQueue_withInt_(self, timeout) start];
+  [create_AndroidOsMessageQueue_1_initWithAndroidOsMessageQueue_withInt_(self, timeout) start];
 }
 
 - (void)callNudgeOnThread {
@@ -376,6 +373,63 @@ AndroidOsMessageQueue *create_AndroidOsMessageQueue_initWithAndroidOsThreadNudge
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidOsMessageQueue)
 
+@implementation AndroidOsMessageQueue_1
+
+- (instancetype)initWithAndroidOsMessageQueue:(AndroidOsMessageQueue *)outer$
+                                      withInt:(jint)capture$0 {
+  AndroidOsMessageQueue_1_initWithAndroidOsMessageQueue_withInt_(self, outer$, capture$0);
+  return self;
+}
+
+- (void)run {
+  @try {
+    JavaLangThread_sleepWithLong_(val$timeout_);
+    AndroidOsMessageQueue_dopNudgeThreadNow(this$0_);
+  }
+  @catch (JavaLangInterruptedException *e) {
+  }
+}
+
+- (void)dealloc {
+  RELEASE_(this$0_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithAndroidOsMessageQueue:withInt:);
+  methods[1].selector = @selector(run);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "this$0_", "LAndroidOsMessageQueue;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "val$timeout_", "I", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "LAndroidOsMessageQueue;", "testThreadTimerWithInt:" };
+  static const J2ObjcClassInfo _AndroidOsMessageQueue_1 = { "", "android.os", ptrTable, methods, fields, 7, 0x8008, 2, 2, 0, -1, 1, -1, -1 };
+  return &_AndroidOsMessageQueue_1;
+}
+
+@end
+
+void AndroidOsMessageQueue_1_initWithAndroidOsMessageQueue_withInt_(AndroidOsMessageQueue_1 *self, AndroidOsMessageQueue *outer$, jint capture$0) {
+  JreStrongAssign(&self->this$0_, outer$);
+  self->val$timeout_ = capture$0;
+  JavaLangThread_init(self);
+}
+
+AndroidOsMessageQueue_1 *new_AndroidOsMessageQueue_1_initWithAndroidOsMessageQueue_withInt_(AndroidOsMessageQueue *outer$, jint capture$0) {
+  J2OBJC_NEW_IMPL(AndroidOsMessageQueue_1, initWithAndroidOsMessageQueue_withInt_, outer$, capture$0)
+}
+
+AndroidOsMessageQueue_1 *create_AndroidOsMessageQueue_1_initWithAndroidOsMessageQueue_withInt_(AndroidOsMessageQueue *outer$, jint capture$0) {
+  J2OBJC_CREATE_IMPL(AndroidOsMessageQueue_1, initWithAndroidOsMessageQueue_withInt_, outer$, capture$0)
+}
+
 @implementation AndroidOsMessageQueue_IdleHandler
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -394,60 +448,3 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidOsMessageQueue)
 @end
 
 J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(AndroidOsMessageQueue_IdleHandler)
-
-@implementation AndroidOsMessageQueue_$1
-
-- (void)run {
-  @try {
-    JavaLangThread_sleepWithLong_(val$timeout_);
-    AndroidOsMessageQueue_dopNudgeThreadNow(this$0_);
-  }
-  @catch (JavaLangInterruptedException *e) {
-  }
-}
-
-- (instancetype)initWithAndroidOsMessageQueue:(AndroidOsMessageQueue *)outer$
-                                      withInt:(jint)capture$0 {
-  AndroidOsMessageQueue_$1_initWithAndroidOsMessageQueue_withInt_(self, outer$, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(this$0_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithAndroidOsMessageQueue:withInt:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LAndroidOsMessageQueue;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$timeout_", "I", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "LAndroidOsMessageQueue;I", "LAndroidOsMessageQueue;", "testThreadTimerWithInt:" };
-  static const J2ObjcClassInfo _AndroidOsMessageQueue_$1 = { "", "android.os", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_AndroidOsMessageQueue_$1;
-}
-
-@end
-
-void AndroidOsMessageQueue_$1_initWithAndroidOsMessageQueue_withInt_(AndroidOsMessageQueue_$1 *self, AndroidOsMessageQueue *outer$, jint capture$0) {
-  JreStrongAssign(&self->this$0_, outer$);
-  self->val$timeout_ = capture$0;
-  JavaLangThread_init(self);
-}
-
-AndroidOsMessageQueue_$1 *new_AndroidOsMessageQueue_$1_initWithAndroidOsMessageQueue_withInt_(AndroidOsMessageQueue *outer$, jint capture$0) {
-  J2OBJC_NEW_IMPL(AndroidOsMessageQueue_$1, initWithAndroidOsMessageQueue_withInt_, outer$, capture$0)
-}
-
-AndroidOsMessageQueue_$1 *create_AndroidOsMessageQueue_$1_initWithAndroidOsMessageQueue_withInt_(AndroidOsMessageQueue *outer$, jint capture$0) {
-  J2OBJC_CREATE_IMPL(AndroidOsMessageQueue_$1, initWithAndroidOsMessageQueue_withInt_, outer$, capture$0)
-}

@@ -222,7 +222,7 @@ withRetrofitMimeTypedOutput:(id<RetrofitMimeTypedOutput>)body {
     { "boundary_", "LNSString;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
     { "length_", "J", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LNSString;", "LJavaIoIOException;", "()Ljava/util/List<[LB;>;", "addPart", "LNSString;LRetrofitMimeTypedOutput;", "LNSString;LNSString;LRetrofitMimeTypedOutput;", "writeTo", "LJavaIoOutputStream;", "buildBoundary", "LNSString;ZZ", "buildHeader", &RetrofitMimeMultipartTypedOutput_DEFAULT_TRANSFER_ENCODING, "Ljava/util/List<Lretrofit/mime/MultipartTypedOutput$MimePart;>;", "LRetrofitMimeMultipartTypedOutput_MimePart;" };
+  static const void *ptrTable[] = { "LNSString;", "LJavaIoIOException;", "()Ljava/util/List<[B>;", "addPart", "LNSString;LRetrofitMimeTypedOutput;", "LNSString;LNSString;LRetrofitMimeTypedOutput;", "writeTo", "LJavaIoOutputStream;", "buildBoundary", "LNSString;ZZ", "buildHeader", &RetrofitMimeMultipartTypedOutput_DEFAULT_TRANSFER_ENCODING, "Ljava/util/List<Lretrofit/mime/MultipartTypedOutput$MimePart;>;", "LRetrofitMimeMultipartTypedOutput_MimePart;" };
   static const J2ObjcClassInfo _RetrofitMimeMultipartTypedOutput = { "MultipartTypedOutput", "retrofit.mime", ptrTable, methods, fields, 7, 0x11, 12, 5, -1, 13, -1, -1, -1 };
   return &_RetrofitMimeMultipartTypedOutput;
 }
@@ -270,7 +270,7 @@ IOSByteArray *RetrofitMimeMultipartTypedOutput_buildBoundaryWithNSString_withBoo
       [sb appendWithNSString:@"--"];
     }
     [sb appendWithNSString:@"\x0d\n"];
-    return [((NSString *) nil_chk([sb description])) getBytesWithCharsetName:@"UTF-8"];
+    return [((NSString *) nil_chk([sb description])) java_getBytesWithCharsetName:@"UTF-8"];
   }
   @catch (JavaIoIOException *ex) {
     @throw create_JavaLangRuntimeException_initWithNSString_withNSException_(@"Unable to write multipart boundary", ex);
@@ -297,7 +297,7 @@ IOSByteArray *RetrofitMimeMultipartTypedOutput_buildHeaderWithNSString_withNSStr
     [headers appendWithNSString:@"\x0d\nContent-Transfer-Encoding: "];
     [headers appendWithNSString:transferEncoding];
     [headers appendWithNSString:@"\x0d\n\x0d\n"];
-    return [((NSString *) nil_chk([headers description])) getBytesWithCharsetName:@"UTF-8"];
+    return [((NSString *) nil_chk([headers description])) java_getBytesWithCharsetName:@"UTF-8"];
   }
   @catch (JavaIoIOException *ex) {
     @throw create_JavaLangRuntimeException_initWithNSString_withNSException_(@"Unable to write multipart header", ex);

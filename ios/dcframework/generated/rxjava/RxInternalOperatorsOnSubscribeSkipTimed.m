@@ -114,7 +114,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeSkipTimed)
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribeSkipTimed_SkipTimedSubscriber class]);
   RELEASE_(child_);
   [super dealloc];
 }

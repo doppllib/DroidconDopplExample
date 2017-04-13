@@ -46,15 +46,15 @@ inline JavaTextSimpleDateFormat *DCPConferenceDataHelper_get_timeFormat();
 FOUNDATION_EXPORT JavaTextSimpleDateFormat *DCPConferenceDataHelper_timeFormat;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(DCPConferenceDataHelper, timeFormat, JavaTextSimpleDateFormat *)
 
-FOUNDATION_EXPORT NSString *DCPConferenceDataHelper_dateToDayStringWithJavaUtilDate_(JavaUtilDate *d);
-
-FOUNDATION_EXPORT IOSObjectArray *DCPConferenceDataHelper_listDaysWithAndroidContentContext_withBoolean_(AndroidContentContext *context, jboolean allEvents);
-
 FOUNDATION_EXPORT void DCPConferenceDataHelper_init(DCPConferenceDataHelper *self);
 
 FOUNDATION_EXPORT DCPConferenceDataHelper *new_DCPConferenceDataHelper_init() NS_RETURNS_RETAINED;
 
 FOUNDATION_EXPORT DCPConferenceDataHelper *create_DCPConferenceDataHelper_init();
+
+FOUNDATION_EXPORT NSString *DCPConferenceDataHelper_dateToDayStringWithJavaUtilDate_(JavaUtilDate *d);
+
+FOUNDATION_EXPORT IOSObjectArray *DCPConferenceDataHelper_listDaysWithAndroidContentContext_withBoolean_(AndroidContentContext *context, jboolean allEvents);
 
 J2OBJC_TYPE_LITERAL_HEADER(DCPConferenceDataHelper)
 

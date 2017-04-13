@@ -39,13 +39,13 @@ inline jlong AndroidUtilTimeUtils_get_NANOS_PER_MS();
 #define AndroidUtilTimeUtils_NANOS_PER_MS 1000000LL
 J2OBJC_STATIC_FIELD_CONSTANT(AndroidUtilTimeUtils, NANOS_PER_MS, jlong)
 
-FOUNDATION_EXPORT void AndroidUtilTimeUtils_formatDurationWithLong_withJavaLangStringBuilder_(jlong duration, JavaLangStringBuilder *builder);
-
 FOUNDATION_EXPORT void AndroidUtilTimeUtils_init(AndroidUtilTimeUtils *self);
 
 FOUNDATION_EXPORT AndroidUtilTimeUtils *new_AndroidUtilTimeUtils_init() NS_RETURNS_RETAINED;
 
 FOUNDATION_EXPORT AndroidUtilTimeUtils *create_AndroidUtilTimeUtils_init();
+
+FOUNDATION_EXPORT void AndroidUtilTimeUtils_formatDurationWithLong_withJavaLangStringBuilder_(jlong duration, JavaLangStringBuilder *builder);
 
 J2OBJC_TYPE_LITERAL_HEADER(AndroidUtilTimeUtils)
 

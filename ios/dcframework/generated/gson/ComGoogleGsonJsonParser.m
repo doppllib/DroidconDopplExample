@@ -22,6 +22,13 @@
 
 @implementation ComGoogleGsonJsonParser
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonJsonParser_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (ComGoogleGsonJsonElement *)parseWithNSString:(NSString *)json {
   return [self parseWithJavaIoReader:create_JavaIoStringReader_initWithNSString_(json)];
 }
@@ -63,26 +70,19 @@
   }
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonJsonParser_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LComGoogleGsonJsonElement;", 0x1, 0, 1, 2, -1, -1, -1 },
     { NULL, "LComGoogleGsonJsonElement;", 0x1, 0, 3, 4, -1, -1, -1 },
     { NULL, "LComGoogleGsonJsonElement;", 0x1, 0, 5, 4, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(parseWithNSString:);
-  methods[1].selector = @selector(parseWithJavaIoReader:);
-  methods[2].selector = @selector(parseWithComGoogleGsonStreamJsonReader:);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(parseWithNSString:);
+  methods[2].selector = @selector(parseWithJavaIoReader:);
+  methods[3].selector = @selector(parseWithComGoogleGsonStreamJsonReader:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "parse", "LNSString;", "LComGoogleGsonJsonSyntaxException;", "LJavaIoReader;", "LComGoogleGsonJsonIOException;LComGoogleGsonJsonSyntaxException;", "LComGoogleGsonStreamJsonReader;" };
   static const J2ObjcClassInfo _ComGoogleGsonJsonParser = { "JsonParser", "com.google.gson", ptrTable, methods, NULL, 7, 0x11, 4, 0, -1, -1, -1, -1, -1 };

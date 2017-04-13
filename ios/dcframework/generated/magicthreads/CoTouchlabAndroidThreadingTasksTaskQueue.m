@@ -65,7 +65,6 @@ J2OBJC_FIELD_SETTER(CoTouchlabAndroidThreadingTasksTaskQueue_LinkedListQueue, li
 
 J2OBJC_EMPTY_STATIC_INIT(CoTouchlabAndroidThreadingTasksTaskQueue_ExeTask)
 
-J2OBJC_FIELD_SETTER(CoTouchlabAndroidThreadingTasksTaskQueue_ExeTask, this$0_, CoTouchlabAndroidThreadingTasksTaskQueue *)
 J2OBJC_FIELD_SETTER(CoTouchlabAndroidThreadingTasksTaskQueue_ExeTask, task_, CoTouchlabAndroidThreadingTasksTask *)
 
 __attribute__((unused)) static void CoTouchlabAndroidThreadingTasksTaskQueue_ExeTask_initWithCoTouchlabAndroidThreadingTasksTaskQueue_withCoTouchlabAndroidThreadingTasksTask_(CoTouchlabAndroidThreadingTasksTaskQueue_ExeTask *self, CoTouchlabAndroidThreadingTasksTaskQueue *outer$, CoTouchlabAndroidThreadingTasksTask *task);
@@ -357,7 +356,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksTaskQueue_Linked
     { "this$0_", "LCoTouchlabAndroidThreadingTasksTaskQueue;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "task_", "LCoTouchlabAndroidThreadingTasksTask;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabAndroidThreadingTasksTaskQueue;LCoTouchlabAndroidThreadingTasksTask;", "LCoTouchlabAndroidThreadingTasksTaskQueue;" };
+  static const void *ptrTable[] = { "LCoTouchlabAndroidThreadingTasksTask;", "LCoTouchlabAndroidThreadingTasksTaskQueue;" };
   static const J2ObjcClassInfo _CoTouchlabAndroidThreadingTasksTaskQueue_ExeTask = { "ExeTask", "co.touchlab.android.threading.tasks", ptrTable, methods, fields, 7, 0x2, 2, 2, 1, -1, -1, -1, -1 };
   return &_CoTouchlabAndroidThreadingTasksTaskQueue_ExeTask;
 }

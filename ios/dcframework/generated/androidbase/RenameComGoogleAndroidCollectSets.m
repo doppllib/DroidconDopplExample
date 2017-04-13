@@ -13,6 +13,13 @@
 
 @implementation RenameComGoogleAndroidCollectSets
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RenameComGoogleAndroidCollectSets_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (JavaUtilHashSet *)newHashSet {
   return RenameComGoogleAndroidCollectSets_newHashSet();
 }
@@ -29,28 +36,21 @@
   return RenameComGoogleAndroidCollectSets_newSortedSetWithNSObjectArray_(elements);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RenameComGoogleAndroidCollectSets_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaUtilHashSet;", 0x9, -1, -1, -1, 0, -1, -1 },
     { NULL, "LJavaUtilHashSet;", 0x89, 1, 2, -1, 3, -1, -1 },
     { NULL, "LJavaUtilSortedSet;", 0x9, -1, -1, -1, 4, -1, -1 },
     { NULL, "LJavaUtilSortedSet;", 0x89, 5, 2, -1, 6, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(newHashSet);
-  methods[1].selector = @selector(newHashSetWithNSObjectArray:);
-  methods[2].selector = @selector(newSortedSet);
-  methods[3].selector = @selector(newSortedSetWithNSObjectArray:);
-  methods[4].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(newHashSet);
+  methods[2].selector = @selector(newHashSetWithNSObjectArray:);
+  methods[3].selector = @selector(newSortedSet);
+  methods[4].selector = @selector(newSortedSetWithNSObjectArray:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "<K:Ljava/lang/Object;>()Ljava/util/HashSet<TK;>;", "newHashSet", "[LNSObject;", "<E:Ljava/lang/Object;>([TE;)Ljava/util/HashSet<TE;>;", "<E:Ljava/lang/Object;>()Ljava/util/SortedSet<TE;>;", "newSortedSet", "<E:Ljava/lang/Object;>([TE;)Ljava/util/SortedSet<TE;>;" };
   static const J2ObjcClassInfo _RenameComGoogleAndroidCollectSets = { "Sets", "rename.com.google.android.collect", ptrTable, methods, NULL, 7, 0x1, 5, 0, -1, -1, -1, -1, -1 };
@@ -58,6 +58,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void RenameComGoogleAndroidCollectSets_init(RenameComGoogleAndroidCollectSets *self) {
+  NSObject_init(self);
+}
+
+RenameComGoogleAndroidCollectSets *new_RenameComGoogleAndroidCollectSets_init() {
+  J2OBJC_NEW_IMPL(RenameComGoogleAndroidCollectSets, init)
+}
+
+RenameComGoogleAndroidCollectSets *create_RenameComGoogleAndroidCollectSets_init() {
+  J2OBJC_CREATE_IMPL(RenameComGoogleAndroidCollectSets, init)
+}
 
 JavaUtilHashSet *RenameComGoogleAndroidCollectSets_newHashSet() {
   RenameComGoogleAndroidCollectSets_initialize();
@@ -82,18 +94,6 @@ id<JavaUtilSortedSet> RenameComGoogleAndroidCollectSets_newSortedSetWithNSObject
   id<JavaUtilSortedSet> set = create_JavaUtilTreeSet_init();
   JavaUtilCollections_addAllWithJavaUtilCollection_withNSObjectArray_(set, elements);
   return set;
-}
-
-void RenameComGoogleAndroidCollectSets_init(RenameComGoogleAndroidCollectSets *self) {
-  NSObject_init(self);
-}
-
-RenameComGoogleAndroidCollectSets *new_RenameComGoogleAndroidCollectSets_init() {
-  J2OBJC_NEW_IMPL(RenameComGoogleAndroidCollectSets, init)
-}
-
-RenameComGoogleAndroidCollectSets *create_RenameComGoogleAndroidCollectSets_init() {
-  J2OBJC_CREATE_IMPL(RenameComGoogleAndroidCollectSets, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RenameComGoogleAndroidCollectSets)

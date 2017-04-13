@@ -56,6 +56,12 @@
 
 J2OBJC_EMPTY_STATIC_INIT(CoTouchlabDroidconandroidUtilsIOUtils)
 
+FOUNDATION_EXPORT void CoTouchlabDroidconandroidUtilsIOUtils_init(CoTouchlabDroidconandroidUtilsIOUtils *self);
+
+FOUNDATION_EXPORT CoTouchlabDroidconandroidUtilsIOUtils *new_CoTouchlabDroidconandroidUtilsIOUtils_init() NS_RETURNS_RETAINED;
+
+FOUNDATION_EXPORT CoTouchlabDroidconandroidUtilsIOUtils *create_CoTouchlabDroidconandroidUtilsIOUtils_init();
+
 FOUNDATION_EXPORT IOSByteArray *CoTouchlabDroidconandroidUtilsIOUtils_toByteArrayWithJavaIoInputStream_(JavaIoInputStream *input);
 
 FOUNDATION_EXPORT jint CoTouchlabDroidconandroidUtilsIOUtils_copy__WithJavaIoInputStream_withJavaIoOutputStream_(JavaIoInputStream *input, JavaIoOutputStream *output);
@@ -73,12 +79,6 @@ FOUNDATION_EXPORT jlong CoTouchlabDroidconandroidUtilsIOUtils_copyLargeWithJavaI
 FOUNDATION_EXPORT id<JavaUtilList> CoTouchlabDroidconandroidUtilsIOUtils_readLinesWithJavaIoInputStream_(JavaIoInputStream *input);
 
 FOUNDATION_EXPORT id<JavaUtilList> CoTouchlabDroidconandroidUtilsIOUtils_readLinesWithJavaIoReader_(JavaIoReader *input);
-
-FOUNDATION_EXPORT void CoTouchlabDroidconandroidUtilsIOUtils_init(CoTouchlabDroidconandroidUtilsIOUtils *self);
-
-FOUNDATION_EXPORT CoTouchlabDroidconandroidUtilsIOUtils *new_CoTouchlabDroidconandroidUtilsIOUtils_init() NS_RETURNS_RETAINED;
-
-FOUNDATION_EXPORT CoTouchlabDroidconandroidUtilsIOUtils *create_CoTouchlabDroidconandroidUtilsIOUtils_init();
 
 J2OBJC_TYPE_LITERAL_HEADER(CoTouchlabDroidconandroidUtilsIOUtils)
 

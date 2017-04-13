@@ -10,11 +10,6 @@
 
 @implementation CoTouchlabAndroidThreadingTasksPersistedTransientMethuselahCommandPurgePolicy
 
-- (jboolean)purgeCommandOnTransientExceptionWithCoTouchlabAndroidThreadingTasksPersistedPersistedTask:(CoTouchlabAndroidThreadingTasksPersistedPersistedTask *)persistedTask
-                                              withCoTouchlabAndroidThreadingErrorcontrolSoftException:(CoTouchlabAndroidThreadingErrorcontrolSoftException *)exception {
-  return false;
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   CoTouchlabAndroidThreadingTasksPersistedTransientMethuselahCommandPurgePolicy_init(self);
@@ -22,15 +17,20 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (jboolean)purgeCommandOnTransientExceptionWithCoTouchlabAndroidThreadingTasksPersistedPersistedTask:(CoTouchlabAndroidThreadingTasksPersistedPersistedTask *)persistedTask
+                                              withCoTouchlabAndroidThreadingErrorcontrolSoftException:(CoTouchlabAndroidThreadingErrorcontrolSoftException *)exception {
+  return false;
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "Z", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "Z", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(purgeCommandOnTransientExceptionWithCoTouchlabAndroidThreadingTasksPersistedPersistedTask:withCoTouchlabAndroidThreadingErrorcontrolSoftException:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(purgeCommandOnTransientExceptionWithCoTouchlabAndroidThreadingTasksPersistedPersistedTask:withCoTouchlabAndroidThreadingErrorcontrolSoftException:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "purgeCommandOnTransientException", "LCoTouchlabAndroidThreadingTasksPersistedPersistedTask;LCoTouchlabAndroidThreadingErrorcontrolSoftException;" };
   static const J2ObjcClassInfo _CoTouchlabAndroidThreadingTasksPersistedTransientMethuselahCommandPurgePolicy = { "TransientMethuselahCommandPurgePolicy", "co.touchlab.android.threading.tasks.persisted", ptrTable, methods, NULL, 7, 0x1, 2, 0, -1, -1, -1, -1, -1 };

@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/BlockingOperatorToIterator.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxExceptionsExceptions.h"
 #include "RxInternalOperatorsBlockingOperatorToIterator.h"
@@ -167,7 +166,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsBlockingOperatorToIterator_SubscriberIterator class]);
   RELEASE_(notifications_);
   RELEASE_(buf_);
   [super dealloc];

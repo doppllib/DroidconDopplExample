@@ -16,10 +16,6 @@ IOSIntArray *CoTouchlabDroidconandroidUtilsEmojiUtil_EMOJI_ABC;
 
 @implementation CoTouchlabDroidconandroidUtilsEmojiUtil
 
-+ (NSString *)getEmojiForUserWithNSString:(NSString *)displayName {
-  return CoTouchlabDroidconandroidUtilsEmojiUtil_getEmojiForUserWithNSString_(displayName);
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   CoTouchlabDroidconandroidUtilsEmojiUtil_init(self);
@@ -27,15 +23,19 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
++ (NSString *)getEmojiForUserWithNSString:(NSString *)displayName {
+  return CoTouchlabDroidconandroidUtilsEmojiUtil_getEmojiForUserWithNSString_(displayName);
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSString;", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSString;", 0x9, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getEmojiForUserWithNSString:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(getEmojiForUserWithNSString:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "DECIMAL_VALUE_A", "I", .constantValue.asLong = 0, 0x9, -1, 2, -1, -1 },
@@ -55,18 +55,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 @end
 
-NSString *CoTouchlabDroidconandroidUtilsEmojiUtil_getEmojiForUserWithNSString_(NSString *displayName) {
-  CoTouchlabDroidconandroidUtilsEmojiUtil_initialize();
-  jint unicode = (jint) 0x1F60A;
-  if (!AndroidTextTextUtils_isEmptyWithJavaLangCharSequence_(displayName)) {
-    jint c = [((NSString *) nil_chk([((NSString *) nil_chk(displayName)) lowercaseString])) charAtWithInt:0] - CoTouchlabDroidconandroidUtilsEmojiUtil_DECIMAL_VALUE_A;
-    if (c >= 0 && c < ((IOSIntArray *) nil_chk(CoTouchlabDroidconandroidUtilsEmojiUtil_EMOJI_ABC))->size_) {
-      unicode = IOSIntArray_Get(nil_chk(CoTouchlabDroidconandroidUtilsEmojiUtil_EMOJI_ABC), c);
-    }
-  }
-  return [NSString stringWithCharacters:JavaLangCharacter_toCharsWithInt_(unicode)];
-}
-
 void CoTouchlabDroidconandroidUtilsEmojiUtil_init(CoTouchlabDroidconandroidUtilsEmojiUtil *self) {
   NSObject_init(self);
 }
@@ -77,6 +65,18 @@ CoTouchlabDroidconandroidUtilsEmojiUtil *new_CoTouchlabDroidconandroidUtilsEmoji
 
 CoTouchlabDroidconandroidUtilsEmojiUtil *create_CoTouchlabDroidconandroidUtilsEmojiUtil_init() {
   J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidUtilsEmojiUtil, init)
+}
+
+NSString *CoTouchlabDroidconandroidUtilsEmojiUtil_getEmojiForUserWithNSString_(NSString *displayName) {
+  CoTouchlabDroidconandroidUtilsEmojiUtil_initialize();
+  jint unicode = (jint) 0x1F60A;
+  if (!AndroidTextTextUtils_isEmptyWithJavaLangCharSequence_(displayName)) {
+    jint c = [((NSString *) nil_chk([((NSString *) nil_chk(displayName)) lowercaseString])) charAtWithInt:0] - CoTouchlabDroidconandroidUtilsEmojiUtil_DECIMAL_VALUE_A;
+    if (c >= 0 && c < ((IOSIntArray *) nil_chk(CoTouchlabDroidconandroidUtilsEmojiUtil_EMOJI_ABC))->size_) {
+      unicode = IOSIntArray_Get(nil_chk(CoTouchlabDroidconandroidUtilsEmojiUtil_EMOJI_ABC), c);
+    }
+  }
+  return [NSString java_stringWithCharacters:JavaLangCharacter_toCharsWithInt_(unicode)];
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabDroidconandroidUtilsEmojiUtil)

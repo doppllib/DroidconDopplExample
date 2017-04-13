@@ -31,49 +31,49 @@ __attribute__((unused)) static RxInternalOperatorsNotificationLite *new_RxIntern
 
 __attribute__((unused)) static RxInternalOperatorsNotificationLite *create_RxInternalOperatorsNotificationLite_init();
 
+@interface RxInternalOperatorsNotificationLite_1 : NSObject < JavaIoSerializable >
+
+- (instancetype)init;
+
+- (NSString *)description;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsNotificationLite_1)
+
+inline jlong RxInternalOperatorsNotificationLite_1_get_serialVersionUID();
+#define RxInternalOperatorsNotificationLite_1_serialVersionUID 1LL
+J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsNotificationLite_1, serialVersionUID, jlong)
+
+__attribute__((unused)) static void RxInternalOperatorsNotificationLite_1_init(RxInternalOperatorsNotificationLite_1 *self);
+
+__attribute__((unused)) static RxInternalOperatorsNotificationLite_1 *new_RxInternalOperatorsNotificationLite_1_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalOperatorsNotificationLite_1 *create_RxInternalOperatorsNotificationLite_1_init();
+
+@interface RxInternalOperatorsNotificationLite_2 : NSObject < JavaIoSerializable >
+
+- (instancetype)init;
+
+- (NSString *)description;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsNotificationLite_2)
+
+inline jlong RxInternalOperatorsNotificationLite_2_get_serialVersionUID();
+#define RxInternalOperatorsNotificationLite_2_serialVersionUID 2LL
+J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsNotificationLite_2, serialVersionUID, jlong)
+
+__attribute__((unused)) static void RxInternalOperatorsNotificationLite_2_init(RxInternalOperatorsNotificationLite_2 *self);
+
+__attribute__((unused)) static RxInternalOperatorsNotificationLite_2 *new_RxInternalOperatorsNotificationLite_2_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalOperatorsNotificationLite_2 *create_RxInternalOperatorsNotificationLite_2_init();
+
 inline jlong RxInternalOperatorsNotificationLite_OnErrorSentinel_get_serialVersionUID();
 #define RxInternalOperatorsNotificationLite_OnErrorSentinel_serialVersionUID 3LL
 J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsNotificationLite_OnErrorSentinel, serialVersionUID, jlong)
-
-@interface RxInternalOperatorsNotificationLite_$1 : NSObject < JavaIoSerializable >
-
-- (NSString *)description;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsNotificationLite_$1)
-
-inline jlong RxInternalOperatorsNotificationLite_$1_get_serialVersionUID();
-#define RxInternalOperatorsNotificationLite_$1_serialVersionUID 1LL
-J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsNotificationLite_$1, serialVersionUID, jlong)
-
-__attribute__((unused)) static void RxInternalOperatorsNotificationLite_$1_init(RxInternalOperatorsNotificationLite_$1 *self);
-
-__attribute__((unused)) static RxInternalOperatorsNotificationLite_$1 *new_RxInternalOperatorsNotificationLite_$1_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsNotificationLite_$1 *create_RxInternalOperatorsNotificationLite_$1_init();
-
-@interface RxInternalOperatorsNotificationLite_$2 : NSObject < JavaIoSerializable >
-
-- (NSString *)description;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsNotificationLite_$2)
-
-inline jlong RxInternalOperatorsNotificationLite_$2_get_serialVersionUID();
-#define RxInternalOperatorsNotificationLite_$2_serialVersionUID 2LL
-J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsNotificationLite_$2, serialVersionUID, jlong)
-
-__attribute__((unused)) static void RxInternalOperatorsNotificationLite_$2_init(RxInternalOperatorsNotificationLite_$2 *self);
-
-__attribute__((unused)) static RxInternalOperatorsNotificationLite_$2 *new_RxInternalOperatorsNotificationLite_$2_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsNotificationLite_$2 *create_RxInternalOperatorsNotificationLite_$2_init();
 
 J2OBJC_INITIALIZED_DEFN(RxInternalOperatorsNotificationLite)
 
@@ -172,8 +172,8 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (void)initialize {
   if (self == [RxInternalOperatorsNotificationLite class]) {
-    JreStrongAssignAndConsume(&RxInternalOperatorsNotificationLite_ON_COMPLETED_SENTINEL, new_RxInternalOperatorsNotificationLite_$1_init());
-    JreStrongAssignAndConsume(&RxInternalOperatorsNotificationLite_ON_NEXT_NULL_SENTINEL, new_RxInternalOperatorsNotificationLite_$2_init());
+    JreStrongAssignAndConsume(&RxInternalOperatorsNotificationLite_ON_COMPLETED_SENTINEL, new_RxInternalOperatorsNotificationLite_1_init());
+    JreStrongAssignAndConsume(&RxInternalOperatorsNotificationLite_ON_NEXT_NULL_SENTINEL, new_RxInternalOperatorsNotificationLite_2_init());
     J2OBJC_SET_INITIALIZED(RxInternalOperatorsNotificationLite)
   }
 }
@@ -223,7 +223,7 @@ jboolean RxInternalOperatorsNotificationLite_acceptWithRxObserver_withId_(id<RxO
     return false;
   }
   else if (n != nil) {
-    if ([n java_getClass] == (id) RxInternalOperatorsNotificationLite_OnErrorSentinel_class_()) {
+    if ([n java_getClass] == RxInternalOperatorsNotificationLite_OnErrorSentinel_class_()) {
       [((id<RxObserver>) nil_chk(o)) onErrorWithNSException:((RxInternalOperatorsNotificationLite_OnErrorSentinel *) cast_chk(n, [RxInternalOperatorsNotificationLite_OnErrorSentinel class]))->e_];
       return true;
     }
@@ -283,6 +283,96 @@ NSException *RxInternalOperatorsNotificationLite_getErrorWithId_(id n) {
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsNotificationLite)
 
+@implementation RxInternalOperatorsNotificationLite_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalOperatorsNotificationLite_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
+- (NSString *)description {
+  return @"Notification=>Completed";
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSString;", 0x1, 0, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(description);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "serialVersionUID", "J", .constantValue.asLong = RxInternalOperatorsNotificationLite_1_serialVersionUID, 0x1a, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "toString", "LRxInternalOperatorsNotificationLite;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsNotificationLite_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, -1, -1, -1 };
+  return &_RxInternalOperatorsNotificationLite_1;
+}
+
+@end
+
+void RxInternalOperatorsNotificationLite_1_init(RxInternalOperatorsNotificationLite_1 *self) {
+  NSObject_init(self);
+}
+
+RxInternalOperatorsNotificationLite_1 *new_RxInternalOperatorsNotificationLite_1_init() {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsNotificationLite_1, init)
+}
+
+RxInternalOperatorsNotificationLite_1 *create_RxInternalOperatorsNotificationLite_1_init() {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsNotificationLite_1, init)
+}
+
+@implementation RxInternalOperatorsNotificationLite_2
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalOperatorsNotificationLite_2_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
+- (NSString *)description {
+  return @"Notification=>NULL";
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSString;", 0x1, 0, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(description);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "serialVersionUID", "J", .constantValue.asLong = RxInternalOperatorsNotificationLite_2_serialVersionUID, 0x1a, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "toString", "LRxInternalOperatorsNotificationLite;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsNotificationLite_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, -1, -1, -1 };
+  return &_RxInternalOperatorsNotificationLite_2;
+}
+
+@end
+
+void RxInternalOperatorsNotificationLite_2_init(RxInternalOperatorsNotificationLite_2 *self) {
+  NSObject_init(self);
+}
+
+RxInternalOperatorsNotificationLite_2 *new_RxInternalOperatorsNotificationLite_2_init() {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsNotificationLite_2, init)
+}
+
+RxInternalOperatorsNotificationLite_2 *create_RxInternalOperatorsNotificationLite_2_init() {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsNotificationLite_2, init)
+}
+
 @implementation RxInternalOperatorsNotificationLite_OnErrorSentinel
 
 - (instancetype)initWithNSException:(NSException *)e {
@@ -334,93 +424,3 @@ RxInternalOperatorsNotificationLite_OnErrorSentinel *create_RxInternalOperatorsN
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsNotificationLite_OnErrorSentinel)
-
-@implementation RxInternalOperatorsNotificationLite_$1
-
-- (NSString *)description {
-  return @"Notification=>Completed";
-}
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalOperatorsNotificationLite_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSString;", 0x1, 0, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(description);
-  methods[1].selector = @selector(init);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "serialVersionUID", "J", .constantValue.asLong = RxInternalOperatorsNotificationLite_$1_serialVersionUID, 0x1a, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "toString", "LRxInternalOperatorsNotificationLite;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsNotificationLite_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, -1, -1, -1 };
-  return &_RxInternalOperatorsNotificationLite_$1;
-}
-
-@end
-
-void RxInternalOperatorsNotificationLite_$1_init(RxInternalOperatorsNotificationLite_$1 *self) {
-  NSObject_init(self);
-}
-
-RxInternalOperatorsNotificationLite_$1 *new_RxInternalOperatorsNotificationLite_$1_init() {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsNotificationLite_$1, init)
-}
-
-RxInternalOperatorsNotificationLite_$1 *create_RxInternalOperatorsNotificationLite_$1_init() {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsNotificationLite_$1, init)
-}
-
-@implementation RxInternalOperatorsNotificationLite_$2
-
-- (NSString *)description {
-  return @"Notification=>NULL";
-}
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalOperatorsNotificationLite_$2_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSString;", 0x1, 0, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(description);
-  methods[1].selector = @selector(init);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "serialVersionUID", "J", .constantValue.asLong = RxInternalOperatorsNotificationLite_$2_serialVersionUID, 0x1a, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "toString", "LRxInternalOperatorsNotificationLite;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsNotificationLite_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, -1, -1, -1 };
-  return &_RxInternalOperatorsNotificationLite_$2;
-}
-
-@end
-
-void RxInternalOperatorsNotificationLite_$2_init(RxInternalOperatorsNotificationLite_$2 *self) {
-  NSObject_init(self);
-}
-
-RxInternalOperatorsNotificationLite_$2 *new_RxInternalOperatorsNotificationLite_$2_init() {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsNotificationLite_$2, init)
-}
-
-RxInternalOperatorsNotificationLite_$2 *create_RxInternalOperatorsNotificationLite_$2_init() {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsNotificationLite_$2, init)
-}

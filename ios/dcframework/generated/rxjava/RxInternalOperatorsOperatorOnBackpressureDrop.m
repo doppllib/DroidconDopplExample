@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OperatorOnBackpressureDrop.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxExceptionsExceptions.h"
 #include "RxFunctionsAction1.h"
@@ -15,34 +14,37 @@
 #include "java/lang/Long.h"
 #include "java/util/concurrent/atomic/AtomicLong.h"
 
-@interface RxInternalOperatorsOperatorOnBackpressureDrop_$1 : NSObject < RxProducer > {
+@interface RxInternalOperatorsOperatorOnBackpressureDrop_1 : NSObject < RxProducer > {
  @public
   JavaUtilConcurrentAtomicAtomicLong *val$requested_;
 }
-
-- (void)requestWithLong:(jlong)n;
 
 - (instancetype)initWithJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)capture$0;
 
+- (void)requestWithLong:(jlong)n;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorOnBackpressureDrop_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorOnBackpressureDrop_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorOnBackpressureDrop_$1, val$requested_, JavaUtilConcurrentAtomicAtomicLong *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorOnBackpressureDrop_1_initWithJavaUtilConcurrentAtomicAtomicLong_(RxInternalOperatorsOperatorOnBackpressureDrop_1 *self, JavaUtilConcurrentAtomicAtomicLong *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorOnBackpressureDrop_$1_initWithJavaUtilConcurrentAtomicAtomicLong_(RxInternalOperatorsOperatorOnBackpressureDrop_$1 *self, JavaUtilConcurrentAtomicAtomicLong *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorOnBackpressureDrop_1 *new_RxInternalOperatorsOperatorOnBackpressureDrop_1_initWithJavaUtilConcurrentAtomicAtomicLong_(JavaUtilConcurrentAtomicAtomicLong *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorOnBackpressureDrop_$1 *new_RxInternalOperatorsOperatorOnBackpressureDrop_$1_initWithJavaUtilConcurrentAtomicAtomicLong_(JavaUtilConcurrentAtomicAtomicLong *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorOnBackpressureDrop_1 *create_RxInternalOperatorsOperatorOnBackpressureDrop_1_initWithJavaUtilConcurrentAtomicAtomicLong_(JavaUtilConcurrentAtomicAtomicLong *capture$0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorOnBackpressureDrop_$1 *create_RxInternalOperatorsOperatorOnBackpressureDrop_$1_initWithJavaUtilConcurrentAtomicAtomicLong_(JavaUtilConcurrentAtomicAtomicLong *capture$0);
-
-@interface RxInternalOperatorsOperatorOnBackpressureDrop_$2 : RxSubscriber {
+@interface RxInternalOperatorsOperatorOnBackpressureDrop_2 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorOnBackpressureDrop *this$0_;
-  jboolean done_;
   RxSubscriber *val$child_;
   JavaUtilConcurrentAtomicAtomicLong *val$requested_;
+  jboolean done_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorOnBackpressureDrop:(RxInternalOperatorsOperatorOnBackpressureDrop *)outer$
+                                                     withRxSubscriber:(RxSubscriber *)capture$0
+                               withJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)capture$1
+                                                     withRxSubscriber:(RxSubscriber *)param0;
 
 - (void)onStart;
 
@@ -52,24 +54,15 @@ __attribute__((unused)) static RxInternalOperatorsOperatorOnBackpressureDrop_$1 
 
 - (void)onNextWithId:(id)t;
 
-- (instancetype)initWithRxInternalOperatorsOperatorOnBackpressureDrop:(RxInternalOperatorsOperatorOnBackpressureDrop *)outer$
-                                                     withRxSubscriber:(RxSubscriber *)capture$0
-                               withJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)capture$1
-                                                     withRxSubscriber:(RxSubscriber *)arg$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorOnBackpressureDrop_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorOnBackpressureDrop_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorOnBackpressureDrop_$2, this$0_, RxInternalOperatorsOperatorOnBackpressureDrop *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorOnBackpressureDrop_$2, val$child_, RxSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorOnBackpressureDrop_$2, val$requested_, JavaUtilConcurrentAtomicAtomicLong *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorOnBackpressureDrop_2_initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_(RxInternalOperatorsOperatorOnBackpressureDrop_2 *self, RxInternalOperatorsOperatorOnBackpressureDrop *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicLong *capture$1, RxSubscriber *param0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorOnBackpressureDrop_$2_initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_(RxInternalOperatorsOperatorOnBackpressureDrop_$2 *self, RxInternalOperatorsOperatorOnBackpressureDrop *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicLong *capture$1, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorOnBackpressureDrop_2 *new_RxInternalOperatorsOperatorOnBackpressureDrop_2_initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_(RxInternalOperatorsOperatorOnBackpressureDrop *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicLong *capture$1, RxSubscriber *param0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorOnBackpressureDrop_$2 *new_RxInternalOperatorsOperatorOnBackpressureDrop_$2_initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_(RxInternalOperatorsOperatorOnBackpressureDrop *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicLong *capture$1, RxSubscriber *arg$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorOnBackpressureDrop_$2 *create_RxInternalOperatorsOperatorOnBackpressureDrop_$2_initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_(RxInternalOperatorsOperatorOnBackpressureDrop *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicLong *capture$1, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorOnBackpressureDrop_2 *create_RxInternalOperatorsOperatorOnBackpressureDrop_2_initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_(RxInternalOperatorsOperatorOnBackpressureDrop *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicLong *capture$1, RxSubscriber *param0);
 
 @implementation RxInternalOperatorsOperatorOnBackpressureDrop
 
@@ -91,8 +84,8 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 - (RxSubscriber *)callWithId:(RxSubscriber *)child {
   JavaUtilConcurrentAtomicAtomicLong *requested = create_JavaUtilConcurrentAtomicAtomicLong_init();
-  [((RxSubscriber *) nil_chk(child)) setProducerWithRxProducer:create_RxInternalOperatorsOperatorOnBackpressureDrop_$1_initWithJavaUtilConcurrentAtomicAtomicLong_(requested)];
-  return create_RxInternalOperatorsOperatorOnBackpressureDrop_$2_initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_(self, child, requested, child);
+  [((RxSubscriber *) nil_chk(child)) setProducerWithRxProducer:create_RxInternalOperatorsOperatorOnBackpressureDrop_1_initWithJavaUtilConcurrentAtomicAtomicLong_(requested)];
+  return create_RxInternalOperatorsOperatorOnBackpressureDrop_2_initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_(self, child, requested, child);
 }
 
 - (void)dealloc {
@@ -208,15 +201,15 @@ RxInternalOperatorsOperatorOnBackpressureDrop_Holder *create_RxInternalOperators
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorOnBackpressureDrop_Holder)
 
-@implementation RxInternalOperatorsOperatorOnBackpressureDrop_$1
+@implementation RxInternalOperatorsOperatorOnBackpressureDrop_1
+
+- (instancetype)initWithJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)capture$0 {
+  RxInternalOperatorsOperatorOnBackpressureDrop_1_initWithJavaUtilConcurrentAtomicAtomicLong_(self, capture$0);
+  return self;
+}
 
 - (void)requestWithLong:(jlong)n {
   RxInternalOperatorsBackpressureUtils_getAndAddRequestWithJavaUtilConcurrentAtomicAtomicLong_withLong_(val$requested_, n);
-}
-
-- (instancetype)initWithJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)capture$0 {
-  RxInternalOperatorsOperatorOnBackpressureDrop_$1_initWithJavaUtilConcurrentAtomicAtomicLong_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -226,38 +219,46 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorOnBackpressureDrop_H
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(requestWithLong:);
-  methods[1].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicLong:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicLong:);
+  methods[1].selector = @selector(requestWithLong:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$requested_", "LJavaUtilConcurrentAtomicAtomicLong;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "request", "J", "LJavaUtilConcurrentAtomicAtomicLong;", "LRxInternalOperatorsOperatorOnBackpressureDrop;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorOnBackpressureDrop_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
-  return &_RxInternalOperatorsOperatorOnBackpressureDrop_$1;
+  static const void *ptrTable[] = { "request", "J", "LRxInternalOperatorsOperatorOnBackpressureDrop;", "callWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorOnBackpressureDrop_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, -1, -1 };
+  return &_RxInternalOperatorsOperatorOnBackpressureDrop_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorOnBackpressureDrop_$1_initWithJavaUtilConcurrentAtomicAtomicLong_(RxInternalOperatorsOperatorOnBackpressureDrop_$1 *self, JavaUtilConcurrentAtomicAtomicLong *capture$0) {
+void RxInternalOperatorsOperatorOnBackpressureDrop_1_initWithJavaUtilConcurrentAtomicAtomicLong_(RxInternalOperatorsOperatorOnBackpressureDrop_1 *self, JavaUtilConcurrentAtomicAtomicLong *capture$0) {
   JreStrongAssign(&self->val$requested_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorOnBackpressureDrop_$1 *new_RxInternalOperatorsOperatorOnBackpressureDrop_$1_initWithJavaUtilConcurrentAtomicAtomicLong_(JavaUtilConcurrentAtomicAtomicLong *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorOnBackpressureDrop_$1, initWithJavaUtilConcurrentAtomicAtomicLong_, capture$0)
+RxInternalOperatorsOperatorOnBackpressureDrop_1 *new_RxInternalOperatorsOperatorOnBackpressureDrop_1_initWithJavaUtilConcurrentAtomicAtomicLong_(JavaUtilConcurrentAtomicAtomicLong *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorOnBackpressureDrop_1, initWithJavaUtilConcurrentAtomicAtomicLong_, capture$0)
 }
 
-RxInternalOperatorsOperatorOnBackpressureDrop_$1 *create_RxInternalOperatorsOperatorOnBackpressureDrop_$1_initWithJavaUtilConcurrentAtomicAtomicLong_(JavaUtilConcurrentAtomicAtomicLong *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorOnBackpressureDrop_$1, initWithJavaUtilConcurrentAtomicAtomicLong_, capture$0)
+RxInternalOperatorsOperatorOnBackpressureDrop_1 *create_RxInternalOperatorsOperatorOnBackpressureDrop_1_initWithJavaUtilConcurrentAtomicAtomicLong_(JavaUtilConcurrentAtomicAtomicLong *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorOnBackpressureDrop_1, initWithJavaUtilConcurrentAtomicAtomicLong_, capture$0)
 }
 
-@implementation RxInternalOperatorsOperatorOnBackpressureDrop_$2
+@implementation RxInternalOperatorsOperatorOnBackpressureDrop_2
+
+- (instancetype)initWithRxInternalOperatorsOperatorOnBackpressureDrop:(RxInternalOperatorsOperatorOnBackpressureDrop *)outer$
+                                                     withRxSubscriber:(RxSubscriber *)capture$0
+                               withJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)capture$1
+                                                     withRxSubscriber:(RxSubscriber *)param0 {
+  RxInternalOperatorsOperatorOnBackpressureDrop_2_initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_(self, outer$, capture$0, capture$1, param0);
+  return self;
+}
 
 - (void)onStart {
   [self requestWithLong:JavaLangLong_MAX_VALUE];
@@ -300,16 +301,7 @@ RxInternalOperatorsOperatorOnBackpressureDrop_$1 *create_RxInternalOperatorsOper
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorOnBackpressureDrop:(RxInternalOperatorsOperatorOnBackpressureDrop *)outer$
-                                                     withRxSubscriber:(RxSubscriber *)capture$0
-                               withJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)capture$1
-                                                     withRxSubscriber:(RxSubscriber *)arg$0 {
-  RxInternalOperatorsOperatorOnBackpressureDrop_$2_initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_(self, outer$, capture$0, capture$1, arg$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorOnBackpressureDrop_$2 class]);
   RELEASE_(this$0_);
   RELEASE_(val$child_);
   RELEASE_(val$requested_);
@@ -318,44 +310,44 @@ RxInternalOperatorsOperatorOnBackpressureDrop_$1 *create_RxInternalOperatorsOper
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 4, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onStart);
-  methods[1].selector = @selector(onCompleted);
-  methods[2].selector = @selector(onErrorWithNSException:);
-  methods[3].selector = @selector(onNextWithId:);
-  methods[4].selector = @selector(initWithRxInternalOperatorsOperatorOnBackpressureDrop:withRxSubscriber:withJavaUtilConcurrentAtomicAtomicLong:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorOnBackpressureDrop:withRxSubscriber:withJavaUtilConcurrentAtomicAtomicLong:withRxSubscriber:);
+  methods[1].selector = @selector(onStart);
+  methods[2].selector = @selector(onCompleted);
+  methods[3].selector = @selector(onErrorWithNSException:);
+  methods[4].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorOnBackpressureDrop;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
-    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorOnBackpressureDrop;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
     { "val$requested_", "LJavaUtilConcurrentAtomicAtomicLong;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "LRxInternalOperatorsOperatorOnBackpressureDrop;LRxSubscriber;LJavaUtilConcurrentAtomicAtomicLong;LRxSubscriber;", "(Lrx/internal/operators/OperatorOnBackpressureDrop;Lrx/Subscriber<-TT;>;Ljava/util/concurrent/atomic/AtomicLong;Lrx/Subscriber<*>;)V", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorOnBackpressureDrop;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorOnBackpressureDrop_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 4, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsOperatorOnBackpressureDrop_$2;
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "Lrx/internal/operators/OperatorOnBackpressureDrop<TT;>;", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorOnBackpressureDrop;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorOnBackpressureDrop_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 4, 9, -1, 10, 11, -1 };
+  return &_RxInternalOperatorsOperatorOnBackpressureDrop_2;
 }
 
 @end
 
-void RxInternalOperatorsOperatorOnBackpressureDrop_$2_initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_(RxInternalOperatorsOperatorOnBackpressureDrop_$2 *self, RxInternalOperatorsOperatorOnBackpressureDrop *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicLong *capture$1, RxSubscriber *arg$0) {
+void RxInternalOperatorsOperatorOnBackpressureDrop_2_initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_(RxInternalOperatorsOperatorOnBackpressureDrop_2 *self, RxInternalOperatorsOperatorOnBackpressureDrop *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicLong *capture$1, RxSubscriber *param0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$child_, capture$0);
   JreStrongAssign(&self->val$requested_, capture$1);
-  RxSubscriber_initWithRxSubscriber_(self, arg$0);
+  RxSubscriber_initWithRxSubscriber_(self, param0);
 }
 
-RxInternalOperatorsOperatorOnBackpressureDrop_$2 *new_RxInternalOperatorsOperatorOnBackpressureDrop_$2_initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_(RxInternalOperatorsOperatorOnBackpressureDrop *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicLong *capture$1, RxSubscriber *arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorOnBackpressureDrop_$2, initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_, outer$, capture$0, capture$1, arg$0)
+RxInternalOperatorsOperatorOnBackpressureDrop_2 *new_RxInternalOperatorsOperatorOnBackpressureDrop_2_initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_(RxInternalOperatorsOperatorOnBackpressureDrop *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicLong *capture$1, RxSubscriber *param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorOnBackpressureDrop_2, initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_, outer$, capture$0, capture$1, param0)
 }
 
-RxInternalOperatorsOperatorOnBackpressureDrop_$2 *create_RxInternalOperatorsOperatorOnBackpressureDrop_$2_initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_(RxInternalOperatorsOperatorOnBackpressureDrop *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicLong *capture$1, RxSubscriber *arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorOnBackpressureDrop_$2, initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_, outer$, capture$0, capture$1, arg$0)
+RxInternalOperatorsOperatorOnBackpressureDrop_2 *create_RxInternalOperatorsOperatorOnBackpressureDrop_2_initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_(RxInternalOperatorsOperatorOnBackpressureDrop *outer$, RxSubscriber *capture$0, JavaUtilConcurrentAtomicAtomicLong *capture$1, RxSubscriber *param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorOnBackpressureDrop_2, initWithRxInternalOperatorsOperatorOnBackpressureDrop_withRxSubscriber_withJavaUtilConcurrentAtomicAtomicLong_withRxSubscriber_, outer$, capture$0, capture$1, param0)
 }

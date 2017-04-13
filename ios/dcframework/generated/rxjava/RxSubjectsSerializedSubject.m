@@ -22,26 +22,24 @@
 J2OBJC_FIELD_SETTER(RxSubjectsSerializedSubject, observer_, RxObserversSerializedObserver *)
 J2OBJC_FIELD_SETTER(RxSubjectsSerializedSubject, actual_, RxSubjectsSubject *)
 
-@interface RxSubjectsSerializedSubject_$1 : NSObject < RxObservable_OnSubscribe > {
+@interface RxSubjectsSerializedSubject_1 : NSObject < RxObservable_OnSubscribe > {
  @public
   RxSubjectsSubject *val$actual_;
 }
 
-- (void)callWithId:(RxSubscriber *)child;
-
 - (instancetype)initWithRxSubjectsSubject:(RxSubjectsSubject *)capture$0;
+
+- (void)callWithId:(RxSubscriber *)child;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxSubjectsSerializedSubject_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxSubjectsSerializedSubject_1)
 
-J2OBJC_FIELD_SETTER(RxSubjectsSerializedSubject_$1, val$actual_, RxSubjectsSubject *)
+__attribute__((unused)) static void RxSubjectsSerializedSubject_1_initWithRxSubjectsSubject_(RxSubjectsSerializedSubject_1 *self, RxSubjectsSubject *capture$0);
 
-__attribute__((unused)) static void RxSubjectsSerializedSubject_$1_initWithRxSubjectsSubject_(RxSubjectsSerializedSubject_$1 *self, RxSubjectsSubject *capture$0);
+__attribute__((unused)) static RxSubjectsSerializedSubject_1 *new_RxSubjectsSerializedSubject_1_initWithRxSubjectsSubject_(RxSubjectsSubject *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxSubjectsSerializedSubject_$1 *new_RxSubjectsSerializedSubject_$1_initWithRxSubjectsSubject_(RxSubjectsSubject *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxSubjectsSerializedSubject_$1 *create_RxSubjectsSerializedSubject_$1_initWithRxSubjectsSubject_(RxSubjectsSubject *capture$0);
+__attribute__((unused)) static RxSubjectsSerializedSubject_1 *create_RxSubjectsSerializedSubject_1_initWithRxSubjectsSubject_(RxSubjectsSubject *capture$0);
 
 @implementation RxSubjectsSerializedSubject
 
@@ -100,7 +98,7 @@ __attribute__((unused)) static RxSubjectsSerializedSubject_$1 *create_RxSubjects
 @end
 
 void RxSubjectsSerializedSubject_initWithRxSubjectsSubject_(RxSubjectsSerializedSubject *self, RxSubjectsSubject *actual) {
-  RxSubjectsSubject_initWithRxObservable_OnSubscribe_(self, create_RxSubjectsSerializedSubject_$1_initWithRxSubjectsSubject_(actual));
+  RxSubjectsSubject_initWithRxObservable_OnSubscribe_(self, create_RxSubjectsSerializedSubject_1_initWithRxSubjectsSubject_(actual));
   JreStrongAssign(&self->actual_, actual);
   JreStrongAssignAndConsume(&self->observer_, new_RxObserversSerializedObserver_initWithRxObserver_(actual));
 }
@@ -115,15 +113,15 @@ RxSubjectsSerializedSubject *create_RxSubjectsSerializedSubject_initWithRxSubjec
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubjectsSerializedSubject)
 
-@implementation RxSubjectsSerializedSubject_$1
+@implementation RxSubjectsSerializedSubject_1
+
+- (instancetype)initWithRxSubjectsSubject:(RxSubjectsSubject *)capture$0 {
+  RxSubjectsSerializedSubject_1_initWithRxSubjectsSubject_(self, capture$0);
+  return self;
+}
 
 - (void)callWithId:(RxSubscriber *)child {
   [((RxSubjectsSubject *) nil_chk(val$actual_)) unsafeSubscribeWithRxSubscriber:child];
-}
-
-- (instancetype)initWithRxSubjectsSubject:(RxSubjectsSubject *)capture$0 {
-  RxSubjectsSerializedSubject_$1_initWithRxSubjectsSubject_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -133,33 +131,33 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubjectsSerializedSubject)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxSubjectsSubject:);
+  methods[0].selector = @selector(initWithRxSubjectsSubject:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$actual_", "LRxSubjectsSubject;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$actual_", "LRxSubjectsSubject;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-TR;>;)V", "LRxSubjectsSubject;", "(Lrx/subjects/Subject<TT;TR;>;)V", "Lrx/subjects/Subject<TT;TR;>;", "LRxSubjectsSerializedSubject;", "initWithRxSubjectsSubject:", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<TR;>;" };
-  static const J2ObjcClassInfo _RxSubjectsSerializedSubject_$1 = { "", "rx.subjects", ptrTable, methods, fields, 7, 0x8008, 2, 1, 6, -1, 7, 8, -1 };
-  return &_RxSubjectsSerializedSubject_$1;
+  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-TR;>;)V", "Lrx/subjects/Subject<TT;TR;>;", "LRxSubjectsSerializedSubject;", "initWithRxSubjectsSubject:", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<TR;>;" };
+  static const J2ObjcClassInfo _RxSubjectsSerializedSubject_1 = { "", "rx.subjects", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
+  return &_RxSubjectsSerializedSubject_1;
 }
 
 @end
 
-void RxSubjectsSerializedSubject_$1_initWithRxSubjectsSubject_(RxSubjectsSerializedSubject_$1 *self, RxSubjectsSubject *capture$0) {
+void RxSubjectsSerializedSubject_1_initWithRxSubjectsSubject_(RxSubjectsSerializedSubject_1 *self, RxSubjectsSubject *capture$0) {
   JreStrongAssign(&self->val$actual_, capture$0);
   NSObject_init(self);
 }
 
-RxSubjectsSerializedSubject_$1 *new_RxSubjectsSerializedSubject_$1_initWithRxSubjectsSubject_(RxSubjectsSubject *capture$0) {
-  J2OBJC_NEW_IMPL(RxSubjectsSerializedSubject_$1, initWithRxSubjectsSubject_, capture$0)
+RxSubjectsSerializedSubject_1 *new_RxSubjectsSerializedSubject_1_initWithRxSubjectsSubject_(RxSubjectsSubject *capture$0) {
+  J2OBJC_NEW_IMPL(RxSubjectsSerializedSubject_1, initWithRxSubjectsSubject_, capture$0)
 }
 
-RxSubjectsSerializedSubject_$1 *create_RxSubjectsSerializedSubject_$1_initWithRxSubjectsSubject_(RxSubjectsSubject *capture$0) {
-  J2OBJC_CREATE_IMPL(RxSubjectsSerializedSubject_$1, initWithRxSubjectsSubject_, capture$0)
+RxSubjectsSerializedSubject_1 *create_RxSubjectsSerializedSubject_1_initWithRxSubjectsSubject_(RxSubjectsSubject *capture$0) {
+  J2OBJC_CREATE_IMPL(RxSubjectsSerializedSubject_1, initWithRxSubjectsSubject_, capture$0)
 }

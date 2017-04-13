@@ -140,15 +140,15 @@ JavaLangNumberFormatException *AndroidUtilSizeF_invalidSizeFWithNSString_(NSStri
 AndroidUtilSizeF *AndroidUtilSizeF_parseSizeFWithNSString_(NSString *string) {
   AndroidUtilSizeF_initialize();
   if (string == nil) @throw create_JavaLangIllegalArgumentException_initWithNSString_(@"string must not be null");
-  jint sep_ix = [string indexOf:'*'];
+  jint sep_ix = [string java_indexOf:'*'];
   if (sep_ix < 0) {
-    sep_ix = [string indexOf:'x'];
+    sep_ix = [string java_indexOf:'x'];
   }
   if (sep_ix < 0) {
     @throw AndroidUtilSizeF_invalidSizeFWithNSString_(string);
   }
   @try {
-    return create_AndroidUtilSizeF_initWithFloat_withFloat_(JavaLangFloat_parseFloatWithNSString_([string substring:0 endIndex:sep_ix]), JavaLangFloat_parseFloatWithNSString_([string substring:sep_ix + 1]));
+    return create_AndroidUtilSizeF_initWithFloat_withFloat_(JavaLangFloat_parseFloatWithNSString_([string java_substring:0 endIndex:sep_ix]), JavaLangFloat_parseFloatWithNSString_([string java_substring:sep_ix + 1]));
   }
   @catch (JavaLangNumberFormatException *e) {
     @throw AndroidUtilSizeF_invalidSizeFWithNSString_(string);

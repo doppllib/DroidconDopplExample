@@ -25,6 +25,13 @@ J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorOnBackpressureLatest_LatestSubscr
 
 @implementation RxInternalOperatorsOperatorOnBackpressureLatest
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalOperatorsOperatorOnBackpressureLatest_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (RxInternalOperatorsOperatorOnBackpressureLatest *)instance {
   return RxInternalOperatorsOperatorOnBackpressureLatest_instance();
 }
@@ -39,24 +46,17 @@ J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorOnBackpressureLatest_LatestSubscr
   return parent;
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalOperatorsOperatorOnBackpressureLatest_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxInternalOperatorsOperatorOnBackpressureLatest;", 0x9, -1, -1, -1, 0, -1, -1 },
     { NULL, "LRxSubscriber;", 0x1, 1, 2, -1, 3, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(instance);
-  methods[1].selector = @selector(callWithId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(instance);
+  methods[2].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "<T:Ljava/lang/Object;>()Lrx/internal/operators/OperatorOnBackpressureLatest<TT;>;", "call", "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorOnBackpressureLatest_Holder;LRxInternalOperatorsOperatorOnBackpressureLatest_LatestEmitter;LRxInternalOperatorsOperatorOnBackpressureLatest_LatestSubscriber;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Lrx/Observable$Operator<TT;TT;>;" };
   static const J2ObjcClassInfo _RxInternalOperatorsOperatorOnBackpressureLatest = { "OperatorOnBackpressureLatest", "rx.internal.operators", ptrTable, methods, NULL, 7, 0x11, 3, 0, -1, 4, -1, 5, -1 };
@@ -64,11 +64,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
-
-RxInternalOperatorsOperatorOnBackpressureLatest *RxInternalOperatorsOperatorOnBackpressureLatest_instance() {
-  RxInternalOperatorsOperatorOnBackpressureLatest_initialize();
-  return JreLoadStatic(RxInternalOperatorsOperatorOnBackpressureLatest_Holder, INSTANCE);
-}
 
 void RxInternalOperatorsOperatorOnBackpressureLatest_init(RxInternalOperatorsOperatorOnBackpressureLatest *self) {
   NSObject_init(self);
@@ -80,6 +75,11 @@ RxInternalOperatorsOperatorOnBackpressureLatest *new_RxInternalOperatorsOperator
 
 RxInternalOperatorsOperatorOnBackpressureLatest *create_RxInternalOperatorsOperatorOnBackpressureLatest_init() {
   J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorOnBackpressureLatest, init)
+}
+
+RxInternalOperatorsOperatorOnBackpressureLatest *RxInternalOperatorsOperatorOnBackpressureLatest_instance() {
+  RxInternalOperatorsOperatorOnBackpressureLatest_initialize();
+  return JreLoadStatic(RxInternalOperatorsOperatorOnBackpressureLatest_Holder, INSTANCE);
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorOnBackpressureLatest)
@@ -370,7 +370,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorOnBackpressureLatest
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorOnBackpressureLatest_LatestSubscriber class]);
   RELEASE_(producer_LatestSubscriber_);
   [super dealloc];
 }

@@ -17,6 +17,7 @@
 #include "DCPEventDetailHost.h"
 #include "DCPEventDetailPresenter.h"
 #include "DCPPlatformClient.h"
+#include "DCTAbstractWatchVideoTask.h"
 #include "DCTAddRsvpTask.h"
 #include "DCTEventDetailLoadTask.h"
 #include "DCTEventVideoDetailsTask.h"
@@ -99,7 +100,7 @@ __attribute__((unused)) static jboolean DCPEventDetailPresenter_ready(DCPEventDe
 
 - (void)onEventMainThreadWithDCTStartWatchVideoTask:(DCTStartWatchVideoTask *)task {
   [((id<DCPEventDetailHost>) nil_chk(host_)) resetStreamProgress];
-  if (((DCTStartWatchVideoTask *) nil_chk(task))->videoOk_) {
+  if (((DCTAbstractWatchVideoTask *) nil_chk(task))->videoOk_) {
     DCPEventDetailPresenter_recordAnalyticsWithNSString_(self, CoTouchlabDroidconandroidUtilsAnalyticsEvents_STREAM_SUCCESS);
     [((id<DCPEventDetailHost>) nil_chk(host_)) callStreamActivityWithDCTStartWatchVideoTask:task];
   }

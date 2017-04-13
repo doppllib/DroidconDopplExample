@@ -25,6 +25,7 @@
 #include "CoTouchlabSqueakyStmtQueryManyClause.h"
 #include "CoTouchlabSqueakyStmtWhere.h"
 #include "DCDAppPrefs.h"
+#include "DCDBlock.h"
 #include "DCDDatabaseHelper.h"
 #include "DCDEvent.h"
 #include "DCDEventSpeaker.h"
@@ -53,34 +54,37 @@
 #include "java/util/Set.h"
 #include "java/util/concurrent/Callable.h"
 
-@interface CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1 : NSObject < JavaUtilConcurrentCallable > {
+@interface CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1 : NSObject < JavaUtilConcurrentCallable > {
  @public
   DCDDatabaseHelper *val$databaseHelper_;
   AndroidContentContext *val$context_;
   CoTouchlabDroidconandroidNetworkDaoConvention *val$convention_;
 }
 
-- (id)call;
-
 - (instancetype)initWithDCDDatabaseHelper:(DCDDatabaseHelper *)capture$0
                 withAndroidContentContext:(AndroidContentContext *)capture$1
 withCoTouchlabDroidconandroidNetworkDaoConvention:(CoTouchlabDroidconandroidNetworkDaoConvention *)capture$2;
 
+- (JavaLangVoid *)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1)
+J2OBJC_EMPTY_STATIC_INIT(CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1)
 
-J2OBJC_FIELD_SETTER(CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1, val$databaseHelper_, DCDDatabaseHelper *)
-J2OBJC_FIELD_SETTER(CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1, val$context_, AndroidContentContext *)
-J2OBJC_FIELD_SETTER(CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1, val$convention_, CoTouchlabDroidconandroidNetworkDaoConvention *)
+__attribute__((unused)) static void CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1_initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_(CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1 *self, DCDDatabaseHelper *capture$0, AndroidContentContext *capture$1, CoTouchlabDroidconandroidNetworkDaoConvention *capture$2);
 
-__attribute__((unused)) static void CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1_initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_(CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1 *self, DCDDatabaseHelper *capture$0, AndroidContentContext *capture$1, CoTouchlabDroidconandroidNetworkDaoConvention *capture$2);
+__attribute__((unused)) static CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1 *new_CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1_initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_(DCDDatabaseHelper *capture$0, AndroidContentContext *capture$1, CoTouchlabDroidconandroidNetworkDaoConvention *capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1 *new_CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1_initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_(DCDDatabaseHelper *capture$0, AndroidContentContext *capture$1, CoTouchlabDroidconandroidNetworkDaoConvention *capture$2) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1 *create_CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1_initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_(DCDDatabaseHelper *capture$0, AndroidContentContext *capture$1, CoTouchlabDroidconandroidNetworkDaoConvention *capture$2);
+__attribute__((unused)) static CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1 *create_CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1_initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_(DCDDatabaseHelper *capture$0, AndroidContentContext *capture$1, CoTouchlabDroidconandroidNetworkDaoConvention *capture$2);
 
 @implementation CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 + (void)callMeWithAndroidContentContext:(AndroidContentContext *)c {
   CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_callMeWithAndroidContentContext_(c);
@@ -118,15 +122,9 @@ __attribute__((unused)) static CoTouchlabDroidconandroidTasksPersistedRefreshSch
   CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_saveConventionDataWithAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_(context, convention);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x4, 2, 1, -1, -1, -1, -1 },
     { NULL, "Z", 0x4, 3, 4, -1, -1, -1, -1 },
@@ -134,18 +132,17 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "Z", 0x4, 5, 6, -1, -1, -1, -1 },
     { NULL, "V", 0x4, 7, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x9, 8, 9, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callMeWithAndroidContentContext:);
-  methods[1].selector = @selector(runNetworkWithAndroidContentContext:);
-  methods[2].selector = @selector(handleErrorWithAndroidContentContext:withNSException:);
-  methods[3].selector = @selector(logSummary);
-  methods[4].selector = @selector(sameWithCoTouchlabAndroidThreadingTasksPersistedPersistedTask:);
-  methods[5].selector = @selector(onCompleteWithAndroidContentContext:);
-  methods[6].selector = @selector(saveConventionDataWithAndroidContentContext:withCoTouchlabDroidconandroidNetworkDaoConvention:);
-  methods[7].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callMeWithAndroidContentContext:);
+  methods[2].selector = @selector(runNetworkWithAndroidContentContext:);
+  methods[3].selector = @selector(handleErrorWithAndroidContentContext:withNSException:);
+  methods[4].selector = @selector(logSummary);
+  methods[5].selector = @selector(sameWithCoTouchlabAndroidThreadingTasksPersistedPersistedTask:);
+  methods[6].selector = @selector(onCompleteWithAndroidContentContext:);
+  methods[7].selector = @selector(saveConventionDataWithAndroidContentContext:withCoTouchlabDroidconandroidNetworkDaoConvention:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "callMe", "LAndroidContentContext;", "runNetwork", "handleError", "LAndroidContentContext;LNSException;", "same", "LCoTouchlabAndroidThreadingTasksPersistedPersistedTask;", "onComplete", "saveConventionData", "LAndroidContentContext;LCoTouchlabDroidconandroidNetworkDaoConvention;" };
   static const J2ObjcClassInfo _CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData = { "RefreshScheduleData", "co.touchlab.droidconandroid.tasks.persisted", ptrTable, methods, NULL, 7, 0x1, 8, 0, -1, -1, -1, -1, -1 };
@@ -153,18 +150,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
-
-void CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_callMeWithAndroidContentContext_(AndroidContentContext *c) {
-  CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_initialize();
-  [((CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue *) nil_chk(CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory_getInstanceWithAndroidContentContext_(c))) executeWithCoTouchlabAndroidThreadingTasksPersistedPersistedTask:create_CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_init()];
-}
-
-void CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_saveConventionDataWithAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_(AndroidContentContext *context, CoTouchlabDroidconandroidNetworkDaoConvention *convention) {
-  CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_initialize();
-  if (convention == nil) @throw create_JavaLangIllegalStateException_initWithNSString_(@"No convention results");
-  DCDDatabaseHelper *databaseHelper = DCDDatabaseHelper_getInstanceWithAndroidContentContext_(context);
-  [((DCDDatabaseHelper *) nil_chk(databaseHelper)) performTransactionOrThrowRuntimeWithJavaUtilConcurrentCallable:create_CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1_initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_(databaseHelper, context, convention)];
-}
 
 void CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_init(CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData *self) {
   CoTouchlabAndroidThreadingTasksHelperRetrofitPersistedTask_init(self);
@@ -178,11 +163,30 @@ CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData *create_CoTouchlabDro
   J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData, init)
 }
 
+void CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_callMeWithAndroidContentContext_(AndroidContentContext *c) {
+  CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_initialize();
+  [((CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue *) nil_chk(CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory_getInstanceWithAndroidContentContext_(c))) executeWithCoTouchlabAndroidThreadingTasksPersistedPersistedTask:create_CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_init()];
+}
+
+void CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_saveConventionDataWithAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_(AndroidContentContext *context, CoTouchlabDroidconandroidNetworkDaoConvention *convention) {
+  CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_initialize();
+  if (convention == nil) @throw create_JavaLangIllegalStateException_initWithNSString_(@"No convention results");
+  DCDDatabaseHelper *databaseHelper = DCDDatabaseHelper_getInstanceWithAndroidContentContext_(context);
+  [((DCDDatabaseHelper *) nil_chk(databaseHelper)) performTransactionOrThrowRuntimeWithJavaUtilConcurrentCallable:create_CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1_initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_(databaseHelper, context, convention)];
+}
+
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData)
 
-@implementation CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1
+@implementation CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1
 
-- (id)call {
+- (instancetype)initWithDCDDatabaseHelper:(DCDDatabaseHelper *)capture$0
+                withAndroidContentContext:(AndroidContentContext *)capture$1
+withCoTouchlabDroidconandroidNetworkDaoConvention:(CoTouchlabDroidconandroidNetworkDaoConvention *)capture$2 {
+  CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1_initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_(self, capture$0, capture$1, capture$2);
+  return self;
+}
+
+- (JavaLangVoid *)call {
   id<CoTouchlabSqueakyDaoDao> eventDao = [((DCDDatabaseHelper *) nil_chk(val$databaseHelper_)) getEventDao];
   id<CoTouchlabSqueakyDaoDao> venueDao = [val$databaseHelper_ getVenueDao];
   id<CoTouchlabSqueakyDaoDao> blockDao = [val$databaseHelper_ getBlockDao];
@@ -199,7 +203,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabDroidconandroidTasksPersistedRefreshS
       id<JavaUtilIterator> venueEventsIterator = [((id<JavaUtilList>) nil_chk(((CoTouchlabDroidconandroidNetworkDaoVenue *) nil_chk(venue))->events_)) iterator];
       while ([((id<JavaUtilIterator>) nil_chk(venueEventsIterator)) hasNext]) {
         CoTouchlabDroidconandroidNetworkDaoEvent *event = [venueEventsIterator next];
-        [foundEvents addWithId:JavaLangLong_valueOfWithLong_(((CoTouchlabDroidconandroidNetworkDaoEvent *) nil_chk(event))->id__)];
+        [foundEvents addWithId:JavaLangLong_valueOfWithLong_(((DCDEvent *) nil_chk(event))->id__)];
         DCDEvent *dbEvent = [((id<CoTouchlabSqueakyDaoDao>) nil_chk(eventDao)) queryForIdWithId:JavaLangLong_valueOfWithLong_(event->id__)];
         JreStrongAssign(&event->venue_, venue);
         if (CoTouchlabDroidconandroidUtilsStringUtils_isEmptyWithNSString_(event->startDate_) || CoTouchlabDroidconandroidUtilsStringUtils_isEmptyWithNSString_(event->endDate_)) continue;
@@ -232,7 +236,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabDroidconandroidTasksPersistedRefreshS
     if ([((id<JavaUtilList>) nil_chk(blocks)) size] > 0) {
       [((id<CoTouchlabSqueakyDaoDao>) nil_chk(blockDao)) delete__WithJavaUtilCollection:[((id<CoTouchlabSqueakyDaoDao_QueryModifiers>) nil_chk([blockDao queryForAll])) list]];
       for (CoTouchlabDroidconandroidNetworkDaoBlock * __strong block in blocks) {
-        JreStrongAssign(&((CoTouchlabDroidconandroidNetworkDaoBlock *) nil_chk(block))->startDateLong_, JavaLangLong_valueOfWithLong_([((JavaUtilDate *) nil_chk([((JavaTextDateFormat *) nil_chk([((JavaLangThreadLocal *) nil_chk(JreLoadStatic(CoTouchlabDroidconandroidUtilsTimeUtils, DATE_FORMAT))) get])) parseWithNSString:block->startDate_])) getTime]));
+        JreStrongAssign(&((DCDBlock *) nil_chk(block))->startDateLong_, JavaLangLong_valueOfWithLong_([((JavaUtilDate *) nil_chk([((JavaTextDateFormat *) nil_chk([((JavaLangThreadLocal *) nil_chk(JreLoadStatic(CoTouchlabDroidconandroidUtilsTimeUtils, DATE_FORMAT))) get])) parseWithNSString:block->startDate_])) getTime]));
         JreStrongAssign(&block->endDateLong_, JavaLangLong_valueOfWithLong_([((JavaUtilDate *) nil_chk([((JavaTextDateFormat *) nil_chk([((JavaLangThreadLocal *) nil_chk(JreLoadStatic(CoTouchlabDroidconandroidUtilsTimeUtils, DATE_FORMAT))) get])) parseWithNSString:block->endDate_])) getTime]));
         [blockDao createOrUpdateWithId:block];
       }
@@ -247,13 +251,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabDroidconandroidTasksPersistedRefreshS
   return nil;
 }
 
-- (instancetype)initWithDCDDatabaseHelper:(DCDDatabaseHelper *)capture$0
-                withAndroidContentContext:(AndroidContentContext *)capture$1
-withCoTouchlabDroidconandroidNetworkDaoConvention:(CoTouchlabDroidconandroidNetworkDaoConvention *)capture$2 {
-  CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1_initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_(self, capture$0, capture$1, capture$2);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$databaseHelper_);
   RELEASE_(val$context_);
@@ -263,37 +260,37 @@ withCoTouchlabDroidconandroidNetworkDaoConvention:(CoTouchlabDroidconandroidNetw
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaLangVoid;", 0x1, -1, -1, 0, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithDCDDatabaseHelper:withAndroidContentContext:withCoTouchlabDroidconandroidNetworkDaoConvention:);
+  methods[0].selector = @selector(initWithDCDDatabaseHelper:withAndroidContentContext:withCoTouchlabDroidconandroidNetworkDaoConvention:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$databaseHelper_", "LDCDDatabaseHelper;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$context_", "LAndroidContentContext;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$convention_", "LCoTouchlabDroidconandroidNetworkDaoConvention;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LJavaLangException;", "LDCDDatabaseHelper;LAndroidContentContext;LCoTouchlabDroidconandroidNetworkDaoConvention;", "LCoTouchlabDroidconandroidTasksPersistedRefreshScheduleData;", "saveConventionDataWithAndroidContentContext:withCoTouchlabDroidconandroidNetworkDaoConvention:", "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/Void;>;" };
-  static const J2ObjcClassInfo _CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1 = { "", "co.touchlab.droidconandroid.tasks.persisted", ptrTable, methods, fields, 7, 0x8008, 2, 3, 2, -1, 3, 4, -1 };
-  return &_CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1;
+  static const void *ptrTable[] = { "LJavaLangException;", "LCoTouchlabDroidconandroidTasksPersistedRefreshScheduleData;", "saveConventionDataWithAndroidContentContext:withCoTouchlabDroidconandroidNetworkDaoConvention:", "Ljava/lang/Object;Ljava/util/concurrent/Callable<Ljava/lang/Void;>;" };
+  static const J2ObjcClassInfo _CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1 = { "", "co.touchlab.droidconandroid.tasks.persisted", ptrTable, methods, fields, 7, 0x8008, 2, 3, 1, -1, 2, 3, -1 };
+  return &_CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1;
 }
 
 @end
 
-void CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1_initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_(CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1 *self, DCDDatabaseHelper *capture$0, AndroidContentContext *capture$1, CoTouchlabDroidconandroidNetworkDaoConvention *capture$2) {
+void CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1_initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_(CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1 *self, DCDDatabaseHelper *capture$0, AndroidContentContext *capture$1, CoTouchlabDroidconandroidNetworkDaoConvention *capture$2) {
   JreStrongAssign(&self->val$databaseHelper_, capture$0);
   JreStrongAssign(&self->val$context_, capture$1);
   JreStrongAssign(&self->val$convention_, capture$2);
   NSObject_init(self);
 }
 
-CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1 *new_CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1_initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_(DCDDatabaseHelper *capture$0, AndroidContentContext *capture$1, CoTouchlabDroidconandroidNetworkDaoConvention *capture$2) {
-  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1, initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_, capture$0, capture$1, capture$2)
+CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1 *new_CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1_initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_(DCDDatabaseHelper *capture$0, AndroidContentContext *capture$1, CoTouchlabDroidconandroidNetworkDaoConvention *capture$2) {
+  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1, initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_, capture$0, capture$1, capture$2)
 }
 
-CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1 *create_CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1_initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_(DCDDatabaseHelper *capture$0, AndroidContentContext *capture$1, CoTouchlabDroidconandroidNetworkDaoConvention *capture$2) {
-  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_$1, initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_, capture$0, capture$1, capture$2)
+CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1 *create_CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1_initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_(DCDDatabaseHelper *capture$0, AndroidContentContext *capture$1, CoTouchlabDroidconandroidNetworkDaoConvention *capture$2) {
+  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData_1, initWithDCDDatabaseHelper_withAndroidContentContext_withCoTouchlabDroidconandroidNetworkDaoConvention_, capture$0, capture$1, capture$2)
 }

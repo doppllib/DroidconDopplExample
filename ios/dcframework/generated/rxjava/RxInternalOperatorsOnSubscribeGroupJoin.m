@@ -32,13 +32,7 @@
   RxInternalOperatorsOnSubscribeGroupJoin *this$0_;
 }
 
-- (id<RxObserver>)getForNullKey;
-
-- (id<RxObserver>)putForNullKeyWithId:(id<RxObserver>)arg0;
-
 @end
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeGroupJoin_ResultManager, this$0_, RxInternalOperatorsOnSubscribeGroupJoin *)
 
 inline jlong RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_get_serialVersionUID();
 #define RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_serialVersionUID -3035156013812425335LL
@@ -51,16 +45,12 @@ J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsOnSubscribeGroupJoin_ResultManag
 
 @end
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_LeftObserver, this$0_, RxInternalOperatorsOnSubscribeGroupJoin_ResultManager *)
-
 @interface RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_RightObserver () {
  @public
   RxInternalOperatorsOnSubscribeGroupJoin_ResultManager *this$0_;
 }
 
 @end
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_RightObserver, this$0_, RxInternalOperatorsOnSubscribeGroupJoin_ResultManager *)
 
 @interface RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_LeftDurationObserver () {
  @public
@@ -69,16 +59,12 @@ J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_RightO
 
 @end
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_LeftDurationObserver, this$0_, RxInternalOperatorsOnSubscribeGroupJoin_ResultManager *)
-
 @interface RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_RightDurationObserver () {
  @public
   RxInternalOperatorsOnSubscribeGroupJoin_ResultManager *this$0_;
 }
 
 @end
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_RightDurationObserver, this$0_, RxInternalOperatorsOnSubscribeGroupJoin_ResultManager *)
 
 @interface RxInternalOperatorsOnSubscribeGroupJoin_WindowObservableFunc_WindowSubscriber () {
  @public
@@ -103,7 +89,7 @@ J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeGroupJoin_WindowObservableFunc
 - (void)callWithId:(RxSubscriber *)child {
   RxInternalOperatorsOnSubscribeGroupJoin_ResultManager *ro = create_RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_initWithRxInternalOperatorsOnSubscribeGroupJoin_withRxSubscriber_(self, create_RxObserversSerializedSubscriber_initWithRxSubscriber_(child));
   [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:ro];
-  [ro onit];
+  [ro init__];
 }
 
 - (void)dealloc {
@@ -166,7 +152,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeGroupJoin)
   return self;
 }
 
-- (void)onit {
+- (void)init__ {
   RxSubscriber *s1 = create_RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_LeftObserver_initWithRxInternalOperatorsOnSubscribeGroupJoin_ResultManager_(self);
   RxSubscriber *s2 = create_RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_RightObserver_initWithRxInternalOperatorsOnSubscribeGroupJoin_ResultManager_(self);
   [((RxSubscriptionsCompositeSubscription *) nil_chk(group_)) addWithRxSubscription:s1];
@@ -232,18 +218,18 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeGroupJoin)
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
     { NULL, NULL, 0x1, -1, 0, -1, 1, -1, -1 },
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 2, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LJavaUtilMap;", 0x0, -1, -1, -1, 2, -1, -1 },
-    { NULL, "V", 0x0, 3, 4, -1, -1, -1, -1 },
-    { NULL, "V", 0x0, 5, 4, -1, -1, -1, -1 },
-    { NULL, "V", 0x0, 6, 7, -1, 8, -1, -1 },
+    { NULL, "LJavaUtilMap;", 0x0, -1, -1, -1, 3, -1, -1 },
+    { NULL, "V", 0x0, 4, 5, -1, -1, -1, -1 },
+    { NULL, "V", 0x0, 6, 5, -1, -1, -1, -1 },
+    { NULL, "V", 0x0, 7, 8, -1, 9, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
   methods[0].selector = @selector(initWithRxInternalOperatorsOnSubscribeGroupJoin:withRxSubscriber:);
-  methods[1].selector = @selector(onit);
+  methods[1].selector = @selector(init__);
   methods[2].selector = @selector(unsubscribe);
   methods[3].selector = @selector(isUnsubscribed);
   methods[4].selector = @selector(leftMap);
@@ -252,19 +238,19 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeGroupJoin)
   methods[7].selector = @selector(completeWithJavaUtilList:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOnSubscribeGroupJoin;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOnSubscribeGroupJoin;", .constantValue.asLong = 0, 0x1012, -1, -1, 10, -1 },
     { "serialVersionUID", "J", .constantValue.asLong = RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_serialVersionUID, 0x1a, -1, -1, -1, -1 },
     { "cancel_", "LRxSubscriptionsRefCountSubscription;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
-    { "subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x10, -1, -1, 9, -1 },
+    { "subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x10, -1, -1, 11, -1 },
     { "group_", "LRxSubscriptionsCompositeSubscription;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
     { "leftIds_", "I", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "rightIds_", "I", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
-    { "rightMap_", "LJavaUtilMap;", .constantValue.asLong = 0, 0x10, -1, -1, 10, -1 },
+    { "rightMap_", "LJavaUtilMap;", .constantValue.asLong = 0, 0x10, -1, -1, 12, -1 },
     { "leftDone_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "rightDone_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOnSubscribeGroupJoin;LRxSubscriber;", "(Lrx/internal/operators/OnSubscribeGroupJoin;Lrx/Subscriber<-TR;>;)V", "()Ljava/util/Map<Ljava/lang/Integer;Lrx/Observer<TT2;>;>;", "errorAll", "LNSException;", "errorMain", "complete", "LJavaUtilList;", "(Ljava/util/List<Lrx/Observer<TT2;>;>;)V", "Lrx/Subscriber<-TR;>;", "Ljava/util/Map<Ljava/lang/Integer;TT2;>;", "LRxInternalOperatorsOnSubscribeGroupJoin;", "LRxInternalOperatorsOnSubscribeGroupJoin_ResultManager_LeftObserver;LRxInternalOperatorsOnSubscribeGroupJoin_ResultManager_RightObserver;LRxInternalOperatorsOnSubscribeGroupJoin_ResultManager_LeftDurationObserver;LRxInternalOperatorsOnSubscribeGroupJoin_ResultManager_RightDurationObserver;", "Ljava/util/HashMap<Ljava/lang/Integer;Lrx/Observer<TT2;>;>;Lrx/Subscription;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeGroupJoin_ResultManager = { "ResultManager", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 8, 10, 11, 12, -1, 13, -1 };
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<-TR;>;)V", "init", "()Ljava/util/Map<Ljava/lang/Integer;Lrx/Observer<TT2;>;>;", "errorAll", "LNSException;", "errorMain", "complete", "LJavaUtilList;", "(Ljava/util/List<Lrx/Observer<TT2;>;>;)V", "Lrx/internal/operators/OnSubscribeGroupJoin<TT1;TT2;TD1;TD2;TR;>;", "Lrx/Subscriber<-TR;>;", "Ljava/util/Map<Ljava/lang/Integer;TT2;>;", "LRxInternalOperatorsOnSubscribeGroupJoin;", "LRxInternalOperatorsOnSubscribeGroupJoin_ResultManager_LeftObserver;LRxInternalOperatorsOnSubscribeGroupJoin_ResultManager_RightObserver;LRxInternalOperatorsOnSubscribeGroupJoin_ResultManager_LeftDurationObserver;LRxInternalOperatorsOnSubscribeGroupJoin_ResultManager_RightDurationObserver;", "Ljava/util/HashMap<Ljava/lang/Integer;Lrx/Observer<TT2;>;>;Lrx/Subscription;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeGroupJoin_ResultManager = { "ResultManager", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 8, 10, 13, 14, -1, 15, -1 };
   return &_RxInternalOperatorsOnSubscribeGroupJoin_ResultManager;
 }
 
@@ -290,6 +276,11 @@ RxInternalOperatorsOnSubscribeGroupJoin_ResultManager *create_RxInternalOperator
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeGroupJoin_ResultManager)
 
 @implementation RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_LeftObserver
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeGroupJoin_ResultManager:(RxInternalOperatorsOnSubscribeGroupJoin_ResultManager *)outer$ {
+  RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_LeftObserver_initWithRxInternalOperatorsOnSubscribeGroupJoin_ResultManager_(self, outer$);
+  return self;
+}
 
 - (void)onNextWithId:(id)args {
   @try {
@@ -337,30 +328,24 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeGroupJoin_ResultM
   [this$0_ errorAllWithNSException:e];
 }
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeGroupJoin_ResultManager:(RxInternalOperatorsOnSubscribeGroupJoin_ResultManager *)outer$ {
-  RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_LeftObserver_initWithRxInternalOperatorsOnSubscribeGroupJoin_ResultManager_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_LeftObserver class]);
   RELEASE_(this$0_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onCompleted);
-  methods[2].selector = @selector(onErrorWithNSException:);
-  methods[3].selector = @selector(initWithRxInternalOperatorsOnSubscribeGroupJoin_ResultManager:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOnSubscribeGroupJoin_ResultManager:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onCompleted);
+  methods[3].selector = @selector(onErrorWithNSException:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalOperatorsOnSubscribeGroupJoin_ResultManager;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
@@ -388,6 +373,11 @@ RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_LeftObserver *create_RxInt
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_LeftObserver)
 
 @implementation RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_RightObserver
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeGroupJoin_ResultManager:(RxInternalOperatorsOnSubscribeGroupJoin_ResultManager *)outer$ {
+  RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_RightObserver_initWithRxInternalOperatorsOnSubscribeGroupJoin_ResultManager_(self, outer$);
+  return self;
+}
 
 - (void)onNextWithId:(id)args {
   @try {
@@ -430,30 +420,24 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeGroupJoin_ResultM
   [this$0_ errorAllWithNSException:e];
 }
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeGroupJoin_ResultManager:(RxInternalOperatorsOnSubscribeGroupJoin_ResultManager *)outer$ {
-  RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_RightObserver_initWithRxInternalOperatorsOnSubscribeGroupJoin_ResultManager_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_RightObserver class]);
   RELEASE_(this$0_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onCompleted);
-  methods[2].selector = @selector(onErrorWithNSException:);
-  methods[3].selector = @selector(initWithRxInternalOperatorsOnSubscribeGroupJoin_ResultManager:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOnSubscribeGroupJoin_ResultManager:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onCompleted);
+  methods[3].selector = @selector(onErrorWithNSException:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalOperatorsOnSubscribeGroupJoin_ResultManager;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
@@ -511,7 +495,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeGroupJoin_ResultM
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_LeftDurationObserver class]);
   RELEASE_(this$0_);
   [super dealloc];
 }
@@ -535,7 +518,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeGroupJoin_ResultM
     { "id__", "I", .constantValue.asLong = 0, 0x10, 6, -1, -1, -1 },
     { "once_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOnSubscribeGroupJoin_ResultManager;I", "onError", "LNSException;", "onNext", "LNSObject;", "(TD1;)V", "id", "LRxInternalOperatorsOnSubscribeGroupJoin_ResultManager;", "Lrx/Subscriber<TD1;>;" };
+  static const void *ptrTable[] = { "I", "onError", "LNSException;", "onNext", "LNSObject;", "(TD1;)V", "id", "LRxInternalOperatorsOnSubscribeGroupJoin_ResultManager;", "Lrx/Subscriber<TD1;>;" };
   static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_LeftDurationObserver = { "LeftDurationObserver", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 4, 3, 7, -1, -1, 8, -1 };
   return &_RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_LeftDurationObserver;
 }
@@ -586,7 +569,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeGroupJoin_ResultM
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_RightDurationObserver class]);
   RELEASE_(this$0_);
   [super dealloc];
 }
@@ -610,7 +592,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeGroupJoin_ResultM
     { "id__", "I", .constantValue.asLong = 0, 0x10, 6, -1, -1, -1 },
     { "once_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOnSubscribeGroupJoin_ResultManager;I", "onError", "LNSException;", "onNext", "LNSObject;", "(TD2;)V", "id", "LRxInternalOperatorsOnSubscribeGroupJoin_ResultManager;", "Lrx/Subscriber<TD2;>;" };
+  static const void *ptrTable[] = { "I", "onError", "LNSException;", "onNext", "LNSObject;", "(TD2;)V", "id", "LRxInternalOperatorsOnSubscribeGroupJoin_ResultManager;", "Lrx/Subscriber<TD2;>;" };
   static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_RightDurationObserver = { "RightDurationObserver", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 4, 3, 7, -1, -1, 8, -1 };
   return &_RxInternalOperatorsOnSubscribeGroupJoin_ResultManager_RightDurationObserver;
 }
@@ -716,7 +698,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeGroupJoin_WindowO
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribeGroupJoin_WindowObservableFunc_WindowSubscriber class]);
   RELEASE_(subscriber_WindowSubscriber_);
   RELEASE_(ref_);
   [super dealloc];
@@ -740,7 +721,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeGroupJoin_WindowO
     { "subscriber_WindowSubscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x10, 7, -1, 8, -1 },
     { "ref_", "LRxSubscription;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOnSubscribeGroupJoin_WindowObservableFunc;LRxSubscriber;LRxSubscription;", "(Lrx/internal/operators/OnSubscribeGroupJoin$WindowObservableFunc;Lrx/Subscriber<-TT;>;Lrx/Subscription;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "subscriber", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOnSubscribeGroupJoin_WindowObservableFunc;", "Lrx/Subscriber<TT;>;" };
+  static const void *ptrTable[] = { "LRxSubscriber;LRxSubscription;", "(Lrx/Subscriber<-TT;>;Lrx/Subscription;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "subscriber", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOnSubscribeGroupJoin_WindowObservableFunc;", "Lrx/Subscriber<TT;>;" };
   static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeGroupJoin_WindowObservableFunc_WindowSubscriber = { "WindowSubscriber", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 4, 2, 9, -1, -1, 10, -1 };
   return &_RxInternalOperatorsOnSubscribeGroupJoin_WindowObservableFunc_WindowSubscriber;
 }

@@ -13,6 +13,13 @@
 
 @implementation RxInternalUtilUnsafeBaseLinkedQueue
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalUtilUnsafeBaseLinkedQueue_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (id<JavaUtilIterator>)iterator {
   @throw create_JavaLangUnsupportedOperationException_init();
 }
@@ -34,30 +41,23 @@
   return [self lvConsumerNode] == [self lvProducerNode];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalUtilUnsafeBaseLinkedQueue_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(__unsafe_unretained id *)stackbuf count:(NSUInteger)len {
   return JreDefaultFastEnumeration(self, state, stackbuf, len);
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaUtilIterator;", 0x11, -1, -1, -1, 0, -1, -1 },
     { NULL, "I", 0x11, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x11, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(iterator);
-  methods[1].selector = @selector(size);
-  methods[2].selector = @selector(isEmpty);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(iterator);
+  methods[2].selector = @selector(size);
+  methods[3].selector = @selector(isEmpty);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "p00_BaseLinkedQueue_", "J", .constantValue.asLong = 0, 0x0, 1, -1, -1, -1 },

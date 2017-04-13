@@ -10,16 +10,16 @@
 
 @implementation CoTouchlabDroidconandroidNetworkDaoUserAccount
 
-- (NSString *)getName {
-  return name_;
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   CoTouchlabDroidconandroidNetworkDaoUserAccount_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
+
+- (NSString *)getName {
+  return name_;
+}
 
 - (void)dealloc {
   RELEASE_(id__);
@@ -43,13 +43,13 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getName);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(getName);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "id__", "LJavaLangLong;", .constantValue.asLong = 0, 0x1, 0, -1, -1, -1 },

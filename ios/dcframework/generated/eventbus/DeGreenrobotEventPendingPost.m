@@ -5,7 +5,6 @@
 
 #include "DeGreenrobotEventPendingPost.h"
 #include "DeGreenrobotEventSubscription.h"
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "java/util/ArrayList.h"
 #include "java/util/List.h"

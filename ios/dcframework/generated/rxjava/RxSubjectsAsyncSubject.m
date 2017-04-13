@@ -17,26 +17,24 @@
 #include "java/util/ArrayList.h"
 #include "java/util/List.h"
 
-@interface RxSubjectsAsyncSubject_$1 : NSObject < RxFunctionsAction1 > {
+@interface RxSubjectsAsyncSubject_1 : NSObject < RxFunctionsAction1 > {
  @public
   RxSubjectsSubjectSubscriptionManager *val$state_;
 }
 
-- (void)callWithId:(RxSubjectsSubjectSubscriptionManager_SubjectObserver *)o;
-
 - (instancetype)initWithRxSubjectsSubjectSubscriptionManager:(RxSubjectsSubjectSubscriptionManager *)capture$0;
+
+- (void)callWithId:(RxSubjectsSubjectSubscriptionManager_SubjectObserver *)o;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxSubjectsAsyncSubject_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxSubjectsAsyncSubject_1)
 
-J2OBJC_FIELD_SETTER(RxSubjectsAsyncSubject_$1, val$state_, RxSubjectsSubjectSubscriptionManager *)
+__attribute__((unused)) static void RxSubjectsAsyncSubject_1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsAsyncSubject_1 *self, RxSubjectsSubjectSubscriptionManager *capture$0);
 
-__attribute__((unused)) static void RxSubjectsAsyncSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsAsyncSubject_$1 *self, RxSubjectsSubjectSubscriptionManager *capture$0);
+__attribute__((unused)) static RxSubjectsAsyncSubject_1 *new_RxSubjectsAsyncSubject_1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxSubjectsAsyncSubject_$1 *new_RxSubjectsAsyncSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxSubjectsAsyncSubject_$1 *create_RxSubjectsAsyncSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0);
+__attribute__((unused)) static RxSubjectsAsyncSubject_1 *create_RxSubjectsAsyncSubject_1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0);
 
 @implementation RxSubjectsAsyncSubject
 
@@ -192,7 +190,7 @@ __attribute__((unused)) static RxSubjectsAsyncSubject_$1 *create_RxSubjectsAsync
 RxSubjectsAsyncSubject *RxSubjectsAsyncSubject_create() {
   RxSubjectsAsyncSubject_initialize();
   RxSubjectsSubjectSubscriptionManager *state = create_RxSubjectsSubjectSubscriptionManager_init();
-  JreStrongAssignAndConsume(&state->onTerminated_, new_RxSubjectsAsyncSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(state));
+  JreStrongAssignAndConsume(&state->onTerminated_, new_RxSubjectsAsyncSubject_1_initWithRxSubjectsSubjectSubscriptionManager_(state));
   return create_RxSubjectsAsyncSubject_initWithRxObservable_OnSubscribe_withRxSubjectsSubjectSubscriptionManager_(state, state);
 }
 
@@ -211,7 +209,12 @@ RxSubjectsAsyncSubject *create_RxSubjectsAsyncSubject_initWithRxObservable_OnSub
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubjectsAsyncSubject)
 
-@implementation RxSubjectsAsyncSubject_$1
+@implementation RxSubjectsAsyncSubject_1
+
+- (instancetype)initWithRxSubjectsSubjectSubscriptionManager:(RxSubjectsSubjectSubscriptionManager *)capture$0 {
+  RxSubjectsAsyncSubject_1_initWithRxSubjectsSubjectSubscriptionManager_(self, capture$0);
+  return self;
+}
 
 - (void)callWithId:(RxSubjectsSubjectSubscriptionManager_SubjectObserver *)o {
   id v = [((RxSubjectsSubjectSubscriptionManager *) nil_chk(val$state_)) getLatest];
@@ -226,11 +229,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubjectsAsyncSubject)
   }
 }
 
-- (instancetype)initWithRxSubjectsSubjectSubscriptionManager:(RxSubjectsSubjectSubscriptionManager *)capture$0 {
-  RxSubjectsAsyncSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$state_);
   [super dealloc];
@@ -238,33 +236,33 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubjectsAsyncSubject)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxSubjectsSubjectSubscriptionManager:);
+  methods[0].selector = @selector(initWithRxSubjectsSubjectSubscriptionManager:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$state_", "LRxSubjectsSubjectSubscriptionManager;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$state_", "LRxSubjectsSubjectSubscriptionManager;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxSubjectsSubjectSubscriptionManager_SubjectObserver;", "(Lrx/subjects/SubjectSubscriptionManager$SubjectObserver<TT;>;)V", "LRxSubjectsSubjectSubscriptionManager;", "(Lrx/subjects/SubjectSubscriptionManager<TT;>;)V", "Lrx/subjects/SubjectSubscriptionManager<TT;>;", "LRxSubjectsAsyncSubject;", "create", "Ljava/lang/Object;Lrx/functions/Action1<Lrx/subjects/SubjectSubscriptionManager$SubjectObserver<TT;>;>;" };
-  static const J2ObjcClassInfo _RxSubjectsAsyncSubject_$1 = { "", "rx.subjects", ptrTable, methods, fields, 7, 0x8008, 2, 1, 6, -1, 7, 8, -1 };
-  return &_RxSubjectsAsyncSubject_$1;
+  static const void *ptrTable[] = { "call", "LRxSubjectsSubjectSubscriptionManager_SubjectObserver;", "(Lrx/subjects/SubjectSubscriptionManager$SubjectObserver<TT;>;)V", "Lrx/subjects/SubjectSubscriptionManager<TT;>;", "LRxSubjectsAsyncSubject;", "create", "Ljava/lang/Object;Lrx/functions/Action1<Lrx/subjects/SubjectSubscriptionManager$SubjectObserver<TT;>;>;" };
+  static const J2ObjcClassInfo _RxSubjectsAsyncSubject_1 = { "", "rx.subjects", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
+  return &_RxSubjectsAsyncSubject_1;
 }
 
 @end
 
-void RxSubjectsAsyncSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsAsyncSubject_$1 *self, RxSubjectsSubjectSubscriptionManager *capture$0) {
+void RxSubjectsAsyncSubject_1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsAsyncSubject_1 *self, RxSubjectsSubjectSubscriptionManager *capture$0) {
   JreStrongAssign(&self->val$state_, capture$0);
   NSObject_init(self);
 }
 
-RxSubjectsAsyncSubject_$1 *new_RxSubjectsAsyncSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0) {
-  J2OBJC_NEW_IMPL(RxSubjectsAsyncSubject_$1, initWithRxSubjectsSubjectSubscriptionManager_, capture$0)
+RxSubjectsAsyncSubject_1 *new_RxSubjectsAsyncSubject_1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0) {
+  J2OBJC_NEW_IMPL(RxSubjectsAsyncSubject_1, initWithRxSubjectsSubjectSubscriptionManager_, capture$0)
 }
 
-RxSubjectsAsyncSubject_$1 *create_RxSubjectsAsyncSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0) {
-  J2OBJC_CREATE_IMPL(RxSubjectsAsyncSubject_$1, initWithRxSubjectsSubjectSubscriptionManager_, capture$0)
+RxSubjectsAsyncSubject_1 *create_RxSubjectsAsyncSubject_1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0) {
+  J2OBJC_CREATE_IMPL(RxSubjectsAsyncSubject_1, initWithRxSubjectsSubjectSubscriptionManager_, capture$0)
 }

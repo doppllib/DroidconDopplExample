@@ -6,6 +6,7 @@
 #include "IOSClass.h"
 #include "IOSObjectArray.h"
 #include "J2ObjC_source.h"
+#include "RxDopplJ2objcWeakReference.h"
 #include "RxExceptionsExceptions.h"
 #include "RxFunctionsAction1.h"
 #include "RxInternalOperatorsNotificationLite.h"
@@ -35,26 +36,24 @@ J2OBJC_STATIC_FIELD_OBJ_FINAL(RxSubjectsBehaviorSubject, EMPTY_ARRAY, IOSObjectA
 
 __attribute__((unused)) static RxSubjectsBehaviorSubject *RxSubjectsBehaviorSubject_createWithId_withBoolean_(id defaultValue, jboolean hasDefault);
 
-@interface RxSubjectsBehaviorSubject_$1 : NSObject < RxFunctionsAction1 > {
+@interface RxSubjectsBehaviorSubject_1 : NSObject < RxFunctionsAction1 > {
  @public
-  RxSubjectsSubjectSubscriptionManager *val$state_;
+  RxDopplJ2objcWeakReference *val$weakState_;
 }
+
+- (instancetype)initWithRxDopplJ2objcWeakReference:(RxDopplJ2objcWeakReference *)capture$0;
 
 - (void)callWithId:(RxSubjectsSubjectSubscriptionManager_SubjectObserver *)o;
 
-- (instancetype)initWithRxSubjectsSubjectSubscriptionManager:(RxSubjectsSubjectSubscriptionManager *)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxSubjectsBehaviorSubject_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxSubjectsBehaviorSubject_1)
 
-J2OBJC_FIELD_SETTER(RxSubjectsBehaviorSubject_$1, val$state_, RxSubjectsSubjectSubscriptionManager *)
+__attribute__((unused)) static void RxSubjectsBehaviorSubject_1_initWithRxDopplJ2objcWeakReference_(RxSubjectsBehaviorSubject_1 *self, RxDopplJ2objcWeakReference *capture$0);
 
-__attribute__((unused)) static void RxSubjectsBehaviorSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsBehaviorSubject_$1 *self, RxSubjectsSubjectSubscriptionManager *capture$0);
+__attribute__((unused)) static RxSubjectsBehaviorSubject_1 *new_RxSubjectsBehaviorSubject_1_initWithRxDopplJ2objcWeakReference_(RxDopplJ2objcWeakReference *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxSubjectsBehaviorSubject_$1 *new_RxSubjectsBehaviorSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxSubjectsBehaviorSubject_$1 *create_RxSubjectsBehaviorSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0);
+__attribute__((unused)) static RxSubjectsBehaviorSubject_1 *create_RxSubjectsBehaviorSubject_1_initWithRxDopplJ2objcWeakReference_(RxDopplJ2objcWeakReference *capture$0);
 
 J2OBJC_INITIALIZED_DEFN(RxSubjectsBehaviorSubject)
 
@@ -222,7 +221,7 @@ J2OBJC_INITIALIZED_DEFN(RxSubjectsBehaviorSubject)
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, -1, -1, -1, 12, -1, -1 },
     { NULL, "LNSException;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "[LNSObject;", 0x1, 13, 14, -1, -1, -1, -1 },
+    { NULL, "[LNSObject;", 0x1, 13, 14, -1, 15, -1, -1 },
     { NULL, "[LNSObject;", 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
@@ -245,11 +244,11 @@ J2OBJC_INITIALIZED_DEFN(RxSubjectsBehaviorSubject)
   methods[15].selector = @selector(getValues);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "EMPTY_ARRAY", "[LNSObject;", .constantValue.asLong = 0, 0x1a, -1, 15, -1, -1 },
-    { "state_", "LRxSubjectsSubjectSubscriptionManager;", .constantValue.asLong = 0, 0x12, -1, -1, 16, -1 },
+    { "EMPTY_ARRAY", "[LNSObject;", .constantValue.asLong = 0, 0x1a, -1, 16, -1, -1 },
+    { "state_", "LRxSubjectsSubjectSubscriptionManager;", .constantValue.asLong = 0, 0x12, -1, -1, 17, -1 },
   };
-  static const void *ptrTable[] = { "<T:Ljava/lang/Object;>()Lrx/subjects/BehaviorSubject<TT;>;", "create", "LNSObject;", "<T:Ljava/lang/Object;>(TT;)Lrx/subjects/BehaviorSubject<TT;>;", "LNSObject;Z", "<T:Ljava/lang/Object;>(TT;Z)Lrx/subjects/BehaviorSubject<TT;>;", "LRxObservable_OnSubscribe;LRxSubjectsSubjectSubscriptionManager;", "(Lrx/Observable$OnSubscribe<TT;>;Lrx/subjects/SubjectSubscriptionManager<TT;>;)V", "onError", "LNSException;", "onNext", "(TT;)V", "()TT;", "getValues", "[LNSObject;", &RxSubjectsBehaviorSubject_EMPTY_ARRAY, "Lrx/subjects/SubjectSubscriptionManager<TT;>;", "<T:Ljava/lang/Object;>Lrx/subjects/Subject<TT;TT;>;" };
-  static const J2ObjcClassInfo _RxSubjectsBehaviorSubject = { "BehaviorSubject", "rx.subjects", ptrTable, methods, fields, 7, 0x11, 16, 2, -1, -1, -1, 17, -1 };
+  static const void *ptrTable[] = { "<T:Ljava/lang/Object;>()Lrx/subjects/BehaviorSubject<TT;>;", "create", "LNSObject;", "<T:Ljava/lang/Object;>(TT;)Lrx/subjects/BehaviorSubject<TT;>;", "LNSObject;Z", "<T:Ljava/lang/Object;>(TT;Z)Lrx/subjects/BehaviorSubject<TT;>;", "LRxObservable_OnSubscribe;LRxSubjectsSubjectSubscriptionManager;", "(Lrx/Observable$OnSubscribe<TT;>;Lrx/subjects/SubjectSubscriptionManager<TT;>;)V", "onError", "LNSException;", "onNext", "(TT;)V", "()TT;", "getValues", "[LNSObject;", "([TT;)[TT;", &RxSubjectsBehaviorSubject_EMPTY_ARRAY, "Lrx/subjects/SubjectSubscriptionManager<TT;>;", "<T:Ljava/lang/Object;>Lrx/subjects/Subject<TT;TT;>;" };
+  static const J2ObjcClassInfo _RxSubjectsBehaviorSubject = { "BehaviorSubject", "rx.subjects", ptrTable, methods, fields, 7, 0x11, 16, 2, -1, -1, -1, 18, -1 };
   return &_RxSubjectsBehaviorSubject;
 }
 
@@ -278,7 +277,8 @@ RxSubjectsBehaviorSubject *RxSubjectsBehaviorSubject_createWithId_withBoolean_(i
   if (hasDefault) {
     [state setLatestWithId:RxInternalOperatorsNotificationLite_nextWithId_(defaultValue)];
   }
-  JreStrongAssignAndConsume(&state->onAdded_, new_RxSubjectsBehaviorSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(state));
+  RxDopplJ2objcWeakReference *weakState = create_RxDopplJ2objcWeakReference_initWithId_(state);
+  JreStrongAssignAndConsume(&state->onAdded_, new_RxSubjectsBehaviorSubject_1_initWithRxDopplJ2objcWeakReference_(weakState));
   JreStrongAssign(&state->onTerminated_, state->onAdded_);
   return create_RxSubjectsBehaviorSubject_initWithRxObservable_OnSubscribe_withRxSubjectsSubjectSubscriptionManager_(state, state);
 }
@@ -298,51 +298,52 @@ RxSubjectsBehaviorSubject *create_RxSubjectsBehaviorSubject_initWithRxObservable
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubjectsBehaviorSubject)
 
-@implementation RxSubjectsBehaviorSubject_$1
+@implementation RxSubjectsBehaviorSubject_1
 
-- (void)callWithId:(RxSubjectsSubjectSubscriptionManager_SubjectObserver *)o {
-  [((RxSubjectsSubjectSubscriptionManager_SubjectObserver *) nil_chk(o)) emitFirstWithId:[((RxSubjectsSubjectSubscriptionManager *) nil_chk(val$state_)) getLatest]];
-}
-
-- (instancetype)initWithRxSubjectsSubjectSubscriptionManager:(RxSubjectsSubjectSubscriptionManager *)capture$0 {
-  RxSubjectsBehaviorSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(self, capture$0);
+- (instancetype)initWithRxDopplJ2objcWeakReference:(RxDopplJ2objcWeakReference *)capture$0 {
+  RxSubjectsBehaviorSubject_1_initWithRxDopplJ2objcWeakReference_(self, capture$0);
   return self;
 }
 
+- (void)callWithId:(RxSubjectsSubjectSubscriptionManager_SubjectObserver *)o {
+  RxSubjectsSubjectSubscriptionManager *state = [((RxDopplJ2objcWeakReference *) nil_chk(val$weakState_)) get];
+  if (state != nil) [((RxSubjectsSubjectSubscriptionManager_SubjectObserver *) nil_chk(o)) emitFirstWithId:[state getLatest]];
+}
+
 - (void)dealloc {
-  RELEASE_(val$state_);
+  RELEASE_(val$weakState_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxSubjectsSubjectSubscriptionManager:);
+  methods[0].selector = @selector(initWithRxDopplJ2objcWeakReference:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$state_", "LRxSubjectsSubjectSubscriptionManager;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$weakState_", "LRxDopplJ2objcWeakReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxSubjectsSubjectSubscriptionManager_SubjectObserver;", "(Lrx/subjects/SubjectSubscriptionManager$SubjectObserver<TT;>;)V", "LRxSubjectsSubjectSubscriptionManager;", "(Lrx/subjects/SubjectSubscriptionManager<TT;>;)V", "Lrx/subjects/SubjectSubscriptionManager<TT;>;", "LRxSubjectsBehaviorSubject;", "createWithId:withBoolean:", "Ljava/lang/Object;Lrx/functions/Action1<Lrx/subjects/SubjectSubscriptionManager$SubjectObserver<TT;>;>;" };
-  static const J2ObjcClassInfo _RxSubjectsBehaviorSubject_$1 = { "", "rx.subjects", ptrTable, methods, fields, 7, 0x8008, 2, 1, 6, -1, 7, 8, -1 };
-  return &_RxSubjectsBehaviorSubject_$1;
+  static const void *ptrTable[] = { "call", "LRxSubjectsSubjectSubscriptionManager_SubjectObserver;", "(Lrx/subjects/SubjectSubscriptionManager$SubjectObserver<TT;>;)V", "Lrx/doppl/J2objcWeakReference<Lrx/subjects/SubjectSubscriptionManager<TT;>;>;", "LRxSubjectsBehaviorSubject;", "createWithId:withBoolean:", "Ljava/lang/Object;Lrx/functions/Action1<Lrx/subjects/SubjectSubscriptionManager$SubjectObserver<TT;>;>;" };
+  static const J2ObjcClassInfo _RxSubjectsBehaviorSubject_1 = { "", "rx.subjects", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
+  return &_RxSubjectsBehaviorSubject_1;
 }
 
 @end
 
-void RxSubjectsBehaviorSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsBehaviorSubject_$1 *self, RxSubjectsSubjectSubscriptionManager *capture$0) {
-  JreStrongAssign(&self->val$state_, capture$0);
+void RxSubjectsBehaviorSubject_1_initWithRxDopplJ2objcWeakReference_(RxSubjectsBehaviorSubject_1 *self, RxDopplJ2objcWeakReference *capture$0) {
+  JreStrongAssign(&self->val$weakState_, capture$0);
   NSObject_init(self);
 }
 
-RxSubjectsBehaviorSubject_$1 *new_RxSubjectsBehaviorSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0) {
-  J2OBJC_NEW_IMPL(RxSubjectsBehaviorSubject_$1, initWithRxSubjectsSubjectSubscriptionManager_, capture$0)
+RxSubjectsBehaviorSubject_1 *new_RxSubjectsBehaviorSubject_1_initWithRxDopplJ2objcWeakReference_(RxDopplJ2objcWeakReference *capture$0) {
+  J2OBJC_NEW_IMPL(RxSubjectsBehaviorSubject_1, initWithRxDopplJ2objcWeakReference_, capture$0)
 }
 
-RxSubjectsBehaviorSubject_$1 *create_RxSubjectsBehaviorSubject_$1_initWithRxSubjectsSubjectSubscriptionManager_(RxSubjectsSubjectSubscriptionManager *capture$0) {
-  J2OBJC_CREATE_IMPL(RxSubjectsBehaviorSubject_$1, initWithRxSubjectsSubjectSubscriptionManager_, capture$0)
+RxSubjectsBehaviorSubject_1 *create_RxSubjectsBehaviorSubject_1_initWithRxDopplJ2objcWeakReference_(RxDopplJ2objcWeakReference *capture$0) {
+  J2OBJC_CREATE_IMPL(RxSubjectsBehaviorSubject_1, initWithRxDopplJ2objcWeakReference_, capture$0)
 }

@@ -183,9 +183,9 @@ J2OBJC_INITIALIZED_DEFN(RxSubjectsReplaySubject)
     { NULL, "I", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "[LNSObject;", 0x1, 18, 19, -1, -1, -1, -1 },
+    { NULL, "[LNSObject;", 0x1, 18, 19, -1, 20, -1, -1 },
     { NULL, "[LNSObject;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, -1, -1, -1, 20, -1, -1 },
+    { NULL, "LNSObject;", 0x1, -1, -1, -1, 21, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -213,11 +213,11 @@ J2OBJC_INITIALIZED_DEFN(RxSubjectsReplaySubject)
   methods[21].selector = @selector(getValue);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "state_", "LRxSubjectsReplaySubject_ReplayState;", .constantValue.asLong = 0, 0x10, -1, -1, 21, -1 },
-    { "EMPTY_ARRAY", "[LNSObject;", .constantValue.asLong = 0, 0x1a, -1, 22, -1, -1 },
+    { "state_", "LRxSubjectsReplaySubject_ReplayState;", .constantValue.asLong = 0, 0x10, -1, -1, 22, -1 },
+    { "EMPTY_ARRAY", "[LNSObject;", .constantValue.asLong = 0, 0x1a, -1, 23, -1, -1 },
   };
-  static const void *ptrTable[] = { "<T:Ljava/lang/Object;>()Lrx/subjects/ReplaySubject<TT;>;", "create", "I", "<T:Ljava/lang/Object;>(I)Lrx/subjects/ReplaySubject<TT;>;", "createWithSize", "createWithTime", "JLJavaUtilConcurrentTimeUnit;LRxScheduler;", "<T:Ljava/lang/Object;>(JLjava/util/concurrent/TimeUnit;Lrx/Scheduler;)Lrx/subjects/ReplaySubject<TT;>;", "createWithTimeAndSize", "JLJavaUtilConcurrentTimeUnit;ILRxScheduler;", "<T:Ljava/lang/Object;>(JLjava/util/concurrent/TimeUnit;ILrx/Scheduler;)Lrx/subjects/ReplaySubject<TT;>;", "LRxSubjectsReplaySubject_ReplayState;", "(Lrx/subjects/ReplaySubject$ReplayState<TT;>;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "getValues", "[LNSObject;", "()TT;", "Lrx/subjects/ReplaySubject$ReplayState<TT;>;", &RxSubjectsReplaySubject_EMPTY_ARRAY, "LRxSubjectsReplaySubject_ReplayState;LRxSubjectsReplaySubject_ReplayBuffer;LRxSubjectsReplaySubject_ReplayUnboundedBuffer;LRxSubjectsReplaySubject_ReplaySizeBoundBuffer;LRxSubjectsReplaySubject_ReplaySizeAndTimeBoundBuffer;LRxSubjectsReplaySubject_ReplayProducer;", "<T:Ljava/lang/Object;>Lrx/subjects/Subject<TT;TT;>;" };
-  static const J2ObjcClassInfo _RxSubjectsReplaySubject = { "ReplaySubject", "rx.subjects", ptrTable, methods, fields, 7, 0x11, 22, 2, -1, 23, -1, 24, -1 };
+  static const void *ptrTable[] = { "<T:Ljava/lang/Object;>()Lrx/subjects/ReplaySubject<TT;>;", "create", "I", "<T:Ljava/lang/Object;>(I)Lrx/subjects/ReplaySubject<TT;>;", "createWithSize", "createWithTime", "JLJavaUtilConcurrentTimeUnit;LRxScheduler;", "<T:Ljava/lang/Object;>(JLjava/util/concurrent/TimeUnit;Lrx/Scheduler;)Lrx/subjects/ReplaySubject<TT;>;", "createWithTimeAndSize", "JLJavaUtilConcurrentTimeUnit;ILRxScheduler;", "<T:Ljava/lang/Object;>(JLjava/util/concurrent/TimeUnit;ILrx/Scheduler;)Lrx/subjects/ReplaySubject<TT;>;", "LRxSubjectsReplaySubject_ReplayState;", "(Lrx/subjects/ReplaySubject$ReplayState<TT;>;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "getValues", "[LNSObject;", "([TT;)[TT;", "()TT;", "Lrx/subjects/ReplaySubject$ReplayState<TT;>;", &RxSubjectsReplaySubject_EMPTY_ARRAY, "LRxSubjectsReplaySubject_ReplayState;LRxSubjectsReplaySubject_ReplayBuffer;LRxSubjectsReplaySubject_ReplayUnboundedBuffer;LRxSubjectsReplaySubject_ReplaySizeBoundBuffer;LRxSubjectsReplaySubject_ReplaySizeAndTimeBoundBuffer;LRxSubjectsReplaySubject_ReplayProducer;", "<T:Ljava/lang/Object;>Lrx/subjects/Subject<TT;TT;>;" };
+  static const J2ObjcClassInfo _RxSubjectsReplaySubject = { "ReplaySubject", "rx.subjects", ptrTable, methods, fields, 7, 0x11, 22, 2, -1, 24, -1, 25, -1 };
   return &_RxSubjectsReplaySubject;
 }
 
@@ -499,7 +499,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubjectsReplaySubject_ReplayState)
     { NULL, "LNSObject;", 0x401, -1, -1, -1, 8, -1, -1 },
     { NULL, "I", 0x401, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x401, -1, -1, -1, -1, -1, -1 },
-    { NULL, "[LNSObject;", 0x401, 9, 10, -1, -1, -1, -1 },
+    { NULL, "[LNSObject;", 0x401, 9, 10, -1, 11, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -514,8 +514,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubjectsReplaySubject_ReplayState)
   methods[8].selector = @selector(isEmpty);
   methods[9].selector = @selector(toArrayWithNSObjectArray:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "next", "LNSObject;", "(TT;)V", "error", "LNSException;", "drain", "LRxSubjectsReplaySubject_ReplayProducer;", "(Lrx/subjects/ReplaySubject$ReplayProducer<TT;>;)V", "()TT;", "toArray", "[LNSObject;", "LRxSubjectsReplaySubject;", "<T:Ljava/lang/Object;>Ljava/lang/Object;" };
-  static const J2ObjcClassInfo _RxSubjectsReplaySubject_ReplayBuffer = { "ReplayBuffer", "rx.subjects", ptrTable, methods, NULL, 7, 0x608, 10, 0, 11, -1, -1, 12, -1 };
+  static const void *ptrTable[] = { "next", "LNSObject;", "(TT;)V", "error", "LNSException;", "drain", "LRxSubjectsReplaySubject_ReplayProducer;", "(Lrx/subjects/ReplaySubject$ReplayProducer<TT;>;)V", "()TT;", "toArray", "[LNSObject;", "([TT;)[TT;", "LRxSubjectsReplaySubject;", "<T:Ljava/lang/Object;>Ljava/lang/Object;" };
+  static const J2ObjcClassInfo _RxSubjectsReplaySubject_ReplayBuffer = { "ReplayBuffer", "rx.subjects", ptrTable, methods, NULL, 7, 0x608, 10, 0, 12, -1, -1, 13, -1 };
   return &_RxSubjectsReplaySubject_ReplayBuffer;
 }
 
@@ -694,7 +694,7 @@ J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(RxSubjectsReplaySubject_ReplayBuffer)
   return a;
 }
 
-- (void)javaFinalize {
+- (void)java_finalize {
   IOSObjectArray *myArray = head_;
   while (myArray != nil) {
     jint lastIndex = myArray->size_ - 1;
@@ -702,7 +702,7 @@ J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(RxSubjectsReplaySubject_ReplayBuffer)
     IOSObjectArray_Set(myArray, lastIndex, nil);
     myArray = lastRef;
   }
-  [super javaFinalize];
+  [super java_finalize];
 }
 
 - (void)dealloc {
@@ -725,8 +725,8 @@ J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(RxSubjectsReplaySubject_ReplayBuffer)
     { NULL, "LNSObject;", 0x1, -1, -1, -1, 9, -1, -1 },
     { NULL, "I", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "[LNSObject;", 0x1, 10, 11, -1, -1, -1, -1 },
-    { NULL, "V", 0x4, 12, -1, 5, -1, -1, -1 },
+    { NULL, "[LNSObject;", 0x1, 10, 11, -1, 12, -1, -1 },
+    { NULL, "V", 0x4, 13, -1, 5, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -741,7 +741,7 @@ J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(RxSubjectsReplaySubject_ReplayBuffer)
   methods[8].selector = @selector(size);
   methods[9].selector = @selector(isEmpty);
   methods[10].selector = @selector(toArrayWithNSObjectArray:);
-  methods[11].selector = @selector(javaFinalize);
+  methods[11].selector = @selector(java_finalize);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "capacity_", "I", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
@@ -752,8 +752,8 @@ J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(RxSubjectsReplaySubject_ReplayBuffer)
     { "done_", "Z", .constantValue.asLong = 0, 0x40, -1, -1, -1, -1 },
     { "error_", "LNSException;", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "I", "next", "LNSObject;", "(TT;)V", "error", "LNSException;", "drain", "LRxSubjectsReplaySubject_ReplayProducer;", "(Lrx/subjects/ReplaySubject$ReplayProducer<TT;>;)V", "()TT;", "toArray", "[LNSObject;", "finalize", "LRxSubjectsReplaySubject;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Lrx/subjects/ReplaySubject$ReplayBuffer<TT;>;" };
-  static const J2ObjcClassInfo _RxSubjectsReplaySubject_ReplayUnboundedBuffer = { "ReplayUnboundedBuffer", "rx.subjects", ptrTable, methods, fields, 7, 0x18, 12, 7, 13, -1, -1, 14, -1 };
+  static const void *ptrTable[] = { "I", "next", "LNSObject;", "(TT;)V", "error", "LNSException;", "drain", "LRxSubjectsReplaySubject_ReplayProducer;", "(Lrx/subjects/ReplaySubject$ReplayProducer<TT;>;)V", "()TT;", "toArray", "[LNSObject;", "([TT;)[TT;", "finalize", "LRxSubjectsReplaySubject;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Lrx/subjects/ReplaySubject$ReplayBuffer<TT;>;" };
+  static const J2ObjcClassInfo _RxSubjectsReplaySubject_ReplayUnboundedBuffer = { "ReplayUnboundedBuffer", "rx.subjects", ptrTable, methods, fields, 7, 0x18, 12, 7, 14, -1, -1, 15, -1 };
   return &_RxSubjectsReplaySubject_ReplayUnboundedBuffer;
 }
 
@@ -940,7 +940,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubjectsReplaySubject_ReplayUnboundedBuffer)
     { NULL, "LNSObject;", 0x1, -1, -1, -1, 9, -1, -1 },
     { NULL, "I", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "[LNSObject;", 0x1, 10, 11, -1, -1, -1, -1 },
+    { NULL, "[LNSObject;", 0x1, 10, 11, -1, 12, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -958,14 +958,14 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubjectsReplaySubject_ReplayUnboundedBuffer)
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "limit_", "I", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
-    { "head_", "LRxSubjectsReplaySubject_ReplaySizeBoundBuffer_Node;", .constantValue.asLong = 0, 0x40, -1, -1, 12, -1 },
-    { "tail_", "LRxSubjectsReplaySubject_ReplaySizeBoundBuffer_Node;", .constantValue.asLong = 0, 0x0, -1, -1, 12, -1 },
+    { "head_", "LRxSubjectsReplaySubject_ReplaySizeBoundBuffer_Node;", .constantValue.asLong = 0, 0x40, -1, -1, 13, -1 },
+    { "tail_", "LRxSubjectsReplaySubject_ReplaySizeBoundBuffer_Node;", .constantValue.asLong = 0, 0x0, -1, -1, 13, -1 },
     { "size_", "I", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "done_", "Z", .constantValue.asLong = 0, 0x40, -1, -1, -1, -1 },
     { "error_", "LNSException;", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "I", "next", "LNSObject;", "(TT;)V", "error", "LNSException;", "drain", "LRxSubjectsReplaySubject_ReplayProducer;", "(Lrx/subjects/ReplaySubject$ReplayProducer<TT;>;)V", "()TT;", "toArray", "[LNSObject;", "Lrx/subjects/ReplaySubject$ReplaySizeBoundBuffer$Node<TT;>;", "LRxSubjectsReplaySubject;", "LRxSubjectsReplaySubject_ReplaySizeBoundBuffer_Node;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Lrx/subjects/ReplaySubject$ReplayBuffer<TT;>;" };
-  static const J2ObjcClassInfo _RxSubjectsReplaySubject_ReplaySizeBoundBuffer = { "ReplaySizeBoundBuffer", "rx.subjects", ptrTable, methods, fields, 7, 0x18, 11, 6, 13, 14, -1, 15, -1 };
+  static const void *ptrTable[] = { "I", "next", "LNSObject;", "(TT;)V", "error", "LNSException;", "drain", "LRxSubjectsReplaySubject_ReplayProducer;", "(Lrx/subjects/ReplaySubject$ReplayProducer<TT;>;)V", "()TT;", "toArray", "[LNSObject;", "([TT;)[TT;", "Lrx/subjects/ReplaySubject$ReplaySizeBoundBuffer$Node<TT;>;", "LRxSubjectsReplaySubject;", "LRxSubjectsReplaySubject_ReplaySizeBoundBuffer_Node;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Lrx/subjects/ReplaySubject$ReplayBuffer<TT;>;" };
+  static const J2ObjcClassInfo _RxSubjectsReplaySubject_ReplaySizeBoundBuffer = { "ReplaySizeBoundBuffer", "rx.subjects", ptrTable, methods, fields, 7, 0x18, 11, 6, 14, 15, -1, 16, -1 };
   return &_RxSubjectsReplaySubject_ReplaySizeBoundBuffer;
 }
 
@@ -996,9 +996,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubjectsReplaySubject_ReplaySizeBoundBuffer)
   return self;
 }
 
-- (void)javaFinalize {
+- (void)java_finalize {
   [self setWithId:nil];
-  [super javaFinalize];
+  [super java_finalize];
 }
 
 - (void)dealloc {
@@ -1015,7 +1015,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubjectsReplaySubject_ReplaySizeBoundBuffer)
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
   methods[0].selector = @selector(initWithId:);
-  methods[1].selector = @selector(javaFinalize);
+  methods[1].selector = @selector(java_finalize);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "serialVersionUID", "J", .constantValue.asLong = RxSubjectsReplaySubject_ReplaySizeBoundBuffer_Node_serialVersionUID, 0x1a, -1, -1, -1, -1 },
@@ -1259,7 +1259,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubjectsReplaySubject_ReplaySizeBoundBuffer_N
     { NULL, "LNSObject;", 0x1, -1, -1, -1, 10, -1, -1 },
     { NULL, "I", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "[LNSObject;", 0x1, 11, 12, -1, -1, -1, -1 },
+    { NULL, "[LNSObject;", 0x1, 11, 12, -1, 13, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -1281,14 +1281,14 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubjectsReplaySubject_ReplaySizeBoundBuffer_N
     { "limit_", "I", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
     { "maxAgeMillis_", "J", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
     { "scheduler_", "LRxScheduler;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
-    { "head_", "LRxSubjectsReplaySubject_ReplaySizeAndTimeBoundBuffer_TimedNode;", .constantValue.asLong = 0, 0x40, -1, -1, 13, -1 },
-    { "tail_", "LRxSubjectsReplaySubject_ReplaySizeAndTimeBoundBuffer_TimedNode;", .constantValue.asLong = 0, 0x0, -1, -1, 13, -1 },
+    { "head_", "LRxSubjectsReplaySubject_ReplaySizeAndTimeBoundBuffer_TimedNode;", .constantValue.asLong = 0, 0x40, -1, -1, 14, -1 },
+    { "tail_", "LRxSubjectsReplaySubject_ReplaySizeAndTimeBoundBuffer_TimedNode;", .constantValue.asLong = 0, 0x0, -1, -1, 14, -1 },
     { "size_", "I", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "done_", "Z", .constantValue.asLong = 0, 0x40, -1, -1, -1, -1 },
     { "error_", "LNSException;", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "IJLRxScheduler;", "next", "LNSObject;", "(TT;)V", "error", "LNSException;", "()Lrx/subjects/ReplaySubject$ReplaySizeAndTimeBoundBuffer$TimedNode<TT;>;", "drain", "LRxSubjectsReplaySubject_ReplayProducer;", "(Lrx/subjects/ReplaySubject$ReplayProducer<TT;>;)V", "()TT;", "toArray", "[LNSObject;", "Lrx/subjects/ReplaySubject$ReplaySizeAndTimeBoundBuffer$TimedNode<TT;>;", "LRxSubjectsReplaySubject;", "LRxSubjectsReplaySubject_ReplaySizeAndTimeBoundBuffer_TimedNode;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Lrx/subjects/ReplaySubject$ReplayBuffer<TT;>;" };
-  static const J2ObjcClassInfo _RxSubjectsReplaySubject_ReplaySizeAndTimeBoundBuffer = { "ReplaySizeAndTimeBoundBuffer", "rx.subjects", ptrTable, methods, fields, 7, 0x18, 13, 8, 14, 15, -1, 16, -1 };
+  static const void *ptrTable[] = { "IJLRxScheduler;", "next", "LNSObject;", "(TT;)V", "error", "LNSException;", "()Lrx/subjects/ReplaySubject$ReplaySizeAndTimeBoundBuffer$TimedNode<TT;>;", "drain", "LRxSubjectsReplaySubject_ReplayProducer;", "(Lrx/subjects/ReplaySubject$ReplayProducer<TT;>;)V", "()TT;", "toArray", "[LNSObject;", "([TT;)[TT;", "Lrx/subjects/ReplaySubject$ReplaySizeAndTimeBoundBuffer$TimedNode<TT;>;", "LRxSubjectsReplaySubject;", "LRxSubjectsReplaySubject_ReplaySizeAndTimeBoundBuffer_TimedNode;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Lrx/subjects/ReplaySubject$ReplayBuffer<TT;>;" };
+  static const J2ObjcClassInfo _RxSubjectsReplaySubject_ReplaySizeAndTimeBoundBuffer = { "ReplaySizeAndTimeBoundBuffer", "rx.subjects", ptrTable, methods, fields, 7, 0x18, 13, 8, 15, 16, -1, 17, -1 };
   return &_RxSubjectsReplaySubject_ReplaySizeAndTimeBoundBuffer;
 }
 
@@ -1322,9 +1322,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubjectsReplaySubject_ReplaySizeAndTimeBoundB
   return self;
 }
 
-- (void)javaFinalize {
+- (void)java_finalize {
   [self setWithId:nil];
-  [super javaFinalize];
+  [super java_finalize];
 }
 
 - (void)dealloc {
@@ -1341,7 +1341,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxSubjectsReplaySubject_ReplaySizeAndTimeBoundB
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
   methods[0].selector = @selector(initWithId:withLong:);
-  methods[1].selector = @selector(javaFinalize);
+  methods[1].selector = @selector(java_finalize);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "serialVersionUID", "J", .constantValue.asLong = RxSubjectsReplaySubject_ReplaySizeAndTimeBoundBuffer_TimedNode_serialVersionUID, 0x1a, -1, -1, -1, -1 },

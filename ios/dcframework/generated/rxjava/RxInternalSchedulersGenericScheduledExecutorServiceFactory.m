@@ -84,6 +84,10 @@ RxInternalSchedulersGenericScheduledExecutorServiceFactory *RxInternalSchedulers
 
 @end
 
+void RxInternalSchedulersGenericScheduledExecutorServiceFactory_initWithNSString_withInt_(RxInternalSchedulersGenericScheduledExecutorServiceFactory *self, NSString *__name, jint __ordinal) {
+  JavaLangEnum_initWithNSString_withInt_(self, __name, __ordinal);
+}
+
 id<JavaUtilConcurrentThreadFactory> RxInternalSchedulersGenericScheduledExecutorServiceFactory_threadFactory() {
   RxInternalSchedulersGenericScheduledExecutorServiceFactory_initialize();
   return RxInternalSchedulersGenericScheduledExecutorServiceFactory_THREAD_FACTORY;
@@ -101,10 +105,6 @@ id<JavaUtilConcurrentScheduledExecutorService> RxInternalSchedulersGenericSchedu
 id<JavaUtilConcurrentScheduledExecutorService> RxInternalSchedulersGenericScheduledExecutorServiceFactory_createDefault() {
   RxInternalSchedulersGenericScheduledExecutorServiceFactory_initialize();
   return JavaUtilConcurrentExecutors_newScheduledThreadPoolWithInt_withJavaUtilConcurrentThreadFactory_(1, RxInternalSchedulersGenericScheduledExecutorServiceFactory_threadFactory());
-}
-
-void RxInternalSchedulersGenericScheduledExecutorServiceFactory_initWithNSString_withInt_(RxInternalSchedulersGenericScheduledExecutorServiceFactory *self, NSString *__name, jint __ordinal) {
-  JavaLangEnum_initWithNSString_withInt_(self, __name, __ordinal);
 }
 
 IOSObjectArray *RxInternalSchedulersGenericScheduledExecutorServiceFactory_values() {

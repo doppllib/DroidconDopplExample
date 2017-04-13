@@ -110,13 +110,13 @@ J2OBJC_IGNORE_DESIGNATED_END
   static J2ObjcMethodInfo methods[] = {
     { NULL, "LCoTouchlabSqueakyFieldTypesDateStringType;", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x4, -1, 0, -1, -1, -1, -1 },
-    { NULL, NULL, 0x4, -1, 1, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 2, 3, 4, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 5, 6, 4, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 7, 8, 4, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 9, 10, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 11, 12, -1, -1, -1, -1 },
+    { NULL, NULL, 0x4, -1, 0, -1, 1, -1, -1 },
+    { NULL, NULL, 0x4, -1, 2, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 3, 4, 5, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 6, 7, 5, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 8, 9, 5, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 10, 11, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 12, 13, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -131,10 +131,10 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[8].selector = @selector(makeConfigObjectWithCoTouchlabSqueakyFieldFieldType:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "DEFAULT_WIDTH", "I", .constantValue.asLong = 0, 0x9, -1, 13, -1, -1 },
-    { "singleTon", "LCoTouchlabSqueakyFieldTypesDateStringType;", .constantValue.asLong = 0, 0x1a, -1, 14, -1, -1 },
+    { "DEFAULT_WIDTH", "I", .constantValue.asLong = 0, 0x9, -1, 14, -1, -1 },
+    { "singleTon", "LCoTouchlabSqueakyFieldTypesDateStringType;", .constantValue.asLong = 0, 0x1a, -1, 15, -1, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "LCoTouchlabSqueakyFieldSqlType;", "parseDefaultString", "LCoTouchlabSqueakyFieldFieldType;LNSString;", "LJavaSqlSQLException;", "resultToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LAndroidDatabaseCursor;I", "sqlArgToJava", "LCoTouchlabSqueakyFieldFieldType;LNSObject;I", "javaToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LNSObject;", "makeConfigObject", "LCoTouchlabSqueakyFieldFieldType;", &CoTouchlabSqueakyFieldTypesDateStringType_DEFAULT_WIDTH, &CoTouchlabSqueakyFieldTypesDateStringType_singleTon };
+  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "(Lco/touchlab/squeaky/field/SqlType;[Ljava/lang/Class<*>;)V", "LCoTouchlabSqueakyFieldSqlType;", "parseDefaultString", "LCoTouchlabSqueakyFieldFieldType;LNSString;", "LJavaSqlSQLException;", "resultToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LAndroidDatabaseCursor;I", "sqlArgToJava", "LCoTouchlabSqueakyFieldFieldType;LNSObject;I", "javaToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LNSObject;", "makeConfigObject", "LCoTouchlabSqueakyFieldFieldType;", &CoTouchlabSqueakyFieldTypesDateStringType_DEFAULT_WIDTH, &CoTouchlabSqueakyFieldTypesDateStringType_singleTon };
   static const J2ObjcClassInfo _CoTouchlabSqueakyFieldTypesDateStringType = { "DateStringType", "co.touchlab.squeaky.field.types", ptrTable, methods, fields, 7, 0x1, 9, 2, -1, -1, -1, -1, -1 };
   return &_CoTouchlabSqueakyFieldTypesDateStringType;
 }

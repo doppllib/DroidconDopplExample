@@ -16,7 +16,7 @@
 #include "java/util/concurrent/TimeoutException.h"
 #include "java/util/concurrent/atomic/AtomicBoolean.h"
 
-@interface RxInternalOperatorsCompletableOnSubscribeTimeout_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsCompletableOnSubscribeTimeout_1 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalOperatorsCompletableOnSubscribeTimeout *this$0_;
   JavaUtilConcurrentAtomicAtomicBoolean *val$once_;
@@ -24,32 +24,29 @@
   id<RxCompletableSubscriber> val$s_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalOperatorsCompletableOnSubscribeTimeout:(RxInternalOperatorsCompletableOnSubscribeTimeout *)outer$
                                withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$0
                                 withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$1
                                              withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsCompletableOnSubscribeTimeout_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsCompletableOnSubscribeTimeout_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsCompletableOnSubscribeTimeout_$1, this$0_, RxInternalOperatorsCompletableOnSubscribeTimeout *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsCompletableOnSubscribeTimeout_$1, val$once_, JavaUtilConcurrentAtomicAtomicBoolean *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsCompletableOnSubscribeTimeout_$1, val$set_, RxSubscriptionsCompositeSubscription *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsCompletableOnSubscribeTimeout_$1, val$s_, id<RxCompletableSubscriber>)
+__attribute__((unused)) static void RxInternalOperatorsCompletableOnSubscribeTimeout_1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeTimeout_1 *self, RxInternalOperatorsCompletableOnSubscribeTimeout *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2);
 
-__attribute__((unused)) static void RxInternalOperatorsCompletableOnSubscribeTimeout_$1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeTimeout_$1 *self, RxInternalOperatorsCompletableOnSubscribeTimeout *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2);
+__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeTimeout_1 *new_RxInternalOperatorsCompletableOnSubscribeTimeout_1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeTimeout *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeTimeout_$1 *new_RxInternalOperatorsCompletableOnSubscribeTimeout_$1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeTimeout *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeTimeout_1 *create_RxInternalOperatorsCompletableOnSubscribeTimeout_1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeTimeout *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2);
 
-__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeTimeout_$1 *create_RxInternalOperatorsCompletableOnSubscribeTimeout_$1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeTimeout *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2);
-
-@interface RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1 : NSObject < RxCompletableSubscriber > {
+@interface RxInternalOperatorsCompletableOnSubscribeTimeout_1_1 : NSObject < RxCompletableSubscriber > {
  @public
-  RxInternalOperatorsCompletableOnSubscribeTimeout_$1 *this$0_;
+  RxInternalOperatorsCompletableOnSubscribeTimeout_1 *this$0_;
 }
+
+- (instancetype)initWithRxInternalOperatorsCompletableOnSubscribeTimeout_1:(RxInternalOperatorsCompletableOnSubscribeTimeout_1 *)outer$;
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
@@ -57,50 +54,42 @@ __attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeTimeout_
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxInternalOperatorsCompletableOnSubscribeTimeout_$1:(RxInternalOperatorsCompletableOnSubscribeTimeout_$1 *)outer$;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsCompletableOnSubscribeTimeout_1_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1, this$0_, RxInternalOperatorsCompletableOnSubscribeTimeout_$1 *)
+__attribute__((unused)) static void RxInternalOperatorsCompletableOnSubscribeTimeout_1_1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_1_(RxInternalOperatorsCompletableOnSubscribeTimeout_1_1 *self, RxInternalOperatorsCompletableOnSubscribeTimeout_1 *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_$1_(RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1 *self, RxInternalOperatorsCompletableOnSubscribeTimeout_$1 *outer$);
+__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeTimeout_1_1 *new_RxInternalOperatorsCompletableOnSubscribeTimeout_1_1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_1_(RxInternalOperatorsCompletableOnSubscribeTimeout_1 *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1 *new_RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_$1_(RxInternalOperatorsCompletableOnSubscribeTimeout_$1 *outer$) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeTimeout_1_1 *create_RxInternalOperatorsCompletableOnSubscribeTimeout_1_1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_1_(RxInternalOperatorsCompletableOnSubscribeTimeout_1 *outer$);
 
-__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1 *create_RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_$1_(RxInternalOperatorsCompletableOnSubscribeTimeout_$1 *outer$);
-
-@interface RxInternalOperatorsCompletableOnSubscribeTimeout_$2 : NSObject < RxCompletableSubscriber > {
+@interface RxInternalOperatorsCompletableOnSubscribeTimeout_2 : NSObject < RxCompletableSubscriber > {
  @public
   RxSubscriptionsCompositeSubscription *val$set_;
   JavaUtilConcurrentAtomicAtomicBoolean *val$once_;
   id<RxCompletableSubscriber> val$s_;
 }
 
+- (instancetype)initWithRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$0
+                   withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$1
+                                 withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2;
+
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d;
 
 - (void)onErrorWithNSException:(NSException *)e;
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$0
-                   withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$1
-                                 withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsCompletableOnSubscribeTimeout_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsCompletableOnSubscribeTimeout_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsCompletableOnSubscribeTimeout_$2, val$set_, RxSubscriptionsCompositeSubscription *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsCompletableOnSubscribeTimeout_$2, val$once_, JavaUtilConcurrentAtomicAtomicBoolean *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsCompletableOnSubscribeTimeout_$2, val$s_, id<RxCompletableSubscriber>)
+__attribute__((unused)) static void RxInternalOperatorsCompletableOnSubscribeTimeout_2_initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeTimeout_2 *self, RxSubscriptionsCompositeSubscription *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1, id<RxCompletableSubscriber> capture$2);
 
-__attribute__((unused)) static void RxInternalOperatorsCompletableOnSubscribeTimeout_$2_initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeTimeout_$2 *self, RxSubscriptionsCompositeSubscription *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1, id<RxCompletableSubscriber> capture$2);
+__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeTimeout_2 *new_RxInternalOperatorsCompletableOnSubscribeTimeout_2_initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_(RxSubscriptionsCompositeSubscription *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1, id<RxCompletableSubscriber> capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeTimeout_$2 *new_RxInternalOperatorsCompletableOnSubscribeTimeout_$2_initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_(RxSubscriptionsCompositeSubscription *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1, id<RxCompletableSubscriber> capture$2) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeTimeout_$2 *create_RxInternalOperatorsCompletableOnSubscribeTimeout_$2_initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_(RxSubscriptionsCompositeSubscription *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1, id<RxCompletableSubscriber> capture$2);
+__attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeTimeout_2 *create_RxInternalOperatorsCompletableOnSubscribeTimeout_2_initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_(RxSubscriptionsCompositeSubscription *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1, id<RxCompletableSubscriber> capture$2);
 
 @implementation RxInternalOperatorsCompletableOnSubscribeTimeout
 
@@ -119,8 +108,8 @@ __attribute__((unused)) static RxInternalOperatorsCompletableOnSubscribeTimeout_
   JavaUtilConcurrentAtomicAtomicBoolean *once = create_JavaUtilConcurrentAtomicAtomicBoolean_init();
   RxScheduler_Worker *w = [((RxScheduler *) nil_chk(scheduler_)) createWorker];
   [set addWithRxSubscription:w];
-  [((RxScheduler_Worker *) nil_chk(w)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsCompletableOnSubscribeTimeout_$1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(self, once, set, s) withLong:timeout_ withJavaUtilConcurrentTimeUnit:unit_];
-  [((RxCompletable *) nil_chk(source_)) unsafeSubscribeWithRxCompletableSubscriber:create_RxInternalOperatorsCompletableOnSubscribeTimeout_$2_initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_(set, once, s)];
+  [((RxScheduler_Worker *) nil_chk(w)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsCompletableOnSubscribeTimeout_1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(self, once, set, s) withLong:timeout_ withJavaUtilConcurrentTimeUnit:unit_];
+  [((RxCompletable *) nil_chk(source_)) unsafeSubscribeWithRxCompletableSubscriber:create_RxInternalOperatorsCompletableOnSubscribeTimeout_2_initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_(set, once, s)];
 }
 
 - (void)dealloc {
@@ -174,7 +163,15 @@ RxInternalOperatorsCompletableOnSubscribeTimeout *create_RxInternalOperatorsComp
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCompletableOnSubscribeTimeout)
 
-@implementation RxInternalOperatorsCompletableOnSubscribeTimeout_$1
+@implementation RxInternalOperatorsCompletableOnSubscribeTimeout_1
+
+- (instancetype)initWithRxInternalOperatorsCompletableOnSubscribeTimeout:(RxInternalOperatorsCompletableOnSubscribeTimeout *)outer$
+                               withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$0
+                                withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$1
+                                             withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2 {
+  RxInternalOperatorsCompletableOnSubscribeTimeout_1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(self, outer$, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)call {
   if ([((JavaUtilConcurrentAtomicAtomicBoolean *) nil_chk(val$once_)) compareAndSetWithBoolean:false withBoolean:true]) {
@@ -183,17 +180,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCompletableOnSubscribeTimeou
       [((id<RxCompletableSubscriber>) nil_chk(val$s_)) onErrorWithNSException:create_JavaUtilConcurrentTimeoutException_init()];
     }
     else {
-      [this$0_->other_ unsafeSubscribeWithRxCompletableSubscriber:create_RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_$1_(self)];
+      [this$0_->other_ unsafeSubscribeWithRxCompletableSubscriber:create_RxInternalOperatorsCompletableOnSubscribeTimeout_1_1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_1_(self)];
     }
   }
-}
-
-- (instancetype)initWithRxInternalOperatorsCompletableOnSubscribeTimeout:(RxInternalOperatorsCompletableOnSubscribeTimeout *)outer$
-                               withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$0
-                                withRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$1
-                                             withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2 {
-  RxInternalOperatorsCompletableOnSubscribeTimeout_$1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(self, outer$, capture$0, capture$1, capture$2);
-  return self;
 }
 
 - (void)dealloc {
@@ -206,13 +195,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCompletableOnSubscribeTimeou
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsCompletableOnSubscribeTimeout:withJavaUtilConcurrentAtomicAtomicBoolean:withRxSubscriptionsCompositeSubscription:withRxCompletableSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsCompletableOnSubscribeTimeout:withJavaUtilConcurrentAtomicAtomicBoolean:withRxSubscriptionsCompositeSubscription:withRxCompletableSubscriber:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalOperatorsCompletableOnSubscribeTimeout;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
@@ -220,14 +209,14 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCompletableOnSubscribeTimeou
     { "val$set_", "LRxSubscriptionsCompositeSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$s_", "LRxCompletableSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsCompletableOnSubscribeTimeout;LJavaUtilConcurrentAtomicAtomicBoolean;LRxSubscriptionsCompositeSubscription;LRxCompletableSubscriber;", "LRxInternalOperatorsCompletableOnSubscribeTimeout;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsCompletableOnSubscribeTimeout_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 4, 1, -1, 2, -1, -1 };
-  return &_RxInternalOperatorsCompletableOnSubscribeTimeout_$1;
+  static const void *ptrTable[] = { "LRxInternalOperatorsCompletableOnSubscribeTimeout;", "callWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsCompletableOnSubscribeTimeout_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 4, 0, -1, 1, -1, -1 };
+  return &_RxInternalOperatorsCompletableOnSubscribeTimeout_1;
 }
 
 @end
 
-void RxInternalOperatorsCompletableOnSubscribeTimeout_$1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeTimeout_$1 *self, RxInternalOperatorsCompletableOnSubscribeTimeout *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) {
+void RxInternalOperatorsCompletableOnSubscribeTimeout_1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeTimeout_1 *self, RxInternalOperatorsCompletableOnSubscribeTimeout *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$once_, capture$0);
   JreStrongAssign(&self->val$set_, capture$1);
@@ -235,15 +224,20 @@ void RxInternalOperatorsCompletableOnSubscribeTimeout_$1_initWithRxInternalOpera
   NSObject_init(self);
 }
 
-RxInternalOperatorsCompletableOnSubscribeTimeout_$1 *new_RxInternalOperatorsCompletableOnSubscribeTimeout_$1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeTimeout *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsCompletableOnSubscribeTimeout_$1, initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_, outer$, capture$0, capture$1, capture$2)
+RxInternalOperatorsCompletableOnSubscribeTimeout_1 *new_RxInternalOperatorsCompletableOnSubscribeTimeout_1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeTimeout *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsCompletableOnSubscribeTimeout_1, initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_, outer$, capture$0, capture$1, capture$2)
 }
 
-RxInternalOperatorsCompletableOnSubscribeTimeout_$1 *create_RxInternalOperatorsCompletableOnSubscribeTimeout_$1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeTimeout *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsCompletableOnSubscribeTimeout_$1, initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_, outer$, capture$0, capture$1, capture$2)
+RxInternalOperatorsCompletableOnSubscribeTimeout_1 *create_RxInternalOperatorsCompletableOnSubscribeTimeout_1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeTimeout *outer$, JavaUtilConcurrentAtomicAtomicBoolean *capture$0, RxSubscriptionsCompositeSubscription *capture$1, id<RxCompletableSubscriber> capture$2) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsCompletableOnSubscribeTimeout_1, initWithRxInternalOperatorsCompletableOnSubscribeTimeout_withJavaUtilConcurrentAtomicAtomicBoolean_withRxSubscriptionsCompositeSubscription_withRxCompletableSubscriber_, outer$, capture$0, capture$1, capture$2)
 }
 
-@implementation RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1
+@implementation RxInternalOperatorsCompletableOnSubscribeTimeout_1_1
+
+- (instancetype)initWithRxInternalOperatorsCompletableOnSubscribeTimeout_1:(RxInternalOperatorsCompletableOnSubscribeTimeout_1 *)outer$ {
+  RxInternalOperatorsCompletableOnSubscribeTimeout_1_1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_1_(self, outer$);
+  return self;
+}
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d {
   [((RxSubscriptionsCompositeSubscription *) nil_chk(this$0_->val$set_)) addWithRxSubscription:d];
@@ -259,11 +253,6 @@ RxInternalOperatorsCompletableOnSubscribeTimeout_$1 *create_RxInternalOperatorsC
   [((id<RxCompletableSubscriber>) nil_chk(this$0_->val$s_)) onCompleted];
 }
 
-- (instancetype)initWithRxInternalOperatorsCompletableOnSubscribeTimeout_$1:(RxInternalOperatorsCompletableOnSubscribeTimeout_$1 *)outer$ {
-  RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_$1_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -271,42 +260,49 @@ RxInternalOperatorsCompletableOnSubscribeTimeout_$1 *create_RxInternalOperatorsC
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxInternalOperatorsCompletableOnSubscribeTimeout_$1:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsCompletableOnSubscribeTimeout_1:);
+  methods[1].selector = @selector(onSubscribeWithRxSubscription:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsCompletableOnSubscribeTimeout_$1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsCompletableOnSubscribeTimeout_1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onSubscribe", "LRxSubscription;", "onError", "LNSException;", "LRxInternalOperatorsCompletableOnSubscribeTimeout_$1;", "call" };
-  static const J2ObjcClassInfo _RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 1, 4, -1, 5, -1, -1 };
-  return &_RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1;
+  static const void *ptrTable[] = { "onSubscribe", "LRxSubscription;", "onError", "LNSException;", "LRxInternalOperatorsCompletableOnSubscribeTimeout_1;", "call" };
+  static const J2ObjcClassInfo _RxInternalOperatorsCompletableOnSubscribeTimeout_1_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 1, 4, -1, 5, -1, -1 };
+  return &_RxInternalOperatorsCompletableOnSubscribeTimeout_1_1;
 }
 
 @end
 
-void RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_$1_(RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1 *self, RxInternalOperatorsCompletableOnSubscribeTimeout_$1 *outer$) {
+void RxInternalOperatorsCompletableOnSubscribeTimeout_1_1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_1_(RxInternalOperatorsCompletableOnSubscribeTimeout_1_1 *self, RxInternalOperatorsCompletableOnSubscribeTimeout_1 *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1 *new_RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_$1_(RxInternalOperatorsCompletableOnSubscribeTimeout_$1 *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1, initWithRxInternalOperatorsCompletableOnSubscribeTimeout_$1_, outer$)
+RxInternalOperatorsCompletableOnSubscribeTimeout_1_1 *new_RxInternalOperatorsCompletableOnSubscribeTimeout_1_1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_1_(RxInternalOperatorsCompletableOnSubscribeTimeout_1 *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsCompletableOnSubscribeTimeout_1_1, initWithRxInternalOperatorsCompletableOnSubscribeTimeout_1_, outer$)
 }
 
-RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1 *create_RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_$1_(RxInternalOperatorsCompletableOnSubscribeTimeout_$1 *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1, initWithRxInternalOperatorsCompletableOnSubscribeTimeout_$1_, outer$)
+RxInternalOperatorsCompletableOnSubscribeTimeout_1_1 *create_RxInternalOperatorsCompletableOnSubscribeTimeout_1_1_initWithRxInternalOperatorsCompletableOnSubscribeTimeout_1_(RxInternalOperatorsCompletableOnSubscribeTimeout_1 *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsCompletableOnSubscribeTimeout_1_1, initWithRxInternalOperatorsCompletableOnSubscribeTimeout_1_, outer$)
 }
 
-@implementation RxInternalOperatorsCompletableOnSubscribeTimeout_$2
+@implementation RxInternalOperatorsCompletableOnSubscribeTimeout_2
+
+- (instancetype)initWithRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$0
+                   withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$1
+                                 withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2 {
+  RxInternalOperatorsCompletableOnSubscribeTimeout_2_initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_(self, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)onSubscribeWithRxSubscription:(id<RxSubscription>)d {
   [((RxSubscriptionsCompositeSubscription *) nil_chk(val$set_)) addWithRxSubscription:d];
@@ -329,13 +325,6 @@ RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1 *create_RxInternalOperato
   }
 }
 
-- (instancetype)initWithRxSubscriptionsCompositeSubscription:(RxSubscriptionsCompositeSubscription *)capture$0
-                   withJavaUtilConcurrentAtomicAtomicBoolean:(JavaUtilConcurrentAtomicAtomicBoolean *)capture$1
-                                 withRxCompletableSubscriber:(id<RxCompletableSubscriber>)capture$2 {
-  RxInternalOperatorsCompletableOnSubscribeTimeout_$2_initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_(self, capture$0, capture$1, capture$2);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$set_);
   RELEASE_(val$once_);
@@ -345,41 +334,41 @@ RxInternalOperatorsCompletableOnSubscribeTimeout_$1_$1 *create_RxInternalOperato
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onSubscribeWithRxSubscription:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxSubscriptionsCompositeSubscription:withJavaUtilConcurrentAtomicAtomicBoolean:withRxCompletableSubscriber:);
+  methods[0].selector = @selector(initWithRxSubscriptionsCompositeSubscription:withJavaUtilConcurrentAtomicAtomicBoolean:withRxCompletableSubscriber:);
+  methods[1].selector = @selector(onSubscribeWithRxSubscription:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$set_", "LRxSubscriptionsCompositeSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$once_", "LJavaUtilConcurrentAtomicAtomicBoolean;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$s_", "LRxCompletableSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onSubscribe", "LRxSubscription;", "onError", "LNSException;", "LRxSubscriptionsCompositeSubscription;LJavaUtilConcurrentAtomicAtomicBoolean;LRxCompletableSubscriber;", "LRxInternalOperatorsCompletableOnSubscribeTimeout;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsCompletableOnSubscribeTimeout_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 5, -1, 6, -1, -1 };
-  return &_RxInternalOperatorsCompletableOnSubscribeTimeout_$2;
+  static const void *ptrTable[] = { "onSubscribe", "LRxSubscription;", "onError", "LNSException;", "LRxInternalOperatorsCompletableOnSubscribeTimeout;", "callWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsCompletableOnSubscribeTimeout_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 4, -1, 5, -1, -1 };
+  return &_RxInternalOperatorsCompletableOnSubscribeTimeout_2;
 }
 
 @end
 
-void RxInternalOperatorsCompletableOnSubscribeTimeout_$2_initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeTimeout_$2 *self, RxSubscriptionsCompositeSubscription *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1, id<RxCompletableSubscriber> capture$2) {
+void RxInternalOperatorsCompletableOnSubscribeTimeout_2_initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_(RxInternalOperatorsCompletableOnSubscribeTimeout_2 *self, RxSubscriptionsCompositeSubscription *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1, id<RxCompletableSubscriber> capture$2) {
   JreStrongAssign(&self->val$set_, capture$0);
   JreStrongAssign(&self->val$once_, capture$1);
   JreStrongAssign(&self->val$s_, capture$2);
   NSObject_init(self);
 }
 
-RxInternalOperatorsCompletableOnSubscribeTimeout_$2 *new_RxInternalOperatorsCompletableOnSubscribeTimeout_$2_initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_(RxSubscriptionsCompositeSubscription *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1, id<RxCompletableSubscriber> capture$2) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsCompletableOnSubscribeTimeout_$2, initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_, capture$0, capture$1, capture$2)
+RxInternalOperatorsCompletableOnSubscribeTimeout_2 *new_RxInternalOperatorsCompletableOnSubscribeTimeout_2_initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_(RxSubscriptionsCompositeSubscription *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1, id<RxCompletableSubscriber> capture$2) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsCompletableOnSubscribeTimeout_2, initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_, capture$0, capture$1, capture$2)
 }
 
-RxInternalOperatorsCompletableOnSubscribeTimeout_$2 *create_RxInternalOperatorsCompletableOnSubscribeTimeout_$2_initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_(RxSubscriptionsCompositeSubscription *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1, id<RxCompletableSubscriber> capture$2) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsCompletableOnSubscribeTimeout_$2, initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_, capture$0, capture$1, capture$2)
+RxInternalOperatorsCompletableOnSubscribeTimeout_2 *create_RxInternalOperatorsCompletableOnSubscribeTimeout_2_initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_(RxSubscriptionsCompositeSubscription *capture$0, JavaUtilConcurrentAtomicAtomicBoolean *capture$1, id<RxCompletableSubscriber> capture$2) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsCompletableOnSubscribeTimeout_2, initWithRxSubscriptionsCompositeSubscription_withJavaUtilConcurrentAtomicAtomicBoolean_withRxCompletableSubscriber_, capture$0, capture$1, capture$2)
 }

@@ -124,7 +124,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   if (obj == nil) {
     return false;
   }
-  if ([self java_getClass] != (id) [obj java_getClass]) {
+  if ([self java_getClass] != [obj java_getClass]) {
     return false;
   }
   RxInternalUtilSynchronizedQueue *other = (RxInternalUtilSynchronizedQueue *) cast_chk(obj, [RxInternalUtilSynchronizedQueue class]);
@@ -161,7 +161,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   }
 }
 
-- (id)clone {
+- (id)java_clone {
   @synchronized(self) {
     RxInternalUtilSynchronizedQueue *q = create_RxInternalUtilSynchronizedQueue_initWithInt_(size_);
     [q addAllWithJavaUtilCollection:list_];
@@ -233,9 +233,9 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "LNSObject;", 0x21, -1, -1, -1, 17, -1, -1 },
     { NULL, "LNSObject;", 0x21, -1, -1, -1, 17, -1, -1 },
     { NULL, "Z", 0x21, 18, 2, -1, 5, -1, -1 },
-    { NULL, "LNSObject;", 0x21, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x21, 19, -1, -1, -1, -1, -1 },
     { NULL, "[LNSObject;", 0x21, -1, -1, -1, -1, -1, -1 },
-    { NULL, "[LNSObject;", 0x21, 19, 20, -1, 21, -1, -1 },
+    { NULL, "[LNSObject;", 0x21, 20, 21, -1, 22, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -260,21 +260,21 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[18].selector = @selector(poll);
   methods[19].selector = @selector(remove);
   methods[20].selector = @selector(offerWithId:);
-  methods[21].selector = @selector(clone);
+  methods[21].selector = @selector(java_clone);
   methods[22].selector = @selector(toArray);
   methods[23].selector = @selector(toArrayWithNSObjectArray:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "list_", "LJavaUtilQueue;", .constantValue.asLong = 0, 0x12, -1, -1, 22, -1 },
+    { "list_", "LJavaUtilQueue;", .constantValue.asLong = 0, 0x12, -1, -1, 23, -1 },
     { "size_", "I", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "I", "contains", "LNSObject;", "()Ljava/util/Iterator<TT;>;", "add", "(TT;)Z", "remove", "containsAll", "LJavaUtilCollection;", "(Ljava/util/Collection<*>;)Z", "addAll", "(Ljava/util/Collection<+TT;>;)Z", "removeAll", "retainAll", "toString", "hashCode", "equals", "()TT;", "offer", "toArray", "[LNSObject;", "<R:Ljava/lang/Object;>([TR;)[TR;", "Ljava/util/Queue<TT;>;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Ljava/util/Queue<TT;>;Ljava/lang/Cloneable;" };
-  static const J2ObjcClassInfo _RxInternalUtilSynchronizedQueue = { "SynchronizedQueue", "rx.internal.util", ptrTable, methods, fields, 7, 0x1, 24, 2, -1, -1, -1, 23, -1 };
+  static const void *ptrTable[] = { "I", "contains", "LNSObject;", "()Ljava/util/Iterator<TT;>;", "add", "(TT;)Z", "remove", "containsAll", "LJavaUtilCollection;", "(Ljava/util/Collection<*>;)Z", "addAll", "(Ljava/util/Collection<+TT;>;)Z", "removeAll", "retainAll", "toString", "hashCode", "equals", "()TT;", "offer", "clone", "toArray", "[LNSObject;", "<R:Ljava/lang/Object;>([TR;)[TR;", "Ljava/util/Queue<TT;>;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Ljava/util/Queue<TT;>;Ljava/lang/Cloneable;" };
+  static const J2ObjcClassInfo _RxInternalUtilSynchronizedQueue = { "SynchronizedQueue", "rx.internal.util", ptrTable, methods, fields, 7, 0x1, 24, 2, -1, -1, -1, 24, -1 };
   return &_RxInternalUtilSynchronizedQueue;
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-  return [[self clone] retain];
+  return [[self java_clone] retain];
 }
 
 @end

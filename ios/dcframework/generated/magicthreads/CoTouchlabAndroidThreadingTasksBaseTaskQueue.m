@@ -10,7 +10,6 @@
 #include "CoTouchlabAndroidThreadingTasksBaseTaskQueue.h"
 #include "CoTouchlabAndroidThreadingTasksTask.h"
 #include "CoTouchlabAndroidThreadingUtilsUiThreadContext.h"
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "java/lang/Error.h"
 #include "java/lang/Runnable.h"
@@ -36,6 +35,22 @@
 J2OBJC_FIELD_SETTER(CoTouchlabAndroidThreadingTasksBaseTaskQueue, currentTask_, CoTouchlabAndroidThreadingTasksTask *)
 J2OBJC_FIELD_SETTER(CoTouchlabAndroidThreadingTasksBaseTaskQueue, listeners_, id<JavaUtilList>)
 
+@interface CoTouchlabAndroidThreadingTasksBaseTaskQueue_1 : NSObject < JavaUtilConcurrentThreadFactory >
+
+- (instancetype)init;
+
+- (JavaLangThread *)newThreadWithJavaLangRunnable:(id<JavaLangRunnable>)r OBJC_METHOD_FAMILY_NONE;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(CoTouchlabAndroidThreadingTasksBaseTaskQueue_1)
+
+__attribute__((unused)) static void CoTouchlabAndroidThreadingTasksBaseTaskQueue_1_init(CoTouchlabAndroidThreadingTasksBaseTaskQueue_1 *self);
+
+__attribute__((unused)) static CoTouchlabAndroidThreadingTasksBaseTaskQueue_1 *new_CoTouchlabAndroidThreadingTasksBaseTaskQueue_1_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static CoTouchlabAndroidThreadingTasksBaseTaskQueue_1 *create_CoTouchlabAndroidThreadingTasksBaseTaskQueue_1_init();
+
 @interface CoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueWrapper : NSObject
 
 @end
@@ -50,8 +65,6 @@ J2OBJC_FIELD_SETTER(CoTouchlabAndroidThreadingTasksBaseTaskQueue, listeners_, id
 
 @end
 
-J2OBJC_FIELD_SETTER(CoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueHandler, this$0_, CoTouchlabAndroidThreadingTasksBaseTaskQueue *)
-
 __attribute__((unused)) static void CoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueHandler_initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_withAndroidOsLooper_(CoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueHandler *self, CoTouchlabAndroidThreadingTasksBaseTaskQueue *outer$, AndroidOsLooper *looper);
 
 __attribute__((unused)) static CoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueHandler *new_CoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueHandler_initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_withAndroidOsLooper_(CoTouchlabAndroidThreadingTasksBaseTaskQueue *outer$, AndroidOsLooper *looper) NS_RETURNS_RETAINED;
@@ -65,22 +78,6 @@ __attribute__((unused)) static CoTouchlabAndroidThreadingTasksBaseTaskQueue_Queu
 @interface CoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueListener : NSObject
 
 @end
-
-@interface CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1 : NSObject < JavaUtilConcurrentThreadFactory >
-
-- (JavaLangThread *)newThreadWithJavaLangRunnable:(id<JavaLangRunnable>)r OBJC_METHOD_FAMILY_NONE;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1)
-
-__attribute__((unused)) static void CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1_init(CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1 *self);
-
-__attribute__((unused)) static CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1 *new_CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1 *create_CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1_init();
 
 @implementation CoTouchlabAndroidThreadingTasksBaseTaskQueue
 
@@ -218,7 +215,7 @@ withCoTouchlabAndroidThreadingTasksTask:(CoTouchlabAndroidThreadingTasksTask *)t
 
 void CoTouchlabAndroidThreadingTasksBaseTaskQueue_initWithAndroidAppApplication_withCoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueWrapper_(CoTouchlabAndroidThreadingTasksBaseTaskQueue *self, AndroidAppApplication *application, id<CoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueWrapper> queueWrapper) {
   NSObject_init(self);
-  JreStrongAssign(&self->executorService_, JavaUtilConcurrentExecutors_newSingleThreadExecutorWithJavaUtilConcurrentThreadFactory_(create_CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1_init()));
+  JreStrongAssign(&self->executorService_, JavaUtilConcurrentExecutors_newSingleThreadExecutorWithJavaUtilConcurrentThreadFactory_(create_CoTouchlabAndroidThreadingTasksBaseTaskQueue_1_init()));
   JreStrongAssignAndConsume(&self->listeners_, new_JavaUtilArrayList_init());
   self->startedCalled_ = false;
   JreStrongAssign(&self->application_, application);
@@ -227,6 +224,48 @@ void CoTouchlabAndroidThreadingTasksBaseTaskQueue_initWithAndroidAppApplication_
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksBaseTaskQueue)
+
+@implementation CoTouchlabAndroidThreadingTasksBaseTaskQueue_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabAndroidThreadingTasksBaseTaskQueue_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
+- (JavaLangThread *)newThreadWithJavaLangRunnable:(id<JavaLangRunnable>)r {
+  return create_JavaLangThread_initWithJavaLangRunnable_(r);
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaLangThread;", 0x1, 0, 1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(newThreadWithJavaLangRunnable:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "newThread", "LJavaLangRunnable;", "LCoTouchlabAndroidThreadingTasksBaseTaskQueue;" };
+  static const J2ObjcClassInfo _CoTouchlabAndroidThreadingTasksBaseTaskQueue_1 = { "", "co.touchlab.android.threading.tasks", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, -1, -1, -1 };
+  return &_CoTouchlabAndroidThreadingTasksBaseTaskQueue_1;
+}
+
+@end
+
+void CoTouchlabAndroidThreadingTasksBaseTaskQueue_1_init(CoTouchlabAndroidThreadingTasksBaseTaskQueue_1 *self) {
+  NSObject_init(self);
+}
+
+CoTouchlabAndroidThreadingTasksBaseTaskQueue_1 *new_CoTouchlabAndroidThreadingTasksBaseTaskQueue_1_init() {
+  J2OBJC_NEW_IMPL(CoTouchlabAndroidThreadingTasksBaseTaskQueue_1, init)
+}
+
+CoTouchlabAndroidThreadingTasksBaseTaskQueue_1 *create_CoTouchlabAndroidThreadingTasksBaseTaskQueue_1_init() {
+  J2OBJC_CREATE_IMPL(CoTouchlabAndroidThreadingTasksBaseTaskQueue_1, init)
+}
 
 @implementation CoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueWrapper
 
@@ -339,7 +378,7 @@ J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksBaseTaskQueu
     { "POST_EXE", "I", .constantValue.asInt = CoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueHandler_POST_EXE, 0x19, -1, -1, -1, -1 },
     { "THROW", "I", .constantValue.asInt = CoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueHandler_THROW, 0x18, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabAndroidThreadingTasksBaseTaskQueue;LAndroidOsLooper;", "handleMessage", "LAndroidOsMessage;", "LCoTouchlabAndroidThreadingTasksBaseTaskQueue;" };
+  static const void *ptrTable[] = { "LAndroidOsLooper;", "handleMessage", "LAndroidOsMessage;", "LCoTouchlabAndroidThreadingTasksBaseTaskQueue;" };
   static const J2ObjcClassInfo _CoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueHandler = { "QueueHandler", "co.touchlab.android.threading.tasks", ptrTable, methods, fields, 7, 0x4, 2, 5, 3, -1, -1, -1, -1 };
   return &_CoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueHandler;
 }
@@ -465,45 +504,3 @@ J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksBaseTaskQueu
 @end
 
 J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueListener)
-
-@implementation CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1
-
-- (JavaLangThread *)newThreadWithJavaLangRunnable:(id<JavaLangRunnable>)r {
-  return create_JavaLangThread_initWithJavaLangRunnable_(r);
-}
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaLangThread;", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(newThreadWithJavaLangRunnable:);
-  methods[1].selector = @selector(init);
-  #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "newThread", "LJavaLangRunnable;", "LCoTouchlabAndroidThreadingTasksBaseTaskQueue;" };
-  static const J2ObjcClassInfo _CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1 = { "", "co.touchlab.android.threading.tasks", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, -1, -1, -1 };
-  return &_CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1;
-}
-
-@end
-
-void CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1_init(CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1 *self) {
-  NSObject_init(self);
-}
-
-CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1 *new_CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1_init() {
-  J2OBJC_NEW_IMPL(CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1, init)
-}
-
-CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1 *create_CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1_init() {
-  J2OBJC_CREATE_IMPL(CoTouchlabAndroidThreadingTasksBaseTaskQueue_$1, init)
-}

@@ -44,15 +44,15 @@ J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(AndroidOsParcelable)
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
     { NULL, "LNSObject;", 0x401, 0, 1, -1, 2, -1, -1 },
-    { NULL, "[LNSObject;", 0x401, 3, 4, -1, -1, -1, -1 },
+    { NULL, "[LNSObject;", 0x401, 3, 4, -1, 5, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
   methods[0].selector = @selector(createFromParcelWithAndroidOsParcel:);
   methods[1].selector = @selector(newArrayWithInt:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "createFromParcel", "LAndroidOsParcel;", "(Landroid/os/Parcel;)TT;", "newArray", "I", "LAndroidOsParcelable;", "<T:Ljava/lang/Object;>Ljava/lang/Object;" };
-  static const J2ObjcClassInfo _AndroidOsParcelable_Creator = { "Creator", "android.os", ptrTable, methods, NULL, 7, 0x609, 2, 0, 5, -1, -1, 6, -1 };
+  static const void *ptrTable[] = { "createFromParcel", "LAndroidOsParcel;", "(Landroid/os/Parcel;)TT;", "newArray", "I", "(I)[TT;", "LAndroidOsParcelable;", "<T:Ljava/lang/Object;>Ljava/lang/Object;" };
+  static const J2ObjcClassInfo _AndroidOsParcelable_Creator = { "Creator", "android.os", ptrTable, methods, NULL, 7, 0x609, 2, 0, 6, -1, -1, 7, -1 };
   return &_AndroidOsParcelable_Creator;
 }
 

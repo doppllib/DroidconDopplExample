@@ -10,7 +10,6 @@
 #include "AndroidDatabaseSqliteSQLiteProgram.h"
 #include "AndroidDatabaseSqliteSQLiteQuery.h"
 #include "AndroidDatabaseSqliteSQLiteSession.h"
-#include "IOSClass.h"
 #include "IOSObjectArray.h"
 #include "J2ObjC_source.h"
 #include "android/util/Log.h"

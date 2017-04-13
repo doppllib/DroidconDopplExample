@@ -10,7 +10,6 @@
 #include "CoTouchlabSqueakyFieldTypesSerializableType.h"
 #include "CoTouchlabSqueakyMiscIOUtils.h"
 #include "CoTouchlabSqueakyMiscSqlExceptionUtil.h"
-#include "IOSClass.h"
 #include "IOSObjectArray.h"
 #include "IOSPrimitiveArray.h"
 #include "J2ObjC_source.h"
@@ -114,11 +113,11 @@ J2OBJC_IGNORE_DESIGNATED_END
   static J2ObjcMethodInfo methods[] = {
     { NULL, "LCoTouchlabSqueakyFieldTypesSerializableType;", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x4, -1, 0, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 1, 2, 3, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 4, 5, 3, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 6, 7, 3, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 8, 9, 3, -1, -1, -1 },
+    { NULL, NULL, 0x4, -1, 0, -1, 1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 2, 3, 4, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 5, 6, 4, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 7, 8, 4, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 9, 10, 4, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
@@ -133,9 +132,9 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[7].selector = @selector(isComparable);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "singleTon", "LCoTouchlabSqueakyFieldTypesSerializableType;", .constantValue.asLong = 0, 0x1a, -1, 10, -1, -1 },
+    { "singleTon", "LCoTouchlabSqueakyFieldTypesSerializableType;", .constantValue.asLong = 0, 0x1a, -1, 11, -1, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "parseDefaultString", "LCoTouchlabSqueakyFieldFieldType;LNSString;", "LJavaSqlSQLException;", "resultToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LAndroidDatabaseCursor;I", "sqlArgToJava", "LCoTouchlabSqueakyFieldFieldType;LNSObject;I", "javaToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LNSObject;", &CoTouchlabSqueakyFieldTypesSerializableType_singleTon };
+  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "(Lco/touchlab/squeaky/field/SqlType;[Ljava/lang/Class<*>;)V", "parseDefaultString", "LCoTouchlabSqueakyFieldFieldType;LNSString;", "LJavaSqlSQLException;", "resultToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LAndroidDatabaseCursor;I", "sqlArgToJava", "LCoTouchlabSqueakyFieldFieldType;LNSObject;I", "javaToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LNSObject;", &CoTouchlabSqueakyFieldTypesSerializableType_singleTon };
   static const J2ObjcClassInfo _CoTouchlabSqueakyFieldTypesSerializableType = { "SerializableType", "co.touchlab.squeaky.field.types", ptrTable, methods, fields, 7, 0x1, 8, 1, -1, -1, -1, -1, -1 };
   return &_CoTouchlabSqueakyFieldTypesSerializableType;
 }

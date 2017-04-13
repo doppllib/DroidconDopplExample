@@ -194,7 +194,7 @@ RxInternalUtilInternalObservableUtils *RxInternalUtilInternalObservableUtils_val
     { "ERROR_NOT_IMPLEMENTED", "LRxFunctionsAction1;", .constantValue.asLong = 0, 0x19, -1, 34, 35, -1 },
     { "IS_EMPTY", "LRxObservable_Operator;", .constantValue.asLong = 0, 0x19, -1, 36, 37, -1 },
   };
-  static const void *ptrTable[] = { "equalsWith", "LNSObject;", "(Ljava/lang/Object;)Lrx/functions/Func1<Ljava/lang/Object;Ljava/lang/Boolean;>;", "isInstanceOf", "LIOSClass;", "(Ljava/lang/Class<*>;)Lrx/functions/Func1<Ljava/lang/Object;Ljava/lang/Boolean;>;", "createRepeatDematerializer", "LRxFunctionsFunc1;", "(Lrx/functions/Func1<+Lrx/Observable<+Ljava/lang/Void;>;+Lrx/Observable<*>;>;)Lrx/functions/Func1<Lrx/Observable<+Lrx/Notification<*>;>;Lrx/Observable<*>;>;", "createReplaySelectorAndObserveOn", "LRxFunctionsFunc1;LRxScheduler;", "<T:Ljava/lang/Object;R:Ljava/lang/Object;>(Lrx/functions/Func1<-Lrx/Observable<TT;>;+Lrx/Observable<TR;>;>;Lrx/Scheduler;)Lrx/functions/Func1<Lrx/Observable<TT;>;Lrx/Observable<TR;>;>;", "createRetryDematerializer", "(Lrx/functions/Func1<+Lrx/Observable<+Ljava/lang/Throwable;>;+Lrx/Observable<*>;>;)Lrx/functions/Func1<Lrx/Observable<+Lrx/Notification<*>;>;Lrx/Observable<*>;>;", "createReplaySupplier", "LRxObservable;", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;)Lrx/functions/Func0<Lrx/observables/ConnectableObservable<TT;>;>;", "LRxObservable;I", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;I)Lrx/functions/Func0<Lrx/observables/ConnectableObservable<TT;>;>;", "LRxObservable;JLJavaUtilConcurrentTimeUnit;LRxScheduler;", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;JLjava/util/concurrent/TimeUnit;Lrx/Scheduler;)Lrx/functions/Func0<Lrx/observables/ConnectableObservable<TT;>;>;", "LRxObservable;IJLJavaUtilConcurrentTimeUnit;LRxScheduler;", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;IJLjava/util/concurrent/TimeUnit;Lrx/Scheduler;)Lrx/functions/Func0<Lrx/observables/ConnectableObservable<TT;>;>;", "createCollectorCaller", "LRxFunctionsAction2;", "<T:Ljava/lang/Object;R:Ljava/lang/Object;>(Lrx/functions/Action2<TR;-TT;>;)Lrx/functions/Func2<TR;TT;TR;>;", "valueOf", "LNSString;", &RxInternalUtilInternalObservableUtils_LONG_COUNTER, &RxInternalUtilInternalObservableUtils_OBJECT_EQUALS, &RxInternalUtilInternalObservableUtils_TO_ARRAY, &RxInternalUtilInternalObservableUtils_RETURNS_VOID, &RxInternalUtilInternalObservableUtils_COUNTER, &RxInternalUtilInternalObservableUtils_ERROR_EXTRACTOR, &RxInternalUtilInternalObservableUtils_ERROR_NOT_IMPLEMENTED, "Lrx/functions/Action1<Ljava/lang/Throwable;>;", &RxInternalUtilInternalObservableUtils_IS_EMPTY, "Lrx/Observable$Operator<Ljava/lang/Boolean;Ljava/lang/Object;>;", "LRxInternalUtilInternalObservableUtils_PlusOneFunc2;LRxInternalUtilInternalObservableUtils_PlusOneLongFunc2;LRxInternalUtilInternalObservableUtils_ObjectEqualsFunc2;LRxInternalUtilInternalObservableUtils_ToArrayFunc1;LRxInternalUtilInternalObservableUtils_EqualsWithFunc1;LRxInternalUtilInternalObservableUtils_IsInstanceOfFunc1;LRxInternalUtilInternalObservableUtils_RepeatNotificationDematerializer;LRxInternalUtilInternalObservableUtils_ReturnsVoidFunc1;LRxInternalUtilInternalObservableUtils_SelectorAndObserveOn;LRxInternalUtilInternalObservableUtils_RetryNotificationDematerializer;LRxInternalUtilInternalObservableUtils_NotificationErrorExtractor;LRxInternalUtilInternalObservableUtils_ReplaySupplierNoParams;LRxInternalUtilInternalObservableUtils_ReplaySupplierBuffer;LRxInternalUtilInternalObservableUtils_ReplaySupplierBufferTime;LRxInternalUtilInternalObservableUtils_ReplaySupplierTime;LRxInternalUtilInternalObservableUtils_CollectorCaller;LRxInternalUtilInternalObservableUtils_ErrorNotImplementedAction;", "Ljava/lang/Enum<Lrx/internal/util/InternalObservableUtils;>;" };
+  static const void *ptrTable[] = { "equalsWith", "LNSObject;", "(Ljava/lang/Object;)Lrx/functions/Func1<Ljava/lang/Object;Ljava/lang/Boolean;>;", "isInstanceOf", "LIOSClass;", "(Ljava/lang/Class<*>;)Lrx/functions/Func1<Ljava/lang/Object;Ljava/lang/Boolean;>;", "createRepeatDematerializer", "LRxFunctionsFunc1;", "(Lrx/functions/Func1<-Lrx/Observable<+Ljava/lang/Void;>;+Lrx/Observable<*>;>;)Lrx/functions/Func1<Lrx/Observable<+Lrx/Notification<*>;>;Lrx/Observable<*>;>;", "createReplaySelectorAndObserveOn", "LRxFunctionsFunc1;LRxScheduler;", "<T:Ljava/lang/Object;R:Ljava/lang/Object;>(Lrx/functions/Func1<-Lrx/Observable<TT;>;+Lrx/Observable<TR;>;>;Lrx/Scheduler;)Lrx/functions/Func1<Lrx/Observable<TT;>;Lrx/Observable<TR;>;>;", "createRetryDematerializer", "(Lrx/functions/Func1<-Lrx/Observable<+Ljava/lang/Throwable;>;+Lrx/Observable<*>;>;)Lrx/functions/Func1<Lrx/Observable<+Lrx/Notification<*>;>;Lrx/Observable<*>;>;", "createReplaySupplier", "LRxObservable;", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;)Lrx/functions/Func0<Lrx/observables/ConnectableObservable<TT;>;>;", "LRxObservable;I", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;I)Lrx/functions/Func0<Lrx/observables/ConnectableObservable<TT;>;>;", "LRxObservable;JLJavaUtilConcurrentTimeUnit;LRxScheduler;", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;JLjava/util/concurrent/TimeUnit;Lrx/Scheduler;)Lrx/functions/Func0<Lrx/observables/ConnectableObservable<TT;>;>;", "LRxObservable;IJLJavaUtilConcurrentTimeUnit;LRxScheduler;", "<T:Ljava/lang/Object;>(Lrx/Observable<TT;>;IJLjava/util/concurrent/TimeUnit;Lrx/Scheduler;)Lrx/functions/Func0<Lrx/observables/ConnectableObservable<TT;>;>;", "createCollectorCaller", "LRxFunctionsAction2;", "<T:Ljava/lang/Object;R:Ljava/lang/Object;>(Lrx/functions/Action2<TR;-TT;>;)Lrx/functions/Func2<TR;TT;TR;>;", "valueOf", "LNSString;", &RxInternalUtilInternalObservableUtils_LONG_COUNTER, &RxInternalUtilInternalObservableUtils_OBJECT_EQUALS, &RxInternalUtilInternalObservableUtils_TO_ARRAY, &RxInternalUtilInternalObservableUtils_RETURNS_VOID, &RxInternalUtilInternalObservableUtils_COUNTER, &RxInternalUtilInternalObservableUtils_ERROR_EXTRACTOR, &RxInternalUtilInternalObservableUtils_ERROR_NOT_IMPLEMENTED, "Lrx/functions/Action1<Ljava/lang/Throwable;>;", &RxInternalUtilInternalObservableUtils_IS_EMPTY, "Lrx/Observable$Operator<Ljava/lang/Boolean;Ljava/lang/Object;>;", "LRxInternalUtilInternalObservableUtils_PlusOneFunc2;LRxInternalUtilInternalObservableUtils_PlusOneLongFunc2;LRxInternalUtilInternalObservableUtils_ObjectEqualsFunc2;LRxInternalUtilInternalObservableUtils_ToArrayFunc1;LRxInternalUtilInternalObservableUtils_EqualsWithFunc1;LRxInternalUtilInternalObservableUtils_IsInstanceOfFunc1;LRxInternalUtilInternalObservableUtils_RepeatNotificationDematerializer;LRxInternalUtilInternalObservableUtils_ReturnsVoidFunc1;LRxInternalUtilInternalObservableUtils_SelectorAndObserveOn;LRxInternalUtilInternalObservableUtils_RetryNotificationDematerializer;LRxInternalUtilInternalObservableUtils_NotificationErrorExtractor;LRxInternalUtilInternalObservableUtils_ReplaySupplierNoParams;LRxInternalUtilInternalObservableUtils_ReplaySupplierBuffer;LRxInternalUtilInternalObservableUtils_ReplaySupplierBufferTime;LRxInternalUtilInternalObservableUtils_ReplaySupplierTime;LRxInternalUtilInternalObservableUtils_CollectorCaller;LRxInternalUtilInternalObservableUtils_ErrorNotImplementedAction;", "Ljava/lang/Enum<Lrx/internal/util/InternalObservableUtils;>;" };
   static const J2ObjcClassInfo _RxInternalUtilInternalObservableUtils = { "InternalObservableUtils", "rx.internal.util", ptrTable, methods, fields, 7, 0x4011, 12, 8, -1, 38, -1, 39, -1 };
   return &_RxInternalUtilInternalObservableUtils;
 }
@@ -214,6 +214,10 @@ RxInternalUtilInternalObservableUtils *RxInternalUtilInternalObservableUtils_val
 }
 
 @end
+
+void RxInternalUtilInternalObservableUtils_initWithNSString_withInt_(RxInternalUtilInternalObservableUtils *self, NSString *__name, jint __ordinal) {
+  JavaLangEnum_initWithNSString_withInt_(self, __name, __ordinal);
+}
 
 id<RxFunctionsFunc1> RxInternalUtilInternalObservableUtils_equalsWithWithId_(id other) {
   RxInternalUtilInternalObservableUtils_initialize();
@@ -265,10 +269,6 @@ id<RxFunctionsFunc2> RxInternalUtilInternalObservableUtils_createCollectorCaller
   return create_RxInternalUtilInternalObservableUtils_CollectorCaller_initWithRxFunctionsAction2_(collector);
 }
 
-void RxInternalUtilInternalObservableUtils_initWithNSString_withInt_(RxInternalUtilInternalObservableUtils *self, NSString *__name, jint __ordinal) {
-  JavaLangEnum_initWithNSString_withInt_(self, __name, __ordinal);
-}
-
 IOSObjectArray *RxInternalUtilInternalObservableUtils_values() {
   RxInternalUtilInternalObservableUtils_initialize();
   return [IOSObjectArray arrayWithObjects:RxInternalUtilInternalObservableUtils_values_ count:0 type:RxInternalUtilInternalObservableUtils_class_()];
@@ -288,11 +288,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilInternalObservableUtils)
 
 @implementation RxInternalUtilInternalObservableUtils_PlusOneFunc2
 
-- (JavaLangInteger *)callWithId:(JavaLangInteger *)count
-                         withId:(id)o {
-  return JavaLangInteger_valueOfWithInt_([((JavaLangInteger *) nil_chk(count)) intValue] + 1);
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   RxInternalUtilInternalObservableUtils_PlusOneFunc2_init(self);
@@ -300,15 +295,20 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (JavaLangInteger *)callWithId:(JavaLangInteger *)count
+                         withId:(id)o {
+  return JavaLangInteger_valueOfWithInt_([((JavaLangInteger *) nil_chk(count)) intValue] + 1);
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaLangInteger;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaLangInteger;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:withId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LJavaLangInteger;LNSObject;", "LRxInternalUtilInternalObservableUtils;", "Ljava/lang/Object;Lrx/functions/Func2<Ljava/lang/Integer;Ljava/lang/Object;Ljava/lang/Integer;>;" };
   static const J2ObjcClassInfo _RxInternalUtilInternalObservableUtils_PlusOneFunc2 = { "PlusOneFunc2", "rx.internal.util", ptrTable, methods, NULL, 7, 0x18, 2, 0, 2, -1, -1, 3, -1 };
@@ -333,11 +333,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilInternalObservableUtils_PlusOneFu
 
 @implementation RxInternalUtilInternalObservableUtils_PlusOneLongFunc2
 
-- (JavaLangLong *)callWithId:(JavaLangLong *)count
-                      withId:(id)o {
-  return JavaLangLong_valueOfWithLong_([((JavaLangLong *) nil_chk(count)) longLongValue] + 1);
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   RxInternalUtilInternalObservableUtils_PlusOneLongFunc2_init(self);
@@ -345,15 +340,20 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (JavaLangLong *)callWithId:(JavaLangLong *)count
+                      withId:(id)o {
+  return JavaLangLong_valueOfWithLong_([((JavaLangLong *) nil_chk(count)) longLongValue] + 1);
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaLangLong;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaLangLong;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:withId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LJavaLangLong;LNSObject;", "LRxInternalUtilInternalObservableUtils;", "Ljava/lang/Object;Lrx/functions/Func2<Ljava/lang/Long;Ljava/lang/Object;Ljava/lang/Long;>;" };
   static const J2ObjcClassInfo _RxInternalUtilInternalObservableUtils_PlusOneLongFunc2 = { "PlusOneLongFunc2", "rx.internal.util", ptrTable, methods, NULL, 7, 0x18, 2, 0, 2, -1, -1, 3, -1 };
@@ -378,11 +378,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilInternalObservableUtils_PlusOneLo
 
 @implementation RxInternalUtilInternalObservableUtils_ObjectEqualsFunc2
 
-- (JavaLangBoolean *)callWithId:(id)first
-                         withId:(id)second {
-  return JavaLangBoolean_valueOfWithBoolean_(first == second || (first != nil && [first isEqual:second]));
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   RxInternalUtilInternalObservableUtils_ObjectEqualsFunc2_init(self);
@@ -390,15 +385,20 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (JavaLangBoolean *)callWithId:(id)first
+                         withId:(id)second {
+  return JavaLangBoolean_valueOfWithBoolean_(first == second || (first != nil && [first isEqual:second]));
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaLangBoolean;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaLangBoolean;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:withId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LNSObject;LNSObject;", "LRxInternalUtilInternalObservableUtils;", "Ljava/lang/Object;Lrx/functions/Func2<Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Boolean;>;" };
   static const J2ObjcClassInfo _RxInternalUtilInternalObservableUtils_ObjectEqualsFunc2 = { "ObjectEqualsFunc2", "rx.internal.util", ptrTable, methods, NULL, 7, 0x18, 2, 0, 2, -1, -1, 3, -1 };
@@ -423,10 +423,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilInternalObservableUtils_ObjectEqu
 
 @implementation RxInternalUtilInternalObservableUtils_ToArrayFunc1
 
-- (IOSObjectArray *)callWithId:(id<JavaUtilList>)o {
-  return [((id<JavaUtilList>) nil_chk(o)) toArrayWithNSObjectArray:[IOSObjectArray arrayWithLength:[o size] type:RxObservable_class_()]];
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   RxInternalUtilInternalObservableUtils_ToArrayFunc1_init(self);
@@ -434,15 +430,19 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (IOSObjectArray *)callWithId:(id<JavaUtilList>)o {
+  return [((id<JavaUtilList>) nil_chk(o)) toArrayWithNSObjectArray:[IOSObjectArray arrayWithLength:[o size] type:RxObservable_class_()]];
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "[LRxObservable;", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "[LRxObservable;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LJavaUtilList;", "(Ljava/util/List<+Lrx/Observable<*>;>;)[Lrx/Observable<*>;", "LRxInternalUtilInternalObservableUtils;", "Ljava/lang/Object;Lrx/functions/Func1<Ljava/util/List<+Lrx/Observable<*>;>;[Lrx/Observable<*>;>;" };
   static const J2ObjcClassInfo _RxInternalUtilInternalObservableUtils_ToArrayFunc1 = { "ToArrayFunc1", "rx.internal.util", ptrTable, methods, NULL, 7, 0x18, 2, 0, 3, -1, -1, 4, -1 };
@@ -596,7 +596,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilInternalObservableUtils_IsInstanc
   static const J2ObjcFieldInfo fields[] = {
     { "notificationHandler_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x10, -1, -1, 5, -1 },
   };
-  static const void *ptrTable[] = { "LRxFunctionsFunc1;", "(Lrx/functions/Func1<+Lrx/Observable<+Ljava/lang/Void;>;+Lrx/Observable<*>;>;)V", "call", "LRxObservable;", "(Lrx/Observable<+Lrx/Notification<*>;>;)Lrx/Observable<*>;", "Lrx/functions/Func1<+Lrx/Observable<+Ljava/lang/Void;>;+Lrx/Observable<*>;>;", "LRxInternalUtilInternalObservableUtils;", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Observable<+Lrx/Notification<*>;>;Lrx/Observable<*>;>;" };
+  static const void *ptrTable[] = { "LRxFunctionsFunc1;", "(Lrx/functions/Func1<-Lrx/Observable<+Ljava/lang/Void;>;+Lrx/Observable<*>;>;)V", "call", "LRxObservable;", "(Lrx/Observable<+Lrx/Notification<*>;>;)Lrx/Observable<*>;", "Lrx/functions/Func1<-Lrx/Observable<+Ljava/lang/Void;>;+Lrx/Observable<*>;>;", "LRxInternalUtilInternalObservableUtils;", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Observable<+Lrx/Notification<*>;>;Lrx/Observable<*>;>;" };
   static const J2ObjcClassInfo _RxInternalUtilInternalObservableUtils_RepeatNotificationDematerializer = { "RepeatNotificationDematerializer", "rx.internal.util", ptrTable, methods, fields, 7, 0x18, 2, 1, 6, -1, -1, 7, -1 };
   return &_RxInternalUtilInternalObservableUtils_RepeatNotificationDematerializer;
 }
@@ -620,10 +620,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilInternalObservableUtils_RepeatNot
 
 @implementation RxInternalUtilInternalObservableUtils_ReturnsVoidFunc1
 
-- (id)callWithId:(id)t {
-  return nil;
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   RxInternalUtilInternalObservableUtils_ReturnsVoidFunc1_init(self);
@@ -631,15 +627,19 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (JavaLangVoid *)callWithId:(id)t {
+  return nil;
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaLangVoid;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaLangVoid;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LNSObject;", "LRxInternalUtilInternalObservableUtils;", "Ljava/lang/Object;Lrx/functions/Func1<Ljava/lang/Object;Ljava/lang/Void;>;" };
   static const J2ObjcClassInfo _RxInternalUtilInternalObservableUtils_ReturnsVoidFunc1 = { "ReturnsVoidFunc1", "rx.internal.util", ptrTable, methods, NULL, 7, 0x18, 2, 0, 2, -1, -1, 3, -1 };
@@ -746,7 +746,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilInternalObservableUtils_SelectorA
   static const J2ObjcFieldInfo fields[] = {
     { "notificationHandler_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x10, -1, -1, 5, -1 },
   };
-  static const void *ptrTable[] = { "LRxFunctionsFunc1;", "(Lrx/functions/Func1<+Lrx/Observable<+Ljava/lang/Throwable;>;+Lrx/Observable<*>;>;)V", "call", "LRxObservable;", "(Lrx/Observable<+Lrx/Notification<*>;>;)Lrx/Observable<*>;", "Lrx/functions/Func1<+Lrx/Observable<+Ljava/lang/Throwable;>;+Lrx/Observable<*>;>;", "LRxInternalUtilInternalObservableUtils;", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Observable<+Lrx/Notification<*>;>;Lrx/Observable<*>;>;" };
+  static const void *ptrTable[] = { "LRxFunctionsFunc1;", "(Lrx/functions/Func1<-Lrx/Observable<+Ljava/lang/Throwable;>;+Lrx/Observable<*>;>;)V", "call", "LRxObservable;", "(Lrx/Observable<+Lrx/Notification<*>;>;)Lrx/Observable<*>;", "Lrx/functions/Func1<-Lrx/Observable<+Ljava/lang/Throwable;>;+Lrx/Observable<*>;>;", "LRxInternalUtilInternalObservableUtils;", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Observable<+Lrx/Notification<*>;>;Lrx/Observable<*>;>;" };
   static const J2ObjcClassInfo _RxInternalUtilInternalObservableUtils_RetryNotificationDematerializer = { "RetryNotificationDematerializer", "rx.internal.util", ptrTable, methods, fields, 7, 0x18, 2, 1, 6, -1, -1, 7, -1 };
   return &_RxInternalUtilInternalObservableUtils_RetryNotificationDematerializer;
 }
@@ -770,10 +770,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilInternalObservableUtils_RetryNoti
 
 @implementation RxInternalUtilInternalObservableUtils_NotificationErrorExtractor
 
-- (NSException *)callWithId:(RxNotification *)t {
-  return [((RxNotification *) nil_chk(t)) getThrowable];
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   RxInternalUtilInternalObservableUtils_NotificationErrorExtractor_init(self);
@@ -781,15 +777,19 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (NSException *)callWithId:(RxNotification *)t {
+  return [((RxNotification *) nil_chk(t)) getThrowable];
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSException;", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSException;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LRxNotification;", "(Lrx/Notification<*>;)Ljava/lang/Throwable;", "LRxInternalUtilInternalObservableUtils;", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/Notification<*>;Ljava/lang/Throwable;>;" };
   static const J2ObjcClassInfo _RxInternalUtilInternalObservableUtils_NotificationErrorExtractor = { "NotificationErrorExtractor", "rx.internal.util", ptrTable, methods, NULL, 7, 0x18, 2, 0, 3, -1, -1, 4, -1 };
@@ -1099,10 +1099,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilInternalObservableUtils_Collector
 
 @implementation RxInternalUtilInternalObservableUtils_ErrorNotImplementedAction
 
-- (void)callWithId:(NSException *)t {
-  @throw create_RxExceptionsOnErrorNotImplementedException_initWithNSException_(t);
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   RxInternalUtilInternalObservableUtils_ErrorNotImplementedAction_init(self);
@@ -1110,15 +1106,19 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (void)callWithId:(NSException *)t {
+  @throw create_RxExceptionsOnErrorNotImplementedException_initWithNSException_(t);
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "call", "LNSException;", "LRxInternalUtilInternalObservableUtils;", "Ljava/lang/Object;Lrx/functions/Action1<Ljava/lang/Throwable;>;" };
   static const J2ObjcClassInfo _RxInternalUtilInternalObservableUtils_ErrorNotImplementedAction = { "ErrorNotImplementedAction", "rx.internal.util", ptrTable, methods, NULL, 7, 0x18, 2, 0, 2, -1, -1, 3, -1 };

@@ -62,7 +62,7 @@
 
 #pragma mark Protected
 
-- (void)javaFinalize;
+- (void)java_finalize;
 
 @end
 

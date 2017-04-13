@@ -11,6 +11,13 @@
 
 @implementation CoTouchlabSqueakyFieldBaseFieldConverter
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabSqueakyFieldBaseFieldConverter_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (id)javaToSqlArgWithCoTouchlabSqueakyFieldFieldType:(CoTouchlabSqueakyFieldFieldType *)fieldType
                                                withId:(id)javaObject {
   return javaObject;
@@ -22,24 +29,17 @@
   return sqlArg;
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabSqueakyFieldBaseFieldConverter_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, 0, 1, 2, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, 3, 4, 2, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(javaToSqlArgWithCoTouchlabSqueakyFieldFieldType:withId:);
-  methods[1].selector = @selector(sqlArgToJavaWithCoTouchlabSqueakyFieldFieldType:withId:withInt:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(javaToSqlArgWithCoTouchlabSqueakyFieldFieldType:withId:);
+  methods[2].selector = @selector(sqlArgToJavaWithCoTouchlabSqueakyFieldFieldType:withId:withInt:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "javaToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LNSObject;", "LJavaSqlSQLException;", "sqlArgToJava", "LCoTouchlabSqueakyFieldFieldType;LNSObject;I" };
   static const J2ObjcClassInfo _CoTouchlabSqueakyFieldBaseFieldConverter = { "BaseFieldConverter", "co.touchlab.squeaky.field", ptrTable, methods, NULL, 7, 0x401, 3, 0, -1, -1, -1, -1, -1 };

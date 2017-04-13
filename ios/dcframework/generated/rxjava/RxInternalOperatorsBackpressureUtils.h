@@ -36,23 +36,23 @@
 
 + (void)postCompleteDoneWithJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)requested
                                              withJavaUtilQueue:(id<JavaUtilQueue>)queue
-                                              withRxSubscriber:(RxSubscriber *)actual
-                                          withRxFunctionsFunc1:(id<RxFunctionsFunc1>)exitTransform;
+                                              withRxSubscriber:(RxSubscriber *)actual;
 
 + (void)postCompleteDoneWithJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)requested
                                              withJavaUtilQueue:(id<JavaUtilQueue>)queue
-                                              withRxSubscriber:(RxSubscriber *)actual;
+                                              withRxSubscriber:(RxSubscriber *)actual
+                                          withRxFunctionsFunc1:(id<RxFunctionsFunc1>)exitTransform;
+
++ (jboolean)postCompleteRequestWithJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)requested
+                                                             withLong:(jlong)n
+                                                    withJavaUtilQueue:(id<JavaUtilQueue>)queue
+                                                     withRxSubscriber:(RxSubscriber *)actual;
 
 + (jboolean)postCompleteRequestWithJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)requested
                                                              withLong:(jlong)n
                                                     withJavaUtilQueue:(id<JavaUtilQueue>)queue
                                                      withRxSubscriber:(RxSubscriber *)actual
                                                  withRxFunctionsFunc1:(id<RxFunctionsFunc1>)exitTransform;
-
-+ (jboolean)postCompleteRequestWithJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)requested
-                                                             withLong:(jlong)n
-                                                    withJavaUtilQueue:(id<JavaUtilQueue>)queue
-                                                     withRxSubscriber:(RxSubscriber *)actual;
 
 + (jlong)producedWithJavaUtilConcurrentAtomicAtomicLong:(JavaUtilConcurrentAtomicAtomicLong *)requested
                                                withLong:(jlong)n;

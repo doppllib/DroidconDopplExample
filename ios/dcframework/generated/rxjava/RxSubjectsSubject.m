@@ -25,7 +25,7 @@
 }
 
 - (RxSubjectsSerializedSubject *)toSerialized {
-  if ([self java_getClass] == (id) RxSubjectsSerializedSubject_class_()) {
+  if ([self java_getClass] == RxSubjectsSerializedSubject_class_()) {
     return (RxSubjectsSerializedSubject *) cast_chk(self, [RxSubjectsSerializedSubject class]);
   }
   return create_RxSubjectsSerializedSubject_initWithRxSubjectsSubject_(self);

@@ -27,6 +27,8 @@
 @class IOSObjectArray;
 @class JavaUtilConcurrentAtomicAtomicLong;
 @protocol JavaUtilCollection;
+@protocol JavaUtilFunctionConsumer;
+@protocol JavaUtilFunctionPredicate;
 @protocol JavaUtilIterator;
 @protocol JavaUtilSpliterator;
 @protocol JavaUtilStreamStream;

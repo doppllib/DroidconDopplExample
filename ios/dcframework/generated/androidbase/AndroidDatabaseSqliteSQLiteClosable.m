@@ -24,6 +24,13 @@ __attribute__((unused)) static IOSObjectArray *AndroidDatabaseSqliteSQLiteClosab
 
 @implementation AndroidDatabaseSqliteSQLiteClosable
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  AndroidDatabaseSqliteSQLiteClosable_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (void)onAllReferencesReleased {
   // can't call an abstract method
   [self doesNotRecognizeSelector:_cmd];
@@ -66,32 +73,25 @@ __attribute__((unused)) static IOSObjectArray *AndroidDatabaseSqliteSQLiteClosab
   [self releaseReference];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  AndroidDatabaseSqliteSQLiteClosable_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x404, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x4, -1, -1, -1, -1, 0, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, 1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onAllReferencesReleased);
-  methods[1].selector = @selector(onAllReferencesReleasedFromContainer);
-  methods[2].selector = @selector(acquireReference);
-  methods[3].selector = @selector(releaseReference);
-  methods[4].selector = @selector(releaseReferenceFromContainer);
-  methods[5].selector = @selector(close);
-  methods[6].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(onAllReferencesReleased);
+  methods[2].selector = @selector(onAllReferencesReleasedFromContainer);
+  methods[3].selector = @selector(acquireReference);
+  methods[4].selector = @selector(releaseReference);
+  methods[5].selector = @selector(releaseReferenceFromContainer);
+  methods[6].selector = @selector(close);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "mReferenceCount_", "I", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },

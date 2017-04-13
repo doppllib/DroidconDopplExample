@@ -28,6 +28,13 @@ J2OBJC_INITIALIZED_DEFN(RxPluginsRxJavaSchedulersHook)
 
 @implementation RxPluginsRxJavaSchedulersHook
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaSchedulersHook_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (RxScheduler *)createComputationScheduler {
   return RxPluginsRxJavaSchedulersHook_createComputationScheduler();
 }
@@ -72,15 +79,9 @@ J2OBJC_INITIALIZED_DEFN(RxPluginsRxJavaSchedulersHook)
   return RxPluginsRxJavaSchedulersHook_getDefaultInstance();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaSchedulersHook_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxScheduler;", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxScheduler;", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, "LRxScheduler;", 0x9, -1, -1, -1, -1, -1, -1 },
@@ -92,22 +93,21 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "LRxScheduler;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRxFunctionsAction0;", 0x1, 4, 5, -1, -1, 6, -1 },
     { NULL, "LRxPluginsRxJavaSchedulersHook;", 0x9, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(createComputationScheduler);
-  methods[1].selector = @selector(createComputationSchedulerWithJavaUtilConcurrentThreadFactory:);
-  methods[2].selector = @selector(createIoScheduler);
-  methods[3].selector = @selector(createIoSchedulerWithJavaUtilConcurrentThreadFactory:);
-  methods[4].selector = @selector(createNewThreadScheduler);
-  methods[5].selector = @selector(createNewThreadSchedulerWithJavaUtilConcurrentThreadFactory:);
-  methods[6].selector = @selector(getComputationScheduler);
-  methods[7].selector = @selector(getIOScheduler);
-  methods[8].selector = @selector(getNewThreadScheduler);
-  methods[9].selector = @selector(onScheduleWithRxFunctionsAction0:);
-  methods[10].selector = @selector(getDefaultInstance);
-  methods[11].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(createComputationScheduler);
+  methods[2].selector = @selector(createComputationSchedulerWithJavaUtilConcurrentThreadFactory:);
+  methods[3].selector = @selector(createIoScheduler);
+  methods[4].selector = @selector(createIoSchedulerWithJavaUtilConcurrentThreadFactory:);
+  methods[5].selector = @selector(createNewThreadScheduler);
+  methods[6].selector = @selector(createNewThreadSchedulerWithJavaUtilConcurrentThreadFactory:);
+  methods[7].selector = @selector(getComputationScheduler);
+  methods[8].selector = @selector(getIOScheduler);
+  methods[9].selector = @selector(getNewThreadScheduler);
+  methods[10].selector = @selector(onScheduleWithRxFunctionsAction0:);
+  methods[11].selector = @selector(getDefaultInstance);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "DEFAULT_INSTANCE", "LRxPluginsRxJavaSchedulersHook;", .constantValue.asLong = 0, 0x1a, -1, 7, -1, -1 },
@@ -125,6 +125,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void RxPluginsRxJavaSchedulersHook_init(RxPluginsRxJavaSchedulersHook *self) {
+  NSObject_init(self);
+}
+
+RxPluginsRxJavaSchedulersHook *new_RxPluginsRxJavaSchedulersHook_init() {
+  J2OBJC_NEW_IMPL(RxPluginsRxJavaSchedulersHook, init)
+}
+
+RxPluginsRxJavaSchedulersHook *create_RxPluginsRxJavaSchedulersHook_init() {
+  J2OBJC_CREATE_IMPL(RxPluginsRxJavaSchedulersHook, init)
+}
 
 RxScheduler *RxPluginsRxJavaSchedulersHook_createComputationScheduler() {
   RxPluginsRxJavaSchedulersHook_initialize();
@@ -168,18 +180,6 @@ RxScheduler *RxPluginsRxJavaSchedulersHook_createNewThreadSchedulerWithJavaUtilC
 RxPluginsRxJavaSchedulersHook *RxPluginsRxJavaSchedulersHook_getDefaultInstance() {
   RxPluginsRxJavaSchedulersHook_initialize();
   return RxPluginsRxJavaSchedulersHook_DEFAULT_INSTANCE;
-}
-
-void RxPluginsRxJavaSchedulersHook_init(RxPluginsRxJavaSchedulersHook *self) {
-  NSObject_init(self);
-}
-
-RxPluginsRxJavaSchedulersHook *new_RxPluginsRxJavaSchedulersHook_init() {
-  J2OBJC_NEW_IMPL(RxPluginsRxJavaSchedulersHook, init)
-}
-
-RxPluginsRxJavaSchedulersHook *create_RxPluginsRxJavaSchedulersHook_init() {
-  J2OBJC_CREATE_IMPL(RxPluginsRxJavaSchedulersHook, init)
 }
 
 IOSObjectArray *RxPluginsRxJavaSchedulersHook__Annotations$0() {

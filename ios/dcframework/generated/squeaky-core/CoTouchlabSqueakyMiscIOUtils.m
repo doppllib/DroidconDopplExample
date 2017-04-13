@@ -10,10 +10,6 @@
 
 @implementation CoTouchlabSqueakyMiscIOUtils
 
-+ (void)closeQuietlyWithJavaIoCloseable:(id<JavaIoCloseable>)closeable {
-  CoTouchlabSqueakyMiscIOUtils_closeQuietlyWithJavaIoCloseable_(closeable);
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   CoTouchlabSqueakyMiscIOUtils_init(self);
@@ -21,15 +17,19 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
++ (void)closeQuietlyWithJavaIoCloseable:(id<JavaIoCloseable>)closeable {
+  CoTouchlabSqueakyMiscIOUtils_closeQuietlyWithJavaIoCloseable_(closeable);
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x9, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(closeQuietlyWithJavaIoCloseable:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(closeQuietlyWithJavaIoCloseable:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "closeQuietly", "LJavaIoCloseable;" };
   static const J2ObjcClassInfo _CoTouchlabSqueakyMiscIOUtils = { "IOUtils", "co.touchlab.squeaky.misc", ptrTable, methods, NULL, 7, 0x1, 2, 0, -1, -1, -1, -1, -1 };
@@ -37,17 +37,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
-
-void CoTouchlabSqueakyMiscIOUtils_closeQuietlyWithJavaIoCloseable_(id<JavaIoCloseable> closeable) {
-  CoTouchlabSqueakyMiscIOUtils_initialize();
-  if (closeable != nil) {
-    @try {
-      [closeable close];
-    }
-    @catch (JavaIoIOException *e) {
-    }
-  }
-}
 
 void CoTouchlabSqueakyMiscIOUtils_init(CoTouchlabSqueakyMiscIOUtils *self) {
   NSObject_init(self);
@@ -59,6 +48,17 @@ CoTouchlabSqueakyMiscIOUtils *new_CoTouchlabSqueakyMiscIOUtils_init() {
 
 CoTouchlabSqueakyMiscIOUtils *create_CoTouchlabSqueakyMiscIOUtils_init() {
   J2OBJC_CREATE_IMPL(CoTouchlabSqueakyMiscIOUtils, init)
+}
+
+void CoTouchlabSqueakyMiscIOUtils_closeQuietlyWithJavaIoCloseable_(id<JavaIoCloseable> closeable) {
+  CoTouchlabSqueakyMiscIOUtils_initialize();
+  if (closeable != nil) {
+    @try {
+      [closeable close];
+    }
+    @catch (JavaIoIOException *e) {
+    }
+  }
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabSqueakyMiscIOUtils)

@@ -12,13 +12,17 @@
 #include "java/lang/Boolean.h"
 #include "java/lang/Integer.h"
 
-@interface RxInternalOperatorsOperatorSkipWhile_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorSkipWhile_1 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorSkipWhile *this$0_;
+  RxSubscriber *val$child_;
   jboolean skipping_;
   jint index_;
-  RxSubscriber *val$child_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorSkipWhile:(RxInternalOperatorsOperatorSkipWhile *)outer$
+                                            withRxSubscriber:(RxSubscriber *)capture$0
+                                            withRxSubscriber:(RxSubscriber *)param0;
 
 - (void)onNextWithId:(id)t;
 
@@ -26,44 +30,35 @@
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxInternalOperatorsOperatorSkipWhile:(RxInternalOperatorsOperatorSkipWhile *)outer$
-                                            withRxSubscriber:(RxSubscriber *)capture$0
-                                            withRxSubscriber:(RxSubscriber *)arg$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSkipWhile_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSkipWhile_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSkipWhile_$1, this$0_, RxInternalOperatorsOperatorSkipWhile *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSkipWhile_$1, val$child_, RxSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorSkipWhile_1_initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipWhile_1 *self, RxInternalOperatorsOperatorSkipWhile *outer$, RxSubscriber *capture$0, RxSubscriber *param0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorSkipWhile_$1_initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipWhile_$1 *self, RxInternalOperatorsOperatorSkipWhile *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorSkipWhile_1 *new_RxInternalOperatorsOperatorSkipWhile_1_initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipWhile *outer$, RxSubscriber *capture$0, RxSubscriber *param0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorSkipWhile_$1 *new_RxInternalOperatorsOperatorSkipWhile_$1_initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipWhile *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorSkipWhile_1 *create_RxInternalOperatorsOperatorSkipWhile_1_initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipWhile *outer$, RxSubscriber *capture$0, RxSubscriber *param0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorSkipWhile_$1 *create_RxInternalOperatorsOperatorSkipWhile_$1_initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipWhile *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0);
-
-@interface RxInternalOperatorsOperatorSkipWhile_$2 : NSObject < RxFunctionsFunc2 > {
+@interface RxInternalOperatorsOperatorSkipWhile_2 : NSObject < RxFunctionsFunc2 > {
  @public
   id<RxFunctionsFunc1> val$predicate_;
 }
 
+- (instancetype)initWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$0;
+
 - (JavaLangBoolean *)callWithId:(id)t1
                          withId:(JavaLangInteger *)t2;
 
-- (instancetype)initWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSkipWhile_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSkipWhile_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSkipWhile_$2, val$predicate_, id<RxFunctionsFunc1>)
+__attribute__((unused)) static void RxInternalOperatorsOperatorSkipWhile_2_initWithRxFunctionsFunc1_(RxInternalOperatorsOperatorSkipWhile_2 *self, id<RxFunctionsFunc1> capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorSkipWhile_$2_initWithRxFunctionsFunc1_(RxInternalOperatorsOperatorSkipWhile_$2 *self, id<RxFunctionsFunc1> capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorSkipWhile_2 *new_RxInternalOperatorsOperatorSkipWhile_2_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorSkipWhile_$2 *new_RxInternalOperatorsOperatorSkipWhile_$2_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorSkipWhile_$2 *create_RxInternalOperatorsOperatorSkipWhile_$2_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorSkipWhile_2 *create_RxInternalOperatorsOperatorSkipWhile_2_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0);
 
 @implementation RxInternalOperatorsOperatorSkipWhile
 
@@ -73,7 +68,7 @@ __attribute__((unused)) static RxInternalOperatorsOperatorSkipWhile_$2 *create_R
 }
 
 - (RxSubscriber *)callWithId:(RxSubscriber *)child {
-  return create_RxInternalOperatorsOperatorSkipWhile_$1_initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_(self, child, child);
+  return create_RxInternalOperatorsOperatorSkipWhile_1_initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_(self, child, child);
 }
 
 + (id<RxFunctionsFunc2>)toPredicate2WithRxFunctionsFunc1:(id<RxFunctionsFunc1>)predicate {
@@ -122,12 +117,19 @@ RxInternalOperatorsOperatorSkipWhile *create_RxInternalOperatorsOperatorSkipWhil
 
 id<RxFunctionsFunc2> RxInternalOperatorsOperatorSkipWhile_toPredicate2WithRxFunctionsFunc1_(id<RxFunctionsFunc1> predicate) {
   RxInternalOperatorsOperatorSkipWhile_initialize();
-  return create_RxInternalOperatorsOperatorSkipWhile_$2_initWithRxFunctionsFunc1_(predicate);
+  return create_RxInternalOperatorsOperatorSkipWhile_2_initWithRxFunctionsFunc1_(predicate);
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorSkipWhile)
 
-@implementation RxInternalOperatorsOperatorSkipWhile_$1
+@implementation RxInternalOperatorsOperatorSkipWhile_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorSkipWhile:(RxInternalOperatorsOperatorSkipWhile *)outer$
+                                            withRxSubscriber:(RxSubscriber *)capture$0
+                                            withRxSubscriber:(RxSubscriber *)param0 {
+  RxInternalOperatorsOperatorSkipWhile_1_initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, param0);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   if (!skipping_) {
@@ -160,15 +162,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorSkipWhile)
   [((RxSubscriber *) nil_chk(val$child_)) onCompleted];
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorSkipWhile:(RxInternalOperatorsOperatorSkipWhile *)outer$
-                                            withRxSubscriber:(RxSubscriber *)capture$0
-                                            withRxSubscriber:(RxSubscriber *)arg$0 {
-  RxInternalOperatorsOperatorSkipWhile_$1_initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, arg$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorSkipWhile_$1 class]);
   RELEASE_(this$0_);
   RELEASE_(val$child_);
   [super dealloc];
@@ -176,56 +170,56 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorSkipWhile)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
+    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxInternalOperatorsOperatorSkipWhile:withRxSubscriber:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorSkipWhile:withRxSubscriber:withRxSubscriber:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorSkipWhile;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorSkipWhile;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
     { "skipping_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "index_", "I", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
-    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxInternalOperatorsOperatorSkipWhile;LRxSubscriber;LRxSubscriber;", "(Lrx/internal/operators/OperatorSkipWhile;Lrx/Subscriber<-TT;>;Lrx/Subscriber<*>;)V", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorSkipWhile;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSkipWhile_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 4, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsOperatorSkipWhile_$1;
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/internal/operators/OperatorSkipWhile<TT;>;", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorSkipWhile;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSkipWhile_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 4, 9, -1, 10, 11, -1 };
+  return &_RxInternalOperatorsOperatorSkipWhile_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorSkipWhile_$1_initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipWhile_$1 *self, RxInternalOperatorsOperatorSkipWhile *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
+void RxInternalOperatorsOperatorSkipWhile_1_initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipWhile_1 *self, RxInternalOperatorsOperatorSkipWhile *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$child_, capture$0);
-  RxSubscriber_initWithRxSubscriber_(self, arg$0);
+  RxSubscriber_initWithRxSubscriber_(self, param0);
   self->skipping_ = true;
 }
 
-RxInternalOperatorsOperatorSkipWhile_$1 *new_RxInternalOperatorsOperatorSkipWhile_$1_initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipWhile *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSkipWhile_$1, initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_, outer$, capture$0, arg$0)
+RxInternalOperatorsOperatorSkipWhile_1 *new_RxInternalOperatorsOperatorSkipWhile_1_initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipWhile *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSkipWhile_1, initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_, outer$, capture$0, param0)
 }
 
-RxInternalOperatorsOperatorSkipWhile_$1 *create_RxInternalOperatorsOperatorSkipWhile_$1_initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipWhile *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSkipWhile_$1, initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_, outer$, capture$0, arg$0)
+RxInternalOperatorsOperatorSkipWhile_1 *create_RxInternalOperatorsOperatorSkipWhile_1_initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSkipWhile *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSkipWhile_1, initWithRxInternalOperatorsOperatorSkipWhile_withRxSubscriber_withRxSubscriber_, outer$, capture$0, param0)
 }
 
-@implementation RxInternalOperatorsOperatorSkipWhile_$2
+@implementation RxInternalOperatorsOperatorSkipWhile_2
+
+- (instancetype)initWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$0 {
+  RxInternalOperatorsOperatorSkipWhile_2_initWithRxFunctionsFunc1_(self, capture$0);
+  return self;
+}
 
 - (JavaLangBoolean *)callWithId:(id)t1
                          withId:(JavaLangInteger *)t2 {
   return [((id<RxFunctionsFunc1>) nil_chk(val$predicate_)) callWithId:t1];
-}
-
-- (instancetype)initWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$0 {
-  RxInternalOperatorsOperatorSkipWhile_$2_initWithRxFunctionsFunc1_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -235,33 +229,33 @@ RxInternalOperatorsOperatorSkipWhile_$1 *create_RxInternalOperatorsOperatorSkipW
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaLangBoolean;", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:withId:);
-  methods[1].selector = @selector(initWithRxFunctionsFunc1:);
+  methods[0].selector = @selector(initWithRxFunctionsFunc1:);
+  methods[1].selector = @selector(callWithId:withId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$predicate_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$predicate_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
   };
-  static const void *ptrTable[] = { "call", "LNSObject;LJavaLangInteger;", "(TT;Ljava/lang/Integer;)Ljava/lang/Boolean;", "LRxFunctionsFunc1;", "(Lrx/functions/Func1<-TT;Ljava/lang/Boolean;>;)V", "Lrx/functions/Func1<-TT;Ljava/lang/Boolean;>;", "LRxInternalOperatorsOperatorSkipWhile;", "toPredicate2WithRxFunctionsFunc1:", "Ljava/lang/Object;Lrx/functions/Func2<TT;Ljava/lang/Integer;Ljava/lang/Boolean;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSkipWhile_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 6, -1, 7, 8, -1 };
-  return &_RxInternalOperatorsOperatorSkipWhile_$2;
+  static const void *ptrTable[] = { "call", "LNSObject;LJavaLangInteger;", "(TT;Ljava/lang/Integer;)Ljava/lang/Boolean;", "Lrx/functions/Func1<-TT;Ljava/lang/Boolean;>;", "LRxInternalOperatorsOperatorSkipWhile;", "toPredicate2WithRxFunctionsFunc1:", "Ljava/lang/Object;Lrx/functions/Func2<TT;Ljava/lang/Integer;Ljava/lang/Boolean;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSkipWhile_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
+  return &_RxInternalOperatorsOperatorSkipWhile_2;
 }
 
 @end
 
-void RxInternalOperatorsOperatorSkipWhile_$2_initWithRxFunctionsFunc1_(RxInternalOperatorsOperatorSkipWhile_$2 *self, id<RxFunctionsFunc1> capture$0) {
+void RxInternalOperatorsOperatorSkipWhile_2_initWithRxFunctionsFunc1_(RxInternalOperatorsOperatorSkipWhile_2 *self, id<RxFunctionsFunc1> capture$0) {
   JreStrongAssign(&self->val$predicate_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorSkipWhile_$2 *new_RxInternalOperatorsOperatorSkipWhile_$2_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSkipWhile_$2, initWithRxFunctionsFunc1_, capture$0)
+RxInternalOperatorsOperatorSkipWhile_2 *new_RxInternalOperatorsOperatorSkipWhile_2_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSkipWhile_2, initWithRxFunctionsFunc1_, capture$0)
 }
 
-RxInternalOperatorsOperatorSkipWhile_$2 *create_RxInternalOperatorsOperatorSkipWhile_$2_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSkipWhile_$2, initWithRxFunctionsFunc1_, capture$0)
+RxInternalOperatorsOperatorSkipWhile_2 *create_RxInternalOperatorsOperatorSkipWhile_2_initWithRxFunctionsFunc1_(id<RxFunctionsFunc1> capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSkipWhile_2, initWithRxFunctionsFunc1_, capture$0)
 }

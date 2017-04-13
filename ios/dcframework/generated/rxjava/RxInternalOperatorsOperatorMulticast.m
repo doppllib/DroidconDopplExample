@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OperatorMulticast.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxFunctionsAction0.h"
 #include "RxFunctionsAction1.h"
@@ -36,61 +35,57 @@ __attribute__((unused)) static RxInternalOperatorsOperatorMulticast *new_RxInter
 
 __attribute__((unused)) static RxInternalOperatorsOperatorMulticast *create_RxInternalOperatorsOperatorMulticast_initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_withRxObservable_withRxFunctionsFunc0_(id guard, JavaUtilConcurrentAtomicAtomicReference *connectedSubject, id<JavaUtilList> waitingForConnect, RxObservable *source, id<RxFunctionsFunc0> subjectFactory);
 
-@interface RxInternalOperatorsOperatorMulticast_$1 : NSObject < RxObservable_OnSubscribe > {
+@interface RxInternalOperatorsOperatorMulticast_1 : NSObject < RxObservable_OnSubscribe > {
  @public
   id val$guard_;
   JavaUtilConcurrentAtomicAtomicReference *val$connectedSubject_;
   id<JavaUtilList> val$waitingForConnect_;
 }
 
-- (void)callWithId:(RxSubscriber *)subscriber;
-
 - (instancetype)initWithId:(id)capture$0
 withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$1
           withJavaUtilList:(id<JavaUtilList>)capture$2;
 
+- (void)callWithId:(RxSubscriber *)subscriber;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorMulticast_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorMulticast_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorMulticast_$1, val$guard_, id)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorMulticast_$1, val$connectedSubject_, JavaUtilConcurrentAtomicAtomicReference *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorMulticast_$1, val$waitingForConnect_, id<JavaUtilList>)
+__attribute__((unused)) static void RxInternalOperatorsOperatorMulticast_1_initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_(RxInternalOperatorsOperatorMulticast_1 *self, id capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<JavaUtilList> capture$2);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorMulticast_$1_initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_(RxInternalOperatorsOperatorMulticast_$1 *self, id capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<JavaUtilList> capture$2);
+__attribute__((unused)) static RxInternalOperatorsOperatorMulticast_1 *new_RxInternalOperatorsOperatorMulticast_1_initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_(id capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<JavaUtilList> capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorMulticast_$1 *new_RxInternalOperatorsOperatorMulticast_$1_initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_(id capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<JavaUtilList> capture$2) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorMulticast_1 *create_RxInternalOperatorsOperatorMulticast_1_initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_(id capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<JavaUtilList> capture$2);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorMulticast_$1 *create_RxInternalOperatorsOperatorMulticast_$1_initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_(id capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<JavaUtilList> capture$2);
-
-@interface RxInternalOperatorsOperatorMulticast_$2 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOperatorMulticast_2 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalOperatorsOperatorMulticast *this$0_;
   JavaUtilConcurrentAtomicAtomicReference *val$gs_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalOperatorsOperatorMulticast:(RxInternalOperatorsOperatorMulticast *)outer$
                  withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorMulticast_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorMulticast_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorMulticast_$2, this$0_, RxInternalOperatorsOperatorMulticast *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorMulticast_$2, val$gs_, JavaUtilConcurrentAtomicAtomicReference *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorMulticast_2_initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorMulticast_2 *self, RxInternalOperatorsOperatorMulticast *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorMulticast_$2_initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorMulticast_$2 *self, RxInternalOperatorsOperatorMulticast *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorMulticast_2 *new_RxInternalOperatorsOperatorMulticast_2_initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorMulticast *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorMulticast_$2 *new_RxInternalOperatorsOperatorMulticast_$2_initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorMulticast *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorMulticast_2 *create_RxInternalOperatorsOperatorMulticast_2_initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorMulticast *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorMulticast_$2 *create_RxInternalOperatorsOperatorMulticast_$2_initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorMulticast *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0);
-
-@interface RxInternalOperatorsOperatorMulticast_$3 : RxSubscriber {
+@interface RxInternalOperatorsOperatorMulticast_3 : RxSubscriber {
  @public
   RxSubscriber *val$s_;
 }
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
+                    withRxSubscriber:(RxSubscriber *)param0;
 
 - (void)onNextWithId:(id)t;
 
@@ -98,20 +93,15 @@ __attribute__((unused)) static RxInternalOperatorsOperatorMulticast_$2 *create_R
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
-                    withRxSubscriber:(RxSubscriber *)arg$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorMulticast_$3)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorMulticast_3)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorMulticast_$3, val$s_, RxSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorMulticast_3_initWithRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorMulticast_3 *self, RxSubscriber *capture$0, RxSubscriber *param0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorMulticast_$3_initWithRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorMulticast_$3 *self, RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorMulticast_3 *new_RxInternalOperatorsOperatorMulticast_3_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *param0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorMulticast_$3 *new_RxInternalOperatorsOperatorMulticast_$3_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *arg$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorMulticast_$3 *create_RxInternalOperatorsOperatorMulticast_$3_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorMulticast_3 *create_RxInternalOperatorsOperatorMulticast_3_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *param0);
 
 @implementation RxInternalOperatorsOperatorMulticast
 
@@ -140,10 +130,10 @@ withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicRefer
       RxSubjectsSubject *subject = [((id<RxFunctionsFunc0>) nil_chk(subjectFactory_)) call];
       JreStrongAssign(&subscription_, RxObserversSubscribers_fromWithRxObserver_(subject));
       JavaUtilConcurrentAtomicAtomicReference *gs = create_JavaUtilConcurrentAtomicAtomicReference_init();
-      [gs setWithId:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOperatorMulticast_$2_initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_(self, gs))];
+      [gs setWithId:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOperatorMulticast_2_initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_(self, gs))];
       JreStrongAssign(&guardedSubscription_, [gs get]);
       for (RxSubscriber * __strong s in nil_chk(waitingForConnect_)) {
-        [((RxSubjectsSubject *) nil_chk(subject)) unsafeSubscribeWithRxSubscriber:create_RxInternalOperatorsOperatorMulticast_$3_initWithRxSubscriber_withRxSubscriber_(s, s)];
+        [((RxSubjectsSubject *) nil_chk(subject)) unsafeSubscribeWithRxSubscriber:create_RxInternalOperatorsOperatorMulticast_3_initWithRxSubscriber_withRxSubscriber_(s, s)];
       }
       [waitingForConnect_ clear];
       [((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(connectedSubject_)) setWithId:subject];
@@ -211,7 +201,7 @@ RxInternalOperatorsOperatorMulticast *create_RxInternalOperatorsOperatorMulticas
 }
 
 void RxInternalOperatorsOperatorMulticast_initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_withRxObservable_withRxFunctionsFunc0_(RxInternalOperatorsOperatorMulticast *self, id guard, JavaUtilConcurrentAtomicAtomicReference *connectedSubject, id<JavaUtilList> waitingForConnect, RxObservable *source, id<RxFunctionsFunc0> subjectFactory) {
-  RxObservablesConnectableObservable_initWithRxObservable_OnSubscribe_(self, create_RxInternalOperatorsOperatorMulticast_$1_initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_(guard, connectedSubject, waitingForConnect));
+  RxObservablesConnectableObservable_initWithRxObservable_OnSubscribe_(self, create_RxInternalOperatorsOperatorMulticast_1_initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_(guard, connectedSubject, waitingForConnect));
   JreStrongAssign(&self->guard_, guard);
   JreStrongAssign(&self->connectedSubject_, connectedSubject);
   JreStrongAssign(&self->waitingForConnect_, waitingForConnect);
@@ -229,7 +219,14 @@ RxInternalOperatorsOperatorMulticast *create_RxInternalOperatorsOperatorMulticas
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorMulticast)
 
-@implementation RxInternalOperatorsOperatorMulticast_$1
+@implementation RxInternalOperatorsOperatorMulticast_1
+
+- (instancetype)initWithId:(id)capture$0
+withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$1
+          withJavaUtilList:(id<JavaUtilList>)capture$2 {
+  RxInternalOperatorsOperatorMulticast_1_initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_(self, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)callWithId:(RxSubscriber *)subscriber {
   @synchronized(val$guard_) {
@@ -242,13 +239,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorMulticast)
   }
 }
 
-- (instancetype)initWithId:(id)capture$0
-withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$1
-          withJavaUtilList:(id<JavaUtilList>)capture$2 {
-  RxInternalOperatorsOperatorMulticast_$1_initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_(self, capture$0, capture$1, capture$2);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$guard_);
   RELEASE_(val$connectedSubject_);
@@ -258,42 +248,48 @@ withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicRefer
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithId:withJavaUtilConcurrentAtomicAtomicReference:withJavaUtilList:);
+  methods[0].selector = @selector(initWithId:withJavaUtilConcurrentAtomicAtomicReference:withJavaUtilList:);
+  methods[1].selector = @selector(callWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$guard_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$connectedSubject_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-    { "val$waitingForConnect_", "LJavaUtilList;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
+    { "val$connectedSubject_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$waitingForConnect_", "LJavaUtilList;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
   };
-  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-TR;>;)V", "LNSObject;LJavaUtilConcurrentAtomicAtomicReference;LJavaUtilList;", "(Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReference<Lrx/subjects/Subject<-TT;+TR;>;>;Ljava/util/List<Lrx/Subscriber<-TR;>;>;)V", "Ljava/util/concurrent/atomic/AtomicReference<Lrx/subjects/Subject<-TT;+TR;>;>;", "Ljava/util/List<Lrx/Subscriber<-TR;>;>;", "LRxInternalOperatorsOperatorMulticast;", "initWithId:withJavaUtilConcurrentAtomicAtomicReference:withJavaUtilList:withRxObservable:withRxFunctionsFunc0:", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<TR;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorMulticast_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 3, 7, -1, 8, 9, -1 };
-  return &_RxInternalOperatorsOperatorMulticast_$1;
+  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-TR;>;)V", "Ljava/util/concurrent/atomic/AtomicReference<Lrx/subjects/Subject<-TT;+TR;>;>;", "Ljava/util/List<Lrx/Subscriber<-TR;>;>;", "LRxInternalOperatorsOperatorMulticast;", "initWithId:withJavaUtilConcurrentAtomicAtomicReference:withJavaUtilList:withRxObservable:withRxFunctionsFunc0:", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<TR;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorMulticast_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 3, 5, -1, 6, 7, -1 };
+  return &_RxInternalOperatorsOperatorMulticast_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorMulticast_$1_initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_(RxInternalOperatorsOperatorMulticast_$1 *self, id capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<JavaUtilList> capture$2) {
+void RxInternalOperatorsOperatorMulticast_1_initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_(RxInternalOperatorsOperatorMulticast_1 *self, id capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<JavaUtilList> capture$2) {
   JreStrongAssign(&self->val$guard_, capture$0);
   JreStrongAssign(&self->val$connectedSubject_, capture$1);
   JreStrongAssign(&self->val$waitingForConnect_, capture$2);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorMulticast_$1 *new_RxInternalOperatorsOperatorMulticast_$1_initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_(id capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<JavaUtilList> capture$2) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorMulticast_$1, initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_, capture$0, capture$1, capture$2)
+RxInternalOperatorsOperatorMulticast_1 *new_RxInternalOperatorsOperatorMulticast_1_initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_(id capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<JavaUtilList> capture$2) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorMulticast_1, initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_, capture$0, capture$1, capture$2)
 }
 
-RxInternalOperatorsOperatorMulticast_$1 *create_RxInternalOperatorsOperatorMulticast_$1_initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_(id capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<JavaUtilList> capture$2) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorMulticast_$1, initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_, capture$0, capture$1, capture$2)
+RxInternalOperatorsOperatorMulticast_1 *create_RxInternalOperatorsOperatorMulticast_1_initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_(id capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, id<JavaUtilList> capture$2) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorMulticast_1, initWithId_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilList_, capture$0, capture$1, capture$2)
 }
 
-@implementation RxInternalOperatorsOperatorMulticast_$2
+@implementation RxInternalOperatorsOperatorMulticast_2
+
+- (instancetype)initWithRxInternalOperatorsOperatorMulticast:(RxInternalOperatorsOperatorMulticast *)outer$
+                 withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0 {
+  RxInternalOperatorsOperatorMulticast_2_initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)call {
   id<RxSubscription> s;
@@ -313,12 +309,6 @@ RxInternalOperatorsOperatorMulticast_$1 *create_RxInternalOperatorsOperatorMulti
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorMulticast:(RxInternalOperatorsOperatorMulticast *)outer$
-                 withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0 {
-  RxInternalOperatorsOperatorMulticast_$2_initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_(self, outer$, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   RELEASE_(val$gs_);
@@ -327,40 +317,46 @@ RxInternalOperatorsOperatorMulticast_$1 *create_RxInternalOperatorsOperatorMulti
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorMulticast:withJavaUtilConcurrentAtomicAtomicReference:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorMulticast:withJavaUtilConcurrentAtomicAtomicReference:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorMulticast;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$gs_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorMulticast;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
+    { "val$gs_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorMulticast;LJavaUtilConcurrentAtomicAtomicReference;", "(Lrx/internal/operators/OperatorMulticast;Ljava/util/concurrent/atomic/AtomicReference<Lrx/Subscription;>;)V", "Ljava/util/concurrent/atomic/AtomicReference<Lrx/Subscription;>;", "LRxInternalOperatorsOperatorMulticast;", "connectWithRxFunctionsAction1:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorMulticast_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, -1, -1 };
-  return &_RxInternalOperatorsOperatorMulticast_$2;
+  static const void *ptrTable[] = { "Lrx/internal/operators/OperatorMulticast<TT;TR;>;", "Ljava/util/concurrent/atomic/AtomicReference<Lrx/Subscription;>;", "LRxInternalOperatorsOperatorMulticast;", "connectWithRxFunctionsAction1:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorMulticast_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 2, -1, 3, -1, -1 };
+  return &_RxInternalOperatorsOperatorMulticast_2;
 }
 
 @end
 
-void RxInternalOperatorsOperatorMulticast_$2_initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorMulticast_$2 *self, RxInternalOperatorsOperatorMulticast *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0) {
+void RxInternalOperatorsOperatorMulticast_2_initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorMulticast_2 *self, RxInternalOperatorsOperatorMulticast *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$gs_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorMulticast_$2 *new_RxInternalOperatorsOperatorMulticast_$2_initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorMulticast *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorMulticast_$2, initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_, outer$, capture$0)
+RxInternalOperatorsOperatorMulticast_2 *new_RxInternalOperatorsOperatorMulticast_2_initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorMulticast *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorMulticast_2, initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_, outer$, capture$0)
 }
 
-RxInternalOperatorsOperatorMulticast_$2 *create_RxInternalOperatorsOperatorMulticast_$2_initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorMulticast *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorMulticast_$2, initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_, outer$, capture$0)
+RxInternalOperatorsOperatorMulticast_2 *create_RxInternalOperatorsOperatorMulticast_2_initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorMulticast *outer$, JavaUtilConcurrentAtomicAtomicReference *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorMulticast_2, initWithRxInternalOperatorsOperatorMulticast_withJavaUtilConcurrentAtomicAtomicReference_, outer$, capture$0)
 }
 
-@implementation RxInternalOperatorsOperatorMulticast_$3
+@implementation RxInternalOperatorsOperatorMulticast_3
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
+                    withRxSubscriber:(RxSubscriber *)param0 {
+  RxInternalOperatorsOperatorMulticast_3_initWithRxSubscriber_withRxSubscriber_(self, capture$0, param0);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   [((RxSubscriber *) nil_chk(val$s_)) onNextWithId:t];
@@ -374,51 +370,44 @@ RxInternalOperatorsOperatorMulticast_$2 *create_RxInternalOperatorsOperatorMulti
   [((RxSubscriber *) nil_chk(val$s_)) onCompleted];
 }
 
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0
-                    withRxSubscriber:(RxSubscriber *)arg$0 {
-  RxInternalOperatorsOperatorMulticast_$3_initWithRxSubscriber_withRxSubscriber_(self, capture$0, arg$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorMulticast_$3 class]);
   RELEASE_(val$s_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
+    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxSubscriber:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxSubscriber:withRxSubscriber:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$s_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TR;)V", "onError", "LNSException;", "LRxSubscriber;LRxSubscriber;", "(Lrx/Subscriber<-TR;>;Lrx/Subscriber<*>;)V", "Lrx/Subscriber<-TR;>;", "LRxInternalOperatorsOperatorMulticast;", "connectWithRxFunctionsAction1:", "Lrx/Subscriber<TR;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorMulticast_$3 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 1, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsOperatorMulticast_$3;
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "onNext", "LNSObject;", "(TR;)V", "onError", "LNSException;", "Lrx/Subscriber<-TR;>;", "LRxInternalOperatorsOperatorMulticast;", "connectWithRxFunctionsAction1:", "Lrx/Subscriber<TR;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorMulticast_3 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 1, 8, -1, 9, 10, -1 };
+  return &_RxInternalOperatorsOperatorMulticast_3;
 }
 
 @end
 
-void RxInternalOperatorsOperatorMulticast_$3_initWithRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorMulticast_$3 *self, RxSubscriber *capture$0, RxSubscriber *arg$0) {
+void RxInternalOperatorsOperatorMulticast_3_initWithRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorMulticast_3 *self, RxSubscriber *capture$0, RxSubscriber *param0) {
   JreStrongAssign(&self->val$s_, capture$0);
-  RxSubscriber_initWithRxSubscriber_(self, arg$0);
+  RxSubscriber_initWithRxSubscriber_(self, param0);
 }
 
-RxInternalOperatorsOperatorMulticast_$3 *new_RxInternalOperatorsOperatorMulticast_$3_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorMulticast_$3, initWithRxSubscriber_withRxSubscriber_, capture$0, arg$0)
+RxInternalOperatorsOperatorMulticast_3 *new_RxInternalOperatorsOperatorMulticast_3_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorMulticast_3, initWithRxSubscriber_withRxSubscriber_, capture$0, param0)
 }
 
-RxInternalOperatorsOperatorMulticast_$3 *create_RxInternalOperatorsOperatorMulticast_$3_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorMulticast_$3, initWithRxSubscriber_withRxSubscriber_, capture$0, arg$0)
+RxInternalOperatorsOperatorMulticast_3 *create_RxInternalOperatorsOperatorMulticast_3_initWithRxSubscriber_withRxSubscriber_(RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorMulticast_3, initWithRxSubscriber_withRxSubscriber_, capture$0, param0)
 }

@@ -156,10 +156,10 @@
   withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit
                  withRxScheduler:(RxScheduler *)scheduler;
 
+- (RxObservable *)bufferWithRxObservable:(RxObservable *)boundary;
+
 - (RxObservable *)bufferWithRxObservable:(RxObservable *)bufferOpenings
                     withRxFunctionsFunc1:(id<RxFunctionsFunc1>)bufferClosingSelector;
-
-- (RxObservable *)bufferWithRxObservable:(RxObservable *)boundary;
 
 - (RxObservable *)bufferWithRxObservable:(RxObservable *)boundary
                                  withInt:(jint)initialCapacity;
@@ -552,9 +552,6 @@
                          withRxFunctionsFunc0:(id<RxFunctionsFunc0>)onCompleted
                                       withInt:(jint)maxConcurrent;
 
-- (RxObservable *)flatMapWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)func
-                                      withInt:(jint)maxConcurrent;
-
 - (RxObservable *)flatMapWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)collectionSelector
                          withRxFunctionsFunc2:(id<RxFunctionsFunc2>)resultSelector;
 
@@ -562,16 +559,19 @@
                          withRxFunctionsFunc2:(id<RxFunctionsFunc2>)resultSelector
                                       withInt:(jint)maxConcurrent;
 
-- (RxObservable *)flatMapIterableWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)collectionSelector;
+- (RxObservable *)flatMapWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)func
+                                      withInt:(jint)maxConcurrent;
 
-- (RxObservable *)flatMapIterableWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)collectionSelector
-                                              withInt:(jint)maxConcurrent;
+- (RxObservable *)flatMapIterableWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)collectionSelector;
 
 - (RxObservable *)flatMapIterableWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)collectionSelector
                                  withRxFunctionsFunc2:(id<RxFunctionsFunc2>)resultSelector;
 
 - (RxObservable *)flatMapIterableWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)collectionSelector
                                  withRxFunctionsFunc2:(id<RxFunctionsFunc2>)resultSelector
+                                              withInt:(jint)maxConcurrent;
+
+- (RxObservable *)flatMapIterableWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)collectionSelector
                                               withInt:(jint)maxConcurrent;
 
 - (void)forEachWithRxFunctionsAction1:(id<RxFunctionsAction1>)onNext;
@@ -1365,19 +1365,16 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit
   withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit
                  withRxScheduler:(RxScheduler *)scheduler;
 
+- (RxObservable *)windowWithRxObservable:(RxObservable *)boundary;
+
 - (RxObservable *)windowWithRxObservable:(RxObservable *)windowOpenings
                     withRxFunctionsFunc1:(id<RxFunctionsFunc1>)closingSelector;
-
-- (RxObservable *)windowWithRxObservable:(RxObservable *)boundary;
 
 - (RxObservable *)withLatestFromWithJavaLangIterable:(id<JavaLangIterable>)others
                                 withRxFunctionsFuncN:(id<RxFunctionsFuncN>)combiner;
 
 - (RxObservable *)withLatestFromWithRxObservable:(RxObservable *)other
                             withRxFunctionsFunc2:(id<RxFunctionsFunc2>)resultSelector;
-
-- (RxObservable *)withLatestFromWithRxObservableArray:(IOSObjectArray *)others
-                                 withRxFunctionsFuncN:(id<RxFunctionsFuncN>)combiner;
 
 - (RxObservable *)withLatestFromWithRxObservable:(RxObservable *)o1
                                 withRxObservable:(RxObservable *)o2
@@ -1427,6 +1424,9 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit
                                 withRxObservable:(RxObservable *)o7
                                 withRxObservable:(RxObservable *)o8
                             withRxFunctionsFunc9:(id<RxFunctionsFunc9>)combiner;
+
+- (RxObservable *)withLatestFromWithRxObservableArray:(IOSObjectArray *)others
+                                 withRxFunctionsFuncN:(id<RxFunctionsFuncN>)combiner;
 
 + (RxObservable *)zipWithJavaLangIterable:(id<JavaLangIterable>)ws
                      withRxFunctionsFuncN:(id<RxFunctionsFuncN>)zipFunction;

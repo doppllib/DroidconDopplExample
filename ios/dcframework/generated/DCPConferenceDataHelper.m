@@ -33,22 +33,22 @@
 
 #pragma clang diagnostic ignored "-Wprotocol"
 
-@interface DCPConferenceDataHelper_$1 : NSObject < JavaUtilComparator >
+@interface DCPConferenceDataHelper_1 : NSObject < JavaUtilComparator >
+
+- (instancetype)init;
 
 - (jint)compareWithId:(id<DCDScheduleBlock>)o1
                withId:(id<DCDScheduleBlock>)o2;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(DCPConferenceDataHelper_$1)
+J2OBJC_EMPTY_STATIC_INIT(DCPConferenceDataHelper_1)
 
-__attribute__((unused)) static void DCPConferenceDataHelper_$1_init(DCPConferenceDataHelper_$1 *self);
+__attribute__((unused)) static void DCPConferenceDataHelper_1_init(DCPConferenceDataHelper_1 *self);
 
-__attribute__((unused)) static DCPConferenceDataHelper_$1 *new_DCPConferenceDataHelper_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static DCPConferenceDataHelper_1 *new_DCPConferenceDataHelper_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static DCPConferenceDataHelper_$1 *create_DCPConferenceDataHelper_$1_init();
+__attribute__((unused)) static DCPConferenceDataHelper_1 *create_DCPConferenceDataHelper_1_init();
 
 J2OBJC_INITIALIZED_DEFN(DCPConferenceDataHelper)
 
@@ -56,6 +56,13 @@ JavaTextSimpleDateFormat *DCPConferenceDataHelper_dateFormat;
 JavaTextSimpleDateFormat *DCPConferenceDataHelper_timeFormat;
 
 @implementation DCPConferenceDataHelper
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  DCPConferenceDataHelper_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 + (NSString *)dateToDayStringWithJavaUtilDate:(JavaUtilDate *)d {
   return DCPConferenceDataHelper_dateToDayStringWithJavaUtilDate_(d);
@@ -66,24 +73,17 @@ JavaTextSimpleDateFormat *DCPConferenceDataHelper_timeFormat;
   return DCPConferenceDataHelper_listDaysWithAndroidContentContext_withBoolean_(context, allEvents);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  DCPConferenceDataHelper_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, "[LDCPConferenceDayHolder;", 0x9, 2, 3, 4, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(dateToDayStringWithJavaUtilDate:);
-  methods[1].selector = @selector(listDaysWithAndroidContentContext:withBoolean:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(dateToDayStringWithJavaUtilDate:);
+  methods[2].selector = @selector(listDaysWithAndroidContentContext:withBoolean:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "dateFormat", "LJavaTextSimpleDateFormat;", .constantValue.asLong = 0, 0x18, -1, 5, -1, -1 },
@@ -105,6 +105,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void DCPConferenceDataHelper_init(DCPConferenceDataHelper *self) {
+  NSObject_init(self);
+}
+
+DCPConferenceDataHelper *new_DCPConferenceDataHelper_init() {
+  J2OBJC_NEW_IMPL(DCPConferenceDataHelper, init)
+}
+
+DCPConferenceDataHelper *create_DCPConferenceDataHelper_init() {
+  J2OBJC_CREATE_IMPL(DCPConferenceDataHelper, init)
+}
 
 NSString *DCPConferenceDataHelper_dateToDayStringWithJavaUtilDate_(JavaUtilDate *d) {
   DCPConferenceDataHelper_initialize();
@@ -130,7 +142,7 @@ IOSObjectArray *DCPConferenceDataHelper_listDaysWithAndroidContentContext_withBo
     [((id<CoTouchlabSqueakyDaoDao>) nil_chk(eventDao)) fillForeignCollectionWithId:event withNSString:@"speakerList"];
   }
   [all addAllWithJavaUtilCollection:eventList];
-  JavaUtilCollections_sortWithJavaUtilList_withJavaUtilComparator_(all, create_DCPConferenceDataHelper_$1_init());
+  JavaUtilCollections_sortWithJavaUtilList_withJavaUtilComparator_(all, create_DCPConferenceDataHelper_1_init());
   JavaUtilTreeMap *allTheData = create_JavaUtilTreeMap_init();
   NSString *lastHourDisplay = @"";
   id<JavaUtilList> blockHours = create_JavaUtilArrayList_init();
@@ -156,21 +168,16 @@ IOSObjectArray *DCPConferenceDataHelper_listDaysWithAndroidContentContext_withBo
   return [dayHolders toArrayWithNSObjectArray:[IOSObjectArray arrayWithLength:[dayHolders size] type:DCPConferenceDayHolder_class_()]];
 }
 
-void DCPConferenceDataHelper_init(DCPConferenceDataHelper *self) {
-  NSObject_init(self);
-}
-
-DCPConferenceDataHelper *new_DCPConferenceDataHelper_init() {
-  J2OBJC_NEW_IMPL(DCPConferenceDataHelper, init)
-}
-
-DCPConferenceDataHelper *create_DCPConferenceDataHelper_init() {
-  J2OBJC_CREATE_IMPL(DCPConferenceDataHelper, init)
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(DCPConferenceDataHelper)
 
-@implementation DCPConferenceDataHelper_$1
+@implementation DCPConferenceDataHelper_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  DCPConferenceDataHelper_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (jint)compareWithId:(id<DCDScheduleBlock>)o1
                withId:(id<DCDScheduleBlock>)o2 {
@@ -181,13 +188,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(DCPConferenceDataHelper)
   if ([o2 isBlock]) return -1;
   return [((NSString *) nil_chk(((DCDVenue *) nil_chk(((DCDEvent *) cast_chk(o1, [DCDEvent class]))->venue_))->name_)) compareToWithId:((DCDEvent *) cast_chk(o2, [DCDEvent class]))->venue_->name_];
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  DCPConferenceDataHelper_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<JavaUtilComparator>)reversed {
   return JavaUtilComparator_reversed(self);
@@ -220,29 +220,29 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "I", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "I", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(compareWithId:withId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(compareWithId:withId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "compare", "LDCDScheduleBlock;LDCDScheduleBlock;", "LDCPConferenceDataHelper;", "listDaysWithAndroidContentContext:withBoolean:", "Ljava/lang/Object;Ljava/util/Comparator<Lco/touchlab/droidconandroid/data/ScheduleBlock;>;" };
-  static const J2ObjcClassInfo _DCPConferenceDataHelper_$1 = { "", "co.touchlab.droidconandroid.presenter", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
-  return &_DCPConferenceDataHelper_$1;
+  static const J2ObjcClassInfo _DCPConferenceDataHelper_1 = { "", "co.touchlab.droidconandroid.presenter", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, 4, -1 };
+  return &_DCPConferenceDataHelper_1;
 }
 
 @end
 
-void DCPConferenceDataHelper_$1_init(DCPConferenceDataHelper_$1 *self) {
+void DCPConferenceDataHelper_1_init(DCPConferenceDataHelper_1 *self) {
   NSObject_init(self);
 }
 
-DCPConferenceDataHelper_$1 *new_DCPConferenceDataHelper_$1_init() {
-  J2OBJC_NEW_IMPL(DCPConferenceDataHelper_$1, init)
+DCPConferenceDataHelper_1 *new_DCPConferenceDataHelper_1_init() {
+  J2OBJC_NEW_IMPL(DCPConferenceDataHelper_1, init)
 }
 
-DCPConferenceDataHelper_$1 *create_DCPConferenceDataHelper_$1_init() {
-  J2OBJC_CREATE_IMPL(DCPConferenceDataHelper_$1, init)
+DCPConferenceDataHelper_1 *create_DCPConferenceDataHelper_1_init() {
+  J2OBJC_CREATE_IMPL(DCPConferenceDataHelper_1, init)
 }

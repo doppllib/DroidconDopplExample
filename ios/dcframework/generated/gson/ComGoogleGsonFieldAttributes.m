@@ -48,7 +48,7 @@ J2OBJC_FIELD_SETTER(ComGoogleGsonFieldAttributes, field_, JavaLangReflectField *
 }
 
 - (id<JavaLangAnnotationAnnotation>)getAnnotationWithIOSClass:(IOSClass *)annotation {
-  return ((id<JavaLangAnnotationAnnotation>) [((JavaLangReflectField *) nil_chk(field_)) getAnnotationWithIOSClass:annotation]);
+  return [((JavaLangReflectField *) nil_chk(field_)) getAnnotationWithIOSClass:annotation];
 }
 
 - (id<JavaUtilCollection>)getAnnotations {

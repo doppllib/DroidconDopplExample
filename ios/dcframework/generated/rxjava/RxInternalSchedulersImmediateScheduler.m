@@ -32,8 +32,6 @@ __attribute__((unused)) static RxInternalSchedulersImmediateScheduler *create_Rx
 
 @end
 
-J2OBJC_FIELD_SETTER(RxInternalSchedulersImmediateScheduler_InnerImmediateScheduler, this$0_, RxInternalSchedulersImmediateScheduler *)
-
 J2OBJC_INITIALIZED_DEFN(RxInternalSchedulersImmediateScheduler)
 
 RxInternalSchedulersImmediateScheduler *RxInternalSchedulersImmediateScheduler_INSTANCE;
@@ -127,9 +125,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersImmediateScheduler)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
-    { NULL, "LRxSubscription;", 0x1, 1, 2, -1, -1, -1, -1 },
-    { NULL, "LRxSubscription;", 0x1, 1, 3, -1, -1, -1, -1 },
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxSubscription;", 0x1, 0, 1, -1, -1, -1, -1 },
+    { NULL, "LRxSubscription;", 0x1, 0, 2, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
   };
@@ -145,8 +143,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersImmediateScheduler)
     { "this$0_", "LRxInternalSchedulersImmediateScheduler;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "innerSubscription_", "LRxSubscriptionsBooleanSubscription;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalSchedulersImmediateScheduler;", "schedule", "LRxFunctionsAction0;JLJavaUtilConcurrentTimeUnit;", "LRxFunctionsAction0;" };
-  static const J2ObjcClassInfo _RxInternalSchedulersImmediateScheduler_InnerImmediateScheduler = { "InnerImmediateScheduler", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x10, 5, 2, 0, -1, -1, -1, -1 };
+  static const void *ptrTable[] = { "schedule", "LRxFunctionsAction0;JLJavaUtilConcurrentTimeUnit;", "LRxFunctionsAction0;", "LRxInternalSchedulersImmediateScheduler;" };
+  static const J2ObjcClassInfo _RxInternalSchedulersImmediateScheduler_InnerImmediateScheduler = { "InnerImmediateScheduler", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x10, 5, 2, 3, -1, -1, -1, -1 };
   return &_RxInternalSchedulersImmediateScheduler_InnerImmediateScheduler;
 }
 

@@ -33,9 +33,9 @@
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, NULL, 0x4, -1, 0, -1, -1, -1, -1 },
-    { NULL, NULL, 0x4, -1, 1, -1, -1, -1, -1 },
-    { NULL, "LJavaLangEnum;", 0xc, 2, 3, 4, 5, -1, -1 },
+    { NULL, NULL, 0x4, -1, 0, -1, 1, -1, -1 },
+    { NULL, NULL, 0x4, -1, 2, -1, -1, -1, -1 },
+    { NULL, "LJavaLangEnum;", 0xc, 3, 4, 5, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -43,7 +43,7 @@
   methods[1].selector = @selector(initWithCoTouchlabSqueakyFieldSqlType:);
   methods[2].selector = @selector(enumValWithCoTouchlabSqueakyFieldFieldType:withId:withJavaLangEnum:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "LCoTouchlabSqueakyFieldSqlType;", "enumVal", "LCoTouchlabSqueakyFieldFieldType;LNSObject;LJavaLangEnum;", "LJavaSqlSQLException;", "(Lco/touchlab/squeaky/field/FieldType;Ljava/lang/Object;Ljava/lang/Enum<*>;)Ljava/lang/Enum<*>;" };
+  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "(Lco/touchlab/squeaky/field/SqlType;[Ljava/lang/Class<*>;)V", "LCoTouchlabSqueakyFieldSqlType;", "enumVal", "LCoTouchlabSqueakyFieldFieldType;LNSObject;LJavaLangEnum;", "LJavaSqlSQLException;", "(Lco/touchlab/squeaky/field/FieldType;Ljava/lang/Object;Ljava/lang/Enum<*>;)Ljava/lang/Enum<*>;" };
   static const J2ObjcClassInfo _CoTouchlabSqueakyFieldTypesBaseEnumType = { "BaseEnumType", "co.touchlab.squeaky.field.types", ptrTable, methods, NULL, 7, 0x401, 3, 0, -1, -1, -1, -1, -1 };
   return &_CoTouchlabSqueakyFieldTypesBaseEnumType;
 }

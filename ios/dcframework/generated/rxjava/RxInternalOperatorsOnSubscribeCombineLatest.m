@@ -241,7 +241,7 @@ id RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator_MISSING;
     empty = (completedCount == sourceCount || (value == nil && o == RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator_MISSING));
     if (!empty) {
       if (value != nil && allSourcesFinished) {
-        [((RxInternalUtilAtomicSpscLinkedArrayQueue *) nil_chk(queue_)) offerWithId:combinerSubscriber withId:[latest_ clone]];
+        [((RxInternalUtilAtomicSpscLinkedArrayQueue *) nil_chk(queue_)) offerWithId:combinerSubscriber withId:[latest_ java_clone]];
       }
       else if (value == nil && [((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(error_)) get] != nil && (o == RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator_MISSING || !delayError_)) {
         JreAssignVolatileBoolean(&done_, true);
@@ -378,12 +378,8 @@ id RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator_MISSING;
   }
 }
 
-- (void)__javaClone:(RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator *)original {
-  [super __javaClone:original];
-  [actual_ release];
-}
-
 - (void)dealloc {
+  RELEASE_(actual_);
   RELEASE_(combiner_);
   RELEASE_(subscribers_);
   RELEASE_(latest_);
@@ -396,15 +392,15 @@ id RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator_MISSING;
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
     { NULL, NULL, 0x1, -1, 0, -1, 1, -1, -1 },
-    { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
+    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x0, 6, 7, -1, 8, -1, -1 },
-    { NULL, "V", 0x0, 9, 10, -1, -1, -1, -1 },
+    { NULL, "V", 0x0, 7, 8, -1, 9, -1, -1 },
+    { NULL, "V", 0x0, 10, 11, -1, -1, -1, -1 },
     { NULL, "V", 0x0, -1, -1, -1, -1, -1, -1 },
-    { NULL, "Z", 0x0, 11, 12, -1, 13, -1, -1 },
-    { NULL, "V", 0x0, 14, 15, -1, -1, -1, -1 },
+    { NULL, "Z", 0x0, 12, 13, -1, 14, -1, -1 },
+    { NULL, "V", 0x0, 15, 16, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -421,23 +417,23 @@ id RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator_MISSING;
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "serialVersionUID", "J", .constantValue.asLong = RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator_serialVersionUID, 0x1a, -1, -1, -1, -1 },
-    { "actual_", "LRxSubscriber;", .constantValue.asLong = 0, 0x10, -1, -1, 16, -1 },
-    { "combiner_", "LRxFunctionsFuncN;", .constantValue.asLong = 0, 0x10, -1, -1, 17, -1 },
-    { "subscribers_", "[LRxInternalOperatorsOnSubscribeCombineLatest_CombinerSubscriber;", .constantValue.asLong = 0, 0x10, -1, -1, 18, -1 },
+    { "actual_", "LRxSubscriber;", .constantValue.asLong = 0, 0x10, -1, -1, 17, -1 },
+    { "combiner_", "LRxFunctionsFuncN;", .constantValue.asLong = 0, 0x10, -1, -1, 18, -1 },
+    { "subscribers_", "[LRxInternalOperatorsOnSubscribeCombineLatest_CombinerSubscriber;", .constantValue.asLong = 0, 0x10, -1, -1, 19, -1 },
     { "bufferSize_", "I", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
     { "latest_", "[LNSObject;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
-    { "queue_", "LRxInternalUtilAtomicSpscLinkedArrayQueue;", .constantValue.asLong = 0, 0x10, -1, -1, 19, -1 },
+    { "queue_", "LRxInternalUtilAtomicSpscLinkedArrayQueue;", .constantValue.asLong = 0, 0x10, -1, -1, 20, -1 },
     { "delayError_", "Z", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
     { "cancelled_", "Z", .constantValue.asLong = 0, 0x40, -1, -1, -1, -1 },
     { "done_", "Z", .constantValue.asLong = 0, 0x40, -1, -1, -1, -1 },
     { "requested_", "LJavaUtilConcurrentAtomicAtomicLong;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
-    { "error_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x10, -1, -1, 20, -1 },
+    { "error_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x10, -1, -1, 21, -1 },
     { "active_", "I", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "complete_", "I", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
-    { "MISSING", "LNSObject;", .constantValue.asLong = 0, 0x18, -1, 21, -1, -1 },
+    { "MISSING", "LNSObject;", .constantValue.asLong = 0, 0x18, -1, 22, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxSubscriber;LRxFunctionsFuncN;IIZ", "(Lrx/Subscriber<-TR;>;Lrx/functions/FuncN<+TR;>;IIZ)V", "subscribe", "[LRxObservable;", "request", "J", "cancel", "LJavaUtilQueue;", "(Ljava/util/Queue<*>;)V", "combine", "LNSObject;I", "checkTerminated", "ZZLRxSubscriber;LJavaUtilQueue;Z", "(ZZLrx/Subscriber<*>;Ljava/util/Queue<*>;Z)Z", "onError", "LNSException;", "Lrx/Subscriber<-TR;>;", "Lrx/functions/FuncN<+TR;>;", "[Lrx/internal/operators/OnSubscribeCombineLatest$CombinerSubscriber<TT;TR;>;", "Lrx/internal/util/atomic/SpscLinkedArrayQueue<Ljava/lang/Object;>;", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Throwable;>;", &RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator_MISSING, "LRxInternalOperatorsOnSubscribeCombineLatest;", "<T:Ljava/lang/Object;R:Ljava/lang/Object;>Ljava/util/concurrent/atomic/AtomicInteger;Lrx/Producer;Lrx/Subscription;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator = { "LatestCoordinator", "rx.internal.operators", ptrTable, methods, fields, 7, 0x18, 10, 15, 22, -1, -1, 23, -1 };
+  static const void *ptrTable[] = { "LRxSubscriber;LRxFunctionsFuncN;IIZ", "(Lrx/Subscriber<-TR;>;Lrx/functions/FuncN<+TR;>;IIZ)V", "subscribe", "[LRxObservable;", "([Lrx/Observable<+TT;>;)V", "request", "J", "cancel", "LJavaUtilQueue;", "(Ljava/util/Queue<*>;)V", "combine", "LNSObject;I", "checkTerminated", "ZZLRxSubscriber;LJavaUtilQueue;Z", "(ZZLrx/Subscriber<*>;Ljava/util/Queue<*>;Z)Z", "onError", "LNSException;", "Lrx/Subscriber<-TR;>;", "Lrx/functions/FuncN<+TR;>;", "[Lrx/internal/operators/OnSubscribeCombineLatest$CombinerSubscriber<TT;TR;>;", "Lrx/internal/util/atomic/SpscLinkedArrayQueue<Ljava/lang/Object;>;", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Throwable;>;", &RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator_MISSING, "LRxInternalOperatorsOnSubscribeCombineLatest;", "<T:Ljava/lang/Object;R:Ljava/lang/Object;>Ljava/util/concurrent/atomic/AtomicInteger;Lrx/Producer;Lrx/Subscription;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator = { "LatestCoordinator", "rx.internal.operators", ptrTable, methods, fields, 7, 0x18, 10, 15, 23, -1, -1, 24, -1 };
   return &_RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator;
 }
 
@@ -452,7 +448,7 @@ id RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator_MISSING;
 
 void RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator_initWithRxSubscriber_withRxFunctionsFuncN_withInt_withInt_withBoolean_(RxInternalOperatorsOnSubscribeCombineLatest_LatestCoordinator *self, RxSubscriber *actual, id<RxFunctionsFuncN> combiner, jint count, jint bufferSize, jboolean delayError) {
   JavaUtilConcurrentAtomicAtomicInteger_init(self);
-  self->actual_ = actual;
+  JreStrongAssign(&self->actual_, actual);
   JreStrongAssign(&self->combiner_, combiner);
   self->bufferSize_ = bufferSize;
   self->delayError_ = delayError;
@@ -512,7 +508,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeCombineLatest_Lat
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribeCombineLatest_CombinerSubscriber class]);
   RELEASE_(parent_);
   [super dealloc];
 }

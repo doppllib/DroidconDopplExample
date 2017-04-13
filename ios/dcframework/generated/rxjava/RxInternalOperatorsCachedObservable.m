@@ -39,10 +39,12 @@ __attribute__((unused)) static RxInternalOperatorsCachedObservable *new_RxIntern
 
 __attribute__((unused)) static RxInternalOperatorsCachedObservable *create_RxInternalOperatorsCachedObservable_initWithRxObservable_OnSubscribe_withRxInternalOperatorsCachedObservable_CacheState_(id<RxObservable_OnSubscribe> onSubscribe, RxInternalOperatorsCachedObservable_CacheState *state);
 
-@interface RxInternalOperatorsCachedObservable_CacheState_$1 : RxSubscriber {
+@interface RxInternalOperatorsCachedObservable_CacheState_1 : RxSubscriber {
  @public
   RxInternalOperatorsCachedObservable_CacheState *this$0_;
 }
+
+- (instancetype)initWithRxInternalOperatorsCachedObservable_CacheState:(RxInternalOperatorsCachedObservable_CacheState *)outer$;
 
 - (void)onNextWithId:(id)t;
 
@@ -50,27 +52,31 @@ __attribute__((unused)) static RxInternalOperatorsCachedObservable *create_RxInt
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxInternalOperatorsCachedObservable_CacheState:(RxInternalOperatorsCachedObservable_CacheState *)outer$;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsCachedObservable_CacheState_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsCachedObservable_CacheState_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsCachedObservable_CacheState_$1, this$0_, RxInternalOperatorsCachedObservable_CacheState *)
+__attribute__((unused)) static void RxInternalOperatorsCachedObservable_CacheState_1_initWithRxInternalOperatorsCachedObservable_CacheState_(RxInternalOperatorsCachedObservable_CacheState_1 *self, RxInternalOperatorsCachedObservable_CacheState *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsCachedObservable_CacheState_$1_initWithRxInternalOperatorsCachedObservable_CacheState_(RxInternalOperatorsCachedObservable_CacheState_$1 *self, RxInternalOperatorsCachedObservable_CacheState *outer$);
+__attribute__((unused)) static RxInternalOperatorsCachedObservable_CacheState_1 *new_RxInternalOperatorsCachedObservable_CacheState_1_initWithRxInternalOperatorsCachedObservable_CacheState_(RxInternalOperatorsCachedObservable_CacheState *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsCachedObservable_CacheState_$1 *new_RxInternalOperatorsCachedObservable_CacheState_$1_initWithRxInternalOperatorsCachedObservable_CacheState_(RxInternalOperatorsCachedObservable_CacheState *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsCachedObservable_CacheState_$1 *create_RxInternalOperatorsCachedObservable_CacheState_$1_initWithRxInternalOperatorsCachedObservable_CacheState_(RxInternalOperatorsCachedObservable_CacheState *outer$);
+__attribute__((unused)) static RxInternalOperatorsCachedObservable_CacheState_1 *create_RxInternalOperatorsCachedObservable_CacheState_1_initWithRxInternalOperatorsCachedObservable_CacheState_(RxInternalOperatorsCachedObservable_CacheState *outer$);
 
 inline jlong RxInternalOperatorsCachedObservable_CachedSubscribe_get_serialVersionUID();
 #define RxInternalOperatorsCachedObservable_CachedSubscribe_serialVersionUID -2817751667698696782LL
 J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsCachedObservable_CachedSubscribe, serialVersionUID, jlong)
 
+@interface RxInternalOperatorsCachedObservable_ReplayProducer ()
+
+- (void)clearChild;
+
+@end
+
 inline jlong RxInternalOperatorsCachedObservable_ReplayProducer_get_serialVersionUID();
 #define RxInternalOperatorsCachedObservable_ReplayProducer_serialVersionUID -2557562030197141021LL
 J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsCachedObservable_ReplayProducer, serialVersionUID, jlong)
+
+__attribute__((unused)) static void RxInternalOperatorsCachedObservable_ReplayProducer_clearChild(RxInternalOperatorsCachedObservable_ReplayProducer *self);
 
 @implementation RxInternalOperatorsCachedObservable
 
@@ -207,7 +213,7 @@ IOSObjectArray *RxInternalOperatorsCachedObservable_CacheState_EMPTY;
 }
 
 - (void)connect {
-  RxSubscriber *subscriber = create_RxInternalOperatorsCachedObservable_CacheState_$1_initWithRxInternalOperatorsCachedObservable_CacheState_(self);
+  RxSubscriber *subscriber = create_RxInternalOperatorsCachedObservable_CacheState_1_initWithRxInternalOperatorsCachedObservable_CacheState_(self);
   [((RxSubscriptionsSerialSubscription *) nil_chk(connection_)) setWithRxSubscription:subscriber];
   [((RxObservable *) nil_chk(source_)) unsafeSubscribeWithRxSubscriber:subscriber];
   JreAssignVolatileBoolean(&isConnected_, true);
@@ -328,7 +334,12 @@ RxInternalOperatorsCachedObservable_CacheState *create_RxInternalOperatorsCached
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCachedObservable_CacheState)
 
-@implementation RxInternalOperatorsCachedObservable_CacheState_$1
+@implementation RxInternalOperatorsCachedObservable_CacheState_1
+
+- (instancetype)initWithRxInternalOperatorsCachedObservable_CacheState:(RxInternalOperatorsCachedObservable_CacheState *)outer$ {
+  RxInternalOperatorsCachedObservable_CacheState_1_initWithRxInternalOperatorsCachedObservable_CacheState_(self, outer$);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   [this$0_ onNextWithId:t];
@@ -342,52 +353,46 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCachedObservable_CacheState)
   [this$0_ onCompleted];
 }
 
-- (instancetype)initWithRxInternalOperatorsCachedObservable_CacheState:(RxInternalOperatorsCachedObservable_CacheState *)outer$ {
-  RxInternalOperatorsCachedObservable_CacheState_$1_initWithRxInternalOperatorsCachedObservable_CacheState_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsCachedObservable_CacheState_$1 class]);
   RELEASE_(this$0_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxInternalOperatorsCachedObservable_CacheState:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsCachedObservable_CacheState:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsCachedObservable_CacheState;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsCachedObservable_CacheState;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxInternalOperatorsCachedObservable_CacheState;", "connect", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsCachedObservable_CacheState_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 1, 5, -1, 6, 7, -1 };
-  return &_RxInternalOperatorsCachedObservable_CacheState_$1;
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/internal/operators/CachedObservable$CacheState<TT;>;", "LRxInternalOperatorsCachedObservable_CacheState;", "connect", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsCachedObservable_CacheState_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 1, 6, -1, 7, 8, -1 };
+  return &_RxInternalOperatorsCachedObservable_CacheState_1;
 }
 
 @end
 
-void RxInternalOperatorsCachedObservable_CacheState_$1_initWithRxInternalOperatorsCachedObservable_CacheState_(RxInternalOperatorsCachedObservable_CacheState_$1 *self, RxInternalOperatorsCachedObservable_CacheState *outer$) {
+void RxInternalOperatorsCachedObservable_CacheState_1_initWithRxInternalOperatorsCachedObservable_CacheState_(RxInternalOperatorsCachedObservable_CacheState_1 *self, RxInternalOperatorsCachedObservable_CacheState *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   RxSubscriber_init(self);
 }
 
-RxInternalOperatorsCachedObservable_CacheState_$1 *new_RxInternalOperatorsCachedObservable_CacheState_$1_initWithRxInternalOperatorsCachedObservable_CacheState_(RxInternalOperatorsCachedObservable_CacheState *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsCachedObservable_CacheState_$1, initWithRxInternalOperatorsCachedObservable_CacheState_, outer$)
+RxInternalOperatorsCachedObservable_CacheState_1 *new_RxInternalOperatorsCachedObservable_CacheState_1_initWithRxInternalOperatorsCachedObservable_CacheState_(RxInternalOperatorsCachedObservable_CacheState *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsCachedObservable_CacheState_1, initWithRxInternalOperatorsCachedObservable_CacheState_, outer$)
 }
 
-RxInternalOperatorsCachedObservable_CacheState_$1 *create_RxInternalOperatorsCachedObservable_CacheState_$1_initWithRxInternalOperatorsCachedObservable_CacheState_(RxInternalOperatorsCachedObservable_CacheState *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsCachedObservable_CacheState_$1, initWithRxInternalOperatorsCachedObservable_CacheState_, outer$)
+RxInternalOperatorsCachedObservable_CacheState_1 *create_RxInternalOperatorsCachedObservable_CacheState_1_initWithRxInternalOperatorsCachedObservable_CacheState_(RxInternalOperatorsCachedObservable_CacheState *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsCachedObservable_CacheState_1, initWithRxInternalOperatorsCachedObservable_CacheState_, outer$)
 }
 
 @implementation RxInternalOperatorsCachedObservable_CachedSubscribe
@@ -400,8 +405,9 @@ RxInternalOperatorsCachedObservable_CacheState_$1 *create_RxInternalOperatorsCac
 - (void)callWithId:(RxSubscriber *)t {
   RxInternalOperatorsCachedObservable_ReplayProducer *rp = create_RxInternalOperatorsCachedObservable_ReplayProducer_initWithRxSubscriber_withRxInternalOperatorsCachedObservable_CacheState_(t, state_);
   [((RxInternalOperatorsCachedObservable_CacheState *) nil_chk(state_)) addProducerWithRxInternalOperatorsCachedObservable_ReplayProducer:rp];
-  [((RxSubscriber *) nil_chk(t)) addWithRxSubscription:rp];
-  [t setProducerWithRxProducer:rp];
+  RxInternalOperatorsCachedObservable_ReplayProducer *p = rp;
+  [((RxSubscriber *) nil_chk(t)) addWithRxSubscription:p];
+  [t setProducerWithRxProducer:p];
   if (![self get] && [self compareAndSetWithBoolean:false withBoolean:true]) {
     [state_ connect];
   }
@@ -491,6 +497,10 @@ withRxInternalOperatorsCachedObservable_CacheState:(RxInternalOperatorsCachedObs
   }
 }
 
+- (void)clearChild {
+  RxInternalOperatorsCachedObservable_ReplayProducer_clearChild(self);
+}
+
 - (void)replay {
   @synchronized(self) {
     if (emitting_) {
@@ -502,6 +512,7 @@ withRxInternalOperatorsCachedObservable_CacheState:(RxInternalOperatorsCachedObs
   jboolean skipFinal = false;
   @try {
     RxSubscriber *child = self->child_;
+    if (child == nil) return;
     for (; ; ) {
       jlong r = [self get];
       if (r < 0LL) {
@@ -521,13 +532,15 @@ withRxInternalOperatorsCachedObservable_CacheState:(RxInternalOperatorsCachedObs
         if (r == 0) {
           id o = IOSObjectArray_Get(b, k);
           if (RxInternalOperatorsNotificationLite_isCompletedWithId_(o)) {
-            [((RxSubscriber *) nil_chk(child)) onCompleted];
+            [child onCompleted];
+            RxInternalOperatorsCachedObservable_ReplayProducer_clearChild(self);
             skipFinal = true;
             [self unsubscribe];
             return;
           }
           else if (RxInternalOperatorsNotificationLite_isErrorWithId_(o)) {
-            [((RxSubscriber *) nil_chk(child)) onErrorWithNSException:RxInternalOperatorsNotificationLite_getErrorWithId_(o)];
+            [child onErrorWithNSException:RxInternalOperatorsNotificationLite_getErrorWithId_(o)];
+            RxInternalOperatorsCachedObservable_ReplayProducer_clearChild(self);
             skipFinal = true;
             [self unsubscribe];
             return;
@@ -536,7 +549,8 @@ withRxInternalOperatorsCachedObservable_CacheState:(RxInternalOperatorsCachedObs
         else if (r > 0) {
           jint valuesProduced = 0;
           while (j < s && r > 0) {
-            if ([((RxSubscriber *) nil_chk(child)) isUnsubscribed]) {
+            if ([child isUnsubscribed]) {
+              RxInternalOperatorsCachedObservable_ReplayProducer_clearChild(self);
               skipFinal = true;
               return;
             }
@@ -549,6 +563,7 @@ withRxInternalOperatorsCachedObservable_CacheState:(RxInternalOperatorsCachedObs
               if (RxInternalOperatorsNotificationLite_acceptWithRxObserver_withId_(child, o)) {
                 skipFinal = true;
                 [self unsubscribe];
+                RxInternalOperatorsCachedObservable_ReplayProducer_clearChild(self);
                 return;
               }
             }
@@ -558,6 +573,7 @@ withRxInternalOperatorsCachedObservable_CacheState:(RxInternalOperatorsCachedObs
               [self unsubscribe];
               if (!RxInternalOperatorsNotificationLite_isErrorWithId_(o) && !RxInternalOperatorsNotificationLite_isCompletedWithId_(o)) {
                 [child onErrorWithNSException:RxExceptionsOnErrorThrowable_addValueAsLastCauseWithNSException_withId_(err, RxInternalOperatorsNotificationLite_getValueWithId_(o))];
+                RxInternalOperatorsCachedObservable_ReplayProducer_clearChild(self);
               }
               return;
             }
@@ -566,8 +582,9 @@ withRxInternalOperatorsCachedObservable_CacheState:(RxInternalOperatorsCachedObs
             r--;
             valuesProduced++;
           }
-          if ([((RxSubscriber *) nil_chk(child)) isUnsubscribed]) {
+          if ([child isUnsubscribed]) {
             skipFinal = true;
+            RxInternalOperatorsCachedObservable_ReplayProducer_clearChild(self);
             return;
           }
           index_ = j;
@@ -613,6 +630,7 @@ withRxInternalOperatorsCachedObservable_CacheState:(RxInternalOperatorsCachedObs
     { NULL, "J", 0x1, 4, 3, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x2, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
@@ -622,11 +640,12 @@ withRxInternalOperatorsCachedObservable_CacheState:(RxInternalOperatorsCachedObs
   methods[2].selector = @selector(producedWithLong:);
   methods[3].selector = @selector(isUnsubscribed);
   methods[4].selector = @selector(unsubscribe);
-  methods[5].selector = @selector(replay);
+  methods[5].selector = @selector(clearChild);
+  methods[6].selector = @selector(replay);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "serialVersionUID", "J", .constantValue.asLong = RxInternalOperatorsCachedObservable_ReplayProducer_serialVersionUID, 0x1a, -1, -1, -1, -1 },
-    { "child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x10, -1, -1, 5, -1 },
+    { "child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x0, -1, -1, 5, -1 },
     { "state_", "LRxInternalOperatorsCachedObservable_CacheState;", .constantValue.asLong = 0, 0x10, -1, -1, 6, -1 },
     { "currentBuffer_", "[LNSObject;", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "currentIndexInBuffer_", "I", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
@@ -635,7 +654,7 @@ withRxInternalOperatorsCachedObservable_CacheState:(RxInternalOperatorsCachedObs
     { "missed_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LRxSubscriber;LRxInternalOperatorsCachedObservable_CacheState;", "(Lrx/Subscriber<-TT;>;Lrx/internal/operators/CachedObservable$CacheState<TT;>;)V", "request", "J", "produced", "Lrx/Subscriber<-TT;>;", "Lrx/internal/operators/CachedObservable$CacheState<TT;>;", "LRxInternalOperatorsCachedObservable;", "<T:Ljava/lang/Object;>Ljava/util/concurrent/atomic/AtomicLong;Lrx/Producer;Lrx/Subscription;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsCachedObservable_ReplayProducer = { "ReplayProducer", "rx.internal.operators", ptrTable, methods, fields, 7, 0x18, 6, 8, 7, -1, -1, 8, -1 };
+  static const J2ObjcClassInfo _RxInternalOperatorsCachedObservable_ReplayProducer = { "ReplayProducer", "rx.internal.operators", ptrTable, methods, fields, 7, 0x18, 7, 8, 7, -1, -1, 8, -1 };
   return &_RxInternalOperatorsCachedObservable_ReplayProducer;
 }
 
@@ -653,6 +672,10 @@ RxInternalOperatorsCachedObservable_ReplayProducer *new_RxInternalOperatorsCache
 
 RxInternalOperatorsCachedObservable_ReplayProducer *create_RxInternalOperatorsCachedObservable_ReplayProducer_initWithRxSubscriber_withRxInternalOperatorsCachedObservable_CacheState_(RxSubscriber *child, RxInternalOperatorsCachedObservable_CacheState *state) {
   J2OBJC_CREATE_IMPL(RxInternalOperatorsCachedObservable_ReplayProducer, initWithRxSubscriber_withRxInternalOperatorsCachedObservable_CacheState_, child, state)
+}
+
+void RxInternalOperatorsCachedObservable_ReplayProducer_clearChild(RxInternalOperatorsCachedObservable_ReplayProducer *self) {
+  JreStrongAssign(&self->child_, nil);
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsCachedObservable_ReplayProducer)

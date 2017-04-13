@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/schedulers/CachedThreadScheduler.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxFunctionsAction0.h"
 #include "RxInternalSchedulersCachedThreadScheduler.h"
@@ -54,47 +53,43 @@ J2OBJC_FIELD_SETTER(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool, 
 J2OBJC_FIELD_SETTER(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool, evictorService_, id<JavaUtilConcurrentScheduledExecutorService>)
 J2OBJC_FIELD_SETTER(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool, evictorTask_, id<JavaUtilConcurrentFuture>)
 
-@interface RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1 : NSObject < JavaUtilConcurrentThreadFactory > {
+@interface RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1 : NSObject < JavaUtilConcurrentThreadFactory > {
  @public
   id<JavaUtilConcurrentThreadFactory> val$threadFactory_;
 }
 
-- (JavaLangThread *)newThreadWithJavaLangRunnable:(id<JavaLangRunnable>)r OBJC_METHOD_FAMILY_NONE;
-
 - (instancetype)initWithJavaUtilConcurrentThreadFactory:(id<JavaUtilConcurrentThreadFactory>)capture$0;
+
+- (JavaLangThread *)newThreadWithJavaLangRunnable:(id<JavaLangRunnable>)r OBJC_METHOD_FAMILY_NONE;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1)
 
-J2OBJC_FIELD_SETTER(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1, val$threadFactory_, id<JavaUtilConcurrentThreadFactory>)
+__attribute__((unused)) static void RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1_initWithJavaUtilConcurrentThreadFactory_(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1 *self, id<JavaUtilConcurrentThreadFactory> capture$0);
 
-__attribute__((unused)) static void RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1_initWithJavaUtilConcurrentThreadFactory_(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1 *self, id<JavaUtilConcurrentThreadFactory> capture$0);
+__attribute__((unused)) static RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1 *new_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1_initWithJavaUtilConcurrentThreadFactory_(id<JavaUtilConcurrentThreadFactory> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1 *new_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1_initWithJavaUtilConcurrentThreadFactory_(id<JavaUtilConcurrentThreadFactory> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1 *create_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1_initWithJavaUtilConcurrentThreadFactory_(id<JavaUtilConcurrentThreadFactory> capture$0);
 
-__attribute__((unused)) static RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1 *create_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1_initWithJavaUtilConcurrentThreadFactory_(id<JavaUtilConcurrentThreadFactory> capture$0);
-
-@interface RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2 : NSObject < JavaLangRunnable > {
+@interface RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2 : NSObject < JavaLangRunnable > {
  @public
   RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool *this$0_;
 }
 
-- (void)run;
-
 - (instancetype)initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool:(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool *)outer$;
+
+- (void)run;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2)
 
-J2OBJC_FIELD_SETTER(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2, this$0_, RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool *)
+__attribute__((unused)) static void RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2_initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2 *self, RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool *outer$);
 
-__attribute__((unused)) static void RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2_initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2 *self, RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool *outer$);
+__attribute__((unused)) static RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2 *new_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2_initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2 *new_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2_initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2 *create_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2_initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool *outer$);
+__attribute__((unused)) static RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2 *create_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2_initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool *outer$);
 
 @interface RxInternalSchedulersCachedThreadScheduler_EventLoopWorker () {
  @public
@@ -109,29 +104,26 @@ J2OBJC_FIELD_SETTER(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker, i
 J2OBJC_FIELD_SETTER(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker, pool_, RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool *)
 J2OBJC_FIELD_SETTER(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker, threadWorker_, RxInternalSchedulersCachedThreadScheduler_ThreadWorker *)
 
-@interface RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalSchedulersCachedThreadScheduler_EventLoopWorker *this$0_;
   id<RxFunctionsAction0> val$action_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker:(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker *)outer$
                                                            withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1)
 
-J2OBJC_FIELD_SETTER(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1, this$0_, RxInternalSchedulersCachedThreadScheduler_EventLoopWorker *)
-J2OBJC_FIELD_SETTER(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1, val$action_, id<RxFunctionsAction0>)
+__attribute__((unused)) static void RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1_initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1 *self, RxInternalSchedulersCachedThreadScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0);
 
-__attribute__((unused)) static void RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1_initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1 *self, RxInternalSchedulersCachedThreadScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0);
+__attribute__((unused)) static RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1 *new_RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1_initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1 *new_RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1_initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1 *create_RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1_initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0);
+__attribute__((unused)) static RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1 *create_RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1_initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0);
 
 @interface RxInternalSchedulersCachedThreadScheduler_ThreadWorker () {
  @public
@@ -355,9 +347,9 @@ void RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_initWithJavaUtil
   id<JavaUtilConcurrentScheduledExecutorService> evictor = nil;
   id<JavaUtilConcurrentFuture> task = nil;
   if (unit != nil) {
-    evictor = JavaUtilConcurrentExecutors_newScheduledThreadPoolWithInt_withJavaUtilConcurrentThreadFactory_(1, create_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1_initWithJavaUtilConcurrentThreadFactory_(threadFactory));
+    evictor = JavaUtilConcurrentExecutors_newScheduledThreadPoolWithInt_withJavaUtilConcurrentThreadFactory_(1, create_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1_initWithJavaUtilConcurrentThreadFactory_(threadFactory));
     RxInternalSchedulersNewThreadWorker_tryEnableCancelPolicyWithJavaUtilConcurrentScheduledExecutorService_(evictor);
-    task = [((id<JavaUtilConcurrentScheduledExecutorService>) nil_chk(evictor)) scheduleWithFixedDelayWithJavaLangRunnable:create_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2_initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_(self) withLong:self->keepAliveTime_ withLong:self->keepAliveTime_ withJavaUtilConcurrentTimeUnit:JreLoadEnum(JavaUtilConcurrentTimeUnit, NANOSECONDS)];
+    task = [((id<JavaUtilConcurrentScheduledExecutorService>) nil_chk(evictor)) scheduleWithFixedDelayWithJavaLangRunnable:create_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2_initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_(self) withLong:self->keepAliveTime_ withLong:self->keepAliveTime_ withJavaUtilConcurrentTimeUnit:JreLoadEnum(JavaUtilConcurrentTimeUnit, NANOSECONDS)];
   }
   JreStrongAssign(&self->evictorService_, evictor);
   JreStrongAssign(&self->evictorTask_, task);
@@ -373,17 +365,17 @@ RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool *create_RxInternalSch
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool)
 
-@implementation RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1
+@implementation RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1
+
+- (instancetype)initWithJavaUtilConcurrentThreadFactory:(id<JavaUtilConcurrentThreadFactory>)capture$0 {
+  RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1_initWithJavaUtilConcurrentThreadFactory_(self, capture$0);
+  return self;
+}
 
 - (JavaLangThread *)newThreadWithJavaLangRunnable:(id<JavaLangRunnable>)r {
   JavaLangThread *thread = [((id<JavaUtilConcurrentThreadFactory>) nil_chk(val$threadFactory_)) newThreadWithJavaLangRunnable:r];
   [((JavaLangThread *) nil_chk(thread)) setNameWithNSString:JreStrcat("$$", [thread getName], @" (Evictor)")];
   return thread;
-}
-
-- (instancetype)initWithJavaUtilConcurrentThreadFactory:(id<JavaUtilConcurrentThreadFactory>)capture$0 {
-  RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1_initWithJavaUtilConcurrentThreadFactory_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -393,46 +385,46 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersCachedThreadScheduler_Cache
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaLangThread;", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(newThreadWithJavaLangRunnable:);
-  methods[1].selector = @selector(initWithJavaUtilConcurrentThreadFactory:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentThreadFactory:);
+  methods[1].selector = @selector(newThreadWithJavaLangRunnable:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$threadFactory_", "LJavaUtilConcurrentThreadFactory;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "newThread", "LJavaLangRunnable;", "LJavaUtilConcurrentThreadFactory;", "LRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool;", "initWithJavaUtilConcurrentThreadFactory:withLong:withJavaUtilConcurrentTimeUnit:" };
-  static const J2ObjcClassInfo _RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
-  return &_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1;
+  static const void *ptrTable[] = { "newThread", "LJavaLangRunnable;", "LRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool;", "initWithJavaUtilConcurrentThreadFactory:withLong:withJavaUtilConcurrentTimeUnit:" };
+  static const J2ObjcClassInfo _RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, -1, -1 };
+  return &_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1;
 }
 
 @end
 
-void RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1_initWithJavaUtilConcurrentThreadFactory_(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1 *self, id<JavaUtilConcurrentThreadFactory> capture$0) {
+void RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1_initWithJavaUtilConcurrentThreadFactory_(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1 *self, id<JavaUtilConcurrentThreadFactory> capture$0) {
   JreStrongAssign(&self->val$threadFactory_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1 *new_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1_initWithJavaUtilConcurrentThreadFactory_(id<JavaUtilConcurrentThreadFactory> capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1, initWithJavaUtilConcurrentThreadFactory_, capture$0)
+RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1 *new_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1_initWithJavaUtilConcurrentThreadFactory_(id<JavaUtilConcurrentThreadFactory> capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1, initWithJavaUtilConcurrentThreadFactory_, capture$0)
 }
 
-RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1 *create_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1_initWithJavaUtilConcurrentThreadFactory_(id<JavaUtilConcurrentThreadFactory> capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1, initWithJavaUtilConcurrentThreadFactory_, capture$0)
+RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1 *create_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1_initWithJavaUtilConcurrentThreadFactory_(id<JavaUtilConcurrentThreadFactory> capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_1, initWithJavaUtilConcurrentThreadFactory_, capture$0)
 }
 
-@implementation RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2
+@implementation RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2
+
+- (instancetype)initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool:(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool *)outer$ {
+  RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2_initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_(self, outer$);
+  return self;
+}
 
 - (void)run {
   [this$0_ evictExpiredWorkers];
-}
-
-- (instancetype)initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool:(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool *)outer$ {
-  RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2_initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_(self, outer$);
-  return self;
 }
 
 - (void)dealloc {
@@ -442,35 +434,35 @@ RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$1 *create_RxInternal
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool:);
+  methods[0].selector = @selector(initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool:);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool;", "initWithJavaUtilConcurrentThreadFactory:withLong:withJavaUtilConcurrentTimeUnit:" };
-  static const J2ObjcClassInfo _RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
-  return &_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2;
+  static const J2ObjcClassInfo _RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  return &_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2;
 }
 
 @end
 
-void RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2_initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2 *self, RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool *outer$) {
+void RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2_initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2 *self, RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2 *new_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2_initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2, initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_, outer$)
+RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2 *new_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2_initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2, initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_, outer$)
 }
 
-RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2 *create_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2_initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2, initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_, outer$)
+RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2 *create_RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2_initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_2, initWithRxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_, outer$)
 }
 
 @implementation RxInternalSchedulersCachedThreadScheduler_EventLoopWorker
@@ -505,7 +497,7 @@ RxInternalSchedulersCachedThreadScheduler_CachedWorkerPool_$2 *create_RxInternal
   if ([((RxSubscriptionsCompositeSubscription *) nil_chk(innerSubscription_)) isUnsubscribed]) {
     return RxSubscriptionsSubscriptions_unsubscribed();
   }
-  RxInternalSchedulersScheduledAction *s = [((RxInternalSchedulersCachedThreadScheduler_ThreadWorker *) nil_chk(threadWorker_)) scheduleActualWithRxFunctionsAction0:create_RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1_initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_(self, action) withLong:delayTime withJavaUtilConcurrentTimeUnit:unit];
+  RxInternalSchedulersScheduledAction *s = [((RxInternalSchedulersCachedThreadScheduler_ThreadWorker *) nil_chk(threadWorker_)) scheduleActualWithRxFunctionsAction0:create_RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1_initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_(self, action) withLong:delayTime withJavaUtilConcurrentTimeUnit:unit];
   [innerSubscription_ addWithRxSubscription:s];
   [((RxInternalSchedulersScheduledAction *) nil_chk(s)) addParentWithRxSubscriptionsCompositeSubscription:innerSubscription_];
   return s;
@@ -568,19 +560,19 @@ RxInternalSchedulersCachedThreadScheduler_EventLoopWorker *create_RxInternalSche
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker)
 
-@implementation RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1
+@implementation RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1
+
+- (instancetype)initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker:(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker *)outer$
+                                                           withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0 {
+  RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1_initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)call {
   if ([this$0_ isUnsubscribed]) {
     return;
   }
   [((id<RxFunctionsAction0>) nil_chk(val$action_)) call];
-}
-
-- (instancetype)initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker:(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker *)outer$
-                                                           withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0 {
-  RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1_initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_(self, outer$, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -591,37 +583,37 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersCachedThreadScheduler_Event
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker:withRxFunctionsAction0:);
+  methods[0].selector = @selector(initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker:withRxFunctionsAction0:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalSchedulersCachedThreadScheduler_EventLoopWorker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$action_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalSchedulersCachedThreadScheduler_EventLoopWorker;LRxFunctionsAction0;", "LRxInternalSchedulersCachedThreadScheduler_EventLoopWorker;", "scheduleWithRxFunctionsAction0:withLong:withJavaUtilConcurrentTimeUnit:" };
-  static const J2ObjcClassInfo _RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1;
+  static const void *ptrTable[] = { "LRxInternalSchedulersCachedThreadScheduler_EventLoopWorker;", "scheduleWithRxFunctionsAction0:withLong:withJavaUtilConcurrentTimeUnit:" };
+  static const J2ObjcClassInfo _RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 2, 0, -1, 1, -1, -1 };
+  return &_RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1;
 }
 
 @end
 
-void RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1_initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1 *self, RxInternalSchedulersCachedThreadScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) {
+void RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1_initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1 *self, RxInternalSchedulersCachedThreadScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$action_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1 *new_RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1_initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1, initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_, outer$, capture$0)
+RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1 *new_RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1_initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1, initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_, outer$, capture$0)
 }
 
-RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1 *create_RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1_initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_$1, initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_, outer$, capture$0)
+RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1 *create_RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1_initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalSchedulersCachedThreadScheduler_EventLoopWorker_1, initWithRxInternalSchedulersCachedThreadScheduler_EventLoopWorker_withRxFunctionsAction0_, outer$, capture$0)
 }
 
 @implementation RxInternalSchedulersCachedThreadScheduler_ThreadWorker

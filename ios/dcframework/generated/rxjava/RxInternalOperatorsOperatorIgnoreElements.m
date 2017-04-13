@@ -7,10 +7,12 @@
 #include "RxInternalOperatorsOperatorIgnoreElements.h"
 #include "RxSubscriber.h"
 
-@interface RxInternalOperatorsOperatorIgnoreElements_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorIgnoreElements_1 : RxSubscriber {
  @public
   RxSubscriber *val$child_;
 }
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0;
 
 - (void)onCompleted;
 
@@ -18,19 +20,15 @@
 
 - (void)onNextWithId:(id)t;
 
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorIgnoreElements_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorIgnoreElements_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorIgnoreElements_$1, val$child_, RxSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorIgnoreElements_1_initWithRxSubscriber_(RxInternalOperatorsOperatorIgnoreElements_1 *self, RxSubscriber *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorIgnoreElements_$1_initWithRxSubscriber_(RxInternalOperatorsOperatorIgnoreElements_$1 *self, RxSubscriber *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorIgnoreElements_1 *new_RxInternalOperatorsOperatorIgnoreElements_1_initWithRxSubscriber_(RxSubscriber *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorIgnoreElements_$1 *new_RxInternalOperatorsOperatorIgnoreElements_$1_initWithRxSubscriber_(RxSubscriber *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorIgnoreElements_$1 *create_RxInternalOperatorsOperatorIgnoreElements_$1_initWithRxSubscriber_(RxSubscriber *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorIgnoreElements_1 *create_RxInternalOperatorsOperatorIgnoreElements_1_initWithRxSubscriber_(RxSubscriber *capture$0);
 
 @implementation RxInternalOperatorsOperatorIgnoreElements
 
@@ -46,7 +44,7 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 J2OBJC_IGNORE_DESIGNATED_END
 
 - (RxSubscriber *)callWithId:(RxSubscriber *)child {
-  RxSubscriber *parent = create_RxInternalOperatorsOperatorIgnoreElements_$1_initWithRxSubscriber_(child);
+  RxSubscriber *parent = create_RxInternalOperatorsOperatorIgnoreElements_1_initWithRxSubscriber_(child);
   [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:parent];
   return parent;
 }
@@ -141,7 +139,12 @@ RxInternalOperatorsOperatorIgnoreElements_Holder *create_RxInternalOperatorsOper
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorIgnoreElements_Holder)
 
-@implementation RxInternalOperatorsOperatorIgnoreElements_$1
+@implementation RxInternalOperatorsOperatorIgnoreElements_1
+
+- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0 {
+  RxInternalOperatorsOperatorIgnoreElements_1_initWithRxSubscriber_(self, capture$0);
+  return self;
+}
 
 - (void)onCompleted {
   [((RxSubscriber *) nil_chk(val$child_)) onCompleted];
@@ -154,50 +157,44 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorIgnoreElements_Holde
 - (void)onNextWithId:(id)t {
 }
 
-- (instancetype)initWithRxSubscriber:(RxSubscriber *)capture$0 {
-  RxInternalOperatorsOperatorIgnoreElements_$1_initWithRxSubscriber_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorIgnoreElements_$1 class]);
   RELEASE_(val$child_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(initWithRxSubscriber:);
+  methods[0].selector = @selector(initWithRxSubscriber:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)V", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorIgnoreElements;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorIgnoreElements_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 1, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsOperatorIgnoreElements_$1;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorIgnoreElements;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorIgnoreElements_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 1, 6, -1, 7, 8, -1 };
+  return &_RxInternalOperatorsOperatorIgnoreElements_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorIgnoreElements_$1_initWithRxSubscriber_(RxInternalOperatorsOperatorIgnoreElements_$1 *self, RxSubscriber *capture$0) {
+void RxInternalOperatorsOperatorIgnoreElements_1_initWithRxSubscriber_(RxInternalOperatorsOperatorIgnoreElements_1 *self, RxSubscriber *capture$0) {
   JreStrongAssign(&self->val$child_, capture$0);
   RxSubscriber_init(self);
 }
 
-RxInternalOperatorsOperatorIgnoreElements_$1 *new_RxInternalOperatorsOperatorIgnoreElements_$1_initWithRxSubscriber_(RxSubscriber *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorIgnoreElements_$1, initWithRxSubscriber_, capture$0)
+RxInternalOperatorsOperatorIgnoreElements_1 *new_RxInternalOperatorsOperatorIgnoreElements_1_initWithRxSubscriber_(RxSubscriber *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorIgnoreElements_1, initWithRxSubscriber_, capture$0)
 }
 
-RxInternalOperatorsOperatorIgnoreElements_$1 *create_RxInternalOperatorsOperatorIgnoreElements_$1_initWithRxSubscriber_(RxSubscriber *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorIgnoreElements_$1, initWithRxSubscriber_, capture$0)
+RxInternalOperatorsOperatorIgnoreElements_1 *create_RxInternalOperatorsOperatorIgnoreElements_1_initWithRxSubscriber_(RxSubscriber *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorIgnoreElements_1, initWithRxSubscriber_, capture$0)
 }

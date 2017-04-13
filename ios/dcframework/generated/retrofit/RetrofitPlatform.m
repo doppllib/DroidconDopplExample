@@ -43,6 +43,8 @@ __attribute__((unused)) static jboolean RetrofitPlatform_hasRxJavaOnClasspath();
 
 @interface RetrofitPlatform_Base : RetrofitPlatform
 
+- (instancetype)init;
+
 - (id<RetrofitConverterConverter>)defaultConverter;
 
 - (id<RetrofitClientClient_Provider>)defaultClient;
@@ -52,8 +54,6 @@ __attribute__((unused)) static jboolean RetrofitPlatform_hasRxJavaOnClasspath();
 - (id<JavaUtilConcurrentExecutor>)defaultCallbackExecutor;
 
 - (id<RetrofitRestAdapter_Log>)defaultLog;
-
-- (instancetype)init;
 
 @end
 
@@ -67,81 +67,79 @@ __attribute__((unused)) static RetrofitPlatform_Base *create_RetrofitPlatform_Ba
 
 J2OBJC_TYPE_LITERAL_HEADER(RetrofitPlatform_Base)
 
-@interface RetrofitPlatform_Base_$1 : NSObject < RetrofitClientClient_Provider > {
+@interface RetrofitPlatform_Base_1 : NSObject < RetrofitClientClient_Provider > {
  @public
   id<RetrofitClientClient> val$client_;
 }
 
-- (id<RetrofitClientClient>)get;
-
 - (instancetype)initWithRetrofitClientClient:(id<RetrofitClientClient>)capture$0;
+
+- (id<RetrofitClientClient>)get;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RetrofitPlatform_Base_$1)
+J2OBJC_EMPTY_STATIC_INIT(RetrofitPlatform_Base_1)
 
-J2OBJC_FIELD_SETTER(RetrofitPlatform_Base_$1, val$client_, id<RetrofitClientClient>)
+__attribute__((unused)) static void RetrofitPlatform_Base_1_initWithRetrofitClientClient_(RetrofitPlatform_Base_1 *self, id<RetrofitClientClient> capture$0);
 
-__attribute__((unused)) static void RetrofitPlatform_Base_$1_initWithRetrofitClientClient_(RetrofitPlatform_Base_$1 *self, id<RetrofitClientClient> capture$0);
+__attribute__((unused)) static RetrofitPlatform_Base_1 *new_RetrofitPlatform_Base_1_initWithRetrofitClientClient_(id<RetrofitClientClient> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RetrofitPlatform_Base_$1 *new_RetrofitPlatform_Base_$1_initWithRetrofitClientClient_(id<RetrofitClientClient> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RetrofitPlatform_Base_1 *create_RetrofitPlatform_Base_1_initWithRetrofitClientClient_(id<RetrofitClientClient> capture$0);
 
-__attribute__((unused)) static RetrofitPlatform_Base_$1 *create_RetrofitPlatform_Base_$1_initWithRetrofitClientClient_(id<RetrofitClientClient> capture$0);
-
-@interface RetrofitPlatform_Base_$2 : NSObject < JavaUtilConcurrentThreadFactory >
-
-- (JavaLangThread *)newThreadWithJavaLangRunnable:(id<JavaLangRunnable>)r OBJC_METHOD_FAMILY_NONE;
+@interface RetrofitPlatform_Base_2 : NSObject < JavaUtilConcurrentThreadFactory >
 
 - (instancetype)init;
 
+- (JavaLangThread *)newThreadWithJavaLangRunnable:(id<JavaLangRunnable>)r OBJC_METHOD_FAMILY_NONE;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RetrofitPlatform_Base_$2)
+J2OBJC_EMPTY_STATIC_INIT(RetrofitPlatform_Base_2)
 
-__attribute__((unused)) static void RetrofitPlatform_Base_$2_init(RetrofitPlatform_Base_$2 *self);
+__attribute__((unused)) static void RetrofitPlatform_Base_2_init(RetrofitPlatform_Base_2 *self);
 
-__attribute__((unused)) static RetrofitPlatform_Base_$2 *new_RetrofitPlatform_Base_$2_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RetrofitPlatform_Base_2 *new_RetrofitPlatform_Base_2_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RetrofitPlatform_Base_$2 *create_RetrofitPlatform_Base_$2_init();
+__attribute__((unused)) static RetrofitPlatform_Base_2 *create_RetrofitPlatform_Base_2_init();
 
-@interface RetrofitPlatform_Base_$2_$1 : NSObject < JavaLangRunnable > {
+@interface RetrofitPlatform_Base_2_1 : NSObject < JavaLangRunnable > {
  @public
   id<JavaLangRunnable> val$r_;
 }
 
-- (void)run;
-
 - (instancetype)initWithJavaLangRunnable:(id<JavaLangRunnable>)capture$0;
+
+- (void)run;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RetrofitPlatform_Base_$2_$1)
+J2OBJC_EMPTY_STATIC_INIT(RetrofitPlatform_Base_2_1)
 
-J2OBJC_FIELD_SETTER(RetrofitPlatform_Base_$2_$1, val$r_, id<JavaLangRunnable>)
+__attribute__((unused)) static void RetrofitPlatform_Base_2_1_initWithJavaLangRunnable_(RetrofitPlatform_Base_2_1 *self, id<JavaLangRunnable> capture$0);
 
-__attribute__((unused)) static void RetrofitPlatform_Base_$2_$1_initWithJavaLangRunnable_(RetrofitPlatform_Base_$2_$1 *self, id<JavaLangRunnable> capture$0);
+__attribute__((unused)) static RetrofitPlatform_Base_2_1 *new_RetrofitPlatform_Base_2_1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RetrofitPlatform_Base_$2_$1 *new_RetrofitPlatform_Base_$2_$1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RetrofitPlatform_Base_2_1 *create_RetrofitPlatform_Base_2_1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0);
 
-__attribute__((unused)) static RetrofitPlatform_Base_$2_$1 *create_RetrofitPlatform_Base_$2_$1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0);
-
-@interface RetrofitPlatform_Base_$3 : NSObject < RetrofitRestAdapter_Log >
-
-- (void)logWithNSString:(NSString *)message;
+@interface RetrofitPlatform_Base_3 : NSObject < RetrofitRestAdapter_Log >
 
 - (instancetype)init;
 
+- (void)logWithNSString:(NSString *)message;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RetrofitPlatform_Base_$3)
+J2OBJC_EMPTY_STATIC_INIT(RetrofitPlatform_Base_3)
 
-__attribute__((unused)) static void RetrofitPlatform_Base_$3_init(RetrofitPlatform_Base_$3 *self);
+__attribute__((unused)) static void RetrofitPlatform_Base_3_init(RetrofitPlatform_Base_3 *self);
 
-__attribute__((unused)) static RetrofitPlatform_Base_$3 *new_RetrofitPlatform_Base_$3_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RetrofitPlatform_Base_3 *new_RetrofitPlatform_Base_3_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RetrofitPlatform_Base_$3 *create_RetrofitPlatform_Base_$3_init();
+__attribute__((unused)) static RetrofitPlatform_Base_3 *create_RetrofitPlatform_Base_3_init();
 
 @interface RetrofitPlatform_Android : RetrofitPlatform
+
+- (instancetype)init;
 
 - (id<RetrofitConverterConverter>)defaultConverter;
 
@@ -152,8 +150,6 @@ __attribute__((unused)) static RetrofitPlatform_Base_$3 *create_RetrofitPlatform
 - (id<JavaUtilConcurrentExecutor>)defaultCallbackExecutor;
 
 - (id<RetrofitRestAdapter_Log>)defaultLog;
-
-- (instancetype)init;
 
 @end
 
@@ -167,69 +163,72 @@ __attribute__((unused)) static RetrofitPlatform_Android *create_RetrofitPlatform
 
 J2OBJC_TYPE_LITERAL_HEADER(RetrofitPlatform_Android)
 
-@interface RetrofitPlatform_Android_$1 : NSObject < RetrofitClientClient_Provider > {
+@interface RetrofitPlatform_Android_1 : NSObject < RetrofitClientClient_Provider > {
  @public
   id<RetrofitClientClient> val$client_;
 }
 
-- (id<RetrofitClientClient>)get;
-
 - (instancetype)initWithRetrofitClientClient:(id<RetrofitClientClient>)capture$0;
+
+- (id<RetrofitClientClient>)get;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RetrofitPlatform_Android_$1)
+J2OBJC_EMPTY_STATIC_INIT(RetrofitPlatform_Android_1)
 
-J2OBJC_FIELD_SETTER(RetrofitPlatform_Android_$1, val$client_, id<RetrofitClientClient>)
+__attribute__((unused)) static void RetrofitPlatform_Android_1_initWithRetrofitClientClient_(RetrofitPlatform_Android_1 *self, id<RetrofitClientClient> capture$0);
 
-__attribute__((unused)) static void RetrofitPlatform_Android_$1_initWithRetrofitClientClient_(RetrofitPlatform_Android_$1 *self, id<RetrofitClientClient> capture$0);
+__attribute__((unused)) static RetrofitPlatform_Android_1 *new_RetrofitPlatform_Android_1_initWithRetrofitClientClient_(id<RetrofitClientClient> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RetrofitPlatform_Android_$1 *new_RetrofitPlatform_Android_$1_initWithRetrofitClientClient_(id<RetrofitClientClient> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RetrofitPlatform_Android_1 *create_RetrofitPlatform_Android_1_initWithRetrofitClientClient_(id<RetrofitClientClient> capture$0);
 
-__attribute__((unused)) static RetrofitPlatform_Android_$1 *create_RetrofitPlatform_Android_$1_initWithRetrofitClientClient_(id<RetrofitClientClient> capture$0);
-
-@interface RetrofitPlatform_Android_$2 : NSObject < JavaUtilConcurrentThreadFactory >
-
-- (JavaLangThread *)newThreadWithJavaLangRunnable:(id<JavaLangRunnable>)r OBJC_METHOD_FAMILY_NONE;
+@interface RetrofitPlatform_Android_2 : NSObject < JavaUtilConcurrentThreadFactory >
 
 - (instancetype)init;
 
+- (JavaLangThread *)newThreadWithJavaLangRunnable:(id<JavaLangRunnable>)r OBJC_METHOD_FAMILY_NONE;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RetrofitPlatform_Android_$2)
+J2OBJC_EMPTY_STATIC_INIT(RetrofitPlatform_Android_2)
 
-__attribute__((unused)) static void RetrofitPlatform_Android_$2_init(RetrofitPlatform_Android_$2 *self);
+__attribute__((unused)) static void RetrofitPlatform_Android_2_init(RetrofitPlatform_Android_2 *self);
 
-__attribute__((unused)) static RetrofitPlatform_Android_$2 *new_RetrofitPlatform_Android_$2_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RetrofitPlatform_Android_2 *new_RetrofitPlatform_Android_2_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RetrofitPlatform_Android_$2 *create_RetrofitPlatform_Android_$2_init();
+__attribute__((unused)) static RetrofitPlatform_Android_2 *create_RetrofitPlatform_Android_2_init();
 
-@interface RetrofitPlatform_Android_$2_$1 : NSObject < JavaLangRunnable > {
+@interface RetrofitPlatform_Android_2_1 : NSObject < JavaLangRunnable > {
  @public
   id<JavaLangRunnable> val$r_;
 }
 
-- (void)run;
-
 - (instancetype)initWithJavaLangRunnable:(id<JavaLangRunnable>)capture$0;
+
+- (void)run;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RetrofitPlatform_Android_$2_$1)
+J2OBJC_EMPTY_STATIC_INIT(RetrofitPlatform_Android_2_1)
 
-J2OBJC_FIELD_SETTER(RetrofitPlatform_Android_$2_$1, val$r_, id<JavaLangRunnable>)
+__attribute__((unused)) static void RetrofitPlatform_Android_2_1_initWithJavaLangRunnable_(RetrofitPlatform_Android_2_1 *self, id<JavaLangRunnable> capture$0);
 
-__attribute__((unused)) static void RetrofitPlatform_Android_$2_$1_initWithJavaLangRunnable_(RetrofitPlatform_Android_$2_$1 *self, id<JavaLangRunnable> capture$0);
+__attribute__((unused)) static RetrofitPlatform_Android_2_1 *new_RetrofitPlatform_Android_2_1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RetrofitPlatform_Android_$2_$1 *new_RetrofitPlatform_Android_$2_$1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RetrofitPlatform_Android_$2_$1 *create_RetrofitPlatform_Android_$2_$1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0);
+__attribute__((unused)) static RetrofitPlatform_Android_2_1 *create_RetrofitPlatform_Android_2_1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0);
 
 J2OBJC_INITIALIZED_DEFN(RetrofitPlatform)
 
 jboolean RetrofitPlatform_HAS_RX_JAVA;
 
 @implementation RetrofitPlatform
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RetrofitPlatform_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 + (RetrofitPlatform *)get {
   return RetrofitPlatform_get();
@@ -273,15 +272,9 @@ jboolean RetrofitPlatform_HAS_RX_JAVA;
   return RetrofitPlatform_hasRxJavaOnClasspath();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RetrofitPlatform_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRetrofitPlatform;", 0x8, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRetrofitPlatform;", 0xa, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRetrofitConverterConverter;", 0x400, -1, -1, -1, -1, -1, -1 },
@@ -290,19 +283,18 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "LJavaUtilConcurrentExecutor;", 0x400, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRetrofitRestAdapter_Log;", 0x400, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0xa, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(get);
-  methods[1].selector = @selector(findPlatform);
-  methods[2].selector = @selector(defaultConverter);
-  methods[3].selector = @selector(defaultClient);
-  methods[4].selector = @selector(defaultHttpExecutor);
-  methods[5].selector = @selector(defaultCallbackExecutor);
-  methods[6].selector = @selector(defaultLog);
-  methods[7].selector = @selector(hasRxJavaOnClasspath);
-  methods[8].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(get);
+  methods[2].selector = @selector(findPlatform);
+  methods[3].selector = @selector(defaultConverter);
+  methods[4].selector = @selector(defaultClient);
+  methods[5].selector = @selector(defaultHttpExecutor);
+  methods[6].selector = @selector(defaultCallbackExecutor);
+  methods[7].selector = @selector(defaultLog);
+  methods[8].selector = @selector(hasRxJavaOnClasspath);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "PLATFORM", "LRetrofitPlatform;", .constantValue.asLong = 0, 0x1a, -1, 0, -1, -1 },
@@ -322,6 +314,10 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void RetrofitPlatform_init(RetrofitPlatform *self) {
+  NSObject_init(self);
+}
 
 RetrofitPlatform *RetrofitPlatform_get() {
   RetrofitPlatform_initialize();
@@ -344,13 +340,16 @@ jboolean RetrofitPlatform_hasRxJavaOnClasspath() {
   return false;
 }
 
-void RetrofitPlatform_init(RetrofitPlatform *self) {
-  NSObject_init(self);
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitPlatform)
 
 @implementation RetrofitPlatform_Base
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RetrofitPlatform_Base_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<RetrofitConverterConverter>)defaultConverter {
   return create_RetrofitConverterGsonConverter_initWithComGoogleGsonGson_(create_ComGoogleGsonGson_init());
@@ -361,11 +360,11 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitPlatform)
   {
     client = create_RetrofitClientUrlConnectionClient_init();
   }
-  return create_RetrofitPlatform_Base_$1_initWithRetrofitClientClient_(client);
+  return create_RetrofitPlatform_Base_1_initWithRetrofitClientClient_(client);
 }
 
 - (id<JavaUtilConcurrentExecutor>)defaultHttpExecutor {
-  return JavaUtilConcurrentExecutors_newCachedThreadPoolWithJavaUtilConcurrentThreadFactory_(create_RetrofitPlatform_Base_$2_init());
+  return JavaUtilConcurrentExecutors_newCachedThreadPoolWithJavaUtilConcurrentThreadFactory_(create_RetrofitPlatform_Base_2_init());
 }
 
 - (id<JavaUtilConcurrentExecutor>)defaultCallbackExecutor {
@@ -373,33 +372,26 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitPlatform)
 }
 
 - (id<RetrofitRestAdapter_Log>)defaultLog {
-  return create_RetrofitPlatform_Base_$3_init();
+  return create_RetrofitPlatform_Base_3_init();
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RetrofitPlatform_Base_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRetrofitConverterConverter;", 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRetrofitClientClient_Provider;", 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaUtilConcurrentExecutor;", 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaUtilConcurrentExecutor;", 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRetrofitRestAdapter_Log;", 0x0, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(defaultConverter);
-  methods[1].selector = @selector(defaultClient);
-  methods[2].selector = @selector(defaultHttpExecutor);
-  methods[3].selector = @selector(defaultCallbackExecutor);
-  methods[4].selector = @selector(defaultLog);
-  methods[5].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(defaultConverter);
+  methods[2].selector = @selector(defaultClient);
+  methods[3].selector = @selector(defaultHttpExecutor);
+  methods[4].selector = @selector(defaultCallbackExecutor);
+  methods[5].selector = @selector(defaultLog);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "LRetrofitPlatform;" };
   static const J2ObjcClassInfo _RetrofitPlatform_Base = { "Base", "retrofit", ptrTable, methods, NULL, 7, 0xa, 6, 0, 0, -1, -1, -1, -1 };
@@ -422,15 +414,15 @@ RetrofitPlatform_Base *create_RetrofitPlatform_Base_init() {
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitPlatform_Base)
 
-@implementation RetrofitPlatform_Base_$1
+@implementation RetrofitPlatform_Base_1
+
+- (instancetype)initWithRetrofitClientClient:(id<RetrofitClientClient>)capture$0 {
+  RetrofitPlatform_Base_1_initWithRetrofitClientClient_(self, capture$0);
+  return self;
+}
 
 - (id<RetrofitClientClient>)get {
   return val$client_;
-}
-
-- (instancetype)initWithRetrofitClientClient:(id<RetrofitClientClient>)capture$0 {
-  RetrofitPlatform_Base_$1_initWithRetrofitClientClient_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -440,89 +432,89 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitPlatform_Base)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRetrofitClientClient;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(get);
-  methods[1].selector = @selector(initWithRetrofitClientClient:);
+  methods[0].selector = @selector(initWithRetrofitClientClient:);
+  methods[1].selector = @selector(get);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$client_", "LRetrofitClientClient;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRetrofitClientClient;", "LRetrofitPlatform_Base;", "defaultClient" };
-  static const J2ObjcClassInfo _RetrofitPlatform_Base_$1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
-  return &_RetrofitPlatform_Base_$1;
+  static const void *ptrTable[] = { "LRetrofitPlatform_Base;", "defaultClient" };
+  static const J2ObjcClassInfo _RetrofitPlatform_Base_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  return &_RetrofitPlatform_Base_1;
 }
 
 @end
 
-void RetrofitPlatform_Base_$1_initWithRetrofitClientClient_(RetrofitPlatform_Base_$1 *self, id<RetrofitClientClient> capture$0) {
+void RetrofitPlatform_Base_1_initWithRetrofitClientClient_(RetrofitPlatform_Base_1 *self, id<RetrofitClientClient> capture$0) {
   JreStrongAssign(&self->val$client_, capture$0);
   NSObject_init(self);
 }
 
-RetrofitPlatform_Base_$1 *new_RetrofitPlatform_Base_$1_initWithRetrofitClientClient_(id<RetrofitClientClient> capture$0) {
-  J2OBJC_NEW_IMPL(RetrofitPlatform_Base_$1, initWithRetrofitClientClient_, capture$0)
+RetrofitPlatform_Base_1 *new_RetrofitPlatform_Base_1_initWithRetrofitClientClient_(id<RetrofitClientClient> capture$0) {
+  J2OBJC_NEW_IMPL(RetrofitPlatform_Base_1, initWithRetrofitClientClient_, capture$0)
 }
 
-RetrofitPlatform_Base_$1 *create_RetrofitPlatform_Base_$1_initWithRetrofitClientClient_(id<RetrofitClientClient> capture$0) {
-  J2OBJC_CREATE_IMPL(RetrofitPlatform_Base_$1, initWithRetrofitClientClient_, capture$0)
+RetrofitPlatform_Base_1 *create_RetrofitPlatform_Base_1_initWithRetrofitClientClient_(id<RetrofitClientClient> capture$0) {
+  J2OBJC_CREATE_IMPL(RetrofitPlatform_Base_1, initWithRetrofitClientClient_, capture$0)
 }
 
-@implementation RetrofitPlatform_Base_$2
-
-- (JavaLangThread *)newThreadWithJavaLangRunnable:(id<JavaLangRunnable>)r {
-  return create_JavaLangThread_initWithJavaLangRunnable_withNSString_(create_RetrofitPlatform_Base_$2_$1_initWithJavaLangRunnable_(r), RetrofitRestAdapter_IDLE_THREAD_NAME);
-}
+@implementation RetrofitPlatform_Base_2
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
-  RetrofitPlatform_Base_$2_init(self);
+  RetrofitPlatform_Base_2_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (JavaLangThread *)newThreadWithJavaLangRunnable:(id<JavaLangRunnable>)r {
+  return create_JavaLangThread_initWithJavaLangRunnable_withNSString_(create_RetrofitPlatform_Base_2_1_initWithJavaLangRunnable_(r), RetrofitRestAdapter_IDLE_THREAD_NAME);
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaLangThread;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaLangThread;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(newThreadWithJavaLangRunnable:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(newThreadWithJavaLangRunnable:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "newThread", "LJavaLangRunnable;", "LRetrofitPlatform_Base;", "defaultHttpExecutor" };
-  static const J2ObjcClassInfo _RetrofitPlatform_Base_$2 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, -1, -1 };
-  return &_RetrofitPlatform_Base_$2;
+  static const J2ObjcClassInfo _RetrofitPlatform_Base_2 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, -1, -1 };
+  return &_RetrofitPlatform_Base_2;
 }
 
 @end
 
-void RetrofitPlatform_Base_$2_init(RetrofitPlatform_Base_$2 *self) {
+void RetrofitPlatform_Base_2_init(RetrofitPlatform_Base_2 *self) {
   NSObject_init(self);
 }
 
-RetrofitPlatform_Base_$2 *new_RetrofitPlatform_Base_$2_init() {
-  J2OBJC_NEW_IMPL(RetrofitPlatform_Base_$2, init)
+RetrofitPlatform_Base_2 *new_RetrofitPlatform_Base_2_init() {
+  J2OBJC_NEW_IMPL(RetrofitPlatform_Base_2, init)
 }
 
-RetrofitPlatform_Base_$2 *create_RetrofitPlatform_Base_$2_init() {
-  J2OBJC_CREATE_IMPL(RetrofitPlatform_Base_$2, init)
+RetrofitPlatform_Base_2 *create_RetrofitPlatform_Base_2_init() {
+  J2OBJC_CREATE_IMPL(RetrofitPlatform_Base_2, init)
 }
 
-@implementation RetrofitPlatform_Base_$2_$1
+@implementation RetrofitPlatform_Base_2_1
+
+- (instancetype)initWithJavaLangRunnable:(id<JavaLangRunnable>)capture$0 {
+  RetrofitPlatform_Base_2_1_initWithJavaLangRunnable_(self, capture$0);
+  return self;
+}
 
 - (void)run {
   [((JavaLangThread *) nil_chk(JavaLangThread_currentThread())) setPriorityWithInt:JavaLangThread_MIN_PRIORITY];
   [((id<JavaLangRunnable>) nil_chk(val$r_)) run];
-}
-
-- (instancetype)initWithJavaLangRunnable:(id<JavaLangRunnable>)capture$0 {
-  RetrofitPlatform_Base_$2_$1_initWithJavaLangRunnable_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -532,80 +524,87 @@ RetrofitPlatform_Base_$2 *create_RetrofitPlatform_Base_$2_init() {
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithJavaLangRunnable:);
+  methods[0].selector = @selector(initWithJavaLangRunnable:);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$r_", "LJavaLangRunnable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LJavaLangRunnable;", "LRetrofitPlatform_Base_$2;", "newThreadWithJavaLangRunnable:" };
-  static const J2ObjcClassInfo _RetrofitPlatform_Base_$2_$1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
-  return &_RetrofitPlatform_Base_$2_$1;
+  static const void *ptrTable[] = { "LRetrofitPlatform_Base_2;", "newThreadWithJavaLangRunnable:" };
+  static const J2ObjcClassInfo _RetrofitPlatform_Base_2_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  return &_RetrofitPlatform_Base_2_1;
 }
 
 @end
 
-void RetrofitPlatform_Base_$2_$1_initWithJavaLangRunnable_(RetrofitPlatform_Base_$2_$1 *self, id<JavaLangRunnable> capture$0) {
+void RetrofitPlatform_Base_2_1_initWithJavaLangRunnable_(RetrofitPlatform_Base_2_1 *self, id<JavaLangRunnable> capture$0) {
   JreStrongAssign(&self->val$r_, capture$0);
   NSObject_init(self);
 }
 
-RetrofitPlatform_Base_$2_$1 *new_RetrofitPlatform_Base_$2_$1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) {
-  J2OBJC_NEW_IMPL(RetrofitPlatform_Base_$2_$1, initWithJavaLangRunnable_, capture$0)
+RetrofitPlatform_Base_2_1 *new_RetrofitPlatform_Base_2_1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) {
+  J2OBJC_NEW_IMPL(RetrofitPlatform_Base_2_1, initWithJavaLangRunnable_, capture$0)
 }
 
-RetrofitPlatform_Base_$2_$1 *create_RetrofitPlatform_Base_$2_$1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) {
-  J2OBJC_CREATE_IMPL(RetrofitPlatform_Base_$2_$1, initWithJavaLangRunnable_, capture$0)
+RetrofitPlatform_Base_2_1 *create_RetrofitPlatform_Base_2_1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) {
+  J2OBJC_CREATE_IMPL(RetrofitPlatform_Base_2_1, initWithJavaLangRunnable_, capture$0)
 }
 
-@implementation RetrofitPlatform_Base_$3
+@implementation RetrofitPlatform_Base_3
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RetrofitPlatform_Base_3_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)logWithNSString:(NSString *)message {
   [((JavaIoPrintStream *) nil_chk(JreLoadStatic(JavaLangSystem, out))) printlnWithNSString:message];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RetrofitPlatform_Base_$3_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(logWithNSString:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(logWithNSString:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "log", "LNSString;", "LRetrofitPlatform_Base;", "defaultLog" };
-  static const J2ObjcClassInfo _RetrofitPlatform_Base_$3 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, -1, -1 };
-  return &_RetrofitPlatform_Base_$3;
+  static const J2ObjcClassInfo _RetrofitPlatform_Base_3 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, -1, -1 };
+  return &_RetrofitPlatform_Base_3;
 }
 
 @end
 
-void RetrofitPlatform_Base_$3_init(RetrofitPlatform_Base_$3 *self) {
+void RetrofitPlatform_Base_3_init(RetrofitPlatform_Base_3 *self) {
   NSObject_init(self);
 }
 
-RetrofitPlatform_Base_$3 *new_RetrofitPlatform_Base_$3_init() {
-  J2OBJC_NEW_IMPL(RetrofitPlatform_Base_$3, init)
+RetrofitPlatform_Base_3 *new_RetrofitPlatform_Base_3_init() {
+  J2OBJC_NEW_IMPL(RetrofitPlatform_Base_3, init)
 }
 
-RetrofitPlatform_Base_$3 *create_RetrofitPlatform_Base_$3_init() {
-  J2OBJC_CREATE_IMPL(RetrofitPlatform_Base_$3, init)
+RetrofitPlatform_Base_3 *create_RetrofitPlatform_Base_3_init() {
+  J2OBJC_CREATE_IMPL(RetrofitPlatform_Base_3, init)
 }
 
 @implementation RetrofitPlatform_Android
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RetrofitPlatform_Android_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<RetrofitConverterConverter>)defaultConverter {
   return create_RetrofitConverterGsonConverter_initWithComGoogleGsonGson_(create_ComGoogleGsonGson_init());
@@ -616,11 +615,11 @@ RetrofitPlatform_Base_$3 *create_RetrofitPlatform_Base_$3_init() {
   {
     client = create_RetrofitClientUrlConnectionClient_init();
   }
-  return create_RetrofitPlatform_Android_$1_initWithRetrofitClientClient_(client);
+  return create_RetrofitPlatform_Android_1_initWithRetrofitClientClient_(client);
 }
 
 - (id<JavaUtilConcurrentExecutor>)defaultHttpExecutor {
-  return JavaUtilConcurrentExecutors_newCachedThreadPoolWithJavaUtilConcurrentThreadFactory_(create_RetrofitPlatform_Android_$2_init());
+  return JavaUtilConcurrentExecutors_newCachedThreadPoolWithJavaUtilConcurrentThreadFactory_(create_RetrofitPlatform_Android_2_init());
 }
 
 - (id<JavaUtilConcurrentExecutor>)defaultCallbackExecutor {
@@ -631,30 +630,23 @@ RetrofitPlatform_Base_$3 *create_RetrofitPlatform_Base_$3_init() {
   return create_RetrofitAndroidAndroidLog_initWithNSString_(@"Retrofit");
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RetrofitPlatform_Android_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRetrofitConverterConverter;", 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRetrofitClientClient_Provider;", 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaUtilConcurrentExecutor;", 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaUtilConcurrentExecutor;", 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRetrofitRestAdapter_Log;", 0x0, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(defaultConverter);
-  methods[1].selector = @selector(defaultClient);
-  methods[2].selector = @selector(defaultHttpExecutor);
-  methods[3].selector = @selector(defaultCallbackExecutor);
-  methods[4].selector = @selector(defaultLog);
-  methods[5].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(defaultConverter);
+  methods[2].selector = @selector(defaultClient);
+  methods[3].selector = @selector(defaultHttpExecutor);
+  methods[4].selector = @selector(defaultCallbackExecutor);
+  methods[5].selector = @selector(defaultLog);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "LRetrofitPlatform;" };
   static const J2ObjcClassInfo _RetrofitPlatform_Android = { "Android", "retrofit", ptrTable, methods, NULL, 7, 0xa, 6, 0, 0, -1, -1, -1, -1 };
@@ -677,15 +669,15 @@ RetrofitPlatform_Android *create_RetrofitPlatform_Android_init() {
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitPlatform_Android)
 
-@implementation RetrofitPlatform_Android_$1
+@implementation RetrofitPlatform_Android_1
+
+- (instancetype)initWithRetrofitClientClient:(id<RetrofitClientClient>)capture$0 {
+  RetrofitPlatform_Android_1_initWithRetrofitClientClient_(self, capture$0);
+  return self;
+}
 
 - (id<RetrofitClientClient>)get {
   return val$client_;
-}
-
-- (instancetype)initWithRetrofitClientClient:(id<RetrofitClientClient>)capture$0 {
-  RetrofitPlatform_Android_$1_initWithRetrofitClientClient_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -695,88 +687,88 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitPlatform_Android)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LRetrofitClientClient;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(get);
-  methods[1].selector = @selector(initWithRetrofitClientClient:);
+  methods[0].selector = @selector(initWithRetrofitClientClient:);
+  methods[1].selector = @selector(get);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$client_", "LRetrofitClientClient;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRetrofitClientClient;", "LRetrofitPlatform_Android;", "defaultClient" };
-  static const J2ObjcClassInfo _RetrofitPlatform_Android_$1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
-  return &_RetrofitPlatform_Android_$1;
+  static const void *ptrTable[] = { "LRetrofitPlatform_Android;", "defaultClient" };
+  static const J2ObjcClassInfo _RetrofitPlatform_Android_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  return &_RetrofitPlatform_Android_1;
 }
 
 @end
 
-void RetrofitPlatform_Android_$1_initWithRetrofitClientClient_(RetrofitPlatform_Android_$1 *self, id<RetrofitClientClient> capture$0) {
+void RetrofitPlatform_Android_1_initWithRetrofitClientClient_(RetrofitPlatform_Android_1 *self, id<RetrofitClientClient> capture$0) {
   JreStrongAssign(&self->val$client_, capture$0);
   NSObject_init(self);
 }
 
-RetrofitPlatform_Android_$1 *new_RetrofitPlatform_Android_$1_initWithRetrofitClientClient_(id<RetrofitClientClient> capture$0) {
-  J2OBJC_NEW_IMPL(RetrofitPlatform_Android_$1, initWithRetrofitClientClient_, capture$0)
+RetrofitPlatform_Android_1 *new_RetrofitPlatform_Android_1_initWithRetrofitClientClient_(id<RetrofitClientClient> capture$0) {
+  J2OBJC_NEW_IMPL(RetrofitPlatform_Android_1, initWithRetrofitClientClient_, capture$0)
 }
 
-RetrofitPlatform_Android_$1 *create_RetrofitPlatform_Android_$1_initWithRetrofitClientClient_(id<RetrofitClientClient> capture$0) {
-  J2OBJC_CREATE_IMPL(RetrofitPlatform_Android_$1, initWithRetrofitClientClient_, capture$0)
+RetrofitPlatform_Android_1 *create_RetrofitPlatform_Android_1_initWithRetrofitClientClient_(id<RetrofitClientClient> capture$0) {
+  J2OBJC_CREATE_IMPL(RetrofitPlatform_Android_1, initWithRetrofitClientClient_, capture$0)
 }
 
-@implementation RetrofitPlatform_Android_$2
-
-- (JavaLangThread *)newThreadWithJavaLangRunnable:(id<JavaLangRunnable>)r {
-  return create_JavaLangThread_initWithJavaLangRunnable_withNSString_(create_RetrofitPlatform_Android_$2_$1_initWithJavaLangRunnable_(r), RetrofitRestAdapter_IDLE_THREAD_NAME);
-}
+@implementation RetrofitPlatform_Android_2
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
-  RetrofitPlatform_Android_$2_init(self);
+  RetrofitPlatform_Android_2_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (JavaLangThread *)newThreadWithJavaLangRunnable:(id<JavaLangRunnable>)r {
+  return create_JavaLangThread_initWithJavaLangRunnable_withNSString_(create_RetrofitPlatform_Android_2_1_initWithJavaLangRunnable_(r), RetrofitRestAdapter_IDLE_THREAD_NAME);
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaLangThread;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaLangThread;", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(newThreadWithJavaLangRunnable:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(newThreadWithJavaLangRunnable:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "newThread", "LJavaLangRunnable;", "LRetrofitPlatform_Android;", "defaultHttpExecutor" };
-  static const J2ObjcClassInfo _RetrofitPlatform_Android_$2 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, -1, -1 };
-  return &_RetrofitPlatform_Android_$2;
+  static const J2ObjcClassInfo _RetrofitPlatform_Android_2 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, -1, -1 };
+  return &_RetrofitPlatform_Android_2;
 }
 
 @end
 
-void RetrofitPlatform_Android_$2_init(RetrofitPlatform_Android_$2 *self) {
+void RetrofitPlatform_Android_2_init(RetrofitPlatform_Android_2 *self) {
   NSObject_init(self);
 }
 
-RetrofitPlatform_Android_$2 *new_RetrofitPlatform_Android_$2_init() {
-  J2OBJC_NEW_IMPL(RetrofitPlatform_Android_$2, init)
+RetrofitPlatform_Android_2 *new_RetrofitPlatform_Android_2_init() {
+  J2OBJC_NEW_IMPL(RetrofitPlatform_Android_2, init)
 }
 
-RetrofitPlatform_Android_$2 *create_RetrofitPlatform_Android_$2_init() {
-  J2OBJC_CREATE_IMPL(RetrofitPlatform_Android_$2, init)
+RetrofitPlatform_Android_2 *create_RetrofitPlatform_Android_2_init() {
+  J2OBJC_CREATE_IMPL(RetrofitPlatform_Android_2, init)
 }
 
-@implementation RetrofitPlatform_Android_$2_$1
+@implementation RetrofitPlatform_Android_2_1
+
+- (instancetype)initWithJavaLangRunnable:(id<JavaLangRunnable>)capture$0 {
+  RetrofitPlatform_Android_2_1_initWithJavaLangRunnable_(self, capture$0);
+  return self;
+}
 
 - (void)run {
   [((id<JavaLangRunnable>) nil_chk(val$r_)) run];
-}
-
-- (instancetype)initWithJavaLangRunnable:(id<JavaLangRunnable>)capture$0 {
-  RetrofitPlatform_Android_$2_$1_initWithJavaLangRunnable_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -786,33 +778,33 @@ RetrofitPlatform_Android_$2 *create_RetrofitPlatform_Android_$2_init() {
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithJavaLangRunnable:);
+  methods[0].selector = @selector(initWithJavaLangRunnable:);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$r_", "LJavaLangRunnable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LJavaLangRunnable;", "LRetrofitPlatform_Android_$2;", "newThreadWithJavaLangRunnable:" };
-  static const J2ObjcClassInfo _RetrofitPlatform_Android_$2_$1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
-  return &_RetrofitPlatform_Android_$2_$1;
+  static const void *ptrTable[] = { "LRetrofitPlatform_Android_2;", "newThreadWithJavaLangRunnable:" };
+  static const J2ObjcClassInfo _RetrofitPlatform_Android_2_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  return &_RetrofitPlatform_Android_2_1;
 }
 
 @end
 
-void RetrofitPlatform_Android_$2_$1_initWithJavaLangRunnable_(RetrofitPlatform_Android_$2_$1 *self, id<JavaLangRunnable> capture$0) {
+void RetrofitPlatform_Android_2_1_initWithJavaLangRunnable_(RetrofitPlatform_Android_2_1 *self, id<JavaLangRunnable> capture$0) {
   JreStrongAssign(&self->val$r_, capture$0);
   NSObject_init(self);
 }
 
-RetrofitPlatform_Android_$2_$1 *new_RetrofitPlatform_Android_$2_$1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) {
-  J2OBJC_NEW_IMPL(RetrofitPlatform_Android_$2_$1, initWithJavaLangRunnable_, capture$0)
+RetrofitPlatform_Android_2_1 *new_RetrofitPlatform_Android_2_1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) {
+  J2OBJC_NEW_IMPL(RetrofitPlatform_Android_2_1, initWithJavaLangRunnable_, capture$0)
 }
 
-RetrofitPlatform_Android_$2_$1 *create_RetrofitPlatform_Android_$2_$1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) {
-  J2OBJC_CREATE_IMPL(RetrofitPlatform_Android_$2_$1, initWithJavaLangRunnable_, capture$0)
+RetrofitPlatform_Android_2_1 *create_RetrofitPlatform_Android_2_1_initWithJavaLangRunnable_(id<JavaLangRunnable> capture$0) {
+  J2OBJC_CREATE_IMPL(RetrofitPlatform_Android_2_1, initWithJavaLangRunnable_, capture$0)
 }

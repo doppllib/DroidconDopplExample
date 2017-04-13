@@ -88,7 +88,7 @@ NSString *RetrofitMimeMimeUtil_parseCharsetWithNSString_withNSString_(NSString *
   RetrofitMimeMimeUtil_initialize();
   JavaUtilRegexMatcher *match = [((JavaUtilRegexPattern *) nil_chk(RetrofitMimeMimeUtil_CHARSET)) matcherWithJavaLangCharSequence:mimeType];
   if ([((JavaUtilRegexMatcher *) nil_chk(match)) find]) {
-    return [((NSString *) nil_chk([match groupWithInt:1])) replaceAll:@"[\"\\\\]" withReplacement:@""];
+    return [((NSString *) nil_chk([match groupWithInt:1])) java_replaceAll:@"[\"\\\\]" withReplacement:@""];
   }
   return defaultCharset;
 }

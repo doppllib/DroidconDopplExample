@@ -19,6 +19,13 @@
 
 @implementation CoTouchlabDroidconandroidUtilsIOUtils
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabDroidconandroidUtilsIOUtils_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (IOSByteArray *)toByteArrayWithJavaIoInputStream:(JavaIoInputStream *)input {
   return CoTouchlabDroidconandroidUtilsIOUtils_toByteArrayWithJavaIoInputStream_(input);
 }
@@ -60,15 +67,9 @@
   return CoTouchlabDroidconandroidUtilsIOUtils_readLinesWithJavaIoReader_(input);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabDroidconandroidUtilsIOUtils_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "[B", 0x9, 0, 1, 2, -1, -1, -1 },
     { NULL, "I", 0x9, 3, 4, 2, -1, -1, -1 },
     { NULL, "J", 0x9, 5, 4, 2, -1, -1, -1 },
@@ -78,20 +79,19 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "J", 0x9, 5, 8, 2, -1, -1, -1 },
     { NULL, "LJavaUtilList;", 0x9, 9, 1, 2, -1, -1, -1 },
     { NULL, "LJavaUtilList;", 0x9, 9, 10, 2, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(toByteArrayWithJavaIoInputStream:);
-  methods[1].selector = @selector(copy__WithJavaIoInputStream:withJavaIoOutputStream:);
-  methods[2].selector = @selector(copyLargeWithJavaIoInputStream:withJavaIoOutputStream:);
-  methods[3].selector = @selector(toStringWithJavaIoInputStream:);
-  methods[4].selector = @selector(copy__WithJavaIoInputStream:withJavaIoWriter:);
-  methods[5].selector = @selector(copy__WithJavaIoReader:withJavaIoWriter:);
-  methods[6].selector = @selector(copyLargeWithJavaIoReader:withJavaIoWriter:);
-  methods[7].selector = @selector(readLinesWithJavaIoInputStream:);
-  methods[8].selector = @selector(readLinesWithJavaIoReader:);
-  methods[9].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(toByteArrayWithJavaIoInputStream:);
+  methods[2].selector = @selector(copy__WithJavaIoInputStream:withJavaIoOutputStream:);
+  methods[3].selector = @selector(copyLargeWithJavaIoInputStream:withJavaIoOutputStream:);
+  methods[4].selector = @selector(toStringWithJavaIoInputStream:);
+  methods[5].selector = @selector(copy__WithJavaIoInputStream:withJavaIoWriter:);
+  methods[6].selector = @selector(copy__WithJavaIoReader:withJavaIoWriter:);
+  methods[7].selector = @selector(copyLargeWithJavaIoReader:withJavaIoWriter:);
+  methods[8].selector = @selector(readLinesWithJavaIoInputStream:);
+  methods[9].selector = @selector(readLinesWithJavaIoReader:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "toByteArray", "LJavaIoInputStream;", "LJavaIoIOException;", "copy", "LJavaIoInputStream;LJavaIoOutputStream;", "copyLarge", "toString", "LJavaIoInputStream;LJavaIoWriter;", "LJavaIoReader;LJavaIoWriter;", "readLines", "LJavaIoReader;" };
   static const J2ObjcClassInfo _CoTouchlabDroidconandroidUtilsIOUtils = { "IOUtils", "co.touchlab.droidconandroid.utils", ptrTable, methods, NULL, 7, 0x1, 10, 0, -1, -1, -1, -1, -1 };
@@ -99,6 +99,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void CoTouchlabDroidconandroidUtilsIOUtils_init(CoTouchlabDroidconandroidUtilsIOUtils *self) {
+  NSObject_init(self);
+}
+
+CoTouchlabDroidconandroidUtilsIOUtils *new_CoTouchlabDroidconandroidUtilsIOUtils_init() {
+  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidUtilsIOUtils, init)
+}
+
+CoTouchlabDroidconandroidUtilsIOUtils *create_CoTouchlabDroidconandroidUtilsIOUtils_init() {
+  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidUtilsIOUtils, init)
+}
 
 IOSByteArray *CoTouchlabDroidconandroidUtilsIOUtils_toByteArrayWithJavaIoInputStream_(JavaIoInputStream *input) {
   CoTouchlabDroidconandroidUtilsIOUtils_initialize();
@@ -168,18 +180,6 @@ id<JavaUtilList> CoTouchlabDroidconandroidUtilsIOUtils_readLinesWithJavaIoReader
     [list addWithId:line];
   }
   return list;
-}
-
-void CoTouchlabDroidconandroidUtilsIOUtils_init(CoTouchlabDroidconandroidUtilsIOUtils *self) {
-  NSObject_init(self);
-}
-
-CoTouchlabDroidconandroidUtilsIOUtils *new_CoTouchlabDroidconandroidUtilsIOUtils_init() {
-  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidUtilsIOUtils, init)
-}
-
-CoTouchlabDroidconandroidUtilsIOUtils *create_CoTouchlabDroidconandroidUtilsIOUtils_init() {
-  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidUtilsIOUtils, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabDroidconandroidUtilsIOUtils)

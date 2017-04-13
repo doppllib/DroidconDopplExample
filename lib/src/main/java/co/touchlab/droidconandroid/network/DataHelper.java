@@ -8,6 +8,8 @@ import com.google.gson.GsonBuilder;
 
 import org.jetbrains.annotations.NotNull;
 
+import javax.net.ssl.HttpsURLConnection;
+
 import co.touchlab.droidconandroid.data.AppPrefs;
 import co.touchlab.droidconandroid.presenter.PlatformClient;
 import retrofit.ErrorHandler;
@@ -78,4 +80,6 @@ public class DataHelper
 
         return builder;
     }
+
+    private Class asdf = HttpsURLConnection.class;
 }

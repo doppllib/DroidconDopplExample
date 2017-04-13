@@ -52,6 +52,12 @@
 
 J2OBJC_STATIC_INIT(RxPluginsRxJavaSchedulersHook)
 
+FOUNDATION_EXPORT void RxPluginsRxJavaSchedulersHook_init(RxPluginsRxJavaSchedulersHook *self);
+
+FOUNDATION_EXPORT RxPluginsRxJavaSchedulersHook *new_RxPluginsRxJavaSchedulersHook_init() NS_RETURNS_RETAINED;
+
+FOUNDATION_EXPORT RxPluginsRxJavaSchedulersHook *create_RxPluginsRxJavaSchedulersHook_init();
+
 FOUNDATION_EXPORT RxScheduler *RxPluginsRxJavaSchedulersHook_createComputationScheduler();
 
 FOUNDATION_EXPORT RxScheduler *RxPluginsRxJavaSchedulersHook_createComputationSchedulerWithJavaUtilConcurrentThreadFactory_(id<JavaUtilConcurrentThreadFactory> threadFactory);
@@ -65,12 +71,6 @@ FOUNDATION_EXPORT RxScheduler *RxPluginsRxJavaSchedulersHook_createNewThreadSche
 FOUNDATION_EXPORT RxScheduler *RxPluginsRxJavaSchedulersHook_createNewThreadSchedulerWithJavaUtilConcurrentThreadFactory_(id<JavaUtilConcurrentThreadFactory> threadFactory);
 
 FOUNDATION_EXPORT RxPluginsRxJavaSchedulersHook *RxPluginsRxJavaSchedulersHook_getDefaultInstance();
-
-FOUNDATION_EXPORT void RxPluginsRxJavaSchedulersHook_init(RxPluginsRxJavaSchedulersHook *self);
-
-FOUNDATION_EXPORT RxPluginsRxJavaSchedulersHook *new_RxPluginsRxJavaSchedulersHook_init() NS_RETURNS_RETAINED;
-
-FOUNDATION_EXPORT RxPluginsRxJavaSchedulersHook *create_RxPluginsRxJavaSchedulersHook_init();
 
 J2OBJC_TYPE_LITERAL_HEADER(RxPluginsRxJavaSchedulersHook)
 

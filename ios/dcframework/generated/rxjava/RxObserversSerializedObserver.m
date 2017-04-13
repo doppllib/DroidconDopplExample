@@ -193,6 +193,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObserversSerializedObserver)
 
 @implementation RxObserversSerializedObserver_FastList
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxObserversSerializedObserver_FastList_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (void)addWithId:(id)o {
   jint s = size_;
   IOSObjectArray *a = array_;
@@ -210,13 +217,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObserversSerializedObserver)
   size_ = s + 1;
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxObserversSerializedObserver_FastList_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(array_);
   [super dealloc];
@@ -224,13 +224,13 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(addWithId:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(addWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "array_", "[LNSObject;", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },

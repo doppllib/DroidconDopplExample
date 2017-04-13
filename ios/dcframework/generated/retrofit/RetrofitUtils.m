@@ -175,10 +175,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitUtils)
 
 @implementation RetrofitUtils_SynchronousExecutor
 
-- (void)executeWithJavaLangRunnable:(id<JavaLangRunnable>)runnable {
-  [((id<JavaLangRunnable>) nil_chk(runnable)) run];
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   RetrofitUtils_SynchronousExecutor_init(self);
@@ -186,15 +182,19 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
+- (void)executeWithJavaLangRunnable:(id<JavaLangRunnable>)runnable {
+  [((id<JavaLangRunnable>) nil_chk(runnable)) run];
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(executeWithJavaLangRunnable:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(executeWithJavaLangRunnable:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "execute", "LJavaLangRunnable;", "LRetrofitUtils;" };
   static const J2ObjcClassInfo _RetrofitUtils_SynchronousExecutor = { "SynchronousExecutor", "retrofit", ptrTable, methods, NULL, 7, 0x8, 2, 0, 2, -1, -1, -1, -1 };

@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OperatorWindowWithSize.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxInternalOperatorsBackpressureUtils.h"
 #include "RxInternalOperatorsOperatorWindowWithSize.h"
@@ -22,26 +21,24 @@
 #include "java/util/concurrent/atomic/AtomicInteger.h"
 #include "java/util/concurrent/atomic/AtomicLong.h"
 
-@interface RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1 : NSObject < RxProducer > {
+@interface RxInternalOperatorsOperatorWindowWithSize_WindowExact_1 : NSObject < RxProducer > {
  @public
   RxInternalOperatorsOperatorWindowWithSize_WindowExact *this$0_;
 }
 
-- (void)requestWithLong:(jlong)n;
-
 - (instancetype)initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact:(RxInternalOperatorsOperatorWindowWithSize_WindowExact *)outer$;
+
+- (void)requestWithLong:(jlong)n;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorWindowWithSize_WindowExact_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1, this$0_, RxInternalOperatorsOperatorWindowWithSize_WindowExact *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorWindowWithSize_WindowExact_1_initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_(RxInternalOperatorsOperatorWindowWithSize_WindowExact_1 *self, RxInternalOperatorsOperatorWindowWithSize_WindowExact *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1_initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_(RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1 *self, RxInternalOperatorsOperatorWindowWithSize_WindowExact *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithSize_WindowExact_1 *new_RxInternalOperatorsOperatorWindowWithSize_WindowExact_1_initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_(RxInternalOperatorsOperatorWindowWithSize_WindowExact *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1 *new_RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1_initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_(RxInternalOperatorsOperatorWindowWithSize_WindowExact *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1 *create_RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1_initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_(RxInternalOperatorsOperatorWindowWithSize_WindowExact *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorWindowWithSize_WindowExact_1 *create_RxInternalOperatorsOperatorWindowWithSize_WindowExact_1_initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_(RxInternalOperatorsOperatorWindowWithSize_WindowExact *outer$);
 
 @interface RxInternalOperatorsOperatorWindowWithSize_WindowSkip_WindowSkipProducer () {
  @public
@@ -49,8 +46,6 @@ __attribute__((unused)) static RxInternalOperatorsOperatorWindowWithSize_WindowE
 }
 
 @end
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorWindowWithSize_WindowSkip_WindowSkipProducer, this$0_, RxInternalOperatorsOperatorWindowWithSize_WindowSkip *)
 
 inline jlong RxInternalOperatorsOperatorWindowWithSize_WindowSkip_WindowSkipProducer_get_serialVersionUID();
 #define RxInternalOperatorsOperatorWindowWithSize_WindowSkip_WindowSkipProducer_serialVersionUID 4625807964358024108LL
@@ -62,8 +57,6 @@ J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsOperatorWindowWithSize_WindowSki
 }
 
 @end
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorWindowWithSize_WindowOverlap_WindowOverlapProducer, this$0_, RxInternalOperatorsOperatorWindowWithSize_WindowOverlap *)
 
 inline jlong RxInternalOperatorsOperatorWindowWithSize_WindowOverlap_WindowOverlapProducer_get_serialVersionUID();
 #define RxInternalOperatorsOperatorWindowWithSize_WindowOverlap_WindowOverlapProducer_serialVersionUID 4625807964358024108LL
@@ -181,7 +174,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithSize)
 }
 
 - (id<RxProducer>)createProducer {
-  return create_RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1_initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_(self);
+  return create_RxInternalOperatorsOperatorWindowWithSize_WindowExact_1_initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_(self);
 }
 
 - (void)call {
@@ -191,7 +184,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithSize)
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorWindowWithSize_WindowExact class]);
   RELEASE_(actual_);
   RELEASE_(wip_);
   RELEASE_(cancel_);
@@ -252,7 +244,12 @@ RxInternalOperatorsOperatorWindowWithSize_WindowExact *create_RxInternalOperator
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithSize_WindowExact)
 
-@implementation RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1
+@implementation RxInternalOperatorsOperatorWindowWithSize_WindowExact_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact:(RxInternalOperatorsOperatorWindowWithSize_WindowExact *)outer$ {
+  RxInternalOperatorsOperatorWindowWithSize_WindowExact_1_initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_(self, outer$);
+  return self;
+}
 
 - (void)requestWithLong:(jlong)n {
   if (n < 0LL) {
@@ -264,11 +261,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithSize_Windo
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact:(RxInternalOperatorsOperatorWindowWithSize_WindowExact *)outer$ {
-  RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1_initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -276,35 +268,35 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithSize_Windo
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(requestWithLong:);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact:);
+  methods[1].selector = @selector(requestWithLong:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorWindowWithSize_WindowExact;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorWindowWithSize_WindowExact;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
   };
-  static const void *ptrTable[] = { "request", "J", "LRxInternalOperatorsOperatorWindowWithSize_WindowExact;", "createProducer" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, -1, -1 };
-  return &_RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1;
+  static const void *ptrTable[] = { "request", "J", "Lrx/internal/operators/OperatorWindowWithSize$WindowExact<TT;>;", "LRxInternalOperatorsOperatorWindowWithSize_WindowExact;", "createProducer" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithSize_WindowExact_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
+  return &_RxInternalOperatorsOperatorWindowWithSize_WindowExact_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1_initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_(RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1 *self, RxInternalOperatorsOperatorWindowWithSize_WindowExact *outer$) {
+void RxInternalOperatorsOperatorWindowWithSize_WindowExact_1_initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_(RxInternalOperatorsOperatorWindowWithSize_WindowExact_1 *self, RxInternalOperatorsOperatorWindowWithSize_WindowExact *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1 *new_RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1_initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_(RxInternalOperatorsOperatorWindowWithSize_WindowExact *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1, initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_, outer$)
+RxInternalOperatorsOperatorWindowWithSize_WindowExact_1 *new_RxInternalOperatorsOperatorWindowWithSize_WindowExact_1_initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_(RxInternalOperatorsOperatorWindowWithSize_WindowExact *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorWindowWithSize_WindowExact_1, initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_, outer$)
 }
 
-RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1 *create_RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1_initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_(RxInternalOperatorsOperatorWindowWithSize_WindowExact *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1, initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_, outer$)
+RxInternalOperatorsOperatorWindowWithSize_WindowExact_1 *create_RxInternalOperatorsOperatorWindowWithSize_WindowExact_1_initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_(RxInternalOperatorsOperatorWindowWithSize_WindowExact *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorWindowWithSize_WindowExact_1, initWithRxInternalOperatorsOperatorWindowWithSize_WindowExact_, outer$)
 }
 
 @implementation RxInternalOperatorsOperatorWindowWithSize_WindowSkip
@@ -371,7 +363,6 @@ RxInternalOperatorsOperatorWindowWithSize_WindowExact_$1 *create_RxInternalOpera
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorWindowWithSize_WindowSkip class]);
   RELEASE_(actual_);
   RELEASE_(wip_);
   RELEASE_(cancel_);
@@ -436,6 +427,11 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithSize_Windo
 
 @implementation RxInternalOperatorsOperatorWindowWithSize_WindowSkip_WindowSkipProducer
 
+- (instancetype)initWithRxInternalOperatorsOperatorWindowWithSize_WindowSkip:(RxInternalOperatorsOperatorWindowWithSize_WindowSkip *)outer$ {
+  RxInternalOperatorsOperatorWindowWithSize_WindowSkip_WindowSkipProducer_initWithRxInternalOperatorsOperatorWindowWithSize_WindowSkip_(self, outer$);
+  return self;
+}
+
 - (void)requestWithLong:(jlong)n {
   if (n < 0LL) {
     @throw create_JavaLangIllegalArgumentException_initWithNSString_(JreStrcat("$J", @"n >= 0 required but it was ", n));
@@ -455,11 +451,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithSize_Windo
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorWindowWithSize_WindowSkip:(RxInternalOperatorsOperatorWindowWithSize_WindowSkip *)outer$ {
-  RxInternalOperatorsOperatorWindowWithSize_WindowSkip_WindowSkipProducer_initWithRxInternalOperatorsOperatorWindowWithSize_WindowSkip_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -467,20 +458,20 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithSize_Windo
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(requestWithLong:);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorWindowWithSize_WindowSkip:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorWindowWithSize_WindowSkip:);
+  methods[1].selector = @selector(requestWithLong:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorWindowWithSize_WindowSkip;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorWindowWithSize_WindowSkip;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
     { "serialVersionUID", "J", .constantValue.asLong = RxInternalOperatorsOperatorWindowWithSize_WindowSkip_WindowSkipProducer_serialVersionUID, 0x1a, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "request", "J", "LRxInternalOperatorsOperatorWindowWithSize_WindowSkip;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithSize_WindowSkip_WindowSkipProducer = { "WindowSkipProducer", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 2, 2, 2, -1, -1, -1, -1 };
+  static const void *ptrTable[] = { "request", "J", "Lrx/internal/operators/OperatorWindowWithSize$WindowSkip<TT;>;", "LRxInternalOperatorsOperatorWindowWithSize_WindowSkip;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithSize_WindowSkip_WindowSkipProducer = { "WindowSkipProducer", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 2, 2, 3, -1, -1, -1, -1 };
   return &_RxInternalOperatorsOperatorWindowWithSize_WindowSkip_WindowSkipProducer;
 }
 
@@ -635,7 +626,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithSize_Windo
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorWindowWithSize_WindowOverlap class]);
   RELEASE_(actual_);
   RELEASE_(wip_);
   RELEASE_(cancel_);
@@ -719,6 +709,11 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithSize_Windo
 
 @implementation RxInternalOperatorsOperatorWindowWithSize_WindowOverlap_WindowOverlapProducer
 
+- (instancetype)initWithRxInternalOperatorsOperatorWindowWithSize_WindowOverlap:(RxInternalOperatorsOperatorWindowWithSize_WindowOverlap *)outer$ {
+  RxInternalOperatorsOperatorWindowWithSize_WindowOverlap_WindowOverlapProducer_initWithRxInternalOperatorsOperatorWindowWithSize_WindowOverlap_(self, outer$);
+  return self;
+}
+
 - (void)requestWithLong:(jlong)n {
   if (n < 0LL) {
     @throw create_JavaLangIllegalArgumentException_initWithNSString_(JreStrcat("$J", @"n >= 0 required but it was ", n));
@@ -739,11 +734,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithSize_Windo
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorWindowWithSize_WindowOverlap:(RxInternalOperatorsOperatorWindowWithSize_WindowOverlap *)outer$ {
-  RxInternalOperatorsOperatorWindowWithSize_WindowOverlap_WindowOverlapProducer_initWithRxInternalOperatorsOperatorWindowWithSize_WindowOverlap_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -751,20 +741,20 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorWindowWithSize_Windo
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(requestWithLong:);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorWindowWithSize_WindowOverlap:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorWindowWithSize_WindowOverlap:);
+  methods[1].selector = @selector(requestWithLong:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorWindowWithSize_WindowOverlap;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorWindowWithSize_WindowOverlap;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
     { "serialVersionUID", "J", .constantValue.asLong = RxInternalOperatorsOperatorWindowWithSize_WindowOverlap_WindowOverlapProducer_serialVersionUID, 0x1a, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "request", "J", "LRxInternalOperatorsOperatorWindowWithSize_WindowOverlap;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithSize_WindowOverlap_WindowOverlapProducer = { "WindowOverlapProducer", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 2, 2, 2, -1, -1, -1, -1 };
+  static const void *ptrTable[] = { "request", "J", "Lrx/internal/operators/OperatorWindowWithSize$WindowOverlap<TT;>;", "LRxInternalOperatorsOperatorWindowWithSize_WindowOverlap;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorWindowWithSize_WindowOverlap_WindowOverlapProducer = { "WindowOverlapProducer", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 2, 2, 3, -1, -1, -1, -1 };
   return &_RxInternalOperatorsOperatorWindowWithSize_WindowOverlap_WindowOverlapProducer;
 }
 

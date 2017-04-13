@@ -21,6 +21,8 @@
 #include "java/util/concurrent/atomic/AtomicBoolean.h"
 #include "java/util/concurrent/atomic/AtomicReference.h"
 
+@class RxInternalSchedulersSchedulerWhen_ScheduledAction;
+
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
 
 @interface RxInternalSchedulersSchedulerWhen () {
@@ -35,6 +37,96 @@
 J2OBJC_FIELD_SETTER(RxInternalSchedulersSchedulerWhen, actualScheduler_, RxScheduler *)
 J2OBJC_FIELD_SETTER(RxInternalSchedulersSchedulerWhen, workerObserver_, id<RxObserver>)
 J2OBJC_FIELD_SETTER(RxInternalSchedulersSchedulerWhen, subscription_, id<RxSubscription>)
+
+@interface RxInternalSchedulersSchedulerWhen_2 : NSObject < RxFunctionsFunc1 > {
+ @public
+  RxScheduler_Worker *val$actualWorker_;
+}
+
+- (instancetype)initWithRxScheduler_Worker:(RxScheduler_Worker *)capture$0;
+
+- (RxCompletable *)callWithId:(RxInternalSchedulersSchedulerWhen_ScheduledAction *)action;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersSchedulerWhen_2)
+
+__attribute__((unused)) static void RxInternalSchedulersSchedulerWhen_2_initWithRxScheduler_Worker_(RxInternalSchedulersSchedulerWhen_2 *self, RxScheduler_Worker *capture$0);
+
+__attribute__((unused)) static RxInternalSchedulersSchedulerWhen_2 *new_RxInternalSchedulersSchedulerWhen_2_initWithRxScheduler_Worker_(RxScheduler_Worker *capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalSchedulersSchedulerWhen_2 *create_RxInternalSchedulersSchedulerWhen_2_initWithRxScheduler_Worker_(RxScheduler_Worker *capture$0);
+
+@interface RxInternalSchedulersSchedulerWhen_2_1 : NSObject < RxCompletable_OnSubscribe > {
+ @public
+  RxInternalSchedulersSchedulerWhen_2 *this$0_;
+  RxInternalSchedulersSchedulerWhen_ScheduledAction *val$action_;
+}
+
+- (instancetype)initWithRxInternalSchedulersSchedulerWhen_2:(RxInternalSchedulersSchedulerWhen_2 *)outer$
+      withRxInternalSchedulersSchedulerWhen_ScheduledAction:(RxInternalSchedulersSchedulerWhen_ScheduledAction *)capture$0;
+
+- (void)callWithId:(id<RxCompletableSubscriber>)actionCompletable;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersSchedulerWhen_2_1)
+
+__attribute__((unused)) static void RxInternalSchedulersSchedulerWhen_2_1_initWithRxInternalSchedulersSchedulerWhen_2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_(RxInternalSchedulersSchedulerWhen_2_1 *self, RxInternalSchedulersSchedulerWhen_2 *outer$, RxInternalSchedulersSchedulerWhen_ScheduledAction *capture$0);
+
+__attribute__((unused)) static RxInternalSchedulersSchedulerWhen_2_1 *new_RxInternalSchedulersSchedulerWhen_2_1_initWithRxInternalSchedulersSchedulerWhen_2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_(RxInternalSchedulersSchedulerWhen_2 *outer$, RxInternalSchedulersSchedulerWhen_ScheduledAction *capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalSchedulersSchedulerWhen_2_1 *create_RxInternalSchedulersSchedulerWhen_2_1_initWithRxInternalSchedulersSchedulerWhen_2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_(RxInternalSchedulersSchedulerWhen_2 *outer$, RxInternalSchedulersSchedulerWhen_ScheduledAction *capture$0);
+
+@interface RxInternalSchedulersSchedulerWhen_3 : RxScheduler_Worker {
+ @public
+  RxScheduler_Worker *val$actualWorker_;
+  id<RxObserver> val$actionObserver_;
+  JavaUtilConcurrentAtomicAtomicBoolean *unsubscribed_;
+}
+
+- (instancetype)initWithRxScheduler_Worker:(RxScheduler_Worker *)capture$0
+                            withRxObserver:(id<RxObserver>)capture$1;
+
+- (void)unsubscribe;
+
+- (jboolean)isUnsubscribed;
+
+- (id<RxSubscription>)scheduleWithRxFunctionsAction0:(id<RxFunctionsAction0>)action
+                                            withLong:(jlong)delayTime
+                      withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit;
+
+- (id<RxSubscription>)scheduleWithRxFunctionsAction0:(id<RxFunctionsAction0>)action;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersSchedulerWhen_3)
+
+J2OBJC_FIELD_SETTER(RxInternalSchedulersSchedulerWhen_3, unsubscribed_, JavaUtilConcurrentAtomicAtomicBoolean *)
+
+__attribute__((unused)) static void RxInternalSchedulersSchedulerWhen_3_initWithRxScheduler_Worker_withRxObserver_(RxInternalSchedulersSchedulerWhen_3 *self, RxScheduler_Worker *capture$0, id<RxObserver> capture$1);
+
+__attribute__((unused)) static RxInternalSchedulersSchedulerWhen_3 *new_RxInternalSchedulersSchedulerWhen_3_initWithRxScheduler_Worker_withRxObserver_(RxScheduler_Worker *capture$0, id<RxObserver> capture$1) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalSchedulersSchedulerWhen_3 *create_RxInternalSchedulersSchedulerWhen_3_initWithRxScheduler_Worker_withRxObserver_(RxScheduler_Worker *capture$0, id<RxObserver> capture$1);
+
+@interface RxInternalSchedulersSchedulerWhen_1 : NSObject < RxSubscription >
+
+- (instancetype)init;
+
+- (void)unsubscribe;
+
+- (jboolean)isUnsubscribed;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersSchedulerWhen_1)
+
+__attribute__((unused)) static void RxInternalSchedulersSchedulerWhen_1_init(RxInternalSchedulersSchedulerWhen_1 *self);
+
+__attribute__((unused)) static RxInternalSchedulersSchedulerWhen_1 *new_RxInternalSchedulersSchedulerWhen_1_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalSchedulersSchedulerWhen_1 *create_RxInternalSchedulersSchedulerWhen_1_init();
 
 @interface RxInternalSchedulersSchedulerWhen_ScheduledAction : JavaUtilConcurrentAtomicAtomicReference < RxSubscription >
 
@@ -121,103 +213,6 @@ __attribute__((unused)) static RxInternalSchedulersSchedulerWhen_DelayedAction *
 
 J2OBJC_TYPE_LITERAL_HEADER(RxInternalSchedulersSchedulerWhen_DelayedAction)
 
-@interface RxInternalSchedulersSchedulerWhen_$2 : NSObject < RxFunctionsFunc1 > {
- @public
-  RxScheduler_Worker *val$actualWorker_;
-}
-
-- (RxCompletable *)callWithId:(RxInternalSchedulersSchedulerWhen_ScheduledAction *)action;
-
-- (instancetype)initWithRxScheduler_Worker:(RxScheduler_Worker *)capture$0;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersSchedulerWhen_$2)
-
-J2OBJC_FIELD_SETTER(RxInternalSchedulersSchedulerWhen_$2, val$actualWorker_, RxScheduler_Worker *)
-
-__attribute__((unused)) static void RxInternalSchedulersSchedulerWhen_$2_initWithRxScheduler_Worker_(RxInternalSchedulersSchedulerWhen_$2 *self, RxScheduler_Worker *capture$0);
-
-__attribute__((unused)) static RxInternalSchedulersSchedulerWhen_$2 *new_RxInternalSchedulersSchedulerWhen_$2_initWithRxScheduler_Worker_(RxScheduler_Worker *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalSchedulersSchedulerWhen_$2 *create_RxInternalSchedulersSchedulerWhen_$2_initWithRxScheduler_Worker_(RxScheduler_Worker *capture$0);
-
-@interface RxInternalSchedulersSchedulerWhen_$2_$1 : NSObject < RxCompletable_OnSubscribe > {
- @public
-  RxInternalSchedulersSchedulerWhen_$2 *this$0_;
-  RxInternalSchedulersSchedulerWhen_ScheduledAction *val$action_;
-}
-
-- (void)callWithId:(id<RxCompletableSubscriber>)actionCompletable;
-
-- (instancetype)initWithRxInternalSchedulersSchedulerWhen_$2:(RxInternalSchedulersSchedulerWhen_$2 *)outer$
-       withRxInternalSchedulersSchedulerWhen_ScheduledAction:(RxInternalSchedulersSchedulerWhen_ScheduledAction *)capture$0;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersSchedulerWhen_$2_$1)
-
-J2OBJC_FIELD_SETTER(RxInternalSchedulersSchedulerWhen_$2_$1, this$0_, RxInternalSchedulersSchedulerWhen_$2 *)
-J2OBJC_FIELD_SETTER(RxInternalSchedulersSchedulerWhen_$2_$1, val$action_, RxInternalSchedulersSchedulerWhen_ScheduledAction *)
-
-__attribute__((unused)) static void RxInternalSchedulersSchedulerWhen_$2_$1_initWithRxInternalSchedulersSchedulerWhen_$2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_(RxInternalSchedulersSchedulerWhen_$2_$1 *self, RxInternalSchedulersSchedulerWhen_$2 *outer$, RxInternalSchedulersSchedulerWhen_ScheduledAction *capture$0);
-
-__attribute__((unused)) static RxInternalSchedulersSchedulerWhen_$2_$1 *new_RxInternalSchedulersSchedulerWhen_$2_$1_initWithRxInternalSchedulersSchedulerWhen_$2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_(RxInternalSchedulersSchedulerWhen_$2 *outer$, RxInternalSchedulersSchedulerWhen_ScheduledAction *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalSchedulersSchedulerWhen_$2_$1 *create_RxInternalSchedulersSchedulerWhen_$2_$1_initWithRxInternalSchedulersSchedulerWhen_$2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_(RxInternalSchedulersSchedulerWhen_$2 *outer$, RxInternalSchedulersSchedulerWhen_ScheduledAction *capture$0);
-
-@interface RxInternalSchedulersSchedulerWhen_$3 : RxScheduler_Worker {
- @public
-  JavaUtilConcurrentAtomicAtomicBoolean *unsubscribed_;
-  RxScheduler_Worker *val$actualWorker_;
-  id<RxObserver> val$actionObserver_;
-}
-
-- (void)unsubscribe;
-
-- (jboolean)isUnsubscribed;
-
-- (id<RxSubscription>)scheduleWithRxFunctionsAction0:(id<RxFunctionsAction0>)action
-                                            withLong:(jlong)delayTime
-                      withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit;
-
-- (id<RxSubscription>)scheduleWithRxFunctionsAction0:(id<RxFunctionsAction0>)action;
-
-- (instancetype)initWithRxScheduler_Worker:(RxScheduler_Worker *)capture$0
-                            withRxObserver:(id<RxObserver>)capture$1;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersSchedulerWhen_$3)
-
-J2OBJC_FIELD_SETTER(RxInternalSchedulersSchedulerWhen_$3, unsubscribed_, JavaUtilConcurrentAtomicAtomicBoolean *)
-J2OBJC_FIELD_SETTER(RxInternalSchedulersSchedulerWhen_$3, val$actualWorker_, RxScheduler_Worker *)
-J2OBJC_FIELD_SETTER(RxInternalSchedulersSchedulerWhen_$3, val$actionObserver_, id<RxObserver>)
-
-__attribute__((unused)) static void RxInternalSchedulersSchedulerWhen_$3_initWithRxScheduler_Worker_withRxObserver_(RxInternalSchedulersSchedulerWhen_$3 *self, RxScheduler_Worker *capture$0, id<RxObserver> capture$1);
-
-__attribute__((unused)) static RxInternalSchedulersSchedulerWhen_$3 *new_RxInternalSchedulersSchedulerWhen_$3_initWithRxScheduler_Worker_withRxObserver_(RxScheduler_Worker *capture$0, id<RxObserver> capture$1) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalSchedulersSchedulerWhen_$3 *create_RxInternalSchedulersSchedulerWhen_$3_initWithRxScheduler_Worker_withRxObserver_(RxScheduler_Worker *capture$0, id<RxObserver> capture$1);
-
-@interface RxInternalSchedulersSchedulerWhen_$1 : NSObject < RxSubscription >
-
-- (void)unsubscribe;
-
-- (jboolean)isUnsubscribed;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersSchedulerWhen_$1)
-
-__attribute__((unused)) static void RxInternalSchedulersSchedulerWhen_$1_init(RxInternalSchedulersSchedulerWhen_$1 *self);
-
-__attribute__((unused)) static RxInternalSchedulersSchedulerWhen_$1 *new_RxInternalSchedulersSchedulerWhen_$1_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalSchedulersSchedulerWhen_$1 *create_RxInternalSchedulersSchedulerWhen_$1_init();
-
 J2OBJC_INITIALIZED_DEFN(RxInternalSchedulersSchedulerWhen)
 
 id<RxSubscription> RxInternalSchedulersSchedulerWhen_SUBSCRIBED;
@@ -243,8 +238,8 @@ id<RxSubscription> RxInternalSchedulersSchedulerWhen_UNSUBSCRIBED;
   RxScheduler_Worker *actualWorker = [((RxScheduler *) nil_chk(actualScheduler_)) createWorker];
   RxInternalOperatorsBufferUntilSubscriber *actionSubject = RxInternalOperatorsBufferUntilSubscriber_create();
   id<RxObserver> actionObserver = create_RxObserversSerializedObserver_initWithRxObserver_(actionSubject);
-  RxObservable *actions = [((RxInternalOperatorsBufferUntilSubscriber *) nil_chk(actionSubject)) mapWithRxFunctionsFunc1:create_RxInternalSchedulersSchedulerWhen_$2_initWithRxScheduler_Worker_(actualWorker)];
-  RxScheduler_Worker *worker = create_RxInternalSchedulersSchedulerWhen_$3_initWithRxScheduler_Worker_withRxObserver_(actualWorker, actionObserver);
+  RxObservable *actions = [((RxInternalOperatorsBufferUntilSubscriber *) nil_chk(actionSubject)) mapWithRxFunctionsFunc1:create_RxInternalSchedulersSchedulerWhen_2_initWithRxScheduler_Worker_(actualWorker)];
+  RxScheduler_Worker *worker = create_RxInternalSchedulersSchedulerWhen_3_initWithRxScheduler_Worker_withRxObserver_(actualWorker, actionObserver);
   [((id<RxObserver>) nil_chk(workerObserver_)) onNextWithId:actions];
   return worker;
 }
@@ -284,7 +279,7 @@ id<RxSubscription> RxInternalSchedulersSchedulerWhen_UNSUBSCRIBED;
 
 + (void)initialize {
   if (self == [RxInternalSchedulersSchedulerWhen class]) {
-    JreStrongAssignAndConsume(&RxInternalSchedulersSchedulerWhen_SUBSCRIBED, new_RxInternalSchedulersSchedulerWhen_$1_init());
+    JreStrongAssignAndConsume(&RxInternalSchedulersSchedulerWhen_SUBSCRIBED, new_RxInternalSchedulersSchedulerWhen_1_init());
     JreStrongAssign(&RxInternalSchedulersSchedulerWhen_UNSUBSCRIBED, RxSubscriptionsSubscriptions_unsubscribed());
     J2OBJC_SET_INITIALIZED(RxInternalSchedulersSchedulerWhen)
   }
@@ -309,6 +304,240 @@ RxInternalSchedulersSchedulerWhen *create_RxInternalSchedulersSchedulerWhen_init
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersSchedulerWhen)
+
+@implementation RxInternalSchedulersSchedulerWhen_2
+
+- (instancetype)initWithRxScheduler_Worker:(RxScheduler_Worker *)capture$0 {
+  RxInternalSchedulersSchedulerWhen_2_initWithRxScheduler_Worker_(self, capture$0);
+  return self;
+}
+
+- (RxCompletable *)callWithId:(RxInternalSchedulersSchedulerWhen_ScheduledAction *)action {
+  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxInternalSchedulersSchedulerWhen_2_1_initWithRxInternalSchedulersSchedulerWhen_2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_(self, action));
+}
+
+- (void)dealloc {
+  RELEASE_(val$actualWorker_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxCompletable;", 0x1, 0, 1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxScheduler_Worker:);
+  methods[1].selector = @selector(callWithId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$actualWorker_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LRxInternalSchedulersSchedulerWhen_ScheduledAction;", "LRxInternalSchedulersSchedulerWhen;", "createWorker", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/internal/schedulers/SchedulerWhen$ScheduledAction;Lrx/Completable;>;" };
+  static const J2ObjcClassInfo _RxInternalSchedulersSchedulerWhen_2 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, 4, -1 };
+  return &_RxInternalSchedulersSchedulerWhen_2;
+}
+
+@end
+
+void RxInternalSchedulersSchedulerWhen_2_initWithRxScheduler_Worker_(RxInternalSchedulersSchedulerWhen_2 *self, RxScheduler_Worker *capture$0) {
+  JreStrongAssign(&self->val$actualWorker_, capture$0);
+  NSObject_init(self);
+}
+
+RxInternalSchedulersSchedulerWhen_2 *new_RxInternalSchedulersSchedulerWhen_2_initWithRxScheduler_Worker_(RxScheduler_Worker *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalSchedulersSchedulerWhen_2, initWithRxScheduler_Worker_, capture$0)
+}
+
+RxInternalSchedulersSchedulerWhen_2 *create_RxInternalSchedulersSchedulerWhen_2_initWithRxScheduler_Worker_(RxScheduler_Worker *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalSchedulersSchedulerWhen_2, initWithRxScheduler_Worker_, capture$0)
+}
+
+@implementation RxInternalSchedulersSchedulerWhen_2_1
+
+- (instancetype)initWithRxInternalSchedulersSchedulerWhen_2:(RxInternalSchedulersSchedulerWhen_2 *)outer$
+      withRxInternalSchedulersSchedulerWhen_ScheduledAction:(RxInternalSchedulersSchedulerWhen_ScheduledAction *)capture$0 {
+  RxInternalSchedulersSchedulerWhen_2_1_initWithRxInternalSchedulersSchedulerWhen_2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_(self, outer$, capture$0);
+  return self;
+}
+
+- (void)callWithId:(id<RxCompletableSubscriber>)actionCompletable {
+  [((id<RxCompletableSubscriber>) nil_chk(actionCompletable)) onSubscribeWithRxSubscription:val$action_];
+  RxInternalSchedulersSchedulerWhen_ScheduledAction_callWithRxScheduler_Worker_(nil_chk(val$action_), this$0_->val$actualWorker_);
+  [actionCompletable onCompleted];
+}
+
+- (void)dealloc {
+  RELEASE_(this$0_);
+  RELEASE_(val$action_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxInternalSchedulersSchedulerWhen_2:withRxInternalSchedulersSchedulerWhen_ScheduledAction:);
+  methods[1].selector = @selector(callWithId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "this$0_", "LRxInternalSchedulersSchedulerWhen_2;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "val$action_", "LRxInternalSchedulersSchedulerWhen_ScheduledAction;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxInternalSchedulersSchedulerWhen_2;", "callWithId:" };
+  static const J2ObjcClassInfo _RxInternalSchedulersSchedulerWhen_2_1 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 2, 2, -1, 3, -1, -1 };
+  return &_RxInternalSchedulersSchedulerWhen_2_1;
+}
+
+@end
+
+void RxInternalSchedulersSchedulerWhen_2_1_initWithRxInternalSchedulersSchedulerWhen_2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_(RxInternalSchedulersSchedulerWhen_2_1 *self, RxInternalSchedulersSchedulerWhen_2 *outer$, RxInternalSchedulersSchedulerWhen_ScheduledAction *capture$0) {
+  JreStrongAssign(&self->this$0_, outer$);
+  JreStrongAssign(&self->val$action_, capture$0);
+  NSObject_init(self);
+}
+
+RxInternalSchedulersSchedulerWhen_2_1 *new_RxInternalSchedulersSchedulerWhen_2_1_initWithRxInternalSchedulersSchedulerWhen_2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_(RxInternalSchedulersSchedulerWhen_2 *outer$, RxInternalSchedulersSchedulerWhen_ScheduledAction *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalSchedulersSchedulerWhen_2_1, initWithRxInternalSchedulersSchedulerWhen_2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_, outer$, capture$0)
+}
+
+RxInternalSchedulersSchedulerWhen_2_1 *create_RxInternalSchedulersSchedulerWhen_2_1_initWithRxInternalSchedulersSchedulerWhen_2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_(RxInternalSchedulersSchedulerWhen_2 *outer$, RxInternalSchedulersSchedulerWhen_ScheduledAction *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalSchedulersSchedulerWhen_2_1, initWithRxInternalSchedulersSchedulerWhen_2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_, outer$, capture$0)
+}
+
+@implementation RxInternalSchedulersSchedulerWhen_3
+
+- (instancetype)initWithRxScheduler_Worker:(RxScheduler_Worker *)capture$0
+                            withRxObserver:(id<RxObserver>)capture$1 {
+  RxInternalSchedulersSchedulerWhen_3_initWithRxScheduler_Worker_withRxObserver_(self, capture$0, capture$1);
+  return self;
+}
+
+- (void)unsubscribe {
+  if ([((JavaUtilConcurrentAtomicAtomicBoolean *) nil_chk(unsubscribed_)) compareAndSetWithBoolean:false withBoolean:true]) {
+    [((RxScheduler_Worker *) nil_chk(val$actualWorker_)) unsubscribe];
+    [((id<RxObserver>) nil_chk(val$actionObserver_)) onCompleted];
+  }
+}
+
+- (jboolean)isUnsubscribed {
+  return [((JavaUtilConcurrentAtomicAtomicBoolean *) nil_chk(unsubscribed_)) get];
+}
+
+- (id<RxSubscription>)scheduleWithRxFunctionsAction0:(id<RxFunctionsAction0>)action
+                                            withLong:(jlong)delayTime
+                      withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit {
+  RxInternalSchedulersSchedulerWhen_DelayedAction *delayedAction = create_RxInternalSchedulersSchedulerWhen_DelayedAction_initWithRxFunctionsAction0_withLong_withJavaUtilConcurrentTimeUnit_(action, delayTime, unit);
+  [((id<RxObserver>) nil_chk(val$actionObserver_)) onNextWithId:delayedAction];
+  return delayedAction;
+}
+
+- (id<RxSubscription>)scheduleWithRxFunctionsAction0:(id<RxFunctionsAction0>)action {
+  RxInternalSchedulersSchedulerWhen_ImmediateAction *immediateAction = create_RxInternalSchedulersSchedulerWhen_ImmediateAction_initWithRxFunctionsAction0_(action);
+  [((id<RxObserver>) nil_chk(val$actionObserver_)) onNextWithId:immediateAction];
+  return immediateAction;
+}
+
+- (void)dealloc {
+  RELEASE_(val$actualWorker_);
+  RELEASE_(val$actionObserver_);
+  RELEASE_(unsubscribed_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxSubscription;", 0x1, 0, 1, -1, -1, -1, -1 },
+    { NULL, "LRxSubscription;", 0x1, 0, 2, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxScheduler_Worker:withRxObserver:);
+  methods[1].selector = @selector(unsubscribe);
+  methods[2].selector = @selector(isUnsubscribed);
+  methods[3].selector = @selector(scheduleWithRxFunctionsAction0:withLong:withJavaUtilConcurrentTimeUnit:);
+  methods[4].selector = @selector(scheduleWithRxFunctionsAction0:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$actualWorker_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "val$actionObserver_", "LRxObserver;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "unsubscribed_", "LJavaUtilConcurrentAtomicAtomicBoolean;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "schedule", "LRxFunctionsAction0;JLJavaUtilConcurrentTimeUnit;", "LRxFunctionsAction0;", "Lrx/Observer<Lrx/internal/schedulers/SchedulerWhen$ScheduledAction;>;", "LRxInternalSchedulersSchedulerWhen;", "createWorker" };
+  static const J2ObjcClassInfo _RxInternalSchedulersSchedulerWhen_3 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 5, 3, 4, -1, 5, -1, -1 };
+  return &_RxInternalSchedulersSchedulerWhen_3;
+}
+
+@end
+
+void RxInternalSchedulersSchedulerWhen_3_initWithRxScheduler_Worker_withRxObserver_(RxInternalSchedulersSchedulerWhen_3 *self, RxScheduler_Worker *capture$0, id<RxObserver> capture$1) {
+  JreStrongAssign(&self->val$actualWorker_, capture$0);
+  JreStrongAssign(&self->val$actionObserver_, capture$1);
+  RxScheduler_Worker_init(self);
+  JreStrongAssignAndConsume(&self->unsubscribed_, new_JavaUtilConcurrentAtomicAtomicBoolean_init());
+}
+
+RxInternalSchedulersSchedulerWhen_3 *new_RxInternalSchedulersSchedulerWhen_3_initWithRxScheduler_Worker_withRxObserver_(RxScheduler_Worker *capture$0, id<RxObserver> capture$1) {
+  J2OBJC_NEW_IMPL(RxInternalSchedulersSchedulerWhen_3, initWithRxScheduler_Worker_withRxObserver_, capture$0, capture$1)
+}
+
+RxInternalSchedulersSchedulerWhen_3 *create_RxInternalSchedulersSchedulerWhen_3_initWithRxScheduler_Worker_withRxObserver_(RxScheduler_Worker *capture$0, id<RxObserver> capture$1) {
+  J2OBJC_CREATE_IMPL(RxInternalSchedulersSchedulerWhen_3, initWithRxScheduler_Worker_withRxObserver_, capture$0, capture$1)
+}
+
+@implementation RxInternalSchedulersSchedulerWhen_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalSchedulersSchedulerWhen_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
+- (void)unsubscribe {
+}
+
+- (jboolean)isUnsubscribed {
+  return false;
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(unsubscribe);
+  methods[2].selector = @selector(isUnsubscribed);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "LRxInternalSchedulersSchedulerWhen;" };
+  static const J2ObjcClassInfo _RxInternalSchedulersSchedulerWhen_1 = { "", "rx.internal.schedulers", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 0, -1, -1, -1, -1 };
+  return &_RxInternalSchedulersSchedulerWhen_1;
+}
+
+@end
+
+void RxInternalSchedulersSchedulerWhen_1_init(RxInternalSchedulersSchedulerWhen_1 *self) {
+  NSObject_init(self);
+}
+
+RxInternalSchedulersSchedulerWhen_1 *new_RxInternalSchedulersSchedulerWhen_1_init() {
+  J2OBJC_NEW_IMPL(RxInternalSchedulersSchedulerWhen_1, init)
+}
+
+RxInternalSchedulersSchedulerWhen_1 *create_RxInternalSchedulersSchedulerWhen_1_init() {
+  J2OBJC_CREATE_IMPL(RxInternalSchedulersSchedulerWhen_1, init)
+}
 
 @implementation RxInternalSchedulersSchedulerWhen_ScheduledAction
 
@@ -499,237 +728,3 @@ RxInternalSchedulersSchedulerWhen_DelayedAction *create_RxInternalSchedulersSche
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersSchedulerWhen_DelayedAction)
-
-@implementation RxInternalSchedulersSchedulerWhen_$2
-
-- (RxCompletable *)callWithId:(RxInternalSchedulersSchedulerWhen_ScheduledAction *)action {
-  return RxCompletable_createWithRxCompletable_OnSubscribe_(create_RxInternalSchedulersSchedulerWhen_$2_$1_initWithRxInternalSchedulersSchedulerWhen_$2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_(self, action));
-}
-
-- (instancetype)initWithRxScheduler_Worker:(RxScheduler_Worker *)capture$0 {
-  RxInternalSchedulersSchedulerWhen_$2_initWithRxScheduler_Worker_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$actualWorker_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxCompletable;", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxScheduler_Worker:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$actualWorker_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LRxInternalSchedulersSchedulerWhen_ScheduledAction;", "LRxScheduler_Worker;", "LRxInternalSchedulersSchedulerWhen;", "createWorker", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/internal/schedulers/SchedulerWhen$ScheduledAction;Lrx/Completable;>;" };
-  static const J2ObjcClassInfo _RxInternalSchedulersSchedulerWhen_$2 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, 5, -1 };
-  return &_RxInternalSchedulersSchedulerWhen_$2;
-}
-
-@end
-
-void RxInternalSchedulersSchedulerWhen_$2_initWithRxScheduler_Worker_(RxInternalSchedulersSchedulerWhen_$2 *self, RxScheduler_Worker *capture$0) {
-  JreStrongAssign(&self->val$actualWorker_, capture$0);
-  NSObject_init(self);
-}
-
-RxInternalSchedulersSchedulerWhen_$2 *new_RxInternalSchedulersSchedulerWhen_$2_initWithRxScheduler_Worker_(RxScheduler_Worker *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalSchedulersSchedulerWhen_$2, initWithRxScheduler_Worker_, capture$0)
-}
-
-RxInternalSchedulersSchedulerWhen_$2 *create_RxInternalSchedulersSchedulerWhen_$2_initWithRxScheduler_Worker_(RxScheduler_Worker *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalSchedulersSchedulerWhen_$2, initWithRxScheduler_Worker_, capture$0)
-}
-
-@implementation RxInternalSchedulersSchedulerWhen_$2_$1
-
-- (void)callWithId:(id<RxCompletableSubscriber>)actionCompletable {
-  [((id<RxCompletableSubscriber>) nil_chk(actionCompletable)) onSubscribeWithRxSubscription:val$action_];
-  RxInternalSchedulersSchedulerWhen_ScheduledAction_callWithRxScheduler_Worker_(nil_chk(val$action_), this$0_->val$actualWorker_);
-  [actionCompletable onCompleted];
-}
-
-- (instancetype)initWithRxInternalSchedulersSchedulerWhen_$2:(RxInternalSchedulersSchedulerWhen_$2 *)outer$
-       withRxInternalSchedulersSchedulerWhen_ScheduledAction:(RxInternalSchedulersSchedulerWhen_ScheduledAction *)capture$0 {
-  RxInternalSchedulersSchedulerWhen_$2_$1_initWithRxInternalSchedulersSchedulerWhen_$2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_(self, outer$, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(this$0_);
-  RELEASE_(val$action_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxInternalSchedulersSchedulerWhen_$2:withRxInternalSchedulersSchedulerWhen_ScheduledAction:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalSchedulersSchedulerWhen_$2;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$action_", "LRxInternalSchedulersSchedulerWhen_ScheduledAction;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LRxCompletableSubscriber;", "LRxInternalSchedulersSchedulerWhen_$2;LRxInternalSchedulersSchedulerWhen_ScheduledAction;", "LRxInternalSchedulersSchedulerWhen_$2;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalSchedulersSchedulerWhen_$2_$1 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, -1, -1 };
-  return &_RxInternalSchedulersSchedulerWhen_$2_$1;
-}
-
-@end
-
-void RxInternalSchedulersSchedulerWhen_$2_$1_initWithRxInternalSchedulersSchedulerWhen_$2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_(RxInternalSchedulersSchedulerWhen_$2_$1 *self, RxInternalSchedulersSchedulerWhen_$2 *outer$, RxInternalSchedulersSchedulerWhen_ScheduledAction *capture$0) {
-  JreStrongAssign(&self->this$0_, outer$);
-  JreStrongAssign(&self->val$action_, capture$0);
-  NSObject_init(self);
-}
-
-RxInternalSchedulersSchedulerWhen_$2_$1 *new_RxInternalSchedulersSchedulerWhen_$2_$1_initWithRxInternalSchedulersSchedulerWhen_$2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_(RxInternalSchedulersSchedulerWhen_$2 *outer$, RxInternalSchedulersSchedulerWhen_ScheduledAction *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalSchedulersSchedulerWhen_$2_$1, initWithRxInternalSchedulersSchedulerWhen_$2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_, outer$, capture$0)
-}
-
-RxInternalSchedulersSchedulerWhen_$2_$1 *create_RxInternalSchedulersSchedulerWhen_$2_$1_initWithRxInternalSchedulersSchedulerWhen_$2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_(RxInternalSchedulersSchedulerWhen_$2 *outer$, RxInternalSchedulersSchedulerWhen_ScheduledAction *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalSchedulersSchedulerWhen_$2_$1, initWithRxInternalSchedulersSchedulerWhen_$2_withRxInternalSchedulersSchedulerWhen_ScheduledAction_, outer$, capture$0)
-}
-
-@implementation RxInternalSchedulersSchedulerWhen_$3
-
-- (void)unsubscribe {
-  if ([((JavaUtilConcurrentAtomicAtomicBoolean *) nil_chk(unsubscribed_)) compareAndSetWithBoolean:false withBoolean:true]) {
-    [((RxScheduler_Worker *) nil_chk(val$actualWorker_)) unsubscribe];
-    [((id<RxObserver>) nil_chk(val$actionObserver_)) onCompleted];
-  }
-}
-
-- (jboolean)isUnsubscribed {
-  return [((JavaUtilConcurrentAtomicAtomicBoolean *) nil_chk(unsubscribed_)) get];
-}
-
-- (id<RxSubscription>)scheduleWithRxFunctionsAction0:(id<RxFunctionsAction0>)action
-                                            withLong:(jlong)delayTime
-                      withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit {
-  RxInternalSchedulersSchedulerWhen_DelayedAction *delayedAction = create_RxInternalSchedulersSchedulerWhen_DelayedAction_initWithRxFunctionsAction0_withLong_withJavaUtilConcurrentTimeUnit_(action, delayTime, unit);
-  [((id<RxObserver>) nil_chk(val$actionObserver_)) onNextWithId:delayedAction];
-  return delayedAction;
-}
-
-- (id<RxSubscription>)scheduleWithRxFunctionsAction0:(id<RxFunctionsAction0>)action {
-  RxInternalSchedulersSchedulerWhen_ImmediateAction *immediateAction = create_RxInternalSchedulersSchedulerWhen_ImmediateAction_initWithRxFunctionsAction0_(action);
-  [((id<RxObserver>) nil_chk(val$actionObserver_)) onNextWithId:immediateAction];
-  return immediateAction;
-}
-
-- (instancetype)initWithRxScheduler_Worker:(RxScheduler_Worker *)capture$0
-                            withRxObserver:(id<RxObserver>)capture$1 {
-  RxInternalSchedulersSchedulerWhen_$3_initWithRxScheduler_Worker_withRxObserver_(self, capture$0, capture$1);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(unsubscribed_);
-  RELEASE_(val$actualWorker_);
-  RELEASE_(val$actionObserver_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "LRxSubscription;", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, "LRxSubscription;", 0x1, 0, 2, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(unsubscribe);
-  methods[1].selector = @selector(isUnsubscribed);
-  methods[2].selector = @selector(scheduleWithRxFunctionsAction0:withLong:withJavaUtilConcurrentTimeUnit:);
-  methods[3].selector = @selector(scheduleWithRxFunctionsAction0:);
-  methods[4].selector = @selector(initWithRxScheduler_Worker:withRxObserver:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "unsubscribed_", "LJavaUtilConcurrentAtomicAtomicBoolean;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
-    { "val$actualWorker_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$actionObserver_", "LRxObserver;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-  };
-  static const void *ptrTable[] = { "schedule", "LRxFunctionsAction0;JLJavaUtilConcurrentTimeUnit;", "LRxFunctionsAction0;", "LRxScheduler_Worker;LRxObserver;", "(Lrx/Scheduler$Worker;Lrx/Observer<Lrx/internal/schedulers/SchedulerWhen$ScheduledAction;>;)V", "Lrx/Observer<Lrx/internal/schedulers/SchedulerWhen$ScheduledAction;>;", "LRxInternalSchedulersSchedulerWhen;", "createWorker" };
-  static const J2ObjcClassInfo _RxInternalSchedulersSchedulerWhen_$3 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 5, 3, 6, -1, 7, -1, -1 };
-  return &_RxInternalSchedulersSchedulerWhen_$3;
-}
-
-@end
-
-void RxInternalSchedulersSchedulerWhen_$3_initWithRxScheduler_Worker_withRxObserver_(RxInternalSchedulersSchedulerWhen_$3 *self, RxScheduler_Worker *capture$0, id<RxObserver> capture$1) {
-  JreStrongAssign(&self->val$actualWorker_, capture$0);
-  JreStrongAssign(&self->val$actionObserver_, capture$1);
-  RxScheduler_Worker_init(self);
-  JreStrongAssignAndConsume(&self->unsubscribed_, new_JavaUtilConcurrentAtomicAtomicBoolean_init());
-}
-
-RxInternalSchedulersSchedulerWhen_$3 *new_RxInternalSchedulersSchedulerWhen_$3_initWithRxScheduler_Worker_withRxObserver_(RxScheduler_Worker *capture$0, id<RxObserver> capture$1) {
-  J2OBJC_NEW_IMPL(RxInternalSchedulersSchedulerWhen_$3, initWithRxScheduler_Worker_withRxObserver_, capture$0, capture$1)
-}
-
-RxInternalSchedulersSchedulerWhen_$3 *create_RxInternalSchedulersSchedulerWhen_$3_initWithRxScheduler_Worker_withRxObserver_(RxScheduler_Worker *capture$0, id<RxObserver> capture$1) {
-  J2OBJC_CREATE_IMPL(RxInternalSchedulersSchedulerWhen_$3, initWithRxScheduler_Worker_withRxObserver_, capture$0, capture$1)
-}
-
-@implementation RxInternalSchedulersSchedulerWhen_$1
-
-- (void)unsubscribe {
-}
-
-- (jboolean)isUnsubscribed {
-  return false;
-}
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalSchedulersSchedulerWhen_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(unsubscribe);
-  methods[1].selector = @selector(isUnsubscribed);
-  methods[2].selector = @selector(init);
-  #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "LRxInternalSchedulersSchedulerWhen;" };
-  static const J2ObjcClassInfo _RxInternalSchedulersSchedulerWhen_$1 = { "", "rx.internal.schedulers", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 0, -1, -1, -1, -1 };
-  return &_RxInternalSchedulersSchedulerWhen_$1;
-}
-
-@end
-
-void RxInternalSchedulersSchedulerWhen_$1_init(RxInternalSchedulersSchedulerWhen_$1 *self) {
-  NSObject_init(self);
-}
-
-RxInternalSchedulersSchedulerWhen_$1 *new_RxInternalSchedulersSchedulerWhen_$1_init() {
-  J2OBJC_NEW_IMPL(RxInternalSchedulersSchedulerWhen_$1, init)
-}
-
-RxInternalSchedulersSchedulerWhen_$1 *create_RxInternalSchedulersSchedulerWhen_$1_init() {
-  J2OBJC_CREATE_IMPL(RxInternalSchedulersSchedulerWhen_$1, init)
-}

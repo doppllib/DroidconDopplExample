@@ -108,6 +108,13 @@ J2OBJC_INITIALIZED_DEFN(AndroidDatabaseDatabaseUtils)
 
 @implementation AndroidDatabaseDatabaseUtils
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  AndroidDatabaseDatabaseUtils_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (void)bindObjectToProgramWithAndroidDatabaseSqliteSQLiteProgram:(AndroidDatabaseSqliteSQLiteProgram *)prog
                                                           withInt:(jint)index
                                                            withId:(id)value {
@@ -361,15 +368,9 @@ J2OBJC_INITIALIZED_DEFN(AndroidDatabaseDatabaseUtils)
   return AndroidDatabaseDatabaseUtils_findRowIdColumnIndexWithNSStringArray_(columnNames);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  AndroidDatabaseDatabaseUtils_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x9, 0, 1, -1, -1, -1, -1 },
     { NULL, "I", 0x9, 2, 3, -1, -1, -1, -1 },
     { NULL, "V", 0x9, 4, 5, -1, -1, -1, -1 },
@@ -417,58 +418,57 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "I", 0x9, 56, 9, -1, -1, -1, -1 },
     { NULL, "[LNSString;", 0x9, 57, 58, -1, -1, -1, -1 },
     { NULL, "I", 0x9, 59, 60, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(bindObjectToProgramWithAndroidDatabaseSqliteSQLiteProgram:withInt:withId:);
-  methods[1].selector = @selector(getTypeOfObjectWithId:);
-  methods[2].selector = @selector(cursorFillWindowWithAndroidDatabaseCursor:withInt:withAndroidDatabaseCursorWindow:);
-  methods[3].selector = @selector(appendEscapedSQLStringWithJavaLangStringBuilder:withNSString:);
-  methods[4].selector = @selector(sqlEscapeStringWithNSString:);
-  methods[5].selector = @selector(appendValueToSqlWithJavaLangStringBuilder:withId:);
-  methods[6].selector = @selector(concatenateWhereWithNSString:withNSString:);
-  methods[7].selector = @selector(getCollationKeyWithNSString:);
-  methods[8].selector = @selector(getKeyLenWithByteArray:);
-  methods[9].selector = @selector(getCollationKeyInBytesWithNSString:);
-  methods[10].selector = @selector(dumpCursorWithAndroidDatabaseCursor:);
-  methods[11].selector = @selector(dumpCursorWithAndroidDatabaseCursor:withJavaIoPrintStream:);
-  methods[12].selector = @selector(dumpCursorWithAndroidDatabaseCursor:withJavaLangStringBuilder:);
-  methods[13].selector = @selector(dumpCursorToStringWithAndroidDatabaseCursor:);
-  methods[14].selector = @selector(dumpCurrentRowWithAndroidDatabaseCursor:);
-  methods[15].selector = @selector(dumpCurrentRowWithAndroidDatabaseCursor:withJavaIoPrintStream:);
-  methods[16].selector = @selector(dumpCurrentRowWithAndroidDatabaseCursor:withJavaLangStringBuilder:);
-  methods[17].selector = @selector(dumpCurrentRowToStringWithAndroidDatabaseCursor:);
-  methods[18].selector = @selector(cursorStringToContentValuesWithAndroidDatabaseCursor:withNSString:withAndroidContentContentValues:);
-  methods[19].selector = @selector(cursorStringToInsertHelperWithAndroidDatabaseCursor:withNSString:withAndroidDatabaseDatabaseUtils_InsertHelper:withInt:);
-  methods[20].selector = @selector(cursorStringToContentValuesWithAndroidDatabaseCursor:withNSString:withAndroidContentContentValues:withNSString:);
-  methods[21].selector = @selector(cursorIntToContentValuesWithAndroidDatabaseCursor:withNSString:withAndroidContentContentValues:);
-  methods[22].selector = @selector(cursorIntToContentValuesWithAndroidDatabaseCursor:withNSString:withAndroidContentContentValues:withNSString:);
-  methods[23].selector = @selector(cursorLongToContentValuesWithAndroidDatabaseCursor:withNSString:withAndroidContentContentValues:);
-  methods[24].selector = @selector(cursorLongToContentValuesWithAndroidDatabaseCursor:withNSString:withAndroidContentContentValues:withNSString:);
-  methods[25].selector = @selector(cursorDoubleToCursorValuesWithAndroidDatabaseCursor:withNSString:withAndroidContentContentValues:);
-  methods[26].selector = @selector(cursorDoubleToContentValuesWithAndroidDatabaseCursor:withNSString:withAndroidContentContentValues:withNSString:);
-  methods[27].selector = @selector(cursorRowToContentValuesWithAndroidDatabaseCursor:withAndroidContentContentValues:);
-  methods[28].selector = @selector(cursorPickFillWindowStartPositionWithInt:withInt:);
-  methods[29].selector = @selector(queryNumEntriesWithAndroidDatabaseSqliteSQLiteDatabase:withNSString:);
-  methods[30].selector = @selector(queryNumEntriesWithAndroidDatabaseSqliteSQLiteDatabase:withNSString:withNSString:);
-  methods[31].selector = @selector(queryNumEntriesWithAndroidDatabaseSqliteSQLiteDatabase:withNSString:withNSString:withNSStringArray:);
-  methods[32].selector = @selector(queryIsEmptyWithAndroidDatabaseSqliteSQLiteDatabase:withNSString:);
-  methods[33].selector = @selector(longForQueryWithAndroidDatabaseSqliteSQLiteDatabase:withNSString:withNSStringArray:);
-  methods[34].selector = @selector(longForQueryWithAndroidDatabaseSqliteSQLiteStatement:withNSStringArray:);
-  methods[35].selector = @selector(stringForQueryWithAndroidDatabaseSqliteSQLiteDatabase:withNSString:withNSStringArray:);
-  methods[36].selector = @selector(stringForQueryWithAndroidDatabaseSqliteSQLiteStatement:withNSStringArray:);
-  methods[37].selector = @selector(cursorStringToContentValuesIfPresentWithAndroidDatabaseCursor:withAndroidContentContentValues:withNSString:);
-  methods[38].selector = @selector(cursorLongToContentValuesIfPresentWithAndroidDatabaseCursor:withAndroidContentContentValues:withNSString:);
-  methods[39].selector = @selector(cursorShortToContentValuesIfPresentWithAndroidDatabaseCursor:withAndroidContentContentValues:withNSString:);
-  methods[40].selector = @selector(cursorIntToContentValuesIfPresentWithAndroidDatabaseCursor:withAndroidContentContentValues:withNSString:);
-  methods[41].selector = @selector(cursorFloatToContentValuesIfPresentWithAndroidDatabaseCursor:withAndroidContentContentValues:withNSString:);
-  methods[42].selector = @selector(cursorDoubleToContentValuesIfPresentWithAndroidDatabaseCursor:withAndroidContentContentValues:withNSString:);
-  methods[43].selector = @selector(createDbFromSqlStatementsWithAndroidContentContext:withNSString:withInt:withNSString:);
-  methods[44].selector = @selector(getSqlStatementTypeWithNSString:);
-  methods[45].selector = @selector(appendSelectionArgsWithNSStringArray:withNSStringArray:);
-  methods[46].selector = @selector(findRowIdColumnIndexWithNSStringArray:);
-  methods[47].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(bindObjectToProgramWithAndroidDatabaseSqliteSQLiteProgram:withInt:withId:);
+  methods[2].selector = @selector(getTypeOfObjectWithId:);
+  methods[3].selector = @selector(cursorFillWindowWithAndroidDatabaseCursor:withInt:withAndroidDatabaseCursorWindow:);
+  methods[4].selector = @selector(appendEscapedSQLStringWithJavaLangStringBuilder:withNSString:);
+  methods[5].selector = @selector(sqlEscapeStringWithNSString:);
+  methods[6].selector = @selector(appendValueToSqlWithJavaLangStringBuilder:withId:);
+  methods[7].selector = @selector(concatenateWhereWithNSString:withNSString:);
+  methods[8].selector = @selector(getCollationKeyWithNSString:);
+  methods[9].selector = @selector(getKeyLenWithByteArray:);
+  methods[10].selector = @selector(getCollationKeyInBytesWithNSString:);
+  methods[11].selector = @selector(dumpCursorWithAndroidDatabaseCursor:);
+  methods[12].selector = @selector(dumpCursorWithAndroidDatabaseCursor:withJavaIoPrintStream:);
+  methods[13].selector = @selector(dumpCursorWithAndroidDatabaseCursor:withJavaLangStringBuilder:);
+  methods[14].selector = @selector(dumpCursorToStringWithAndroidDatabaseCursor:);
+  methods[15].selector = @selector(dumpCurrentRowWithAndroidDatabaseCursor:);
+  methods[16].selector = @selector(dumpCurrentRowWithAndroidDatabaseCursor:withJavaIoPrintStream:);
+  methods[17].selector = @selector(dumpCurrentRowWithAndroidDatabaseCursor:withJavaLangStringBuilder:);
+  methods[18].selector = @selector(dumpCurrentRowToStringWithAndroidDatabaseCursor:);
+  methods[19].selector = @selector(cursorStringToContentValuesWithAndroidDatabaseCursor:withNSString:withAndroidContentContentValues:);
+  methods[20].selector = @selector(cursorStringToInsertHelperWithAndroidDatabaseCursor:withNSString:withAndroidDatabaseDatabaseUtils_InsertHelper:withInt:);
+  methods[21].selector = @selector(cursorStringToContentValuesWithAndroidDatabaseCursor:withNSString:withAndroidContentContentValues:withNSString:);
+  methods[22].selector = @selector(cursorIntToContentValuesWithAndroidDatabaseCursor:withNSString:withAndroidContentContentValues:);
+  methods[23].selector = @selector(cursorIntToContentValuesWithAndroidDatabaseCursor:withNSString:withAndroidContentContentValues:withNSString:);
+  methods[24].selector = @selector(cursorLongToContentValuesWithAndroidDatabaseCursor:withNSString:withAndroidContentContentValues:);
+  methods[25].selector = @selector(cursorLongToContentValuesWithAndroidDatabaseCursor:withNSString:withAndroidContentContentValues:withNSString:);
+  methods[26].selector = @selector(cursorDoubleToCursorValuesWithAndroidDatabaseCursor:withNSString:withAndroidContentContentValues:);
+  methods[27].selector = @selector(cursorDoubleToContentValuesWithAndroidDatabaseCursor:withNSString:withAndroidContentContentValues:withNSString:);
+  methods[28].selector = @selector(cursorRowToContentValuesWithAndroidDatabaseCursor:withAndroidContentContentValues:);
+  methods[29].selector = @selector(cursorPickFillWindowStartPositionWithInt:withInt:);
+  methods[30].selector = @selector(queryNumEntriesWithAndroidDatabaseSqliteSQLiteDatabase:withNSString:);
+  methods[31].selector = @selector(queryNumEntriesWithAndroidDatabaseSqliteSQLiteDatabase:withNSString:withNSString:);
+  methods[32].selector = @selector(queryNumEntriesWithAndroidDatabaseSqliteSQLiteDatabase:withNSString:withNSString:withNSStringArray:);
+  methods[33].selector = @selector(queryIsEmptyWithAndroidDatabaseSqliteSQLiteDatabase:withNSString:);
+  methods[34].selector = @selector(longForQueryWithAndroidDatabaseSqliteSQLiteDatabase:withNSString:withNSStringArray:);
+  methods[35].selector = @selector(longForQueryWithAndroidDatabaseSqliteSQLiteStatement:withNSStringArray:);
+  methods[36].selector = @selector(stringForQueryWithAndroidDatabaseSqliteSQLiteDatabase:withNSString:withNSStringArray:);
+  methods[37].selector = @selector(stringForQueryWithAndroidDatabaseSqliteSQLiteStatement:withNSStringArray:);
+  methods[38].selector = @selector(cursorStringToContentValuesIfPresentWithAndroidDatabaseCursor:withAndroidContentContentValues:withNSString:);
+  methods[39].selector = @selector(cursorLongToContentValuesIfPresentWithAndroidDatabaseCursor:withAndroidContentContentValues:withNSString:);
+  methods[40].selector = @selector(cursorShortToContentValuesIfPresentWithAndroidDatabaseCursor:withAndroidContentContentValues:withNSString:);
+  methods[41].selector = @selector(cursorIntToContentValuesIfPresentWithAndroidDatabaseCursor:withAndroidContentContentValues:withNSString:);
+  methods[42].selector = @selector(cursorFloatToContentValuesIfPresentWithAndroidDatabaseCursor:withAndroidContentContentValues:withNSString:);
+  methods[43].selector = @selector(cursorDoubleToContentValuesIfPresentWithAndroidDatabaseCursor:withAndroidContentContentValues:withNSString:);
+  methods[44].selector = @selector(createDbFromSqlStatementsWithAndroidContentContext:withNSString:withInt:withNSString:);
+  methods[45].selector = @selector(getSqlStatementTypeWithNSString:);
+  methods[46].selector = @selector(appendSelectionArgsWithNSStringArray:withNSStringArray:);
+  methods[47].selector = @selector(findRowIdColumnIndexWithNSStringArray:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "TAG", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 61, -1, -1 },
@@ -498,6 +498,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void AndroidDatabaseDatabaseUtils_init(AndroidDatabaseDatabaseUtils *self) {
+  NSObject_init(self);
+}
+
+AndroidDatabaseDatabaseUtils *new_AndroidDatabaseDatabaseUtils_init() {
+  J2OBJC_NEW_IMPL(AndroidDatabaseDatabaseUtils, init)
+}
+
+AndroidDatabaseDatabaseUtils *create_AndroidDatabaseDatabaseUtils_init() {
+  J2OBJC_CREATE_IMPL(AndroidDatabaseDatabaseUtils, init)
+}
 
 void AndroidDatabaseDatabaseUtils_bindObjectToProgramWithAndroidDatabaseSqliteSQLiteProgram_withInt_withId_(AndroidDatabaseSqliteSQLiteProgram *prog, jint index, id value) {
   AndroidDatabaseDatabaseUtils_initialize();
@@ -603,7 +615,7 @@ void AndroidDatabaseDatabaseUtils_cursorFillWindowWithAndroidDatabaseCursor_with
 void AndroidDatabaseDatabaseUtils_appendEscapedSQLStringWithJavaLangStringBuilder_withNSString_(JavaLangStringBuilder *sb, NSString *sqlString) {
   AndroidDatabaseDatabaseUtils_initialize();
   [((JavaLangStringBuilder *) nil_chk(sb)) appendWithChar:'\''];
-  if ([((NSString *) nil_chk(sqlString)) indexOf:'\''] != -1) {
+  if ([((NSString *) nil_chk(sqlString)) java_indexOf:'\''] != -1) {
     jint length = ((jint) [sqlString length]);
     for (jint i = 0; i < length; i++) {
       jchar c = [sqlString charAtWithInt:i];
@@ -658,7 +670,7 @@ NSString *AndroidDatabaseDatabaseUtils_getCollationKeyWithNSString_(NSString *na
   AndroidDatabaseDatabaseUtils_initialize();
   IOSByteArray *arr = AndroidDatabaseDatabaseUtils_getCollationKeyInBytesWithNSString_(name);
   @try {
-    return [NSString stringWithBytes:arr offset:0 length:AndroidDatabaseDatabaseUtils_getKeyLenWithByteArray_(arr) charsetName:@"ISO8859_1"];
+    return [NSString java_stringWithBytes:arr offset:0 length:AndroidDatabaseDatabaseUtils_getKeyLenWithByteArray_(arr) charsetName:@"ISO8859_1"];
   }
   @catch (JavaLangException *ex) {
     return @"";
@@ -980,11 +992,11 @@ void AndroidDatabaseDatabaseUtils_createDbFromSqlStatementsWithAndroidContentCon
 
 jint AndroidDatabaseDatabaseUtils_getSqlStatementTypeWithNSString_(NSString *sql) {
   AndroidDatabaseDatabaseUtils_initialize();
-  sql = [((NSString *) nil_chk(sql)) trim];
+  sql = [((NSString *) nil_chk(sql)) java_trim];
   if (((jint) [((NSString *) nil_chk(sql)) length]) < 3) {
     return AndroidDatabaseDatabaseUtils_STATEMENT_OTHER;
   }
-  NSString *prefixSql = [((NSString *) nil_chk([sql substring:0 endIndex:3])) uppercaseStringWithJRELocale:JreLoadStatic(JavaUtilLocale, ROOT)];
+  NSString *prefixSql = [((NSString *) nil_chk([sql java_substring:0 endIndex:3])) java_uppercaseStringWithJRELocale:JreLoadStatic(JavaUtilLocale, ROOT)];
   if ([((NSString *) nil_chk(prefixSql)) isEqual:@"SEL"]) {
     return AndroidDatabaseDatabaseUtils_STATEMENT_SELECT;
   }
@@ -1038,18 +1050,6 @@ jint AndroidDatabaseDatabaseUtils_findRowIdColumnIndexWithNSStringArray_(IOSObje
     }
   }
   return -1;
-}
-
-void AndroidDatabaseDatabaseUtils_init(AndroidDatabaseDatabaseUtils *self) {
-  NSObject_init(self);
-}
-
-AndroidDatabaseDatabaseUtils *new_AndroidDatabaseDatabaseUtils_init() {
-  J2OBJC_NEW_IMPL(AndroidDatabaseDatabaseUtils, init)
-}
-
-AndroidDatabaseDatabaseUtils *create_AndroidDatabaseDatabaseUtils_init() {
-  J2OBJC_CREATE_IMPL(AndroidDatabaseDatabaseUtils, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(AndroidDatabaseDatabaseUtils)
@@ -1314,7 +1314,7 @@ AndroidDatabaseSqliteSQLiteStatement *AndroidDatabaseDatabaseUtils_InsertHelper_
   if (allowReplace) {
     if (self->mReplaceStatement_ == nil) {
       if (self->mInsertSQL_ == nil) AndroidDatabaseDatabaseUtils_InsertHelper_buildSQL(self);
-      NSString *replaceSQL = JreStrcat("$$", @"INSERT OR REPLACE", [((NSString *) nil_chk(self->mInsertSQL_)) substring:6]);
+      NSString *replaceSQL = JreStrcat("$$", @"INSERT OR REPLACE", [((NSString *) nil_chk(self->mInsertSQL_)) java_substring:6]);
       JreStrongAssign(&self->mReplaceStatement_, [((AndroidDatabaseSqliteSQLiteDatabase *) nil_chk(self->mDb_)) compileStatementWithNSString:replaceSQL]);
     }
     return self->mReplaceStatement_;

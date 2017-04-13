@@ -354,7 +354,7 @@ jboolean RetrofitTypes_equalsWithJavaLangReflectType_withJavaLangReflectType_(id
     if (!([JavaLangReflectTypeVariable_class_() isInstance:b])) return false;
     id<JavaLangReflectTypeVariable> va = (id<JavaLangReflectTypeVariable>) cast_check(a, JavaLangReflectTypeVariable_class_());
     id<JavaLangReflectTypeVariable> vb = (id<JavaLangReflectTypeVariable>) cast_check(b, JavaLangReflectTypeVariable_class_());
-    return [((id<JavaLangReflectTypeVariable>) nil_chk(va)) getGenericDeclaration] == (id) [((id<JavaLangReflectTypeVariable>) nil_chk(vb)) getGenericDeclaration] && [((NSString *) nil_chk([va getName])) isEqual:[vb getName]];
+    return [((id<JavaLangReflectTypeVariable>) nil_chk(va)) getGenericDeclaration] == [((id<JavaLangReflectTypeVariable>) nil_chk(vb)) getGenericDeclaration] && [((NSString *) nil_chk([va getName])) isEqual:[vb getName]];
   }
   else {
     return false;
@@ -451,7 +451,7 @@ id<JavaLangReflectType> RetrofitTypes_resolveWithJavaLangReflectType_withIOSClas
         id<JavaLangReflectType> resolvedTypeArgument = RetrofitTypes_resolveWithJavaLangReflectType_withIOSClass_withJavaLangReflectType_(context, contextRawType, IOSObjectArray_Get(args, t));
         if (resolvedTypeArgument != IOSObjectArray_Get(args, t)) {
           if (!changed) {
-            args = [args clone];
+            args = [args java_clone];
             changed = true;
           }
           IOSObjectArray_Set(nil_chk(args), t, resolvedTypeArgument);
@@ -520,7 +520,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitTypes)
 }
 
 - (IOSObjectArray *)getActualTypeArguments {
-  return [((IOSObjectArray *) nil_chk(typeArguments_)) clone];
+  return [((IOSObjectArray *) nil_chk(typeArguments_)) java_clone];
 }
 
 - (id<JavaLangReflectType>)getRawType {
@@ -600,7 +600,7 @@ void RetrofitTypes_ParameterizedTypeImpl_initWithJavaLangReflectType_withJavaLan
   }
   JreStrongAssign(&self->ownerType_, ownerType);
   JreStrongAssign(&self->rawType_, rawType);
-  JreStrongAssign(&self->typeArguments_, [((IOSObjectArray *) nil_chk(typeArguments)) clone]);
+  JreStrongAssign(&self->typeArguments_, [((IOSObjectArray *) nil_chk(typeArguments)) java_clone]);
   {
     IOSObjectArray *a__ = self->typeArguments_;
     id<JavaLangReflectType> const *b__ = ((IOSObjectArray *) nil_chk(a__))->buffer_;
@@ -722,7 +722,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitTypes_GenericArrayTypeImpl)
 
 - (NSString *)description {
   if (lowerBound_ != nil) return JreStrcat("$$", @"? super ", RetrofitTypes_typeToStringWithJavaLangReflectType_(lowerBound_));
-  if (upperBound_ == NSObject_class_()) return @"?";
+  if (upperBound_ == (id) NSObject_class_()) return @"?";
   return JreStrcat("$$", @"? extends ", RetrofitTypes_typeToStringWithJavaLangReflectType_(upperBound_));
 }
 
@@ -772,7 +772,7 @@ void RetrofitTypes_WildcardTypeImpl_initWithJavaLangReflectTypeArray_withJavaLan
   if (lowerBounds->size_ == 1) {
     if (IOSObjectArray_Get(lowerBounds, 0) == nil) @throw create_JavaLangNullPointerException_init();
     RetrofitTypes_checkNotPrimitiveWithJavaLangReflectType_(IOSObjectArray_Get(lowerBounds, 0));
-    if (IOSObjectArray_Get(upperBounds, 0) != NSObject_class_()) @throw create_JavaLangIllegalArgumentException_init();
+    if (IOSObjectArray_Get(upperBounds, 0) != (id) NSObject_class_()) @throw create_JavaLangIllegalArgumentException_init();
     JreStrongAssign(&self->lowerBound_, IOSObjectArray_Get(lowerBounds, 0));
     JreStrongAssign(&self->upperBound_, NSObject_class_());
   }

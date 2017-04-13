@@ -41,7 +41,9 @@ __attribute__((unused)) static void RxObserversTestObserver_assertionErrorWithNS
 
 __attribute__((unused)) static IOSObjectArray *RxObserversTestObserver__Annotations$0();
 
-@interface RxObserversTestObserver_$1 : NSObject < RxObserver >
+@interface RxObserversTestObserver_1 : NSObject < RxObserver >
+
+- (instancetype)init;
 
 - (void)onCompleted;
 
@@ -49,17 +51,15 @@ __attribute__((unused)) static IOSObjectArray *RxObserversTestObserver__Annotati
 
 - (void)onNextWithId:(id)t;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxObserversTestObserver_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxObserversTestObserver_1)
 
-__attribute__((unused)) static void RxObserversTestObserver_$1_init(RxObserversTestObserver_$1 *self);
+__attribute__((unused)) static void RxObserversTestObserver_1_init(RxObserversTestObserver_1 *self);
 
-__attribute__((unused)) static RxObserversTestObserver_$1 *new_RxObserversTestObserver_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxObserversTestObserver_1 *new_RxObserversTestObserver_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxObserversTestObserver_$1 *create_RxObserversTestObserver_$1_init();
+__attribute__((unused)) static RxObserversTestObserver_1 *create_RxObserversTestObserver_1_init();
 
 J2OBJC_INITIALIZED_DEFN(RxObserversTestObserver)
 
@@ -201,7 +201,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (void)initialize {
   if (self == [RxObserversTestObserver class]) {
-    JreStrongAssignAndConsume(&RxObserversTestObserver_INERT, new_RxObserversTestObserver_$1_init());
+    JreStrongAssignAndConsume(&RxObserversTestObserver_INERT, new_RxObserversTestObserver_1_init());
     J2OBJC_SET_INITIALIZED(RxObserversTestObserver)
   }
 }
@@ -275,7 +275,14 @@ IOSObjectArray *RxObserversTestObserver__Annotations$0() {
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObserversTestObserver)
 
-@implementation RxObserversTestObserver_$1
+@implementation RxObserversTestObserver_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxObserversTestObserver_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)onCompleted {
 }
@@ -286,42 +293,35 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxObserversTestObserver)
 - (void)onNextWithId:(id)t {
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxObserversTestObserver_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "LRxObserversTestObserver;", "Ljava/lang/Object;Lrx/Observer<Ljava/lang/Object;>;" };
-  static const J2ObjcClassInfo _RxObserversTestObserver_$1 = { "", "rx.observers", ptrTable, methods, NULL, 7, 0x8008, 4, 0, 4, -1, -1, 5, -1 };
-  return &_RxObserversTestObserver_$1;
+  static const J2ObjcClassInfo _RxObserversTestObserver_1 = { "", "rx.observers", ptrTable, methods, NULL, 7, 0x8008, 4, 0, 4, -1, -1, 5, -1 };
+  return &_RxObserversTestObserver_1;
 }
 
 @end
 
-void RxObserversTestObserver_$1_init(RxObserversTestObserver_$1 *self) {
+void RxObserversTestObserver_1_init(RxObserversTestObserver_1 *self) {
   NSObject_init(self);
 }
 
-RxObserversTestObserver_$1 *new_RxObserversTestObserver_$1_init() {
-  J2OBJC_NEW_IMPL(RxObserversTestObserver_$1, init)
+RxObserversTestObserver_1 *new_RxObserversTestObserver_1_init() {
+  J2OBJC_NEW_IMPL(RxObserversTestObserver_1, init)
 }
 
-RxObserversTestObserver_$1 *create_RxObserversTestObserver_$1_init() {
-  J2OBJC_CREATE_IMPL(RxObserversTestObserver_$1, init)
+RxObserversTestObserver_1 *create_RxObserversTestObserver_1_init() {
+  J2OBJC_CREATE_IMPL(RxObserversTestObserver_1, init)
 }

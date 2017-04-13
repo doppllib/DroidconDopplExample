@@ -77,7 +77,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   IOSByteArray *bytes = (IOSByteArray *) cast_chk(sqlArg, [IOSByteArray class]);
   NSString *charsetName = CoTouchlabSqueakyFieldTypesStringBytesType_getCharsetNameWithCoTouchlabSqueakyFieldFieldType_(self, fieldType);
   @try {
-    return [NSString stringWithBytes:bytes charsetName:charsetName];
+    return [NSString java_stringWithBytes:bytes charsetName:charsetName];
   }
   @catch (JavaIoUnsupportedEncodingException *e) {
     @throw CoTouchlabSqueakyMiscSqlExceptionUtil_createWithNSString_withNSException_(JreStrcat("$$", @"Could not convert string with charset name: ", charsetName), e);
@@ -89,7 +89,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   NSString *string = (NSString *) cast_chk(javaObject, [NSString class]);
   NSString *charsetName = CoTouchlabSqueakyFieldTypesStringBytesType_getCharsetNameWithCoTouchlabSqueakyFieldFieldType_(self, fieldType);
   @try {
-    return [((NSString *) nil_chk(string)) getBytesWithCharsetName:charsetName];
+    return [((NSString *) nil_chk(string)) java_getBytesWithCharsetName:charsetName];
   }
   @catch (JavaIoUnsupportedEncodingException *e) {
     @throw CoTouchlabSqueakyMiscSqlExceptionUtil_createWithNSString_withNSException_(JreStrcat("$$", @"Could not convert string with charset name: ", charsetName), e);
@@ -104,12 +104,12 @@ J2OBJC_IGNORE_DESIGNATED_END
   static J2ObjcMethodInfo methods[] = {
     { NULL, "LCoTouchlabSqueakyFieldTypesStringBytesType;", 0x9, -1, -1, -1, -1, -1, -1 },
     { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x4, -1, 0, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 1, 2, 3, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 4, 5, 3, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 6, 7, 3, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 8, 9, 3, -1, -1, -1 },
-    { NULL, "LNSString;", 0x2, 10, 11, -1, -1, -1, -1 },
+    { NULL, NULL, 0x4, -1, 0, -1, 1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 2, 3, 4, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 5, 6, 4, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 7, 8, 4, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 9, 10, 4, -1, -1, -1 },
+    { NULL, "LNSString;", 0x2, 11, 12, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -123,10 +123,10 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[7].selector = @selector(getCharsetNameWithCoTouchlabSqueakyFieldFieldType:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "DEFAULT_STRING_BYTES_CHARSET_NAME", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 12, -1, -1 },
-    { "singleTon", "LCoTouchlabSqueakyFieldTypesStringBytesType;", .constantValue.asLong = 0, 0x1a, -1, 13, -1, -1 },
+    { "DEFAULT_STRING_BYTES_CHARSET_NAME", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 13, -1, -1 },
+    { "singleTon", "LCoTouchlabSqueakyFieldTypesStringBytesType;", .constantValue.asLong = 0, 0x1a, -1, 14, -1, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "parseDefaultString", "LCoTouchlabSqueakyFieldFieldType;LNSString;", "LJavaSqlSQLException;", "resultToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LAndroidDatabaseCursor;I", "sqlArgToJava", "LCoTouchlabSqueakyFieldFieldType;LNSObject;I", "javaToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LNSObject;", "getCharsetName", "LCoTouchlabSqueakyFieldFieldType;", &CoTouchlabSqueakyFieldTypesStringBytesType_DEFAULT_STRING_BYTES_CHARSET_NAME, &CoTouchlabSqueakyFieldTypesStringBytesType_singleTon };
+  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "(Lco/touchlab/squeaky/field/SqlType;[Ljava/lang/Class<*>;)V", "parseDefaultString", "LCoTouchlabSqueakyFieldFieldType;LNSString;", "LJavaSqlSQLException;", "resultToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LAndroidDatabaseCursor;I", "sqlArgToJava", "LCoTouchlabSqueakyFieldFieldType;LNSObject;I", "javaToSqlArg", "LCoTouchlabSqueakyFieldFieldType;LNSObject;", "getCharsetName", "LCoTouchlabSqueakyFieldFieldType;", &CoTouchlabSqueakyFieldTypesStringBytesType_DEFAULT_STRING_BYTES_CHARSET_NAME, &CoTouchlabSqueakyFieldTypesStringBytesType_singleTon };
   static const J2ObjcClassInfo _CoTouchlabSqueakyFieldTypesStringBytesType = { "StringBytesType", "co.touchlab.squeaky.field.types", ptrTable, methods, fields, 7, 0x1, 8, 2, -1, -1, -1, -1, -1 };
   return &_CoTouchlabSqueakyFieldTypesStringBytesType;
 }

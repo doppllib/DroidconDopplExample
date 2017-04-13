@@ -29,7 +29,7 @@
 
 - (void)clear;
 
-- (AndroidUtilLongSparseArray *)clone;
+- (AndroidUtilLongSparseArray *)java_clone;
 
 - (void)delete__WithLong:(jlong)key;
 

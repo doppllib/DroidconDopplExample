@@ -331,10 +331,10 @@ IOSObjectArray *RxInternalOperatorsOnSubscribePublishMulticast_TERMINATED;
     { NULL, "V", 0x0, 9, 10, -1, -1, -1, -1 },
     { NULL, "V", 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x0, 11, 12, -1, -1, -1, -1 },
-    { NULL, "[LRxInternalOperatorsOnSubscribePublishMulticast_PublishProducer;", 0x0, -1, -1, -1, -1, -1, -1 },
-    { NULL, "Z", 0x0, 13, 14, -1, 15, -1, -1 },
-    { NULL, "V", 0x0, 16, 14, -1, 17, -1, -1 },
-    { NULL, "LRxSubscriber;", 0x1, -1, -1, -1, 18, -1, -1 },
+    { NULL, "[LRxInternalOperatorsOnSubscribePublishMulticast_PublishProducer;", 0x0, -1, -1, -1, 13, -1, -1 },
+    { NULL, "Z", 0x0, 14, 15, -1, 16, -1, -1 },
+    { NULL, "V", 0x0, 17, 15, -1, 18, -1, -1 },
+    { NULL, "LRxSubscriber;", 0x1, -1, -1, -1, 19, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
   };
@@ -357,19 +357,19 @@ IOSObjectArray *RxInternalOperatorsOnSubscribePublishMulticast_TERMINATED;
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "serialVersionUID", "J", .constantValue.asLong = RxInternalOperatorsOnSubscribePublishMulticast_serialVersionUID, 0x1a, -1, -1, -1, -1 },
-    { "queue_", "LJavaUtilQueue;", .constantValue.asLong = 0, 0x10, -1, -1, 19, -1 },
+    { "queue_", "LJavaUtilQueue;", .constantValue.asLong = 0, 0x10, -1, -1, 20, -1 },
     { "prefetch_", "I", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
     { "delayError_", "Z", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
-    { "parent_", "LRxInternalOperatorsOnSubscribePublishMulticast_ParentSubscriber;", .constantValue.asLong = 0, 0x10, -1, -1, 20, -1 },
+    { "parent_", "LRxInternalOperatorsOnSubscribePublishMulticast_ParentSubscriber;", .constantValue.asLong = 0, 0x10, -1, -1, 21, -1 },
     { "done_", "Z", .constantValue.asLong = 0, 0x40, -1, -1, -1, -1 },
     { "error_", "LNSException;", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
     { "producer_", "LRxProducer;", .constantValue.asLong = 0, 0x40, -1, -1, -1, -1 },
-    { "subscribers_", "[LRxInternalOperatorsOnSubscribePublishMulticast_PublishProducer;", .constantValue.asLong = 0, 0x40, -1, -1, 21, -1 },
-    { "EMPTY", "[LRxInternalOperatorsOnSubscribePublishMulticast_PublishProducer;", .constantValue.asLong = 0, 0x18, -1, 22, 23, -1 },
-    { "TERMINATED", "[LRxInternalOperatorsOnSubscribePublishMulticast_PublishProducer;", .constantValue.asLong = 0, 0x18, -1, 24, 23, -1 },
+    { "subscribers_", "[LRxInternalOperatorsOnSubscribePublishMulticast_PublishProducer;", .constantValue.asLong = 0, 0x40, -1, -1, 22, -1 },
+    { "EMPTY", "[LRxInternalOperatorsOnSubscribePublishMulticast_PublishProducer;", .constantValue.asLong = 0, 0x18, -1, 23, 24, -1 },
+    { "TERMINATED", "[LRxInternalOperatorsOnSubscribePublishMulticast_PublishProducer;", .constantValue.asLong = 0, 0x18, -1, 25, 24, -1 },
   };
-  static const void *ptrTable[] = { "IZ", "call", "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "setProducer", "LRxProducer;", "checkTerminated", "ZZ", "add", "LRxInternalOperatorsOnSubscribePublishMulticast_PublishProducer;", "(Lrx/internal/operators/OnSubscribePublishMulticast$PublishProducer<TT;>;)Z", "remove", "(Lrx/internal/operators/OnSubscribePublishMulticast$PublishProducer<TT;>;)V", "()Lrx/Subscriber<TT;>;", "Ljava/util/Queue<TT;>;", "Lrx/internal/operators/OnSubscribePublishMulticast$ParentSubscriber<TT;>;", "[Lrx/internal/operators/OnSubscribePublishMulticast$PublishProducer<TT;>;", &RxInternalOperatorsOnSubscribePublishMulticast_EMPTY, "[Lrx/internal/operators/OnSubscribePublishMulticast$PublishProducer<*>;", &RxInternalOperatorsOnSubscribePublishMulticast_TERMINATED, "LRxInternalOperatorsOnSubscribePublishMulticast_ParentSubscriber;LRxInternalOperatorsOnSubscribePublishMulticast_PublishProducer;", "<T:Ljava/lang/Object;>Ljava/util/concurrent/atomic/AtomicInteger;Lrx/Observable$OnSubscribe<TT;>;Lrx/Observer<TT;>;Lrx/Subscription;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribePublishMulticast = { "OnSubscribePublishMulticast", "rx.internal.operators", ptrTable, methods, fields, 7, 0x11, 14, 11, -1, 25, -1, 26, -1 };
+  static const void *ptrTable[] = { "IZ", "call", "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "setProducer", "LRxProducer;", "checkTerminated", "ZZ", "()[Lrx/internal/operators/OnSubscribePublishMulticast$PublishProducer<TT;>;", "add", "LRxInternalOperatorsOnSubscribePublishMulticast_PublishProducer;", "(Lrx/internal/operators/OnSubscribePublishMulticast$PublishProducer<TT;>;)Z", "remove", "(Lrx/internal/operators/OnSubscribePublishMulticast$PublishProducer<TT;>;)V", "()Lrx/Subscriber<TT;>;", "Ljava/util/Queue<TT;>;", "Lrx/internal/operators/OnSubscribePublishMulticast$ParentSubscriber<TT;>;", "[Lrx/internal/operators/OnSubscribePublishMulticast$PublishProducer<TT;>;", &RxInternalOperatorsOnSubscribePublishMulticast_EMPTY, "[Lrx/internal/operators/OnSubscribePublishMulticast$PublishProducer<*>;", &RxInternalOperatorsOnSubscribePublishMulticast_TERMINATED, "LRxInternalOperatorsOnSubscribePublishMulticast_ParentSubscriber;LRxInternalOperatorsOnSubscribePublishMulticast_PublishProducer;", "<T:Ljava/lang/Object;>Ljava/util/concurrent/atomic/AtomicInteger;Lrx/Observable$OnSubscribe<TT;>;Lrx/Observer<TT;>;Lrx/Subscription;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribePublishMulticast = { "OnSubscribePublishMulticast", "rx.internal.operators", ptrTable, methods, fields, 7, 0x11, 14, 11, -1, 26, -1, 27, -1 };
   return &_RxInternalOperatorsOnSubscribePublishMulticast;
 }
 
@@ -434,7 +434,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribePublishMulticast)
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribePublishMulticast_ParentSubscriber class]);
   RELEASE_(state_);
   [super dealloc];
 }

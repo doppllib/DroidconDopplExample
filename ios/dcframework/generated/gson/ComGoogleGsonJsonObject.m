@@ -30,6 +30,13 @@ __attribute__((unused)) static ComGoogleGsonJsonElement *ComGoogleGsonJsonObject
 
 @implementation ComGoogleGsonJsonObject
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonJsonObject_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (ComGoogleGsonJsonObject *)deepCopy {
   ComGoogleGsonJsonObject *result = create_ComGoogleGsonJsonObject_init();
   for (id<JavaUtilMap_Entry> __strong entry_ in nil_chk([((ComGoogleGsonInternalLinkedTreeMap *) nil_chk(members_)) entrySet])) {
@@ -106,13 +113,6 @@ withComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)value {
   return ((jint) [((ComGoogleGsonInternalLinkedTreeMap *) nil_chk(members_)) hash]);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonJsonObject_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(members_);
   [super dealloc];
@@ -120,6 +120,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LComGoogleGsonJsonObject;", 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "LComGoogleGsonJsonElement;", 0x1, 2, 3, -1, -1, -1, -1 },
@@ -136,27 +137,26 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "LComGoogleGsonJsonObject;", 0x1, 16, 3, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, 17, 10, -1, -1, -1, -1 },
     { NULL, "I", 0x1, 18, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(deepCopy);
-  methods[1].selector = @selector(addWithNSString:withComGoogleGsonJsonElement:);
-  methods[2].selector = @selector(removeWithNSString:);
-  methods[3].selector = @selector(addPropertyWithNSString:withNSString:);
-  methods[4].selector = @selector(addPropertyWithNSString:withNSNumber:);
-  methods[5].selector = @selector(addPropertyWithNSString:withJavaLangBoolean:);
-  methods[6].selector = @selector(addPropertyWithNSString:withJavaLangCharacter:);
-  methods[7].selector = @selector(createJsonElementWithId:);
-  methods[8].selector = @selector(entrySet);
-  methods[9].selector = @selector(hasWithNSString:);
-  methods[10].selector = @selector(getWithNSString:);
-  methods[11].selector = @selector(getAsJsonPrimitiveWithNSString:);
-  methods[12].selector = @selector(getAsJsonArrayWithNSString:);
-  methods[13].selector = @selector(getAsJsonObjectWithNSString:);
-  methods[14].selector = @selector(isEqual:);
-  methods[15].selector = @selector(hash);
-  methods[16].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(deepCopy);
+  methods[2].selector = @selector(addWithNSString:withComGoogleGsonJsonElement:);
+  methods[3].selector = @selector(removeWithNSString:);
+  methods[4].selector = @selector(addPropertyWithNSString:withNSString:);
+  methods[5].selector = @selector(addPropertyWithNSString:withNSNumber:);
+  methods[6].selector = @selector(addPropertyWithNSString:withJavaLangBoolean:);
+  methods[7].selector = @selector(addPropertyWithNSString:withJavaLangCharacter:);
+  methods[8].selector = @selector(createJsonElementWithId:);
+  methods[9].selector = @selector(entrySet);
+  methods[10].selector = @selector(hasWithNSString:);
+  methods[11].selector = @selector(getWithNSString:);
+  methods[12].selector = @selector(getAsJsonPrimitiveWithNSString:);
+  methods[13].selector = @selector(getAsJsonArrayWithNSString:);
+  methods[14].selector = @selector(getAsJsonObjectWithNSString:);
+  methods[15].selector = @selector(isEqual:);
+  methods[16].selector = @selector(hash);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "members_", "LComGoogleGsonInternalLinkedTreeMap;", .constantValue.asLong = 0, 0x12, -1, -1, 19, -1 },
@@ -167,10 +167,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
-
-ComGoogleGsonJsonElement *ComGoogleGsonJsonObject_createJsonElementWithId_(ComGoogleGsonJsonObject *self, id value) {
-  return value == nil ? JreLoadStatic(ComGoogleGsonJsonNull, INSTANCE) : (id) create_ComGoogleGsonJsonPrimitive_initWithId_(value);
-}
 
 void ComGoogleGsonJsonObject_init(ComGoogleGsonJsonObject *self) {
   ComGoogleGsonJsonElement_init(self);
@@ -183,6 +179,10 @@ ComGoogleGsonJsonObject *new_ComGoogleGsonJsonObject_init() {
 
 ComGoogleGsonJsonObject *create_ComGoogleGsonJsonObject_init() {
   J2OBJC_CREATE_IMPL(ComGoogleGsonJsonObject, init)
+}
+
+ComGoogleGsonJsonElement *ComGoogleGsonJsonObject_createJsonElementWithId_(ComGoogleGsonJsonObject *self, id value) {
+  return value == nil ? JreLoadStatic(ComGoogleGsonJsonNull, INSTANCE) : (id) create_ComGoogleGsonJsonPrimitive_initWithId_(value);
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonJsonObject)

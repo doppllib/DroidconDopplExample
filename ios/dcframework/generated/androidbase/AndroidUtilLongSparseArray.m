@@ -6,7 +6,6 @@
 #include "AndroidUtilEmptyArray.h"
 #include "AndroidUtilLongSparseArray.h"
 #include "ComAndroidInternalUtilGrowingArrayUtils.h"
-#include "IOSClass.h"
 #include "IOSObjectArray.h"
 #include "IOSPrimitiveArray.h"
 #include "J2ObjC_source.h"
@@ -52,12 +51,12 @@ J2OBJC_IGNORE_DESIGNATED_END
   return self;
 }
 
-- (AndroidUtilLongSparseArray *)clone {
+- (AndroidUtilLongSparseArray *)java_clone {
   AndroidUtilLongSparseArray *clone = nil;
   @try {
-    clone = (AndroidUtilLongSparseArray *) cast_chk([super clone], [AndroidUtilLongSparseArray class]);
-    JreStrongAssign(&((AndroidUtilLongSparseArray *) nil_chk(clone))->mKeys_, [((IOSLongArray *) nil_chk(mKeys_)) clone]);
-    JreStrongAssign(&clone->mValues_, [((IOSObjectArray *) nil_chk(mValues_)) clone]);
+    clone = (AndroidUtilLongSparseArray *) cast_chk([super java_clone], [AndroidUtilLongSparseArray class]);
+    JreStrongAssign(&((AndroidUtilLongSparseArray *) nil_chk(clone))->mKeys_, [((IOSLongArray *) nil_chk(mKeys_)) java_clone]);
+    JreStrongAssign(&clone->mValues_, [((IOSObjectArray *) nil_chk(mValues_)) java_clone]);
   }
   @catch (JavaLangCloneNotSupportedException *cnse) {
   }
@@ -230,29 +229,29 @@ J2OBJC_IGNORE_DESIGNATED_END
   static J2ObjcMethodInfo methods[] = {
     { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, NULL, 0x1, -1, 0, -1, -1, -1, -1 },
-    { NULL, "LAndroidUtilLongSparseArray;", 0x1, -1, -1, -1, 1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 2, 3, -1, 4, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 2, 5, -1, 6, -1, -1 },
-    { NULL, "V", 0x1, 7, 3, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 8, 3, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 9, 0, -1, -1, -1, -1 },
+    { NULL, "LAndroidUtilLongSparseArray;", 0x1, 1, -1, -1, 2, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 3, 4, -1, 5, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 3, 6, -1, 7, -1, -1 },
+    { NULL, "V", 0x1, 8, 4, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 9, 4, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 10, 0, -1, -1, -1, -1 },
     { NULL, "V", 0x2, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 10, 5, -1, 11, -1, -1 },
+    { NULL, "V", 0x1, 11, 6, -1, 12, -1, -1 },
     { NULL, "I", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "J", 0x1, 12, 0, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 13, 0, -1, 14, -1, -1 },
-    { NULL, "V", 0x1, 15, 16, -1, 17, -1, -1 },
-    { NULL, "I", 0x1, 18, 3, -1, -1, -1, -1 },
-    { NULL, "I", 0x1, 19, 20, -1, 21, -1, -1 },
+    { NULL, "J", 0x1, 13, 0, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 14, 0, -1, 15, -1, -1 },
+    { NULL, "V", 0x1, 16, 17, -1, 18, -1, -1 },
+    { NULL, "I", 0x1, 19, 4, -1, -1, -1, -1 },
+    { NULL, "I", 0x1, 20, 21, -1, 22, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, 22, 5, -1, 11, -1, -1 },
-    { NULL, "LNSString;", 0x1, 23, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 23, 6, -1, 12, -1, -1 },
+    { NULL, "LNSString;", 0x1, 24, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
   methods[0].selector = @selector(init);
   methods[1].selector = @selector(initWithInt:);
-  methods[2].selector = @selector(clone);
+  methods[2].selector = @selector(java_clone);
   methods[3].selector = @selector(getWithLong:);
   methods[4].selector = @selector(getWithLong:withId:);
   methods[5].selector = @selector(delete__WithLong:);
@@ -271,19 +270,19 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[18].selector = @selector(description);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "DELETED", "LNSObject;", .constantValue.asLong = 0, 0x1a, -1, 24, -1, -1 },
+    { "DELETED", "LNSObject;", .constantValue.asLong = 0, 0x1a, -1, 25, -1, -1 },
     { "mGarbage_", "Z", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "mKeys_", "[J", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "mValues_", "[LNSObject;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "mSize_", "I", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "I", "()Landroid/util/LongSparseArray<TE;>;", "get", "J", "(J)TE;", "JLNSObject;", "(JTE;)TE;", "delete", "remove", "removeAt", "put", "(JTE;)V", "keyAt", "valueAt", "(I)TE;", "setValueAt", "ILNSObject;", "(ITE;)V", "indexOfKey", "indexOfValue", "LNSObject;", "(TE;)I", "append", "toString", &AndroidUtilLongSparseArray_DELETED, "<E:Ljava/lang/Object;>Ljava/lang/Object;Ljava/lang/Cloneable;" };
-  static const J2ObjcClassInfo _AndroidUtilLongSparseArray = { "LongSparseArray", "android.util", ptrTable, methods, fields, 7, 0x1, 19, 5, -1, -1, -1, 25, -1 };
+  static const void *ptrTable[] = { "I", "clone", "()Landroid/util/LongSparseArray<TE;>;", "get", "J", "(J)TE;", "JLNSObject;", "(JTE;)TE;", "delete", "remove", "removeAt", "put", "(JTE;)V", "keyAt", "valueAt", "(I)TE;", "setValueAt", "ILNSObject;", "(ITE;)V", "indexOfKey", "indexOfValue", "LNSObject;", "(TE;)I", "append", "toString", &AndroidUtilLongSparseArray_DELETED, "<E:Ljava/lang/Object;>Ljava/lang/Object;Ljava/lang/Cloneable;" };
+  static const J2ObjcClassInfo _AndroidUtilLongSparseArray = { "LongSparseArray", "android.util", ptrTable, methods, fields, 7, 0x1, 19, 5, -1, -1, -1, 26, -1 };
   return &_AndroidUtilLongSparseArray;
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-  return [[self clone] retain];
+  return [[self java_clone] retain];
 }
 
 + (void)initialize {

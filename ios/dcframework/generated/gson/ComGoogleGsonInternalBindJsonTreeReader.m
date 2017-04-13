@@ -54,7 +54,9 @@ __attribute__((unused)) static id ComGoogleGsonInternalBindJsonTreeReader_popSta
 
 __attribute__((unused)) static void ComGoogleGsonInternalBindJsonTreeReader_expectWithComGoogleGsonStreamJsonToken_(ComGoogleGsonInternalBindJsonTreeReader *self, ComGoogleGsonStreamJsonToken *expected);
 
-@interface ComGoogleGsonInternalBindJsonTreeReader_$1 : JavaIoReader
+@interface ComGoogleGsonInternalBindJsonTreeReader_1 : JavaIoReader
+
+- (instancetype)init;
 
 - (jint)readWithCharArray:(IOSCharArray *)buffer
                   withInt:(jint)offset
@@ -62,17 +64,15 @@ __attribute__((unused)) static void ComGoogleGsonInternalBindJsonTreeReader_expe
 
 - (void)close;
 
-- (instancetype)init;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindJsonTreeReader_$1)
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindJsonTreeReader_1)
 
-__attribute__((unused)) static void ComGoogleGsonInternalBindJsonTreeReader_$1_init(ComGoogleGsonInternalBindJsonTreeReader_$1 *self);
+__attribute__((unused)) static void ComGoogleGsonInternalBindJsonTreeReader_1_init(ComGoogleGsonInternalBindJsonTreeReader_1 *self);
 
-__attribute__((unused)) static ComGoogleGsonInternalBindJsonTreeReader_$1 *new_ComGoogleGsonInternalBindJsonTreeReader_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalBindJsonTreeReader_1 *new_ComGoogleGsonInternalBindJsonTreeReader_1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalBindJsonTreeReader_$1 *create_ComGoogleGsonInternalBindJsonTreeReader_$1_init();
+__attribute__((unused)) static ComGoogleGsonInternalBindJsonTreeReader_1 *create_ComGoogleGsonInternalBindJsonTreeReader_1_init();
 
 J2OBJC_INITIALIZED_DEFN(ComGoogleGsonInternalBindJsonTreeReader)
 
@@ -327,7 +327,7 @@ J2OBJC_INITIALIZED_DEFN(ComGoogleGsonInternalBindJsonTreeReader)
 
 + (void)initialize {
   if (self == [ComGoogleGsonInternalBindJsonTreeReader class]) {
-    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindJsonTreeReader_UNREADABLE_READER, new_ComGoogleGsonInternalBindJsonTreeReader_$1_init());
+    JreStrongAssignAndConsume(&ComGoogleGsonInternalBindJsonTreeReader_UNREADABLE_READER, new_ComGoogleGsonInternalBindJsonTreeReader_1_init());
     JreStrongAssignAndConsume(&ComGoogleGsonInternalBindJsonTreeReader_SENTINEL_CLOSED, new_NSObject_init());
     J2OBJC_SET_INITIALIZED(ComGoogleGsonInternalBindJsonTreeReader)
   }
@@ -365,7 +365,14 @@ void ComGoogleGsonInternalBindJsonTreeReader_expectWithComGoogleGsonStreamJsonTo
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalBindJsonTreeReader)
 
-@implementation ComGoogleGsonInternalBindJsonTreeReader_$1
+@implementation ComGoogleGsonInternalBindJsonTreeReader_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonInternalBindJsonTreeReader_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (jint)readWithCharArray:(IOSCharArray *)buffer
                   withInt:(jint)offset
@@ -377,40 +384,33 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalBindJsonTreeReader)
   @throw create_JavaLangAssertionError_init();
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonInternalBindJsonTreeReader_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "I", 0x1, 0, 1, 2, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, 2, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithCharArray:withInt:withInt:);
-  methods[1].selector = @selector(close);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithCharArray:withInt:withInt:);
+  methods[2].selector = @selector(close);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "read", "[CII", "LJavaIoIOException;", "LComGoogleGsonInternalBindJsonTreeReader;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindJsonTreeReader_$1 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 3, -1, -1, -1, -1 };
-  return &_ComGoogleGsonInternalBindJsonTreeReader_$1;
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindJsonTreeReader_1 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 3, -1, -1, -1, -1 };
+  return &_ComGoogleGsonInternalBindJsonTreeReader_1;
 }
 
 @end
 
-void ComGoogleGsonInternalBindJsonTreeReader_$1_init(ComGoogleGsonInternalBindJsonTreeReader_$1 *self) {
+void ComGoogleGsonInternalBindJsonTreeReader_1_init(ComGoogleGsonInternalBindJsonTreeReader_1 *self) {
   JavaIoReader_init(self);
 }
 
-ComGoogleGsonInternalBindJsonTreeReader_$1 *new_ComGoogleGsonInternalBindJsonTreeReader_$1_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindJsonTreeReader_$1, init)
+ComGoogleGsonInternalBindJsonTreeReader_1 *new_ComGoogleGsonInternalBindJsonTreeReader_1_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindJsonTreeReader_1, init)
 }
 
-ComGoogleGsonInternalBindJsonTreeReader_$1 *create_ComGoogleGsonInternalBindJsonTreeReader_$1_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindJsonTreeReader_$1, init)
+ComGoogleGsonInternalBindJsonTreeReader_1 *create_ComGoogleGsonInternalBindJsonTreeReader_1_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindJsonTreeReader_1, init)
 }

@@ -21,26 +21,24 @@
 
 J2OBJC_FIELD_SETTER(CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener, handler_, AndroidOsHandler *)
 
-@interface CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1 : NSObject < JavaLangRunnable > {
+@interface CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1 : NSObject < JavaLangRunnable > {
  @public
   CoTouchlabAndroidThreadingTasksBaseTaskQueue *val$queue_;
 }
 
-- (void)run;
-
 - (instancetype)initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue:(CoTouchlabAndroidThreadingTasksBaseTaskQueue *)capture$0;
+
+- (void)run;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1)
+J2OBJC_EMPTY_STATIC_INIT(CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1)
 
-J2OBJC_FIELD_SETTER(CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1, val$queue_, CoTouchlabAndroidThreadingTasksBaseTaskQueue *)
+__attribute__((unused)) static void CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1_initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_(CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1 *self, CoTouchlabAndroidThreadingTasksBaseTaskQueue *capture$0);
 
-__attribute__((unused)) static void CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1_initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_(CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1 *self, CoTouchlabAndroidThreadingTasksBaseTaskQueue *capture$0);
+__attribute__((unused)) static CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1 *new_CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1_initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_(CoTouchlabAndroidThreadingTasksBaseTaskQueue *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1 *new_CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1_initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_(CoTouchlabAndroidThreadingTasksBaseTaskQueue *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1 *create_CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1_initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_(CoTouchlabAndroidThreadingTasksBaseTaskQueue *capture$0);
+__attribute__((unused)) static CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1 *create_CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1_initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_(CoTouchlabAndroidThreadingTasksBaseTaskQueue *capture$0);
 
 @implementation CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener
 
@@ -57,7 +55,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 - (void)queueFinishedWithCoTouchlabAndroidThreadingTasksBaseTaskQueue:(CoTouchlabAndroidThreadingTasksBaseTaskQueue *)queue {
   if (retryCount_ < 8 && [((CoTouchlabAndroidThreadingTasksBaseTaskQueue *) nil_chk(queue)) countTasks] > 0) {
     retryCount_++;
-    [((AndroidOsHandler *) nil_chk(handler_)) postDelayedWithJavaLangRunnable:create_CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1_initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_(queue) withLong:5000 * (2 ^ retryCount_)];
+    [((AndroidOsHandler *) nil_chk(handler_)) postDelayedWithJavaLangRunnable:create_CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1_initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_(queue) withLong:5000 * (2 ^ retryCount_)];
   }
   else {
     retryCount_ = 0;
@@ -120,15 +118,15 @@ CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener *create_CoTouchlabDr
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener)
 
-@implementation CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1
+@implementation CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1
+
+- (instancetype)initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue:(CoTouchlabAndroidThreadingTasksBaseTaskQueue *)capture$0 {
+  CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1_initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_(self, capture$0);
+  return self;
+}
 
 - (void)run {
   [((CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue *) nil_chk(((CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue *) cast_chk(val$queue_, [CoTouchlabAndroidThreadingTasksPersistedPersistedTaskQueue class])))) restartQueue];
-}
-
-- (instancetype)initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue:(CoTouchlabAndroidThreadingTasksBaseTaskQueue *)capture$0 {
-  CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1_initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_(self, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -138,33 +136,33 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabDroidconandroidTasksPersistedBackoffR
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue:);
+  methods[0].selector = @selector(initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue:);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$queue_", "LCoTouchlabAndroidThreadingTasksBaseTaskQueue;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabAndroidThreadingTasksBaseTaskQueue;", "LCoTouchlabDroidconandroidTasksPersistedBackoffRetryListener;", "queueFinishedWithCoTouchlabAndroidThreadingTasksBaseTaskQueue:" };
-  static const J2ObjcClassInfo _CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1 = { "", "co.touchlab.droidconandroid.tasks.persisted", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
-  return &_CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1;
+  static const void *ptrTable[] = { "LCoTouchlabDroidconandroidTasksPersistedBackoffRetryListener;", "queueFinishedWithCoTouchlabAndroidThreadingTasksBaseTaskQueue:" };
+  static const J2ObjcClassInfo _CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1 = { "", "co.touchlab.droidconandroid.tasks.persisted", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  return &_CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1;
 }
 
 @end
 
-void CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1_initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_(CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1 *self, CoTouchlabAndroidThreadingTasksBaseTaskQueue *capture$0) {
+void CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1_initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_(CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1 *self, CoTouchlabAndroidThreadingTasksBaseTaskQueue *capture$0) {
   JreStrongAssign(&self->val$queue_, capture$0);
   NSObject_init(self);
 }
 
-CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1 *new_CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1_initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_(CoTouchlabAndroidThreadingTasksBaseTaskQueue *capture$0) {
-  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1, initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_, capture$0)
+CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1 *new_CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1_initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_(CoTouchlabAndroidThreadingTasksBaseTaskQueue *capture$0) {
+  J2OBJC_NEW_IMPL(CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1, initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_, capture$0)
 }
 
-CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1 *create_CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1_initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_(CoTouchlabAndroidThreadingTasksBaseTaskQueue *capture$0) {
-  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_$1, initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_, capture$0)
+CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1 *create_CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1_initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_(CoTouchlabAndroidThreadingTasksBaseTaskQueue *capture$0) {
+  J2OBJC_CREATE_IMPL(CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener_1, initWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_, capture$0)
 }

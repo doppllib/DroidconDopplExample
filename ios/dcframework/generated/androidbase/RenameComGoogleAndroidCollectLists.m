@@ -11,6 +11,13 @@
 
 @implementation RenameComGoogleAndroidCollectLists
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RenameComGoogleAndroidCollectLists_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (JavaUtilArrayList *)newArrayList {
   return RenameComGoogleAndroidCollectLists_newArrayList();
 }
@@ -19,24 +26,17 @@
   return RenameComGoogleAndroidCollectLists_newArrayListWithNSObjectArray_(elements);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RenameComGoogleAndroidCollectLists_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaUtilArrayList;", 0x9, -1, -1, -1, 0, -1, -1 },
     { NULL, "LJavaUtilArrayList;", 0x89, 1, 2, -1, 3, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(newArrayList);
-  methods[1].selector = @selector(newArrayListWithNSObjectArray:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(newArrayList);
+  methods[2].selector = @selector(newArrayListWithNSObjectArray:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "<E:Ljava/lang/Object;>()Ljava/util/ArrayList<TE;>;", "newArrayList", "[LNSObject;", "<E:Ljava/lang/Object;>([TE;)Ljava/util/ArrayList<TE;>;" };
   static const J2ObjcClassInfo _RenameComGoogleAndroidCollectLists = { "Lists", "rename.com.google.android.collect", ptrTable, methods, NULL, 7, 0x1, 3, 0, -1, -1, -1, -1, -1 };
@@ -44,6 +44,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
+
+void RenameComGoogleAndroidCollectLists_init(RenameComGoogleAndroidCollectLists *self) {
+  NSObject_init(self);
+}
+
+RenameComGoogleAndroidCollectLists *new_RenameComGoogleAndroidCollectLists_init() {
+  J2OBJC_NEW_IMPL(RenameComGoogleAndroidCollectLists, init)
+}
+
+RenameComGoogleAndroidCollectLists *create_RenameComGoogleAndroidCollectLists_init() {
+  J2OBJC_CREATE_IMPL(RenameComGoogleAndroidCollectLists, init)
+}
 
 JavaUtilArrayList *RenameComGoogleAndroidCollectLists_newArrayList() {
   RenameComGoogleAndroidCollectLists_initialize();
@@ -56,18 +68,6 @@ JavaUtilArrayList *RenameComGoogleAndroidCollectLists_newArrayListWithNSObjectAr
   JavaUtilArrayList *list = create_JavaUtilArrayList_initWithInt_(capacity);
   JavaUtilCollections_addAllWithJavaUtilCollection_withNSObjectArray_(list, elements);
   return list;
-}
-
-void RenameComGoogleAndroidCollectLists_init(RenameComGoogleAndroidCollectLists *self) {
-  NSObject_init(self);
-}
-
-RenameComGoogleAndroidCollectLists *new_RenameComGoogleAndroidCollectLists_init() {
-  J2OBJC_NEW_IMPL(RenameComGoogleAndroidCollectLists, init)
-}
-
-RenameComGoogleAndroidCollectLists *create_RenameComGoogleAndroidCollectLists_init() {
-  J2OBJC_CREATE_IMPL(RenameComGoogleAndroidCollectLists, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RenameComGoogleAndroidCollectLists)

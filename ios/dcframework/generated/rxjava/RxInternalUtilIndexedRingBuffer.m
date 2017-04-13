@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/util/IndexedRingBuffer.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxFunctionsFunc1.h"
 #include "RxInternalUtilIndexedRingBuffer.h"
@@ -18,6 +17,8 @@
 #include "java/util/concurrent/atomic/AtomicIntegerArray.h"
 #include "java/util/concurrent/atomic/AtomicReference.h"
 #include "java/util/concurrent/atomic/AtomicReferenceArray.h"
+
+#pragma clang diagnostic ignored "-Wincomplete-implementation"
 
 @interface RxInternalUtilIndexedRingBuffer () {
  @public
@@ -60,6 +61,24 @@ __attribute__((unused)) static void RxInternalUtilIndexedRingBuffer_pushRemovedI
 
 __attribute__((unused)) static jint RxInternalUtilIndexedRingBuffer_forEachWithRxFunctionsFunc1_withInt_withInt_(RxInternalUtilIndexedRingBuffer *self, id<RxFunctionsFunc1> action, jint startIndex, jint endIndex);
 
+@interface RxInternalUtilIndexedRingBuffer_1 : RxInternalUtilObjectPool
+
+- (instancetype)init;
+
+- (RxInternalUtilIndexedRingBuffer *)createObject;
+
+- (RxInternalUtilIndexedRingBuffer *)borrowObject;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(RxInternalUtilIndexedRingBuffer_1)
+
+__attribute__((unused)) static void RxInternalUtilIndexedRingBuffer_1_init(RxInternalUtilIndexedRingBuffer_1 *self);
+
+__attribute__((unused)) static RxInternalUtilIndexedRingBuffer_1 *new_RxInternalUtilIndexedRingBuffer_1_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static RxInternalUtilIndexedRingBuffer_1 *create_RxInternalUtilIndexedRingBuffer_1_init();
+
 @interface RxInternalUtilIndexedRingBuffer_IndexSection () {
  @public
   JavaUtilConcurrentAtomicAtomicIntegerArray *unsafeArray_;
@@ -70,22 +89,6 @@ __attribute__((unused)) static jint RxInternalUtilIndexedRingBuffer_forEachWithR
 
 J2OBJC_FIELD_SETTER(RxInternalUtilIndexedRingBuffer_IndexSection, unsafeArray_, JavaUtilConcurrentAtomicAtomicIntegerArray *)
 J2OBJC_FIELD_SETTER(RxInternalUtilIndexedRingBuffer_IndexSection, _next_, JavaUtilConcurrentAtomicAtomicReference *)
-
-@interface RxInternalUtilIndexedRingBuffer_$1 : RxInternalUtilObjectPool
-
-- (RxInternalUtilIndexedRingBuffer *)createObject;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(RxInternalUtilIndexedRingBuffer_$1)
-
-__attribute__((unused)) static void RxInternalUtilIndexedRingBuffer_$1_init(RxInternalUtilIndexedRingBuffer_$1 *self);
-
-__attribute__((unused)) static RxInternalUtilIndexedRingBuffer_$1 *new_RxInternalUtilIndexedRingBuffer_$1_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalUtilIndexedRingBuffer_$1 *create_RxInternalUtilIndexedRingBuffer_$1_init();
 
 J2OBJC_INITIALIZED_DEFN(RxInternalUtilIndexedRingBuffer)
 
@@ -258,7 +261,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (void)initialize {
   if (self == [RxInternalUtilIndexedRingBuffer class]) {
-    JreStrongAssignAndConsume(&RxInternalUtilIndexedRingBuffer_POOL, new_RxInternalUtilIndexedRingBuffer_$1_init());
+    JreStrongAssignAndConsume(&RxInternalUtilIndexedRingBuffer_POOL, new_RxInternalUtilIndexedRingBuffer_1_init());
     {
       jint defaultSize = 128;
       if (RxInternalUtilPlatformDependent_isAndroid()) {
@@ -411,7 +414,56 @@ jint RxInternalUtilIndexedRingBuffer_forEachWithRxFunctionsFunc1_withInt_withInt
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilIndexedRingBuffer)
 
+@implementation RxInternalUtilIndexedRingBuffer_1
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalUtilIndexedRingBuffer_1_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
+- (RxInternalUtilIndexedRingBuffer *)createObject {
+  return create_RxInternalUtilIndexedRingBuffer_init();
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxInternalUtilIndexedRingBuffer;", 0x4, -1, -1, -1, 0, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(createObject);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "()Lrx/internal/util/IndexedRingBuffer<*>;", "LRxInternalUtilIndexedRingBuffer;", "Lrx/internal/util/ObjectPool<Lrx/internal/util/IndexedRingBuffer<*>;>;" };
+  static const J2ObjcClassInfo _RxInternalUtilIndexedRingBuffer_1 = { "", "rx.internal.util", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, -1, 2, -1 };
+  return &_RxInternalUtilIndexedRingBuffer_1;
+}
+
+@end
+
+void RxInternalUtilIndexedRingBuffer_1_init(RxInternalUtilIndexedRingBuffer_1 *self) {
+  RxInternalUtilObjectPool_init(self);
+}
+
+RxInternalUtilIndexedRingBuffer_1 *new_RxInternalUtilIndexedRingBuffer_1_init() {
+  J2OBJC_NEW_IMPL(RxInternalUtilIndexedRingBuffer_1, init)
+}
+
+RxInternalUtilIndexedRingBuffer_1 *create_RxInternalUtilIndexedRingBuffer_1_init() {
+  J2OBJC_CREATE_IMPL(RxInternalUtilIndexedRingBuffer_1, init)
+}
+
 @implementation RxInternalUtilIndexedRingBuffer_ElementSection
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalUtilIndexedRingBuffer_ElementSection_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (RxInternalUtilIndexedRingBuffer_ElementSection *)getNext {
   if ([((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(next_)) get] != nil) {
@@ -428,13 +480,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilIndexedRingBuffer)
   }
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalUtilIndexedRingBuffer_ElementSection_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(array_);
   RELEASE_(next_);
@@ -443,13 +488,13 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxInternalUtilIndexedRingBuffer_ElementSection;", 0x0, -1, -1, -1, 0, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxInternalUtilIndexedRingBuffer_ElementSection;", 0x0, -1, -1, -1, 0, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getNext);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(getNext);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "array_", "LJavaUtilConcurrentAtomicAtomicReferenceArray;", .constantValue.asLong = 0, 0x10, -1, -1, 1, -1 },
@@ -480,6 +525,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilIndexedRingBuffer_ElementSection)
 
 @implementation RxInternalUtilIndexedRingBuffer_IndexSection
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalUtilIndexedRingBuffer_IndexSection_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (jint)getAndSetWithInt:(jint)expected
                  withInt:(jint)newValue {
   return [((JavaUtilConcurrentAtomicAtomicIntegerArray *) nil_chk(unsafeArray_)) getAndSetWithInt:expected withInt:newValue];
@@ -505,13 +557,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilIndexedRingBuffer_ElementSection)
   }
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalUtilIndexedRingBuffer_IndexSection_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(unsafeArray_);
   RELEASE_(_next_);
@@ -520,17 +565,17 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "I", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 1, -1, -1, -1, -1 },
     { NULL, "LRxInternalUtilIndexedRingBuffer_IndexSection;", 0x0, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getAndSetWithInt:withInt:);
-  methods[1].selector = @selector(setWithInt:withInt:);
-  methods[2].selector = @selector(getNext);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(getAndSetWithInt:withInt:);
+  methods[2].selector = @selector(setWithInt:withInt:);
+  methods[3].selector = @selector(getNext);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "unsafeArray_", "LJavaUtilConcurrentAtomicAtomicIntegerArray;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
@@ -558,45 +603,3 @@ RxInternalUtilIndexedRingBuffer_IndexSection *create_RxInternalUtilIndexedRingBu
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilIndexedRingBuffer_IndexSection)
-
-@implementation RxInternalUtilIndexedRingBuffer_$1
-
-- (RxInternalUtilIndexedRingBuffer *)createObject {
-  return create_RxInternalUtilIndexedRingBuffer_init();
-}
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalUtilIndexedRingBuffer_$1_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxInternalUtilIndexedRingBuffer;", 0x4, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(createObject);
-  methods[1].selector = @selector(init);
-  #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "()Lrx/internal/util/IndexedRingBuffer<*>;", "LRxInternalUtilIndexedRingBuffer;", "Lrx/internal/util/ObjectPool<Lrx/internal/util/IndexedRingBuffer<*>;>;" };
-  static const J2ObjcClassInfo _RxInternalUtilIndexedRingBuffer_$1 = { "", "rx.internal.util", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, -1, 2, -1 };
-  return &_RxInternalUtilIndexedRingBuffer_$1;
-}
-
-@end
-
-void RxInternalUtilIndexedRingBuffer_$1_init(RxInternalUtilIndexedRingBuffer_$1 *self) {
-  RxInternalUtilObjectPool_init(self);
-}
-
-RxInternalUtilIndexedRingBuffer_$1 *new_RxInternalUtilIndexedRingBuffer_$1_init() {
-  J2OBJC_NEW_IMPL(RxInternalUtilIndexedRingBuffer_$1, init)
-}
-
-RxInternalUtilIndexedRingBuffer_$1 *create_RxInternalUtilIndexedRingBuffer_$1_init() {
-  J2OBJC_CREATE_IMPL(RxInternalUtilIndexedRingBuffer_$1, init)
-}

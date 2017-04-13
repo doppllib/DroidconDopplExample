@@ -28,26 +28,26 @@
 #include "java/util/concurrent/atomic/AtomicInteger.h"
 #include "java/util/concurrent/atomic/AtomicReference.h"
 
-@interface RxInternalOperatorsOnSubscribeConcatMap_$1 : NSObject < RxProducer > {
+@interface RxInternalOperatorsOnSubscribeConcatMap_InnerProducer : NSObject < RxProducer > {
  @public
-  RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *val$parent_;
+  __unsafe_unretained RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *parent_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber:(RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *)parent;
 
 - (void)requestWithLong:(jlong)n;
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber:(RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeConcatMap_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeConcatMap_InnerProducer)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeConcatMap_$1, val$parent_, RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeConcatMap_InnerProducer_initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_(RxInternalOperatorsOnSubscribeConcatMap_InnerProducer *self, RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *parent);
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeConcatMap_$1_initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_(RxInternalOperatorsOnSubscribeConcatMap_$1 *self, RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeConcatMap_InnerProducer *new_RxInternalOperatorsOnSubscribeConcatMap_InnerProducer_initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_(RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *parent) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeConcatMap_$1 *new_RxInternalOperatorsOnSubscribeConcatMap_$1_initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_(RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeConcatMap_InnerProducer *create_RxInternalOperatorsOnSubscribeConcatMap_InnerProducer_initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_(RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *parent);
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeConcatMap_$1 *create_RxInternalOperatorsOnSubscribeConcatMap_$1_initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_(RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *capture$0);
+J2OBJC_TYPE_LITERAL_HEADER(RxInternalOperatorsOnSubscribeConcatMap_InnerProducer)
 
 @implementation RxInternalOperatorsOnSubscribeConcatMap
 
@@ -70,7 +70,7 @@ __attribute__((unused)) static RxInternalOperatorsOnSubscribeConcatMap_$1 *creat
   RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *parent = create_RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_initWithRxSubscriber_withRxFunctionsFunc1_withInt_withInt_(s, mapper_, prefetch_, delayErrorMode_);
   [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:parent];
   [child addWithRxSubscription:parent->inner_];
-  [child setProducerWithRxProducer:create_RxInternalOperatorsOnSubscribeConcatMap_$1_initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_(parent)];
+  [child setProducerWithRxProducer:create_RxInternalOperatorsOnSubscribeConcatMap_InnerProducer_initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_(parent)];
   if (![child isUnsubscribed]) {
     [((RxObservable *) nil_chk(source_)) unsafeSubscribeWithRxSubscriber:parent];
   }
@@ -101,7 +101,7 @@ __attribute__((unused)) static RxInternalOperatorsOnSubscribeConcatMap_$1 *creat
     { "BOUNDARY", "I", .constantValue.asInt = RxInternalOperatorsOnSubscribeConcatMap_BOUNDARY, 0x19, -1, -1, -1, -1 },
     { "END", "I", .constantValue.asInt = RxInternalOperatorsOnSubscribeConcatMap_END, 0x19, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxObservable;LRxFunctionsFunc1;II", "(Lrx/Observable<+TT;>;Lrx/functions/Func1<-TT;+Lrx/Observable<+TR;>;>;II)V", "call", "LRxSubscriber;", "(Lrx/Subscriber<-TR;>;)V", "Lrx/Observable<+TT;>;", "Lrx/functions/Func1<-TT;+Lrx/Observable<+TR;>;>;", "LRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber;LRxInternalOperatorsOnSubscribeConcatMap_ConcatMapInnerSubscriber;LRxInternalOperatorsOnSubscribeConcatMap_ConcatMapInnerScalarProducer;", "<T:Ljava/lang/Object;R:Ljava/lang/Object;>Ljava/lang/Object;Lrx/Observable$OnSubscribe<TR;>;" };
+  static const void *ptrTable[] = { "LRxObservable;LRxFunctionsFunc1;II", "(Lrx/Observable<+TT;>;Lrx/functions/Func1<-TT;+Lrx/Observable<+TR;>;>;II)V", "call", "LRxSubscriber;", "(Lrx/Subscriber<-TR;>;)V", "Lrx/Observable<+TT;>;", "Lrx/functions/Func1<-TT;+Lrx/Observable<+TR;>;>;", "LRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber;LRxInternalOperatorsOnSubscribeConcatMap_ConcatMapInnerSubscriber;LRxInternalOperatorsOnSubscribeConcatMap_ConcatMapInnerScalarProducer;LRxInternalOperatorsOnSubscribeConcatMap_InnerProducer;", "<T:Ljava/lang/Object;R:Ljava/lang/Object;>Ljava/lang/Object;Lrx/Observable$OnSubscribe<TR;>;" };
   static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeConcatMap = { "OnSubscribeConcatMap", "rx.internal.operators", ptrTable, methods, fields, 7, 0x11, 2, 7, -1, 7, -1, 8, -1 };
   return &_RxInternalOperatorsOnSubscribeConcatMap;
 }
@@ -262,7 +262,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeConcatMap)
           [self drainErrorWithNSException:create_JavaLangNullPointerException_initWithNSString_(@"The source returned by the mapper was null")];
           return;
         }
-        if (source != (id) RxObservable_empty()) {
+        if (source != RxObservable_empty()) {
           if ([source isKindOfClass:[RxInternalUtilScalarSynchronousObservable class]]) {
             RxInternalUtilScalarSynchronousObservable *scalarSource = (RxInternalUtilScalarSynchronousObservable *) cast_chk(source, [RxInternalUtilScalarSynchronousObservable class]);
             JreAssignVolatileBoolean(&active_, true);
@@ -307,7 +307,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeConcatMap)
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber class]);
   RELEASE_(actual_);
   RELEASE_(mapper_);
   RELEASE_(arbiter_);
@@ -420,7 +419,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeConcatMap_ConcatM
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribeConcatMap_ConcatMapInnerSubscriber class]);
   RELEASE_(parent_);
   [super dealloc];
 }
@@ -532,51 +530,53 @@ RxInternalOperatorsOnSubscribeConcatMap_ConcatMapInnerScalarProducer *create_RxI
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeConcatMap_ConcatMapInnerScalarProducer)
 
-@implementation RxInternalOperatorsOnSubscribeConcatMap_$1
+@implementation RxInternalOperatorsOnSubscribeConcatMap_InnerProducer
 
-- (void)requestWithLong:(jlong)n {
-  [((RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *) nil_chk(val$parent_)) requestMoreWithLong:n];
-}
-
-- (instancetype)initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber:(RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *)capture$0 {
-  RxInternalOperatorsOnSubscribeConcatMap_$1_initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_(self, capture$0);
+- (instancetype)initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber:(RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *)parent {
+  RxInternalOperatorsOnSubscribeConcatMap_InnerProducer_initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_(self, parent);
   return self;
 }
 
-- (void)dealloc {
-  RELEASE_(val$parent_);
-  [super dealloc];
+- (void)requestWithLong:(jlong)n {
+  [((RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *) nil_chk(parent_)) requestMoreWithLong:n];
+}
+
+- (void)__javaClone:(RxInternalOperatorsOnSubscribeConcatMap_InnerProducer *)original {
+  [super __javaClone:original];
+  [parent_ release];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, 3, -1, -1 },
+    { NULL, NULL, 0x1, -1, 0, -1, 1, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(requestWithLong:);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber:);
+  methods[1].selector = @selector(requestWithLong:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$parent_", "LRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+    { "parent_", "LRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber;", .constantValue.asLong = 0, 0x12, -1, -1, 4, -1 },
   };
-  static const void *ptrTable[] = { "request", "J", "LRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber;", "(Lrx/internal/operators/OnSubscribeConcatMap$ConcatMapSubscriber<TT;TR;>;)V", "Lrx/internal/operators/OnSubscribeConcatMap$ConcatMapSubscriber<TT;TR;>;", "LRxInternalOperatorsOnSubscribeConcatMap;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeConcatMap_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 5, -1, 6, -1, -1 };
-  return &_RxInternalOperatorsOnSubscribeConcatMap_$1;
+  static const void *ptrTable[] = { "LRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber;", "(Lrx/internal/operators/OnSubscribeConcatMap$ConcatMapSubscriber<TT;TR;>;)V", "request", "J", "Lrx/internal/operators/OnSubscribeConcatMap$ConcatMapSubscriber<TT;TR;>;", "LRxInternalOperatorsOnSubscribeConcatMap;", "<T:Ljava/lang/Object;R:Ljava/lang/Object;>Ljava/lang/Object;Lrx/Producer;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeConcatMap_InnerProducer = { "InnerProducer", "rx.internal.operators", ptrTable, methods, fields, 7, 0xa, 2, 1, 5, -1, -1, 6, -1 };
+  return &_RxInternalOperatorsOnSubscribeConcatMap_InnerProducer;
 }
 
 @end
 
-void RxInternalOperatorsOnSubscribeConcatMap_$1_initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_(RxInternalOperatorsOnSubscribeConcatMap_$1 *self, RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *capture$0) {
-  JreStrongAssign(&self->val$parent_, capture$0);
+void RxInternalOperatorsOnSubscribeConcatMap_InnerProducer_initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_(RxInternalOperatorsOnSubscribeConcatMap_InnerProducer *self, RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *parent) {
   NSObject_init(self);
+  self->parent_ = parent;
 }
 
-RxInternalOperatorsOnSubscribeConcatMap_$1 *new_RxInternalOperatorsOnSubscribeConcatMap_$1_initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_(RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeConcatMap_$1, initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_, capture$0)
+RxInternalOperatorsOnSubscribeConcatMap_InnerProducer *new_RxInternalOperatorsOnSubscribeConcatMap_InnerProducer_initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_(RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *parent) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeConcatMap_InnerProducer, initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_, parent)
 }
 
-RxInternalOperatorsOnSubscribeConcatMap_$1 *create_RxInternalOperatorsOnSubscribeConcatMap_$1_initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_(RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeConcatMap_$1, initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_, capture$0)
+RxInternalOperatorsOnSubscribeConcatMap_InnerProducer *create_RxInternalOperatorsOnSubscribeConcatMap_InnerProducer_initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_(RxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber *parent) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeConcatMap_InnerProducer, initWithRxInternalOperatorsOnSubscribeConcatMap_ConcatMapSubscriber_, parent)
 }
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeConcatMap_InnerProducer)

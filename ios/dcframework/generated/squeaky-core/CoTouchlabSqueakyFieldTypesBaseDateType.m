@@ -14,6 +14,8 @@
 #include "java/text/SimpleDateFormat.h"
 #include "java/util/Date.h"
 
+#pragma clang diagnostic ignored "-Wincomplete-implementation"
+
 @interface CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig () {
  @public
   JavaLangThreadLocal *threadLocal_;
@@ -23,26 +25,28 @@
 
 J2OBJC_FIELD_SETTER(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig, threadLocal_, JavaLangThreadLocal *)
 
-@interface CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1 : JavaLangThreadLocal {
+@interface CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1 : JavaLangThreadLocal {
  @public
   CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *this$0_;
 }
 
+- (instancetype)initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig:(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *)outer$;
+
 - (JavaTextDateFormat *)initialValue OBJC_METHOD_FAMILY_NONE;
 
-- (instancetype)initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig:(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *)outer$;
+- (JavaTextDateFormat *)get;
+
+- (JavaTextDateFormat *)childValueWithId:(JavaTextDateFormat *)arg0;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1)
+J2OBJC_EMPTY_STATIC_INIT(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1)
 
-J2OBJC_FIELD_SETTER(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1, this$0_, CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *)
+__attribute__((unused)) static void CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1_initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1 *self, CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *outer$);
 
-__attribute__((unused)) static void CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1_initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1 *self, CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *outer$);
+__attribute__((unused)) static CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1 *new_CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1_initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1 *new_CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1_initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1 *create_CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1_initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *outer$);
+__attribute__((unused)) static CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1 *create_CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1_initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *outer$);
 
 J2OBJC_INITIALIZED_DEFN(CoTouchlabSqueakyFieldTypesBaseDateType)
 
@@ -78,11 +82,11 @@ CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *CoTouchlabSqueak
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, NULL, 0x4, -1, 0, -1, -1, -1, -1 },
-    { NULL, NULL, 0x4, -1, 1, -1, -1, -1, -1 },
-    { NULL, "LCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig;", 0xc, 2, 3, -1, -1, -1, -1 },
-    { NULL, "LJavaUtilDate;", 0xc, 4, 5, 6, -1, -1, -1 },
-    { NULL, "LNSString;", 0xc, 7, 5, 6, -1, -1, -1 },
+    { NULL, NULL, 0x4, -1, 0, -1, 1, -1, -1 },
+    { NULL, NULL, 0x4, -1, 2, -1, -1, -1, -1 },
+    { NULL, "LCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig;", 0xc, 3, 4, -1, -1, -1, -1 },
+    { NULL, "LJavaUtilDate;", 0xc, 5, 6, 7, -1, -1, -1 },
+    { NULL, "LNSString;", 0xc, 8, 6, 7, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -93,10 +97,10 @@ CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *CoTouchlabSqueak
   methods[4].selector = @selector(normalizeDateStringWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig:withNSString:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "defaultDateFormatConfig", "LCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig;", .constantValue.asLong = 0, 0x1c, -1, 8, -1, -1 },
+    { "defaultDateFormatConfig", "LCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig;", .constantValue.asLong = 0, 0x1c, -1, 9, -1, -1 },
   };
-  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "LCoTouchlabSqueakyFieldSqlType;", "convertDateStringConfig", "LCoTouchlabSqueakyFieldFieldType;LCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig;", "parseDateString", "LCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig;LNSString;", "LJavaTextParseException;", "normalizeDateString", &CoTouchlabSqueakyFieldTypesBaseDateType_defaultDateFormatConfig, "LCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig;" };
-  static const J2ObjcClassInfo _CoTouchlabSqueakyFieldTypesBaseDateType = { "BaseDateType", "co.touchlab.squeaky.field.types", ptrTable, methods, fields, 7, 0x401, 5, 1, -1, 9, -1, -1, -1 };
+  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldSqlType;[LIOSClass;", "(Lco/touchlab/squeaky/field/SqlType;[Ljava/lang/Class<*>;)V", "LCoTouchlabSqueakyFieldSqlType;", "convertDateStringConfig", "LCoTouchlabSqueakyFieldFieldType;LCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig;", "parseDateString", "LCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig;LNSString;", "LJavaTextParseException;", "normalizeDateString", &CoTouchlabSqueakyFieldTypesBaseDateType_defaultDateFormatConfig, "LCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig;" };
+  static const J2ObjcClassInfo _CoTouchlabSqueakyFieldTypesBaseDateType = { "BaseDateType", "co.touchlab.squeaky.field.types", ptrTable, methods, fields, 7, 0x401, 5, 1, -1, 10, -1, -1, -1 };
   return &_CoTouchlabSqueakyFieldTypesBaseDateType;
 }
 
@@ -192,7 +196,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabSqueakyFieldTypesBaseDateType)
 
 void CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_initWithNSString_(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *self, NSString *dateFormatStr) {
   NSObject_init(self);
-  JreStrongAssignAndConsume(&self->threadLocal_, new_CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1_initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_(self));
+  JreStrongAssignAndConsume(&self->threadLocal_, new_CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1_initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_(self));
   JreStrongAssign(&self->dateFormatStr_, dateFormatStr);
 }
 
@@ -206,15 +210,15 @@ CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *create_CoTouchla
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig)
 
-@implementation CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1
+@implementation CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1
+
+- (instancetype)initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig:(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *)outer$ {
+  CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1_initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_(self, outer$);
+  return self;
+}
 
 - (JavaTextDateFormat *)initialValue {
   return create_JavaTextSimpleDateFormat_initWithNSString_(this$0_->dateFormatStr_);
-}
-
-- (instancetype)initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig:(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *)outer$ {
-  CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1_initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_(self, outer$);
-  return self;
 }
 
 - (void)dealloc {
@@ -224,33 +228,33 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabSqueakyFieldTypesBaseDateType_DateStr
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaTextDateFormat;", 0x4, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, -1, -1, -1 },
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaTextDateFormat;", 0x4, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(initialValue);
-  methods[1].selector = @selector(initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig:);
+  methods[0].selector = @selector(initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig:);
+  methods[1].selector = @selector(initialValue);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "()Ljava/text/DateFormat;", "LCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig;", "Ljava/lang/ThreadLocal<Ljava/text/DateFormat;>;" };
-  static const J2ObjcClassInfo _CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1 = { "", "co.touchlab.squeaky.field.types", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, -1, 2, -1 };
-  return &_CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1;
+  static const void *ptrTable[] = { "LCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig;", "Ljava/lang/ThreadLocal<Ljava/text/DateFormat;>;" };
+  static const J2ObjcClassInfo _CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1 = { "", "co.touchlab.squeaky.field.types", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, -1, 1, -1 };
+  return &_CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1;
 }
 
 @end
 
-void CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1_initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1 *self, CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *outer$) {
+void CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1_initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1 *self, CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   JavaLangThreadLocal_init(self);
 }
 
-CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1 *new_CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1_initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *outer$) {
-  J2OBJC_NEW_IMPL(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1, initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_, outer$)
+CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1 *new_CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1_initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *outer$) {
+  J2OBJC_NEW_IMPL(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1, initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_, outer$)
 }
 
-CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1 *create_CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1_initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *outer$) {
-  J2OBJC_CREATE_IMPL(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_$1, initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_, outer$)
+CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1 *create_CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1_initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig *outer$) {
+  J2OBJC_CREATE_IMPL(CoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_1, initWithCoTouchlabSqueakyFieldTypesBaseDateType_DateStringFormatConfig_, outer$)
 }

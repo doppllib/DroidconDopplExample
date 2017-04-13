@@ -19,6 +19,13 @@ NSString *RxPluginsRxJavaErrorHandler_ERROR_IN_RENDERING_SUFFIX = @".errorRender
 
 @implementation RxPluginsRxJavaErrorHandler
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxPluginsRxJavaErrorHandler_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (void)handleErrorWithNSException:(NSException *)e {
 }
 
@@ -39,26 +46,19 @@ NSString *RxPluginsRxJavaErrorHandler_ERROR_IN_RENDERING_SUFFIX = @".errorRender
   return nil;
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxPluginsRxJavaErrorHandler_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, 2, -1 },
     { NULL, "LNSString;", 0x11, 3, 4, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x4, 5, 4, 6, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(handleErrorWithNSException:);
-  methods[1].selector = @selector(handleOnNextValueRenderingWithId:);
-  methods[2].selector = @selector(renderWithId:);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(handleErrorWithNSException:);
+  methods[2].selector = @selector(handleOnNextValueRenderingWithId:);
+  methods[3].selector = @selector(renderWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "ERROR_IN_RENDERING_SUFFIX", "LNSString;", .constantValue.asLong = 0, 0x1c, -1, 7, -1, -1 },

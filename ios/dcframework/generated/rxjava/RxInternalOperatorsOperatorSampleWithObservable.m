@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OperatorSampleWithObservable.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxInternalOperatorsOperatorSampleWithObservable.h"
 #include "RxObservable.h"
@@ -12,67 +11,59 @@
 #include "RxSubscription.h"
 #include "java/util/concurrent/atomic/AtomicReference.h"
 
-@interface RxInternalOperatorsOperatorSampleWithObservable_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorSampleWithObservable_1 : RxSubscriber {
  @public
   JavaUtilConcurrentAtomicAtomicReference *val$value_;
   RxObserversSerializedSubscriber *val$s_;
   JavaUtilConcurrentAtomicAtomicReference *val$main_;
 }
 
+- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
+                            withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$1
+                    withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$2;
+
 - (void)onNextWithId:(id)t;
 
 - (void)onErrorWithNSException:(NSException *)e;
 
 - (void)onCompleted;
 
-- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
-                            withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$1
-                    withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$2;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSampleWithObservable_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSampleWithObservable_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSampleWithObservable_$1, val$value_, JavaUtilConcurrentAtomicAtomicReference *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSampleWithObservable_$1, val$s_, RxObserversSerializedSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSampleWithObservable_$1, val$main_, JavaUtilConcurrentAtomicAtomicReference *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorSampleWithObservable_1_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorSampleWithObservable_1 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorSampleWithObservable_$1_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorSampleWithObservable_$1 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2);
+__attribute__((unused)) static RxInternalOperatorsOperatorSampleWithObservable_1 *new_RxInternalOperatorsOperatorSampleWithObservable_1_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorSampleWithObservable_$1 *new_RxInternalOperatorsOperatorSampleWithObservable_$1_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorSampleWithObservable_1 *create_RxInternalOperatorsOperatorSampleWithObservable_1_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorSampleWithObservable_$1 *create_RxInternalOperatorsOperatorSampleWithObservable_$1_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2);
-
-@interface RxInternalOperatorsOperatorSampleWithObservable_$2 : RxSubscriber {
+@interface RxInternalOperatorsOperatorSampleWithObservable_2 : RxSubscriber {
  @public
   JavaUtilConcurrentAtomicAtomicReference *val$value_;
   RxObserversSerializedSubscriber *val$s_;
   RxSubscriber *val$samplerSub_;
 }
 
+- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
+                            withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$1
+                                               withRxSubscriber:(RxSubscriber *)capture$2;
+
 - (void)onNextWithId:(id)t;
 
 - (void)onErrorWithNSException:(NSException *)e;
 
 - (void)onCompleted;
 
-- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
-                            withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$1
-                                               withRxSubscriber:(RxSubscriber *)capture$2;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSampleWithObservable_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSampleWithObservable_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSampleWithObservable_$2, val$value_, JavaUtilConcurrentAtomicAtomicReference *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSampleWithObservable_$2, val$s_, RxObserversSerializedSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSampleWithObservable_$2, val$samplerSub_, RxSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorSampleWithObservable_2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSampleWithObservable_2 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *capture$2);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorSampleWithObservable_$2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSampleWithObservable_$2 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *capture$2);
+__attribute__((unused)) static RxInternalOperatorsOperatorSampleWithObservable_2 *new_RxInternalOperatorsOperatorSampleWithObservable_2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorSampleWithObservable_$2 *new_RxInternalOperatorsOperatorSampleWithObservable_$2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *capture$2) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorSampleWithObservable_$2 *create_RxInternalOperatorsOperatorSampleWithObservable_$2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *capture$2);
+__attribute__((unused)) static RxInternalOperatorsOperatorSampleWithObservable_2 *create_RxInternalOperatorsOperatorSampleWithObservable_2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *capture$2);
 
 J2OBJC_INITIALIZED_DEFN(RxInternalOperatorsOperatorSampleWithObservable)
 
@@ -89,8 +80,8 @@ id RxInternalOperatorsOperatorSampleWithObservable_EMPTY_TOKEN;
   RxObserversSerializedSubscriber *s = create_RxObserversSerializedSubscriber_initWithRxSubscriber_(child);
   JavaUtilConcurrentAtomicAtomicReference *value = create_JavaUtilConcurrentAtomicAtomicReference_initWithId_(RxInternalOperatorsOperatorSampleWithObservable_EMPTY_TOKEN);
   JavaUtilConcurrentAtomicAtomicReference *main = create_JavaUtilConcurrentAtomicAtomicReference_init();
-  RxSubscriber *samplerSub = create_RxInternalOperatorsOperatorSampleWithObservable_$1_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_(value, s, main);
-  RxSubscriber *result = create_RxInternalOperatorsOperatorSampleWithObservable_$2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_(value, s, samplerSub);
+  RxSubscriber *samplerSub = create_RxInternalOperatorsOperatorSampleWithObservable_1_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_(value, s, main);
+  RxSubscriber *result = create_RxInternalOperatorsOperatorSampleWithObservable_2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_(value, s, samplerSub);
   [main lazySetWithId:result];
   [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:result];
   [child addWithRxSubscription:samplerSub];
@@ -146,7 +137,14 @@ RxInternalOperatorsOperatorSampleWithObservable *create_RxInternalOperatorsOpera
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorSampleWithObservable)
 
-@implementation RxInternalOperatorsOperatorSampleWithObservable_$1
+@implementation RxInternalOperatorsOperatorSampleWithObservable_1
+
+- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
+                            withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$1
+                    withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$2 {
+  RxInternalOperatorsOperatorSampleWithObservable_1_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_(self, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   id localValue = [((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(val$value_)) getAndSetWithId:JreLoadStatic(RxInternalOperatorsOperatorSampleWithObservable, EMPTY_TOKEN)];
@@ -167,15 +165,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorSampleWithObservable
   [((id<RxSubscription>) nil_chk([((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(val$main_)) get])) unsubscribe];
 }
 
-- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
-                            withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$1
-                    withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$2 {
-  RxInternalOperatorsOperatorSampleWithObservable_$1_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_(self, capture$0, capture$1, capture$2);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorSampleWithObservable_$1 class]);
   RELEASE_(val$value_);
   RELEASE_(val$s_);
   RELEASE_(val$main_);
@@ -184,46 +174,53 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorSampleWithObservable
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicReference:withRxObserversSerializedSubscriber:withJavaUtilConcurrentAtomicAtomicReference:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicReference:withRxObserversSerializedSubscriber:withJavaUtilConcurrentAtomicAtomicReference:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$value_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
-    { "val$s_", "LRxObserversSerializedSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
-    { "val$main_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 9, -1 },
+    { "val$value_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$s_", "LRxObserversSerializedSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
+    { "val$main_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TU;)V", "onError", "LNSException;", "LJavaUtilConcurrentAtomicAtomicReference;LRxObserversSerializedSubscriber;LJavaUtilConcurrentAtomicAtomicReference;", "(Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Object;>;Lrx/observers/SerializedSubscriber<TT;>;Ljava/util/concurrent/atomic/AtomicReference<Lrx/Subscription;>;)V", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Object;>;", "Lrx/observers/SerializedSubscriber<TT;>;", "Ljava/util/concurrent/atomic/AtomicReference<Lrx/Subscription;>;", "LRxInternalOperatorsOperatorSampleWithObservable;", "callWithId:", "Lrx/Subscriber<TU;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSampleWithObservable_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 10, -1, 11, 12, -1 };
-  return &_RxInternalOperatorsOperatorSampleWithObservable_$1;
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TU;)V", "onError", "LNSException;", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Object;>;", "Lrx/observers/SerializedSubscriber<TT;>;", "Ljava/util/concurrent/atomic/AtomicReference<Lrx/Subscription;>;", "LRxInternalOperatorsOperatorSampleWithObservable;", "callWithId:", "Lrx/Subscriber<TU;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSampleWithObservable_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 8, -1, 9, 10, -1 };
+  return &_RxInternalOperatorsOperatorSampleWithObservable_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorSampleWithObservable_$1_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorSampleWithObservable_$1 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
+void RxInternalOperatorsOperatorSampleWithObservable_1_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsOperatorSampleWithObservable_1 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
   JreStrongAssign(&self->val$value_, capture$0);
   JreStrongAssign(&self->val$s_, capture$1);
   JreStrongAssign(&self->val$main_, capture$2);
   RxSubscriber_init(self);
 }
 
-RxInternalOperatorsOperatorSampleWithObservable_$1 *new_RxInternalOperatorsOperatorSampleWithObservable_$1_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSampleWithObservable_$1, initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2)
+RxInternalOperatorsOperatorSampleWithObservable_1 *new_RxInternalOperatorsOperatorSampleWithObservable_1_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSampleWithObservable_1, initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2)
 }
 
-RxInternalOperatorsOperatorSampleWithObservable_$1 *create_RxInternalOperatorsOperatorSampleWithObservable_$1_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSampleWithObservable_$1, initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2)
+RxInternalOperatorsOperatorSampleWithObservable_1 *create_RxInternalOperatorsOperatorSampleWithObservable_1_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSampleWithObservable_1, initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2)
 }
 
-@implementation RxInternalOperatorsOperatorSampleWithObservable_$2
+@implementation RxInternalOperatorsOperatorSampleWithObservable_2
+
+- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
+                            withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$1
+                                               withRxSubscriber:(RxSubscriber *)capture$2 {
+  RxInternalOperatorsOperatorSampleWithObservable_2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_(self, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   [((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(val$value_)) setWithId:t];
@@ -240,15 +237,7 @@ RxInternalOperatorsOperatorSampleWithObservable_$1 *create_RxInternalOperatorsOp
   [val$samplerSub_ unsubscribe];
 }
 
-- (instancetype)initWithJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$0
-                            withRxObserversSerializedSubscriber:(RxObserversSerializedSubscriber *)capture$1
-                                               withRxSubscriber:(RxSubscriber *)capture$2 {
-  RxInternalOperatorsOperatorSampleWithObservable_$2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_(self, capture$0, capture$1, capture$2);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorSampleWithObservable_$2 class]);
   RELEASE_(val$value_);
   RELEASE_(val$s_);
   RELEASE_(val$samplerSub_);
@@ -257,41 +246,41 @@ RxInternalOperatorsOperatorSampleWithObservable_$1 *create_RxInternalOperatorsOp
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicReference:withRxObserversSerializedSubscriber:withRxSubscriber:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentAtomicAtomicReference:withRxObserversSerializedSubscriber:withRxSubscriber:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$value_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
-    { "val$s_", "LRxObserversSerializedSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
-    { "val$samplerSub_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 9, -1 },
+    { "val$value_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$s_", "LRxObserversSerializedSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
+    { "val$samplerSub_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LJavaUtilConcurrentAtomicAtomicReference;LRxObserversSerializedSubscriber;LRxSubscriber;", "(Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Object;>;Lrx/observers/SerializedSubscriber<TT;>;Lrx/Subscriber<TU;>;)V", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Object;>;", "Lrx/observers/SerializedSubscriber<TT;>;", "Lrx/Subscriber<TU;>;", "LRxInternalOperatorsOperatorSampleWithObservable;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSampleWithObservable_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 10, -1, 11, 12, -1 };
-  return &_RxInternalOperatorsOperatorSampleWithObservable_$2;
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Object;>;", "Lrx/observers/SerializedSubscriber<TT;>;", "Lrx/Subscriber<TU;>;", "LRxInternalOperatorsOperatorSampleWithObservable;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSampleWithObservable_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 8, -1, 9, 10, -1 };
+  return &_RxInternalOperatorsOperatorSampleWithObservable_2;
 }
 
 @end
 
-void RxInternalOperatorsOperatorSampleWithObservable_$2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSampleWithObservable_$2 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *capture$2) {
+void RxInternalOperatorsOperatorSampleWithObservable_2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorSampleWithObservable_2 *self, JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *capture$2) {
   JreStrongAssign(&self->val$value_, capture$0);
   JreStrongAssign(&self->val$s_, capture$1);
   JreStrongAssign(&self->val$samplerSub_, capture$2);
   RxSubscriber_init(self);
 }
 
-RxInternalOperatorsOperatorSampleWithObservable_$2 *new_RxInternalOperatorsOperatorSampleWithObservable_$2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *capture$2) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSampleWithObservable_$2, initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_, capture$0, capture$1, capture$2)
+RxInternalOperatorsOperatorSampleWithObservable_2 *new_RxInternalOperatorsOperatorSampleWithObservable_2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *capture$2) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSampleWithObservable_2, initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_, capture$0, capture$1, capture$2)
 }
 
-RxInternalOperatorsOperatorSampleWithObservable_$2 *create_RxInternalOperatorsOperatorSampleWithObservable_$2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *capture$2) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSampleWithObservable_$2, initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_, capture$0, capture$1, capture$2)
+RxInternalOperatorsOperatorSampleWithObservable_2 *create_RxInternalOperatorsOperatorSampleWithObservable_2_initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_(JavaUtilConcurrentAtomicAtomicReference *capture$0, RxObserversSerializedSubscriber *capture$1, RxSubscriber *capture$2) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSampleWithObservable_2, initWithJavaUtilConcurrentAtomicAtomicReference_withRxObserversSerializedSubscriber_withRxSubscriber_, capture$0, capture$1, capture$2)
 }

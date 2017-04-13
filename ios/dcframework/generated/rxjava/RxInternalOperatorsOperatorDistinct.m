@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OperatorDistinct.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxFunctionsFunc1.h"
 #include "RxInternalOperatorsOperatorDistinct.h"
@@ -12,12 +11,16 @@
 #include "java/util/HashSet.h"
 #include "java/util/Set.h"
 
-@interface RxInternalOperatorsOperatorDistinct_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorDistinct_1 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorDistinct *this$0_;
-  id<JavaUtilSet> keyMemory_;
   RxSubscriber *val$child_;
+  id<JavaUtilSet> keyMemory_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorDistinct:(RxInternalOperatorsOperatorDistinct *)outer$
+                                           withRxSubscriber:(RxSubscriber *)capture$0
+                                           withRxSubscriber:(RxSubscriber *)param0;
 
 - (void)onNextWithId:(id)t;
 
@@ -25,23 +28,17 @@
 
 - (void)onCompleted;
 
-- (instancetype)initWithRxInternalOperatorsOperatorDistinct:(RxInternalOperatorsOperatorDistinct *)outer$
-                                           withRxSubscriber:(RxSubscriber *)capture$0
-                                           withRxSubscriber:(RxSubscriber *)arg$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorDistinct_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorDistinct_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDistinct_$1, this$0_, RxInternalOperatorsOperatorDistinct *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDistinct_$1, keyMemory_, id<JavaUtilSet>)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDistinct_$1, val$child_, RxSubscriber *)
+J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorDistinct_1, keyMemory_, id<JavaUtilSet>)
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorDistinct_$1_initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDistinct_$1 *self, RxInternalOperatorsOperatorDistinct *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static void RxInternalOperatorsOperatorDistinct_1_initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDistinct_1 *self, RxInternalOperatorsOperatorDistinct *outer$, RxSubscriber *capture$0, RxSubscriber *param0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorDistinct_$1 *new_RxInternalOperatorsOperatorDistinct_$1_initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDistinct *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorDistinct_1 *new_RxInternalOperatorsOperatorDistinct_1_initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDistinct *outer$, RxSubscriber *capture$0, RxSubscriber *param0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorDistinct_$1 *create_RxInternalOperatorsOperatorDistinct_$1_initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDistinct *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorDistinct_1 *create_RxInternalOperatorsOperatorDistinct_1_initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDistinct *outer$, RxSubscriber *capture$0, RxSubscriber *param0);
 
 @implementation RxInternalOperatorsOperatorDistinct
 
@@ -55,7 +52,7 @@ __attribute__((unused)) static RxInternalOperatorsOperatorDistinct_$1 *create_Rx
 }
 
 - (RxSubscriber *)callWithId:(RxSubscriber *)child {
-  return create_RxInternalOperatorsOperatorDistinct_$1_initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_(self, child, child);
+  return create_RxInternalOperatorsOperatorDistinct_1_initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_(self, child, child);
 }
 
 - (void)dealloc {
@@ -157,7 +154,14 @@ RxInternalOperatorsOperatorDistinct_Holder *create_RxInternalOperatorsOperatorDi
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorDistinct_Holder)
 
-@implementation RxInternalOperatorsOperatorDistinct_$1
+@implementation RxInternalOperatorsOperatorDistinct_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorDistinct:(RxInternalOperatorsOperatorDistinct *)outer$
+                                           withRxSubscriber:(RxSubscriber *)capture$0
+                                           withRxSubscriber:(RxSubscriber *)param0 {
+  RxInternalOperatorsOperatorDistinct_1_initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, param0);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   id key = [((id<RxFunctionsFunc1>) nil_chk(this$0_->keySelector_)) callWithId:t];
@@ -179,58 +183,50 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorDistinct_Holder)
   [((RxSubscriber *) nil_chk(val$child_)) onCompleted];
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorDistinct:(RxInternalOperatorsOperatorDistinct *)outer$
-                                           withRxSubscriber:(RxSubscriber *)capture$0
-                                           withRxSubscriber:(RxSubscriber *)arg$0 {
-  RxInternalOperatorsOperatorDistinct_$1_initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_(self, outer$, capture$0, arg$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorDistinct_$1 class]);
   RELEASE_(this$0_);
-  RELEASE_(keyMemory_);
   RELEASE_(val$child_);
+  RELEASE_(keyMemory_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
+    { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
+    { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(initWithRxInternalOperatorsOperatorDistinct:withRxSubscriber:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorDistinct:withRxSubscriber:withRxSubscriber:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorDistinct;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "keyMemory_", "LJavaUtilSet;", .constantValue.asLong = 0, 0x0, -1, -1, 7, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorDistinct;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
     { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "keyMemory_", "LJavaUtilSet;", .constantValue.asLong = 0, 0x0, -1, -1, 9, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "LRxInternalOperatorsOperatorDistinct;LRxSubscriber;LRxSubscriber;", "(Lrx/internal/operators/OperatorDistinct;Lrx/Subscriber<-TT;>;Lrx/Subscriber<*>;)V", "Ljava/util/Set<TU;>;", "Lrx/Subscriber<-TT;>;", "LRxInternalOperatorsOperatorDistinct;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorDistinct_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 9, -1, 10, 11, -1 };
-  return &_RxInternalOperatorsOperatorDistinct_$1;
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "Lrx/internal/operators/OperatorDistinct<TT;TU;>;", "Lrx/Subscriber<-TT;>;", "Ljava/util/Set<TU;>;", "LRxInternalOperatorsOperatorDistinct;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorDistinct_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 10, -1, 11, 12, -1 };
+  return &_RxInternalOperatorsOperatorDistinct_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorDistinct_$1_initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDistinct_$1 *self, RxInternalOperatorsOperatorDistinct *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
+void RxInternalOperatorsOperatorDistinct_1_initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDistinct_1 *self, RxInternalOperatorsOperatorDistinct *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$child_, capture$0);
-  RxSubscriber_initWithRxSubscriber_(self, arg$0);
+  RxSubscriber_initWithRxSubscriber_(self, param0);
   JreStrongAssignAndConsume(&self->keyMemory_, new_JavaUtilHashSet_init());
 }
 
-RxInternalOperatorsOperatorDistinct_$1 *new_RxInternalOperatorsOperatorDistinct_$1_initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDistinct *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorDistinct_$1, initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_, outer$, capture$0, arg$0)
+RxInternalOperatorsOperatorDistinct_1 *new_RxInternalOperatorsOperatorDistinct_1_initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDistinct *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorDistinct_1, initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_, outer$, capture$0, param0)
 }
 
-RxInternalOperatorsOperatorDistinct_$1 *create_RxInternalOperatorsOperatorDistinct_$1_initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDistinct *outer$, RxSubscriber *capture$0, RxSubscriber *arg$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorDistinct_$1, initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_, outer$, capture$0, arg$0)
+RxInternalOperatorsOperatorDistinct_1 *create_RxInternalOperatorsOperatorDistinct_1_initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_(RxInternalOperatorsOperatorDistinct *outer$, RxSubscriber *capture$0, RxSubscriber *param0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorDistinct_1, initWithRxInternalOperatorsOperatorDistinct_withRxSubscriber_withRxSubscriber_, outer$, capture$0, param0)
 }

@@ -512,22 +512,22 @@ jint RxInternalUtilUnsafeSpscUnboundedArrayQueue_MAX_LOOK_AHEAD_STEP;
     { NULL, "Z", 0x11, 2, 3, -1, 4, -1, -1 },
     { NULL, "Z", 0x2, 5, 6, -1, 7, -1, -1 },
     { NULL, "V", 0x2, 8, 9, -1, 10, -1, -1 },
-    { NULL, "V", 0x2, 11, 12, -1, -1, -1, -1 },
-    { NULL, "[LNSObject;", 0x2, 13, 14, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0x11, -1, -1, -1, 15, -1, -1 },
-    { NULL, "LNSObject;", 0x2, 16, 17, -1, 18, -1, -1 },
-    { NULL, "LNSObject;", 0x11, -1, -1, -1, 15, -1, -1 },
-    { NULL, "LNSObject;", 0x2, 19, 17, -1, 18, -1, -1 },
+    { NULL, "V", 0x2, 11, 12, -1, 13, -1, -1 },
+    { NULL, "[LNSObject;", 0x2, 14, 15, -1, 16, -1, -1 },
+    { NULL, "LNSObject;", 0x11, -1, -1, -1, 17, -1, -1 },
+    { NULL, "LNSObject;", 0x2, 18, 19, -1, 20, -1, -1 },
+    { NULL, "LNSObject;", 0x11, -1, -1, -1, 17, -1, -1 },
+    { NULL, "LNSObject;", 0x2, 21, 19, -1, 20, -1, -1 },
     { NULL, "I", 0x11, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x2, 20, 0, -1, -1, -1, -1 },
+    { NULL, "V", 0x2, 22, 0, -1, -1, -1, -1 },
     { NULL, "J", 0x2, -1, -1, -1, -1, -1, -1 },
     { NULL, "J", 0x2, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x2, 21, 22, -1, -1, -1, -1 },
-    { NULL, "V", 0x2, 23, 22, -1, -1, -1, -1 },
-    { NULL, "J", 0xa, 24, 25, -1, -1, -1, -1 },
-    { NULL, "J", 0xa, 26, 22, -1, -1, -1, -1 },
-    { NULL, "V", 0xa, 27, 28, -1, -1, -1, -1 },
-    { NULL, "LNSObject;", 0xa, 29, 30, -1, 31, -1, -1 },
+    { NULL, "V", 0x2, 23, 24, -1, -1, -1, -1 },
+    { NULL, "V", 0x2, 25, 24, -1, -1, -1, -1 },
+    { NULL, "J", 0xa, 26, 27, -1, -1, -1, -1 },
+    { NULL, "J", 0xa, 28, 24, -1, -1, -1, -1 },
+    { NULL, "V", 0xa, 29, 30, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0xa, 31, 32, -1, 33, -1, -1 },
     { NULL, "J", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "J", 0x1, -1, -1, -1, -1, -1, -1 },
   };
@@ -558,15 +558,15 @@ jint RxInternalUtilUnsafeSpscUnboundedArrayQueue_MAX_LOOK_AHEAD_STEP;
   methods[22].selector = @selector(currentConsumerIndex);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "MAX_LOOK_AHEAD_STEP", "I", .constantValue.asLong = 0, 0x18, -1, 32, -1, -1 },
-    { "P_INDEX_OFFSET", "J", .constantValue.asLong = 0, 0x1a, -1, 33, -1, -1 },
-    { "C_INDEX_OFFSET", "J", .constantValue.asLong = 0, 0x1a, -1, 34, -1, -1 },
-    { "REF_ARRAY_BASE", "J", .constantValue.asLong = 0, 0x1a, -1, 35, -1, -1 },
-    { "REF_ELEMENT_SHIFT", "I", .constantValue.asLong = 0, 0x1a, -1, 36, -1, -1 },
-    { "HAS_NEXT", "LNSObject;", .constantValue.asLong = 0, 0x1a, -1, 37, -1, -1 },
+    { "MAX_LOOK_AHEAD_STEP", "I", .constantValue.asLong = 0, 0x18, -1, 34, -1, -1 },
+    { "P_INDEX_OFFSET", "J", .constantValue.asLong = 0, 0x1a, -1, 35, -1, -1 },
+    { "C_INDEX_OFFSET", "J", .constantValue.asLong = 0, 0x1a, -1, 36, -1, -1 },
+    { "REF_ARRAY_BASE", "J", .constantValue.asLong = 0, 0x1a, -1, 37, -1, -1 },
+    { "REF_ELEMENT_SHIFT", "I", .constantValue.asLong = 0, 0x1a, -1, 38, -1, -1 },
+    { "HAS_NEXT", "LNSObject;", .constantValue.asLong = 0, 0x1a, -1, 39, -1, -1 },
   };
-  static const void *ptrTable[] = { "I", "()Ljava/util/Iterator<TE;>;", "offer", "LNSObject;", "(TE;)Z", "writeToQueue", "[LNSObject;LNSObject;JJ", "([TE;TE;JJ)Z", "resize", "[LNSObject;JJLNSObject;J", "([TE;JJTE;J)V", "soNext", "[LNSObject;[LNSObject;", "lvNext", "[LNSObject;", "()TE;", "newBufferPoll", "[LNSObject;JJ", "([TE;JJ)TE;", "newBufferPeek", "adjustLookAheadStep", "soProducerIndex", "J", "soConsumerIndex", "calcWrappedOffset", "JJ", "calcDirectOffset", "soElement", "[LNSObject;JLNSObject;", "lvElement", "[LNSObject;J", "<E:Ljava/lang/Object;>([TE;J)Ljava/lang/Object;", &RxInternalUtilUnsafeSpscUnboundedArrayQueue_MAX_LOOK_AHEAD_STEP, &RxInternalUtilUnsafeSpscUnboundedArrayQueue_P_INDEX_OFFSET, &RxInternalUtilUnsafeSpscUnboundedArrayQueue_C_INDEX_OFFSET, &RxInternalUtilUnsafeSpscUnboundedArrayQueue_REF_ARRAY_BASE, &RxInternalUtilUnsafeSpscUnboundedArrayQueue_REF_ELEMENT_SHIFT, &RxInternalUtilUnsafeSpscUnboundedArrayQueue_HAS_NEXT, "<E:Ljava/lang/Object;>Lrx/internal/util/unsafe/SpscUnboundedArrayQueueConsumerField<TE;>;Lrx/internal/util/unsafe/QueueProgressIndicators;" };
-  static const J2ObjcClassInfo _RxInternalUtilUnsafeSpscUnboundedArrayQueue = { "SpscUnboundedArrayQueue", "rx.internal.util.unsafe", ptrTable, methods, fields, 7, 0x1, 23, 6, -1, -1, -1, 38, -1 };
+  static const void *ptrTable[] = { "I", "()Ljava/util/Iterator<TE;>;", "offer", "LNSObject;", "(TE;)Z", "writeToQueue", "[LNSObject;LNSObject;JJ", "([TE;TE;JJ)Z", "resize", "[LNSObject;JJLNSObject;J", "([TE;JJTE;J)V", "soNext", "[LNSObject;[LNSObject;", "([TE;[TE;)V", "lvNext", "[LNSObject;", "([TE;)[TE;", "()TE;", "newBufferPoll", "[LNSObject;JJ", "([TE;JJ)TE;", "newBufferPeek", "adjustLookAheadStep", "soProducerIndex", "J", "soConsumerIndex", "calcWrappedOffset", "JJ", "calcDirectOffset", "soElement", "[LNSObject;JLNSObject;", "lvElement", "[LNSObject;J", "<E:Ljava/lang/Object;>([TE;J)Ljava/lang/Object;", &RxInternalUtilUnsafeSpscUnboundedArrayQueue_MAX_LOOK_AHEAD_STEP, &RxInternalUtilUnsafeSpscUnboundedArrayQueue_P_INDEX_OFFSET, &RxInternalUtilUnsafeSpscUnboundedArrayQueue_C_INDEX_OFFSET, &RxInternalUtilUnsafeSpscUnboundedArrayQueue_REF_ARRAY_BASE, &RxInternalUtilUnsafeSpscUnboundedArrayQueue_REF_ELEMENT_SHIFT, &RxInternalUtilUnsafeSpscUnboundedArrayQueue_HAS_NEXT, "<E:Ljava/lang/Object;>Lrx/internal/util/unsafe/SpscUnboundedArrayQueueConsumerField<TE;>;Lrx/internal/util/unsafe/QueueProgressIndicators;" };
+  static const J2ObjcClassInfo _RxInternalUtilUnsafeSpscUnboundedArrayQueue = { "SpscUnboundedArrayQueue", "rx.internal.util.unsafe", ptrTable, methods, fields, 7, 0x1, 23, 6, -1, -1, -1, 40, -1 };
   return &_RxInternalUtilUnsafeSpscUnboundedArrayQueue;
 }
 

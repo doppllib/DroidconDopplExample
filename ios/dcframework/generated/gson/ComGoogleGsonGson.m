@@ -65,6 +65,8 @@
 #include "java/util/concurrent/atomic/AtomicLong.h"
 #include "java/util/concurrent/atomic/AtomicLongArray.h"
 
+#pragma clang diagnostic ignored "-Wincomplete-implementation"
+
 @interface ComGoogleGsonGson () {
  @public
   JavaLangThreadLocal *calls_;
@@ -114,6 +116,179 @@ __attribute__((unused)) static ComGoogleGsonTypeAdapter *ComGoogleGsonGson_atomi
 
 __attribute__((unused)) static void ComGoogleGsonGson_assertFullConsumptionWithId_withComGoogleGsonStreamJsonReader_(id obj, ComGoogleGsonStreamJsonReader *reader);
 
+@interface ComGoogleGsonGson_1 : NSObject < ComGoogleGsonJsonDeserializationContext > {
+ @public
+  ComGoogleGsonGson *this$0_;
+}
+
+- (instancetype)initWithComGoogleGsonGson:(ComGoogleGsonGson *)outer$;
+
+- (id)deserializeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)json
+                      withJavaLangReflectType:(id<JavaLangReflectType>)typeOfT;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonGson_1)
+
+__attribute__((unused)) static void ComGoogleGsonGson_1_initWithComGoogleGsonGson_(ComGoogleGsonGson_1 *self, ComGoogleGsonGson *outer$);
+
+__attribute__((unused)) static ComGoogleGsonGson_1 *new_ComGoogleGsonGson_1_initWithComGoogleGsonGson_(ComGoogleGsonGson *outer$) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonGson_1 *create_ComGoogleGsonGson_1_initWithComGoogleGsonGson_(ComGoogleGsonGson *outer$);
+
+@interface ComGoogleGsonGson_2 : NSObject < ComGoogleGsonJsonSerializationContext > {
+ @public
+  ComGoogleGsonGson *this$0_;
+}
+
+- (instancetype)initWithComGoogleGsonGson:(ComGoogleGsonGson *)outer$;
+
+- (ComGoogleGsonJsonElement *)serializeWithId:(id)src;
+
+- (ComGoogleGsonJsonElement *)serializeWithId:(id)src
+                      withJavaLangReflectType:(id<JavaLangReflectType>)typeOfSrc;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonGson_2)
+
+__attribute__((unused)) static void ComGoogleGsonGson_2_initWithComGoogleGsonGson_(ComGoogleGsonGson_2 *self, ComGoogleGsonGson *outer$);
+
+__attribute__((unused)) static ComGoogleGsonGson_2 *new_ComGoogleGsonGson_2_initWithComGoogleGsonGson_(ComGoogleGsonGson *outer$) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonGson_2 *create_ComGoogleGsonGson_2_initWithComGoogleGsonGson_(ComGoogleGsonGson *outer$);
+
+@interface ComGoogleGsonGson_3 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaLangDouble *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(NSNumber *)value;
+
+- (NSNumber *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (NSNumber *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (NSNumber *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonGson_3)
+
+__attribute__((unused)) static void ComGoogleGsonGson_3_init(ComGoogleGsonGson_3 *self);
+
+__attribute__((unused)) static ComGoogleGsonGson_3 *new_ComGoogleGsonGson_3_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonGson_3 *create_ComGoogleGsonGson_3_init();
+
+@interface ComGoogleGsonGson_4 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (JavaLangFloat *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(NSNumber *)value;
+
+- (NSNumber *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (NSNumber *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (NSNumber *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonGson_4)
+
+__attribute__((unused)) static void ComGoogleGsonGson_4_init(ComGoogleGsonGson_4 *self);
+
+__attribute__((unused)) static ComGoogleGsonGson_4 *new_ComGoogleGsonGson_4_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonGson_4 *create_ComGoogleGsonGson_4_init();
+
+@interface ComGoogleGsonGson_5 : ComGoogleGsonTypeAdapter
+
+- (instancetype)init;
+
+- (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(NSNumber *)value;
+
+- (NSNumber *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (NSNumber *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (NSNumber *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonGson_5)
+
+__attribute__((unused)) static void ComGoogleGsonGson_5_init(ComGoogleGsonGson_5 *self);
+
+__attribute__((unused)) static ComGoogleGsonGson_5 *new_ComGoogleGsonGson_5_init() NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonGson_5 *create_ComGoogleGsonGson_5_init();
+
+@interface ComGoogleGsonGson_6 : ComGoogleGsonTypeAdapter {
+ @public
+  ComGoogleGsonTypeAdapter *val$longAdapter_;
+}
+
+- (instancetype)initWithComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$0;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaUtilConcurrentAtomicAtomicLong *)value;
+
+- (JavaUtilConcurrentAtomicAtomicLong *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (JavaUtilConcurrentAtomicAtomicLong *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaUtilConcurrentAtomicAtomicLong *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaUtilConcurrentAtomicAtomicLong *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonGson_6)
+
+__attribute__((unused)) static void ComGoogleGsonGson_6_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonGson_6 *self, ComGoogleGsonTypeAdapter *capture$0);
+
+__attribute__((unused)) static ComGoogleGsonGson_6 *new_ComGoogleGsonGson_6_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonGson_6 *create_ComGoogleGsonGson_6_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0);
+
+@interface ComGoogleGsonGson_7 : ComGoogleGsonTypeAdapter {
+ @public
+  ComGoogleGsonTypeAdapter *val$longAdapter_;
+}
+
+- (instancetype)initWithComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$0;
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(JavaUtilConcurrentAtomicAtomicLongArray *)value;
+
+- (JavaUtilConcurrentAtomicAtomicLongArray *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
+
+- (JavaUtilConcurrentAtomicAtomicLongArray *)fromJsonWithJavaIoReader:(JavaIoReader *)arg0;
+
+- (JavaUtilConcurrentAtomicAtomicLongArray *)fromJsonTreeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)arg0;
+
+- (JavaUtilConcurrentAtomicAtomicLongArray *)fromJsonWithNSString:(NSString *)arg0;
+
+@end
+
+J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonGson_7)
+
+__attribute__((unused)) static void ComGoogleGsonGson_7_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonGson_7 *self, ComGoogleGsonTypeAdapter *capture$0);
+
+__attribute__((unused)) static ComGoogleGsonGson_7 *new_ComGoogleGsonGson_7_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0) NS_RETURNS_RETAINED;
+
+__attribute__((unused)) static ComGoogleGsonGson_7 *create_ComGoogleGsonGson_7_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0);
+
 @interface ComGoogleGsonGson_FutureTypeAdapter () {
  @public
   ComGoogleGsonTypeAdapter *delegate_;
@@ -122,157 +297,6 @@ __attribute__((unused)) static void ComGoogleGsonGson_assertFullConsumptionWithI
 @end
 
 J2OBJC_FIELD_SETTER(ComGoogleGsonGson_FutureTypeAdapter, delegate_, ComGoogleGsonTypeAdapter *)
-
-@interface ComGoogleGsonGson_$1 : NSObject < ComGoogleGsonJsonDeserializationContext > {
- @public
-  ComGoogleGsonGson *this$0_;
-}
-
-- (id)deserializeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)json
-                      withJavaLangReflectType:(id<JavaLangReflectType>)typeOfT;
-
-- (instancetype)initWithComGoogleGsonGson:(ComGoogleGsonGson *)outer$;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonGson_$1)
-
-J2OBJC_FIELD_SETTER(ComGoogleGsonGson_$1, this$0_, ComGoogleGsonGson *)
-
-__attribute__((unused)) static void ComGoogleGsonGson_$1_initWithComGoogleGsonGson_(ComGoogleGsonGson_$1 *self, ComGoogleGsonGson *outer$);
-
-__attribute__((unused)) static ComGoogleGsonGson_$1 *new_ComGoogleGsonGson_$1_initWithComGoogleGsonGson_(ComGoogleGsonGson *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonGson_$1 *create_ComGoogleGsonGson_$1_initWithComGoogleGsonGson_(ComGoogleGsonGson *outer$);
-
-@interface ComGoogleGsonGson_$2 : NSObject < ComGoogleGsonJsonSerializationContext > {
- @public
-  ComGoogleGsonGson *this$0_;
-}
-
-- (ComGoogleGsonJsonElement *)serializeWithId:(id)src;
-
-- (ComGoogleGsonJsonElement *)serializeWithId:(id)src
-                      withJavaLangReflectType:(id<JavaLangReflectType>)typeOfSrc;
-
-- (instancetype)initWithComGoogleGsonGson:(ComGoogleGsonGson *)outer$;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonGson_$2)
-
-J2OBJC_FIELD_SETTER(ComGoogleGsonGson_$2, this$0_, ComGoogleGsonGson *)
-
-__attribute__((unused)) static void ComGoogleGsonGson_$2_initWithComGoogleGsonGson_(ComGoogleGsonGson_$2 *self, ComGoogleGsonGson *outer$);
-
-__attribute__((unused)) static ComGoogleGsonGson_$2 *new_ComGoogleGsonGson_$2_initWithComGoogleGsonGson_(ComGoogleGsonGson *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonGson_$2 *create_ComGoogleGsonGson_$2_initWithComGoogleGsonGson_(ComGoogleGsonGson *outer$);
-
-@interface ComGoogleGsonGson_$3 : ComGoogleGsonTypeAdapter
-
-- (JavaLangDouble *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(NSNumber *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonGson_$3)
-
-__attribute__((unused)) static void ComGoogleGsonGson_$3_init(ComGoogleGsonGson_$3 *self);
-
-__attribute__((unused)) static ComGoogleGsonGson_$3 *new_ComGoogleGsonGson_$3_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonGson_$3 *create_ComGoogleGsonGson_$3_init();
-
-@interface ComGoogleGsonGson_$4 : ComGoogleGsonTypeAdapter
-
-- (JavaLangFloat *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(NSNumber *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonGson_$4)
-
-__attribute__((unused)) static void ComGoogleGsonGson_$4_init(ComGoogleGsonGson_$4 *self);
-
-__attribute__((unused)) static ComGoogleGsonGson_$4 *new_ComGoogleGsonGson_$4_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonGson_$4 *create_ComGoogleGsonGson_$4_init();
-
-@interface ComGoogleGsonGson_$5 : ComGoogleGsonTypeAdapter
-
-- (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(NSNumber *)value;
-
-- (instancetype)init;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonGson_$5)
-
-__attribute__((unused)) static void ComGoogleGsonGson_$5_init(ComGoogleGsonGson_$5 *self);
-
-__attribute__((unused)) static ComGoogleGsonGson_$5 *new_ComGoogleGsonGson_$5_init() NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonGson_$5 *create_ComGoogleGsonGson_$5_init();
-
-@interface ComGoogleGsonGson_$6 : ComGoogleGsonTypeAdapter {
- @public
-  ComGoogleGsonTypeAdapter *val$longAdapter_;
-}
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaUtilConcurrentAtomicAtomicLong *)value;
-
-- (JavaUtilConcurrentAtomicAtomicLong *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (instancetype)initWithComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$0;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonGson_$6)
-
-J2OBJC_FIELD_SETTER(ComGoogleGsonGson_$6, val$longAdapter_, ComGoogleGsonTypeAdapter *)
-
-__attribute__((unused)) static void ComGoogleGsonGson_$6_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonGson_$6 *self, ComGoogleGsonTypeAdapter *capture$0);
-
-__attribute__((unused)) static ComGoogleGsonGson_$6 *new_ComGoogleGsonGson_$6_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonGson_$6 *create_ComGoogleGsonGson_$6_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0);
-
-@interface ComGoogleGsonGson_$7 : ComGoogleGsonTypeAdapter {
- @public
-  ComGoogleGsonTypeAdapter *val$longAdapter_;
-}
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(JavaUtilConcurrentAtomicAtomicLongArray *)value;
-
-- (JavaUtilConcurrentAtomicAtomicLongArray *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg;
-
-- (instancetype)initWithComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$0;
-
-@end
-
-J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonGson_$7)
-
-J2OBJC_FIELD_SETTER(ComGoogleGsonGson_$7, val$longAdapter_, ComGoogleGsonTypeAdapter *)
-
-__attribute__((unused)) static void ComGoogleGsonGson_$7_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonGson_$7 *self, ComGoogleGsonTypeAdapter *capture$0);
-
-__attribute__((unused)) static ComGoogleGsonGson_$7 *new_ComGoogleGsonGson_$7_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static ComGoogleGsonGson_$7 *create_ComGoogleGsonGson_$7_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0);
 
 @implementation ComGoogleGsonGson
 
@@ -725,8 +749,8 @@ void ComGoogleGsonGson_initWithComGoogleGsonInternalExcluder_withComGoogleGsonFi
   NSObject_init(self);
   JreStrongAssignAndConsume(&self->calls_, new_JavaLangThreadLocal_init());
   JreStrongAssign(&self->typeTokenCache_, JavaUtilCollections_synchronizedMapWithJavaUtilMap_(create_JavaUtilHashMap_init()));
-  self->deserializationContext_ = create_ComGoogleGsonGson_$1_initWithComGoogleGsonGson_(self);
-  self->serializationContext_ = create_ComGoogleGsonGson_$2_initWithComGoogleGsonGson_(self);
+  self->deserializationContext_ = create_ComGoogleGsonGson_1_initWithComGoogleGsonGson_(self);
+  self->serializationContext_ = create_ComGoogleGsonGson_2_initWithComGoogleGsonGson_(self);
   JreStrongAssignAndConsume(&self->constructorConstructor_, new_ComGoogleGsonInternalConstructorConstructor_initWithJavaUtilMap_(instanceCreators));
   self->serializeNulls_ = serializeNulls;
   self->generateNonExecutableJson_ = generateNonExecutableGson;
@@ -792,14 +816,14 @@ ComGoogleGsonTypeAdapter *ComGoogleGsonGson_doubleAdapterWithBoolean_(ComGoogleG
   if (serializeSpecialFloatingPointValues) {
     return JreLoadStatic(ComGoogleGsonInternalBindTypeAdapters, DOUBLE);
   }
-  return create_ComGoogleGsonGson_$3_init();
+  return create_ComGoogleGsonGson_3_init();
 }
 
 ComGoogleGsonTypeAdapter *ComGoogleGsonGson_floatAdapterWithBoolean_(ComGoogleGsonGson *self, jboolean serializeSpecialFloatingPointValues) {
   if (serializeSpecialFloatingPointValues) {
     return JreLoadStatic(ComGoogleGsonInternalBindTypeAdapters, FLOAT);
   }
-  return create_ComGoogleGsonGson_$4_init();
+  return create_ComGoogleGsonGson_4_init();
 }
 
 void ComGoogleGsonGson_checkValidFloatingPointWithDouble_(jdouble value) {
@@ -814,17 +838,17 @@ ComGoogleGsonTypeAdapter *ComGoogleGsonGson_longAdapterWithComGoogleGsonLongSeri
   if (longSerializationPolicy == JreLoadEnum(ComGoogleGsonLongSerializationPolicy, DEFAULT)) {
     return JreLoadStatic(ComGoogleGsonInternalBindTypeAdapters, LONG);
   }
-  return create_ComGoogleGsonGson_$5_init();
+  return create_ComGoogleGsonGson_5_init();
 }
 
 ComGoogleGsonTypeAdapter *ComGoogleGsonGson_atomicLongAdapterWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *longAdapter) {
   ComGoogleGsonGson_initialize();
-  return [create_ComGoogleGsonGson_$6_initWithComGoogleGsonTypeAdapter_(longAdapter) nullSafe];
+  return [create_ComGoogleGsonGson_6_initWithComGoogleGsonTypeAdapter_(longAdapter) nullSafe];
 }
 
 ComGoogleGsonTypeAdapter *ComGoogleGsonGson_atomicLongArrayAdapterWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *longAdapter) {
   ComGoogleGsonGson_initialize();
-  return [create_ComGoogleGsonGson_$7_initWithComGoogleGsonTypeAdapter_(longAdapter) nullSafe];
+  return [create_ComGoogleGsonGson_7_initWithComGoogleGsonTypeAdapter_(longAdapter) nullSafe];
 }
 
 void ComGoogleGsonGson_assertFullConsumptionWithId_withComGoogleGsonStreamJsonReader_(id obj, ComGoogleGsonStreamJsonReader *reader) {
@@ -844,90 +868,16 @@ void ComGoogleGsonGson_assertFullConsumptionWithId_withComGoogleGsonStreamJsonRe
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonGson)
 
-@implementation ComGoogleGsonGson_FutureTypeAdapter
+@implementation ComGoogleGsonGson_1
 
-- (void)setDelegateWithComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)typeAdapter {
-  if (delegate_ != nil) {
-    @throw create_JavaLangAssertionError_init();
-  }
-  JreStrongAssign(&delegate_, typeAdapter);
-}
-
-- (id)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
-  if (delegate_ == nil) {
-    @throw create_JavaLangIllegalStateException_init();
-  }
-  return [delegate_ readWithComGoogleGsonStreamJsonReader:inArg];
-}
-
-- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
-                                        withId:(id)value {
-  if (delegate_ == nil) {
-    @throw create_JavaLangIllegalStateException_init();
-  }
-  [delegate_ writeWithComGoogleGsonStreamJsonWriter:outArg withId:value];
-}
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonGson_FutureTypeAdapter_init(self);
+- (instancetype)initWithComGoogleGsonGson:(ComGoogleGsonGson *)outer$ {
+  ComGoogleGsonGson_1_initWithComGoogleGsonGson_(self, outer$);
   return self;
 }
-J2OBJC_IGNORE_DESIGNATED_END
-
-- (void)dealloc {
-  RELEASE_(delegate_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, "LNSObject;", 0x1, 3, 4, 5, 6, -1, -1 },
-    { NULL, "V", 0x1, 7, 8, 5, 9, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(setDelegateWithComGoogleGsonTypeAdapter:);
-  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[3].selector = @selector(init);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "delegate_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x2, -1, -1, 10, -1 },
-  };
-  static const void *ptrTable[] = { "setDelegate", "LComGoogleGsonTypeAdapter;", "(Lcom/google/gson/TypeAdapter<TT;>;)V", "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)TT;", "write", "LComGoogleGsonStreamJsonWriter;LNSObject;", "(Lcom/google/gson/stream/JsonWriter;TT;)V", "Lcom/google/gson/TypeAdapter<TT;>;", "LComGoogleGsonGson;", "<T:Ljava/lang/Object;>Lcom/google/gson/TypeAdapter<TT;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonGson_FutureTypeAdapter = { "FutureTypeAdapter", "com.google.gson", ptrTable, methods, fields, 7, 0x8, 4, 1, 11, -1, -1, 12, -1 };
-  return &_ComGoogleGsonGson_FutureTypeAdapter;
-}
-
-@end
-
-void ComGoogleGsonGson_FutureTypeAdapter_init(ComGoogleGsonGson_FutureTypeAdapter *self) {
-  ComGoogleGsonTypeAdapter_init(self);
-}
-
-ComGoogleGsonGson_FutureTypeAdapter *new_ComGoogleGsonGson_FutureTypeAdapter_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonGson_FutureTypeAdapter, init)
-}
-
-ComGoogleGsonGson_FutureTypeAdapter *create_ComGoogleGsonGson_FutureTypeAdapter_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonGson_FutureTypeAdapter, init)
-}
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonGson_FutureTypeAdapter)
-
-@implementation ComGoogleGsonGson_$1
 
 - (id)deserializeWithComGoogleGsonJsonElement:(ComGoogleGsonJsonElement *)json
                       withJavaLangReflectType:(id<JavaLangReflectType>)typeOfT {
   return [this$0_ fromJsonWithComGoogleGsonJsonElement:json withJavaLangReflectType:typeOfT];
-}
-
-- (instancetype)initWithComGoogleGsonGson:(ComGoogleGsonGson *)outer$ {
-  ComGoogleGsonGson_$1_initWithComGoogleGsonGson_(self, outer$);
-  return self;
 }
 
 - (void)dealloc {
@@ -937,38 +887,43 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonGson_FutureTypeAdapter)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, NULL, 0x0, -1, 4, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(deserializeWithComGoogleGsonJsonElement:withJavaLangReflectType:);
-  methods[1].selector = @selector(initWithComGoogleGsonGson:);
+  methods[0].selector = @selector(initWithComGoogleGsonGson:);
+  methods[1].selector = @selector(deserializeWithComGoogleGsonJsonElement:withJavaLangReflectType:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LComGoogleGsonGson;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "deserialize", "LComGoogleGsonJsonElement;LJavaLangReflectType;", "LComGoogleGsonJsonParseException;", "<T:Ljava/lang/Object;>(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;)TT;", "LComGoogleGsonGson;" };
-  static const J2ObjcClassInfo _ComGoogleGsonGson_$1 = { "", "com.google.gson", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, -1, -1, -1 };
-  return &_ComGoogleGsonGson_$1;
+  static const J2ObjcClassInfo _ComGoogleGsonGson_1 = { "", "com.google.gson", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, -1, -1, -1 };
+  return &_ComGoogleGsonGson_1;
 }
 
 @end
 
-void ComGoogleGsonGson_$1_initWithComGoogleGsonGson_(ComGoogleGsonGson_$1 *self, ComGoogleGsonGson *outer$) {
+void ComGoogleGsonGson_1_initWithComGoogleGsonGson_(ComGoogleGsonGson_1 *self, ComGoogleGsonGson *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-ComGoogleGsonGson_$1 *new_ComGoogleGsonGson_$1_initWithComGoogleGsonGson_(ComGoogleGsonGson *outer$) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonGson_$1, initWithComGoogleGsonGson_, outer$)
+ComGoogleGsonGson_1 *new_ComGoogleGsonGson_1_initWithComGoogleGsonGson_(ComGoogleGsonGson *outer$) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonGson_1, initWithComGoogleGsonGson_, outer$)
 }
 
-ComGoogleGsonGson_$1 *create_ComGoogleGsonGson_$1_initWithComGoogleGsonGson_(ComGoogleGsonGson *outer$) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonGson_$1, initWithComGoogleGsonGson_, outer$)
+ComGoogleGsonGson_1 *create_ComGoogleGsonGson_1_initWithComGoogleGsonGson_(ComGoogleGsonGson *outer$) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonGson_1, initWithComGoogleGsonGson_, outer$)
 }
 
-@implementation ComGoogleGsonGson_$2
+@implementation ComGoogleGsonGson_2
+
+- (instancetype)initWithComGoogleGsonGson:(ComGoogleGsonGson *)outer$ {
+  ComGoogleGsonGson_2_initWithComGoogleGsonGson_(self, outer$);
+  return self;
+}
 
 - (ComGoogleGsonJsonElement *)serializeWithId:(id)src {
   return [this$0_ toJsonTreeWithId:src];
@@ -979,11 +934,6 @@ ComGoogleGsonGson_$1 *create_ComGoogleGsonGson_$1_initWithComGoogleGsonGson_(Com
   return [this$0_ toJsonTreeWithId:src withJavaLangReflectType:typeOfSrc];
 }
 
-- (instancetype)initWithComGoogleGsonGson:(ComGoogleGsonGson *)outer$ {
-  ComGoogleGsonGson_$2_initWithComGoogleGsonGson_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -991,40 +941,47 @@ ComGoogleGsonGson_$1 *create_ComGoogleGsonGson_$1_initWithComGoogleGsonGson_(Com
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "LComGoogleGsonJsonElement;", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "LComGoogleGsonJsonElement;", 0x1, 0, 2, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(serializeWithId:);
-  methods[1].selector = @selector(serializeWithId:withJavaLangReflectType:);
-  methods[2].selector = @selector(initWithComGoogleGsonGson:);
+  methods[0].selector = @selector(initWithComGoogleGsonGson:);
+  methods[1].selector = @selector(serializeWithId:);
+  methods[2].selector = @selector(serializeWithId:withJavaLangReflectType:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LComGoogleGsonGson;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "serialize", "LNSObject;", "LNSObject;LJavaLangReflectType;", "LComGoogleGsonGson;" };
-  static const J2ObjcClassInfo _ComGoogleGsonGson_$2 = { "", "com.google.gson", ptrTable, methods, fields, 7, 0x8008, 3, 1, 3, -1, -1, -1, -1 };
-  return &_ComGoogleGsonGson_$2;
+  static const J2ObjcClassInfo _ComGoogleGsonGson_2 = { "", "com.google.gson", ptrTable, methods, fields, 7, 0x8008, 3, 1, 3, -1, -1, -1, -1 };
+  return &_ComGoogleGsonGson_2;
 }
 
 @end
 
-void ComGoogleGsonGson_$2_initWithComGoogleGsonGson_(ComGoogleGsonGson_$2 *self, ComGoogleGsonGson *outer$) {
+void ComGoogleGsonGson_2_initWithComGoogleGsonGson_(ComGoogleGsonGson_2 *self, ComGoogleGsonGson *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-ComGoogleGsonGson_$2 *new_ComGoogleGsonGson_$2_initWithComGoogleGsonGson_(ComGoogleGsonGson *outer$) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonGson_$2, initWithComGoogleGsonGson_, outer$)
+ComGoogleGsonGson_2 *new_ComGoogleGsonGson_2_initWithComGoogleGsonGson_(ComGoogleGsonGson *outer$) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonGson_2, initWithComGoogleGsonGson_, outer$)
 }
 
-ComGoogleGsonGson_$2 *create_ComGoogleGsonGson_$2_initWithComGoogleGsonGson_(ComGoogleGsonGson *outer$) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonGson_$2, initWithComGoogleGsonGson_, outer$)
+ComGoogleGsonGson_2 *create_ComGoogleGsonGson_2_initWithComGoogleGsonGson_(ComGoogleGsonGson *outer$) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonGson_2, initWithComGoogleGsonGson_, outer$)
 }
 
-@implementation ComGoogleGsonGson_$3
+@implementation ComGoogleGsonGson_3
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonGson_3_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaLangDouble *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -1045,45 +1002,45 @@ ComGoogleGsonGson_$2 *create_ComGoogleGsonGson_$2_initWithComGoogleGsonGson_(Com
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSNumber:value];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonGson_$3_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaLangDouble;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaLangDouble;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Double;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V", "LComGoogleGsonGson;", "doubleAdapterWithBoolean:", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonGson_$3 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, 8, 9, -1 };
-  return &_ComGoogleGsonGson_$3;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "LComGoogleGsonGson;", "doubleAdapterWithBoolean:", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonGson_3 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, 6, 7, -1 };
+  return &_ComGoogleGsonGson_3;
 }
 
 @end
 
-void ComGoogleGsonGson_$3_init(ComGoogleGsonGson_$3 *self) {
+void ComGoogleGsonGson_3_init(ComGoogleGsonGson_3 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonGson_$3 *new_ComGoogleGsonGson_$3_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonGson_$3, init)
+ComGoogleGsonGson_3 *new_ComGoogleGsonGson_3_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonGson_3, init)
 }
 
-ComGoogleGsonGson_$3 *create_ComGoogleGsonGson_$3_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonGson_$3, init)
+ComGoogleGsonGson_3 *create_ComGoogleGsonGson_3_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonGson_3, init)
 }
 
-@implementation ComGoogleGsonGson_$4
+@implementation ComGoogleGsonGson_4
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonGson_4_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (JavaLangFloat *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -1104,45 +1061,45 @@ ComGoogleGsonGson_$3 *create_ComGoogleGsonGson_$3_init() {
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSNumber:value];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonGson_$4_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaLangFloat;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaLangFloat;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Float;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V", "LComGoogleGsonGson;", "floatAdapterWithBoolean:", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonGson_$4 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, 8, 9, -1 };
-  return &_ComGoogleGsonGson_$4;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "LComGoogleGsonGson;", "floatAdapterWithBoolean:", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonGson_4 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, 6, 7, -1 };
+  return &_ComGoogleGsonGson_4;
 }
 
 @end
 
-void ComGoogleGsonGson_$4_init(ComGoogleGsonGson_$4 *self) {
+void ComGoogleGsonGson_4_init(ComGoogleGsonGson_4 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonGson_$4 *new_ComGoogleGsonGson_$4_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonGson_$4, init)
+ComGoogleGsonGson_4 *new_ComGoogleGsonGson_4_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonGson_4, init)
 }
 
-ComGoogleGsonGson_$4 *create_ComGoogleGsonGson_$4_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonGson_$4, init)
+ComGoogleGsonGson_4 *create_ComGoogleGsonGson_4_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonGson_4, init)
 }
 
-@implementation ComGoogleGsonGson_$5
+@implementation ComGoogleGsonGson_5
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonGson_5_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (NSNumber *)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
   if ([((ComGoogleGsonStreamJsonReader *) nil_chk(inArg)) peek] == JreLoadEnum(ComGoogleGsonStreamJsonToken, NULL)) {
@@ -1161,45 +1118,43 @@ ComGoogleGsonGson_$4 *create_ComGoogleGsonGson_$4_init() {
   [((ComGoogleGsonStreamJsonWriter *) nil_chk(outArg)) valueWithNSString:[value description]];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComGoogleGsonGson_$5_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "LNSNumber;", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "V", 0x1, 4, 5, 2, 6, -1, -1 },
     { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LNSNumber;", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "V", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Number;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Number;)V", "LComGoogleGsonGson;", "longAdapterWithComGoogleGsonLongSerializationPolicy:", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonGson_$5 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 7, -1, 8, 9, -1 };
-  return &_ComGoogleGsonGson_$5;
+  static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "LComGoogleGsonGson;", "longAdapterWithComGoogleGsonLongSerializationPolicy:", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonGson_5 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, 6, 7, -1 };
+  return &_ComGoogleGsonGson_5;
 }
 
 @end
 
-void ComGoogleGsonGson_$5_init(ComGoogleGsonGson_$5 *self) {
+void ComGoogleGsonGson_5_init(ComGoogleGsonGson_5 *self) {
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonGson_$5 *new_ComGoogleGsonGson_$5_init() {
-  J2OBJC_NEW_IMPL(ComGoogleGsonGson_$5, init)
+ComGoogleGsonGson_5 *new_ComGoogleGsonGson_5_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonGson_5, init)
 }
 
-ComGoogleGsonGson_$5 *create_ComGoogleGsonGson_$5_init() {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonGson_$5, init)
+ComGoogleGsonGson_5 *create_ComGoogleGsonGson_5_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonGson_5, init)
 }
 
-@implementation ComGoogleGsonGson_$6
+@implementation ComGoogleGsonGson_6
+
+- (instancetype)initWithComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$0 {
+  ComGoogleGsonGson_6_initWithComGoogleGsonTypeAdapter_(self, capture$0);
+  return self;
+}
 
 - (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
                                         withId:(JavaUtilConcurrentAtomicAtomicLong *)value {
@@ -1211,11 +1166,6 @@ ComGoogleGsonGson_$5 *create_ComGoogleGsonGson_$5_init() {
   return create_JavaUtilConcurrentAtomicAtomicLong_initWithLong_([((NSNumber *) nil_chk(value)) longLongValue]);
 }
 
-- (instancetype)initWithComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$0 {
-  ComGoogleGsonGson_$6_initWithComGoogleGsonTypeAdapter_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$longAdapter_);
   [super dealloc];
@@ -1223,40 +1173,45 @@ ComGoogleGsonGson_$5 *create_ComGoogleGsonGson_$5_init() {
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "LJavaUtilConcurrentAtomicAtomicLong;", 0x1, 4, 5, 2, 6, -1, -1 },
-    { NULL, NULL, 0x0, -1, 7, -1, 8, -1, -1 },
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "LJavaUtilConcurrentAtomicAtomicLong;", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[2].selector = @selector(initWithComGoogleGsonTypeAdapter:);
+  methods[0].selector = @selector(initWithComGoogleGsonTypeAdapter:);
+  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
+  methods[2].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$longAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x1012, -1, -1, 9, -1 },
+    { "val$longAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
   };
-  static const void *ptrTable[] = { "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilConcurrentAtomicAtomicLong;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonWriter;Ljava/util/concurrent/atomic/AtomicLong;)V", "read", "LComGoogleGsonStreamJsonReader;", "(Lcom/google/gson/stream/JsonReader;)Ljava/util/concurrent/atomic/AtomicLong;", "LComGoogleGsonTypeAdapter;", "(Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;)V", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;", "LComGoogleGsonGson;", "atomicLongAdapterWithComGoogleGsonTypeAdapter:", "Lcom/google/gson/TypeAdapter<Ljava/util/concurrent/atomic/AtomicLong;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonGson_$6 = { "", "com.google.gson", ptrTable, methods, fields, 7, 0x8008, 3, 1, 10, -1, 11, 12, -1 };
-  return &_ComGoogleGsonGson_$6;
+  static const void *ptrTable[] = { "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilConcurrentAtomicAtomicLong;", "LJavaIoIOException;", "read", "LComGoogleGsonStreamJsonReader;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;", "LComGoogleGsonGson;", "atomicLongAdapterWithComGoogleGsonTypeAdapter:", "Lcom/google/gson/TypeAdapter<Ljava/util/concurrent/atomic/AtomicLong;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonGson_6 = { "", "com.google.gson", ptrTable, methods, fields, 7, 0x8008, 3, 1, 6, -1, 7, 8, -1 };
+  return &_ComGoogleGsonGson_6;
 }
 
 @end
 
-void ComGoogleGsonGson_$6_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonGson_$6 *self, ComGoogleGsonTypeAdapter *capture$0) {
+void ComGoogleGsonGson_6_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonGson_6 *self, ComGoogleGsonTypeAdapter *capture$0) {
   JreStrongAssign(&self->val$longAdapter_, capture$0);
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonGson_$6 *new_ComGoogleGsonGson_$6_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonGson_$6, initWithComGoogleGsonTypeAdapter_, capture$0)
+ComGoogleGsonGson_6 *new_ComGoogleGsonGson_6_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonGson_6, initWithComGoogleGsonTypeAdapter_, capture$0)
 }
 
-ComGoogleGsonGson_$6 *create_ComGoogleGsonGson_$6_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonGson_$6, initWithComGoogleGsonTypeAdapter_, capture$0)
+ComGoogleGsonGson_6 *create_ComGoogleGsonGson_6_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonGson_6, initWithComGoogleGsonTypeAdapter_, capture$0)
 }
 
-@implementation ComGoogleGsonGson_$7
+@implementation ComGoogleGsonGson_7
+
+- (instancetype)initWithComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$0 {
+  ComGoogleGsonGson_7_initWithComGoogleGsonTypeAdapter_(self, capture$0);
+  return self;
+}
 
 - (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
                                         withId:(JavaUtilConcurrentAtomicAtomicLongArray *)value {
@@ -1283,11 +1238,6 @@ ComGoogleGsonGson_$6 *create_ComGoogleGsonGson_$6_initWithComGoogleGsonTypeAdapt
   return array;
 }
 
-- (instancetype)initWithComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)capture$0 {
-  ComGoogleGsonGson_$7_initWithComGoogleGsonTypeAdapter_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$longAdapter_);
   [super dealloc];
@@ -1295,35 +1245,109 @@ ComGoogleGsonGson_$6 *create_ComGoogleGsonGson_$6_initWithComGoogleGsonTypeAdapt
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, 2, 3, -1, -1 },
-    { NULL, "LJavaUtilConcurrentAtomicAtomicLongArray;", 0x1, 4, 5, 2, 6, -1, -1 },
-    { NULL, NULL, 0x0, -1, 7, -1, 8, -1, -1 },
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, 2, -1, -1, -1 },
+    { NULL, "LJavaUtilConcurrentAtomicAtomicLongArray;", 0x1, 3, 4, 2, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
-  methods[1].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
-  methods[2].selector = @selector(initWithComGoogleGsonTypeAdapter:);
+  methods[0].selector = @selector(initWithComGoogleGsonTypeAdapter:);
+  methods[1].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
+  methods[2].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$longAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x1012, -1, -1, 9, -1 },
+    { "val$longAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
   };
-  static const void *ptrTable[] = { "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilConcurrentAtomicAtomicLongArray;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonWriter;Ljava/util/concurrent/atomic/AtomicLongArray;)V", "read", "LComGoogleGsonStreamJsonReader;", "(Lcom/google/gson/stream/JsonReader;)Ljava/util/concurrent/atomic/AtomicLongArray;", "LComGoogleGsonTypeAdapter;", "(Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;)V", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;", "LComGoogleGsonGson;", "atomicLongArrayAdapterWithComGoogleGsonTypeAdapter:", "Lcom/google/gson/TypeAdapter<Ljava/util/concurrent/atomic/AtomicLongArray;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonGson_$7 = { "", "com.google.gson", ptrTable, methods, fields, 7, 0x8008, 3, 1, 10, -1, 11, 12, -1 };
-  return &_ComGoogleGsonGson_$7;
+  static const void *ptrTable[] = { "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilConcurrentAtomicAtomicLongArray;", "LJavaIoIOException;", "read", "LComGoogleGsonStreamJsonReader;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;", "LComGoogleGsonGson;", "atomicLongArrayAdapterWithComGoogleGsonTypeAdapter:", "Lcom/google/gson/TypeAdapter<Ljava/util/concurrent/atomic/AtomicLongArray;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonGson_7 = { "", "com.google.gson", ptrTable, methods, fields, 7, 0x8008, 3, 1, 6, -1, 7, 8, -1 };
+  return &_ComGoogleGsonGson_7;
 }
 
 @end
 
-void ComGoogleGsonGson_$7_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonGson_$7 *self, ComGoogleGsonTypeAdapter *capture$0) {
+void ComGoogleGsonGson_7_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonGson_7 *self, ComGoogleGsonTypeAdapter *capture$0) {
   JreStrongAssign(&self->val$longAdapter_, capture$0);
   ComGoogleGsonTypeAdapter_init(self);
 }
 
-ComGoogleGsonGson_$7 *new_ComGoogleGsonGson_$7_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonGson_$7, initWithComGoogleGsonTypeAdapter_, capture$0)
+ComGoogleGsonGson_7 *new_ComGoogleGsonGson_7_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonGson_7, initWithComGoogleGsonTypeAdapter_, capture$0)
 }
 
-ComGoogleGsonGson_$7 *create_ComGoogleGsonGson_$7_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonGson_$7, initWithComGoogleGsonTypeAdapter_, capture$0)
+ComGoogleGsonGson_7 *create_ComGoogleGsonGson_7_initWithComGoogleGsonTypeAdapter_(ComGoogleGsonTypeAdapter *capture$0) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonGson_7, initWithComGoogleGsonTypeAdapter_, capture$0)
 }
+
+@implementation ComGoogleGsonGson_FutureTypeAdapter
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComGoogleGsonGson_FutureTypeAdapter_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
+- (void)setDelegateWithComGoogleGsonTypeAdapter:(ComGoogleGsonTypeAdapter *)typeAdapter {
+  if (delegate_ != nil) {
+    @throw create_JavaLangAssertionError_init();
+  }
+  JreStrongAssign(&delegate_, typeAdapter);
+}
+
+- (id)readWithComGoogleGsonStreamJsonReader:(ComGoogleGsonStreamJsonReader *)inArg {
+  if (delegate_ == nil) {
+    @throw create_JavaLangIllegalStateException_init();
+  }
+  return [delegate_ readWithComGoogleGsonStreamJsonReader:inArg];
+}
+
+- (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)outArg
+                                        withId:(id)value {
+  if (delegate_ == nil) {
+    @throw create_JavaLangIllegalStateException_init();
+  }
+  [delegate_ writeWithComGoogleGsonStreamJsonWriter:outArg withId:value];
+}
+
+- (void)dealloc {
+  RELEASE_(delegate_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 3, 4, 5, 6, -1, -1 },
+    { NULL, "V", 0x1, 7, 8, 5, 9, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(setDelegateWithComGoogleGsonTypeAdapter:);
+  methods[2].selector = @selector(readWithComGoogleGsonStreamJsonReader:);
+  methods[3].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "delegate_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x2, -1, -1, 10, -1 },
+  };
+  static const void *ptrTable[] = { "setDelegate", "LComGoogleGsonTypeAdapter;", "(Lcom/google/gson/TypeAdapter<TT;>;)V", "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)TT;", "write", "LComGoogleGsonStreamJsonWriter;LNSObject;", "(Lcom/google/gson/stream/JsonWriter;TT;)V", "Lcom/google/gson/TypeAdapter<TT;>;", "LComGoogleGsonGson;", "<T:Ljava/lang/Object;>Lcom/google/gson/TypeAdapter<TT;>;" };
+  static const J2ObjcClassInfo _ComGoogleGsonGson_FutureTypeAdapter = { "FutureTypeAdapter", "com.google.gson", ptrTable, methods, fields, 7, 0x8, 4, 1, 11, -1, -1, 12, -1 };
+  return &_ComGoogleGsonGson_FutureTypeAdapter;
+}
+
+@end
+
+void ComGoogleGsonGson_FutureTypeAdapter_init(ComGoogleGsonGson_FutureTypeAdapter *self) {
+  ComGoogleGsonTypeAdapter_init(self);
+}
+
+ComGoogleGsonGson_FutureTypeAdapter *new_ComGoogleGsonGson_FutureTypeAdapter_init() {
+  J2OBJC_NEW_IMPL(ComGoogleGsonGson_FutureTypeAdapter, init)
+}
+
+ComGoogleGsonGson_FutureTypeAdapter *create_ComGoogleGsonGson_FutureTypeAdapter_init() {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonGson_FutureTypeAdapter, init)
+}
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonGson_FutureTypeAdapter)

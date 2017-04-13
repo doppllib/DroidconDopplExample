@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/BlockingOperatorLatest.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxExceptionsExceptions.h"
 #include "RxInternalOperatorsBlockingOperatorLatest.h"
@@ -36,26 +35,24 @@ __attribute__((unused)) static RxInternalOperatorsBlockingOperatorLatest *new_Rx
 
 __attribute__((unused)) static RxInternalOperatorsBlockingOperatorLatest *create_RxInternalOperatorsBlockingOperatorLatest_init();
 
-@interface RxInternalOperatorsBlockingOperatorLatest_$1 : NSObject < JavaLangIterable > {
+@interface RxInternalOperatorsBlockingOperatorLatest_1 : NSObject < JavaLangIterable > {
  @public
   RxObservable *val$source_;
 }
 
-- (id<JavaUtilIterator>)iterator;
-
 - (instancetype)initWithRxObservable:(RxObservable *)capture$0;
+
+- (id<JavaUtilIterator>)iterator;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsBlockingOperatorLatest_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsBlockingOperatorLatest_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsBlockingOperatorLatest_$1, val$source_, RxObservable *)
+__attribute__((unused)) static void RxInternalOperatorsBlockingOperatorLatest_1_initWithRxObservable_(RxInternalOperatorsBlockingOperatorLatest_1 *self, RxObservable *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsBlockingOperatorLatest_$1_initWithRxObservable_(RxInternalOperatorsBlockingOperatorLatest_$1 *self, RxObservable *capture$0);
+__attribute__((unused)) static RxInternalOperatorsBlockingOperatorLatest_1 *new_RxInternalOperatorsBlockingOperatorLatest_1_initWithRxObservable_(RxObservable *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsBlockingOperatorLatest_$1 *new_RxInternalOperatorsBlockingOperatorLatest_$1_initWithRxObservable_(RxObservable *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsBlockingOperatorLatest_$1 *create_RxInternalOperatorsBlockingOperatorLatest_$1_initWithRxObservable_(RxObservable *capture$0);
+__attribute__((unused)) static RxInternalOperatorsBlockingOperatorLatest_1 *create_RxInternalOperatorsBlockingOperatorLatest_1_initWithRxObservable_(RxObservable *capture$0);
 
 @implementation RxInternalOperatorsBlockingOperatorLatest
 
@@ -102,12 +99,82 @@ RxInternalOperatorsBlockingOperatorLatest *create_RxInternalOperatorsBlockingOpe
 
 id<JavaLangIterable> RxInternalOperatorsBlockingOperatorLatest_latestWithRxObservable_(RxObservable *source) {
   RxInternalOperatorsBlockingOperatorLatest_initialize();
-  return create_RxInternalOperatorsBlockingOperatorLatest_$1_initWithRxObservable_(source);
+  return create_RxInternalOperatorsBlockingOperatorLatest_1_initWithRxObservable_(source);
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsBlockingOperatorLatest)
 
+@implementation RxInternalOperatorsBlockingOperatorLatest_1
+
+- (instancetype)initWithRxObservable:(RxObservable *)capture$0 {
+  RxInternalOperatorsBlockingOperatorLatest_1_initWithRxObservable_(self, capture$0);
+  return self;
+}
+
+- (id<JavaUtilIterator>)iterator {
+  RxInternalOperatorsBlockingOperatorLatest_LatestObserverIterator *lio = create_RxInternalOperatorsBlockingOperatorLatest_LatestObserverIterator_init();
+  [((RxObservable *) nil_chk([((RxObservable *) nil_chk((val$source_))) materialize])) subscribeWithRxSubscriber:lio];
+  return lio;
+}
+
+- (void)forEachWithJavaUtilFunctionConsumer:(id<JavaUtilFunctionConsumer>)arg0 {
+  JavaLangIterable_forEachWithJavaUtilFunctionConsumer_(self, arg0);
+}
+
+- (id<JavaUtilSpliterator>)spliterator {
+  return JavaLangIterable_spliterator(self);
+}
+
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(__unsafe_unretained id *)stackbuf count:(NSUInteger)len {
+  return JreDefaultFastEnumeration(self, state, stackbuf, len);
+}
+
+- (void)dealloc {
+  RELEASE_(val$source_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LJavaUtilIterator;", 0x1, -1, -1, -1, 0, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxObservable:);
+  methods[1].selector = @selector(iterator);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$source_", "LRxObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 1, -1 },
+  };
+  static const void *ptrTable[] = { "()Ljava/util/Iterator<TT;>;", "Lrx/Observable<+TT;>;", "LRxInternalOperatorsBlockingOperatorLatest;", "latestWithRxObservable:", "Ljava/lang/Object;Ljava/lang/Iterable<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsBlockingOperatorLatest_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, 4, -1 };
+  return &_RxInternalOperatorsBlockingOperatorLatest_1;
+}
+
+@end
+
+void RxInternalOperatorsBlockingOperatorLatest_1_initWithRxObservable_(RxInternalOperatorsBlockingOperatorLatest_1 *self, RxObservable *capture$0) {
+  JreStrongAssign(&self->val$source_, capture$0);
+  NSObject_init(self);
+}
+
+RxInternalOperatorsBlockingOperatorLatest_1 *new_RxInternalOperatorsBlockingOperatorLatest_1_initWithRxObservable_(RxObservable *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsBlockingOperatorLatest_1, initWithRxObservable_, capture$0)
+}
+
+RxInternalOperatorsBlockingOperatorLatest_1 *create_RxInternalOperatorsBlockingOperatorLatest_1_initWithRxObservable_(RxObservable *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsBlockingOperatorLatest_1, initWithRxObservable_, capture$0)
+}
+
 @implementation RxInternalOperatorsBlockingOperatorLatest_LatestObserverIterator
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalOperatorsBlockingOperatorLatest_LatestObserverIterator_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)onNextWithId:(RxNotification *)args {
   jboolean wasNotAvailable = [((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(value_)) getAndSetWithId:args] == nil;
@@ -162,19 +229,11 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsBlockingOperatorLatest)
   @throw create_JavaLangUnsupportedOperationException_initWithNSString_(@"Read-only iterator.");
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalOperatorsBlockingOperatorLatest_LatestObserverIterator_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)forEachRemainingWithJavaUtilFunctionConsumer:(id<JavaUtilFunctionConsumer>)arg0 {
   JavaUtilIterator_forEachRemainingWithJavaUtilFunctionConsumer_(self, arg0);
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsBlockingOperatorLatest_LatestObserverIterator class]);
   RELEASE_(notify_);
   RELEASE_(value_);
   RELEASE_(iteratorNotification_);
@@ -183,23 +242,23 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, -1, -1, -1, 5, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(hasNext);
-  methods[4].selector = @selector(next);
-  methods[5].selector = @selector(remove);
-  methods[6].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
+  methods[4].selector = @selector(hasNext);
+  methods[5].selector = @selector(next);
+  methods[6].selector = @selector(remove);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "notify_", "LJavaUtilConcurrentSemaphore;", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
@@ -228,66 +287,3 @@ RxInternalOperatorsBlockingOperatorLatest_LatestObserverIterator *create_RxInter
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsBlockingOperatorLatest_LatestObserverIterator)
-
-@implementation RxInternalOperatorsBlockingOperatorLatest_$1
-
-- (id<JavaUtilIterator>)iterator {
-  RxInternalOperatorsBlockingOperatorLatest_LatestObserverIterator *lio = create_RxInternalOperatorsBlockingOperatorLatest_LatestObserverIterator_init();
-  [((RxObservable *) nil_chk([((RxObservable *) nil_chk((val$source_))) materialize])) subscribeWithRxSubscriber:lio];
-  return lio;
-}
-
-- (instancetype)initWithRxObservable:(RxObservable *)capture$0 {
-  RxInternalOperatorsBlockingOperatorLatest_$1_initWithRxObservable_(self, capture$0);
-  return self;
-}
-
-- (void)forEachWithJavaUtilFunctionConsumer:(id<JavaUtilFunctionConsumer>)arg0 {
-  JavaLangIterable_forEachWithJavaUtilFunctionConsumer_(self, arg0);
-}
-
-- (id<JavaUtilSpliterator>)spliterator {
-  return JavaLangIterable_spliterator(self);
-}
-
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(__unsafe_unretained id *)stackbuf count:(NSUInteger)len {
-  return JreDefaultFastEnumeration(self, state, stackbuf, len);
-}
-
-- (void)dealloc {
-  RELEASE_(val$source_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LJavaUtilIterator;", 0x1, -1, -1, -1, 0, -1, -1 },
-    { NULL, NULL, 0x0, -1, 1, -1, 2, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(iterator);
-  methods[1].selector = @selector(initWithRxObservable:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$source_", "LRxObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
-  };
-  static const void *ptrTable[] = { "()Ljava/util/Iterator<TT;>;", "LRxObservable;", "(Lrx/Observable<+TT;>;)V", "Lrx/Observable<+TT;>;", "LRxInternalOperatorsBlockingOperatorLatest;", "latestWithRxObservable:", "Ljava/lang/Object;Ljava/lang/Iterable<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsBlockingOperatorLatest_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
-  return &_RxInternalOperatorsBlockingOperatorLatest_$1;
-}
-
-@end
-
-void RxInternalOperatorsBlockingOperatorLatest_$1_initWithRxObservable_(RxInternalOperatorsBlockingOperatorLatest_$1 *self, RxObservable *capture$0) {
-  JreStrongAssign(&self->val$source_, capture$0);
-  NSObject_init(self);
-}
-
-RxInternalOperatorsBlockingOperatorLatest_$1 *new_RxInternalOperatorsBlockingOperatorLatest_$1_initWithRxObservable_(RxObservable *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsBlockingOperatorLatest_$1, initWithRxObservable_, capture$0)
-}
-
-RxInternalOperatorsBlockingOperatorLatest_$1 *create_RxInternalOperatorsBlockingOperatorLatest_$1_initWithRxObservable_(RxObservable *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsBlockingOperatorLatest_$1, initWithRxObservable_, capture$0)
-}

@@ -14,6 +14,13 @@
 
 @implementation CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (jboolean)hasTasksOfTypeWithCoTouchlabAndroidThreadingTasksBaseTaskQueue:(CoTouchlabAndroidThreadingTasksBaseTaskQueue *)taskQueueActual
                                                          withIOSClassArray:(IOSObjectArray *)classes {
   return CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_hasTasksOfTypeWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_withIOSClassArray_(taskQueueActual, classes);
@@ -25,24 +32,17 @@
   return CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_hasTasksOfTypeWithCoTouchlabAndroidThreadingTasksStickyStickyTaskManager_withCoTouchlabAndroidThreadingTasksBaseTaskQueue_withIOSClassArray_(stickyTaskManager, taskQueueActual, classes);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x89, 0, 1, -1, -1, -1, -1 },
     { NULL, "Z", 0x89, 0, 2, -1, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(hasTasksOfTypeWithCoTouchlabAndroidThreadingTasksBaseTaskQueue:withIOSClassArray:);
-  methods[1].selector = @selector(hasTasksOfTypeWithCoTouchlabAndroidThreadingTasksStickyStickyTaskManager:withCoTouchlabAndroidThreadingTasksBaseTaskQueue:withIOSClassArray:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(hasTasksOfTypeWithCoTouchlabAndroidThreadingTasksBaseTaskQueue:withIOSClassArray:);
+  methods[2].selector = @selector(hasTasksOfTypeWithCoTouchlabAndroidThreadingTasksStickyStickyTaskManager:withCoTouchlabAndroidThreadingTasksBaseTaskQueue:withIOSClassArray:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "hasTasksOfType", "LCoTouchlabAndroidThreadingTasksBaseTaskQueue;[LIOSClass;", "LCoTouchlabAndroidThreadingTasksStickyStickyTaskManager;LCoTouchlabAndroidThreadingTasksBaseTaskQueue;[LIOSClass;", "LCoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_ClassesQuery;" };
   static const J2ObjcClassInfo _CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper = { "TaskQueueHelper", "co.touchlab.android.threading.tasks.utils", ptrTable, methods, NULL, 7, 0x1, 3, 0, -1, 3, -1, -1, -1 };
@@ -50,18 +50,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
-
-jboolean CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_hasTasksOfTypeWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_withIOSClassArray_(CoTouchlabAndroidThreadingTasksBaseTaskQueue *taskQueueActual, IOSObjectArray *classes) {
-  CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_initialize();
-  return CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_hasTasksOfTypeWithCoTouchlabAndroidThreadingTasksStickyStickyTaskManager_withCoTouchlabAndroidThreadingTasksBaseTaskQueue_withIOSClassArray_(nil, taskQueueActual, classes);
-}
-
-jboolean CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_hasTasksOfTypeWithCoTouchlabAndroidThreadingTasksStickyStickyTaskManager_withCoTouchlabAndroidThreadingTasksBaseTaskQueue_withIOSClassArray_(CoTouchlabAndroidThreadingTasksStickyStickyTaskManager *stickyTaskManager, CoTouchlabAndroidThreadingTasksBaseTaskQueue *taskQueueActual, IOSObjectArray *classes) {
-  CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_initialize();
-  CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_ClassesQuery *queueQuery = create_CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_ClassesQuery_initWithCoTouchlabAndroidThreadingTasksStickyStickyTaskManager_withIOSClassArray_(stickyTaskManager, classes);
-  [((CoTouchlabAndroidThreadingTasksBaseTaskQueue *) nil_chk(taskQueueActual)) queryWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueQuery:queueQuery];
-  return queueQuery->found_;
-}
 
 void CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_init(CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper *self) {
   NSObject_init(self);
@@ -73,6 +61,18 @@ CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper *new_CoTouchlabAndroidThread
 
 CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper *create_CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_init() {
   J2OBJC_CREATE_IMPL(CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper, init)
+}
+
+jboolean CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_hasTasksOfTypeWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_withIOSClassArray_(CoTouchlabAndroidThreadingTasksBaseTaskQueue *taskQueueActual, IOSObjectArray *classes) {
+  CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_initialize();
+  return CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_hasTasksOfTypeWithCoTouchlabAndroidThreadingTasksStickyStickyTaskManager_withCoTouchlabAndroidThreadingTasksBaseTaskQueue_withIOSClassArray_(nil, taskQueueActual, classes);
+}
+
+jboolean CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_hasTasksOfTypeWithCoTouchlabAndroidThreadingTasksStickyStickyTaskManager_withCoTouchlabAndroidThreadingTasksBaseTaskQueue_withIOSClassArray_(CoTouchlabAndroidThreadingTasksStickyStickyTaskManager *stickyTaskManager, CoTouchlabAndroidThreadingTasksBaseTaskQueue *taskQueueActual, IOSObjectArray *classes) {
+  CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_initialize();
+  CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_ClassesQuery *queueQuery = create_CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper_ClassesQuery_initWithCoTouchlabAndroidThreadingTasksStickyStickyTaskManager_withIOSClassArray_(stickyTaskManager, classes);
+  [((CoTouchlabAndroidThreadingTasksBaseTaskQueue *) nil_chk(taskQueueActual)) queryWithCoTouchlabAndroidThreadingTasksBaseTaskQueue_QueueQuery:queueQuery];
+  return queueQuery->found_;
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper)

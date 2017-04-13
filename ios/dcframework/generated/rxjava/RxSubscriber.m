@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/Subscriber.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxInternalUtilSubscriptionList.h"
 #include "RxProducer.h"
@@ -62,7 +61,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)unsubscribe {
   [((RxInternalUtilSubscriptionList *) nil_chk(subscriptions_)) unsubscribe];
-  JreStrongAssign(&producer_, nil);
 }
 
 - (jboolean)isUnsubscribed {
@@ -118,21 +116,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   }
 }
 
-- (void)j2objcCleanup {
-  JreStrongAssign(&producer_, nil);
-  if (subscriber_ != nil) {
-    [subscriber_ j2objcCleanup];
-    JreStrongAssign(&subscriber_, nil);
-  }
-}
-
-- (void)javaFinalize {
-  [super javaFinalize];
-  [self j2objcCleanup];
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxSubscriber class]);
   RELEASE_(subscriptions_);
   RELEASE_(subscriber_);
   RELEASE_(producer_);
@@ -151,8 +135,6 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "V", 0x14, 6, 7, -1, -1, -1, -1 },
     { NULL, "V", 0x2, 8, 7, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 9, 10, -1, -1, -1, -1 },
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, "V", 0x4, 11, -1, 12, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
@@ -166,18 +148,16 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[7].selector = @selector(requestWithLong:);
   methods[8].selector = @selector(addToRequestedWithLong:);
   methods[9].selector = @selector(setProducerWithRxProducer:);
-  methods[10].selector = @selector(j2objcCleanup);
-  methods[11].selector = @selector(javaFinalize);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "NOT_SET", "J", .constantValue.asLong = RxSubscriber_NOT_SET, 0x1a, -1, -1, -1, -1 },
     { "subscriptions_", "LRxInternalUtilSubscriptionList;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
-    { "subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x2, -1, -1, 13, -1 },
+    { "subscriber_", "LRxSubscriber;", .constantValue.asLong = 0, 0x12, -1, -1, 11, -1 },
     { "producer_", "LRxProducer;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "requested_", "J", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "LRxSubscriber;Z", "(Lrx/Subscriber<*>;Z)V", "add", "LRxSubscription;", "request", "J", "addToRequested", "setProducer", "LRxProducer;", "finalize", "LNSException;", "Lrx/Subscriber<*>;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Lrx/Observer<TT;>;Lrx/Subscription;" };
-  static const J2ObjcClassInfo _RxSubscriber = { "Subscriber", "rx", ptrTable, methods, fields, 7, 0x401, 12, 5, -1, -1, -1, 14, -1 };
+  static const void *ptrTable[] = { "LRxSubscriber;", "(Lrx/Subscriber<*>;)V", "LRxSubscriber;Z", "(Lrx/Subscriber<*>;Z)V", "add", "LRxSubscription;", "request", "J", "addToRequested", "setProducer", "LRxProducer;", "Lrx/Subscriber<*>;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Lrx/Observer<TT;>;Lrx/Subscription;" };
+  static const J2ObjcClassInfo _RxSubscriber = { "Subscriber", "rx", ptrTable, methods, fields, 7, 0x401, 10, 5, -1, -1, -1, 12, -1 };
   return &_RxSubscriber;
 }
 

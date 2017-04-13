@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OperatorBufferWithSize.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxExceptionsMissingBackpressureException.h"
 #include "RxInternalOperatorsBackpressureUtils.h"
@@ -17,26 +16,24 @@
 #include "java/util/concurrent/atomic/AtomicBoolean.h"
 #include "java/util/concurrent/atomic/AtomicLong.h"
 
-@interface RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1 : NSObject < RxProducer > {
+@interface RxInternalOperatorsOperatorBufferWithSize_BufferExact_1 : NSObject < RxProducer > {
  @public
   RxInternalOperatorsOperatorBufferWithSize_BufferExact *this$0_;
 }
 
-- (void)requestWithLong:(jlong)n;
-
 - (instancetype)initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact:(RxInternalOperatorsOperatorBufferWithSize_BufferExact *)outer$;
+
+- (void)requestWithLong:(jlong)n;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorBufferWithSize_BufferExact_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1, this$0_, RxInternalOperatorsOperatorBufferWithSize_BufferExact *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorBufferWithSize_BufferExact_1_initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_(RxInternalOperatorsOperatorBufferWithSize_BufferExact_1 *self, RxInternalOperatorsOperatorBufferWithSize_BufferExact *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1_initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_(RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1 *self, RxInternalOperatorsOperatorBufferWithSize_BufferExact *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithSize_BufferExact_1 *new_RxInternalOperatorsOperatorBufferWithSize_BufferExact_1_initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_(RxInternalOperatorsOperatorBufferWithSize_BufferExact *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1 *new_RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1_initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_(RxInternalOperatorsOperatorBufferWithSize_BufferExact *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1 *create_RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1_initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_(RxInternalOperatorsOperatorBufferWithSize_BufferExact *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorBufferWithSize_BufferExact_1 *create_RxInternalOperatorsOperatorBufferWithSize_BufferExact_1_initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_(RxInternalOperatorsOperatorBufferWithSize_BufferExact *outer$);
 
 @interface RxInternalOperatorsOperatorBufferWithSize_BufferSkip_BufferSkipProducer () {
  @public
@@ -44,8 +41,6 @@ __attribute__((unused)) static RxInternalOperatorsOperatorBufferWithSize_BufferE
 }
 
 @end
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorBufferWithSize_BufferSkip_BufferSkipProducer, this$0_, RxInternalOperatorsOperatorBufferWithSize_BufferSkip *)
 
 inline jlong RxInternalOperatorsOperatorBufferWithSize_BufferSkip_BufferSkipProducer_get_serialVersionUID();
 #define RxInternalOperatorsOperatorBufferWithSize_BufferSkip_BufferSkipProducer_serialVersionUID 3428177408082367154LL
@@ -57,8 +52,6 @@ J2OBJC_STATIC_FIELD_CONSTANT(RxInternalOperatorsOperatorBufferWithSize_BufferSki
 }
 
 @end
-
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorBufferWithSize_BufferOverlap_BufferOverlapProducer, this$0_, RxInternalOperatorsOperatorBufferWithSize_BufferOverlap *)
 
 inline jlong RxInternalOperatorsOperatorBufferWithSize_BufferOverlap_BufferOverlapProducer_get_serialVersionUID();
 #define RxInternalOperatorsOperatorBufferWithSize_BufferOverlap_BufferOverlapProducer_serialVersionUID -4015894850868853147LL
@@ -169,11 +162,10 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithSize)
 }
 
 - (id<RxProducer>)createProducer {
-  return create_RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1_initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_(self);
+  return create_RxInternalOperatorsOperatorBufferWithSize_BufferExact_1_initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_(self);
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorBufferWithSize_BufferExact class]);
   RELEASE_(actual_);
   RELEASE_(buffer_);
   [super dealloc];
@@ -224,7 +216,12 @@ RxInternalOperatorsOperatorBufferWithSize_BufferExact *create_RxInternalOperator
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithSize_BufferExact)
 
-@implementation RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1
+@implementation RxInternalOperatorsOperatorBufferWithSize_BufferExact_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact:(RxInternalOperatorsOperatorBufferWithSize_BufferExact *)outer$ {
+  RxInternalOperatorsOperatorBufferWithSize_BufferExact_1_initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_(self, outer$);
+  return self;
+}
 
 - (void)requestWithLong:(jlong)n {
   if (n < 0LL) {
@@ -236,11 +233,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithSize_Buffe
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact:(RxInternalOperatorsOperatorBufferWithSize_BufferExact *)outer$ {
-  RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1_initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -248,35 +240,35 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithSize_Buffe
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(requestWithLong:);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact:);
+  methods[1].selector = @selector(requestWithLong:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorBufferWithSize_BufferExact;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorBufferWithSize_BufferExact;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
   };
-  static const void *ptrTable[] = { "request", "J", "LRxInternalOperatorsOperatorBufferWithSize_BufferExact;", "createProducer" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, -1, -1 };
-  return &_RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1;
+  static const void *ptrTable[] = { "request", "J", "Lrx/internal/operators/OperatorBufferWithSize$BufferExact<TT;>;", "LRxInternalOperatorsOperatorBufferWithSize_BufferExact;", "createProducer" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorBufferWithSize_BufferExact_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
+  return &_RxInternalOperatorsOperatorBufferWithSize_BufferExact_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1_initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_(RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1 *self, RxInternalOperatorsOperatorBufferWithSize_BufferExact *outer$) {
+void RxInternalOperatorsOperatorBufferWithSize_BufferExact_1_initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_(RxInternalOperatorsOperatorBufferWithSize_BufferExact_1 *self, RxInternalOperatorsOperatorBufferWithSize_BufferExact *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1 *new_RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1_initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_(RxInternalOperatorsOperatorBufferWithSize_BufferExact *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1, initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_, outer$)
+RxInternalOperatorsOperatorBufferWithSize_BufferExact_1 *new_RxInternalOperatorsOperatorBufferWithSize_BufferExact_1_initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_(RxInternalOperatorsOperatorBufferWithSize_BufferExact *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorBufferWithSize_BufferExact_1, initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_, outer$)
 }
 
-RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1 *create_RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1_initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_(RxInternalOperatorsOperatorBufferWithSize_BufferExact *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1, initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_, outer$)
+RxInternalOperatorsOperatorBufferWithSize_BufferExact_1 *create_RxInternalOperatorsOperatorBufferWithSize_BufferExact_1_initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_(RxInternalOperatorsOperatorBufferWithSize_BufferExact *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorBufferWithSize_BufferExact_1, initWithRxInternalOperatorsOperatorBufferWithSize_BufferExact_, outer$)
 }
 
 @implementation RxInternalOperatorsOperatorBufferWithSize_BufferSkip
@@ -330,7 +322,6 @@ RxInternalOperatorsOperatorBufferWithSize_BufferExact_$1 *create_RxInternalOpera
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorBufferWithSize_BufferSkip class]);
   RELEASE_(actual_);
   RELEASE_(buffer_);
   [super dealloc];
@@ -386,6 +377,11 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithSize_Buffe
 
 @implementation RxInternalOperatorsOperatorBufferWithSize_BufferSkip_BufferSkipProducer
 
+- (instancetype)initWithRxInternalOperatorsOperatorBufferWithSize_BufferSkip:(RxInternalOperatorsOperatorBufferWithSize_BufferSkip *)outer$ {
+  RxInternalOperatorsOperatorBufferWithSize_BufferSkip_BufferSkipProducer_initWithRxInternalOperatorsOperatorBufferWithSize_BufferSkip_(self, outer$);
+  return self;
+}
+
 - (void)requestWithLong:(jlong)n {
   if (n < 0) {
     @throw create_JavaLangIllegalArgumentException_initWithNSString_(JreStrcat("$J", @"n >= 0 required but it was ", n));
@@ -405,11 +401,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithSize_Buffe
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorBufferWithSize_BufferSkip:(RxInternalOperatorsOperatorBufferWithSize_BufferSkip *)outer$ {
-  RxInternalOperatorsOperatorBufferWithSize_BufferSkip_BufferSkipProducer_initWithRxInternalOperatorsOperatorBufferWithSize_BufferSkip_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -417,20 +408,20 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithSize_Buffe
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(requestWithLong:);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorBufferWithSize_BufferSkip:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorBufferWithSize_BufferSkip:);
+  methods[1].selector = @selector(requestWithLong:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorBufferWithSize_BufferSkip;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorBufferWithSize_BufferSkip;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
     { "serialVersionUID", "J", .constantValue.asLong = RxInternalOperatorsOperatorBufferWithSize_BufferSkip_BufferSkipProducer_serialVersionUID, 0x1a, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "request", "J", "LRxInternalOperatorsOperatorBufferWithSize_BufferSkip;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorBufferWithSize_BufferSkip_BufferSkipProducer = { "BufferSkipProducer", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 2, 2, 2, -1, -1, -1, -1 };
+  static const void *ptrTable[] = { "request", "J", "Lrx/internal/operators/OperatorBufferWithSize$BufferSkip<TT;>;", "LRxInternalOperatorsOperatorBufferWithSize_BufferSkip;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorBufferWithSize_BufferSkip_BufferSkipProducer = { "BufferSkipProducer", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 2, 2, 3, -1, -1, -1, -1 };
   return &_RxInternalOperatorsOperatorBufferWithSize_BufferSkip_BufferSkipProducer;
 }
 
@@ -506,7 +497,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithSize_Buffe
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorBufferWithSize_BufferOverlap class]);
   RELEASE_(actual_);
   RELEASE_(queue_);
   RELEASE_(requested_BufferOverlap_);
@@ -567,6 +557,11 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithSize_Buffe
 
 @implementation RxInternalOperatorsOperatorBufferWithSize_BufferOverlap_BufferOverlapProducer
 
+- (instancetype)initWithRxInternalOperatorsOperatorBufferWithSize_BufferOverlap:(RxInternalOperatorsOperatorBufferWithSize_BufferOverlap *)outer$ {
+  RxInternalOperatorsOperatorBufferWithSize_BufferOverlap_BufferOverlapProducer_initWithRxInternalOperatorsOperatorBufferWithSize_BufferOverlap_(self, outer$);
+  return self;
+}
+
 - (void)requestWithLong:(jlong)n {
   RxInternalOperatorsOperatorBufferWithSize_BufferOverlap *parent = this$0_;
   if (RxInternalOperatorsBackpressureUtils_postCompleteRequestWithJavaUtilConcurrentAtomicAtomicLong_withLong_withJavaUtilQueue_withRxSubscriber_(parent->requested_BufferOverlap_, n, parent->queue_, parent->actual_)) {
@@ -584,11 +579,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithSize_Buffe
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorBufferWithSize_BufferOverlap:(RxInternalOperatorsOperatorBufferWithSize_BufferOverlap *)outer$ {
-  RxInternalOperatorsOperatorBufferWithSize_BufferOverlap_BufferOverlapProducer_initWithRxInternalOperatorsOperatorBufferWithSize_BufferOverlap_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -596,20 +586,20 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorBufferWithSize_Buffe
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(requestWithLong:);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorBufferWithSize_BufferOverlap:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorBufferWithSize_BufferOverlap:);
+  methods[1].selector = @selector(requestWithLong:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorBufferWithSize_BufferOverlap;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorBufferWithSize_BufferOverlap;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
     { "serialVersionUID", "J", .constantValue.asLong = RxInternalOperatorsOperatorBufferWithSize_BufferOverlap_BufferOverlapProducer_serialVersionUID, 0x1a, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "request", "J", "LRxInternalOperatorsOperatorBufferWithSize_BufferOverlap;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorBufferWithSize_BufferOverlap_BufferOverlapProducer = { "BufferOverlapProducer", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 2, 2, 2, -1, -1, -1, -1 };
+  static const void *ptrTable[] = { "request", "J", "Lrx/internal/operators/OperatorBufferWithSize$BufferOverlap<TT;>;", "LRxInternalOperatorsOperatorBufferWithSize_BufferOverlap;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorBufferWithSize_BufferOverlap_BufferOverlapProducer = { "BufferOverlapProducer", "rx.internal.operators", ptrTable, methods, fields, 7, 0x10, 2, 2, 3, -1, -1, -1, -1 };
   return &_RxInternalOperatorsOperatorBufferWithSize_BufferOverlap_BufferOverlapProducer;
 }
 

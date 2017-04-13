@@ -69,6 +69,13 @@ jlong RxInternalUtilUnsafeBaseLinkedQueueConsumerNodeRef_C_NODE_OFFSET;
 
 @implementation RxInternalUtilUnsafeBaseLinkedQueueConsumerNodeRef
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalUtilUnsafeBaseLinkedQueueConsumerNodeRef_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (void)spConsumerNodeWithRxInternalUtilAtomicLinkedQueueNode:(RxInternalUtilAtomicLinkedQueueNode *)node {
   JreStrongAssign(&consumerNode_, node);
 }
@@ -81,13 +88,6 @@ jlong RxInternalUtilUnsafeBaseLinkedQueueConsumerNodeRef_C_NODE_OFFSET;
   return consumerNode_;
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalUtilUnsafeBaseLinkedQueueConsumerNodeRef_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(__unsafe_unretained id *)stackbuf count:(NSUInteger)len {
   return JreDefaultFastEnumeration(self, state, stackbuf, len);
 }
@@ -99,17 +99,17 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x14, 0, 1, -1, 2, -1, -1 },
     { NULL, "LRxInternalUtilAtomicLinkedQueueNode;", 0x14, -1, -1, -1, 3, -1, -1 },
     { NULL, "LRxInternalUtilAtomicLinkedQueueNode;", 0x14, -1, -1, -1, 3, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(spConsumerNodeWithRxInternalUtilAtomicLinkedQueueNode:);
-  methods[1].selector = @selector(lvConsumerNode);
-  methods[2].selector = @selector(lpConsumerNode);
-  methods[3].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(spConsumerNodeWithRxInternalUtilAtomicLinkedQueueNode:);
+  methods[2].selector = @selector(lvConsumerNode);
+  methods[3].selector = @selector(lpConsumerNode);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "C_NODE_OFFSET", "J", .constantValue.asLong = 0, 0x1c, -1, 4, -1, -1 },

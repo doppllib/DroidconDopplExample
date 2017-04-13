@@ -30,13 +30,13 @@
 
 J2OBJC_EMPTY_STATIC_INIT(CoTouchlabSqueakyMiscIOUtils)
 
-FOUNDATION_EXPORT void CoTouchlabSqueakyMiscIOUtils_closeQuietlyWithJavaIoCloseable_(id<JavaIoCloseable> closeable);
-
 FOUNDATION_EXPORT void CoTouchlabSqueakyMiscIOUtils_init(CoTouchlabSqueakyMiscIOUtils *self);
 
 FOUNDATION_EXPORT CoTouchlabSqueakyMiscIOUtils *new_CoTouchlabSqueakyMiscIOUtils_init() NS_RETURNS_RETAINED;
 
 FOUNDATION_EXPORT CoTouchlabSqueakyMiscIOUtils *create_CoTouchlabSqueakyMiscIOUtils_init();
+
+FOUNDATION_EXPORT void CoTouchlabSqueakyMiscIOUtils_closeQuietlyWithJavaIoCloseable_(id<JavaIoCloseable> closeable);
 
 J2OBJC_TYPE_LITERAL_HEADER(CoTouchlabSqueakyMiscIOUtils)
 

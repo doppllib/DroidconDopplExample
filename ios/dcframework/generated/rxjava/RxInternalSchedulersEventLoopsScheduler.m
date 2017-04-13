@@ -37,53 +37,47 @@ J2OBJC_FIELD_SETTER(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker, tim
 J2OBJC_FIELD_SETTER(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker, both_, RxInternalUtilSubscriptionList *)
 J2OBJC_FIELD_SETTER(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker, poolWorker_, RxInternalSchedulersEventLoopsScheduler_PoolWorker *)
 
-@interface RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *this$0_;
   id<RxFunctionsAction0> val$action_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker:(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *)outer$
                                                          withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1)
 
-J2OBJC_FIELD_SETTER(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1, this$0_, RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *)
-J2OBJC_FIELD_SETTER(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1, val$action_, id<RxFunctionsAction0>)
+__attribute__((unused)) static void RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1 *self, RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0);
 
-__attribute__((unused)) static void RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1 *self, RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0);
+__attribute__((unused)) static RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1 *new_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1 *new_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1 *create_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0);
 
-__attribute__((unused)) static RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1 *create_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0);
-
-@interface RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *this$0_;
   id<RxFunctionsAction0> val$action_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker:(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *)outer$
                                                          withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2)
 
-J2OBJC_FIELD_SETTER(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2, this$0_, RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *)
-J2OBJC_FIELD_SETTER(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2, val$action_, id<RxFunctionsAction0>)
+__attribute__((unused)) static void RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2 *self, RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0);
 
-__attribute__((unused)) static void RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2 *self, RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0);
+__attribute__((unused)) static RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2 *new_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2 *new_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2 *create_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0);
+__attribute__((unused)) static RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2 *create_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0);
 
 J2OBJC_INITIALIZED_DEFN(RxInternalSchedulersEventLoopsScheduler)
 
@@ -300,7 +294,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersEventLoopsScheduler_FixedSc
   if ([self isUnsubscribed]) {
     return RxSubscriptionsSubscriptions_unsubscribed();
   }
-  return [((RxInternalSchedulersEventLoopsScheduler_PoolWorker *) nil_chk(poolWorker_)) scheduleActualWithRxFunctionsAction0:create_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(self, action) withLong:0 withJavaUtilConcurrentTimeUnit:nil withRxInternalUtilSubscriptionList:serial_];
+  return [((RxInternalSchedulersEventLoopsScheduler_PoolWorker *) nil_chk(poolWorker_)) scheduleActualWithRxFunctionsAction0:create_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(self, action) withLong:0 withJavaUtilConcurrentTimeUnit:nil withRxInternalUtilSubscriptionList:serial_];
 }
 
 - (id<RxSubscription>)scheduleWithRxFunctionsAction0:(id<RxFunctionsAction0>)action
@@ -309,7 +303,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersEventLoopsScheduler_FixedSc
   if ([self isUnsubscribed]) {
     return RxSubscriptionsSubscriptions_unsubscribed();
   }
-  return [((RxInternalSchedulersEventLoopsScheduler_PoolWorker *) nil_chk(poolWorker_)) scheduleActualWithRxFunctionsAction0:create_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(self, action) withLong:delayTime withJavaUtilConcurrentTimeUnit:unit withRxSubscriptionsCompositeSubscription:timed_];
+  return [((RxInternalSchedulersEventLoopsScheduler_PoolWorker *) nil_chk(poolWorker_)) scheduleActualWithRxFunctionsAction0:create_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(self, action) withLong:delayTime withJavaUtilConcurrentTimeUnit:unit withRxSubscriptionsCompositeSubscription:timed_];
 }
 
 - (void)dealloc {
@@ -367,19 +361,19 @@ RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *create_RxInternalSchedu
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker)
 
-@implementation RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1
+@implementation RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1
+
+- (instancetype)initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker:(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *)outer$
+                                                         withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0 {
+  RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)call {
   if ([this$0_ isUnsubscribed]) {
     return;
   }
   [((id<RxFunctionsAction0>) nil_chk(val$action_)) call];
-}
-
-- (instancetype)initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker:(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *)outer$
-                                                         withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0 {
-  RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(self, outer$, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -390,52 +384,52 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalSchedulersEventLoopsScheduler_EventLo
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker:withRxFunctionsAction0:);
+  methods[0].selector = @selector(initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker:withRxFunctionsAction0:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalSchedulersEventLoopsScheduler_EventLoopWorker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$action_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalSchedulersEventLoopsScheduler_EventLoopWorker;LRxFunctionsAction0;", "LRxInternalSchedulersEventLoopsScheduler_EventLoopWorker;", "scheduleWithRxFunctionsAction0:" };
-  static const J2ObjcClassInfo _RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1;
+  static const void *ptrTable[] = { "LRxInternalSchedulersEventLoopsScheduler_EventLoopWorker;", "scheduleWithRxFunctionsAction0:" };
+  static const J2ObjcClassInfo _RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 2, 0, -1, 1, -1, -1 };
+  return &_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1;
 }
 
 @end
 
-void RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1 *self, RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) {
+void RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1 *self, RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$action_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1 *new_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1, initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_, outer$, capture$0)
+RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1 *new_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1, initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_, outer$, capture$0)
 }
 
-RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1 *create_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1, initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_, outer$, capture$0)
+RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1 *create_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_1, initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_, outer$, capture$0)
 }
 
-@implementation RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2
+@implementation RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2
+
+- (instancetype)initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker:(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *)outer$
+                                                         withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0 {
+  RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)call {
   if ([this$0_ isUnsubscribed]) {
     return;
   }
   [((id<RxFunctionsAction0>) nil_chk(val$action_)) call];
-}
-
-- (instancetype)initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker:(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *)outer$
-                                                         withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0 {
-  RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(self, outer$, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -446,37 +440,37 @@ RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$1 *create_RxInternalSch
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker:withRxFunctionsAction0:);
+  methods[0].selector = @selector(initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker:withRxFunctionsAction0:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "this$0_", "LRxInternalSchedulersEventLoopsScheduler_EventLoopWorker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$action_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalSchedulersEventLoopsScheduler_EventLoopWorker;LRxFunctionsAction0;", "LRxInternalSchedulersEventLoopsScheduler_EventLoopWorker;", "scheduleWithRxFunctionsAction0:withLong:withJavaUtilConcurrentTimeUnit:" };
-  static const J2ObjcClassInfo _RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2;
+  static const void *ptrTable[] = { "LRxInternalSchedulersEventLoopsScheduler_EventLoopWorker;", "scheduleWithRxFunctionsAction0:withLong:withJavaUtilConcurrentTimeUnit:" };
+  static const J2ObjcClassInfo _RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2 = { "", "rx.internal.schedulers", ptrTable, methods, fields, 7, 0x8008, 2, 2, 0, -1, 1, -1, -1 };
+  return &_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2;
 }
 
 @end
 
-void RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2 *self, RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) {
+void RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2 *self, RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$action_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2 *new_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2, initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_, outer$, capture$0)
+RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2 *new_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2, initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_, outer$, capture$0)
 }
 
-RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2 *create_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_$2, initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_, outer$, capture$0)
+RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2 *create_RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2_initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker *outer$, id<RxFunctionsAction0> capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalSchedulersEventLoopsScheduler_EventLoopWorker_2, initWithRxInternalSchedulersEventLoopsScheduler_EventLoopWorker_withRxFunctionsAction0_, outer$, capture$0)
 }
 
 @implementation RxInternalSchedulersEventLoopsScheduler_PoolWorker

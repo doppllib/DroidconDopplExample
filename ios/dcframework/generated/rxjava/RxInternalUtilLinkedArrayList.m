@@ -82,7 +82,7 @@
   return [((id<JavaUtilList>) nil_chk([self toList])) description];
 }
 
-- (void)javaFinalize {
+- (void)java_finalize {
   IOSObjectArray *myArray = head_;
   while (myArray != nil) {
     jint lastIndex = myArray->size_ - 1;
@@ -90,7 +90,7 @@
     IOSObjectArray_Set(myArray, lastIndex, nil);
     myArray = lastRef;
   }
-  [super javaFinalize];
+  [super java_finalize];
 }
 
 - (void)dealloc {
@@ -124,7 +124,7 @@
   methods[6].selector = @selector(capacityHint);
   methods[7].selector = @selector(toList);
   methods[8].selector = @selector(description);
-  methods[9].selector = @selector(javaFinalize);
+  methods[9].selector = @selector(java_finalize);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "capacityHint_", "I", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },

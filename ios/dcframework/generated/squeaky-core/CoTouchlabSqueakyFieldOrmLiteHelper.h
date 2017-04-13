@@ -31,13 +31,13 @@
 
 J2OBJC_EMPTY_STATIC_INIT(CoTouchlabSqueakyFieldOrmLiteHelper)
 
-FOUNDATION_EXPORT id CoTouchlabSqueakyFieldOrmLiteHelper_safeConvertWithIOSClass_withId_(IOSClass *type, id arg);
-
 FOUNDATION_EXPORT void CoTouchlabSqueakyFieldOrmLiteHelper_init(CoTouchlabSqueakyFieldOrmLiteHelper *self);
 
 FOUNDATION_EXPORT CoTouchlabSqueakyFieldOrmLiteHelper *new_CoTouchlabSqueakyFieldOrmLiteHelper_init() NS_RETURNS_RETAINED;
 
 FOUNDATION_EXPORT CoTouchlabSqueakyFieldOrmLiteHelper *create_CoTouchlabSqueakyFieldOrmLiteHelper_init();
+
+FOUNDATION_EXPORT id CoTouchlabSqueakyFieldOrmLiteHelper_safeConvertWithIOSClass_withId_(IOSClass *type, id arg);
 
 J2OBJC_TYPE_LITERAL_HEADER(CoTouchlabSqueakyFieldOrmLiteHelper)
 

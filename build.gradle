@@ -5,17 +5,16 @@ buildscript {
         mavenLocal()
         mavenCentral()
         maven { url "https://plugins.gradle.org/m2/" }
-        maven { url "http://dl.bintray.com/populov/maven" }
         maven {
             // change to point to your repo, e.g. http://my.org/repo
-            url "http://dopplmaven.s3-website-us-east-1.amazonaws.com/"
-//            url dopplMavenDeploy
+//            url "http://dopplmaven.s3-website-us-east-1.amazonaws.com/"
+            url dopplMavenDeploy
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.2'
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
-        classpath 'co.touchlab.doppel:doppelgradle:0.4.1-SNAPSHOT'
+        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'net.ltgt.gradle:gradle-apt-plugin:0.9'
+        classpath 'co.touchlab.doppel:doppelgradle:0.4.3-SNAPSHOT'
     }
 }
 
@@ -26,8 +25,8 @@ allprojects {
         mavenCentral()
         maven {
             // change to point to your repo, e.g. http://my.org/repo
-            url "http://dopplmaven.s3-website-us-east-1.amazonaws.com/"
-//            url dopplMavenDeploy
+//            url "http://dopplmaven.s3-website-us-east-1.amazonaws.com/"
+            url dopplMavenDeploy
         }
     }
 }

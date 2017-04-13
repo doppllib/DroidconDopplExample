@@ -23,99 +23,89 @@
 #include "java/lang/System.h"
 #include "java/util/concurrent/atomic/AtomicBoolean.h"
 
-inline jlong RxInternalUtilScalarSynchronousObservable_ScalarAsyncProducer_get_serialVersionUID();
-#define RxInternalUtilScalarSynchronousObservable_ScalarAsyncProducer_serialVersionUID -2466317989629281651LL
-J2OBJC_STATIC_FIELD_CONSTANT(RxInternalUtilScalarSynchronousObservable_ScalarAsyncProducer, serialVersionUID, jlong)
-
-@interface RxInternalUtilScalarSynchronousObservable_$1 : NSObject < RxFunctionsFunc1 > {
+@interface RxInternalUtilScalarSynchronousObservable_1 : NSObject < RxFunctionsFunc1 > {
  @public
   RxInternalSchedulersEventLoopsScheduler *val$els_;
 }
 
-- (id<RxSubscription>)callWithId:(id<RxFunctionsAction0>)a;
-
 - (instancetype)initWithRxInternalSchedulersEventLoopsScheduler:(RxInternalSchedulersEventLoopsScheduler *)capture$0;
+
+- (id<RxSubscription>)callWithId:(id<RxFunctionsAction0>)a;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalUtilScalarSynchronousObservable_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalUtilScalarSynchronousObservable_1)
 
-J2OBJC_FIELD_SETTER(RxInternalUtilScalarSynchronousObservable_$1, val$els_, RxInternalSchedulersEventLoopsScheduler *)
+__attribute__((unused)) static void RxInternalUtilScalarSynchronousObservable_1_initWithRxInternalSchedulersEventLoopsScheduler_(RxInternalUtilScalarSynchronousObservable_1 *self, RxInternalSchedulersEventLoopsScheduler *capture$0);
 
-__attribute__((unused)) static void RxInternalUtilScalarSynchronousObservable_$1_initWithRxInternalSchedulersEventLoopsScheduler_(RxInternalUtilScalarSynchronousObservable_$1 *self, RxInternalSchedulersEventLoopsScheduler *capture$0);
+__attribute__((unused)) static RxInternalUtilScalarSynchronousObservable_1 *new_RxInternalUtilScalarSynchronousObservable_1_initWithRxInternalSchedulersEventLoopsScheduler_(RxInternalSchedulersEventLoopsScheduler *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalUtilScalarSynchronousObservable_$1 *new_RxInternalUtilScalarSynchronousObservable_$1_initWithRxInternalSchedulersEventLoopsScheduler_(RxInternalSchedulersEventLoopsScheduler *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalUtilScalarSynchronousObservable_1 *create_RxInternalUtilScalarSynchronousObservable_1_initWithRxInternalSchedulersEventLoopsScheduler_(RxInternalSchedulersEventLoopsScheduler *capture$0);
 
-__attribute__((unused)) static RxInternalUtilScalarSynchronousObservable_$1 *create_RxInternalUtilScalarSynchronousObservable_$1_initWithRxInternalSchedulersEventLoopsScheduler_(RxInternalSchedulersEventLoopsScheduler *capture$0);
-
-@interface RxInternalUtilScalarSynchronousObservable_$2 : NSObject < RxFunctionsFunc1 > {
+@interface RxInternalUtilScalarSynchronousObservable_2 : NSObject < RxFunctionsFunc1 > {
  @public
   RxScheduler *val$scheduler_;
 }
 
-- (id<RxSubscription>)callWithId:(id<RxFunctionsAction0>)a;
-
 - (instancetype)initWithRxScheduler:(RxScheduler *)capture$0;
+
+- (id<RxSubscription>)callWithId:(id<RxFunctionsAction0>)a;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalUtilScalarSynchronousObservable_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalUtilScalarSynchronousObservable_2)
 
-J2OBJC_FIELD_SETTER(RxInternalUtilScalarSynchronousObservable_$2, val$scheduler_, RxScheduler *)
+__attribute__((unused)) static void RxInternalUtilScalarSynchronousObservable_2_initWithRxScheduler_(RxInternalUtilScalarSynchronousObservable_2 *self, RxScheduler *capture$0);
 
-__attribute__((unused)) static void RxInternalUtilScalarSynchronousObservable_$2_initWithRxScheduler_(RxInternalUtilScalarSynchronousObservable_$2 *self, RxScheduler *capture$0);
+__attribute__((unused)) static RxInternalUtilScalarSynchronousObservable_2 *new_RxInternalUtilScalarSynchronousObservable_2_initWithRxScheduler_(RxScheduler *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalUtilScalarSynchronousObservable_$2 *new_RxInternalUtilScalarSynchronousObservable_$2_initWithRxScheduler_(RxScheduler *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalUtilScalarSynchronousObservable_2 *create_RxInternalUtilScalarSynchronousObservable_2_initWithRxScheduler_(RxScheduler *capture$0);
 
-__attribute__((unused)) static RxInternalUtilScalarSynchronousObservable_$2 *create_RxInternalUtilScalarSynchronousObservable_$2_initWithRxScheduler_(RxScheduler *capture$0);
-
-@interface RxInternalUtilScalarSynchronousObservable_$2_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalUtilScalarSynchronousObservable_2_1 : NSObject < RxFunctionsAction0 > {
  @public
   id<RxFunctionsAction0> val$a_;
   RxScheduler_Worker *val$w_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0
                     withRxScheduler_Worker:(RxScheduler_Worker *)capture$1;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalUtilScalarSynchronousObservable_$2_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalUtilScalarSynchronousObservable_2_1)
 
-J2OBJC_FIELD_SETTER(RxInternalUtilScalarSynchronousObservable_$2_$1, val$a_, id<RxFunctionsAction0>)
-J2OBJC_FIELD_SETTER(RxInternalUtilScalarSynchronousObservable_$2_$1, val$w_, RxScheduler_Worker *)
+__attribute__((unused)) static void RxInternalUtilScalarSynchronousObservable_2_1_initWithRxFunctionsAction0_withRxScheduler_Worker_(RxInternalUtilScalarSynchronousObservable_2_1 *self, id<RxFunctionsAction0> capture$0, RxScheduler_Worker *capture$1);
 
-__attribute__((unused)) static void RxInternalUtilScalarSynchronousObservable_$2_$1_initWithRxFunctionsAction0_withRxScheduler_Worker_(RxInternalUtilScalarSynchronousObservable_$2_$1 *self, id<RxFunctionsAction0> capture$0, RxScheduler_Worker *capture$1);
+__attribute__((unused)) static RxInternalUtilScalarSynchronousObservable_2_1 *new_RxInternalUtilScalarSynchronousObservable_2_1_initWithRxFunctionsAction0_withRxScheduler_Worker_(id<RxFunctionsAction0> capture$0, RxScheduler_Worker *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalUtilScalarSynchronousObservable_$2_$1 *new_RxInternalUtilScalarSynchronousObservable_$2_$1_initWithRxFunctionsAction0_withRxScheduler_Worker_(id<RxFunctionsAction0> capture$0, RxScheduler_Worker *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalUtilScalarSynchronousObservable_2_1 *create_RxInternalUtilScalarSynchronousObservable_2_1_initWithRxFunctionsAction0_withRxScheduler_Worker_(id<RxFunctionsAction0> capture$0, RxScheduler_Worker *capture$1);
 
-__attribute__((unused)) static RxInternalUtilScalarSynchronousObservable_$2_$1 *create_RxInternalUtilScalarSynchronousObservable_$2_$1_initWithRxFunctionsAction0_withRxScheduler_Worker_(id<RxFunctionsAction0> capture$0, RxScheduler_Worker *capture$1);
+inline jlong RxInternalUtilScalarSynchronousObservable_ScalarAsyncProducer_get_serialVersionUID();
+#define RxInternalUtilScalarSynchronousObservable_ScalarAsyncProducer_serialVersionUID -2466317989629281651LL
+J2OBJC_STATIC_FIELD_CONSTANT(RxInternalUtilScalarSynchronousObservable_ScalarAsyncProducer, serialVersionUID, jlong)
 
-@interface RxInternalUtilScalarSynchronousObservable_$3 : NSObject < RxObservable_OnSubscribe > {
+@interface RxInternalUtilScalarSynchronousObservable_3 : NSObject < RxObservable_OnSubscribe > {
  @public
   RxInternalUtilScalarSynchronousObservable *this$0_;
   id<RxFunctionsFunc1> val$func_;
 }
 
-- (void)callWithId:(RxSubscriber *)child;
-
 - (instancetype)initWithRxInternalUtilScalarSynchronousObservable:(RxInternalUtilScalarSynchronousObservable *)outer$
                                              withRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$0;
 
+- (void)callWithId:(RxSubscriber *)child;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalUtilScalarSynchronousObservable_$3)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalUtilScalarSynchronousObservable_3)
 
-J2OBJC_FIELD_SETTER(RxInternalUtilScalarSynchronousObservable_$3, this$0_, RxInternalUtilScalarSynchronousObservable *)
-J2OBJC_FIELD_SETTER(RxInternalUtilScalarSynchronousObservable_$3, val$func_, id<RxFunctionsFunc1>)
+__attribute__((unused)) static void RxInternalUtilScalarSynchronousObservable_3_initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_(RxInternalUtilScalarSynchronousObservable_3 *self, RxInternalUtilScalarSynchronousObservable *outer$, id<RxFunctionsFunc1> capture$0);
 
-__attribute__((unused)) static void RxInternalUtilScalarSynchronousObservable_$3_initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_(RxInternalUtilScalarSynchronousObservable_$3 *self, RxInternalUtilScalarSynchronousObservable *outer$, id<RxFunctionsFunc1> capture$0);
+__attribute__((unused)) static RxInternalUtilScalarSynchronousObservable_3 *new_RxInternalUtilScalarSynchronousObservable_3_initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_(RxInternalUtilScalarSynchronousObservable *outer$, id<RxFunctionsFunc1> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalUtilScalarSynchronousObservable_$3 *new_RxInternalUtilScalarSynchronousObservable_$3_initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_(RxInternalUtilScalarSynchronousObservable *outer$, id<RxFunctionsFunc1> capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalUtilScalarSynchronousObservable_$3 *create_RxInternalUtilScalarSynchronousObservable_$3_initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_(RxInternalUtilScalarSynchronousObservable *outer$, id<RxFunctionsFunc1> capture$0);
+__attribute__((unused)) static RxInternalUtilScalarSynchronousObservable_3 *create_RxInternalUtilScalarSynchronousObservable_3_initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_(RxInternalUtilScalarSynchronousObservable *outer$, id<RxFunctionsFunc1> capture$0);
 
 J2OBJC_INITIALIZED_DEFN(RxInternalUtilScalarSynchronousObservable)
 
@@ -145,16 +135,16 @@ jboolean RxInternalUtilScalarSynchronousObservable_STRONG_MODE;
   id<RxFunctionsFunc1> onSchedule;
   if ([scheduler isKindOfClass:[RxInternalSchedulersEventLoopsScheduler class]]) {
     RxInternalSchedulersEventLoopsScheduler *els = (RxInternalSchedulersEventLoopsScheduler *) cast_chk(scheduler, [RxInternalSchedulersEventLoopsScheduler class]);
-    onSchedule = create_RxInternalUtilScalarSynchronousObservable_$1_initWithRxInternalSchedulersEventLoopsScheduler_(els);
+    onSchedule = create_RxInternalUtilScalarSynchronousObservable_1_initWithRxInternalSchedulersEventLoopsScheduler_(els);
   }
   else {
-    onSchedule = create_RxInternalUtilScalarSynchronousObservable_$2_initWithRxScheduler_(scheduler);
+    onSchedule = create_RxInternalUtilScalarSynchronousObservable_2_initWithRxScheduler_(scheduler);
   }
   return RxObservable_createWithRxObservable_OnSubscribe_(create_RxInternalUtilScalarSynchronousObservable_ScalarAsyncOnSubscribe_initWithId_withRxFunctionsFunc1_(t_, onSchedule));
 }
 
 - (RxObservable *)scalarFlatMapWithRxFunctionsFunc1:(id<RxFunctionsFunc1>)func {
-  return RxObservable_createWithRxObservable_OnSubscribe_(create_RxInternalUtilScalarSynchronousObservable_$3_initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_(self, func));
+  return RxObservable_createWithRxObservable_OnSubscribe_(create_RxInternalUtilScalarSynchronousObservable_3_initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_(self, func));
 }
 
 - (void)dealloc {
@@ -228,6 +218,164 @@ RxInternalUtilScalarSynchronousObservable *create_RxInternalUtilScalarSynchronou
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilScalarSynchronousObservable)
+
+@implementation RxInternalUtilScalarSynchronousObservable_1
+
+- (instancetype)initWithRxInternalSchedulersEventLoopsScheduler:(RxInternalSchedulersEventLoopsScheduler *)capture$0 {
+  RxInternalUtilScalarSynchronousObservable_1_initWithRxInternalSchedulersEventLoopsScheduler_(self, capture$0);
+  return self;
+}
+
+- (id<RxSubscription>)callWithId:(id<RxFunctionsAction0>)a {
+  return [((RxInternalSchedulersEventLoopsScheduler *) nil_chk(val$els_)) scheduleDirectWithRxFunctionsAction0:a];
+}
+
+- (void)dealloc {
+  RELEASE_(val$els_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxSubscription;", 0x1, 0, 1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxInternalSchedulersEventLoopsScheduler:);
+  methods[1].selector = @selector(callWithId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$els_", "LRxInternalSchedulersEventLoopsScheduler;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LRxFunctionsAction0;", "LRxInternalUtilScalarSynchronousObservable;", "scalarScheduleOnWithRxScheduler:", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/functions/Action0;Lrx/Subscription;>;" };
+  static const J2ObjcClassInfo _RxInternalUtilScalarSynchronousObservable_1 = { "", "rx.internal.util", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, 4, -1 };
+  return &_RxInternalUtilScalarSynchronousObservable_1;
+}
+
+@end
+
+void RxInternalUtilScalarSynchronousObservable_1_initWithRxInternalSchedulersEventLoopsScheduler_(RxInternalUtilScalarSynchronousObservable_1 *self, RxInternalSchedulersEventLoopsScheduler *capture$0) {
+  JreStrongAssign(&self->val$els_, capture$0);
+  NSObject_init(self);
+}
+
+RxInternalUtilScalarSynchronousObservable_1 *new_RxInternalUtilScalarSynchronousObservable_1_initWithRxInternalSchedulersEventLoopsScheduler_(RxInternalSchedulersEventLoopsScheduler *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalUtilScalarSynchronousObservable_1, initWithRxInternalSchedulersEventLoopsScheduler_, capture$0)
+}
+
+RxInternalUtilScalarSynchronousObservable_1 *create_RxInternalUtilScalarSynchronousObservable_1_initWithRxInternalSchedulersEventLoopsScheduler_(RxInternalSchedulersEventLoopsScheduler *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalUtilScalarSynchronousObservable_1, initWithRxInternalSchedulersEventLoopsScheduler_, capture$0)
+}
+
+@implementation RxInternalUtilScalarSynchronousObservable_2
+
+- (instancetype)initWithRxScheduler:(RxScheduler *)capture$0 {
+  RxInternalUtilScalarSynchronousObservable_2_initWithRxScheduler_(self, capture$0);
+  return self;
+}
+
+- (id<RxSubscription>)callWithId:(id<RxFunctionsAction0>)a {
+  RxScheduler_Worker *w = [((RxScheduler *) nil_chk(val$scheduler_)) createWorker];
+  [((RxScheduler_Worker *) nil_chk(w)) scheduleWithRxFunctionsAction0:create_RxInternalUtilScalarSynchronousObservable_2_1_initWithRxFunctionsAction0_withRxScheduler_Worker_(a, w)];
+  return w;
+}
+
+- (void)dealloc {
+  RELEASE_(val$scheduler_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LRxSubscription;", 0x1, 0, 1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxScheduler:);
+  methods[1].selector = @selector(callWithId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$scheduler_", "LRxScheduler;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LRxFunctionsAction0;", "LRxInternalUtilScalarSynchronousObservable;", "scalarScheduleOnWithRxScheduler:", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/functions/Action0;Lrx/Subscription;>;" };
+  static const J2ObjcClassInfo _RxInternalUtilScalarSynchronousObservable_2 = { "", "rx.internal.util", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, 4, -1 };
+  return &_RxInternalUtilScalarSynchronousObservable_2;
+}
+
+@end
+
+void RxInternalUtilScalarSynchronousObservable_2_initWithRxScheduler_(RxInternalUtilScalarSynchronousObservable_2 *self, RxScheduler *capture$0) {
+  JreStrongAssign(&self->val$scheduler_, capture$0);
+  NSObject_init(self);
+}
+
+RxInternalUtilScalarSynchronousObservable_2 *new_RxInternalUtilScalarSynchronousObservable_2_initWithRxScheduler_(RxScheduler *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalUtilScalarSynchronousObservable_2, initWithRxScheduler_, capture$0)
+}
+
+RxInternalUtilScalarSynchronousObservable_2 *create_RxInternalUtilScalarSynchronousObservable_2_initWithRxScheduler_(RxScheduler *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalUtilScalarSynchronousObservable_2, initWithRxScheduler_, capture$0)
+}
+
+@implementation RxInternalUtilScalarSynchronousObservable_2_1
+
+- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0
+                    withRxScheduler_Worker:(RxScheduler_Worker *)capture$1 {
+  RxInternalUtilScalarSynchronousObservable_2_1_initWithRxFunctionsAction0_withRxScheduler_Worker_(self, capture$0, capture$1);
+  return self;
+}
+
+- (void)call {
+  @try {
+    [((id<RxFunctionsAction0>) nil_chk(val$a_)) call];
+  }
+  @finally {
+    [((RxScheduler_Worker *) nil_chk(val$w_)) unsubscribe];
+  }
+}
+
+- (void)dealloc {
+  RELEASE_(val$a_);
+  RELEASE_(val$w_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxFunctionsAction0:withRxScheduler_Worker:);
+  methods[1].selector = @selector(call);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "val$a_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "val$w_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+  };
+  static const void *ptrTable[] = { "LRxInternalUtilScalarSynchronousObservable_2;", "callWithId:" };
+  static const J2ObjcClassInfo _RxInternalUtilScalarSynchronousObservable_2_1 = { "", "rx.internal.util", ptrTable, methods, fields, 7, 0x8008, 2, 2, 0, -1, 1, -1, -1 };
+  return &_RxInternalUtilScalarSynchronousObservable_2_1;
+}
+
+@end
+
+void RxInternalUtilScalarSynchronousObservable_2_1_initWithRxFunctionsAction0_withRxScheduler_Worker_(RxInternalUtilScalarSynchronousObservable_2_1 *self, id<RxFunctionsAction0> capture$0, RxScheduler_Worker *capture$1) {
+  JreStrongAssign(&self->val$a_, capture$0);
+  JreStrongAssign(&self->val$w_, capture$1);
+  NSObject_init(self);
+}
+
+RxInternalUtilScalarSynchronousObservable_2_1 *new_RxInternalUtilScalarSynchronousObservable_2_1_initWithRxFunctionsAction0_withRxScheduler_Worker_(id<RxFunctionsAction0> capture$0, RxScheduler_Worker *capture$1) {
+  J2OBJC_NEW_IMPL(RxInternalUtilScalarSynchronousObservable_2_1, initWithRxFunctionsAction0_withRxScheduler_Worker_, capture$0, capture$1)
+}
+
+RxInternalUtilScalarSynchronousObservable_2_1 *create_RxInternalUtilScalarSynchronousObservable_2_1_initWithRxFunctionsAction0_withRxScheduler_Worker_(id<RxFunctionsAction0> capture$0, RxScheduler_Worker *capture$1) {
+  J2OBJC_CREATE_IMPL(RxInternalUtilScalarSynchronousObservable_2_1, initWithRxFunctionsAction0_withRxScheduler_Worker_, capture$0, capture$1)
+}
 
 @implementation RxInternalUtilScalarSynchronousObservable_JustOnSubscribe
 
@@ -427,6 +575,65 @@ RxInternalUtilScalarSynchronousObservable_ScalarAsyncProducer *create_RxInternal
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilScalarSynchronousObservable_ScalarAsyncProducer)
 
+@implementation RxInternalUtilScalarSynchronousObservable_3
+
+- (instancetype)initWithRxInternalUtilScalarSynchronousObservable:(RxInternalUtilScalarSynchronousObservable *)outer$
+                                             withRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$0 {
+  RxInternalUtilScalarSynchronousObservable_3_initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_(self, outer$, capture$0);
+  return self;
+}
+
+- (void)callWithId:(RxSubscriber *)child {
+  RxObservable *o = [((id<RxFunctionsFunc1>) nil_chk(val$func_)) callWithId:this$0_->t_];
+  if ([o isKindOfClass:[RxInternalUtilScalarSynchronousObservable class]]) {
+    [((RxSubscriber *) nil_chk(child)) setProducerWithRxProducer:RxInternalUtilScalarSynchronousObservable_createProducerWithRxSubscriber_withId_(child, ((RxInternalUtilScalarSynchronousObservable *) nil_chk(((RxInternalUtilScalarSynchronousObservable *) cast_chk(o, [RxInternalUtilScalarSynchronousObservable class]))))->t_)];
+  }
+  else {
+    [((RxObservable *) nil_chk(o)) unsafeSubscribeWithRxSubscriber:RxObserversSubscribers_wrapWithRxSubscriber_(child)];
+  }
+}
+
+- (void)dealloc {
+  RELEASE_(this$0_);
+  RELEASE_(val$func_);
+  [super dealloc];
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithRxInternalUtilScalarSynchronousObservable:withRxFunctionsFunc1:);
+  methods[1].selector = @selector(callWithId:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "this$0_", "LRxInternalUtilScalarSynchronousObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
+    { "val$func_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+  };
+  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-TR;>;)V", "Lrx/internal/util/ScalarSynchronousObservable<TT;>;", "Lrx/functions/Func1<-TT;+Lrx/Observable<+TR;>;>;", "LRxInternalUtilScalarSynchronousObservable;", "scalarFlatMapWithRxFunctionsFunc1:", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<TR;>;" };
+  static const J2ObjcClassInfo _RxInternalUtilScalarSynchronousObservable_3 = { "", "rx.internal.util", ptrTable, methods, fields, 7, 0x8008, 2, 2, 5, -1, 6, 7, -1 };
+  return &_RxInternalUtilScalarSynchronousObservable_3;
+}
+
+@end
+
+void RxInternalUtilScalarSynchronousObservable_3_initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_(RxInternalUtilScalarSynchronousObservable_3 *self, RxInternalUtilScalarSynchronousObservable *outer$, id<RxFunctionsFunc1> capture$0) {
+  JreStrongAssign(&self->this$0_, outer$);
+  JreStrongAssign(&self->val$func_, capture$0);
+  NSObject_init(self);
+}
+
+RxInternalUtilScalarSynchronousObservable_3 *new_RxInternalUtilScalarSynchronousObservable_3_initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_(RxInternalUtilScalarSynchronousObservable *outer$, id<RxFunctionsFunc1> capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalUtilScalarSynchronousObservable_3, initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_, outer$, capture$0)
+}
+
+RxInternalUtilScalarSynchronousObservable_3 *create_RxInternalUtilScalarSynchronousObservable_3_initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_(RxInternalUtilScalarSynchronousObservable *outer$, id<RxFunctionsFunc1> capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalUtilScalarSynchronousObservable_3, initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_, outer$, capture$0)
+}
+
 @implementation RxInternalUtilScalarSynchronousObservable_WeakSingleProducer
 
 - (instancetype)initWithRxSubscriber:(RxSubscriber *)actual
@@ -507,220 +714,3 @@ RxInternalUtilScalarSynchronousObservable_WeakSingleProducer *create_RxInternalU
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilScalarSynchronousObservable_WeakSingleProducer)
-
-@implementation RxInternalUtilScalarSynchronousObservable_$1
-
-- (id<RxSubscription>)callWithId:(id<RxFunctionsAction0>)a {
-  return [((RxInternalSchedulersEventLoopsScheduler *) nil_chk(val$els_)) scheduleDirectWithRxFunctionsAction0:a];
-}
-
-- (instancetype)initWithRxInternalSchedulersEventLoopsScheduler:(RxInternalSchedulersEventLoopsScheduler *)capture$0 {
-  RxInternalUtilScalarSynchronousObservable_$1_initWithRxInternalSchedulersEventLoopsScheduler_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$els_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxSubscription;", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxInternalSchedulersEventLoopsScheduler:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$els_", "LRxInternalSchedulersEventLoopsScheduler;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LRxFunctionsAction0;", "LRxInternalSchedulersEventLoopsScheduler;", "LRxInternalUtilScalarSynchronousObservable;", "scalarScheduleOnWithRxScheduler:", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/functions/Action0;Lrx/Subscription;>;" };
-  static const J2ObjcClassInfo _RxInternalUtilScalarSynchronousObservable_$1 = { "", "rx.internal.util", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, 5, -1 };
-  return &_RxInternalUtilScalarSynchronousObservable_$1;
-}
-
-@end
-
-void RxInternalUtilScalarSynchronousObservable_$1_initWithRxInternalSchedulersEventLoopsScheduler_(RxInternalUtilScalarSynchronousObservable_$1 *self, RxInternalSchedulersEventLoopsScheduler *capture$0) {
-  JreStrongAssign(&self->val$els_, capture$0);
-  NSObject_init(self);
-}
-
-RxInternalUtilScalarSynchronousObservable_$1 *new_RxInternalUtilScalarSynchronousObservable_$1_initWithRxInternalSchedulersEventLoopsScheduler_(RxInternalSchedulersEventLoopsScheduler *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalUtilScalarSynchronousObservable_$1, initWithRxInternalSchedulersEventLoopsScheduler_, capture$0)
-}
-
-RxInternalUtilScalarSynchronousObservable_$1 *create_RxInternalUtilScalarSynchronousObservable_$1_initWithRxInternalSchedulersEventLoopsScheduler_(RxInternalSchedulersEventLoopsScheduler *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalUtilScalarSynchronousObservable_$1, initWithRxInternalSchedulersEventLoopsScheduler_, capture$0)
-}
-
-@implementation RxInternalUtilScalarSynchronousObservable_$2
-
-- (id<RxSubscription>)callWithId:(id<RxFunctionsAction0>)a {
-  RxScheduler_Worker *w = [((RxScheduler *) nil_chk(val$scheduler_)) createWorker];
-  [((RxScheduler_Worker *) nil_chk(w)) scheduleWithRxFunctionsAction0:create_RxInternalUtilScalarSynchronousObservable_$2_$1_initWithRxFunctionsAction0_withRxScheduler_Worker_(a, w)];
-  return w;
-}
-
-- (instancetype)initWithRxScheduler:(RxScheduler *)capture$0 {
-  RxInternalUtilScalarSynchronousObservable_$2_initWithRxScheduler_(self, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$scheduler_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "LRxSubscription;", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxScheduler:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$scheduler_", "LRxScheduler;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LRxFunctionsAction0;", "LRxScheduler;", "LRxInternalUtilScalarSynchronousObservable;", "scalarScheduleOnWithRxScheduler:", "Ljava/lang/Object;Lrx/functions/Func1<Lrx/functions/Action0;Lrx/Subscription;>;" };
-  static const J2ObjcClassInfo _RxInternalUtilScalarSynchronousObservable_$2 = { "", "rx.internal.util", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, 5, -1 };
-  return &_RxInternalUtilScalarSynchronousObservable_$2;
-}
-
-@end
-
-void RxInternalUtilScalarSynchronousObservable_$2_initWithRxScheduler_(RxInternalUtilScalarSynchronousObservable_$2 *self, RxScheduler *capture$0) {
-  JreStrongAssign(&self->val$scheduler_, capture$0);
-  NSObject_init(self);
-}
-
-RxInternalUtilScalarSynchronousObservable_$2 *new_RxInternalUtilScalarSynchronousObservable_$2_initWithRxScheduler_(RxScheduler *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalUtilScalarSynchronousObservable_$2, initWithRxScheduler_, capture$0)
-}
-
-RxInternalUtilScalarSynchronousObservable_$2 *create_RxInternalUtilScalarSynchronousObservable_$2_initWithRxScheduler_(RxScheduler *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalUtilScalarSynchronousObservable_$2, initWithRxScheduler_, capture$0)
-}
-
-@implementation RxInternalUtilScalarSynchronousObservable_$2_$1
-
-- (void)call {
-  @try {
-    [((id<RxFunctionsAction0>) nil_chk(val$a_)) call];
-  }
-  @finally {
-    [((RxScheduler_Worker *) nil_chk(val$w_)) unsubscribe];
-  }
-}
-
-- (instancetype)initWithRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0
-                    withRxScheduler_Worker:(RxScheduler_Worker *)capture$1 {
-  RxInternalUtilScalarSynchronousObservable_$2_$1_initWithRxFunctionsAction0_withRxScheduler_Worker_(self, capture$0, capture$1);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(val$a_);
-  RELEASE_(val$w_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxFunctionsAction0:withRxScheduler_Worker:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "val$a_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$w_", "LRxScheduler_Worker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-  };
-  static const void *ptrTable[] = { "LRxFunctionsAction0;LRxScheduler_Worker;", "LRxInternalUtilScalarSynchronousObservable_$2;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalUtilScalarSynchronousObservable_$2_$1 = { "", "rx.internal.util", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
-  return &_RxInternalUtilScalarSynchronousObservable_$2_$1;
-}
-
-@end
-
-void RxInternalUtilScalarSynchronousObservable_$2_$1_initWithRxFunctionsAction0_withRxScheduler_Worker_(RxInternalUtilScalarSynchronousObservable_$2_$1 *self, id<RxFunctionsAction0> capture$0, RxScheduler_Worker *capture$1) {
-  JreStrongAssign(&self->val$a_, capture$0);
-  JreStrongAssign(&self->val$w_, capture$1);
-  NSObject_init(self);
-}
-
-RxInternalUtilScalarSynchronousObservable_$2_$1 *new_RxInternalUtilScalarSynchronousObservable_$2_$1_initWithRxFunctionsAction0_withRxScheduler_Worker_(id<RxFunctionsAction0> capture$0, RxScheduler_Worker *capture$1) {
-  J2OBJC_NEW_IMPL(RxInternalUtilScalarSynchronousObservable_$2_$1, initWithRxFunctionsAction0_withRxScheduler_Worker_, capture$0, capture$1)
-}
-
-RxInternalUtilScalarSynchronousObservable_$2_$1 *create_RxInternalUtilScalarSynchronousObservable_$2_$1_initWithRxFunctionsAction0_withRxScheduler_Worker_(id<RxFunctionsAction0> capture$0, RxScheduler_Worker *capture$1) {
-  J2OBJC_CREATE_IMPL(RxInternalUtilScalarSynchronousObservable_$2_$1, initWithRxFunctionsAction0_withRxScheduler_Worker_, capture$0, capture$1)
-}
-
-@implementation RxInternalUtilScalarSynchronousObservable_$3
-
-- (void)callWithId:(RxSubscriber *)child {
-  RxObservable *o = [((id<RxFunctionsFunc1>) nil_chk(val$func_)) callWithId:this$0_->t_];
-  if ([o isKindOfClass:[RxInternalUtilScalarSynchronousObservable class]]) {
-    [((RxSubscriber *) nil_chk(child)) setProducerWithRxProducer:RxInternalUtilScalarSynchronousObservable_createProducerWithRxSubscriber_withId_(child, ((RxInternalUtilScalarSynchronousObservable *) nil_chk(((RxInternalUtilScalarSynchronousObservable *) cast_chk(o, [RxInternalUtilScalarSynchronousObservable class]))))->t_)];
-  }
-  else {
-    [((RxObservable *) nil_chk(o)) unsafeSubscribeWithRxSubscriber:RxObserversSubscribers_wrapWithRxSubscriber_(child)];
-  }
-}
-
-- (instancetype)initWithRxInternalUtilScalarSynchronousObservable:(RxInternalUtilScalarSynchronousObservable *)outer$
-                                             withRxFunctionsFunc1:(id<RxFunctionsFunc1>)capture$0 {
-  RxInternalUtilScalarSynchronousObservable_$3_initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_(self, outer$, capture$0);
-  return self;
-}
-
-- (void)dealloc {
-  RELEASE_(this$0_);
-  RELEASE_(val$func_);
-  [super dealloc];
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(callWithId:);
-  methods[1].selector = @selector(initWithRxInternalUtilScalarSynchronousObservable:withRxFunctionsFunc1:);
-  #pragma clang diagnostic pop
-  static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalUtilScalarSynchronousObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$func_", "LRxFunctionsFunc1;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
-  };
-  static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-TR;>;)V", "LRxInternalUtilScalarSynchronousObservable;LRxFunctionsFunc1;", "(Lrx/internal/util/ScalarSynchronousObservable;Lrx/functions/Func1<-TT;+Lrx/Observable<+TR;>;>;)V", "Lrx/functions/Func1<-TT;+Lrx/Observable<+TR;>;>;", "LRxInternalUtilScalarSynchronousObservable;", "scalarFlatMapWithRxFunctionsFunc1:", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<TR;>;" };
-  static const J2ObjcClassInfo _RxInternalUtilScalarSynchronousObservable_$3 = { "", "rx.internal.util", ptrTable, methods, fields, 7, 0x8008, 2, 2, 6, -1, 7, 8, -1 };
-  return &_RxInternalUtilScalarSynchronousObservable_$3;
-}
-
-@end
-
-void RxInternalUtilScalarSynchronousObservable_$3_initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_(RxInternalUtilScalarSynchronousObservable_$3 *self, RxInternalUtilScalarSynchronousObservable *outer$, id<RxFunctionsFunc1> capture$0) {
-  JreStrongAssign(&self->this$0_, outer$);
-  JreStrongAssign(&self->val$func_, capture$0);
-  NSObject_init(self);
-}
-
-RxInternalUtilScalarSynchronousObservable_$3 *new_RxInternalUtilScalarSynchronousObservable_$3_initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_(RxInternalUtilScalarSynchronousObservable *outer$, id<RxFunctionsFunc1> capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalUtilScalarSynchronousObservable_$3, initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_, outer$, capture$0)
-}
-
-RxInternalUtilScalarSynchronousObservable_$3 *create_RxInternalUtilScalarSynchronousObservable_$3_initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_(RxInternalUtilScalarSynchronousObservable *outer$, id<RxFunctionsFunc1> capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalUtilScalarSynchronousObservable_$3, initWithRxInternalUtilScalarSynchronousObservable_withRxFunctionsFunc1_, outer$, capture$0)
-}

@@ -165,7 +165,7 @@ static void sqliteProfileCallback(void *data, const char *sql, sqlite3_uint64 tm
 }
 
 /*+ (void) nativeRegisterLocalizedCollators:(NSObject *)connectionPtr withLocaleStr:(NSString *)localeStr {
-    IOSByteArray *sql = [localeStr getBytesWithEncoding:NSUTF16StringEncoding];
+    IOSByteArray *sql = [localeStr java_getBytesWithEncoding:NSUTF16StringEncoding];
     uint32_t sqlLength = [sql length];
     SQLiteConnectionNative* connection = (SQLiteConnectionNative *)(connectionPtr);
 
@@ -181,7 +181,7 @@ static void sqliteProfileCallback(void *data, const char *sql, sqlite3_uint64 tm
 + (NSObject *) nativePrepareStatement:(NSObject *)connectionPtr withSql:(NSString *)sqlString {
     SQLiteConnectionNative* connection = (SQLiteConnectionNative *)(connectionPtr);
 
-    IOSByteArray *sql = [sqlString getBytesWithEncoding:NSUTF16StringEncoding];
+    IOSByteArray *sql = [sqlString java_getBytesWithEncoding:NSUTF16StringEncoding];
     uint32_t sqlLength = [sql length];
     sqlite3_stmt* statement;
     int err = sqlite3_prepare16_v2(connection->db, [sql buffer], sqlLength, &statement, NULL);
@@ -251,7 +251,7 @@ static void sqliteProfileCallback(void *data, const char *sql, sqlite3_uint64 tm
             length += 1;
         }
         IOSCharArray *chars = [IOSCharArray newArrayWithChars:name count:length];
-        NSString* asdf = [NSString stringWithCharacters:chars];
+        NSString* asdf = [NSString java_stringWithCharacters:chars];
         [chars release];
         return asdf;
     }
@@ -304,7 +304,7 @@ static void sqliteProfileCallback(void *data, const char *sql, sqlite3_uint64 tm
     SQLitePreparedStatement *statement = (SQLitePreparedStatement *)(statementPtr);
 
     //TODO: Figure this out with UTF16...
-    const IOSByteArray *bytes = [value getBytesWithEncoding:NSUTF8StringEncoding];
+    const IOSByteArray *bytes = [value java_getBytesWithEncoding:NSUTF8StringEncoding];
     int err = sqlite3_bind_text(statement.statement, index, [bytes buffer], [bytes length],
                                   SQLITE_TRANSIENT);
     if (err != SQLITE_OK) {
@@ -372,7 +372,7 @@ static void sqliteProfileCallback(void *data, const char *sql, sqlite3_uint64 tm
         if (text) {
             size_t length = sqlite3_column_bytes16(statement.statement, 0) / sizeof(jchar);
             IOSCharArray *chars = [IOSCharArray newArrayWithChars:text count:length];
-            NSString* asdf = [NSString stringWithCharacters:chars];
+            NSString* asdf = [NSString java_stringWithCharacters:chars];
             [chars release];
             return asdf;
         }
@@ -592,8 +592,8 @@ static enum CopyRowResult copyRow(CursorWindowNative* window,
 }
 
 - (void)dealloc {
-[path release];
-[label release];
+path = nil;
+label = nil;
 [super dealloc];
 }
 

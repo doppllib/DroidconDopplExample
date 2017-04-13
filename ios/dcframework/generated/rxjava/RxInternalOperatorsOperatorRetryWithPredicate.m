@@ -19,36 +19,36 @@
 #include "java/lang/Integer.h"
 #include "java/util/concurrent/atomic/AtomicInteger.h"
 
-@interface RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber *this$0_;
   RxObservable *val$o_;
 }
 
-- (void)call;
-
 - (instancetype)initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber:(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber *)outer$
                                                                       withRxObservable:(RxObservable *)capture$0;
 
+- (void)call;
+
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1, this$0_, RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1, val$o_, RxObservable *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1 *self, RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber *outer$, RxObservable *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 *self, RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber *outer$, RxObservable *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1 *new_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber *outer$, RxObservable *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 *new_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber *outer$, RxObservable *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1 *create_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber *outer$, RxObservable *capture$0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 *create_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber *outer$, RxObservable *capture$0);
-
-@interface RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1 : RxSubscriber {
  @public
-  RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 *this$0_;
-  jboolean done_;
+  RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1 *this$0_;
   id<RxFunctionsAction0> val$_self_;
+  jboolean done_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1:(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1 *)outer$
+                                                                  withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0;
 
 - (void)onCompleted;
 
@@ -58,21 +58,15 @@ __attribute__((unused)) static RxInternalOperatorsOperatorRetryWithPredicate_Sou
 
 - (void)setProducerWithRxProducer:(id<RxProducer>)p;
 
-- (instancetype)initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1:(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 *)outer$
-                                                                   withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1, this$0_, RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1, val$_self_, id<RxFunctionsAction0>)
+__attribute__((unused)) static void RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_withRxFunctionsAction0_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1 *self, RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1 *outer$, id<RxFunctionsAction0> capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_withRxFunctionsAction0_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1 *self, RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 *outer$, id<RxFunctionsAction0> capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1 *new_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_withRxFunctionsAction0_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1 *outer$, id<RxFunctionsAction0> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1 *new_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_withRxFunctionsAction0_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 *outer$, id<RxFunctionsAction0> capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1 *create_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_withRxFunctionsAction0_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 *outer$, id<RxFunctionsAction0> capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1 *create_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_withRxFunctionsAction0_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1 *outer$, id<RxFunctionsAction0> capture$0);
 
 @implementation RxInternalOperatorsOperatorRetryWithPredicate
 
@@ -150,11 +144,10 @@ withRxInternalProducersProducerArbiter:(RxInternalProducersProducerArbiter *)pa 
 }
 
 - (void)onNextWithId:(RxObservable *)o {
-  [((RxScheduler_Worker *) nil_chk(inner_)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_(self, o)];
+  [((RxScheduler_Worker *) nil_chk(inner_)) scheduleWithRxFunctionsAction0:create_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_(self, o)];
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber class]);
   RELEASE_(child_);
   RELEASE_(predicate_);
   RELEASE_(inner_);
@@ -213,20 +206,20 @@ RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber *create_RxInterna
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber)
 
-@implementation RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1
+@implementation RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber:(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber *)outer$
+                                                                      withRxObservable:(RxObservable *)capture$0 {
+  RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)call {
   id<RxFunctionsAction0> _self = self;
   [((JavaUtilConcurrentAtomicAtomicInteger *) nil_chk(this$0_->attempts_)) incrementAndGet];
-  RxSubscriber *subscriber = create_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_withRxFunctionsAction0_(self, _self);
+  RxSubscriber *subscriber = create_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_withRxFunctionsAction0_(self, _self);
   [((RxSubscriptionsSerialSubscription *) nil_chk(this$0_->serialSubscription_)) setWithRxSubscription:subscriber];
   [((RxObservable *) nil_chk(val$o_)) unsafeSubscribeWithRxSubscriber:subscriber];
-}
-
-- (instancetype)initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber:(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber *)outer$
-                                                                      withRxObservable:(RxObservable *)capture$0 {
-  RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_(self, outer$, capture$0);
-  return self;
 }
 
 - (void)dealloc {
@@ -237,40 +230,46 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorRetryWithPredicate_S
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber:withRxObservable:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber:withRxObservable:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$o_", "LRxObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
+    { "val$o_", "LRxObservable;", .constantValue.asLong = 0, 0x1012, -1, -1, 1, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber;LRxObservable;", "(Lrx/internal/operators/OperatorRetryWithPredicate$SourceSubscriber;Lrx/Observable<TT;>;)V", "Lrx/Observable<TT;>;", "LRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber;", "onNextWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, -1, -1 };
-  return &_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1;
+  static const void *ptrTable[] = { "Lrx/internal/operators/OperatorRetryWithPredicate$SourceSubscriber<TT;>;", "Lrx/Observable<TT;>;", "LRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber;", "onNextWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 2, 2, -1, 3, -1, -1 };
+  return &_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 *self, RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber *outer$, RxObservable *capture$0) {
+void RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1 *self, RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber *outer$, RxObservable *capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$o_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 *new_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber *outer$, RxObservable *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1, initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_, outer$, capture$0)
+RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1 *new_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber *outer$, RxObservable *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1, initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_, outer$, capture$0)
 }
 
-RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 *create_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber *outer$, RxObservable *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1, initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_, outer$, capture$0)
+RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1 *create_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber *outer$, RxObservable *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1, initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_withRxObservable_, outer$, capture$0)
 }
 
-@implementation RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1
+@implementation RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1:(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1 *)outer$
+                                                                  withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0 {
+  RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_withRxFunctionsAction0_(self, outer$, capture$0);
+  return self;
+}
 
 - (void)onCompleted {
   if (!done_) {
@@ -302,14 +301,7 @@ RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 *create_RxInte
   [((RxInternalProducersProducerArbiter *) nil_chk(this$0_->this$0_->pa_)) setProducerWithRxProducer:p];
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1:(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 *)outer$
-                                                                   withRxFunctionsAction0:(id<RxFunctionsAction0>)capture$0 {
-  RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_withRxFunctionsAction0_(self, outer$, capture$0);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1 class]);
   RELEASE_(this$0_);
   RELEASE_(val$_self_);
   [super dealloc];
@@ -317,42 +309,42 @@ RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 *create_RxInte
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
     { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 7, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(setProducerWithRxProducer:);
-  methods[4].selector = @selector(initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1:withRxFunctionsAction0:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1:withRxFunctionsAction0:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
+  methods[4].selector = @selector(setProducerWithRxProducer:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$_self_", "LRxFunctionsAction0;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "done_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "setProducer", "LRxProducer;", "LRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1;LRxFunctionsAction0;", "LRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1;", "call", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 3, 8, -1, 9, 10, -1 };
-  return &_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "setProducer", "LRxProducer;", "LRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1;", "call", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 3, 7, -1, 8, 9, -1 };
+  return &_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_withRxFunctionsAction0_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1 *self, RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 *outer$, id<RxFunctionsAction0> capture$0) {
+void RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_withRxFunctionsAction0_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1 *self, RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1 *outer$, id<RxFunctionsAction0> capture$0) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$_self_, capture$0);
   RxSubscriber_init(self);
 }
 
-RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1 *new_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_withRxFunctionsAction0_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 *outer$, id<RxFunctionsAction0> capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1, initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_withRxFunctionsAction0_, outer$, capture$0)
+RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1 *new_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_withRxFunctionsAction0_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1 *outer$, id<RxFunctionsAction0> capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1, initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_withRxFunctionsAction0_, outer$, capture$0)
 }
 
-RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1 *create_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_withRxFunctionsAction0_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1 *outer$, id<RxFunctionsAction0> capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_$1, initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_$1_withRxFunctionsAction0_, outer$, capture$0)
+RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1 *create_RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1_initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_withRxFunctionsAction0_(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1 *outer$, id<RxFunctionsAction0> capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_1, initWithRxInternalOperatorsOperatorRetryWithPredicate_SourceSubscriber_1_withRxFunctionsAction0_, outer$, capture$0)
 }

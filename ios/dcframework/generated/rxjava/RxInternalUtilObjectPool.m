@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/util/ObjectPool.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxInternalSchedulersGenericScheduledExecutorService.h"
 #include "RxInternalUtilObjectPool.h"
@@ -41,26 +40,24 @@ __attribute__((unused)) static void RxInternalUtilObjectPool_initWithInt_withInt
 
 __attribute__((unused)) static void RxInternalUtilObjectPool_initialize__WithInt_(RxInternalUtilObjectPool *self, jint min);
 
-@interface RxInternalUtilObjectPool_$1 : NSObject < JavaLangRunnable > {
+@interface RxInternalUtilObjectPool_1 : NSObject < JavaLangRunnable > {
  @public
   RxInternalUtilObjectPool *this$0_;
 }
 
-- (void)run;
-
 - (instancetype)initWithRxInternalUtilObjectPool:(RxInternalUtilObjectPool *)outer$;
+
+- (void)run;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalUtilObjectPool_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalUtilObjectPool_1)
 
-J2OBJC_FIELD_SETTER(RxInternalUtilObjectPool_$1, this$0_, RxInternalUtilObjectPool *)
+__attribute__((unused)) static void RxInternalUtilObjectPool_1_initWithRxInternalUtilObjectPool_(RxInternalUtilObjectPool_1 *self, RxInternalUtilObjectPool *outer$);
 
-__attribute__((unused)) static void RxInternalUtilObjectPool_$1_initWithRxInternalUtilObjectPool_(RxInternalUtilObjectPool_$1 *self, RxInternalUtilObjectPool *outer$);
+__attribute__((unused)) static RxInternalUtilObjectPool_1 *new_RxInternalUtilObjectPool_1_initWithRxInternalUtilObjectPool_(RxInternalUtilObjectPool *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalUtilObjectPool_$1 *new_RxInternalUtilObjectPool_$1_initWithRxInternalUtilObjectPool_(RxInternalUtilObjectPool *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalUtilObjectPool_$1 *create_RxInternalUtilObjectPool_$1_initWithRxInternalUtilObjectPool_(RxInternalUtilObjectPool *outer$);
+__attribute__((unused)) static RxInternalUtilObjectPool_1 *create_RxInternalUtilObjectPool_1_initWithRxInternalUtilObjectPool_(RxInternalUtilObjectPool *outer$);
 
 @implementation RxInternalUtilObjectPool
 
@@ -108,7 +105,7 @@ J2OBJC_IGNORE_DESIGNATED_END
     id<JavaUtilConcurrentScheduledExecutorService> w = RxInternalSchedulersGenericScheduledExecutorService_getInstance();
     id<JavaUtilConcurrentFuture> f;
     @try {
-      f = [((id<JavaUtilConcurrentScheduledExecutorService>) nil_chk(w)) scheduleAtFixedRateWithJavaLangRunnable:create_RxInternalUtilObjectPool_$1_initWithRxInternalUtilObjectPool_(self) withLong:validationInterval_ withLong:validationInterval_ withJavaUtilConcurrentTimeUnit:JreLoadEnum(JavaUtilConcurrentTimeUnit, SECONDS)];
+      f = [((id<JavaUtilConcurrentScheduledExecutorService>) nil_chk(w)) scheduleAtFixedRateWithJavaLangRunnable:create_RxInternalUtilObjectPool_1_initWithRxInternalUtilObjectPool_(self) withLong:validationInterval_ withLong:validationInterval_ withJavaUtilConcurrentTimeUnit:JreLoadEnum(JavaUtilConcurrentTimeUnit, SECONDS)];
     }
     @catch (JavaUtilConcurrentRejectedExecutionException *ex) {
       RxPluginsRxJavaHooks_onErrorWithNSException_(ex);
@@ -203,7 +200,12 @@ void RxInternalUtilObjectPool_initialize__WithInt_(RxInternalUtilObjectPool *sel
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilObjectPool)
 
-@implementation RxInternalUtilObjectPool_$1
+@implementation RxInternalUtilObjectPool_1
+
+- (instancetype)initWithRxInternalUtilObjectPool:(RxInternalUtilObjectPool *)outer$ {
+  RxInternalUtilObjectPool_1_initWithRxInternalUtilObjectPool_(self, outer$);
+  return self;
+}
 
 - (void)run {
   jint size = [((id<JavaUtilQueue>) nil_chk(this$0_->pool_)) size];
@@ -221,11 +223,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilObjectPool)
   }
 }
 
-- (instancetype)initWithRxInternalUtilObjectPool:(RxInternalUtilObjectPool *)outer$ {
-  RxInternalUtilObjectPool_$1_initWithRxInternalUtilObjectPool_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -233,33 +230,33 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalUtilObjectPool)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(run);
-  methods[1].selector = @selector(initWithRxInternalUtilObjectPool:);
+  methods[0].selector = @selector(initWithRxInternalUtilObjectPool:);
+  methods[1].selector = @selector(run);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalUtilObjectPool;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalUtilObjectPool;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalUtilObjectPool;", "start" };
-  static const J2ObjcClassInfo _RxInternalUtilObjectPool_$1 = { "", "rx.internal.util", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
-  return &_RxInternalUtilObjectPool_$1;
+  static const void *ptrTable[] = { "Lrx/internal/util/ObjectPool<TT;>;", "LRxInternalUtilObjectPool;", "start" };
+  static const J2ObjcClassInfo _RxInternalUtilObjectPool_1 = { "", "rx.internal.util", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
+  return &_RxInternalUtilObjectPool_1;
 }
 
 @end
 
-void RxInternalUtilObjectPool_$1_initWithRxInternalUtilObjectPool_(RxInternalUtilObjectPool_$1 *self, RxInternalUtilObjectPool *outer$) {
+void RxInternalUtilObjectPool_1_initWithRxInternalUtilObjectPool_(RxInternalUtilObjectPool_1 *self, RxInternalUtilObjectPool *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalUtilObjectPool_$1 *new_RxInternalUtilObjectPool_$1_initWithRxInternalUtilObjectPool_(RxInternalUtilObjectPool *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalUtilObjectPool_$1, initWithRxInternalUtilObjectPool_, outer$)
+RxInternalUtilObjectPool_1 *new_RxInternalUtilObjectPool_1_initWithRxInternalUtilObjectPool_(RxInternalUtilObjectPool *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalUtilObjectPool_1, initWithRxInternalUtilObjectPool_, outer$)
 }
 
-RxInternalUtilObjectPool_$1 *create_RxInternalUtilObjectPool_$1_initWithRxInternalUtilObjectPool_(RxInternalUtilObjectPool *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalUtilObjectPool_$1, initWithRxInternalUtilObjectPool_, outer$)
+RxInternalUtilObjectPool_1 *create_RxInternalUtilObjectPool_1_initWithRxInternalUtilObjectPool_(RxInternalUtilObjectPool *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalUtilObjectPool_1, initWithRxInternalUtilObjectPool_, outer$)
 }

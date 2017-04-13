@@ -24,10 +24,12 @@
 
 @end
 
-@interface RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1 : RxSubscriber {
+@interface RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *this$0_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber:(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *)outer$;
 
 - (void)onNextWithId:(id)t;
 
@@ -37,19 +39,15 @@
 
 - (void)setProducerWithRxProducer:(id<RxProducer>)p;
 
-- (instancetype)initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber:(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *)outer$;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1, this$0_, RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1 *self, RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1 *self, RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1 *new_RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1 *new_RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1 *create_RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1 *create_RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *outer$);
 
 @implementation RxInternalOperatorsOperatorTimeoutBase
 
@@ -222,7 +220,7 @@ J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorTimeoutBase_Time
       [((RxObserversSerializedSubscriber *) nil_chk(serializedSubscriber_)) onErrorWithNSException:create_JavaUtilConcurrentTimeoutException_init()];
     }
     else {
-      RxSubscriber *second = create_RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_(self);
+      RxSubscriber *second = create_RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_(self);
       [other_ unsafeSubscribeWithRxSubscriber:second];
       [((RxSubscriptionsSerialSubscription *) nil_chk(serial_)) setWithRxSubscription:second];
     }
@@ -230,7 +228,6 @@ J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorTimeoutBase_Time
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber class]);
   RELEASE_(serial_);
   RELEASE_(serializedSubscriber_);
   RELEASE_(timeoutStub_);
@@ -295,7 +292,12 @@ RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *create_RxInternalOpera
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber)
 
-@implementation RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1
+@implementation RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber:(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *)outer$ {
+  RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_(self, outer$);
+  return self;
+}
 
 - (void)onNextWithId:(id)t {
   [((RxObserversSerializedSubscriber *) nil_chk(this$0_->serializedSubscriber_)) onNextWithId:t];
@@ -313,52 +315,46 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorTimeoutBase_TimeoutS
   [((RxInternalProducersProducerArbiter *) nil_chk(this$0_->arbiter_)) setProducerWithRxProducer:p];
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber:(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *)outer$ {
-  RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1 class]);
   RELEASE_(this$0_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { NULL, "V", 0x1, 3, 4, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 5, 6, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 7, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onNextWithId:);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onCompleted);
-  methods[3].selector = @selector(setProducerWithRxProducer:);
-  methods[4].selector = @selector(initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber:);
+  methods[1].selector = @selector(onNextWithId:);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onCompleted);
+  methods[4].selector = @selector(setProducerWithRxProducer:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
   };
-  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "setProducer", "LRxProducer;", "LRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber;", "onTimeoutWithLong:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 1, 7, -1, 8, 9, -1 };
-  return &_RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1;
+  static const void *ptrTable[] = { "onNext", "LNSObject;", "(TT;)V", "onError", "LNSException;", "setProducer", "LRxProducer;", "Lrx/internal/operators/OperatorTimeoutBase$TimeoutSubscriber<TT;>;", "LRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber;", "onTimeoutWithLong:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 1, 8, -1, 9, 10, -1 };
+  return &_RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1 *self, RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *outer$) {
+void RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1 *self, RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   RxSubscriber_init(self);
 }
 
-RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1 *new_RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1, initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_, outer$)
+RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1 *new_RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1, initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_, outer$)
 }
 
-RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1 *create_RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_$1, initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_, outer$)
+RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1 *create_RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1_initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_1, initWithRxInternalOperatorsOperatorTimeoutBase_TimeoutSubscriber_, outer$)
 }

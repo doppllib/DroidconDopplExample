@@ -26,47 +26,43 @@
 #include "java/util/List.h"
 #include "java/util/concurrent/atomic/AtomicLong.h"
 
-@interface RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalOperatorsOperatorSwitch_SwitchSubscriber *this$0_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber:(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *)outer$;
 
 - (void)call;
 
-- (instancetype)initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber:(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *)outer$;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1, this$0_, RxInternalOperatorsOperatorSwitch_SwitchSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1 *self, RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1 *self, RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1 *new_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1 *new_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1 *create_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1 *create_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$);
-
-@interface RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2 : NSObject < RxProducer > {
+@interface RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2 : NSObject < RxProducer > {
  @public
   RxInternalOperatorsOperatorSwitch_SwitchSubscriber *this$0_;
 }
 
-- (void)requestWithLong:(jlong)n;
-
 - (instancetype)initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber:(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *)outer$;
+
+- (void)requestWithLong:(jlong)n;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2, this$0_, RxInternalOperatorsOperatorSwitch_SwitchSubscriber *)
+__attribute__((unused)) static void RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2 *self, RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2 *self, RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2 *new_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2 *new_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2 *create_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$);
+__attribute__((unused)) static RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2 *create_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$);
 
 @interface RxInternalOperatorsOperatorSwitch_InnerSubscriber () {
  @public
@@ -111,7 +107,7 @@ J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorSwitch_InnerSubscriber, parent_, 
   static const J2ObjcFieldInfo fields[] = {
     { "delayError_", "Z", .constantValue.asLong = 0, 0x10, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "instance", "Z", "<T:Ljava/lang/Object;>(Z)Lrx/internal/operators/OperatorSwitch<TT;>;", "call", "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)Lrx/Subscriber<+Lrx/Observable<+TT;>;>;", "LRxInternalOperatorsOperatorSwitch_Holder;LRxInternalOperatorsOperatorSwitch_HolderDelayError;LRxInternalOperatorsOperatorSwitch_SwitchSubscriber;LRxInternalOperatorsOperatorSwitch_InnerSubscriber;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Lrx/Observable$Operator<TT;Lrx/Observable<+TT;>;>;" };
+  static const void *ptrTable[] = { "instance", "Z", "<T:Ljava/lang/Object;>(Z)Lrx/internal/operators/OperatorSwitch<TT;>;", "call", "LRxSubscriber;", "(Lrx/Subscriber<-TT;>;)Lrx/Subscriber<-Lrx/Observable<+TT;>;>;", "LRxInternalOperatorsOperatorSwitch_Holder;LRxInternalOperatorsOperatorSwitch_HolderDelayError;LRxInternalOperatorsOperatorSwitch_SwitchSubscriber;LRxInternalOperatorsOperatorSwitch_InnerSubscriber;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Lrx/Observable$Operator<TT;Lrx/Observable<+TT;>;>;" };
   static const J2ObjcClassInfo _RxInternalOperatorsOperatorSwitch = { "OperatorSwitch", "rx.internal.operators", ptrTable, methods, fields, 7, 0x11, 3, 1, -1, 6, -1, 7, -1 };
   return &_RxInternalOperatorsOperatorSwitch;
 }
@@ -259,8 +255,8 @@ NSException *RxInternalOperatorsOperatorSwitch_SwitchSubscriber_TERMINAL_ERROR;
 
 - (void)init__ {
   [((RxSubscriber *) nil_chk(child_)) addWithRxSubscription:serial_];
-  [child_ addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(self))];
-  [child_ setProducerWithRxProducer:create_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(self)];
+  [child_ addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(self))];
+  [child_ setProducerWithRxProducer:create_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(self)];
 }
 
 - (void)clearProducer {
@@ -497,7 +493,6 @@ withRxInternalUtilAtomicSpscLinkedArrayQueue:(RxInternalUtilAtomicSpscLinkedArra
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorSwitch_SwitchSubscriber class]);
   RELEASE_(child_);
   RELEASE_(serial_);
   RELEASE_(index_);
@@ -591,15 +586,15 @@ RxInternalOperatorsOperatorSwitch_SwitchSubscriber *create_RxInternalOperatorsOp
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorSwitch_SwitchSubscriber)
 
-@implementation RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1
+@implementation RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1
+
+- (instancetype)initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber:(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *)outer$ {
+  RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(self, outer$);
+  return self;
+}
 
 - (void)call {
   [this$0_ clearProducer];
-}
-
-- (instancetype)initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber:(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *)outer$ {
-  RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(self, outer$);
-  return self;
 }
 
 - (void)dealloc {
@@ -609,38 +604,43 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorSwitch_SwitchSubscri
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorSwitch_SwitchSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorSwitch_SwitchSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOperatorSwitch_SwitchSubscriber;", "init__" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
-  return &_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1;
+  static const void *ptrTable[] = { "Lrx/internal/operators/OperatorSwitch$SwitchSubscriber<TT;>;", "LRxInternalOperatorsOperatorSwitch_SwitchSubscriber;", "init__" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
+  return &_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1 *self, RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$) {
+void RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1 *self, RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1 *new_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1, initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_, outer$)
+RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1 *new_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1, initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_, outer$)
 }
 
-RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1 *create_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1, initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_, outer$)
+RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1 *create_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_1, initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_, outer$)
 }
 
-@implementation RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2
+@implementation RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2
+
+- (instancetype)initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber:(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *)outer$ {
+  RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(self, outer$);
+  return self;
+}
 
 - (void)requestWithLong:(jlong)n {
   if (n > 0LL) {
@@ -651,11 +651,6 @@ RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1 *create_RxInternalOperator
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber:(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *)outer$ {
-  RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(self, outer$);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(this$0_);
   [super dealloc];
@@ -663,35 +658,35 @@ RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$1 *create_RxInternalOperator
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(requestWithLong:);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber:);
+  methods[1].selector = @selector(requestWithLong:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorSwitch_SwitchSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorSwitch_SwitchSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
   };
-  static const void *ptrTable[] = { "request", "J", "LRxInternalOperatorsOperatorSwitch_SwitchSubscriber;", "init__" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 2, -1, 3, -1, -1 };
-  return &_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2;
+  static const void *ptrTable[] = { "request", "J", "Lrx/internal/operators/OperatorSwitch$SwitchSubscriber<TT;>;", "LRxInternalOperatorsOperatorSwitch_SwitchSubscriber;", "init__" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
+  return &_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2;
 }
 
 @end
 
-void RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2 *self, RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$) {
+void RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2 *self, RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$) {
   JreStrongAssign(&self->this$0_, outer$);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2 *new_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2, initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_, outer$)
+RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2 *new_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2, initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_, outer$)
 }
 
-RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2 *create_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_$2, initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_, outer$)
+RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2 *create_RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2_initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_(RxInternalOperatorsOperatorSwitch_SwitchSubscriber *outer$) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorSwitch_SwitchSubscriber_2, initWithRxInternalOperatorsOperatorSwitch_SwitchSubscriber_, outer$)
 }
 
 @implementation RxInternalOperatorsOperatorSwitch_InnerSubscriber
@@ -719,7 +714,6 @@ withRxInternalOperatorsOperatorSwitch_SwitchSubscriber:(RxInternalOperatorsOpera
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorSwitch_InnerSubscriber class]);
   RELEASE_(parent_);
   [super dealloc];
 }

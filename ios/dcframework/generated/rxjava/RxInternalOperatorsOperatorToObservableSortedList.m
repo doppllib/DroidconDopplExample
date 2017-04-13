@@ -28,36 +28,38 @@ inline id<JavaUtilComparator> RxInternalOperatorsOperatorToObservableSortedList_
 static id<JavaUtilComparator> RxInternalOperatorsOperatorToObservableSortedList_DEFAULT_SORT_FUNCTION;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(RxInternalOperatorsOperatorToObservableSortedList, DEFAULT_SORT_FUNCTION, id<JavaUtilComparator>)
 
-@interface RxInternalOperatorsOperatorToObservableSortedList_$1 : NSObject < JavaUtilComparator > {
+@interface RxInternalOperatorsOperatorToObservableSortedList_1 : NSObject < JavaUtilComparator > {
  @public
   id<RxFunctionsFunc2> val$sortFunction_;
 }
 
+- (instancetype)initWithRxFunctionsFunc2:(id<RxFunctionsFunc2>)capture$0;
+
 - (jint)compareWithId:(id)o1
                withId:(id)o2;
 
-- (instancetype)initWithRxFunctionsFunc2:(id<RxFunctionsFunc2>)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorToObservableSortedList_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorToObservableSortedList_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorToObservableSortedList_$1, val$sortFunction_, id<RxFunctionsFunc2>)
+__attribute__((unused)) static void RxInternalOperatorsOperatorToObservableSortedList_1_initWithRxFunctionsFunc2_(RxInternalOperatorsOperatorToObservableSortedList_1 *self, id<RxFunctionsFunc2> capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorToObservableSortedList_$1_initWithRxFunctionsFunc2_(RxInternalOperatorsOperatorToObservableSortedList_$1 *self, id<RxFunctionsFunc2> capture$0);
+__attribute__((unused)) static RxInternalOperatorsOperatorToObservableSortedList_1 *new_RxInternalOperatorsOperatorToObservableSortedList_1_initWithRxFunctionsFunc2_(id<RxFunctionsFunc2> capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorToObservableSortedList_$1 *new_RxInternalOperatorsOperatorToObservableSortedList_$1_initWithRxFunctionsFunc2_(id<RxFunctionsFunc2> capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorToObservableSortedList_1 *create_RxInternalOperatorsOperatorToObservableSortedList_1_initWithRxFunctionsFunc2_(id<RxFunctionsFunc2> capture$0);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorToObservableSortedList_$1 *create_RxInternalOperatorsOperatorToObservableSortedList_$1_initWithRxFunctionsFunc2_(id<RxFunctionsFunc2> capture$0);
-
-@interface RxInternalOperatorsOperatorToObservableSortedList_$2 : RxSubscriber {
+@interface RxInternalOperatorsOperatorToObservableSortedList_2 : RxSubscriber {
  @public
   RxInternalOperatorsOperatorToObservableSortedList *this$0_;
-  id<JavaUtilList> list_;
-  jboolean completed_;
   RxInternalProducersSingleDelayedProducer *val$producer_;
   RxSubscriber *val$child_;
+  id<JavaUtilList> list_;
+  jboolean completed_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOperatorToObservableSortedList:(RxInternalOperatorsOperatorToObservableSortedList *)outer$
+                             withRxInternalProducersSingleDelayedProducer:(RxInternalProducersSingleDelayedProducer *)capture$0
+                                                         withRxSubscriber:(RxSubscriber *)capture$1;
 
 - (void)onStart;
 
@@ -67,24 +69,17 @@ __attribute__((unused)) static RxInternalOperatorsOperatorToObservableSortedList
 
 - (void)onNextWithId:(id)value;
 
-- (instancetype)initWithRxInternalOperatorsOperatorToObservableSortedList:(RxInternalOperatorsOperatorToObservableSortedList *)outer$
-                             withRxInternalProducersSingleDelayedProducer:(RxInternalProducersSingleDelayedProducer *)capture$0
-                                                         withRxSubscriber:(RxSubscriber *)capture$1;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorToObservableSortedList_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorToObservableSortedList_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorToObservableSortedList_$2, this$0_, RxInternalOperatorsOperatorToObservableSortedList *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorToObservableSortedList_$2, list_, id<JavaUtilList>)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorToObservableSortedList_$2, val$producer_, RxInternalProducersSingleDelayedProducer *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorToObservableSortedList_$2, val$child_, RxSubscriber *)
+J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorToObservableSortedList_2, list_, id<JavaUtilList>)
 
-__attribute__((unused)) static void RxInternalOperatorsOperatorToObservableSortedList_$2_initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorToObservableSortedList_$2 *self, RxInternalOperatorsOperatorToObservableSortedList *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1);
+__attribute__((unused)) static void RxInternalOperatorsOperatorToObservableSortedList_2_initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorToObservableSortedList_2 *self, RxInternalOperatorsOperatorToObservableSortedList *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1);
 
-__attribute__((unused)) static RxInternalOperatorsOperatorToObservableSortedList_$2 *new_RxInternalOperatorsOperatorToObservableSortedList_$2_initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorToObservableSortedList *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOperatorToObservableSortedList_2 *new_RxInternalOperatorsOperatorToObservableSortedList_2_initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorToObservableSortedList *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOperatorToObservableSortedList_$2 *create_RxInternalOperatorsOperatorToObservableSortedList_$2_initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorToObservableSortedList *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1);
+__attribute__((unused)) static RxInternalOperatorsOperatorToObservableSortedList_2 *create_RxInternalOperatorsOperatorToObservableSortedList_2_initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorToObservableSortedList *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1);
 
 J2OBJC_INITIALIZED_DEFN(RxInternalOperatorsOperatorToObservableSortedList)
 
@@ -103,7 +98,7 @@ J2OBJC_INITIALIZED_DEFN(RxInternalOperatorsOperatorToObservableSortedList)
 
 - (RxSubscriber *)callWithId:(RxSubscriber *)child {
   RxInternalProducersSingleDelayedProducer *producer = create_RxInternalProducersSingleDelayedProducer_initWithRxSubscriber_(child);
-  RxSubscriber *result = create_RxInternalOperatorsOperatorToObservableSortedList_$2_initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(self, producer, child);
+  RxSubscriber *result = create_RxInternalOperatorsOperatorToObservableSortedList_2_initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(self, producer, child);
   [((RxSubscriber *) nil_chk(child)) addWithRxSubscription:result];
   [child setProducerWithRxProducer:producer];
   return result;
@@ -162,7 +157,7 @@ RxInternalOperatorsOperatorToObservableSortedList *create_RxInternalOperatorsOpe
 void RxInternalOperatorsOperatorToObservableSortedList_initWithRxFunctionsFunc2_withInt_(RxInternalOperatorsOperatorToObservableSortedList *self, id<RxFunctionsFunc2> sortFunction, jint initialCapacity) {
   NSObject_init(self);
   self->initialCapacity_ = initialCapacity;
-  JreStrongAssignAndConsume(&self->sortFunction_, new_RxInternalOperatorsOperatorToObservableSortedList_$1_initWithRxFunctionsFunc2_(sortFunction));
+  JreStrongAssignAndConsume(&self->sortFunction_, new_RxInternalOperatorsOperatorToObservableSortedList_1_initWithRxFunctionsFunc2_(sortFunction));
 }
 
 RxInternalOperatorsOperatorToObservableSortedList *new_RxInternalOperatorsOperatorToObservableSortedList_initWithRxFunctionsFunc2_withInt_(id<RxFunctionsFunc2> sortFunction, jint initialCapacity) {
@@ -175,92 +170,16 @@ RxInternalOperatorsOperatorToObservableSortedList *create_RxInternalOperatorsOpe
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorToObservableSortedList)
 
-@implementation RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction
+@implementation RxInternalOperatorsOperatorToObservableSortedList_1
 
-- (jint)compareWithId:(id)t1
-               withId:(id)t2 {
-  id<JavaLangComparable> c1 = (id<JavaLangComparable>) cast_check(t1, JavaLangComparable_class_());
-  id<JavaLangComparable> c2 = (id<JavaLangComparable>) cast_check(t2, JavaLangComparable_class_());
-  return [((id<JavaLangComparable>) nil_chk(c1)) compareToWithId:c2];
-}
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction_init(self);
+- (instancetype)initWithRxFunctionsFunc2:(id<RxFunctionsFunc2>)capture$0 {
+  RxInternalOperatorsOperatorToObservableSortedList_1_initWithRxFunctionsFunc2_(self, capture$0);
   return self;
 }
-J2OBJC_IGNORE_DESIGNATED_END
-
-- (id<JavaUtilComparator>)reversed {
-  return JavaUtilComparator_reversed(self);
-}
-
-- (id<JavaUtilComparator>)thenComparingWithJavaUtilComparator:(id<JavaUtilComparator>)arg0 {
-  return JavaUtilComparator_thenComparingWithJavaUtilComparator_(self, arg0);
-}
-
-- (id<JavaUtilComparator>)thenComparingWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)arg0 {
-  return JavaUtilComparator_thenComparingWithJavaUtilFunctionFunction_(self, arg0);
-}
-
-- (id<JavaUtilComparator>)thenComparingWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)arg0
-                                             withJavaUtilComparator:(id<JavaUtilComparator>)arg1 {
-  return JavaUtilComparator_thenComparingWithJavaUtilFunctionFunction_withJavaUtilComparator_(self, arg0, arg1);
-}
-
-- (id<JavaUtilComparator>)thenComparingDoubleWithJavaUtilFunctionToDoubleFunction:(id<JavaUtilFunctionToDoubleFunction>)arg0 {
-  return JavaUtilComparator_thenComparingDoubleWithJavaUtilFunctionToDoubleFunction_(self, arg0);
-}
-
-- (id<JavaUtilComparator>)thenComparingIntWithJavaUtilFunctionToIntFunction:(id<JavaUtilFunctionToIntFunction>)arg0 {
-  return JavaUtilComparator_thenComparingIntWithJavaUtilFunctionToIntFunction_(self, arg0);
-}
-
-- (id<JavaUtilComparator>)thenComparingLongWithJavaUtilFunctionToLongFunction:(id<JavaUtilFunctionToLongFunction>)arg0 {
-  return JavaUtilComparator_thenComparingLongWithJavaUtilFunctionToLongFunction_(self, arg0);
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static J2ObjcMethodInfo methods[] = {
-    { NULL, "I", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
-  };
-  #pragma clang diagnostic push
-  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(compareWithId:withId:);
-  methods[1].selector = @selector(init);
-  #pragma clang diagnostic pop
-  static const void *ptrTable[] = { "compare", "LNSObject;LNSObject;", "LRxInternalOperatorsOperatorToObservableSortedList;", "Ljava/lang/Object;Ljava/util/Comparator<Ljava/lang/Object;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction = { "DefaultComparableFunction", "rx.internal.operators", ptrTable, methods, NULL, 7, 0x18, 2, 0, 2, -1, -1, 3, -1 };
-  return &_RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction;
-}
-
-@end
-
-void RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction_init(RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction *self) {
-  NSObject_init(self);
-}
-
-RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction *new_RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction_init() {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction, init)
-}
-
-RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction *create_RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction_init() {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction, init)
-}
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction)
-
-@implementation RxInternalOperatorsOperatorToObservableSortedList_$1
 
 - (jint)compareWithId:(id)o1
                withId:(id)o2 {
   return [((JavaLangInteger *) nil_chk([((id<RxFunctionsFunc2>) nil_chk(val$sortFunction_)) callWithId:o1 withId:o2])) intValue];
-}
-
-- (instancetype)initWithRxFunctionsFunc2:(id<RxFunctionsFunc2>)capture$0 {
-  RxInternalOperatorsOperatorToObservableSortedList_$1_initWithRxFunctionsFunc2_(self, capture$0);
-  return self;
 }
 
 - (id<JavaUtilComparator>)reversed {
@@ -299,38 +218,45 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorToObservableSortedLi
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "I", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, 3, -1, 4, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(compareWithId:withId:);
-  methods[1].selector = @selector(initWithRxFunctionsFunc2:);
+  methods[0].selector = @selector(initWithRxFunctionsFunc2:);
+  methods[1].selector = @selector(compareWithId:withId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$sortFunction_", "LRxFunctionsFunc2;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$sortFunction_", "LRxFunctionsFunc2;", .constantValue.asLong = 0, 0x1012, -1, -1, 3, -1 },
   };
-  static const void *ptrTable[] = { "compare", "LNSObject;LNSObject;", "(TT;TT;)I", "LRxFunctionsFunc2;", "(Lrx/functions/Func2<-TT;-TT;Ljava/lang/Integer;>;)V", "Lrx/functions/Func2<-TT;-TT;Ljava/lang/Integer;>;", "LRxInternalOperatorsOperatorToObservableSortedList;", "initWithRxFunctionsFunc2:withInt:", "Ljava/lang/Object;Ljava/util/Comparator<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorToObservableSortedList_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 6, -1, 7, 8, -1 };
-  return &_RxInternalOperatorsOperatorToObservableSortedList_$1;
+  static const void *ptrTable[] = { "compare", "LNSObject;LNSObject;", "(TT;TT;)I", "Lrx/functions/Func2<-TT;-TT;Ljava/lang/Integer;>;", "LRxInternalOperatorsOperatorToObservableSortedList;", "initWithRxFunctionsFunc2:withInt:", "Ljava/lang/Object;Ljava/util/Comparator<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorToObservableSortedList_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, 6, -1 };
+  return &_RxInternalOperatorsOperatorToObservableSortedList_1;
 }
 
 @end
 
-void RxInternalOperatorsOperatorToObservableSortedList_$1_initWithRxFunctionsFunc2_(RxInternalOperatorsOperatorToObservableSortedList_$1 *self, id<RxFunctionsFunc2> capture$0) {
+void RxInternalOperatorsOperatorToObservableSortedList_1_initWithRxFunctionsFunc2_(RxInternalOperatorsOperatorToObservableSortedList_1 *self, id<RxFunctionsFunc2> capture$0) {
   JreStrongAssign(&self->val$sortFunction_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOperatorToObservableSortedList_$1 *new_RxInternalOperatorsOperatorToObservableSortedList_$1_initWithRxFunctionsFunc2_(id<RxFunctionsFunc2> capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorToObservableSortedList_$1, initWithRxFunctionsFunc2_, capture$0)
+RxInternalOperatorsOperatorToObservableSortedList_1 *new_RxInternalOperatorsOperatorToObservableSortedList_1_initWithRxFunctionsFunc2_(id<RxFunctionsFunc2> capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorToObservableSortedList_1, initWithRxFunctionsFunc2_, capture$0)
 }
 
-RxInternalOperatorsOperatorToObservableSortedList_$1 *create_RxInternalOperatorsOperatorToObservableSortedList_$1_initWithRxFunctionsFunc2_(id<RxFunctionsFunc2> capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorToObservableSortedList_$1, initWithRxFunctionsFunc2_, capture$0)
+RxInternalOperatorsOperatorToObservableSortedList_1 *create_RxInternalOperatorsOperatorToObservableSortedList_1_initWithRxFunctionsFunc2_(id<RxFunctionsFunc2> capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorToObservableSortedList_1, initWithRxFunctionsFunc2_, capture$0)
 }
 
-@implementation RxInternalOperatorsOperatorToObservableSortedList_$2
+@implementation RxInternalOperatorsOperatorToObservableSortedList_2
+
+- (instancetype)initWithRxInternalOperatorsOperatorToObservableSortedList:(RxInternalOperatorsOperatorToObservableSortedList *)outer$
+                             withRxInternalProducersSingleDelayedProducer:(RxInternalProducersSingleDelayedProducer *)capture$0
+                                                         withRxSubscriber:(RxSubscriber *)capture$1 {
+  RxInternalOperatorsOperatorToObservableSortedList_2_initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(self, outer$, capture$0, capture$1);
+  return self;
+}
 
 - (void)onStart {
   [self requestWithLong:JavaLangLong_MAX_VALUE];
@@ -362,53 +288,45 @@ RxInternalOperatorsOperatorToObservableSortedList_$1 *create_RxInternalOperators
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOperatorToObservableSortedList:(RxInternalOperatorsOperatorToObservableSortedList *)outer$
-                             withRxInternalProducersSingleDelayedProducer:(RxInternalProducersSingleDelayedProducer *)capture$0
-                                                         withRxSubscriber:(RxSubscriber *)capture$1 {
-  RxInternalOperatorsOperatorToObservableSortedList_$2_initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(self, outer$, capture$0, capture$1);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOperatorToObservableSortedList_$2 class]);
   RELEASE_(this$0_);
-  RELEASE_(list_);
   RELEASE_(val$producer_);
   RELEASE_(val$child_);
+  RELEASE_(list_);
   [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onStart);
-  methods[1].selector = @selector(onCompleted);
-  methods[2].selector = @selector(onErrorWithNSException:);
-  methods[3].selector = @selector(onNextWithId:);
-  methods[4].selector = @selector(initWithRxInternalOperatorsOperatorToObservableSortedList:withRxInternalProducersSingleDelayedProducer:withRxSubscriber:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOperatorToObservableSortedList:withRxInternalProducersSingleDelayedProducer:withRxSubscriber:);
+  methods[1].selector = @selector(onStart);
+  methods[2].selector = @selector(onCompleted);
+  methods[3].selector = @selector(onErrorWithNSException:);
+  methods[4].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "this$0_", "LRxInternalOperatorsOperatorToObservableSortedList;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "list_", "LJavaUtilList;", .constantValue.asLong = 0, 0x0, -1, -1, 7, -1 },
+    { "this$0_", "LRxInternalOperatorsOperatorToObservableSortedList;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$producer_", "LRxInternalProducersSingleDelayedProducer;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
+    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
+    { "list_", "LJavaUtilList;", .constantValue.asLong = 0, 0x0, -1, -1, 8, -1 },
     { "completed_", "Z", .constantValue.asLong = 0, 0x0, -1, -1, -1, -1 },
-    { "val$producer_", "LRxInternalProducersSingleDelayedProducer;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
-    { "val$child_", "LRxSubscriber;", .constantValue.asLong = 0, 0x1012, -1, -1, 9, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "LRxInternalOperatorsOperatorToObservableSortedList;LRxInternalProducersSingleDelayedProducer;LRxSubscriber;", "(Lrx/internal/operators/OperatorToObservableSortedList;Lrx/internal/producers/SingleDelayedProducer<Ljava/util/List<TT;>;>;Lrx/Subscriber<-Ljava/util/List<TT;>;>;)V", "Ljava/util/List<TT;>;", "Lrx/internal/producers/SingleDelayedProducer<Ljava/util/List<TT;>;>;", "Lrx/Subscriber<-Ljava/util/List<TT;>;>;", "LRxInternalOperatorsOperatorToObservableSortedList;", "callWithId:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOperatorToObservableSortedList_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 5, 10, -1, 11, 12, -1 };
-  return &_RxInternalOperatorsOperatorToObservableSortedList_$2;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "Lrx/internal/operators/OperatorToObservableSortedList<TT;>;", "Lrx/internal/producers/SingleDelayedProducer<Ljava/util/List<TT;>;>;", "Lrx/Subscriber<-Ljava/util/List<TT;>;>;", "Ljava/util/List<TT;>;", "LRxInternalOperatorsOperatorToObservableSortedList;", "callWithId:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorToObservableSortedList_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 5, 5, 9, -1, 10, 11, -1 };
+  return &_RxInternalOperatorsOperatorToObservableSortedList_2;
 }
 
 @end
 
-void RxInternalOperatorsOperatorToObservableSortedList_$2_initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorToObservableSortedList_$2 *self, RxInternalOperatorsOperatorToObservableSortedList *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) {
+void RxInternalOperatorsOperatorToObservableSortedList_2_initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorToObservableSortedList_2 *self, RxInternalOperatorsOperatorToObservableSortedList *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$producer_, capture$0);
   JreStrongAssign(&self->val$child_, capture$1);
@@ -416,10 +334,86 @@ void RxInternalOperatorsOperatorToObservableSortedList_$2_initWithRxInternalOper
   JreStrongAssignAndConsume(&self->list_, new_JavaUtilArrayList_initWithInt_(outer$->initialCapacity_));
 }
 
-RxInternalOperatorsOperatorToObservableSortedList_$2 *new_RxInternalOperatorsOperatorToObservableSortedList_$2_initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorToObservableSortedList *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorToObservableSortedList_$2, initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_, outer$, capture$0, capture$1)
+RxInternalOperatorsOperatorToObservableSortedList_2 *new_RxInternalOperatorsOperatorToObservableSortedList_2_initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorToObservableSortedList *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorToObservableSortedList_2, initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_, outer$, capture$0, capture$1)
 }
 
-RxInternalOperatorsOperatorToObservableSortedList_$2 *create_RxInternalOperatorsOperatorToObservableSortedList_$2_initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorToObservableSortedList *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorToObservableSortedList_$2, initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_, outer$, capture$0, capture$1)
+RxInternalOperatorsOperatorToObservableSortedList_2 *create_RxInternalOperatorsOperatorToObservableSortedList_2_initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_(RxInternalOperatorsOperatorToObservableSortedList *outer$, RxInternalProducersSingleDelayedProducer *capture$0, RxSubscriber *capture$1) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorToObservableSortedList_2, initWithRxInternalOperatorsOperatorToObservableSortedList_withRxInternalProducersSingleDelayedProducer_withRxSubscriber_, outer$, capture$0, capture$1)
 }
+
+@implementation RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
+- (jint)compareWithId:(id)t1
+               withId:(id)t2 {
+  id<JavaLangComparable> c1 = (id<JavaLangComparable>) cast_check(t1, JavaLangComparable_class_());
+  id<JavaLangComparable> c2 = (id<JavaLangComparable>) cast_check(t2, JavaLangComparable_class_());
+  return [((id<JavaLangComparable>) nil_chk(c1)) compareToWithId:c2];
+}
+
+- (id<JavaUtilComparator>)reversed {
+  return JavaUtilComparator_reversed(self);
+}
+
+- (id<JavaUtilComparator>)thenComparingWithJavaUtilComparator:(id<JavaUtilComparator>)arg0 {
+  return JavaUtilComparator_thenComparingWithJavaUtilComparator_(self, arg0);
+}
+
+- (id<JavaUtilComparator>)thenComparingWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)arg0 {
+  return JavaUtilComparator_thenComparingWithJavaUtilFunctionFunction_(self, arg0);
+}
+
+- (id<JavaUtilComparator>)thenComparingWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)arg0
+                                             withJavaUtilComparator:(id<JavaUtilComparator>)arg1 {
+  return JavaUtilComparator_thenComparingWithJavaUtilFunctionFunction_withJavaUtilComparator_(self, arg0, arg1);
+}
+
+- (id<JavaUtilComparator>)thenComparingDoubleWithJavaUtilFunctionToDoubleFunction:(id<JavaUtilFunctionToDoubleFunction>)arg0 {
+  return JavaUtilComparator_thenComparingDoubleWithJavaUtilFunctionToDoubleFunction_(self, arg0);
+}
+
+- (id<JavaUtilComparator>)thenComparingIntWithJavaUtilFunctionToIntFunction:(id<JavaUtilFunctionToIntFunction>)arg0 {
+  return JavaUtilComparator_thenComparingIntWithJavaUtilFunctionToIntFunction_(self, arg0);
+}
+
+- (id<JavaUtilComparator>)thenComparingLongWithJavaUtilFunctionToLongFunction:(id<JavaUtilFunctionToLongFunction>)arg0 {
+  return JavaUtilComparator_thenComparingLongWithJavaUtilFunctionToLongFunction_(self, arg0);
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
+    { NULL, "I", 0x1, 0, 1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(compareWithId:withId:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "compare", "LNSObject;LNSObject;", "LRxInternalOperatorsOperatorToObservableSortedList;", "Ljava/lang/Object;Ljava/util/Comparator<Ljava/lang/Object;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction = { "DefaultComparableFunction", "rx.internal.operators", ptrTable, methods, NULL, 7, 0x18, 2, 0, 2, -1, -1, 3, -1 };
+  return &_RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction;
+}
+
+@end
+
+void RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction_init(RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction *self) {
+  NSObject_init(self);
+}
+
+RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction *new_RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction_init() {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction, init)
+}
+
+RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction *create_RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction_init() {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction, init)
+}
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOperatorToObservableSortedList_DefaultComparableFunction)

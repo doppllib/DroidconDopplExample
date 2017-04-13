@@ -86,7 +86,7 @@ J2OBJC_TYPE_LITERAL_HEADER(RxInternalOperatorsOperatorScan)
 
 @interface RxInternalOperatorsOperatorScan_InitialProducer : NSObject < RxProducer, RxObserver > {
  @public
-  RxSubscriber *child_;
+  __unsafe_unretained RxSubscriber *child_;
   id<JavaUtilQueue> queue_;
   jboolean emitting_;
   jboolean missed_;
@@ -126,7 +126,6 @@ J2OBJC_TYPE_LITERAL_HEADER(RxInternalOperatorsOperatorScan)
 
 J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOperatorScan_InitialProducer)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorScan_InitialProducer, child_, RxSubscriber *)
 J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorScan_InitialProducer, queue_, id<JavaUtilQueue>)
 J2OBJC_FIELD_SETTER(RxInternalOperatorsOperatorScan_InitialProducer, requested_, JavaUtilConcurrentAtomicAtomicLong *)
 J2OBJC_VOLATILE_FIELD_SETTER(RxInternalOperatorsOperatorScan_InitialProducer, producer_, id<RxProducer>)

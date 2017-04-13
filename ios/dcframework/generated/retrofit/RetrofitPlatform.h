@@ -48,9 +48,9 @@ inline jboolean RetrofitPlatform_get_HAS_RX_JAVA();
 FOUNDATION_EXPORT jboolean RetrofitPlatform_HAS_RX_JAVA;
 J2OBJC_STATIC_FIELD_PRIMITIVE_FINAL(RetrofitPlatform, HAS_RX_JAVA, jboolean)
 
-FOUNDATION_EXPORT RetrofitPlatform *RetrofitPlatform_get();
-
 FOUNDATION_EXPORT void RetrofitPlatform_init(RetrofitPlatform *self);
+
+FOUNDATION_EXPORT RetrofitPlatform *RetrofitPlatform_get();
 
 J2OBJC_TYPE_LITERAL_HEADER(RetrofitPlatform)
 

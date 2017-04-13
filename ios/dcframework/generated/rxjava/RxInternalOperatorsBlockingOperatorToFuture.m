@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/BlockingOperatorToFuture.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxInternalOperatorsBlockingOperatorToFuture.h"
 #include "RxObservable.h"
@@ -30,12 +29,16 @@ __attribute__((unused)) static RxInternalOperatorsBlockingOperatorToFuture *new_
 
 __attribute__((unused)) static RxInternalOperatorsBlockingOperatorToFuture *create_RxInternalOperatorsBlockingOperatorToFuture_init();
 
-@interface RxInternalOperatorsBlockingOperatorToFuture_$1 : RxSubscriber {
+@interface RxInternalOperatorsBlockingOperatorToFuture_1 : RxSubscriber {
  @public
   JavaUtilConcurrentCountDownLatch *val$finished_;
   JavaUtilConcurrentAtomicAtomicReference *val$error_;
   JavaUtilConcurrentAtomicAtomicReference *val$value_;
 }
+
+- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
+             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$1
+             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$2;
 
 - (void)onCompleted;
 
@@ -43,32 +46,29 @@ __attribute__((unused)) static RxInternalOperatorsBlockingOperatorToFuture *crea
 
 - (void)onNextWithId:(id)v;
 
-- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
-             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$1
-             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$2;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsBlockingOperatorToFuture_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsBlockingOperatorToFuture_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsBlockingOperatorToFuture_$1, val$finished_, JavaUtilConcurrentCountDownLatch *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsBlockingOperatorToFuture_$1, val$error_, JavaUtilConcurrentAtomicAtomicReference *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsBlockingOperatorToFuture_$1, val$value_, JavaUtilConcurrentAtomicAtomicReference *)
+__attribute__((unused)) static void RxInternalOperatorsBlockingOperatorToFuture_1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsBlockingOperatorToFuture_1 *self, JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2);
 
-__attribute__((unused)) static void RxInternalOperatorsBlockingOperatorToFuture_$1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsBlockingOperatorToFuture_$1 *self, JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2);
+__attribute__((unused)) static RxInternalOperatorsBlockingOperatorToFuture_1 *new_RxInternalOperatorsBlockingOperatorToFuture_1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsBlockingOperatorToFuture_$1 *new_RxInternalOperatorsBlockingOperatorToFuture_$1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsBlockingOperatorToFuture_1 *create_RxInternalOperatorsBlockingOperatorToFuture_1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2);
 
-__attribute__((unused)) static RxInternalOperatorsBlockingOperatorToFuture_$1 *create_RxInternalOperatorsBlockingOperatorToFuture_$1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2);
-
-@interface RxInternalOperatorsBlockingOperatorToFuture_$2 : NSObject < JavaUtilConcurrentFuture > {
+@interface RxInternalOperatorsBlockingOperatorToFuture_2 : NSObject < JavaUtilConcurrentFuture > {
  @public
-  volatile_jboolean cancelled_;
   JavaUtilConcurrentCountDownLatch *val$finished_;
   id<RxSubscription> val$s_;
   JavaUtilConcurrentAtomicAtomicReference *val$error_;
   JavaUtilConcurrentAtomicAtomicReference *val$value_;
+  volatile_jboolean cancelled_;
 }
+
+- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
+                                      withRxSubscription:(id<RxSubscription>)capture$1
+             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$2
+             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$3;
 
 - (jboolean)cancelWithBoolean:(jboolean)mayInterruptIfRunning;
 
@@ -83,27 +83,17 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit;
 
 - (id)getValue;
 
-- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
-                                      withRxSubscription:(id<RxSubscription>)capture$1
-             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$2
-             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$3;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsBlockingOperatorToFuture_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsBlockingOperatorToFuture_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsBlockingOperatorToFuture_$2, val$finished_, JavaUtilConcurrentCountDownLatch *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsBlockingOperatorToFuture_$2, val$s_, id<RxSubscription>)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsBlockingOperatorToFuture_$2, val$error_, JavaUtilConcurrentAtomicAtomicReference *)
-J2OBJC_FIELD_SETTER(RxInternalOperatorsBlockingOperatorToFuture_$2, val$value_, JavaUtilConcurrentAtomicAtomicReference *)
+__attribute__((unused)) static void RxInternalOperatorsBlockingOperatorToFuture_2_initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsBlockingOperatorToFuture_2 *self, JavaUtilConcurrentCountDownLatch *capture$0, id<RxSubscription> capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2, JavaUtilConcurrentAtomicAtomicReference *capture$3);
 
-__attribute__((unused)) static id RxInternalOperatorsBlockingOperatorToFuture_$2_getValue(RxInternalOperatorsBlockingOperatorToFuture_$2 *self);
+__attribute__((unused)) static RxInternalOperatorsBlockingOperatorToFuture_2 *new_RxInternalOperatorsBlockingOperatorToFuture_2_initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, id<RxSubscription> capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2, JavaUtilConcurrentAtomicAtomicReference *capture$3) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static void RxInternalOperatorsBlockingOperatorToFuture_$2_initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsBlockingOperatorToFuture_$2 *self, JavaUtilConcurrentCountDownLatch *capture$0, id<RxSubscription> capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2, JavaUtilConcurrentAtomicAtomicReference *capture$3);
+__attribute__((unused)) static RxInternalOperatorsBlockingOperatorToFuture_2 *create_RxInternalOperatorsBlockingOperatorToFuture_2_initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, id<RxSubscription> capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2, JavaUtilConcurrentAtomicAtomicReference *capture$3);
 
-__attribute__((unused)) static RxInternalOperatorsBlockingOperatorToFuture_$2 *new_RxInternalOperatorsBlockingOperatorToFuture_$2_initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, id<RxSubscription> capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2, JavaUtilConcurrentAtomicAtomicReference *capture$3) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsBlockingOperatorToFuture_$2 *create_RxInternalOperatorsBlockingOperatorToFuture_$2_initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, id<RxSubscription> capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2, JavaUtilConcurrentAtomicAtomicReference *capture$3);
+__attribute__((unused)) static id RxInternalOperatorsBlockingOperatorToFuture_2_getValue(RxInternalOperatorsBlockingOperatorToFuture_2 *self);
 
 @implementation RxInternalOperatorsBlockingOperatorToFuture
 
@@ -153,13 +143,20 @@ id<JavaUtilConcurrentFuture> RxInternalOperatorsBlockingOperatorToFuture_toFutur
   JavaUtilConcurrentCountDownLatch *finished = create_JavaUtilConcurrentCountDownLatch_initWithInt_(1);
   JavaUtilConcurrentAtomicAtomicReference *value = create_JavaUtilConcurrentAtomicAtomicReference_init();
   JavaUtilConcurrentAtomicAtomicReference *error = create_JavaUtilConcurrentAtomicAtomicReference_init();
-  id<RxSubscription> s = [((RxObservable *) nil_chk([((RxObservable *) nil_chk((that))) single])) subscribeWithRxSubscriber:create_RxInternalOperatorsBlockingOperatorToFuture_$1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(finished, error, value)];
-  return create_RxInternalOperatorsBlockingOperatorToFuture_$2_initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(finished, s, error, value);
+  id<RxSubscription> s = [((RxObservable *) nil_chk([((RxObservable *) nil_chk((that))) single])) subscribeWithRxSubscriber:create_RxInternalOperatorsBlockingOperatorToFuture_1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(finished, error, value)];
+  return create_RxInternalOperatorsBlockingOperatorToFuture_2_initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(finished, s, error, value);
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsBlockingOperatorToFuture)
 
-@implementation RxInternalOperatorsBlockingOperatorToFuture_$1
+@implementation RxInternalOperatorsBlockingOperatorToFuture_1
+
+- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
+             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$1
+             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$2 {
+  RxInternalOperatorsBlockingOperatorToFuture_1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(self, capture$0, capture$1, capture$2);
+  return self;
+}
 
 - (void)onCompleted {
   [((JavaUtilConcurrentCountDownLatch *) nil_chk(val$finished_)) countDown];
@@ -174,15 +171,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsBlockingOperatorToFuture)
   [((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(val$value_)) setWithId:v];
 }
 
-- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
-             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$1
-             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$2 {
-  RxInternalOperatorsBlockingOperatorToFuture_$1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(self, capture$0, capture$1, capture$2);
-  return self;
-}
-
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsBlockingOperatorToFuture_$1 class]);
   RELEASE_(val$finished_);
   RELEASE_(val$error_);
   RELEASE_(val$value_);
@@ -191,46 +180,54 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsBlockingOperatorToFuture)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 2, 3, -1, 4, -1, -1 },
-    { NULL, NULL, 0x0, -1, 5, -1, 6, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(onCompleted);
-  methods[1].selector = @selector(onErrorWithNSException:);
-  methods[2].selector = @selector(onNextWithId:);
-  methods[3].selector = @selector(initWithJavaUtilConcurrentCountDownLatch:withJavaUtilConcurrentAtomicAtomicReference:withJavaUtilConcurrentAtomicAtomicReference:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentCountDownLatch:withJavaUtilConcurrentAtomicAtomicReference:withJavaUtilConcurrentAtomicAtomicReference:);
+  methods[1].selector = @selector(onCompleted);
+  methods[2].selector = @selector(onErrorWithNSException:);
+  methods[3].selector = @selector(onNextWithId:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "val$finished_", "LJavaUtilConcurrentCountDownLatch;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$error_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
-    { "val$value_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 8, -1 },
+    { "val$error_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
+    { "val$value_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 6, -1 },
   };
-  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "LJavaUtilConcurrentCountDownLatch;LJavaUtilConcurrentAtomicAtomicReference;LJavaUtilConcurrentAtomicAtomicReference;", "(Ljava/util/concurrent/CountDownLatch;Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Throwable;>;Ljava/util/concurrent/atomic/AtomicReference<TT;>;)V", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Throwable;>;", "Ljava/util/concurrent/atomic/AtomicReference<TT;>;", "LRxInternalOperatorsBlockingOperatorToFuture;", "toFutureWithRxObservable:", "Lrx/Subscriber<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsBlockingOperatorToFuture_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 9, -1, 10, 11, -1 };
-  return &_RxInternalOperatorsBlockingOperatorToFuture_$1;
+  static const void *ptrTable[] = { "onError", "LNSException;", "onNext", "LNSObject;", "(TT;)V", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Throwable;>;", "Ljava/util/concurrent/atomic/AtomicReference<TT;>;", "LRxInternalOperatorsBlockingOperatorToFuture;", "toFutureWithRxObservable:", "Lrx/Subscriber<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsBlockingOperatorToFuture_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 4, 3, 7, -1, 8, 9, -1 };
+  return &_RxInternalOperatorsBlockingOperatorToFuture_1;
 }
 
 @end
 
-void RxInternalOperatorsBlockingOperatorToFuture_$1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsBlockingOperatorToFuture_$1 *self, JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
+void RxInternalOperatorsBlockingOperatorToFuture_1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsBlockingOperatorToFuture_1 *self, JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
   JreStrongAssign(&self->val$finished_, capture$0);
   JreStrongAssign(&self->val$error_, capture$1);
   JreStrongAssign(&self->val$value_, capture$2);
   RxSubscriber_init(self);
 }
 
-RxInternalOperatorsBlockingOperatorToFuture_$1 *new_RxInternalOperatorsBlockingOperatorToFuture_$1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsBlockingOperatorToFuture_$1, initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2)
+RxInternalOperatorsBlockingOperatorToFuture_1 *new_RxInternalOperatorsBlockingOperatorToFuture_1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsBlockingOperatorToFuture_1, initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2)
 }
 
-RxInternalOperatorsBlockingOperatorToFuture_$1 *create_RxInternalOperatorsBlockingOperatorToFuture_$1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsBlockingOperatorToFuture_$1, initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2)
+RxInternalOperatorsBlockingOperatorToFuture_1 *create_RxInternalOperatorsBlockingOperatorToFuture_1_initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, JavaUtilConcurrentAtomicAtomicReference *capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsBlockingOperatorToFuture_1, initWithJavaUtilConcurrentCountDownLatch_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2)
 }
 
-@implementation RxInternalOperatorsBlockingOperatorToFuture_$2
+@implementation RxInternalOperatorsBlockingOperatorToFuture_2
+
+- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
+                                      withRxSubscription:(id<RxSubscription>)capture$1
+             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$2
+             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$3 {
+  RxInternalOperatorsBlockingOperatorToFuture_2_initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(self, capture$0, capture$1, capture$2, capture$3);
+  return self;
+}
 
 - (jboolean)cancelWithBoolean:(jboolean)mayInterruptIfRunning {
   if ([((JavaUtilConcurrentCountDownLatch *) nil_chk(val$finished_)) getCount] > 0) {
@@ -254,13 +251,13 @@ RxInternalOperatorsBlockingOperatorToFuture_$1 *create_RxInternalOperatorsBlocki
 
 - (id)get {
   [((JavaUtilConcurrentCountDownLatch *) nil_chk(val$finished_)) await];
-  return RxInternalOperatorsBlockingOperatorToFuture_$2_getValue(self);
+  return RxInternalOperatorsBlockingOperatorToFuture_2_getValue(self);
 }
 
 - (id)getWithLong:(jlong)timeout
 withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit {
   if ([((JavaUtilConcurrentCountDownLatch *) nil_chk(val$finished_)) awaitWithLong:timeout withJavaUtilConcurrentTimeUnit:unit]) {
-    return RxInternalOperatorsBlockingOperatorToFuture_$2_getValue(self);
+    return RxInternalOperatorsBlockingOperatorToFuture_2_getValue(self);
   }
   else {
     @throw create_JavaUtilConcurrentTimeoutException_initWithNSString_(JreStrcat("$J$", @"Timed out after ", [((JavaUtilConcurrentTimeUnit *) nil_chk(unit)) toMillisWithLong:timeout], @"ms waiting for underlying Observable."));
@@ -268,15 +265,7 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit {
 }
 
 - (id)getValue {
-  return RxInternalOperatorsBlockingOperatorToFuture_$2_getValue(self);
-}
-
-- (instancetype)initWithJavaUtilConcurrentCountDownLatch:(JavaUtilConcurrentCountDownLatch *)capture$0
-                                      withRxSubscription:(id<RxSubscription>)capture$1
-             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$2
-             withJavaUtilConcurrentAtomicAtomicReference:(JavaUtilConcurrentAtomicAtomicReference *)capture$3 {
-  RxInternalOperatorsBlockingOperatorToFuture_$2_initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(self, capture$0, capture$1, capture$2, capture$3);
-  return self;
+  return RxInternalOperatorsBlockingOperatorToFuture_2_getValue(self);
 }
 
 - (void)dealloc {
@@ -289,39 +278,55 @@ withJavaUtilConcurrentTimeUnit:(JavaUtilConcurrentTimeUnit *)unit {
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "Z", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSObject;", 0x1, -1, -1, 2, 3, -1, -1 },
     { NULL, "LNSObject;", 0x1, 4, 5, 6, 7, -1, -1 },
     { NULL, "LNSObject;", 0x2, -1, -1, 8, 3, -1, -1 },
-    { NULL, NULL, 0x0, -1, 9, -1, 10, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(cancelWithBoolean:);
-  methods[1].selector = @selector(isCancelled);
-  methods[2].selector = @selector(isDone);
-  methods[3].selector = @selector(get);
-  methods[4].selector = @selector(getWithLong:withJavaUtilConcurrentTimeUnit:);
-  methods[5].selector = @selector(getValue);
-  methods[6].selector = @selector(initWithJavaUtilConcurrentCountDownLatch:withRxSubscription:withJavaUtilConcurrentAtomicAtomicReference:withJavaUtilConcurrentAtomicAtomicReference:);
+  methods[0].selector = @selector(initWithJavaUtilConcurrentCountDownLatch:withRxSubscription:withJavaUtilConcurrentAtomicAtomicReference:withJavaUtilConcurrentAtomicAtomicReference:);
+  methods[1].selector = @selector(cancelWithBoolean:);
+  methods[2].selector = @selector(isCancelled);
+  methods[3].selector = @selector(isDone);
+  methods[4].selector = @selector(get);
+  methods[5].selector = @selector(getWithLong:withJavaUtilConcurrentTimeUnit:);
+  methods[6].selector = @selector(getValue);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "cancelled_", "Z", .constantValue.asLong = 0, 0x42, -1, -1, -1, -1 },
     { "val$finished_", "LJavaUtilConcurrentCountDownLatch;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
     { "val$s_", "LRxSubscription;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
-    { "val$error_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 11, -1 },
-    { "val$value_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 12, -1 },
+    { "val$error_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 9, -1 },
+    { "val$value_", "LJavaUtilConcurrentAtomicAtomicReference;", .constantValue.asLong = 0, 0x1012, -1, -1, 10, -1 },
+    { "cancelled_", "Z", .constantValue.asLong = 0, 0x42, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "cancel", "Z", "LJavaLangInterruptedException;LJavaUtilConcurrentExecutionException;", "()TT;", "get", "JLJavaUtilConcurrentTimeUnit;", "LJavaLangInterruptedException;LJavaUtilConcurrentExecutionException;LJavaUtilConcurrentTimeoutException;", "(JLjava/util/concurrent/TimeUnit;)TT;", "LJavaUtilConcurrentExecutionException;", "LJavaUtilConcurrentCountDownLatch;LRxSubscription;LJavaUtilConcurrentAtomicAtomicReference;LJavaUtilConcurrentAtomicAtomicReference;", "(Ljava/util/concurrent/CountDownLatch;Lrx/Subscription;Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Throwable;>;Ljava/util/concurrent/atomic/AtomicReference<TT;>;)V", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Throwable;>;", "Ljava/util/concurrent/atomic/AtomicReference<TT;>;", "LRxInternalOperatorsBlockingOperatorToFuture;", "toFutureWithRxObservable:", "Ljava/lang/Object;Ljava/util/concurrent/Future<TT;>;" };
-  static const J2ObjcClassInfo _RxInternalOperatorsBlockingOperatorToFuture_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 7, 5, 13, -1, 14, 15, -1 };
-  return &_RxInternalOperatorsBlockingOperatorToFuture_$2;
+  static const void *ptrTable[] = { "cancel", "Z", "LJavaLangInterruptedException;LJavaUtilConcurrentExecutionException;", "()TT;", "get", "JLJavaUtilConcurrentTimeUnit;", "LJavaLangInterruptedException;LJavaUtilConcurrentExecutionException;LJavaUtilConcurrentTimeoutException;", "(JLjava/util/concurrent/TimeUnit;)TT;", "LJavaUtilConcurrentExecutionException;", "Ljava/util/concurrent/atomic/AtomicReference<Ljava/lang/Throwable;>;", "Ljava/util/concurrent/atomic/AtomicReference<TT;>;", "LRxInternalOperatorsBlockingOperatorToFuture;", "toFutureWithRxObservable:", "Ljava/lang/Object;Ljava/util/concurrent/Future<TT;>;" };
+  static const J2ObjcClassInfo _RxInternalOperatorsBlockingOperatorToFuture_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 7, 5, 11, -1, 12, 13, -1 };
+  return &_RxInternalOperatorsBlockingOperatorToFuture_2;
 }
 
 @end
 
-id RxInternalOperatorsBlockingOperatorToFuture_$2_getValue(RxInternalOperatorsBlockingOperatorToFuture_$2 *self) {
+void RxInternalOperatorsBlockingOperatorToFuture_2_initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsBlockingOperatorToFuture_2 *self, JavaUtilConcurrentCountDownLatch *capture$0, id<RxSubscription> capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2, JavaUtilConcurrentAtomicAtomicReference *capture$3) {
+  JreStrongAssign(&self->val$finished_, capture$0);
+  JreStrongAssign(&self->val$s_, capture$1);
+  JreStrongAssign(&self->val$error_, capture$2);
+  JreStrongAssign(&self->val$value_, capture$3);
+  NSObject_init(self);
+}
+
+RxInternalOperatorsBlockingOperatorToFuture_2 *new_RxInternalOperatorsBlockingOperatorToFuture_2_initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, id<RxSubscription> capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2, JavaUtilConcurrentAtomicAtomicReference *capture$3) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsBlockingOperatorToFuture_2, initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2, capture$3)
+}
+
+RxInternalOperatorsBlockingOperatorToFuture_2 *create_RxInternalOperatorsBlockingOperatorToFuture_2_initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, id<RxSubscription> capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2, JavaUtilConcurrentAtomicAtomicReference *capture$3) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsBlockingOperatorToFuture_2, initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2, capture$3)
+}
+
+id RxInternalOperatorsBlockingOperatorToFuture_2_getValue(RxInternalOperatorsBlockingOperatorToFuture_2 *self) {
   NSException *throwable = [((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(self->val$error_)) get];
   if (throwable != nil) {
     @throw create_JavaUtilConcurrentExecutionException_initWithNSString_withNSException_(@"Observable onError", throwable);
@@ -332,20 +337,4 @@ id RxInternalOperatorsBlockingOperatorToFuture_$2_getValue(RxInternalOperatorsBl
   else {
     return [((JavaUtilConcurrentAtomicAtomicReference *) nil_chk(self->val$value_)) get];
   }
-}
-
-void RxInternalOperatorsBlockingOperatorToFuture_$2_initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(RxInternalOperatorsBlockingOperatorToFuture_$2 *self, JavaUtilConcurrentCountDownLatch *capture$0, id<RxSubscription> capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2, JavaUtilConcurrentAtomicAtomicReference *capture$3) {
-  JreStrongAssign(&self->val$finished_, capture$0);
-  JreStrongAssign(&self->val$s_, capture$1);
-  JreStrongAssign(&self->val$error_, capture$2);
-  JreStrongAssign(&self->val$value_, capture$3);
-  NSObject_init(self);
-}
-
-RxInternalOperatorsBlockingOperatorToFuture_$2 *new_RxInternalOperatorsBlockingOperatorToFuture_$2_initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, id<RxSubscription> capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2, JavaUtilConcurrentAtomicAtomicReference *capture$3) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsBlockingOperatorToFuture_$2, initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2, capture$3)
-}
-
-RxInternalOperatorsBlockingOperatorToFuture_$2 *create_RxInternalOperatorsBlockingOperatorToFuture_$2_initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_(JavaUtilConcurrentCountDownLatch *capture$0, id<RxSubscription> capture$1, JavaUtilConcurrentAtomicAtomicReference *capture$2, JavaUtilConcurrentAtomicAtomicReference *capture$3) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsBlockingOperatorToFuture_$2, initWithJavaUtilConcurrentCountDownLatch_withRxSubscription_withJavaUtilConcurrentAtomicAtomicReference_withJavaUtilConcurrentAtomicAtomicReference_, capture$0, capture$1, capture$2, capture$3)
 }

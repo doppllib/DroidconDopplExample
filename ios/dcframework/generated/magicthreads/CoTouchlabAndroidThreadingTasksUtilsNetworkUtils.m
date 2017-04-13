@@ -9,10 +9,6 @@
 
 @implementation CoTouchlabAndroidThreadingTasksUtilsNetworkUtils
 
-+ (jboolean)isOnlineWithAndroidContentContext:(AndroidContentContext *)context {
-  return CoTouchlabAndroidThreadingTasksUtilsNetworkUtils_isOnlineWithAndroidContentContext_(context);
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   CoTouchlabAndroidThreadingTasksUtilsNetworkUtils_init(self);
@@ -20,15 +16,19 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
++ (jboolean)isOnlineWithAndroidContentContext:(AndroidContentContext *)context {
+  return CoTouchlabAndroidThreadingTasksUtilsNetworkUtils_isOnlineWithAndroidContentContext_(context);
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
-    { NULL, "Z", 0x109, 0, 1, -1, -1, -1, -1 },
     { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
+    { NULL, "Z", 0x109, 0, 1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(isOnlineWithAndroidContentContext:);
-  methods[1].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(isOnlineWithAndroidContentContext:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "isOnline", "LAndroidContentContext;" };
   static const J2ObjcClassInfo _CoTouchlabAndroidThreadingTasksUtilsNetworkUtils = { "NetworkUtils", "co.touchlab.android.threading.tasks.utils", ptrTable, methods, NULL, 7, 0x1, 2, 0, -1, -1, -1, -1, -1 };
@@ -36,11 +36,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 @end
-
-jboolean CoTouchlabAndroidThreadingTasksUtilsNetworkUtils_isOnlineWithAndroidContentContext_(AndroidContentContext *context) {
-  CoTouchlabAndroidThreadingTasksUtilsNetworkUtils_initialize();
-  return true;
-}
 
 void CoTouchlabAndroidThreadingTasksUtilsNetworkUtils_init(CoTouchlabAndroidThreadingTasksUtilsNetworkUtils *self) {
   NSObject_init(self);
@@ -52,6 +47,11 @@ CoTouchlabAndroidThreadingTasksUtilsNetworkUtils *new_CoTouchlabAndroidThreading
 
 CoTouchlabAndroidThreadingTasksUtilsNetworkUtils *create_CoTouchlabAndroidThreadingTasksUtilsNetworkUtils_init() {
   J2OBJC_CREATE_IMPL(CoTouchlabAndroidThreadingTasksUtilsNetworkUtils, init)
+}
+
+jboolean CoTouchlabAndroidThreadingTasksUtilsNetworkUtils_isOnlineWithAndroidContentContext_(AndroidContentContext *context) {
+  CoTouchlabAndroidThreadingTasksUtilsNetworkUtils_initialize();
+  return true;
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(CoTouchlabAndroidThreadingTasksUtilsNetworkUtils)

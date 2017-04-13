@@ -3,7 +3,6 @@
 //  source: /Users/kgalligan/devel-doppl/RxJava/src/main/java/rx/internal/operators/OnSubscribeAmb.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "RxFunctionsAction0.h"
 #include "RxInternalOperatorsOnSubscribeAmb.h"
@@ -53,47 +52,43 @@ __attribute__((unused)) static void RxInternalOperatorsOnSubscribeAmb_AmbSubscri
 
 __attribute__((unused)) static jboolean RxInternalOperatorsOnSubscribeAmb_AmbSubscriber_isSelected(RxInternalOperatorsOnSubscribeAmb_AmbSubscriber *self);
 
-@interface RxInternalOperatorsOnSubscribeAmb_$1 : NSObject < RxFunctionsAction0 > {
+@interface RxInternalOperatorsOnSubscribeAmb_1 : NSObject < RxFunctionsAction0 > {
  @public
   RxInternalOperatorsOnSubscribeAmb_Selection *val$selection_;
 }
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeAmb_Selection:(RxInternalOperatorsOnSubscribeAmb_Selection *)capture$0;
 
 - (void)call;
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeAmb_Selection:(RxInternalOperatorsOnSubscribeAmb_Selection *)capture$0;
-
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeAmb_$1)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeAmb_1)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeAmb_$1, val$selection_, RxInternalOperatorsOnSubscribeAmb_Selection *)
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeAmb_1_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_1 *self, RxInternalOperatorsOnSubscribeAmb_Selection *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeAmb_$1_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_$1 *self, RxInternalOperatorsOnSubscribeAmb_Selection *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeAmb_1 *new_RxInternalOperatorsOnSubscribeAmb_1_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_Selection *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeAmb_$1 *new_RxInternalOperatorsOnSubscribeAmb_$1_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_Selection *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeAmb_1 *create_RxInternalOperatorsOnSubscribeAmb_1_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_Selection *capture$0);
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeAmb_$1 *create_RxInternalOperatorsOnSubscribeAmb_$1_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_Selection *capture$0);
-
-@interface RxInternalOperatorsOnSubscribeAmb_$2 : NSObject < RxProducer > {
+@interface RxInternalOperatorsOnSubscribeAmb_2 : NSObject < RxProducer > {
  @public
   RxInternalOperatorsOnSubscribeAmb_Selection *val$selection_;
 }
 
-- (void)requestWithLong:(jlong)n;
-
 - (instancetype)initWithRxInternalOperatorsOnSubscribeAmb_Selection:(RxInternalOperatorsOnSubscribeAmb_Selection *)capture$0;
+
+- (void)requestWithLong:(jlong)n;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeAmb_$2)
+J2OBJC_EMPTY_STATIC_INIT(RxInternalOperatorsOnSubscribeAmb_2)
 
-J2OBJC_FIELD_SETTER(RxInternalOperatorsOnSubscribeAmb_$2, val$selection_, RxInternalOperatorsOnSubscribeAmb_Selection *)
+__attribute__((unused)) static void RxInternalOperatorsOnSubscribeAmb_2_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_2 *self, RxInternalOperatorsOnSubscribeAmb_Selection *capture$0);
 
-__attribute__((unused)) static void RxInternalOperatorsOnSubscribeAmb_$2_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_$2 *self, RxInternalOperatorsOnSubscribeAmb_Selection *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeAmb_2 *new_RxInternalOperatorsOnSubscribeAmb_2_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_Selection *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeAmb_$2 *new_RxInternalOperatorsOnSubscribeAmb_$2_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_Selection *capture$0) NS_RETURNS_RETAINED;
-
-__attribute__((unused)) static RxInternalOperatorsOnSubscribeAmb_$2 *create_RxInternalOperatorsOnSubscribeAmb_$2_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_Selection *capture$0);
+__attribute__((unused)) static RxInternalOperatorsOnSubscribeAmb_2 *create_RxInternalOperatorsOnSubscribeAmb_2_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_Selection *capture$0);
 
 @implementation RxInternalOperatorsOnSubscribeAmb
 
@@ -176,7 +171,7 @@ __attribute__((unused)) static RxInternalOperatorsOnSubscribeAmb_$2 *create_RxIn
 
 - (void)callWithId:(RxSubscriber *)subscriber {
   RxInternalOperatorsOnSubscribeAmb_Selection *selection = create_RxInternalOperatorsOnSubscribeAmb_Selection_init();
-  [((RxSubscriber *) nil_chk(subscriber)) addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOnSubscribeAmb_$1_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(selection))];
+  [((RxSubscriber *) nil_chk(subscriber)) addWithRxSubscription:RxSubscriptionsSubscriptions_createWithRxFunctionsAction0_(create_RxInternalOperatorsOnSubscribeAmb_1_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(selection))];
   for (RxObservable * __strong source in nil_chk(sources_)) {
     if ([subscriber isUnsubscribed]) {
       break;
@@ -193,7 +188,7 @@ __attribute__((unused)) static RxInternalOperatorsOnSubscribeAmb_$2 *create_RxIn
   if ([subscriber isUnsubscribed]) {
     RxInternalOperatorsOnSubscribeAmb_unsubscribeAmbSubscribersWithJavaUtilCollection_(selection->ambSubscribers_);
   }
-  [subscriber setProducerWithRxProducer:create_RxInternalOperatorsOnSubscribeAmb_$2_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(selection)];
+  [subscriber setProducerWithRxProducer:create_RxInternalOperatorsOnSubscribeAmb_2_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(selection)];
 }
 
 + (void)unsubscribeAmbSubscribersWithJavaUtilCollection:(id<JavaUtilCollection>)ambSubscribers {
@@ -409,7 +404,6 @@ withRxInternalOperatorsOnSubscribeAmb_Selection:(RxInternalOperatorsOnSubscribeA
 }
 
 - (void)dealloc {
-  JreCheckFinalize(self, [RxInternalOperatorsOnSubscribeAmb_AmbSubscriber class]);
   RELEASE_(subscriber_AmbSubscriber_);
   RELEASE_(selection_);
   [super dealloc];
@@ -489,6 +483,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeAmb_AmbSubscriber
 
 @implementation RxInternalOperatorsOnSubscribeAmb_Selection
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  RxInternalOperatorsOnSubscribeAmb_Selection_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (void)unsubscribeLosers {
   RxInternalOperatorsOnSubscribeAmb_AmbSubscriber *winner = [self get];
   if (winner != nil) {
@@ -505,13 +506,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeAmb_AmbSubscriber
   [ambSubscribers_ clear];
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  RxInternalOperatorsOnSubscribeAmb_Selection_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(ambSubscribers_);
   [super dealloc];
@@ -519,15 +513,15 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, 2, -1, -1 },
-    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(unsubscribeLosers);
-  methods[1].selector = @selector(unsubscribeOthersWithRxInternalOperatorsOnSubscribeAmb_AmbSubscriber:);
-  methods[2].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(unsubscribeLosers);
+  methods[2].selector = @selector(unsubscribeOthersWithRxInternalOperatorsOnSubscribeAmb_AmbSubscriber:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "ambSubscribers_", "LJavaUtilCollection;", .constantValue.asLong = 0, 0x10, -1, -1, 3, -1 },
@@ -554,7 +548,12 @@ RxInternalOperatorsOnSubscribeAmb_Selection *create_RxInternalOperatorsOnSubscri
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeAmb_Selection)
 
-@implementation RxInternalOperatorsOnSubscribeAmb_$1
+@implementation RxInternalOperatorsOnSubscribeAmb_1
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeAmb_Selection:(RxInternalOperatorsOnSubscribeAmb_Selection *)capture$0 {
+  RxInternalOperatorsOnSubscribeAmb_1_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(self, capture$0);
+  return self;
+}
 
 - (void)call {
   RxInternalOperatorsOnSubscribeAmb_AmbSubscriber *c;
@@ -564,11 +563,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeAmb_Selection)
   RxInternalOperatorsOnSubscribeAmb_unsubscribeAmbSubscribersWithJavaUtilCollection_(val$selection_->ambSubscribers_);
 }
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeAmb_Selection:(RxInternalOperatorsOnSubscribeAmb_Selection *)capture$0 {
-  RxInternalOperatorsOnSubscribeAmb_$1_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$selection_);
   [super dealloc];
@@ -576,38 +570,43 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RxInternalOperatorsOnSubscribeAmb_Selection)
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, -1, -1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(call);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOnSubscribeAmb_Selection:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOnSubscribeAmb_Selection:);
+  methods[1].selector = @selector(call);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$selection_", "LRxInternalOperatorsOnSubscribeAmb_Selection;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
+    { "val$selection_", "LRxInternalOperatorsOnSubscribeAmb_Selection;", .constantValue.asLong = 0, 0x1012, -1, -1, 0, -1 },
   };
-  static const void *ptrTable[] = { "LRxInternalOperatorsOnSubscribeAmb_Selection;", "(Lrx/internal/operators/OnSubscribeAmb$Selection<TT;>;)V", "Lrx/internal/operators/OnSubscribeAmb$Selection<TT;>;", "LRxInternalOperatorsOnSubscribeAmb;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeAmb_$1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
-  return &_RxInternalOperatorsOnSubscribeAmb_$1;
+  static const void *ptrTable[] = { "Lrx/internal/operators/OnSubscribeAmb$Selection<TT;>;", "LRxInternalOperatorsOnSubscribeAmb;", "callWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeAmb_1 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 1, -1, 2, -1, -1 };
+  return &_RxInternalOperatorsOnSubscribeAmb_1;
 }
 
 @end
 
-void RxInternalOperatorsOnSubscribeAmb_$1_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_$1 *self, RxInternalOperatorsOnSubscribeAmb_Selection *capture$0) {
+void RxInternalOperatorsOnSubscribeAmb_1_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_1 *self, RxInternalOperatorsOnSubscribeAmb_Selection *capture$0) {
   JreStrongAssign(&self->val$selection_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOnSubscribeAmb_$1 *new_RxInternalOperatorsOnSubscribeAmb_$1_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_Selection *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeAmb_$1, initWithRxInternalOperatorsOnSubscribeAmb_Selection_, capture$0)
+RxInternalOperatorsOnSubscribeAmb_1 *new_RxInternalOperatorsOnSubscribeAmb_1_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_Selection *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeAmb_1, initWithRxInternalOperatorsOnSubscribeAmb_Selection_, capture$0)
 }
 
-RxInternalOperatorsOnSubscribeAmb_$1 *create_RxInternalOperatorsOnSubscribeAmb_$1_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_Selection *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeAmb_$1, initWithRxInternalOperatorsOnSubscribeAmb_Selection_, capture$0)
+RxInternalOperatorsOnSubscribeAmb_1 *create_RxInternalOperatorsOnSubscribeAmb_1_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_Selection *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeAmb_1, initWithRxInternalOperatorsOnSubscribeAmb_Selection_, capture$0)
 }
 
-@implementation RxInternalOperatorsOnSubscribeAmb_$2
+@implementation RxInternalOperatorsOnSubscribeAmb_2
+
+- (instancetype)initWithRxInternalOperatorsOnSubscribeAmb_Selection:(RxInternalOperatorsOnSubscribeAmb_Selection *)capture$0 {
+  RxInternalOperatorsOnSubscribeAmb_2_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(self, capture$0);
+  return self;
+}
 
 - (void)requestWithLong:(jlong)n {
   RxInternalOperatorsOnSubscribeAmb_AmbSubscriber *c;
@@ -629,11 +628,6 @@ RxInternalOperatorsOnSubscribeAmb_$1 *create_RxInternalOperatorsOnSubscribeAmb_$
   }
 }
 
-- (instancetype)initWithRxInternalOperatorsOnSubscribeAmb_Selection:(RxInternalOperatorsOnSubscribeAmb_Selection *)capture$0 {
-  RxInternalOperatorsOnSubscribeAmb_$2_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(self, capture$0);
-  return self;
-}
-
 - (void)dealloc {
   RELEASE_(val$selection_);
   [super dealloc];
@@ -641,33 +635,33 @@ RxInternalOperatorsOnSubscribeAmb_$1 *create_RxInternalOperatorsOnSubscribeAmb_$
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, -1, -1, -1, -1, -1 },
     { NULL, "V", 0x1, 0, 1, -1, -1, -1, -1 },
-    { NULL, NULL, 0x0, -1, 2, -1, 3, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(requestWithLong:);
-  methods[1].selector = @selector(initWithRxInternalOperatorsOnSubscribeAmb_Selection:);
+  methods[0].selector = @selector(initWithRxInternalOperatorsOnSubscribeAmb_Selection:);
+  methods[1].selector = @selector(requestWithLong:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "val$selection_", "LRxInternalOperatorsOnSubscribeAmb_Selection;", .constantValue.asLong = 0, 0x1012, -1, -1, 4, -1 },
+    { "val$selection_", "LRxInternalOperatorsOnSubscribeAmb_Selection;", .constantValue.asLong = 0, 0x1012, -1, -1, 2, -1 },
   };
-  static const void *ptrTable[] = { "request", "J", "LRxInternalOperatorsOnSubscribeAmb_Selection;", "(Lrx/internal/operators/OnSubscribeAmb$Selection<TT;>;)V", "Lrx/internal/operators/OnSubscribeAmb$Selection<TT;>;", "LRxInternalOperatorsOnSubscribeAmb;", "callWithId:" };
-  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeAmb_$2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 5, -1, 6, -1, -1 };
-  return &_RxInternalOperatorsOnSubscribeAmb_$2;
+  static const void *ptrTable[] = { "request", "J", "Lrx/internal/operators/OnSubscribeAmb$Selection<TT;>;", "LRxInternalOperatorsOnSubscribeAmb;", "callWithId:" };
+  static const J2ObjcClassInfo _RxInternalOperatorsOnSubscribeAmb_2 = { "", "rx.internal.operators", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, -1, -1 };
+  return &_RxInternalOperatorsOnSubscribeAmb_2;
 }
 
 @end
 
-void RxInternalOperatorsOnSubscribeAmb_$2_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_$2 *self, RxInternalOperatorsOnSubscribeAmb_Selection *capture$0) {
+void RxInternalOperatorsOnSubscribeAmb_2_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_2 *self, RxInternalOperatorsOnSubscribeAmb_Selection *capture$0) {
   JreStrongAssign(&self->val$selection_, capture$0);
   NSObject_init(self);
 }
 
-RxInternalOperatorsOnSubscribeAmb_$2 *new_RxInternalOperatorsOnSubscribeAmb_$2_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_Selection *capture$0) {
-  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeAmb_$2, initWithRxInternalOperatorsOnSubscribeAmb_Selection_, capture$0)
+RxInternalOperatorsOnSubscribeAmb_2 *new_RxInternalOperatorsOnSubscribeAmb_2_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_Selection *capture$0) {
+  J2OBJC_NEW_IMPL(RxInternalOperatorsOnSubscribeAmb_2, initWithRxInternalOperatorsOnSubscribeAmb_Selection_, capture$0)
 }
 
-RxInternalOperatorsOnSubscribeAmb_$2 *create_RxInternalOperatorsOnSubscribeAmb_$2_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_Selection *capture$0) {
-  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeAmb_$2, initWithRxInternalOperatorsOnSubscribeAmb_Selection_, capture$0)
+RxInternalOperatorsOnSubscribeAmb_2 *create_RxInternalOperatorsOnSubscribeAmb_2_initWithRxInternalOperatorsOnSubscribeAmb_Selection_(RxInternalOperatorsOnSubscribeAmb_Selection *capture$0) {
+  J2OBJC_CREATE_IMPL(RxInternalOperatorsOnSubscribeAmb_2, initWithRxInternalOperatorsOnSubscribeAmb_Selection_, capture$0)
 }

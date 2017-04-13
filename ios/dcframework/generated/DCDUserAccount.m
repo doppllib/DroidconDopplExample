@@ -58,6 +58,13 @@ NSString *DCDUserAccount_HTTPS_S3_AMAZONAWS_COM_DROIDCONIMAGES = @"https://s3.am
 
 @implementation DCDUserAccount
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  DCDUserAccount_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (JavaLangLong *)getId {
   return id__;
 }
@@ -130,7 +137,7 @@ NSString *DCDUserAccount_HTTPS_S3_AMAZONAWS_COM_DROIDCONIMAGES = @"https://s3.am
 
 - (jboolean)isEqual:(id)o {
   if (self == o) return true;
-  if (o == nil || [self java_getClass] != (id) [o java_getClass]) return false;
+  if (o == nil || [self java_getClass] != [o java_getClass]) return false;
   DCDUserAccount *that = (DCDUserAccount *) cast_chk(o, [DCDUserAccount class]);
   if (avatarKey_ != nil ? ![avatarKey_ isEqual:that->avatarKey_] : that->avatarKey_ != nil) return false;
   if (company_ != nil ? ![company_ isEqual:that->company_] : that->company_ != nil) return false;
@@ -174,13 +181,6 @@ NSString *DCDUserAccount_HTTPS_S3_AMAZONAWS_COM_DROIDCONIMAGES = @"https://s3.am
   return DCDUserAccount_findByCodeWithDCDDatabaseHelper_withNSString_(databaseHelper, code);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  DCDUserAccount_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 - (void)dealloc {
   RELEASE_(id__);
   RELEASE_(name_);
@@ -202,6 +202,7 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LJavaLangLong;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
     { NULL, "LNSString;", 0x1, -1, -1, -1, -1, -1, -1 },
@@ -222,31 +223,30 @@ J2OBJC_IGNORE_DESIGNATED_END
     { NULL, "Z", 0x1, 0, 1, -1, -1, -1, -1 },
     { NULL, "I", 0x1, 2, -1, -1, -1, -1, -1 },
     { NULL, "LDCDUserAccount;", 0x9, 3, 4, 5, -1, -1, -1 },
-    { NULL, NULL, 0x1, -1, -1, -1, -1, -1, -1 },
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
-  methods[0].selector = @selector(getId);
-  methods[1].selector = @selector(getName);
-  methods[2].selector = @selector(getProfile);
-  methods[3].selector = @selector(getUserCode);
-  methods[4].selector = @selector(getCompany);
-  methods[5].selector = @selector(getFacebook);
-  methods[6].selector = @selector(getTwitter);
-  methods[7].selector = @selector(getLinkedIn);
-  methods[8].selector = @selector(getWebsite);
-  methods[9].selector = @selector(isFollowing);
-  methods[10].selector = @selector(getEmail);
-  methods[11].selector = @selector(getgPlus);
-  methods[12].selector = @selector(getPhone);
-  methods[13].selector = @selector(getCoverKey);
-  methods[14].selector = @selector(getEmailPublic);
-  methods[15].selector = @selector(getAvatarKey);
-  methods[16].selector = @selector(avatarImageUrl);
-  methods[17].selector = @selector(isEqual:);
-  methods[18].selector = @selector(hash);
-  methods[19].selector = @selector(findByCodeWithDCDDatabaseHelper:withNSString:);
-  methods[20].selector = @selector(init);
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(getId);
+  methods[2].selector = @selector(getName);
+  methods[3].selector = @selector(getProfile);
+  methods[4].selector = @selector(getUserCode);
+  methods[5].selector = @selector(getCompany);
+  methods[6].selector = @selector(getFacebook);
+  methods[7].selector = @selector(getTwitter);
+  methods[8].selector = @selector(getLinkedIn);
+  methods[9].selector = @selector(getWebsite);
+  methods[10].selector = @selector(isFollowing);
+  methods[11].selector = @selector(getEmail);
+  methods[12].selector = @selector(getgPlus);
+  methods[13].selector = @selector(getPhone);
+  methods[14].selector = @selector(getCoverKey);
+  methods[15].selector = @selector(getEmailPublic);
+  methods[16].selector = @selector(getAvatarKey);
+  methods[17].selector = @selector(avatarImageUrl);
+  methods[18].selector = @selector(isEqual:);
+  methods[19].selector = @selector(hash);
+  methods[20].selector = @selector(findByCodeWithDCDDatabaseHelper:withNSString:);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
     { "HTTPS_S3_AMAZONAWS_COM_DROIDCONIMAGES", "LNSString;", .constantValue.asLong = 0, 0x19, -1, 6, -1, -1 },
@@ -274,13 +274,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 @end
 
-DCDUserAccount *DCDUserAccount_findByCodeWithDCDDatabaseHelper_withNSString_(DCDDatabaseHelper *databaseHelper, NSString *code) {
-  DCDUserAccount_initialize();
-  id<CoTouchlabSqueakyDaoDao> dao = [((DCDDatabaseHelper *) nil_chk(databaseHelper)) getUserAccountDao];
-  id<JavaUtilList> list = [((id<CoTouchlabSqueakyDaoDao_QueryModifiers>) nil_chk([((CoTouchlabSqueakyStmtWhere *) nil_chk([create_CoTouchlabSqueakyStmtWhere_initWithCoTouchlabSqueakyDaoDao_(dao) eqWithNSString:@"userCode" withId:code])) query])) list];
-  return [((id<JavaUtilList>) nil_chk(list)) size] == 0 ? nil : [list getWithInt:0];
-}
-
 void DCDUserAccount_init(DCDUserAccount *self) {
   NSObject_init(self);
 }
@@ -291,6 +284,13 @@ DCDUserAccount *new_DCDUserAccount_init() {
 
 DCDUserAccount *create_DCDUserAccount_init() {
   J2OBJC_CREATE_IMPL(DCDUserAccount, init)
+}
+
+DCDUserAccount *DCDUserAccount_findByCodeWithDCDDatabaseHelper_withNSString_(DCDDatabaseHelper *databaseHelper, NSString *code) {
+  DCDUserAccount_initialize();
+  id<CoTouchlabSqueakyDaoDao> dao = [((DCDDatabaseHelper *) nil_chk(databaseHelper)) getUserAccountDao];
+  id<JavaUtilList> list = [((id<CoTouchlabSqueakyDaoDao_QueryModifiers>) nil_chk([((CoTouchlabSqueakyStmtWhere *) nil_chk([create_CoTouchlabSqueakyStmtWhere_initWithCoTouchlabSqueakyDaoDao_(dao) eqWithNSString:@"userCode" withId:code])) query])) list];
+  return [((id<JavaUtilList>) nil_chk(list)) size] == 0 ? nil : [list getWithInt:0];
 }
 
 IOSObjectArray *DCDUserAccount__Annotations$0() {

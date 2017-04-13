@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_DCDEvent
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (DCDEvent_) && (INCLUDE_ALL_DCDEvent || defined(INCLUDE_DCDEvent))
 #define DCDEvent_
 
@@ -120,4 +125,8 @@ J2OBJC_TYPE_LITERAL_HEADER(DCDEvent)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_DCDEvent")

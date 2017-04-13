@@ -47,6 +47,7 @@ J2OBJC_TYPE_LITERAL_HEADER(RxInternalOperatorsBlockingOperatorToIterator)
 #include "java/util/Iterator.h"
 
 @class RxNotification;
+@protocol JavaUtilFunctionConsumer;
 
 @interface RxInternalOperatorsBlockingOperatorToIterator_SubscriberIterator : RxSubscriber < JavaUtilIterator >
 
