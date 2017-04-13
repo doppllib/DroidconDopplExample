@@ -7,11 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import co.touchlab.android.threading.eventbus.EventBusExt
 import co.touchlab.droidconandroid.R
-import co.touchlab.droidconandroid.data.Block
-import co.touchlab.droidconandroid.data.Event
-import co.touchlab.droidconandroid.data.Track
-import co.touchlab.droidconandroid.presenter.ConferenceDataPresenter
-import co.touchlab.droidconandroid.presenter.ScheduleBlockHour
+import co.touchlab.droidconandroid.shared.data.Block
+import co.touchlab.droidconandroid.shared.data.Event
+import co.touchlab.droidconandroid.shared.data.Track
+import co.touchlab.droidconandroid.shared.presenter.ConferenceDataPresenter
+import co.touchlab.droidconandroid.shared.presenter.ScheduleBlockHour
 import kotlinx.android.synthetic.main.item_event.view.*
 import kotlinx.android.synthetic.main.item_notification.view.*
 import java.util.*

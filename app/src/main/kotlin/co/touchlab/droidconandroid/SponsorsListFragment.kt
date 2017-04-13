@@ -13,10 +13,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import co.touchlab.android.threading.eventbus.EventBusExt
 import co.touchlab.android.threading.tasks.TaskQueue
-import co.touchlab.droidconandroid.network.SponsorsResult
-import co.touchlab.droidconandroid.presenter.AppManager
-import co.touchlab.droidconandroid.tasks.SponsorsTask
-import co.touchlab.droidconandroid.utils.AnalyticsEvents
+import co.touchlab.droidconandroid.shared.network.SponsorsResult
+import co.touchlab.droidconandroid.shared.presenter.AppManager
+import co.touchlab.droidconandroid.shared.tasks.SponsorsTask
+import co.touchlab.droidconandroid.shared.utils.AnalyticsEvents
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_sponsors_list.*
 import java.util.*

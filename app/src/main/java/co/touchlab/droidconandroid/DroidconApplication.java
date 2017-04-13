@@ -5,15 +5,15 @@ import android.app.Application;
 import android.content.Context;
 import android.util.Log;
 
-import co.touchlab.droidconandroid.utils.IOUtils;
+import co.touchlab.droidconandroid.shared.utils.IOUtils;
 
 import java.io.IOException;
 
 import co.touchlab.android.threading.eventbus.EventBusExt;
 import co.touchlab.droidconandroid.alerts.AlertManagerKt;
-import co.touchlab.droidconandroid.presenter.AppManager;
-import co.touchlab.droidconandroid.presenter.PlatformClient;
-import co.touchlab.droidconandroid.tasks.UpdateAlertsTask;
+import co.touchlab.droidconandroid.shared.presenter.AppManager;
+import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
+import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsTask;
 import retrofit.client.Client;
 
 /**
@@ -44,7 +44,7 @@ public class DroidconApplication extends Application
         Log.i(DroidconApplication.class.getSimpleName(), "currentProcessName: "+ currentProcessName );
         if(!currentProcessName.contains("background_crash"))
         {
-            PlatformClient platformClient = new co.touchlab.droidconandroid.presenter.PlatformClient()
+            PlatformClient platformClient = new co.touchlab.droidconandroid.shared.presenter.PlatformClient()
             {
                 @Override
                 public Client makeClient()

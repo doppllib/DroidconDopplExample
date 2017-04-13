@@ -11,7 +11,7 @@ import android.support.v4.app.FragmentStatePagerAdapter
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
-import co.touchlab.droidconandroid.tasks.SponsorsTask
+import co.touchlab.droidconandroid.shared.tasks.SponsorsTask
 import kotlinx.android.synthetic.main.activity_sponsors.*
 
 class SponsorsActivity : AppCompatActivity() {

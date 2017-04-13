@@ -8,8 +8,8 @@ import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import co.touchlab.droidconandroid.data.UserAccount
-import co.touchlab.droidconandroid.presenter.EventDetailPresenter
+import co.touchlab.droidconandroid.shared.data.UserAccount
+import co.touchlab.droidconandroid.shared.presenter.EventDetailPresenter
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_event_header.view.*
 import kotlinx.android.synthetic.main.item_event_info.view.*

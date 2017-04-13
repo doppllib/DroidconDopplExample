@@ -17,10 +17,10 @@ import android.view.View
 import android.view.ViewGroup
 import co.touchlab.android.threading.eventbus.EventBusExt
 import co.touchlab.android.threading.tasks.TaskQueue
-import co.touchlab.droidconandroid.data.UserAccount
-import co.touchlab.droidconandroid.tasks.AbstractFindUserTask
-import co.touchlab.droidconandroid.tasks.FindUserTask
-import co.touchlab.droidconandroid.utils.EmojiUtil
+import co.touchlab.droidconandroid.shared.data.UserAccount
+import co.touchlab.droidconandroid.shared.tasks.AbstractFindUserTask
+import co.touchlab.droidconandroid.shared.tasks.FindUserTask
+import co.touchlab.droidconandroid.shared.utils.EmojiUtil
 import co.touchlab.droidconandroid.utils.Toaster
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso

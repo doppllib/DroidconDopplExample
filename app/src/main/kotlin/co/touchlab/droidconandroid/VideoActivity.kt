@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.TextUtils
 import android.widget.Toast
-import co.touchlab.droidconandroid.presenter.VideoPlayerHost
-import co.touchlab.droidconandroid.presenter.VideoPlayerPresenter
+import co.touchlab.droidconandroid.shared.presenter.VideoPlayerHost
+import co.touchlab.droidconandroid.shared.presenter.VideoPlayerPresenter
 import com.longtailvideo.jwplayer.events.listeners.VideoPlayerEvents
 import com.longtailvideo.jwplayer.media.playlists.PlaylistItem
 import kotlinx.android.synthetic.main.activity_video.*

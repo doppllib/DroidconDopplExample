@@ -8,7 +8,7 @@ import android.support.v4.content.ContextCompat
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import android.widget.Toast
-import co.touchlab.droidconandroid.data.AppPrefs
+import co.touchlab.droidconandroid.shared.data.AppPrefs
 import kotlinx.android.synthetic.main.view_slack_dialog.view.*
 
 class SlackHelper {
