@@ -109,7 +109,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[1].selector = @selector(interceptWithRetrofitRequestInterceptor_RequestFacade:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "intercept", "LRetrofitRequestInterceptor_RequestFacade;", "LRetrofitRequestInterceptor;" };
-  static const J2ObjcClassInfo _RetrofitRequestInterceptor_1 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, -1, -1, -1 };
+  static const J2ObjcClassInfo _RetrofitRequestInterceptor_1 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8018, 2, 0, 2, -1, -1, -1, -1 };
   return &_RetrofitRequestInterceptor_1;
 }
 

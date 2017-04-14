@@ -615,17 +615,13 @@ J2OBJC_IGNORE_DESIGNATED_END
   return JavaUtilComparator_thenComparingWithJavaUtilComparator_(self, arg0);
 }
 
-- (id<JavaUtilComparator>)thenComparingWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)arg0 {
-  return JavaUtilComparator_thenComparingWithJavaUtilFunctionFunction_(self, arg0);
-}
-
 - (id<JavaUtilComparator>)thenComparingWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)arg0
                                              withJavaUtilComparator:(id<JavaUtilComparator>)arg1 {
   return JavaUtilComparator_thenComparingWithJavaUtilFunctionFunction_withJavaUtilComparator_(self, arg0, arg1);
 }
 
-- (id<JavaUtilComparator>)thenComparingDoubleWithJavaUtilFunctionToDoubleFunction:(id<JavaUtilFunctionToDoubleFunction>)arg0 {
-  return JavaUtilComparator_thenComparingDoubleWithJavaUtilFunctionToDoubleFunction_(self, arg0);
+- (id<JavaUtilComparator>)thenComparingWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)arg0 {
+  return JavaUtilComparator_thenComparingWithJavaUtilFunctionFunction_(self, arg0);
 }
 
 - (id<JavaUtilComparator>)thenComparingIntWithJavaUtilFunctionToIntFunction:(id<JavaUtilFunctionToIntFunction>)arg0 {
@@ -634,6 +630,10 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<JavaUtilComparator>)thenComparingLongWithJavaUtilFunctionToLongFunction:(id<JavaUtilFunctionToLongFunction>)arg0 {
   return JavaUtilComparator_thenComparingLongWithJavaUtilFunctionToLongFunction_(self, arg0);
+}
+
+- (id<JavaUtilComparator>)thenComparingDoubleWithJavaUtilFunctionToDoubleFunction:(id<JavaUtilFunctionToDoubleFunction>)arg0 {
+  return JavaUtilComparator_thenComparingDoubleWithJavaUtilFunctionToDoubleFunction_(self, arg0);
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -647,7 +647,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[1].selector = @selector(compareWithId:withId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "compare", "LJavaLangComparable;LJavaLangComparable;", "LComGoogleGsonInternalLinkedTreeMap;", "Ljava/lang/Object;Ljava/util/Comparator<Ljava/lang/Comparable;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedTreeMap_1 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, -1, 3, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedTreeMap_1 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8018, 2, 0, 2, -1, -1, 3, -1 };
   return &_ComGoogleGsonInternalLinkedTreeMap_1;
 }
 
@@ -1014,7 +1014,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalLinkedTreeMap_EntrySet)
   methods[1].selector = @selector(next);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "()Ljava/util/Map$Entry<TK;TV;>;", "LComGoogleGsonInternalLinkedTreeMap_EntrySet;", "iterator", "Lcom/google/gson/internal/LinkedTreeMap$LinkedTreeMapIterator<Ljava/util/Map$Entry<TK;TV;>;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedTreeMap_EntrySet_1 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedTreeMap_EntrySet_1 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8018, 2, 0, 1, -1, 2, 3, -1 };
   return &_ComGoogleGsonInternalLinkedTreeMap_EntrySet_1;
 }
 
@@ -1133,7 +1133,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalLinkedTreeMap_KeySet)
   methods[1].selector = @selector(next);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "()TK;", "LComGoogleGsonInternalLinkedTreeMap_KeySet;", "iterator", "Lcom/google/gson/internal/LinkedTreeMap$LinkedTreeMapIterator<TK;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedTreeMap_KeySet_1 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedTreeMap_KeySet_1 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8018, 2, 0, 1, -1, 2, 3, -1 };
   return &_ComGoogleGsonInternalLinkedTreeMap_KeySet_1;
 }
 

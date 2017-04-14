@@ -171,7 +171,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitCallbackRunnable)
     { "val$wrapper_", "LRetrofitResponseWrapper;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "Lretrofit/CallbackRunnable<TT;>;", "LRetrofitCallbackRunnable;", "run" };
-  static const J2ObjcClassInfo _RetrofitCallbackRunnable_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
+  static const J2ObjcClassInfo _RetrofitCallbackRunnable_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8018, 2, 2, 1, -1, 2, -1, -1 };
   return &_RetrofitCallbackRunnable_1;
 }
 
@@ -224,7 +224,7 @@ RetrofitCallbackRunnable_1 *create_RetrofitCallbackRunnable_1_initWithRetrofitCa
     { "val$handled_", "LRetrofitRetrofitError;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "Lretrofit/CallbackRunnable<TT;>;", "LRetrofitCallbackRunnable;", "run" };
-  static const J2ObjcClassInfo _RetrofitCallbackRunnable_2 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 2, 1, -1, 2, -1, -1 };
+  static const J2ObjcClassInfo _RetrofitCallbackRunnable_2 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8018, 2, 2, 1, -1, 2, -1, -1 };
   return &_RetrofitCallbackRunnable_2;
 }
 

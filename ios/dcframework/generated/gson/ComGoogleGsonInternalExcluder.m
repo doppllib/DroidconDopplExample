@@ -458,7 +458,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalExcluder)
     { "delegate_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x2, -1, -1, 9, -1 },
   };
   static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonReader;)TT;", "write", "LComGoogleGsonStreamJsonWriter;LNSObject;", "(Lcom/google/gson/stream/JsonWriter;TT;)V", "()Lcom/google/gson/TypeAdapter<TT;>;", "Lcom/google/gson/reflect/TypeToken<TT;>;", "Lcom/google/gson/TypeAdapter<TT;>;", "LComGoogleGsonInternalExcluder;", "createWithComGoogleGsonGson:withComGoogleGsonReflectTypeToken:" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalExcluder_1 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 4, 6, 10, -1, 11, 9, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalExcluder_1 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8018, 4, 6, 10, -1, 11, 9, -1 };
   return &_ComGoogleGsonInternalExcluder_1;
 }
 

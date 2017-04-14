@@ -212,66 +212,6 @@
 		630AAF221DC7C42E009A4050 /* SQLitePreparedStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA89F1DC7C429009A4050 /* SQLitePreparedStatement.m */; };
 		630AAF231DC7C42E009A4050 /* CoTouchlabDroidconandroidCrashReport.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8AC1DC7C429009A4050 /* CoTouchlabDroidconandroidCrashReport.h */; };
 		630AAF241DC7C42E009A4050 /* CoTouchlabDroidconandroidCrashReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8AD1DC7C429009A4050 /* CoTouchlabDroidconandroidCrashReport.m */; };
-		630AAF251DC7C42E009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee$Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8AE1DC7C429009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee$Configuration.h */; };
-		630AAF261DC7C42E009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee$Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8AF1DC7C429009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee$Configuration.m */; };
-		630AAF271DC7C42E009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8B01DC7C429009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee.h */; };
-		630AAF281DC7C42E009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8B11DC7C429009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee.m */; };
-		630AAF291DC7C42E009A4050 /* CoTouchlabDroidconandroidIosIosFirebase.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8B21DC7C429009A4050 /* CoTouchlabDroidconandroidIosIosFirebase.h */; };
-		630AAF2A1DC7C42E009A4050 /* CoTouchlabDroidconandroidIosIosFirebase.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8B31DC7C429009A4050 /* CoTouchlabDroidconandroidIosIosFirebase.m */; };
-		630AAF2B1DC7C42E009A4050 /* CoTouchlabDroidconandroidIosIosPlatformClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8B41DC7C429009A4050 /* CoTouchlabDroidconandroidIosIosPlatformClient.h */; };
-		630AAF2C1DC7C42E009A4050 /* CoTouchlabDroidconandroidIosIosPlatformClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8B51DC7C429009A4050 /* CoTouchlabDroidconandroidIosIosPlatformClient.m */; };
-		630AAF2D1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock$Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8B61DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock$Configuration.h */; };
-		630AAF2E1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock$Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8B71DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock$Configuration.m */; };
-		630AAF2F1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8B81DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock.h */; };
-		630AAF301DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8B91DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock.m */; };
-		630AAF311DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoConvention.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8BA1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoConvention.h */; };
-		630AAF321DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoConvention.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8BB1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoConvention.m */; };
-		630AAF331DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8BC1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoEvent.h */; };
-		630AAF341DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8BD1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoEvent.m */; };
-		630AAF351DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoEventVideoDetails.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8BE1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoEventVideoDetails.h */; };
-		630AAF361DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoEventVideoDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8BF1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoEventVideoDetails.m */; };
-		630AAF371DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserAccount.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8C01DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserAccount.h */; };
-		630AAF381DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8C11DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserAccount.m */; };
-		630AAF391DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserInfoResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8C21DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserInfoResponse.h */; };
-		630AAF3A1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserInfoResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8C31DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserInfoResponse.m */; };
-		630AAF3B1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoVenue.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8C41DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoVenue.h */; };
-		630AAF3C1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8C51DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoVenue.m */; };
-		630AAF3D1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8C61DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDataHelper.h */; };
-		630AAF3E1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8C71DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDataHelper.m */; };
-		630AAF3F1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkFindUserRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8C81DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkFindUserRequest.h */; };
-		630AAF401DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkFindUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8C91DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkFindUserRequest.m */; };
-		630AAF411DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkGsonConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8CA1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkGsonConverter.h */; };
-		630AAF421DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkGsonConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8CB1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkGsonConverter.m */; };
-		630AAF431DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkNetworkErrorHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8CC1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkNetworkErrorHandler.h */; };
-		630AAF441DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkNetworkErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8CD1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkNetworkErrorHandler.m */; };
-		630AAF451DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkRefreshScheduleDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8CE1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkRefreshScheduleDataRequest.h */; };
-		630AAF461DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkRefreshScheduleDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8CF1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkRefreshScheduleDataRequest.m */; };
-		630AAF471DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8D01DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsRequest.h */; };
-		630AAF481DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8D11DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsRequest.m */; };
-		630AAF491DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8D21DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsResult.h */; };
-		630AAF4A1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8D31DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsResult.m */; };
-		630AAF4B1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkWatchVideoRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8D41DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkWatchVideoRequest.h */; };
-		630AAF4C1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkWatchVideoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8D51DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkWatchVideoRequest.m */; };
-		630AAF4D1DC7C42E009A4050 /* CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8D61DC7C429009A4050 /* CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener.h */; };
-		630AAF4E1DC7C42E009A4050 /* CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8D71DC7C429009A4050 /* CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener.m */; };
-		630AAF4F1DC7C42E009A4050 /* CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8D81DC7C429009A4050 /* CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory.h */; };
-		630AAF501DC7C42E009A4050 /* CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8D91DC7C429009A4050 /* CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory.m */; };
-		630AAF511DC7C42E009A4050 /* CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8DA1DC7C429009A4050 /* CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData.h */; };
-		630AAF521DC7C42E009A4050 /* CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8DB1DC7C429009A4050 /* CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData.m */; };
-		630AAF531DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsAnalyticsEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8DC1DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsAnalyticsEvents.h */; };
-		630AAF541DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsAnalyticsEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8DD1DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsAnalyticsEvents.m */; };
-		630AAF551DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsEmojiUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8DE1DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsEmojiUtil.h */; };
-		630AAF561DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsEmojiUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8DF1DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsEmojiUtil.m */; };
-		630AAF571DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsIOUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8E01DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsIOUtils.h */; };
-		630AAF581DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsIOUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8E11DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsIOUtils.m */; };
-		630AAF591DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsSlackUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8E21DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsSlackUtils.h */; };
-		630AAF5A1DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsSlackUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8E31DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsSlackUtils.m */; };
-		630AAF5B1DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsStringUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8E41DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsStringUtils.h */; };
-		630AAF5C1DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8E51DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsStringUtils.m */; };
-		630AAF5D1DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsTimeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8E61DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsTimeUtils.h */; };
-		630AAF5E1DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsTimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8E71DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsTimeUtils.m */; };
-		630AAF5F1DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsUserDataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8E81DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsUserDataHelper.h */; };
-		630AAF601DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsUserDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8E91DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsUserDataHelper.m */; };
 		630AAF611DC7C42E009A4050 /* DCDAppPrefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8EA1DC7C429009A4050 /* DCDAppPrefs.h */; };
 		630AAF621DC7C42E009A4050 /* DCDAppPrefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 630AA8EB1DC7C429009A4050 /* DCDAppPrefs.m */; };
 		630AAF631DC7C42E009A4050 /* DCDBlock$Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 630AA8EC1DC7C429009A4050 /* DCDBlock$Configuration.h */; };
@@ -1594,6 +1534,68 @@
 		635989901DE46D5B002E0AEC /* RxDopplSafeObservableUnsubscribe.m in Sources */ = {isa = PBXBuildFile; fileRef = 6359898A1DE46D5B002E0AEC /* RxDopplSafeObservableUnsubscribe.m */; };
 		635989911DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 6359898B1DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.h */; };
 		635989921DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6359898C1DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.m */; };
+		636BCBA71EA054CF004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB6B1EA054CD004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee.h */; };
+		636BCBA81EA054CF004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB6C1EA054CD004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee.m */; };
+		636BCBA91EA054CF004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee$Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB6D1EA054CD004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee$Configuration.h */; };
+		636BCBAA1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee$Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB6E1EA054CD004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee$Configuration.m */; };
+		636BCBAB1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedIosIosFirebase.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB6F1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedIosIosFirebase.h */; };
+		636BCBAC1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedIosIosFirebase.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB701EA054CE004C8494 /* CoTouchlabDroidconandroidSharedIosIosFirebase.m */; };
+		636BCBAD1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedIosIosPlatformClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB711EA054CE004C8494 /* CoTouchlabDroidconandroidSharedIosIosPlatformClient.h */; };
+		636BCBAE1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedIosIosPlatformClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB721EA054CE004C8494 /* CoTouchlabDroidconandroidSharedIosIosPlatformClient.m */; };
+		636BCBAF1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB731EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock.h */; };
+		636BCBB01EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB741EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock.m */; };
+		636BCBB11EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock$Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB751EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock$Configuration.h */; };
+		636BCBB21EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock$Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB761EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock$Configuration.m */; };
+		636BCBB31EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoConvention.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB771EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoConvention.h */; };
+		636BCBB41EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoConvention.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB781EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoConvention.m */; };
+		636BCBB51EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB791EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEvent.h */; };
+		636BCBB61EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB7A1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEvent.m */; };
+		636BCBB71EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEventVideoDetails.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB7B1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEventVideoDetails.h */; };
+		636BCBB81EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEventVideoDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB7C1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEventVideoDetails.m */; };
+		636BCBB91EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserAccount.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB7D1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserAccount.h */; };
+		636BCBBA1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB7E1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserAccount.m */; };
+		636BCBBB1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserInfoResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB7F1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserInfoResponse.h */; };
+		636BCBBC1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserInfoResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB801EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserInfoResponse.m */; };
+		636BCBBD1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoVenue.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB811EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoVenue.h */; };
+		636BCBBE1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB821EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoVenue.m */; };
+		636BCBBF1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB831EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDataHelper.h */; };
+		636BCBC01EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB841EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDataHelper.m */; };
+		636BCBC11EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkFindUserRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB851EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkFindUserRequest.h */; };
+		636BCBC21EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkFindUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB861EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkFindUserRequest.m */; };
+		636BCBC31EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkGsonConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB871EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkGsonConverter.h */; };
+		636BCBC41EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkGsonConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB881EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkGsonConverter.m */; };
+		636BCBC51EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkNetworkErrorHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB891EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkNetworkErrorHandler.h */; };
+		636BCBC61EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkNetworkErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB8A1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkNetworkErrorHandler.m */; };
+		636BCBC71EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkRefreshScheduleDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB8B1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkRefreshScheduleDataRequest.h */; };
+		636BCBC81EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkRefreshScheduleDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB8C1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkRefreshScheduleDataRequest.m */; };
+		636BCBC91EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB8D1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsRequest.h */; };
+		636BCBCA1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB8E1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsRequest.m */; };
+		636BCBCB1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB8F1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsResult.h */; };
+		636BCBCC1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB901EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsResult.m */; };
+		636BCBCD1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkWatchVideoRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB911EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkWatchVideoRequest.h */; };
+		636BCBCE1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkWatchVideoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB921EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkWatchVideoRequest.m */; };
+		636BCBCF1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedBackoffRetryListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB931EA054CE004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedBackoffRetryListener.h */; };
+		636BCBD01EA054CF004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedBackoffRetryListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB941EA054CE004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedBackoffRetryListener.m */; };
+		636BCBD11EA054CF004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedPersistedTaskQueueFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB951EA054CE004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedPersistedTaskQueueFactory.h */; };
+		636BCBD21EA054CF004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedPersistedTaskQueueFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB961EA054CE004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedPersistedTaskQueueFactory.m */; };
+		636BCBD31EA054CF004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB971EA054CE004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData.h */; };
+		636BCBD41EA054CF004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB981EA054CE004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData.m */; };
+		636BCBD51EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsAnalyticsEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB991EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsAnalyticsEvents.h */; };
+		636BCBD61EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsAnalyticsEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB9A1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsAnalyticsEvents.m */; };
+		636BCBD71EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsEmojiUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB9B1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsEmojiUtil.h */; };
+		636BCBD81EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsEmojiUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB9C1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsEmojiUtil.m */; };
+		636BCBD91EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsIOUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB9D1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsIOUtils.h */; };
+		636BCBDA1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsIOUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCB9E1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsIOUtils.m */; };
+		636BCBDB1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsSlackUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCB9F1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsSlackUtils.h */; };
+		636BCBDC1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsSlackUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCBA01EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsSlackUtils.m */; };
+		636BCBDD1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsStringUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCBA11EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsStringUtils.h */; };
+		636BCBDE1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCBA21EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsStringUtils.m */; };
+		636BCBDF1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsTimeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCBA31EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsTimeUtils.h */; };
+		636BCBE01EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsTimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCBA41EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsTimeUtils.m */; };
+		636BCBE11EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsUserDataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 636BCBA51EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsUserDataHelper.h */; };
+		636BCBE21EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsUserDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BCBA61EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsUserDataHelper.m */; };
+		636BCBE41EA0587E004C8494 /* prefixes.properties in Resources */ = {isa = PBXBuildFile; fileRef = 636BCBE31EA0587E004C8494 /* prefixes.properties */; };
+		636BCBE51EA05885004C8494 /* prefixes.properties in Resources */ = {isa = PBXBuildFile; fileRef = 636BCBE31EA0587E004C8494 /* prefixes.properties */; };
 		63712CB71E2A02A400310FB0 /* AndroidOsBadParcelableException.h in Headers */ = {isa = PBXBuildFile; fileRef = 63712CA31E2A02A400310FB0 /* AndroidOsBadParcelableException.h */; };
 		63712CB81E2A02A400310FB0 /* AndroidOsBadParcelableException.m in Sources */ = {isa = PBXBuildFile; fileRef = 63712CA41E2A02A400310FB0 /* AndroidOsBadParcelableException.m */; };
 		63712CB91E2A02A400310FB0 /* AndroidOsIBinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 63712CA51E2A02A400310FB0 /* AndroidOsIBinder.h */; };
@@ -1637,7 +1639,6 @@
 		FA6128C31C986E7A001142E8 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6128C21C986E7A001142E8 /* EventTableViewCell.xib */; };
 		FA6128C51C986E87001142E8 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6128C41C986E87001142E8 /* EventTableViewCell.swift */; };
 		FA86A7F81C91EDDE00C09CE7 /* PlatformContext_iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = FA86A7F71C91EDDE00C09CE7 /* PlatformContext_iOS.m */; };
-		FAE033A41C9711F8001C50E1 /* prefixes.properties in Resources */ = {isa = PBXBuildFile; fileRef = FAE033A31C9711F8001C50E1 /* prefixes.properties */; };
 		FAE033A61C974C65001C50E1 /* ShowEventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE033A51C974C65001C50E1 /* ShowEventDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -1899,66 +1900,6 @@
 		630AA89F1DC7C429009A4050 /* SQLitePreparedStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLitePreparedStatement.m; sourceTree = "<group>"; };
 		630AA8AC1DC7C429009A4050 /* CoTouchlabDroidconandroidCrashReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidCrashReport.h; sourceTree = "<group>"; };
 		630AA8AD1DC7C429009A4050 /* CoTouchlabDroidconandroidCrashReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidCrashReport.m; sourceTree = "<group>"; };
-		630AA8AE1DC7C429009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee$Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidDataStaffEventAttendee$Configuration.h; sourceTree = "<group>"; };
-		630AA8AF1DC7C429009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee$Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidDataStaffEventAttendee$Configuration.m; sourceTree = "<group>"; };
-		630AA8B01DC7C429009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidDataStaffEventAttendee.h; sourceTree = "<group>"; };
-		630AA8B11DC7C429009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidDataStaffEventAttendee.m; sourceTree = "<group>"; };
-		630AA8B21DC7C429009A4050 /* CoTouchlabDroidconandroidIosIosFirebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidIosIosFirebase.h; sourceTree = "<group>"; };
-		630AA8B31DC7C429009A4050 /* CoTouchlabDroidconandroidIosIosFirebase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidIosIosFirebase.m; sourceTree = "<group>"; };
-		630AA8B41DC7C429009A4050 /* CoTouchlabDroidconandroidIosIosPlatformClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidIosIosPlatformClient.h; sourceTree = "<group>"; };
-		630AA8B51DC7C429009A4050 /* CoTouchlabDroidconandroidIosIosPlatformClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidIosIosPlatformClient.m; sourceTree = "<group>"; };
-		630AA8B61DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock$Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidNetworkDaoBlock$Configuration.h; sourceTree = "<group>"; };
-		630AA8B71DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock$Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidNetworkDaoBlock$Configuration.m; sourceTree = "<group>"; };
-		630AA8B81DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidNetworkDaoBlock.h; sourceTree = "<group>"; };
-		630AA8B91DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidNetworkDaoBlock.m; sourceTree = "<group>"; };
-		630AA8BA1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoConvention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidNetworkDaoConvention.h; sourceTree = "<group>"; };
-		630AA8BB1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoConvention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidNetworkDaoConvention.m; sourceTree = "<group>"; };
-		630AA8BC1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidNetworkDaoEvent.h; sourceTree = "<group>"; };
-		630AA8BD1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidNetworkDaoEvent.m; sourceTree = "<group>"; };
-		630AA8BE1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoEventVideoDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidNetworkDaoEventVideoDetails.h; sourceTree = "<group>"; };
-		630AA8BF1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoEventVideoDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidNetworkDaoEventVideoDetails.m; sourceTree = "<group>"; };
-		630AA8C01DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidNetworkDaoUserAccount.h; sourceTree = "<group>"; };
-		630AA8C11DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidNetworkDaoUserAccount.m; sourceTree = "<group>"; };
-		630AA8C21DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserInfoResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidNetworkDaoUserInfoResponse.h; sourceTree = "<group>"; };
-		630AA8C31DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserInfoResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidNetworkDaoUserInfoResponse.m; sourceTree = "<group>"; };
-		630AA8C41DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidNetworkDaoVenue.h; sourceTree = "<group>"; };
-		630AA8C51DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidNetworkDaoVenue.m; sourceTree = "<group>"; };
-		630AA8C61DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidNetworkDataHelper.h; sourceTree = "<group>"; };
-		630AA8C71DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidNetworkDataHelper.m; sourceTree = "<group>"; };
-		630AA8C81DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkFindUserRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidNetworkFindUserRequest.h; sourceTree = "<group>"; };
-		630AA8C91DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkFindUserRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidNetworkFindUserRequest.m; sourceTree = "<group>"; };
-		630AA8CA1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkGsonConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidNetworkGsonConverter.h; sourceTree = "<group>"; };
-		630AA8CB1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkGsonConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidNetworkGsonConverter.m; sourceTree = "<group>"; };
-		630AA8CC1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkNetworkErrorHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidNetworkNetworkErrorHandler.h; sourceTree = "<group>"; };
-		630AA8CD1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkNetworkErrorHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidNetworkNetworkErrorHandler.m; sourceTree = "<group>"; };
-		630AA8CE1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkRefreshScheduleDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidNetworkRefreshScheduleDataRequest.h; sourceTree = "<group>"; };
-		630AA8CF1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkRefreshScheduleDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidNetworkRefreshScheduleDataRequest.m; sourceTree = "<group>"; };
-		630AA8D01DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidNetworkSponsorsRequest.h; sourceTree = "<group>"; };
-		630AA8D11DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidNetworkSponsorsRequest.m; sourceTree = "<group>"; };
-		630AA8D21DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidNetworkSponsorsResult.h; sourceTree = "<group>"; };
-		630AA8D31DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidNetworkSponsorsResult.m; sourceTree = "<group>"; };
-		630AA8D41DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkWatchVideoRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidNetworkWatchVideoRequest.h; sourceTree = "<group>"; };
-		630AA8D51DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkWatchVideoRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidNetworkWatchVideoRequest.m; sourceTree = "<group>"; };
-		630AA8D61DC7C429009A4050 /* CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener.h; sourceTree = "<group>"; };
-		630AA8D71DC7C429009A4050 /* CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener.m; sourceTree = "<group>"; };
-		630AA8D81DC7C429009A4050 /* CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory.h; sourceTree = "<group>"; };
-		630AA8D91DC7C429009A4050 /* CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory.m; sourceTree = "<group>"; };
-		630AA8DA1DC7C429009A4050 /* CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData.h; sourceTree = "<group>"; };
-		630AA8DB1DC7C429009A4050 /* CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData.m; sourceTree = "<group>"; };
-		630AA8DC1DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsAnalyticsEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidUtilsAnalyticsEvents.h; sourceTree = "<group>"; };
-		630AA8DD1DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsAnalyticsEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidUtilsAnalyticsEvents.m; sourceTree = "<group>"; };
-		630AA8DE1DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsEmojiUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidUtilsEmojiUtil.h; sourceTree = "<group>"; };
-		630AA8DF1DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsEmojiUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidUtilsEmojiUtil.m; sourceTree = "<group>"; };
-		630AA8E01DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsIOUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidUtilsIOUtils.h; sourceTree = "<group>"; };
-		630AA8E11DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsIOUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidUtilsIOUtils.m; sourceTree = "<group>"; };
-		630AA8E21DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsSlackUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidUtilsSlackUtils.h; sourceTree = "<group>"; };
-		630AA8E31DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsSlackUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidUtilsSlackUtils.m; sourceTree = "<group>"; };
-		630AA8E41DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidUtilsStringUtils.h; sourceTree = "<group>"; };
-		630AA8E51DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidUtilsStringUtils.m; sourceTree = "<group>"; };
-		630AA8E61DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsTimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidUtilsTimeUtils.h; sourceTree = "<group>"; };
-		630AA8E71DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsTimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidUtilsTimeUtils.m; sourceTree = "<group>"; };
-		630AA8E81DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsUserDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidUtilsUserDataHelper.h; sourceTree = "<group>"; };
-		630AA8E91DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsUserDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidUtilsUserDataHelper.m; sourceTree = "<group>"; };
 		630AA8EA1DC7C429009A4050 /* DCDAppPrefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCDAppPrefs.h; sourceTree = "<group>"; };
 		630AA8EB1DC7C429009A4050 /* DCDAppPrefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCDAppPrefs.m; sourceTree = "<group>"; };
 		630AA8EC1DC7C429009A4050 /* DCDBlock$Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCDBlock$Configuration.h; sourceTree = "<group>"; };
@@ -3289,6 +3230,67 @@
 		6359898A1DE46D5B002E0AEC /* RxDopplSafeObservableUnsubscribe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxDopplSafeObservableUnsubscribe.m; sourceTree = "<group>"; };
 		6359898B1DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxDopplWeakReferenceHelper.h; sourceTree = "<group>"; };
 		6359898C1DE46D5B002E0AEC /* RxDopplWeakReferenceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxDopplWeakReferenceHelper.m; sourceTree = "<group>"; };
+		636BCB6B1EA054CD004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedDataStaffEventAttendee.h; sourceTree = "<group>"; };
+		636BCB6C1EA054CD004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedDataStaffEventAttendee.m; sourceTree = "<group>"; };
+		636BCB6D1EA054CD004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee$Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedDataStaffEventAttendee$Configuration.h; sourceTree = "<group>"; };
+		636BCB6E1EA054CD004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee$Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedDataStaffEventAttendee$Configuration.m; sourceTree = "<group>"; };
+		636BCB6F1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedIosIosFirebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedIosIosFirebase.h; sourceTree = "<group>"; };
+		636BCB701EA054CE004C8494 /* CoTouchlabDroidconandroidSharedIosIosFirebase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedIosIosFirebase.m; sourceTree = "<group>"; };
+		636BCB711EA054CE004C8494 /* CoTouchlabDroidconandroidSharedIosIosPlatformClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedIosIosPlatformClient.h; sourceTree = "<group>"; };
+		636BCB721EA054CE004C8494 /* CoTouchlabDroidconandroidSharedIosIosPlatformClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedIosIosPlatformClient.m; sourceTree = "<group>"; };
+		636BCB731EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedNetworkDaoBlock.h; sourceTree = "<group>"; };
+		636BCB741EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedNetworkDaoBlock.m; sourceTree = "<group>"; };
+		636BCB751EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock$Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedNetworkDaoBlock$Configuration.h; sourceTree = "<group>"; };
+		636BCB761EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock$Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedNetworkDaoBlock$Configuration.m; sourceTree = "<group>"; };
+		636BCB771EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoConvention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedNetworkDaoConvention.h; sourceTree = "<group>"; };
+		636BCB781EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoConvention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedNetworkDaoConvention.m; sourceTree = "<group>"; };
+		636BCB791EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedNetworkDaoEvent.h; sourceTree = "<group>"; };
+		636BCB7A1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedNetworkDaoEvent.m; sourceTree = "<group>"; };
+		636BCB7B1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEventVideoDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedNetworkDaoEventVideoDetails.h; sourceTree = "<group>"; };
+		636BCB7C1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEventVideoDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedNetworkDaoEventVideoDetails.m; sourceTree = "<group>"; };
+		636BCB7D1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedNetworkDaoUserAccount.h; sourceTree = "<group>"; };
+		636BCB7E1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedNetworkDaoUserAccount.m; sourceTree = "<group>"; };
+		636BCB7F1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserInfoResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedNetworkDaoUserInfoResponse.h; sourceTree = "<group>"; };
+		636BCB801EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserInfoResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedNetworkDaoUserInfoResponse.m; sourceTree = "<group>"; };
+		636BCB811EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedNetworkDaoVenue.h; sourceTree = "<group>"; };
+		636BCB821EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedNetworkDaoVenue.m; sourceTree = "<group>"; };
+		636BCB831EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedNetworkDataHelper.h; sourceTree = "<group>"; };
+		636BCB841EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedNetworkDataHelper.m; sourceTree = "<group>"; };
+		636BCB851EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkFindUserRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedNetworkFindUserRequest.h; sourceTree = "<group>"; };
+		636BCB861EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkFindUserRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedNetworkFindUserRequest.m; sourceTree = "<group>"; };
+		636BCB871EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkGsonConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedNetworkGsonConverter.h; sourceTree = "<group>"; };
+		636BCB881EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkGsonConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedNetworkGsonConverter.m; sourceTree = "<group>"; };
+		636BCB891EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkNetworkErrorHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedNetworkNetworkErrorHandler.h; sourceTree = "<group>"; };
+		636BCB8A1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkNetworkErrorHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedNetworkNetworkErrorHandler.m; sourceTree = "<group>"; };
+		636BCB8B1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkRefreshScheduleDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedNetworkRefreshScheduleDataRequest.h; sourceTree = "<group>"; };
+		636BCB8C1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkRefreshScheduleDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedNetworkRefreshScheduleDataRequest.m; sourceTree = "<group>"; };
+		636BCB8D1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedNetworkSponsorsRequest.h; sourceTree = "<group>"; };
+		636BCB8E1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedNetworkSponsorsRequest.m; sourceTree = "<group>"; };
+		636BCB8F1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedNetworkSponsorsResult.h; sourceTree = "<group>"; };
+		636BCB901EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedNetworkSponsorsResult.m; sourceTree = "<group>"; };
+		636BCB911EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkWatchVideoRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedNetworkWatchVideoRequest.h; sourceTree = "<group>"; };
+		636BCB921EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkWatchVideoRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedNetworkWatchVideoRequest.m; sourceTree = "<group>"; };
+		636BCB931EA054CE004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedBackoffRetryListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedTasksPersistedBackoffRetryListener.h; sourceTree = "<group>"; };
+		636BCB941EA054CE004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedBackoffRetryListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedTasksPersistedBackoffRetryListener.m; sourceTree = "<group>"; };
+		636BCB951EA054CE004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedPersistedTaskQueueFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedTasksPersistedPersistedTaskQueueFactory.h; sourceTree = "<group>"; };
+		636BCB961EA054CE004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedPersistedTaskQueueFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedTasksPersistedPersistedTaskQueueFactory.m; sourceTree = "<group>"; };
+		636BCB971EA054CE004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData.h; sourceTree = "<group>"; };
+		636BCB981EA054CE004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData.m; sourceTree = "<group>"; };
+		636BCB991EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsAnalyticsEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedUtilsAnalyticsEvents.h; sourceTree = "<group>"; };
+		636BCB9A1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsAnalyticsEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedUtilsAnalyticsEvents.m; sourceTree = "<group>"; };
+		636BCB9B1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsEmojiUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedUtilsEmojiUtil.h; sourceTree = "<group>"; };
+		636BCB9C1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsEmojiUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedUtilsEmojiUtil.m; sourceTree = "<group>"; };
+		636BCB9D1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsIOUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedUtilsIOUtils.h; sourceTree = "<group>"; };
+		636BCB9E1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsIOUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedUtilsIOUtils.m; sourceTree = "<group>"; };
+		636BCB9F1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsSlackUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedUtilsSlackUtils.h; sourceTree = "<group>"; };
+		636BCBA01EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsSlackUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedUtilsSlackUtils.m; sourceTree = "<group>"; };
+		636BCBA11EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedUtilsStringUtils.h; sourceTree = "<group>"; };
+		636BCBA21EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedUtilsStringUtils.m; sourceTree = "<group>"; };
+		636BCBA31EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsTimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedUtilsTimeUtils.h; sourceTree = "<group>"; };
+		636BCBA41EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsTimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedUtilsTimeUtils.m; sourceTree = "<group>"; };
+		636BCBA51EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsUserDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDroidconandroidSharedUtilsUserDataHelper.h; sourceTree = "<group>"; };
+		636BCBA61EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsUserDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDroidconandroidSharedUtilsUserDataHelper.m; sourceTree = "<group>"; };
+		636BCBE31EA0587E004C8494 /* prefixes.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = prefixes.properties; sourceTree = "<group>"; };
 		63712CA31E2A02A400310FB0 /* AndroidOsBadParcelableException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidOsBadParcelableException.h; sourceTree = "<group>"; };
 		63712CA41E2A02A400310FB0 /* AndroidOsBadParcelableException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidOsBadParcelableException.m; sourceTree = "<group>"; };
 		63712CA51E2A02A400310FB0 /* AndroidOsIBinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidOsIBinder.h; sourceTree = "<group>"; };
@@ -3400,70 +3402,70 @@
 		630AA7A31DC7C428009A4050 /* generated */ = {
 			isa = PBXGroup;
 			children = (
+				636BCBE31EA0587E004C8494 /* prefixes.properties */,
+				636BCB6B1EA054CD004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee.h */,
+				636BCB6C1EA054CD004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee.m */,
+				636BCB6D1EA054CD004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee$Configuration.h */,
+				636BCB6E1EA054CD004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee$Configuration.m */,
+				636BCB6F1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedIosIosFirebase.h */,
+				636BCB701EA054CE004C8494 /* CoTouchlabDroidconandroidSharedIosIosFirebase.m */,
+				636BCB711EA054CE004C8494 /* CoTouchlabDroidconandroidSharedIosIosPlatformClient.h */,
+				636BCB721EA054CE004C8494 /* CoTouchlabDroidconandroidSharedIosIosPlatformClient.m */,
+				636BCB731EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock.h */,
+				636BCB741EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock.m */,
+				636BCB751EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock$Configuration.h */,
+				636BCB761EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock$Configuration.m */,
+				636BCB771EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoConvention.h */,
+				636BCB781EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoConvention.m */,
+				636BCB791EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEvent.h */,
+				636BCB7A1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEvent.m */,
+				636BCB7B1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEventVideoDetails.h */,
+				636BCB7C1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEventVideoDetails.m */,
+				636BCB7D1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserAccount.h */,
+				636BCB7E1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserAccount.m */,
+				636BCB7F1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserInfoResponse.h */,
+				636BCB801EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserInfoResponse.m */,
+				636BCB811EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoVenue.h */,
+				636BCB821EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoVenue.m */,
+				636BCB831EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDataHelper.h */,
+				636BCB841EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkDataHelper.m */,
+				636BCB851EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkFindUserRequest.h */,
+				636BCB861EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkFindUserRequest.m */,
+				636BCB871EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkGsonConverter.h */,
+				636BCB881EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkGsonConverter.m */,
+				636BCB891EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkNetworkErrorHandler.h */,
+				636BCB8A1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkNetworkErrorHandler.m */,
+				636BCB8B1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkRefreshScheduleDataRequest.h */,
+				636BCB8C1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkRefreshScheduleDataRequest.m */,
+				636BCB8D1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsRequest.h */,
+				636BCB8E1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsRequest.m */,
+				636BCB8F1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsResult.h */,
+				636BCB901EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsResult.m */,
+				636BCB911EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkWatchVideoRequest.h */,
+				636BCB921EA054CE004C8494 /* CoTouchlabDroidconandroidSharedNetworkWatchVideoRequest.m */,
+				636BCB931EA054CE004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedBackoffRetryListener.h */,
+				636BCB941EA054CE004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedBackoffRetryListener.m */,
+				636BCB951EA054CE004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedPersistedTaskQueueFactory.h */,
+				636BCB961EA054CE004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedPersistedTaskQueueFactory.m */,
+				636BCB971EA054CE004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData.h */,
+				636BCB981EA054CE004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData.m */,
+				636BCB991EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsAnalyticsEvents.h */,
+				636BCB9A1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsAnalyticsEvents.m */,
+				636BCB9B1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsEmojiUtil.h */,
+				636BCB9C1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsEmojiUtil.m */,
+				636BCB9D1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsIOUtils.h */,
+				636BCB9E1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsIOUtils.m */,
+				636BCB9F1EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsSlackUtils.h */,
+				636BCBA01EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsSlackUtils.m */,
+				636BCBA11EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsStringUtils.h */,
+				636BCBA21EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsStringUtils.m */,
+				636BCBA31EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsTimeUtils.h */,
+				636BCBA41EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsTimeUtils.m */,
+				636BCBA51EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsUserDataHelper.h */,
+				636BCBA61EA054CE004C8494 /* CoTouchlabDroidconandroidSharedUtilsUserDataHelper.m */,
 				630AA7A41DC7C428009A4050 /* androidbase */,
-				630AA8A01DC7C429009A4050 /* co */,
 				630AA8AC1DC7C429009A4050 /* CoTouchlabDroidconandroidCrashReport.h */,
 				630AA8AD1DC7C429009A4050 /* CoTouchlabDroidconandroidCrashReport.m */,
-				630AA8AE1DC7C429009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee$Configuration.h */,
-				630AA8AF1DC7C429009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee$Configuration.m */,
-				630AA8B01DC7C429009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee.h */,
-				630AA8B11DC7C429009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee.m */,
-				630AA8B21DC7C429009A4050 /* CoTouchlabDroidconandroidIosIosFirebase.h */,
-				630AA8B31DC7C429009A4050 /* CoTouchlabDroidconandroidIosIosFirebase.m */,
-				630AA8B41DC7C429009A4050 /* CoTouchlabDroidconandroidIosIosPlatformClient.h */,
-				630AA8B51DC7C429009A4050 /* CoTouchlabDroidconandroidIosIosPlatformClient.m */,
-				630AA8B61DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock$Configuration.h */,
-				630AA8B71DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock$Configuration.m */,
-				630AA8B81DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock.h */,
-				630AA8B91DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock.m */,
-				630AA8BA1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoConvention.h */,
-				630AA8BB1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoConvention.m */,
-				630AA8BC1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoEvent.h */,
-				630AA8BD1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoEvent.m */,
-				630AA8BE1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoEventVideoDetails.h */,
-				630AA8BF1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoEventVideoDetails.m */,
-				630AA8C01DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserAccount.h */,
-				630AA8C11DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserAccount.m */,
-				630AA8C21DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserInfoResponse.h */,
-				630AA8C31DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserInfoResponse.m */,
-				630AA8C41DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoVenue.h */,
-				630AA8C51DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDaoVenue.m */,
-				630AA8C61DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDataHelper.h */,
-				630AA8C71DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkDataHelper.m */,
-				630AA8C81DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkFindUserRequest.h */,
-				630AA8C91DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkFindUserRequest.m */,
-				630AA8CA1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkGsonConverter.h */,
-				630AA8CB1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkGsonConverter.m */,
-				630AA8CC1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkNetworkErrorHandler.h */,
-				630AA8CD1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkNetworkErrorHandler.m */,
-				630AA8CE1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkRefreshScheduleDataRequest.h */,
-				630AA8CF1DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkRefreshScheduleDataRequest.m */,
-				630AA8D01DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsRequest.h */,
-				630AA8D11DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsRequest.m */,
-				630AA8D21DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsResult.h */,
-				630AA8D31DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsResult.m */,
-				630AA8D41DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkWatchVideoRequest.h */,
-				630AA8D51DC7C429009A4050 /* CoTouchlabDroidconandroidNetworkWatchVideoRequest.m */,
-				630AA8D61DC7C429009A4050 /* CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener.h */,
-				630AA8D71DC7C429009A4050 /* CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener.m */,
-				630AA8D81DC7C429009A4050 /* CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory.h */,
-				630AA8D91DC7C429009A4050 /* CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory.m */,
-				630AA8DA1DC7C429009A4050 /* CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData.h */,
-				630AA8DB1DC7C429009A4050 /* CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData.m */,
-				630AA8DC1DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsAnalyticsEvents.h */,
-				630AA8DD1DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsAnalyticsEvents.m */,
-				630AA8DE1DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsEmojiUtil.h */,
-				630AA8DF1DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsEmojiUtil.m */,
-				630AA8E01DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsIOUtils.h */,
-				630AA8E11DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsIOUtils.m */,
-				630AA8E21DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsSlackUtils.h */,
-				630AA8E31DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsSlackUtils.m */,
-				630AA8E41DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsStringUtils.h */,
-				630AA8E51DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsStringUtils.m */,
-				630AA8E61DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsTimeUtils.h */,
-				630AA8E71DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsTimeUtils.m */,
-				630AA8E81DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsUserDataHelper.h */,
-				630AA8E91DC7C429009A4050 /* CoTouchlabDroidconandroidUtilsUserDataHelper.m */,
 				630AA8EA1DC7C429009A4050 /* DCDAppPrefs.h */,
 				630AA8EB1DC7C429009A4050 /* DCDAppPrefs.m */,
 				630AA8EC1DC7C429009A4050 /* DCDBlock$Configuration.h */,
@@ -4060,101 +4062,6 @@
 			children = (
 			);
 			path = kdom;
-			sourceTree = "<group>";
-		};
-		630AA8A01DC7C429009A4050 /* co */ = {
-			isa = PBXGroup;
-			children = (
-				630AA8A11DC7C429009A4050 /* touchlab */,
-			);
-			path = co;
-			sourceTree = "<group>";
-		};
-		630AA8A11DC7C429009A4050 /* touchlab */ = {
-			isa = PBXGroup;
-			children = (
-				630AA8A21DC7C429009A4050 /* droidconandroid */,
-			);
-			path = touchlab;
-			sourceTree = "<group>";
-		};
-		630AA8A21DC7C429009A4050 /* droidconandroid */ = {
-			isa = PBXGroup;
-			children = (
-				630AA8A31DC7C429009A4050 /* data */,
-				630AA8A51DC7C429009A4050 /* ios */,
-				630AA8A61DC7C429009A4050 /* network */,
-				630AA8A81DC7C429009A4050 /* presenter */,
-				630AA8A91DC7C429009A4050 /* tasks */,
-				630AA8AB1DC7C429009A4050 /* utils */,
-			);
-			path = droidconandroid;
-			sourceTree = "<group>";
-		};
-		630AA8A31DC7C429009A4050 /* data */ = {
-			isa = PBXGroup;
-			children = (
-				630AA8A41DC7C429009A4050 /* staff */,
-			);
-			path = data;
-			sourceTree = "<group>";
-		};
-		630AA8A41DC7C429009A4050 /* staff */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = staff;
-			sourceTree = "<group>";
-		};
-		630AA8A51DC7C429009A4050 /* ios */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ios;
-			sourceTree = "<group>";
-		};
-		630AA8A61DC7C429009A4050 /* network */ = {
-			isa = PBXGroup;
-			children = (
-				630AA8A71DC7C429009A4050 /* dao */,
-			);
-			path = network;
-			sourceTree = "<group>";
-		};
-		630AA8A71DC7C429009A4050 /* dao */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = dao;
-			sourceTree = "<group>";
-		};
-		630AA8A81DC7C429009A4050 /* presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = presenter;
-			sourceTree = "<group>";
-		};
-		630AA8A91DC7C429009A4050 /* tasks */ = {
-			isa = PBXGroup;
-			children = (
-				630AA8AA1DC7C429009A4050 /* persisted */,
-			);
-			path = tasks;
-			sourceTree = "<group>";
-		};
-		630AA8AA1DC7C429009A4050 /* persisted */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = persisted;
-			sourceTree = "<group>";
-		};
-		630AA8AB1DC7C429009A4050 /* utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = utils;
 			sourceTree = "<group>";
 		};
 		630AA9381DC7C429009A4050 /* eventbus */ = {
@@ -6156,7 +6063,6 @@
 				630AAF6B1DC7C42E009A4050 /* DCDEvent.h in Headers */,
 				630AB3791DC7C433009A4050 /* RxPluginsRxJavaSingleExecutionHookDefault.h in Headers */,
 				630AB2D71DC7C433009A4050 /* RxInternalSchedulersScheduledAction.h in Headers */,
-				630AAF331DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoEvent.h in Headers */,
 				630AB2C31DC7C432009A4050 /* RxInternalProducersSingleDelayedProducer.h in Headers */,
 				630AB2C11DC7C432009A4050 /* RxInternalProducersQueuedValueProducer.h in Headers */,
 				630AB0871DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedSuperbusEventListener.h in Headers */,
@@ -6177,7 +6083,6 @@
 				630AB3A31DC7C434009A4050 /* RxSubjectsSubject.h in Headers */,
 				630AB2431DC7C431009A4050 /* RxInternalOperatorsOperatorSampleWithObservable.h in Headers */,
 				630AB4571DC7C434009A4050 /* CoTouchlabSqueakyStmtQueryBaseComparison.h in Headers */,
-				630AAF411DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkGsonConverter.h in Headers */,
 				630AB2571DC7C432009A4050 /* RxInternalOperatorsOperatorSkipWhile.h in Headers */,
 				630AAEC51DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteStatement.h in Headers */,
 				630AB02B1DC7C42E009A4050 /* ComGoogleGsonJsonElement.h in Headers */,
@@ -6188,16 +6093,17 @@
 				630AB37D1DC7C433009A4050 /* RxScheduler.h in Headers */,
 				630AB3A91DC7C434009A4050 /* RxSubjectsUnicastSubject.h in Headers */,
 				630AB32F1DC7C433009A4050 /* RxInternalUtilUnsafePow2.h in Headers */,
-				630AAF371DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserAccount.h in Headers */,
 				630AB0A71DC7C42F009A4050 /* RetrofitClientDefaults.h in Headers */,
+				636BCBAD1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedIosIosPlatformClient.h in Headers */,
 				630AB3C11DC7C434009A4050 /* CoTouchlabSqueakyDaoDao.h in Headers */,
 				630AAE671DC7C42E009A4050 /* AndroidDatabaseCursor.h in Headers */,
+				636BCBE11EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsUserDataHelper.h in Headers */,
 				630AB0231DC7C42E009A4050 /* ComGoogleGsonInternalUnsafeAllocator.h in Headers */,
 				630AB4211DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesIntegerObjectType.h in Headers */,
+				636BCBD31EA054CF004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData.h in Headers */,
 				630AAEBB1DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteProgram.h in Headers */,
 				630AB1711DC7C430009A4050 /* RxFunctionsFuncN.h in Headers */,
 				630AB0D91DC7C42F009A4050 /* RetrofitHttppackage-info.h in Headers */,
-				630AAF271DC7C42E009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee.h in Headers */,
 				630AAE531DC7C42D009A4050 /* AndroidAppSharedPreferencesImpl.h in Headers */,
 				630AB0E71DC7C42F009A4050 /* RetrofitHttpQuery.h in Headers */,
 				630AB2851DC7C432009A4050 /* RxInternalOperatorsOperatorWindowWithStartEndObservable.h in Headers */,
@@ -6205,7 +6111,6 @@
 				630AB1091DC7C42F009A4050 /* RetrofitRequestInterceptorTape.h in Headers */,
 				630AAEFB1DC7C42E009A4050 /* AndroidUtilSize.h in Headers */,
 				630AB41B1DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesEnumStringType.h in Headers */,
-				630AAF571DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsIOUtils.h in Headers */,
 				630AB32B1DC7C433009A4050 /* RxInternalUtilUnsafeMpmcArrayQueue.h in Headers */,
 				630AB4311DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesStringBytesType.h in Headers */,
 				630AB1AD1DC7C431009A4050 /* RxInternalOperatorsOnSubscribeCollect.h in Headers */,
@@ -6220,7 +6125,6 @@
 				630AAF611DC7C42E009A4050 /* DCDAppPrefs.h in Headers */,
 				630AB3871DC7C433009A4050 /* RxSchedulersTestScheduler.h in Headers */,
 				630AAEC91DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteTableLockedException.h in Headers */,
-				630AAF531DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsAnalyticsEvents.h in Headers */,
 				630AB4011DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesBooleanType.h in Headers */,
 				630AB2691DC7C432009A4050 /* RxInternalOperatorsOperatorTakeUntilPredicate.h in Headers */,
 				630AB1811DC7C430009A4050 /* RxInternalOperatorsBlockingOperatorToFuture.h in Headers */,
@@ -6228,7 +6132,6 @@
 				630AB0631DC7C42E009A4050 /* CoTouchlabAndroidThreadingTasksHelperRetrofitPersistedTask.h in Headers */,
 				630AB3C91DC7C434009A4050 /* CoTouchlabSqueakyDaoQuery.h in Headers */,
 				630AAEFF1DC7C42E009A4050 /* AndroidUtilTimeUtils.h in Headers */,
-				630AAF591DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsSlackUtils.h in Headers */,
 				630AB01D1DC7C42E009A4050 /* ComGoogleGsonInternalpackage-info.h in Headers */,
 				630AB1B71DC7C431009A4050 /* RxInternalOperatorsOnSubscribeDelaySubscriptionOther.h in Headers */,
 				630AB2A31DC7C432009A4050 /* RxInternalOperatorsSingleObserveOn.h in Headers */,
@@ -6247,6 +6150,8 @@
 				630AB0AB1DC7C42F009A4050 /* RetrofitClientRequest.h in Headers */,
 				630AAEE11DC7C42E009A4050 /* AndroidProviderBaseColumns.h in Headers */,
 				630AAE891DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteBindOrColumnIndexOutOfRangeException.h in Headers */,
+				636BCBCB1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsResult.h in Headers */,
+				636BCBA71EA054CF004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee.h in Headers */,
 				630AB2A11DC7C432009A4050 /* RxInternalOperatorsSingleLiftObservableOperator.h in Headers */,
 				630AAEBD1DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteQuery.h in Headers */,
 				630AB0851DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedStorageStoredCommandAdapter.h in Headers */,
@@ -6268,6 +6173,7 @@
 				630AB2551DC7C432009A4050 /* RxInternalOperatorsOperatorSkipUntil.h in Headers */,
 				630AAFD31DC7C42E009A4050 /* ComGoogleGsonAnnotationsExpose.h in Headers */,
 				630AB43F1DC7C434009A4050 /* CoTouchlabSqueakyLoggerOLogImpl.h in Headers */,
+				636BCBD11EA054CF004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedPersistedTaskQueueFactory.h in Headers */,
 				630AB1211DC7C430009A4050 /* RxAsyncEmitter.h in Headers */,
 				630AAEC31DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteSession.h in Headers */,
 				630AB2991DC7C432009A4050 /* RxInternalOperatorsSingleDoOnUnsubscribe.h in Headers */,
@@ -6289,13 +6195,13 @@
 				630AB0471DC7C42E009A4050 /* ComGoogleGsonReflectTypeToken.h in Headers */,
 				630AB0DF1DC7C42F009A4050 /* RetrofitHttpPATCH.h in Headers */,
 				630AB1131DC7C42F009A4050 /* RetrofitRetrofitError.h in Headers */,
+				636BCBAB1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedIosIosFirebase.h in Headers */,
 				630AB0051DC7C42E009A4050 /* ComGoogleGsonInternalBindSqlDateTypeAdapter.h in Headers */,
 				630AAEE71DC7C42E009A4050 /* AndroidSupportAnnotationNonNull.h in Headers */,
 				630AB2CD1DC7C432009A4050 /* RxInternalSchedulersGenericScheduledExecutorService.h in Headers */,
 				630AAF9D1DC7C42E009A4050 /* DCTCheckWatchVideoTask.h in Headers */,
 				630AB18F1DC7C430009A4050 /* RxInternalOperatorsCompletableOnSubscribeConcatArray.h in Headers */,
 				630AB1551DC7C430009A4050 /* RxFunctionsAction9.h in Headers */,
-				630AAF4D1DC7C42E009A4050 /* CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener.h in Headers */,
 				630AB26B1DC7C432009A4050 /* RxInternalOperatorsOperatorTakeWhile.h in Headers */,
 				630AB1F51DC7C431009A4050 /* RxInternalOperatorsOnSubscribeToMultimap.h in Headers */,
 				630AAEAB1DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteDiskIOException.h in Headers */,
@@ -6315,7 +6221,6 @@
 				630AB2891DC7C432009A4050 /* RxInternalOperatorsOperatorWithLatestFrom.h in Headers */,
 				630AB2C51DC7C432009A4050 /* RxInternalProducersSingleProducer.h in Headers */,
 				630AB42B1DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesSerializableType.h in Headers */,
-				630AAF2F1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock.h in Headers */,
 				630AAED91DC7C42E009A4050 /* AndroidOsMessage.h in Headers */,
 				630AB42F1DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesShortType.h in Headers */,
 				630AB2931DC7C432009A4050 /* RxInternalOperatorsSingleDoAfterTerminate.h in Headers */,
@@ -6325,21 +6230,19 @@
 				630AB2831DC7C432009A4050 /* RxInternalOperatorsOperatorWindowWithSize.h in Headers */,
 				630AB09B1DC7C42F009A4050 /* CoTouchlabAndroidThreadingUtilsUiThreadContext.h in Headers */,
 				630AB1DB1DC7C431009A4050 /* RxInternalOperatorsOnSubscribePublishMulticast.h in Headers */,
-				630AAF4F1DC7C42E009A4050 /* CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory.h in Headers */,
 				630AB3651DC7C433009A4050 /* Rxpackage-info.h in Headers */,
 				630AB0191DC7C42E009A4050 /* ComGoogleGsonInternalLinkedTreeMap.h in Headers */,
 				630AB2091DC7C431009A4050 /* RxInternalOperatorsOperatorCast.h in Headers */,
 				630AB07F1DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedStorageSqliteSimpleDatabaseHelper.h in Headers */,
+				636BCBBF1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDataHelper.h in Headers */,
 				630AB2131DC7C431009A4050 /* RxInternalOperatorsOperatorDematerialize.h in Headers */,
 				630AB05B1DC7C42E009A4050 /* CoTouchlabAndroidThreadingErrorcontrolSoftException.h in Headers */,
-				630AAF2D1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock$Configuration.h in Headers */,
 				630AB0A91DC7C42F009A4050 /* RetrofitClientHeader.h in Headers */,
 				630AAE851DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteAbortException.h in Headers */,
 				630AB08F1DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksStickyStickyTaskManager.h in Headers */,
 				630AB3F51DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesBaseEnumType.h in Headers */,
 				630AB23F1DC7C431009A4050 /* RxInternalOperatorsOperatorReplay.h in Headers */,
 				630AAF631DC7C42E009A4050 /* DCDBlock$Configuration.h in Headers */,
-				630AAF5B1DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsStringUtils.h in Headers */,
 				630AB4091DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesCharacterObjectType.h in Headers */,
 				630AAE4D1DC7C42D009A4050 /* AndroidAnnotationNullable.h in Headers */,
 				630AB46F1DC7C435009A4050 /* CoTouchlabSqueakyStmtQueryRaw.h in Headers */,
@@ -6375,6 +6278,7 @@
 				630AAF211DC7C42E009A4050 /* SQLitePreparedStatement.h in Headers */,
 				630AB2F51DC7C433009A4050 /* RxInternalUtilAtomicSpscExactAtomicArrayQueue.h in Headers */,
 				630AB2411DC7C431009A4050 /* RxInternalOperatorsOperatorRetryWithPredicate.h in Headers */,
+				636BCBB51EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEvent.h in Headers */,
 				630AB27D1DC7C432009A4050 /* RxInternalOperatorsOperatorUnsubscribeOn.h in Headers */,
 				630AB2DB1DC7C433009A4050 /* RxInternalSchedulersSchedulerWhen.h in Headers */,
 				630AAF1F1DC7C42E009A4050 /* SQLiteErrors.h in Headers */,
@@ -6399,6 +6303,7 @@
 				630AB0751DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedPersistenceProvider.h in Headers */,
 				630AB40F1DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesDateStringType.h in Headers */,
 				630AB17D1DC7C430009A4050 /* RxInternalOperatorsBlockingOperatorMostRecent.h in Headers */,
+				636BCBBD1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoVenue.h in Headers */,
 				630AB39D1DC7C434009A4050 /* RxSubjectsPublishSubject.h in Headers */,
 				630AB3951DC7C433009A4050 /* RxSingleSubscriber.h in Headers */,
 				630AB3331DC7C433009A4050 /* RxInternalUtilUnsafeSpmcArrayQueue.h in Headers */,
@@ -6412,6 +6317,7 @@
 				63712CC91E2A02A400310FB0 /* ComGoogleAutoValueAutoValue.h in Headers */,
 				630AB2771DC7C432009A4050 /* RxInternalOperatorsOperatorTimestamp.h in Headers */,
 				630AB4391DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesVoidType.h in Headers */,
+				636BCBCF1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedBackoffRetryListener.h in Headers */,
 				630AAE611DC7C42D009A4050 /* AndroidDatabaseCharArrayBuffer.h in Headers */,
 				630AB0C11DC7C42F009A4050 /* RetrofitHttpDELETE.h in Headers */,
 				630AAECD1DC7C42E009A4050 /* AndroidDatabaseStaleDataException.h in Headers */,
@@ -6422,6 +6328,7 @@
 				630AAFA51DC7C42E009A4050 /* DCTRemoveRsvpTask.h in Headers */,
 				630AB4351DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesTimeStampStringType.h in Headers */,
 				630AB4031DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesByteArrayType.h in Headers */,
+				636BCBA91EA054CF004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee$Configuration.h in Headers */,
 				630AB0511DC7C42E009A4050 /* ComGoogleGsonStreamMalformedJsonException.h in Headers */,
 				630AAE971DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteCursor.h in Headers */,
 				630AB3751DC7C433009A4050 /* RxPluginsRxJavaSchedulersHook.h in Headers */,
@@ -6447,7 +6354,6 @@
 				630AB2B11DC7C432009A4050 /* RxInternalOperatorsSingleTakeUntilCompletable.h in Headers */,
 				630AAEA91DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteDirectCursorDriver.h in Headers */,
 				630AAF8F1DC7C42E009A4050 /* DCPPlatformClient.h in Headers */,
-				630AAF391DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserInfoResponse.h in Headers */,
 				630AB34F1DC7C433009A4050 /* RxObserver.h in Headers */,
 				630AB3F11DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesBaseDataType.h in Headers */,
 				630AB0771DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedStorageDefaultPersistedTaskQueue.h in Headers */,
@@ -6456,6 +6362,7 @@
 				630AAE8B1DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteBlobTooBigException.h in Headers */,
 				630AAF711DC7C42E009A4050 /* DCDScheduleBlock.h in Headers */,
 				630AB0911DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksTask.h in Headers */,
+				636BCBB11EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock$Configuration.h in Headers */,
 				630AB2711DC7C432009A4050 /* RxInternalOperatorsOperatorTimeout.h in Headers */,
 				630AB13D1DC7C430009A4050 /* RxExceptionspackage-info.h in Headers */,
 				630AAF6D1DC7C42E009A4050 /* DCDEventSpeaker$Configuration.h in Headers */,
@@ -6475,7 +6382,6 @@
 				63712CBF1E2A02A400310FB0 /* AndroidOsParcelable.h in Headers */,
 				630AB45B1DC7C434009A4050 /* CoTouchlabSqueakyStmtQueryClause.h in Headers */,
 				63712CCF1E2A0BA100310FB0 /* AndroidInternalUtilFastXmlSerializer.h in Headers */,
-				630AAF431DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkNetworkErrorHandler.h in Headers */,
 				630AAEB71DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteOpenHelper.h in Headers */,
 				630AB06F1DC7C42E009A4050 /* CoTouchlabAndroidThreadingTasksPersistedPersistedTask.h in Headers */,
 				630AB27B1DC7C432009A4050 /* RxInternalOperatorsOperatorToObservableSortedList.h in Headers */,
@@ -6485,6 +6391,7 @@
 				630AB4651DC7C435009A4050 /* CoTouchlabSqueakyStmtQueryManyClause.h in Headers */,
 				630AB3931DC7C433009A4050 /* RxSinglespackage-info.h in Headers */,
 				630AB2FB1DC7C433009A4050 /* RxInternalUtilAtomicSpscUnboundedAtomicArrayQueue.h in Headers */,
+				636BCBCD1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkWatchVideoRequest.h in Headers */,
 				630AB2591DC7C432009A4050 /* RxInternalOperatorsOperatorSubscribeOn.h in Headers */,
 				630AB3051DC7C433009A4050 /* RxInternalUtilInternalObservableUtils.h in Headers */,
 				630AB45D1DC7C435009A4050 /* CoTouchlabSqueakyStmtQueryComparison.h in Headers */,
@@ -6500,7 +6407,6 @@
 				630AB2C71DC7C432009A4050 /* RxInternalSchedulersCachedThreadScheduler.h in Headers */,
 				630AB0A11DC7C42F009A4050 /* RetrofitCallback.h in Headers */,
 				630AAF9F1DC7C42E009A4050 /* DCTEventDetailLoadTask.h in Headers */,
-				630AAF491DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsResult.h in Headers */,
 				630AB2531DC7C432009A4050 /* RxInternalOperatorsOperatorSkipLastTimed.h in Headers */,
 				630AB1FF1DC7C431009A4050 /* RxInternalOperatorsOperatorAsObservable.h in Headers */,
 				630AB26F1DC7C432009A4050 /* RxInternalOperatorsOperatorTimeInterval.h in Headers */,
@@ -6513,6 +6419,7 @@
 				630AB0AD1DC7C42F009A4050 /* RetrofitClientResponse.h in Headers */,
 				630AB0DD1DC7C42F009A4050 /* RetrofitHttpPartMap.h in Headers */,
 				630AB2B51DC7C432009A4050 /* RxInternalOperatorsSingleTakeUntilSingle.h in Headers */,
+				636BCBB31EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoConvention.h in Headers */,
 				630AB3AB1DC7C434009A4050 /* RxSubscriber.h in Headers */,
 				630AB3091DC7C433009A4050 /* RxInternalUtilObjectPool.h in Headers */,
 				630AB4551DC7C434009A4050 /* CoTouchlabSqueakyStmtJoinAlias.h in Headers */,
@@ -6530,8 +6437,10 @@
 				630AAF991DC7C42E009A4050 /* DCTAbstractWatchVideoTask.h in Headers */,
 				630AB3291DC7C433009A4050 /* RxInternalUtilUnsafeMessagePassingQueue.h in Headers */,
 				630AAE9B1DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteCustomFunction.h in Headers */,
+				636BCBD51EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsAnalyticsEvents.h in Headers */,
 				630AB3EF1DC7C434009A4050 /* CoTouchlabSqueakyFieldSqlType.h in Headers */,
 				630AB3E91DC7C434009A4050 /* CoTouchlabSqueakyFieldForeignCollectionField.h in Headers */,
+				636BCBC71EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkRefreshScheduleDataRequest.h in Headers */,
 				630AB0311DC7C42E009A4050 /* ComGoogleGsonJsonObject.h in Headers */,
 				630AAFC11DC7C42E009A4050 /* DeGreenrobotEventSubscriberExceptionEvent.h in Headers */,
 				630AAFCB1DC7C42E009A4050 /* DeGreenrobotEventUtilAsyncExecutor.h in Headers */,
@@ -6556,12 +6465,13 @@
 				630AB3211DC7C433009A4050 /* RxInternalUtilUnsafeBaseLinkedQueueConsumerNodeRef.h in Headers */,
 				630AB2251DC7C431009A4050 /* RxInternalOperatorsOperatorGroupBy.h in Headers */,
 				630AAFE51DC7C42E009A4050 /* ComGoogleGsonFieldNamingPolicy.h in Headers */,
-				630AAF351DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoEventVideoDetails.h in Headers */,
 				630AAECB1DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteTransactionListener.h in Headers */,
 				630AB3351DC7C433009A4050 /* RxInternalUtilUnsafeSpscArrayQueue.h in Headers */,
 				630AAF7B1DC7C42E009A4050 /* DCDVenue.h in Headers */,
 				630AB0591DC7C42E009A4050 /* CoTouchlabAndroidThreadingErrorcontrolNetworkException.h in Headers */,
+				636BCBB91EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserAccount.h in Headers */,
 				630AB0811DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedStorageSqliteSQLiteDatabaseFactory.h in Headers */,
+				636BCBDB1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsSlackUtils.h in Headers */,
 				63712CB71E2A02A400310FB0 /* AndroidOsBadParcelableException.h in Headers */,
 				630AB2671DC7C432009A4050 /* RxInternalOperatorsOperatorTakeUntil.h in Headers */,
 				630AB2E91DC7C433009A4050 /* RxInternalUtilActionSubscriber.h in Headers */,
@@ -6580,6 +6490,7 @@
 				630AB1591DC7C430009A4050 /* RxFunctionsActions.h in Headers */,
 				630AB2E11DC7C433009A4050 /* RxInternalSubscriptionsSequentialSubscription.h in Headers */,
 				630AB21F1DC7C431009A4050 /* RxInternalOperatorsOperatorDoOnUnsubscribe.h in Headers */,
+				636BCBDD1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsStringUtils.h in Headers */,
 				630AB0931DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksTaskQueue.h in Headers */,
 				630AB31D1DC7C433009A4050 /* RxInternalUtilSynchronizedQueue.h in Headers */,
 				630AB0651DC7C42E009A4050 /* CoTouchlabAndroidThreadingTasksPersistedBusLog.h in Headers */,
@@ -6616,11 +6527,11 @@
 				630AAF891DC7C42E009A4050 /* DCPEventDetailHost.h in Headers */,
 				630AB3631DC7C433009A4050 /* RxObserversTestSubscriber.h in Headers */,
 				630AB2811DC7C432009A4050 /* RxInternalOperatorsOperatorWindowWithObservableFactory.h in Headers */,
+				636BCBB71EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEventVideoDetails.h in Headers */,
 				630AB1A91DC7C431009A4050 /* RxInternalOperatorsOnSubscribeAmb.h in Headers */,
 				630AB18B1DC7C430009A4050 /* RxInternalOperatorsCompletableFromEmitter.h in Headers */,
 				630AB1ED1DC7C431009A4050 /* RxInternalOperatorsOnSubscribeThrow.h in Headers */,
 				630AB33F1DC7C433009A4050 /* RxNotification.h in Headers */,
-				630AAF3F1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkFindUserRequest.h in Headers */,
 				630AB3AD1DC7C434009A4050 /* RxSubscription.h in Headers */,
 				630AB1E71DC7C431009A4050 /* RxInternalOperatorsOnSubscribeSingle.h in Headers */,
 				630AB3391DC7C433009A4050 /* RxInternalUtilUnsafeSpscUnboundedArrayQueue.h in Headers */,
@@ -6644,7 +6555,6 @@
 				630AB4591DC7C434009A4050 /* CoTouchlabSqueakyStmtQueryBetween.h in Headers */,
 				630AB23B1DC7C431009A4050 /* RxInternalOperatorsOperatorOnErrorResumeNextViaFunction.h in Headers */,
 				630AB2F11DC7C433009A4050 /* RxInternalUtilAtomicMpscLinkedAtomicQueue.h in Headers */,
-				630AAF5F1DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsUserDataHelper.h in Headers */,
 				630AB3231DC7C433009A4050 /* RxInternalUtilUnsafeBaseLinkedQueueProducerNodeRef.h in Headers */,
 				630AB46B1DC7C435009A4050 /* CoTouchlabSqueakyStmtQueryQueryBuilder.h in Headers */,
 				630AB46D1DC7C435009A4050 /* CoTouchlabSqueakyStmtQueryQueryFactory.h in Headers */,
@@ -6678,10 +6588,8 @@
 				630AB00B1DC7C42E009A4050 /* ComGoogleGsonInternalBindTypeAdapters.h in Headers */,
 				630AB2EF1DC7C433009A4050 /* RxInternalUtilAtomicLinkedQueueNode.h in Headers */,
 				630AAEA51DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteDatatypeMismatchException.h in Headers */,
-				630AAF2B1DC7C42E009A4050 /* CoTouchlabDroidconandroidIosIosPlatformClient.h in Headers */,
 				630AB2271DC7C431009A4050 /* RxInternalOperatorsOperatorIgnoreElements.h in Headers */,
 				630AB24F1DC7C432009A4050 /* RxInternalOperatorsOperatorSkip.h in Headers */,
-				630AAF511DC7C42E009A4050 /* CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData.h in Headers */,
 				63712CBB1E2A02A400310FB0 /* AndroidOsIInterface.h in Headers */,
 				630AB1691DC7C430009A4050 /* RxFunctionsFunc6.h in Headers */,
 				630AAF811DC7C42E009A4050 /* DCPConferenceDataHelper.h in Headers */,
@@ -6702,6 +6610,7 @@
 				630AB3F91DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesBigIntegerType.h in Headers */,
 				630AB1011DC7C42F009A4050 /* RetrofitPlatform.h in Headers */,
 				630AB0891DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedSuperbusProcessException.h in Headers */,
+				636BCBC31EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkGsonConverter.h in Headers */,
 				630AAF0F1DC7C42E009A4050 /* RenameComGoogleAndroidCollectSets.h in Headers */,
 				630AAEA11DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteDatabaseCorruptException.h in Headers */,
 				630AAE731DC7C42E009A4050 /* AndroidDatabaseDatabaseUtils.h in Headers */,
@@ -6731,6 +6640,7 @@
 				630AB3CD1DC7C434009A4050 /* CoTouchlabSqueakyDaoSqueakyContext.h in Headers */,
 				630AB1E11DC7C431009A4050 /* RxInternalOperatorsOnSubscribeReduce.h in Headers */,
 				630AB34B1DC7C433009A4050 /* RxObservablespackage-info.h in Headers */,
+				636BCBC11EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkFindUserRequest.h in Headers */,
 				630AB14B1DC7C430009A4050 /* RxFunctionsAction4.h in Headers */,
 				630AB3011DC7C433009A4050 /* RxInternalUtilExceptionsUtils.h in Headers */,
 				630AB2171DC7C431009A4050 /* RxInternalOperatorsOperatorDistinctUntilChanged.h in Headers */,
@@ -6749,10 +6659,10 @@
 				630AB11F1DC7C430009A4050 /* RxAnnotationspackage-info.h in Headers */,
 				630AAEF11DC7C42E009A4050 /* AndroidUtilAndroidRuntimeException.h in Headers */,
 				630AB1FD1DC7C431009A4050 /* RxInternalOperatorsOperatorAny.h in Headers */,
-				630AAF4B1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkWatchVideoRequest.h in Headers */,
 				630AAE751DC7C42E009A4050 /* AndroidDatabaseDataSetObservable.h in Headers */,
 				630AAFA91DC7C42E009A4050 /* DCTSponsorsTask.h in Headers */,
 				630AB2231DC7C431009A4050 /* RxInternalOperatorsOperatorElementAt.h in Headers */,
+				636BCBAF1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock.h in Headers */,
 				630AB2A71DC7C432009A4050 /* RxInternalOperatorsSingleOnSubscribeDelaySubscriptionOther.h in Headers */,
 				630AB02F1DC7C42E009A4050 /* ComGoogleGsonJsonNull.h in Headers */,
 				630AB0951DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksUtilsNetworkUtils.h in Headers */,
@@ -6760,24 +6670,21 @@
 				630AB1331DC7C430009A4050 /* RxExceptionsMissingBackpressureException.h in Headers */,
 				630AB3B51DC7C434009A4050 /* RxSubscriptionspackage-info.h in Headers */,
 				630AB36D1DC7C433009A4050 /* RxPluginsRxJavaHooks.h in Headers */,
-				630AAF5D1DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsTimeUtils.h in Headers */,
 				630AB2031DC7C431009A4050 /* RxInternalOperatorsOperatorBufferWithSize.h in Headers */,
 				630AAF051DC7C42E009A4050 /* CursorWindowNative.h in Headers */,
 				630AAFED1DC7C42E009A4050 /* ComGoogleGsonInstanceCreator.h in Headers */,
 				630AAFDD1DC7C42E009A4050 /* ComGoogleGsonAnnotationsUntil.h in Headers */,
-				630AAF3D1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDataHelper.h in Headers */,
 				630AB1451DC7C430009A4050 /* RxFunctionsAction1.h in Headers */,
 				630AB1411DC7C430009A4050 /* RxFunctionsAction.h in Headers */,
 				630AB2A91DC7C432009A4050 /* RxInternalOperatorsSingleOnSubscribeMap.h in Headers */,
-				630AAF3B1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoVenue.h in Headers */,
 				630AB0CD1DC7C42F009A4050 /* RetrofitHttpFormUrlEncoded.h in Headers */,
 				630AB43B1DC7C434009A4050 /* CoTouchlabSqueakyLoggerAndroidLog.h in Headers */,
 				630AB33B1DC7C433009A4050 /* RxInternalUtilUnsafeUnsafeAccess.h in Headers */,
 				630AAE911DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteConnection.h in Headers */,
 				630AB30D1DC7C433009A4050 /* RxInternalUtilOpenHashSet.h in Headers */,
 				630AB0151DC7C42E009A4050 /* ComGoogleGsonInternalLazilyParsedNumber.h in Headers */,
-				630AAF311DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoConvention.h in Headers */,
 				630AB0791DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedStorageGsonGsonStoredCommandAdapter.h in Headers */,
+				636BCBC51EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkNetworkErrorHandler.h in Headers */,
 				630AB17B1DC7C430009A4050 /* RxInternalOperatorsBlockingOperatorLatest.h in Headers */,
 				630AB3991DC7C434009A4050 /* RxSubjectsBehaviorSubject.h in Headers */,
 				630AB0431DC7C42E009A4050 /* ComGoogleGsonpackage-info.h in Headers */,
@@ -6811,13 +6718,13 @@
 				630AB1EF1DC7C431009A4050 /* RxInternalOperatorsOnSubscribeTimerOnce.h in Headers */,
 				63712CC71E2A02A400310FB0 /* ComGoogleAutoValueAutoAnnotation.h in Headers */,
 				630AB2451DC7C431009A4050 /* RxInternalOperatorsOperatorSampleWithTime.h in Headers */,
+				636BCBD71EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsEmojiUtil.h in Headers */,
 				630AB1951DC7C430009A4050 /* RxInternalOperatorsCompletableOnSubscribeMergeArray.h in Headers */,
 				630AB1351DC7C430009A4050 /* RxExceptionsOnCompletedFailedException.h in Headers */,
 				630AB0611DC7C42E009A4050 /* CoTouchlabAndroidThreadingTasksHelperNeverFailPersistedTask.h in Headers */,
 				630AB3A11DC7C434009A4050 /* RxSubjectsSerializedSubject.h in Headers */,
 				630AB1431DC7C430009A4050 /* RxFunctionsAction0.h in Headers */,
 				630AB1A51DC7C430009A4050 /* RxInternalOperatorsNeverObservableHolder.h in Headers */,
-				630AAF251DC7C42E009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee$Configuration.h in Headers */,
 				630AAFAF1DC7C42E009A4050 /* DeGreenrobotEventAsyncPoster.h in Headers */,
 				630AAE8D1DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteCantOpenDatabaseException.h in Headers */,
 				630AB1291DC7C430009A4050 /* RxCompletableSubscriber.h in Headers */,
@@ -6827,11 +6734,11 @@
 				630AB1491DC7C430009A4050 /* RxFunctionsAction3.h in Headers */,
 				630AB1191DC7C430009A4050 /* RetrofitUtils.h in Headers */,
 				630AB3811DC7C433009A4050 /* RxSchedulersNewThreadScheduler.h in Headers */,
+				636BCBDF1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsTimeUtils.h in Headers */,
 				630AB1AF1DC7C431009A4050 /* RxInternalOperatorsOnSubscribeCombineLatest.h in Headers */,
 				630AAFEB1DC7C42E009A4050 /* ComGoogleGsonGsonBuilder.h in Headers */,
 				630AAF8B1DC7C42E009A4050 /* DCPEventDetailPresenter.h in Headers */,
 				630AB1611DC7C430009A4050 /* RxFunctionsFunc2.h in Headers */,
-				630AAF291DC7C42E009A4050 /* CoTouchlabDroidconandroidIosIosFirebase.h in Headers */,
 				630AAFC91DC7C42E009A4050 /* DeGreenrobotEventThreadMode.h in Headers */,
 				63712CB91E2A02A400310FB0 /* AndroidOsIBinder.h in Headers */,
 				630AB1DD1DC7C431009A4050 /* RxInternalOperatorsOnSubscribeRange.h in Headers */,
@@ -6844,6 +6751,7 @@
 				630AB1BB1DC7C431009A4050 /* RxInternalOperatorsOnSubscribeDetach.h in Headers */,
 				630AB1BF1DC7C431009A4050 /* RxInternalOperatorsOnSubscribeFilter.h in Headers */,
 				630AB3D91DC7C434009A4050 /* CoTouchlabSqueakyDbSQLiteStatement.h in Headers */,
+				636BCBC91EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsRequest.h in Headers */,
 				630AAE7F1DC7C42E009A4050 /* AndroidDatabaseObservable.h in Headers */,
 				630AB0551DC7C42E009A4050 /* ComGoogleGsonTypeAdapter.h in Headers */,
 				630AAED11DC7C42E009A4050 /* AndroidOsFileUtils.h in Headers */,
@@ -6863,13 +6771,11 @@
 				630AB12F1DC7C430009A4050 /* RxExceptionsCompositeException.h in Headers */,
 				630AB1C51DC7C431009A4050 /* RxInternalOperatorsOnSubscribeFromAsyncEmitter.h in Headers */,
 				630AB2051DC7C431009A4050 /* RxInternalOperatorsOperatorBufferWithStartEndObservable.h in Headers */,
-				630AAF551DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsEmojiUtil.h in Headers */,
 				630AB3311DC7C433009A4050 /* RxInternalUtilUnsafeQueueProgressIndicators.h in Headers */,
 				630AAEC71DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteStatementInfo.h in Headers */,
 				630AB31F1DC7C433009A4050 /* RxInternalUtilUnsafeBaseLinkedQueue.h in Headers */,
 				630AB0C31DC7C42F009A4050 /* RetrofitHttpEncodedPath.h in Headers */,
 				630AAEE51DC7C42E009A4050 /* AndroidSupportAnnotationIntDef.h in Headers */,
-				630AAF471DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsRequest.h in Headers */,
 				630AB3FB1DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesBooleanCharType.h in Headers */,
 				630AB1971DC7C430009A4050 /* RxInternalOperatorsCompletableOnSubscribeMergeDelayErrorArray.h in Headers */,
 				630AB2331DC7C431009A4050 /* RxInternalOperatorsOperatorObserveOn.h in Headers */,
@@ -6908,16 +6814,17 @@
 				630AB0D11DC7C42F009A4050 /* RetrofitHttpHEAD.h in Headers */,
 				630AB03F1DC7C42E009A4050 /* ComGoogleGsonJsonSyntaxException.h in Headers */,
 				630AAE4F1DC7C42D009A4050 /* AndroidAppApplication.h in Headers */,
+				636BCBD91EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsIOUtils.h in Headers */,
 				630AB3E11DC7C434009A4050 /* CoTouchlabSqueakyFieldDataType.h in Headers */,
 				630AB41D1DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesFloatObjectType.h in Headers */,
 				630AB3E71DC7C434009A4050 /* CoTouchlabSqueakyFieldFieldType.h in Headers */,
-				630AAF451DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkRefreshScheduleDataRequest.h in Headers */,
 				630AAFBB1DC7C42E009A4050 /* DeGreenrobotEventNoSubscriberEvent.h in Headers */,
 				630AAFF11DC7C42E009A4050 /* ComGoogleGsonInternal$Gson$Types.h in Headers */,
 				630AB38B1DC7C433009A4050 /* RxSchedulersTimestamped.h in Headers */,
 				630AB3EB1DC7C434009A4050 /* CoTouchlabSqueakyFieldForeignCollectionInfo.h in Headers */,
 				630AB1871DC7C430009A4050 /* RxInternalOperatorsCachedObservable.h in Headers */,
 				630AB2B91DC7C432009A4050 /* RxInternalOperatorsSingleToObservable.h in Headers */,
+				636BCBBB1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserInfoResponse.h in Headers */,
 				630AB44D1DC7C434009A4050 /* CoTouchlabSqueakyTableGeneratedTableMapper.h in Headers */,
 				630AB1531DC7C430009A4050 /* RxFunctionsAction8.h in Headers */,
 			);
@@ -7107,9 +7014,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				636BCBE51EA05885004C8494 /* prefixes.properties in Resources */,
 				639320311D77FF700047224B /* dataseeds in Resources */,
 				631B98FE1C7D6533008AA20D /* LaunchScreen.storyboard in Resources */,
-				FAE033A41C9711F8001C50E1 /* prefixes.properties in Resources */,
 				631B98FB1C7D6533008AA20D /* Assets.xcassets in Resources */,
 				FA6128C31C986E7A001142E8 /* EventTableViewCell.xib in Resources */,
 				FA258F611C937F5900986E0D /* NoteTableViewCell.xib in Resources */,
@@ -7136,6 +7043,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				636BCBE41EA0587E004C8494 /* prefixes.properties in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -7487,7 +7395,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				63712CB81E2A02A400310FB0 /* AndroidOsBadParcelableException.m in Sources */,
-				630AAF541DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsAnalyticsEvents.m in Sources */,
 				630AB2C41DC7C432009A4050 /* RxInternalProducersSingleDelayedProducer.m in Sources */,
 				630AAFAA1DC7C42E009A4050 /* DCTSponsorsTask.m in Sources */,
 				630AB09A1DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper.m in Sources */,
@@ -7519,7 +7426,6 @@
 				630AB37E1DC7C433009A4050 /* RxScheduler.m in Sources */,
 				630AB1F61DC7C431009A4050 /* RxInternalOperatorsOnSubscribeToMultimap.m in Sources */,
 				630AAFEC1DC7C42E009A4050 /* ComGoogleGsonGsonBuilder.m in Sources */,
-				630AAF4E1DC7C42E009A4050 /* CoTouchlabDroidconandroidTasksPersistedBackoffRetryListener.m in Sources */,
 				630AB2E81DC7C433009A4050 /* RxInternalUtilActionObserver.m in Sources */,
 				630AB3501DC7C433009A4050 /* RxObserver.m in Sources */,
 				630AB1601DC7C430009A4050 /* RxFunctionsFunc1.m in Sources */,
@@ -7564,6 +7470,7 @@
 				630AB03C1DC7C42E009A4050 /* ComGoogleGsonJsonSerializer.m in Sources */,
 				630AB2A01DC7C432009A4050 /* RxInternalOperatorsSingleFromObservable.m in Sources */,
 				630AB27C1DC7C432009A4050 /* RxInternalOperatorsOperatorToObservableSortedList.m in Sources */,
+				636BCBBC1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserInfoResponse.m in Sources */,
 				630AB3C21DC7C434009A4050 /* CoTouchlabSqueakyDaoDao.m in Sources */,
 				630AAF621DC7C42E009A4050 /* DCDAppPrefs.m in Sources */,
 				630AB1AA1DC7C431009A4050 /* RxInternalOperatorsOnSubscribeAmb.m in Sources */,
@@ -7580,8 +7487,8 @@
 				630AAEA21DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteDatabaseCorruptException.m in Sources */,
 				630AB2C21DC7C432009A4050 /* RxInternalProducersQueuedValueProducer.m in Sources */,
 				630AB3981DC7C434009A4050 /* RxSubjectsAsyncSubject.m in Sources */,
+				636BCBBE1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoVenue.m in Sources */,
 				630AAE561DC7C42D009A4050 /* AndroidContentContentValues.m in Sources */,
-				630AAF5E1DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsTimeUtils.m in Sources */,
 				630AB0FA1DC7C42F009A4050 /* RetrofitMimeTypedInput.m in Sources */,
 				630AB4101DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesDateStringType.m in Sources */,
 				630AB0821DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedStorageSqliteSQLiteDatabaseFactory.m in Sources */,
@@ -7613,6 +7520,7 @@
 				630AB4721DC7C435009A4050 /* CoTouchlabSqueakyStmtQuerySimpleComparison.m in Sources */,
 				630AB4121DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesDateTimeType.m in Sources */,
 				630AB43E1DC7C434009A4050 /* CoTouchlabSqueakyLoggerOLog.m in Sources */,
+				636BCBD41EA054CF004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData.m in Sources */,
 				630AB38A1DC7C433009A4050 /* RxSchedulersTimeInterval.m in Sources */,
 				630AB04A1DC7C42E009A4050 /* ComGoogleGsonStreamJsonReader.m in Sources */,
 				630AB13E1DC7C430009A4050 /* RxExceptionspackage-info.m in Sources */,
@@ -7621,7 +7529,6 @@
 				630AB3241DC7C433009A4050 /* RxInternalUtilUnsafeBaseLinkedQueueProducerNodeRef.m in Sources */,
 				630AB4241DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesIntType.m in Sources */,
 				630AAFA01DC7C42E009A4050 /* DCTEventDetailLoadTask.m in Sources */,
-				630AAF321DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoConvention.m in Sources */,
 				630AB1081DC7C42F009A4050 /* RetrofitRequestInterceptor.m in Sources */,
 				630AB3921DC7C433009A4050 /* RxSinglesBlockingSingle.m in Sources */,
 				630AAFE01DC7C42E009A4050 /* ComGoogleGsonDefaultDateTypeAdapter.m in Sources */,
@@ -7647,11 +7554,11 @@
 				630AB2381DC7C431009A4050 /* RxInternalOperatorsOperatorOnBackpressureDrop.m in Sources */,
 				630AB1761DC7C430009A4050 /* RxFunctionsFunctions.m in Sources */,
 				630AB1D21DC7C431009A4050 /* RxInternalOperatorsOnSubscribeLift.m in Sources */,
+				636BCBBA1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoUserAccount.m in Sources */,
 				630AB3E41DC7C434009A4050 /* CoTouchlabSqueakyFieldFieldConverter.m in Sources */,
 				630AB1D81DC7C431009A4050 /* RxInternalOperatorsOnSubscribeOnAssemblyCompletable.m in Sources */,
 				630AB2741DC7C432009A4050 /* RxInternalOperatorsOperatorTimeoutBase.m in Sources */,
 				630AB3BC1DC7C434009A4050 /* RxSubscriptionsSubscriptions.m in Sources */,
-				630AAF4A1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsResult.m in Sources */,
 				630AB3161DC7C433009A4050 /* RxInternalUtilScalarSynchronousObservable.m in Sources */,
 				630AB3E81DC7C434009A4050 /* CoTouchlabSqueakyFieldFieldType.m in Sources */,
 				630AB1C61DC7C431009A4050 /* RxInternalOperatorsOnSubscribeFromAsyncEmitter.m in Sources */,
@@ -7667,8 +7574,10 @@
 				630AB0A81DC7C42F009A4050 /* RetrofitClientDefaults.m in Sources */,
 				630AB0D61DC7C42F009A4050 /* RetrofitHttpHeaders.m in Sources */,
 				630AB23E1DC7C431009A4050 /* RxInternalOperatorsOperatorPublish.m in Sources */,
+				636BCBB81EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEventVideoDetails.m in Sources */,
 				630AB41E1DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesFloatObjectType.m in Sources */,
 				630AB2341DC7C431009A4050 /* RxInternalOperatorsOperatorObserveOn.m in Sources */,
+				636BCBA81EA054CF004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee.m in Sources */,
 				630AB31E1DC7C433009A4050 /* RxInternalUtilSynchronizedQueue.m in Sources */,
 				630AB1301DC7C430009A4050 /* RxExceptionsCompositeException.m in Sources */,
 				630AB10C1DC7C42F009A4050 /* RetrofitResponseCallback.m in Sources */,
@@ -7689,10 +7598,8 @@
 				630AB46C1DC7C435009A4050 /* CoTouchlabSqueakyStmtQueryQueryBuilder.m in Sources */,
 				6359898E1DE46D5B002E0AEC /* RxDopplJ2objcWeakReference.m in Sources */,
 				630AB0201DC7C42E009A4050 /* ComGoogleGsonInternalPrimitives.m in Sources */,
-				630AAF4C1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkWatchVideoRequest.m in Sources */,
 				630AB1221DC7C430009A4050 /* RxAsyncEmitter.m in Sources */,
 				630AB25A1DC7C432009A4050 /* RxInternalOperatorsOperatorSubscribeOn.m in Sources */,
-				630AAF361DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoEventVideoDetails.m in Sources */,
 				630AB3941DC7C433009A4050 /* RxSinglespackage-info.m in Sources */,
 				630AAE9A1DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteCursorDriver.m in Sources */,
 				630AB1401DC7C430009A4050 /* RxExceptionsUnsubscribeFailedException.m in Sources */,
@@ -7726,10 +7633,12 @@
 				630AAFA61DC7C42E009A4050 /* DCTRemoveRsvpTask.m in Sources */,
 				630AB3061DC7C433009A4050 /* RxInternalUtilInternalObservableUtils.m in Sources */,
 				630AB0EE1DC7C42F009A4050 /* RetrofitHttpStreaming.m in Sources */,
+				636BCBCE1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkWatchVideoRequest.m in Sources */,
 				630AB3481DC7C433009A4050 /* RxObservablesConnectableObservable.m in Sources */,
 				630AB4021DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesBooleanType.m in Sources */,
 				630AB44A1DC7C434009A4050 /* CoTouchlabSqueakyTableDatabaseTable.m in Sources */,
 				630AAFC01DC7C42E009A4050 /* DeGreenrobotEventPendingPostQueue.m in Sources */,
+				636BCBDA1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsIOUtils.m in Sources */,
 				630AB0C21DC7C42F009A4050 /* RetrofitHttpDELETE.m in Sources */,
 				630AAED41DC7C42E009A4050 /* AndroidOsHandler.m in Sources */,
 				630AB0441DC7C42E009A4050 /* ComGoogleGsonpackage-info.m in Sources */,
@@ -7748,8 +7657,8 @@
 				630AAE8A1DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteBindOrColumnIndexOutOfRangeException.m in Sources */,
 				630AB3781DC7C433009A4050 /* RxPluginsRxJavaSingleExecutionHook.m in Sources */,
 				630AB2141DC7C431009A4050 /* RxInternalOperatorsOperatorDematerialize.m in Sources */,
-				630AAF301DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock.m in Sources */,
 				630AB3A01DC7C434009A4050 /* RxSubjectsReplaySubject.m in Sources */,
+				636BCBDE1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsStringUtils.m in Sources */,
 				630AB4401DC7C434009A4050 /* CoTouchlabSqueakyLoggerOLogImpl.m in Sources */,
 				630AB3FE1DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesBooleanIntegerType.m in Sources */,
 				630AB32C1DC7C433009A4050 /* RxInternalUtilUnsafeMpmcArrayQueue.m in Sources */,
@@ -7766,10 +7675,8 @@
 				630AB0081DC7C42E009A4050 /* ComGoogleGsonInternalBindTimeTypeAdapter.m in Sources */,
 				630AB04E1DC7C42E009A4050 /* ComGoogleGsonStreamJsonToken.m in Sources */,
 				630AAE821DC7C42E009A4050 /* AndroidDatabaseSQLException.m in Sources */,
-				630AAF5C1DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsStringUtils.m in Sources */,
 				630AAF761DC7C42E009A4050 /* DCDUserAccount$Configuration.m in Sources */,
 				630AAEA81DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteDebug.m in Sources */,
-				630AAF2C1DC7C42E009A4050 /* CoTouchlabDroidconandroidIosIosPlatformClient.m in Sources */,
 				630AB1841DC7C430009A4050 /* RxInternalOperatorsBlockingOperatorToIterator.m in Sources */,
 				630AB10A1DC7C42F009A4050 /* RetrofitRequestInterceptorTape.m in Sources */,
 				630AB3701DC7C433009A4050 /* RxPluginsRxJavaObservableExecutionHook.m in Sources */,
@@ -7780,8 +7687,10 @@
 				630AAF7E1DC7C42E009A4050 /* DCPAbstractEventBusPresenter.m in Sources */,
 				630AB2001DC7C431009A4050 /* RxInternalOperatorsOperatorAsObservable.m in Sources */,
 				630AB0D81DC7C42F009A4050 /* RetrofitHttpMultipart.m in Sources */,
+				636BCBC61EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkNetworkErrorHandler.m in Sources */,
 				630AAEBC1DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteProgram.m in Sources */,
 				630AAEAC1DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteDiskIOException.m in Sources */,
+				636BCBC01EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDataHelper.m in Sources */,
 				630AB2581DC7C432009A4050 /* RxInternalOperatorsOperatorSkipWhile.m in Sources */,
 				630AAF8A1DC7C42E009A4050 /* DCPEventDetailHost.m in Sources */,
 				630AB3EA1DC7C434009A4050 /* CoTouchlabSqueakyFieldForeignCollectionField.m in Sources */,
@@ -7797,8 +7706,6 @@
 				630AAF821DC7C42E009A4050 /* DCPConferenceDataHelper.m in Sources */,
 				630AB4641DC7C435009A4050 /* CoTouchlabSqueakyStmtQueryIsNull.m in Sources */,
 				630AAEAE1DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteDoneException.m in Sources */,
-				630AAF261DC7C42E009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee$Configuration.m in Sources */,
-				630AAF3E1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDataHelper.m in Sources */,
 				630AB46E1DC7C435009A4050 /* CoTouchlabSqueakyStmtQueryQueryFactory.m in Sources */,
 				630AB2961DC7C432009A4050 /* RxInternalOperatorsSingleDoOnEvent.m in Sources */,
 				630AAE841DC7C42E009A4050 /* AndroidDatabaseSqliteDatabaseObjectNotClosedException.m in Sources */,
@@ -7810,13 +7717,13 @@
 				630AB38C1DC7C433009A4050 /* RxSchedulersTimestamped.m in Sources */,
 				630AB01E1DC7C42E009A4050 /* ComGoogleGsonInternalpackage-info.m in Sources */,
 				630AB0E21DC7C42F009A4050 /* RetrofitHttpPath.m in Sources */,
+				636BCBCC1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsResult.m in Sources */,
 				630AAFE41DC7C42E009A4050 /* ComGoogleGsonFieldAttributes.m in Sources */,
 				630AB1661DC7C430009A4050 /* RxFunctionsFunc4.m in Sources */,
 				630AAF221DC7C42E009A4050 /* SQLitePreparedStatement.m in Sources */,
 				630AB2D41DC7C433009A4050 /* RxInternalSchedulersNewThreadScheduler.m in Sources */,
 				630AAE8C1DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteBlobTooBigException.m in Sources */,
 				630AB25C1DC7C432009A4050 /* RxInternalOperatorsOperatorSwitch.m in Sources */,
-				630AAF2A1DC7C42E009A4050 /* CoTouchlabDroidconandroidIosIosFirebase.m in Sources */,
 				630AB15C1DC7C430009A4050 /* RxFunctionsCancellable.m in Sources */,
 				630AAE661DC7C42E009A4050 /* AndroidDatabaseCrossProcessCursorWrapper.m in Sources */,
 				630AB1A61DC7C431009A4050 /* RxInternalOperatorsNeverObservableHolder.m in Sources */,
@@ -7828,20 +7735,17 @@
 				630AAFE21DC7C42E009A4050 /* ComGoogleGsonExclusionStrategy.m in Sources */,
 				630AB17A1DC7C430009A4050 /* RxInternalOperatorsBackpressureUtils.m in Sources */,
 				630AB00C1DC7C42E009A4050 /* ComGoogleGsonInternalBindTypeAdapters.m in Sources */,
-				630AAF421DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkGsonConverter.m in Sources */,
 				630AAE4E1DC7C42D009A4050 /* AndroidAnnotationNullable.m in Sources */,
 				630AB3CC1DC7C434009A4050 /* CoTouchlabSqueakyDaoSelectIterator.m in Sources */,
 				630AB0E81DC7C42F009A4050 /* RetrofitHttpQuery.m in Sources */,
 				630AB26E1DC7C432009A4050 /* RxInternalOperatorsOperatorThrottleFirst.m in Sources */,
 				630AB0941DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksTaskQueue.m in Sources */,
-				630AAF401DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkFindUserRequest.m in Sources */,
 				630AB07C1DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedStorageSqliteClearSQLiteDatabase.m in Sources */,
 				630AB1F41DC7C431009A4050 /* RxInternalOperatorsOnSubscribeToMap.m in Sources */,
 				630AB45C1DC7C434009A4050 /* CoTouchlabSqueakyStmtQueryClause.m in Sources */,
 				630AB1201DC7C430009A4050 /* RxAnnotationspackage-info.m in Sources */,
 				630AB2D81DC7C433009A4050 /* RxInternalSchedulersScheduledAction.m in Sources */,
 				630AB1741DC7C430009A4050 /* RxFunctionsFunction.m in Sources */,
-				630AAF501DC7C42E009A4050 /* CoTouchlabDroidconandroidTasksPersistedPersistedTaskQueueFactory.m in Sources */,
 				630AB05E1DC7C42E009A4050 /* CoTouchlabAndroidThreadingEventbusEventBusExt.m in Sources */,
 				630AB0781DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedStorageDefaultPersistedTaskQueue.m in Sources */,
 				630AB03E1DC7C42E009A4050 /* ComGoogleGsonJsonStreamParser.m in Sources */,
@@ -7869,8 +7773,10 @@
 				630AB2521DC7C432009A4050 /* RxInternalOperatorsOperatorSkipLast.m in Sources */,
 				630AB2EE1DC7C433009A4050 /* RxInternalUtilAtomicBaseLinkedAtomicQueue.m in Sources */,
 				630AB2B81DC7C432009A4050 /* RxInternalOperatorsSingleTimeout.m in Sources */,
+				636BCBC81EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkRefreshScheduleDataRequest.m in Sources */,
 				630AAF101DC7C42E009A4050 /* RenameComGoogleAndroidCollectSets.m in Sources */,
 				630AB3B81DC7C434009A4050 /* RxSubscriptionsRefCountSubscription.m in Sources */,
+				636BCBC41EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkGsonConverter.m in Sources */,
 				630AB21C1DC7C431009A4050 /* RxInternalOperatorsOperatorDoOnRequest.m in Sources */,
 				630AB41C1DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesEnumStringType.m in Sources */,
 				630AB10E1DC7C42F009A4050 /* RetrofitResponseWrapper.m in Sources */,
@@ -7881,9 +7787,8 @@
 				630AB2261DC7C431009A4050 /* RxInternalOperatorsOperatorGroupBy.m in Sources */,
 				630AB29A1DC7C432009A4050 /* RxInternalOperatorsSingleDoOnUnsubscribe.m in Sources */,
 				630AB04C1DC7C42E009A4050 /* ComGoogleGsonStreamJsonScope.m in Sources */,
-				630AAF481DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkSponsorsRequest.m in Sources */,
-				630AAF581DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsIOUtils.m in Sources */,
 				630AB2F41DC7C433009A4050 /* RxInternalUtilAtomicSpscAtomicArrayQueue.m in Sources */,
+				636BCBDC1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsSlackUtils.m in Sources */,
 				630AAE761DC7C42E009A4050 /* AndroidDatabaseDataSetObservable.m in Sources */,
 				630AB1941DC7C430009A4050 /* RxInternalOperatorsCompletableOnSubscribeMerge.m in Sources */,
 				630AB06C1DC7C42E009A4050 /* CoTouchlabAndroidThreadingTasksPersistedCommandPurgePolicy.m in Sources */,
@@ -7905,7 +7810,6 @@
 				630AAF9E1DC7C42E009A4050 /* DCTCheckWatchVideoTask.m in Sources */,
 				630AB4081DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesByteType.m in Sources */,
 				630AB0521DC7C42E009A4050 /* ComGoogleGsonStreamMalformedJsonException.m in Sources */,
-				630AAF281DC7C42E009A4050 /* CoTouchlabDroidconandroidDataStaffEventAttendee.m in Sources */,
 				630AB0001DC7C42E009A4050 /* ComGoogleGsonInternalBindMapTypeAdapterFactory.m in Sources */,
 				630AAE7C1DC7C42E009A4050 /* AndroidDatabaseMatrixCursor.m in Sources */,
 				630AB1101DC7C42F009A4050 /* RetrofitRestAdapter.m in Sources */,
@@ -7923,10 +7827,10 @@
 				630AB07A1DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedStorageGsonGsonStoredCommandAdapter.m in Sources */,
 				630AAE5C1DC7C42D009A4050 /* AndroidContentSharedPreferences.m in Sources */,
 				630AB3FC1DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesBooleanCharType.m in Sources */,
-				630AAF381DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserAccount.m in Sources */,
 				630AB0881DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedSuperbusEventListener.m in Sources */,
 				630AAEFA1DC7C42E009A4050 /* AndroidUtilPrefixPrinter.m in Sources */,
 				630AB13A1DC7C430009A4050 /* RxExceptionsOnErrorNotImplementedException.m in Sources */,
+				636BCBD81EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsEmojiUtil.m in Sources */,
 				630AB3AE1DC7C434009A4050 /* RxSubscription.m in Sources */,
 				630AB2761DC7C432009A4050 /* RxInternalOperatorsOperatorTimeoutWithSelector.m in Sources */,
 				630AB3AA1DC7C434009A4050 /* RxSubjectsUnicastSubject.m in Sources */,
@@ -7941,8 +7845,10 @@
 				630AB3081DC7C433009A4050 /* RxInternalUtilLinkedArrayList.m in Sources */,
 				630AAEB01DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteException.m in Sources */,
 				630AB3DA1DC7C434009A4050 /* CoTouchlabSqueakyDbSQLiteStatement.m in Sources */,
+				636BCBAA1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedDataStaffEventAttendee$Configuration.m in Sources */,
 				630AB2A21DC7C432009A4050 /* RxInternalOperatorsSingleLiftObservableOperator.m in Sources */,
 				630AB3FA1DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesBigIntegerType.m in Sources */,
+				636BCBB41EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoConvention.m in Sources */,
 				630AB23A1DC7C431009A4050 /* RxInternalOperatorsOperatorOnBackpressureLatest.m in Sources */,
 				630AB02A1DC7C42E009A4050 /* ComGoogleGsonJsonDeserializer.m in Sources */,
 				630AAEF21DC7C42E009A4050 /* AndroidUtilAndroidRuntimeException.m in Sources */,
@@ -7951,7 +7857,7 @@
 				630AB0DC1DC7C42F009A4050 /* RetrofitHttpPart.m in Sources */,
 				630AB3521DC7C433009A4050 /* RxObserversAsyncCompletableSubscriber.m in Sources */,
 				630AB3AC1DC7C434009A4050 /* RxSubscriber.m in Sources */,
-				630AAF3A1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoUserInfoResponse.m in Sources */,
+				636BCBCA1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkSponsorsRequest.m in Sources */,
 				630AB2C01DC7C432009A4050 /* RxInternalProducersQueuedProducer.m in Sources */,
 				630AAF8C1DC7C42E009A4050 /* DCPEventDetailPresenter.m in Sources */,
 				630AB0761DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedPersistenceProvider.m in Sources */,
@@ -7961,6 +7867,7 @@
 				630AAE681DC7C42E009A4050 /* AndroidDatabaseCursor.m in Sources */,
 				630AB3001DC7C433009A4050 /* RxInternalUtilBlockingUtils.m in Sources */,
 				630AAEB61DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteMisuseException.m in Sources */,
+				636BCBD61EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsAnalyticsEvents.m in Sources */,
 				630AB37C1DC7C433009A4050 /* RxProducer.m in Sources */,
 				630AB2BC1DC7C432009A4050 /* RxInternalProducersProducerArbiter.m in Sources */,
 				630AB1DE1DC7C431009A4050 /* RxInternalOperatorsOnSubscribeRange.m in Sources */,
@@ -7976,11 +7883,13 @@
 				630AB1881DC7C430009A4050 /* RxInternalOperatorsCachedObservable.m in Sources */,
 				630AB35E1DC7C433009A4050 /* RxObserversSerializedSubscriber.m in Sources */,
 				630AB3D21DC7C434009A4050 /* CoTouchlabSqueakyDbSQLiteOpenHelper.m in Sources */,
+				636BCBE01EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsTimeUtils.m in Sources */,
 				630AB0241DC7C42E009A4050 /* ComGoogleGsonInternalUnsafeAllocator.m in Sources */,
 				630AB2661DC7C432009A4050 /* RxInternalOperatorsOperatorTakeTimed.m in Sources */,
 				630AAF041DC7C42E009A4050 /* ComAndroidInternalUtilGrowingArrayUtils.m in Sources */,
 				630AB0681DC7C42E009A4050 /* CoTouchlabAndroidThreadingTasksPersistedBusLogImpl.m in Sources */,
 				630AB0121DC7C42E009A4050 /* ComGoogleGsonInternalExcluder.m in Sources */,
+				636BCBB61EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoEvent.m in Sources */,
 				630AB4321DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesStringBytesType.m in Sources */,
 				630AB3BE1DC7C434009A4050 /* CoTouchlabSqueakyConfig.m in Sources */,
 				630AB27A1DC7C432009A4050 /* RxInternalOperatorsOperatorToObservableList.m in Sources */,
@@ -8020,12 +7929,12 @@
 				635989901DE46D5B002E0AEC /* RxDopplSafeObservableUnsubscribe.m in Sources */,
 				630AAE501DC7C42D009A4050 /* AndroidAppApplication.m in Sources */,
 				630AB1681DC7C430009A4050 /* RxFunctionsFunc5.m in Sources */,
-				630AAF461DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkRefreshScheduleDataRequest.m in Sources */,
 				630AB0321DC7C42E009A4050 /* ComGoogleGsonJsonObject.m in Sources */,
 				630AAF941DC7C42E009A4050 /* DCPVideoPlayerHost.m in Sources */,
 				630AAEA01DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteDatabaseConfiguration.m in Sources */,
 				630AB3441DC7C433009A4050 /* RxObservablesAsyncOnSubscribe.m in Sources */,
 				630AB36A1DC7C433009A4050 /* RxPluginsRxJavaCompletableExecutionHook.m in Sources */,
+				636BCBD21EA054CF004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedPersistedTaskQueueFactory.m in Sources */,
 				630AB4681DC7C435009A4050 /* CoTouchlabSqueakyStmtQueryNot.m in Sources */,
 				630AAF921DC7C42E009A4050 /* DCPScheduleBlockHour.m in Sources */,
 				630AB0141DC7C42E009A4050 /* ComGoogleGsonInternalJsonReaderInternalAccess.m in Sources */,
@@ -8043,12 +7952,10 @@
 				630AB1821DC7C430009A4050 /* RxInternalOperatorsBlockingOperatorToFuture.m in Sources */,
 				630AB1F01DC7C431009A4050 /* RxInternalOperatorsOnSubscribeTimerOnce.m in Sources */,
 				630AB30A1DC7C433009A4050 /* RxInternalUtilObjectPool.m in Sources */,
-				630AAF2E1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoBlock$Configuration.m in Sources */,
 				630AB42E1DC7C434009A4050 /* CoTouchlabSqueakyFieldTypesShortObjectType.m in Sources */,
 				630AAE521DC7C42D009A4050 /* AndroidAppQueuedWork.m in Sources */,
 				630AB2981DC7C432009A4050 /* RxInternalOperatorsSingleDoOnSubscribe.m in Sources */,
 				630AB3EE1DC7C434009A4050 /* CoTouchlabSqueakyFieldOrmLiteHelper.m in Sources */,
-				630AAF561DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsEmojiUtil.m in Sources */,
 				630AAEEE1DC7C42E009A4050 /* AndroidTelephonyJapanesePhoneNumberFormatter.m in Sources */,
 				630AB14E1DC7C430009A4050 /* RxFunctionsAction5.m in Sources */,
 				630AB33A1DC7C433009A4050 /* RxInternalUtilUnsafeSpscUnboundedArrayQueue.m in Sources */,
@@ -8070,6 +7977,7 @@
 				630AAE6C1DC7C42E009A4050 /* AndroidDatabaseCursorWindow.m in Sources */,
 				630AB3E21DC7C434009A4050 /* CoTouchlabSqueakyFieldDataType.m in Sources */,
 				630AB1641DC7C430009A4050 /* RxFunctionsFunc3.m in Sources */,
+				636BCBB01EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock.m in Sources */,
 				630AB05A1DC7C42E009A4050 /* CoTouchlabAndroidThreadingErrorcontrolNetworkException.m in Sources */,
 				630AB1E81DC7C431009A4050 /* RxInternalOperatorsOnSubscribeSingle.m in Sources */,
 				630AAED01DC7C42E009A4050 /* AndroidOsBundle.m in Sources */,
@@ -8083,6 +7991,7 @@
 				630AB3461DC7C433009A4050 /* RxObservablesBlockingObservable.m in Sources */,
 				630AB1A21DC7C430009A4050 /* RxInternalOperatorsDeferredScalarSubscriberSafe.m in Sources */,
 				630AB1441DC7C430009A4050 /* RxFunctionsAction0.m in Sources */,
+				636BCBD01EA054CF004C8494 /* CoTouchlabDroidconandroidSharedTasksPersistedBackoffRetryListener.m in Sources */,
 				630AAFD01DC7C42E009A4050 /* DeGreenrobotEventUtilHasExecutionScope.m in Sources */,
 				630AB0841DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedStorageSqliteSQLiteDatabaseIntf.m in Sources */,
 				63712CC61E2A02A400310FB0 /* AndroidUtilAndroidException.m in Sources */,
@@ -8105,6 +8014,7 @@
 				630AB01A1DC7C42E009A4050 /* ComGoogleGsonInternalLinkedTreeMap.m in Sources */,
 				630AB0E61DC7C42F009A4050 /* RetrofitHttpPUT.m in Sources */,
 				630AB1CC1DC7C431009A4050 /* RxInternalOperatorsOnSubscribeFromIterable.m in Sources */,
+				636BCBC21EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkFindUserRequest.m in Sources */,
 				630AB1C41DC7C431009A4050 /* RxInternalOperatorsOnSubscribeFromArray.m in Sources */,
 				630AAFDC1DC7C42E009A4050 /* ComGoogleGsonAnnotationsSince.m in Sources */,
 				630AAFDE1DC7C42E009A4050 /* ComGoogleGsonAnnotationsUntil.m in Sources */,
@@ -8122,6 +8032,7 @@
 				630AB1EA1DC7C431009A4050 /* RxInternalOperatorsOnSubscribeSkipTimed.m in Sources */,
 				630AAEBE1DC7C42E009A4050 /* AndroidDatabaseSqliteSQLiteQuery.m in Sources */,
 				630AB1B01DC7C431009A4050 /* RxInternalOperatorsOnSubscribeCombineLatest.m in Sources */,
+				636BCBE21EA054CF004C8494 /* CoTouchlabDroidconandroidSharedUtilsUserDataHelper.m in Sources */,
 				630AB17E1DC7C430009A4050 /* RxInternalOperatorsBlockingOperatorMostRecent.m in Sources */,
 				630AAE541DC7C42D009A4050 /* AndroidAppSharedPreferencesImpl.m in Sources */,
 				630AB3581DC7C433009A4050 /* RxObserversSafeCompletableSubscriber.m in Sources */,
@@ -8163,13 +8074,10 @@
 				630AB2221DC7C431009A4050 /* RxInternalOperatorsOperatorEagerConcatMap.m in Sources */,
 				630AB1BA1DC7C431009A4050 /* RxInternalOperatorsOnSubscribeDelaySubscriptionWithSelector.m in Sources */,
 				630AAE6A1DC7C42E009A4050 /* AndroidDatabaseCursorIndexOutOfBoundsException.m in Sources */,
+				636BCBAC1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedIosIosFirebase.m in Sources */,
 				630AB08A1DC7C42F009A4050 /* CoTouchlabAndroidThreadingTasksPersistedSuperbusProcessException.m in Sources */,
-				630AAF441DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkNetworkErrorHandler.m in Sources */,
 				630AB3261DC7C433009A4050 /* RxInternalUtilUnsafeConcurrentCircularArrayQueue.m in Sources */,
-				630AAF5A1DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsSlackUtils.m in Sources */,
-				630AAF521DC7C42E009A4050 /* CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData.m in Sources */,
 				630AAEE41DC7C42E009A4050 /* AndroidSupportAnnotationCheckResult.m in Sources */,
-				630AAF341DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoEvent.m in Sources */,
 				630AB2CC1DC7C432009A4050 /* RxInternalSchedulersExecutorScheduler.m in Sources */,
 				630AB3B61DC7C434009A4050 /* RxSubscriptionspackage-info.m in Sources */,
 				630AAFEA1DC7C42E009A4050 /* ComGoogleGsonGson.m in Sources */,
@@ -8220,7 +8128,6 @@
 				630AAFC81DC7C42E009A4050 /* DeGreenrobotEventSubscription.m in Sources */,
 				630AB4501DC7C434009A4050 /* CoTouchlabSqueakyTableTableInfo.m in Sources */,
 				630AB2B01DC7C432009A4050 /* RxInternalOperatorsSingleOperatorZip.m in Sources */,
-				630AAF601DC7C42E009A4050 /* CoTouchlabDroidconandroidUtilsUserDataHelper.m in Sources */,
 				630AB1B81DC7C431009A4050 /* RxInternalOperatorsOnSubscribeDelaySubscriptionOther.m in Sources */,
 				630AB0AE1DC7C42F009A4050 /* RetrofitClientResponse.m in Sources */,
 				630AB3961DC7C433009A4050 /* RxSingleSubscriber.m in Sources */,
@@ -8271,7 +8178,7 @@
 				630AB3201DC7C433009A4050 /* RxInternalUtilUnsafeBaseLinkedQueue.m in Sources */,
 				630AB1E21DC7C431009A4050 /* RxInternalOperatorsOnSubscribeReduce.m in Sources */,
 				630AB0DA1DC7C42F009A4050 /* RetrofitHttppackage-info.m in Sources */,
-				630AAF3C1DC7C42E009A4050 /* CoTouchlabDroidconandroidNetworkDaoVenue.m in Sources */,
+				636BCBB21EA054CF004C8494 /* CoTouchlabDroidconandroidSharedNetworkDaoBlock$Configuration.m in Sources */,
 				630AAE721DC7C42E009A4050 /* AndroidDatabaseDatabaseErrorHandler.m in Sources */,
 				630AAECE1DC7C42E009A4050 /* AndroidDatabaseStaleDataException.m in Sources */,
 				630AB1B21DC7C431009A4050 /* RxInternalOperatorsOnSubscribeConcatMap.m in Sources */,
@@ -8281,6 +8188,7 @@
 				630AB1481DC7C430009A4050 /* RxFunctionsAction2.m in Sources */,
 				630AB3D81DC7C434009A4050 /* CoTouchlabSqueakyDbSqliteSqueakyOpenHelper.m in Sources */,
 				630AB2C81DC7C432009A4050 /* RxInternalSchedulersCachedThreadScheduler.m in Sources */,
+				636BCBAE1EA054CF004C8494 /* CoTouchlabDroidconandroidSharedIosIosPlatformClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -354,7 +354,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[3].selector = @selector(close);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "write", "[CII", "LJavaIoIOException;", "LComGoogleGsonInternalBindJsonTreeWriter;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindJsonTreeWriter_1 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 4, 0, 3, -1, -1, -1, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindJsonTreeWriter_1 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8018, 4, 0, 3, -1, -1, -1, -1 };
   return &_ComGoogleGsonInternalBindJsonTreeWriter_1;
 }
 

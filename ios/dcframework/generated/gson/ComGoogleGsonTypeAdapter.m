@@ -210,7 +210,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonTypeAdapter)
     { "this$0_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x1012, -1, -1, 7, -1 },
   };
   static const void *ptrTable[] = { "write", "LComGoogleGsonStreamJsonWriter;LNSObject;", "LJavaIoIOException;", "(Lcom/google/gson/stream/JsonWriter;TT;)V", "read", "LComGoogleGsonStreamJsonReader;", "(Lcom/google/gson/stream/JsonReader;)TT;", "Lcom/google/gson/TypeAdapter<TT;>;", "LComGoogleGsonTypeAdapter;", "nullSafe" };
-  static const J2ObjcClassInfo _ComGoogleGsonTypeAdapter_1 = { "", "com.google.gson", ptrTable, methods, fields, 7, 0x8008, 3, 1, 8, -1, 9, 7, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonTypeAdapter_1 = { "", "com.google.gson", ptrTable, methods, fields, 7, 0x8018, 3, 1, 8, -1, 9, 7, -1 };
   return &_ComGoogleGsonTypeAdapter_1;
 }
 

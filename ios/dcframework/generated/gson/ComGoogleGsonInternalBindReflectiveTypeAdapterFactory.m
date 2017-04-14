@@ -82,9 +82,9 @@ __attribute__((unused)) static id<JavaUtilMap> ComGoogleGsonInternalBindReflecti
                                                      withJavaLangReflectField:(JavaLangReflectField *)capture$1
                                             withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)capture$2
                                                                   withBoolean:(jboolean)capture$3
-                                                                 withNSString:(NSString *)param0
-                                                                  withBoolean:(jboolean)param1
-                                                                  withBoolean:(jboolean)param2;
+                                                                 withNSString:(NSString *)name
+                                                                  withBoolean:(jboolean)serialized
+                                                                  withBoolean:(jboolean)deserialized;
 
 - (void)writeWithComGoogleGsonStreamJsonWriter:(ComGoogleGsonStreamJsonWriter *)writer
                                         withId:(id)value;
@@ -100,11 +100,11 @@ J2OBJC_EMPTY_STATIC_INIT(ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1
 
 J2OBJC_FIELD_SETTER(ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1, typeAdapter_, ComGoogleGsonTypeAdapter *)
 
-__attribute__((unused)) static void ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1_initWithComGoogleGsonInternalBindReflectiveTypeAdapterFactory_withComGoogleGsonGson_withJavaLangReflectField_withComGoogleGsonReflectTypeToken_withBoolean_withNSString_withBoolean_withBoolean_(ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1 *self, ComGoogleGsonInternalBindReflectiveTypeAdapterFactory *outer$, ComGoogleGsonGson *capture$0, JavaLangReflectField *capture$1, ComGoogleGsonReflectTypeToken *capture$2, jboolean capture$3, NSString *param0, jboolean param1, jboolean param2);
+__attribute__((unused)) static void ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1_initWithComGoogleGsonInternalBindReflectiveTypeAdapterFactory_withComGoogleGsonGson_withJavaLangReflectField_withComGoogleGsonReflectTypeToken_withBoolean_withNSString_withBoolean_withBoolean_(ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1 *self, ComGoogleGsonInternalBindReflectiveTypeAdapterFactory *outer$, ComGoogleGsonGson *capture$0, JavaLangReflectField *capture$1, ComGoogleGsonReflectTypeToken *capture$2, jboolean capture$3, NSString *name, jboolean serialized, jboolean deserialized);
 
-__attribute__((unused)) static ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1 *new_ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1_initWithComGoogleGsonInternalBindReflectiveTypeAdapterFactory_withComGoogleGsonGson_withJavaLangReflectField_withComGoogleGsonReflectTypeToken_withBoolean_withNSString_withBoolean_withBoolean_(ComGoogleGsonInternalBindReflectiveTypeAdapterFactory *outer$, ComGoogleGsonGson *capture$0, JavaLangReflectField *capture$1, ComGoogleGsonReflectTypeToken *capture$2, jboolean capture$3, NSString *param0, jboolean param1, jboolean param2) NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1 *new_ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1_initWithComGoogleGsonInternalBindReflectiveTypeAdapterFactory_withComGoogleGsonGson_withJavaLangReflectField_withComGoogleGsonReflectTypeToken_withBoolean_withNSString_withBoolean_withBoolean_(ComGoogleGsonInternalBindReflectiveTypeAdapterFactory *outer$, ComGoogleGsonGson *capture$0, JavaLangReflectField *capture$1, ComGoogleGsonReflectTypeToken *capture$2, jboolean capture$3, NSString *name, jboolean serialized, jboolean deserialized) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1 *create_ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1_initWithComGoogleGsonInternalBindReflectiveTypeAdapterFactory_withComGoogleGsonGson_withJavaLangReflectField_withComGoogleGsonReflectTypeToken_withBoolean_withNSString_withBoolean_withBoolean_(ComGoogleGsonInternalBindReflectiveTypeAdapterFactory *outer$, ComGoogleGsonGson *capture$0, JavaLangReflectField *capture$1, ComGoogleGsonReflectTypeToken *capture$2, jboolean capture$3, NSString *param0, jboolean param1, jboolean param2);
+__attribute__((unused)) static ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1 *create_ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1_initWithComGoogleGsonInternalBindReflectiveTypeAdapterFactory_withComGoogleGsonGson_withJavaLangReflectField_withComGoogleGsonReflectTypeToken_withBoolean_withNSString_withBoolean_withBoolean_(ComGoogleGsonInternalBindReflectiveTypeAdapterFactory *outer$, ComGoogleGsonGson *capture$0, JavaLangReflectField *capture$1, ComGoogleGsonReflectTypeToken *capture$2, jboolean capture$3, NSString *name, jboolean serialized, jboolean deserialized);
 
 @interface ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_Adapter () {
  @public
@@ -393,10 +393,10 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalBindReflectiveTypeAdapterF
                                                      withJavaLangReflectField:(JavaLangReflectField *)capture$1
                                             withComGoogleGsonReflectTypeToken:(ComGoogleGsonReflectTypeToken *)capture$2
                                                                   withBoolean:(jboolean)capture$3
-                                                                 withNSString:(NSString *)param0
-                                                                  withBoolean:(jboolean)param1
-                                                                  withBoolean:(jboolean)param2 {
-  ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1_initWithComGoogleGsonInternalBindReflectiveTypeAdapterFactory_withComGoogleGsonGson_withJavaLangReflectField_withComGoogleGsonReflectTypeToken_withBoolean_withNSString_withBoolean_withBoolean_(self, outer$, capture$0, capture$1, capture$2, capture$3, param0, param1, param2);
+                                                                 withNSString:(NSString *)name
+                                                                  withBoolean:(jboolean)serialized
+                                                                  withBoolean:(jboolean)deserialized {
+  ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1_initWithComGoogleGsonInternalBindReflectiveTypeAdapterFactory_withComGoogleGsonGson_withJavaLangReflectField_withComGoogleGsonReflectTypeToken_withBoolean_withNSString_withBoolean_withBoolean_(self, outer$, capture$0, capture$1, capture$2, capture$3, name, serialized, deserialized);
   return self;
 }
 
@@ -451,27 +451,27 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalBindReflectiveTypeAdapterF
     { "typeAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x10, -1, -1, 9, -1 },
   };
   static const void *ptrTable[] = { "LNSString;ZZ", "write", "LComGoogleGsonStreamJsonWriter;LNSObject;", "LJavaIoIOException;LJavaLangIllegalAccessException;", "read", "LComGoogleGsonStreamJsonReader;LNSObject;", "writeField", "LNSObject;", "Lcom/google/gson/reflect/TypeToken<*>;", "Lcom/google/gson/TypeAdapter<*>;", "LComGoogleGsonInternalBindReflectiveTypeAdapterFactory;", "createBoundFieldWithComGoogleGsonGson:withJavaLangReflectField:withNSString:withComGoogleGsonReflectTypeToken:withBoolean:withBoolean:" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1 = { "", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x8008, 4, 5, 10, -1, 11, -1, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1 = { "", "com.google.gson.internal.bind", ptrTable, methods, fields, 7, 0x8018, 4, 5, 10, -1, 11, -1, -1 };
   return &_ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1;
 }
 
 @end
 
-void ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1_initWithComGoogleGsonInternalBindReflectiveTypeAdapterFactory_withComGoogleGsonGson_withJavaLangReflectField_withComGoogleGsonReflectTypeToken_withBoolean_withNSString_withBoolean_withBoolean_(ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1 *self, ComGoogleGsonInternalBindReflectiveTypeAdapterFactory *outer$, ComGoogleGsonGson *capture$0, JavaLangReflectField *capture$1, ComGoogleGsonReflectTypeToken *capture$2, jboolean capture$3, NSString *param0, jboolean param1, jboolean param2) {
+void ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1_initWithComGoogleGsonInternalBindReflectiveTypeAdapterFactory_withComGoogleGsonGson_withJavaLangReflectField_withComGoogleGsonReflectTypeToken_withBoolean_withNSString_withBoolean_withBoolean_(ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1 *self, ComGoogleGsonInternalBindReflectiveTypeAdapterFactory *outer$, ComGoogleGsonGson *capture$0, JavaLangReflectField *capture$1, ComGoogleGsonReflectTypeToken *capture$2, jboolean capture$3, NSString *name, jboolean serialized, jboolean deserialized) {
   JreStrongAssign(&self->val$context_, capture$0);
   JreStrongAssign(&self->val$field_, capture$1);
   JreStrongAssign(&self->val$fieldType_, capture$2);
   self->val$isPrimitive_ = capture$3;
-  ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_BoundField_initWithNSString_withBoolean_withBoolean_(self, param0, param1, param2);
+  ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_BoundField_initWithNSString_withBoolean_withBoolean_(self, name, serialized, deserialized);
   JreStrongAssign(&self->typeAdapter_, [outer$ getFieldAdapterWithComGoogleGsonGson:capture$0 withJavaLangReflectField:capture$1 withComGoogleGsonReflectTypeToken:capture$2]);
 }
 
-ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1 *new_ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1_initWithComGoogleGsonInternalBindReflectiveTypeAdapterFactory_withComGoogleGsonGson_withJavaLangReflectField_withComGoogleGsonReflectTypeToken_withBoolean_withNSString_withBoolean_withBoolean_(ComGoogleGsonInternalBindReflectiveTypeAdapterFactory *outer$, ComGoogleGsonGson *capture$0, JavaLangReflectField *capture$1, ComGoogleGsonReflectTypeToken *capture$2, jboolean capture$3, NSString *param0, jboolean param1, jboolean param2) {
-  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1, initWithComGoogleGsonInternalBindReflectiveTypeAdapterFactory_withComGoogleGsonGson_withJavaLangReflectField_withComGoogleGsonReflectTypeToken_withBoolean_withNSString_withBoolean_withBoolean_, outer$, capture$0, capture$1, capture$2, capture$3, param0, param1, param2)
+ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1 *new_ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1_initWithComGoogleGsonInternalBindReflectiveTypeAdapterFactory_withComGoogleGsonGson_withJavaLangReflectField_withComGoogleGsonReflectTypeToken_withBoolean_withNSString_withBoolean_withBoolean_(ComGoogleGsonInternalBindReflectiveTypeAdapterFactory *outer$, ComGoogleGsonGson *capture$0, JavaLangReflectField *capture$1, ComGoogleGsonReflectTypeToken *capture$2, jboolean capture$3, NSString *name, jboolean serialized, jboolean deserialized) {
+  J2OBJC_NEW_IMPL(ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1, initWithComGoogleGsonInternalBindReflectiveTypeAdapterFactory_withComGoogleGsonGson_withJavaLangReflectField_withComGoogleGsonReflectTypeToken_withBoolean_withNSString_withBoolean_withBoolean_, outer$, capture$0, capture$1, capture$2, capture$3, name, serialized, deserialized)
 }
 
-ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1 *create_ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1_initWithComGoogleGsonInternalBindReflectiveTypeAdapterFactory_withComGoogleGsonGson_withJavaLangReflectField_withComGoogleGsonReflectTypeToken_withBoolean_withNSString_withBoolean_withBoolean_(ComGoogleGsonInternalBindReflectiveTypeAdapterFactory *outer$, ComGoogleGsonGson *capture$0, JavaLangReflectField *capture$1, ComGoogleGsonReflectTypeToken *capture$2, jboolean capture$3, NSString *param0, jboolean param1, jboolean param2) {
-  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1, initWithComGoogleGsonInternalBindReflectiveTypeAdapterFactory_withComGoogleGsonGson_withJavaLangReflectField_withComGoogleGsonReflectTypeToken_withBoolean_withNSString_withBoolean_withBoolean_, outer$, capture$0, capture$1, capture$2, capture$3, param0, param1, param2)
+ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1 *create_ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1_initWithComGoogleGsonInternalBindReflectiveTypeAdapterFactory_withComGoogleGsonGson_withJavaLangReflectField_withComGoogleGsonReflectTypeToken_withBoolean_withNSString_withBoolean_withBoolean_(ComGoogleGsonInternalBindReflectiveTypeAdapterFactory *outer$, ComGoogleGsonGson *capture$0, JavaLangReflectField *capture$1, ComGoogleGsonReflectTypeToken *capture$2, jboolean capture$3, NSString *name, jboolean serialized, jboolean deserialized) {
+  J2OBJC_CREATE_IMPL(ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_1, initWithComGoogleGsonInternalBindReflectiveTypeAdapterFactory_withComGoogleGsonGson_withJavaLangReflectField_withComGoogleGsonReflectTypeToken_withBoolean_withNSString_withBoolean_withBoolean_, outer$, capture$0, capture$1, capture$2, capture$3, name, serialized, deserialized)
 }
 
 @implementation ComGoogleGsonInternalBindReflectiveTypeAdapterFactory_Adapter

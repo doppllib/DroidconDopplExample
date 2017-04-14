@@ -899,7 +899,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonGson)
     { "this$0_", "LComGoogleGsonGson;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "deserialize", "LComGoogleGsonJsonElement;LJavaLangReflectType;", "LComGoogleGsonJsonParseException;", "<T:Ljava/lang/Object;>(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;)TT;", "LComGoogleGsonGson;" };
-  static const J2ObjcClassInfo _ComGoogleGsonGson_1 = { "", "com.google.gson", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, -1, -1, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonGson_1 = { "", "com.google.gson", ptrTable, methods, fields, 7, 0x8018, 2, 1, 4, -1, -1, -1, -1 };
   return &_ComGoogleGsonGson_1;
 }
 
@@ -955,7 +955,7 @@ ComGoogleGsonGson_1 *create_ComGoogleGsonGson_1_initWithComGoogleGsonGson_(ComGo
     { "this$0_", "LComGoogleGsonGson;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "serialize", "LNSObject;", "LNSObject;LJavaLangReflectType;", "LComGoogleGsonGson;" };
-  static const J2ObjcClassInfo _ComGoogleGsonGson_2 = { "", "com.google.gson", ptrTable, methods, fields, 7, 0x8008, 3, 1, 3, -1, -1, -1, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonGson_2 = { "", "com.google.gson", ptrTable, methods, fields, 7, 0x8018, 3, 1, 3, -1, -1, -1, -1 };
   return &_ComGoogleGsonGson_2;
 }
 
@@ -1015,7 +1015,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "LComGoogleGsonGson;", "doubleAdapterWithBoolean:", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonGson_3 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, 6, 7, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonGson_3 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0x8018, 3, 0, 5, -1, 6, 7, -1 };
   return &_ComGoogleGsonGson_3;
 }
 
@@ -1074,7 +1074,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "LComGoogleGsonGson;", "floatAdapterWithBoolean:", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonGson_4 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, 6, 7, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonGson_4 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0x8018, 3, 0, 5, -1, 6, 7, -1 };
   return &_ComGoogleGsonGson_4;
 }
 
@@ -1131,7 +1131,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[2].selector = @selector(writeWithComGoogleGsonStreamJsonWriter:withId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "read", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;", "write", "LComGoogleGsonStreamJsonWriter;LNSNumber;", "LComGoogleGsonGson;", "longAdapterWithComGoogleGsonLongSerializationPolicy:", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonGson_5 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 5, -1, 6, 7, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonGson_5 = { "", "com.google.gson", ptrTable, methods, NULL, 7, 0x8018, 3, 0, 5, -1, 6, 7, -1 };
   return &_ComGoogleGsonGson_5;
 }
 
@@ -1187,7 +1187,7 @@ ComGoogleGsonGson_5 *create_ComGoogleGsonGson_5_init() {
     { "val$longAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
   };
   static const void *ptrTable[] = { "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilConcurrentAtomicAtomicLong;", "LJavaIoIOException;", "read", "LComGoogleGsonStreamJsonReader;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;", "LComGoogleGsonGson;", "atomicLongAdapterWithComGoogleGsonTypeAdapter:", "Lcom/google/gson/TypeAdapter<Ljava/util/concurrent/atomic/AtomicLong;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonGson_6 = { "", "com.google.gson", ptrTable, methods, fields, 7, 0x8008, 3, 1, 6, -1, 7, 8, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonGson_6 = { "", "com.google.gson", ptrTable, methods, fields, 7, 0x8018, 3, 1, 6, -1, 7, 8, -1 };
   return &_ComGoogleGsonGson_6;
 }
 
@@ -1259,7 +1259,7 @@ ComGoogleGsonGson_6 *create_ComGoogleGsonGson_6_initWithComGoogleGsonTypeAdapter
     { "val$longAdapter_", "LComGoogleGsonTypeAdapter;", .constantValue.asLong = 0, 0x1012, -1, -1, 5, -1 },
   };
   static const void *ptrTable[] = { "write", "LComGoogleGsonStreamJsonWriter;LJavaUtilConcurrentAtomicAtomicLongArray;", "LJavaIoIOException;", "read", "LComGoogleGsonStreamJsonReader;", "Lcom/google/gson/TypeAdapter<Ljava/lang/Number;>;", "LComGoogleGsonGson;", "atomicLongArrayAdapterWithComGoogleGsonTypeAdapter:", "Lcom/google/gson/TypeAdapter<Ljava/util/concurrent/atomic/AtomicLongArray;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonGson_7 = { "", "com.google.gson", ptrTable, methods, fields, 7, 0x8008, 3, 1, 6, -1, 7, 8, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonGson_7 = { "", "com.google.gson", ptrTable, methods, fields, 7, 0x8018, 3, 1, 6, -1, 7, 8, -1 };
   return &_ComGoogleGsonGson_7;
 }
 

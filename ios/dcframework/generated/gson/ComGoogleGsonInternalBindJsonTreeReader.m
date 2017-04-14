@@ -397,7 +397,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[2].selector = @selector(close);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "read", "[CII", "LJavaIoIOException;", "LComGoogleGsonInternalBindJsonTreeReader;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalBindJsonTreeReader_1 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8008, 3, 0, 3, -1, -1, -1, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalBindJsonTreeReader_1 = { "", "com.google.gson.internal.bind", ptrTable, methods, NULL, 7, 0x8018, 3, 0, 3, -1, -1, -1, -1 };
   return &_ComGoogleGsonInternalBindJsonTreeReader_1;
 }
 

@@ -30,6 +30,7 @@ dependencies {
     provided 'co.touchlab.doppl:androidbase:0.6.1-SNAPSHOT'
 
 //    doppl 'co.touchlab.doppl:androidbase:0.4.3-SNAPSHOT@dop'
+    doppl 'co.touchlab.doppl:androidbase:0.6.1-SNAPSHOT:doppl'
 
     doppl 'com.squareup.retrofit:retrofit:1.9.0.4:doppl'
     doppl 'com.google.code.gson:gson:2.6.2.6:doppl'
@@ -46,9 +47,9 @@ dependencies {
 
 dopplConfig {
 
-    translatedPathPrefix 'co.touchlab.droidconandroid.data', 'DCD'
-    translatedPathPrefix 'co.touchlab.droidconandroid.presenter', 'DCP'
-    translatedPathPrefix 'co.touchlab.droidconandroid.tasks', 'DCT'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.data', 'DCD'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.presenter', 'DCP'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.tasks', 'DCT'
 
     copyMainOutput="../ios/dcframework/generated"
     copyDependencies true

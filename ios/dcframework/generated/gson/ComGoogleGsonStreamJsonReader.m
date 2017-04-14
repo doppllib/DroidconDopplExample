@@ -1628,7 +1628,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[1].selector = @selector(promoteNameToValueWithComGoogleGsonStreamJsonReader:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "promoteNameToValue", "LComGoogleGsonStreamJsonReader;", "LJavaIoIOException;" };
-  static const J2ObjcClassInfo _ComGoogleGsonStreamJsonReader_1 = { "", "com.google.gson.stream", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, -1, -1, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonStreamJsonReader_1 = { "", "com.google.gson.stream", ptrTable, methods, NULL, 7, 0x8018, 2, 0, 1, -1, -1, -1, -1 };
   return &_ComGoogleGsonStreamJsonReader_1;
 }
 

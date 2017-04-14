@@ -215,7 +215,7 @@ J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(RetrofitRxSupport_Invoker)
     { "val$invoker_", "LRetrofitRxSupport_Invoker;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "call", "LRxSubscriber;", "(Lrx/Subscriber<-Ljava/lang/Object;>;)V", "LRetrofitRxSupport;", "createRequestObservableWithRetrofitRxSupport_Invoker:", "Ljava/lang/Object;Lrx/Observable$OnSubscribe<Ljava/lang/Object;>;" };
-  static const J2ObjcClassInfo _RetrofitRxSupport_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 2, 3, -1, 4, 5, -1 };
+  static const J2ObjcClassInfo _RetrofitRxSupport_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8018, 2, 2, 3, -1, 4, 5, -1 };
   return &_RetrofitRxSupport_1;
 }
 
@@ -284,7 +284,7 @@ RetrofitRxSupport_1 *create_RetrofitRxSupport_1_initWithRetrofitRxSupport_withRe
     { "val$interceptorTape_", "LRetrofitRequestInterceptorTape;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "Lrx/Subscriber<-Ljava/lang/Object;>;", "LRetrofitRxSupport;", "getRunnableWithRxSubscriber:withRetrofitRxSupport_Invoker:withRetrofitRequestInterceptorTape:" };
-  static const J2ObjcClassInfo _RetrofitRxSupport_2 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 4, 1, -1, 2, -1, -1 };
+  static const J2ObjcClassInfo _RetrofitRxSupport_2 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8018, 2, 4, 1, -1, 2, -1, -1 };
   return &_RetrofitRxSupport_2;
 }
 

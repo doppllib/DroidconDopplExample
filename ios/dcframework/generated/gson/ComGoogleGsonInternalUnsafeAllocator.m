@@ -199,7 +199,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalUnsafeAllocator)
     { "val$unsafe_", "LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "newInstance", "LIOSClass;", "LJavaLangException;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)TT;", "LComGoogleGsonInternalUnsafeAllocator;", "create" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalUnsafeAllocator_1 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 2, 2, 4, -1, 5, -1, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalUnsafeAllocator_1 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8018, 2, 2, 4, -1, 5, -1, -1 };
   return &_ComGoogleGsonInternalUnsafeAllocator_1;
 }
 
@@ -251,7 +251,7 @@ ComGoogleGsonInternalUnsafeAllocator_1 *create_ComGoogleGsonInternalUnsafeAlloca
     { "val$constructorId_", "I", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "newInstance", "LIOSClass;", "LJavaLangException;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)TT;", "LComGoogleGsonInternalUnsafeAllocator;", "create" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalUnsafeAllocator_2 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 2, 2, 4, -1, 5, -1, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalUnsafeAllocator_2 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8018, 2, 2, 4, -1, 5, -1, -1 };
   return &_ComGoogleGsonInternalUnsafeAllocator_2;
 }
 
@@ -301,7 +301,7 @@ ComGoogleGsonInternalUnsafeAllocator_2 *create_ComGoogleGsonInternalUnsafeAlloca
     { "val$newInstance_", "LJavaLangReflectMethod;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "newInstance", "LIOSClass;", "LJavaLangException;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)TT;", "LComGoogleGsonInternalUnsafeAllocator;", "create" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalUnsafeAllocator_3 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8008, 2, 1, 4, -1, 5, -1, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalUnsafeAllocator_3 = { "", "com.google.gson.internal", ptrTable, methods, fields, 7, 0x8018, 2, 1, 4, -1, 5, -1, -1 };
   return &_ComGoogleGsonInternalUnsafeAllocator_3;
 }
 
@@ -344,7 +344,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[1].selector = @selector(newInstanceWithIOSClass:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "newInstance", "LIOSClass;", "<T:Ljava/lang/Object;>(Ljava/lang/Class<TT;>;)TT;", "LComGoogleGsonInternalUnsafeAllocator;", "create" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalUnsafeAllocator_4 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, 4, -1, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalUnsafeAllocator_4 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8018, 2, 0, 3, -1, 4, -1, -1 };
   return &_ComGoogleGsonInternalUnsafeAllocator_4;
 }
 

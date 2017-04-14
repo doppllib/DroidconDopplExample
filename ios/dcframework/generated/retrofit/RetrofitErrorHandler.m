@@ -80,7 +80,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[1].selector = @selector(handleErrorWithRetrofitRetrofitError:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "handleError", "LRetrofitRetrofitError;", "LRetrofitErrorHandler;" };
-  static const J2ObjcClassInfo _RetrofitErrorHandler_1 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, -1, -1, -1 };
+  static const J2ObjcClassInfo _RetrofitErrorHandler_1 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8018, 2, 0, 2, -1, -1, -1, -1 };
   return &_RetrofitErrorHandler_1;
 }
 

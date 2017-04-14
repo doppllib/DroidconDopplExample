@@ -9,8 +9,8 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "DCPAppManager.h"
-#import "CoTouchlabDroidconandroidIosIosPlatformClient.h"
-#import "CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData.h"
+#import "CoTouchlabDroidconandroidSharedIosIosPlatformClient.h"
+#import "CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData.h"
 #import "AndroidContentIOSContext.h"
 #import "AndroidOsLooper.h"
 #import "UIViewController+Utils.h"
@@ -70,7 +70,7 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     //check the type. event messages just open the app so dont need to the handled here.
     if([type isEqualToString:@"updateSchedule"])
     {
-        [CoTouchlabDroidconandroidTasksPersistedRefreshScheduleData callMeWithAndroidContentContext:[AndroidContentIOSContext new]];
+        [CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData callMeWithAndroidContentContext:[AndroidContentIOSContext new]];
         completionHandler(UIBackgroundFetchResultNewData);
     }
     else

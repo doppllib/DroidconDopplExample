@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DCPAppManager.h"
-#import "CoTouchlabDroidconandroidIosIosFirebase.h"
+#import "CoTouchlabDroidconandroidSharedIosIosFirebase.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, DCPAppManager_LoadDataSeed, DCIosFirebase>
 

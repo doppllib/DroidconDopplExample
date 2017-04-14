@@ -192,9 +192,9 @@ __attribute__((unused)) static RetrofitRestAdapter_RestHandler_1 *create_Retrofi
                      withRetrofitRequestInterceptorTape:(RetrofitRequestInterceptorTape *)capture$0
                              withRetrofitRestMethodInfo:(RetrofitRestMethodInfo *)capture$1
                                       withNSObjectArray:(IOSObjectArray *)capture$2
-                                   withRetrofitCallback:(id<RetrofitCallback>)param0
-                         withJavaUtilConcurrentExecutor:(id<JavaUtilConcurrentExecutor>)param1
-                               withRetrofitErrorHandler:(id<RetrofitErrorHandler>)param2;
+                                   withRetrofitCallback:(id<RetrofitCallback>)callback
+                         withJavaUtilConcurrentExecutor:(id<JavaUtilConcurrentExecutor>)callbackExecutor
+                               withRetrofitErrorHandler:(id<RetrofitErrorHandler>)errorHandler;
 
 - (RetrofitResponseWrapper *)obtainResponse;
 
@@ -202,11 +202,11 @@ __attribute__((unused)) static RetrofitRestAdapter_RestHandler_1 *create_Retrofi
 
 J2OBJC_EMPTY_STATIC_INIT(RetrofitRestAdapter_RestHandler_2)
 
-__attribute__((unused)) static void RetrofitRestAdapter_RestHandler_2_initWithRetrofitRestAdapter_RestHandler_withRetrofitRequestInterceptorTape_withRetrofitRestMethodInfo_withNSObjectArray_withRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_(RetrofitRestAdapter_RestHandler_2 *self, RetrofitRestAdapter_RestHandler *outer$, RetrofitRequestInterceptorTape *capture$0, RetrofitRestMethodInfo *capture$1, IOSObjectArray *capture$2, id<RetrofitCallback> param0, id<JavaUtilConcurrentExecutor> param1, id<RetrofitErrorHandler> param2);
+__attribute__((unused)) static void RetrofitRestAdapter_RestHandler_2_initWithRetrofitRestAdapter_RestHandler_withRetrofitRequestInterceptorTape_withRetrofitRestMethodInfo_withNSObjectArray_withRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_(RetrofitRestAdapter_RestHandler_2 *self, RetrofitRestAdapter_RestHandler *outer$, RetrofitRequestInterceptorTape *capture$0, RetrofitRestMethodInfo *capture$1, IOSObjectArray *capture$2, id<RetrofitCallback> callback, id<JavaUtilConcurrentExecutor> callbackExecutor, id<RetrofitErrorHandler> errorHandler);
 
-__attribute__((unused)) static RetrofitRestAdapter_RestHandler_2 *new_RetrofitRestAdapter_RestHandler_2_initWithRetrofitRestAdapter_RestHandler_withRetrofitRequestInterceptorTape_withRetrofitRestMethodInfo_withNSObjectArray_withRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_(RetrofitRestAdapter_RestHandler *outer$, RetrofitRequestInterceptorTape *capture$0, RetrofitRestMethodInfo *capture$1, IOSObjectArray *capture$2, id<RetrofitCallback> param0, id<JavaUtilConcurrentExecutor> param1, id<RetrofitErrorHandler> param2) NS_RETURNS_RETAINED;
+__attribute__((unused)) static RetrofitRestAdapter_RestHandler_2 *new_RetrofitRestAdapter_RestHandler_2_initWithRetrofitRestAdapter_RestHandler_withRetrofitRequestInterceptorTape_withRetrofitRestMethodInfo_withNSObjectArray_withRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_(RetrofitRestAdapter_RestHandler *outer$, RetrofitRequestInterceptorTape *capture$0, RetrofitRestMethodInfo *capture$1, IOSObjectArray *capture$2, id<RetrofitCallback> callback, id<JavaUtilConcurrentExecutor> callbackExecutor, id<RetrofitErrorHandler> errorHandler) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static RetrofitRestAdapter_RestHandler_2 *create_RetrofitRestAdapter_RestHandler_2_initWithRetrofitRestAdapter_RestHandler_withRetrofitRequestInterceptorTape_withRetrofitRestMethodInfo_withNSObjectArray_withRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_(RetrofitRestAdapter_RestHandler *outer$, RetrofitRequestInterceptorTape *capture$0, RetrofitRestMethodInfo *capture$1, IOSObjectArray *capture$2, id<RetrofitCallback> param0, id<JavaUtilConcurrentExecutor> param1, id<RetrofitErrorHandler> param2);
+__attribute__((unused)) static RetrofitRestAdapter_RestHandler_2 *create_RetrofitRestAdapter_RestHandler_2_initWithRetrofitRestAdapter_RestHandler_withRetrofitRequestInterceptorTape_withRetrofitRestMethodInfo_withNSObjectArray_withRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_(RetrofitRestAdapter_RestHandler *outer$, RetrofitRequestInterceptorTape *capture$0, RetrofitRestMethodInfo *capture$1, IOSObjectArray *capture$2, id<RetrofitCallback> callback, id<JavaUtilConcurrentExecutor> callbackExecutor, id<RetrofitErrorHandler> errorHandler);
 
 @interface RetrofitRestAdapter_Builder () {
  @public
@@ -595,7 +595,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[1].selector = @selector(logWithNSString:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "log", "LNSString;", "LRetrofitRestAdapter_Log;" };
-  static const J2ObjcClassInfo _RetrofitRestAdapter_Log_1 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, -1, -1, -1 };
+  static const J2ObjcClassInfo _RetrofitRestAdapter_Log_1 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8018, 2, 0, 2, -1, -1, -1, -1 };
   return &_RetrofitRestAdapter_Log_1;
 }
 
@@ -939,7 +939,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitRestAdapter_RestHandler)
     { "val$args_", "[LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "invoke", "LRetrofitRequestInterceptor;", "LRetrofitRestAdapter_RestHandler;", "invokeWithId:withJavaLangReflectMethod:withNSObjectArray:" };
-  static const J2ObjcClassInfo _RetrofitRestAdapter_RestHandler_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 3, 2, -1, 3, -1, -1 };
+  static const J2ObjcClassInfo _RetrofitRestAdapter_RestHandler_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8018, 2, 3, 2, -1, 3, -1, -1 };
   return &_RetrofitRestAdapter_RestHandler_1;
 }
 
@@ -966,10 +966,10 @@ RetrofitRestAdapter_RestHandler_1 *create_RetrofitRestAdapter_RestHandler_1_init
                      withRetrofitRequestInterceptorTape:(RetrofitRequestInterceptorTape *)capture$0
                              withRetrofitRestMethodInfo:(RetrofitRestMethodInfo *)capture$1
                                       withNSObjectArray:(IOSObjectArray *)capture$2
-                                   withRetrofitCallback:(id<RetrofitCallback>)param0
-                         withJavaUtilConcurrentExecutor:(id<JavaUtilConcurrentExecutor>)param1
-                               withRetrofitErrorHandler:(id<RetrofitErrorHandler>)param2 {
-  RetrofitRestAdapter_RestHandler_2_initWithRetrofitRestAdapter_RestHandler_withRetrofitRequestInterceptorTape_withRetrofitRestMethodInfo_withNSObjectArray_withRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_(self, outer$, capture$0, capture$1, capture$2, param0, param1, param2);
+                                   withRetrofitCallback:(id<RetrofitCallback>)callback
+                         withJavaUtilConcurrentExecutor:(id<JavaUtilConcurrentExecutor>)callbackExecutor
+                               withRetrofitErrorHandler:(id<RetrofitErrorHandler>)errorHandler {
+  RetrofitRestAdapter_RestHandler_2_initWithRetrofitRestAdapter_RestHandler_withRetrofitRequestInterceptorTape_withRetrofitRestMethodInfo_withNSObjectArray_withRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_(self, outer$, capture$0, capture$1, capture$2, callback, callbackExecutor, errorHandler);
   return self;
 }
 
@@ -1002,26 +1002,26 @@ RetrofitRestAdapter_RestHandler_1 *create_RetrofitRestAdapter_RestHandler_1_init
     { "val$args_", "[LNSObject;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LRetrofitCallback;LJavaUtilConcurrentExecutor;LRetrofitErrorHandler;", "LRetrofitRestAdapter_RestHandler;", "invokeWithId:withJavaLangReflectMethod:withNSObjectArray:" };
-  static const J2ObjcClassInfo _RetrofitRestAdapter_RestHandler_2 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 4, 1, -1, 2, -1, -1 };
+  static const J2ObjcClassInfo _RetrofitRestAdapter_RestHandler_2 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8018, 2, 4, 1, -1, 2, -1, -1 };
   return &_RetrofitRestAdapter_RestHandler_2;
 }
 
 @end
 
-void RetrofitRestAdapter_RestHandler_2_initWithRetrofitRestAdapter_RestHandler_withRetrofitRequestInterceptorTape_withRetrofitRestMethodInfo_withNSObjectArray_withRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_(RetrofitRestAdapter_RestHandler_2 *self, RetrofitRestAdapter_RestHandler *outer$, RetrofitRequestInterceptorTape *capture$0, RetrofitRestMethodInfo *capture$1, IOSObjectArray *capture$2, id<RetrofitCallback> param0, id<JavaUtilConcurrentExecutor> param1, id<RetrofitErrorHandler> param2) {
+void RetrofitRestAdapter_RestHandler_2_initWithRetrofitRestAdapter_RestHandler_withRetrofitRequestInterceptorTape_withRetrofitRestMethodInfo_withNSObjectArray_withRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_(RetrofitRestAdapter_RestHandler_2 *self, RetrofitRestAdapter_RestHandler *outer$, RetrofitRequestInterceptorTape *capture$0, RetrofitRestMethodInfo *capture$1, IOSObjectArray *capture$2, id<RetrofitCallback> callback, id<JavaUtilConcurrentExecutor> callbackExecutor, id<RetrofitErrorHandler> errorHandler) {
   JreStrongAssign(&self->this$0_, outer$);
   JreStrongAssign(&self->val$interceptorTape_, capture$0);
   JreStrongAssign(&self->val$methodInfo_, capture$1);
   JreStrongAssign(&self->val$args_, capture$2);
-  RetrofitCallbackRunnable_initWithRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_(self, param0, param1, param2);
+  RetrofitCallbackRunnable_initWithRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_(self, callback, callbackExecutor, errorHandler);
 }
 
-RetrofitRestAdapter_RestHandler_2 *new_RetrofitRestAdapter_RestHandler_2_initWithRetrofitRestAdapter_RestHandler_withRetrofitRequestInterceptorTape_withRetrofitRestMethodInfo_withNSObjectArray_withRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_(RetrofitRestAdapter_RestHandler *outer$, RetrofitRequestInterceptorTape *capture$0, RetrofitRestMethodInfo *capture$1, IOSObjectArray *capture$2, id<RetrofitCallback> param0, id<JavaUtilConcurrentExecutor> param1, id<RetrofitErrorHandler> param2) {
-  J2OBJC_NEW_IMPL(RetrofitRestAdapter_RestHandler_2, initWithRetrofitRestAdapter_RestHandler_withRetrofitRequestInterceptorTape_withRetrofitRestMethodInfo_withNSObjectArray_withRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_, outer$, capture$0, capture$1, capture$2, param0, param1, param2)
+RetrofitRestAdapter_RestHandler_2 *new_RetrofitRestAdapter_RestHandler_2_initWithRetrofitRestAdapter_RestHandler_withRetrofitRequestInterceptorTape_withRetrofitRestMethodInfo_withNSObjectArray_withRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_(RetrofitRestAdapter_RestHandler *outer$, RetrofitRequestInterceptorTape *capture$0, RetrofitRestMethodInfo *capture$1, IOSObjectArray *capture$2, id<RetrofitCallback> callback, id<JavaUtilConcurrentExecutor> callbackExecutor, id<RetrofitErrorHandler> errorHandler) {
+  J2OBJC_NEW_IMPL(RetrofitRestAdapter_RestHandler_2, initWithRetrofitRestAdapter_RestHandler_withRetrofitRequestInterceptorTape_withRetrofitRestMethodInfo_withNSObjectArray_withRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_, outer$, capture$0, capture$1, capture$2, callback, callbackExecutor, errorHandler)
 }
 
-RetrofitRestAdapter_RestHandler_2 *create_RetrofitRestAdapter_RestHandler_2_initWithRetrofitRestAdapter_RestHandler_withRetrofitRequestInterceptorTape_withRetrofitRestMethodInfo_withNSObjectArray_withRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_(RetrofitRestAdapter_RestHandler *outer$, RetrofitRequestInterceptorTape *capture$0, RetrofitRestMethodInfo *capture$1, IOSObjectArray *capture$2, id<RetrofitCallback> param0, id<JavaUtilConcurrentExecutor> param1, id<RetrofitErrorHandler> param2) {
-  J2OBJC_CREATE_IMPL(RetrofitRestAdapter_RestHandler_2, initWithRetrofitRestAdapter_RestHandler_withRetrofitRequestInterceptorTape_withRetrofitRestMethodInfo_withNSObjectArray_withRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_, outer$, capture$0, capture$1, capture$2, param0, param1, param2)
+RetrofitRestAdapter_RestHandler_2 *create_RetrofitRestAdapter_RestHandler_2_initWithRetrofitRestAdapter_RestHandler_withRetrofitRequestInterceptorTape_withRetrofitRestMethodInfo_withNSObjectArray_withRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_(RetrofitRestAdapter_RestHandler *outer$, RetrofitRequestInterceptorTape *capture$0, RetrofitRestMethodInfo *capture$1, IOSObjectArray *capture$2, id<RetrofitCallback> callback, id<JavaUtilConcurrentExecutor> callbackExecutor, id<RetrofitErrorHandler> errorHandler) {
+  J2OBJC_CREATE_IMPL(RetrofitRestAdapter_RestHandler_2, initWithRetrofitRestAdapter_RestHandler_withRetrofitRequestInterceptorTape_withRetrofitRestMethodInfo_withNSObjectArray_withRetrofitCallback_withJavaUtilConcurrentExecutor_withRetrofitErrorHandler_, outer$, capture$0, capture$1, capture$2, callback, callbackExecutor, errorHandler)
 }
 
 @implementation RetrofitRestAdapter_Builder
@@ -1273,7 +1273,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitRestAdapter_Builder)
     { "val$client_", "LRetrofitClientClient;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LRetrofitRestAdapter_Builder;", "setClientWithRetrofitClientClient:" };
-  static const J2ObjcClassInfo _RetrofitRestAdapter_Builder_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  static const J2ObjcClassInfo _RetrofitRestAdapter_Builder_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8018, 2, 1, 0, -1, 1, -1, -1 };
   return &_RetrofitRestAdapter_Builder_1;
 }
 

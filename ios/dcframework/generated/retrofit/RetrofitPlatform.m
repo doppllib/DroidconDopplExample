@@ -444,7 +444,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitPlatform_Base)
     { "val$client_", "LRetrofitClientClient;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LRetrofitPlatform_Base;", "defaultClient" };
-  static const J2ObjcClassInfo _RetrofitPlatform_Base_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  static const J2ObjcClassInfo _RetrofitPlatform_Base_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8018, 2, 1, 0, -1, 1, -1, -1 };
   return &_RetrofitPlatform_Base_1;
 }
 
@@ -487,7 +487,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[1].selector = @selector(newThreadWithJavaLangRunnable:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "newThread", "LJavaLangRunnable;", "LRetrofitPlatform_Base;", "defaultHttpExecutor" };
-  static const J2ObjcClassInfo _RetrofitPlatform_Base_2 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, -1, -1 };
+  static const J2ObjcClassInfo _RetrofitPlatform_Base_2 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8018, 2, 0, 2, -1, 3, -1, -1 };
   return &_RetrofitPlatform_Base_2;
 }
 
@@ -536,7 +536,7 @@ RetrofitPlatform_Base_2 *create_RetrofitPlatform_Base_2_init() {
     { "val$r_", "LJavaLangRunnable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LRetrofitPlatform_Base_2;", "newThreadWithJavaLangRunnable:" };
-  static const J2ObjcClassInfo _RetrofitPlatform_Base_2_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  static const J2ObjcClassInfo _RetrofitPlatform_Base_2_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8018, 2, 1, 0, -1, 1, -1, -1 };
   return &_RetrofitPlatform_Base_2_1;
 }
 
@@ -579,7 +579,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[1].selector = @selector(logWithNSString:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "log", "LNSString;", "LRetrofitPlatform_Base;", "defaultLog" };
-  static const J2ObjcClassInfo _RetrofitPlatform_Base_3 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, -1, -1 };
+  static const J2ObjcClassInfo _RetrofitPlatform_Base_3 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8018, 2, 0, 2, -1, 3, -1, -1 };
   return &_RetrofitPlatform_Base_3;
 }
 
@@ -699,7 +699,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(RetrofitPlatform_Android)
     { "val$client_", "LRetrofitClientClient;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LRetrofitPlatform_Android;", "defaultClient" };
-  static const J2ObjcClassInfo _RetrofitPlatform_Android_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  static const J2ObjcClassInfo _RetrofitPlatform_Android_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8018, 2, 1, 0, -1, 1, -1, -1 };
   return &_RetrofitPlatform_Android_1;
 }
 
@@ -742,7 +742,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[1].selector = @selector(newThreadWithJavaLangRunnable:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "newThread", "LJavaLangRunnable;", "LRetrofitPlatform_Android;", "defaultHttpExecutor" };
-  static const J2ObjcClassInfo _RetrofitPlatform_Android_2 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, 3, -1, -1 };
+  static const J2ObjcClassInfo _RetrofitPlatform_Android_2 = { "", "retrofit", ptrTable, methods, NULL, 7, 0x8018, 2, 0, 2, -1, 3, -1, -1 };
   return &_RetrofitPlatform_Android_2;
 }
 
@@ -790,7 +790,7 @@ RetrofitPlatform_Android_2 *create_RetrofitPlatform_Android_2_init() {
     { "val$r_", "LJavaLangRunnable;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LRetrofitPlatform_Android_2;", "newThreadWithJavaLangRunnable:" };
-  static const J2ObjcClassInfo _RetrofitPlatform_Android_2_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8008, 2, 1, 0, -1, 1, -1, -1 };
+  static const J2ObjcClassInfo _RetrofitPlatform_Android_2_1 = { "", "retrofit", ptrTable, methods, fields, 7, 0x8018, 2, 1, 0, -1, 1, -1, -1 };
   return &_RetrofitPlatform_Android_2_1;
 }
 

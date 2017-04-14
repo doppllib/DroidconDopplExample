@@ -731,17 +731,13 @@ J2OBJC_IGNORE_DESIGNATED_END
   return JavaUtilComparator_thenComparingWithJavaUtilComparator_(self, arg0);
 }
 
-- (id<JavaUtilComparator>)thenComparingWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)arg0 {
-  return JavaUtilComparator_thenComparingWithJavaUtilFunctionFunction_(self, arg0);
-}
-
 - (id<JavaUtilComparator>)thenComparingWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)arg0
                                              withJavaUtilComparator:(id<JavaUtilComparator>)arg1 {
   return JavaUtilComparator_thenComparingWithJavaUtilFunctionFunction_withJavaUtilComparator_(self, arg0, arg1);
 }
 
-- (id<JavaUtilComparator>)thenComparingDoubleWithJavaUtilFunctionToDoubleFunction:(id<JavaUtilFunctionToDoubleFunction>)arg0 {
-  return JavaUtilComparator_thenComparingDoubleWithJavaUtilFunctionToDoubleFunction_(self, arg0);
+- (id<JavaUtilComparator>)thenComparingWithJavaUtilFunctionFunction:(id<JavaUtilFunctionFunction>)arg0 {
+  return JavaUtilComparator_thenComparingWithJavaUtilFunctionFunction_(self, arg0);
 }
 
 - (id<JavaUtilComparator>)thenComparingIntWithJavaUtilFunctionToIntFunction:(id<JavaUtilFunctionToIntFunction>)arg0 {
@@ -750,6 +746,10 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<JavaUtilComparator>)thenComparingLongWithJavaUtilFunctionToLongFunction:(id<JavaUtilFunctionToLongFunction>)arg0 {
   return JavaUtilComparator_thenComparingLongWithJavaUtilFunctionToLongFunction_(self, arg0);
+}
+
+- (id<JavaUtilComparator>)thenComparingDoubleWithJavaUtilFunctionToDoubleFunction:(id<JavaUtilFunctionToDoubleFunction>)arg0 {
+  return JavaUtilComparator_thenComparingDoubleWithJavaUtilFunctionToDoubleFunction_(self, arg0);
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -763,7 +763,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[1].selector = @selector(compareWithId:withId:);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "compare", "LJavaLangComparable;LJavaLangComparable;", "LComGoogleGsonInternalLinkedHashTreeMap;", "Ljava/lang/Object;Ljava/util/Comparator<Ljava/lang/Comparable;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedHashTreeMap_1 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 2, -1, -1, 3, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedHashTreeMap_1 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8018, 2, 0, 2, -1, -1, 3, -1 };
   return &_ComGoogleGsonInternalLinkedHashTreeMap_1;
 }
 
@@ -1324,7 +1324,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalLinkedHashTreeMap_EntrySet
   methods[1].selector = @selector(next);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "()Ljava/util/Map$Entry<TK;TV;>;", "LComGoogleGsonInternalLinkedHashTreeMap_EntrySet;", "iterator", "Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator<Ljava/util/Map$Entry<TK;TV;>;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8018, 2, 0, 1, -1, 2, 3, -1 };
   return &_ComGoogleGsonInternalLinkedHashTreeMap_EntrySet_1;
 }
 
@@ -1443,7 +1443,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComGoogleGsonInternalLinkedHashTreeMap_KeySet)
   methods[1].selector = @selector(next);
   #pragma clang diagnostic pop
   static const void *ptrTable[] = { "()TK;", "LComGoogleGsonInternalLinkedHashTreeMap_KeySet;", "iterator", "Lcom/google/gson/internal/LinkedHashTreeMap$LinkedTreeMapIterator<TK;>;" };
-  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 1, -1, 2, 3, -1 };
+  static const J2ObjcClassInfo _ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1 = { "", "com.google.gson.internal", ptrTable, methods, NULL, 7, 0x8018, 2, 0, 1, -1, 2, 3, -1 };
   return &_ComGoogleGsonInternalLinkedHashTreeMap_KeySet_1;
 }
 
