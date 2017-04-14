@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="app_name">Droidcon NYC 2016!</string>
+    <string name="convention_id">61100</string>
+
+    <string name="about_con_header">About Droidcon Albany</string>
+    <!--TODO add link to sponsors-->
+    <string name="about_con">
+        Droidcon conferences around the world
+        support the Android platform and create a
+        global network for developers and companies.\n\nWe offer best-in-class presentations from
+        leaders in all parts of the Android ecosystem,
+        including core development, embedded
+        solutions, augmented reality, business
+        solutions, and games.
+    </string>
+
     <string name="action_settings">Settings</string>
 
     <string name="network_error">Network problems...</string>

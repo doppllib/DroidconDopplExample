@@ -95,8 +95,7 @@ releasePassword=[You make this. Only needed for release builds]
 
 ### Android
 
-Open the project in Android Studio. Make sure to select the "albanyDebug" flavor/variant (this will
-be merged down to a single flavor soon). Run a standard Android build. This should install like any
+Open the project in Android Studio. Run a standard Android build. This should install like any
 standard android app.
 
 *Hot deploy may have issues, but they were related to the Android libraries and chromecast. Nothing

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="primary">#99cc33</color>
-    <color name="primary_dark">#79a428</color>
-    <color name="primary_dark_50">#8079a428</color>
-    <color name="accent">#91c33f</color>
+    <color name="primary">#237aff</color>
+    <color name="primary_dark">#005ae0</color>
+    <color name="primary_dark_50">#0041a3</color>
+    <color name="accent">#5dfdad</color>
+
+    <color name="welcome_background_0">#ffc92d</color>
+    <color name="welcome_background_1">#689f38</color>
+    <color name="welcome_background_2">#4fc3f7</color>
 
     <!--<color name="primary">#ffc92d</color>
     <color name="primary_dark">#dda91d</color>
@@ -16,7 +20,6 @@
     <!-- TODO change these if we want track colors -->
     <color name="droidcon_green">@color/primary_dark</color>
     <color name="droidcon_pink">@color/primary_dark</color>
-    <color name="droidcon_blue">@color/primary_dark</color>
     <!--    <color name="droidcon_green">#9ccb3f</color>
     <color name="droidcon_pink">#e63e97</color>
     <color name="droidcon_blue">#46c8f2</color>-->
@@ -49,7 +52,7 @@
     <color name="nav_icon_highlight">@color/accent</color>
 
     <color name="accent_pink">#ec3395</color>
-    <color name="social_icons">#989898</color>
+    <color name="social_icons">@color/primary_dark_50</color>
     <color name="drawer_icons">@color/black_55</color>
     <color name="edit_text_bg">#bdbdbd</color>
     <color name="twitter">#38a4dd</color>
