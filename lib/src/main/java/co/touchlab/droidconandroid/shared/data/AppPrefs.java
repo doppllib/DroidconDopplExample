@@ -27,6 +27,7 @@ public class AppPrefs
 
     private SharedPreferences prefs;
 
+
     @NotNull
     public static synchronized AppPrefs getInstance(Context context)
     {

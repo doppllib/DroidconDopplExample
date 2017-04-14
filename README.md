@@ -5,6 +5,10 @@ on 3rd party services, including our proprietary server. Setup would've taken a 
 This version does not log in, and does not store anything on the server. As such, the only thing
 you *might* need to sign up for is a jwplayer trial account to get the video players working.
 
+>
+> For the full app and 2017 additions, see https://github.com/touchlab/DroidconApp
+>
+
 # Why?
 
 This is a demo app for our project building tools and libraries on top of j2objc, to facilitate
@@ -46,7 +50,8 @@ and various Android libraries from the touchlab toolkit. More complete attributi
 
 ## Install Android Studio
 
-Grab the latest stable release, currently version 2.2.2.
+Grab the latest canary version (2.4 preview 4). Stable should work generally,
+but progress!
 
 [Android Studio](https://developer.android.com/studio/index.html)
 
@@ -107,30 +112,24 @@ should be available. Open the project in the 'ios' folder and run.
 
 If you make changes to the java code, run the following on the project command line:
 
-./gradlew doppelArchive
+./gradlew dopplDeploy
 
 This will build the objective c code and copy to the ios folder.
 
 *If you add/remove classes* you'll need to tell Xcode. It won't automatically see them. That's how Xcode rolls, just FYI.
 
+If you're going to do ongoing java-to-objc dev, I would suggest the following:
+
+./gradlew -t dopplDeploy
+
+That will trigger the "hot" gradle build, and transform code on the fly. It
+watches the inputs on the gradle task for relevant changes and runs the
+necessary transform task. Do that, and Command+Tag over to Xcode.
+
 # Notes
 
-There was a bug moving to swift 3 with html formatting strings. That's to be fixed.
-
-The public Android app actually has some pretty bad reviews. Apparently there's an issue with the
-vector support and Android 4.1 (ish). We didn't test on 4.1, but also assumed there wouldn't be
-many people at an Android dev conference with 4.1 phones. May fix, or set minimum to 5.
-
-The code is very much not a universal example of best practice. The droidcon nyc app has always
-been a strange mix of libraries and tech. The Android side uses lots of Kotlin, and the ios side
-has code that represented our first tests of j2objc all the way to latest libraries. Patterns will
-see inconsistent as a result. However, in general we're using an MVP pattern to push as much logic
-as possible in the shared layer.
-
-Also, no tests. Need tests.
-
-We'll push out either a refreshed version of this, or a new sample app in the next few weeks with
-better examples.
+This is an example of using doppl with a separate java jar module. You can include doppl directly in your
+Android build, but this is a complex build with some kind of kotlin issue, so we left it as a separate build.
 
 # Other Stuff
 
