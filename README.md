@@ -11,8 +11,7 @@ you *might* need to sign up for is a jwplayer trial account to get the video pla
 
 # Why?
 
-This is a demo app for our project building tools and libraries on top of j2objc, to facilitate
-cross platform development. Its called Doppl. Short for "doppelganger". [Read Post](https://medium.com/@kpgalligan/doppl-e075a0fde44c)
+This is a demo app for Doppl. It's a set of tools and libraries on top of j2objc. [Read Post](https://medium.com/@kpgalligan/doppl-e075a0fde44c)
 
 The basic concepts:
 
@@ -38,8 +37,6 @@ and various Android libraries from the touchlab toolkit. More complete attributi
 
 # Setup
 
-*Doppl build tools are in flux, so some of these details will change in the near future*
-
 ## Overview
 
 1. Install Android Studio
@@ -51,13 +48,13 @@ and various Android libraries from the touchlab toolkit. More complete attributi
 ## Install Android Studio
 
 Grab the latest canary version (2.4 preview 4). Stable should work generally,
-but progress!
+but progress! You may need to downgrade the gradle version to run in older Android Studio versions.
 
 [Android Studio](https://developer.android.com/studio/index.html)
 
 ## Install Xcode
 
-Install Xcode. I would suggest finding and running a simple sample project, to minimize potential issues with the iOS build system.
+You need to be on a mac, obv.
 
 ### Install Carthage
 
@@ -116,7 +113,7 @@ If you make changes to the java code, run the following on the project command l
 
 This will build the objective c code and copy to the ios folder.
 
-*If you add/remove classes* you'll need to tell Xcode. It won't automatically see them. That's how Xcode rolls, just FYI.
+*If you add/remove classes* you'll need to tell Xcode. It won't automatically see them. That's how Xcode works, just FYI.
 
 If you're going to do ongoing java-to-objc dev, I would suggest the following:
 
@@ -129,7 +126,7 @@ necessary transform task. Do that, and Command+Tag over to Xcode.
 # Notes
 
 This is an example of using doppl with a separate java jar module. You can include doppl directly in your
-Android build, but this is a complex build with some kind of kotlin issue, so we left it as a separate build.
+Android build, but this project is a complex build with some kind of kotlin issue, so we left it as a separate module.
 
 # Other Stuff
 
@@ -144,20 +141,10 @@ work with local data and seed it with json.  If you'd like to use the server, ge
 
 # Code
 
-### Kotlin
-
-Kotlin has been updated to v1!
-
-A large portion of the app is written in [Kotlin](http://kotlinlang.org/).  Android Studio support is pretty good at this point,
-although some parts need to be Java.  Specifically anything that runs through annotation processing.
-
-### Squeaky
+## Squeaky
 
 A fork of ORMLite that is Android specific and uses source generation instead of reflection.  Performance
-is significantly improved, and it supports immutable fields as well as views.  Note *quite* open source
-yet.  Need to clean things up a bit.  Was going to announce it at the conference, but time ran short.  You can't actually build the app as-is with this, but either wait till the source is up, or just swap out with ORMLite.  Its mostly compatible, after package renames (and some tweaking of a foreign collection).
-
-Also, name isn't final.  See how that goes.
+is significantly improved. Wound up not really "releasing" this, but it works.
 
 ## Open Source Tools
 
