@@ -12,6 +12,7 @@ buildscript {
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'co.touchlab.doppl.gradle'
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
@@ -121,6 +122,37 @@ dependencies {
     compile 'com.android.support:cardview-v7:24.2.1'
     compile 'com.android.support:customtabs:24.2.1'
 
-    compile project(':lib')
     compile project(':jwplayer-android-sdk-2.4.1+158')
+
+    annotationProcessor 'co.touchlab.squeaky:squeaky-processor:0.5.0.0'
+    compile 'co.touchlab.squeaky:squeaky-query:0.5.0.0'
+
+    compile 'co.touchlab:magicthreads:0.9.1'
+
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'de.greenrobot:eventbus:2.4.0'
+
+      doppl 'co.touchlab.doppl:androidbase:0.6.1-SNAPSHOT:doppl'
+      doppl 'com.squareup.retrofit:retrofit:1.9.0.4:doppl'
+      doppl 'com.google.code.gson:gson:2.6.2.6:doppl'
+      doppl 'de.greenrobot:eventbus:2.4.0.5:doppl'
+      doppl 'co.touchlab.squeaky:squeaky-query:0.5.0.6:doppl'
+      doppl 'co.touchlab:magicthreads:0.9.1.4:doppl'
+      doppl 'io.reactivex:rxjava:1.2.1.4:doppl'
+      provided 'com.intellij:annotations:9.0.4'
+      doppl 'com.intellij:intellijannotations:9.0.4.2:doppl'
+}
+
+dopplConfig {
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.data', 'DCD'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.presenter', 'DCP'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.tasks', 'DCT'
+
+    copyMainOutput="../ios/dcframework/generated"
+    copyDependencies true
+
+    translatePattern {
+        include '**/shared/**'
+        include '**/CrashReport.*'
+    }
 }
