@@ -117,7 +117,9 @@ This will build the objective c code and copy to the ios folder.
 
 If you're going to do ongoing java-to-objc dev, I would suggest the following:
 
+```
 ./gradlew -t dopplDeploy
+```
 
 That will trigger the "hot" gradle build, and transform code on the fly. It
 watches the inputs on the gradle task for relevant changes and runs the
