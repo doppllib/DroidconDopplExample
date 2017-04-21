@@ -81,6 +81,8 @@ to 'dist dir' (no trailing slash).
 
 ![xcode paths](https://s3.amazonaws.com/dopplmaven/xcodepath.png)
 
+In Android Studio, look in the root directory for 'local.properties'. This should be generated when you open the project in Android Studio.
+
 Add the following to local.properties in the project directory
 
 ```
@@ -103,12 +105,11 @@ in the cross platform parts*
 
 ### iOS
 
-Assuming Kingfisher is built, you *should* be able to run without modificaion. The j2objc/doppl files
-should be available. Open the project in the 'ios' folder and run.
+Assuming Kingfisher is built, you can now generate Objective-C from the Java code. Run the following on the command line at the root of the project.
 
-If you make changes to the java code, run the following on the project command line:
-
+```
 ./gradlew dopplDeploy
+```
 
 This will build the objective c code and copy to the ios folder.
 
