@@ -148,7 +148,7 @@ dopplConfig {
     translatedPathPrefix 'co.touchlab.droidconandroid.shared.presenter', 'DCP'
     translatedPathPrefix 'co.touchlab.droidconandroid.shared.tasks', 'DCT'
 
-    copyMainOutput="../ios/dcframework/generated"
+    copyMainOutput "../ios/dcframework/generated"
     copyDependencies true
 
     translatePattern {
