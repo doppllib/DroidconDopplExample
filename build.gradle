@@ -2,15 +2,12 @@
 buildscript {
     repositories {
         jcenter()
-        mavenLocal()
         mavenCentral()
-        maven { url "https://plugins.gradle.org/m2/" }
-        ivy { url "http://dopplmaven.s3-website-us-east-1.amazonaws.com/" }
+        maven { url 'https://dl.bintray.com/doppllib/maven' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.1'
-        classpath 'net.ltgt.gradle:gradle-apt-plugin:0.9'
-        classpath 'co.touchlab.doppl:gradle:0.6.4-SNAPSHOT'
+        classpath 'com.android.tools.build:gradle:2.3.2'
+        classpath 'co.doppl:gradle:0.8.0'
     }
 }
 
@@ -19,7 +16,7 @@ allprojects {
         maven { url "http://dl.bintray.com/populov/maven" }
         jcenter()
         mavenCentral()
-        ivy { url "http://dopplmaven.s3-website-us-east-1.amazonaws.com/" }
+        maven { url "https://dl.bintray.com/doppllib/maven" }
     }
 }
 
