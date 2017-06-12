@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01526F191EC0F99B00D42000 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 01526F181EC0F99B00D42000 /* libiconv.tbd */; };
 		4C0769921D8339A0003DD320 /* OnboardingPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0769911D8339A0003DD320 /* OnboardingPhotoCell.swift */; };
 		4C81B70B1D75E7B500DFB89C /* SponsorImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81B70A1D75E7B500DFB89C /* SponsorImage.swift */; };
 		4C81B70F1D76162000DFB89C /* SponsorPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81B70E1D76162000DFB89C /* SponsorPhotoCell.swift */; };
@@ -1695,6 +1696,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01526F181EC0F99B00D42000 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		4C0769911D8339A0003DD320 /* OnboardingPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPhotoCell.swift; sourceTree = "<group>"; };
 		4C81B70A1D75E7B500DFB89C /* SponsorImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorImage.swift; sourceTree = "<group>"; };
 		4C81B70E1D76162000DFB89C /* SponsorPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorPhotoCell.swift; sourceTree = "<group>"; };
@@ -3372,6 +3374,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01526F191EC0F99B00D42000 /* libiconv.tbd in Frameworks */,
 				6342C9D71DC6A3540060BE83 /* UIKit.framework in Frameworks */,
 				6342C9D51DC6A34E0060BE83 /* JRE.framework in Frameworks */,
 			);
@@ -3391,6 +3394,7 @@
 		2AAED8C9B01D04A8C89A3D0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01526F181EC0F99B00D42000 /* libiconv.tbd */,
 				6342C9D61DC6A3540060BE83 /* UIKit.framework */,
 				6342B6A61DC67BE00060BE83 /* Kingfisher.framework */,
 				63F0E9451DC4F2C1000A2AD7 /* JWPlayer-iOS-SDK.framework */,
@@ -6865,7 +6869,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 631B991B1C7D6533008AA20D /* Build configuration list for PBXNativeTarget "iosTests" */;
 			buildPhases = (
-				4A6662DA8BA0D23E5EE90F17 /* 📦 Check Pods Manifest.lock */,
 				3D37BFCB66229BC15B176609 /* [CP] Check Pods Manifest.lock */,
 				0DDFB3E6342422A60E27C39C /* [CP] Check Pods Manifest.lock */,
 				0401F5D754ECD651CA55F09F /* [CP] Check Pods Manifest.lock */,
@@ -6876,8 +6879,6 @@
 				631B99021C7D6533008AA20D /* Resources */,
 				11B146CBC08702F26CFC1EA2 /* [CP] Embed Pods Frameworks */,
 				682279DBCF54752B8CF6D0E1 /* [CP] Copy Pods Resources */,
-				E412E11C3CBF7C460324EC00 /* 📦 Embed Pods Frameworks */,
-				815FB4FD2296CE07735DDE28 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -6893,7 +6894,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 631B991E1C7D6533008AA20D /* Build configuration list for PBXNativeTarget "iosUITests" */;
 			buildPhases = (
-				024F3895133E2810E4BA7D98 /* 📦 Check Pods Manifest.lock */,
 				23A0D32EE34D33EC55C968EC /* [CP] Check Pods Manifest.lock */,
 				EB97482FEF65C7B46258CA87 /* [CP] Check Pods Manifest.lock */,
 				6071AEF9EE0E752F5ABF3CF7 /* [CP] Check Pods Manifest.lock */,
@@ -6903,7 +6903,6 @@
 				631B990C1C7D6533008AA20D /* Frameworks */,
 				631B990D1C7D6533008AA20D /* Resources */,
 				B9F9E5CDCDC085164D821BBC /* [CP] Copy Pods Resources */,
-				F9BD59927D116D4AC9F3AB61 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -6963,7 +6962,7 @@
 				TargetAttributes = {
 					631B98EA1C7D6533008AA20D = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 2UER9BPG44;
+						DevelopmentTeam = 7FYJJPTXQ8;
 						LastSwiftMigration = 0800;
 					};
 					631B99031C7D6533008AA20D = {
@@ -6977,7 +6976,7 @@
 					};
 					6342B6AC1DC6A18A0060BE83 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 2UER9BPG44;
+						DevelopmentTeam = 7FYJJPTXQ8;
 						ProvisioningStyle = Automatic;
 					};
 					6342B6B41DC6A18B0060BE83 = {
@@ -7057,21 +7056,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		024F3895133E2810E4BA7D98 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		0401F5D754ECD651CA55F09F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -7147,21 +7131,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		4A6662DA8BA0D23E5EE90F17 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		4ADFA7188E05A380D7FB1124 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -7221,21 +7190,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosTests/Pods-iosTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		815FB4FD2296CE07735DDE28 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosTests/Pods-iosTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9271E4B8A8FFFFFC6B3F0340 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -7266,21 +7220,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosUITests/Pods-iosUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E412E11C3CBF7C460324EC00 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosTests/Pods-iosTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		EB97482FEF65C7B46258CA87 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -7309,21 +7248,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F9BD59927D116D4AC9F3AB61 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iosUITests/Pods-iosUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FC31444A3DD843EC58A23100 /* [CP] Check Pods Manifest.lock */ = {
@@ -8344,7 +8268,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2UER9BPG44;
+				DEVELOPMENT_TEAM = 7FYJJPTXQ8;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -8384,7 +8308,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2UER9BPG44;
+				DEVELOPMENT_TEAM = 7FYJJPTXQ8;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -8478,7 +8402,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2UER9BPG44;
+				DEVELOPMENT_TEAM = 7FYJJPTXQ8;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -8520,7 +8444,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2UER9BPG44;
+				DEVELOPMENT_TEAM = 7FYJJPTXQ8;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
