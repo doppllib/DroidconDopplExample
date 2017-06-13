@@ -150,10 +150,10 @@ import dcframework
                 } else {
                     cell.liveStreamButton.setTitle("STREAM ARCHIVE", for: UIControlState())
                 }
-            } else {
-                cell.liveStreamButton.isHidden = true
-                cell.liveStreamIcon.isHidden = true
             }
+            cell.liveStreamButton.isHidden = true
+            cell.liveStreamIcon.isHidden = true
+            
             return cell
         } else {
             let cell:SpeakerTableViewCell = tableView.dequeueReusableCell(withIdentifier: "speakerCell") as! SpeakerTableViewCell
@@ -228,10 +228,10 @@ import dcframework
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "LiveStream") {
-            let liveStreamVC = (segue.destination as! LiveStreamViewController)
+            /*let liveStreamVC = (segue.destination as! LiveStreamViewController)
             liveStreamVC.titleString = titleString
             liveStreamVC.streamUrl = eventDetailPresenter.getEventVideoDetailsTask().getMergedStreamLink()
-            liveStreamVC.coverUrl = ""
+            liveStreamVC.coverUrl = ""*/
         }
     }
 }
