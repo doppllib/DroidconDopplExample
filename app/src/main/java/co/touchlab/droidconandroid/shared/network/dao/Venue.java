@@ -2,7 +2,7 @@ package co.touchlab.droidconandroid.shared.network.dao;
 
 import com.google.j2objc.annotations.Weak;
 
-import org.jetbrains.annotations.NotNull;
+import javax.annotation.Nonnull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class Venue extends co.touchlab.droidconandroid.shared.data.Venue
 {
-    @NotNull
+    @Nonnull
 
     public List<Event> events = new ArrayList<Event>();
 }

@@ -1,13 +1,11 @@
 package co.touchlab.droidconandroid.shared.network;
 
 import android.content.Context;
-import android.text.TextUtils;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import org.jetbrains.annotations.NotNull;
-
+import javax.annotation.Nonnull;
 import javax.net.ssl.HttpsURLConnection;
 
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
@@ -34,7 +32,7 @@ public class DataHelper
         return makeRequestAdapterBuilder(context, platformClient, null);
     }
 
-    @NotNull
+    @Nonnull
     public static RestAdapter.Builder makeRequestAdapterBuilder(Context context, PlatformClient platformClient, ErrorHandler errorHandler)
     {
         return makeRequestAdapterBuilder(context,
@@ -43,7 +41,7 @@ public class DataHelper
                 errorHandler);
     }
 
-    @NotNull
+    @Nonnull
     public static RestAdapter.Builder makeRequestAdapterBuilder(Context context, PlatformClient platformClient, String baseUrl, ErrorHandler errorHandler)
     {
         AppPrefs appPrefs = AppPrefs.getInstance(context);

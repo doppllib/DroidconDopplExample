@@ -1,5 +1,5 @@
 package co.touchlab.droidconandroid.shared.utils;
-import org.jetbrains.annotations.NotNull;
+import javax.annotation.Nonnull;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -31,8 +31,8 @@ public class TimeUtils
         return simpleDateFormat;
     }
 
-    @NotNull
-    public static Long sanitize(@NotNull Date date)
+    @Nonnull
+    public static Long sanitize(@Nonnull Date date)
     {
         GregorianCalendar       calendar    = new GregorianCalendar();
 

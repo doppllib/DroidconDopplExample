@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import co.touchlab.droidconandroid.shared.utils.StringUtils;
-import org.jetbrains.annotations.NotNull;
+import javax.annotation.Nonnull;
 
 import java.util.UUID;
 
@@ -28,7 +28,7 @@ public class AppPrefs
     private SharedPreferences prefs;
 
 
-    @NotNull
+    @Nonnull
     public static synchronized AppPrefs getInstance(Context context)
     {
         if(instance == null)
@@ -70,7 +70,7 @@ public class AppPrefs
         return prefs.getString(EVENTBRITE_EMAIL, null);
     }
 
-    public void setConventionStartDate(@NotNull String startDate)
+    public void setConventionStartDate(@Nonnull String startDate)
     {
         setString(CONVENTION_START, startDate);
     }
@@ -80,7 +80,7 @@ public class AppPrefs
         return prefs.getString(CONVENTION_START, null);
     }
 
-    public void setConventionEndDate(@NotNull String endDate)
+    public void setConventionEndDate(@Nonnull String endDate)
     {
         setString(CONVENTION_END, endDate);
     }
@@ -101,7 +101,7 @@ public class AppPrefs
         return prefs.getString(CONVENTION_END, null);
     }
 
-    public void setRefreshTime(@NotNull long time)
+    public void setRefreshTime(@Nonnull long time)
     {
         setLong(REFRESH_TIME, time);
     }

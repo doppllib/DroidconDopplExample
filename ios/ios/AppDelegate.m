@@ -12,7 +12,7 @@
 #import "CoTouchlabDroidconandroidSharedIosIosPlatformClient.h"
 #import "CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData.h"
 #import "AndroidContentIOSContext.h"
-#import "AndroidOsLooper.h"
+#import "DopplRuntime.h"
 #import "UIViewController+Utils.h"
 //#import "Reachability.h"
 
@@ -26,7 +26,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [AndroidOsLooper prepareMainLooper];
+    [DopplRuntime start];
     
     NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"rebundle" ofType:@"bundle"];
     

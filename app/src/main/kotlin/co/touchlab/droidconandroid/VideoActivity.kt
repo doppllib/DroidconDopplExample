@@ -7,11 +7,9 @@ import android.text.TextUtils
 import android.widget.Toast
 import co.touchlab.droidconandroid.shared.presenter.VideoPlayerHost
 import co.touchlab.droidconandroid.shared.presenter.VideoPlayerPresenter
-import com.longtailvideo.jwplayer.events.listeners.VideoPlayerEvents
-import com.longtailvideo.jwplayer.media.playlists.PlaylistItem
 import kotlinx.android.synthetic.main.activity_video.*
 
-class VideoActivity : AppCompatActivity(), VideoPlayerEvents.OnFullscreenListener, VideoPlayerHost {
+class VideoActivity : AppCompatActivity(), VideoPlayerHost {
 
     override fun shutDownForce(s: String?) {
         Toast.makeText(this, s, Toast.LENGTH_LONG).show()
@@ -27,12 +25,12 @@ class VideoActivity : AppCompatActivity(), VideoPlayerEvents.OnFullscreenListene
         val cover = intent.getStringExtra(EXTRA_STREAM_COVER)
         val eventId = intent.getLongExtra(EXTRA_EVENT_ID, -1)
         if (!TextUtils.isEmpty(link)) {
-            val builder = PlaylistItem.Builder().file(link)
+//            val builder = PlaylistItem.Builder().file(link)
+//
+//            if(!TextUtils.isEmpty(cover))
+//                builder.image(cover)
 
-            if(!TextUtils.isEmpty(cover))
-                builder.image(cover)
-
-            jwplayer.load(builder.build())
+//            jwplayer.load(builder.build())
         } else {
             finish()
         }
@@ -43,7 +41,7 @@ class VideoActivity : AppCompatActivity(), VideoPlayerEvents.OnFullscreenListene
     override fun onResume() {
         // Let JW Player know that the app has returned from the background
         super.onResume()
-        jwplayer.onResume()
+//        jwplayer.onResume()
 
         presenter!!.startChecking()
     }
@@ -52,28 +50,22 @@ class VideoActivity : AppCompatActivity(), VideoPlayerEvents.OnFullscreenListene
         presenter!!.stopChecking()
 
         // Let JW Player know that the app is going to the background
-        jwplayer.onPause()
+//        jwplayer.onPause()
         super.onPause()
     }
 
     override fun onDestroy() {
         presenter!!.unregister()
         // Let JW Player know that the app is being destroyed
-        jwplayer.onDestroy()
+//        jwplayer.onDestroy()
         super.onDestroy()
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         // Set fullscreen when the device is rotated to landscape
-        jwplayer.setFullscreen(newConfig.orientation === Configuration.ORIENTATION_LANDSCAPE, true)
+//        jwplayer.setFullscreen(newConfig.orientation === Configuration.ORIENTATION_LANDSCAPE, true)
         super.onConfigurationChanged(newConfig)
     }
 
-    override fun onFullscreen(state: Boolean) {
-        if (state) {
-            actionBar.hide()
-        } else {
-            actionBar.show()
-        }
-    }
+
 }

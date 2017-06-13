@@ -1,1 +1,1 @@
-include ':app', ':jwplayer-android-sdk-2.4.1+158'
+include ':app'//, ':jwplayer-android-sdk-2.4.1+158'

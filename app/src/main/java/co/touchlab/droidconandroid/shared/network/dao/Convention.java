@@ -1,6 +1,6 @@
 package co.touchlab.droidconandroid.shared.network.dao;
 
-import org.jetbrains.annotations.NotNull;
+import javax.annotation.Nonnull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,9 +23,9 @@ public class Convention
     @DatabaseField
     public String endDate;
 
-    @NotNull
+    @Nonnull
     public List<Venue> venues = new ArrayList<Venue>();
 
-    @NotNull
+    @Nonnull
     public List<Block> blocks = new ArrayList<>();
 }

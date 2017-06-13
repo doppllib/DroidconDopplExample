@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.1.2'
+    ext.kotlin_version = '1.1.2-5'
     repositories {
         mavenCentral()
     }
@@ -13,6 +13,7 @@ buildscript {
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+
 apply plugin: 'co.doppl.gradle'
 
 Properties properties = new Properties()
@@ -20,13 +21,6 @@ properties.load(project.rootProject.file('local.properties').newDataInputStream(
 def baseurl = properties.getProperty('baseurl')
 def releasePassword = properties.getProperty('releasePassword')
 def jwLicenseKey = properties.getProperty('jwLicenseKey')
-
-repositories {
-    flatDir {
-        dirs 'libs'
-    }
-    mavenCentral()
-}
 
 android {
     compileSdkVersion 25
@@ -109,7 +103,6 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.github.johnpersano:supertoasts:1.3.4.1@aar'
     compile 'com.nineoldandroids:library:2.4.0'
-    compile 'co.touchlab.squeaky:squeaky-query:0.5.0.0'
 
     compile 'commons-io:commons-io:1.4'
     compile 'org.apache.commons:commons-lang3:3.3.2'
@@ -125,25 +118,23 @@ dependencies {
     compile "com.android.support:cardview-v7:$supportVersion"
     compile "com.android.support:customtabs:$supportVersion"
 
-    compile project(':jwplayer-android-sdk-2.4.1+158')
-
-    annotationProcessor 'co.touchlab.squeaky:squeaky-processor:0.5.0.0'
-    compile 'co.touchlab.squeaky:squeaky-query:0.5.0.0'
+    annotationProcessor 'co.touchlab.squeaky:squeaky-processor:0.5.2'
+    compile 'co.touchlab.squeaky:squeaky-query:0.5.2'
 
     compile 'co.touchlab:magicthreads:0.9.1'
 
     compile 'com.squareup.retrofit:retrofit:1.9.0'
     compile 'de.greenrobot:eventbus:2.4.0'
+    compile 'com.google.code.findbugs:jsr305:3.0.2'
 
-    doppl "co.doppl.lib:androidbase:0.8.0:doppl"
-    doppl 'co.doppl.com.squareup.retrofit:retrofit:1.9.0.3:doppl'
-    doppl 'co.doppl.com.google.code.gson:gson:2.6.2.1:doppl'
-    doppl 'co.doppl.de.greenrobot:eventbus:2.4.0.2a:doppl'
-    doppl 'co.touchlab.squeaky:squeaky-query:0.5.0.0:doppl'
-    doppl 'co.touchlab:magicthreads:0.9.1.2:doppl'
-    doppl 'io.reactivex:rxjava:1.2.1.2:doppl'
-    provided 'com.intellij:annotations:9.0.4'
-    doppl 'com.intellij:intellijannotations:9.0.4.2:doppl'
+
+    doppl "co.doppl.lib:androidbase:0.7.5"
+    doppl 'co.doppl.com.squareup.retrofit:retrofit:1.9.0.3'
+    doppl 'co.doppl.com.google.code.gson:gson:2.6.2.1'
+    doppl 'co.doppl.de.greenrobot:eventbus:2.4.0.3'
+    doppl 'co.touchlab.squeaky:squeaky-query:0.5.2.0'
+    doppl 'co.touchlab:magicthreads:0.9.1.3'
+
 }
 
 
