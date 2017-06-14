@@ -1,62 +1,46 @@
-package co.touchlab.droidconandroid.shared.data;
+package co.touchlab.droidconandroid.shared.data2;
 
-import android.text.TextUtils;
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.ForeignKey;
+import android.arch.persistence.room.PrimaryKey;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 import javax.annotation.Nonnull;
 
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
-import co.touchlab.squeaky.field.DatabaseField;
-import co.touchlab.squeaky.field.ForeignCollectionField;
-import co.touchlab.squeaky.table.DatabaseTable;
 
 /**
  * Created by kgalligan on 6/28/14.
  */
-@DatabaseTable
+@Entity(foreignKeys = @ForeignKey(entity = Venue.class, parentColumns = "id", childColumns = "venue_id"))
 public class Event implements ScheduleBlock
 {
-    @DatabaseField(id = true)
+    @PrimaryKey
     public long id;
 
-    @DatabaseField
     public String name;
 
-    @DatabaseField
     public String description;
 
-    @DatabaseField
     public String category;
 
-    @Nonnull
-    @DatabaseField(foreign = true, canBeNull = false, foreignAutoRefresh = true)
+    @ColumnInfo(name = "venue_id")
     public Venue venue;
 
-    @DatabaseField
     public Long startDateLong;
 
-    @DatabaseField
     public Long endDateLong;
 
-    @DatabaseField
     public boolean publicEvent;
 
-    @DatabaseField
     public Integer rsvpLimit;
 
-    @DatabaseField
     public Integer rsvpCount;
 
-    @DatabaseField
     public String rsvpUuid;
 
-    @ForeignCollectionField(foreignFieldName = "event")
-    public List<EventSpeaker> speakerList;
-
-    @DatabaseField
     public Integer vote;
 
     public long getId()
@@ -108,11 +92,6 @@ public class Event implements ScheduleBlock
     public Integer getRsvpCount()
     {
         return rsvpCount;
-    }
-
-    public List<EventSpeaker> getSpeakerList()
-    {
-        return speakerList;
     }
 
     public Integer getVote()
@@ -174,16 +153,4 @@ public class Event implements ScheduleBlock
         this.rsvpUuid = rsvpUuid;
     }
 
-    public String allSpeakersString()
-    {
-        List<String> names =new ArrayList<>();
-        for(EventSpeaker eventSpeaker : speakerList)
-        {
-            UserAccount userAccount = eventSpeaker.userAccount;
-            if(userAccount != null)
-                names.add(userAccount.name);
-        }
-
-        return TextUtils.join(", ", names);
-    }
 }
