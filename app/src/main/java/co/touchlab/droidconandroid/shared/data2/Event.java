@@ -1,8 +1,7 @@
 package co.touchlab.droidconandroid.shared.data2;
 
-import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Embedded;
 import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
 
 import java.util.Date;
@@ -14,7 +13,7 @@ import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 /**
  * Created by kgalligan on 6/28/14.
  */
-@Entity(foreignKeys = @ForeignKey(entity = Venue.class, parentColumns = "id", childColumns = "venue_id"))
+@Entity
 public class Event implements ScheduleBlock
 {
     @PrimaryKey
@@ -26,7 +25,7 @@ public class Event implements ScheduleBlock
 
     public String category;
 
-    @ColumnInfo(name = "venue_id")
+    @Embedded
     public Venue venue;
 
     public Long startDateLong;
