@@ -23,7 +23,7 @@ public class EventAttendee {
     public int event;
 
     @ColumnInfo(name = "user_id")
-    public UserAccount userAccount;
+    public int userAccount;
 
     public Long startDate;
 
