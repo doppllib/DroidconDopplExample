@@ -2,6 +2,7 @@ package co.touchlab.droidconandroid.shared.data2;
 
 import android.arch.persistence.room.Room;
 import android.content.Context;
+import android.support.annotation.NonNull;
 
 import java.util.Iterator;
 import java.util.List;
@@ -21,7 +22,8 @@ public class DatabaseHelper {
         db = Room.databaseBuilder(context, DroidconDatabase.class, "droidcon").build();
     }
 
-    public static DatabaseHelper getInstance(Context context) {
+    @NonNull
+    public static synchronized DatabaseHelper getInstance(Context context) {
         if (instance == null) {
             instance = new DatabaseHelper(context);
         }
