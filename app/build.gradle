@@ -62,6 +62,7 @@ android {
         debug {
             debuggable true
             minifyEnabled false
+            useProguard false
         }
         staging {
             debuggable true
@@ -107,9 +108,9 @@ dependencies {
     compile 'commons-io:commons-io:1.4'
     compile 'org.apache.commons:commons-lang3:3.3.2'
 
-    compile "android.arch.lifecycle:extensions:1.0.0-alpha1"
+//    compile "android.arch.lifecycle:extensions:1.0.0-alpha1"
     compile "android.arch.persistence.room:runtime:1.0.0-alpha1"
-    annotationProcessor "android.arch.lifecycle:compiler:1.0.0-alpha1"
+//    annotationProcessor "android.arch.lifecycle:compiler:1.0.0-alpha1"
     annotationProcessor "android.arch.persistence.room:compiler:1.0.0-alpha1"
 
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
