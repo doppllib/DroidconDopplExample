@@ -1,5 +1,6 @@
 package co.touchlab.droidconandroid.shared.data2;
 
+import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Embedded;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
@@ -19,8 +20,10 @@ public class Event implements ScheduleBlock
     @PrimaryKey
     public long id;
 
+    @ColumnInfo(name = "event_name")
     public String name;
 
+    @ColumnInfo(name = "event_description")
     public String description;
 
     public String category;
