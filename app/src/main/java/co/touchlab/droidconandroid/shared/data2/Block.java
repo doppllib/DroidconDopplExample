@@ -24,6 +24,10 @@ public class Block implements ScheduleBlock
 
     public Long endDateLong;
 
+    public String startDate;
+
+    public String endDate;
+
     @Override
     public boolean isBlock()
     {

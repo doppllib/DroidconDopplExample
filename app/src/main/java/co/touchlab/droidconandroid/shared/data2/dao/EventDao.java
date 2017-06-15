@@ -15,7 +15,7 @@ import co.touchlab.droidconandroid.shared.data2.Event;
 public interface EventDao {
 
     @Query("SELECT * FROM Event WHERE id = :eventId")
-    Event getEventForId(int eventId);
+    Event getEventForId(long eventId);
 
     @Query("SELECT * FROM Event")
     List<Event> getEvents();

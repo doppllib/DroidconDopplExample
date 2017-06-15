@@ -2,9 +2,11 @@ package co.touchlab.droidconandroid.shared.data2;
 
 import android.arch.persistence.room.Embedded;
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.annotation.Nonnull;
 
@@ -41,6 +43,13 @@ public class Event implements ScheduleBlock
     public String rsvpUuid;
 
     public Integer vote;
+
+    public String startDate;
+
+    public String endDate;
+
+    @Ignore
+    public List<co.touchlab.droidconandroid.shared.data2.UserAccount> speakers;
 
     public long getId()
     {

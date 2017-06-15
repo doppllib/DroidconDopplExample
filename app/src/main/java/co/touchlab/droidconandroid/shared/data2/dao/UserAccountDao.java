@@ -13,7 +13,7 @@ import co.touchlab.droidconandroid.shared.data2.UserAccount;
 public interface UserAccountDao {
 
     @Query("SELECT * FROM UserAccount WHERE id = :userId")
-    UserAccount getUserAccount(int userId);
+    UserAccount getUserAccount(long userId);
 
     @Query("SELECT * FROM UserAccount WHERE userCode = :code")
     List<UserAccount> getUsersWithCode(String code);

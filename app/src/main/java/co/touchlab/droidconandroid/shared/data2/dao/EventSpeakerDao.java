@@ -16,7 +16,7 @@ public interface EventSpeakerDao {
     List<EventSpeaker> getEventSpeakers(int eventId);
 
     @Query("SELECT * FROM EventSpeaker WHERE event_id = :eventId AND user_id = :userId")
-    List<EventSpeaker> getEventSpeakers(int eventId, int userId);
+    List<EventSpeaker> getEventSpeakers(long eventId, long userId);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void createOrUpdate(EventSpeaker eventSpeaker);
