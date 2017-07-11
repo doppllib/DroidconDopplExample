@@ -129,14 +129,13 @@
             android:visibility="gone"
             android:paddingTop="40dp">
 
-            <com.wnafee.vector.MorphButton
+            <ImageView
                 android:id="@+id/back"
                 android:layout_width="@dimen/height_xxtiny"
                 android:layout_height="@dimen/height_xxtiny"
                 android:layout_marginLeft="@dimen/padding_large"
                 android:background="?attr/selectableItemBackground"
-                app:vc_endDrawable="@drawable/ic_back"
-                app:vc_startDrawable="@drawable/ic_back"/>
+                android:src="@drawable/ic_back"/>
 
             <TextView
                 android:id="@+id/label"
