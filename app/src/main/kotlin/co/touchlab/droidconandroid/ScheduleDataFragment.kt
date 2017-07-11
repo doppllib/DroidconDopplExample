@@ -20,53 +20,35 @@ import co.touchlab.droidconandroid.ui.EventClickListener
 import kotlinx.android.synthetic.main.fragment_schedule_data.*
 import java.util.*
 
-private const val ALL_EVENTS = "ALL_EVENTS"
-private const val DAY = "DAY"
-private const val POSITION = "POSITION"
-private const val TABLET_COLUMNS = 2
-
-fun createScheduleDataFragment(all: Boolean, day: Long, position: Int): ScheduleDataFragment {
-    val scheduleDataFragment = ScheduleDataFragment()
-    val args = Bundle()
-    args.putBoolean(ALL_EVENTS, all)
-    args.putLong(DAY, day)
-    args.putInt(POSITION, position)
-    scheduleDataFragment.arguments = args
-    return scheduleDataFragment
-}
-
-class ScheduleDataFragment() : Fragment() {
+class ScheduleDataFragment: Fragment() {
     //Extension property for casting adapter
     val RecyclerView.eventAdapter: EventAdapter
         get() = adapter as EventAdapter
 
     val shouldShowNotif: Boolean
-    get() {
-        return AppPrefs.getInstance(context).showNotifCard
-                && !arguments.getBoolean(ALL_EVENTS, true)
-                && arguments.getInt(POSITION,0) == 0
-    }
+        get() {
+            return AppPrefs.getInstance(context).showNotifCard
+                    && !arguments.getBoolean(ALL_EVENTS, true)
+                    && arguments.getInt(POSITION, 0) == 0
+        }
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater?.inflate(R.layout.fragment_schedule_data, container, false)
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?)
-    {
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        if (resources.getBoolean(R.bool.is_tablet))
-        {
+        if (resources.getBoolean(R.bool.is_tablet)) {
             eventList.layoutManager = GridLayoutManager(activity, TABLET_COLUMNS)
-        }
-        else
-        {
+        } else {
             eventList.layoutManager = LinearLayoutManager(activity)
         }
 
-        eventList.adapter = EventAdapter( arguments.getBoolean(ALL_EVENTS, true)
-                , emptyList()
-                , ScheduleEventClickListener()
-                , shouldShowNotif)
+        eventList.adapter = EventAdapter(activity,
+                arguments.getBoolean(ALL_EVENTS, true),
+                emptyList(),
+                ScheduleEventClickListener(),
+                shouldShowNotif)
     }
 
     override fun onResume() {
@@ -74,8 +56,7 @@ class ScheduleDataFragment() : Fragment() {
         EventBusExt.getDefault()!!.register(this)
     }
 
-    override fun onPause()
-    {
+    override fun onPause() {
         super.onPause()
         EventBusExt.getDefault()!!.unregister(this)
     }
@@ -88,7 +69,7 @@ class ScheduleDataFragment() : Fragment() {
         eventList.eventAdapter.toggleTrackFilter(track)
     }
 
-    fun  updateNotifCard() {
+    fun updateNotifCard() {
         eventList.eventAdapter.updateNotificationCard(shouldShowNotif)
     }
 
@@ -106,6 +87,23 @@ class ScheduleDataFragment() : Fragment() {
     private inner class ScheduleEventClickListener : EventClickListener {
         override fun onEventClick(event: Event) {
             EventDetailActivity.callMe(activity, event.id, event.category)
+        }
+    }
+
+    companion object {
+        private val ALL_EVENTS = "ALL_EVENTS"
+        private val DAY = "DAY"
+        private val POSITION = "POSITION"
+        private val TABLET_COLUMNS = 2
+
+        fun newInstance(all: Boolean, day: Long, position: Int): ScheduleDataFragment {
+            val scheduleDataFragment = ScheduleDataFragment()
+            val args = Bundle()
+            args.putBoolean(ALL_EVENTS, all)
+            args.putLong(DAY, day)
+            args.putInt(POSITION, position)
+            scheduleDataFragment.arguments = args
+            return scheduleDataFragment
         }
     }
 }

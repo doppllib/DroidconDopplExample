@@ -26,6 +26,10 @@
     <string name="explore">Schedule</string>
     <string name="my_schedule">My agenda</string>
     <string name="chat_on_slack">Chat on Slack</string>
+    <string name="slack_almost_there">Almost there...</string>
+    <string name="slack_confirm">Yep, take me to Slack</string>
+    <string name="slack_not_yet">Not yet</string>
+    <string name="slack_error">Error opening Slack link</string>
 
     <string name="map">Map</string>
     <string name="social">Social profiles</string>
@@ -114,6 +118,8 @@
     <string name="live_stream">Stream archive</string>
     <string name="live_stream_now">Live now!</string>
     <string name="live_stream_loading">Live stream loading…</string>
+    <string name="whoops">Whoops!</string>
+    <string name="buy_ticket">Buy a ticket</string>
 
     <!-- content descriptions-->
     <string name="cd_live_now">live now</string>
@@ -132,5 +138,8 @@
     <string name="sponsors_tab_general">GENERAL &#x1F60E;</string>
     <string name="sponsors_tab_streaming">STREAMING &#x1F4FA;</string>
     <string name="sponsors_tab_party">PARTY &#x1F389;</string>
+
+    <!-- URL -->
+    <string name="sponsor_image_url">file:///android_asset/sponsors/%1$s.png</string>
 
 </resources>
