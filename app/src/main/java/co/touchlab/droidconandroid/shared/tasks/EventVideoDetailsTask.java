@@ -1,8 +1,6 @@
 package co.touchlab.droidconandroid.shared.tasks;
 import android.content.Context;
 
-import co.touchlab.droidconandroid.shared.utils.StringUtils;
-
 import co.touchlab.android.threading.eventbus.EventBusExt;
 import co.touchlab.android.threading.tasks.Task;
 import co.touchlab.droidconandroid.CrashReport;
@@ -10,6 +8,7 @@ import co.touchlab.droidconandroid.shared.network.DataHelper;
 import co.touchlab.droidconandroid.shared.network.RefreshScheduleDataRequest;
 import co.touchlab.droidconandroid.shared.network.dao.EventVideoDetails;
 import co.touchlab.droidconandroid.shared.presenter.AppManager;
+import co.touchlab.droidconandroid.shared.utils.StringUtils;
 import retrofit.RestAdapter;
 
 /**

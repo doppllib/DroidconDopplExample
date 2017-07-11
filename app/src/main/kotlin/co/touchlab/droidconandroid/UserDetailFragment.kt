@@ -17,7 +17,12 @@ import android.view.View
 import android.view.ViewGroup
 import co.touchlab.android.threading.eventbus.EventBusExt
 import co.touchlab.android.threading.tasks.TaskQueue
+import co.touchlab.droidconandroid.shared.data.DatabaseHelper
 import co.touchlab.droidconandroid.shared.data.UserAccount
+import co.touchlab.droidconandroid.shared.network.DataHelper
+import co.touchlab.droidconandroid.shared.presenter.AppManager
+import co.touchlab.droidconandroid.shared.presenter.UserDetailHost
+import co.touchlab.droidconandroid.shared.presenter.UserDetailPresenter
 import co.touchlab.droidconandroid.shared.tasks.AbstractFindUserTask
 import co.touchlab.droidconandroid.shared.tasks.FindUserTask
 import co.touchlab.droidconandroid.shared.utils.EmojiUtil
@@ -38,8 +43,11 @@ private const val LINKEDIN_PREFIX: String = "http://www.linkedin.com/in/"
 private const val FACEBOOK_PREFIX: String = "http://www.facebook.com/"
 private const val PHONE_PREFIX: String = "tel:"
 
-class UserDetailFragment() : Fragment()
+class UserDetailFragment() : Fragment(), UserDetailHost
 {
+
+    private var presenter: UserDetailPresenter? = null
+
     companion object
     {
         val TAG: String = UserDetailFragment::class.java.simpleName
@@ -54,7 +62,12 @@ class UserDetailFragment() : Fragment()
     {
         super.onCreate(savedInstanceState)
         EventBusExt.getDefault().register(this)
-        TaskQueue.loadQueueNetwork(activity).execute(FindUserTask(findUserCodeArg()))
+        val helper = DatabaseHelper.getInstance(activity)
+        val restAdapter = DataHelper.makeRequestAdapter(activity, AppManager.getPlatformClient())
+        val task = FindUserTask(helper, restAdapter)
+        presenter = UserDetailPresenter(this, task)
+        presenter!!.findUser(findUserCodeArg())
+//        TaskQueue.loadQueueNetwork(activity).execute(FindUserTask(findUserCodeArg()))
     }
 
 
@@ -77,6 +90,7 @@ class UserDetailFragment() : Fragment()
     override fun onDestroy()
     {
         super.onDestroy()
+        presenter!!.unregister()
         EventBusExt.getDefault().unregister(this)
     }
 
@@ -108,6 +122,18 @@ class UserDetailFragment() : Fragment()
             val userAccount = findUserTask.user !!
             showUserData(userAccount)
         }
+    }
+
+    override fun findUserError() {
+        Toaster.showMessage(activity, getString(R.string.network_error))
+
+        if (activity is UserDetailActivity)
+            (activity as UserDetailActivity).onFragmentFinished()
+    }
+
+    override fun onUserFound(userAccount: UserAccount?) {
+        val user = userAccount!!
+        showUserData(user)
     }
 
     private fun showUserData(userAccount: UserAccount)
