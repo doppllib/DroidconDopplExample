@@ -3,7 +3,9 @@ package co.touchlab.droidconandroid.shared.presenter;
 import com.google.j2objc.annotations.Weak;
 
 import co.touchlab.droidconandroid.shared.data.UserAccount;
+import co.touchlab.droidconandroid.shared.network.dao.UserInfoResponse;
 import co.touchlab.droidconandroid.shared.tasks.FindUserTask;
+import co.touchlab.droidconandroid.shared.utils.UserDataHelper;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.CompositeDisposable;
@@ -22,14 +24,18 @@ public class UserDetailPresenter {
         this.task = task;
     }
 
-    public void findUser(@android.support.annotation.NonNull String userCode) {
-        subscriptions.add(task.loadUserAccount(userCode)
+    public void findUser(@NonNull Long userId) {
+        // TODO: Get the user by the ID instead of userCode
+
+        subscriptions.add(task.loadUserInfo(userId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Consumer<UserAccount>() {
+                .subscribe(new Consumer<UserInfoResponse>() {
                     @Override
-                    public void accept(@NonNull UserAccount userAccount) throws Exception {
-                        host.onUserFound(userAccount);
+                    public void accept(@NonNull UserInfoResponse userInfoResponse) throws Exception {
+                        UserAccount user = new UserAccount();
+                        UserDataHelper.userAccountToDb(userInfoResponse.user, user);
+                        host.onUserFound(user);
                     }
                 }, new Consumer<Throwable>() {
                     @Override
@@ -38,7 +44,6 @@ public class UserDetailPresenter {
                     }
                 }));
 
-        // TODO: Make the other call to save user to db
     }
 
     public void unregister() {

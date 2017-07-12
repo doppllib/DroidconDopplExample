@@ -1,7 +1,5 @@
 package co.touchlab.droidconandroid.shared.tasks;
 
-import java.util.concurrent.Callable;
-
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.network.FindUserRequest;
@@ -25,18 +23,18 @@ public class FindUserTask {
         this.restAdapter = restAdapter;
     }
 
-    public Single<UserAccount> loadUserAccount(final String userCode) {
-        return Single.fromCallable(new Callable<UserAccount>() {
-            @Override
-            public UserAccount call() throws Exception {
-                return UserAccount.findByCode(helper, userCode);
-            }
-        });
-    }
+//    public Single<UserAccount> loadUserAccount(final long userId) {
+//        return Single.fromCallable(new Callable<UserAccount>() {
+//            @Override
+//            public UserAccount call() throws Exception {
+//                return UserAccount.findByCode(helper, userId);
+//            }
+//        });
+//    }
 
-    public Single<UserInfoResponse> loadUserInfo(final String userCode) {
+    public Single<UserInfoResponse> loadUserInfo(final long userId) {
         FindUserRequest findUserRequest = restAdapter.create(FindUserRequest.class);
-        return RxJavaInterop.toV2Single(findUserRequest.getUserInfoSingle(userCode));
+        return RxJavaInterop.toV2Single(findUserRequest.getUserInfo(userId));
     }
 
     public Completable saveUserResponse(UserAccount user, UserInfoResponse response) {

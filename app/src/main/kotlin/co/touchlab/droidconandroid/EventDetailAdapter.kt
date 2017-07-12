@@ -60,7 +60,7 @@ class EventDetailAdapter(val context: Context, val frag:EventDetailFragment, val
     }
 
     fun addSpeaker(speaker: UserAccount) {
-        data.add(SpeakerDetail(TYPE_SPEAKER, speaker.avatarImageUrl(), speaker.name, speaker.company, speaker.profile, speaker.userCode))
+        data.add(SpeakerDetail(TYPE_SPEAKER, speaker.avatarImageUrl(), speaker.name, speaker.company, speaker.profile, speaker.userCode, speaker.id))
     }
 
     fun addFeedback(link: String) {
@@ -192,7 +192,7 @@ class EventDetailAdapter(val context: Context, val frag:EventDetailFragment, val
                 nameView.setTextColor(trackColor)
 
                 speakerVH.itemView.setOnClickListener({
-                    UserDetailActivity.callMe(context as Activity, user.userCode)
+                    UserDetailActivity.callMe(context as Activity, user.userCode, user.userId)
                 })
 
                 val bioSpanned = Html.fromHtml(StringUtils.trimToEmpty(user.bio)!!)
@@ -225,7 +225,7 @@ class EventDetailAdapter(val context: Context, val frag:EventDetailFragment, val
 
     inner class StreamDetail(type: Int, val link: String, val cover: String, val liveNow: Boolean) : Detail(type)
 
-    inner class SpeakerDetail(type: Int, val avatar: String?, val name: String, val company: String, val bio: String?, val userCode: String) : Detail(type)
+    inner class SpeakerDetail(type: Int, val avatar: String?, val name: String, val company: String, val bio: String?, val userCode: String, val userId: Long) : Detail(type)
 
     inner class SpaceDetail(type: Int, val size: Int) : Detail(type)
 

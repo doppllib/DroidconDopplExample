@@ -16,10 +16,12 @@ class UserDetailActivity : AppCompatActivity(), UserDetailFragment.Companion.Fin
     companion object
     {
         val USER_CODE = "USER_CODE"
-        fun callMe(a: Activity, userCode: String)
+        val USER_ID = "USER_ID"
+        fun callMe(a: Activity, userCode: String, userId: Long)
         {
             val i = Intent(a, UserDetailActivity::class.java)
             i.putExtra(USER_CODE, userCode)
+            i.putExtra(USER_ID, userId)
             a.startActivity(i)
         }
     }

@@ -43,23 +43,19 @@ private const val LINKEDIN_PREFIX: String = "http://www.linkedin.com/in/"
 private const val FACEBOOK_PREFIX: String = "http://www.facebook.com/"
 private const val PHONE_PREFIX: String = "tel:"
 
-class UserDetailFragment() : Fragment(), UserDetailHost
-{
+class UserDetailFragment() : Fragment(), UserDetailHost {
 
     private var presenter: UserDetailPresenter? = null
 
-    companion object
-    {
+    companion object {
         val TAG: String = UserDetailFragment::class.java.simpleName
 
-        interface FinishListener
-        {
+        interface FinishListener {
             fun onFragmentFinished()
         }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?)
-    {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         EventBusExt.getDefault().register(this)
         val helper = DatabaseHelper.getInstance(activity)
@@ -71,13 +67,11 @@ class UserDetailFragment() : Fragment(), UserDetailHost
     }
 
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View?
-    {
-        return inflater !!.inflate(R.layout.fragment_user_detail, null)
+    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater!!.inflate(R.layout.fragment_user_detail, null)
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?)
-    {
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         toolbar.title = ""
@@ -87,39 +81,33 @@ class UserDetailFragment() : Fragment(), UserDetailHost
         activity.supportActionBar?.setDisplayShowHomeEnabled(true)
     }
 
-    override fun onDestroy()
-    {
+    override fun onDestroy() {
         super.onDestroy()
         presenter!!.unregister()
         EventBusExt.getDefault().unregister(this)
     }
 
-    private fun findUserCodeArg(): String
-    {
-        var userCode = arguments?.getString(UserDetailActivity.USER_CODE)
-        if (StringUtils.isEmpty(userCode))
-        {
-            userCode = activity.intent.getStringExtra(UserDetailActivity.USER_CODE)
-        }
+    private fun findUserCodeArg(): Long {
+        var userId = activity.intent.getLongExtra(UserDetailActivity.USER_ID, 0L)
+//        var userId = arguments?.getLong(UserDetailActivity.USER_ID)
+//        if (userId == 0L)
+//        {
+//        }
 
-        if (StringUtils.isEmpty(userCode))
-            throw IllegalArgumentException("Must set user code")
+        if (userId == 0L)
+            throw IllegalArgumentException("Must set user id")
 
-        return userCode !!
+        return userId
     }
 
-    fun onEventMainThread(findUserTask: AbstractFindUserTask)
-    {
-        if (findUserTask.isError)
-        {
+    fun onEventMainThread(findUserTask: AbstractFindUserTask) {
+        if (findUserTask.isError) {
             Toaster.showMessage(activity, getString(R.string.network_error))
 
             if (activity is UserDetailActivity)
                 (activity as UserDetailActivity).onFragmentFinished()
-        }
-        else
-        {
-            val userAccount = findUserTask.user !!
+        } else {
+            val userAccount = findUserTask.user!!
             showUserData(userAccount)
         }
     }
@@ -136,21 +124,16 @@ class UserDetailFragment() : Fragment(), UserDetailHost
         showUserData(user)
     }
 
-    private fun showUserData(userAccount: UserAccount)
-    {
+    private fun showUserData(userAccount: UserAccount) {
         val avatarKey = userAccount.avatarImageUrl()
-        if (! TextUtils.isEmpty(avatarKey))
-        {
-            val callback = object : Callback
-            {
-                override fun onSuccess()
-                {
+        if (!TextUtils.isEmpty(avatarKey)) {
+            val callback = object : Callback {
+                override fun onSuccess() {
                     placeholder_emoji.text = ""
                 }
 
-                override fun onError()
-                {
-                    if(placeholder_emoji != null)
+                override fun onError() {
+                    if (placeholder_emoji != null)
                         placeholder_emoji.text = EmojiUtil.getEmojiForUser(userAccount.name)
                 }
             }
@@ -159,9 +142,7 @@ class UserDetailFragment() : Fragment(), UserDetailHost
                     .load(avatarKey)
                     .placeholder(R.drawable.circle_profile_placeholder)
                     .into(profile_image, callback)
-        }
-        else
-        {
+        } else {
             placeholder_emoji.text = EmojiUtil.getEmojiForUser(userAccount.name)
         }
 
@@ -169,40 +150,34 @@ class UserDetailFragment() : Fragment(), UserDetailHost
 
         makeIconsPretty(iconsDefaultColor)
 
-        if (! TextUtils.isEmpty(userAccount.name))
-        {
+        if (!TextUtils.isEmpty(userAccount.name)) {
             name.text = userAccount.name
         }
 
-        if (! TextUtils.isEmpty(userAccount.phone))
-        {
+        if (!TextUtils.isEmpty(userAccount.phone)) {
             phone.text = userAccount.phone
             phone.setOnClickListener {
                 val intent = Intent(Intent.ACTION_DIAL)
                 intent.data = Uri.parse(PHONE_PREFIX + userAccount.phone)
-                if (intent.resolveActivity(activity.packageManager) != null)
-                {
+                if (intent.resolveActivity(activity.packageManager) != null) {
                     startActivity(intent)
                 }
             }
             phone.visibility = View.VISIBLE
-        }
-        else
+        } else
 
-        if (! TextUtils.isEmpty(userAccount.email) && userAccount.emailPublic != null && userAccount.emailPublic)
-        {
-            email.text = userAccount.email
+            if (!TextUtils.isEmpty(userAccount.email) && userAccount.emailPublic != null && userAccount.emailPublic) {
+                email.text = userAccount.email
 
-            email.setOnClickListener {
-                val emailIntent = Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                        "mailto", userAccount.email, null))
-                startActivity(emailIntent)
+                email.setOnClickListener {
+                    val emailIntent = Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                            "mailto", userAccount.email, null))
+                    startActivity(emailIntent)
+                }
+                email.visibility = View.VISIBLE
             }
-            email.visibility = View.VISIBLE
-        }
 
-        if (! TextUtils.isEmpty(userAccount.company))
-        {
+        if (!TextUtils.isEmpty(userAccount.company)) {
             company.text = userAccount.company
             company.visibility = View.VISIBLE
 
@@ -217,8 +192,7 @@ class UserDetailFragment() : Fragment(), UserDetailHost
         }
 
         val facebookAccount = userAccount.facebook
-        if (! TextUtils.isEmpty(facebookAccount))
-        {
+        if (!TextUtils.isEmpty(facebookAccount)) {
             facebook.text = facebookAccount
             facebook.setOnClickListener {
                 openLink(Uri.parse(FACEBOOK_PREFIX + facebookAccount))
@@ -227,8 +201,7 @@ class UserDetailFragment() : Fragment(), UserDetailHost
         }
 
         var twitterAccount = userAccount.twitter
-        if (! TextUtils.isEmpty(twitterAccount))
-        {
+        if (!TextUtils.isEmpty(twitterAccount)) {
             twitterAccount = twitterAccount.replace("@", "")
             twitter.text = "@$twitterAccount"
             twitter.setOnClickListener {
@@ -238,8 +211,7 @@ class UserDetailFragment() : Fragment(), UserDetailHost
         }
 
         val linkedInAccount = userAccount.linkedIn
-        if (! TextUtils.isEmpty(linkedInAccount))
-        {
+        if (!TextUtils.isEmpty(linkedInAccount)) {
             linkedIn.text = linkedInAccount
             linkedIn.setOnClickListener {
                 openLink(Uri.parse(LINKEDIN_PREFIX + linkedInAccount))
@@ -248,8 +220,7 @@ class UserDetailFragment() : Fragment(), UserDetailHost
         }
 
         var gPlusAccount = userAccount.gPlus
-        if (! TextUtils.isEmpty(gPlusAccount))
-        {
+        if (!TextUtils.isEmpty(gPlusAccount)) {
             gPlusAccount = gPlusAccount.replace("+", "")
             gPlus.text = "+$gPlusAccount"
             gPlus.setOnClickListener {
@@ -258,14 +229,12 @@ class UserDetailFragment() : Fragment(), UserDetailHost
             gPlus.visibility = View.VISIBLE
         }
 
-        if (! TextUtils.isEmpty(userAccount.website))
-        {
+        if (!TextUtils.isEmpty(userAccount.website)) {
             website.text = userAccount.website
             website.setOnClickListener {
                 var url = userAccount.website
 
-                if (! url.startsWith("http://"))
-                {
+                if (!url.startsWith("http://")) {
                     url = "http://" + url
                 }
                 openLink(Uri.parse(url))
@@ -273,27 +242,22 @@ class UserDetailFragment() : Fragment(), UserDetailHost
             website.visibility = View.VISIBLE
         }
 
-        if (! TextUtils.isEmpty(userAccount.profile))
-        {
+        if (!TextUtils.isEmpty(userAccount.profile)) {
 
             bio.text = Html.fromHtml(StringUtils.trimToEmpty(userAccount.profile)!!)
             bio.visibility = View.VISIBLE
         }
     }
 
-    private fun openLink(webPage: Uri?)
-    {
+    private fun openLink(webPage: Uri?) {
         val intent = Intent(Intent.ACTION_VIEW, webPage)
-        if (intent.resolveActivity(activity.packageManager) != null)
-        {
+        if (intent.resolveActivity(activity.packageManager) != null) {
             startActivity(intent)
         }
     }
 
-    private fun makeIconsPretty(darkVibrantColor: Int)
-    {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M)
-        {
+    private fun makeIconsPretty(darkVibrantColor: Int) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             val contactDrawable = ResourcesCompat.getDrawable(activity,
                     R.drawable.vic_person_add_black_24dp)
             contactDrawable.colorFilter = PorterDuffColorFilter(darkVibrantColor,

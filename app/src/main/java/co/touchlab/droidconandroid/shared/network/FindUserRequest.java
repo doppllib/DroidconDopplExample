@@ -13,6 +13,6 @@ public interface FindUserRequest
     @GET("/dataTest/findUserByCode/{userCode}")
     UserInfoResponse getUserInfo(@Path("userCode") String userCode);
 
-    @GET("/dataTest/findUserByCode/{userCode}")
-    Single<UserInfoResponse> getUserInfoSingle(@Path("userCode") String userCode);
+    @GET("/dataTest/findUserById/{userId}")
+    Single<UserInfoResponse> getUserInfo(@Path("userId") long userId);
 }
