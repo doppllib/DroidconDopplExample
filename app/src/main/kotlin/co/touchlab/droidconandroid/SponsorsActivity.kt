@@ -57,20 +57,10 @@ class SponsorsActivity : AppCompatActivity() {
     }
 
     private fun initTabs() {
-        // Add General tab
-        var generalTab = sponsors_tabs.newTab()
-        generalTab.text = getText(R.string.sponsors_tab_general)
-        sponsors_tabs.addTab(generalTab)
-
-        // Add Streaming tab
-        var streamingTab = sponsors_tabs.newTab()
-        streamingTab.text = getText(R.string.sponsors_tab_streaming)
-        sponsors_tabs.addTab(streamingTab)
-
-        // Add General tab
-        var partyTab = sponsors_tabs.newTab()
-        partyTab.text = getText(R.string.sponsors_tab_party)
-        sponsors_tabs.addTab(partyTab)
+        // Add General, Streaming, and Party tabs - type will be distinguished in Sponsors Task
+        sponsors_tabs.addTab(sponsors_tabs.newTab().setTag(getString(R.string.sponsors_tab_general)))
+        sponsors_tabs.addTab(sponsors_tabs.newTab().setTag(getString(R.string.sponsors_tab_streaming)))
+        sponsors_tabs.addTab(sponsors_tabs.newTab().setTag(getString(R.string.sponsors_tab_party)))
 
         // Style tab text and indicator color
         sponsors_tabs.setTabTextColors(ContextCompat.getColor(this, R.color.tab_inactive_text_dark), ContextCompat.getColor(this, R.color.tab_text_dark))
