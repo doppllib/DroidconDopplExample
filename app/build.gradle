@@ -13,7 +13,7 @@ buildscript {
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'co.doppl.gradle'
 
 Properties properties = new Properties()
@@ -38,6 +38,11 @@ android {
 
         buildConfigField "String", "BASE_URL", "\"$baseurl\""
         resValue "string", "jw_license_key", "$jwLicenseKey"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     signingConfigs {
