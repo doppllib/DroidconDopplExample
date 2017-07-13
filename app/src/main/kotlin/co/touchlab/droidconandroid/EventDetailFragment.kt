@@ -100,8 +100,8 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         return trackId
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater?.inflate(R.layout.fragment_event_detail, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.fragment_event_detail, container, false)
     }
 
     override fun onResume() {
