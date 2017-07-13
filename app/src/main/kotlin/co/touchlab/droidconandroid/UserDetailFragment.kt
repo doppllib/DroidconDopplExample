@@ -16,14 +16,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import co.touchlab.android.threading.eventbus.EventBusExt
-import co.touchlab.android.threading.tasks.TaskQueue
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper
 import co.touchlab.droidconandroid.shared.data.UserAccount
 import co.touchlab.droidconandroid.shared.network.DataHelper
+import co.touchlab.droidconandroid.shared.network.FindUserRequest
 import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.UserDetailHost
 import co.touchlab.droidconandroid.shared.presenter.UserDetailPresenter
-import co.touchlab.droidconandroid.shared.tasks.AbstractFindUserTask
 import co.touchlab.droidconandroid.shared.tasks.FindUserTask
 import co.touchlab.droidconandroid.shared.utils.EmojiUtil
 import co.touchlab.droidconandroid.utils.Toaster
@@ -45,7 +44,7 @@ private const val PHONE_PREFIX: String = "tel:"
 
 class UserDetailFragment() : Fragment(), UserDetailHost {
 
-    private var presenter: UserDetailPresenter? = null
+    private lateinit var presenter: UserDetailPresenter
 
     companion object {
         val TAG: String = UserDetailFragment::class.java.simpleName
@@ -57,15 +56,12 @@ class UserDetailFragment() : Fragment(), UserDetailHost {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        EventBusExt.getDefault().register(this)
         val helper = DatabaseHelper.getInstance(activity)
         val restAdapter = DataHelper.makeRequestAdapter(activity, AppManager.getPlatformClient())
         val task = FindUserTask(helper, restAdapter)
         presenter = UserDetailPresenter(this, task)
-        presenter!!.findUser(findUserCodeArg())
-//        TaskQueue.loadQueueNetwork(activity).execute(FindUserTask(findUserCodeArg()))
+        presenter.findUser(findUserCodeArg())
     }
-
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater!!.inflate(R.layout.fragment_user_detail, null)
@@ -83,7 +79,7 @@ class UserDetailFragment() : Fragment(), UserDetailHost {
 
     override fun onDestroy() {
         super.onDestroy()
-        presenter!!.unregister()
+        presenter.unregister()
         EventBusExt.getDefault().unregister(this)
     }
 
@@ -102,8 +98,8 @@ class UserDetailFragment() : Fragment(), UserDetailHost {
             (activity as UserDetailActivity).onFragmentFinished()
     }
 
-    override fun onUserFound(userAccount: UserAccount?) {
-        val user = userAccount!!
+    override fun onUserFound(userAccount: UserAccount) {
+        val user = userAccount
         showUserData(user)
     }
 
