@@ -19,6 +19,7 @@
     <string name="action_settings">Settings</string>
 
     <string name="network_error">Network problems...</string>
+    <string name="no_user_code_error">User profile not found</string>
 
     <!-- drawer copy-->
     <string name="navigation_drawer_open">Open</string>
