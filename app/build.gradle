@@ -35,6 +35,7 @@ android {
 
         buildConfigField "String", "BASE_URL", "\"$baseurl\""
         resValue "string", "jw_license_key", "$jwLicenseKey"
+        vectorDrawables.useSupportLibrary = true
     }
 
     signingConfigs {
