@@ -1,5 +1,7 @@
 package co.touchlab.droidconandroid.shared.tasks;
 
+import java.util.concurrent.Callable;
+
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.network.FindUserRequest;
@@ -7,6 +9,7 @@ import co.touchlab.droidconandroid.shared.network.dao.UserInfoResponse;
 import co.touchlab.droidconandroid.shared.utils.UserDataHelper;
 import hu.akarnokd.rxjava.interop.RxJavaInterop;
 import io.reactivex.Completable;
+import io.reactivex.Observable;
 import io.reactivex.Single;
 import io.reactivex.functions.Action;
 import retrofit.RestAdapter;
@@ -23,21 +26,21 @@ public class FindUserTask {
         this.restAdapter = restAdapter;
     }
 
-//    public Single<UserAccount> loadUserAccount(final long userId) {
-//        return Single.fromCallable(new Callable<UserAccount>() {
-//            @Override
-//            public UserAccount call() throws Exception {
-//                return UserAccount.findByCode(helper, userId);
-//            }
-//        });
-//    }
-
-    public Single<UserInfoResponse> loadUserInfo(final long userId) {
-        FindUserRequest findUserRequest = restAdapter.create(FindUserRequest.class);
-        return RxJavaInterop.toV2Single(findUserRequest.getUserInfo(userId));
+    public Single<UserAccount> loadUserAccount(final long userId) {
+        return Single.fromCallable(new Callable<UserAccount>() {
+            @Override
+            public UserAccount call() throws Exception {
+                return UserAccount.findByCode(helper, userId);
+            }
+        });
     }
 
-    public Completable saveUserResponse(UserAccount user, UserInfoResponse response) {
+    public Observable<UserInfoResponse> loadUserInfo(final long userId) {
+        FindUserRequest findUserRequest = restAdapter.create(FindUserRequest.class);
+        return RxJavaInterop.toV2Observable(findUserRequest.getUserInfo(userId));
+    }
+
+    public Single<UserAccount> saveUserResponse(UserAccount user, UserInfoResponse response) {
         final UserAccount newDbUser = new UserAccount();
         UserDataHelper.userAccountToDb(response.user, newDbUser);
 
@@ -47,10 +50,10 @@ public class FindUserTask {
                 public void run() throws Exception {
                     helper.getUserAccountDao().createOrUpdate(newDbUser);
                 }
-            });
+            }).andThen(Single.just(newDbUser));
         }
 
-        return Completable.complete();
+        return Single.just(user);
     }
 
 }

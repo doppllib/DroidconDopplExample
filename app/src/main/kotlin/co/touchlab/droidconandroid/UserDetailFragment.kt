@@ -88,12 +88,7 @@ class UserDetailFragment() : Fragment(), UserDetailHost {
     }
 
     private fun findUserCodeArg(): Long {
-        var userId = activity.intent.getLongExtra(UserDetailActivity.USER_ID, 0L)
-//        var userId = arguments?.getLong(UserDetailActivity.USER_ID)
-//        if (userId == 0L)
-//        {
-//        }
-
+        val userId = activity.intent.getLongExtra(UserDetailActivity.USER_ID, 0L)
         if (userId == 0L)
             throw IllegalArgumentException("Must set user id")
 

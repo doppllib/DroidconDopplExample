@@ -24,8 +24,7 @@ public class UserDetailPresenter {
         this.task = task;
     }
 
-    public void findUser(@NonNull Long userId) {
-        // TODO: Get the user by the ID instead of userCode
+    public void findUser(@NonNull final Long userId) {
 
         subscriptions.add(task.loadUserInfo(userId)
                 .subscribeOn(Schedulers.io())
@@ -50,6 +49,5 @@ public class UserDetailPresenter {
         host = null;
         subscriptions.clear();
     }
-
 
 }
