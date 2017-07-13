@@ -95,18 +95,6 @@ class UserDetailFragment() : Fragment(), UserDetailHost {
         return userId
     }
 
-    fun onEventMainThread(findUserTask: AbstractFindUserTask) {
-        if (findUserTask.isError) {
-            Toaster.showMessage(activity, getString(R.string.network_error))
-
-            if (activity is UserDetailActivity)
-                (activity as UserDetailActivity).onFragmentFinished()
-        } else {
-            val userAccount = findUserTask.user!!
-            showUserData(userAccount)
-        }
-    }
-
     override fun findUserError() {
         Toaster.showMessage(activity, getString(R.string.network_error))
 
