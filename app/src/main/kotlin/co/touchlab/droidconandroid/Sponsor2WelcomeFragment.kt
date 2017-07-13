@@ -11,8 +11,8 @@ import kotlinx.android.synthetic.main.fragment_sponsors2.*
  * Created by sufeizhao on 7/11/17.
  */
 class Sponsor2WelcomeFragment : BaseSponsorWelcomeFragment() {
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater?.inflate(R.layout.fragment_sponsors2, container, false)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.fragment_sponsors2, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

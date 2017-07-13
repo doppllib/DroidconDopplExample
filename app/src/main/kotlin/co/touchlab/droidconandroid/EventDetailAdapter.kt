@@ -59,37 +59,37 @@ class EventDetailAdapter(private val context: Context,
 
     //=================== Adapter Overrides ===================
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): RecyclerView.ViewHolder? {
-        when (viewType) {
+        return when (viewType) {
             TYPE_HEADER -> {
                 val view = LayoutInflater.from(context).inflate(R.layout.item_event_header, parent, false)
-                return HeaderVH(view)
+                HeaderVH(view)
             }
             TYPE_STREAM -> {
                 val view = LayoutInflater.from(context).inflate(R.layout.item_event_stream, parent, false)
-                return StreamVH(view)
+                StreamVH(view)
             }
             TYPE_BODY -> {
                 val view = LayoutInflater.from(context).inflate(R.layout.item_event_text, parent, false)
-                return TextVH(view)
+                TextVH(view)
             }
             TYPE_INFO -> {
                 val view = LayoutInflater.from(context).inflate(R.layout.item_event_info, parent, false)
-                return InfoVH(view)
+                InfoVH(view)
             }
             TYPE_SPEAKER -> {
                 val view = LayoutInflater.from(context).inflate(R.layout.item_user_summary, parent, false)
-                return SpeakerVH(view)
+                SpeakerVH(view)
             }
             TYPE_SPACE -> {
                 val view = View(context)
                 parent!!.addView(view)
-                return object : RecyclerView.ViewHolder(view) {}
+                object : RecyclerView.ViewHolder(view) {}
             }
             TYPE_FEEDBACK -> {
                 val view = LayoutInflater.from(context).inflate(R.layout.item_event_feedback, parent, false)
-                return FeedbackVH(view)
+                FeedbackVH(view)
             }
-            else -> return null
+            else -> null
         }
     }
 

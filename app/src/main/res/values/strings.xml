@@ -30,6 +30,9 @@
     <string name="slack_confirm">Yep, take me to Slack</string>
     <string name="slack_not_yet">Not yet</string>
     <string name="slack_error">Error opening Slack link</string>
+    <string name="slack_dialog_title">You’ll need an account to join the DCNYC Slack team.</string>
+    <string name="slack_dialog_text">Have you signed up to join the Slack team yet?</string>
+    <string name="slack_dialog_no">Don\'t ask me again</string>
 
     <string name="map">Map</string>
     <string name="social">Social profiles</string>

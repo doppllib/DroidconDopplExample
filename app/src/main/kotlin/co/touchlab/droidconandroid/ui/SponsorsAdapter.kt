@@ -31,14 +31,14 @@ class SponsorsAdapter(private val context: Context) : RecyclerView.Adapter<Recyc
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): RecyclerView.ViewHolder? {
-        when (viewType) {
+        return when (viewType) {
             VIEW_TYPE_ITEM -> {
-                val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_sponsor, parent, false)
-                return SponsorVH(view)
+                val view = LayoutInflater.from(context).inflate(R.layout.item_sponsor, parent, false)
+                SponsorVH(view)
             }
             else -> {
-                val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_empty, parent, false)
-                return EmptyVH(view)
+                val view = LayoutInflater.from(context).inflate(R.layout.item_empty, parent, false)
+                EmptyVH(view)
             }
         }
     }

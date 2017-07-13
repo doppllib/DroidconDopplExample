@@ -18,18 +18,18 @@ class DrawerAdapter(private val context: Context,
     private var selectedPos = 1
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): RecyclerView.ViewHolder? {
-        when (viewType) {
+        return when (viewType) {
             VIEW_TYPE_NAVIGATION -> {
                 val view = LayoutInflater.from(context).inflate(R.layout.item_drawer, parent, false)
-                return NavigationViewHolder(view)
+                NavigationViewHolder(view)
             }
             VIEW_TYPE_HEADER -> {
                 val view = LayoutInflater.from(context).inflate(R.layout.item_drawer_header, parent, false)
-                return HeaderViewHolder(view)
+                HeaderViewHolder(view)
             }
             else -> {
                 val view = LayoutInflater.from(context).inflate(R.layout.item_drawer_divider, parent, false)
-                return DividerViewHolder(view)
+                DividerViewHolder(view)
             }
         }
     }
