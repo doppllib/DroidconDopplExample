@@ -33,6 +33,18 @@ public class Block implements ScheduleBlock
         return true;
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
     @Override
     public Long getStartLong()
     {
