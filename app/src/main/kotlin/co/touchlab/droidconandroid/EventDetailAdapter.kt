@@ -167,7 +167,7 @@ class EventDetailAdapter(private val context: Context,
                 view.name.text = context.getString(R.string.event_speaker_name).format(user.name, user.company)
                 view.name.setTextColor(trackColor)
 
-                view.setOnClickListener { UserDetailActivity.callMe(context as Activity, user.userCode, user.userId) }
+                view.setOnClickListener { UserDetailActivity.callMe(context as Activity, user.userId) }
                 view.bio.text = Html.fromHtml(StringUtils.trimToEmpty(user.bio))
             }
 
