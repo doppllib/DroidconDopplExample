@@ -103,6 +103,7 @@ android {
 }
 
 def supportVersion = "25.3.1"
+def archVer = "1.0.0-alpha1"
 
 dependencies {
 
@@ -129,6 +130,10 @@ dependencies {
     compile "com.android.support:recyclerview-v7:$supportVersion"
     compile "com.android.support:cardview-v7:$supportVersion"
     compile "com.android.support:customtabs:$supportVersion"
+
+    compile "android.arch.lifecycle:runtime:$archVer"
+    compile "android.arch.lifecycle:extensions:$archVer"
+    annotationProcessor "android.arch.lifecycle:compiler:$archVer"
 
     compile 'com.google.code.findbugs:jsr305:3.0.2'
 

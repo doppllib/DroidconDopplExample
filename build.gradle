@@ -17,6 +17,7 @@ allprojects {
     repositories {
         maven { url "https://dl.bintray.com/doppllib/maven" }
         maven { url "http://dl.bintray.com/populov/maven" }
+        maven { url 'https://maven.google.com' }
         jcenter()
         mavenCentral()
 
