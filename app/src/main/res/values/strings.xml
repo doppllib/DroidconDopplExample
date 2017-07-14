@@ -138,9 +138,9 @@
     <string name="title_activity_sponsors">OUR AWESOME SPONSORS</string>
     <string name="sponsor_image">Sponsor Image</string>
 
-    <string name="sponsors_tab_general">GENERAL &#x1F60E;</string>
-    <string name="sponsors_tab_streaming">STREAMING &#x1F4FA;</string>
-    <string name="sponsors_tab_party">PARTY &#x1F389;</string>
+    <string name="sponsors_tab_general">GENERAL&#160;</string>
+    <string name="sponsors_tab_streaming">STREAMING&#160;</string>
+    <string name="sponsors_tab_party">PARTY&#160;</string>
 
     <!-- URL -->
     <string name="sponsor_image_url">file:///android_asset/sponsors/%1$s.png</string>
