@@ -13,7 +13,7 @@ buildscript {
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'co.doppl.gradle'
 
 Properties properties = new Properties()
@@ -80,6 +80,7 @@ android {
         exclude 'META-INF/NOTICE.txt'
         exclude 'META-INF/maven/org.apache.commons/commons-lang3/pom.xml'
         exclude 'META-INF/maven/org.apache.commons/commons-lang3/pom.properties'
+        exclude 'META-INF/rxjava.properties'
         exclude 'jsr305_annotations/Jsr305_annotations.gwt.xml'
     }
     sourceSets {
