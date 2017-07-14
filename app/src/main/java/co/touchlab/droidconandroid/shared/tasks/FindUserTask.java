@@ -17,6 +17,7 @@ import retrofit.RestAdapter;
 public class FindUserTask {
     private final DatabaseHelper helper;
     private final RestAdapter restAdapter;
+    private Observable<UserAccount> userAccountObservable = null;
 
     public FindUserTask(DatabaseHelper helper, RestAdapter restAdapter) {
         this.helper = helper;
@@ -24,10 +25,15 @@ public class FindUserTask {
     }
 
     public Observable<UserAccount> loadUserAccount(final long userId) {
-        Observable<UserAccount> accountObservable = Observable.fromCallable(() -> UserAccount.findByCode(helper, userId));
+        if (userAccountObservable == null) {
+            Observable<UserAccount> accountObservable = Observable.fromCallable(() -> UserAccount.findByCode(helper, userId));
 
-        return Observable.zip(accountObservable, loadUserInfo(userId), UserAccountInfo::new)
-                .flatMap(this::saveUserResponse);
+            userAccountObservable = Observable.zip(accountObservable, loadUserInfo(userId), UserAccountInfo::new)
+                    .flatMap(this::saveUserResponse)
+                    .cache();
+        }
+
+        return userAccountObservable;
     }
 
     private Observable<UserInfoResponse> loadUserInfo(final long userId) {
