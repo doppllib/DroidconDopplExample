@@ -1,47 +1,29 @@
 package co.touchlab.droidconandroid.shared.tasks;
-import android.content.Context;
 
-import co.touchlab.android.threading.eventbus.EventBusExt;
-import co.touchlab.android.threading.tasks.Task;
-import co.touchlab.droidconandroid.CrashReport;
-import co.touchlab.droidconandroid.shared.network.DataHelper;
-import co.touchlab.droidconandroid.shared.network.NetworkErrorHandler;
 import co.touchlab.droidconandroid.shared.network.SponsorsRequest;
 import co.touchlab.droidconandroid.shared.network.SponsorsResult;
-import co.touchlab.droidconandroid.shared.presenter.AppManager;
+import hu.akarnokd.rxjava.interop.RxJavaInterop;
+import io.reactivex.Observable;
 import retrofit.RestAdapter;
 
-public class SponsorsTask extends Task
-{
-    public static final int SPONSOR_GENERAL   = 0;
+public class SponsorsTask {
+    public static final int SPONSOR_GENERAL = 0;
     public static final int SPONSOR_STREAMING = 1;
-    public static final int SPONSOR_PARTY     = 2;
+    public static final int SPONSOR_PARTY = 2;
 
-    //TODO move to build config?
-    public static final String URL_AMAZON_S3 = "https://s3.amazonaws.com/";
+    private final RestAdapter restAdapter;
 
-    public int            type;
-    public SponsorsResult response;
-
-    public SponsorsTask(int type)
-    {
-        this.type = type;
+    public SponsorsTask(RestAdapter restAdapter) {
+        this.restAdapter = restAdapter;
     }
 
-    @Override
-    protected void run(Context context) throws Throwable
-    {
-        RestAdapter restAdapter = DataHelper.makeRequestAdapterBuilder(context,
-                AppManager.getPlatformClient(), URL_AMAZON_S3,
-                new NetworkErrorHandler()).build();
+    public Observable<SponsorsResult> getSponsors(int type) {
         String fileName = getFileName(type);
-        response = restAdapter.create(SponsorsRequest.class).getSponsors(fileName);
+        return RxJavaInterop.toV2Observable(restAdapter.create(SponsorsRequest.class).getSponsors(fileName));
     }
 
-    private String getFileName(int type)
-    {
-        switch(type)
-        {
+    private String getFileName(int type) {
+        switch (type) {
             case SPONSOR_STREAMING:
                 return "sponsors_stream.json";
             case SPONSOR_PARTY:
@@ -49,19 +31,5 @@ public class SponsorsTask extends Task
             default:
                 return "sponsors_general.json";
         }
-    }
-
-    @Override
-    protected boolean handleError(Context context, Throwable throwable)
-    {
-        CrashReport.logException(throwable);
-        return true;
-    }
-
-    @Override
-    protected void onComplete(Context context)
-    {
-        super.onComplete(context);
-        EventBusExt.getDefault().post(this);
     }
 }

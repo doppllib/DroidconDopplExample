@@ -6,8 +6,7 @@ import retrofit.http.Path;
 /**
  * Created by kgalligan on 7/20/14.
  */
-public interface SponsorsRequest
-{
+public interface SponsorsRequest {
     @GET("/droidconsponsers/{fileName}")
-    SponsorsResult getSponsors(@Path("fileName") String fileName) throws NetworkErrorHandler.NetworkException;
+    rx.Observable<SponsorsResult> getSponsors(@Path("fileName") String fileName);
 }

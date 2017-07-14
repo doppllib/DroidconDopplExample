@@ -9,12 +9,15 @@ import android.view.View
 import android.view.ViewGroup
 import co.touchlab.android.threading.eventbus.EventBusExt
 import co.touchlab.android.threading.tasks.TaskQueue
+import co.touchlab.droidconandroid.shared.network.SponsorsRequest
+import co.touchlab.droidconandroid.shared.network.SponsorsResult
+import co.touchlab.droidconandroid.shared.presenter.SponsorsHost
 import co.touchlab.droidconandroid.shared.tasks.SponsorsTask
 import co.touchlab.droidconandroid.ui.SponsorsAdapter
 import kotlinx.android.synthetic.main.fragment_sponsors_list.*
 import java.util.*
 
-class SponsorsListFragment : Fragment() {
+class SponsorsListFragment : Fragment(), SponsorsHost {
     var adapter: SponsorsAdapter? = null
 
     companion object {
@@ -101,6 +104,14 @@ class SponsorsListFragment : Fragment() {
             layoutManager.spanSizeLookup = spanSizeLookip
             sponsor_list.layoutManager = layoutManager
         }
+    }
+
+    override fun onSponsorsFound(result: SponsorsResult) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun onError() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     inner class Empty(val spanCount: Int)

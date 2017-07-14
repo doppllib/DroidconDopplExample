@@ -19,6 +19,7 @@ apply plugin: 'co.doppl.gradle'
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 def baseurl = properties.getProperty('baseurl')
+def amazonurl = properties.getProperty('amazonurl')
 def releasePassword = properties.getProperty('releasePassword')
 def jwLicenseKey = properties.getProperty('jwLicenseKey')
 
@@ -34,7 +35,13 @@ android {
         versionName "0.1.01"
 
         buildConfigField "String", "BASE_URL", "\"$baseurl\""
+        buildConfigField "String", "AMAZON_URL", "\"$amazonurl\""
         resValue "string", "jw_license_key", "$jwLicenseKey"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     signingConfigs {
