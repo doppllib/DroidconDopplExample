@@ -1,5 +1,7 @@
 package co.touchlab.droidconandroid.shared.presenter;
 
+import android.arch.lifecycle.ViewModel;
+import android.arch.lifecycle.ViewModelProvider;
 import android.support.annotation.NonNull;
 
 import javax.annotation.Nonnull;
@@ -9,12 +11,12 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class SponsorsPresenter {
+public class SponsorsViewModel extends ViewModel {
     private final SponsorsTask task;
     private SponsorsHost host;
     private CompositeDisposable disposables = new CompositeDisposable();
 
-    public SponsorsPresenter(@Nonnull SponsorsTask task) {
+    private SponsorsViewModel(@Nonnull SponsorsTask task) {
         this.task = task;
     }
 
@@ -33,5 +35,19 @@ public class SponsorsPresenter {
     public void unregister() {
         host = null;
         disposables.clear();
+    }
+
+    public static class Factory extends ViewModelProvider.NewInstanceFactory {
+        private final SponsorsTask task;
+
+        public Factory(SponsorsTask task) {
+            this.task = task;
+        }
+
+        @Override
+        public <T extends ViewModel> T create(Class<T> modelClass) {
+            //noinspection unchecked
+            return (T) new SponsorsViewModel(task);
+        }
     }
 }

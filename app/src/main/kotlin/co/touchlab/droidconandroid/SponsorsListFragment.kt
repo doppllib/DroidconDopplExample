@@ -1,5 +1,6 @@
 package co.touchlab.droidconandroid
 
+import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
@@ -9,9 +10,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import co.touchlab.android.threading.eventbus.EventBusExt
+import co.touchlab.droidconandroid.shared.network.DataHelper
 import co.touchlab.droidconandroid.shared.network.SponsorsResult
+import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.SponsorsHost
-import co.touchlab.droidconandroid.shared.presenter.SponsorsPresenter
+import co.touchlab.droidconandroid.shared.presenter.SponsorsViewModel
+import co.touchlab.droidconandroid.shared.tasks.SponsorsTask
 import co.touchlab.droidconandroid.ui.SponsorsAdapter
 import kotlinx.android.synthetic.main.fragment_sponsors_list.*
 import java.util.*
@@ -31,7 +35,12 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
         }
     }
 
-    private lateinit var presenter: SponsorsPresenter
+    private val viewModel: SponsorsViewModel by lazy {
+        val restAdapter = DataHelper.makeRequestAdapterBuilder(activity, AppManager.getPlatformClient(), BuildConfig.AMAZON_URL, null).build()
+        val task = SponsorsTask(restAdapter)
+        val factory = SponsorsViewModel.Factory(task)
+        ViewModelProviders.of(this, factory).get(SponsorsViewModel::class.java)
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_sponsors_list, container, false)
@@ -44,8 +53,8 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
     override fun onStart() {
         super.onStart()
         val type = arguments.getInt(SPONSOR_TYPE)
-        presenter.register(this)
-        presenter.getSponsors(type)
+        viewModel.register(this)
+        viewModel.getSponsors(type)
     }
 
     override fun onStop() {
