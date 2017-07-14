@@ -15,9 +15,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper
-import co.touchlab.droidconandroid.UserDetailActivity.Companion.USER_CODE
 import co.touchlab.droidconandroid.shared.data.UserAccount
-import co.touchlab.droidconandroid.shared.presenter.UserDetailHost
 import co.touchlab.droidconandroid.shared.network.DataHelper
 import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.UserDetailHost
@@ -42,7 +40,6 @@ class UserDetailFragment : Fragment(), UserDetailHost {
         private val LINKEDIN_PREFIX: String = "http://www.linkedin.com/in/"
         private val FACEBOOK_PREFIX: String = "http://www.facebook.com/"
         private val PHONE_PREFIX: String = "tel:"
-        private val TAG = UserDetailFragment::class.java.simpleName
 
         interface FinishListener {
             fun onFragmentFinished()
@@ -53,11 +50,12 @@ class UserDetailFragment : Fragment(), UserDetailHost {
         val helper = DatabaseHelper.getInstance(activity)
         val restAdapter = DataHelper.makeRequestAdapter(activity, AppManager.getPlatformClient())
         val task = FindUserTask(helper, restAdapter)
-        UserDetailPresenter(this, task)
+        UserDetailPresenter(task)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        presenter.register(this)
         presenter.findUser(findUserId())
     }
 

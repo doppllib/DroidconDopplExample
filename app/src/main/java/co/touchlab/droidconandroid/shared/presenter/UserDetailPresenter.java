@@ -15,9 +15,12 @@ public class UserDetailPresenter {
     private FindUserTask task;
     private CompositeDisposable disposables = new CompositeDisposable();
 
-    public UserDetailPresenter(UserDetailHost host, FindUserTask task) {
-        this.host = host;
+    public UserDetailPresenter(FindUserTask task) {
         this.task = task;
+    }
+
+    public void register(UserDetailHost host) {
+        this.host = host;
     }
 
     public void findUser(@NonNull final Long userId) {
