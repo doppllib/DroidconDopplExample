@@ -145,7 +145,4 @@
     <!-- URL -->
     <string name="sponsor_image_url">file:///android_asset/sponsors/%1$s.png</string>
 
-    <!-- URL -->
-    <string name="sponsor_image_url">file:///android_asset/sponsors/%1$s.png</string>
-
 </resources>
