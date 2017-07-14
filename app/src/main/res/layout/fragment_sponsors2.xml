@@ -7,13 +7,12 @@
               android:paddingBottom="@dimen/height_small">
 
     <ScrollView
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        >
+        android:layout_weight="1">
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical">
@@ -24,11 +23,10 @@
                 android:text="CODE LAB Powered By Twilio"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sponsor_section_title"
-                />
+                android:textSize="@dimen/sponsor_section_title"/>
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal"
@@ -38,12 +36,11 @@
                     android:id="@+id/twilio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
-                    />
+                    android:padding="@dimen/sponsor_padding"/>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal"
@@ -54,11 +51,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/sponsor_padding"
-                    />
+                />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal"
@@ -68,15 +65,13 @@
                     android:id="@+id/firebase"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
-                    />
+                    android:padding="@dimen/sponsor_padding"/>
 
                 <ImageView
                     android:id="@+id/commonsware"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
-                    />
+                    android:padding="@dimen/sponsor_padding"/>
             </LinearLayout>
 
             <TextView
@@ -86,11 +81,10 @@
                 android:text="PARTY SPONSORS"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sponsor_section_title"
-                />
+                android:textSize="@dimen/sponsor_section_title"/>
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal"
@@ -100,15 +94,13 @@
                     android:id="@+id/dramafever"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
-                    />
+                    android:padding="@dimen/sponsor_padding"/>
 
                 <ImageView
                     android:id="@+id/bignerdranch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
-                    />
+                    android:padding="@dimen/sponsor_padding"/>
             </LinearLayout>
 
             <TextView
@@ -118,11 +110,10 @@
                 android:text="COMMUNITY SPONSORS"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-                android:textSize="@dimen/sponsor_section_title"
-                />
+                android:textSize="@dimen/sponsor_section_title"/>
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal"
@@ -132,15 +123,13 @@
                     android:id="@+id/mirego"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
-                    />
+                    android:padding="@dimen/sponsor_padding"/>
 
                 <ImageView
                     android:id="@+id/lyft"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
-                    />
+                    android:padding="@dimen/sponsor_padding"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -154,7 +143,6 @@
         android:paddingTop="@dimen/padding_small"
         android:text="... and, more sponsors"
         android:textColor="@color/orange"
-        android:textSize="@dimen/sponsor_section_title"
-        />
+        android:textSize="@dimen/sponsor_section_title"/>
 
 </LinearLayout>

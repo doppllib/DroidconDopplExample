@@ -11,6 +11,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.text.Html
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -77,14 +78,20 @@ class UserDetailFragment : Fragment() {
             userCode = activity.intent.getStringExtra(USER_CODE)
         }
 
-        if (userCode.isNullOrBlank())
-            throw IllegalArgumentException("Must set user code")
+        if (userCode.isNullOrBlank()) {
+            Log.e(TAG, "Must set user code")
+            Toaster.showMessage(activity, getString(R.string.no_user_code_error))
+
+            if (activity is UserDetailActivity)
+                (activity as UserDetailActivity).onFragmentFinished()
+        }
 
         return userCode!!
     }
 
     fun onEventMainThread(findUserTask: AbstractFindUserTask) {
         if (findUserTask.isError) {
+            Log.e(TAG, "User not found")
             Toaster.showMessage(activity, getString(R.string.network_error))
 
             if (activity is UserDetailActivity)
@@ -123,27 +130,6 @@ class UserDetailFragment : Fragment() {
 
         if (!userAccount.name.isNullOrBlank()) {
             name.text = userAccount.name
-        }
-
-        if (!userAccount.phone.isNullOrBlank()) {
-            phone.text = userAccount.phone
-            phone.setOnClickListener {
-                val intent = Intent(Intent.ACTION_DIAL)
-                intent.data = Uri.parse(PHONE_PREFIX + userAccount.phone)
-                if (intent.resolveActivity(activity.packageManager) != null) {
-                    startActivity(intent)
-                }
-            }
-            phone.visibility = View.VISIBLE
-        } else if (!userAccount.email.isNullOrBlank() && userAccount.emailPublic != null && userAccount.emailPublic) {
-            email.text = userAccount.email
-
-            email.setOnClickListener {
-                val emailIntent = Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                        "mailto", userAccount.email, null))
-                startActivity(emailIntent)
-            }
-            email.visibility = View.VISIBLE
         }
 
         if (!userAccount.company.isNullOrBlank()) {
@@ -230,18 +216,6 @@ class UserDetailFragment : Fragment() {
                     R.drawable.vic_person_add_black_24dp)
             contactDrawable.colorFilter = PorterDuffColorFilter(darkVibrantColor,
                     PorterDuff.Mode.SRC_IN)
-
-            val phoneDrawable = ContextCompat.getDrawable(activity,
-                    R.drawable.vic_phone_black_24dp)
-            phoneDrawable.colorFilter = PorterDuffColorFilter(darkVibrantColor,
-                    PorterDuff.Mode.SRC_IN)
-            phone.setCompoundDrawablesWithIntrinsicBounds(phoneDrawable, null, null, null)
-
-            val emailDrawable = ContextCompat.getDrawable(activity,
-                    R.drawable.vic_email_black_24dp)
-            emailDrawable.colorFilter = PorterDuffColorFilter(darkVibrantColor,
-                    PorterDuff.Mode.SRC_IN)
-            email.setCompoundDrawablesWithIntrinsicBounds(emailDrawable, null, null, null)
 
             val companyDrawable = ContextCompat.getDrawable(activity,
                     R.drawable.vic_company_black_24dp)

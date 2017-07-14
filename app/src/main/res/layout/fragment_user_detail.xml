@@ -106,38 +106,6 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/phone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/padding_xxlarge"
-                android:layout_marginStart="@dimen/padding_xxlarge"
-                android:drawableLeft="@drawable/vic_phone_black_24dp"
-                android:drawablePadding="@dimen/padding_medium"
-                android:drawableStart="@drawable/vic_phone_black_24dp"
-                android:drawableTint="@color/primary_dark_50"
-                android:padding="@dimen/padding_medium"
-                android:textColor="@color/primary_dark_50"
-                android:visibility="gone"
-                tools:text="(212) 222-2222"/>
-
-
-            <TextView
-                android:id="@+id/email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/padding_xxlarge"
-                android:layout_marginStart="@dimen/padding_xxlarge"
-                android:drawableLeft="@drawable/vic_email_black_24dp"
-                android:drawablePadding="@dimen/padding_medium"
-                android:drawableStart="@drawable/vic_email_black_24dp"
-                android:drawableTint="@color/primary_dark_50"
-                android:padding="@dimen/padding_medium"
-                android:textColor="@color/primary_dark_50"
-                android:visibility="gone"
-                tools:text="test@touchlab.co"/>
-
-
-            <TextView
                 android:id="@+id/company2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -150,6 +118,7 @@
                 android:padding="@dimen/padding_medium"
                 android:textColor="@color/primary_dark_50"
                 android:visibility="gone"
+                tools:visibility="visible"
                 tools:text="Company"/>
 
             <TextView
@@ -165,6 +134,7 @@
                 android:padding="@dimen/padding_medium"
                 android:textColor="@color/primary_dark_50"
                 android:visibility="gone"
+                tools:visibility="visible"
                 tools:text="www.touchlab.co"/>
 
 
@@ -181,6 +151,7 @@
                 android:padding="@dimen/padding_medium"
                 android:textColor="@color/facebook"
                 android:visibility="gone"
+                tools:visibility="visible"
                 tools:text="Facebook"/>
 
             <TextView
@@ -196,6 +167,7 @@
                 android:padding="@dimen/padding_medium"
                 android:textColor="@color/twitter"
                 android:visibility="gone"
+                tools:visibility="visible"
                 tools:text="\@TouchLabNY"/>
 
             <TextView
@@ -211,6 +183,7 @@
                 android:padding="@dimen/padding_medium"
                 android:textColor="@color/linkedin"
                 android:visibility="gone"
+                tools:visibility="visible"
                 tools:text="LinkedIn"/>
 
             <TextView
@@ -242,6 +215,7 @@
                 android:autoLink="web"
                 android:textColor="@color/primary_dark_50"
                 android:visibility="gone"
+                tools:visibility="visible"
                 tools:text="Bio"/>
 
         </LinearLayout>
