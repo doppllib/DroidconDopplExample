@@ -50,7 +50,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
     private val viewModel: UserDetailViewModel by lazy {
         val helper = DatabaseHelper.getInstance(activity)
         val restAdapter = DataHelper.makeRequestAdapter(activity, AppManager.getPlatformClient())
-        val task = FindUserTask(helper, restAdapter)
+        val task = FindUserTask(helper, restAdapter, findUserId())
         val factory = UserDetailViewModel.Factory(task)
         ViewModelProviders.of(this, factory)[UserDetailViewModel::class.java]
     }
@@ -58,7 +58,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel.register(this)
-        viewModel.findUser(findUserId())
+        viewModel.findUser()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
