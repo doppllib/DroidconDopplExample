@@ -1,24 +1,22 @@
 package co.touchlab.droidconandroid
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.graphics.PorterDuff
 import android.os.Bundle
 import android.support.design.widget.TabLayout
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentStatePagerAdapter
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
-import co.touchlab.droidconandroid.shared.tasks.SponsorsTask
+import co.touchlab.droidconandroid.ScheduleActivity.Companion.ALPHA_OPAQUE
+import co.touchlab.droidconandroid.ui.SponsorFragmentPagerAdapter
 import kotlinx.android.synthetic.main.activity_sponsors.*
 
 class SponsorsActivity : AppCompatActivity() {
     companion object {
-        fun startMe(a: Activity) {
-            val intent = Intent(a, SponsorsActivity::class.java)
-            a.startActivity(intent)
+        fun callMe(activity: Activity) {
+            val intent = Intent(activity, SponsorsActivity::class.java)
+            activity.startActivity(intent)
         }
     }
 
@@ -52,7 +50,7 @@ class SponsorsActivity : AppCompatActivity() {
         sponsors_appbar.setExpanded(true)
         sponsors_appbar.addOnOffsetChangedListener { appBarLayout, verticalOffset ->
             if (appBarLayout.totalScrollRange > 0) {
-                val percentage: Float = 1 - (Math.abs(verticalOffset).toFloat() / appBarLayout.totalScrollRange)
+                val percentage = verticalOffset.calculateAlphaPercentage(appBarLayout.totalScrollRange)
                 sponsors_toolbar.alpha = percentage
             }
         }
@@ -92,29 +90,5 @@ class SponsorsActivity : AppCompatActivity() {
             finish()
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    class SponsorFragmentPagerAdapter(c: Context, fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
-
-        private var context = c
-
-        override fun getCount(): Int {
-            return SPONSOR_COUNT
-        }
-
-        override fun getItem(position: Int): SponsorsListFragment? {
-            return createSponsorsListFragment(position)
-        }
-
-        override fun getPageTitle(position: Int): CharSequence {
-            when (position) {
-                SponsorsTask.SPONSOR_GENERAL -> return context.getString(R.string.sponsors_tab_general)
-                SponsorsTask.SPONSOR_STREAMING -> return context.getString(R.string.sponsors_tab_streaming)
-                SponsorsTask.SPONSOR_PARTY -> return context.getString(R.string.sponsors_tab_party)
-                else -> { // Note the block
-                    return super.getPageTitle(position)
-                }
-            }
-        }
     }
 }
