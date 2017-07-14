@@ -1,6 +1,7 @@
 package co.touchlab.droidconandroid
 
 import android.app.SearchManager
+import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
@@ -14,11 +15,12 @@ import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import co.touchlab.android.threading.eventbus.EventBusExt
-import co.touchlab.android.threading.tasks.TaskQueue
-import co.touchlab.droidconandroid.UserDetailActivity.Companion.USER_CODE
+import co.touchlab.droidconandroid.shared.data.DatabaseHelper
 import co.touchlab.droidconandroid.shared.data.UserAccount
-import co.touchlab.droidconandroid.shared.tasks.AbstractFindUserTask
+import co.touchlab.droidconandroid.shared.network.DataHelper
+import co.touchlab.droidconandroid.shared.presenter.AppManager
+import co.touchlab.droidconandroid.shared.presenter.UserDetailHost
+import co.touchlab.droidconandroid.shared.presenter.UserDetailViewModel
 import co.touchlab.droidconandroid.shared.tasks.FindUserTask
 import co.touchlab.droidconandroid.shared.utils.EmojiUtil
 import co.touchlab.droidconandroid.utils.Toaster
@@ -31,7 +33,7 @@ import org.apache.commons.lang3.StringUtils
  * Created by kgalligan on 7/27/14.
  */
 
-class UserDetailFragment : Fragment() {
+class UserDetailFragment : Fragment(), UserDetailHost {
 
     companion object {
         private val TWITTER_PREFIX: String = "http://www.twitter.com/"
@@ -39,24 +41,31 @@ class UserDetailFragment : Fragment() {
         private val LINKEDIN_PREFIX: String = "http://www.linkedin.com/in/"
         private val FACEBOOK_PREFIX: String = "http://www.facebook.com/"
         private val PHONE_PREFIX: String = "tel:"
-        private val TAG = UserDetailFragment::class.java.simpleName
 
         interface FinishListener {
             fun onFragmentFinished()
         }
     }
 
+    private val viewModel: UserDetailViewModel by lazy {
+        val helper = DatabaseHelper.getInstance(activity)
+        val restAdapter = DataHelper.makeRequestAdapter(activity, AppManager.getPlatformClient())
+        val task = FindUserTask(helper, restAdapter, findUserId())
+        val factory = UserDetailViewModel.Factory(task)
+        ViewModelProviders.of(this, factory)[UserDetailViewModel::class.java]
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        EventBusExt.getDefault().register(this)
-        TaskQueue.loadQueueNetwork(activity).execute(FindUserTask(findUserCodeArg()))
+        viewModel.register(this)
+        viewModel.findUser()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_user_detail, container, false)
+        return inflater.inflate(R.layout.fragment_user_detail, container)
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         toolbar.title = ""
@@ -67,32 +76,28 @@ class UserDetailFragment : Fragment() {
     }
 
     override fun onDestroy() {
+        viewModel.unregister()
         super.onDestroy()
-        EventBusExt.getDefault().unregister(this)
     }
 
-    private fun findUserCodeArg(): String {
-        var userCode = arguments?.getString(USER_CODE)
-        if (userCode.isNullOrBlank()) {
-            userCode = activity.intent.getStringExtra(USER_CODE)
-        }
+    private fun findUserId(): Long {
+        val userId = activity.intent.getLongExtra(UserDetailActivity.USER_ID, 0L)
+        if (userId == 0L)
+            throw IllegalArgumentException("Must set user id")
 
-        if (userCode.isNullOrBlank())
-            throw IllegalArgumentException("Must set user code")
-
-        return userCode!!
+        return userId
     }
 
-    fun onEventMainThread(findUserTask: AbstractFindUserTask) {
-        if (findUserTask.isError) {
-            Toaster.showMessage(activity, getString(R.string.network_error))
+    override fun findUserError() {
+        Toaster.showMessage(activity, getString(R.string.network_error))
 
-            if (activity is UserDetailActivity)
-                (activity as UserDetailActivity).onFragmentFinished()
-        } else {
-            val userAccount = findUserTask.user
-            showUserData(userAccount)
-        }
+        if (activity is UserDetailActivity)
+            (activity as UserDetailActivity).onFragmentFinished()
+    }
+
+    override fun onUserFound(userAccount: UserAccount) {
+        val user = userAccount
+        showUserData(user)
     }
 
     private fun showUserData(userAccount: UserAccount) {

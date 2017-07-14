@@ -1,73 +1,61 @@
 package co.touchlab.droidconandroid.shared.tasks;
-import android.content.Context;
-
-import java.net.HttpURLConnection;
-import java.sql.SQLException;
 
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data.UserAccount;
-import co.touchlab.droidconandroid.shared.network.DataHelper;
 import co.touchlab.droidconandroid.shared.network.FindUserRequest;
+import co.touchlab.droidconandroid.shared.network.dao.UserAccountInfo;
 import co.touchlab.droidconandroid.shared.network.dao.UserInfoResponse;
-import co.touchlab.droidconandroid.shared.presenter.AppManager;
+import co.touchlab.droidconandroid.shared.utils.UserDataHelper;
+import hu.akarnokd.rxjava.interop.RxJavaInterop;
+import io.reactivex.Completable;
+import io.reactivex.Observable;
 import retrofit.RestAdapter;
-import retrofit.RetrofitError;
 
 /**
  * Created by kgalligan on 4/8/16.
  */
-public class FindUserTask extends AbstractFindUserTask
-{
-    final String code;
+public class FindUserTask {
+    private final DatabaseHelper helper;
+    private final RestAdapter restAdapter;
+    private final long userId;
+    private Observable<UserAccount> userAccountObservable = null;
 
-    public FindUserTask(String code)
-    {
-        this.code = code;
+    public FindUserTask(DatabaseHelper helper, RestAdapter restAdapter, long userId) {
+        this.helper = helper;
+        this.restAdapter = restAdapter;
+        this.userId = userId;
     }
 
-    @Override
-    protected void run(final Context context) throws Throwable
-    {
-        handleData(context, new LoadFromDb()
-                   {
-                       @Override
-                       public UserAccount load() throws SQLException
-                       {
-                           DatabaseHelper databaseHelper = DatabaseHelper.getInstance(context);
-                           return UserAccount.findByCode(databaseHelper, code);
-                       }
-                   }, new LoadUserInfo()
-                   {
-                       @Override
-                       public UserInfoResponse load()
-                       {
-                           RestAdapter restAdapter = DataHelper.makeRequestAdapter(context,
-                                                                                   AppManager.getPlatformClient());
-                           FindUserRequest findUserRequest = restAdapter
-                                   .create(FindUserRequest.class);
-                           try
-                           {
-                               return findUserRequest.getUserInfo(code);
-                           }
-                           catch(RetrofitError e)
-                           {
-                               if(e.getResponse().getStatus() == HttpURLConnection.HTTP_NOT_FOUND)
-                               {
-                                   errorStringCode = "error_user_not_found";
-                               }
-                               else if(e.getKind() == RetrofitError.Kind.NETWORK)
-                               {
-                                   errorStringCode = "network_error";
-                               }
-                               else
-                               {
-                                   throw new RuntimeException(e);
-                               }
-                           }
-                           return null;
-                       }
-                   }
+    public Observable<UserAccount> loadUserAccount() {
+        if (userAccountObservable == null) {
+            Observable<UserAccount> accountObservable =
+                    Observable.fromCallable(() -> UserAccount.findByCode(helper, userId));
 
-        );
+            userAccountObservable =
+                    Observable.zip(accountObservable, loadUserInfo(userId), UserAccountInfo::new)
+                            .flatMap(this::saveUserResponse)
+                            .cache();
+        }
+
+        return userAccountObservable;
     }
+
+    private Observable<UserInfoResponse> loadUserInfo(final long userId) {
+        FindUserRequest findUserRequest = restAdapter.create(FindUserRequest.class);
+        return RxJavaInterop.toV2Observable(findUserRequest.getUserInfo(userId));
+    }
+
+    private Observable<UserAccount> saveUserResponse(UserAccountInfo userAccountInfo) {
+        final UserAccount newDbUser = new UserAccount();
+        UserAccount userAccount = userAccountInfo.userAccount;
+        UserDataHelper.userAccountToDb(userAccountInfo.userInfoResponse.user, newDbUser);
+
+        if (userAccount == null || !userAccount.equals(newDbUser)) {
+            return Completable.fromAction(() -> helper.getUserAccountDao().createOrUpdate(newDbUser))
+                    .andThen(Observable.just(newDbUser));
+        }
+
+        return Observable.just(userAccount);
+    }
+
 }
