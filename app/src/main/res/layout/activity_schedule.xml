@@ -85,7 +85,6 @@
                             android:id="@+id/schedule_placeholder_emoji"
                             android:layout_width="@dimen/height_xxtiny"
                             android:layout_height="@dimen/height_xxtiny"
-                            android:layout_alignLeft="@id/schedule_toolbar_profile"
                             android:layout_alignStart="@id/schedule_toolbar_profile"
                             android:layout_alignTop="@id/schedule_toolbar_profile"
                             android:gravity="center"
@@ -101,7 +100,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     android:layout_gravity="bottom"
-                    android:layout_marginLeft="@dimen/toolbar_title_margin_left"
+                    android:layout_marginStart="@dimen/toolbar_title_margin_left"
                     android:fitsSystemWindows="true"/>
 
             </android.support.design.widget.CollapsingToolbarLayout>
@@ -120,7 +119,7 @@
         android:id="@+id/drawer_recycler"
         android:layout_width="@dimen/drawer_width"
         android:layout_height="match_parent"
-        android:layout_gravity="left|start"
+        android:layout_gravity="start"
         android:background="@color/white"
         android:elevation="8dp"
         android:fitsSystemWindows="false"/>
@@ -136,20 +135,20 @@
         android:orientation="vertical"
         android:paddingTop="40dp">
 
-        <com.wnafee.vector.MorphButton
+        <Button
             android:id="@+id/back"
             android:layout_width="@dimen/height_xxtiny"
             android:layout_height="@dimen/height_xxtiny"
-            android:layout_marginLeft="@dimen/padding_large"
+            android:layout_marginStart="@dimen/padding_large"
             android:background="?attr/selectableItemBackground"
-            app:vc_endDrawable="@drawable/ic_back"
-            app:vc_startDrawable="@drawable/ic_back"/>
+            android:src="@drawable/ic_back"/>
 
         <TextView
             android:id="@+id/label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/height_xlarge"
+            android:paddingStart="@dimen/height_xlarge"
+            android:paddingEnd="0dp"
             android:text="@string/filter"
             android:textColor="@color/black"
             android:textSize="@dimen/text_xlarge"/>

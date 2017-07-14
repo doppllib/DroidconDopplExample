@@ -36,9 +36,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="@dimen/height_medium"
             android:layout_marginStart="@dimen/height_medium"
-            android:singleLine="true"
+            android:maxLines="1"
             android:textColor="@color/selectable_text_black"
             tools:text="Schedule"/>
 
@@ -46,7 +45,7 @@
             android:id="@+id/action_icon"
             android:layout_width="@dimen/height_xxtiny"
             android:layout_height="@dimen/height_xxtiny"
-            android:layout_gravity="center_vertical|right"
+            android:layout_gravity="center_vertical|end"
             android:tint="#979797"
             android:contentDescription="@string/cd_navigation_icon"
             app:srcCompat="@drawable/ic_launch_black_24dp"/>
