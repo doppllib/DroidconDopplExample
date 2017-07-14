@@ -19,7 +19,6 @@ import co.touchlab.android.threading.eventbus.EventBusExt
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper
 import co.touchlab.droidconandroid.shared.data.UserAccount
 import co.touchlab.droidconandroid.shared.network.DataHelper
-import co.touchlab.droidconandroid.shared.network.FindUserRequest
 import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.UserDetailHost
 import co.touchlab.droidconandroid.shared.presenter.UserDetailPresenter
@@ -42,12 +41,16 @@ private const val LINKEDIN_PREFIX: String = "http://www.linkedin.com/in/"
 private const val FACEBOOK_PREFIX: String = "http://www.facebook.com/"
 private const val PHONE_PREFIX: String = "tel:"
 
-class UserDetailFragment() : Fragment(), UserDetailHost {
+class UserDetailFragment : Fragment(), UserDetailHost {
 
-    private lateinit var presenter: UserDetailPresenter
+    private val presenter: UserDetailPresenter by lazy {
+        val helper = DatabaseHelper.getInstance(activity)
+        val restAdapter = DataHelper.makeRequestAdapter(activity, AppManager.getPlatformClient())
+        val task = FindUserTask(helper, restAdapter)
+        UserDetailPresenter(this, task)
+    }
 
     companion object {
-        val TAG: String = UserDetailFragment::class.java.simpleName
 
         interface FinishListener {
             fun onFragmentFinished()
@@ -56,18 +59,14 @@ class UserDetailFragment() : Fragment(), UserDetailHost {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val helper = DatabaseHelper.getInstance(activity)
-        val restAdapter = DataHelper.makeRequestAdapter(activity, AppManager.getPlatformClient())
-        val task = FindUserTask(helper, restAdapter)
-        presenter = UserDetailPresenter(this, task)
-        presenter.findUser(findUserCodeArg())
+        presenter.findUser(findUserId())
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater!!.inflate(R.layout.fragment_user_detail, null)
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.fragment_user_detail, container)
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         toolbar.title = ""
@@ -78,12 +77,11 @@ class UserDetailFragment() : Fragment(), UserDetailHost {
     }
 
     override fun onDestroy() {
-        super.onDestroy()
         presenter.unregister()
-        EventBusExt.getDefault().unregister(this)
+        super.onDestroy()
     }
 
-    private fun findUserCodeArg(): Long {
+    private fun findUserId(): Long {
         val userId = activity.intent.getLongExtra(UserDetailActivity.USER_ID, 0L)
         if (userId == 0L)
             throw IllegalArgumentException("Must set user id")
