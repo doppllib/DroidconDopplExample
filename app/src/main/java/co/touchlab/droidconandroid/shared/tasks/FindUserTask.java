@@ -24,15 +24,18 @@ public class FindUserTask {
     }
 
     public Observable<UserAccount> loadUserAccount(final long userId) {
-        return Observable.fromCallable(() -> UserAccount.findByCode(helper, userId));
+        Observable<UserAccount> accountObservable = Observable.fromCallable(() -> UserAccount.findByCode(helper, userId));
+
+        return Observable.zip(accountObservable, loadUserInfo(userId), UserAccountInfo::new)
+                .flatMap(this::saveUserResponse);
     }
 
-    public Observable<UserInfoResponse> loadUserInfo(final long userId) {
+    private Observable<UserInfoResponse> loadUserInfo(final long userId) {
         FindUserRequest findUserRequest = restAdapter.create(FindUserRequest.class);
         return RxJavaInterop.toV2Observable(findUserRequest.getUserInfo(userId));
     }
 
-    public Observable<UserAccount> saveUserResponse(UserAccountInfo userAccountInfo) {
+    private Observable<UserAccount> saveUserResponse(UserAccountInfo userAccountInfo) {
         final UserAccount newDbUser = new UserAccount();
         UserAccount userAccount = userAccountInfo.userAccount;
         UserDataHelper.userAccountToDb(userAccountInfo.userInfoResponse.user, newDbUser);

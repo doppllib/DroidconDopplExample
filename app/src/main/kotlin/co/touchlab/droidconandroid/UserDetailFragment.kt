@@ -15,7 +15,6 @@ import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import co.touchlab.android.threading.eventbus.EventBusExt
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper
 import co.touchlab.droidconandroid.shared.data.UserAccount
 import co.touchlab.droidconandroid.shared.network.DataHelper
