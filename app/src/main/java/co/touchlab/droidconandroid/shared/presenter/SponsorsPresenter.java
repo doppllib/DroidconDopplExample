@@ -18,8 +18,11 @@ public class SponsorsPresenter {
         this.task = task;
     }
 
-    public void getSponsors(int type, @NonNull SponsorsHost view) {
-        this.host = view;
+    public void register(@NonNull SponsorsHost host) {
+        this.host = host;
+    }
+
+    public void getSponsors(int type) {
         disposables.add(task.getSponsors(type)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
