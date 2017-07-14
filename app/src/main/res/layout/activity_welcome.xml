@@ -31,7 +31,7 @@
 
         <TextView
             android:layout_alignParentRight="true"
-            android:id="@+id/advance"
+            android:id="@+id/advanceTv"
             android:textAllCaps="true"
             android:layout_centerVertical="true"
             android:padding="@dimen/padding_wedge"

@@ -2,9 +2,10 @@
 
 This is a trimmed down version of the Droidcon NYC app. The production version had several dependencies on 3rd party services, including our proprietary server. Setup would've taken a lot of effort. This version does not log in, and does not store anything on the server. As such, the only thing you *might* need to sign up for is a jwplayer trial account to get the video players working.
 
->
-> For the full app and 2017 additions, see https://github.com/touchlab/DroidconApp
->
+## Library Status
+
+Several of these libraries are aging considerably. We'll be replacing and rearchitecting.
+Keep an eye on the repos for updates and changes leading up to Droidcon NYC 2017.
 
 ## Why?
 

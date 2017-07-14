@@ -22,10 +22,10 @@ fun scheduleAlert(context: Context, nextEvent: Event?) {
 
 private fun setAlarm(context: Context, nextEvent: Event) {
     val notificationIntent = Intent(ALERT_ACTION)
-    notificationIntent.addCategory(INTENT_CATEGORY)
-    notificationIntent.putExtra(EXTRA_EVENT_NAME, nextEvent.name)
-    notificationIntent.putExtra(EXTRA_EVENT_ID, nextEvent.id)
-    notificationIntent.putExtra(EXTRA_EVENT_CATEGORY, nextEvent.category)
+            .addCategory(INTENT_CATEGORY)
+            .putExtra(EXTRA_EVENT_NAME, nextEvent.name)
+            .putExtra(EXTRA_EVENT_ID, nextEvent.id)
+            .putExtra(EXTRA_EVENT_CATEGORY, nextEvent.category)
 
     val broadcast = PendingIntent.getBroadcast(context, ALARM_REQUEST_CODE, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT)
     val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
@@ -39,10 +39,9 @@ private fun clearAlerts(context: Context) {
     val notificationIntent = Intent(ALERT_ACTION)
     notificationIntent.addCategory(INTENT_CATEGORY)
     val broadcast = PendingIntent.getBroadcast(context, ALARM_REQUEST_CODE, notificationIntent, PendingIntent.FLAG_NO_CREATE)
-    if(broadcast != null)
-    {
+    broadcast?.let {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        alarmManager.cancel(broadcast)
-        broadcast.cancel()
+        alarmManager.cancel(it)
+        it.cancel()
     }
 }

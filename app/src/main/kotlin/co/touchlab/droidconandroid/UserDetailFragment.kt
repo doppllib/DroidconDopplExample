@@ -11,12 +11,13 @@ import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.text.Html
-import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper
+import co.touchlab.droidconandroid.UserDetailActivity.Companion.USER_CODE
 import co.touchlab.droidconandroid.shared.data.UserAccount
+import co.touchlab.droidconandroid.shared.presenter.UserDetailHost
 import co.touchlab.droidconandroid.shared.network.DataHelper
 import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.UserDetailHost
@@ -26,7 +27,6 @@ import co.touchlab.droidconandroid.shared.utils.EmojiUtil
 import co.touchlab.droidconandroid.utils.Toaster
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
-import com.wnafee.vector.compat.ResourcesCompat
 import kotlinx.android.synthetic.main.fragment_user_detail.*
 import org.apache.commons.lang3.StringUtils
 
@@ -34,26 +34,26 @@ import org.apache.commons.lang3.StringUtils
  * Created by kgalligan on 7/27/14.
  */
 
-private const val TWITTER_PREFIX: String = "http://www.twitter.com/"
-private const val GPLUS_PREFIX: String = "http://www.google.com/+"
-private const val LINKEDIN_PREFIX: String = "http://www.linkedin.com/in/"
-private const val FACEBOOK_PREFIX: String = "http://www.facebook.com/"
-private const val PHONE_PREFIX: String = "tel:"
-
 class UserDetailFragment : Fragment(), UserDetailHost {
+
+    companion object {
+        private val TWITTER_PREFIX: String = "http://www.twitter.com/"
+        private val GPLUS_PREFIX: String = "http://www.google.com/+"
+        private val LINKEDIN_PREFIX: String = "http://www.linkedin.com/in/"
+        private val FACEBOOK_PREFIX: String = "http://www.facebook.com/"
+        private val PHONE_PREFIX: String = "tel:"
+        private val TAG = UserDetailFragment::class.java.simpleName
+
+        interface FinishListener {
+            fun onFragmentFinished()
+        }
+    }
 
     private val presenter: UserDetailPresenter by lazy {
         val helper = DatabaseHelper.getInstance(activity)
         val restAdapter = DataHelper.makeRequestAdapter(activity, AppManager.getPlatformClient())
         val task = FindUserTask(helper, restAdapter)
         UserDetailPresenter(this, task)
-    }
-
-    companion object {
-
-        interface FinishListener {
-            fun onFragmentFinished()
-        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -102,15 +102,16 @@ class UserDetailFragment : Fragment(), UserDetailHost {
 
     private fun showUserData(userAccount: UserAccount) {
         val avatarKey = userAccount.avatarImageUrl()
-        if (!TextUtils.isEmpty(avatarKey)) {
+        if (!avatarKey.isNullOrBlank()) {
             val callback = object : Callback {
                 override fun onSuccess() {
                     placeholder_emoji.text = ""
                 }
 
                 override fun onError() {
-                    if (placeholder_emoji != null)
-                        placeholder_emoji.text = EmojiUtil.getEmojiForUser(userAccount.name)
+                    placeholder_emoji?.let {
+                        it.text = EmojiUtil.getEmojiForUser(userAccount.name)
+                    }
                 }
             }
 
@@ -123,14 +124,13 @@ class UserDetailFragment : Fragment(), UserDetailHost {
         }
 
         val iconsDefaultColor = ContextCompat.getColor(activity, R.color.social_icons)
-
         makeIconsPretty(iconsDefaultColor)
 
-        if (!TextUtils.isEmpty(userAccount.name)) {
+        if (!userAccount.name.isNullOrBlank()) {
             name.text = userAccount.name
         }
 
-        if (!TextUtils.isEmpty(userAccount.phone)) {
+        if (!userAccount.phone.isNullOrBlank()) {
             phone.text = userAccount.phone
             phone.setOnClickListener {
                 val intent = Intent(Intent.ACTION_DIAL)
@@ -140,20 +140,18 @@ class UserDetailFragment : Fragment(), UserDetailHost {
                 }
             }
             phone.visibility = View.VISIBLE
-        } else
+        } else if (!userAccount.email.isNullOrBlank() && userAccount.emailPublic != null && userAccount.emailPublic) {
+            email.text = userAccount.email
 
-            if (!TextUtils.isEmpty(userAccount.email) && userAccount.emailPublic != null && userAccount.emailPublic) {
-                email.text = userAccount.email
-
-                email.setOnClickListener {
-                    val emailIntent = Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                            "mailto", userAccount.email, null))
-                    startActivity(emailIntent)
-                }
-                email.visibility = View.VISIBLE
+            email.setOnClickListener {
+                val emailIntent = Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                        "mailto", userAccount.email, null))
+                startActivity(emailIntent)
             }
+            email.visibility = View.VISIBLE
+        }
 
-        if (!TextUtils.isEmpty(userAccount.company)) {
+        if (!userAccount.company.isNullOrBlank()) {
             company.text = userAccount.company
             company.visibility = View.VISIBLE
 
@@ -168,7 +166,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
         }
 
         val facebookAccount = userAccount.facebook
-        if (!TextUtils.isEmpty(facebookAccount)) {
+        if (!facebookAccount.isNullOrBlank()) {
             facebook.text = facebookAccount
             facebook.setOnClickListener {
                 openLink(Uri.parse(FACEBOOK_PREFIX + facebookAccount))
@@ -177,7 +175,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
         }
 
         var twitterAccount = userAccount.twitter
-        if (!TextUtils.isEmpty(twitterAccount)) {
+        if (!twitterAccount.isNullOrBlank()) {
             twitterAccount = twitterAccount.replace("@", "")
             twitter.text = "@$twitterAccount"
             twitter.setOnClickListener {
@@ -187,7 +185,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
         }
 
         val linkedInAccount = userAccount.linkedIn
-        if (!TextUtils.isEmpty(linkedInAccount)) {
+        if (!linkedInAccount.isNullOrBlank()) {
             linkedIn.text = linkedInAccount
             linkedIn.setOnClickListener {
                 openLink(Uri.parse(LINKEDIN_PREFIX + linkedInAccount))
@@ -196,7 +194,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
         }
 
         var gPlusAccount = userAccount.gPlus
-        if (!TextUtils.isEmpty(gPlusAccount)) {
+        if (!gPlusAccount.isNullOrBlank()) {
             gPlusAccount = gPlusAccount.replace("+", "")
             gPlus.text = "+$gPlusAccount"
             gPlus.setOnClickListener {
@@ -205,7 +203,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
             gPlus.visibility = View.VISIBLE
         }
 
-        if (!TextUtils.isEmpty(userAccount.website)) {
+        if (!userAccount.website.isNullOrBlank()) {
             website.text = userAccount.website
             website.setOnClickListener {
                 var url = userAccount.website
@@ -218,8 +216,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
             website.visibility = View.VISIBLE
         }
 
-        if (!TextUtils.isEmpty(userAccount.profile)) {
-
+        if (!userAccount.profile.isNullOrBlank()) {
             bio.text = Html.fromHtml(StringUtils.trimToEmpty(userAccount.profile)!!)
             bio.visibility = View.VISIBLE
         }
@@ -234,40 +231,39 @@ class UserDetailFragment : Fragment(), UserDetailHost {
 
     private fun makeIconsPretty(darkVibrantColor: Int) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
-            val contactDrawable = ResourcesCompat.getDrawable(activity,
+            val contactDrawable = ContextCompat.getDrawable(activity,
                     R.drawable.vic_person_add_black_24dp)
             contactDrawable.colorFilter = PorterDuffColorFilter(darkVibrantColor,
                     PorterDuff.Mode.SRC_IN)
 
-            val phoneDrawable = ResourcesCompat.getDrawable(activity,
+            val phoneDrawable = ContextCompat.getDrawable(activity,
                     R.drawable.vic_phone_black_24dp)
             phoneDrawable.colorFilter = PorterDuffColorFilter(darkVibrantColor,
                     PorterDuff.Mode.SRC_IN)
             phone.setCompoundDrawablesWithIntrinsicBounds(phoneDrawable, null, null, null)
 
-            val emailDrawable = ResourcesCompat.getDrawable(activity,
+            val emailDrawable = ContextCompat.getDrawable(activity,
                     R.drawable.vic_email_black_24dp)
             emailDrawable.colorFilter = PorterDuffColorFilter(darkVibrantColor,
                     PorterDuff.Mode.SRC_IN)
             email.setCompoundDrawablesWithIntrinsicBounds(emailDrawable, null, null, null)
 
-            val companyDrawable = ResourcesCompat.getDrawable(activity,
+            val companyDrawable = ContextCompat.getDrawable(activity,
                     R.drawable.vic_company_black_24dp)
             companyDrawable.colorFilter = PorterDuffColorFilter(darkVibrantColor,
                     PorterDuff.Mode.SRC_IN)
             company2.setCompoundDrawablesWithIntrinsicBounds(companyDrawable, null, null, null)
 
-            val websiteDrawable = ResourcesCompat.getDrawable(activity,
+            val websiteDrawable = ContextCompat.getDrawable(activity,
                     R.drawable.vic_website_black_24dp)
             websiteDrawable.colorFilter = PorterDuffColorFilter(darkVibrantColor,
                     PorterDuff.Mode.SRC_IN)
             website.setCompoundDrawablesWithIntrinsicBounds(websiteDrawable, null, null, null)
 
-            val bioDrawable = ResourcesCompat.getDrawable(activity, R.drawable.vic_bio_black_24dp)
+            val bioDrawable = ContextCompat.getDrawable(activity, R.drawable.vic_bio_black_24dp)
             bioDrawable.colorFilter = PorterDuffColorFilter(darkVibrantColor,
                     PorterDuff.Mode.SRC_IN)
             bio.setCompoundDrawablesWithIntrinsicBounds(bioDrawable, null, null, null)
         }
     }
-
 }
