@@ -34,11 +34,9 @@ public class UserDetailViewModel extends ViewModel {
                         throwable -> host.findUserError()));
     }
 
-    @Override
-    protected void onCleared() {
+    public void unregister() {
         disposables.clear();
         host = null;
-        super.onCleared();
     }
 
     public static class Factory extends ViewModelProvider.NewInstanceFactory {

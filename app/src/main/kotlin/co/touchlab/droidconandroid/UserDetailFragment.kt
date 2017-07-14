@@ -76,6 +76,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
     }
 
     override fun onDestroy() {
+        viewModel.unregister()
         super.onDestroy()
     }
 
