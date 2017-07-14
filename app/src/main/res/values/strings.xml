@@ -31,6 +31,9 @@
     <string name="slack_confirm">Yep, take me to Slack</string>
     <string name="slack_not_yet">Not yet</string>
     <string name="slack_error">Error opening Slack link</string>
+    <string name="slack_dialog_title">You’ll need an account to join the DCNYC Slack team.</string>
+    <string name="slack_dialog_text">Have you signed up to join the Slack team yet?</string>
+    <string name="slack_dialog_no">Don\'t ask me again</string>
 
     <string name="map">Map</string>
     <string name="social">Social profiles</string>
@@ -136,9 +139,9 @@
     <string name="title_activity_sponsors">OUR AWESOME SPONSORS</string>
     <string name="sponsor_image">Sponsor Image</string>
 
-    <string name="sponsors_tab_general">GENERAL &#x1F60E;</string>
-    <string name="sponsors_tab_streaming">STREAMING &#x1F4FA;</string>
-    <string name="sponsors_tab_party">PARTY &#x1F389;</string>
+    <string name="sponsors_tab_general">GENERAL&#160;</string>
+    <string name="sponsors_tab_streaming">STREAMING&#160;</string>
+    <string name="sponsors_tab_party">PARTY&#160;</string>
 
     <!-- URL -->
     <string name="sponsor_image_url">file:///android_asset/sponsors/%1$s.png</string>

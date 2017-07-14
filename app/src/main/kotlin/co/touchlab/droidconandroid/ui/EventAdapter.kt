@@ -39,22 +39,22 @@ class EventAdapter(private val context: Context,
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): RecyclerView.ViewHolder {
-        when (viewType) {
+        return when (viewType) {
             VIEW_TYPE_EVENT -> {
                 val v = LayoutInflater.from(context).inflate(R.layout.item_event, parent, false)
-                return ScheduleBlockViewHolder(v)
+                ScheduleBlockViewHolder(v)
             }
             VIEW_TYPE_PAST_EVENT, VIEW_TYPE_BLOCK -> {
                 val v = LayoutInflater.from(context).inflate(R.layout.item_block, parent, false)
-                return ScheduleBlockViewHolder(v)
+                ScheduleBlockViewHolder(v)
             }
             VIEW_TYPE_NOTIFICATION -> {
                 val v = LayoutInflater.from(context).inflate(R.layout.item_notification, parent, false)
-                return NotificationViewHolder(v)
+                NotificationViewHolder(v)
             }
             VIEW_TYPE_NEW_ROW -> {
                 val v = LayoutInflater.from(context).inflate(R.layout.item_new_row, parent, false)
-                return NewRowViewHolder(v)
+                NewRowViewHolder(v)
             }
             else -> throw UnsupportedOperationException()
         }
