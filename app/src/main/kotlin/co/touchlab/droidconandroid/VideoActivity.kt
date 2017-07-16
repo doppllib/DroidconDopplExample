@@ -44,11 +44,11 @@ class VideoActivity : AppCompatActivity(), VideoPlayerHost {
         super.onResume()
 //        jwplayer.onResume()
 
-        presenter!!.startChecking()
+//        presenter!!.startChecking()
     }
 
     override fun onPause() {
-        presenter!!.stopChecking()
+//        presenter!!.stopChecking()
 
         // Let JW Player know that the app is going to the background
 //        jwplayer.onPause()

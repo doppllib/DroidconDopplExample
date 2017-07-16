@@ -12,7 +12,6 @@ import co.touchlab.droidconandroid.shared.tasks.AddRsvpTask;
 import co.touchlab.droidconandroid.shared.tasks.EventDetailLoadTask;
 import co.touchlab.droidconandroid.shared.tasks.EventVideoDetailsTask;
 import co.touchlab.droidconandroid.shared.tasks.RemoveRsvpTask;
-import co.touchlab.droidconandroid.shared.tasks.StartWatchVideoTask;
 import co.touchlab.droidconandroid.shared.utils.AnalyticsEvents;
 import co.touchlab.droidconandroid.shared.utils.SlackUtils;
 
@@ -43,8 +42,7 @@ public class EventDetailPresenter extends AbstractEventBusPresenter
     public void callStartVideo(String link, String cover)
     {
         recordAnalytics(AnalyticsEvents.STREAM_CLICKED);
-        TaskQueue.loadQueueNetwork(getContext())
-                .execute(new StartWatchVideoTask(eventId, link, cover));
+
     }
 
     public void onEventMainThread(EventDetailLoadTask task)
@@ -89,33 +87,6 @@ public class EventDetailPresenter extends AbstractEventBusPresenter
     public void onEventMainThread(AddRsvpTask task)
     {
         refreshData();
-    }
-
-    public void onEventMainThread(StartWatchVideoTask task)
-    {
-        host.resetStreamProgress();
-        if(task.videoOk)
-        {
-            recordAnalytics(AnalyticsEvents.STREAM_SUCCESS);
-            host.callStreamActivity(task);
-        }
-        else if(task.unauthorized)
-        {
-
-            host.showTicketOptions(AppPrefs.getInstance(getContext()).getEventbriteEmail(),
-                    task.link,
-                    task.cover);
-        }
-        else
-        {
-            host.reportError("Couldn't start video. Either server or network issue.");
-        }
-    }
-
-    public boolean isStreamStarting()
-    {
-        return TaskQueueHelper.hasTasksOfType(TaskQueue.loadQueueNetwork(getContext()),
-                StartWatchVideoTask.class);
     }
 
     private boolean ready()

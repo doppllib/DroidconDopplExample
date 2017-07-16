@@ -18,7 +18,7 @@ apply plugin: 'co.doppl.gradle'
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
-def baseurl = properties.getProperty('baseurl')
+def baseurl = properties.hasProperty('baseurl')? properties.getProperty('baseurl') : "http://droidcon-server.herokuapp.com/"
 def releasePassword = properties.getProperty('releasePassword')
 def jwLicenseKey = properties.getProperty('jwLicenseKey')
 
@@ -124,8 +124,15 @@ dependencies {
     //Shared code dependencies
     doppl 'co.doppl.lib:androidbase:0.8.0'
 
-    compile 'com.squareup.retrofit:retrofit:1.9.0'
-    doppl 'co.doppl.com.squareup.retrofit:retrofit:1.9.0.5'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    doppl 'co.doppl.com.squareup.retrofit2.nossl:retrofit:2.3.0.0'
+    doppl 'co.doppl.com.squareup.retrofit2.nossl:converter-gson:2.3.0.0'
+    doppl 'co.doppl.com.squareup.retrofit2.nossl:adapter-rxjava2:2.3.0.0'
+
+    compile "io.reactivex.rxjava2:rxjava:2.0.8"
+    doppl "co.doppl.io.reactivex.rxjava2:rxjava:2.0.8.0"
 
     compile 'de.greenrobot:eventbus:2.4.0'
     doppl 'co.doppl.de.greenrobot:eventbus:2.4.0.4'

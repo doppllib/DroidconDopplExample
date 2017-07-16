@@ -1,6 +1,8 @@
 package co.touchlab.droidconandroid.shared.tasks;
+
 import android.content.Context;
 
+import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.sql.SQLException;
 
@@ -10,8 +12,9 @@ import co.touchlab.droidconandroid.shared.network.DataHelper;
 import co.touchlab.droidconandroid.shared.network.FindUserRequest;
 import co.touchlab.droidconandroid.shared.network.dao.UserInfoResponse;
 import co.touchlab.droidconandroid.shared.presenter.AppManager;
-import retrofit.RestAdapter;
 import retrofit.RetrofitError;
+import retrofit2.Response;
+import retrofit2.Retrofit;
 
 /**
  * Created by kgalligan on 4/8/16.
@@ -41,28 +44,20 @@ public class FindUserTask extends AbstractFindUserTask
                        @Override
                        public UserInfoResponse load()
                        {
-                           RestAdapter restAdapter = DataHelper.makeRequestAdapter(context,
-                                                                                   AppManager.getPlatformClient());
+                           Retrofit restAdapter = DataHelper.makeRetrofit2Client(AppManager.getPlatformClient().baseUrl());
                            FindUserRequest findUserRequest = restAdapter
                                    .create(FindUserRequest.class);
                            try
                            {
-                               return findUserRequest.getUserInfo(code);
-                           }
-                           catch(RetrofitError e)
-                           {
-                               if(e.getResponse().getStatus() == HttpURLConnection.HTTP_NOT_FOUND)
-                               {
+                               Response<UserInfoResponse> response = findUserRequest.getUserInfo(code).execute();
+                               if(response.code() == 404)
                                    errorStringCode = "error_user_not_found";
-                               }
-                               else if(e.getKind() == RetrofitError.Kind.NETWORK)
-                               {
-                                   errorStringCode = "network_error";
-                               }
                                else
-                               {
-                                   throw new RuntimeException(e);
-                               }
+                                   return response.body();
+                           }
+                           catch(IOException e)
+                           {
+                               errorStringCode = "network_error";
                            }
                            return null;
                        }

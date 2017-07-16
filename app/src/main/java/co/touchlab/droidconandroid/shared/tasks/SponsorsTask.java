@@ -1,15 +1,14 @@
 package co.touchlab.droidconandroid.shared.tasks;
+
 import android.content.Context;
 
 import co.touchlab.android.threading.eventbus.EventBusExt;
 import co.touchlab.android.threading.tasks.Task;
 import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.network.DataHelper;
-import co.touchlab.droidconandroid.shared.network.NetworkErrorHandler;
 import co.touchlab.droidconandroid.shared.network.SponsorsRequest;
 import co.touchlab.droidconandroid.shared.network.SponsorsResult;
-import co.touchlab.droidconandroid.shared.presenter.AppManager;
-import retrofit.RestAdapter;
+import retrofit2.Retrofit;
 
 public class SponsorsTask extends Task
 {
@@ -31,11 +30,9 @@ public class SponsorsTask extends Task
     @Override
     protected void run(Context context) throws Throwable
     {
-        RestAdapter restAdapter = DataHelper.makeRequestAdapterBuilder(context,
-                AppManager.getPlatformClient(), URL_AMAZON_S3,
-                new NetworkErrorHandler()).build();
+        Retrofit restAdapter = DataHelper.makeRetrofit2Client(URL_AMAZON_S3);
         String fileName = getFileName(type);
-        response = restAdapter.create(SponsorsRequest.class).getSponsors(fileName);
+        response = restAdapter.create(SponsorsRequest.class).getSponsors(fileName).execute().body();
     }
 
     private String getFileName(int type)
