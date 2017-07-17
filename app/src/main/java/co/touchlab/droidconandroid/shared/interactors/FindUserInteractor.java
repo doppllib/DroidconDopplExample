@@ -1,4 +1,4 @@
-package co.touchlab.droidconandroid.shared.tasks;
+package co.touchlab.droidconandroid.shared.interactors;
 
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data.UserAccount;
@@ -14,13 +14,13 @@ import retrofit.RestAdapter;
 /**
  * Created by kgalligan on 4/8/16.
  */
-public class FindUserTask {
+public class FindUserInteractor {
     private final DatabaseHelper helper;
     private final RestAdapter restAdapter;
     private final long userId;
     private Observable<UserAccount> userAccountObservable = null;
 
-    public FindUserTask(DatabaseHelper helper, RestAdapter restAdapter, long userId) {
+    public FindUserInteractor(DatabaseHelper helper, RestAdapter restAdapter, long userId) {
         this.helper = helper;
         this.restAdapter = restAdapter;
         this.userId = userId;

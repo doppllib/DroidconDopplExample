@@ -5,7 +5,7 @@ import android.arch.lifecycle.ViewModelProvider;
 
 import com.google.j2objc.annotations.Weak;
 
-import co.touchlab.droidconandroid.shared.tasks.FindUserTask;
+import co.touchlab.droidconandroid.shared.interactors.FindUserInteractor;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
@@ -14,10 +14,10 @@ public class UserDetailViewModel extends ViewModel {
 
     @Weak
     private UserDetailHost host;
-    private FindUserTask task;
+    private FindUserInteractor task;
     private CompositeDisposable disposables = new CompositeDisposable();
 
-    private UserDetailViewModel(FindUserTask task) {
+    private UserDetailViewModel(FindUserInteractor task) {
         this.task = task;
     }
 
@@ -39,9 +39,9 @@ public class UserDetailViewModel extends ViewModel {
     }
 
     public static class Factory extends ViewModelProvider.NewInstanceFactory {
-        private final FindUserTask task;
+        private final FindUserInteractor task;
 
-        public Factory(FindUserTask task) {
+        public Factory(FindUserInteractor task) {
             this.task = task;
         }
 
