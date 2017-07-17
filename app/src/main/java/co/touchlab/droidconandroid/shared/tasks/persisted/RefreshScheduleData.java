@@ -1,8 +1,8 @@
 package co.touchlab.droidconandroid.shared.tasks.persisted;
+
 import android.content.Context;
 
-import co.touchlab.droidconandroid.shared.utils.StringUtils;
-
+import java.io.IOException;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.HashSet;
@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Callable;
 
+import co.touchlab.android.threading.errorcontrol.NetworkException;
+import co.touchlab.android.threading.errorcontrol.SoftException;
 import co.touchlab.android.threading.eventbus.EventBusExt;
 import co.touchlab.android.threading.tasks.helper.RetrofitPersistedTask;
 import co.touchlab.android.threading.tasks.persisted.PersistedTask;
@@ -27,35 +29,21 @@ import co.touchlab.droidconandroid.shared.network.RefreshScheduleDataRequest;
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
 import co.touchlab.droidconandroid.shared.presenter.AppManager;
 import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
+import co.touchlab.droidconandroid.shared.utils.StringUtils;
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 import co.touchlab.droidconandroid.shared.utils.UserDataHelper;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.stmt.Where;
-import retrofit.RestAdapter;
+import retrofit2.Retrofit;
 
 /**
  * Created by kgalligan on 4/7/16.
  */
-public class RefreshScheduleData extends RetrofitPersistedTask
+public class RefreshScheduleData extends PersistedTask
 {
     public static void callMe(Context c)
     {
         PersistedTaskQueueFactory.getInstance(c).execute(new RefreshScheduleData());
-    }
-
-    @Override
-    protected void runNetwork(Context context)
-    {
-        final PlatformClient platformClient = AppManager.getPlatformClient();
-        RestAdapter restAdapter = DataHelper.makeRequestAdapter(context, platformClient);
-
-        RefreshScheduleDataRequest request = restAdapter.create(RefreshScheduleDataRequest.class);
-
-        Convention convention = request.getScheduleData(platformClient.getConventionId());
-        saveConventionData(context, convention);
-
-        AppPrefs.getInstance(context).setRefreshTime(System.currentTimeMillis());
-
     }
 
     @Override
@@ -75,6 +63,23 @@ public class RefreshScheduleData extends RetrofitPersistedTask
     protected boolean same(PersistedTask persistedTask)
     {
         return persistedTask instanceof RefreshScheduleData;
+    }
+
+    @Override
+    protected void run(Context context) throws SoftException, Throwable {
+        try {
+            final PlatformClient platformClient = AppManager.getPlatformClient();
+            Retrofit restAdapter = DataHelper.makeRetrofit2Client(platformClient.baseUrl());
+
+            RefreshScheduleDataRequest request = restAdapter.create(RefreshScheduleDataRequest.class);
+
+            Convention convention = request.getScheduleData(platformClient.getConventionId()).execute().body();
+            saveConventionData(context, convention);
+
+            AppPrefs.getInstance(context).setRefreshTime(System.currentTimeMillis());
+        } catch (IOException e) {
+            throw new NetworkException(e);
+        }
     }
 
     @Override

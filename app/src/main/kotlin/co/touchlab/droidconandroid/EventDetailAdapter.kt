@@ -121,25 +121,19 @@ class EventDetailAdapter(private val context: Context,
                 }
                 view.slackButton.setOnClickListener { presenter.openSlack() }
 
-                if (presenter.isStreamStarting) {
-                    view.streamLoading.visibility = View.VISIBLE
-                    view.streamNow.visibility = View.GONE
+                view.streamLoading.visibility = View.GONE
+                if (detail.liveNow) {
+                    view.streamNow.visibility = View.VISIBLE
                     view.streamNotNow.visibility = View.GONE
+                    view.imageLive.visibility = View.VISIBLE
+                    view.imageNotLive.visibility = View.GONE
+                    view.slackButton.visibility = View.VISIBLE
                 } else {
-                    view.streamLoading.visibility = View.GONE
-                    if (detail.liveNow) {
-                        view.streamNow.visibility = View.VISIBLE
-                        view.streamNotNow.visibility = View.GONE
-                        view.imageLive.visibility = View.VISIBLE
-                        view.imageNotLive.visibility = View.GONE
-                        view.slackButton.visibility = View.VISIBLE
-                    } else {
-                        view.streamNow.visibility = View.GONE
-                        view.streamNotNow.visibility = View.VISIBLE
-                        view.imageLive.visibility = View.GONE
-                        view.imageNotLive.visibility = View.VISIBLE
-                        view.slackButton.visibility = View.GONE
-                    }
+                    view.streamNow.visibility = View.GONE
+                    view.streamNotNow.visibility = View.VISIBLE
+                    view.imageLive.visibility = View.GONE
+                    view.imageNotLive.visibility = View.VISIBLE
+                    view.slackButton.visibility = View.GONE
                 }
             }
 
