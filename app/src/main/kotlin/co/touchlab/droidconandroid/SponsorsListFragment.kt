@@ -16,6 +16,7 @@ import co.touchlab.droidconandroid.shared.network.SponsorsResult
 import co.touchlab.droidconandroid.shared.presenter.SponsorsHost
 import co.touchlab.droidconandroid.shared.presenter.SponsorsViewModel
 import co.touchlab.droidconandroid.ui.SponsorsAdapter
+import co.touchlab.droidconandroid.utils.Toaster
 import kotlinx.android.synthetic.main.fragment_sponsors_list.*
 import java.util.*
 
@@ -112,7 +113,9 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
     }
 
     override fun onError() {
-        Log.d("Error", "Embarrassing lol omg stop")
+        val error = "There was an error trying to reach the network"
+        Toaster.showMessage(activity, error)
+        Log.e("SponsorsListFragment", error)
     }
 
     inner class Empty(val spanCount: Int)
