@@ -49,7 +49,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
 
     private val viewModel: UserDetailViewModel by lazy {
         val helper = DatabaseHelper.getInstance(activity)
-        val restAdapter = DataHelper.makeRequestAdapter(activity, AppManager.getPlatformClient())
+        val restAdapter = DataHelper.makeRetrofit2Client(AppManager.getPlatformClient().baseUrl())
         val task = FindUserInteractor(helper, restAdapter, findUserId())
         val factory = UserDetailViewModel.Factory(task)
         ViewModelProviders.of(this, factory)[UserDetailViewModel::class.java]

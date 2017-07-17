@@ -6,21 +6,20 @@ import co.touchlab.droidconandroid.shared.network.FindUserRequest;
 import co.touchlab.droidconandroid.shared.network.dao.UserAccountInfo;
 import co.touchlab.droidconandroid.shared.network.dao.UserInfoResponse;
 import co.touchlab.droidconandroid.shared.utils.UserDataHelper;
-import hu.akarnokd.rxjava.interop.RxJavaInterop;
 import io.reactivex.Completable;
 import io.reactivex.Observable;
-import retrofit.RestAdapter;
+import retrofit2.Retrofit;
 
 /**
  * Created by kgalligan on 4/8/16.
  */
 public class FindUserInteractor {
     private final DatabaseHelper helper;
-    private final RestAdapter restAdapter;
+    private final Retrofit restAdapter;
     private final long userId;
     private Observable<UserAccount> userAccountObservable = null;
 
-    public FindUserInteractor(DatabaseHelper helper, RestAdapter restAdapter, long userId) {
+    public FindUserInteractor(DatabaseHelper helper, Retrofit restAdapter, long userId) {
         this.helper = helper;
         this.restAdapter = restAdapter;
         this.userId = userId;
@@ -42,7 +41,7 @@ public class FindUserInteractor {
 
     private Observable<UserInfoResponse> loadUserInfo(final long userId) {
         FindUserRequest findUserRequest = restAdapter.create(FindUserRequest.class);
-        return RxJavaInterop.toV2Observable(findUserRequest.getUserInfo(userId));
+        return findUserRequest.getUserInfo(userId);
     }
 
     private Observable<UserAccount> saveUserResponse(UserAccountInfo userAccountInfo) {
