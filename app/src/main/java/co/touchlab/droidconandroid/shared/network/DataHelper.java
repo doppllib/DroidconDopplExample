@@ -14,13 +14,12 @@ public class DataHelper
     public static Retrofit makeRetrofit2Client(String baseUrl)
     {
         GsonConverterFactory factory = GsonConverterFactory.create();
-        Retrofit retrofit = new Retrofit.Builder()
+
+        return new Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(factory)
                 .build();
-
-        return retrofit;
     }
 
     private Class asdf = HttpsURLConnection.class;
