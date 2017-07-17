@@ -65,7 +65,7 @@ import dcframework
     
     func dataRefresh() {
         event = eventDetailPresenter.getEventDetailLoadTask().getEvent()
-        speakers = PlatformContext_iOS.javaList(toNSArray: eventDetailPresenter.getEventDetailLoadTask().getEvent().getSpeakerList()) as? [DCDEventSpeaker]
+        speakers = PlatformContext_iOS.javaList(toList: eventDetailPresenter.getEventDetailLoadTask().getEvent().getSpeakerList()) as? [DCDEventSpeaker]
         tableView.reloadData()
         updateButton()
         updateHeaderImage()

@@ -1,4 +1,7 @@
 package co.touchlab.droidconandroid.shared.presenter;
+
+import co.touchlab.droidconandroid.shared.data.ScheduleBlock;
+
 /**
  * Created by kgalligan on 4/17/16.
  */
@@ -13,5 +16,14 @@ public class ConferenceDayHolder
         this.hourHolders = hourHolders;
     }
 
+    public String getDayString()
+    {
+        return dayString;
+    }
+
+    public ScheduleBlockHour[] getHourHolders()
+    {
+        return hourHolders;
+    }
 
 }

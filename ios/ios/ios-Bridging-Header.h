@@ -7,11 +7,16 @@
 #import "DCTEventDetailLoadTask.h"
 #import "DCTEventVideoDetailsTask.h"
 #import "DCTStartWatchVideoTask.h"
+#import "DCPConferenceDataPresenter.h"
+#import "DCPConferenceDayHolder.h"
+#import "DCPScheduleBlockHour.h"
 
 #import "DCDAppPrefs.h"
+#import "DCDBlock.h"
+#import "DCDVenue.h"
+#import "DCPConferenceDataHost.h"
 #import "AndroidContentContext.h"
 #import "AndroidContentIOSContext.h"
-#import "PlatformContext_iOS.h"
 #import "java/util/ArrayList.h"
 
 #import "java/lang/Integer.h"
@@ -22,3 +27,8 @@
 #import "DCDUserAccount.h"
 #import "DCDEventSpeaker.h"
 #import <JWPlayer-iOS-SDK/JWPlayerController.h>
+
+#import "CoTouchlabDroidconandroidSharedIosIosFirebase.h"
+#import "CoTouchlabDroidconandroidSharedIosIosPlatformClient.h"
+#import "CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData.h"
+#import "DopplRuntime.h"

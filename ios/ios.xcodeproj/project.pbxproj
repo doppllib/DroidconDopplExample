@@ -8,14 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		01526F191EC0F99B00D42000 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 01526F181EC0F99B00D42000 /* libiconv.tbd */; };
+		018320261F152215009794AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018320251F152215009794AC /* ViewController.swift */; };
+		018320281F153CC3009794AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018320271F153CC3009794AC /* AppDelegate.swift */; };
+		0183202C1F155D86009794AC /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0183202B1F155D86009794AC /* NoteTableViewCell.swift */; };
+		0183202E1F155F9A009794AC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0183202D1F155F9A009794AC /* UIViewController.swift */; };
+		018320301F156ADA009794AC /* PlatformContext_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0183202F1F156ADA009794AC /* PlatformContext_iOS.swift */; };
 		4C0769921D8339A0003DD320 /* OnboardingPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0769911D8339A0003DD320 /* OnboardingPhotoCell.swift */; };
 		4C81B70B1D75E7B500DFB89C /* SponsorImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81B70A1D75E7B500DFB89C /* SponsorImage.swift */; };
 		4C81B70F1D76162000DFB89C /* SponsorPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81B70E1D76162000DFB89C /* SponsorPhotoCell.swift */; };
 		4C81B7131D7616C500DFB89C /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81B7121D7616C500DFB89C /* SponsorsViewController.swift */; };
 		4CFD936D1D8355630018C837 /* OnboardingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD936C1D8355630018C837 /* OnboardingHeaderView.swift */; };
-		631B98F01C7D6533008AA20D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 631B98EF1C7D6533008AA20D /* main.m */; };
-		631B98F31C7D6533008AA20D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 631B98F21C7D6533008AA20D /* AppDelegate.m */; };
-		631B98F61C7D6533008AA20D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 631B98F51C7D6533008AA20D /* ViewController.m */; };
 		631B98F91C7D6533008AA20D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631B98F71C7D6533008AA20D /* Main.storyboard */; };
 		631B98FB1C7D6533008AA20D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631B98FA1C7D6533008AA20D /* Assets.xcassets */; };
 		631B98FE1C7D6533008AA20D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631B98FC1C7D6533008AA20D /* LaunchScreen.storyboard */; };
@@ -221,24 +223,16 @@
 		63B30EBE1F0D4AB7005345C3 /* AndroidOsUserHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B308461F0D4AB0005345C3 /* AndroidOsUserHandle.m */; };
 		63B30EBF1F0D4AB7005345C3 /* AndroidProviderBaseColumns.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B308471F0D4AB0005345C3 /* AndroidProviderBaseColumns.h */; };
 		63B30EC01F0D4AB7005345C3 /* AndroidProviderBaseColumns.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B308481F0D4AB0005345C3 /* AndroidProviderBaseColumns.m */; };
-		63B30EC11F0D4AB7005345C3 /* AndroidSupportAnnotationCallSuper.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B308491F0D4AB0005345C3 /* AndroidSupportAnnotationCallSuper.h */; };
-		63B30EC21F0D4AB7005345C3 /* AndroidSupportAnnotationCallSuper.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B3084A1F0D4AB0005345C3 /* AndroidSupportAnnotationCallSuper.m */; };
 		63B30EC31F0D4AB7005345C3 /* AndroidSupportAnnotationCheckResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B3084B1F0D4AB0005345C3 /* AndroidSupportAnnotationCheckResult.h */; };
 		63B30EC41F0D4AB7005345C3 /* AndroidSupportAnnotationCheckResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B3084C1F0D4AB0005345C3 /* AndroidSupportAnnotationCheckResult.m */; };
 		63B30EC51F0D4AB7005345C3 /* AndroidSupportAnnotationIntDef.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B3084D1F0D4AB0005345C3 /* AndroidSupportAnnotationIntDef.h */; };
 		63B30EC61F0D4AB7005345C3 /* AndroidSupportAnnotationIntDef.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B3084E1F0D4AB0005345C3 /* AndroidSupportAnnotationIntDef.m */; };
-		63B30EC71F0D4AB7005345C3 /* AndroidSupportAnnotationMainThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B3084F1F0D4AB0005345C3 /* AndroidSupportAnnotationMainThread.h */; };
-		63B30EC81F0D4AB7005345C3 /* AndroidSupportAnnotationMainThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B308501F0D4AB0005345C3 /* AndroidSupportAnnotationMainThread.m */; };
 		63B30EC91F0D4AB7005345C3 /* AndroidSupportAnnotationNonNull.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B308511F0D4AB0005345C3 /* AndroidSupportAnnotationNonNull.h */; };
 		63B30ECA1F0D4AB7005345C3 /* AndroidSupportAnnotationNonNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B308521F0D4AB0005345C3 /* AndroidSupportAnnotationNonNull.m */; };
 		63B30ECB1F0D4AB7005345C3 /* AndroidSupportAnnotationNullable.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B308531F0D4AB0005345C3 /* AndroidSupportAnnotationNullable.h */; };
 		63B30ECC1F0D4AB7005345C3 /* AndroidSupportAnnotationNullable.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B308541F0D4AB0005345C3 /* AndroidSupportAnnotationNullable.m */; };
-		63B30ECD1F0D4AB7005345C3 /* AndroidSupportAnnotationRestrictTo.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B308551F0D4AB0005345C3 /* AndroidSupportAnnotationRestrictTo.h */; };
-		63B30ECE1F0D4AB7005345C3 /* AndroidSupportAnnotationRestrictTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B308561F0D4AB0005345C3 /* AndroidSupportAnnotationRestrictTo.m */; };
 		63B30ECF1F0D4AB7005345C3 /* AndroidSupportAnnotationVisibleForTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B308571F0D4AB0005345C3 /* AndroidSupportAnnotationVisibleForTesting.h */; };
 		63B30ED01F0D4AB7005345C3 /* AndroidSupportAnnotationVisibleForTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B308581F0D4AB0005345C3 /* AndroidSupportAnnotationVisibleForTesting.m */; };
-		63B30ED11F0D4AB7005345C3 /* AndroidSupportAnnotationWorkerThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B308591F0D4AB0005345C3 /* AndroidSupportAnnotationWorkerThread.h */; };
-		63B30ED21F0D4AB7005345C3 /* AndroidSupportAnnotationWorkerThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B3085A1F0D4AB0005345C3 /* AndroidSupportAnnotationWorkerThread.m */; };
 		63B30ED31F0D4AB7005345C3 /* AndroidTelephonyJapanesePhoneNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B3085B1F0D4AB0005345C3 /* AndroidTelephonyJapanesePhoneNumberFormatter.h */; };
 		63B30ED41F0D4AB7005345C3 /* AndroidTelephonyJapanesePhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B3085C1F0D4AB0005345C3 /* AndroidTelephonyJapanesePhoneNumberFormatter.m */; };
 		63B30ED51F0D4AB7005345C3 /* AndroidTelephonyPhoneNumberUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B3085D1F0D4AB0005345C3 /* AndroidTelephonyPhoneNumberUtils.h */; };
@@ -1682,7 +1676,6 @@
 		63EE30CC1CC5E1BD00B64D3D /* CheckLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30CB1CC5E1BD00B64D3D /* CheckLoginController.swift */; };
 		63EE30CE1CC6985800B64D3D /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30CD1CC6985800B64D3D /* StartScreenViewController.swift */; };
 		63EE30D01CC6AD4400B64D3D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30CF1CC6AD4400B64D3D /* WelcomeViewController.swift */; };
-		63EE30D41CC7DDB800B64D3D /* UIViewController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30D31CC7DDB800B64D3D /* UIViewController+Utils.m */; };
 		63EE30DF1CD025AC00B64D3D /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30DE1CD025AC00B64D3D /* EventListCell.swift */; };
 		63F0E9461DC4F2C1000A2AD7 /* JWPlayer-iOS-SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F0E9451DC4F2C1000A2AD7 /* JWPlayer-iOS-SDK.framework */; };
 		F92EB65A1D5A5EEC003B47B7 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */; };
@@ -1691,12 +1684,10 @@
 		F9B8C7011D539328000724FC /* LiveStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B8C7001D539328000724FC /* LiveStreamViewController.swift */; };
 		F9D6952D1D47AF9D0095F0F9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */; };
 		FA258F611C937F5900986E0D /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA258F601C937F5900986E0D /* NoteTableViewCell.xib */; };
-		FA258F641C9381C600986E0D /* NoteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA258F631C9381C600986E0D /* NoteTableViewCell.m */; };
 		FA6128BF1C986E05001142E8 /* SpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6128BE1C986E05001142E8 /* SpeakerTableViewCell.swift */; };
 		FA6128C11C986E16001142E8 /* SpeakerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6128C01C986E16001142E8 /* SpeakerTableViewCell.xib */; };
 		FA6128C31C986E7A001142E8 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6128C21C986E7A001142E8 /* EventTableViewCell.xib */; };
 		FA6128C51C986E87001142E8 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6128C41C986E87001142E8 /* EventTableViewCell.swift */; };
-		FA86A7F81C91EDDE00C09CE7 /* PlatformContext_iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = FA86A7F71C91EDDE00C09CE7 /* PlatformContext_iOS.m */; };
 		FAE033A61C974C65001C50E1 /* ShowEventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE033A51C974C65001C50E1 /* ShowEventDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -1754,17 +1745,17 @@
 
 /* Begin PBXFileReference section */
 		01526F181EC0F99B00D42000 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		018320251F152215009794AC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		018320271F153CC3009794AC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0183202B1F155D86009794AC /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		0183202D1F155F9A009794AC /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		0183202F1F156ADA009794AC /* PlatformContext_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformContext_iOS.swift; sourceTree = "<group>"; };
 		4C0769911D8339A0003DD320 /* OnboardingPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPhotoCell.swift; sourceTree = "<group>"; };
 		4C81B70A1D75E7B500DFB89C /* SponsorImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorImage.swift; sourceTree = "<group>"; };
 		4C81B70E1D76162000DFB89C /* SponsorPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorPhotoCell.swift; sourceTree = "<group>"; };
 		4C81B7121D7616C500DFB89C /* SponsorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4CFD936C1D8355630018C837 /* OnboardingHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingHeaderView.swift; sourceTree = "<group>"; };
 		631B98EB1C7D6533008AA20D /* Droicon NYC 2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Droicon NYC 2016.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		631B98EF1C7D6533008AA20D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		631B98F11C7D6533008AA20D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		631B98F21C7D6533008AA20D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		631B98F41C7D6533008AA20D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		631B98F51C7D6533008AA20D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		631B98F81C7D6533008AA20D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		631B98FA1C7D6533008AA20D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		631B98FD1C7D6533008AA20D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -1975,24 +1966,16 @@
 		63B308461F0D4AB0005345C3 /* AndroidOsUserHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidOsUserHandle.m; sourceTree = "<group>"; };
 		63B308471F0D4AB0005345C3 /* AndroidProviderBaseColumns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidProviderBaseColumns.h; sourceTree = "<group>"; };
 		63B308481F0D4AB0005345C3 /* AndroidProviderBaseColumns.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidProviderBaseColumns.m; sourceTree = "<group>"; };
-		63B308491F0D4AB0005345C3 /* AndroidSupportAnnotationCallSuper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidSupportAnnotationCallSuper.h; sourceTree = "<group>"; };
-		63B3084A1F0D4AB0005345C3 /* AndroidSupportAnnotationCallSuper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidSupportAnnotationCallSuper.m; sourceTree = "<group>"; };
 		63B3084B1F0D4AB0005345C3 /* AndroidSupportAnnotationCheckResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidSupportAnnotationCheckResult.h; sourceTree = "<group>"; };
 		63B3084C1F0D4AB0005345C3 /* AndroidSupportAnnotationCheckResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidSupportAnnotationCheckResult.m; sourceTree = "<group>"; };
 		63B3084D1F0D4AB0005345C3 /* AndroidSupportAnnotationIntDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidSupportAnnotationIntDef.h; sourceTree = "<group>"; };
 		63B3084E1F0D4AB0005345C3 /* AndroidSupportAnnotationIntDef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidSupportAnnotationIntDef.m; sourceTree = "<group>"; };
-		63B3084F1F0D4AB0005345C3 /* AndroidSupportAnnotationMainThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidSupportAnnotationMainThread.h; sourceTree = "<group>"; };
-		63B308501F0D4AB0005345C3 /* AndroidSupportAnnotationMainThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidSupportAnnotationMainThread.m; sourceTree = "<group>"; };
 		63B308511F0D4AB0005345C3 /* AndroidSupportAnnotationNonNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidSupportAnnotationNonNull.h; sourceTree = "<group>"; };
 		63B308521F0D4AB0005345C3 /* AndroidSupportAnnotationNonNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidSupportAnnotationNonNull.m; sourceTree = "<group>"; };
 		63B308531F0D4AB0005345C3 /* AndroidSupportAnnotationNullable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidSupportAnnotationNullable.h; sourceTree = "<group>"; };
 		63B308541F0D4AB0005345C3 /* AndroidSupportAnnotationNullable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidSupportAnnotationNullable.m; sourceTree = "<group>"; };
-		63B308551F0D4AB0005345C3 /* AndroidSupportAnnotationRestrictTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidSupportAnnotationRestrictTo.h; sourceTree = "<group>"; };
-		63B308561F0D4AB0005345C3 /* AndroidSupportAnnotationRestrictTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidSupportAnnotationRestrictTo.m; sourceTree = "<group>"; };
 		63B308571F0D4AB0005345C3 /* AndroidSupportAnnotationVisibleForTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidSupportAnnotationVisibleForTesting.h; sourceTree = "<group>"; };
 		63B308581F0D4AB0005345C3 /* AndroidSupportAnnotationVisibleForTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidSupportAnnotationVisibleForTesting.m; sourceTree = "<group>"; };
-		63B308591F0D4AB0005345C3 /* AndroidSupportAnnotationWorkerThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidSupportAnnotationWorkerThread.h; sourceTree = "<group>"; };
-		63B3085A1F0D4AB0005345C3 /* AndroidSupportAnnotationWorkerThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidSupportAnnotationWorkerThread.m; sourceTree = "<group>"; };
 		63B3085B1F0D4AB0005345C3 /* AndroidTelephonyJapanesePhoneNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidTelephonyJapanesePhoneNumberFormatter.h; sourceTree = "<group>"; };
 		63B3085C1F0D4AB0005345C3 /* AndroidTelephonyJapanesePhoneNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AndroidTelephonyJapanesePhoneNumberFormatter.m; sourceTree = "<group>"; };
 		63B3085D1F0D4AB0005345C3 /* AndroidTelephonyPhoneNumberUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AndroidTelephonyPhoneNumberUtils.h; sourceTree = "<group>"; };
@@ -3435,8 +3418,6 @@
 		63EE30CB1CC5E1BD00B64D3D /* CheckLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckLoginController.swift; sourceTree = "<group>"; };
 		63EE30CD1CC6985800B64D3D /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		63EE30CF1CC6AD4400B64D3D /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		63EE30D31CC7DDB800B64D3D /* UIViewController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utils.m"; sourceTree = "<group>"; };
-		63EE30D51CC7DDE600B64D3D /* UIViewController+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utils.h"; sourceTree = "<group>"; };
 		63EE30DE1CD025AC00B64D3D /* EventListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListCell.swift; sourceTree = "<group>"; };
 		63F0E8291DC4EBEA000A2AD7 /* JRE.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JRE.framework; path = ../../../devel/j2objc/dist/frameworks/JRE.framework; sourceTree = "<group>"; };
 		63F0E9451DC4F2C1000A2AD7 /* JWPlayer-iOS-SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "JWPlayer-iOS-SDK.framework"; path = "Manual/JWPlayer-iOS-SDK.framework"; sourceTree = "<group>"; };
@@ -3446,14 +3427,10 @@
 		F9B8C7001D539328000724FC /* LiveStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveStreamViewController.swift; sourceTree = "<group>"; };
 		F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		FA258F601C937F5900986E0D /* NoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
-		FA258F621C9381C600986E0D /* NoteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteTableViewCell.h; sourceTree = "<group>"; };
-		FA258F631C9381C600986E0D /* NoteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteTableViewCell.m; sourceTree = "<group>"; };
 		FA6128BE1C986E05001142E8 /* SpeakerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerTableViewCell.swift; sourceTree = "<group>"; };
 		FA6128C01C986E16001142E8 /* SpeakerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerTableViewCell.xib; sourceTree = "<group>"; };
 		FA6128C21C986E7A001142E8 /* EventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 		FA6128C41C986E87001142E8 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
-		FA86A7F61C91EDDE00C09CE7 /* PlatformContext_iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformContext_iOS.h; sourceTree = "<group>"; };
-		FA86A7F71C91EDDE00C09CE7 /* PlatformContext_iOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformContext_iOS.m; sourceTree = "<group>"; };
 		FA86A7F91C92169900C09CE7 /* ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		FAE033A31C9711F8001C50E1 /* prefixes.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = prefixes.properties; path = ios/prefixes.properties; sourceTree = "<group>"; };
 		FAE033A51C974C65001C50E1 /* ShowEventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventDetailViewController.swift; sourceTree = "<group>"; };
@@ -3548,13 +3525,8 @@
 		631B98ED1C7D6533008AA20D /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				0183202F1F156ADA009794AC /* PlatformContext_iOS.swift */,
 				639320301D77FF700047224B /* dataseeds */,
-				631B98F11C7D6533008AA20D /* AppDelegate.h */,
-				631B98F21C7D6533008AA20D /* AppDelegate.m */,
-				FA86A7F61C91EDDE00C09CE7 /* PlatformContext_iOS.h */,
-				FA86A7F71C91EDDE00C09CE7 /* PlatformContext_iOS.m */,
-				631B98F41C7D6533008AA20D /* ViewController.h */,
-				631B98F51C7D6533008AA20D /* ViewController.m */,
 				FAE033A51C974C65001C50E1 /* ShowEventDetailViewController.swift */,
 				FA258F5F1C937F4100986E0D /* Views */,
 				631B98F71C7D6533008AA20D /* Main.storyboard */,
@@ -3566,8 +3538,6 @@
 				63EE30CB1CC5E1BD00B64D3D /* CheckLoginController.swift */,
 				63EE30CD1CC6985800B64D3D /* StartScreenViewController.swift */,
 				63EE30CF1CC6AD4400B64D3D /* WelcomeViewController.swift */,
-				63EE30D31CC7DDB800B64D3D /* UIViewController+Utils.m */,
-				63EE30D51CC7DDE600B64D3D /* UIViewController+Utils.h */,
 				63EE30DE1CD025AC00B64D3D /* EventListCell.swift */,
 				F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */,
 				F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */,
@@ -3579,6 +3549,9 @@
 				4C81B7121D7616C500DFB89C /* SponsorsViewController.swift */,
 				4C0769911D8339A0003DD320 /* OnboardingPhotoCell.swift */,
 				4CFD936C1D8355630018C837 /* OnboardingHeaderView.swift */,
+				018320251F152215009794AC /* ViewController.swift */,
+				018320271F153CC3009794AC /* AppDelegate.swift */,
+				0183202D1F155F9A009794AC /* UIViewController.swift */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -3586,7 +3559,6 @@
 		631B98EE1C7D6533008AA20D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				631B98EF1C7D6533008AA20D /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -3977,24 +3949,16 @@
 				63B308461F0D4AB0005345C3 /* AndroidOsUserHandle.m */,
 				63B308471F0D4AB0005345C3 /* AndroidProviderBaseColumns.h */,
 				63B308481F0D4AB0005345C3 /* AndroidProviderBaseColumns.m */,
-				63B308491F0D4AB0005345C3 /* AndroidSupportAnnotationCallSuper.h */,
-				63B3084A1F0D4AB0005345C3 /* AndroidSupportAnnotationCallSuper.m */,
 				63B3084B1F0D4AB0005345C3 /* AndroidSupportAnnotationCheckResult.h */,
 				63B3084C1F0D4AB0005345C3 /* AndroidSupportAnnotationCheckResult.m */,
 				63B3084D1F0D4AB0005345C3 /* AndroidSupportAnnotationIntDef.h */,
 				63B3084E1F0D4AB0005345C3 /* AndroidSupportAnnotationIntDef.m */,
-				63B3084F1F0D4AB0005345C3 /* AndroidSupportAnnotationMainThread.h */,
-				63B308501F0D4AB0005345C3 /* AndroidSupportAnnotationMainThread.m */,
 				63B308511F0D4AB0005345C3 /* AndroidSupportAnnotationNonNull.h */,
 				63B308521F0D4AB0005345C3 /* AndroidSupportAnnotationNonNull.m */,
 				63B308531F0D4AB0005345C3 /* AndroidSupportAnnotationNullable.h */,
 				63B308541F0D4AB0005345C3 /* AndroidSupportAnnotationNullable.m */,
-				63B308551F0D4AB0005345C3 /* AndroidSupportAnnotationRestrictTo.h */,
-				63B308561F0D4AB0005345C3 /* AndroidSupportAnnotationRestrictTo.m */,
 				63B308571F0D4AB0005345C3 /* AndroidSupportAnnotationVisibleForTesting.h */,
 				63B308581F0D4AB0005345C3 /* AndroidSupportAnnotationVisibleForTesting.m */,
-				63B308591F0D4AB0005345C3 /* AndroidSupportAnnotationWorkerThread.h */,
-				63B3085A1F0D4AB0005345C3 /* AndroidSupportAnnotationWorkerThread.m */,
 				63B3085B1F0D4AB0005345C3 /* AndroidTelephonyJapanesePhoneNumberFormatter.h */,
 				63B3085C1F0D4AB0005345C3 /* AndroidTelephonyJapanesePhoneNumberFormatter.m */,
 				63B3085D1F0D4AB0005345C3 /* AndroidTelephonyPhoneNumberUtils.h */,
@@ -5366,12 +5330,11 @@
 			isa = PBXGroup;
 			children = (
 				FA258F601C937F5900986E0D /* NoteTableViewCell.xib */,
-				FA258F621C9381C600986E0D /* NoteTableViewCell.h */,
-				FA258F631C9381C600986E0D /* NoteTableViewCell.m */,
 				FA6128C21C986E7A001142E8 /* EventTableViewCell.xib */,
 				FA6128C41C986E87001142E8 /* EventTableViewCell.swift */,
 				FA6128C01C986E16001142E8 /* SpeakerTableViewCell.xib */,
 				FA6128BE1C986E05001142E8 /* SpeakerTableViewCell.swift */,
+				0183202B1F155D86009794AC /* NoteTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -5485,7 +5448,6 @@
 				63B312881F0D4AB9005345C3 /* RxInternalOperatorsOperatorWithLatestFromMany.h in Headers */,
 				63B313D81F0D4ABA005345C3 /* CoTouchlabSqueakyFieldBaseFieldConverter.h in Headers */,
 				63B312021F0D4AB9005345C3 /* RxInternalOperatorsOperatorBufferWithStartEndObservable.h in Headers */,
-				63B30EC71F0D4AB7005345C3 /* AndroidSupportAnnotationMainThread.h in Headers */,
 				63B314481F0D4ABB005345C3 /* CoTouchlabSqueakyTableDatabaseView.h in Headers */,
 				63B310EE1F0D4AB8005345C3 /* RetrofitMimeTypedInput.h in Headers */,
 				63B312DA1F0D4AB9005345C3 /* RxInternalSchedulersSleepingAction.h in Headers */,
@@ -5543,7 +5505,6 @@
 				63B313A61F0D4ABA005345C3 /* RxSubjectsUnicastSubject.h in Headers */,
 				63B30E611F0D4AB7005345C3 /* AndroidDatabaseSqliteSQLiteDatabaseConfiguration.h in Headers */,
 				63B3128A1F0D4AB9005345C3 /* RxInternalOperatorsOperatorZip.h in Headers */,
-				63B30ECD1F0D4AB7005345C3 /* AndroidSupportAnnotationRestrictTo.h in Headers */,
 				63B310F61F0D4AB8005345C3 /* RetrofitPlatform.h in Headers */,
 				63B311B21F0D4AB9005345C3 /* RxInternalOperatorsOnSubscribeDelaySubscription.h in Headers */,
 				63B313221F0D4ABA005345C3 /* RxInternalUtilUnsafeConcurrentCircularArrayQueue.h in Headers */,
@@ -5988,7 +5949,6 @@
 				63B30FDD1F0D4AB8005345C3 /* ComGoogleGsonGson.h in Headers */,
 				63B3142C1F0D4ABB005345C3 /* CoTouchlabSqueakyFieldTypesShortType.h in Headers */,
 				63B314201F0D4ABB005345C3 /* CoTouchlabSqueakyFieldTypesIntType.h in Headers */,
-				63B30EC11F0D4AB7005345C3 /* AndroidSupportAnnotationCallSuper.h in Headers */,
 				63B3126E1F0D4AB9005345C3 /* RxInternalOperatorsOperatorTimeout.h in Headers */,
 				63B30F431F0D4AB7005345C3 /* CoTouchlabDroidconandroidSharedTasksPersistedPersistedTaskQueueFactory.h in Headers */,
 				63B30FBF1F0D4AB7005345C3 /* DeGreenrobotEventUtilAsyncExecutor.h in Headers */,
@@ -6194,7 +6154,6 @@
 				63B30EFA1F0D4AB7005345C3 /* AndroidLog.h in Headers */,
 				63B310071F0D4AB8005345C3 /* ComGoogleGsonInternalJsonReaderInternalAccess.h in Headers */,
 				63B310FC1F0D4AB8005345C3 /* RetrofitRequestInterceptor.h in Headers */,
-				63B30ED11F0D4AB7005345C3 /* AndroidSupportAnnotationWorkerThread.h in Headers */,
 				63B310D41F0D4AB8005345C3 /* RetrofitHttpPATCH.h in Headers */,
 				63B312EE1F0D4ABA005345C3 /* RxInternalUtilAtomicMpscLinkedAtomicQueue.h in Headers */,
 				63B311481F0D4AB8005345C3 /* RxFunctionsAction4.h in Headers */,
@@ -6650,28 +6609,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				018320281F153CC3009794AC /* AppDelegate.swift in Sources */,
 				F9B8C7011D539328000724FC /* LiveStreamViewController.swift in Sources */,
 				63EE30DF1CD025AC00B64D3D /* EventListCell.swift in Sources */,
+				0183202E1F155F9A009794AC /* UIViewController.swift in Sources */,
 				4C81B70B1D75E7B500DFB89C /* SponsorImage.swift in Sources */,
 				63EE30CC1CC5E1BD00B64D3D /* CheckLoginController.swift in Sources */,
-				63EE30D41CC7DDB800B64D3D /* UIViewController+Utils.m in Sources */,
+				018320301F156ADA009794AC /* PlatformContext_iOS.swift in Sources */,
 				FA6128C51C986E87001142E8 /* EventTableViewCell.swift in Sources */,
+				018320261F152215009794AC /* ViewController.swift in Sources */,
 				63EE30D01CC6AD4400B64D3D /* WelcomeViewController.swift in Sources */,
-				FA86A7F81C91EDDE00C09CE7 /* PlatformContext_iOS.m in Sources */,
-				631B98F61C7D6533008AA20D /* ViewController.m in Sources */,
 				F9D6952D1D47AF9D0095F0F9 /* AboutViewController.swift in Sources */,
 				4CFD936D1D8355630018C837 /* OnboardingHeaderView.swift in Sources */,
-				631B98F31C7D6533008AA20D /* AppDelegate.m in Sources */,
+				0183202C1F155D86009794AC /* NoteTableViewCell.swift in Sources */,
 				4C81B7131D7616C500DFB89C /* SponsorsViewController.swift in Sources */,
 				4C81B70F1D76162000DFB89C /* SponsorPhotoCell.swift in Sources */,
-				FA258F641C9381C600986E0D /* NoteTableViewCell.m in Sources */,
 				FAE033A61C974C65001C50E1 /* ShowEventDetailViewController.swift in Sources */,
 				4C0769921D8339A0003DD320 /* OnboardingPhotoCell.swift in Sources */,
 				F92EB65C1D5B7D3B003B47B7 /* Welcome4ViewController.swift in Sources */,
 				FA6128BF1C986E05001142E8 /* SpeakerTableViewCell.swift in Sources */,
 				F9903FA21D3FBEC70050687E /* DroidconTabBarViewController.swift in Sources */,
 				F92EB65A1D5A5EEC003B47B7 /* WelcomePageViewController.swift in Sources */,
-				631B98F01C7D6533008AA20D /* main.m in Sources */,
 				63EE30CE1CC6985800B64D3D /* StartScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -6764,7 +6722,6 @@
 				63B30F581F0D4AB7005345C3 /* DCDBlock$Configuration.m in Sources */,
 				63B313211F0D4ABA005345C3 /* RxInternalUtilUnsafeBaseLinkedQueueProducerNodeRef.m in Sources */,
 				63B312A51F0D4AB9005345C3 /* RxInternalOperatorsSingleOnSubscribeDelaySubscriptionOther.m in Sources */,
-				63B30EC81F0D4AB7005345C3 /* AndroidSupportAnnotationMainThread.m in Sources */,
 				63B311CD1F0D4AB9005345C3 /* RxInternalOperatorsOnSubscribeJoin.m in Sources */,
 				63B313951F0D4ABA005345C3 /* RxSubjectsAsyncSubject.m in Sources */,
 				63B314311F0D4ABB005345C3 /* CoTouchlabSqueakyFieldTypesStringType.m in Sources */,
@@ -7114,7 +7071,6 @@
 				63B314671F0D4ABB005345C3 /* CoTouchlabSqueakyStmtQueryQueryable.m in Sources */,
 				63B30EEE1F0D4AB7005345C3 /* AndroidUtilSize.m in Sources */,
 				63B30E861F0D4AB7005345C3 /* AndroidDatabaseSqliteSQLiteSession.m in Sources */,
-				63B30EC21F0D4AB7005345C3 /* AndroidSupportAnnotationCallSuper.m in Sources */,
 				63B30EF61F0D4AB7005345C3 /* ComAndroidInternalUtilGrowingArrayUtils.m in Sources */,
 				63B30F5A1F0D4AB7005345C3 /* DCDBlock.m in Sources */,
 				63B313D91F0D4ABA005345C3 /* CoTouchlabSqueakyFieldBaseFieldConverter.m in Sources */,
@@ -7352,7 +7308,6 @@
 				63B310D71F0D4AB8005345C3 /* RetrofitHttpPath.m in Sources */,
 				63B30FA01F0D4AB7005345C3 /* DCTStartWatchVideoTask.m in Sources */,
 				63B30F601F0D4AB7005345C3 /* DCDEvent.m in Sources */,
-				63B30ECE1F0D4AB7005345C3 /* AndroidSupportAnnotationRestrictTo.m in Sources */,
 				63B30F841F0D4AB7005345C3 /* DCPPlatformClient.m in Sources */,
 				63B313451F0D4ABA005345C3 /* RxObservablesConnectableObservable.m in Sources */,
 				63B30F441F0D4AB7005345C3 /* CoTouchlabDroidconandroidSharedTasksPersistedPersistedTaskQueueFactory.m in Sources */,
@@ -7424,7 +7379,6 @@
 				63B313DF1F0D4ABA005345C3 /* CoTouchlabSqueakyFieldDataType.m in Sources */,
 				63B310041F0D4AB8005345C3 /* ComGoogleGsonInternalConstructorConstructor.m in Sources */,
 				63B3124B1F0D4AB9005345C3 /* RxInternalOperatorsOperatorSingle.m in Sources */,
-				63B30ED21F0D4AB7005345C3 /* AndroidSupportAnnotationWorkerThread.m in Sources */,
 				63B3110D1F0D4AB8005345C3 /* RetrofitTypes.m in Sources */,
 				63B311AB1F0D4AB9005345C3 /* RxInternalOperatorsOnSubscribeCollect.m in Sources */,
 				63B311751F0D4AB8005345C3 /* RxFunctionspackage-info.m in Sources */,
@@ -7687,6 +7641,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS/Androidbase.framework/Headers",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
@@ -7727,6 +7682,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS/Androidbase.framework/Headers",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
