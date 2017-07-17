@@ -10,6 +10,7 @@ import io.reactivex.Observable;
 public class EventVideoDetailsInteractor {
     private final long eventId;
     private final VideoDetailsRequest request;
+    private Observable<EventVideoDetails> videoDetailsObservable;
 
     public EventVideoDetailsInteractor(VideoDetailsRequest request, long eventId) {
         this.request = request;
@@ -17,6 +18,10 @@ public class EventVideoDetailsInteractor {
     }
 
     public Observable<EventVideoDetails> getVideoDetails() {
-        return request.getEventVideoDetails(eventId);
+        if (videoDetailsObservable == null) {
+            videoDetailsObservable = request.getEventVideoDetails(eventId).cache();
+        }
+
+        return videoDetailsObservable;
     }
 }

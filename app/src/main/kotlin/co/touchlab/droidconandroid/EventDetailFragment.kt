@@ -1,5 +1,6 @@
 package co.touchlab.droidconandroid
 
+import android.arch.lifecycle.ViewModelProviders
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.res.ColorStateList
@@ -48,7 +49,8 @@ class EventDetailFragment : Fragment(), EventDetailHost {
 
         val helper = DatabaseHelper.getInstance(activity)
         val eventDetailsInteractor = EventDetailInteractor(helper, eventId)
-        EventDetailPresenter(eventDetailsInteractor, videoDetailsInteractor)
+        val factory = EventDetailPresenter.Factory(eventDetailsInteractor, videoDetailsInteractor)
+        ViewModelProviders.of(this, factory)[EventDetailPresenter::class.java]
     }
 
     private var trackColor: Int = 0

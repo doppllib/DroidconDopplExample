@@ -1,6 +1,7 @@
 package co.touchlab.droidconandroid.shared.presenter;
 
-import android.util.Log;
+import android.arch.lifecycle.ViewModel;
+import android.arch.lifecycle.ViewModelProvider;
 
 import com.google.j2objc.annotations.Weak;
 
@@ -9,9 +10,9 @@ import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.data.EventInfo;
 import co.touchlab.droidconandroid.shared.data.Venue;
 import co.touchlab.droidconandroid.shared.interactors.EventDetailInteractor;
+import co.touchlab.droidconandroid.shared.interactors.EventVideoDetailsInteractor;
 import co.touchlab.droidconandroid.shared.network.dao.EventVideoDetails;
 import co.touchlab.droidconandroid.shared.tasks.AddRsvpTask;
-import co.touchlab.droidconandroid.shared.interactors.EventVideoDetailsInteractor;
 import co.touchlab.droidconandroid.shared.tasks.RemoveRsvpTask;
 import co.touchlab.droidconandroid.shared.utils.AnalyticsEvents;
 import co.touchlab.droidconandroid.shared.utils.SlackUtils;
@@ -26,14 +27,14 @@ import static co.touchlab.droidconandroid.shared.presenter.AppManager.getContext
 /**
  * Created by kgalligan on 4/25/16.
  */
-public class EventDetailPresenter {
+public class EventDetailPresenter extends ViewModel {
     @Weak
     private EventDetailHost host;
     private EventDetailInteractor detailInteractor;
     private EventVideoDetailsInteractor videoInteractor;
     private CompositeDisposable disposables = new CompositeDisposable();
 
-    public EventDetailPresenter(EventDetailInteractor detailInteractor, EventVideoDetailsInteractor videoInteractor) {
+    private EventDetailPresenter(EventDetailInteractor detailInteractor, EventVideoDetailsInteractor videoInteractor) {
         this.detailInteractor = detailInteractor;
         this.videoInteractor = videoInteractor;
     }
@@ -47,13 +48,9 @@ public class EventDetailPresenter {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(eventInfo -> {
-                    Log.d("Success", "Successfully got stuff, " + eventInfo.event.getName());
                     recordAnalytics(AnalyticsEvents.OPEN_EVENT, eventInfo.event);
                     host.dataRefresh(eventInfo);
-                }, e -> {
-                    Log.d("Failure", "Failed to get things, " + e.getLocalizedMessage());
-                    host.reportError("Error getting event details");
-                }));
+                }, e -> host.reportError("Error getting event details")));
     }
 
     public void callStartVideo(String link, String cover) {
@@ -100,6 +97,7 @@ public class EventDetailPresenter {
         host = null;
     }
 
+    // TODO: Replace with RSVPTasks that work
 //    public void toggleRsvp()
 //    {
 //        if(! ready())
@@ -126,6 +124,7 @@ public class EventDetailPresenter {
         callStartVideo(link, cover);
     }
 
+    // FIXME: I think we're getting rid of Slack stuff
     public void openSlack() {
         disposables.add(detailInteractor.getEventVenue()
                 .subscribeOn(Schedulers.io())
@@ -140,5 +139,21 @@ public class EventDetailPresenter {
         host.openSlack(slackLink,
                 slackLinkHttp,
                 AppPrefs.getInstance(getContext()).getShowSlackDialog());
+    }
+
+    public static class Factory extends ViewModelProvider.NewInstanceFactory {
+        private final EventVideoDetailsInteractor videoInteractor;
+        private final EventDetailInteractor detailInteractor;
+
+        public Factory(EventDetailInteractor detailInteractor, EventVideoDetailsInteractor videoInteractor) {
+            this.videoInteractor = videoInteractor;
+            this.detailInteractor = detailInteractor;
+        }
+
+        @Override
+        public <T extends ViewModel> T create(Class<T> modelClass) {
+            //noinspection unchecked
+            return (T) new EventDetailPresenter(detailInteractor, videoInteractor);
+        }
     }
 }
