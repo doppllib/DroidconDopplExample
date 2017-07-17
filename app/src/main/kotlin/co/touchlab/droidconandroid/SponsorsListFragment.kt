@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.fragment_sponsors_list.*
 import java.util.*
 
 class SponsorsListFragment : Fragment(), SponsorsHost {
-    var adapter: SponsorsAdapter? = null
+    private lateinit var adapter: SponsorsAdapter
 
     companion object {
         private val SPONSOR_TYPE = "SPONSOR_TYPE"
@@ -95,17 +95,16 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
             }
         }
 
-
         // Create adapter and set on recyclerView
         adapter = SponsorsAdapter(activity)
-        adapter!!.addAll(finalList)
+        adapter.addAll(finalList)
         sponsor_list.adapter = adapter
 
         // Set Layout manager w/ a non-default span-size lookup
         val layoutManager = GridLayoutManager(activity, totalSpanCount)
         val spanSizeLookip: GridLayoutManager.SpanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
             override fun getSpanSize(position: Int): Int {
-                return adapter!!.getItemSpanSize(position)
+                return adapter.getItemSpanSize(position)
             }
         }
         spanSizeLookip.isSpanIndexCacheEnabled = false
