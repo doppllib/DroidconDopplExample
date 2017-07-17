@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import co.touchlab.android.threading.eventbus.EventBusExt
 import co.touchlab.droidconandroid.shared.network.DataHelper
+import co.touchlab.droidconandroid.shared.network.SponsorsRequest
 import co.touchlab.droidconandroid.shared.network.SponsorsResult
 import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.SponsorsHost
@@ -37,7 +38,8 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
 
     private val viewModel: SponsorsViewModel by lazy {
         val restAdapter = DataHelper.makeRequestAdapterBuilder(activity, AppManager.getPlatformClient(), BuildConfig.AMAZON_URL, null).build()
-        val task = SponsorsTask(restAdapter)
+        val sponsorsRequest = restAdapter.create(SponsorsRequest::class.java)
+        val task = SponsorsTask(sponsorsRequest)
         val factory = SponsorsViewModel.Factory(task)
         ViewModelProviders.of(this, factory).get(SponsorsViewModel::class.java)
     }
