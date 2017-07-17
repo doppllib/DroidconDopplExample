@@ -19,6 +19,7 @@
     <string name="action_settings">Settings</string>
 
     <string name="network_error">Network problems...</string>
+    <string name="user_not_found_error">User not found</string>
 
     <!-- drawer copy-->
     <string name="navigation_drawer_open">Open</string>

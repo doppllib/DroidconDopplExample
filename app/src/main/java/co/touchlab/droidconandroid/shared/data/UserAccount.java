@@ -201,10 +201,10 @@ public class UserAccount
         return result;
     }
 
-    public static UserAccount findByCode(DatabaseHelper databaseHelper, String code) throws SQLException
+    public static UserAccount findByCode(DatabaseHelper databaseHelper, long userId) throws SQLException
     {
         Dao<UserAccount> dao = databaseHelper.getUserAccountDao();
-        List<UserAccount> list = new Where(dao).eq("userCode", code).query().list();
+        List<UserAccount> list = new Where(dao).eq("id", userId).query().list();
         return list.size() == 0 ? null : list.get(0);
     }
 
