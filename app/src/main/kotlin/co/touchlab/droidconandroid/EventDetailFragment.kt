@@ -27,7 +27,7 @@ import co.touchlab.droidconandroid.shared.network.VideoDetailsRequest
 import co.touchlab.droidconandroid.shared.network.dao.EventVideoDetails
 import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.EventDetailHost
-import co.touchlab.droidconandroid.shared.presenter.EventDetailPresenter
+import co.touchlab.droidconandroid.shared.presenter.EventDetailViewModel
 import co.touchlab.droidconandroid.shared.tasks.AddRsvpTask
 import co.touchlab.droidconandroid.shared.tasks.RemoveRsvpTask
 import kotlinx.android.synthetic.main.fragment_event_detail.*
@@ -42,15 +42,15 @@ class EventDetailFragment : Fragment(), EventDetailHost {
 
     private val eventId: Long by lazy { findEventIdArg() }
 
-    private val presenter: EventDetailPresenter by lazy {
+    private val viewModel: EventDetailViewModel by lazy {
         val retrofit = DataHelper.makeRetrofit2Client(AppManager.getPlatformClient().baseUrl())
         val videoDetailsRequest = retrofit.create(VideoDetailsRequest::class.java)
         val videoDetailsInteractor = EventVideoDetailsInteractor(videoDetailsRequest, eventId)
 
         val helper = DatabaseHelper.getInstance(activity)
         val eventDetailsInteractor = EventDetailInteractor(helper, eventId)
-        val factory = EventDetailPresenter.Factory(eventDetailsInteractor, videoDetailsInteractor)
-        ViewModelProviders.of(this, factory)[EventDetailPresenter::class.java]
+        val factory = EventDetailViewModel.Factory(eventDetailsInteractor, videoDetailsInteractor)
+        ViewModelProviders.of(this, factory)[EventDetailViewModel::class.java]
     }
 
     private var trackColor: Int = 0
@@ -86,7 +86,7 @@ class EventDetailFragment : Fragment(), EventDetailHost {
 
     override fun onDestroy() {
         super.onDestroy()
-        presenter.unregister()
+        viewModel.unregister()
     }
 
     private fun findEventIdArg(): Long {
@@ -121,8 +121,8 @@ class EventDetailFragment : Fragment(), EventDetailHost {
 
     override fun onResume() {
         super.onResume()
-        presenter.register(this)
-        presenter.getDetails()
+        viewModel.register(this)
+        viewModel.getDetails()
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
@@ -182,7 +182,7 @@ class EventDetailFragment : Fragment(), EventDetailHost {
                 if (email!!.isNotEmpty()) {
                     buttonText = getString(R.string.proceed)
                     dialog.setButton(AlertDialog.BUTTON_POSITIVE, buttonText, { _, _ ->
-                        presenter.setEventbriteEmail(email.toString(), link, cover)
+                        viewModel.setEventbriteEmail(email.toString(), link, cover)
                     })
                 } else {
                     buttonText = getString(R.string.buy_ticket)
@@ -254,7 +254,7 @@ class EventDetailFragment : Fragment(), EventDetailHost {
      * Adds all the content to the recyclerView
      */
     private fun updateContent(event: Event, videoDetails: EventVideoDetails, speakers: List<UserAccount>?, conflict: Boolean) {
-        val adapter = EventDetailAdapter(activity, presenter, trackColor)
+        val adapter = EventDetailAdapter(activity, viewModel, trackColor)
 
         //Construct the time and venue string and add it to the adapter
         var formattedStart = event.startDateLong!!.formatDate(TIME_FORMAT)

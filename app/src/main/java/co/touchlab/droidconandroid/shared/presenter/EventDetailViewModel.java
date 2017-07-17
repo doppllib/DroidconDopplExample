@@ -27,14 +27,14 @@ import static co.touchlab.droidconandroid.shared.presenter.AppManager.getContext
 /**
  * Created by kgalligan on 4/25/16.
  */
-public class EventDetailPresenter extends ViewModel {
+public class EventDetailViewModel extends ViewModel {
     @Weak
     private EventDetailHost host;
     private EventDetailInteractor detailInteractor;
     private EventVideoDetailsInteractor videoInteractor;
     private CompositeDisposable disposables = new CompositeDisposable();
 
-    private EventDetailPresenter(EventDetailInteractor detailInteractor, EventVideoDetailsInteractor videoInteractor) {
+    private EventDetailViewModel(EventDetailInteractor detailInteractor, EventVideoDetailsInteractor videoInteractor) {
         this.detailInteractor = detailInteractor;
         this.videoInteractor = videoInteractor;
     }
@@ -153,7 +153,7 @@ public class EventDetailPresenter extends ViewModel {
         @Override
         public <T extends ViewModel> T create(Class<T> modelClass) {
             //noinspection unchecked
-            return (T) new EventDetailPresenter(detailInteractor, videoInteractor);
+            return (T) new EventDetailViewModel(detailInteractor, videoInteractor);
         }
     }
 }
