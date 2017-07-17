@@ -1,25 +1,23 @@
-package co.touchlab.droidconandroid.shared.tasks;
+package co.touchlab.droidconandroid.shared.interactors;
 
 import co.touchlab.droidconandroid.shared.network.SponsorsRequest;
 import co.touchlab.droidconandroid.shared.network.SponsorsResult;
-import retrofit2.Retrofit;
-import hu.akarnokd.rxjava.interop.RxJavaInterop;
 import io.reactivex.Observable;
 
-public class SponsorsTask {
+public class SponsorsInteractor {
     public static final int SPONSOR_GENERAL = 0;
     public static final int SPONSOR_STREAMING = 1;
     public static final int SPONSOR_PARTY = 2;
 
     private final SponsorsRequest request;
 
-    public SponsorsTask(SponsorsRequest request) {
+    public SponsorsInteractor(SponsorsRequest request) {
         this.request = request;
     }
 
     public Observable<SponsorsResult> getSponsors(int type) {
         String fileName = getFileName(type);
-        return RxJavaInterop.toV2Observable(request.getSponsors(fileName));
+        return request.getSponsors(fileName);
     }
 
     private String getFileName(int type) {

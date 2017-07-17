@@ -6,17 +6,17 @@ import android.support.annotation.NonNull;
 
 import javax.annotation.Nonnull;
 
-import co.touchlab.droidconandroid.shared.tasks.SponsorsTask;
+import co.touchlab.droidconandroid.shared.interactors.SponsorsInteractor;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
 
 public class SponsorsViewModel extends ViewModel {
-    private final SponsorsTask task;
+    private final SponsorsInteractor task;
     private SponsorsHost host;
     private CompositeDisposable disposables = new CompositeDisposable();
 
-    private SponsorsViewModel(@Nonnull SponsorsTask task) {
+    private SponsorsViewModel(@Nonnull SponsorsInteractor task) {
         this.task = task;
     }
 
@@ -38,9 +38,9 @@ public class SponsorsViewModel extends ViewModel {
     }
 
     public static class Factory extends ViewModelProvider.NewInstanceFactory {
-        private final SponsorsTask task;
+        private final SponsorsInteractor task;
 
-        public Factory(SponsorsTask task) {
+        public Factory(SponsorsInteractor task) {
             this.task = task;
         }
 

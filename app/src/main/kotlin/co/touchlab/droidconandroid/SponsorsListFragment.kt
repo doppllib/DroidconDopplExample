@@ -9,14 +9,12 @@ import android.util.SparseIntArray
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import co.touchlab.android.threading.eventbus.EventBusExt
+import co.touchlab.droidconandroid.shared.interactors.SponsorsInteractor
 import co.touchlab.droidconandroid.shared.network.DataHelper
 import co.touchlab.droidconandroid.shared.network.SponsorsRequest
 import co.touchlab.droidconandroid.shared.network.SponsorsResult
-import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.SponsorsHost
 import co.touchlab.droidconandroid.shared.presenter.SponsorsViewModel
-import co.touchlab.droidconandroid.shared.tasks.SponsorsTask
 import co.touchlab.droidconandroid.ui.SponsorsAdapter
 import kotlinx.android.synthetic.main.fragment_sponsors_list.*
 import java.util.*
@@ -37,9 +35,9 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
     }
 
     private val viewModel: SponsorsViewModel by lazy {
-        val restAdapter = DataHelper.makeRequestAdapterBuilder(activity, AppManager.getPlatformClient(), BuildConfig.AMAZON_URL, null).build()
+        val restAdapter = DataHelper.makeRetrofit2Client(BuildConfig.AMAZON_URL)
         val sponsorsRequest = restAdapter.create(SponsorsRequest::class.java)
-        val task = SponsorsTask(sponsorsRequest)
+        val task = SponsorsInteractor(sponsorsRequest)
         val factory = SponsorsViewModel.Factory(task)
         ViewModelProviders.of(this, factory).get(SponsorsViewModel::class.java)
     }
@@ -61,7 +59,7 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
 
     override fun onStop() {
         super.onStop()
-        EventBusExt.getDefault()!!.unregister(this)
+        viewModel.unregister()
     }
 
     override fun onSponsorsFound(sponsorResult: SponsorsResult) {
