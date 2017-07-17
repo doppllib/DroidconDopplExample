@@ -25,7 +25,6 @@ import co.touchlab.droidconandroid.shared.presenter.EventDetailPresenter
 import co.touchlab.droidconandroid.shared.tasks.AddRsvpTask
 import co.touchlab.droidconandroid.shared.tasks.EventVideoDetailsTask
 import co.touchlab.droidconandroid.shared.tasks.RemoveRsvpTask
-import co.touchlab.droidconandroid.shared.tasks.StartWatchVideoTask
 import kotlinx.android.synthetic.main.fragment_event_detail.*
 import kotlinx.android.synthetic.main.view_streaming_email_dialog.view.*
 import java.util.*
@@ -184,13 +183,6 @@ class EventDetailFragment : Fragment(), EventDetailHost {
             override fun afterTextChanged(s: Editable?) {
             }
         })
-    }
-
-    override fun callStreamActivity(detail: StartWatchVideoTask) {
-        val intent = Intent(context, VideoActivity::class.java)
-        intent.putExtra(EXTRA_STREAM_LINK, detail.link)
-        intent.putExtra(EXTRA_STREAM_COVER, detail.cover)
-        context.startActivity(intent)
     }
 
     override fun resetStreamProgress() { recycler.adapter?.notifyDataSetChanged() }

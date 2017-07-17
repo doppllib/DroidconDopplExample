@@ -2,6 +2,7 @@ package co.touchlab.droidconandroid.shared.tasks;
 
 import co.touchlab.droidconandroid.shared.network.SponsorsRequest;
 import co.touchlab.droidconandroid.shared.network.SponsorsResult;
+import retrofit2.Retrofit;
 import hu.akarnokd.rxjava.interop.RxJavaInterop;
 import io.reactivex.Observable;
 

@@ -1,4 +1,5 @@
 package co.touchlab.droidconandroid.shared.tasks;
+
 import android.content.Context;
 
 import co.touchlab.android.threading.eventbus.EventBusExt;
@@ -9,7 +10,7 @@ import co.touchlab.droidconandroid.shared.network.RefreshScheduleDataRequest;
 import co.touchlab.droidconandroid.shared.network.dao.EventVideoDetails;
 import co.touchlab.droidconandroid.shared.presenter.AppManager;
 import co.touchlab.droidconandroid.shared.utils.StringUtils;
-import retrofit.RestAdapter;
+import retrofit2.Retrofit;
 
 /**
  * Created by kgalligan on 9/14/16.
@@ -43,11 +44,10 @@ public class EventVideoDetailsTask extends Task
     @Override
     protected void run(Context context) throws Throwable
     {
-        RestAdapter restAdapter = DataHelper.makeRequestAdapter(context,
-                AppManager.getPlatformClient());
+        Retrofit restAdapter = DataHelper.makeRetrofit2Client(AppManager.getPlatformClient().baseUrl());
         RefreshScheduleDataRequest refreshScheduleDataRequest = restAdapter.create(
                 RefreshScheduleDataRequest.class);
-        eventVideoDetails = refreshScheduleDataRequest.getEventVideoDetails(eventId);
+        eventVideoDetails = refreshScheduleDataRequest.getEventVideoDetails(eventId).execute().body();
     }
 
     @Override
