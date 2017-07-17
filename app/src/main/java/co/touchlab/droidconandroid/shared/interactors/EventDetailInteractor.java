@@ -45,7 +45,7 @@ public class EventDetailInteractor {
         return getEvent(eventDao).map(event -> event.venue);
     }
 
-    public Single<Event> getEvent(Dao<Event> eventDao) {
+    private Single<Event> getEvent(Dao<Event> eventDao) {
         return Single.fromCallable(() -> eventDao.queryForId(eventId));
     }
 
