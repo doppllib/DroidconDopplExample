@@ -35,10 +35,12 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
         }
     }
 
+    private val type: Int by lazy { arguments.getInt(SPONSOR_TYPE) }
+
     private val viewModel: SponsorsViewModel by lazy {
         val restAdapter = DataHelper.makeRetrofit2Client(BuildConfig.AMAZON_URL)
         val sponsorsRequest = restAdapter.create(SponsorsRequest::class.java)
-        val task = SponsorsInteractor(sponsorsRequest)
+        val task = SponsorsInteractor(sponsorsRequest, type)
         val factory = SponsorsViewModel.Factory(task)
         ViewModelProviders.of(this, factory).get(SponsorsViewModel::class.java)
     }
@@ -53,9 +55,8 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
 
     override fun onStart() {
         super.onStart()
-        val type = arguments.getInt(SPONSOR_TYPE)
         viewModel.register(this)
-        viewModel.getSponsors(type)
+        viewModel.getSponsors()
     }
 
     override fun onStop() {

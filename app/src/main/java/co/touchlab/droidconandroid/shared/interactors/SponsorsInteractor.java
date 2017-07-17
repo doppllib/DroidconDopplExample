@@ -10,14 +10,21 @@ public class SponsorsInteractor {
     public static final int SPONSOR_PARTY = 2;
 
     private final SponsorsRequest request;
+    private final int type;
+    private Observable<SponsorsResult> sponsorsObservable;
 
-    public SponsorsInteractor(SponsorsRequest request) {
+    public SponsorsInteractor(SponsorsRequest request, int type) {
         this.request = request;
+        this.type = type;
     }
 
-    public Observable<SponsorsResult> getSponsors(int type) {
-        String fileName = getFileName(type);
-        return request.getSponsors(fileName);
+    public Observable<SponsorsResult> getSponsors() {
+        if (sponsorsObservable == null) {
+            String fileName = getFileName(type);
+            sponsorsObservable = request.getSponsors(fileName).cache();
+        }
+
+        return sponsorsObservable;
     }
 
     private String getFileName(int type) {

@@ -24,8 +24,8 @@ public class SponsorsViewModel extends ViewModel {
         this.host = host;
     }
 
-    public void getSponsors(int type) {
-        disposables.add(task.getSponsors(type)
+    public void getSponsors() {
+        disposables.add(task.getSponsors()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(host::onSponsorsFound,
