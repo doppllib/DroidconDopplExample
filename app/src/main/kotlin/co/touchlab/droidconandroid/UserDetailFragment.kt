@@ -11,7 +11,6 @@ import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.text.Html
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -78,20 +77,14 @@ class UserDetailFragment : Fragment() {
             userCode = activity.intent.getStringExtra(USER_CODE)
         }
 
-        if (userCode.isNullOrBlank()) {
-            Log.e(TAG, "Must set user code")
-            Toaster.showMessage(activity, getString(R.string.no_user_code_error))
-
-            if (activity is UserDetailActivity)
-                (activity as UserDetailActivity).onFragmentFinished()
-        }
+        if (userCode.isNullOrBlank())
+            throw IllegalArgumentException("Must set user code")
 
         return userCode!!
     }
 
     fun onEventMainThread(findUserTask: AbstractFindUserTask) {
         if (findUserTask.isError) {
-            Log.e(TAG, "User not found")
             Toaster.showMessage(activity, getString(R.string.network_error))
 
             if (activity is UserDetailActivity)
