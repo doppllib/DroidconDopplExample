@@ -11,19 +11,23 @@ import android.support.v4.content.ContextCompat
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.text.*
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import co.touchlab.android.threading.tasks.TaskQueue
-import co.touchlab.droidconandroid.shared.data.Event
-import co.touchlab.droidconandroid.shared.data.Track
-import co.touchlab.droidconandroid.shared.data.UserAccount
+import co.touchlab.droidconandroid.shared.data.*
+import co.touchlab.droidconandroid.shared.interactors.EventDetailInteractor
+import co.touchlab.droidconandroid.shared.interactors.EventVideoDetailsInteractor
+import co.touchlab.droidconandroid.shared.network.DataHelper
+import co.touchlab.droidconandroid.shared.network.VideoDetailsRequest
+import co.touchlab.droidconandroid.shared.network.dao.EventVideoDetails
+import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.EventDetailHost
 import co.touchlab.droidconandroid.shared.presenter.EventDetailPresenter
 import co.touchlab.droidconandroid.shared.tasks.AddRsvpTask
-import co.touchlab.droidconandroid.shared.tasks.EventVideoDetailsTask
 import co.touchlab.droidconandroid.shared.tasks.RemoveRsvpTask
 import kotlinx.android.synthetic.main.fragment_event_detail.*
 import kotlinx.android.synthetic.main.view_streaming_email_dialog.view.*
@@ -34,7 +38,19 @@ import java.util.*
  */
 
 class EventDetailFragment : Fragment(), EventDetailHost {
-    private val presenter: EventDetailPresenter by lazy { EventDetailPresenter(context, findEventIdArg(), this) }
+
+    private val eventId: Long by lazy { findEventIdArg() }
+
+    private val presenter: EventDetailPresenter by lazy {
+        val retrofit = DataHelper.makeRetrofit2Client(AppManager.getPlatformClient().baseUrl())
+        val videoDetailsRequest = retrofit.create(VideoDetailsRequest::class.java)
+        val videoDetailsInteractor = EventVideoDetailsInteractor(videoDetailsRequest, eventId)
+
+        val helper = DatabaseHelper.getInstance(activity)
+        val eventDetailsInteractor = EventDetailInteractor(helper, eventId)
+        EventDetailPresenter(eventDetailsInteractor, videoDetailsInteractor)
+    }
+
     private var trackColor: Int = 0
     private var fabColorList: ColorStateList? = null
 
@@ -64,13 +80,11 @@ class EventDetailFragment : Fragment(), EventDetailHost {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        EventBusExt.getDefault() !!.register(this)
     }
 
     override fun onDestroy() {
         super.onDestroy()
         presenter.unregister()
-//        EventBusExt.getDefault() !!.unregister(this)
     }
 
     private fun findEventIdArg(): Long {
@@ -105,7 +119,8 @@ class EventDetailFragment : Fragment(), EventDetailHost {
 
     override fun onResume() {
         super.onResume()
-        presenter.refreshData()
+        presenter.register(this)
+        presenter.getDetails()
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
@@ -121,22 +136,17 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         updateTrackColor(findTrackIdArg())
     }
 
-    override fun videoDataRefresh() {
-        dataRefresh()
-    }
+    override fun dataRefresh(eventInfo: EventInfo) {
 
-    override fun dataRefresh() {
-        if (presenter.eventDetailLoadTask.eventId != findEventIdArg()) return
-
-        val event = presenter.eventDetailLoadTask.event
+        val event = eventInfo.event
 
         updateTrackColor(event.category)
         updateFAB(event)
 
         updateContent(event,
-                presenter.eventVideoDetailsTask,
-                presenter.eventDetailLoadTask.speakers,
-                presenter.eventDetailLoadTask.conflict)
+                eventInfo.videoDetails,
+                eventInfo.speakers,
+                eventInfo.conflict)
     }
 
     override fun reportError(error: String) {
@@ -241,7 +251,7 @@ class EventDetailFragment : Fragment(), EventDetailHost {
     /**
      * Adds all the content to the recyclerView
      */
-    private fun updateContent(event: Event, videoDetailsTask: EventVideoDetailsTask?, speakers: List<UserAccount>?, conflict: Boolean) {
+    private fun updateContent(event: Event, videoDetails: EventVideoDetails, speakers: List<UserAccount>?, conflict: Boolean) {
         val adapter = EventDetailAdapter(activity, presenter, trackColor)
 
         //Construct the time and venue string and add it to the adapter
@@ -257,8 +267,8 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         val venueFormatString = resources.getString(R.string.event_venue_time)
         adapter.addHeader(event.name, venueFormatString.format(event.venue.name, formattedStart, formattedEnd))
 
-        if (videoDetailsTask != null && videoDetailsTask.hasStream())
-            adapter.addStream(videoDetailsTask.mergedStreamLink, "", videoDetailsTask.isNow)
+        if (videoDetails.hasStream())
+            adapter.addStream(videoDetails.mergedStreamLink, "", videoDetails.isNow)
 
         if (event.isNow)
             adapter.addInfo("<i><b>" + resources.getString(R.string.event_now) + "</b></i>")
