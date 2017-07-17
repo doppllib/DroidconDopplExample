@@ -13,12 +13,15 @@ buildscript {
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'co.doppl.gradle'
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
-def baseurl = properties.getProperty('baseurl')
+def baseurl = properties.hasProperty('baseurl') ?
+        properties.getProperty('baseurl') :
+        'https://droidcon-server.herokuapp.com/'
+
 def releasePassword = properties.getProperty('releasePassword')
 def jwLicenseKey = properties.getProperty('jwLicenseKey')
 
@@ -36,6 +39,11 @@ android {
         buildConfigField "String", "BASE_URL", "\"$baseurl\""
         resValue "string", "jw_license_key", "$jwLicenseKey"
         vectorDrawables.useSupportLibrary = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     signingConfigs {
@@ -82,6 +90,9 @@ android {
         exclude 'META-INF/maven/org.apache.commons/commons-lang3/pom.xml'
         exclude 'META-INF/maven/org.apache.commons/commons-lang3/pom.properties'
         exclude 'jsr305_annotations/Jsr305_annotations.gwt.xml'
+        // avoid "DuplicateFileException caused by having both RxJava 1.0 and 2.0 side by side
+        exclude 'META-INF/rxjava.properties'
+
     }
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -93,6 +104,7 @@ android {
 }
 
 def supportVersion = "25.3.1"
+def archVer = "1.0.0-alpha1"
 
 dependencies {
 
@@ -119,6 +131,10 @@ dependencies {
     compile "com.android.support:cardview-v7:$supportVersion"
     compile "com.android.support:customtabs:$supportVersion"
 
+    compile "android.arch.lifecycle:runtime:$archVer"
+    compile "android.arch.lifecycle:extensions:$archVer"
+    annotationProcessor "android.arch.lifecycle:compiler:$archVer"
+
     compile 'com.google.code.findbugs:jsr305:3.0.2'
 
     //Shared code dependencies
@@ -129,6 +145,10 @@ dependencies {
 
     compile 'de.greenrobot:eventbus:2.4.0'
     doppl 'co.doppl.de.greenrobot:eventbus:2.4.0.4'
+
+    compile 'io.reactivex:rxjava:1.3.0'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile "com.github.akarnokd:rxjava2-interop:0.10.1"
 
     compile 'co.touchlab:magicthreads:0.9.3'
     doppl 'co.touchlab:magicthreads:0.9.3.0'
