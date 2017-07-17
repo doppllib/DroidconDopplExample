@@ -18,7 +18,7 @@ apply plugin: 'co.doppl.gradle'
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
-def baseurl = properties.getProperty('baseurl')
+def baseurl = properties.hasProperty('baseurl') ? properties.getProperty('baseurl') : 'https://droidcon-server.herokuapp.com/'
 def amazonurl = properties.getProperty('amazonurl')
 def releasePassword = properties.getProperty('releasePassword')
 def jwLicenseKey = properties.getProperty('jwLicenseKey')
