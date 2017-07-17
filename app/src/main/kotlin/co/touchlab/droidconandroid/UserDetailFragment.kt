@@ -17,11 +17,11 @@ import android.view.View
 import android.view.ViewGroup
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper
 import co.touchlab.droidconandroid.shared.data.UserAccount
+import co.touchlab.droidconandroid.shared.interactors.FindUserInteractor
 import co.touchlab.droidconandroid.shared.network.DataHelper
 import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.UserDetailHost
 import co.touchlab.droidconandroid.shared.presenter.UserDetailViewModel
-import co.touchlab.droidconandroid.shared.tasks.FindUserTask
 import co.touchlab.droidconandroid.shared.utils.EmojiUtil
 import co.touchlab.droidconandroid.utils.Toaster
 import com.squareup.picasso.Callback
@@ -50,7 +50,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
     private val viewModel: UserDetailViewModel by lazy {
         val helper = DatabaseHelper.getInstance(activity)
         val restAdapter = DataHelper.makeRequestAdapter(activity, AppManager.getPlatformClient())
-        val task = FindUserTask(helper, restAdapter, findUserId())
+        val task = FindUserInteractor(helper, restAdapter, findUserId())
         val factory = UserDetailViewModel.Factory(task)
         ViewModelProviders.of(this, factory)[UserDetailViewModel::class.java]
     }
@@ -83,13 +83,13 @@ class UserDetailFragment : Fragment(), UserDetailHost {
     private fun findUserId(): Long {
         val userId = activity.intent.getLongExtra(UserDetailActivity.USER_ID, 0L)
         if (userId == 0L)
-            throw IllegalArgumentException("Must set user id")
+            findUserError()
 
         return userId
     }
 
     override fun findUserError() {
-        Toaster.showMessage(activity, getString(R.string.network_error))
+        Toaster.showMessage(activity, getString(R.string.user_not_found_error))
 
         if (activity is UserDetailActivity)
             (activity as UserDetailActivity).onFragmentFinished()

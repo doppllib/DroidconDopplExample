@@ -19,6 +19,7 @@
     <string name="action_settings">Settings</string>
 
     <string name="network_error">Network problems...</string>
+    <string name="user_not_found_error">User not found</string>
 
     <!-- drawer copy-->
     <string name="navigation_drawer_open">Open</string>
@@ -138,9 +139,9 @@
     <string name="title_activity_sponsors">OUR AWESOME SPONSORS</string>
     <string name="sponsor_image">Sponsor Image</string>
 
-    <string name="sponsors_tab_general">GENERAL &#x1F60E;</string>
-    <string name="sponsors_tab_streaming">STREAMING &#x1F4FA;</string>
-    <string name="sponsors_tab_party">PARTY &#x1F389;</string>
+    <string name="sponsors_tab_general">GENERAL&#160;</string>
+    <string name="sponsors_tab_streaming">STREAMING&#160;</string>
+    <string name="sponsors_tab_party">PARTY&#160;</string>
 
     <!-- URL -->
     <string name="sponsor_image_url">file:///android_asset/sponsors/%1$s.png</string>
