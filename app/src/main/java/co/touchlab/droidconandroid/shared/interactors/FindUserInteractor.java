@@ -14,7 +14,7 @@ import io.reactivex.Observable;
  */
 public class FindUserInteractor {
     private final DatabaseHelper helper;
-    private FindUserRequest request;
+    private final FindUserRequest request;
     private final long userId;
     private Observable<UserAccount> userAccountObservable = null;
 
