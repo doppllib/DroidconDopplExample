@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import co.touchlab.droidconandroid.shared.data.UserAccount
-import co.touchlab.droidconandroid.shared.presenter.EventDetailPresenter
+import co.touchlab.droidconandroid.shared.presenter.EventDetailViewModel
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_event_header.view.*
 import kotlinx.android.synthetic.main.item_event_info.view.*
@@ -23,7 +23,7 @@ import java.util.*
  */
 
 class EventDetailAdapter(private val context: Context,
-                         private val presenter: EventDetailPresenter,
+                         private val viewModel: EventDetailViewModel,
                          private val trackColor: Int) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     //dataset
     private var data = ArrayList<Detail>()
@@ -112,14 +112,14 @@ class EventDetailAdapter(private val context: Context,
                 val view = (holder as StreamVH).itemView
                 val detail = data[position] as StreamDetail
                 view.streamNow.setOnClickListener {
-                    presenter.callStartVideo(detail.link, detail.cover)
+                    viewModel.callStartVideo(detail.link, detail.cover)
                     notifyDataSetChanged()
                 }
                 view.streamNotNow.setOnClickListener {
-                    presenter.callStartVideo(detail.link, detail.cover)
+                    viewModel.callStartVideo(detail.link, detail.cover)
                     notifyDataSetChanged()
                 }
-                view.slackButton.setOnClickListener { presenter.openSlack() }
+                view.slackButton.setOnClickListener { viewModel.openSlack() }
 
                 view.streamLoading.visibility = View.GONE
                 if (detail.liveNow) {
