@@ -132,27 +132,6 @@ class UserDetailFragment : Fragment(), UserDetailHost {
             name.text = userAccount.name
         }
 
-        if (!userAccount.phone.isNullOrBlank()) {
-            phone.text = userAccount.phone
-            phone.setOnClickListener {
-                val intent = Intent(Intent.ACTION_DIAL)
-                intent.data = Uri.parse(PHONE_PREFIX + userAccount.phone)
-                if (intent.resolveActivity(activity.packageManager) != null) {
-                    startActivity(intent)
-                }
-            }
-            phone.visibility = View.VISIBLE
-        } else if (!userAccount.email.isNullOrBlank() && userAccount.emailPublic != null && userAccount.emailPublic) {
-            email.text = userAccount.email
-
-            email.setOnClickListener {
-                val emailIntent = Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                        "mailto", userAccount.email, null))
-                startActivity(emailIntent)
-            }
-            email.visibility = View.VISIBLE
-        }
-
         if (!userAccount.company.isNullOrBlank()) {
             company.text = userAccount.company
             company.visibility = View.VISIBLE
@@ -237,18 +216,6 @@ class UserDetailFragment : Fragment(), UserDetailHost {
                     R.drawable.vic_person_add_black_24dp)
             contactDrawable.colorFilter = PorterDuffColorFilter(darkVibrantColor,
                     PorterDuff.Mode.SRC_IN)
-
-            val phoneDrawable = ContextCompat.getDrawable(activity,
-                    R.drawable.vic_phone_black_24dp)
-            phoneDrawable.colorFilter = PorterDuffColorFilter(darkVibrantColor,
-                    PorterDuff.Mode.SRC_IN)
-            phone.setCompoundDrawablesWithIntrinsicBounds(phoneDrawable, null, null, null)
-
-            val emailDrawable = ContextCompat.getDrawable(activity,
-                    R.drawable.vic_email_black_24dp)
-            emailDrawable.colorFilter = PorterDuffColorFilter(darkVibrantColor,
-                    PorterDuff.Mode.SRC_IN)
-            email.setCompoundDrawablesWithIntrinsicBounds(emailDrawable, null, null, null)
 
             val companyDrawable = ContextCompat.getDrawable(activity,
                     R.drawable.vic_company_black_24dp)
