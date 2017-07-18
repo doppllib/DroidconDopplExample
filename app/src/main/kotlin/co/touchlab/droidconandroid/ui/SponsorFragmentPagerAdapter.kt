@@ -23,14 +23,17 @@ class SponsorFragmentPagerAdapter(private val context: Context, fm: FragmentMana
     override fun getPageTitle(position: Int): CharSequence {
         return when (position) {
             // Emoji not supported in xml for anything below Android 6.0
-            SponsorsInteractor.SPONSOR_GENERAL -> context.getString(R.string.sponsors_tab_general) + String(Character.toChars(0x1F60E))
-            SponsorsInteractor.SPONSOR_STREAMING -> context.getString(R.string.sponsors_tab_streaming) + String(Character.toChars(0x1F4FA))
-            SponsorsInteractor.SPONSOR_PARTY -> context.getString(R.string.sponsors_tab_party) + String(Character.toChars(0x1F389))
+            SponsorsTask.SPONSOR_GENERAL -> context.getString(R.string.sponsors_tab_general) + String(Character.toChars(UNICODE_COOL_EMOJI))
+            SponsorsTask.SPONSOR_STREAMING -> context.getString(R.string.sponsors_tab_streaming) + String(Character.toChars(UNICODE_TV_EMOJI))
+            SponsorsTask.SPONSOR_PARTY -> context.getString(R.string.sponsors_tab_party) + String(Character.toChars(UNICODE_PARTY_EMOJI))
             else -> super.getPageTitle(position)
         }
     }
 
     companion object {
         private val SPONSOR_COUNT = 3
+        private val UNICODE_COOL_EMOJI = 0x1F60E
+        private val UNICODE_TV_EMOJI = 0x1F4FA
+        private val UNICODE_PARTY_EMOJI = 0x1F389
     }
 }

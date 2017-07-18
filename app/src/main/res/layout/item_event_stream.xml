@@ -2,32 +2,29 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <FrameLayout android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:id="@+id/image"
                  android:layout_below="@id/subtitle"
-                 android:layout_marginLeft="@dimen/padding_large"
                  android:layout_marginStart="@dimen/padding_large"
                  android:layout_marginTop="@dimen/padding_large"
-                 android:contentDescription="@string/cd_stream_icon"
-    >
+                 android:contentDescription="@string/cd_stream_icon">
         <ImageView
             android:id="@+id/imageLive"
             android:layout_width="@dimen/event_entry_icon"
             android:layout_height="@dimen/event_entry_icon"
             android:tint="#FF0000"
-            android:src="@drawable/ic_videocam_black_24dp"
-        />
+            android:src="@drawable/ic_videocam_black_24dp"/>
 
         <ImageView
             android:id="@+id/imageNotLive"
             android:layout_width="@dimen/event_entry_icon"
             android:layout_height="@dimen/event_entry_icon"
             android:tint="@color/primary_dark_50"
-            android:src="@drawable/ic_videocam_black_24dp"
-        />
+            android:src="@drawable/ic_videocam_black_24dp"/>
     </FrameLayout>
 
 
@@ -39,7 +36,6 @@
         android:layout_gravity="center_vertical"
         android:layout_marginTop="@dimen/padding_tiny"
         android:layout_toEndOf="@id/image"
-        android:layout_toRightOf="@id/image"
         android:padding="@dimen/padding_large"
         android:text="@string/live_stream"
         android:textAllCaps="true"
@@ -56,7 +52,6 @@
         android:layout_gravity="center_vertical"
         android:layout_marginTop="@dimen/padding_tiny"
         android:layout_toEndOf="@id/image"
-        android:layout_toRightOf="@id/image"
         android:padding="@dimen/padding_large"
         android:text="@string/live_stream_now"
         android:textAllCaps="true"
@@ -73,7 +68,6 @@
         android:layout_gravity="center_vertical"
         android:layout_marginTop="@dimen/padding_tiny"
         android:layout_toEndOf="@id/image"
-        android:layout_toRightOf="@id/image"
         android:padding="@dimen/padding_large"
         android:text="@string/live_stream_loading"
         android:textAllCaps="true"
@@ -86,7 +80,6 @@
         android:id="@+id/slackButton"
         app:srcCompat="@drawable/vic_slack_24dp"
         android:tint="#FF0000"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
         android:layout_width="wrap_content"

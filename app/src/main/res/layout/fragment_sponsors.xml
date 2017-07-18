@@ -1,186 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:orientation="vertical"
-              android:paddingBottom="@dimen/height_small"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingBottom="@dimen/height_small">
     <ScrollView
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-android:layout_weight="1"
-        android:background="@color/white"
-        >
+        android:layout_weight="1"
+        android:background="@color/white">
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/google"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="24dp"
                 android:layout_marginTop="24dp"
                 android:paddingBottom="@dimen/sponsor_section_padding"
-                android:id="@+id/google"
-                />
+                android:paddingTop="24dp"/>
 
             <ImageView
+                android:id="@+id/facebook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="@dimen/sponsor_section_padding"
-                android:paddingTop="@dimen/sponsor_section_padding"
-                android:id="@+id/facebook"
-                />
+                android:paddingTop="@dimen/sponsor_section_padding"/>
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/sponsor_section_padding"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/sponsor_section_padding">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
                     android:id="@+id/couchbase"
-                    />
-                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
+                    android:padding="@dimen/sponsor_padding"/>
+                <ImageView
                     android:id="@+id/tumblr"
-                    />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/sponsor_padding"/>
             </LinearLayout>
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
                     android:id="@+id/genymobile"
-                    />
-                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
+                    android:padding="@dimen/sponsor_padding"/>
+                <ImageView
                     android:id="@+id/uber"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:paddingBottom="@dimen/sponsor_section_padding"
-                android:orientation="horizontal">
-                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
+                    android:padding="@dimen/sponsor_padding"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/sponsor_section_padding">
+                <ImageView
                     android:id="@+id/microsoft"
-                    />
-                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
+                    android:padding="@dimen/sponsor_padding"/>
+                <ImageView
                     android:id="@+id/amex"
-                    />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/sponsor_padding"/>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/sponsor_section_padding"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/sponsor_section_padding">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
                     android:id="@+id/priceline"
-                    />
-                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/sponsor_padding"
+                />
+                <ImageView
                     android:id="@+id/paypal"
-                    />
-                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
+                    android:padding="@dimen/sponsor_padding"/>
+                <ImageView
                     android:id="@+id/veloxity"
-                    />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/sponsor_padding"/>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
                     android:id="@+id/firebase"
-                    />
-                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
+                    android:padding="@dimen/sponsor_padding"/>
+                <ImageView
                     android:id="@+id/sympli"
-                    />
-                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
+                    android:padding="@dimen/sponsor_padding"/>
+                <ImageView
                     android:id="@+id/pluralsight"
-                    />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/sponsor_padding"/>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:paddingBottom="@dimen/sponsor_section_padding"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/sponsor_section_padding">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
                     android:id="@+id/branch"
-                    />
-                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
+                    android:padding="@dimen/sponsor_padding"/>
+                <ImageView
                     android:id="@+id/generalassembly"
-                    />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/sponsor_padding"/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:paddingTop="@dimen/sponsor_section_padding"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/sponsor_section_padding">
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
                     android:id="@+id/appgrade"
-                    />
-                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/sponsor_padding"
+                    android:padding="@dimen/sponsor_padding"/>
+                <ImageView
                     android:id="@+id/nimble"
-                    />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/sponsor_padding"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -189,12 +170,11 @@ android:layout_weight="1"
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/sponsor_section_title"
         android:layout_gravity="center"
-        android:text="@string/welcome_3_title"
-        android:textColor="@color/orange"
         android:paddingBottom="@dimen/padding_small"
         android:paddingTop="@dimen/padding_small"
-        />
+        android:text="@string/welcome_3_title"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/sponsor_section_title"/>
 
 </LinearLayout>
