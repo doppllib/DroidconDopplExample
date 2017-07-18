@@ -2,6 +2,7 @@ package co.touchlab.droidconandroid.shared.presenter;
 
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
+import android.util.Log;
 
 import com.google.j2objc.annotations.Weak;
 
@@ -11,9 +12,8 @@ import co.touchlab.droidconandroid.shared.data.EventInfo;
 import co.touchlab.droidconandroid.shared.data.Venue;
 import co.touchlab.droidconandroid.shared.interactors.EventDetailInteractor;
 import co.touchlab.droidconandroid.shared.interactors.EventVideoDetailsInteractor;
+import co.touchlab.droidconandroid.shared.interactors.RsvpInteractor;
 import co.touchlab.droidconandroid.shared.network.dao.EventVideoDetails;
-import co.touchlab.droidconandroid.shared.tasks.AddRsvpTask;
-import co.touchlab.droidconandroid.shared.tasks.RemoveRsvpTask;
 import co.touchlab.droidconandroid.shared.utils.AnalyticsEvents;
 import co.touchlab.droidconandroid.shared.utils.SlackUtils;
 import co.touchlab.droidconandroid.shared.utils.StringUtils;
@@ -30,13 +30,17 @@ import static co.touchlab.droidconandroid.shared.presenter.AppManager.getContext
 public class EventDetailViewModel extends ViewModel {
     @Weak
     private EventDetailHost host;
-    private EventDetailInteractor detailInteractor;
-    private EventVideoDetailsInteractor videoInteractor;
+    private final EventDetailInteractor detailInteractor;
+    private final EventVideoDetailsInteractor videoInteractor;
+    private final RsvpInteractor rsvpInteractor;
     private CompositeDisposable disposables = new CompositeDisposable();
 
-    private EventDetailViewModel(EventDetailInteractor detailInteractor, EventVideoDetailsInteractor videoInteractor) {
+    private EventDetailViewModel(EventDetailInteractor detailInteractor,
+                                 EventVideoDetailsInteractor videoInteractor,
+                                 RsvpInteractor rsvpInteractor) {
         this.detailInteractor = detailInteractor;
         this.videoInteractor = videoInteractor;
+        this.rsvpInteractor = rsvpInteractor;
     }
 
     public void register(EventDetailHost host) {
@@ -84,40 +88,34 @@ public class EventDetailViewModel extends ViewModel {
         );
     }
 
-    public void onEventMainThread(RemoveRsvpTask task) {
-        getDetails();
-    }
-
-    public void onEventMainThread(AddRsvpTask task) {
-        getDetails();
-    }
-
     public void unregister() {
         disposables.clear();
         host = null;
     }
 
-    // TODO: Replace with RSVPTasks that work
-//    public void toggleRsvp()
-//    {
-//        if(! ready())
-//        {
-//            return;
-//        }
-//
-//        long eventId = eventDetailInteractor.event.id;
-//        if(eventDetailInteractor.event.isRsvped())
-//        {
-//            TaskQueue.loadQueueDefault(getContext())
-//                    .execute(new RemoveRsvpTask(eventId));
-//            recordAnalytics(AnalyticsEvents.UNRSVP_EVENT);
-//        }
-//        else
-//        {
-//            TaskQueue.loadQueueDefault(getContext()).execute(new AddRsvpTask(eventId));
-//            recordAnalytics(AnalyticsEvents.RSVP_EVENT);
-//        }
-//    }
+    public void toggleRsvp(boolean isAlreadyRsvped) {
+        if (isAlreadyRsvped) {
+            rsvpInteractor.removeRsvp()
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(event -> {
+                                host.updateRsvp();
+                                recordAnalytics(AnalyticsEvents.UNRSVP_EVENT, event);
+                                getDetails();
+                            },
+                            e -> Log.e("Error", "Error trying to remove rsvp"));
+        } else {
+            rsvpInteractor.addRsvp()
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(event -> {
+                                host.updateRsvp();
+                                recordAnalytics(AnalyticsEvents.RSVP_EVENT, event);
+                                getDetails();
+                            },
+                            e -> Log.e("Error", "Error trying to add rsvp"));
+        }
+    }
 
     public void setEventbriteEmail(String email, String link, String cover) {
         AppPrefs.getInstance(getContext()).setEventbriteEmail(email);
@@ -144,16 +142,20 @@ public class EventDetailViewModel extends ViewModel {
     public static class Factory extends ViewModelProvider.NewInstanceFactory {
         private final EventVideoDetailsInteractor videoInteractor;
         private final EventDetailInteractor detailInteractor;
+        private final RsvpInteractor rsvpInteractor;
 
-        public Factory(EventDetailInteractor detailInteractor, EventVideoDetailsInteractor videoInteractor) {
+        public Factory(EventDetailInteractor detailInteractor,
+                       EventVideoDetailsInteractor videoInteractor,
+                       RsvpInteractor rsvpInteractor) {
             this.videoInteractor = videoInteractor;
             this.detailInteractor = detailInteractor;
+            this.rsvpInteractor = rsvpInteractor;
         }
 
         @Override
         public <T extends ViewModel> T create(Class<T> modelClass) {
             //noinspection unchecked
-            return (T) new EventDetailViewModel(detailInteractor, videoInteractor);
+            return (T) new EventDetailViewModel(detailInteractor, videoInteractor, rsvpInteractor);
         }
     }
 }
