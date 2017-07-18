@@ -62,13 +62,13 @@ public class EventDetailInteractor {
         return info;
     }
 
-    private static boolean hasConflict(Event event, List dataSet) {
-        for (Object ce : dataSet) {
-            if (ce instanceof Event) {
-                Event cee = (Event) ce;
-                if (event.id != cee.id && !TextUtils.isEmpty(cee.rsvpUuid) && event.startDateLong < cee.endDateLong && event.endDateLong > cee.startDateLong)
-                    return true;
-            }
+    private static boolean hasConflict(Event event, List<Event> allEvents) {
+        for (Event existingEvent : allEvents) {
+            if (event.id != existingEvent.id
+                    && !TextUtils.isEmpty(existingEvent.rsvpUuid)
+                    && event.startDateLong < existingEvent.endDateLong
+                    && event.endDateLong > existingEvent.startDateLong)
+                return true;
         }
 
         return false;
