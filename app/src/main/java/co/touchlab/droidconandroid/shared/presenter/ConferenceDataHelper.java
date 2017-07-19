@@ -1,6 +1,4 @@
 package co.touchlab.droidconandroid.shared.presenter;
-import android.content.Context;
-
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -36,9 +34,8 @@ public class ConferenceDataHelper
         return dateFormat.format(d);
     }
 
-    public static ConferenceDayHolder[] listDays(Context context, boolean allEvents) throws SQLException
+    public static ConferenceDayHolder[] listDays(DatabaseHelper databaseHelper, boolean allEvents) throws SQLException
     {
-        final DatabaseHelper databaseHelper = DatabaseHelper.getInstance(context);
         final Dao<Event> eventDao = databaseHelper.getEventDao();
         final Dao<Block> blockDao = databaseHelper.getBlockDao();
 
