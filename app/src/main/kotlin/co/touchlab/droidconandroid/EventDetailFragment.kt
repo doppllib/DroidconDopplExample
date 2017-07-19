@@ -22,14 +22,14 @@ import co.touchlab.android.threading.tasks.TaskQueue
 import co.touchlab.droidconandroid.shared.data.*
 import co.touchlab.droidconandroid.shared.interactors.EventDetailInteractor
 import co.touchlab.droidconandroid.shared.interactors.EventVideoDetailsInteractor
+import co.touchlab.droidconandroid.shared.interactors.RsvpInteractor
 import co.touchlab.droidconandroid.shared.network.DataHelper
 import co.touchlab.droidconandroid.shared.network.VideoDetailsRequest
 import co.touchlab.droidconandroid.shared.network.dao.EventVideoDetails
 import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.EventDetailHost
 import co.touchlab.droidconandroid.shared.presenter.EventDetailViewModel
-import co.touchlab.droidconandroid.shared.tasks.AddRsvpTask
-import co.touchlab.droidconandroid.shared.tasks.RemoveRsvpTask
+import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsTask
 import kotlinx.android.synthetic.main.fragment_event_detail.*
 import kotlinx.android.synthetic.main.view_streaming_email_dialog.view.*
 import java.util.*
@@ -49,7 +49,8 @@ class EventDetailFragment : Fragment(), EventDetailHost {
 
         val helper = DatabaseHelper.getInstance(activity)
         val eventDetailsInteractor = EventDetailInteractor(helper, eventId)
-        val factory = EventDetailViewModel.Factory(eventDetailsInteractor, videoDetailsInteractor)
+        val rsvpInteractor = RsvpInteractor(helper, eventId)
+        val factory = EventDetailViewModel.Factory(eventDetailsInteractor, videoDetailsInteractor, rsvpInteractor)
         ViewModelProviders.of(this, factory)[EventDetailViewModel::class.java]
     }
 
@@ -197,10 +198,17 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         })
     }
 
-    override fun resetStreamProgress() { recycler.adapter?.notifyDataSetChanged() }
+    override fun resetStreamProgress() {
+        recycler.adapter?.notifyDataSetChanged()
+    }
 
     override fun openSlack(slackLink: String, slackLinkHttp: String, showSlackDialog: Boolean) {
         SlackHelper.openSlack(activity, slackLink, slackLinkHttp, showSlackDialog)
+    }
+
+    override fun updateRsvp() {
+        // FIXME: Bandaid until we fully convert the UpdateAlertsTask
+        TaskQueue.loadQueueDefault(activity).execute(UpdateAlertsTask())
     }
 
     /**
@@ -238,9 +246,9 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         } else {
             fab.setOnClickListener {
                 if (event.isRsvped) {
-                    TaskQueue.loadQueueDefault(activity).execute(RemoveRsvpTask(event.id))
+                    viewModel.toggleRsvp(false)
                 } else {
-                    TaskQueue.loadQueueDefault(activity).execute(AddRsvpTask(event.id))
+                    viewModel.toggleRsvp(true)
                 }
             }
 
