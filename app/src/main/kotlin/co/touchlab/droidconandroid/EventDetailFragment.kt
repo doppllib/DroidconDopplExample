@@ -14,11 +14,11 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import co.touchlab.android.threading.tasks.TaskQueue
 import co.touchlab.droidconandroid.shared.data.*
 import co.touchlab.droidconandroid.shared.interactors.EventDetailInteractor
 import co.touchlab.droidconandroid.shared.interactors.EventVideoDetailsInteractor
@@ -29,7 +29,7 @@ import co.touchlab.droidconandroid.shared.network.dao.EventVideoDetails
 import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.EventDetailHost
 import co.touchlab.droidconandroid.shared.presenter.EventDetailViewModel
-import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsTask
+import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsInteractor
 import kotlinx.android.synthetic.main.fragment_event_detail.*
 import kotlinx.android.synthetic.main.view_streaming_email_dialog.view.*
 import java.util.*
@@ -41,6 +41,12 @@ import java.util.*
 class EventDetailFragment : Fragment(), EventDetailHost {
 
     private val eventId: Long by lazy { findEventIdArg() }
+
+    private val alertsInteractor: UpdateAlertsInteractor by lazy {
+        val helper = DatabaseHelper.getInstance(activity)
+        val appPrefs = AppPrefs.getInstance(activity)
+        UpdateAlertsInteractor(helper, appPrefs)
+    }
 
     private val viewModel: EventDetailViewModel by lazy {
         val retrofit = DataHelper.makeRetrofit2Client(AppManager.getPlatformClient().baseUrl())
@@ -208,7 +214,9 @@ class EventDetailFragment : Fragment(), EventDetailHost {
 
     override fun updateRsvp() {
         // FIXME: Bandaid until we fully convert the UpdateAlertsTask
-        TaskQueue.loadQueueDefault(activity).execute(UpdateAlertsTask())
+//        TaskQueue.loadQueueDefault(activity).execute(UpdateAlertsTask())
+        alertsInteractor.alert()
+
     }
 
     /**
@@ -222,9 +230,11 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         fab.rippleColor = ContextCompat.getColor(context, R.color.white)
 
         if (event.isRsvped) {
+            Log.d("EDF", "Setting")
             fab.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.ic_check))
             fab.isActivated = true
         } else {
+            Log.d("EDF", "Not setting")
             fab.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.ic_plus))
             fab.isActivated = false
         }
@@ -238,24 +248,26 @@ class EventDetailFragment : Fragment(), EventDetailHost {
             }
         }
 
+        Log.d("EDF", "It's me")
+
         val layoutParams = fab.layoutParams as CoordinatorLayout.LayoutParams
-        if (event.isPast) {
-            layoutParams.anchorId = View.NO_ID
-            fab.layoutParams = layoutParams
-            fab.visibility = View.GONE
-        } else {
+//        if (event.isPast) {
+//            layoutParams.anchorId = View.NO_ID
+//            fab.layoutParams = layoutParams
+//            fab.visibility = View.GONE
+//        } else {
             fab.setOnClickListener {
                 if (event.isRsvped) {
-                    viewModel.toggleRsvp(false)
-                } else {
                     viewModel.toggleRsvp(true)
+                } else {
+                    viewModel.toggleRsvp(false)
                 }
             }
 
             layoutParams.anchorId = R.id.appbar
             fab.layoutParams = layoutParams
             fab.visibility = View.VISIBLE
-        }
+//        }
     }
 
     /**

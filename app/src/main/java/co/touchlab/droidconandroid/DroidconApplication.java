@@ -10,12 +10,8 @@ import com.birbit.android.jobqueue.config.Configuration;
 import com.birbit.android.jobqueue.log.CustomLogger;
 import com.birbit.android.jobqueue.scheduling.FrameworkJobSchedulerService;
 
-import co.touchlab.droidconandroid.shared.tasks.persisted.JobQueueService;
-import co.touchlab.droidconandroid.shared.utils.IOUtils;
-
 import java.io.IOException;
 
-import co.touchlab.android.threading.eventbus.EventBusExt;
 import co.touchlab.droidconandroid.alerts.AlertManagerKt;
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
@@ -23,6 +19,7 @@ import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.presenter.AppManager;
 import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
 import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsInteractor;
+import co.touchlab.droidconandroid.shared.tasks.persisted.JobQueueService;
 import co.touchlab.droidconandroid.shared.utils.IOUtils;
 import retrofit.client.Client;
 
@@ -43,7 +40,6 @@ public class DroidconApplication extends Application
     public void onCreate()
     {
         super.onCreate();
-        EventBusExt.getDefault().register(this);
         getJobManager();
 
         String currentProcessName = getCurrentProcessName(this);

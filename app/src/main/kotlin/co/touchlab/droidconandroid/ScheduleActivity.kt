@@ -39,6 +39,7 @@ class ScheduleActivity : AppCompatActivity() {
     val interactor: RefreshScheduleInteractor by lazy {
         RefreshScheduleInteractor(helper)
     }
+
     val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
         val prefs = AppPrefs.getInstance(this)
         UpdateAlertsInteractor(helper, prefs)
