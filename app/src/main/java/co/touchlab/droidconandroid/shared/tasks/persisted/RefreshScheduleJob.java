@@ -22,7 +22,7 @@ public class RefreshScheduleJob extends Job
 {
     private static final String GROUP_TAG   = "refresh-schedule";
     private static final int    DELAY_IN_MS = 60000; // 1 min
-    private static final int    MAX_RETRY   = 8;
+    private static final int    MAX_RETRY   = 7;
     private              int    retryCount  = 0;
 
     public RefreshScheduleJob()
