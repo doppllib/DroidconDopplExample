@@ -16,7 +16,6 @@ import co.touchlab.droidconandroid.shared.presenter.AppManager;
 import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
 import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsInteractor;
 import co.touchlab.droidconandroid.shared.utils.IOUtils;
-import io.reactivex.Observable;
 import retrofit.client.Client;
 
 /**
@@ -24,8 +23,6 @@ import retrofit.client.Client;
  */
 public class DroidconApplication extends Application
 {
-
-    private Observable<Event> nextEvent;
 
     public static String getCurrentProcessName(Context context) {
         // Log.d(TAG, "getCurrentProcessName");
@@ -53,10 +50,13 @@ public class DroidconApplication extends Application
         AppPrefs appPrefs = AppPrefs.getInstance(this);
 
         UpdateAlertsInteractor alertsInteractor = new UpdateAlertsInteractor(helper, appPrefs);
+        alertsInteractor.getAlerts()
+                .subscribe(this::update,
+                        e -> Log.e("UpdateError", "Error while updating " + e.getLocalizedMessage()));
 
         if(!currentProcessName.contains("background_crash"))
         {
-            PlatformClient platformClient = new co.touchlab.droidconandroid.shared.presenter.PlatformClient()
+            PlatformClient platformClient = new PlatformClient()
             {
                 @Override
                 public Client makeClient()
@@ -116,9 +116,8 @@ public class DroidconApplication extends Application
         }
     }
 
-    @SuppressWarnings("unused")
-    public void onEventMainThread(UpdateAlertsInteractor task)
+    public void update(Event nextEvent)
     {
-        AlertManagerKt.scheduleAlert(this, task.nextEvent);
+        AlertManagerKt.scheduleAlert(this, nextEvent);
     }
 }

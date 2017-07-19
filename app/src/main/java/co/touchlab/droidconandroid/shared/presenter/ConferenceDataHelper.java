@@ -1,4 +1,5 @@
 package co.touchlab.droidconandroid.shared.presenter;
+
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import co.touchlab.droidconandroid.shared.data.ScheduleBlock;
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.stmt.Where;
+import io.reactivex.Single;
 
 /**
  * Created by kgalligan on 4/17/16.
@@ -31,6 +33,10 @@ public class ConferenceDataHelper
     public static String dateToDayString(Date d)
     {
         return dateFormat.format(d);
+    }
+
+    public static Single<ConferenceDayHolder[]> getDays(DatabaseHelper helper, boolean allEvents) {
+        return Single.fromCallable(() -> listDays(helper, allEvents));
     }
 
     public static ConferenceDayHolder[] listDays(DatabaseHelper databaseHelper, boolean allEvents) throws SQLException
