@@ -64,23 +64,29 @@ public class ConferenceDataHelper
 
         all.addAll(eventList);
 
-        Collections.sort(all, new Comparator<ScheduleBlock>()
+        Collections.sort(all, (o1, o2) ->
         {
-            @Override
-            public int compare(ScheduleBlock o1, ScheduleBlock o2)
+            final long compTimes = o1.getStartLong() - o2.getStartLong();
+            if(compTimes != 0)
             {
-                final long compTimes = o1.getStartLong() - o2.getStartLong();
-                if(compTimes != 0) return compTimes > 0
-                        ? 1
-                        : - 1;
-
-                if(o1.isBlock() && o2.isBlock()) return 0;
-
-                if(o1.isBlock()) return 1;
-                if(o2.isBlock()) return - 1;
-
-                return ((Event) o1).venue.name.compareTo(((Event) o2).venue.name);
+                return compTimes > 0 ? 1 : - 1;
             }
+
+            if(o1.isBlock() && o2.isBlock())
+            {
+                return 0;
+            }
+
+            if(o1.isBlock())
+            {
+                return 1;
+            }
+            if(o2.isBlock())
+            {
+                return - 1;
+            }
+
+            return ((Event) o1).venue.name.compareTo(((Event) o2).venue.name);
         });
 
         TreeMap<String, List<ScheduleBlockHour>> allTheData = new TreeMap<>();

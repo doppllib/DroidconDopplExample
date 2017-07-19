@@ -1,5 +1,6 @@
 package co.touchlab.droidconandroid
 
+import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
 import android.content.Intent
 import android.graphics.PorterDuff
@@ -16,23 +17,27 @@ import android.view.View
 import co.touchlab.android.threading.eventbus.EventBusExt
 import co.touchlab.android.threading.tasks.TaskQueue
 import co.touchlab.droidconandroid.shared.data.AppPrefs
-import co.touchlab.droidconandroid.shared.presenter.AppManager
-import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHost
-import co.touchlab.droidconandroid.shared.presenter.ConferenceDataPresenter
-import co.touchlab.droidconandroid.shared.presenter.ConferenceDayHolder
+import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor
+import co.touchlab.droidconandroid.shared.presenter.*
 import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsTask
-import co.touchlab.droidconandroid.shared.tasks.persisted.RefreshScheduleData
+import co.touchlab.droidconandroid.shared.tasks.persisted.RefreshScheduleJob
 import co.touchlab.droidconandroid.shared.utils.TimeUtils
 import co.touchlab.droidconandroid.ui.*
 import kotlinx.android.synthetic.main.activity_schedule.*
 import java.util.*
 
 class ScheduleActivity : AppCompatActivity() {
-    private var conferenceDataPresenter: ConferenceDataPresenter? = null
+
     private var allEvents = true
+    private lateinit var viewModel: ConferenceDataViewModel
+    // temporary till we daggerize
+    val interactor: RefreshScheduleInteractor by lazy { RefreshScheduleInteractor(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val factory = ConferenceDataViewModel.Factory(this, interactor, allEvents)
+        viewModel = ViewModelProviders.of(this, factory)[ConferenceDataViewModel::class.java]
+
         when (AppManager.findStartScreen()) {
             AppManager.AppScreens.Welcome -> {
                 startActivity(WelcomeActivity.getLaunchIntent(this@ScheduleActivity, false))
@@ -64,7 +69,7 @@ class ScheduleActivity : AppCompatActivity() {
         Handler().post(RefreshRunnable())
 
         // will refresh data from server only if it is old
-        conferenceDataPresenter?.refreshFromServer()
+        viewModel.refreshFromServer()
 
         if (isTablet()) {
             drawer_layout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_OPEN, drawer_recycler)
@@ -92,11 +97,6 @@ class ScheduleActivity : AppCompatActivity() {
         super.onStop()
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        conferenceDataPresenter?.unregister()
-    }
-
     private fun setupToolbar() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
@@ -108,7 +108,7 @@ class ScheduleActivity : AppCompatActivity() {
 
         appbar.addOnOffsetChangedListener { appBarLayout, verticalOffset ->
             if (appBarLayout.totalScrollRange > 0) {
-                val percentage= verticalOffset.calculateAlphaPercentage(appBarLayout.totalScrollRange)
+                val percentage = verticalOffset.calculateAlphaPercentage(appBarLayout.totalScrollRange)
                 schedule_toolbar_title.alpha = percentage
                 schedule_toolbar_profile.alpha = percentage
                 schedule_toolbar_notif.alpha = percentage
@@ -151,9 +151,9 @@ class ScheduleActivity : AppCompatActivity() {
                         appbar.setExpanded(true)
                     }
                     R.string.chat_on_slack -> {
-                        SlackHelper.openSlack(this@ScheduleActivity, conferenceDataPresenter!!.slackLink,
-                                conferenceDataPresenter!!.slackLinkHttp,
-                                conferenceDataPresenter!!.shouldShowSlackDialog())
+                        SlackHelper.openSlack(this@ScheduleActivity, viewModel.slackLink,
+                                viewModel.slackLinkHttp,
+                                viewModel.shouldShowSlackDialog())
                     }
 
                     R.string.about -> AboutActivity.callMe(this@ScheduleActivity)
@@ -234,8 +234,9 @@ class ScheduleActivity : AppCompatActivity() {
     }
 
     @Suppress("unused", "UNUSED_PARAMETER")
-    fun onEventMainThread(eventDetailTask: RefreshScheduleData) {
+    fun onEventMainThread(eventDetailJob: RefreshScheduleJob) {
         Handler().post(RefreshRunnable())
+        viewModel.refreshConferenceData()
     }
 
     @Suppress("unused", "UNUSED_PARAMETER")
@@ -245,18 +246,8 @@ class ScheduleActivity : AppCompatActivity() {
         updateNotifications(notificationEvent.allow)
     }
 
-    class ConfHost : ConferenceDataHost {
-        override fun loadCallback(conferenceDayHolders: Array<out ConferenceDayHolder>?) {
-            EventBusExt.getDefault().post(conferenceDayHolders)
-        }
-    }
-
     inner class RefreshRunnable : Runnable {
         override fun run() {
-            conferenceDataPresenter?.unregister()
-            conferenceDataPresenter = ConferenceDataPresenter(this@ScheduleActivity,
-                    ConfHost(), allEvents)
-
             val dates: ArrayList<Long> = ArrayList()
             val startString: String? = AppPrefs.getInstance(this@ScheduleActivity).conventionStartDate
             val endString: String? = AppPrefs.getInstance(this@ScheduleActivity).conventionEndDate

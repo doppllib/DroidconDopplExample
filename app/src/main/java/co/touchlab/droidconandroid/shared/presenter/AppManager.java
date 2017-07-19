@@ -1,9 +1,11 @@
 package co.touchlab.droidconandroid.shared.presenter;
 import android.content.Context;
 
-import co.touchlab.android.threading.tasks.TaskQueue;
+import com.google.gson.Gson;
+
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
-import co.touchlab.droidconandroid.shared.tasks.SeedScheduleDataTask;
+import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor;
+import co.touchlab.droidconandroid.shared.network.dao.Convention;
 
 /**
  * Created by kgalligan on 4/19/16.
@@ -28,7 +30,8 @@ public class AppManager
         if(AppPrefs.getInstance(context).once(FIRST_SEED))
         {
             final String seed = loadDataSeed.dataSeed();
-            TaskQueue.loadQueueDefault(context).execute(new SeedScheduleDataTask(seed));
+            RefreshScheduleInteractor.saveConventionData(context,
+                    new Gson().fromJson(seed, Convention.class));
         }
     }
 
