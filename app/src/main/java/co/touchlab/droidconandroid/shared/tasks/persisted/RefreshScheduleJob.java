@@ -21,7 +21,7 @@ import retrofit2.Retrofit;
 public class RefreshScheduleJob extends Job
 {
     private static final String GROUP_TAG   = "refresh-schedule";
-    private static final int    DELAY_IN_MS = 60000; // 1 min
+    private static final int    DELAY_IN_MS = 300000; // 5 min
     private              int    retryCount  = 0;
 
     public RefreshScheduleJob()

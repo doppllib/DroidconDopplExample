@@ -35,7 +35,7 @@ class ScheduleActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val factory = ConferenceDataViewModel.Factory(this, interactor, allEvents)
+        val factory = ConferenceDataViewModel.Factory(interactor, allEvents, AppPrefs.getInstance(this))
         viewModel = ViewModelProviders.of(this, factory)[ConferenceDataViewModel::class.java]
 
         when (AppManager.findStartScreen()) {
@@ -236,7 +236,6 @@ class ScheduleActivity : AppCompatActivity() {
     @Suppress("unused", "UNUSED_PARAMETER")
     fun onEventMainThread(eventDetailJob: RefreshScheduleJob) {
         Handler().post(RefreshRunnable())
-        viewModel.refreshConferenceData()
     }
 
     @Suppress("unused", "UNUSED_PARAMETER")

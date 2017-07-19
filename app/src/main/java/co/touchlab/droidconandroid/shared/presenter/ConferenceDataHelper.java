@@ -5,7 +5,6 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.TreeMap;
@@ -17,7 +16,6 @@ import co.touchlab.droidconandroid.shared.data.ScheduleBlock;
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.stmt.Where;
-import io.reactivex.Observable;
 
 /**
  * Created by kgalligan on 4/17/16.
