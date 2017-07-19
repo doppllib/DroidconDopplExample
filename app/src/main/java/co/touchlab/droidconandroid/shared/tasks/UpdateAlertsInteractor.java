@@ -34,7 +34,7 @@ public class UpdateAlertsInteractor {
         return alerts;
     }
 
-    public void run() {
+    public void alert() {
         if (prefs.getAllowNotifications()) {
             ConferenceDataHelper.getDays(helper, false)
                     .subscribeOn(Schedulers.io())

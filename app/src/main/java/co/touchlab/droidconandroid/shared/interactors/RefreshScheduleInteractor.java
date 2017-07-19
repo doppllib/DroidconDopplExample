@@ -35,12 +35,12 @@ import io.reactivex.subjects.BehaviorSubject;
 public class RefreshScheduleInteractor
 {
     private final JobManager jobManager;
-    private final Context    context;
+    private final DatabaseHelper helper;
     private BehaviorSubject<ConferenceDayHolder[]> conferenceDataSubject = BehaviorSubject.create();
 
-    public RefreshScheduleInteractor(Context context)
+    public RefreshScheduleInteractor(DatabaseHelper helper)
     {
-        this.context = context;
+        this.helper = helper;
         this.jobManager = DroidconApplication.getInstance().getJobManager();
     }
 
@@ -53,7 +53,7 @@ public class RefreshScheduleInteractor
     {
         try
         {
-            ConferenceDayHolder[] newData = ConferenceDataHelper.listDays(context, allEvents);
+            ConferenceDayHolder[] newData = ConferenceDataHelper.listDays(helper, allEvents);
             conferenceDataSubject.onNext(newData);
         }
         catch(SQLException e)
