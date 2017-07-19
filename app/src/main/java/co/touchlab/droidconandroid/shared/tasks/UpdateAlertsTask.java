@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import co.touchlab.android.threading.eventbus.EventBusExt;
 import co.touchlab.android.threading.tasks.Task;
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
+import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHelper;
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDayHolder;
@@ -25,7 +26,9 @@ public class UpdateAlertsTask extends Task
     {
         if(AppPrefs.getInstance(context).getAllowNotifications())
         {
-            ConferenceDayHolder[] conferenceDayHolders = ConferenceDataHelper.listDays(context,
+            DatabaseHelper databaseHelper = DatabaseHelper.getInstance(context);
+            ConferenceDayHolder[] conferenceDayHolders = ConferenceDataHelper.listDays(
+                    databaseHelper,
                     false);
             for(ConferenceDayHolder day : conferenceDayHolders)
             {

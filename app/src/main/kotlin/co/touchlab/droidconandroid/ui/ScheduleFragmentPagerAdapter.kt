@@ -6,9 +6,6 @@ import co.touchlab.droidconandroid.ScheduleDataFragment
 import co.touchlab.droidconandroid.formatDate
 import co.touchlab.droidconandroid.shared.data.Track
 
-/**
- * Created by sufeizhao on 7/11/17.
- */
 class ScheduleFragmentPagerAdapter(private var fm: FragmentManager, private var dates: List<Long>, private var allEvents: Boolean) : FragmentPagerAdapter(fm) {
 
     override fun getCount(): Int {

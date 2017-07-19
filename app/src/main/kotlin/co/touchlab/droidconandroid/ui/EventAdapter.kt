@@ -13,8 +13,8 @@ import co.touchlab.droidconandroid.setViewVisibility
 import co.touchlab.droidconandroid.shared.data.Block
 import co.touchlab.droidconandroid.shared.data.Event
 import co.touchlab.droidconandroid.shared.data.Track
-import co.touchlab.droidconandroid.shared.presenter.ConferenceDataPresenter
 import co.touchlab.droidconandroid.shared.presenter.ScheduleBlockHour
+import co.touchlab.droidconandroid.shared.utils.EventUtils
 import kotlinx.android.synthetic.main.item_event.view.*
 import kotlinx.android.synthetic.main.item_notification.view.*
 import java.util.*
@@ -66,7 +66,7 @@ class EventAdapter(private val context: Context,
             val scheduleBlockHour = filteredData[adjustedPosition]
 
             scheduleBlockHour?.let {
-                ConferenceDataPresenter.styleEventRow(scheduleBlockHour, dataSet, holder, allEvents)
+                EventUtils.styleEventRow(scheduleBlockHour, dataSet, holder, allEvents)
 
                 if (!scheduleBlockHour.scheduleBlock.isBlock) {
                     holder.setOnClickListener { eventClickListener.onEventClick(scheduleBlockHour.scheduleBlock as Event) }
@@ -152,7 +152,7 @@ class EventAdapter(private val context: Context,
 
     inner abstract class ScheduleCardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
-    inner class ScheduleBlockViewHolder(itemView: View) : ScheduleCardViewHolder(itemView), ConferenceDataPresenter.EventRow {
+    inner class ScheduleBlockViewHolder(itemView: View) : ScheduleCardViewHolder(itemView), EventUtils.EventRow {
 
         override fun setTitleText(s: String?) { itemView.title.text = s }
 
