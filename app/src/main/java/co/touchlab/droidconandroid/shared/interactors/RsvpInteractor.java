@@ -2,10 +2,14 @@ package co.touchlab.droidconandroid.shared.interactors;
 
 import android.support.annotation.NonNull;
 
+import com.birbit.android.jobqueue.JobManager;
+
 import java.util.UUID;
 
+import co.touchlab.droidconandroid.DroidconApplication;
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data.Event;
+import co.touchlab.droidconandroid.shared.tasks.persisted.RsvpJob;
 import co.touchlab.squeaky.dao.Dao;
 import io.reactivex.Single;
 
@@ -13,15 +17,18 @@ import io.reactivex.Single;
  * Created by kgalligan on 4/7/16.
  */
 public class RsvpInteractor {
-    private final Long eventId;
+    private final Long           eventId;
     private final DatabaseHelper helper;
+    private final JobManager     jobManager;
 
     public RsvpInteractor(DatabaseHelper helper, Long eventId) {
         this.eventId = eventId;
         this.helper = helper;
+        this.jobManager = DroidconApplication.getInstance().getJobManager();
     }
 
     public Single<Event> addRsvp() {
+        jobManager.addJobInBackground(new RsvpJob(eventId));
         Dao<Event> dao = helper.getEventDao();
         return Single.fromCallable(() -> dao.queryForId(eventId))
                 .filter(event -> event != null && event.rsvpUuid == null)
@@ -30,6 +37,7 @@ public class RsvpInteractor {
     }
 
     public Single<Event> removeRsvp() {
+        jobManager.addJobInBackground(new RsvpJob(eventId));
         Dao<Event> dao = helper.getEventDao();
         return Single.fromCallable(() -> dao.queryForId(eventId))
                 .filter(event -> event != null)
