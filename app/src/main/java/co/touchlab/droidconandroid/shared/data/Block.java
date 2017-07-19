@@ -59,11 +59,11 @@ public class Block implements ScheduleBlock
 
     public String getStartFormatted()
     {
-        return TimeUtils.DATE_FORMAT.get().format(new Date(startDateLong));
+        return TimeUtils.LOCAL_DATE_FORMAT.get().format(new Date(startDateLong));
     }
 
     public String getEndFormatted()
     {
-        return TimeUtils.DATE_FORMAT.get().format(new Date(endDateLong));
+        return TimeUtils.LOCAL_DATE_FORMAT.get().format(new Date(endDateLong));
     }
 }

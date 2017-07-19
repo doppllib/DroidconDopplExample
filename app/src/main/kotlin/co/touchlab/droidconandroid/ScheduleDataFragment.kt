@@ -15,6 +15,7 @@ import co.touchlab.droidconandroid.shared.data.Event
 import co.touchlab.droidconandroid.shared.data.Track
 import co.touchlab.droidconandroid.shared.presenter.*
 import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsTask
+import co.touchlab.droidconandroid.shared.utils.TimeUtils
 import co.touchlab.droidconandroid.ui.EventAdapter
 import co.touchlab.droidconandroid.ui.EventClickListener
 import kotlinx.android.synthetic.main.fragment_schedule_data.*
@@ -87,7 +88,7 @@ class ScheduleDataFragment : Fragment(), ConferenceDataHost {
     }
 
     override fun loadCallback(dayHolders: Array<ConferenceDayHolder>) {
-        val dayString = ConferenceDataHelper.dateToDayString(Date(arguments.getLong(DAY)))
+        val dayString = TimeUtils.dateToDayString(Date(arguments.getLong(DAY)))
         for (holder in dayHolders) {
             if (holder.dayString?.equals(dayString) ?: false) {
                 updateAdapter(holder.hourHolders)

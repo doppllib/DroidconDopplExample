@@ -252,8 +252,8 @@ class ScheduleActivity : AppCompatActivity() {
             val endString: String? = AppPrefs.getInstance(this@ScheduleActivity).conventionEndDate
 
             if (!startString.isNullOrBlank() && !endString.isNullOrBlank()) {
-                var start: Long = TimeUtils.sanitize(TimeUtils.DATE_FORMAT.get().parse(startString))
-                val end: Long = TimeUtils.sanitize(TimeUtils.DATE_FORMAT.get().parse(endString))
+                var start: Long = TimeUtils.sanitize(TimeUtils.LOCAL_DATE_FORMAT.get().parse(startString))
+                val end: Long = TimeUtils.sanitize(TimeUtils.LOCAL_DATE_FORMAT.get().parse(endString))
 
                 while (start <= end) {
                     dates.add(start)

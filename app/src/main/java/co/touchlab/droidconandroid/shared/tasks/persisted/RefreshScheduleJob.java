@@ -10,18 +10,19 @@ import com.birbit.android.jobqueue.RetryConstraint;
 import co.touchlab.android.threading.eventbus.EventBusExt;
 import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
-import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor;
 import co.touchlab.droidconandroid.shared.network.DataHelper;
 import co.touchlab.droidconandroid.shared.network.RefreshScheduleDataRequest;
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
 import co.touchlab.droidconandroid.shared.presenter.AppManager;
+import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHelper;
 import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
 import retrofit2.Retrofit;
 
 public class RefreshScheduleJob extends Job
 {
     private static final String GROUP_TAG   = "refresh-schedule";
-    private static final int    DELAY_IN_MS = 300000; // 5 min
+    private static final int    DELAY_IN_MS = 60000; // 1 min
+    private static final int    MAX_RETRY   = 8;
     private              int    retryCount  = 0;
 
     public RefreshScheduleJob()
@@ -47,7 +48,7 @@ public class RefreshScheduleJob extends Job
         Convention convention = request.getScheduleData(platformClient.getConventionId())
                 .execute()
                 .body();
-        RefreshScheduleInteractor.saveConventionData(getApplicationContext(), convention);
+        ConferenceDataHelper.saveConventionData(getApplicationContext(), convention);
         AppPrefs.getInstance(getApplicationContext()).setRefreshTime(System.currentTimeMillis());
         EventBusExt.getDefault().post(this);
     }
@@ -61,7 +62,7 @@ public class RefreshScheduleJob extends Job
     @Override
     protected RetryConstraint shouldReRunOnThrowable(@NonNull Throwable throwable, int runCount, int maxRunCount)
     {
-        if(retryCount < 8)
+        if(retryCount < MAX_RETRY)
         {
             retryCount++;
             return RetryConstraint.createExponentialBackoff(runCount, DELAY_IN_MS);
