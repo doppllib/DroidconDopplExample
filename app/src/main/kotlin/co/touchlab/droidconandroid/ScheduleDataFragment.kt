@@ -88,7 +88,7 @@ class ScheduleDataFragment : Fragment(), ConferenceDataHost {
     }
 
     override fun loadCallback(dayHolders: Array<ConferenceDayHolder>) {
-        val dayString = TimeUtils.dateToDayString(Date(arguments.getLong(DAY)))
+        val dayString = ConferenceDataHelper.dateToDayString(Date(arguments.getLong(DAY)))
         for (holder in dayHolders) {
             if (holder.dayString?.equals(dayString) ?: false) {
                 updateAdapter(holder.hourHolders)
