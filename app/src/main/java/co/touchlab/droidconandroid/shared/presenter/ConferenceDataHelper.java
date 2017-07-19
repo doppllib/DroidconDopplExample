@@ -35,7 +35,8 @@ public class ConferenceDataHelper
         return dateFormat.format(d);
     }
 
-    public static Single<ConferenceDayHolder[]> getDays(DatabaseHelper helper, boolean allEvents) {
+    public static Single<ConferenceDayHolder[]> getDays(DatabaseHelper helper, boolean allEvents)
+    {
         return Single.fromCallable(() -> listDays(helper, allEvents));
     }
 
@@ -82,14 +83,12 @@ public class ConferenceDataHelper
 
         TreeMap<String, List<ScheduleBlockHour>> allTheData = new TreeMap<>();
         String lastHourDisplay = "";
-        List<ScheduleBlockHour> blockHours = new ArrayList<>();
 
         for(ScheduleBlock scheduleBlock : all)
         {
             final Date startDateObj = new Date(scheduleBlock.getStartLong());
             final String startDate = dateFormat.format(startDateObj);
-            List<ScheduleBlockHour> blockHourList = allTheData
-                    .get(startDate);
+            List<ScheduleBlockHour> blockHourList = allTheData.get(startDate);
             if(blockHourList == null)
             {
                 blockHourList = new ArrayList<>();
@@ -106,10 +105,10 @@ public class ConferenceDataHelper
 
         for(String dateString : allTheData.keySet())
         {
-            final List<ScheduleBlockHour> hourBlocksMap = allTheData
-                    .get(dateString);
+            final List<ScheduleBlockHour> hourBlocksMap = allTheData.get(dateString);
 
-            final ConferenceDayHolder conferenceDayHolder = new ConferenceDayHolder(dateString, hourBlocksMap.toArray(new ScheduleBlockHour[hourBlocksMap.size()]));
+            final ConferenceDayHolder conferenceDayHolder = new ConferenceDayHolder(dateString,
+                    hourBlocksMap.toArray(new ScheduleBlockHour[hourBlocksMap.size()]));
             dayHolders.add(conferenceDayHolder);
         }
 
