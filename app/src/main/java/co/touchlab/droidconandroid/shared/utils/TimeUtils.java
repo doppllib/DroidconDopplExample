@@ -15,10 +15,6 @@ import java.util.TimeZone;
  */
 public class TimeUtils
 {
-    public static final SimpleDateFormat        SIMPLE_DATE_FORMAT = TimeUtils.makeDateFormat(
-            "MM/dd/yyyy");
-    public static final SimpleDateFormat        SIMPLE_TIME_FORMAT = TimeUtils.makeDateFormat(
-            "h:mma");
     public static final TimeZone                TIME_ZONE          = TimeZone.getTimeZone(
             "America/New_York");
     public static       ThreadLocal<DateFormat> LOCAL_DATE_FORMAT  = new ThreadLocal<DateFormat>()
@@ -54,10 +50,5 @@ public class TimeUtils
     public static long parseTime(String date) throws ParseException
     {
         return TimeUtils.LOCAL_DATE_FORMAT.get().parse(date).getTime();
-    }
-
-    public static String dateToDayString(Date d)
-    {
-        return TimeUtils.SIMPLE_DATE_FORMAT.format(d);
     }
 }

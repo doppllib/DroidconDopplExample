@@ -17,6 +17,7 @@ import android.view.View
 import co.touchlab.android.threading.eventbus.EventBusExt
 import co.touchlab.android.threading.tasks.TaskQueue
 import co.touchlab.droidconandroid.shared.data.AppPrefs
+import co.touchlab.droidconandroid.shared.data.DatabaseHelper
 import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor
 import co.touchlab.droidconandroid.shared.presenter.*
 import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsTask
@@ -31,7 +32,7 @@ class ScheduleActivity : AppCompatActivity() {
     private var allEvents = true
     private lateinit var viewModel: ConferenceDataViewModel
     // temporary till we daggerize
-    val interactor: RefreshScheduleInteractor by lazy { RefreshScheduleInteractor(this) }
+    val interactor: RefreshScheduleInteractor by lazy { RefreshScheduleInteractor(DatabaseHelper.getInstance(this)) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

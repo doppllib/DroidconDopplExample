@@ -3,6 +3,7 @@ import android.content.Context;
 
 import java.sql.SQLException;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
@@ -31,6 +32,20 @@ import co.touchlab.squeaky.stmt.Where;
  */
 public class ConferenceDataHelper
 {
+    final static SimpleDateFormat dateFormat;
+    final static SimpleDateFormat timeFormat;
+
+    static
+    {
+        dateFormat = TimeUtils.makeDateFormat("MM/dd/yyyy");
+        timeFormat = TimeUtils.makeDateFormat("h:mma");
+    }
+
+    public static String dateToDayString(Date d)
+    {
+        return dateFormat.format(d);
+    }
+
     public static ConferenceDayHolder[] listDays(DatabaseHelper databaseHelper, boolean allEvents) throws SQLException
     {
         final Dao<Event> eventDao = databaseHelper.getEventDao();
@@ -88,7 +103,7 @@ public class ConferenceDataHelper
         for(ScheduleBlock scheduleBlock : all)
         {
             final Date startDateObj = new Date(scheduleBlock.getStartLong());
-            final String startDate = TimeUtils.SIMPLE_DATE_FORMAT.format(startDateObj);
+            final String startDate = dateFormat.format(startDateObj);
             List<ScheduleBlockHour> blockHourList = allTheData.get(startDate);
             if(blockHourList == null)
             {
@@ -96,7 +111,7 @@ public class ConferenceDataHelper
                 allTheData.put(startDate, blockHourList);
             }
 
-            final String startTime = TimeUtils.SIMPLE_TIME_FORMAT.format(startDateObj);
+            final String startTime = timeFormat.format(startDateObj);
             final boolean newHourDisplay = ! lastHourDisplay.equals(startTime);
             blockHourList.add(new ScheduleBlockHour(newHourDisplay ? startTime : "", scheduleBlock));
             lastHourDisplay = startTime;
