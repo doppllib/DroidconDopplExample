@@ -12,7 +12,7 @@ import co.touchlab.droidconandroid.shared.data.AppPrefs;
 import co.touchlab.droidconandroid.shared.data.Block;
 import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.tasks.SeedScheduleDataTask;
-import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsTask;
+import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsInteractor;
 import co.touchlab.droidconandroid.shared.tasks.persisted.RefreshScheduleData;
 import co.touchlab.droidconandroid.shared.utils.SlackUtils;
 
@@ -58,7 +58,7 @@ public class ConferenceDataPresenter extends AbstractEventBusPresenter
 
     public void onEventMainThread(LoadConferenceDataTask task)
     {
-        TaskQueue.loadQueueDefault(getContext()).execute(new UpdateAlertsTask());
+        TaskQueue.loadQueueDefault(getContext()).execute(new UpdateAlertsInteractor());
 
         // Since this task is called from both the Schedule and My Agenda, make sure this flag is the same
         if(allEvents == task.allEvents)

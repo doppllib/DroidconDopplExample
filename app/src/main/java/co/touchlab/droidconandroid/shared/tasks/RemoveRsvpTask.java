@@ -36,7 +36,7 @@ public class RemoveRsvpTask extends Task
                 {
                     event.rsvpUuid = null;
                     dao.update(event);
-                    TaskQueue.loadQueueDefault(context).execute(new UpdateAlertsTask());
+                    TaskQueue.loadQueueDefault(context).execute(new UpdateAlertsInteractor());
                 }
 
                 return null;

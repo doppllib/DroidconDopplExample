@@ -38,7 +38,7 @@ public class AddRsvpTask extends Task
                     String uuid = UUID.randomUUID().toString();
                     event.rsvpUuid = uuid;
                     dao.update(event);
-                    TaskQueue.loadQueueDefault(context).execute(new UpdateAlertsTask());
+                    TaskQueue.loadQueueDefault(context).execute(new UpdateAlertsInteractor());
                 }
 
                 return null;

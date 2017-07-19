@@ -5,15 +5,18 @@ import android.app.Application;
 import android.content.Context;
 import android.util.Log;
 
-import co.touchlab.droidconandroid.shared.utils.IOUtils;
-
 import java.io.IOException;
 
 import co.touchlab.android.threading.eventbus.EventBusExt;
 import co.touchlab.droidconandroid.alerts.AlertManagerKt;
+import co.touchlab.droidconandroid.shared.data.AppPrefs;
+import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
+import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.presenter.AppManager;
 import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
-import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsTask;
+import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsInteractor;
+import co.touchlab.droidconandroid.shared.utils.IOUtils;
+import io.reactivex.Observable;
 import retrofit.client.Client;
 
 /**
@@ -21,6 +24,9 @@ import retrofit.client.Client;
  */
 public class DroidconApplication extends Application
 {
+
+    private Observable<Event> nextEvent;
+
     public static String getCurrentProcessName(Context context) {
         // Log.d(TAG, "getCurrentProcessName");
         int pid = android.os.Process.myPid();
@@ -42,6 +48,12 @@ public class DroidconApplication extends Application
 
         String currentProcessName = getCurrentProcessName(this);
         Log.i(DroidconApplication.class.getSimpleName(), "currentProcessName: "+ currentProcessName );
+
+        DatabaseHelper helper = DatabaseHelper.getInstance(this);
+        AppPrefs appPrefs = AppPrefs.getInstance(this);
+
+        UpdateAlertsInteractor alertsInteractor = new UpdateAlertsInteractor(helper, appPrefs);
+
         if(!currentProcessName.contains("background_crash"))
         {
             PlatformClient platformClient = new co.touchlab.droidconandroid.shared.presenter.PlatformClient()
@@ -90,19 +102,14 @@ public class DroidconApplication extends Application
                 }
             };
 
-            AppManager.initContext(this, platformClient, new AppManager.LoadDataSeed()
-            {
-                @Override
-                public String dataSeed()
+            AppManager.initContext(this, platformClient, () -> {
+                try
                 {
-                    try
-                    {
-                        return IOUtils.toString(getAssets().open("dataseed.json"));
-                    }
-                    catch(IOException e)
-                    {
-                        throw new RuntimeException(e);
-                    }
+                    return IOUtils.toString(getAssets().open("dataseed.json"));
+                }
+                catch(IOException e)
+                {
+                    throw new RuntimeException(e);
                 }
             });
 
@@ -110,7 +117,7 @@ public class DroidconApplication extends Application
     }
 
     @SuppressWarnings("unused")
-    public void onEventMainThread(UpdateAlertsTask task)
+    public void onEventMainThread(UpdateAlertsInteractor task)
     {
         AlertManagerKt.scheduleAlert(this, task.nextEvent);
     }

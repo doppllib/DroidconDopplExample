@@ -20,7 +20,7 @@ import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHost
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataPresenter
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDayHolder
-import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsTask
+import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsInteractor
 import co.touchlab.droidconandroid.shared.tasks.persisted.RefreshScheduleData
 import co.touchlab.droidconandroid.shared.utils.TimeUtils
 import co.touchlab.droidconandroid.ui.*
@@ -225,7 +225,7 @@ class ScheduleActivity : AppCompatActivity() {
         prefs.allowNotifications = allow
         prefs.showNotifCard = false
         (view_pager.adapter as ScheduleFragmentPagerAdapter).updateNotifCard()
-        TaskQueue.loadQueueDefault(this).execute(UpdateAlertsTask())
+        TaskQueue.loadQueueDefault(this).execute(UpdateAlertsInteractor())
         adjustToolBarAndDrawers()
     }
 
