@@ -93,18 +93,8 @@ public class EventDetailViewModel extends ViewModel {
         host = null;
     }
 
-    public void toggleRsvp(boolean isAlreadyRsvped) {
-        if (isAlreadyRsvped) {
-            rsvpInteractor.removeRsvp()
-                    .subscribeOn(Schedulers.io())
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(event -> {
-                                host.updateRsvp();
-                                recordAnalytics(AnalyticsEvents.UNRSVP_EVENT, event);
-                                getDetails();
-                            },
-                            e -> Log.e("Error", "Error trying to remove rsvp"));
-        } else {
+    public void toggleRsvp(boolean rsvp) {
+        if (!rsvp) {
             rsvpInteractor.addRsvp()
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
@@ -114,6 +104,16 @@ public class EventDetailViewModel extends ViewModel {
                                 getDetails();
                             },
                             e -> Log.e("Error", "Error trying to add rsvp"));
+        } else {
+            rsvpInteractor.removeRsvp()
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(event -> {
+                                host.updateRsvp();
+                                recordAnalytics(AnalyticsEvents.UNRSVP_EVENT, event);
+                                getDetails();
+                            },
+                            e -> Log.e("Error", "Error trying to remove rsvp"));
         }
     }
 
