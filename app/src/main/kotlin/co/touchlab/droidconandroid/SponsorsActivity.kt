@@ -72,6 +72,7 @@ class SponsorsActivity : AppCompatActivity() {
         sponsors_view_pager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(sponsors_tabs))
         sponsors_view_pager.setPageMarginDrawable(ContextCompat.getDrawable(this@SponsorsActivity, R.drawable.div_empty_16dp))
         sponsors_view_pager.pageMargin = resources.getDimensionPixelSize(R.dimen.pager_margin)
+        sponsors_view_pager.offscreenPageLimit = 2
         sponsors_tabs.setupWithViewPager(sponsors_view_pager)
     }
 

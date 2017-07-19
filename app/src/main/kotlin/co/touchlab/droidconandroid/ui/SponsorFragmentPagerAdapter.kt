@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
 import co.touchlab.droidconandroid.R
 import co.touchlab.droidconandroid.SponsorsListFragment
-import co.touchlab.droidconandroid.shared.tasks.SponsorsTask
+import co.touchlab.droidconandroid.shared.interactors.SponsorsInteractor
 
 /**
  * Created by sufeizhao on 7/11/17.

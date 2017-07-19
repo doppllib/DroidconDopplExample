@@ -18,10 +18,8 @@ apply plugin: 'co.doppl.gradle'
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
-def baseurl = properties.hasProperty('baseurl') ?
-        properties.getProperty('baseurl') :
-        'https://droidcon-server.herokuapp.com/'
-
+def baseurl = properties.hasProperty('baseurl') ? properties.getProperty('baseurl') : 'https://droidcon-server.herokuapp.com/'
+def amazonurl = properties.getProperty('amazonurl')
 def releasePassword = properties.getProperty('releasePassword')
 def jwLicenseKey = properties.getProperty('jwLicenseKey')
 
@@ -37,6 +35,7 @@ android {
         versionName "0.1.01"
 
         buildConfigField "String", "BASE_URL", "\"$baseurl\""
+        buildConfigField "String", "AMAZON_URL", "\"$amazonurl\""
         resValue "string", "jw_license_key", "$jwLicenseKey"
         vectorDrawables.useSupportLibrary = true
     }
