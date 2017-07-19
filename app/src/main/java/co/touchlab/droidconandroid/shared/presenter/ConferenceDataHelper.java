@@ -17,6 +17,7 @@ import co.touchlab.droidconandroid.shared.data.ScheduleBlock;
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.stmt.Where;
+import io.reactivex.Observable;
 
 /**
  * Created by kgalligan on 4/17/16.
@@ -45,7 +46,7 @@ public class ConferenceDataHelper
         List<ScheduleBlock> all = new ArrayList<>();
 
         all.addAll(blockDao.queryForAll().list());
-        List<Event> eventList = null;
+        List<Event> eventList;
 
         if(allEvents)
         {
@@ -76,7 +77,6 @@ public class ConferenceDataHelper
             {
                 return 0;
             }
-
             if(o1.isBlock())
             {
                 return 1;
@@ -91,14 +91,12 @@ public class ConferenceDataHelper
 
         TreeMap<String, List<ScheduleBlockHour>> allTheData = new TreeMap<>();
         String lastHourDisplay = "";
-        List<ScheduleBlockHour> blockHours = new ArrayList<>();
 
         for(ScheduleBlock scheduleBlock : all)
         {
             final Date startDateObj = new Date(scheduleBlock.getStartLong());
             final String startDate = dateFormat.format(startDateObj);
-            List<ScheduleBlockHour> blockHourList = allTheData
-                    .get(startDate);
+            List<ScheduleBlockHour> blockHourList = allTheData.get(startDate);
             if(blockHourList == null)
             {
                 blockHourList = new ArrayList<>();
@@ -115,10 +113,10 @@ public class ConferenceDataHelper
 
         for(String dateString : allTheData.keySet())
         {
-            final List<ScheduleBlockHour> hourBlocksMap = allTheData
-                    .get(dateString);
+            final List<ScheduleBlockHour> hourBlocksMap = allTheData.get(dateString);
 
-            final ConferenceDayHolder conferenceDayHolder = new ConferenceDayHolder(dateString, hourBlocksMap.toArray(new ScheduleBlockHour[hourBlocksMap.size()]));
+            final ConferenceDayHolder conferenceDayHolder = new ConferenceDayHolder(dateString,
+                    hourBlocksMap.toArray(new ScheduleBlockHour[hourBlocksMap.size()]));
             dayHolders.add(conferenceDayHolder);
         }
 

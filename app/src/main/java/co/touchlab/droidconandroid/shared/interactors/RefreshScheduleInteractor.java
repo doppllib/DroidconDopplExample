@@ -1,7 +1,6 @@
 package co.touchlab.droidconandroid.shared.interactors;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.birbit.android.jobqueue.JobManager;
 
