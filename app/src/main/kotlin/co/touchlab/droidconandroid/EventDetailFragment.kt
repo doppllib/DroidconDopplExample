@@ -14,7 +14,6 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -213,10 +212,7 @@ class EventDetailFragment : Fragment(), EventDetailHost {
     }
 
     override fun updateRsvp() {
-        // FIXME: Bandaid until we fully convert the UpdateAlertsTask
-//        TaskQueue.loadQueueDefault(activity).execute(UpdateAlertsTask())
         alertsInteractor.alert()
-
     }
 
     /**
@@ -230,11 +226,9 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         fab.rippleColor = ContextCompat.getColor(context, R.color.white)
 
         if (event.isRsvped) {
-            Log.d("EDF", "Setting")
             fab.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.ic_check))
             fab.isActivated = true
         } else {
-            Log.d("EDF", "Not setting")
             fab.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.ic_plus))
             fab.isActivated = false
         }
@@ -247,8 +241,6 @@ class EventDetailFragment : Fragment(), EventDetailHost {
                 true
             }
         }
-
-        Log.d("EDF", "It's me")
 
         val layoutParams = fab.layoutParams as CoordinatorLayout.LayoutParams
 //        if (event.isPast) {

@@ -10,10 +10,9 @@ import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHelper;
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDayHolder;
 import co.touchlab.droidconandroid.shared.presenter.ScheduleBlockHour;
-import io.reactivex.Observable;
+import co.touchlab.droidconandroid.shared.utils.EventBusExt;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
-import io.reactivex.subjects.PublishSubject;
 
 /**
  * Created by samuelhill on 7/5/16.
@@ -21,17 +20,13 @@ import io.reactivex.subjects.PublishSubject;
 public class UpdateAlertsInteractor {
     private final DatabaseHelper helper;
     private final AppPrefs prefs;
-    private PublishSubject<Event> alerts = PublishSubject.create(); // This might need to be a Relay
+    public Event event;
 
     public static final long ALERT_BUFFER = TimeUnit.MINUTES.toMillis(5);
 
     public UpdateAlertsInteractor(DatabaseHelper helper, AppPrefs prefs) {
         this.helper = helper;
         this.prefs = prefs;
-    }
-
-    public Observable<Event> getAlerts() {
-        return alerts;
     }
 
     public void alert() {
@@ -50,7 +45,8 @@ public class UpdateAlertsInteractor {
                 if (hour.scheduleBlock instanceof Event) {
                     Event event = (Event) hour.scheduleBlock;
                     if (event.getStartLong() - ALERT_BUFFER > System.currentTimeMillis()) {
-                        alerts.onNext(event);
+                        this.event = event;
+                        EventBusExt.getDefault().post(this);
                         return;
                     }
                 }

@@ -13,13 +13,12 @@ import com.birbit.android.jobqueue.scheduling.FrameworkJobSchedulerService;
 import java.io.IOException;
 
 import co.touchlab.droidconandroid.alerts.AlertManagerKt;
-import co.touchlab.droidconandroid.shared.data.AppPrefs;
-import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.presenter.AppManager;
 import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
 import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsInteractor;
 import co.touchlab.droidconandroid.shared.tasks.persisted.JobQueueService;
+import co.touchlab.droidconandroid.shared.utils.EventBusExt;
 import co.touchlab.droidconandroid.shared.utils.IOUtils;
 
 /**
@@ -44,13 +43,7 @@ public class DroidconApplication extends Application
         String currentProcessName = getCurrentProcessName(this);
         Log.i(DroidconApplication.class.getSimpleName(), "currentProcessName: "+ currentProcessName );
 
-        DatabaseHelper helper = DatabaseHelper.getInstance(this);
-        AppPrefs appPrefs = AppPrefs.getInstance(this);
-
-        UpdateAlertsInteractor alertsInteractor = new UpdateAlertsInteractor(helper, appPrefs);
-        alertsInteractor.getAlerts()
-                .subscribe(this::update,
-                        e -> Log.e("UpdateError", "Error while updating " + e.getLocalizedMessage()));
+        EventBusExt.getDefault().register(this);
 
         if(!currentProcessName.contains("background_crash"))
         {
@@ -184,6 +177,10 @@ public class DroidconApplication extends Application
         return instance;
     }
 
+    public void onEventMainThread(UpdateAlertsInteractor interactor)
+    {
+        update(interactor.event);
+    }
 
     public void update(Event nextEvent)
     {
