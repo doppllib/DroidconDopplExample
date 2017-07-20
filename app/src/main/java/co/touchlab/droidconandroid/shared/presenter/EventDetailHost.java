@@ -1,5 +1,6 @@
 package co.touchlab.droidconandroid.shared.presenter;
 
+import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.data.EventInfo;
 
 /**
@@ -10,7 +11,7 @@ public interface EventDetailHost
     void dataRefresh(EventInfo eventInfo);
     void resetStreamProgress();
     void reportError(String error);
-    void updateRsvp();
+    void updateRsvp(Event event);
     void showTicketOptions(String email, String link, String cover);
     void openSlack(String slackLink, String slackLinkHttp, boolean showSlackDialog);
 }

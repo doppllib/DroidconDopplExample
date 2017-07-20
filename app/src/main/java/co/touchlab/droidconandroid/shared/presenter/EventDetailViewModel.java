@@ -99,9 +99,8 @@ public class EventDetailViewModel extends ViewModel {
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(event -> {
-                                host.updateRsvp();
+                                host.updateRsvp(event);
                                 recordAnalytics(AnalyticsEvents.RSVP_EVENT, event);
-                                getDetails();
                             },
                             e -> Log.e("Error", "Error trying to add rsvp"));
 
@@ -110,9 +109,8 @@ public class EventDetailViewModel extends ViewModel {
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(event -> {
-                                host.updateRsvp();
+                                host.updateRsvp(event);
                                 recordAnalytics(AnalyticsEvents.UNRSVP_EVENT, event);
-                                getDetails();
                             },
                             e -> Log.e("Error", "Error trying to remove rsvp"));
         }

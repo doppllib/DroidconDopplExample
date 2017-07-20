@@ -211,7 +211,8 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         SlackHelper.openSlack(activity, slackLink, slackLinkHttp, showSlackDialog)
     }
 
-    override fun updateRsvp() {
+    override fun updateRsvp(event: Event) {
+        updateFAB(event)
         alertsInteractor.alert()
     }
 
@@ -243,11 +244,11 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         }
 
         val layoutParams = fab.layoutParams as CoordinatorLayout.LayoutParams
-//        if (event.isPast) {
-//            layoutParams.anchorId = View.NO_ID
-//            fab.layoutParams = layoutParams
-//            fab.visibility = View.GONE
-//        } else {
+        if (event.isPast) {
+            layoutParams.anchorId = View.NO_ID
+            fab.layoutParams = layoutParams
+            fab.visibility = View.GONE
+        } else {
             fab.setOnClickListener {
                 if (event.isRsvped) {
                     viewModel.toggleRsvp(false)
@@ -259,7 +260,7 @@ class EventDetailFragment : Fragment(), EventDetailHost {
             layoutParams.anchorId = R.id.appbar
             fab.layoutParams = layoutParams
             fab.visibility = View.VISIBLE
-//        }
+        }
     }
 
     /**
