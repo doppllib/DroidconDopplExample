@@ -12,7 +12,7 @@ import co.touchlab.droidconandroid.EventDetailActivity
 import co.touchlab.droidconandroid.R
 import co.touchlab.droidconandroid.shared.data.AppPrefs
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper
-import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsInteractor
+import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 
 const val EXTRA_EVENT_NAME = "EXTRA_EVENT_NAME"
 const val EXTRA_EVENT_ID = "EXTRA_EVENT_ID"

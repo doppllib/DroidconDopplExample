@@ -1,4 +1,4 @@
-package co.touchlab.droidconandroid.shared.tasks;
+package co.touchlab.droidconandroid.shared.interactors;
 
 import android.util.Log;
 

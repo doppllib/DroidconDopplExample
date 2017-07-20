@@ -22,13 +22,13 @@ import co.touchlab.droidconandroid.shared.data.*
 import co.touchlab.droidconandroid.shared.interactors.EventDetailInteractor
 import co.touchlab.droidconandroid.shared.interactors.EventVideoDetailsInteractor
 import co.touchlab.droidconandroid.shared.interactors.RsvpInteractor
+import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 import co.touchlab.droidconandroid.shared.network.DataHelper
 import co.touchlab.droidconandroid.shared.network.VideoDetailsRequest
 import co.touchlab.droidconandroid.shared.network.dao.EventVideoDetails
 import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.EventDetailHost
 import co.touchlab.droidconandroid.shared.presenter.EventDetailViewModel
-import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsInteractor
 import kotlinx.android.synthetic.main.fragment_event_detail.*
 import kotlinx.android.synthetic.main.view_streaming_email_dialog.view.*
 import java.util.*
@@ -41,21 +41,18 @@ class EventDetailFragment : Fragment(), EventDetailHost {
 
     private val eventId: Long by lazy { findEventIdArg() }
 
-    private val alertsInteractor: UpdateAlertsInteractor by lazy {
-        val helper = DatabaseHelper.getInstance(activity)
-        val appPrefs = AppPrefs.getInstance(activity)
-        UpdateAlertsInteractor(helper, appPrefs)
-    }
-
     private val viewModel: EventDetailViewModel by lazy {
         val retrofit = DataHelper.makeRetrofit2Client(AppManager.getPlatformClient().baseUrl())
         val videoDetailsRequest = retrofit.create(VideoDetailsRequest::class.java)
         val videoDetailsInteractor = EventVideoDetailsInteractor(videoDetailsRequest, eventId)
 
         val helper = DatabaseHelper.getInstance(activity)
+        val appPrefs = AppPrefs.getInstance(activity)
+        val alertsInteractor = UpdateAlertsInteractor(helper, appPrefs)
         val eventDetailsInteractor = EventDetailInteractor(helper, eventId)
         val rsvpInteractor = RsvpInteractor(helper, eventId)
-        val factory = EventDetailViewModel.Factory(eventDetailsInteractor, videoDetailsInteractor, rsvpInteractor)
+        val factory = EventDetailViewModel.Factory(eventDetailsInteractor, videoDetailsInteractor,
+                rsvpInteractor, alertsInteractor)
         ViewModelProviders.of(this, factory)[EventDetailViewModel::class.java]
     }
 
@@ -213,7 +210,6 @@ class EventDetailFragment : Fragment(), EventDetailHost {
 
     override fun updateRsvp(event: Event) {
         updateFAB(event)
-        alertsInteractor.alert()
     }
 
     /**

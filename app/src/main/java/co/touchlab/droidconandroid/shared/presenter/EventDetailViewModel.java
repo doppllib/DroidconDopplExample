@@ -13,6 +13,7 @@ import co.touchlab.droidconandroid.shared.data.Venue;
 import co.touchlab.droidconandroid.shared.interactors.EventDetailInteractor;
 import co.touchlab.droidconandroid.shared.interactors.EventVideoDetailsInteractor;
 import co.touchlab.droidconandroid.shared.interactors.RsvpInteractor;
+import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor;
 import co.touchlab.droidconandroid.shared.network.dao.EventVideoDetails;
 import co.touchlab.droidconandroid.shared.utils.AnalyticsEvents;
 import co.touchlab.droidconandroid.shared.utils.SlackUtils;
@@ -33,14 +34,16 @@ public class EventDetailViewModel extends ViewModel {
     private final EventDetailInteractor detailInteractor;
     private final EventVideoDetailsInteractor videoInteractor;
     private final RsvpInteractor rsvpInteractor;
+    private final UpdateAlertsInteractor alertsInteractor;
     private CompositeDisposable disposables = new CompositeDisposable();
 
     private EventDetailViewModel(EventDetailInteractor detailInteractor,
                                  EventVideoDetailsInteractor videoInteractor,
-                                 RsvpInteractor rsvpInteractor) {
+                                 RsvpInteractor rsvpInteractor, UpdateAlertsInteractor alertsInteractor) {
         this.detailInteractor = detailInteractor;
         this.videoInteractor = videoInteractor;
         this.rsvpInteractor = rsvpInteractor;
+        this.alertsInteractor = alertsInteractor;
     }
 
     public void register(EventDetailHost host) {
@@ -100,6 +103,7 @@ public class EventDetailViewModel extends ViewModel {
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(event -> {
                                 host.updateRsvp(event);
+                                alertsInteractor.alert();
                                 recordAnalytics(AnalyticsEvents.RSVP_EVENT, event);
                             },
                             e -> Log.e("Error", "Error trying to add rsvp"));
@@ -110,6 +114,7 @@ public class EventDetailViewModel extends ViewModel {
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(event -> {
                                 host.updateRsvp(event);
+                                alertsInteractor.alert();
                                 recordAnalytics(AnalyticsEvents.UNRSVP_EVENT, event);
                             },
                             e -> Log.e("Error", "Error trying to remove rsvp"));
@@ -142,19 +147,21 @@ public class EventDetailViewModel extends ViewModel {
         private final EventVideoDetailsInteractor videoInteractor;
         private final EventDetailInteractor detailInteractor;
         private final RsvpInteractor rsvpInteractor;
+        private final UpdateAlertsInteractor alertsInteractor;
 
         public Factory(EventDetailInteractor detailInteractor,
                        EventVideoDetailsInteractor videoInteractor,
-                       RsvpInteractor rsvpInteractor) {
+                       RsvpInteractor rsvpInteractor, UpdateAlertsInteractor alertsInteractor) {
             this.videoInteractor = videoInteractor;
             this.detailInteractor = detailInteractor;
             this.rsvpInteractor = rsvpInteractor;
+            this.alertsInteractor = alertsInteractor;
         }
 
         @Override
         public <T extends ViewModel> T create(Class<T> modelClass) {
             //noinspection unchecked
-            return (T) new EventDetailViewModel(detailInteractor, videoInteractor, rsvpInteractor);
+            return (T) new EventDetailViewModel(detailInteractor, videoInteractor, rsvpInteractor, alertsInteractor);
         }
     }
 }

@@ -19,7 +19,7 @@ import co.touchlab.droidconandroid.shared.data.DatabaseHelper
 import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor
 import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataViewModel
-import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsInteractor
+import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 import co.touchlab.droidconandroid.shared.tasks.persisted.RefreshScheduleJob
 import co.touchlab.droidconandroid.shared.utils.EventBusExt
 import co.touchlab.droidconandroid.shared.utils.TimeUtils

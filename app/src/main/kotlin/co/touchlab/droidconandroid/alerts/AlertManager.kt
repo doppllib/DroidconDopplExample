@@ -7,7 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.support.annotation.UiThread
 import co.touchlab.droidconandroid.shared.data.Event
-import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsInteractor
+import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 
 private const val ALARM_REQUEST_CODE = 100
 private const val INTENT_CATEGORY = "android.intent.category.DEFAULT"
