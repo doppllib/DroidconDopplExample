@@ -57,7 +57,6 @@ class AlertReceiver : BroadcastReceiver() {
         }
 
         //This receiver also gets triggered for time changes. Always update the alarms here
-//        TaskQueue.loadQueueDefault(context).execute(UpdateAlertsInteractor())
         updateAlertsInteractor.alert()
     }
 }
