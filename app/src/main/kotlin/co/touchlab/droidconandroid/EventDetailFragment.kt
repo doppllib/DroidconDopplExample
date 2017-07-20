@@ -1,7 +1,6 @@
 package co.touchlab.droidconandroid
 
 import android.arch.lifecycle.ViewModelProviders
-import android.content.DialogInterface
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.net.Uri
@@ -9,11 +8,8 @@ import android.os.Bundle
 import android.support.design.widget.CoordinatorLayout
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
-import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,17 +17,11 @@ import android.widget.Toast
 import co.touchlab.android.threading.tasks.TaskQueue
 import co.touchlab.droidconandroid.shared.data.*
 import co.touchlab.droidconandroid.shared.interactors.EventDetailInteractor
-import co.touchlab.droidconandroid.shared.interactors.EventVideoDetailsInteractor
 import co.touchlab.droidconandroid.shared.interactors.RsvpInteractor
-import co.touchlab.droidconandroid.shared.network.DataHelper
-import co.touchlab.droidconandroid.shared.network.VideoDetailsRequest
-import co.touchlab.droidconandroid.shared.network.dao.EventVideoDetails
-import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.EventDetailHost
 import co.touchlab.droidconandroid.shared.presenter.EventDetailViewModel
 import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsTask
 import kotlinx.android.synthetic.main.fragment_event_detail.*
-import kotlinx.android.synthetic.main.view_streaming_email_dialog.view.*
 import java.util.*
 
 /**
@@ -43,14 +33,10 @@ class EventDetailFragment : Fragment(), EventDetailHost {
     private val eventId: Long by lazy { findEventIdArg() }
 
     private val viewModel: EventDetailViewModel by lazy {
-        val retrofit = DataHelper.makeRetrofit2Client(AppManager.getPlatformClient().baseUrl())
-        val videoDetailsRequest = retrofit.create(VideoDetailsRequest::class.java)
-        val videoDetailsInteractor = EventVideoDetailsInteractor(videoDetailsRequest, eventId)
-
         val helper = DatabaseHelper.getInstance(activity)
         val eventDetailsInteractor = EventDetailInteractor(helper, eventId)
         val rsvpInteractor = RsvpInteractor(helper, eventId)
-        val factory = EventDetailViewModel.Factory(eventDetailsInteractor, videoDetailsInteractor, rsvpInteractor)
+        val factory = EventDetailViewModel.Factory(eventDetailsInteractor, rsvpInteractor)
         ViewModelProviders.of(this, factory)[EventDetailViewModel::class.java]
     }
 
@@ -59,12 +45,7 @@ class EventDetailFragment : Fragment(), EventDetailHost {
 
     companion object {
         @JvmField
-        val EXTRA_STREAM_LINK = "EXTRA_STREAM_LINK"
-        @JvmField
-        val EXTRA_STREAM_COVER = "EXTRA_STREAM_COVER"
-        @JvmField
         val EXTRA_EVENT_ID = "EXTRA_EVENT_ID"
-        private val TICKET_URL = "https://www.eventbrite.com/e/droidcon-nyc-2016-tickets-25645809306"
         private val FAB_URL = "http://imgur.com/gallery/7drHiqr"
         private val TIME_FORMAT = "h:mm a"
         private val EVENT_ID = "EVENT_ID"
@@ -147,63 +128,12 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         updateFAB(event)
 
         updateContent(event,
-                eventInfo.videoDetails,
                 eventInfo.speakers,
                 eventInfo.conflict)
     }
 
     override fun reportError(error: String) {
         Toast.makeText(context, error, Toast.LENGTH_LONG).show()
-    }
-
-    override fun showTicketOptions(email: String?, link: String, cover: String) {
-        val bodyView = LayoutInflater.from(activity).inflate(R.layout.view_streaming_email_dialog, null)
-
-        val buyClickListener = DialogInterface.OnClickListener { _, _ ->
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse(TICKET_URL)
-            startActivity(intent)
-        }
-
-        val builder = AlertDialog.Builder(activity, R.style.AlertDialogTheme)
-                .setTitle(getString(R.string.whoops))
-                .setView(bodyView)
-                .setPositiveButton(getString(R.string.buy_ticket), buyClickListener)
-                .setNegativeButton(getString(R.string.cancel), null)
-        val dialog = builder.show()
-        dialog.getButton(AlertDialog.BUTTON_NEGATIVE)
-                .setTextColor(ContextCompat.getColor(activity, R.color.text_gray))
-
-        bodyView.streaming_email_edit_text.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-            }
-
-            override fun onTextChanged(email: CharSequence?, start: Int, before: Int, count: Int) {
-                val buttonText: String
-                if (email!!.isNotEmpty()) {
-                    buttonText = getString(R.string.proceed)
-                    dialog.setButton(AlertDialog.BUTTON_POSITIVE, buttonText, { _, _ ->
-                        viewModel.setEventbriteEmail(email.toString(), link, cover)
-                    })
-                } else {
-                    buttonText = getString(R.string.buy_ticket)
-                    dialog.setButton(AlertDialog.BUTTON_POSITIVE, buttonText, buyClickListener)
-                }
-                // setButton doesn't update the title after dialog is shown, use getButton
-                dialog.getButton(AlertDialog.BUTTON_POSITIVE).text = buttonText
-            }
-
-            override fun afterTextChanged(s: Editable?) {
-            }
-        })
-    }
-
-    override fun resetStreamProgress() {
-        recycler.adapter?.notifyDataSetChanged()
-    }
-
-    override fun openSlack(slackLink: String, slackLinkHttp: String, showSlackDialog: Boolean) {
-        SlackHelper.openSlack(activity, slackLink, slackLinkHttp, showSlackDialog)
     }
 
     override fun updateRsvp() {
@@ -261,7 +191,7 @@ class EventDetailFragment : Fragment(), EventDetailHost {
     /**
      * Adds all the content to the recyclerView
      */
-    private fun updateContent(event: Event, videoDetails: EventVideoDetails, speakers: List<UserAccount>?, conflict: Boolean) {
+    private fun updateContent(event: Event, speakers: List<UserAccount>?, conflict: Boolean) {
         val adapter = EventDetailAdapter(activity, viewModel, trackColor)
 
         //Construct the time and venue string and add it to the adapter
@@ -276,9 +206,6 @@ class EventDetailFragment : Fragment(), EventDetailHost {
 
         val venueFormatString = resources.getString(R.string.event_venue_time)
         adapter.addHeader(event.name, venueFormatString.format(event.venue.name, formattedStart, formattedEnd))
-
-        if (videoDetails.hasStream())
-            adapter.addStream(videoDetails.mergedStreamLink, "", videoDetails.isNow)
 
         if (event.isNow)
             adapter.addInfo("<i><b>" + resources.getString(R.string.event_now) + "</b></i>")

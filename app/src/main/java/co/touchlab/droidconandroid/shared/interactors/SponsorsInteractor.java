@@ -6,8 +6,7 @@ import io.reactivex.Observable;
 
 public class SponsorsInteractor {
     public static final int SPONSOR_GENERAL = 0;
-    public static final int SPONSOR_STREAMING = 1;
-    public static final int SPONSOR_PARTY = 2;
+    public static final int SPONSOR_PARTY = 1;
 
     private final SponsorsRequest request;
     private final int type;
@@ -29,8 +28,6 @@ public class SponsorsInteractor {
 
     private String getFileName(int type) {
         switch (type) {
-            case SPONSOR_STREAMING:
-                return "sponsors_stream.json";
             case SPONSOR_PARTY:
                 return "sponsors_party.json";
             default:

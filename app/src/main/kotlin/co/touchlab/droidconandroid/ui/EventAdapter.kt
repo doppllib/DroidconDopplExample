@@ -26,13 +26,11 @@ import java.util.*
 
 class EventAdapter(private val context: Context,
                    private val allEvents: Boolean,
-                   initialFilters: List<String>,
                    private val eventClickListener: EventClickListener,
                    private var showNotificationCard: Boolean) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var dataSet: List<ScheduleBlockHour> = emptyList()
     private var filteredData: ArrayList<ScheduleBlockHour?> = ArrayList()
-    private var currentTracks: ArrayList<String> = ArrayList(initialFilters)
 
     override fun getItemCount(): Int {
         return filteredData.size + adjustNotification
@@ -93,19 +91,8 @@ class EventAdapter(private val context: Context,
         }
     }
 
-    fun toggleTrackFilter(track: Track) {
-        val trackServerName = track.serverName
-        if (!currentTracks.contains(trackServerName)) {
-            currentTracks.add(trackServerName)
-        } else {
-            currentTracks.remove(trackServerName)
-        }
-        updateData()
-    }
-
     private fun updateData() {
         filteredData.clear()
-        if (currentTracks.isEmpty()) {
             for (item in dataSet) {
                 val position = filteredData.size + adjustNotification
                 if (item.hourStringDisplay.isNotBlank() && position.isOdd()) {
@@ -114,20 +101,6 @@ class EventAdapter(private val context: Context,
                 }
                 filteredData.add(item)
             }
-        } else {
-            //TODO: Filter
-            /*for (item in dataSet) {
-                if(item is Block) {
-                    filteredData.add(item)
-                } else {
-                    val event = item as Event
-                    val category = event.category
-                    if (!TextUtils.isEmpty(category) && currentTracks.contains(category)) {
-                        filteredData.add(item)
-                    }
-                }
-            }*/
-        }
 
         notifyDataSetChanged()
     }

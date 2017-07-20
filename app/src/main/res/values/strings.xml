@@ -26,14 +26,6 @@
     <string name="navigation_drawer_close">Close</string>
     <string name="explore">Schedule</string>
     <string name="my_schedule">My agenda</string>
-    <string name="chat_on_slack">Chat on Slack</string>
-    <string name="slack_almost_there">Almost there...</string>
-    <string name="slack_confirm">Yep, take me to Slack</string>
-    <string name="slack_not_yet">Not yet</string>
-    <string name="slack_error">Error opening Slack link</string>
-    <string name="slack_dialog_title">You’ll need an account to join the DCNYC Slack team.</string>
-    <string name="slack_dialog_text">Have you signed up to join the Slack team yet?</string>
-    <string name="slack_dialog_no">Don\'t ask me again</string>
 
     <string name="map">Map</string>
     <string name="social">Social profiles</string>
@@ -77,7 +69,7 @@
     <string name="event_track" >on the %1$s track</string>
     <string name="event_now" >This session is happening now</string>
     <string name="event_past" >This session has already ended</string>
-    <string name="event_conflict" >This session conflicts with another session in your schedule</string>
+    <string name="event_conflict">This session conflicts with another session in your schedule</string>
 
     <string name="filter">Filter</string>
     <string name="about_app_header">About the app</string>
@@ -119,11 +111,6 @@
     <string name="lorem_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </string>
     <string name="feedback">Feedback</string>
-    <string name="live_stream">Stream archive</string>
-    <string name="live_stream_now">Live now!</string>
-    <string name="live_stream_loading">Live stream loading…</string>
-    <string name="whoops">Whoops!</string>
-    <string name="buy_ticket">Buy a ticket</string>
 
     <!-- content descriptions-->
     <string name="cd_live_now">live now</string>
@@ -133,14 +120,12 @@
     <string name="cd_profile_cover_image">profile cover image</string>
     <string name="cd_close_user_detail">close user detail</string>
     <string name="cd_event_description">event description</string>
-    <string name="cd_stream_icon">stream icon</string>
 
     <string name="title_activity_user_detail">Profile</string>
     <string name="title_activity_sponsors">OUR AWESOME SPONSORS</string>
     <string name="sponsor_image">Sponsor Image</string>
 
     <string name="sponsors_tab_general">GENERAL&#160;</string>
-    <string name="sponsors_tab_streaming">STREAMING&#160;</string>
     <string name="sponsors_tab_party">PARTY&#160;</string>
 
     <!-- URL -->

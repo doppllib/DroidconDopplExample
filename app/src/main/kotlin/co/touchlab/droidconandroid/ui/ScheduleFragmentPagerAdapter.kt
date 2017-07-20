@@ -20,12 +20,6 @@ class ScheduleFragmentPagerAdapter(private var fm: FragmentManager, private var 
         return dates[position].formatDate(TIME_FORMAT)
     }
 
-    fun updateFrags(track: Track) {
-        for (fragment in fm.fragments) {
-            (fragment as? ScheduleDataFragment)?.filter(track)
-        }
-    }
-
     fun updateNotifCard() {
         for (fragment in fm.fragments) {
             (fragment as? ScheduleDataFragment)?.updateNotifCard()
