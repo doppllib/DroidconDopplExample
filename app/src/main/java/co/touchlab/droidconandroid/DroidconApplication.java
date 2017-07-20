@@ -21,7 +21,6 @@ import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
 import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsInteractor;
 import co.touchlab.droidconandroid.shared.tasks.persisted.JobQueueService;
 import co.touchlab.droidconandroid.shared.utils.IOUtils;
-import retrofit.client.Client;
 
 /**
  * Created by kgalligan on 6/28/14.
@@ -57,12 +56,6 @@ public class DroidconApplication extends Application
         {
             PlatformClient platformClient = new PlatformClient()
             {
-                @Override
-                public Client makeClient()
-                {
-                    return null;
-                }
-
                 @Override
                 public String baseUrl()
                 {
