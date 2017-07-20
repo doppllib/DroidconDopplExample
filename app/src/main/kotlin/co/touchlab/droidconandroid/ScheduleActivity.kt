@@ -237,7 +237,6 @@ class ScheduleActivity : AppCompatActivity() {
         prefs.allowNotifications = allow
         prefs.showNotifCard = false
         (view_pager.adapter as ScheduleFragmentPagerAdapter).updateNotifCard()
-//        TaskQueue.loadQueueDefault(this).execute(UpdateAlertsInteractor())
         updateAlertsInteractor.alert()
         adjustToolBarAndDrawers()
     }

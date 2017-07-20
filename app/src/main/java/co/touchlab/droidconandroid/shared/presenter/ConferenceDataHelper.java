@@ -1,5 +1,7 @@
 package co.touchlab.droidconandroid.shared.presenter;
 
+import android.content.Context;
+
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

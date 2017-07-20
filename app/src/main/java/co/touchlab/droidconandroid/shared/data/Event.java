@@ -2,11 +2,11 @@ package co.touchlab.droidconandroid.shared.data;
 
 import android.text.TextUtils;
 
-import javax.annotation.Nonnull;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import javax.annotation.Nonnull;
 
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 import co.touchlab.squeaky.field.DatabaseField;

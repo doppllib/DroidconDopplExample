@@ -5,7 +5,6 @@ import com.google.gson.Gson;
 
 import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
-import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor;
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
 
 /**
@@ -33,7 +32,7 @@ public class AppManager
             try
             {
                 final String seed = loadDataSeed.dataSeed();
-                RefreshScheduleInteractor.saveConventionData(context,
+                ConferenceDataHelper.saveConventionData(context,
                         new Gson().fromJson(seed, Convention.class));
             }
             catch(RuntimeException e)
