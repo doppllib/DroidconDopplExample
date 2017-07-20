@@ -9,6 +9,13 @@ import com.birbit.android.jobqueue.JobManager;
 import com.birbit.android.jobqueue.config.Configuration;
 import com.birbit.android.jobqueue.log.CustomLogger;
 import com.birbit.android.jobqueue.scheduling.FrameworkJobSchedulerService;
+import com.birbit.android.jobqueue.JobManager;
+import com.birbit.android.jobqueue.config.Configuration;
+import com.birbit.android.jobqueue.log.CustomLogger;
+import com.birbit.android.jobqueue.scheduling.FrameworkJobSchedulerService;
+
+import co.touchlab.droidconandroid.shared.tasks.persisted.JobQueueService;
+import co.touchlab.droidconandroid.shared.utils.IOUtils;
 
 import java.io.IOException;
 
