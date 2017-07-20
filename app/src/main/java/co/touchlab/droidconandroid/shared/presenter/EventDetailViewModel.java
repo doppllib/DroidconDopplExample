@@ -95,27 +95,26 @@ public class EventDetailViewModel extends ViewModel {
 
     public void toggleRsvp(boolean rsvp) {
         if (rsvp) {
-            rsvpInteractor.removeRsvp()
-                    .subscribeOn(Schedulers.io())
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(event -> {
-                                Log.d("EDF", "We wanted to set it to false and it is " + event.isRsvped());
-                                host.updateRsvp();
-                                recordAnalytics(AnalyticsEvents.UNRSVP_EVENT, event);
-                                getDetails();
-                            },
-                            e -> Log.e("Error", "Error trying to remove rsvp"));
-        } else {
             rsvpInteractor.addRsvp()
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(event -> {
-                                Log.d("EDF", "We wanted to set it to true and it is " + event.isRsvped());
                                 host.updateRsvp();
                                 recordAnalytics(AnalyticsEvents.RSVP_EVENT, event);
                                 getDetails();
                             },
                             e -> Log.e("Error", "Error trying to add rsvp"));
+
+        } else {
+            rsvpInteractor.removeRsvp()
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(event -> {
+                                host.updateRsvp();
+                                recordAnalytics(AnalyticsEvents.UNRSVP_EVENT, event);
+                                getDetails();
+                            },
+                            e -> Log.e("Error", "Error trying to remove rsvp"));
         }
     }
 
