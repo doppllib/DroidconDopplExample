@@ -13,7 +13,7 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_event_header.view.*
 import kotlinx.android.synthetic.main.item_event_info.view.*
 import kotlinx.android.synthetic.main.item_event_text.view.*
-import kotlinx.android.synthetic.main.item_user_summary.view.*
+import kotlinx.android.synthetic.main.item_speaker_summary.view.*
 import org.apache.commons.lang3.StringUtils
 import java.util.*
 
@@ -69,7 +69,7 @@ class EventDetailAdapter(private val context: Context,
                 InfoVH(view)
             }
             TYPE_SPEAKER -> {
-                val view = LayoutInflater.from(context).inflate(R.layout.item_user_summary, parent, false)
+                val view = LayoutInflater.from(context).inflate(R.layout.item_speaker_summary, parent, false)
                 SpeakerVH(view)
             }
             TYPE_SPACE -> {

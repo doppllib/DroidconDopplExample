@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/text_xlarge"
-        tools:text="Title"
+        tools:text="Welcome to Droidcon"
         android:paddingLeft="@dimen/padding_xxlarge"
         android:paddingRight="@dimen/padding_xxlarge"
         android:paddingBottom="@dimen/padding_small"
@@ -31,9 +31,11 @@
         android:textSize="@dimen/text_large"
         android:paddingLeft="@dimen/padding_xxlarge"
         android:paddingRight="@dimen/padding_xxlarge"
-        tools:text="Title"
+        android:layout_marginBottom="10dp"
+        tools:text="description"
         android:id="@+id/descriptionTv"
         android:layout_alignParentBottom="true"
+        android:gravity="center"
         android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

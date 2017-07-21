@@ -35,11 +35,11 @@
     <!-- welcome copy-->
     <string name="welcome_0_title">Welcome to Droidcon!</string>
     <string name="welcome_1_title">Plan ahead</string>
-    <string name="welcome_2_title">Be yourself</string>
-    <string name="welcome_3_title">Say hey to our sponsors ...</string>
+    <string name="welcome_2_title">Stay connected</string>
+    <string name="welcome_3_title">Say hey to our sponsors …</string>
     <string name="welcome_0_desc">This app will help you navigate the world\'s largest community-driven Android conference</string>
     <string name="welcome_1_desc">Quickly make and manage your schedule to stay on track</string>
-    <string name="welcome_2_desc">Fill out your profile and connect with other attendees</string>
+    <string name="welcome_2_desc">Check out the speaker profiles before the talks</string>
     <string name="welcome_3_desc">Sponsors are cool.</string>
     <string name="next">Next</string>
     <string name="lets_go">Let\'s go!</string>
