@@ -47,6 +47,7 @@ public class RsvpInteractor {
         Dao<Event> eventDao = helper.getEventDao();
         return Single.fromCallable(() -> {
             eventDao.update(event);
+            jobManager.addJobInBackground(new RsvpJob(eventId, event.rsvpUuid));
             return event;
         });
     }
@@ -54,7 +55,6 @@ public class RsvpInteractor {
     @NonNull
     private Event setRsvp(Event event, String uuid) {
         event.rsvpUuid = uuid;
-        jobManager.addJobInBackground(new RsvpJob(eventId, uuid));
         return event;
     }
 
