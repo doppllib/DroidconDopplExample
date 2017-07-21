@@ -27,10 +27,11 @@ class WelcomePagerAdapter(fm: FragmentManager, val short: Boolean) : FragmentPag
     }
 
     override fun getCount(): Int {
-        return FRAGMENT_COUNT
+        return if (short) SHORT_COUNT else FRAGMENT_COUNT
     }
 
     companion object {
         private val FRAGMENT_COUNT = 2
+        private val SHORT_COUNT = 2
     }
 }

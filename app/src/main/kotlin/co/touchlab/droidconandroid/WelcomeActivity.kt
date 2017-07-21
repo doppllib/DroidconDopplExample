@@ -19,6 +19,8 @@ import kotlinx.android.synthetic.main.activity_welcome.*
 class WelcomeActivity : AppCompatActivity() {
     companion object {
         private val SHORT = "SHORT"
+        private val LAST_INDEX = 1
+        private val LAST_INDEX_SHORT = 1
 
         fun getLaunchIntent(context: Context, short: Boolean): Intent {
             val intent = Intent(context, WelcomeActivity::class.java)
@@ -32,7 +34,7 @@ class WelcomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_welcome)
 
         val short = intent.getBooleanExtra(SHORT, false)
-        val lastIndex = 1
+        val lastIndex = if (short) LAST_INDEX_SHORT else LAST_INDEX
 
         viewPager.adapter = WelcomePagerAdapter(supportFragmentManager, short)
         indicator.setViewPager(viewPager)
