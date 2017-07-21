@@ -1,16 +1,17 @@
 package co.touchlab.droidconandroid.shared.presenter;
-import co.touchlab.droidconandroid.shared.tasks.StartWatchVideoTask;
+
+import co.touchlab.droidconandroid.shared.data.Event;
+import co.touchlab.droidconandroid.shared.data.EventInfo;
 
 /**
  * Created by kgalligan on 4/25/16.
  */
 public interface EventDetailHost
 {
-    void dataRefresh();
-    void videoDataRefresh();
-    void callStreamActivity(StartWatchVideoTask task);
+    void dataRefresh(EventInfo eventInfo);
     void resetStreamProgress();
     void reportError(String error);
+    void updateRsvp(Event event);
     void showTicketOptions(String email, String link, String cover);
     void openSlack(String slackLink, String slackLinkHttp, boolean showSlackDialog);
 }

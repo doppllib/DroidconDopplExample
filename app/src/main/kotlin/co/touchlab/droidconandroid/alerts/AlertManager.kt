@@ -7,7 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.support.annotation.UiThread
 import co.touchlab.droidconandroid.shared.data.Event
-import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsTask
+import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 
 private const val ALARM_REQUEST_CODE = 100
 private const val INTENT_CATEGORY = "android.intent.category.DEFAULT"
@@ -22,14 +22,14 @@ fun scheduleAlert(context: Context, nextEvent: Event?) {
 
 private fun setAlarm(context: Context, nextEvent: Event) {
     val notificationIntent = Intent(ALERT_ACTION)
-    notificationIntent.addCategory(INTENT_CATEGORY)
-    notificationIntent.putExtra(EXTRA_EVENT_NAME, nextEvent.name)
-    notificationIntent.putExtra(EXTRA_EVENT_ID, nextEvent.id)
-    notificationIntent.putExtra(EXTRA_EVENT_CATEGORY, nextEvent.category)
+            .addCategory(INTENT_CATEGORY)
+            .putExtra(EXTRA_EVENT_NAME, nextEvent.name)
+            .putExtra(EXTRA_EVENT_ID, nextEvent.id)
+            .putExtra(EXTRA_EVENT_CATEGORY, nextEvent.category)
 
     val broadcast = PendingIntent.getBroadcast(context, ALARM_REQUEST_CODE, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT)
     val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-    alarmManager.set(AlarmManager.RTC_WAKEUP, nextEvent.startDateLong - UpdateAlertsTask.ALERT_BUFFER, broadcast)
+    alarmManager.set(AlarmManager.RTC_WAKEUP, nextEvent.startDateLong - UpdateAlertsInteractor.ALERT_BUFFER, broadcast)
 }
 
 private fun clearAlerts(context: Context) {
@@ -39,10 +39,9 @@ private fun clearAlerts(context: Context) {
     val notificationIntent = Intent(ALERT_ACTION)
     notificationIntent.addCategory(INTENT_CATEGORY)
     val broadcast = PendingIntent.getBroadcast(context, ALARM_REQUEST_CODE, notificationIntent, PendingIntent.FLAG_NO_CREATE)
-    if(broadcast != null)
-    {
+    broadcast?.let {
         val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        alarmManager.cancel(broadcast)
-        broadcast.cancel()
+        alarmManager.cancel(it)
+        it.cancel()
     }
 }

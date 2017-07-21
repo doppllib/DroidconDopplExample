@@ -1,7 +1,6 @@
 package co.touchlab.droidconandroid.shared.utils;
-import javax.annotation.Nonnull;
-
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -9,13 +8,16 @@ import java.util.GregorianCalendar;
 import java.util.Locale;
 import java.util.TimeZone;
 
+import javax.annotation.Nonnull;
+
 /**
  * Created by izzyoji :) on 8/5/15.
  */
 public class TimeUtils
 {
-    public static final TimeZone TIME_ZONE = TimeZone.getTimeZone("America/New_York");
-    public static ThreadLocal<DateFormat> DATE_FORMAT = new ThreadLocal<DateFormat>()
+    public static final TimeZone                TIME_ZONE          = TimeZone.getTimeZone(
+            "America/New_York");
+    public static       ThreadLocal<DateFormat> LOCAL_DATE_FORMAT  = new ThreadLocal<DateFormat>()
     {
         @Override
         protected DateFormat initialValue()
@@ -43,5 +45,10 @@ public class TimeUtils
         calendar.set(Calendar.SECOND, 0);                 // set second in minute
         calendar.set(Calendar.MILLISECOND, 0);
         return calendar.getTimeInMillis();
+    }
+
+    public static long parseTime(String date) throws ParseException
+    {
+        return TimeUtils.LOCAL_DATE_FORMAT.get().parse(date).getTime();
     }
 }

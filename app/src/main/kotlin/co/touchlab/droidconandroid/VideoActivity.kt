@@ -3,11 +3,12 @@ package co.touchlab.droidconandroid
 import android.content.res.Configuration
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.text.TextUtils
 import android.widget.Toast
+import co.touchlab.droidconandroid.EventDetailFragment.Companion.EXTRA_EVENT_ID
+import co.touchlab.droidconandroid.EventDetailFragment.Companion.EXTRA_STREAM_COVER
+import co.touchlab.droidconandroid.EventDetailFragment.Companion.EXTRA_STREAM_LINK
 import co.touchlab.droidconandroid.shared.presenter.VideoPlayerHost
 import co.touchlab.droidconandroid.shared.presenter.VideoPlayerPresenter
-import kotlinx.android.synthetic.main.activity_video.*
 
 class VideoActivity : AppCompatActivity(), VideoPlayerHost {
 
@@ -24,7 +25,7 @@ class VideoActivity : AppCompatActivity(), VideoPlayerHost {
         val link = intent.getStringExtra(EXTRA_STREAM_LINK)
         val cover = intent.getStringExtra(EXTRA_STREAM_COVER)
         val eventId = intent.getLongExtra(EXTRA_EVENT_ID, -1)
-        if (!TextUtils.isEmpty(link)) {
+        if (!link.isNullOrBlank()) {
 //            val builder = PlaylistItem.Builder().file(link)
 //
 //            if(!TextUtils.isEmpty(cover))
@@ -43,11 +44,11 @@ class VideoActivity : AppCompatActivity(), VideoPlayerHost {
         super.onResume()
 //        jwplayer.onResume()
 
-        presenter!!.startChecking()
+//        presenter!!.startChecking()
     }
 
     override fun onPause() {
-        presenter!!.stopChecking()
+//        presenter!!.stopChecking()
 
         // Let JW Player know that the app is going to the background
 //        jwplayer.onPause()
@@ -66,6 +67,4 @@ class VideoActivity : AppCompatActivity(), VideoPlayerHost {
 //        jwplayer.setFullscreen(newConfig.orientation === Configuration.ORIENTATION_LANDSCAPE, true)
         super.onConfigurationChanged(newConfig)
     }
-
-
 }

@@ -1,13 +1,14 @@
 package co.touchlab.droidconandroid.shared.network;
 
-import retrofit.http.GET;
-import retrofit.http.Path;
+
+import io.reactivex.Observable;
+import retrofit2.http.GET;
+import retrofit2.http.Path;
 
 /**
  * Created by kgalligan on 7/20/14.
  */
-public interface SponsorsRequest
-{
+public interface SponsorsRequest {
     @GET("/droidconsponsers/{fileName}")
-    SponsorsResult getSponsors(@Path("fileName") String fileName) throws NetworkErrorHandler.NetworkException;
+    Observable<SponsorsResult> getSponsors(@Path("fileName") String fileName);
 }

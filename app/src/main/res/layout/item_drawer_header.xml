@@ -32,7 +32,6 @@
             android:layout_height="@dimen/height_large"
             android:layout_alignTop="@id/avatar"
             android:layout_alignStart="@id/avatar"
-            android:layout_alignLeft="@id/avatar"
             android:textSize="@dimen/text_xxxxlarge"
             android:textColor="@color/black"
             android:gravity="center"
@@ -44,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/email"
             android:fontFamily="sans-serif-medium"
-            android:singleLine="true"
+            android:maxLines="1"
             android:textColor="@color/black"
             tools:text="First Last"/>
 
@@ -53,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:singleLine="true"
+            android:maxLines="1"
             android:textColor="@color/black"
             tools:text="test@touchlab.co"/>
 

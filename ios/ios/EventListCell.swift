@@ -12,5 +12,5 @@ import UIKit
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var speakerNamesLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
-    @IBOutlet var rsvpView: UIView!
+    //@IBOutlet var rsvpView: UIView!
 }

@@ -65,7 +65,7 @@ import dcframework
     
     func dataRefresh() {
         event = eventDetailPresenter.getEventDetailLoadTask().getEvent()
-        speakers = PlatformContext_iOS.javaList(toNSArray: eventDetailPresenter.getEventDetailLoadTask().getEvent().getSpeakerList()) as? [DCDEventSpeaker]
+        speakers = PlatformContext_iOS.javaList(toList: eventDetailPresenter.getEventDetailLoadTask().getEvent().getSpeakerList()) as? [DCDEventSpeaker]
         tableView.reloadData()
         updateButton()
         updateHeaderImage()
@@ -139,13 +139,13 @@ import dcframework
             cell.loadInfo(titleString!, description: descriptionString!, track: event!.getVenue().getName(), time: dateTime!, event: event, eventDetailPresenter: eventDetailPresenter)
             cell.selectionStyle = UITableViewCellSelectionStyle.none
             
-            let videoDetailsTask:DCTEventVideoDetailsTask? = eventDetailPresenter.getEventVideoDetailsTask()
+            let videoDetailsInteractor:DCTEventVideoDetailsTask? = eventDetailPresenter.getEventVideoDetailsTask()
             
-            if (videoDetailsTask != nil && videoDetailsTask!.hasStream()) {
+            if (videoDetailsInteractor != nil && videoDetailsInteractor!.hasStream()) {
                 cell.liveStreamButton.addTarget(self, action: #selector(ShowEventDetailViewController.liveStreamTapped(_:)), for: UIControlEvents.touchUpInside)
                 cell.liveStreamButton.isHidden = false
                 cell.liveStreamIcon.isHidden = false
-                if(videoDetailsTask!.isNow()){
+                if(videoDetailsInteractor!.isNow()){
                     cell.liveStreamButton.setTitle("LIVE STREAM", for: UIControlState())
                 } else {
                     cell.liveStreamButton.setTitle("STREAM ARCHIVE", for: UIControlState())

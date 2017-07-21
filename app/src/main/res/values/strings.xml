@@ -19,6 +19,7 @@
     <string name="action_settings">Settings</string>
 
     <string name="network_error">Network problems...</string>
+    <string name="user_not_found_error">User not found</string>
 
     <!-- drawer copy-->
     <string name="navigation_drawer_open">Open</string>
@@ -26,6 +27,13 @@
     <string name="explore">Schedule</string>
     <string name="my_schedule">My agenda</string>
     <string name="chat_on_slack">Chat on Slack</string>
+    <string name="slack_almost_there">Almost there...</string>
+    <string name="slack_confirm">Yep, take me to Slack</string>
+    <string name="slack_not_yet">Not yet</string>
+    <string name="slack_error">Error opening Slack link</string>
+    <string name="slack_dialog_title">You’ll need an account to join the DCNYC Slack team.</string>
+    <string name="slack_dialog_text">Have you signed up to join the Slack team yet?</string>
+    <string name="slack_dialog_no">Don\'t ask me again</string>
 
     <string name="map">Map</string>
     <string name="social">Social profiles</string>
@@ -114,6 +122,8 @@
     <string name="live_stream">Stream archive</string>
     <string name="live_stream_now">Live now!</string>
     <string name="live_stream_loading">Live stream loading…</string>
+    <string name="whoops">Whoops!</string>
+    <string name="buy_ticket">Buy a ticket</string>
 
     <!-- content descriptions-->
     <string name="cd_live_now">live now</string>
@@ -129,8 +139,11 @@
     <string name="title_activity_sponsors">OUR AWESOME SPONSORS</string>
     <string name="sponsor_image">Sponsor Image</string>
 
-    <string name="sponsors_tab_general">GENERAL &#x1F60E;</string>
-    <string name="sponsors_tab_streaming">STREAMING &#x1F4FA;</string>
-    <string name="sponsors_tab_party">PARTY &#x1F389;</string>
+    <string name="sponsors_tab_general">GENERAL&#160;</string>
+    <string name="sponsors_tab_streaming">STREAMING&#160;</string>
+    <string name="sponsors_tab_party">PARTY&#160;</string>
+
+    <!-- URL -->
+    <string name="sponsor_image_url">file:///android_asset/sponsors/%1$s.png</string>
 
 </resources>

@@ -7,14 +7,14 @@
               android:orientation="vertical">
 
     <TextView
-        android:text="You’ll need an account to join the DCNYC Slack team."
+        android:text="@string/slack_dialog_title"
         android:textColor="@android:color/black"
         android:layout_width="match_parent"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="16dp"
-              android:layout_height="match_parent"/>
+        android:layout_height="match_parent"/>
     <TextView
-        android:text="Have you signed up to join the Slack team yet?"
+        android:text="@string/slack_dialog_text"
         android:textColor="@android:color/black"
         android:layout_marginBottom="16dp"
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
 
     <FrameLayout android:layout_width="match_parent" android:layout_height="48dp">
         <TextView
-            android:text="Don't ask me again"
+            android:text="@string/slack_dialog_no"
             android:textColor="@android:color/black"
             android:textSize="14sp"
             android:gravity="center_vertical"
@@ -32,7 +32,7 @@
             android:theme="@style/AlertDialogTheme"
             android:id="@+id/dont_ask"
             style="@style/Widget.AppCompat.CompoundButton.CheckBox"
-            android:layout_gravity="right|center_vertical"
+            android:layout_gravity="end|center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </FrameLayout>

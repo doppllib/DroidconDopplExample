@@ -7,9 +7,9 @@
               android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_above="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/titleTv"
         android:layout_centerHorizontal="true"
         android:id="@+id/image"/>
 
@@ -21,8 +21,8 @@
         android:paddingLeft="@dimen/padding_xxlarge"
         android:paddingRight="@dimen/padding_xxlarge"
         android:paddingBottom="@dimen/padding_small"
-        android:id="@+id/title"
-        android:layout_above="@+id/description"
+        android:id="@+id/titleTv"
+        android:layout_above="@+id/descriptionTv"
         android:layout_centerHorizontal="true"/>
 
     <TextView
@@ -32,7 +32,7 @@
         android:paddingLeft="@dimen/padding_xxlarge"
         android:paddingRight="@dimen/padding_xxlarge"
         tools:text="Title"
-        android:id="@+id/description"
+        android:id="@+id/descriptionTv"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"/>
 
