@@ -4,9 +4,6 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.text.TextUtils;
 
-import java.sql.SQLException;
-import java.util.List;
-
 /**
  * Created by kgalligan on 6/28/14.
  */
@@ -166,12 +163,6 @@ public class UserAccount {
         result = 31 * result + (coverKey != null ? coverKey.hashCode() : 0);
         result = 31 * result + (emailPublic != null ? emailPublic.hashCode() : 0);
         return result;
-    }
-
-    public static UserAccount findByCode(DatabaseHelper databaseHelper, String code) throws SQLException {
-        // This method probably doesn't have to be in this class.
-        List<UserAccount> list = databaseHelper.getUserAccountDao().getUsersWithCode(code);
-        return list.size() == 0 ? null : list.get(0);
     }
 
 }

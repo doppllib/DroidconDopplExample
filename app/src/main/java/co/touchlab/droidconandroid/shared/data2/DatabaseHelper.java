@@ -8,10 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-import co.touchlab.droidconandroid.shared.data2.dao.BlockDao;
 import co.touchlab.droidconandroid.shared.data2.dao.EventDao;
-import co.touchlab.droidconandroid.shared.data2.dao.EventSpeakerDao;
-import co.touchlab.droidconandroid.shared.data2.dao.UserAccountDao;
 
 public class DatabaseHelper {
 
@@ -31,24 +28,8 @@ public class DatabaseHelper {
         return instance;
     }
 
-    public BlockDao getBlockDao() {
-        return db.blockDao();
-    }
-
-    public UserAccountDao getUserAccountDao() {
-        return db.userAccountDao();
-    }
-
-    public EventSpeakerDao getEventSpeakerDao() {
-        return db.eventSpeakerDao();
-    }
-
-    public EventDao getEventDao() {
-        return db.eventDao();
-    }
-
     public void deleteEventsNotIn(Set<Long> goodStuff) {
-        final EventDao dao = getEventDao();
+        final EventDao dao = db.eventDao();
         final List<Event> allEvents = dao.getEvents();
 
         final Iterator<Event> iterator = allEvents.iterator();
