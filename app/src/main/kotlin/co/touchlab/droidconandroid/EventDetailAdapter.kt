@@ -74,7 +74,7 @@ class EventDetailAdapter(private val context: Context,
             }
             TYPE_SPACE -> {
                 val view = View(context)
-                parent!!.addView(view)
+                parent?.addView(view)
                 object : RecyclerView.ViewHolder(view) {}
             }
             TYPE_FEEDBACK -> {
@@ -94,7 +94,7 @@ class EventDetailAdapter(private val context: Context,
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
-        when (holder!!.itemViewType) {
+        when (holder?.itemViewType) {
             TYPE_HEADER -> {
                 val view = (holder as HeaderVH).itemView
                 view.title.text = (data[position] as HeaderDetail).title

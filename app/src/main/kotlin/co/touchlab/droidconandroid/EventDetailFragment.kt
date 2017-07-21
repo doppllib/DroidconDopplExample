@@ -36,7 +36,8 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         val appPrefs = AppPrefs.getInstance(activity)
         val alertsInteractor = UpdateAlertsInteractor(helper, appPrefs)
         val eventDetailsInteractor = EventDetailInteractor(helper, eventId)
-        val rsvpInteractor = RsvpInteractor(helper, eventId)
+        val jobManager = DroidconApplication.getInstance().jobManager
+        val rsvpInteractor = RsvpInteractor(jobManager, helper, eventId)
         val factory = EventDetailViewModel.Factory(eventDetailsInteractor, rsvpInteractor, alertsInteractor)
         ViewModelProviders.of(this, factory)[EventDetailViewModel::class.java]
     }
@@ -176,9 +177,9 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         } else {
             fab.setOnClickListener {
                 if (event.isRsvped) {
-                    viewModel.toggleRsvp(false)
-                } else {
                     viewModel.toggleRsvp(true)
+                } else {
+                    viewModel.toggleRsvp(false)
                 }
             }
 

@@ -198,7 +198,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
         }
 
         if (!userAccount.profile.isNullOrBlank()) {
-            bio.text = Html.fromHtml(StringUtils.trimToEmpty(userAccount.profile)!!)
+            bio.text = Html.fromHtml(StringUtils.trimToEmpty(userAccount.profile))
             bio.visibility = View.VISIBLE
         }
     }
