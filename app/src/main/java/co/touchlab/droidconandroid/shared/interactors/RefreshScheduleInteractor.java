@@ -19,10 +19,10 @@ public class RefreshScheduleInteractor
     private final DatabaseHelper databaseHelper;
     private BehaviorSubject<ConferenceDayHolder[]> conferenceDataSubject = BehaviorSubject.create();
 
-    public RefreshScheduleInteractor(DatabaseHelper databaseHelper)
+    public RefreshScheduleInteractor(JobManager jobManager, DatabaseHelper databaseHelper)
     {
         this.databaseHelper = databaseHelper;
-        this.jobManager = DroidconApplication.getInstance().getJobManager();
+        this.jobManager = jobManager;
     }
 
     public Observable<ConferenceDayHolder[]> getDataStream()

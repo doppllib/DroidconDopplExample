@@ -37,7 +37,8 @@ class ScheduleActivity : AppCompatActivity() {
     }
 
     val interactor: RefreshScheduleInteractor by lazy {
-        RefreshScheduleInteractor(helper)
+        val jobManager = DroidconApplication.getInstance().jobManager
+        RefreshScheduleInteractor(jobManager, helper)
     }
 
     val updateAlertsInteractor: UpdateAlertsInteractor by lazy {

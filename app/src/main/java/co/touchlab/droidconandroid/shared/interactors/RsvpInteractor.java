@@ -21,10 +21,11 @@ public class RsvpInteractor {
     private final DatabaseHelper helper;
     private final JobManager     jobManager;
 
-    public RsvpInteractor(DatabaseHelper helper, Long eventId) {
+    public RsvpInteractor(JobManager jobManager, DatabaseHelper helper, Long eventId)
+    {
         this.eventId = eventId;
         this.helper = helper;
-        this.jobManager = DroidconApplication.getInstance().getJobManager();
+        this.jobManager = jobManager;
     }
 
     public Single<Event> addRsvp() {
