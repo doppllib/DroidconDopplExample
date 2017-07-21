@@ -7,7 +7,6 @@ import android.util.Log;
 import com.google.j2objc.annotations.Weak;
 
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
-import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.data.EventInfo;
 import co.touchlab.droidconandroid.shared.data.Venue;
 import co.touchlab.droidconandroid.shared.interactors.EventDetailInteractor;
@@ -15,9 +14,10 @@ import co.touchlab.droidconandroid.shared.interactors.EventVideoDetailsInteracto
 import co.touchlab.droidconandroid.shared.interactors.RsvpInteractor;
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor;
 import co.touchlab.droidconandroid.shared.network.dao.EventVideoDetails;
+import co.touchlab.droidconandroid.shared.tasks.persisted.RsvpJob;
 import co.touchlab.droidconandroid.shared.utils.AnalyticsEvents;
+import co.touchlab.droidconandroid.shared.utils.AnalyticsHelper;
 import co.touchlab.droidconandroid.shared.utils.SlackUtils;
-import co.touchlab.droidconandroid.shared.utils.StringUtils;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
@@ -55,13 +55,13 @@ public class EventDetailViewModel extends ViewModel {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(eventInfo -> {
-                    recordAnalytics(AnalyticsEvents.OPEN_EVENT, eventInfo.event);
+                    AnalyticsHelper.recordAnalytics(AnalyticsEvents.OPEN_EVENT, eventInfo.event);
                     host.dataRefresh(eventInfo);
                 }, e -> host.reportError("Error getting event details")));
     }
 
     public void callStartVideo(String link, String cover) {
-        recordAnalytics(AnalyticsEvents.STREAM_CLICKED);
+        AnalyticsHelper.recordAnalytics(AnalyticsEvents.STREAM_CLICKED);
     }
 
     private Observable<EventInfo> getEventDetails() {
@@ -74,21 +74,6 @@ public class EventDetailViewModel extends ViewModel {
     private EventInfo getEventAndVideoInfo(EventInfo eventInfo, EventVideoDetails videoDetails) {
         eventInfo.videoDetails = videoDetails;
         return eventInfo;
-    }
-
-    private void recordAnalytics(String analyticsKey) {
-        // Do nothing for now
-    }
-
-    private void recordAnalytics(String analyticsKey, Event event) {
-        String eventName = event != null ? StringUtils.trimToEmpty(event.getName()) : "";
-        AppManager.getPlatformClient().logEvent(
-                analyticsKey,
-                AnalyticsEvents.PARAM_ITEM_ID,
-                Long.toString(event.getId()),
-                AnalyticsEvents.PARAM_ITEM_NAME,
-                eventName
-        );
     }
 
     public void unregister() {
@@ -104,7 +89,6 @@ public class EventDetailViewModel extends ViewModel {
                     .subscribe(event -> {
                                 host.updateRsvp(event);
                                 alertsInteractor.alert();
-                                recordAnalytics(AnalyticsEvents.RSVP_EVENT, event);
                             },
                             e -> Log.e("Error", "Error trying to add rsvp"));
 
@@ -115,7 +99,6 @@ public class EventDetailViewModel extends ViewModel {
                     .subscribe(event -> {
                                 host.updateRsvp(event);
                                 alertsInteractor.alert();
-                                recordAnalytics(AnalyticsEvents.UNRSVP_EVENT, event);
                             },
                             e -> Log.e("Error", "Error trying to remove rsvp"));
         }
