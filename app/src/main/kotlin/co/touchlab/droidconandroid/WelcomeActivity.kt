@@ -32,7 +32,7 @@ class WelcomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_welcome)
 
         val short = intent.getBooleanExtra(SHORT, false)
-        val lastIndex = if (short) 1 else 2
+        val lastIndex = 1
 
         viewPager.adapter = WelcomePagerAdapter(supportFragmentManager, short)
         indicator.setViewPager(viewPager)
