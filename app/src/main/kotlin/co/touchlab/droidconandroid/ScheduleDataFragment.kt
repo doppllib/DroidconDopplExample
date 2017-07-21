@@ -61,7 +61,6 @@ class ScheduleDataFragment : Fragment(), ConferenceDataHost {
 
         eventList.adapter = EventAdapter(activity,
                 arguments.getBoolean(ALL_EVENTS, true),
-                emptyList(),
                 ScheduleEventClickListener(),
                 shouldShowNotif)
     }
@@ -79,10 +78,6 @@ class ScheduleDataFragment : Fragment(), ConferenceDataHost {
 
     private fun updateAdapter(data: Array<out ScheduleBlockHour>) {
         eventList.eventAdapter.updateEvents(data.asList())
-    }
-
-    fun filter(track: Track) {
-        eventList.eventAdapter.toggleTrackFilter(track)
     }
 
     fun updateNotifCard() {

@@ -6,7 +6,6 @@ import com.google.j2objc.annotations.AutoreleasePool;
 
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
 import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor;
-import co.touchlab.droidconandroid.shared.utils.SlackUtils;
 
 public class ConferenceDataViewModel extends ViewModel
 {
@@ -41,23 +40,6 @@ public class ConferenceDataViewModel extends ViewModel
             refreshConferenceData();
         }
     }
-
-    // FIXME: To be removed
-    public String getSlackLink()
-    {
-        return SlackUtils.createSlackLink(null);
-    }
-
-    public String getSlackLinkHttp()
-    {
-        return SlackUtils.createSlackLinkHttp(null);
-    }
-
-    public boolean shouldShowSlackDialog()
-    {
-        return appPrefs.getShowSlackDialog();
-    }
-
 
     public static class Factory extends ViewModelProvider.NewInstanceFactory
     {

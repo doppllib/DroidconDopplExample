@@ -12,7 +12,6 @@ import co.touchlab.droidconandroid.shared.presenter.EventDetailViewModel
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_event_header.view.*
 import kotlinx.android.synthetic.main.item_event_info.view.*
-import kotlinx.android.synthetic.main.item_event_stream.view.*
 import kotlinx.android.synthetic.main.item_event_text.view.*
 import kotlinx.android.synthetic.main.item_user_summary.view.*
 import org.apache.commons.lang3.StringUtils
@@ -31,10 +30,6 @@ class EventDetailAdapter(private val context: Context,
     //=================== Public helper functions ===================
     fun addHeader(title: String, venue: String) {
         data.add(HeaderDetail(TYPE_HEADER, title, venue))
-    }
-
-    fun addStream(link: String, cover: String, liveNow: Boolean) {
-        data.add(StreamDetail(TYPE_STREAM, link, cover, liveNow))
     }
 
     fun addBody(description: String) {
@@ -64,10 +59,7 @@ class EventDetailAdapter(private val context: Context,
                 val view = LayoutInflater.from(context).inflate(R.layout.item_event_header, parent, false)
                 HeaderVH(view)
             }
-            TYPE_STREAM -> {
-                val view = LayoutInflater.from(context).inflate(R.layout.item_event_stream, parent, false)
-                StreamVH(view)
-            }
+
             TYPE_BODY -> {
                 val view = LayoutInflater.from(context).inflate(R.layout.item_event_text, parent, false)
                 TextVH(view)
@@ -107,34 +99,6 @@ class EventDetailAdapter(private val context: Context,
                 val view = (holder as HeaderVH).itemView
                 view.title.text = (data[position] as HeaderDetail).title
                 view.subtitle.text = (data[position] as HeaderDetail).subtitle
-            }
-            TYPE_STREAM -> {
-                val view = (holder as StreamVH).itemView
-                val detail = data[position] as StreamDetail
-                view.streamNow.setOnClickListener {
-                    viewModel.callStartVideo(detail.link, detail.cover)
-                    notifyDataSetChanged()
-                }
-                view.streamNotNow.setOnClickListener {
-                    viewModel.callStartVideo(detail.link, detail.cover)
-                    notifyDataSetChanged()
-                }
-                view.slackButton.setOnClickListener { viewModel.openSlack() }
-
-                view.streamLoading.visibility = View.GONE
-                if (detail.liveNow) {
-                    view.streamNow.visibility = View.VISIBLE
-                    view.streamNotNow.visibility = View.GONE
-                    view.imageLive.visibility = View.VISIBLE
-                    view.imageNotLive.visibility = View.GONE
-                    view.slackButton.visibility = View.VISIBLE
-                } else {
-                    view.streamNow.visibility = View.GONE
-                    view.streamNotNow.visibility = View.VISIBLE
-                    view.imageLive.visibility = View.GONE
-                    view.imageNotLive.visibility = View.VISIBLE
-                    view.slackButton.visibility = View.GONE
-                }
             }
 
             TYPE_INFO -> {
@@ -184,8 +148,7 @@ class EventDetailAdapter(private val context: Context,
         private val TYPE_INFO: Int = 3
         private val TYPE_SPACE: Int = 4
         private val TYPE_SPEAKER: Int = 5
-        private val TYPE_STREAM: Int = 6
-        private val TYPE_FEEDBACK: Int = 7
+        private val TYPE_FEEDBACK: Int = 6
     }
 
     //=================== Adapter type models ===================
@@ -199,8 +162,6 @@ class EventDetailAdapter(private val context: Context,
 
     inner class TextDetail(type: Int, val text: String, val icon: Int) : Detail(type)
 
-    inner class StreamDetail(type: Int, val link: String, val cover: String, val liveNow: Boolean) : Detail(type)
-
     inner class SpeakerDetail(type: Int, val avatar: String?, val name: String, val company: String, val bio: String?, val userCode: String, val userId: Long) : Detail(type)
 
     inner class SpaceDetail(type: Int, val size: Int) : Detail(type)
@@ -208,8 +169,6 @@ class EventDetailAdapter(private val context: Context,
     //=================== Type ViewHolders ===================
 
     inner class HeaderVH(val item: View) : RecyclerView.ViewHolder(item) {}
-
-    inner class StreamVH(val item: View) : RecyclerView.ViewHolder(item) {}
 
     inner class InfoVH(val item: View) : RecyclerView.ViewHolder(item) {}
 

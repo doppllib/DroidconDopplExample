@@ -38,10 +38,10 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
     private val type: Int by lazy { arguments.getInt(SPONSOR_TYPE) }
 
     private val viewModel: SponsorsViewModel by lazy {
-        val restAdapter = DataHelper.makeRetrofit2Client(BuildConfig.AMAZON_URL)
-        val sponsorsRequest = restAdapter.create(SponsorsRequest::class.java)
-        val task = SponsorsInteractor(sponsorsRequest, type)
-        val factory = SponsorsViewModel.Factory(task)
+        val retrofit = DataHelper.makeRetrofit2Client(BuildConfig.AMAZON_URL)
+        val sponsorsRequest = retrofit.create(SponsorsRequest::class.java)
+        val interactor = SponsorsInteractor(sponsorsRequest, type)
+        val factory = SponsorsViewModel.Factory(interactor)
         ViewModelProviders.of(this, factory).get(SponsorsViewModel::class.java)
     }
 

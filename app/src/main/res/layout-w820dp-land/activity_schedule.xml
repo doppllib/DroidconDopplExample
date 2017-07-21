@@ -116,43 +116,6 @@
             android:elevation="8dp"
             android:background="@color/white"/>
 
-        <RelativeLayout
-            android:id="@+id/filter_wrapper"
-            android:layout_width="@dimen/drawer_width"
-            android:layout_height="match_parent"
-            android:layout_gravity="right|end"
-            android:background="@color/white"
-            android:elevation="8dp"
-            android:fitsSystemWindows="false"
-            android:orientation="vertical"
-            android:visibility="gone"
-            android:paddingTop="40dp">
-
-            <Button
-                android:id="@+id/back"
-                android:layout_width="@dimen/height_xxtiny"
-                android:layout_height="@dimen/height_xxtiny"
-                android:layout_marginStart="@dimen/padding_large"
-                android:background="?attr/selectableItemBackground"
-                android:src="@drawable/ic_back"/>
-
-            <TextView
-                android:id="@+id/label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="@dimen/height_xlarge"
-                android:paddingEnd="0dp"
-                android:text="@string/filter"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_xlarge"/>
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/filter_recycler"
-                android:layout_width="@dimen/drawer_width"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/label"/>
-        </RelativeLayout>
-
     </android.support.v4.widget.DrawerLayout>
 
     <android.support.v4.view.ViewPager

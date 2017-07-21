@@ -57,9 +57,8 @@ class SponsorsActivity : AppCompatActivity() {
     }
 
     private fun initTabs() {
-        // Add General, Streaming, and Party tabs - type will be distinguished in Sponsors Task
+        // Add General and Party tabs - type will be distinguished in Sponsors Task
         sponsors_tabs.addTab(sponsors_tabs.newTab().setTag(getString(R.string.sponsors_tab_general)))
-        sponsors_tabs.addTab(sponsors_tabs.newTab().setTag(getString(R.string.sponsors_tab_streaming)))
         sponsors_tabs.addTab(sponsors_tabs.newTab().setTag(getString(R.string.sponsors_tab_party)))
 
         // Style tab text and indicator color
