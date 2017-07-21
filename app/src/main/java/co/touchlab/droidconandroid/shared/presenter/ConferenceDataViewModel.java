@@ -36,6 +36,10 @@ public class ConferenceDataViewModel extends ViewModel
         {
             interactor.refreshFromServer();
         }
+        else
+        {
+            refreshConferenceData();
+        }
     }
 
     // FIXME: To be removed

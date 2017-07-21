@@ -7,7 +7,7 @@ import com.google.j2objc.annotations.Weak;
 /**
  * Created by kgalligan on 9/16/16.
  */
-public class VideoPlayerPresenter extends AbstractEventBusPresenter
+public class VideoPlayerPresenter
 {
     @Weak
     final VideoPlayerHost host;
@@ -17,9 +17,12 @@ public class VideoPlayerPresenter extends AbstractEventBusPresenter
 
     public VideoPlayerPresenter(Context context, VideoPlayerHost host, long eventId)
     {
-        super(context);
         this.host = host;
         this.eventId = eventId;
         handler = new Handler();
+    }
+
+    public void unregister() {
+
     }
 }

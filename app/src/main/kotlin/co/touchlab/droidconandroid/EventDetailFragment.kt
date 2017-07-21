@@ -18,18 +18,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import co.touchlab.android.threading.tasks.TaskQueue
 import co.touchlab.droidconandroid.shared.data.*
 import co.touchlab.droidconandroid.shared.interactors.EventDetailInteractor
 import co.touchlab.droidconandroid.shared.interactors.EventVideoDetailsInteractor
 import co.touchlab.droidconandroid.shared.interactors.RsvpInteractor
+import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 import co.touchlab.droidconandroid.shared.network.DataHelper
 import co.touchlab.droidconandroid.shared.network.VideoDetailsRequest
 import co.touchlab.droidconandroid.shared.network.dao.EventVideoDetails
 import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.EventDetailHost
 import co.touchlab.droidconandroid.shared.presenter.EventDetailViewModel
-import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsTask
 import kotlinx.android.synthetic.main.fragment_event_detail.*
 import kotlinx.android.synthetic.main.view_streaming_email_dialog.view.*
 import java.util.*
@@ -48,9 +47,12 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         val videoDetailsInteractor = EventVideoDetailsInteractor(videoDetailsRequest, eventId)
 
         val helper = DatabaseHelper.getInstance(activity)
+        val appPrefs = AppPrefs.getInstance(activity)
+        val alertsInteractor = UpdateAlertsInteractor(helper, appPrefs)
         val eventDetailsInteractor = EventDetailInteractor(helper, eventId)
         val rsvpInteractor = RsvpInteractor(helper, eventId)
-        val factory = EventDetailViewModel.Factory(eventDetailsInteractor, videoDetailsInteractor, rsvpInteractor)
+        val factory = EventDetailViewModel.Factory(eventDetailsInteractor, videoDetailsInteractor,
+                rsvpInteractor, alertsInteractor)
         ViewModelProviders.of(this, factory)[EventDetailViewModel::class.java]
     }
 
@@ -206,9 +208,8 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         SlackHelper.openSlack(activity, slackLink, slackLinkHttp, showSlackDialog)
     }
 
-    override fun updateRsvp() {
-        // FIXME: Bandaid until we fully convert the UpdateAlertsTask
-        TaskQueue.loadQueueDefault(activity).execute(UpdateAlertsTask())
+    override fun updateRsvp(event: Event) {
+        updateFAB(event)
     }
 
     /**

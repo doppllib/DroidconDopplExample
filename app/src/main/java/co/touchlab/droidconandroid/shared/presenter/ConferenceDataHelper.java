@@ -1,4 +1,5 @@
 package co.touchlab.droidconandroid.shared.presenter;
+
 import android.content.Context;
 
 import java.sql.SQLException;
@@ -26,6 +27,7 @@ import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 import co.touchlab.droidconandroid.shared.utils.UserDataHelper;
 import co.touchlab.squeaky.dao.Dao;
 import co.touchlab.squeaky.stmt.Where;
+import io.reactivex.Single;
 
 /**
  * Created by kgalligan on 4/17/16.
@@ -44,6 +46,11 @@ public class ConferenceDataHelper
     public static String dateToDayString(Date d)
     {
         return dateFormat.format(d);
+    }
+
+    public static Single<ConferenceDayHolder[]> getDays(DatabaseHelper helper, boolean allEvents)
+    {
+        return Single.fromCallable(() -> listDays(helper, allEvents));
     }
 
     public static ConferenceDayHolder[] listDays(DatabaseHelper databaseHelper, boolean allEvents) throws SQLException
@@ -73,26 +80,16 @@ public class ConferenceDataHelper
 
         all.addAll(eventList);
 
-        Collections.sort(all, (o1, o2) ->
-        {
+        Collections.sort(all, (o1, o2) -> {
             final long compTimes = o1.getStartLong() - o2.getStartLong();
-            if(compTimes != 0)
-            {
-                return compTimes > 0 ? 1 : - 1;
-            }
+            if(compTimes != 0) return compTimes > 0
+                    ? 1
+                    : - 1;
 
-            if(o1.isBlock() && o2.isBlock())
-            {
-                return 0;
-            }
-            if(o1.isBlock())
-            {
-                return 1;
-            }
-            if(o2.isBlock())
-            {
-                return - 1;
-            }
+            if(o1.isBlock() && o2.isBlock()) return 0;
+
+            if(o1.isBlock()) return 1;
+            if(o2.isBlock()) return - 1;
 
             return ((Event) o1).venue.name.compareTo(((Event) o2).venue.name);
         });
