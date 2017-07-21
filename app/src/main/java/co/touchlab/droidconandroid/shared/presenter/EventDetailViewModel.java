@@ -13,6 +13,7 @@ import co.touchlab.droidconandroid.shared.interactors.EventDetailInteractor;
 import co.touchlab.droidconandroid.shared.interactors.EventVideoDetailsInteractor;
 import co.touchlab.droidconandroid.shared.interactors.RsvpInteractor;
 import co.touchlab.droidconandroid.shared.network.dao.EventVideoDetails;
+import co.touchlab.droidconandroid.shared.tasks.persisted.RsvpJob;
 import co.touchlab.droidconandroid.shared.utils.AnalyticsEvents;
 import co.touchlab.droidconandroid.shared.utils.AnalyticsHelper;
 import co.touchlab.droidconandroid.shared.utils.SlackUtils;

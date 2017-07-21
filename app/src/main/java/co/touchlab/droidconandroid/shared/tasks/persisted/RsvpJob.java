@@ -17,12 +17,14 @@ public class RsvpJob extends Job
     private static final int    DELAY_IN_MS = 60000; // 1 min
     private static final int    MAX_RETRY   = 7;
     private              int    retryCount  = 0;
-    private long eventId;
+    private long   eventId;
+    private String uuid;
 
-    public RsvpJob(Long eventId)
+    public RsvpJob(Long eventId, String uuid)
     {
         super(new Params(Priority.LOW).requireNetwork().groupBy(GROUP_TAG).persist());
         this.eventId = eventId;
+        this.uuid = uuid;
     }
 
     @Override
@@ -34,7 +36,14 @@ public class RsvpJob extends Job
     public void onRun() throws Throwable
     {
         // TODO post to backend
-        AnalyticsHelper.recordAnalytics(AnalyticsEvents.RSVP_EVENT, eventId);
+        if(uuid == null)
+        {
+            AnalyticsHelper.recordAnalytics(AnalyticsEvents.UNRSVP_EVENT, eventId);
+        }
+        else
+        {
+            AnalyticsHelper.recordAnalytics(AnalyticsEvents.RSVP_EVENT, eventId);
+        }
     }
 
     @Override
