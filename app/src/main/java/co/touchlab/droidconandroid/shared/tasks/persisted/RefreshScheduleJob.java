@@ -7,7 +7,6 @@ import com.birbit.android.jobqueue.Job;
 import com.birbit.android.jobqueue.Params;
 import com.birbit.android.jobqueue.RetryConstraint;
 
-import co.touchlab.android.threading.eventbus.EventBusExt;
 import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
 import co.touchlab.droidconandroid.shared.network.DataHelper;
@@ -16,6 +15,7 @@ import co.touchlab.droidconandroid.shared.network.dao.Convention;
 import co.touchlab.droidconandroid.shared.presenter.AppManager;
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHelper;
 import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
+import co.touchlab.droidconandroid.shared.utils.EventBusExt;
 import retrofit2.Retrofit;
 
 public class RefreshScheduleJob extends Job

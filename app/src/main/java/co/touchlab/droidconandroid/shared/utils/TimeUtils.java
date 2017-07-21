@@ -1,6 +1,4 @@
 package co.touchlab.droidconandroid.shared.utils;
-import javax.annotation.Nonnull;
-
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -9,6 +7,8 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 import java.util.TimeZone;
+
+import javax.annotation.Nonnull;
 
 /**
  * Created by izzyoji :) on 8/5/15.

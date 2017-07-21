@@ -153,9 +153,6 @@ dependencies {
     compile 'de.greenrobot:eventbus:2.4.0'
     doppl 'co.doppl.de.greenrobot:eventbus:2.4.0.4'
 
-    compile 'co.touchlab:magicthreads:0.9.3'
-    doppl 'co.touchlab:magicthreads:0.9.3.0'
-
     annotationProcessor 'co.touchlab.squeaky:squeaky-processor:0.5.3'
     compile 'co.touchlab.squeaky:squeaky-query:0.5.3'
     doppl 'co.touchlab.squeaky:squeaky-query:0.5.3.0'

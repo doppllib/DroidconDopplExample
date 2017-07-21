@@ -10,6 +10,7 @@ import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.data.EventInfo;
 import co.touchlab.droidconandroid.shared.interactors.EventDetailInteractor;
 import co.touchlab.droidconandroid.shared.interactors.RsvpInteractor;
+import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor;
 import co.touchlab.droidconandroid.shared.utils.AnalyticsEvents;
 import co.touchlab.droidconandroid.shared.utils.StringUtils;
 import io.reactivex.Observable;
@@ -17,7 +18,6 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
 
-import static co.touchlab.droidconandroid.shared.presenter.AppManager.getContext;
 
 /**
  * Created by kgalligan on 4/25/16.
@@ -27,12 +27,15 @@ public class EventDetailViewModel extends ViewModel {
     private EventDetailHost host;
     private final EventDetailInteractor detailInteractor;
     private final RsvpInteractor rsvpInteractor;
+    private final UpdateAlertsInteractor alertsInteractor;
     private CompositeDisposable disposables = new CompositeDisposable();
 
     private EventDetailViewModel(EventDetailInteractor detailInteractor,
-                                 RsvpInteractor rsvpInteractor) {
+                                 RsvpInteractor rsvpInteractor,
+                                 UpdateAlertsInteractor alertsInteractor) {
         this.detailInteractor = detailInteractor;
         this.rsvpInteractor = rsvpInteractor;
+        this.alertsInteractor = alertsInteractor;
     }
 
     public void register(EventDetailHost host) {
@@ -74,24 +77,25 @@ public class EventDetailViewModel extends ViewModel {
     }
 
     public void toggleRsvp(boolean rsvp) {
-        if (!rsvp) {
+        if (rsvp) {
             rsvpInteractor.addRsvp()
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(event -> {
-                                host.updateRsvp();
+                                host.updateRsvp(event);
+                                alertsInteractor.alert();
                                 recordAnalytics(AnalyticsEvents.RSVP_EVENT, event);
-                                getDetails();
                             },
                             e -> Log.e("Error", "Error trying to add rsvp"));
+
         } else {
             rsvpInteractor.removeRsvp()
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(event -> {
-                                host.updateRsvp();
+                                host.updateRsvp(event);
+                                alertsInteractor.alert();
                                 recordAnalytics(AnalyticsEvents.UNRSVP_EVENT, event);
-                                getDetails();
                             },
                             e -> Log.e("Error", "Error trying to remove rsvp"));
         }
@@ -100,17 +104,20 @@ public class EventDetailViewModel extends ViewModel {
     public static class Factory extends ViewModelProvider.NewInstanceFactory {
         private final EventDetailInteractor detailInteractor;
         private final RsvpInteractor rsvpInteractor;
+        private final UpdateAlertsInteractor alertsInteractor;
 
         public Factory(EventDetailInteractor detailInteractor,
-                       RsvpInteractor rsvpInteractor) {
+                       RsvpInteractor rsvpInteractor,
+                       UpdateAlertsInteractor alertsInteractor) {
             this.detailInteractor = detailInteractor;
             this.rsvpInteractor = rsvpInteractor;
+            this.alertsInteractor = alertsInteractor;
         }
 
         @Override
         public <T extends ViewModel> T create(Class<T> modelClass) {
             //noinspection unchecked
-            return (T) new EventDetailViewModel(detailInteractor, rsvpInteractor);
+            return (T) new EventDetailViewModel(detailInteractor, rsvpInteractor, alertsInteractor);
         }
     }
 }

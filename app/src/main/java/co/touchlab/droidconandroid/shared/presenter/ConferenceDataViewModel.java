@@ -35,6 +35,10 @@ public class ConferenceDataViewModel extends ViewModel
         {
             interactor.refreshFromServer();
         }
+        else
+        {
+            refreshConferenceData();
+        }
     }
 
     public static class Factory extends ViewModelProvider.NewInstanceFactory

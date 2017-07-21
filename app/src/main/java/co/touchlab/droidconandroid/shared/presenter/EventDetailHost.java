@@ -1,5 +1,6 @@
 package co.touchlab.droidconandroid.shared.presenter;
 
+import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.data.EventInfo;
 
 /**
@@ -9,5 +10,5 @@ public interface EventDetailHost
 {
     void dataRefresh(EventInfo eventInfo);
     void reportError(String error);
-    void updateRsvp();
+    void updateRsvp(Event event);
 }

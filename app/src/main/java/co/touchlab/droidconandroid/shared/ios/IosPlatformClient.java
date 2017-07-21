@@ -5,7 +5,6 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 
 import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
-import retrofit.client.Client;
 
 /**
  * Created by kgalligan on 4/10/16.
@@ -18,12 +17,6 @@ public class IosPlatformClient implements PlatformClient
     public IosPlatformClient(IosFirebase iosFirebase)
     {
         this.iosFirebase = iosFirebase;
-    }
-
-    @Override
-    public Client makeClient()
-    {
-        return null;
     }
 
     @Override

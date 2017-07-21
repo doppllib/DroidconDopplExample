@@ -1,17 +1,10 @@
 package co.touchlab.droidconandroid.shared.presenter;
-import retrofit.client.Client;
 
 /**
  * Created by kgalligan on 4/6/16.
  */
 public interface PlatformClient
 {
-    /**
-     * Create a custom retrofit client. Currently not super useful.
-     * @return
-     */
-    Client makeClient();
-
     /**
      * Url for droidcon server
      * @return

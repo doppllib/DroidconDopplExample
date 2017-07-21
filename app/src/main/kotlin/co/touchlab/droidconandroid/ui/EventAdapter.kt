@@ -6,7 +6,6 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import co.touchlab.android.threading.eventbus.EventBusExt
 import co.touchlab.droidconandroid.R
 import co.touchlab.droidconandroid.isOdd
 import co.touchlab.droidconandroid.setViewVisibility
@@ -14,6 +13,7 @@ import co.touchlab.droidconandroid.shared.data.Block
 import co.touchlab.droidconandroid.shared.data.Event
 import co.touchlab.droidconandroid.shared.data.Track
 import co.touchlab.droidconandroid.shared.presenter.ScheduleBlockHour
+import co.touchlab.droidconandroid.shared.utils.EventBusExt
 import co.touchlab.droidconandroid.shared.utils.EventUtils
 import kotlinx.android.synthetic.main.item_event.view.*
 import kotlinx.android.synthetic.main.item_notification.view.*

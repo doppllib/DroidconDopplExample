@@ -9,13 +9,12 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import co.touchlab.android.threading.tasks.TaskQueue
 import co.touchlab.droidconandroid.shared.data.AppPrefs
+import co.touchlab.droidconandroid.shared.data.DatabaseHelper
 import co.touchlab.droidconandroid.shared.data.Event
 import co.touchlab.droidconandroid.shared.data.Track
 import co.touchlab.droidconandroid.shared.presenter.*
-import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsTask
-import co.touchlab.droidconandroid.shared.utils.TimeUtils
+import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 import co.touchlab.droidconandroid.ui.EventAdapter
 import co.touchlab.droidconandroid.ui.EventClickListener
 import kotlinx.android.synthetic.main.fragment_schedule_data.*
@@ -27,6 +26,15 @@ class ScheduleDataFragment : Fragment(), ConferenceDataHost {
         val interactor = (activity as ScheduleActivity).interactor
         val factory = ScheduleDataViewModel.Factory(interactor)
         ViewModelProviders.of(this, factory)[ScheduleDataViewModel::class.java]
+    }
+
+    val helper: DatabaseHelper by lazy {
+        DatabaseHelper.getInstance(activity)
+    }
+
+    val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
+        val prefs = AppPrefs.getInstance(activity)
+        UpdateAlertsInteractor(helper, prefs)
     }
 
     val RecyclerView.eventAdapter: EventAdapter
@@ -90,7 +98,7 @@ class ScheduleDataFragment : Fragment(), ConferenceDataHost {
                 break
             }
         }
-        TaskQueue.loadQueueDefault(context).execute(UpdateAlertsTask())
+        updateAlertsInteractor.alert()
     }
 
     companion object {
