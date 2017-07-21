@@ -145,7 +145,7 @@ public class ConferenceDataHelper
             Dao<UserAccount> userAccountDao = helper.getUserAccountDao();
             Dao<EventSpeaker> eventSpeakerDao = helper.getEventSpeakerDao();
 
-            appPrefs.setConventionStartDate(convention.startDate);
+            appPrefs.setConventionStartDate(convention.startDate); // Can be moved outside the transaction
             appPrefs.setConventionEndDate(convention.endDate);
 
             List<co.touchlab.droidconandroid.shared.network.dao.Venue> venues = convention.venues;

@@ -1,11 +1,9 @@
 package co.touchlab.droidconandroid.shared.network.dao;
 
-import com.google.j2objc.annotations.Weak;
-
-import javax.annotation.Nonnull;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.annotation.Nonnull;
 
 /**
  * Created by kgalligan on 7/19/14.

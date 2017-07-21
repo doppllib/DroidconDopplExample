@@ -13,7 +13,7 @@ import co.touchlab.droidconandroid.shared.data2.EventSpeaker;
 public interface EventSpeakerDao {
 
     @Query("SELECT * FROM EventSpeaker WHERE event_id = :eventId")
-    List<EventSpeaker> getEventSpeakers(int eventId);
+    List<EventSpeaker> getEventSpeakers(long eventId);
 
     @Query("SELECT * FROM EventSpeaker WHERE event_id = :eventId AND user_id = :userId")
     List<EventSpeaker> getEventSpeakers(long eventId, long userId);

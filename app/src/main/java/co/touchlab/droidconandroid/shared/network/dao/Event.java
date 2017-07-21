@@ -1,5 +1,7 @@
 package co.touchlab.droidconandroid.shared.network.dao;
 
+import android.arch.persistence.room.Ignore;
+
 import java.util.List;
 
 import co.touchlab.squeaky.field.DatabaseField;
@@ -15,5 +17,6 @@ public class Event extends co.touchlab.droidconandroid.shared.data.Event
     @DatabaseField
     public String endDate;
 
+    @Ignore
     public List<UserAccount> speakers;
 }

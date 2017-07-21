@@ -16,6 +16,7 @@ public interface BlockDao {
     @Query("SELECT * FROM Block")
     List<Block> getBlocks();
 
+    // Potentially annoying to delete this way, could truncate the table instead
     @Delete
     void deleteAll(List<Block> blocks);
 
