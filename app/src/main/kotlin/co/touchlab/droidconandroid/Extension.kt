@@ -8,11 +8,11 @@ import co.touchlab.droidconandroid.shared.utils.TimeUtils
  * Created by kgalligan on 7/21/14.
  */
 fun Activity.findView(id: Int): View {
-    return this.findViewById(id)!!
+    return this.findViewById(id)
 }
 
 fun View.findView(id: Int): View {
-    return this.findViewById(id)!!
+    return this.findViewById(id)
 }
 
 fun Int.isOdd(): Boolean = this % 2 != 0

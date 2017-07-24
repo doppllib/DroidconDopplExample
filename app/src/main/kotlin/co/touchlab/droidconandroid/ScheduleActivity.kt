@@ -37,7 +37,8 @@ class ScheduleActivity : AppCompatActivity() {
     }
 
     val interactor: RefreshScheduleInteractor by lazy {
-        RefreshScheduleInteractor(helper)
+        val jobManager = DroidconApplication.getInstance().jobManager
+        RefreshScheduleInteractor(jobManager, helper)
     }
 
     val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
@@ -162,11 +163,6 @@ class ScheduleActivity : AppCompatActivity() {
                         allEvents = false
                         appbar.setExpanded(true)
                     }
-                    R.string.chat_on_slack -> {
-                        SlackHelper.openSlack(this@ScheduleActivity, viewModel.slackLink,
-                                viewModel.slackLinkHttp,
-                                viewModel.shouldShowSlackDialog())
-                    }
 
                     R.string.about -> AboutActivity.callMe(this@ScheduleActivity)
                     R.string.sponsors -> SponsorsActivity.callMe(this@ScheduleActivity)
@@ -180,7 +176,6 @@ class ScheduleActivity : AppCompatActivity() {
             override fun onHeaderItemClick() {}
         })
         drawer_recycler.layoutManager = LinearLayoutManager(this)
-        drawer_layout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, filter_wrapper)
     }
 
     private fun getDrawerItems(): List<Any> {
@@ -188,7 +183,6 @@ class ScheduleActivity : AppCompatActivity() {
         drawerItems.add("header_placeholder")
         drawerItems.add(NavigationItem(R.string.explore, R.drawable.vic_event_black_24dp))
         drawerItems.add(NavigationItem(R.string.my_schedule, R.drawable.vic_clock_black_24dp))
-        drawerItems.add(NavigationItem(R.string.chat_on_slack, R.drawable.vic_slack_24dp, true))
         drawerItems.add("divider_placeholder")
         drawerItems.add(NavigationItem(R.string.sponsors, R.drawable.vic_star_circle))
         drawerItems.add(NavigationItem(R.string.about, R.drawable.vic_info_outline_black_24dp))

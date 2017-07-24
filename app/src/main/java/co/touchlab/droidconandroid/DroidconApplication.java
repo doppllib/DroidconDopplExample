@@ -76,7 +76,13 @@ public class DroidconApplication extends Application
                 @Override
                 public void logEvent(String name, String... params)
                 {
-
+                    StringBuilder sb = new StringBuilder();
+                    for(String param : params)
+                    {
+                        sb.append(param);
+                        sb.append("; ");
+                    }
+                    Log.i(name, sb.toString());
                 }
 
                 @Override
