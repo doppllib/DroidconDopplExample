@@ -1,11 +1,11 @@
 package co.touchlab.droidconandroid.shared.tasks.persisted;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 
 import com.birbit.android.jobqueue.Job;
 import com.birbit.android.jobqueue.Params;
 import com.birbit.android.jobqueue.RetryConstraint;
+
+import org.jetbrains.annotations.NotNull;
 
 import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.utils.AnalyticsEvents;
@@ -47,13 +47,13 @@ public class RsvpJob extends Job
     }
 
     @Override
-    protected void onCancel(int cancelReason, @Nullable Throwable throwable)
+    protected void onCancel(int cancelReason, @NotNull Throwable throwable)
     {
         CrashReport.logException(throwable);
     }
 
     @Override
-    protected RetryConstraint shouldReRunOnThrowable(@NonNull Throwable throwable, int runCount, int maxRunCount)
+    protected RetryConstraint shouldReRunOnThrowable(@NotNull Throwable throwable, int runCount, int maxRunCount)
     {
         if(retryCount < MAX_RETRY)
         {

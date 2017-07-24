@@ -26,6 +26,8 @@
 
     <color name="orange">#ef6541</color>
     <color name="red">#f1582c</color>
+    <color name="black">#000</color>
+    <color name="white">#FFF</color>
 
     <color name="black_95">#F2000000</color>
     <color name="black_90">#E6000000</color>

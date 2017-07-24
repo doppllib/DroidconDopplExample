@@ -1,11 +1,12 @@
 package co.touchlab.droidconandroid.shared.tasks.persisted;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 
 import com.birbit.android.jobqueue.Job;
 import com.birbit.android.jobqueue.Params;
 import com.birbit.android.jobqueue.RetryConstraint;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
@@ -60,7 +61,7 @@ public class RefreshScheduleJob extends Job
     }
 
     @Override
-    protected RetryConstraint shouldReRunOnThrowable(@NonNull Throwable throwable, int runCount, int maxRunCount)
+    protected RetryConstraint shouldReRunOnThrowable(@NotNull Throwable throwable, int runCount, int maxRunCount)
     {
         if(retryCount < MAX_RETRY)
         {
