@@ -207,20 +207,9 @@ class EventDetailFragment() : Fragment(), EventDetailHost
         })
     }
 
-    override fun callStreamActivity(detail: StartWatchVideoTask) {
-        val i = Intent(context, VideoActivity::class.java)
-        i.putExtra(EXTRA_STREAM_LINK, detail.link)
-        i.putExtra(EXTRA_STREAM_COVER, detail.cover)
-        context.startActivity(i)
-    }
-
     override fun resetStreamProgress(){
         if(recycler.adapter != null)
             recycler.adapter.notifyDataSetChanged()
-    }
-
-    override fun openSlack(slackLink: String, slackLinkHttp: String, showSlackDialog: Boolean) {
-        SlackHelper.openSlack(activity, slackLink, slackLinkHttp, showSlackDialog)
     }
 
     /**

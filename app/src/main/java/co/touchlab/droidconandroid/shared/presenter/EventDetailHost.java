@@ -8,9 +8,7 @@ public interface EventDetailHost
 {
     void dataRefresh();
     void videoDataRefresh();
-    void callStreamActivity(StartWatchVideoTask task);
     void resetStreamProgress();
     void reportError(String error);
     void showTicketOptions(String email, String link, String cover);
-    void openSlack(String slackLink, String slackLinkHttp, boolean showSlackDialog);
 }

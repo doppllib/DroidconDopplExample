@@ -75,10 +75,6 @@ import dcframework
         tableView.reloadData()
     }
     
-    func callStreamActivity(with task: DCTStartWatchVideoTask){
-        //TODO remove method later
-    }
-    
     func reportError(with error: String){
         let alert = UIAlertView(title: "Video Error", message: error as String, delegate: nil, cancelButtonTitle: "Ok")
         alert.show()
@@ -112,11 +108,6 @@ import dcframework
         // 4. Present the alert.
         self.present(alert, animated: true, completion: nil)
     }
-    
-    func openSlack(with slackLink: String!, with slackLinkHttp: String!, withBoolean showSlackDialog: jboolean) {
-        // TODO
-    }
-
     
     // MARK: TableView
     

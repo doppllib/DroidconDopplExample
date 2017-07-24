@@ -97,7 +97,6 @@ public class EventDetailPresenter extends AbstractEventBusPresenter
         if(task.videoOk)
         {
             recordAnalytics(AnalyticsEvents.STREAM_SUCCESS);
-            host.callStreamActivity(task);
         }
         else if(task.unauthorized)
         {
@@ -171,8 +170,5 @@ public class EventDetailPresenter extends AbstractEventBusPresenter
     {
         String slackLink = SlackUtils.createSlackLink(eventDetailLoadTask.event.venue);
         String slackLinkHttp = SlackUtils.createSlackLinkHttp(eventDetailLoadTask.event.venue);
-        host.openSlack(slackLink,
-                slackLinkHttp,
-                AppPrefs.getInstance(getContext()).getShowSlackDialog());
     }
 }
