@@ -6,20 +6,18 @@ import android.text.TextUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
-import co.touchlab.droidconandroid.shared.data.Event;
-import co.touchlab.droidconandroid.shared.data.EventInfo;
-import co.touchlab.droidconandroid.shared.data.EventSpeaker;
-import co.touchlab.droidconandroid.shared.data.UserAccount;
-import co.touchlab.droidconandroid.shared.data.Venue;
-import co.touchlab.squeaky.dao.Dao;
+import co.touchlab.droidconandroid.shared.data2.DatabaseHelper;
+import co.touchlab.droidconandroid.shared.data2.Event;
+import co.touchlab.droidconandroid.shared.data2.EventInfo;
+import co.touchlab.droidconandroid.shared.data2.UserAccount;
+import co.touchlab.droidconandroid.shared.data2.Venue;
 import io.reactivex.Single;
 
 /**
  * Created by kgalligan on 4/7/16.
  */
 public class EventDetailInteractor {
-    public final long eventId;
+    public final  long           eventId;
     private final DatabaseHelper helper;
 
     public EventDetailInteractor(DatabaseHelper helper, long eventId) {
@@ -28,33 +26,41 @@ public class EventDetailInteractor {
     }
 
     public Single<EventInfo> getEventInfo() {
-        Dao<Event> eventDao = helper.getEventDao();
-        Single<Event> eventSingle = getEvent(eventDao);
-        Single<List<Event>> allEvents = Single.fromCallable(() -> eventDao.queryForAll().list());
-        Single<List<EventSpeaker>> speakersSingle =
-                Single.fromCallable(() -> helper.getEventSpeakerDao()
-                        .queryForEq("event_id", eventId)
-                        .list());
+        Single<Event> eventSingle = getEvent();
+        Single<List<Event>> allEvents = helper.getEvents();
+        Single<List<UserAccount>> speakersSingle = getEventSpeakers();
 
         return Single.zip(eventSingle, speakersSingle, allEvents, this::createEventInfo);
 
     }
 
-    public Single<Venue> getEventVenue() {
-        Dao<Event> eventDao = helper.getEventDao();
-        return getEvent(eventDao).map(event -> event.venue);
+    private Single<List<UserAccount>> getEventSpeakers()
+    {
+        return helper.getEventSpeakers(eventId)
+                .toObservable()
+                .flatMapIterable(list -> list)
+                .map(eventSpeaker -> eventSpeaker.userAccountId)
+                .flatMap(userId -> helper.getUserAccountForId(userId).toObservable())
+                .toList();
     }
 
-    private Single<Event> getEvent(Dao<Event> eventDao) {
-        return Single.fromCallable(() -> eventDao.queryForId(eventId));
+    public Single<Venue> getEventVenue() {
+        return getEvent().map(event -> event.venue);
+    }
+
+    private Single<Event> getEvent()
+    {
+        return helper.getEventForId(eventId);
     }
 
     @NonNull
-    private EventInfo createEventInfo(Event event, List<EventSpeaker> eventSpeakers, List<Event> allEvents) {
+    private EventInfo createEventInfo(Event event, List<UserAccount> eventSpeakers, List<Event> allEvents)
+    {
         EventInfo info = new EventInfo();
         List<UserAccount> speakerList = new ArrayList<>();
-        for (EventSpeaker speaker : eventSpeakers) {
-            speakerList.add(speaker.getUserAccount());
+        for(UserAccount speaker : eventSpeakers)
+        {
+            speakerList.add(speaker);
         }
         info.event = event;
         info.speakers = speakerList;

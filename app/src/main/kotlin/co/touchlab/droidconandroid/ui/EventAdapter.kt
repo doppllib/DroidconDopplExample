@@ -9,8 +9,6 @@ import android.view.ViewGroup
 import co.touchlab.droidconandroid.R
 import co.touchlab.droidconandroid.isOdd
 import co.touchlab.droidconandroid.setViewVisibility
-import co.touchlab.droidconandroid.shared.data.Block
-import co.touchlab.droidconandroid.shared.data.Event
 import co.touchlab.droidconandroid.shared.presenter.HourBlock
 import co.touchlab.droidconandroid.shared.utils.EventBusExt
 import co.touchlab.droidconandroid.shared.utils.EventUtils
@@ -66,7 +64,7 @@ class EventAdapter(private val context: Context,
                 EventUtils.styleEventRow(scheduleBlockHour, dataSet, holder, allEvents)
 
                 if (!scheduleBlockHour.timeBlock.isBlock) {
-                    holder.setOnClickListener { eventClickListener.onEventClick(scheduleBlockHour.timeBlock as Event) }
+                    holder.setOnClickListener { eventClickListener.onEventClick(scheduleBlockHour.timeBlock as co.touchlab.droidconandroid.shared.data2.Event) }
                 }
             }
         }
@@ -84,8 +82,8 @@ class EventAdapter(private val context: Context,
 
         val item = filteredData[adjustedPosition]?.timeBlock
         when (item) {
-            is Event -> return if (item.isPast) VIEW_TYPE_PAST_EVENT else VIEW_TYPE_EVENT
-            is Block -> return VIEW_TYPE_BLOCK
+            is co.touchlab.droidconandroid.shared.data2.Event -> return if (item.isPast) VIEW_TYPE_PAST_EVENT else VIEW_TYPE_EVENT
+            is co.touchlab.droidconandroid.shared.data2.Block -> return VIEW_TYPE_BLOCK
             else -> throw UnsupportedOperationException()
         }
     }
@@ -197,7 +195,7 @@ class EventAdapter(private val context: Context,
 }
 
 interface EventClickListener {
-    fun onEventClick(event: Event)
+    fun onEventClick(event: co.touchlab.droidconandroid.shared.data2.Event)
 }
 
 data class UpdateAllowNotificationEvent(val allow: Boolean)

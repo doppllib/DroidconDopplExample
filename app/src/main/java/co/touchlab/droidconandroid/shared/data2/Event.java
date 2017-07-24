@@ -8,7 +8,6 @@ import java.util.Date;
 
 import javax.annotation.Nonnull;
 
-import co.touchlab.droidconandroid.shared.data.TimeBlock;
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 
 /**

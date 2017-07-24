@@ -9,12 +9,11 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import co.touchlab.droidconandroid.shared.data.AppPrefs
-import co.touchlab.droidconandroid.shared.data.DatabaseHelper
-import co.touchlab.droidconandroid.shared.data.Event
-import co.touchlab.droidconandroid.shared.data.Track
-import co.touchlab.droidconandroid.shared.presenter.*
+import co.touchlab.droidconandroid.shared.data2.AppPrefs
+import co.touchlab.droidconandroid.shared.data2.Event
+import co.touchlab.droidconandroid.shared.data2.DatabaseHelper
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
+import co.touchlab.droidconandroid.shared.presenter.*
 import co.touchlab.droidconandroid.ui.EventAdapter
 import co.touchlab.droidconandroid.ui.EventClickListener
 import kotlinx.android.synthetic.main.fragment_schedule_data.*

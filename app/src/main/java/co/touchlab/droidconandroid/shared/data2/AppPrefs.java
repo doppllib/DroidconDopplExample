@@ -1,12 +1,9 @@
-package co.touchlab.droidconandroid.shared.data;
+package co.touchlab.droidconandroid.shared.data2;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import co.touchlab.droidconandroid.shared.utils.StringUtils;
 import javax.annotation.Nonnull;
-
-import java.util.UUID;
 
 /**
  * Created by kgalligan on 6/28/14.

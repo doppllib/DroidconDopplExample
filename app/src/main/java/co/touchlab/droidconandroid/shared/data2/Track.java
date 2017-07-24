@@ -1,4 +1,4 @@
-package co.touchlab.droidconandroid.shared.data;
+package co.touchlab.droidconandroid.shared.data2;
 import android.text.TextUtils;
 
 /**

@@ -6,7 +6,7 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.support.annotation.UiThread
-import co.touchlab.droidconandroid.shared.data.Event
+import co.touchlab.droidconandroid.shared.data2.Event
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 
 private const val ALARM_REQUEST_CODE = 100

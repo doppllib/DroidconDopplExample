@@ -4,9 +4,9 @@ import android.util.Log;
 
 import java.util.concurrent.TimeUnit;
 
-import co.touchlab.droidconandroid.shared.data.AppPrefs;
-import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
-import co.touchlab.droidconandroid.shared.data.Event;
+import co.touchlab.droidconandroid.shared.data2.AppPrefs;
+import co.touchlab.droidconandroid.shared.data2.Event;
+import co.touchlab.droidconandroid.shared.data2.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHelper;
 import co.touchlab.droidconandroid.shared.presenter.DaySchedule;
 import co.touchlab.droidconandroid.shared.presenter.HourBlock;
@@ -19,8 +19,8 @@ import io.reactivex.schedulers.Schedulers;
  */
 public class UpdateAlertsInteractor {
     private final DatabaseHelper helper;
-    private final AppPrefs prefs;
-    public Event event;
+    private final AppPrefs       prefs;
+    public        Event          event;
 
     public static final long ALERT_BUFFER = TimeUnit.MINUTES.toMillis(5);
 

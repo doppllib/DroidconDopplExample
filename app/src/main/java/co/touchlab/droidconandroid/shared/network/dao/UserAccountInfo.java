@@ -1,9 +1,10 @@
 package co.touchlab.droidconandroid.shared.network.dao;
 
-import co.touchlab.droidconandroid.shared.data.UserAccount;
+
+import co.touchlab.droidconandroid.shared.data2.UserAccount;
 
 public class UserAccountInfo {
-    public UserAccount userAccount;
+    public UserAccount      userAccount;
     public UserInfoResponse userInfoResponse;
 
     public UserAccountInfo(UserAccount userAccount, UserInfoResponse userInfoResponse) {

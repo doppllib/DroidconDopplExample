@@ -5,7 +5,6 @@ import android.arch.persistence.room.PrimaryKey;
 
 import java.util.Date;
 
-import co.touchlab.droidconandroid.shared.data.TimeBlock;
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 
 /**

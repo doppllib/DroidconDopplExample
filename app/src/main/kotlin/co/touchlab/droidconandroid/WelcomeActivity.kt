@@ -7,7 +7,7 @@ import android.support.v4.content.ContextCompat
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import co.touchlab.droidconandroid.ScheduleActivity.Companion.callMe
-import co.touchlab.droidconandroid.shared.data.AppPrefs
+import co.touchlab.droidconandroid.shared.data2.AppPrefs
 import co.touchlab.droidconandroid.ui.WelcomePagerAdapter
 import kotlinx.android.synthetic.main.activity_welcome.*
 

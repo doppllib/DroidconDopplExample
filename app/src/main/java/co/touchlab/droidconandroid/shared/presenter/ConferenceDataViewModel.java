@@ -4,7 +4,7 @@ import android.arch.lifecycle.ViewModelProvider;
 
 import com.google.j2objc.annotations.AutoreleasePool;
 
-import co.touchlab.droidconandroid.shared.data.AppPrefs;
+import co.touchlab.droidconandroid.shared.data2.AppPrefs;
 import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor;
 
 public class ConferenceDataViewModel extends ViewModel

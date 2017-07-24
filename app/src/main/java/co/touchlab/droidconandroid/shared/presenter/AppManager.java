@@ -4,7 +4,8 @@ import android.content.Context;
 import com.google.gson.Gson;
 
 import co.touchlab.droidconandroid.CrashReport;
-import co.touchlab.droidconandroid.shared.data.AppPrefs;
+import co.touchlab.droidconandroid.shared.data2.AppPrefs;
+import co.touchlab.droidconandroid.shared.data2.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
 
 /**
@@ -27,12 +28,14 @@ public class AppManager
         AppManager.context = context;
         AppManager.platformClient = platformClient;
 
-        if(AppPrefs.getInstance(context).once(FIRST_SEED))
+        DatabaseHelper helper = DatabaseHelper.getInstance(context);
+        AppPrefs appPrefs = AppPrefs.getInstance(context);
+        if(appPrefs.once(FIRST_SEED))
         {
             try
             {
                 final String seed = loadDataSeed.dataSeed();
-                ConferenceDataHelper.saveConventionData(context,
+                ConferenceDataHelper.saveConventionData(helper, appPrefs,
                         new Gson().fromJson(seed, Convention.class));
             }
             catch(RuntimeException e)

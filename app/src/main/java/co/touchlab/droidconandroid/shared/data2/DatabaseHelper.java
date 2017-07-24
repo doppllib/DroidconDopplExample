@@ -14,13 +14,13 @@ import co.touchlab.droidconandroid.shared.network.dao.NetworkUserAccount;
 import io.reactivex.Completable;
 import io.reactivex.Single;
 
-public class Data2Helper
+public class DatabaseHelper
 {
 
-    private static Data2Helper      instance;
+    private static DatabaseHelper   instance;
     private        DroidconDatabase db;
 
-    private Data2Helper(Context context)
+    private DatabaseHelper(Context context)
     {
         db = Room.databaseBuilder(context, DroidconDatabase.class, "droidcon")
                 .allowMainThreadQueries()
@@ -28,11 +28,11 @@ public class Data2Helper
     }
 
     @NonNull
-    public static synchronized Data2Helper getInstance(Context context)
+    public static synchronized DatabaseHelper getInstance(Context context)
     {
         if(instance == null)
         {
-            instance = new Data2Helper(context);
+            instance = new DatabaseHelper(context);
         }
 
         return instance;
@@ -182,6 +182,12 @@ public class Data2Helper
         return Completable.fromAction(() -> dao.createOrUpdate(dbUa));
     }
 
+    public Completable saveUserAccount(UserAccount userAccount)
+    {
+        UserAccountDao dao = db.userAccountDao();
+        return Completable.fromAction(() -> dao.createOrUpdate(userAccount));
+    }
+
     public void saveUserAccount2(NetworkUserAccount ua, UserAccount userAccount)
     {
         UserAccount dbUa = userAccountToDb(ua, userAccount);
@@ -191,7 +197,7 @@ public class Data2Helper
     }
 
     @NonNull
-    private UserAccount userAccountToDb(NetworkUserAccount ua, UserAccount dbUa)
+    public UserAccount userAccountToDb(NetworkUserAccount ua, UserAccount dbUa)
     {
         dbUa.id = ua.id;
         dbUa.name = ua.name;

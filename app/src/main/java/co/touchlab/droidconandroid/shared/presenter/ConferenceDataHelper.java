@@ -11,11 +11,11 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeMap;
 
-import co.touchlab.droidconandroid.shared.data.AppPrefs;
-import co.touchlab.droidconandroid.shared.data.TimeBlock;
-import co.touchlab.droidconandroid.shared.data2.Data2Helper;
+import co.touchlab.droidconandroid.shared.data2.AppPrefs;
+import co.touchlab.droidconandroid.shared.data2.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data2.Event;
 import co.touchlab.droidconandroid.shared.data2.EventSpeaker;
+import co.touchlab.droidconandroid.shared.data2.TimeBlock;
 import co.touchlab.droidconandroid.shared.data2.UserAccount;
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkBlock;
@@ -45,12 +45,12 @@ public class ConferenceDataHelper
         return dateFormat.format(d);
     }
 
-    public static Single<DaySchedule[]> getDays(Data2Helper helper, boolean allEvents)
+    public static Single<DaySchedule[]> getDays(DatabaseHelper helper, boolean allEvents)
     {
         return Single.fromCallable(() -> getDaySchedules(helper, allEvents));
     }
 
-    public static DaySchedule[] getDaySchedules(Data2Helper databaseHelper, boolean allEvents) throws SQLException
+    public static DaySchedule[] getDaySchedules(DatabaseHelper databaseHelper, boolean allEvents) throws SQLException
     {
         List<TimeBlock> eventAndBlockList = new ArrayList<>();
         List<Event> eventList;
@@ -144,7 +144,7 @@ public class ConferenceDataHelper
         return dayScheduleList;
     }
 
-    public static void saveConventionData(final Data2Helper helper, final AppPrefs appPrefs, final Convention convention)
+    public static void saveConventionData(final DatabaseHelper helper, final AppPrefs appPrefs, final Convention convention)
     {
 
         if(convention == null)

@@ -6,11 +6,9 @@ import com.birbit.android.jobqueue.JobManager;
 
 import java.util.UUID;
 
-import co.touchlab.droidconandroid.DroidconApplication;
-import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
-import co.touchlab.droidconandroid.shared.data.Event;
+import co.touchlab.droidconandroid.shared.data2.DatabaseHelper;
+import co.touchlab.droidconandroid.shared.data2.Event;
 import co.touchlab.droidconandroid.shared.tasks.persisted.RsvpJob;
-import co.touchlab.squeaky.dao.Dao;
 import io.reactivex.Single;
 
 /**
@@ -29,25 +27,22 @@ public class RsvpInteractor {
     }
 
     public Single<Event> addRsvp() {
-        Dao<Event> dao = helper.getEventDao();
-        return Single.fromCallable(() -> dao.queryForId(eventId))
+        return helper.getEventForId(eventId)
                 .filter(event -> event != null && event.rsvpUuid == null)
                 .map(event -> setRsvp(event, UUID.randomUUID().toString()))
                 .flatMapSingle(this::updateEvent);
     }
 
     public Single<Event> removeRsvp() {
-        Dao<Event> dao = helper.getEventDao();
-        return Single.fromCallable(() -> dao.queryForId(eventId))
+        return helper.getEventForId(eventId)
                 .filter(event -> event != null)
                 .map(event -> setRsvp(event, null))
                 .flatMapSingle(this::updateEvent);
     }
 
     private Single<Event> updateEvent(Event event) {
-        Dao<Event> eventDao = helper.getEventDao();
         return Single.fromCallable(() -> {
-            eventDao.update(event);
+            helper.updateEvent(event).subscribe();
             jobManager.addJobInBackground(new RsvpJob(eventId, event.rsvpUuid));
             return event;
         });
