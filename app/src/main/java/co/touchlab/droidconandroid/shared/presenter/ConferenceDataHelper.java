@@ -167,86 +167,90 @@ public class ConferenceDataHelper
             Dao<UserAccount> userAccountDao = helper.getUserAccountDao();
             Dao<EventSpeaker> eventSpeakerDao = helper.getEventSpeakerDao();
 
+            //extract
             appPrefs.setConventionStartDate(convention.startDate); // Can be moved outside the transaction
             appPrefs.setConventionEndDate(convention.endDate);
 
-            List<co.touchlab.droidconandroid.shared.network.dao.Venue> venues = convention.venues;
-            List<co.touchlab.droidconandroid.shared.network.dao.Block> blocks = convention.blocks;
-            Set<Long> foundEvents = new HashSet<>();
+            List<co.touchlab.droidconandroid.shared.network.dao.Venue> newVenueList = convention.venues;
+            List<co.touchlab.droidconandroid.shared.network.dao.Block> newBlockList = convention.blocks;
+            Set<Long> eventIdList = new HashSet<>();
             try
             {
-
-                for(co.touchlab.droidconandroid.shared.network.dao.Venue venue : venues)
+                for(co.touchlab.droidconandroid.shared.network.dao.Venue newVenue : newVenueList)
                 {
-                    venueDao.createOrUpdate(venue);
-                    for(co.touchlab.droidconandroid.shared.network.dao.Event event : venue.events)
+                    venueDao.createOrUpdate(newVenue); //will skip
+                    for(co.touchlab.droidconandroid.shared.network.dao.Event newEvent : newVenue.events)
                     {
-                        foundEvents.add(event.id);
-                        Event dbEvent = eventDao.queryForId(event.id);
-                        event.venue = venue;
+                        eventIdList.add(newEvent.id);
+                        Event oldEvent = eventDao.queryForId(newEvent.id); // just to check for rsvp, can be moved
+                        newEvent.venue = newVenue;
 
-                        if(StringUtils.isEmpty(event.startDate) ||
-                                StringUtils.isEmpty(event.endDate))
+                        if(StringUtils.isEmpty(newEvent.startDate) ||
+                                StringUtils.isEmpty(newEvent.endDate))
                         {
                             continue;
                         }
 
-                        event.startDateLong = TimeUtils.parseTime(event.startDate);
-                        event.endDateLong = TimeUtils.parseTime(event.endDate);
+                        newEvent.startDateLong = TimeUtils.parseTime(newEvent.startDate);
+                        newEvent.endDateLong = TimeUtils.parseTime(newEvent.endDate);
 
-                        if(dbEvent != null)
+                        // use elvis
+                        if(oldEvent != null)
                         {
-                            event.rsvpUuid = dbEvent.rsvpUuid;
+                            newEvent.rsvpUuid = oldEvent.rsvpUuid;
                         }
 
-                        eventDao.createOrUpdate(event);
+                        eventDao.createOrUpdate(newEvent);
                         int speakerCount = 0;
 
-                        for(co.touchlab.droidconandroid.shared.network.dao.UserAccount ua : event.speakers)
+                        for(co.touchlab.droidconandroid.shared.network.dao.UserAccount newSpeaker : newEvent.speakers)
                         {
-                            UserAccount userAccount = userAccountDao.queryForId(ua.id);
+                            UserAccount oldSpeaker = userAccountDao.queryForId(newSpeaker.id);
 
-                            if(userAccount == null)
+                            if(oldSpeaker == null)
                             {
-                                userAccount = new UserAccount();
+                                oldSpeaker = new UserAccount();
                             }
 
-                            UserDataHelper.userAccountToDb(ua, userAccount);
-                            userAccountDao.createOrUpdate(userAccount);
+                            // make 1 method update&save
+                            UserDataHelper.userAccountToDb(newSpeaker, oldSpeaker);
+                            userAccountDao.createOrUpdate(oldSpeaker);
+
+                            // get list of eventSpeaker, does not need to be a list
                             Where<EventSpeaker> where = new Where<>(eventSpeakerDao);
-                            List resultList = where.and()
-                                    .eq("event_id", event.id)
-                                    .eq("userAccount_id", userAccount.id)
+                            List speakerEventList = where.and()
+                                    .eq("event_id", newEvent.id) //event already updated
+                                    .eq("userAccount_id", oldSpeaker.id) //event already updated
                                     .query()
                                     .list();
+                            EventSpeaker eventSpeaker = ((speakerEventList.size() == 0)
+                                    ? new EventSpeaker() : (EventSpeaker) speakerEventList.get(0));
 
-                            EventSpeaker eventSpeaker = ((resultList.size() == 0)
-                                    ? new EventSpeaker()
-                                    : (EventSpeaker) resultList.get(0));
-
-                            eventSpeaker.event = event;
-                            eventSpeaker.userAccount = userAccount;
+                            // make 1 method, update&save
+                            eventSpeaker.event = newEvent;
+                            eventSpeaker.userAccount = oldSpeaker;
                             eventSpeaker.displayOrder = speakerCount++;
-
                             eventSpeakerDao.createOrUpdate(eventSpeaker);
                         }
                     }
 
                 }
 
-                // don't clear the db if no events are returned
-                if(! foundEvents.isEmpty())
+                // clear db if events are returned
+                if(! eventIdList.isEmpty())
                 {
-                    helper.deleteEventsNotIn(foundEvents);
+                    helper.deleteEventsNotIn(eventIdList);
                 }
 
-                if(blocks.size() > 0)
+                if(newBlockList.size() > 0)
                 {
-                    //Dump all of them first
+                    //Dump all old blocks first
                     blockDao.delete(blockDao.queryForAll().list());
 
-                    for(co.touchlab.droidconandroid.shared.network.dao.Block block : blocks)
+                    // parse and save new blocks
+                    for(co.touchlab.droidconandroid.shared.network.dao.Block block : newBlockList)
                     {
+                        // reconsider if formatting needs to be done here
                         block.startDateLong = TimeUtils.parseTime(block.startDate);
                         block.endDateLong = TimeUtils.parseTime(block.endDate);
                         blockDao.createOrUpdate(block);
@@ -258,6 +262,7 @@ public class ConferenceDataHelper
             {
                 throw new RuntimeException(e);
             }
+            // callable?!
             return null;
         });
     }
