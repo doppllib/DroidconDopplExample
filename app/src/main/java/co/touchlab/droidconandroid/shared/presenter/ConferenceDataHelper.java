@@ -11,12 +11,12 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeMap;
 
-import co.touchlab.droidconandroid.shared.data2.AppPrefs;
-import co.touchlab.droidconandroid.shared.data2.DatabaseHelper;
-import co.touchlab.droidconandroid.shared.data2.Event;
-import co.touchlab.droidconandroid.shared.data2.EventSpeaker;
-import co.touchlab.droidconandroid.shared.data2.TimeBlock;
-import co.touchlab.droidconandroid.shared.data2.UserAccount;
+import co.touchlab.droidconandroid.shared.data.AppPrefs;
+import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
+import co.touchlab.droidconandroid.shared.data.Event;
+import co.touchlab.droidconandroid.shared.data.EventSpeaker;
+import co.touchlab.droidconandroid.shared.data.TimeBlock;
+import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkBlock;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkEvent;

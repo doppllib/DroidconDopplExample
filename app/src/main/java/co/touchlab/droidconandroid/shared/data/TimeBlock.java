@@ -1,4 +1,4 @@
-package co.touchlab.droidconandroid.shared.data2;
+package co.touchlab.droidconandroid.shared.data;
 /**
  * Created by izzyoji :) on 8/12/15.
  */

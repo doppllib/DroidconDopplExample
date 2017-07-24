@@ -6,11 +6,11 @@ import android.text.TextUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-import co.touchlab.droidconandroid.shared.data2.DatabaseHelper;
-import co.touchlab.droidconandroid.shared.data2.Event;
-import co.touchlab.droidconandroid.shared.data2.EventInfo;
-import co.touchlab.droidconandroid.shared.data2.UserAccount;
-import co.touchlab.droidconandroid.shared.data2.Venue;
+import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
+import co.touchlab.droidconandroid.shared.data.Event;
+import co.touchlab.droidconandroid.shared.data.EventInfo;
+import co.touchlab.droidconandroid.shared.data.UserAccount;
+import co.touchlab.droidconandroid.shared.data.Venue;
 import io.reactivex.Single;
 
 /**

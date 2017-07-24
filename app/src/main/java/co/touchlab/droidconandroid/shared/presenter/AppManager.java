@@ -4,8 +4,8 @@ import android.content.Context;
 import com.google.gson.Gson;
 
 import co.touchlab.droidconandroid.CrashReport;
-import co.touchlab.droidconandroid.shared.data2.AppPrefs;
-import co.touchlab.droidconandroid.shared.data2.DatabaseHelper;
+import co.touchlab.droidconandroid.shared.data.AppPrefs;
+import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
 
 /**

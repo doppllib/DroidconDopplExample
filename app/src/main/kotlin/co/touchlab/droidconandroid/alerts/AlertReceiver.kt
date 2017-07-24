@@ -10,8 +10,8 @@ import android.support.v4.app.TaskStackBuilder
 import android.support.v7.app.NotificationCompat
 import co.touchlab.droidconandroid.EventDetailActivity
 import co.touchlab.droidconandroid.R
-import co.touchlab.droidconandroid.shared.data2.AppPrefs
-import co.touchlab.droidconandroid.shared.data2.DatabaseHelper
+import co.touchlab.droidconandroid.shared.data.AppPrefs
+import co.touchlab.droidconandroid.shared.data.DatabaseHelper
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 
 const val EXTRA_EVENT_NAME = "EXTRA_EVENT_NAME"

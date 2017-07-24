@@ -1,4 +1,4 @@
-package co.touchlab.droidconandroid.shared.data2;
+package co.touchlab.droidconandroid.shared.data;
 
 import android.arch.persistence.room.Room;
 import android.content.Context;
@@ -8,8 +8,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-import co.touchlab.droidconandroid.shared.data2.dao.EventDao;
-import co.touchlab.droidconandroid.shared.data2.dao.UserAccountDao;
+import co.touchlab.droidconandroid.shared.data.dao.EventDao;
+import co.touchlab.droidconandroid.shared.data.dao.UserAccountDao;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkUserAccount;
 import io.reactivex.Completable;
 import io.reactivex.Single;

@@ -1,4 +1,4 @@
-package co.touchlab.droidconandroid.shared.data2.dao;
+package co.touchlab.droidconandroid.shared.data.dao;
 
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
@@ -8,7 +8,7 @@ import android.arch.persistence.room.Query;
 
 import java.util.List;
 
-import co.touchlab.droidconandroid.shared.data2.Block;
+import co.touchlab.droidconandroid.shared.data.Block;
 
 @Dao
 public interface BlockDao {

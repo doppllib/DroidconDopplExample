@@ -1,7 +1,7 @@
 package co.touchlab.droidconandroid.shared.presenter;
 
-import co.touchlab.droidconandroid.shared.data2.Event;
-import co.touchlab.droidconandroid.shared.data2.EventInfo;
+import co.touchlab.droidconandroid.shared.data.Event;
+import co.touchlab.droidconandroid.shared.data.EventInfo;
 
 /**
  * Created by kgalligan on 4/25/16.

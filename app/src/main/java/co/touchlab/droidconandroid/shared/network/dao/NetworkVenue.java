@@ -7,7 +7,7 @@ import java.util.List;
 
 import javax.annotation.Nonnull;
 
-import co.touchlab.droidconandroid.shared.data2.Venue;
+import co.touchlab.droidconandroid.shared.data.Venue;
 
 /**
  * Created by kgalligan on 7/19/14.

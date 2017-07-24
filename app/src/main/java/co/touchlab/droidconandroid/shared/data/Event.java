@@ -1,4 +1,4 @@
-package co.touchlab.droidconandroid.shared.data2;
+package co.touchlab.droidconandroid.shared.data;
 
 import android.arch.persistence.room.Embedded;
 import android.arch.persistence.room.Entity;

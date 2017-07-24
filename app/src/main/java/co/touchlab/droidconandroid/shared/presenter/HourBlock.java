@@ -1,6 +1,6 @@
 package co.touchlab.droidconandroid.shared.presenter;
 
-import co.touchlab.droidconandroid.shared.data2.TimeBlock;
+import co.touchlab.droidconandroid.shared.data.TimeBlock;
 
 /**
  * Created by kgalligan on 4/25/16.

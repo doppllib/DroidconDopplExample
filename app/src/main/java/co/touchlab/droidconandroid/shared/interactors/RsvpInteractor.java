@@ -6,8 +6,8 @@ import com.birbit.android.jobqueue.JobManager;
 
 import java.util.UUID;
 
-import co.touchlab.droidconandroid.shared.data2.DatabaseHelper;
-import co.touchlab.droidconandroid.shared.data2.Event;
+import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
+import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.tasks.persisted.RsvpJob;
 import io.reactivex.Single;
 

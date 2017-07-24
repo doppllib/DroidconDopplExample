@@ -1,4 +1,4 @@
-package co.touchlab.droidconandroid.shared.data2.dao;
+package co.touchlab.droidconandroid.shared.data.dao;
 
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
@@ -9,7 +9,7 @@ import android.arch.persistence.room.Update;
 
 import java.util.List;
 
-import co.touchlab.droidconandroid.shared.data2.Event;
+import co.touchlab.droidconandroid.shared.data.Event;
 
 @Dao
 public interface EventDao {

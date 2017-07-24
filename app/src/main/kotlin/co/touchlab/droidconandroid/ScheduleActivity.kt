@@ -14,8 +14,8 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.text.format.DateUtils
 import android.view.View
-import co.touchlab.droidconandroid.shared.data2.AppPrefs
-import co.touchlab.droidconandroid.shared.data2.DatabaseHelper
+import co.touchlab.droidconandroid.shared.data.AppPrefs
+import co.touchlab.droidconandroid.shared.data.DatabaseHelper
 import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 import co.touchlab.droidconandroid.shared.presenter.AppManager

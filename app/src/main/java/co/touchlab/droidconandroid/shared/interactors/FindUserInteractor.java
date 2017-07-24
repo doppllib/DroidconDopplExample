@@ -1,7 +1,7 @@
 package co.touchlab.droidconandroid.shared.interactors;
 
-import co.touchlab.droidconandroid.shared.data2.DatabaseHelper;
-import co.touchlab.droidconandroid.shared.data2.UserAccount;
+import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
+import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.network.FindUserRequest;
 import co.touchlab.droidconandroid.shared.network.dao.UserAccountInfo;
 import co.touchlab.droidconandroid.shared.network.dao.UserInfoResponse;

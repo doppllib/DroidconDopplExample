@@ -5,7 +5,7 @@ import com.birbit.android.jobqueue.JobManager;
 import java.sql.SQLException;
 
 import co.touchlab.droidconandroid.CrashReport;
-import co.touchlab.droidconandroid.shared.data2.DatabaseHelper;
+import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHelper;
 import co.touchlab.droidconandroid.shared.presenter.DaySchedule;
 import co.touchlab.droidconandroid.shared.tasks.persisted.RefreshScheduleJob;

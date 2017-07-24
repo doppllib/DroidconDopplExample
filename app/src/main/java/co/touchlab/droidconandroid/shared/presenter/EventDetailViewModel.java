@@ -6,7 +6,7 @@ import android.util.Log;
 
 import com.google.j2objc.annotations.Weak;
 
-import co.touchlab.droidconandroid.shared.data2.EventInfo;
+import co.touchlab.droidconandroid.shared.data.EventInfo;
 import co.touchlab.droidconandroid.shared.interactors.EventDetailInteractor;
 import co.touchlab.droidconandroid.shared.interactors.RsvpInteractor;
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor;
