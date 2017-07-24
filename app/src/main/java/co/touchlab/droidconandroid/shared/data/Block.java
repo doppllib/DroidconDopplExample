@@ -10,7 +10,7 @@ import co.touchlab.squeaky.table.DatabaseTable;
  * Created by izzyoji :) on 8/12/15.
  */
 @DatabaseTable
-public class Block implements ScheduleBlock
+public class Block implements TimeBlock
 {
     @DatabaseField(id = true)
     public long id;

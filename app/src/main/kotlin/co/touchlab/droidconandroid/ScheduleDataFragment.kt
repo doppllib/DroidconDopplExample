@@ -76,7 +76,7 @@ class ScheduleDataFragment : Fragment(), ConferenceDataHost {
         viewModel.unregister()
     }
 
-    private fun updateAdapter(data: Array<out ScheduleBlockHour>) {
+    private fun updateAdapter(data: Array<out HourBlock>) {
         eventList.eventAdapter.updateEvents(data.asList())
     }
 
@@ -90,9 +90,9 @@ class ScheduleDataFragment : Fragment(), ConferenceDataHost {
         }
     }
 
-    override fun loadCallback(dayHolders: Array<ConferenceDayHolder>) {
+    override fun loadCallback(daySchedules: Array<DaySchedule>) {
         val dayString = ConferenceDataHelper.dateToDayString(Date(arguments.getLong(DAY)))
-        for (holder in dayHolders) {
+        for (holder in daySchedules) {
             if (holder.dayString?.equals(dayString) ?: false) {
                 updateAdapter(holder.hourHolders)
                 break

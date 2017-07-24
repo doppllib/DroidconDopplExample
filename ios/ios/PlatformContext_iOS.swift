@@ -169,9 +169,9 @@ extension PlatformContext_iOS : UITableViewDelegate {
 
 extension PlatformContext_iOS : DCPConferenceDataHost {
     
-    func loadCallback(withDCPConferenceDayHolderArray conferenceDayHolders: IOSObjectArray!) {
+    func loadCallback(withDCPConferenceDayHolderArray daySchedules: IOSObjectArray!) {
         hourBlocks = [DCPScheduleBlockHour]()
-        conferenceDays = convertiOSObjectArrayToArray(objArray: conferenceDayHolders) as! [DCPConferenceDayHolder]
+        conferenceDays = convertiOSObjectArrayToArray(objArray: daySchedules) as! [DCPConferenceDayHolder]
         updateTableData()
         reloadDelegate?.reloadTableView()
     }

@@ -18,7 +18,7 @@ import co.touchlab.droidconandroid.shared.data.Block;
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.data.EventSpeaker;
-import co.touchlab.droidconandroid.shared.data.ScheduleBlock;
+import co.touchlab.droidconandroid.shared.data.TimeBlock;
 import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.data.Venue;
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
@@ -48,19 +48,17 @@ public class ConferenceDataHelper
         return dateFormat.format(d);
     }
 
-    public static Single<ConferenceDayHolder[]> getDays(DatabaseHelper helper, boolean allEvents)
+    public static Single<DaySchedule[]> getDays(DatabaseHelper helper, boolean allEvents)
     {
-        return Single.fromCallable(() -> listDays(helper, allEvents));
+        return Single.fromCallable(() -> getDaySchedules(helper, allEvents));
     }
 
-    public static ConferenceDayHolder[] listDays(DatabaseHelper databaseHelper, boolean allEvents) throws SQLException
+    public static DaySchedule[] getDaySchedules(DatabaseHelper databaseHelper, boolean allEvents) throws SQLException
     {
         final Dao<Event> eventDao = databaseHelper.getEventDao();
         final Dao<Block> blockDao = databaseHelper.getBlockDao();
 
-        List<ScheduleBlock> all = new ArrayList<>();
-
-        all.addAll(blockDao.queryForAll().list());
+        List<TimeBlock> eventAndBlockList = new ArrayList<>();
         List<Event> eventList;
 
         if(allEvents)
@@ -78,54 +76,78 @@ public class ConferenceDataHelper
             eventDao.fillForeignCollection(event, "speakerList");
         }
 
-        all.addAll(eventList);
+        eventAndBlockList.addAll(blockDao.queryForAll().list());
+        eventAndBlockList.addAll(eventList);
 
-        Collections.sort(all, (o1, o2) -> {
-            final long compTimes = o1.getStartLong() - o2.getStartLong();
-            if(compTimes != 0) return compTimes > 0
-                    ? 1
-                    : - 1;
+        Collections.sort(eventAndBlockList, ConferenceDataHelper:: sortTimeBlocks);
+        TreeMap<String, List<HourBlock>> dateWithBlocksTreeMap = formatHourBlocks(eventAndBlockList);
+        List<DaySchedule> dayScheduleList = convertMapToDaySchedule(dateWithBlocksTreeMap);
 
-            if(o1.isBlock() && o2.isBlock()) return 0;
+        return dayScheduleList.toArray(new DaySchedule[dayScheduleList.size()]);
+    }
 
-            if(o1.isBlock()) return 1;
-            if(o2.isBlock()) return - 1;
+    private static int sortTimeBlocks(TimeBlock o1, TimeBlock o2)
+    {
+        final long compTimes = o1.getStartLong() - o2.getStartLong();
+        if(compTimes != 0)
+        {
+            return compTimes > 0 ? 1 : - 1;
+        }
 
-            return ((Event) o1).venue.name.compareTo(((Event) o2).venue.name);
-        });
+        if(o1.isBlock() && o2.isBlock())
+        {
+            return 0;
+        }
 
-        TreeMap<String, List<ScheduleBlockHour>> allTheData = new TreeMap<>();
+        if(o1.isBlock())
+        {
+            return 1;
+        }
+        if(o2.isBlock())
+        {
+            return - 1;
+        }
+
+        return ((Event) o1).venue.name.compareTo(((Event) o2).venue.name);
+    }
+
+    private static TreeMap<String, List<HourBlock>> formatHourBlocks(List<TimeBlock> eventAndBlockList)
+    {
+        TreeMap<String, List<HourBlock>> dateWithBlocksTreeMap = new TreeMap<>();
         String lastHourDisplay = "";
 
-        for(ScheduleBlock scheduleBlock : all)
+        for(TimeBlock timeBlock : eventAndBlockList)
         {
-            final Date startDateObj = new Date(scheduleBlock.getStartLong());
+            final Date startDateObj = new Date(timeBlock.getStartLong());
             final String startDate = dateFormat.format(startDateObj);
-            List<ScheduleBlockHour> blockHourList = allTheData.get(startDate);
+            List<HourBlock> blockHourList = dateWithBlocksTreeMap.get(startDate);
             if(blockHourList == null)
             {
                 blockHourList = new ArrayList<>();
-                allTheData.put(startDate, blockHourList);
+                dateWithBlocksTreeMap.put(startDate, blockHourList);
             }
 
             final String startTime = timeFormat.format(startDateObj);
             final boolean newHourDisplay = ! lastHourDisplay.equals(startTime);
-            blockHourList.add(new ScheduleBlockHour(newHourDisplay ? startTime : "", scheduleBlock));
+            blockHourList.add(new HourBlock(newHourDisplay ? startTime : "", timeBlock));
             lastHourDisplay = startTime;
         }
+        return dateWithBlocksTreeMap;
+    }
 
-        List<ConferenceDayHolder> dayHolders = new ArrayList<>();
+    private static List<DaySchedule> convertMapToDaySchedule(TreeMap<String, List<HourBlock>> dateWithBlocksTreeMap)
+    {
+        List<DaySchedule> dayScheduleList = new ArrayList<>();
 
-        for(String dateString : allTheData.keySet())
+        for(String dateString : dateWithBlocksTreeMap.keySet())
         {
-            final List<ScheduleBlockHour> hourBlocksMap = allTheData.get(dateString);
-
-            final ConferenceDayHolder conferenceDayHolder = new ConferenceDayHolder(dateString,
-                    hourBlocksMap.toArray(new ScheduleBlockHour[hourBlocksMap.size()]));
-            dayHolders.add(conferenceDayHolder);
+            final List<HourBlock> hourBlocksMap = dateWithBlocksTreeMap.get(dateString);
+            final DaySchedule daySchedule = new DaySchedule(dateString,
+                    hourBlocksMap.toArray(new HourBlock[hourBlocksMap.size()]));
+            dayScheduleList.add(daySchedule);
         }
 
-        return dayHolders.toArray(new ConferenceDayHolder[dayHolders.size()]);
+        return dayScheduleList;
     }
 
     public static void saveConventionData(final Context context, final Convention convention)

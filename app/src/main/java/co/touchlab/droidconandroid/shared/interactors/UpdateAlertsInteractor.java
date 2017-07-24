@@ -8,8 +8,8 @@ import co.touchlab.droidconandroid.shared.data.AppPrefs;
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHelper;
-import co.touchlab.droidconandroid.shared.presenter.ConferenceDayHolder;
-import co.touchlab.droidconandroid.shared.presenter.ScheduleBlockHour;
+import co.touchlab.droidconandroid.shared.presenter.DaySchedule;
+import co.touchlab.droidconandroid.shared.presenter.HourBlock;
 import co.touchlab.droidconandroid.shared.utils.EventBusExt;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -39,11 +39,15 @@ public class UpdateAlertsInteractor {
         }
     }
 
-    private void update(ConferenceDayHolder[] conferenceDayHolders) {
-        for (ConferenceDayHolder day : conferenceDayHolders) {
-            for (ScheduleBlockHour hour : day.hourHolders) {
-                if (hour.scheduleBlock instanceof Event) {
-                    Event event = (Event) hour.scheduleBlock;
+    private void update(DaySchedule[] daySchedules)
+    {
+        for(DaySchedule day : daySchedules)
+        {
+            for(HourBlock hour : day.hourHolders)
+            {
+                if(hour.timeBlock instanceof Event)
+                {
+                    Event event = (Event) hour.timeBlock;
                     if (event.getStartLong() - ALERT_BUFFER > System.currentTimeMillis()) {
                         this.event = event;
                         EventBusExt.getDefault().post(this);
