@@ -62,8 +62,8 @@
     <string name="hint_bio">Bio</string>
     <string name="contact">Contact Info</string>
     <string name="privacy">Privacy</string>
-    
-    <!-- Event Detail -->
+
+    <!-- NetworkEvent Detail -->
     <string name="event_venue_time" >%1$s, %2$s - %3$s</string>
     <string name="event_speaker_name" >%1$s, %2$s</string>
     <string name="event_track" >on the %1$s track</string>
@@ -119,7 +119,7 @@
     <string name="cd_navigation_icon">navigation icon</string>
     <string name="cd_profile_cover_image">profile cover image</string>
     <string name="cd_close_user_detail">close user detail</string>
-    <string name="cd_event_description">event description</string>
+    <string name="cd_event_description">networkEvent description</string>
 
     <string name="title_activity_user_detail">Profile</string>
     <string name="title_activity_sponsors">OUR AWESOME SPONSORS</string>

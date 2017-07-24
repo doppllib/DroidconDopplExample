@@ -22,6 +22,10 @@ import co.touchlab.droidconandroid.shared.data.TimeBlock;
 import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.data.Venue;
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
+import co.touchlab.droidconandroid.shared.network.dao.NetworkBlock;
+import co.touchlab.droidconandroid.shared.network.dao.NetworkEvent;
+import co.touchlab.droidconandroid.shared.network.dao.NetworkUserAccount;
+import co.touchlab.droidconandroid.shared.network.dao.NetworkVenue;
 import co.touchlab.droidconandroid.shared.utils.StringUtils;
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 import co.touchlab.droidconandroid.shared.utils.UserDataHelper;
@@ -171,18 +175,18 @@ public class ConferenceDataHelper
             appPrefs.setConventionStartDate(convention.startDate); // Can be moved outside the transaction
             appPrefs.setConventionEndDate(convention.endDate);
 
-            List<co.touchlab.droidconandroid.shared.network.dao.Venue> newVenueList = convention.venues;
-            List<co.touchlab.droidconandroid.shared.network.dao.Block> newBlockList = convention.blocks;
+            List<NetworkVenue> newVenueList = convention.venues;
+            List<NetworkBlock> newBlockList = convention.blocks;
             Set<Long> eventIdList = new HashSet<>();
             try
             {
-                for(co.touchlab.droidconandroid.shared.network.dao.Venue newVenue : newVenueList)
+                for(NetworkVenue newVenue : newVenueList)
                 {
-                    venueDao.createOrUpdate(newVenue); //will skip
-                    for(co.touchlab.droidconandroid.shared.network.dao.Event newEvent : newVenue.events)
+                    venueDao.createOrUpdate(newVenue);//will skip
+                    for(NetworkEvent newEvent : newVenue.events)
                     {
                         eventIdList.add(newEvent.id);
-                        Event oldEvent = eventDao.queryForId(newEvent.id); // just to check for rsvp, can be moved
+                        Event oldEvent = eventDao.queryForId(newEvent.id);// just to check for rsvp, can be moved
                         newEvent.venue = newVenue;
 
                         if(StringUtils.isEmpty(newEvent.startDate) ||
@@ -203,7 +207,7 @@ public class ConferenceDataHelper
                         eventDao.createOrUpdate(newEvent);
                         int speakerCount = 0;
 
-                        for(co.touchlab.droidconandroid.shared.network.dao.UserAccount newSpeaker : newEvent.speakers)
+                        for(NetworkUserAccount newSpeaker : newEvent.speakers)
                         {
                             UserAccount oldSpeaker = userAccountDao.queryForId(newSpeaker.id);
 
@@ -224,7 +228,8 @@ public class ConferenceDataHelper
                                     .query()
                                     .list();
                             EventSpeaker eventSpeaker = ((speakerEventList.size() == 0)
-                                    ? new EventSpeaker() : (EventSpeaker) speakerEventList.get(0));
+                                    ? new EventSpeaker()
+                                    : (EventSpeaker) speakerEventList.get(0));
 
                             // make 1 method, update&save
                             eventSpeaker.event = newEvent;
@@ -248,12 +253,13 @@ public class ConferenceDataHelper
                     blockDao.delete(blockDao.queryForAll().list());
 
                     // parse and save new blocks
-                    for(co.touchlab.droidconandroid.shared.network.dao.Block block : newBlockList)
+
+                    for(NetworkBlock newBlock : newBlockList)
                     {
                         // reconsider if formatting needs to be done here
-                        block.startDateLong = TimeUtils.parseTime(block.startDate);
-                        block.endDateLong = TimeUtils.parseTime(block.endDate);
-                        blockDao.createOrUpdate(block);
+                        newBlock.startDateLong = TimeUtils.parseTime(newBlock.startDate);
+                        newBlock.endDateLong = TimeUtils.parseTime(newBlock.endDate);
+                        blockDao.createOrUpdate(newBlock);
                     }
                 }
 

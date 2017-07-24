@@ -2,7 +2,7 @@ package co.touchlab.droidconandroid.shared.network.dao;
 /**
  * Created by kgalligan on 4/6/16.
  */
-public class UserAccount
+public class NetworkUserAccount
 {
     public Long id;
     public String name;

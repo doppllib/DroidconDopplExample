@@ -9,7 +9,7 @@ import co.touchlab.squeaky.field.DatabaseField;
 /**
  * Created by kgalligan on 7/19/14.
  */
-public class Event extends co.touchlab.droidconandroid.shared.data.Event
+public class NetworkEvent extends co.touchlab.droidconandroid.shared.data.Event
 {
     @DatabaseField
     public String startDate;
@@ -18,5 +18,5 @@ public class Event extends co.touchlab.droidconandroid.shared.data.Event
     public String endDate;
 
     @Ignore
-    public List<UserAccount> speakers;
+    public List<NetworkUserAccount> speakers;
 }

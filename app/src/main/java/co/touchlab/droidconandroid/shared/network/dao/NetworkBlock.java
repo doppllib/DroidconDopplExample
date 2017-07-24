@@ -7,7 +7,7 @@ import co.touchlab.squeaky.table.DatabaseTable;
  * Created by izzyoji :) on 8/12/15.
  */
 @DatabaseTable
-public class Block extends co.touchlab.droidconandroid.shared.data.Block
+public class NetworkBlock extends co.touchlab.droidconandroid.shared.data.Block
 {
     @DatabaseField
     public String startDate;

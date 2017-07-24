@@ -1,9 +1,9 @@
 package co.touchlab.droidconandroid.shared.network.dao;
 
-import javax.annotation.Nonnull;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.annotation.Nonnull;
 
 import co.touchlab.squeaky.field.DatabaseField;
 
@@ -24,8 +24,8 @@ public class Convention
     public String endDate;
 
     @Nonnull
-    public List<Venue> venues = new ArrayList<Venue>();
+    public List<NetworkVenue> venues = new ArrayList<NetworkVenue>();
 
     @Nonnull
-    public List<Block> blocks = new ArrayList<>();
+    public List<NetworkBlock> blocks = new ArrayList<>();
 }

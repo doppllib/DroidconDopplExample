@@ -17,7 +17,7 @@ import dcframework
     var titleString: String?
     var descriptionString: String?
     var dateTime: String?
-    var event: DCDEvent!
+    var networkEvent: DCDEvent!
     var speakers: [DCDEventSpeaker]?
     var eventDetailPresenter: DCPEventDetailPresenter!
     
@@ -37,7 +37,7 @@ import dcframework
             eventDetailPresenter.unregister()
         }
         
-        eventDetailPresenter = DCPEventDetailPresenter(androidContentContext: DCPAppManager.getContext(), withLong: event.getId(), with: self)
+        eventDetailPresenter = DCPEventDetailPresenter(androidContentContext: DCPAppManager.getContext(), withLong: networkEvent.getId(), with: self)
         
         eventDetailPresenter.refreshData()
         
@@ -64,7 +64,7 @@ import dcframework
     // MARK: Data refresh
     
     func dataRefresh() {
-        event = eventDetailPresenter.getEventDetailLoadTask().getEvent()
+        networkEvent = eventDetailPresenter.getEventDetailLoadTask().getEvent()
         speakers = PlatformContext_iOS.javaList(toList: eventDetailPresenter.getEventDetailLoadTask().getEvent().getSpeakerList()) as? [DCDEventSpeaker]
         tableView.reloadData()
         updateButton()
@@ -131,7 +131,7 @@ import dcframework
         if (indexPath as NSIndexPath).section == 0 {
             let cell:EventTableViewCell = tableView.dequeueReusableCell(withIdentifier: "eventCell") as! EventTableViewCell
 
-            cell.loadInfo(titleString!, description: descriptionString!, track: event!.getVenue().getName(), time: dateTime!, event: event, eventDetailPresenter: eventDetailPresenter)
+            cell.loadInfo(titleString!, description: descriptionString!, track: networkEvent!.getVenue().getName(), time: dateTime!, networkEvent: networkEvent, eventDetailPresenter: eventDetailPresenter)
             cell.selectionStyle = UITableViewCellSelectionStyle.none
             
             let videoDetailsInteractor:DCTEventVideoDetailsTask? = eventDetailPresenter.getEventVideoDetailsTask()
@@ -178,7 +178,7 @@ import dcframework
     }
     
     func updateButton() {
-        if (event.isRsvped()) {
+        if (networkEvent.isRsvped()) {
             rsvpButton.setImage(UIImage(named: "ic_done"), for: UIControlState())
             rsvpButton.backgroundColor = UIColor.white
         } else {
@@ -189,9 +189,9 @@ import dcframework
     
     //TODO Use Track class from shared lib folder.
     func updateHeaderImage() {
-        let track : DCDTrack  = (event.getCategory() ?? "").isEmpty ?
+        let track : DCDTrack  = (networkEvent.getCategory() ?? "").isEmpty ?
             DCDTrack.findByServerName(with: "Design") : // Default to design (Same as Android)
-        DCDTrack.findByServerName(with: event.getCategory())
+        DCDTrack.findByServerName(with: networkEvent.getCategory())
         
         var imageName : String
         
