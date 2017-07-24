@@ -1,12 +1,11 @@
 package co.touchlab.droidconandroid.shared.network.dao;
 
-import javax.annotation.Nonnull;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import co.touchlab.squeaky.field.DatabaseField;
-
 
 /**
  * Created by kgalligan on 7/19/14.
@@ -23,9 +22,9 @@ public class Convention
     @DatabaseField
     public String endDate;
 
-    @Nonnull
+    @NotNull
     public List<Venue> venues = new ArrayList<Venue>();
 
-    @Nonnull
+    @NotNull
     public List<Block> blocks = new ArrayList<>();
 }

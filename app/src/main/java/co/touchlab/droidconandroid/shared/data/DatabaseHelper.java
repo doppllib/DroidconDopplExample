@@ -3,7 +3,7 @@ package co.touchlab.droidconandroid.shared.data;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
-import javax.annotation.Nonnull;
+import org.jetbrains.annotations.NotNull;
 
 import java.sql.SQLException;
 import java.util.Iterator;
@@ -37,7 +37,7 @@ public class DatabaseHelper extends SqueakyOpenHelper
         super(context, DATABASE_FILE_NAME, null, BASELINE);
     }
 
-    @Nonnull
+    @NotNull
     public static synchronized DatabaseHelper getInstance(Context context)
     {
         if(instance == null)
@@ -82,31 +82,31 @@ public class DatabaseHelper extends SqueakyOpenHelper
         db.execSQL("PRAGMA foreign_keys=ON;");
     }
 
-    @Nonnull
+    @NotNull
     public Dao<Venue> getVenueDao()
     {
         return getDao(Venue.class);
     }
 
-    @Nonnull
+    @NotNull
     public Dao<Event> getEventDao()
     {
         return getDao(Event.class);
     }
 
-    @Nonnull
+    @NotNull
     public Dao<UserAccount> getUserAccountDao()
     {
         return getDao(UserAccount.class);
     }
 
-    @Nonnull
+    @NotNull
     public Dao<EventSpeaker> getEventSpeakerDao()
     {
         return getDao(EventSpeaker.class);
     }
 
-    @Nonnull
+    @NotNull
     public Dao<Block> getBlockDao()
     {
         return getDao(Block.class);

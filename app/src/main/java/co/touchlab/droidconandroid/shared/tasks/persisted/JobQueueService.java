@@ -1,14 +1,15 @@
 package co.touchlab.droidconandroid.shared.tasks.persisted;
-import android.support.annotation.NonNull;
 
 import com.birbit.android.jobqueue.JobManager;
 import com.birbit.android.jobqueue.scheduling.FrameworkJobSchedulerService;
+
+import org.jetbrains.annotations.NotNull;
 
 import co.touchlab.droidconandroid.DroidconApplication;
 
 public class JobQueueService extends FrameworkJobSchedulerService
 {
-    @NonNull
+    @NotNull
     @Override
     protected JobManager getJobManager()
     {
