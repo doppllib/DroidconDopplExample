@@ -11,7 +11,6 @@ import co.touchlab.droidconandroid.isOdd
 import co.touchlab.droidconandroid.setViewVisibility
 import co.touchlab.droidconandroid.shared.data.Block
 import co.touchlab.droidconandroid.shared.data.Event
-import co.touchlab.droidconandroid.shared.data.Track
 import co.touchlab.droidconandroid.shared.presenter.HourBlock
 import co.touchlab.droidconandroid.shared.utils.EventBusExt
 import co.touchlab.droidconandroid.shared.utils.EventUtils
@@ -31,7 +30,6 @@ class EventAdapter(private val context: Context,
 
     private var dataSet: List<HourBlock> = emptyList()
     private var filteredData: ArrayList<HourBlock?> = ArrayList()
-    private var currentTracks: ArrayList<String> = ArrayList(initialFilters)
 
     override fun getItemCount(): Int {
         return filteredData.size + adjustNotification
