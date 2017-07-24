@@ -76,7 +76,7 @@ import dcframework
     }
     
     func callStreamActivity(with task: DCTStartWatchVideoTask){
-        performSegue(withIdentifier: "LiveStream", sender: self)
+        //TODO remove method later
     }
     
     func reportError(with error: String){
@@ -138,22 +138,6 @@ import dcframework
 
             cell.loadInfo(titleString!, description: descriptionString!, track: event!.getVenue().getName(), time: dateTime!, event: event, eventDetailPresenter: eventDetailPresenter)
             cell.selectionStyle = UITableViewCellSelectionStyle.none
-            
-            let videoDetailsTask:DCTEventVideoDetailsTask? = eventDetailPresenter.getEventVideoDetailsTask()
-            
-            if (videoDetailsTask != nil && videoDetailsTask!.hasStream()) {
-                cell.liveStreamButton.addTarget(self, action: #selector(ShowEventDetailViewController.liveStreamTapped(_:)), for: UIControlEvents.touchUpInside)
-                cell.liveStreamButton.isHidden = false
-                cell.liveStreamIcon.isHidden = false
-                if(videoDetailsTask!.isNow()){
-                    cell.liveStreamButton.setTitle("LIVE STREAM", for: UIControlState())
-                } else {
-                    cell.liveStreamButton.setTitle("STREAM ARCHIVE", for: UIControlState())
-                }
-            }
-            cell.liveStreamButton.isHidden = true
-            cell.liveStreamIcon.isHidden = true
-            
             return cell
         } else {
             let cell:SpeakerTableViewCell = tableView.dequeueReusableCell(withIdentifier: "speakerCell") as! SpeakerTableViewCell
@@ -220,18 +204,5 @@ import dcframework
 
     @IBAction func toggleRsvp(_ sender: UIButton) {
         eventDetailPresenter.toggleRsvp()
-    }
-    
-    func liveStreamTapped(_ sender: UIButton) {
-        eventDetailPresenter.callStartVideo(with: eventDetailPresenter.getEventVideoDetailsTask().getMergedStreamLink(), with: "")
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "LiveStream") {
-            /*let liveStreamVC = (segue.destination as! LiveStreamViewController)
-            liveStreamVC.titleString = titleString
-            liveStreamVC.streamUrl = eventDetailPresenter.getEventVideoDetailsTask().getMergedStreamLink()
-            liveStreamVC.coverUrl = ""*/
-        }
     }
 }

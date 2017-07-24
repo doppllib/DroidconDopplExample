@@ -208,29 +208,11 @@
                         <outlet property="headerImage" destination="ZbT-NM-odG" id="dLB-dR-eGx"/>
                         <outlet property="rsvpButton" destination="xQK-un-yDe" id="0IK-0O-WyP"/>
                         <outlet property="tableView" destination="VLj-AE-5LA" id="ccs-68-hng"/>
-                        <segue destination="2Cs-7c-HEa" kind="show" identifier="LiveStream" id="0Yf-uw-4Ku"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u9y-Xd-Qes" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1130" y="1768"/>
-        </scene>
-        <!--Live Stream View Controller-->
-        <scene sceneID="8y1-4D-POF">
-            <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="2Cs-7c-HEa" customClass="LiveStreamViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="I5o-ct-ErC"/>
-                        <viewControllerLayoutGuide type="bottom" id="gDi-T5-SNP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Xcb-9K-rTz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UIj-Kt-OvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1845" y="1768"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="SEn-eK-DHA">

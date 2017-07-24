@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		01526F191EC0F99B00D42000 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 01526F181EC0F99B00D42000 /* libiconv.tbd */; };
-		01547FD81F1E8E89006460FE /* prefixes.properties in Resources */ = {isa = PBXBuildFile; fileRef = FAE033A31C9711F8001C50E1 /* prefixes.properties */; };
 		015486531F1E8FD4006460FE /* AndroidAnnotationNonNull.h in Headers */ = {isa = PBXBuildFile; fileRef = 01547FDB1F1E8FCD006460FE /* AndroidAnnotationNonNull.h */; };
 		015486541F1E8FD4006460FE /* AndroidAnnotationNonNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 01547FDC1F1E8FCD006460FE /* AndroidAnnotationNonNull.m */; };
 		015486551F1E8FD4006460FE /* AndroidAnnotationNullable.h in Headers */ = {isa = PBXBuildFile; fileRef = 01547FDD1F1E8FCD006460FE /* AndroidAnnotationNullable.h */; };
@@ -663,7 +662,6 @@
 		015488DE1F1E8FD6006460FE /* CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0154826B1F1E8FCF006460FE /* CoTouchlabAndroidThreadingTasksUtilsTaskQueueHelper.m */; };
 		015488DF1F1E8FD6006460FE /* CoTouchlabAndroidThreadingUtilsUiThreadContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 0154826C1F1E8FCF006460FE /* CoTouchlabAndroidThreadingUtilsUiThreadContext.h */; };
 		015488E01F1E8FD6006460FE /* CoTouchlabAndroidThreadingUtilsUiThreadContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 0154826D1F1E8FCF006460FE /* CoTouchlabAndroidThreadingUtilsUiThreadContext.m */; };
-		015488E11F1E8FD6006460FE /* prefixes.properties in Resources */ = {isa = PBXBuildFile; fileRef = 0154826E1F1E8FCF006460FE /* prefixes.properties */; };
 		015488E21F1E8FD6006460FE /* RetrofitAndroidAndroidLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 015482701F1E8FCF006460FE /* RetrofitAndroidAndroidLog.h */; };
 		015488E31F1E8FD6006460FE /* RetrofitAndroidAndroidLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 015482711F1E8FCF006460FE /* RetrofitAndroidAndroidLog.m */; };
 		015488E41F1E8FD6006460FE /* RetrofitAndroidMainThreadExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = 015482721F1E8FCF006460FE /* RetrofitAndroidMainThreadExecutor.h */; };
@@ -1656,7 +1654,8 @@
 		01548CBF1F1E8FDA006460FE /* CoTouchlabSqueakyStmtQuerySimpleComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 015486501F1E8FD4006460FE /* CoTouchlabSqueakyStmtQuerySimpleComparison.m */; };
 		01548CC01F1E8FDA006460FE /* CoTouchlabSqueakyStmtWhere.h in Headers */ = {isa = PBXBuildFile; fileRef = 015486511F1E8FD4006460FE /* CoTouchlabSqueakyStmtWhere.h */; };
 		01548CC11F1E8FDA006460FE /* CoTouchlabSqueakyStmtWhere.m in Sources */ = {isa = PBXBuildFile; fileRef = 015486521F1E8FD4006460FE /* CoTouchlabSqueakyStmtWhere.m */; };
-		01548CC21F1E920B006460FE /* prefixes.properties in Resources */ = {isa = PBXBuildFile; fileRef = 0154826E1F1E8FCF006460FE /* prefixes.properties */; };
+		016DFCC01F2654D1002E58D7 /* prefixes.properties in Resources */ = {isa = PBXBuildFile; fileRef = 0154826E1F1E8FCF006460FE /* prefixes.properties */; };
+		016DFCC31F2654E6002E58D7 /* prefixes.properties in Resources */ = {isa = PBXBuildFile; fileRef = 0154826E1F1E8FCF006460FE /* prefixes.properties */; };
 		018320261F152215009794AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018320251F152215009794AC /* ViewController.swift */; };
 		018320281F153CC3009794AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018320271F153CC3009794AC /* AppDelegate.swift */; };
 		0183202C1F155D86009794AC /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0183202B1F155D86009794AC /* NoteTableViewCell.swift */; };
@@ -1690,7 +1689,6 @@
 		F92EB65A1D5A5EEC003B47B7 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */; };
 		F92EB65C1D5B7D3B003B47B7 /* Welcome4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EB65B1D5B7D3B003B47B7 /* Welcome4ViewController.swift */; };
 		F9903FA21D3FBEC70050687E /* DroidconTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */; };
-		F9B8C7011D539328000724FC /* LiveStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B8C7001D539328000724FC /* LiveStreamViewController.swift */; };
 		F9D6952D1D47AF9D0095F0F9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */; };
 		FA258F611C937F5900986E0D /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA258F601C937F5900986E0D /* NoteTableViewCell.xib */; };
 		FA6128BF1C986E05001142E8 /* SpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6128BE1C986E05001142E8 /* SpeakerTableViewCell.swift */; };
@@ -3441,7 +3439,6 @@
 		F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
 		F92EB65B1D5B7D3B003B47B7 /* Welcome4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Welcome4ViewController.swift; sourceTree = "<group>"; };
 		F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroidconTabBarViewController.swift; sourceTree = "<group>"; };
-		F9B8C7001D539328000724FC /* LiveStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveStreamViewController.swift; sourceTree = "<group>"; };
 		F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		FA258F601C937F5900986E0D /* NoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
 		FA6128BE1C986E05001142E8 /* SpeakerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerTableViewCell.swift; sourceTree = "<group>"; };
@@ -5292,7 +5289,6 @@
 				63EE30DE1CD025AC00B64D3D /* EventListCell.swift */,
 				F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */,
 				F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */,
-				F9B8C7001D539328000724FC /* LiveStreamViewController.swift */,
 				F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */,
 				F92EB65B1D5B7D3B003B47B7 /* Welcome4ViewController.swift */,
 				4C81B70A1D75E7B500DFB89C /* SponsorImage.swift */,
@@ -6379,13 +6375,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01547FD81F1E8E89006460FE /* prefixes.properties in Resources */,
 				639320311D77FF700047224B /* dataseeds in Resources */,
+				016DFCC31F2654E6002E58D7 /* prefixes.properties in Resources */,
 				631B98FE1C7D6533008AA20D /* LaunchScreen.storyboard in Resources */,
 				631B98FB1C7D6533008AA20D /* Assets.xcassets in Resources */,
 				FA6128C31C986E7A001142E8 /* EventTableViewCell.xib in Resources */,
 				FA258F611C937F5900986E0D /* NoteTableViewCell.xib in Resources */,
-				01548CC21F1E920B006460FE /* prefixes.properties in Resources */,
 				631B98F91C7D6533008AA20D /* Main.storyboard in Resources */,
 				FA6128C11C986E16001142E8 /* SpeakerTableViewCell.xib in Resources */,
 			);
@@ -6409,7 +6404,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				015488E11F1E8FD6006460FE /* prefixes.properties in Resources */,
+				016DFCC01F2654D1002E58D7 /* prefixes.properties in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -6640,7 +6635,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				018320281F153CC3009794AC /* AppDelegate.swift in Sources */,
-				F9B8C7011D539328000724FC /* LiveStreamViewController.swift in Sources */,
 				63EE30DF1CD025AC00B64D3D /* EventListCell.swift in Sources */,
 				0183202E1F155F9A009794AC /* UIViewController.swift in Sources */,
 				4C81B70B1D75E7B500DFB89C /* SponsorImage.swift in Sources */,
