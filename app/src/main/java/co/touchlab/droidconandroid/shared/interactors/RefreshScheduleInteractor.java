@@ -8,7 +8,7 @@ import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.DroidconApplication;
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHelper;
-import co.touchlab.droidconandroid.shared.presenter.ConferenceDayHolder;
+import co.touchlab.droidconandroid.shared.presenter.DaySchedule;
 import co.touchlab.droidconandroid.shared.tasks.persisted.RefreshScheduleJob;
 import io.reactivex.Observable;
 import io.reactivex.subjects.BehaviorSubject;
@@ -17,7 +17,7 @@ public class RefreshScheduleInteractor
 {
     private final JobManager     jobManager;
     private final DatabaseHelper databaseHelper;
-    private BehaviorSubject<ConferenceDayHolder[]> conferenceDataSubject = BehaviorSubject.create();
+    private BehaviorSubject<DaySchedule[]> conferenceDataSubject = BehaviorSubject.create();
 
     public RefreshScheduleInteractor(DatabaseHelper databaseHelper)
     {
@@ -25,7 +25,7 @@ public class RefreshScheduleInteractor
         this.jobManager = DroidconApplication.getInstance().getJobManager();
     }
 
-    public Observable<ConferenceDayHolder[]> getDataStream()
+    public Observable<DaySchedule[]> getDataStream()
     {
         return conferenceDataSubject.hide();
     }
@@ -34,7 +34,7 @@ public class RefreshScheduleInteractor
     {
         try
         {
-            ConferenceDayHolder[] newData = ConferenceDataHelper.listDays(databaseHelper,
+            DaySchedule[] newData = ConferenceDataHelper.getDaySchedules(databaseHelper,
                     allEvents);
             conferenceDataSubject.onNext(newData);
         }

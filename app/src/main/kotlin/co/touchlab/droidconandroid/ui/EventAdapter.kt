@@ -12,7 +12,7 @@ import co.touchlab.droidconandroid.setViewVisibility
 import co.touchlab.droidconandroid.shared.data.Block
 import co.touchlab.droidconandroid.shared.data.Event
 import co.touchlab.droidconandroid.shared.data.Track
-import co.touchlab.droidconandroid.shared.presenter.ScheduleBlockHour
+import co.touchlab.droidconandroid.shared.presenter.HourBlock
 import co.touchlab.droidconandroid.shared.utils.EventBusExt
 import co.touchlab.droidconandroid.shared.utils.EventUtils
 import kotlinx.android.synthetic.main.item_event.view.*
@@ -30,8 +30,8 @@ class EventAdapter(private val context: Context,
                    private val eventClickListener: EventClickListener,
                    private var showNotificationCard: Boolean) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private var dataSet: List<ScheduleBlockHour> = emptyList()
-    private var filteredData: ArrayList<ScheduleBlockHour?> = ArrayList()
+    private var dataSet: List<HourBlock> = emptyList()
+    private var filteredData: ArrayList<HourBlock?> = ArrayList()
     private var currentTracks: ArrayList<String> = ArrayList(initialFilters)
 
     override fun getItemCount(): Int {
@@ -68,8 +68,8 @@ class EventAdapter(private val context: Context,
             scheduleBlockHour?.let {
                 EventUtils.styleEventRow(scheduleBlockHour, dataSet, holder, allEvents)
 
-                if (!scheduleBlockHour.scheduleBlock.isBlock) {
-                    holder.setOnClickListener { eventClickListener.onEventClick(scheduleBlockHour.scheduleBlock as Event) }
+                if (!scheduleBlockHour.timeBlock.isBlock) {
+                    holder.setOnClickListener { eventClickListener.onEventClick(scheduleBlockHour.timeBlock as Event) }
                 }
             }
         }
@@ -85,7 +85,7 @@ class EventAdapter(private val context: Context,
             return VIEW_TYPE_NEW_ROW
         }
 
-        val item = filteredData[adjustedPosition]?.scheduleBlock
+        val item = filteredData[adjustedPosition]?.timeBlock
         when (item) {
             is Event -> return if (item.isPast) VIEW_TYPE_PAST_EVENT else VIEW_TYPE_EVENT
             is Block -> return VIEW_TYPE_BLOCK
@@ -132,7 +132,7 @@ class EventAdapter(private val context: Context,
         notifyDataSetChanged()
     }
 
-    fun updateEvents(data: List<ScheduleBlockHour>) {
+    fun updateEvents(data: List<HourBlock>) {
         dataSet = data
         updateData()
     }

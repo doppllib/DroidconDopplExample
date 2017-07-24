@@ -17,7 +17,7 @@ import co.touchlab.squeaky.table.DatabaseTable;
  * Created by kgalligan on 6/28/14.
  */
 @DatabaseTable
-public class Event implements ScheduleBlock
+public class Event implements TimeBlock
 {
     @DatabaseField(id = true)
     public long id;

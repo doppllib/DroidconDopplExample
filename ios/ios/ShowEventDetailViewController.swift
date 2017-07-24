@@ -113,11 +113,6 @@ import dcframework
         self.present(alert, animated: true, completion: nil)
     }
     
-    func openSlack(with slackLink: String!, with slackLinkHttp: String!, withBoolean showSlackDialog: jboolean) {
-        // TODO
-    }
-
-    
     // MARK: TableView
     
     func numberOfSections(in tableView: UITableView) -> Int {
