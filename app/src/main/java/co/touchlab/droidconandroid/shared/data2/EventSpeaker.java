@@ -10,26 +10,28 @@ import android.arch.persistence.room.PrimaryKey;
  * Created by kgalligan on 7/28/14.
  */
 @Entity(foreignKeys = {
-        @ForeignKey(entity = Event.class, parentColumns = "id", childColumns = "event_id"),
-        @ForeignKey(entity = UserAccount.class, parentColumns = "id", childColumns = "user_id")
+        @ForeignKey(entity = Event.class, parentColumns = "id", childColumns = "event_id", onDelete = ForeignKey.CASCADE),
+        @ForeignKey(entity = UserAccount.class, parentColumns = "id", childColumns = "user_id", onDelete = ForeignKey.CASCADE)
 })
 public class EventSpeaker {
     @PrimaryKey(autoGenerate = true)
     public Integer id;
 
     @ColumnInfo(name = "event_id")
-    public int eventId;
+    public long eventId;
 
     @ColumnInfo(name = "user_id")
-    public int userAccountId;
+    public long userAccountId;
 
     public int displayOrder;
 
-    public int getEventId() {
+    public long getEventId()
+    {
         return eventId;
     }
 
-    public int getUserAccountId() {
+    public long getUserAccountId()
+    {
         return userAccountId;
     }
 

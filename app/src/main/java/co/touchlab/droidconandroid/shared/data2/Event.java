@@ -8,13 +8,14 @@ import java.util.Date;
 
 import javax.annotation.Nonnull;
 
+import co.touchlab.droidconandroid.shared.data.TimeBlock;
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 
 /**
  * Created by kgalligan on 6/28/14.
  */
 @Entity
-public class Event implements ScheduleBlock
+public class Event implements TimeBlock
 {
     @PrimaryKey
     public long id;

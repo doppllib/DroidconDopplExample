@@ -5,8 +5,6 @@ import java.util.List;
 
 import javax.annotation.Nonnull;
 
-import co.touchlab.squeaky.field.DatabaseField;
-
 
 /**
  * Created by kgalligan on 7/19/14.
@@ -17,10 +15,8 @@ public class Convention
     public String description;
     public String locationName;
 
-    @DatabaseField
     public String startDate;
 
-    @DatabaseField
     public String endDate;
 
     @Nonnull

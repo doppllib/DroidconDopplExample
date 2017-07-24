@@ -5,13 +5,14 @@ import android.arch.persistence.room.PrimaryKey;
 
 import java.util.Date;
 
+import co.touchlab.droidconandroid.shared.data.TimeBlock;
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 
 /**
  * Created by izzyoji :) on 8/12/15.
  */
 @Entity
-public class Block implements ScheduleBlock
+public class Block implements TimeBlock
 {
     @PrimaryKey
     public long id;

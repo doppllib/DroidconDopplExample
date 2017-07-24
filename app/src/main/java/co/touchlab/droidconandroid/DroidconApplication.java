@@ -13,7 +13,7 @@ import com.birbit.android.jobqueue.scheduling.FrameworkJobSchedulerService;
 import java.io.IOException;
 
 import co.touchlab.droidconandroid.alerts.AlertManagerKt;
-import co.touchlab.droidconandroid.shared.data.Event;
+import co.touchlab.droidconandroid.shared.data2.Event;
 import co.touchlab.droidconandroid.shared.presenter.AppManager;
 import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor;

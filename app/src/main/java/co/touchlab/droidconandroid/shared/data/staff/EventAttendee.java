@@ -1,6 +1,6 @@
 package co.touchlab.droidconandroid.shared.data.staff;
 
-import co.touchlab.droidconandroid.shared.data.Event;
+import co.touchlab.droidconandroid.shared.data2.Event;
 import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.squeaky.field.DatabaseField;
 import co.touchlab.squeaky.table.DatabaseTable;

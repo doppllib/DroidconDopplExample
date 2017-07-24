@@ -1,5 +1,5 @@
 package co.touchlab.droidconandroid.shared.utils;
-import co.touchlab.droidconandroid.shared.data.Event;
+import co.touchlab.droidconandroid.shared.data2.Event;
 import co.touchlab.droidconandroid.shared.presenter.AppManager;
 
 /**

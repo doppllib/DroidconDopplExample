@@ -1,18 +1,14 @@
 package co.touchlab.droidconandroid.shared.network.dao;
 
-import co.touchlab.squeaky.field.DatabaseField;
-import co.touchlab.squeaky.table.DatabaseTable;
+import co.touchlab.droidconandroid.shared.data2.Block;
 
 /**
  * Created by izzyoji :) on 8/12/15.
  */
-@DatabaseTable
-public class NetworkBlock extends co.touchlab.droidconandroid.shared.data.Block
+public class NetworkBlock extends Block
 {
-    @DatabaseField
-    public String startDate;
+    //    public String startDate;
 
-    @DatabaseField
-    public String endDate;
+    //    public String endDate;
 
 }

@@ -1,7 +1,5 @@
 package co.touchlab.droidconandroid.shared.presenter;
 
-import android.content.Context;
-
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -14,13 +12,11 @@ import java.util.Set;
 import java.util.TreeMap;
 
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
-import co.touchlab.droidconandroid.shared.data.Block;
-import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
-import co.touchlab.droidconandroid.shared.data.Event;
-import co.touchlab.droidconandroid.shared.data.EventSpeaker;
 import co.touchlab.droidconandroid.shared.data.TimeBlock;
-import co.touchlab.droidconandroid.shared.data.UserAccount;
-import co.touchlab.droidconandroid.shared.data.Venue;
+import co.touchlab.droidconandroid.shared.data2.Data2Helper;
+import co.touchlab.droidconandroid.shared.data2.Event;
+import co.touchlab.droidconandroid.shared.data2.EventSpeaker;
+import co.touchlab.droidconandroid.shared.data2.UserAccount;
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkBlock;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkEvent;
@@ -28,9 +24,6 @@ import co.touchlab.droidconandroid.shared.network.dao.NetworkUserAccount;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkVenue;
 import co.touchlab.droidconandroid.shared.utils.StringUtils;
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
-import co.touchlab.droidconandroid.shared.utils.UserDataHelper;
-import co.touchlab.squeaky.dao.Dao;
-import co.touchlab.squeaky.stmt.Where;
 import io.reactivex.Single;
 
 /**
@@ -52,35 +45,32 @@ public class ConferenceDataHelper
         return dateFormat.format(d);
     }
 
-    public static Single<DaySchedule[]> getDays(DatabaseHelper helper, boolean allEvents)
+    public static Single<DaySchedule[]> getDays(Data2Helper helper, boolean allEvents)
     {
         return Single.fromCallable(() -> getDaySchedules(helper, allEvents));
     }
 
-    public static DaySchedule[] getDaySchedules(DatabaseHelper databaseHelper, boolean allEvents) throws SQLException
+    public static DaySchedule[] getDaySchedules(Data2Helper databaseHelper, boolean allEvents) throws SQLException
     {
-        final Dao<Event> eventDao = databaseHelper.getEventDao();
-        final Dao<Block> blockDao = databaseHelper.getBlockDao();
-
         List<TimeBlock> eventAndBlockList = new ArrayList<>();
         List<Event> eventList;
 
         if(allEvents)
         {
-            eventList = eventDao.queryForAll().list();
+            eventList = databaseHelper.getEvents2();
         }
         else
         {
-            Where<Event> where = new Where<>(eventDao);
-            eventList = where.isNotNull("rsvpUuid").query().list();
+            eventList = databaseHelper.getEventsWithRsvpsNotNull();
         }
 
-        for(Event event : eventList)
-        {
-            eventDao.fillForeignCollection(event, "speakerList");
-        }
+        // FIXME: Potentially will have to fill this to get speakers to display
+        //        for(Event event : eventList)
+        //        {
+        //            eventDao.fillForeignCollection(event, "speakerList");
+        //        }
 
-        eventAndBlockList.addAll(blockDao.queryForAll().list());
+        eventAndBlockList.addAll(databaseHelper.getBlocks2());
         eventAndBlockList.addAll(eventList);
 
         Collections.sort(eventAndBlockList, ConferenceDataHelper:: sortTimeBlocks);
@@ -154,122 +144,104 @@ public class ConferenceDataHelper
         return dayScheduleList;
     }
 
-    public static void saveConventionData(final Context context, final Convention convention)
+    public static void saveConventionData(final Data2Helper helper, final AppPrefs appPrefs, final Convention convention)
     {
+
         if(convention == null)
         {
             throw new IllegalStateException("No convention results");
         }
 
-        DatabaseHelper helper = DatabaseHelper.getInstance(context);
-        AppPrefs appPrefs = AppPrefs.getInstance(context);
-        helper.performTransactionOrThrowRuntime(() ->
+        appPrefs.setConventionStartDate(convention.startDate);
+        appPrefs.setConventionEndDate(convention.endDate);
+
+        List<NetworkVenue> newVenueList = convention.venues;
+        List<NetworkBlock> newBlockList = convention.blocks;
+        Set<Long> eventIdList = new HashSet<>();
+
+        try
         {
-            Dao<Event> eventDao = helper.getEventDao();
-            Dao<Venue> venueDao = helper.getVenueDao();
-            Dao<Block> blockDao = helper.getBlockDao();
-            Dao<UserAccount> userAccountDao = helper.getUserAccountDao();
-            Dao<EventSpeaker> eventSpeakerDao = helper.getEventSpeakerDao();
-
-            //extract
-            appPrefs.setConventionStartDate(convention.startDate); // Can be moved outside the transaction
-            appPrefs.setConventionEndDate(convention.endDate);
-
-            List<NetworkVenue> newVenueList = convention.venues;
-            List<NetworkBlock> newBlockList = convention.blocks;
-            Set<Long> eventIdList = new HashSet<>();
-            try
+            for(NetworkVenue newVenue : newVenueList)
             {
-                for(NetworkVenue newVenue : newVenueList)
+                for(NetworkEvent newEvent : newVenue.events)
                 {
-                    venueDao.createOrUpdate(newVenue);//will skip
-                    for(NetworkEvent newEvent : newVenue.events)
+                    eventIdList.add(newEvent.id);
+                    String matchingRsvpUuid = helper.getRsvpUuidForEventWithId2(newEvent.id);// just to check for rsvp, can be moved
+                    newEvent.venue = newVenue;
+
+                    if(StringUtils.isEmpty(newEvent.startDate) ||
+                            StringUtils.isEmpty(newEvent.endDate))
                     {
-                        eventIdList.add(newEvent.id);
-                        Event oldEvent = eventDao.queryForId(newEvent.id);// just to check for rsvp, can be moved
-                        newEvent.venue = newVenue;
-
-                        if(StringUtils.isEmpty(newEvent.startDate) ||
-                                StringUtils.isEmpty(newEvent.endDate))
-                        {
-                            continue;
-                        }
-
-                        newEvent.startDateLong = TimeUtils.parseTime(newEvent.startDate);
-                        newEvent.endDateLong = TimeUtils.parseTime(newEvent.endDate);
-
-                        // use elvis
-                        if(oldEvent != null)
-                        {
-                            newEvent.rsvpUuid = oldEvent.rsvpUuid;
-                        }
-
-                        eventDao.createOrUpdate(newEvent);
-                        int speakerCount = 0;
-
-                        for(NetworkUserAccount newSpeaker : newEvent.speakers)
-                        {
-                            UserAccount oldSpeaker = userAccountDao.queryForId(newSpeaker.id);
-
-                            if(oldSpeaker == null)
-                            {
-                                oldSpeaker = new UserAccount();
-                            }
-
-                            // make 1 method update&save
-                            UserDataHelper.userAccountToDb(newSpeaker, oldSpeaker);
-                            userAccountDao.createOrUpdate(oldSpeaker);
-
-                            // get list of eventSpeaker, does not need to be a list
-                            Where<EventSpeaker> where = new Where<>(eventSpeakerDao);
-                            List speakerEventList = where.and()
-                                    .eq("event_id", newEvent.id) //event already updated
-                                    .eq("userAccount_id", oldSpeaker.id) //event already updated
-                                    .query()
-                                    .list();
-                            EventSpeaker eventSpeaker = ((speakerEventList.size() == 0)
-                                    ? new EventSpeaker()
-                                    : (EventSpeaker) speakerEventList.get(0));
-
-                            // make 1 method, update&save
-                            eventSpeaker.event = newEvent;
-                            eventSpeaker.userAccount = oldSpeaker;
-                            eventSpeaker.displayOrder = speakerCount++;
-                            eventSpeakerDao.createOrUpdate(eventSpeaker);
-                        }
+                        continue;
                     }
 
-                }
+                    newEvent.startDateLong = TimeUtils.parseTime(newEvent.startDate);
+                    newEvent.endDateLong = TimeUtils.parseTime(newEvent.endDate);
 
-                // clear db if events are returned
-                if(! eventIdList.isEmpty())
-                {
-                    helper.deleteEventsNotIn(eventIdList);
-                }
-
-                if(newBlockList.size() > 0)
-                {
-                    //Dump all old blocks first
-                    blockDao.delete(blockDao.queryForAll().list());
-
-                    // parse and save new blocks
-
-                    for(NetworkBlock newBlock : newBlockList)
+                    if(matchingRsvpUuid != null)
                     {
-                        // reconsider if formatting needs to be done here
-                        newBlock.startDateLong = TimeUtils.parseTime(newBlock.startDate);
-                        newBlock.endDateLong = TimeUtils.parseTime(newBlock.endDate);
-                        blockDao.createOrUpdate(newBlock);
+                        newEvent.rsvpUuid = matchingRsvpUuid;
+                    }
+
+                    // Need a layer to convert an event to a different type of event
+                    helper.createOrUpdateEvent2(newEvent);
+                    int speakerCount = 0;
+
+                    for(NetworkUserAccount newSpeaker : newEvent.speakers)
+                    {
+                        UserAccount oldSpeaker = helper.getUserAccount(newSpeaker.id);
+
+                        if(oldSpeaker == null)
+                        {
+                            oldSpeaker = new UserAccount();
+                        }
+
+                        helper.saveUserAccount2(newSpeaker, oldSpeaker);
+
+                        EventSpeaker eventSpeaker = helper.getSpeakerForEventWithId(newEvent.id,
+                                newSpeaker.id);
+
+                        if(eventSpeaker == null)
+                        {
+                            eventSpeaker = new EventSpeaker();
+                        }
+
+                        // make 1 method, update&save
+                        eventSpeaker.eventId = newEvent.id;
+                        eventSpeaker.userAccountId = oldSpeaker.id;
+                        eventSpeaker.displayOrder = speakerCount++;
+                        helper.updateSpeaker(eventSpeaker);
                     }
                 }
 
             }
-            catch(SQLException | ParseException e)
+
+            // clear db if events are returned
+            if(! eventIdList.isEmpty())
             {
-                throw new RuntimeException(e);
+                helper.deleteEventsNotIn(eventIdList);
             }
-            // callable?!
-            return null;
-        });
+
+            if(newBlockList.size() > 0)
+            {
+                //Dump all old blocks first
+                helper.deleteBlocks(helper.getBlocks2());
+
+                // parse and save new blocks
+
+                for(NetworkBlock newBlock : newBlockList)
+                {
+                    // reconsider if formatting needs to be done here
+                    newBlock.startDateLong = TimeUtils.parseTime(newBlock.startDate);
+                    newBlock.endDateLong = TimeUtils.parseTime(newBlock.endDate);
+                    helper.createOrUpdateBlock(newBlock);
+                }
+            }
+
+        }
+        catch(ParseException e)
+        {
+            throw new RuntimeException(e);
+        }
     }
 }

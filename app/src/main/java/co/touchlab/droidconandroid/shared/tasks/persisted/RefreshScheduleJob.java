@@ -9,6 +9,7 @@ import com.birbit.android.jobqueue.RetryConstraint;
 
 import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
+import co.touchlab.droidconandroid.shared.data2.Data2Helper;
 import co.touchlab.droidconandroid.shared.network.DataHelper;
 import co.touchlab.droidconandroid.shared.network.RefreshScheduleDataRequest;
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
@@ -48,8 +49,10 @@ public class RefreshScheduleJob extends Job
         Convention convention = request.getScheduleData(platformClient.getConventionId())
                 .execute()
                 .body();
-        ConferenceDataHelper.saveConventionData(getApplicationContext(), convention);
-        AppPrefs.getInstance(getApplicationContext()).setRefreshTime(System.currentTimeMillis());
+        Data2Helper helper = Data2Helper.getInstance(getApplicationContext());
+        AppPrefs appPrefs = AppPrefs.getInstance(getApplicationContext());
+        ConferenceDataHelper.saveConventionData(helper, appPrefs, convention);
+        appPrefs.setRefreshTime(System.currentTimeMillis());
         EventBusExt.getDefault().post(this);
     }
 

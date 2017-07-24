@@ -4,7 +4,7 @@ import android.text.TextUtils;
 import java.util.List;
 
 import co.touchlab.droidconandroid.shared.data.Block;
-import co.touchlab.droidconandroid.shared.data.Event;
+import co.touchlab.droidconandroid.shared.data2.Event;
 import co.touchlab.droidconandroid.shared.presenter.HourBlock;
 
 public class EventUtils

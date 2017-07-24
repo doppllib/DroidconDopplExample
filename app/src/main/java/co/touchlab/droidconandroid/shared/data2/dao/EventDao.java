@@ -17,6 +17,9 @@ public interface EventDao {
     @Query("SELECT * FROM Event WHERE id = :eventId")
     Event getEventForId(long eventId);
 
+    @Query("SELECT rsvpUuid FROM Event WHERE id = :eventId")
+    String getRsvpUuidForEventWithId(long eventId);
+
     @Query("SELECT * FROM Event")
     List<Event> getEvents();
 

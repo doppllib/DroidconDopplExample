@@ -14,23 +14,25 @@ import co.touchlab.droidconandroid.shared.network.dao.NetworkUserAccount;
 import io.reactivex.Completable;
 import io.reactivex.Single;
 
-public class DatabaseHelper
+public class Data2Helper
 {
 
-    private static DatabaseHelper   instance;
+    private static Data2Helper      instance;
     private        DroidconDatabase db;
 
-    private DatabaseHelper(Context context)
+    private Data2Helper(Context context)
     {
-        db = Room.databaseBuilder(context, DroidconDatabase.class, "droidcon").build();
+        db = Room.databaseBuilder(context, DroidconDatabase.class, "droidcon")
+                .allowMainThreadQueries()
+                .build();
     }
 
     @NonNull
-    public static synchronized DatabaseHelper getInstance(Context context)
+    public static synchronized Data2Helper getInstance(Context context)
     {
         if(instance == null)
         {
-            instance = new DatabaseHelper(context);
+            instance = new Data2Helper(context);
         }
 
         return instance;
@@ -62,19 +64,44 @@ public class DatabaseHelper
         return Single.fromCallable(() -> db.eventDao().getEventForId(eventId));
     }
 
+    public Single<String> getRsvpUuidForEventWithId(long eventId)
+    {
+        return Single.fromCallable(() -> getRsvpUuidForEventWithId2(eventId));
+    }
+
+    public String getRsvpUuidForEventWithId2(long eventId)
+    {
+        return db.eventDao().getRsvpUuidForEventWithId(eventId);
+    }
+
     public Single<List<Event>> getEventsWithRsvps()
     {
-        return Single.fromCallable(() -> db.eventDao().rsvpUuidNotNull());
+        return Single.fromCallable(() -> getEventsWithRsvpsNotNull());
+    }
+
+    public List<Event> getEventsWithRsvpsNotNull()
+    {
+        return db.eventDao().rsvpUuidNotNull();
     }
 
     public Single<List<Event>> getEvents()
     {
-        return Single.fromCallable(() -> db.eventDao().getEvents());
+        return Single.fromCallable(() -> getEvents2());
+    }
+
+    public List<Event> getEvents2()
+    {
+        return db.eventDao().getEvents();
     }
 
     public Completable createOrUpdateEvent(Event event)
     {
-        return Completable.fromAction(() -> db.eventDao().createOrUpdate(event));
+        return Completable.fromAction(() -> createOrUpdateEvent2(event));
+    }
+
+    public void createOrUpdateEvent2(Event event)
+    {
+        db.eventDao().createOrUpdate(event);
     }
 
     public Completable updateEvent(Event event)
@@ -89,7 +116,22 @@ public class DatabaseHelper
 
     public Single<List<Block>> getBlocks()
     {
-        return Single.fromCallable(() -> db.blockDao().getBlocks());
+        return Single.fromCallable(this :: getBlocks2);
+    }
+
+    public List<Block> getBlocks2()
+    {
+        return db.blockDao().getBlocks();
+    }
+
+    public Completable createOrUpdateBlock(Block block)
+    {
+        return Completable.fromAction(() -> updateBlock(block));
+    }
+
+    public void updateBlock(Block block)
+    {
+        db.blockDao().createOrUpdate(block);
     }
 
     public Completable deleteBlocks(List<Block> blocks)
@@ -97,9 +139,24 @@ public class DatabaseHelper
         return Completable.fromAction(() -> db.blockDao().deleteAll(blocks));
     }
 
-    public Single<List<EventSpeaker>> getEventSpeakers(long eventId, long userId)
+    public Single<EventSpeaker> getEventSpeaker(long eventId, long userId)
     {
-        return Single.fromCallable(() -> db.eventSpeakerDao().getEventSpeakers(eventId, userId));
+        return Single.fromCallable(() -> getSpeakerForEventWithId(eventId, userId));
+    }
+
+    public EventSpeaker getSpeakerForEventWithId(long eventId, long userId)
+    {
+        return db.eventSpeakerDao().getSpeakerForEventWithId(eventId, userId);
+    }
+
+    public Completable createOrUpdateEventSpeaker(EventSpeaker speaker)
+    {
+        return Completable.fromAction(() -> updateSpeaker(speaker));
+    }
+
+    public void updateSpeaker(EventSpeaker speaker)
+    {
+        db.eventSpeakerDao().createOrUpdate(speaker);
     }
 
     public Single<List<EventSpeaker>> getEventSpeakers(long eventId)
@@ -107,25 +164,35 @@ public class DatabaseHelper
         return Single.fromCallable(() -> db.eventSpeakerDao().getEventSpeakers(eventId));
     }
 
-    public Single<UserAccount> findUserByCode(long userId)
+    public Single<UserAccount> getUserAccountForId(long userId)
     {
-        return Single.fromCallable(() -> db.userAccountDao().getUserAccount(userId));
+        return Single.fromCallable(() -> getUserAccount(userId));
     }
 
-    // Putting networking models into db
-
-    public Completable saveUserAccount(NetworkUserAccount ua)
+    public UserAccount getUserAccount(long userId)
     {
-        UserAccount dbUa = userAccountToDb(ua);
+        return db.userAccountDao().getUserAccount(userId);
+    }
+
+    public Completable saveUserAccount(NetworkUserAccount ua, UserAccount userAccount)
+    {
+        UserAccount dbUa = userAccountToDb(ua, userAccount);
 
         UserAccountDao dao = db.userAccountDao();
         return Completable.fromAction(() -> dao.createOrUpdate(dbUa));
     }
 
-    @NonNull
-    public UserAccount userAccountToDb(NetworkUserAccount ua)
+    public void saveUserAccount2(NetworkUserAccount ua, UserAccount userAccount)
     {
-        UserAccount dbUa = new UserAccount();
+        UserAccount dbUa = userAccountToDb(ua, userAccount);
+
+        UserAccountDao dao = db.userAccountDao();
+        dao.createOrUpdate(dbUa);
+    }
+
+    @NonNull
+    private UserAccount userAccountToDb(NetworkUserAccount ua, UserAccount dbUa)
+    {
         dbUa.id = ua.id;
         dbUa.name = ua.name;
         dbUa.profile = ua.profile;
@@ -144,6 +211,5 @@ public class DatabaseHelper
         dbUa.emailPublic = ua.emailPublic;
         return dbUa;
     }
-
 
 }
