@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 
 import org.jetbrains.annotations.NotNull;
 
-import io.reactivex.annotations.NonNull;
 
 /**
  * Created by kgalligan on 6/28/14.
@@ -24,7 +23,7 @@ public class AppPrefs
     private SharedPreferences prefs;
 
 
-    @NonNull
+    @NotNull
     public static synchronized AppPrefs getInstance(Context context)
     {
         if(instance == null)
