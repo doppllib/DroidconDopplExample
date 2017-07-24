@@ -10,6 +10,7 @@ import java.util.Set;
 
 import co.touchlab.droidconandroid.shared.data2.dao.EventDao;
 import co.touchlab.droidconandroid.shared.data2.dao.UserAccountDao;
+import co.touchlab.droidconandroid.shared.network.dao.NetworkUserAccount;
 import io.reactivex.Completable;
 import io.reactivex.Single;
 
@@ -113,7 +114,7 @@ public class DatabaseHelper
 
     // Putting networking models into db
 
-    public Completable saveUserAccount(co.touchlab.droidconandroid.shared.network.dao.UserAccount ua)
+    public Completable saveUserAccount(NetworkUserAccount ua)
     {
         UserAccount dbUa = userAccountToDb(ua);
 
@@ -122,7 +123,7 @@ public class DatabaseHelper
     }
 
     @NonNull
-    public UserAccount userAccountToDb(co.touchlab.droidconandroid.shared.network.dao.UserAccount ua)
+    public UserAccount userAccountToDb(NetworkUserAccount ua)
     {
         UserAccount dbUa = new UserAccount();
         dbUa.id = ua.id;

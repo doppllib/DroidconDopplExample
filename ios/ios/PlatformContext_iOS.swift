@@ -11,7 +11,7 @@ import JRE
 
 protocol PlatformContext_iOSDelegate : class {
     func reloadTableView()
-    func showEventDetailView(with event: DCDEvent, andIndex index: Int)
+    func showEventDetailView(with networkEvent: DCDEvent, andIndex index: Int)
 }
 
 class PlatformContext_iOS : NSObject {
@@ -64,8 +64,8 @@ class PlatformContext_iOS : NSObject {
         iOSContext = DCPAppManager.getContext()
     }
     
-    func getSpeakersArray(from event: DCDEvent) -> [Any] {
-        return PlatformContext_iOS.javaList(toList: event.getSpeakerList())
+    func getSpeakersArray(from networkEvent: DCDEvent) -> [Any] {
+        return PlatformContext_iOS.javaList(toList: networkEvent.getSpeakerList())
     }
     
     fileprivate func formatSpeakersString(from array: [DCDEventSpeaker]) -> String {
@@ -135,16 +135,16 @@ extension PlatformContext_iOS : UITableViewDataSource {
         
         let hourHolder = hourBlocks[indexPath.row]
         let eventObj = hourHolder.getScheduleBlock()
-        if let event = eventObj as? DCDEvent {
-            let speakers = getSpeakersArray(from: event) as! [DCDEventSpeaker]
-            cell.titleLabel.text = event.getName().replacingOccurrences(of: "Android", with: "[Sad Puppy]")
+        if let networkEvent = eventObj as? DCDEvent {
+            let speakers = getSpeakersArray(from: networkEvent) as! [DCDEventSpeaker]
+            cell.titleLabel.text = networkEvent.getName().replacingOccurrences(of: "Android", with: "[Sad Puppy]")
             cell.speakerNamesLabel.text = formatSpeakersString(from: speakers)
             cell.timeLabel.text = hourHolder.getStringDisplay()
-            //cell.rsvpView.isHidden = event.isRsvped() && !event.isPast()
+            //cell.rsvpView.isHidden = networkEvent.isRsvped() && !networkEvent.isPast()
             
-        } else if let event = eventObj as? DCDBlock {
-            cell.titleLabel.text = event.getName()
-            cell.speakerNamesLabel.text = getEventTime(startTime: event.getStartFormatted() as NSString, andEnd: event.getEndFormatted() as NSString)
+        } else if let networkEvent = eventObj as? DCDBlock {
+            cell.titleLabel.text = networkEvent.getName()
+            cell.speakerNamesLabel.text = getEventTime(startTime: networkEvent.getStartFormatted() as NSString, andEnd: networkEvent.getEndFormatted() as NSString)
             cell.timeLabel.text = ""
             //cell.rsvpView.isHidden = true
         }
@@ -160,8 +160,8 @@ extension PlatformContext_iOS : UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: false)
         
         let eventObj = hourBlocks[indexPath.row].getScheduleBlock()
-        if let event = eventObj as? DCDEvent {
-            reloadDelegate?.showEventDetailView(with: event, andIndex: indexPath.row)
+        if let networkEvent = eventObj as? DCDEvent {
+            reloadDelegate?.showEventDetailView(with: networkEvent, andIndex: indexPath.row)
         }
     }
     

@@ -22,6 +22,10 @@ import co.touchlab.droidconandroid.shared.data.TimeBlock;
 import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.data.Venue;
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
+import co.touchlab.droidconandroid.shared.network.dao.NetworkBlock;
+import co.touchlab.droidconandroid.shared.network.dao.NetworkEvent;
+import co.touchlab.droidconandroid.shared.network.dao.NetworkUserAccount;
+import co.touchlab.droidconandroid.shared.network.dao.NetworkVenue;
 import co.touchlab.droidconandroid.shared.utils.StringUtils;
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 import co.touchlab.droidconandroid.shared.utils.UserDataHelper;
@@ -170,39 +174,39 @@ public class ConferenceDataHelper
             appPrefs.setConventionStartDate(convention.startDate); // Can be moved outside the transaction
             appPrefs.setConventionEndDate(convention.endDate);
 
-            List<co.touchlab.droidconandroid.shared.network.dao.Venue> venues = convention.venues;
-            List<co.touchlab.droidconandroid.shared.network.dao.Block> blocks = convention.blocks;
+            List<NetworkVenue> networkVenues = convention.venues;
+            List<NetworkBlock> networkBlocks = convention.blocks;
             Set<Long> foundEvents = new HashSet<>();
             try
             {
 
-                for(co.touchlab.droidconandroid.shared.network.dao.Venue venue : venues)
+                for(NetworkVenue networkVenue : networkVenues)
                 {
-                    venueDao.createOrUpdate(venue);
-                    for(co.touchlab.droidconandroid.shared.network.dao.Event event : venue.events)
+                    venueDao.createOrUpdate(networkVenue);
+                    for(NetworkEvent networkEvent : networkVenue.events)
                     {
-                        foundEvents.add(event.id);
-                        Event dbEvent = eventDao.queryForId(event.id);
-                        event.venue = venue;
+                        foundEvents.add(networkEvent.id);
+                        Event dbEvent = eventDao.queryForId(networkEvent.id);
+                        networkEvent.venue = networkVenue;
 
-                        if(StringUtils.isEmpty(event.startDate) ||
-                                StringUtils.isEmpty(event.endDate))
+                        if(StringUtils.isEmpty(networkEvent.startDate) ||
+                                StringUtils.isEmpty(networkEvent.endDate))
                         {
                             continue;
                         }
 
-                        event.startDateLong = TimeUtils.parseTime(event.startDate);
-                        event.endDateLong = TimeUtils.parseTime(event.endDate);
+                        networkEvent.startDateLong = TimeUtils.parseTime(networkEvent.startDate);
+                        networkEvent.endDateLong = TimeUtils.parseTime(networkEvent.endDate);
 
                         if(dbEvent != null)
                         {
-                            event.rsvpUuid = dbEvent.rsvpUuid;
+                            networkEvent.rsvpUuid = dbEvent.rsvpUuid;
                         }
 
-                        eventDao.createOrUpdate(event);
+                        eventDao.createOrUpdate(networkEvent);
                         int speakerCount = 0;
 
-                        for(co.touchlab.droidconandroid.shared.network.dao.UserAccount ua : event.speakers)
+                        for(NetworkUserAccount ua : networkEvent.speakers)
                         {
                             UserAccount userAccount = userAccountDao.queryForId(ua.id);
 
@@ -214,8 +218,7 @@ public class ConferenceDataHelper
                             UserDataHelper.userAccountToDb(ua, userAccount);
                             userAccountDao.createOrUpdate(userAccount);
                             Where<EventSpeaker> where = new Where<>(eventSpeakerDao);
-                            List resultList = where.and()
-                                    .eq("event_id", event.id)
+                            List resultList = where.and().eq("event_id", networkEvent.id)
                                     .eq("userAccount_id", userAccount.id)
                                     .query()
                                     .list();
@@ -224,7 +227,7 @@ public class ConferenceDataHelper
                                     ? new EventSpeaker()
                                     : (EventSpeaker) resultList.get(0));
 
-                            eventSpeaker.event = event;
+                            eventSpeaker.event = networkEvent;
                             eventSpeaker.userAccount = userAccount;
                             eventSpeaker.displayOrder = speakerCount++;
 
@@ -240,16 +243,16 @@ public class ConferenceDataHelper
                     helper.deleteEventsNotIn(foundEvents);
                 }
 
-                if(blocks.size() > 0)
+                if(networkBlocks.size() > 0)
                 {
                     //Dump all of them first
                     blockDao.delete(blockDao.queryForAll().list());
 
-                    for(co.touchlab.droidconandroid.shared.network.dao.Block block : blocks)
+                    for(NetworkBlock networkBlock : networkBlocks)
                     {
-                        block.startDateLong = TimeUtils.parseTime(block.startDate);
-                        block.endDateLong = TimeUtils.parseTime(block.endDate);
-                        blockDao.createOrUpdate(block);
+                        networkBlock.startDateLong = TimeUtils.parseTime(networkBlock.startDate);
+                        networkBlock.endDateLong = TimeUtils.parseTime(networkBlock.endDate);
+                        blockDao.createOrUpdate(networkBlock);
                     }
                 }
 

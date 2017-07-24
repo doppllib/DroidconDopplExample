@@ -12,10 +12,10 @@ import co.touchlab.droidconandroid.shared.data2.UserAccount;
 @Dao
 public interface UserAccountDao {
 
-    @Query("SELECT * FROM UserAccount WHERE id = :userId")
+    @Query("SELECT * FROM NetworkUserAccount WHERE id = :userId")
     UserAccount getUserAccount(long userId);
 
-    @Query("SELECT * FROM UserAccount WHERE userCode = :code")
+    @Query("SELECT * FROM NetworkUserAccount WHERE userCode = :code")
     List<UserAccount> getUsersWithCode(String code);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

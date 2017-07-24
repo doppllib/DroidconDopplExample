@@ -1,10 +1,12 @@
 package co.touchlab.droidconandroid.shared.utils;
+import co.touchlab.droidconandroid.shared.network.dao.NetworkUserAccount;
+
 /**
  * Created by kgalligan on 9/26/16.
  */
 public class UserDataHelper
 {
-    public static void userAccountToDb(co.touchlab.droidconandroid.shared.network.dao.UserAccount ua, co.touchlab.droidconandroid.shared.data.UserAccount dbUa)
+    public static void userAccountToDb(NetworkUserAccount ua, co.touchlab.droidconandroid.shared.data.UserAccount dbUa)
     {
         dbUa.id = ua.id;
         dbUa.name = ua.name;

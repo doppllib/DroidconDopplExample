@@ -13,7 +13,7 @@ import co.touchlab.droidconandroid.shared.data2.Block;
 @Dao
 public interface BlockDao {
 
-    @Query("SELECT * FROM Block")
+    @Query("SELECT * FROM NetworkBlock")
     List<Block> getBlocks();
 
     // Potentially annoying to delete this way, could truncate the table instead

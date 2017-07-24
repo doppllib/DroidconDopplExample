@@ -5,5 +5,5 @@ package co.touchlab.droidconandroid.shared.network.dao;
  */
 public class UserInfoResponse
 {
-    public UserAccount     user;
+    public NetworkUserAccount user;
 }

@@ -14,13 +14,13 @@ import co.touchlab.droidconandroid.shared.data2.Event;
 @Dao
 public interface EventDao {
 
-    @Query("SELECT * FROM Event WHERE id = :eventId")
+    @Query("SELECT * FROM NetworkEvent WHERE id = :eventId")
     Event getEventForId(long eventId);
 
-    @Query("SELECT * FROM Event")
+    @Query("SELECT * FROM NetworkEvent")
     List<Event> getEvents();
 
-    @Query("SELECT * FROM Event WHERE rsvpUuid NOT NULL")
+    @Query("SELECT * FROM NetworkEvent WHERE rsvpUuid NOT NULL")
     List<Event> rsvpUuidNotNull();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
