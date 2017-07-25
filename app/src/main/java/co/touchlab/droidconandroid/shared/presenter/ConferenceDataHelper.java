@@ -12,13 +12,13 @@ import java.util.Set;
 import java.util.TreeMap;
 
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
+import co.touchlab.droidconandroid.shared.data.Block;
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.data.EventSpeaker;
 import co.touchlab.droidconandroid.shared.data.TimeBlock;
 import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
-import co.touchlab.droidconandroid.shared.network.dao.NetworkBlock;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkEvent;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkUserAccount;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkVenue;
@@ -63,12 +63,6 @@ public class ConferenceDataHelper
         {
             eventList = databaseHelper.getEventsWithRsvpsNotNull();
         }
-
-        // FIXME: Potentially will have to fill this to get speakers to display
-        //        for(Event event : eventList)
-        //        {
-        //            eventDao.fillForeignCollection(event, "speakerList");
-        //        }
 
         eventAndBlockList.addAll(databaseHelper.getBlocks2());
         eventAndBlockList.addAll(eventList);
@@ -156,7 +150,7 @@ public class ConferenceDataHelper
         appPrefs.setConventionEndDate(convention.endDate);
 
         List<NetworkVenue> newVenueList = convention.venues;
-        List<NetworkBlock> newBlockList = convention.blocks;
+        List<Block> newBlockList = convention.blocks;
         Set<Long> eventIdList = new HashSet<>();
 
         try
@@ -166,7 +160,7 @@ public class ConferenceDataHelper
                 for(NetworkEvent newEvent : newVenue.events)
                 {
                     eventIdList.add(newEvent.id);
-                    String matchingRsvpUuid = helper.getRsvpUuidForEventWithId2(newEvent.id);// just to check for rsvp, can be moved
+                    String matchingRsvpUuid = helper.getRsvpUuidForEventWithId2(newEvent.id);
                     newEvent.venue = newVenue;
 
                     if(StringUtils.isEmpty(newEvent.startDate) ||
@@ -183,7 +177,6 @@ public class ConferenceDataHelper
                         newEvent.rsvpUuid = matchingRsvpUuid;
                     }
 
-                    // Need a layer to convert an event to a different type of event
                     helper.createOrUpdateEvent2(newEvent);
                     int speakerCount = 0;
 
@@ -229,12 +222,12 @@ public class ConferenceDataHelper
 
                 // parse and save new blocks
 
-                for(NetworkBlock newBlock : newBlockList)
+                for(Block newBlock : newBlockList)
                 {
                     // reconsider if formatting needs to be done here
                     newBlock.startDateLong = TimeUtils.parseTime(newBlock.startDate);
                     newBlock.endDateLong = TimeUtils.parseTime(newBlock.endDate);
-                    helper.createOrUpdateBlock(newBlock);
+                    helper.updateBlock(newBlock);
                 }
             }
 

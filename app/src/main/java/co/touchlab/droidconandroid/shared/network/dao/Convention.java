@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.annotation.Nonnull;
 
+import co.touchlab.droidconandroid.shared.data.Block;
+
 
 /**
  * Created by kgalligan on 7/19/14.
@@ -23,5 +25,5 @@ public class Convention
     public List<NetworkVenue> venues = new ArrayList<NetworkVenue>();
 
     @Nonnull
-    public List<NetworkBlock> blocks = new ArrayList<>();
+    public List<Block> blocks = new ArrayList<>();
 }
