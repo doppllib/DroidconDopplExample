@@ -23,7 +23,6 @@ public class DatabaseHelper
     private DatabaseHelper(Context context)
     {
         db = Room.databaseBuilder(context, DroidconDatabase.class, "droidcon")
-                .allowMainThreadQueries()
                 .build();
     }
 

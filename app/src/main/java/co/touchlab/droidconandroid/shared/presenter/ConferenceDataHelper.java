@@ -24,6 +24,7 @@ import co.touchlab.droidconandroid.shared.network.dao.NetworkUserAccount;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkVenue;
 import co.touchlab.droidconandroid.shared.utils.StringUtils;
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
+import io.reactivex.Completable;
 import io.reactivex.Single;
 
 /**
@@ -136,6 +137,11 @@ public class ConferenceDataHelper
         }
 
         return dayScheduleList;
+    }
+
+    public static Completable saveConvention(final DatabaseHelper helper, final AppPrefs appPrefs, final Convention convention)
+    {
+        return Completable.fromAction(() -> saveConventionData(helper, appPrefs, convention));
     }
 
     public static void saveConventionData(final DatabaseHelper helper, final AppPrefs appPrefs, final Convention convention)

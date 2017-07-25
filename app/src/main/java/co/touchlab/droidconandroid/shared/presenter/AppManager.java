@@ -7,6 +7,8 @@ import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 
 /**
  * Created by kgalligan on 4/19/16.
@@ -35,8 +37,14 @@ public class AppManager
             try
             {
                 final String seed = loadDataSeed.dataSeed();
-                ConferenceDataHelper.saveConventionData(helper, appPrefs,
-                        new Gson().fromJson(seed, Convention.class));
+                ConferenceDataHelper.saveConvention(helper,
+                        appPrefs,
+                        new Gson().fromJson(seed, Convention.class))
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(() ->
+                        {
+                        }, CrashReport:: logException);
             }
             catch(RuntimeException e)
             {
