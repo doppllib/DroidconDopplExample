@@ -1,8 +1,8 @@
 package co.touchlab.droidconandroid.shared.interactors;
 
-import android.support.annotation.NonNull;
-
 import com.birbit.android.jobqueue.JobManager;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.UUID;
 
@@ -48,7 +48,7 @@ public class RsvpInteractor {
         });
     }
 
-    @NonNull
+    @NotNull
     private Event setRsvp(Event event, String uuid) {
         event.rsvpUuid = uuid;
         return event;

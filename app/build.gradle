@@ -109,26 +109,16 @@ def archVer = "1.0.0-alpha5"
 dependencies {
 
     //UI Dependencies
-    compile "com.android.support:support-v4:$supportVersion"
-    compile 'com.squareup.picasso:picasso:2.4.0'
-    compile 'com.squareup.okhttp:okhttp:2.4.0'
-    compile 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'
-
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.github.johnpersano:supertoasts:1.3.4.1@aar'
-    compile 'com.nineoldandroids:library:2.4.0'
-
-    compile 'commons-io:commons-io:1.4'
-    compile 'org.apache.commons:commons-lang3:3.3.2'
 
     compile "android.arch.persistence.room:runtime:$archVer"
     annotationProcessor "android.arch.persistence.room:compiler:$archVer"
 
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    compile "com.android.support:support-v4:$supportVersion"
     compile "com.android.support:appcompat-v7:$supportVersion"
     compile "com.android.support:design:$supportVersion"
-    compile 'com.viewpagerindicator:library:2.4.1@aar'
-    compile 'de.hdodenhof:circleimageview:1.3.0'
     compile "com.android.support:palette-v7:$supportVersion"
     compile "com.android.support:recyclerview-v7:$supportVersion"
     compile "com.android.support:cardview-v7:$supportVersion"
@@ -138,7 +128,12 @@ dependencies {
     compile "android.arch.lifecycle:extensions:$archVer"
     annotationProcessor "android.arch.lifecycle:compiler:$archVer"
 
-    compile 'com.google.code.findbugs:jsr305:3.0.2'
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'
+
+    compile 'com.viewpagerindicator:library:2.4.1@aar'
+    compile 'de.hdodenhof:circleimageview:1.3.0'
+    compile 'com.squareup.picasso:picasso:2.4.0'
 
     //Shared code dependencies
     doppl 'co.doppl.lib:androidbase:0.8.0'

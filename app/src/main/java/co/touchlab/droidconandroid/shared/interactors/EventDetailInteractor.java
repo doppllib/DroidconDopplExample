@@ -1,7 +1,8 @@
 package co.touchlab.droidconandroid.shared.interactors;
 
-import android.support.annotation.NonNull;
 import android.text.TextUtils;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;

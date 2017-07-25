@@ -9,12 +9,12 @@ import android.view.View
 import android.view.ViewGroup
 import co.touchlab.droidconandroid.shared.data.UserAccount
 import co.touchlab.droidconandroid.shared.presenter.EventDetailViewModel
+import co.touchlab.droidconandroid.shared.utils.StringUtils
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_event_header.view.*
 import kotlinx.android.synthetic.main.item_event_info.view.*
 import kotlinx.android.synthetic.main.item_event_text.view.*
 import kotlinx.android.synthetic.main.item_user_summary.view.*
-import org.apache.commons.lang3.StringUtils
 import java.util.*
 
 /**
@@ -103,12 +103,12 @@ class EventDetailAdapter(private val context: Context,
 
             TYPE_INFO -> {
                 val view = (holder as InfoVH).itemView
-                view.info.text = Html.fromHtml(StringUtils.trimToEmpty((data[position] as TextDetail).text))
+                view.info.text = Html.fromHtml((data[position] as TextDetail).text.trim())
             }
 
             TYPE_BODY -> {
                 val view = (holder as TextVH).itemView
-                view.body.text = Html.fromHtml(StringUtils.trimToEmpty((data[position] as TextDetail).text))
+                view.body.text = Html.fromHtml((data[position] as TextDetail).text.trim())
             }
 
             TYPE_SPEAKER -> {

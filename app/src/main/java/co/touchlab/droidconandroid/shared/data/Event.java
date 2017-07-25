@@ -4,9 +4,10 @@ import android.arch.persistence.room.Embedded;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
-import java.util.Date;
+import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nonnull;
+import java.util.ArrayList;
+import java.util.Date;
 
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 
@@ -66,7 +67,7 @@ public class Event implements TimeBlock
         return category;
     }
 
-    @Nonnull
+    @NotNull
     public Venue getVenue()
     {
         return venue;
