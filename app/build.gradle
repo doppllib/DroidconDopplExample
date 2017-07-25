@@ -100,7 +100,7 @@ android {
 }
 
 def supportVersion = "25.3.1"
-def archVer = "1.0.0-alpha5"
+def archVer = "1.0.0-alpha1"
 
 dependencies {
 
@@ -122,6 +122,7 @@ dependencies {
     annotationProcessor "android.arch.lifecycle:compiler:$archVer"
     compile "android.arch.persistence.room:runtime:$archVer"
     annotationProcessor "android.arch.persistence.room:compiler:$archVer"
+    doppl "android.arch.persistence.room:runtime:1.0.0.2-alpha1"
 
     compile 'com.squareup.okhttp:okhttp:2.4.0'
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'

@@ -155,9 +155,9 @@ import dcframework
             
             let speaker = speakers![indexPath.row] as DCDEventSpeaker
             if let speakerDescription = (speakers?[indexPath.row].getUserAccount().getProfile()) {
-                let userAccount = speaker.getUserAccount()
-                let imageUrl = userAccount!.avatarImageUrl() ?? ""
-                cell.loadInfo(userAccount!.getName() as! String, info: speakerDescription as! String, imgUrl: imageUrl)
+                let userAccountFromDb = speaker.getUserAccount()
+                let imageUrl = userAccountFromDb!.avatarImageUrl() ?? ""
+                cell.loadInfo(userAccountFromDb!.getName() as! String, info: speakerDescription as! String, imgUrl: imageUrl)
             }
             
             cell.selectionStyle = UITableViewCellSelectionStyle.none

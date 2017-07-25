@@ -42,7 +42,6 @@ public class RefreshScheduleJob extends Job
     @Override
     public void onRun() throws Throwable
     {
-        // Could extract all of this stuff out for testing's sake
         Retrofit retrofit = DataHelper.makeRetrofit2Client(AppManager.getPlatformClient()
                 .baseUrl());
         RefreshScheduleDataRequest request = retrofit.create(RefreshScheduleDataRequest.class);

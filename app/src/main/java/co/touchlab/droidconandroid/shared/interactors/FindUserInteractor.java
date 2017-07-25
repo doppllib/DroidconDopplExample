@@ -42,16 +42,16 @@ public class FindUserInteractor {
     }
 
     private Observable<UserAccount> saveUserResponse(UserAccountInfo userAccountInfo) {
-        final UserAccount newDbUser = new UserAccount();
-        UserAccount userAccount = userAccountInfo.userAccount;
-        helper.userAccountToDb(userAccountInfo.userInfoResponse.user, newDbUser);
+        final UserAccount networkUser = userAccountInfo.getUserAccountFromNetwork().user;
+        final UserAccount dbUser = userAccountInfo.getUserAccountFromDb();
 
-        if (userAccount == null || !userAccount.equals(newDbUser)) {
-            return Completable.fromAction(() -> helper.saveUserAccount(newDbUser))
-                    .andThen(Observable.just(newDbUser));
+        if(dbUser == null || ! dbUser.equals(networkUser))
+        {
+            return Completable.fromAction(() -> helper.saveUserAccount(networkUser))
+                    .andThen(Observable.just(networkUser));
         }
 
-        return Observable.just(userAccount);
+        return Observable.just(dbUser);
     }
 
 }
