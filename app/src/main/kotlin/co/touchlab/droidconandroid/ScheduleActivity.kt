@@ -53,7 +53,7 @@ class ScheduleActivity : AppCompatActivity() {
 
         when (AppManager.findStartScreen()) {
             AppManager.AppScreens.Welcome -> {
-                startActivity(WelcomeActivity.getLaunchIntent(this@ScheduleActivity, false))
+                startActivity(WelcomeActivity.getLaunchIntent(this@ScheduleActivity))
                 finish()
                 return
             }

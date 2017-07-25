@@ -18,13 +18,10 @@ import kotlinx.android.synthetic.main.activity_welcome.*
 
 class WelcomeActivity : AppCompatActivity() {
     companion object {
-        private val SHORT = "SHORT"
         private val LAST_INDEX = 1
-        private val LAST_INDEX_SHORT = 1
 
-        fun getLaunchIntent(context: Context, short: Boolean): Intent {
+        fun getLaunchIntent(context: Context): Intent {
             val intent = Intent(context, WelcomeActivity::class.java)
-            intent.putExtra(SHORT, short)
             return intent
         }
     }
@@ -33,23 +30,16 @@ class WelcomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
 
-        val short = intent.getBooleanExtra(SHORT, false)
-        val lastIndex = if (short) LAST_INDEX_SHORT else LAST_INDEX
-
-        viewPager.adapter = WelcomePagerAdapter(supportFragmentManager, short)
+        viewPager.adapter = WelcomePagerAdapter(supportFragmentManager)
         indicator.setViewPager(viewPager)
-
-        if (short)
-            indicator.fillColor = ContextCompat.getColor(this@WelcomeActivity, R.color.orange)
-
         indicator.setOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
 
             override fun onPageScrollStateChanged(state: Int) {}
 
             override fun onPageSelected(position: Int) {
-                if (short || lastIndex > 2) {
-                    if (position >= lastIndex - 1) {
+                if (LAST_INDEX > 2) {
+                    if (position >= LAST_INDEX - 1) {
                         advanceTv.setTextColor(ContextCompat.getColor(this@WelcomeActivity, R.color.orange))
                         indicator.fillColor = ContextCompat.getColor(this@WelcomeActivity, R.color.orange)
                     } else {
@@ -58,7 +48,7 @@ class WelcomeActivity : AppCompatActivity() {
                     }
                 }
 
-                if (position == lastIndex) {
+                if (position == LAST_INDEX) {
                     advanceTv.setText(R.string.lets_go)
                 } else {
                     advanceTv.setText(R.string.next)
@@ -69,7 +59,7 @@ class WelcomeActivity : AppCompatActivity() {
         advanceTv.setOnClickListener {
             val position = viewPager.currentItem
             when (position) {
-                lastIndex -> {
+                LAST_INDEX -> {
                     callMe(this@WelcomeActivity)
                     finish()
                 }
