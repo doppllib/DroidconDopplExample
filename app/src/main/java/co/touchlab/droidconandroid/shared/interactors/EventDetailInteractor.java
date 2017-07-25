@@ -54,7 +54,7 @@ public class EventDetailInteractor {
         return helper.getEventForId(eventId);
     }
 
-    @NonNull
+    @NotNull
     private EventInfo createEventInfo(Event event, List<UserAccount> eventSpeakers, List<Event> allEvents)
     {
         EventInfo info = new EventInfo();
