@@ -51,21 +51,21 @@ public class ConferenceDataHelper
         return Single.fromCallable(() -> getDaySchedules(helper, allEvents));
     }
 
-    public static DaySchedule[] getDaySchedules(DatabaseHelper databaseHelper, boolean allEvents) throws SQLException
+    private static DaySchedule[] getDaySchedules(DatabaseHelper databaseHelper, boolean allEvents) throws SQLException
     {
         List<TimeBlock> eventAndBlockList = new ArrayList<>();
         List<Event> eventList;
 
         if(allEvents)
         {
-            eventList = databaseHelper.getEvents2();
+            eventList = databaseHelper.getEventsList();
         }
         else
         {
             eventList = databaseHelper.getEventsWithRsvpsNotNull();
         }
 
-        eventAndBlockList.addAll(databaseHelper.getBlocks2());
+        eventAndBlockList.addAll(databaseHelper.getBlocksList());
         eventAndBlockList.addAll(eventList);
 
         Collections.sort(eventAndBlockList, ConferenceDataHelper:: sortTimeBlocks);
@@ -144,7 +144,7 @@ public class ConferenceDataHelper
         return Completable.fromAction(() -> saveConventionData(helper, appPrefs, convention));
     }
 
-    public static void saveConventionData(final DatabaseHelper helper, final AppPrefs appPrefs, final Convention convention)
+    private static void saveConventionData(final DatabaseHelper helper, final AppPrefs appPrefs, final Convention convention)
     {
 
         if(convention == null)
@@ -166,7 +166,7 @@ public class ConferenceDataHelper
                 for(NetworkEvent newEvent : newVenue.events)
                 {
                     eventIdList.add(newEvent.id);
-                    String matchingRsvpUuid = helper.getRsvpUuidForEventWithId2(newEvent.id);
+                    String matchingRsvpUuid = helper.getRsvpUuidForEventWithId(newEvent.id);
                     newEvent.venue = newVenue;
 
                     if(StringUtils.isEmpty(newEvent.startDate) ||
@@ -183,7 +183,7 @@ public class ConferenceDataHelper
                         newEvent.rsvpUuid = matchingRsvpUuid;
                     }
 
-                    helper.createOrUpdateEvent2(newEvent);
+                    helper.createEvent(newEvent);
                     int speakerCount = 0;
 
                     for(NetworkUserAccount newSpeaker : newEvent.speakers)
@@ -195,7 +195,7 @@ public class ConferenceDataHelper
                             oldSpeaker = new UserAccount();
                         }
 
-                        helper.saveUserAccount2(newSpeaker, oldSpeaker);
+                        helper.convertAndSaveUserAccount(newSpeaker, oldSpeaker);
 
                         EventSpeaker eventSpeaker = helper.getSpeakerForEventWithId(newEvent.id,
                                 newSpeaker.id);
@@ -224,7 +224,7 @@ public class ConferenceDataHelper
             if(newBlockList.size() > 0)
             {
                 //Dump all old blocks first
-                helper.deleteBlocks(helper.getBlocks2());
+                helper.deleteBlocks(helper.getBlocksList());
 
                 // parse and save new blocks
 

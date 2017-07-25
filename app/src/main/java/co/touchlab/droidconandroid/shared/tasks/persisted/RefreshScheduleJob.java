@@ -12,7 +12,6 @@ import co.touchlab.droidconandroid.shared.data.AppPrefs;
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.network.DataHelper;
 import co.touchlab.droidconandroid.shared.network.RefreshScheduleDataRequest;
-import co.touchlab.droidconandroid.shared.network.dao.Convention;
 import co.touchlab.droidconandroid.shared.presenter.AppManager;
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHelper;
 import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
@@ -42,18 +41,21 @@ public class RefreshScheduleJob extends Job
     @Override
     public void onRun() throws Throwable
     {
+        // Could extract all of this stuff out for testing's sake
         Retrofit retrofit = DataHelper.makeRetrofit2Client(AppManager.getPlatformClient()
                 .baseUrl());
         RefreshScheduleDataRequest request = retrofit.create(RefreshScheduleDataRequest.class);
         final PlatformClient platformClient = AppManager.getPlatformClient();
-        Convention convention = request.getScheduleData(platformClient.getConventionId())
-                .execute()
-                .body();
         DatabaseHelper helper = DatabaseHelper.getInstance(getApplicationContext());
         AppPrefs appPrefs = AppPrefs.getInstance(getApplicationContext());
-        ConferenceDataHelper.saveConventionData(helper, appPrefs, convention);
+
         appPrefs.setRefreshTime(System.currentTimeMillis());
-        EventBusExt.getDefault().post(this);
+
+        request.getScheduleData(platformClient.getConventionId())
+                .flatMapCompletable(convention -> ConferenceDataHelper.saveConvention(helper,
+                        appPrefs,
+                        convention))
+                .subscribe(() -> EventBusExt.getDefault().post(this), CrashReport:: logException);
     }
 
     @Override

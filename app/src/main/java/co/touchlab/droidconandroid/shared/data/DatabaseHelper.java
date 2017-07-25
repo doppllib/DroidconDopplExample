@@ -63,19 +63,9 @@ public class DatabaseHelper
         return Single.fromCallable(() -> db.eventDao().getEventForId(eventId));
     }
 
-    public Single<String> getRsvpUuidForEventWithId(long eventId)
-    {
-        return Single.fromCallable(() -> getRsvpUuidForEventWithId2(eventId));
-    }
-
-    public String getRsvpUuidForEventWithId2(long eventId)
+    public String getRsvpUuidForEventWithId(long eventId)
     {
         return db.eventDao().getRsvpUuidForEventWithId(eventId);
-    }
-
-    public Single<List<Event>> getEventsWithRsvps()
-    {
-        return Single.fromCallable(() -> getEventsWithRsvpsNotNull());
     }
 
     public List<Event> getEventsWithRsvpsNotNull()
@@ -85,20 +75,15 @@ public class DatabaseHelper
 
     public Single<List<Event>> getEvents()
     {
-        return Single.fromCallable(() -> getEvents2());
+        return Single.fromCallable(this :: getEventsList);
     }
 
-    public List<Event> getEvents2()
+    public List<Event> getEventsList()
     {
         return db.eventDao().getEvents();
     }
 
-    public Completable createOrUpdateEvent(Event event)
-    {
-        return Completable.fromAction(() -> createOrUpdateEvent2(event));
-    }
-
-    public void createOrUpdateEvent2(Event event)
+    public void createEvent(Event event)
     {
         db.eventDao().createOrUpdate(event);
     }
@@ -108,24 +93,14 @@ public class DatabaseHelper
         return Completable.fromAction(() -> db.eventDao().updateEvent(event));
     }
 
-    public Completable deleteEvents(List<Event> events)
+    public void deleteEvents(List<Event> events)
     {
-        return Completable.fromAction(() -> db.eventDao().deleteAll(events));
+        db.eventDao().deleteAll(events);
     }
 
-    public Single<List<Block>> getBlocks()
-    {
-        return Single.fromCallable(this :: getBlocks2);
-    }
-
-    public List<Block> getBlocks2()
+    public List<Block> getBlocksList()
     {
         return db.blockDao().getBlocks();
-    }
-
-    public Completable createOrUpdateBlock(Block block)
-    {
-        return Completable.fromAction(() -> updateBlock(block));
     }
 
     public void updateBlock(Block block)
@@ -138,19 +113,9 @@ public class DatabaseHelper
         return Completable.fromAction(() -> db.blockDao().deleteAll(blocks));
     }
 
-    public Single<EventSpeaker> getEventSpeaker(long eventId, long userId)
-    {
-        return Single.fromCallable(() -> getSpeakerForEventWithId(eventId, userId));
-    }
-
     public EventSpeaker getSpeakerForEventWithId(long eventId, long userId)
     {
         return db.eventSpeakerDao().getSpeakerForEventWithId(eventId, userId);
-    }
-
-    public Completable createOrUpdateEventSpeaker(EventSpeaker speaker)
-    {
-        return Completable.fromAction(() -> updateSpeaker(speaker));
     }
 
     public void updateSpeaker(EventSpeaker speaker)
@@ -173,21 +138,13 @@ public class DatabaseHelper
         return db.userAccountDao().getUserAccount(userId);
     }
 
-    public Completable saveUserAccount(NetworkUserAccount ua, UserAccount userAccount)
-    {
-        UserAccount dbUa = userAccountToDb(ua, userAccount);
-
-        UserAccountDao dao = db.userAccountDao();
-        return Completable.fromAction(() -> dao.createOrUpdate(dbUa));
-    }
-
     public Completable saveUserAccount(UserAccount userAccount)
     {
         UserAccountDao dao = db.userAccountDao();
         return Completable.fromAction(() -> dao.createOrUpdate(userAccount));
     }
 
-    public void saveUserAccount2(NetworkUserAccount ua, UserAccount userAccount)
+    public void convertAndSaveUserAccount(NetworkUserAccount ua, UserAccount userAccount)
     {
         UserAccount dbUa = userAccountToDb(ua, userAccount);
 
