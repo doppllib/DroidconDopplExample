@@ -135,19 +135,17 @@ extension PlatformContext_iOS : UITableViewDataSource {
         
         let hourHolder = hourBlocks[indexPath.row]
         let eventObj = hourHolder.getScheduleBlock()
-        if let networkEvent = eventObj as? DCDEvent {
-            let speakers = getSpeakersArray(from: networkEvent) as! [DCDEventSpeaker]
-            cell.titleLabel.text = networkEvent.getName().replacingOccurrences(of: "Android", with: "[Sad Puppy]")
+        
+        if let event = eventObj as? DCDEvent {
+            cell.titleLabel.text = event.getName().replacingOccurrences(of: "Android", with: "[Sad Puppy]")
+            let speakers = getSpeakersArray(from: event) as! [DCDEventSpeaker]
             cell.speakerNamesLabel.text = formatSpeakersString(from: speakers)
-            cell.timeLabel.text = hourHolder.getStringDisplay()
-            //cell.rsvpView.isHidden = networkEvent.isRsvped() && !networkEvent.isPast()
-            
-        } else if let networkEvent = eventObj as? DCDBlock {
-            cell.titleLabel.text = networkEvent.getName()
-            cell.speakerNamesLabel.text = getEventTime(startTime: networkEvent.getStartFormatted() as NSString, andEnd: networkEvent.getEndFormatted() as NSString)
-            cell.timeLabel.text = ""
-            //cell.rsvpView.isHidden = true
+        } else if let event = eventObj as? DCDBlock {
+            cell.titleLabel.text = event.getName()
+            cell.speakerNamesLabel.text = ""
         }
+        cell.timeLabel.text = hourHolder.getStringDisplay().lowercased()
+        cell.startOfBlock = indexPath.row == 0 || hourBlocks[indexPath.row - 1].getScheduleBlock().getStartLong() != eventObj!.getStartLong()
         cell.layer.isOpaque = true
         return cell
     }
@@ -155,6 +153,14 @@ extension PlatformContext_iOS : UITableViewDataSource {
 }
 
 extension PlatformContext_iOS : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.isHighlighted = true
+    }
+    
+    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.isHighlighted = false
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
