@@ -24,10 +24,9 @@ import java.util.*
 class EventDetailAdapter(private val context: Context,
                          private val viewModel: EventDetailViewModel,
                          private val trackColor: Int) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-    //dataset
+
     private var data = ArrayList<Detail>()
 
-    //=================== Public helper functions ===================
     fun addHeader(title: String, venue: String) {
         data.add(HeaderDetail(TYPE_HEADER, title, venue))
     }
@@ -45,14 +44,13 @@ class EventDetailAdapter(private val context: Context,
     }
 
     fun addSpeaker(speaker: UserAccount) {
-        data.add(SpeakerDetail(TYPE_SPEAKER, speaker.avatarImageUrl(), speaker.name, speaker.company, speaker.profile, speaker.userCode, speaker.id))
+        data.add(SpeakerDetail(TYPE_SPEAKER, speaker.avatarImageUrl(), speaker.name, speaker.company, speaker.profile, speaker.id))
     }
 
     fun addFeedback(link: String) {
         data.add(TextDetail(TYPE_FEEDBACK, link, 0))
     }
 
-    //=================== Adapter Overrides ===================
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): RecyclerView.ViewHolder? {
         return when (viewType) {
             TYPE_HEADER -> {
@@ -151,7 +149,6 @@ class EventDetailAdapter(private val context: Context,
         private val TYPE_FEEDBACK: Int = 6
     }
 
-    //=================== Adapter type models ===================
     open inner class Detail(val type: Int) {
         fun getItemType(): Int {
             return type
@@ -162,19 +159,17 @@ class EventDetailAdapter(private val context: Context,
 
     inner class TextDetail(type: Int, val text: String, val icon: Int) : Detail(type)
 
-    inner class SpeakerDetail(type: Int, val avatar: String?, val name: String, val company: String, val bio: String?, val userCode: String, val userId: Long) : Detail(type)
+    inner class SpeakerDetail(type: Int, val avatar: String?, val name: String, val company: String, val bio: String?, val userId: Long) : Detail(type)
 
     inner class SpaceDetail(type: Int, val size: Int) : Detail(type)
 
-    //=================== Type ViewHolders ===================
+    inner class HeaderVH(val item: View) : RecyclerView.ViewHolder(item)
 
-    inner class HeaderVH(val item: View) : RecyclerView.ViewHolder(item) {}
+    inner class InfoVH(val item: View) : RecyclerView.ViewHolder(item)
 
-    inner class InfoVH(val item: View) : RecyclerView.ViewHolder(item) {}
+    inner class TextVH(val item: View) : RecyclerView.ViewHolder(item)
 
-    inner class TextVH(val item: View) : RecyclerView.ViewHolder(item) {}
+    inner class SpeakerVH(val item: View) : RecyclerView.ViewHolder(item)
 
-    inner class SpeakerVH(val item: View) : RecyclerView.ViewHolder(item) {}
-
-    inner class FeedbackVH(val item: View) : RecyclerView.ViewHolder(item) {}
+    inner class FeedbackVH(val item: View) : RecyclerView.ViewHolder(item)
 }
