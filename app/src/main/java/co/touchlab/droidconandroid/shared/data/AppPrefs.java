@@ -3,10 +3,8 @@ package co.touchlab.droidconandroid.shared.data;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import co.touchlab.droidconandroid.shared.utils.StringUtils;
-import javax.annotation.Nonnull;
+import org.jetbrains.annotations.NotNull;
 
-import java.util.UUID;
 
 /**
  * Created by kgalligan on 6/28/14.
@@ -25,7 +23,7 @@ public class AppPrefs
     private SharedPreferences prefs;
 
 
-    @Nonnull
+    @NotNull
     public static synchronized AppPrefs getInstance(Context context)
     {
         if(instance == null)
@@ -54,7 +52,7 @@ public class AppPrefs
         setBoolean(SEEN_WELCOME, true);
     }
 
-    public void setConventionStartDate(@Nonnull String startDate)
+    public void setConventionStartDate(@NotNull String startDate)
     {
         setString(CONVENTION_START, startDate);
     }
@@ -64,7 +62,7 @@ public class AppPrefs
         return prefs.getString(CONVENTION_START, null);
     }
 
-    public void setConventionEndDate(@Nonnull String endDate)
+    public void setConventionEndDate(@NotNull String endDate)
     {
         setString(CONVENTION_END, endDate);
     }
@@ -74,7 +72,7 @@ public class AppPrefs
         return prefs.getString(CONVENTION_END, null);
     }
 
-    public void setRefreshTime(@Nonnull long time)
+    public void setRefreshTime(long time)
     {
         setLong(REFRESH_TIME, time);
     }

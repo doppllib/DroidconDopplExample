@@ -28,7 +28,6 @@ import co.touchlab.droidconandroid.utils.Toaster
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_speaker_detail.*
-import org.apache.commons.lang3.StringUtils
 
 /**
  * Created by kgalligan on 7/27/14.
@@ -198,7 +197,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
         }
 
         if (!userAccount.profile.isNullOrBlank()) {
-            bio.text = Html.fromHtml(StringUtils.trimToEmpty(userAccount.profile))
+            bio.text = Html.fromHtml(userAccount.profile.trim())
             bio.visibility = View.VISIBLE
         }
     }

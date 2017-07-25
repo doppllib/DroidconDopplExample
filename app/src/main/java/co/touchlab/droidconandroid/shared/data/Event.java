@@ -2,11 +2,11 @@ package co.touchlab.droidconandroid.shared.data;
 
 import android.text.TextUtils;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
-import javax.annotation.Nonnull;
 
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 import co.touchlab.squeaky.field.DatabaseField;
@@ -31,7 +31,7 @@ public class Event implements ScheduleBlock
     @DatabaseField
     public String category;
 
-    @Nonnull
+    @NotNull
     @DatabaseField(foreign = true, canBeNull = false, foreignAutoRefresh = true)
     public Venue venue;
 
@@ -79,7 +79,7 @@ public class Event implements ScheduleBlock
         return category;
     }
 
-    @Nonnull
+    @NotNull
     public Venue getVenue()
     {
         return venue;
