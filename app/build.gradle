@@ -70,7 +70,6 @@ android {
         debug {
             debuggable true
             minifyEnabled false
-            useProguard false
         }
         staging {
             debuggable true
@@ -90,9 +89,6 @@ android {
         exclude 'META-INF/maven/org.apache.commons/commons-lang3/pom.xml'
         exclude 'META-INF/maven/org.apache.commons/commons-lang3/pom.properties'
         exclude 'jsr305_annotations/Jsr305_annotations.gwt.xml'
-        // avoid "DuplicateFileException caused by having both RxJava 1.0 and 2.0 side by side
-        exclude 'META-INF/rxjava.properties'
-
     }
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -111,9 +107,6 @@ dependencies {
     //UI Dependencies
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile "android.arch.persistence.room:runtime:$archVer"
-    annotationProcessor "android.arch.persistence.room:compiler:$archVer"
-
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     compile "com.android.support:support-v4:$supportVersion"
@@ -127,6 +120,8 @@ dependencies {
     compile "android.arch.lifecycle:runtime:$archVer"
     compile "android.arch.lifecycle:extensions:$archVer"
     annotationProcessor "android.arch.lifecycle:compiler:$archVer"
+    compile "android.arch.persistence.room:runtime:$archVer"
+    annotationProcessor "android.arch.persistence.room:compiler:$archVer"
 
     compile 'com.squareup.okhttp:okhttp:2.4.0'
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'

@@ -205,7 +205,6 @@ public class ConferenceDataHelper
                             eventSpeaker = new EventSpeaker();
                         }
 
-                        // make 1 method, update&save
                         eventSpeaker.eventId = newEvent.id;
                         eventSpeaker.userAccountId = oldSpeaker.id;
                         eventSpeaker.displayOrder = speakerCount++;
