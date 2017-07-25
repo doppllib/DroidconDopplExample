@@ -53,7 +53,7 @@ class ScheduleActivity : AppCompatActivity() {
 
         when (AppManager.findStartScreen()) {
             AppManager.AppScreens.Welcome -> {
-                startActivity(WelcomeActivity.getLaunchIntent(this@ScheduleActivity, false))
+                startActivity(WelcomeActivity.getLaunchIntent(this@ScheduleActivity))
                 finish()
                 return
             }
@@ -123,14 +123,10 @@ class ScheduleActivity : AppCompatActivity() {
             if (appBarLayout.totalScrollRange > 0) {
                 val percentage = verticalOffset.calculateAlphaPercentage(appBarLayout.totalScrollRange)
                 schedule_toolbar_title.alpha = percentage
-                schedule_toolbar_profile.alpha = percentage
                 schedule_toolbar_notif.alpha = percentage
-                schedule_placeholder_emoji.alpha = percentage
             }
         }
         appbar.setExpanded(true)
-
-        schedule_profile_touch.setOnClickListener {}
 
         schedule_toolbar_notif.setOnClickListener {
             val prefs = AppPrefs.getInstance(this)
