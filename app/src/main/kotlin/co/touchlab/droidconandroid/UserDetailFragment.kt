@@ -27,7 +27,7 @@ import co.touchlab.droidconandroid.shared.utils.EmojiUtil
 import co.touchlab.droidconandroid.utils.Toaster
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.fragment_user_detail.*
+import kotlinx.android.synthetic.main.fragment_speaker_detail.*
 
 /**
  * Created by kgalligan on 7/27/14.
@@ -63,7 +63,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_user_detail, container)
+        return inflater.inflate(R.layout.fragment_speaker_detail, container)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

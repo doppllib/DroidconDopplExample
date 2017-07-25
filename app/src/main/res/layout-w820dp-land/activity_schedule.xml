@@ -64,27 +64,6 @@
                     android:padding="16dp"
                     android:src="@drawable/vic_notifications_none_black_24dp"
                     android:visibility="gone"/>
-                <RelativeLayout
-                    android:id="@+id/schedule_profile_touch"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp">
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/schedule_toolbar_profile"
-                        android:layout_width="@dimen/height_xxtiny"
-                        android:layout_height="@dimen/height_xxtiny"
-                        android:src="@drawable/circle_profile_placeholder"/>
-                    <TextView
-                        android:id="@+id/schedule_placeholder_emoji"
-                        android:layout_width="@dimen/height_xxtiny"
-                        android:layout_height="@dimen/height_xxtiny"
-                        android:layout_alignStart="@id/schedule_toolbar_profile"
-                        android:layout_alignTop="@id/schedule_toolbar_profile"
-                        android:gravity="center"
-                        android:textColor="@color/black"
-                        android:textSize="@dimen/text_small"
-                        tools:text=":)"/>
-                </RelativeLayout>
             </LinearLayout>
 
             <android.support.design.widget.TabLayout
