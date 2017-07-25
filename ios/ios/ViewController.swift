@@ -40,8 +40,6 @@ class ViewController : UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         // refresh every time it appears so that we see updates, doesn't seem to affect scroll position of list
         loadConferenceSchedule()
-        tableView.tableHeaderView = nil
-        tableView.tableFooterView = nil
         
         tableView.delegate = platformContext
         tableView.dataSource = platformContext
