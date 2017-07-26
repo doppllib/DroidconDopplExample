@@ -33,11 +33,12 @@ class EventDetailFragment : Fragment(), EventDetailHost {
 
     private val viewModel: EventDetailViewModel by lazy {
         val helper = DatabaseHelper.getInstance(activity)
+        val oldDbHelper = DatabaseHelper.getInstance(activity)
         val appPrefs = AppPrefs.getInstance(activity)
         val alertsInteractor = UpdateAlertsInteractor(helper, appPrefs)
-        val eventDetailsInteractor = EventDetailInteractor(helper, eventId)
+        val eventDetailsInteractor = EventDetailInteractor(oldDbHelper, eventId)
         val jobManager = DroidconApplication.getInstance().jobManager
-        val rsvpInteractor = RsvpInteractor(jobManager, helper, eventId)
+        val rsvpInteractor = RsvpInteractor(jobManager, oldDbHelper, eventId)
         val factory = EventDetailViewModel.Factory(eventDetailsInteractor, rsvpInteractor, alertsInteractor)
         ViewModelProviders.of(this, factory)[EventDetailViewModel::class.java]
     }

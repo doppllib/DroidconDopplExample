@@ -5,32 +5,12 @@ import co.touchlab.droidconandroid.shared.data.UserAccount;
 
 public class UserAccountInfo
 {
-    private UserAccount      userAccountFromDb;
-    private UserInfoResponse userAccountFromNetwork;
+    public UserAccount      userAccount;
+    public UserInfoResponse userInfoResponse;
 
-    public UserAccountInfo(UserAccount userAccountFromDb, UserInfoResponse userAccountFromNetwork)
+    public UserAccountInfo(UserAccount userAccount, UserInfoResponse userInfoResponse)
     {
-        this.userAccountFromDb = userAccountFromDb;
-        this.userAccountFromNetwork = userAccountFromNetwork;
-    }
-
-    public UserAccount getUserAccountFromDb()
-    {
-        return userAccountFromDb;
-    }
-
-    public void setUserAccountFromDb(UserAccount userAccountFromDb)
-    {
-        this.userAccountFromDb = userAccountFromDb;
-    }
-
-    public UserInfoResponse getUserAccountFromNetwork()
-    {
-        return userAccountFromNetwork;
-    }
-
-    public void setUserAccountFromNetwork(UserInfoResponse userAccountFromNetwork)
-    {
-        this.userAccountFromNetwork = userAccountFromNetwork;
+        this.userAccount = userAccount;
+        this.userInfoResponse = userInfoResponse;
     }
 }

@@ -20,6 +20,7 @@ import co.touchlab.droidconandroid.shared.data.TimeBlock;
 import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkEvent;
+import co.touchlab.droidconandroid.shared.network.dao.NetworkUserAccount;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkVenue;
 import co.touchlab.droidconandroid.shared.utils.StringUtils;
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
@@ -185,7 +186,7 @@ public class ConferenceDataHelper
                     helper.createEvent(newEvent);
                     int speakerCount = 0;
 
-                    for(UserAccount newSpeaker : newEvent.speakers)
+                    for(NetworkUserAccount newSpeaker : newEvent.speakers)
                     {
                         UserAccount oldSpeaker = helper.getUserAccount(newSpeaker.id);
 
@@ -194,7 +195,7 @@ public class ConferenceDataHelper
                             oldSpeaker = new UserAccount();
                         }
 
-                        helper.saveAccount(newSpeaker);
+                        helper.convertAndSaveUserAccount(newSpeaker, oldSpeaker);
 
                         EventSpeaker eventSpeaker = helper.getSpeakerForEventWithId(newEvent.id,
                                 newSpeaker.id);

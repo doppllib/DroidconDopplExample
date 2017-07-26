@@ -2,15 +2,18 @@ package co.touchlab.droidconandroid.shared.data;
 
 import android.arch.persistence.room.Room;
 import android.content.Context;
+import android.support.annotation.NonNull;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.sql.SQLException;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
 import co.touchlab.droidconandroid.shared.data.dao.EventDao;
 import co.touchlab.droidconandroid.shared.data.dao.UserAccountDao;
+import co.touchlab.droidconandroid.shared.network.dao.NetworkUserAccount;
 import io.reactivex.Completable;
 import io.reactivex.Single;
 
@@ -144,9 +147,34 @@ public class DatabaseHelper
         return Completable.fromAction(() -> dao.createOrUpdate(userAccount));
     }
 
-    public void saveAccount(UserAccount userAccount)
+    public void convertAndSaveUserAccount(NetworkUserAccount ua, UserAccount userAccount)
     {
+        UserAccount dbUa = userAccountToDb(ua, userAccount);
+
         UserAccountDao dao = db.userAccountDao();
-        dao.createOrUpdate(userAccount);
+        dao.createOrUpdate(dbUa);
     }
+
+    @NonNull
+    public UserAccount userAccountToDb(NetworkUserAccount ua, UserAccount dbUa)
+    {
+        dbUa.id = ua.id;
+        dbUa.name = ua.name;
+        dbUa.profile = ua.profile;
+        dbUa.avatarKey = ua.avatarKey;
+        dbUa.userCode = ua.userCode;
+        dbUa.company = ua.company;
+        dbUa.twitter = ua.twitter;
+        dbUa.linkedIn = ua.linkedIn;
+        dbUa.website = ua.website;
+        dbUa.following = ua.following;
+        dbUa.gPlus = ua.gPlus;
+        dbUa.phone = ua.phone;
+        dbUa.email = ua.email;
+        dbUa.coverKey = ua.coverKey;
+        dbUa.facebook = ua.facebook;
+        dbUa.emailPublic = ua.emailPublic;
+        return dbUa;
+    }
+
 }
