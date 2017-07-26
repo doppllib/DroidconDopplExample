@@ -11,7 +11,6 @@
     </style>
 
     <style name="AppTheme" parent="AppTheme.Base">
-        <!-- todo transparent status bar pre-lollipop-->
     </style>
 
     <style name="drawerTheme" parent="AppTheme">
@@ -34,7 +33,7 @@
 
     <style name="ActionBar" parent="Widget.AppCompat.ActionBar">
         <item name="android:background">@android:color/transparent</item>
-        <item name="theme">@style/ActionBar.ThemeOverlay</item>
+        <item name="android:theme">@style/ActionBar.ThemeOverlay</item>
         <item name="popupTheme">@style/ThemeOverlay.AppCompat</item>
     </style>
 
