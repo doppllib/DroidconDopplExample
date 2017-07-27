@@ -7,6 +7,7 @@ buildscript {
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+        classpath 'me.tatarka:gradle-retrolambda:3.4.0'
     }
 }
 
@@ -21,7 +22,6 @@ properties.load(project.rootProject.file('local.properties').newDataInputStream(
 def baseurl = properties.hasProperty('baseurl') ? properties.getProperty('baseurl') : 'https://droidcon-server.herokuapp.com/'
 def amazonurl = properties.getProperty('amazonurl') ? properties.getProperty('amazonurl') : 'https://s3.amazonaws.com/'
 def releasePassword = properties.getProperty('releasePassword')
-def jwLicenseKey = properties.getProperty('jwLicenseKey')
 
 android {
     compileSdkVersion 25
@@ -36,7 +36,6 @@ android {
 
         buildConfigField "String", "BASE_URL", "\"$baseurl\""
         buildConfigField "String", "AMAZON_URL", "\"$amazonurl\""
-        resValue "string", "jw_license_key", "$jwLicenseKey"
         vectorDrawables.useSupportLibrary = true
     }
 
@@ -89,9 +88,6 @@ android {
         exclude 'META-INF/maven/org.apache.commons/commons-lang3/pom.xml'
         exclude 'META-INF/maven/org.apache.commons/commons-lang3/pom.properties'
         exclude 'jsr305_annotations/Jsr305_annotations.gwt.xml'
-        // avoid "DuplicateFileException caused by having both RxJava 1.0 and 2.0 side by side
-        exclude 'META-INF/rxjava.properties'
-
     }
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -123,6 +119,9 @@ dependencies {
     compile "android.arch.lifecycle:runtime:$archVer"
     compile "android.arch.lifecycle:extensions:$archVer"
     annotationProcessor "android.arch.lifecycle:compiler:$archVer"
+    compile "android.arch.persistence.room:runtime:$archVer"
+    annotationProcessor "android.arch.persistence.room:compiler:$archVer"
+    doppl "android.arch.persistence.room:runtime:1.0.0.2-alpha1"
 
     compile 'com.squareup.okhttp:okhttp:2.4.0'
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'
@@ -148,9 +147,6 @@ dependencies {
     compile 'de.greenrobot:eventbus:2.4.0'
     doppl 'co.doppl.de.greenrobot:eventbus:2.4.0.4'
 
-    annotationProcessor 'co.touchlab.squeaky:squeaky-processor:0.5.3'
-    compile 'co.touchlab.squeaky:squeaky-query:0.5.3'
-    doppl 'co.touchlab.squeaky:squeaky-query:0.5.3.0'
     //    doppl 'co.doppl.com.google.code.gson:gson:2.6.2.1'
 
     compile 'com.birbit:android-priority-jobqueue:2.0.1'

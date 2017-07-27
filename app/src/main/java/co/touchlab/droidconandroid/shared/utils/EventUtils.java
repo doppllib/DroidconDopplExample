@@ -5,18 +5,18 @@ import java.util.List;
 
 import co.touchlab.droidconandroid.shared.data.Block;
 import co.touchlab.droidconandroid.shared.data.Event;
-import co.touchlab.droidconandroid.shared.presenter.ScheduleBlockHour;
+import co.touchlab.droidconandroid.shared.presenter.HourBlock;
 
 public class EventUtils
 {
-    public static void styleEventRow(ScheduleBlockHour scheduleBlockHour, List dataSet, EventRow row, boolean allEvents)
+    public static void styleEventRow(HourBlock scheduleBlockHour, List dataSet, EventRow row, boolean allEvents)
     {
         boolean isFirstInBlock = ! scheduleBlockHour.hourStringDisplay.isEmpty();
         row.setTimeGap(isFirstInBlock);
 
-        if(scheduleBlockHour.getScheduleBlock().isBlock())
+        if(scheduleBlockHour.getTimeBlock().isBlock())
         {
-            Block block = (Block) scheduleBlockHour.scheduleBlock;
+            Block block = (Block) scheduleBlockHour.timeBlock;
             row.setTitleText(block.name);
             row.setTimeText(scheduleBlockHour.hourStringDisplay.toLowerCase());
             row.setSpeakerText("");
@@ -27,7 +27,7 @@ public class EventUtils
         }
         else
         {
-            Event event = (Event) scheduleBlockHour.scheduleBlock;
+            Event event = (Event) scheduleBlockHour.timeBlock;
             row.setTimeText(scheduleBlockHour.hourStringDisplay.toLowerCase());
             row.setTitleText(event.name);
             row.setSpeakerText(event.allSpeakersString());
@@ -44,10 +44,9 @@ public class EventUtils
         {
             for(Object o : dataSet)
             {
-                if(o instanceof ScheduleBlockHour &&
-                        ((ScheduleBlockHour) o).scheduleBlock instanceof Event)
+                if(o instanceof HourBlock && ((HourBlock) o).timeBlock instanceof Event)
                 {
-                    Event e = (Event) ((ScheduleBlockHour) o).scheduleBlock;
+                    Event e = (Event) ((HourBlock) o).timeBlock;
                     if(event.id != e.id && ! TextUtils.isEmpty(e.rsvpUuid) &&
                             event.startDateLong < e.endDateLong &&
                             event.endDateLong > e.startDateLong)

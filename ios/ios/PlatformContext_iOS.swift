@@ -11,7 +11,7 @@ import JRE
 
 protocol PlatformContext_iOSDelegate : class {
     func reloadTableView()
-    func showEventDetailView(with event: DCDEvent, andIndex index: Int)
+    func showEventDetailView(with networkEvent: DCDEvent, andIndex index: Int)
 }
 
 class PlatformContext_iOS : NSObject {
@@ -64,8 +64,8 @@ class PlatformContext_iOS : NSObject {
         iOSContext = DCPAppManager.getContext()
     }
     
-    func getSpeakersArray(from event: DCDEvent) -> [Any] {
-        return PlatformContext_iOS.javaList(toList: event.getSpeakerList())
+    func getSpeakersArray(from networkEvent: DCDEvent) -> [Any] {
+        return PlatformContext_iOS.javaList(toList: networkEvent.getSpeakerList())
     }
     
     fileprivate func formatSpeakersString(from array: [DCDEventSpeaker]) -> String {
@@ -166,8 +166,8 @@ extension PlatformContext_iOS : UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: false)
         
         let eventObj = hourBlocks[indexPath.row].getScheduleBlock()
-        if let event = eventObj as? DCDEvent {
-            reloadDelegate?.showEventDetailView(with: event, andIndex: indexPath.row)
+        if let networkEvent = eventObj as? DCDEvent {
+            reloadDelegate?.showEventDetailView(with: networkEvent, andIndex: indexPath.row)
         }
     }
     
@@ -175,9 +175,9 @@ extension PlatformContext_iOS : UITableViewDelegate {
 
 extension PlatformContext_iOS : DCPConferenceDataHost {
     
-    func loadCallback(withDCPConferenceDayHolderArray conferenceDayHolders: IOSObjectArray!) {
+    func loadCallback(withDCPConferenceDayHolderArray daySchedules: IOSObjectArray!) {
         hourBlocks = [DCPScheduleBlockHour]()
-        conferenceDays = convertiOSObjectArrayToArray(objArray: conferenceDayHolders) as! [DCPConferenceDayHolder]
+        conferenceDays = convertiOSObjectArrayToArray(objArray: daySchedules) as! [DCPConferenceDayHolder]
         updateTableData()
         reloadDelegate?.reloadTableView()
     }
