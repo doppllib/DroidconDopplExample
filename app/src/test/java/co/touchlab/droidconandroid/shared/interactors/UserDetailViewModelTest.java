@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.presenter.UserDetailHost;
 import co.touchlab.droidconandroid.shared.presenter.UserDetailViewModel;
 import io.reactivex.Observable;
@@ -22,9 +23,9 @@ public class UserDetailViewModelTest
     public final RxTrampolineSchedulerRule schedulerRule = new RxTrampolineSchedulerRule();
 
     @Mock
-            FindUserInteractor  interactor;
+    FindUserInteractor interactor;
     @Mock
-            UserDetailHost      host;
+    UserDetailHost     host;
     private UserDetailViewModel viewModel;
 
     @Before
@@ -38,6 +39,17 @@ public class UserDetailViewModelTest
     public void tearDown()
     {
         viewModel.unregister();
+    }
+
+    @Test
+    public void whenSuccessGettingUserDetail_shouldShowResults()
+    {
+        UserAccount user = new UserAccount();
+        when(interactor.loadUserAccount()).thenReturn(Observable.just(user));
+
+        viewModel.findUser();
+
+        verify(host).onUserFound(user);
     }
 
     @Test
