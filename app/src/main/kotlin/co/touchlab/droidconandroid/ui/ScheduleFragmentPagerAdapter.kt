@@ -4,7 +4,6 @@ import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 import co.touchlab.droidconandroid.ScheduleDataFragment
 import co.touchlab.droidconandroid.formatDate
-import co.touchlab.droidconandroid.shared.data.Track
 
 class ScheduleFragmentPagerAdapter(private var fm: FragmentManager, private var dates: List<Long>, private var allEvents: Boolean) : FragmentPagerAdapter(fm) {
 

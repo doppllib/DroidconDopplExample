@@ -1,7 +1,8 @@
 package co.touchlab.droidconandroid.shared.data;
 
+import android.arch.persistence.room.Room;
 import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
+import android.support.annotation.NonNull;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -9,32 +10,23 @@ import java.sql.SQLException;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.Callable;
 
-import co.touchlab.droidconandroid.shared.data.staff.EventAttendee;
-import co.touchlab.droidconandroid.shared.presenter.AppManager;
-import co.touchlab.squeaky.dao.Dao;
-import co.touchlab.squeaky.db.sqlite.SQLiteDatabaseImpl;
-import co.touchlab.squeaky.db.sqlite.SqueakyOpenHelper;
-import co.touchlab.squeaky.table.TableUtils;
+import co.touchlab.droidconandroid.shared.data.dao.EventDao;
+import co.touchlab.droidconandroid.shared.data.dao.UserAccountDao;
+import co.touchlab.droidconandroid.shared.network.dao.NetworkUserAccount;
+import io.reactivex.Completable;
+import io.reactivex.Single;
 
-/**
- * Created by kgalligan on 6/28/14.
- */
-public class DatabaseHelper extends SqueakyOpenHelper
+public class DatabaseHelper
 {
 
-    private static final String DATABASE_FILE_NAME = "droidcon";
-    public static final  int    BASELINE           = 3;
-
-    private static DatabaseHelper instance;
-
-    // @reminder Ordering matters, create foreign key dependant classes later
-    private final Class[] tableClasses = new Class[] {Venue.class, Event.class, Block.class, UserAccount.class, EventAttendee.class, EventSpeaker.class};
+    private static DatabaseHelper   instance;
+    private        DroidconDatabase db;
 
     private DatabaseHelper(Context context)
     {
-        super(context, DATABASE_FILE_NAME, null, BASELINE);
+        db = Room.databaseBuilder(context, DroidconDatabase.class, "droidcon")
+                .build();
     }
 
     @NotNull
@@ -48,107 +40,141 @@ public class DatabaseHelper extends SqueakyOpenHelper
         return instance;
     }
 
-    @Override
-    public void onCreate(SQLiteDatabase db)
+    public void deleteEventsNotIn(Set<Long> goodStuff)
     {
-        try
-        {
-            TableUtils.createTables(new SQLiteDatabaseImpl(db), tableClasses);
-        }
-        catch(SQLException e)
-        {
-            throw new RuntimeException(e);
-        }
-    }
+        final EventDao dao = db.eventDao();
+        final List<Event> allEvents = dao.getEvents();
 
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
-    {
-        try
-        {
-            TableUtils.dropTables(new SQLiteDatabaseImpl(db), false, Event.class);
-            TableUtils.createTables(new SQLiteDatabaseImpl(db), Event.class);
-        }
-        catch(SQLException e)
-        {
-            throw new RuntimeException(e);
-        }
-    }
-
-    @Override
-    public void onOpen(SQLiteDatabase db)
-    {
-        super.onOpen(db);
-        db.execSQL("PRAGMA foreign_keys=ON;");
-    }
-
-    @NotNull
-    public Dao<Venue> getVenueDao()
-    {
-        return getDao(Venue.class);
-    }
-
-    @NotNull
-    public Dao<Event> getEventDao()
-    {
-        return getDao(Event.class);
-    }
-
-    @NotNull
-    public Dao<UserAccount> getUserAccountDao()
-    {
-        return getDao(UserAccount.class);
-    }
-
-    @NotNull
-    public Dao<EventSpeaker> getEventSpeakerDao()
-    {
-        return getDao(EventSpeaker.class);
-    }
-
-    @NotNull
-    public Dao<Block> getBlockDao()
-    {
-        return getDao(Block.class);
-    }
-
-    public void deleteEventsNotIn(Set<Long> goodStuff) throws SQLException
-    {
-        final Dao<Event> eventDao = getEventDao();
-        final List<Event> allEvents = eventDao.queryForAll().list();
         final Iterator<Event> iterator = allEvents.iterator();
         while(iterator.hasNext())
         {
             Event event = iterator.next();
             if(goodStuff.contains(event.id))
+            {
                 iterator.remove();
+            }
         }
 
         if(allEvents.size() > 0)
-            eventDao.delete(allEvents);
+        {
+            dao.deleteAll(allEvents);
+        }
     }
 
-    /**
-     * @param transaction .
-     * @throws RuntimeException on {@link SQLException}
-     */
-    public void performTransactionOrThrowRuntime(Callable<Void> transaction)
+    public Single<Event> getEventForId(long eventId)
     {
-        SQLiteDatabase db = getWritableDatabase();
-        try
-        {
-            db.beginTransaction();
-            transaction.call();
-            db.setTransactionSuccessful();
-        }
-        catch(Exception e)
-        {
-            AppManager.getPlatformClient().logException(e);
-            throw new RuntimeException(e);
-        }
-        finally
-        {
-            db.endTransaction();
-        }
+        return Single.fromCallable(() -> db.eventDao().getEventForId(eventId));
     }
+
+    public String getRsvpUuidForEventWithId(long eventId)
+    {
+        return db.eventDao().getRsvpUuidForEventWithId(eventId);
+    }
+
+    public List<Event> getEventsWithRsvpsNotNull()
+    {
+        return db.eventDao().rsvpUuidNotNull();
+    }
+
+    public Single<List<Event>> getEvents()
+    {
+        return Single.fromCallable(this :: getEventsList);
+    }
+
+    public List<Event> getEventsList()
+    {
+        return db.eventDao().getEvents();
+    }
+
+    public void createEvent(Event event)
+    {
+        db.eventDao().createOrUpdate(event);
+    }
+
+    public Completable updateEvent(Event event)
+    {
+        return Completable.fromAction(() -> db.eventDao().updateEvent(event));
+    }
+
+    public void deleteEvents(List<Event> events)
+    {
+        db.eventDao().deleteAll(events);
+    }
+
+    public List<Block> getBlocksList()
+    {
+        return db.blockDao().getBlocks();
+    }
+
+    public void updateBlock(Block block)
+    {
+        db.blockDao().createOrUpdate(block);
+    }
+
+    public Completable deleteBlocks(List<Block> blocks)
+    {
+        return Completable.fromAction(() -> db.blockDao().deleteAll(blocks));
+    }
+
+    public EventSpeaker getSpeakerForEventWithId(long eventId, long userId)
+    {
+        return db.eventSpeakerDao().getSpeakerForEventWithId(eventId, userId);
+    }
+
+    public void updateSpeaker(EventSpeaker speaker)
+    {
+        db.eventSpeakerDao().createOrUpdate(speaker);
+    }
+
+    public Single<List<EventSpeaker>> getEventSpeakers(long eventId)
+    {
+        return Single.fromCallable(() -> db.eventSpeakerDao().getEventSpeakers(eventId));
+    }
+
+    public Single<UserAccount> getUserAccountForId(long userId)
+    {
+        return Single.fromCallable(() -> getUserAccount(userId));
+    }
+
+    public UserAccount getUserAccount(long userId)
+    {
+        return db.userAccountDao().getUserAccount(userId);
+    }
+
+    public Completable saveUserAccount(UserAccount userAccount)
+    {
+        UserAccountDao dao = db.userAccountDao();
+        return Completable.fromAction(() -> dao.createOrUpdate(userAccount));
+    }
+
+    public void convertAndSaveUserAccount(NetworkUserAccount ua, UserAccount userAccount)
+    {
+        UserAccount dbUa = userAccountToDb(ua, userAccount);
+
+        UserAccountDao dao = db.userAccountDao();
+        dao.createOrUpdate(dbUa);
+    }
+
+    @NonNull
+    public UserAccount userAccountToDb(NetworkUserAccount ua, UserAccount dbUa)
+    {
+        dbUa.id = ua.id;
+        dbUa.name = ua.name;
+        dbUa.profile = ua.profile;
+        dbUa.avatarKey = ua.avatarKey;
+        dbUa.userCode = ua.userCode;
+        dbUa.company = ua.company;
+        dbUa.twitter = ua.twitter;
+        dbUa.linkedIn = ua.linkedIn;
+        dbUa.website = ua.website;
+        dbUa.following = ua.following;
+        dbUa.gPlus = ua.gPlus;
+        dbUa.phone = ua.phone;
+        dbUa.email = ua.email;
+        dbUa.coverKey = ua.coverKey;
+        dbUa.facebook = ua.facebook;
+        dbUa.emailPublic = ua.emailPublic;
+        return dbUa;
+    }
+
 }

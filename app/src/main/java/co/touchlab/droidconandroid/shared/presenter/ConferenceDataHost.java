@@ -4,5 +4,5 @@ package co.touchlab.droidconandroid.shared.presenter;
  */
 public interface ConferenceDataHost
 {
-    void loadCallback(ConferenceDayHolder[] conferenceDayHolders);
+    void loadCallback(DaySchedule[] daySchedules);
 }
