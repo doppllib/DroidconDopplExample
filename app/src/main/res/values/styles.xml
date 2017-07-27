@@ -11,10 +11,7 @@
     </style>
 
     <style name="AppTheme" parent="AppTheme.Base">
-<<<<<<< HEAD
-=======
         <item name="android:windowTranslucentStatus">true</item>
->>>>>>> b5688c4... updated activity_about and activity_schedule
     </style>
 
     <style name="drawerTheme" parent="AppTheme">
@@ -95,43 +92,10 @@
         <item name="android:paddingLeft">@dimen/height_xlarge</item>
         <item name="android:textColor">@color/text_gray</item>
     </style>
-    <style name="about_icon">
-        <item name="android:layout_width">20dp</item>
-        <item name="android:layout_height">20dp</item>
+    <style name="about_item">
+        <item name="android:layout_marginStart">@dimen/padding_medium</item>
+        <item name="android:layout_marginEnd">@dimen/padding_medium</item>
         <item name="android:layout_marginTop">@dimen/padding_medium</item>
-        <item name="android:layout_marginBottom">@dimen/padding_medium</item>
-        <item name="android:layout_marginLeft">@dimen/padding_medium</item>
-        <item name="android:tint">@color/primary_dark_50</item>
-    </style>
-    <style name="about_header">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">@dimen/padding_medium</item>
-        <item name="android:layout_marginRight">@dimen/padding_medium</item>
-        <item name="android:layout_marginTop">@dimen/padding_medium</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
-        <item name="android:textSize">@dimen/text_small</item>
-    </style>
-    <style name="about_logo">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:layout_marginLeft">@dimen/padding_medium</item>
-        <item name="android:layout_marginRight">@dimen/padding_medium</item>
-        <item name="android:layout_marginTop">@dimen/padding_medium</item>
-    </style>
-    <style name="about_body">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">@dimen/padding_medium</item>
-        <item name="android:layout_marginRight">@dimen/padding_medium</item>
-        <item name="android:layout_marginTop">@dimen/padding_medium</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textColorLink">@color/primary_dark_50</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:singleLine">false</item>
-        <item name="android:textSize">@dimen/text_small</item>
     </style>
     <style name="notif_card_button" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:layout_width">104dp</item>
@@ -145,7 +109,7 @@
         <item name="android:layout_gravity">top</item>
         <item name="android:textSize">@dimen/text_xlarge</item>
         <item name="android:layout_marginTop">@dimen/toolbar_title_margin_top</item>
-        <item name="android:layout_marginLeft">@dimen/toolbar_title_margin_left</item>
+        <item name="android:layout_marginStart">@dimen/toolbar_title_margin_left</item>
         <item name="android:singleLine">true</item>
     </style>
     <style name="EditProfileHeader">

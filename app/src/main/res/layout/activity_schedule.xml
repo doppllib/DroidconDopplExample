@@ -77,7 +77,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     android:layout_gravity="bottom"
-                    android:layout_marginStart="@dimen/toolbar_title_margin_left"/>
+                    android:layout_marginStart="@dimen/toolbar_title_margin_left"
+                    app:tabGravity="fill"
+                    app:tabMaxWidth="0dp"
+                    app:tabMode="fixed"/>
 
             </android.support.design.widget.CollapsingToolbarLayout>
 
@@ -97,7 +100,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/white"
-        android:elevation="8dp"
-        android:fitsSystemWindows="false"/>
+        android:elevation="8dp"/>
 
 </android.support.v4.widget.DrawerLayout>

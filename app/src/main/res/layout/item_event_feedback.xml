@@ -4,8 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="@dimen/padding_medium"
-    android:paddingBottom="@dimen/padding_medium">
+    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+    android:layout_marginBottom="@dimen/padding_medium"
+    android:layout_marginTop="@dimen/padding_small">
 
     <TextView
         android:id="@+id/feedback"

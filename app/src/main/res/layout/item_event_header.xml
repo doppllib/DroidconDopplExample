@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingTop="@dimen/padding_medium"
-    android:paddingBottom="@dimen/padding_medium">
+    android:layout_marginTop="@dimen/padding_medium"
+    android:layout_marginBottom="@dimen/padding_small"
+    android:layout_marginEnd="@dimen/activity_horizontal_margin">
 
     <TextView
         android:id="@+id/title"
@@ -37,6 +38,7 @@
         android:id="@+id/image"
         android:layout_width="@dimen/event_entry_icon"
         android:layout_height="@dimen/event_entry_icon"
+        android:layout_centerVertical="true"
         android:layout_marginStart="@dimen/padding_large"
         android:layout_marginTop="@dimen/padding_large"/>
 
