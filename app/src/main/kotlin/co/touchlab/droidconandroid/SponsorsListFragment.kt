@@ -22,6 +22,7 @@ import java.util.*
 
 class SponsorsListFragment : Fragment(), SponsorsHost {
     private lateinit var adapter: SponsorsAdapter
+    private lateinit var layoutManager: GridLayoutManager
 
     companion object {
         private val SPONSOR_TYPE = "SPONSOR_TYPE"
@@ -51,6 +52,10 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        adapter = SponsorsAdapter(activity)
+        layoutManager = GridLayoutManager(activity, 1)
+        sponsor_recycler.layoutManager = layoutManager
+        sponsor_recycler.adapter = adapter
     }
 
     override fun onStart() {
@@ -95,13 +100,10 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
             }
         }
 
-        // Create adapter and set on recyclerView
-        adapter = SponsorsAdapter(activity)
         adapter.addAll(finalList)
-        sponsor_list.adapter = adapter
 
         // Set Layout manager w/ a non-default span-size lookup
-        val layoutManager = GridLayoutManager(activity, totalSpanCount)
+        layoutManager.spanCount = totalSpanCount
         val spanSizeLookip: GridLayoutManager.SpanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
             override fun getSpanSize(position: Int): Int {
                 return adapter.getItemSpanSize(position)
@@ -109,7 +111,6 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
         }
         spanSizeLookip.isSpanIndexCacheEnabled = false
         layoutManager.spanSizeLookup = spanSizeLookip
-        sponsor_list.layoutManager = layoutManager
     }
 
     override fun onError() {

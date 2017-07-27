@@ -60,7 +60,7 @@
                     android:id="@+id/schedule_toolbar_notif"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:contentDescription="@string/content_toggle_alerts"
+                    android:contentDescription="@string/cd_toggle_alerts"
                     android:padding="16dp"
                     android:src="@drawable/vic_notifications_none_black_24dp"
                     android:visibility="gone"/>
