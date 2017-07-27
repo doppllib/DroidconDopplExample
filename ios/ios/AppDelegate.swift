@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         let type = userInfo["type"] as! String
-        //check the type. event messages just open the app so dont need to the handled here.
+        //check the type. networkEvent messages just open the app so dont need to the handled here.
         if type == "updateSchedule" {
             CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData.callMe(with: AndroidContentIOSContext(()))
             completionHandler(.newData)

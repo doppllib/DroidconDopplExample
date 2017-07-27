@@ -130,7 +130,7 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         updateFAB(event)
 
         updateContent(event,
-                eventInfo.speakers,
+                eventInfo.speakers, // make another call for speakers
                 eventInfo.conflict)
     }
 

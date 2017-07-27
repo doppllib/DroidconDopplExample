@@ -1,48 +1,37 @@
 package co.touchlab.droidconandroid.shared.data;
 
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+
 import java.util.Date;
 
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
-import co.touchlab.squeaky.field.DatabaseField;
-import co.touchlab.squeaky.table.DatabaseTable;
 
 /**
  * Created by izzyoji :) on 8/12/15.
  */
-@DatabaseTable
-public class Block implements ScheduleBlock
+@Entity
+public class Block implements TimeBlock
 {
-    @DatabaseField(id = true)
+    @PrimaryKey
     public long id;
 
-    @DatabaseField
     public String name;
 
-    @DatabaseField
     public String description;
 
-    @DatabaseField
     public Long startDateLong;
 
-    @DatabaseField
     public Long endDateLong;
+
+    public String startDate;
+
+    public String endDate;
 
     @Override
     public boolean isBlock()
     {
         return true;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getDescription() {
-        return description;
     }
 
     @Override

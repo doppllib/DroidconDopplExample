@@ -1,38 +1,41 @@
 package co.touchlab.droidconandroid.shared.data;
 
-import co.touchlab.squeaky.field.DatabaseField;
-import co.touchlab.squeaky.table.DatabaseTable;
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.ForeignKey;
+import android.arch.persistence.room.PrimaryKey;
+
 
 /**
  * Created by kgalligan on 7/28/14.
  */
-@DatabaseTable
-public class EventSpeaker
-{
-    @DatabaseField(generatedId = true)
+@Entity(foreignKeys = {
+        @ForeignKey(entity = Event.class, parentColumns = "id", childColumns = "event_id", onDelete = ForeignKey.CASCADE),
+        @ForeignKey(entity = UserAccount.class, parentColumns = "id", childColumns = "user_id", onDelete = ForeignKey.CASCADE)
+})
+public class EventSpeaker {
+    @PrimaryKey(autoGenerate = true)
     public Integer id;
 
-    @DatabaseField(foreign = true, canBeNull = false, foreignAutoRefresh = true)
-    public Event event;
+    @ColumnInfo(name = "event_id")
+    public long eventId;
 
-    @DatabaseField(foreign = true, canBeNull = false, foreignAutoRefresh = true)
-    public UserAccount userAccount;
+    @ColumnInfo(name = "user_id")
+    public long userAccountId;
 
-    @DatabaseField
     public int displayOrder;
 
-    public Event getEvent()
+    public long getEventId()
     {
-        return event;
+        return eventId;
     }
 
-    public UserAccount getUserAccount()
+    public long getUserAccountId()
     {
-        return userAccount;
+        return userAccountId;
     }
 
-    public int getDisplayOrder()
-    {
+    public int getDisplayOrder() {
         return displayOrder;
     }
 }

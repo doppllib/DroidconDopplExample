@@ -5,7 +5,10 @@ import com.google.gson.Gson;
 
 import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
+import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 
 /**
  * Created by kgalligan on 4/19/16.
@@ -27,13 +30,21 @@ public class AppManager
         AppManager.context = context;
         AppManager.platformClient = platformClient;
 
-        if(AppPrefs.getInstance(context).once(FIRST_SEED))
+        DatabaseHelper helper = DatabaseHelper.getInstance(context);
+        AppPrefs appPrefs = AppPrefs.getInstance(context);
+        if(appPrefs.once(FIRST_SEED))
         {
             try
             {
                 final String seed = loadDataSeed.dataSeed();
-                ConferenceDataHelper.saveConventionData(context,
-                        new Gson().fromJson(seed, Convention.class));
+                ConferenceDataHelper.saveConvention(helper,
+                        appPrefs,
+                        new Gson().fromJson(seed, Convention.class))
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(() ->
+                        {
+                        }, CrashReport:: logException);
             }
             catch(RuntimeException e)
             {
