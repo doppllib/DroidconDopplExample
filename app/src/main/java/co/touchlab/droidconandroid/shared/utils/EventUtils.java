@@ -28,6 +28,7 @@ public class EventUtils
         else
         {
             Event event = (Event) scheduleBlockHour.timeBlock;
+
             row.setTimeText(scheduleBlockHour.hourStringDisplay.toLowerCase());
             row.setTitleText(event.name);
             row.setSpeakerText(event.allSpeakersString());
