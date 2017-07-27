@@ -11,6 +11,10 @@
     </style>
 
     <style name="AppTheme" parent="AppTheme.Base">
+<<<<<<< HEAD
+=======
+        <item name="android:windowTranslucentStatus">true</item>
+>>>>>>> b5688c4... updated activity_about and activity_schedule
     </style>
 
     <style name="drawerTheme" parent="AppTheme">
