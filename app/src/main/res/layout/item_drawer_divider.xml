@@ -5,5 +5,5 @@
       android:layout_marginStart="@dimen/padding_medium"
       android:layout_marginTop="@dimen/padding_small"
       android:layout_marginBottom="@dimen/padding_small"
-      android:background="@color/black_20"
+      android:foreground="@color/black_20"
       android:orientation="vertical"/>

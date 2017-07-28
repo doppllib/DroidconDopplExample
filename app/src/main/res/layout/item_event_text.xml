@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:paddingBottom="@dimen/padding_medium"
-    android:paddingTop="@dimen/padding_medium">
+    android:paddingTop="@dimen/padding_medium" tools:ignore="UseCompoundDrawables">
 
     <ImageView
         android:id="@+id/image"
@@ -26,7 +26,6 @@
         android:layout_weight="1"
         android:autoLink="web"
         android:textColor="@color/black"
-        android:textSize="@dimen/text_small"
-        tools:text="@string/lorem_long"/>
+        android:textSize="@dimen/text_small"/>
 
 </LinearLayout>

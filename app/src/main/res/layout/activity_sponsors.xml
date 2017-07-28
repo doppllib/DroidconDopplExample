@@ -30,6 +30,7 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/superglyph_outline360x114dp"
                 app:layout_collapseMode="pin"
+                android:contentDescription="@null"
                 app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"/>
 
             <android.support.v7.widget.Toolbar

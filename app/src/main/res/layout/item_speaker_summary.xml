@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="@dimen/padding_medium"
         android:layout_marginRight="@dimen/padding_medium"
-        tools:src="@drawable/profile_placeholder"/>
+        tools:src="@drawable/circle_profile_placeholder"/>
 
     <TextView
         android:id="@+id/name"

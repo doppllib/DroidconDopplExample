@@ -30,6 +30,7 @@
                 android:fitsSystemWindows="true"
                 android:scaleType="centerCrop"
                 app:layout_collapseMode="pin"
+                android:contentDescription="@null"
                 app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"/>
 
             <android.support.v7.widget.Toolbar
@@ -91,7 +92,7 @@
             android:id="@+id/drawer_recycler"
             android:layout_width="@dimen/drawer_width"
             android:layout_height="match_parent"
-            android:layout_gravity="left|start"
+            android:layout_gravity="start"
             android:elevation="8dp"
             android:background="@color/white"/>
 

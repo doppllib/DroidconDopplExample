@@ -38,6 +38,7 @@
         android:layout_width="@dimen/event_entry_icon"
         android:layout_height="@dimen/event_entry_icon"
         android:layout_marginStart="@dimen/padding_large"
+        android:contentDescription="@null"
         android:layout_marginTop="@dimen/padding_large"/>
 
 </RelativeLayout>

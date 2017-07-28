@@ -116,7 +116,7 @@ class EventDetailAdapter(private val context: Context,
                 if (!user.avatar.isNullOrBlank()) {
                     Picasso.with(context).load(user.avatar)
                             .noFade()
-                            .placeholder(R.drawable.profile_placeholder)
+                            .placeholder(R.drawable.circle_profile_placeholder)
                             .into(view.profile_image)
                 }
 

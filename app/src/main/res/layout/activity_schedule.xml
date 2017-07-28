@@ -32,10 +32,11 @@
                 <ImageView
                     android:id="@+id/schedule_backdrop"
                     android:layout_width="match_parent"
-                    android:layout_height="136dp"
+                    android:layout_height="match_parent"
                     android:fitsSystemWindows="true"
                     android:scaleType="centerCrop"
                     app:layout_collapseMode="pin"
+                    android:contentDescription="@null"
                     app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"/>
 
                 <android.support.v7.widget.Toolbar
