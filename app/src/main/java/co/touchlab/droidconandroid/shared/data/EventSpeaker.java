@@ -23,6 +23,8 @@ public class EventSpeaker {
     @ColumnInfo(name = "user_id")
     public long userAccountId;
 
+    public String name;
+
     public int displayOrder;
 
     public long getEventId()

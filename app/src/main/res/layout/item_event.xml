@@ -90,14 +90,14 @@
                     tools:text="This is a title"/>
 
                 <TextView
-                    android:id="@+id/location_time"
+                    android:id="@+id/speaker"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="@dimen/location_time_margin_bottom"
                     android:layout_marginStart="@dimen/padding_micro"
                     android:layout_marginTop="@dimen/padding_tiny"
                     android:textColor="@color/card_text_subtitle"
-                    tools:text="Place"/>
+                    tools:text="Keanu Reeves"/>
 
                 <View
                     android:id="@+id/event_divider"

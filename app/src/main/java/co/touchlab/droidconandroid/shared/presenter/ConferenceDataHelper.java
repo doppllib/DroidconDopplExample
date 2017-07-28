@@ -58,7 +58,7 @@ public class ConferenceDataHelper
 
         if(allEvents)
         {
-            eventList = databaseHelper.getEventsList();
+            eventList = databaseHelper.getEventsWithSpeakersList();
         }
         else
         {
@@ -206,12 +206,12 @@ public class ConferenceDataHelper
                         }
 
                         eventSpeaker.eventId = newEvent.id;
+                        eventSpeaker.name = oldSpeaker.name;
                         eventSpeaker.userAccountId = oldSpeaker.id;
                         eventSpeaker.displayOrder = speakerCount++;
                         helper.updateSpeaker(eventSpeaker);
                     }
                 }
-
             }
 
             // clear db if events are returned
