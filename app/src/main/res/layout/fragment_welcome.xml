@@ -1,40 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:paddingTop="@dimen/status_bar_height"
-              android:paddingBottom="@dimen/height_small"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/height_small"
+    android:paddingTop="@dimen/status_bar_height">
 
     <ImageView
+        android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/image" android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/text_xlarge"
-        tools:text="Welcome to Droidcon"
-        android:paddingLeft="@dimen/padding_xxlarge"
-        android:paddingRight="@dimen/padding_xxlarge"
-        android:paddingBottom="@dimen/padding_small"
         android:id="@+id/titleTv"
-        android:layout_above="@+id/descriptionTv"
-        android:layout_centerHorizontal="true"/>
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/text_large"
-        android:paddingLeft="@dimen/padding_xxlarge"
-        android:paddingRight="@dimen/padding_xxlarge"
-        android:layout_marginBottom="10dp"
-        tools:text="description"
+        android:layout_above="@+id/descriptionTv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/padding_small"
+        android:layout_marginStart="@dimen/padding_xxlarge"
+        android:layout_marginEnd="@dimen/padding_xxlarge"
+        android:textSize="@dimen/text_xlarge"
+        tools:text="Welcome to Droidcon"/>
+
+    <TextView
         android:id="@+id/descriptionTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
-        android:layout_centerHorizontal="true"/>
+        android:layout_marginStart="@dimen/padding_xxlarge"
+        android:layout_marginEnd="@dimen/padding_xxlarge"
+        android:textSize="@dimen/text_large"
+        tools:text="description"/>
 
 </RelativeLayout>

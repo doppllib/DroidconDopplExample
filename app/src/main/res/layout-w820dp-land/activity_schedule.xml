@@ -63,7 +63,8 @@
                     android:contentDescription="@string/cd_toggle_alerts"
                     android:padding="16dp"
                     android:src="@drawable/vic_notifications_none_black_24dp"
-                    android:visibility="gone"/>
+                    android:visibility="gone"
+                    tools:visibility="visible"/>
             </LinearLayout>
 
             <android.support.design.widget.TabLayout
@@ -72,7 +73,10 @@
                 android:layout_height="?attr/actionBarSize"
                 android:layout_gravity="bottom"
                 android:layout_marginStart="@dimen/toolbar_title_margin_left"
-                android:fitsSystemWindows="true"/>
+                app:tabGravity="fill"
+                app:tabMaxWidth="264dp"
+                app:tabMinWidth="160dp"
+                app:tabMode="fixed"/>
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
@@ -80,20 +84,17 @@
 
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/drawer_layout"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/drawer_recycler"
             android:layout_width="@dimen/drawer_width"
             android:layout_height="match_parent"
-            android:layout_gravity="left|start"
-            android:elevation="8dp"
-            android:background="@color/white"/>
+            android:layout_gravity="start"
+            android:background="@color/white"
+            android:elevation="8dp"/>
 
     </android.support.v4.widget.DrawerLayout>
 
@@ -101,7 +102,6 @@
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
         android:layout_marginStart="@dimen/drawer_width"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    android:id="@+id/item_root" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_gravity="center"
     android:clipToPadding="false"
     android:orientation="vertical"
     android:paddingBottom="@dimen/item_root_padding_bottom"
@@ -27,8 +29,8 @@
             android:id="@+id/card_root"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/padding_wedge"
             android:layout_marginEnd="@dimen/padding_wedge"
+            android:layout_marginStart="@dimen/padding_wedge"
             android:layout_marginTop="@dimen/padding_wedge"
             android:orientation="vertical">
 
@@ -58,8 +60,8 @@
                 style="@style/notif_card_button"
                 android:layout_alignParentEnd="true"
                 android:layout_below="@id/notify_body"
-                android:textColor="@color/primary_dark_50"
-                android:text="@string/notif_card_accept"/>
+                android:text="@string/notif_card_accept"
+                android:textColor="@color/primary_dark_50"/>
 
             <Button
                 android:id="@+id/notify_decline"
