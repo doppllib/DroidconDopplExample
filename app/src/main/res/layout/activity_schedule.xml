@@ -79,7 +79,8 @@
                     android:layout_gravity="bottom"
                     android:layout_marginStart="@dimen/toolbar_title_margin_left"
                     app:tabGravity="fill"
-                    app:tabMaxWidth="0dp"
+                    app:tabMaxWidth="264dp"
+                    app:tabMinWidth="160dp"
                     app:tabMode="fixed"/>
 
             </android.support.design.widget.CollapsingToolbarLayout>
