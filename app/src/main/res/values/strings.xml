@@ -85,13 +85,15 @@
     <string name="sponsors_tab_party">PARTY&#160;</string>
 
     <!-- URL -->
-    <string name="sponsor_image_url">file:///android_asset/sponsors/%1$s.png</string>
+    <string name="sponsor_image_url" translatable="false">file:///android_asset/sponsors/%1$s.png
+    </string>
 
-
-    <string name="lorem_short">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    <string name="lorem_short" translatable="false">Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </string>
-    <string name="lorem_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+    <string name="lorem_long" translatable="false">Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nUt enim ad minim veniam, quis
         nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </string>
