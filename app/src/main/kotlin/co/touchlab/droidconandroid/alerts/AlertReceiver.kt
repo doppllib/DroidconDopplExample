@@ -46,7 +46,7 @@ class AlertReceiver : BroadcastReceiver() {
             val pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT)
 
             val notification = NotificationCompat.Builder(context)
-                    .setSmallIcon(R.drawable.ic_notification)
+                    .setSmallIcon(R.drawable.ic_notification_smallicon_color)
                     .setContentTitle(context.getString(R.string.notif_title))
                     .setContentText(context.getString(R.string.notif_body, eventName))
                     .setAutoCancel(true)

@@ -2,6 +2,7 @@ package co.touchlab.droidconandroid.shared.utils;
 import android.text.TextUtils;
 
 import java.util.List;
+import java.util.Locale;
 
 import co.touchlab.droidconandroid.shared.data.Block;
 import co.touchlab.droidconandroid.shared.data.Event;
@@ -18,7 +19,7 @@ public class EventUtils
         {
             Block block = (Block) scheduleBlockHour.getTimeBlock();
             row.setTitleText(block.name);
-            row.setTimeText(scheduleBlockHour.getHourStringDisplay().toLowerCase());
+            row.setTimeText(scheduleBlockHour.getHourStringDisplay().toLowerCase(Locale.getDefault()));
             row.setSpeakerText("");
             row.setDescription(block.description);
             row.setLiveNowVisible(false);
@@ -28,7 +29,7 @@ public class EventUtils
         else
         {
             Event event = (Event) scheduleBlockHour.getTimeBlock();
-            row.setTimeText(scheduleBlockHour.getHourStringDisplay().toLowerCase());
+            row.setTimeText(scheduleBlockHour.getHourStringDisplay().toLowerCase(Locale.getDefault()));
             row.setTitleText(event.name);
             row.setSpeakerText(event.allSpeakersString());
             row.setDescription(event.description);

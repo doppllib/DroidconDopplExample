@@ -17,6 +17,7 @@ public class AppManager
 {
     public static final String FIRST_SEED = "FIRST_SEED";
 
+    @SuppressWarnings("StaticFieldLeak")
     private static Context context;
     private static PlatformClient platformClient;
 
