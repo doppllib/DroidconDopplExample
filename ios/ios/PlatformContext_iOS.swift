@@ -11,7 +11,7 @@ import JRE
 
 protocol PlatformContext_iOSDelegate : class {
     func reloadTableView()
-    func showEventDetailView(with event: DCDEvent, andIndex index: Int)
+    func showEventDetailView(with networkEvent: DCDEvent, andIndex index: Int)
 }
 
 class PlatformContext_iOS : NSObject {
@@ -64,8 +64,8 @@ class PlatformContext_iOS : NSObject {
         iOSContext = DCPAppManager.getContext()
     }
     
-    func getSpeakersArray(from event: DCDEvent) -> [Any] {
-        return PlatformContext_iOS.javaList(toList: event.getSpeakerList())
+    func getSpeakersArray(from networkEvent: DCDEvent) -> [Any] {
+        return PlatformContext_iOS.javaList(toList: networkEvent.getSpeakerList())
     }
     
     fileprivate func formatSpeakersString(from array: [DCDEventSpeaker]) -> String {
@@ -135,19 +135,17 @@ extension PlatformContext_iOS : UITableViewDataSource {
         
         let hourHolder = hourBlocks[indexPath.row]
         let eventObj = hourHolder.getScheduleBlock()
+        
         if let event = eventObj as? DCDEvent {
-            let speakers = getSpeakersArray(from: event) as! [DCDEventSpeaker]
             cell.titleLabel.text = event.getName().replacingOccurrences(of: "Android", with: "[Sad Puppy]")
+            let speakers = getSpeakersArray(from: event) as! [DCDEventSpeaker]
             cell.speakerNamesLabel.text = formatSpeakersString(from: speakers)
-            cell.timeLabel.text = hourHolder.getStringDisplay()
-            //cell.rsvpView.isHidden = event.isRsvped() && !event.isPast()
-            
         } else if let event = eventObj as? DCDBlock {
             cell.titleLabel.text = event.getName()
-            cell.speakerNamesLabel.text = getEventTime(startTime: event.getStartFormatted() as NSString, andEnd: event.getEndFormatted() as NSString)
-            cell.timeLabel.text = ""
-            //cell.rsvpView.isHidden = true
+            cell.speakerNamesLabel.text = ""
         }
+        cell.timeLabel.text = hourHolder.getStringDisplay().lowercased()
+        cell.startOfBlock = indexPath.row == 0 || hourBlocks[indexPath.row - 1].getScheduleBlock().getStartLong() != eventObj!.getStartLong()
         cell.layer.isOpaque = true
         return cell
     }
@@ -156,12 +154,20 @@ extension PlatformContext_iOS : UITableViewDataSource {
 
 extension PlatformContext_iOS : UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.isHighlighted = true
+    }
+    
+    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+        tableView.cellForRow(at: indexPath)?.isHighlighted = false
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         
         let eventObj = hourBlocks[indexPath.row].getScheduleBlock()
-        if let event = eventObj as? DCDEvent {
-            reloadDelegate?.showEventDetailView(with: event, andIndex: indexPath.row)
+        if let networkEvent = eventObj as? DCDEvent {
+            reloadDelegate?.showEventDetailView(with: networkEvent, andIndex: indexPath.row)
         }
     }
     
@@ -169,9 +175,9 @@ extension PlatformContext_iOS : UITableViewDelegate {
 
 extension PlatformContext_iOS : DCPConferenceDataHost {
     
-    func loadCallback(withDCPConferenceDayHolderArray conferenceDayHolders: IOSObjectArray!) {
+    func loadCallback(withDCPConferenceDayHolderArray daySchedules: IOSObjectArray!) {
         hourBlocks = [DCPScheduleBlockHour]()
-        conferenceDays = convertiOSObjectArrayToArray(objArray: conferenceDayHolders) as! [DCPConferenceDayHolder]
+        conferenceDays = convertiOSObjectArrayToArray(objArray: daySchedules) as! [DCPConferenceDayHolder]
         updateTableData()
         reloadDelegate?.reloadTableView()
     }

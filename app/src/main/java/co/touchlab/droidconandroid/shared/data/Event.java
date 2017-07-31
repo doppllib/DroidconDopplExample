@@ -1,63 +1,57 @@
 package co.touchlab.droidconandroid.shared.data;
 
+import android.arch.persistence.room.Embedded;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
+import android.arch.persistence.room.PrimaryKey;
 import android.text.TextUtils;
 
-import javax.annotation.Nonnull;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
-import co.touchlab.squeaky.field.DatabaseField;
-import co.touchlab.squeaky.field.ForeignCollectionField;
-import co.touchlab.squeaky.table.DatabaseTable;
 
 /**
  * Created by kgalligan on 6/28/14.
  */
-@DatabaseTable
-public class Event implements ScheduleBlock
+@Entity
+public class Event implements TimeBlock
 {
-    @DatabaseField(id = true)
+    @PrimaryKey
     public long id;
 
-    @DatabaseField
     public String name;
 
-    @DatabaseField
     public String description;
 
-    @DatabaseField
     public String category;
 
-    @Nonnull
-    @DatabaseField(foreign = true, canBeNull = false, foreignAutoRefresh = true)
+    @Embedded(prefix = "venue_")
     public Venue venue;
 
-    @DatabaseField
     public Long startDateLong;
 
-    @DatabaseField
     public Long endDateLong;
 
-    @DatabaseField
     public boolean publicEvent;
 
-    @DatabaseField
     public Integer rsvpLimit;
 
-    @DatabaseField
     public Integer rsvpCount;
 
-    @DatabaseField
     public String rsvpUuid;
 
-    @ForeignCollectionField(foreignFieldName = "event")
-    public List<EventSpeaker> speakerList;
-
-    @DatabaseField
     public Integer vote;
+
+    public String startDate;
+
+    public String endDate;
+
+    @Ignore
+    public List<EventSpeaker> speakerList;
 
     public long getId()
     {
@@ -79,7 +73,7 @@ public class Event implements ScheduleBlock
         return category;
     }
 
-    @Nonnull
+    @NotNull
     public Venue getVenue()
     {
         return venue;
@@ -110,11 +104,6 @@ public class Event implements ScheduleBlock
         return rsvpCount;
     }
 
-    public List<EventSpeaker> getSpeakerList()
-    {
-        return speakerList;
-    }
-
     public Integer getVote()
     {
         return vote;
@@ -132,8 +121,9 @@ public class Event implements ScheduleBlock
 
     public boolean isNow()
     {
-        return startDateLong != null && endDateLong != null && System
-                .currentTimeMillis() < endDateLong && System.currentTimeMillis() > startDateLong;
+        return startDateLong != null && endDateLong != null &&
+                System.currentTimeMillis() < endDateLong &&
+                System.currentTimeMillis() > startDateLong;
     }
 
     @Override
@@ -156,12 +146,12 @@ public class Event implements ScheduleBlock
 
     public String getStartFormatted()
     {
-        return TimeUtils.DATE_FORMAT.get().format(new Date(startDateLong));
+        return TimeUtils.LOCAL_DATE_FORMAT.get().format(new Date(startDateLong));
     }
 
     public String getEndFormatted()
     {
-        return TimeUtils.DATE_FORMAT.get().format(new Date(endDateLong));
+        return TimeUtils.LOCAL_DATE_FORMAT.get().format(new Date(endDateLong));
     }
 
     public String getRsvpUuid()
@@ -174,14 +164,16 @@ public class Event implements ScheduleBlock
         this.rsvpUuid = rsvpUuid;
     }
 
+
     public String allSpeakersString()
     {
-        List<String> names =new ArrayList<>();
+        List<String> names = new ArrayList<>();
         for(EventSpeaker eventSpeaker : speakerList)
         {
-            UserAccount userAccount = eventSpeaker.userAccount;
-            if(userAccount != null)
-                names.add(userAccount.name);
+            if(eventSpeaker != null)
+            {
+                names.add(eventSpeaker.name);
+            }
         }
 
         return TextUtils.join(", ", names);

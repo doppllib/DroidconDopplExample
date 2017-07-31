@@ -8,10 +8,11 @@ import android.content.Intent
 import android.media.RingtoneManager
 import android.support.v4.app.TaskStackBuilder
 import android.support.v7.app.NotificationCompat
-import co.touchlab.android.threading.tasks.TaskQueue
 import co.touchlab.droidconandroid.EventDetailActivity
 import co.touchlab.droidconandroid.R
-import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsTask
+import co.touchlab.droidconandroid.shared.data.AppPrefs
+import co.touchlab.droidconandroid.shared.data.DatabaseHelper
+import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 
 const val EXTRA_EVENT_NAME = "EXTRA_EVENT_NAME"
 const val EXTRA_EVENT_ID = "EXTRA_EVENT_ID"
@@ -19,7 +20,15 @@ const val EXTRA_EVENT_CATEGORY = "EXTRA_EVENT_CATEGORY"
 const val ALERT_ACTION = "co.touchlab.droidconandroid.DISPLAY_NOTIFICATION"
 
 class AlertReceiver : BroadcastReceiver() {
+    private lateinit var helper: DatabaseHelper
+    private lateinit var prefs: AppPrefs
+
     override fun onReceive(context: Context, intent: Intent) {
+
+        helper = DatabaseHelper.getInstance(context)
+        prefs = AppPrefs.getInstance(context)
+        val updateAlertsInteractor = UpdateAlertsInteractor(helper, prefs)
+
         if (ALERT_ACTION == intent.action) {
 
             val eventName = intent.getStringExtra(EXTRA_EVENT_NAME)
@@ -48,6 +57,6 @@ class AlertReceiver : BroadcastReceiver() {
         }
 
         //This receiver also gets triggered for time changes. Always update the alarms here
-        TaskQueue.loadQueueDefault(context).execute(UpdateAlertsTask())
+        updateAlertsInteractor.alert()
     }
 }

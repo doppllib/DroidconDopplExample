@@ -1,17 +1,19 @@
 package co.touchlab.droidconandroid.ui
 
+import android.content.Context
 import android.support.v4.content.ContextCompat
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import co.touchlab.android.threading.eventbus.EventBusExt
 import co.touchlab.droidconandroid.R
+import co.touchlab.droidconandroid.isOdd
+import co.touchlab.droidconandroid.setViewVisibility
 import co.touchlab.droidconandroid.shared.data.Block
 import co.touchlab.droidconandroid.shared.data.Event
-import co.touchlab.droidconandroid.shared.data.Track
-import co.touchlab.droidconandroid.shared.presenter.ConferenceDataPresenter
-import co.touchlab.droidconandroid.shared.presenter.ScheduleBlockHour
+import co.touchlab.droidconandroid.shared.presenter.HourBlock
+import co.touchlab.droidconandroid.shared.utils.EventBusExt
+import co.touchlab.droidconandroid.shared.utils.EventUtils
 import kotlinx.android.synthetic.main.item_event.view.*
 import kotlinx.android.synthetic.main.item_notification.view.*
 import java.util.*
@@ -21,60 +23,50 @@ import java.util.*
  * Created by izzyoji :) on 8/6/15.
  */
 
-private const val VIEW_TYPE_EVENT = 0
-private const val VIEW_TYPE_BLOCK = 1
-private const val VIEW_TYPE_PAST_EVENT = 2
-private const val VIEW_TYPE_NOTIFICATION = 3
-private const val VIEW_TYPE_NEW_ROW = 4
+class EventAdapter(private val context: Context,
+                   private val allEvents: Boolean,
+                   private val eventClickListener: EventClickListener,
+                   private var showNotificationCard: Boolean) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-private const val HEADER_ITEMS_COUNT = 1
-
-class EventAdapter(private val allEvents: Boolean
-                   , initialFilters: List<String>
-                   , private val eventClickListener: EventClickListener
-                   , var showNotificationCard: Boolean) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-
-    private var dataSet: List<ScheduleBlockHour> = emptyList()
-    private var filteredData: ArrayList<ScheduleBlockHour?> = ArrayList()
-    private var currentTracks: ArrayList<String> = ArrayList(initialFilters)
+    private var dataSet: List<HourBlock> = emptyList()
+    private var filteredData: ArrayList<HourBlock?> = ArrayList()
 
     override fun getItemCount(): Int {
-        return filteredData.size + if (showNotificationCard) HEADER_ITEMS_COUNT else 0
+        return filteredData.size + adjustNotification
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        when (viewType) {
+    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): RecyclerView.ViewHolder {
+        return when (viewType) {
             VIEW_TYPE_EVENT -> {
-                val v = LayoutInflater.from(parent.context).inflate(R.layout.item_event, parent, false)
-                return ScheduleBlockViewHolder(v)
+                val v = LayoutInflater.from(context).inflate(R.layout.item_event, parent, false)
+                ScheduleBlockViewHolder(v)
             }
             VIEW_TYPE_PAST_EVENT, VIEW_TYPE_BLOCK -> {
-                val v = LayoutInflater.from(parent.context).inflate(R.layout.item_block, parent, false)
-                return ScheduleBlockViewHolder(v)
+                val v = LayoutInflater.from(context).inflate(R.layout.item_block, parent, false)
+                ScheduleBlockViewHolder(v)
             }
             VIEW_TYPE_NOTIFICATION -> {
-                val v = LayoutInflater.from(parent.context).inflate(R.layout.item_notification, parent, false)
-                return NotificationViewHolder(v)
+                val v = LayoutInflater.from(context).inflate(R.layout.item_notification, parent, false)
+                NotificationViewHolder(v)
             }
             VIEW_TYPE_NEW_ROW -> {
-                val v = LayoutInflater.from(parent.context).inflate(R.layout.item_new_row, parent, false)
-                return NewRowViewHolder(v)
+                val v = LayoutInflater.from(context).inflate(R.layout.item_new_row, parent, false)
+                NewRowViewHolder(v)
             }
-
             else -> throw UnsupportedOperationException()
         }
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        val adjustedPosition = position - if (showNotificationCard) HEADER_ITEMS_COUNT else 0
         if (holder is ScheduleBlockViewHolder) {
+            val adjustedPosition = position - adjustNotification
             val scheduleBlockHour = filteredData[adjustedPosition]
 
-            if (scheduleBlockHour != null) {
-                ConferenceDataPresenter.styleEventRow(scheduleBlockHour, dataSet, holder, allEvents)
+            scheduleBlockHour?.let {
+                EventUtils.styleEventRow(scheduleBlockHour, dataSet, holder, allEvents)
 
-                if (!scheduleBlockHour.scheduleBlock.isBlock) {
-                    holder.setOnClickListener { eventClickListener.onEventClick(scheduleBlockHour.scheduleBlock as Event) }
+                if (!scheduleBlockHour.timeBlock.isBlock) {
+                    holder.setOnClickListener { eventClickListener.onEventClick(scheduleBlockHour.timeBlock as Event) }
                 }
             }
         }
@@ -82,15 +74,15 @@ class EventAdapter(private val allEvents: Boolean
 
     override fun getItemViewType(position: Int): Int {
         //Position 0 is always the notification
-        if (position == 0 && showNotificationCard) return VIEW_TYPE_NOTIFICATION
+        if (position == 0 && showNotificationCard)
+            return VIEW_TYPE_NOTIFICATION
 
-        val adjustedPosition = position - if (showNotificationCard) HEADER_ITEMS_COUNT else 0
-
+        val adjustedPosition = position - adjustNotification
         if (filteredData[adjustedPosition] == null) {
             return VIEW_TYPE_NEW_ROW
         }
 
-        val item = filteredData[adjustedPosition]?.scheduleBlock
+        val item = filteredData[adjustedPosition]?.timeBlock
         when (item) {
             is Event -> return if (item.isPast) VIEW_TYPE_PAST_EVENT else VIEW_TYPE_EVENT
             is Block -> return VIEW_TYPE_BLOCK
@@ -98,53 +90,27 @@ class EventAdapter(private val allEvents: Boolean
         }
     }
 
-    fun toggleTrackFilter(track: Track) {
-        val trackServerName = track.serverName
-        if (!currentTracks.contains(trackServerName)) {
-            currentTracks.add(trackServerName)
-        } else {
-            currentTracks.remove(trackServerName)
-        }
-        updateData()
-    }
-
     private fun updateData() {
         filteredData.clear()
-        if (currentTracks.isEmpty()) {
             for (item in dataSet) {
-                val position = filteredData.size + if (showNotificationCard) HEADER_ITEMS_COUNT else 0
-                if (!item.hourStringDisplay.isEmpty() && position % 2 != 0) {
+                val position = filteredData.size + adjustNotification
+                if (item.hourStringDisplay.isNotBlank() && position.isOdd()) {
                     // Insert an empty block to indicate a new row
                     filteredData.add(null)
                 }
                 filteredData.add(item)
             }
-        } else {
-            //TODO: Filter
-            /*for (item in dataSet) {
-                if(item is Block) {
-                    filteredData.add(item)
-                } else {
-                    val event = item as Event
-                    val category = event.category
-                    if (!TextUtils.isEmpty(category) && currentTracks.contains(category)) {
-                        filteredData.add(item)
-                    }
-                }
-            }*/
-        }
 
         notifyDataSetChanged()
     }
 
-    fun updateEvents(data: List<ScheduleBlockHour>) {
+    fun updateEvents(data: List<HourBlock>) {
         dataSet = data
         updateData()
     }
 
     fun updateNotificationCard(show: Boolean) {
-        if (show == showNotificationCard)
-            return
+        if (show == showNotificationCard) return
 
         showNotificationCard = show
         if (show)
@@ -153,20 +119,19 @@ class EventAdapter(private val allEvents: Boolean
             notifyItemRemoved(0)
     }
 
-    inner abstract class ScheduleCardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {}
+    private val adjustNotification: Int
+        get() = if (showNotificationCard) HEADER_ITEMS_COUNT else 0
 
-    inner class ScheduleBlockViewHolder(itemView: View) : ScheduleCardViewHolder(itemView), ConferenceDataPresenter.EventRow {
+    inner abstract class ScheduleCardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
-        override fun setTitleText(s: String?) {
-            itemView.title.text = s
-        }
+    inner class ScheduleBlockViewHolder(itemView: View) : ScheduleCardViewHolder(itemView), EventUtils.EventRow {
 
-        override fun setTimeText(s: String?) {
-            itemView.time.text = s
-        }
+        override fun setTitleText(s: String?) { itemView.title.text = s }
 
-        override fun setDetailText(s: String?) {
-            itemView.location_time.text = s
+        override fun setTimeText(s: String?) { itemView.time.text = s }
+
+        override fun setSpeakerText(s: String?) {
+            itemView.speaker.text = s
         }
 
         override fun setDescription(s: String?) {
@@ -175,23 +140,25 @@ class EventAdapter(private val allEvents: Boolean
         }
 
         override fun setRsvpVisible(rsvp: Boolean, past: Boolean) {
-            val rsvpColor = if (past) ContextCompat.getColor(itemView.context, R.color.card_text_subtitle) else ContextCompat.getColor(itemView.context, R.color.accent)
+            val rsvpColor = if (past) ContextCompat.getColor(itemView.context, R.color.card_text_subtitle)
+            else ContextCompat.getColor(itemView.context, R.color.accent)
             itemView.rsvp.setBackgroundColor(rsvpColor)
-            itemView.rsvp.visibility = if (rsvp) View.VISIBLE else View.INVISIBLE
+            itemView.rsvp.setViewVisibility(rsvp)
         }
 
-        override fun setRsvpConflict(b: Boolean) {
-            itemView.conflict_text.visibility = if (b) View.VISIBLE else View.INVISIBLE
-            if (b) itemView.rsvp.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.red))
+        override fun setRsvpConflict(hasConflict: Boolean) {
+            itemView.conflict_text.setViewVisibility(hasConflict)
+            if (hasConflict)
+                itemView.rsvp.setBackgroundColor(ContextCompat.getColor(itemView.context, R.color.red))
         }
 
-        override fun setLiveNowVisible(b : Boolean) {
-            itemView.live.visibility = if (b) View.VISIBLE else View.INVISIBLE
+        override fun setLiveNowVisible(liveNow: Boolean) {
+            itemView.live.setViewVisibility(liveNow)
         }
 
-        override fun setTimeGap(b : Boolean) {
+        override fun setTimeGap(gap: Boolean) {
             if (!isTablet(itemView)) {
-                val topPadding = if (b) R.dimen.padding_small else R.dimen.padding_xmicro
+                val topPadding = if (gap) R.dimen.padding_small else R.dimen.padding_xmicro
                 itemView.setPadding(itemView.paddingLeft,
                         itemView.context.resources.getDimensionPixelOffset(topPadding),
                         itemView.paddingRight,
@@ -203,7 +170,7 @@ class EventAdapter(private val allEvents: Boolean
             itemView.card.setOnClickListener { listener() }
         }
 
-        fun isTablet(itemView : View) : Boolean {
+        fun isTablet(itemView: View): Boolean {
             return itemView.context.resources.getBoolean(R.bool.is_tablet)
         }
     }
@@ -219,7 +186,16 @@ class EventAdapter(private val allEvents: Boolean
         }
     }
 
-    inner class NewRowViewHolder(itemView: View) : ScheduleCardViewHolder(itemView) {}
+    inner class NewRowViewHolder(itemView: View) : ScheduleCardViewHolder(itemView)
+
+    companion object {
+        private val VIEW_TYPE_EVENT = 0
+        private val VIEW_TYPE_BLOCK = 1
+        private val VIEW_TYPE_PAST_EVENT = 2
+        private val VIEW_TYPE_NOTIFICATION = 3
+        private val VIEW_TYPE_NEW_ROW = 4
+        private val HEADER_ITEMS_COUNT = 1
+    }
 }
 
 interface EventClickListener {

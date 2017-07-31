@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/drawer_header_height"
+    android:layout_gravity="center"
     android:background="@color/white"
     android:orientation="vertical">
 
@@ -12,51 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/cd_profile_cover_image"
-        android:scaleType="centerCrop"/>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/status_bar_height"
-        android:padding="@dimen/padding_medium">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/avatar"
-            android:layout_width="@dimen/height_large"
-            android:layout_height="@dimen/height_large"
-            android:src="@drawable/circle_profile_placeholder"/>
-
-        <TextView
-            android:id="@+id/header_placeholder_emoji"
-            android:layout_width="@dimen/height_large"
-            android:layout_height="@dimen/height_large"
-            android:layout_alignTop="@id/avatar"
-            android:layout_alignStart="@id/avatar"
-            android:layout_alignLeft="@id/avatar"
-            android:textSize="@dimen/text_xxxxlarge"
-            android:textColor="@color/black"
-            android:gravity="center"
-            tools:text=":)"/>
-
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/email"
-            android:fontFamily="sans-serif-medium"
-            android:singleLine="true"
-            android:textColor="@color/black"
-            tools:text="First Last"/>
-
-        <TextView
-            android:id="@+id/email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:singleLine="true"
-            android:textColor="@color/black"
-            tools:text="test@touchlab.co"/>
-
-    </RelativeLayout>
+        android:src="@drawable/superglyph_blue"
+        android:layout_margin="20dp"
+        android:scaleType="centerInside"/>
 
 </FrameLayout>

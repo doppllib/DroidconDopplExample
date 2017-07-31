@@ -1,193 +1,123 @@
 package co.touchlab.droidconandroid
 
-import android.content.Intent
-import android.net.Uri
+import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.util.SparseIntArray
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import co.touchlab.android.threading.eventbus.EventBusExt
-import co.touchlab.android.threading.tasks.TaskQueue
+import co.touchlab.droidconandroid.shared.interactors.SponsorsInteractor
+import co.touchlab.droidconandroid.shared.network.DataHelper
+import co.touchlab.droidconandroid.shared.network.SponsorsRequest
 import co.touchlab.droidconandroid.shared.network.SponsorsResult
-import co.touchlab.droidconandroid.shared.presenter.AppManager
-import co.touchlab.droidconandroid.shared.tasks.SponsorsTask
-import co.touchlab.droidconandroid.shared.utils.AnalyticsEvents
-import com.squareup.picasso.Picasso
+import co.touchlab.droidconandroid.shared.presenter.SponsorsHost
+import co.touchlab.droidconandroid.shared.presenter.SponsorsViewModel
+import co.touchlab.droidconandroid.ui.SponsorsAdapter
+import co.touchlab.droidconandroid.utils.Toaster
 import kotlinx.android.synthetic.main.fragment_sponsors_list.*
 import java.util.*
 
-const val SPONSOR_TYPE = "SPONSOR_TYPE"
-const val SPONSOR_COUNT = 3
+class SponsorsListFragment : Fragment(), SponsorsHost {
+    private lateinit var adapter: SponsorsAdapter
+    private lateinit var layoutManager: GridLayoutManager
 
-fun createSponsorsListFragment(type: Int): SponsorsListFragment {
-    val fragment = SponsorsListFragment()
-    val args = Bundle()
-    args.putInt(SPONSOR_TYPE, type)
-    fragment.arguments = args
-    return fragment
-}
+    companion object {
+        private val SPONSOR_TYPE = "SPONSOR_TYPE"
 
-class SponsorsListFragment() : Fragment() {
-
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater?.inflate(R.layout.fragment_sponsors_list, container, false)
+        fun newInstance(type: Int): SponsorsListFragment {
+            val fragment = SponsorsListFragment()
+            val args = Bundle()
+            args.putInt(SPONSOR_TYPE, type)
+            fragment.arguments = args
+            return fragment
+        }
     }
 
-    var adapter: SponsorsAdapter? = null
+    private val type: Int by lazy { arguments.getInt(SPONSOR_TYPE) }
+
+    private val viewModel: SponsorsViewModel by lazy {
+        val retrofit = DataHelper.makeRetrofit2Client(BuildConfig.AMAZON_URL)
+        val sponsorsRequest = retrofit.create(SponsorsRequest::class.java)
+        val interactor = SponsorsInteractor(sponsorsRequest, type)
+        val factory = SponsorsViewModel.Factory(interactor)
+        ViewModelProviders.of(this, factory).get(SponsorsViewModel::class.java)
+    }
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.fragment_sponsors_list, container, false)
+    }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        adapter = SponsorsAdapter(activity)
+        layoutManager = GridLayoutManager(activity, 1)
+        sponsor_recycler.layoutManager = layoutManager
+        sponsor_recycler.adapter = adapter
     }
 
     override fun onStart() {
         super.onStart()
-        EventBusExt.getDefault()!!.register(this)
-        val type = arguments.getInt(SPONSOR_TYPE)
-        TaskQueue.loadQueueDefault(context.applicationContext).execute(SponsorsTask(type))
+        viewModel.register(this)
+        viewModel.getSponsors()
     }
 
     override fun onStop() {
         super.onStop()
-        EventBusExt.getDefault()!!.unregister(this)
+        viewModel.unregister()
     }
 
-    @Suppress("unused")
-    fun onEventMainThread(task: SponsorsTask) {
-        if (task.type == arguments.getInt(SPONSOR_TYPE)) {
-            // Filter through and insert "filler items" .. TODO This is a hack
-            var finalList: ArrayList<Any> = ArrayList()
-            var totalSpanCount = 1
+    override fun onSponsorsFound(sponsorResult: SponsorsResult) {
+        // Filter through and insert "filler items" .. TODO This is a hack
+        val finalList: ArrayList<Any> = ArrayList()
 
-            if(task.response != null) {
-                totalSpanCount = task.response!!.totalSpanCount
-                val lastIndex = task.response!!.sponsors.lastIndex
-                val spanCounts = SparseIntArray()
-                for (sponsor in task.response!!.sponsors) {
-                    // Add object to results
-                    finalList.add(sponsor)
+        val totalSpanCount = sponsorResult.totalSpanCount
+        val lastIndex = sponsorResult.sponsors.lastIndex
+        val spanCounts = SparseIntArray()
+        for (sponsor in sponsorResult.sponsors) {
+            // Add object to results
+            finalList.add(sponsor)
 
-                    // Increment count
-                    var currentCount = spanCounts.get(sponsor.spanCount, -1)
-                    if (currentCount == -1) {
-                        spanCounts.put(sponsor.spanCount, 1)
-                        currentCount = 1
-                    } else {
-                        spanCounts.put(sponsor.spanCount, ++currentCount)
-                    }
-
-                    // Check if last item of group, if so, insert any spaces if needed
-                    val index = task.response!!.sponsors.indexOf(sponsor)
-                    if (index != lastIndex && sponsor.spanCount != task.response!!.sponsors[index + 1].spanCount) {
-                        var emptySpots = (totalSpanCount - (currentCount * sponsor.spanCount) % totalSpanCount) / sponsor.spanCount
-                        while (emptySpots > 0) {
-                            finalList.add(Empty(sponsor.spanCount))
-                            emptySpots--
-                        }
-                    }
-                }
-            }
-
-            // Create adapter and set on recyclerView
-            adapter = SponsorsAdapter()
-            adapter!!.addAll(finalList)
-            sponsor_list!!.adapter = adapter
-
-            // Set Layout manager w/ a non-default span-size lookup
-            var layoutManager = GridLayoutManager(activity, totalSpanCount)
-            val spanSizeLookip: GridLayoutManager.SpanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
-                override fun getSpanSize(position: Int): Int {
-                    return adapter!!.getItemSpanSize(position)
-                }
-            }
-            spanSizeLookip.isSpanIndexCacheEnabled = false
-            layoutManager.spanSizeLookup = spanSizeLookip
-            sponsor_list!!.layoutManager = layoutManager
-        }
-    }
-
-    inner class Empty (val spanCount: Int)
-
-    inner class SponsorsAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-
-        private val VIEW_TYPE_ITEM = 0
-        private val VIEW_TYPE_EMPTY = 1
-
-        private var dataset: ArrayList<Any> = ArrayList()
-
-        override fun getItemViewType(position: Int): Int {
-             if (dataset[position] is SponsorsResult.Sponsor) return VIEW_TYPE_ITEM else return VIEW_TYPE_EMPTY
-        }
-
-        override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): RecyclerView.ViewHolder? {
-            if (viewType == VIEW_TYPE_ITEM) {
-                val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_sponsor, parent, false)
-                return SponsorVH(view)
+            // Increment count
+            var currentCount = spanCounts.get(sponsor.spanCount, -1)
+            if (currentCount == -1) {
+                spanCounts.put(sponsor.spanCount, 1)
+                currentCount = 1
             } else {
-                val view = LayoutInflater.from(parent?.context).inflate(R.layout.item_empty, parent, false)
-                return EmptyVH(view)
+                spanCounts.put(sponsor.spanCount, ++currentCount)
             }
-        }
 
-        override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
-            if (getItemViewType(position) == VIEW_TYPE_ITEM) {
-                val vh = holder as SponsorVH
-                val data = dataset[position] as SponsorsResult.Sponsor
-
-                // Load image and set content desc
-                vh.image!!.contentDescription = data.sponsorName
-                Picasso.with(context)
-                        .load(data.sponsorImage)
-                        .placeholder(R.drawable.placeholder_sponsor_image)
-                        .into(vh.image)
-
-                // Set view click
-                vh.itemView.setOnClickListener {
-                    AppManager.getPlatformClient()
-                            .logEvent(AnalyticsEvents.CLICK_SPONSOR, AnalyticsEvents.PARAM_ITEM_NAME, data.sponsorLink)
-                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(data.sponsorLink))
-                    startActivity(intent)
+            // Check if last item of group, if so, insert any spaces if needed
+            val index = sponsorResult.sponsors.indexOf(sponsor)
+            if (index != lastIndex && sponsor.spanCount != sponsorResult.sponsors[index + 1].spanCount) {
+                var emptySpots = (totalSpanCount - (currentCount * sponsor.spanCount) % totalSpanCount) / sponsor.spanCount
+                while (emptySpots > 0) {
+                    finalList.add(Empty(sponsor.spanCount))
+                    emptySpots--
                 }
             }
         }
 
-        override fun getItemCount(): Int {
-            return dataset.size
-        }
+        adapter.addAll(finalList)
 
-        inner class SponsorVH(val item: View) : RecyclerView.ViewHolder(item) {
-            var image: ImageView? = null
-
-            init {
-                image = item.findViewById(R.id.item_sponsor_image) as ImageView
+        // Set Layout manager w/ a non-default span-size lookup
+        layoutManager.spanCount = totalSpanCount
+        val spanSizeLookip: GridLayoutManager.SpanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
+            override fun getSpanSize(position: Int): Int {
+                return adapter.getItemSpanSize(position)
             }
         }
-
-        inner class EmptyVH(val item: View) : RecyclerView.ViewHolder(item) {
-
-        }
-
-        fun getItemSpanSize(position: Int): Int {
-            if (dataset[position] is SponsorsResult.Sponsor) {
-                return (dataset[position] as SponsorsResult.Sponsor).spanCount
-            } else{
-                return (dataset[position] as Empty).spanCount
-            }
-        }
-
-        fun addAll(sponsors: List<Any>) {
-            dataset.addAll(sponsors)
-            notifyDataSetChanged()
-        }
-
-        fun add(spanCount: Int, name: String, image: String, link: String) {
-            dataset.add(SponsorsResult().Sponsor(spanCount, name, image, link))
-            notifyDataSetChanged()
-        }
+        spanSizeLookip.isSpanIndexCacheEnabled = false
+        layoutManager.spanSizeLookup = spanSizeLookip
     }
 
+    override fun onError() {
+        val error = "There was an error trying to reach the network"
+        Toaster.showMessage(activity, error)
+        Log.e("SponsorsListFragment", error)
+    }
+
+    inner class Empty(val spanCount: Int)
 }

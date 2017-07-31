@@ -3,10 +3,8 @@ package co.touchlab.droidconandroid.shared.data;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import co.touchlab.droidconandroid.shared.utils.StringUtils;
-import javax.annotation.Nonnull;
+import org.jetbrains.annotations.NotNull;
 
-import java.util.UUID;
 
 /**
  * Created by kgalligan on 6/28/14.
@@ -14,21 +12,18 @@ import java.util.UUID;
 public class AppPrefs
 {
     public static final String SEEN_WELCOME     = "seen_welcome";
-    public static final String EVENTBRITE_EMAIL            = "EVENTBRITE_EMAIL";
     public static final String CONVENTION_START = "convention_start";
     public static final String CONVENTION_END  = "convention_end";
     public static final String REFRESH_TIME    = "refresh_time";
     public static final String ALLOW_NOTIFS    = "allow_notifs";
     public static final String SHOW_NOTIF_CARD = "show_notif_card";
-    public static final String VIDEO_DEVICE_ID = "VIDEO_DEVICE_ID";
-    public static final String SHOW_SLACK_DIALOG = "show_slack_dialog";
 
     private static AppPrefs instance;
 
     private SharedPreferences prefs;
 
 
-    @Nonnull
+    @NotNull
     public static synchronized AppPrefs getInstance(Context context)
     {
         if(instance == null)
@@ -57,20 +52,7 @@ public class AppPrefs
         setBoolean(SEEN_WELCOME, true);
     }
 
-    public void setEventbriteEmail(String email)
-    {
-        if(StringUtils.isEmpty(email))
-            prefs.edit().remove(EVENTBRITE_EMAIL).apply();
-        else
-            setString(EVENTBRITE_EMAIL, email);
-    }
-
-    public String getEventbriteEmail()
-    {
-        return prefs.getString(EVENTBRITE_EMAIL, null);
-    }
-
-    public void setConventionStartDate(@Nonnull String startDate)
+    public void setConventionStartDate(@NotNull String startDate)
     {
         setString(CONVENTION_START, startDate);
     }
@@ -80,20 +62,9 @@ public class AppPrefs
         return prefs.getString(CONVENTION_START, null);
     }
 
-    public void setConventionEndDate(@Nonnull String endDate)
+    public void setConventionEndDate(@NotNull String endDate)
     {
         setString(CONVENTION_END, endDate);
-    }
-
-    public String getVideoDeviceId()
-    {
-        String deviceId = prefs.getString(VIDEO_DEVICE_ID, null);
-        if(deviceId == null)
-        {
-            deviceId = UUID.randomUUID().toString();
-            setString(VIDEO_DEVICE_ID, deviceId);
-        }
-        return deviceId;
     }
 
     public String getConventionEndDate()
@@ -101,7 +72,7 @@ public class AppPrefs
         return prefs.getString(CONVENTION_END, null);
     }
 
-    public void setRefreshTime(@Nonnull long time)
+    public void setRefreshTime(long time)
     {
         setLong(REFRESH_TIME, time);
     }
@@ -109,16 +80,6 @@ public class AppPrefs
     public long getRefreshTime()
     {
         return prefs.getLong(REFRESH_TIME, 0);
-    }
-
-    public boolean getShowSlackDialog()
-    {
-        return prefs.getBoolean(SHOW_SLACK_DIALOG, true);
-    }
-
-    public void setShowSlackDialog(boolean show)
-    {
-        setBoolean(SHOW_SLACK_DIALOG, show);
     }
 
     public boolean getAllowNotifications(){return prefs.getBoolean(ALLOW_NOTIFS, false);}

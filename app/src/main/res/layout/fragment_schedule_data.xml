@@ -8,9 +8,5 @@
         android:id="@+id/eventList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="@dimen/event_list_margin_start"
-        android:paddingStart="@dimen/event_list_margin_start"
-        android:paddingRight="0dp"
-        android:paddingEnd="0dp"
         android:clipChildren="false"/>
 </RelativeLayout>

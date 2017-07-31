@@ -74,7 +74,7 @@ import dcframework
     func videoDataRefresh() {
         tableView.reloadData()
     }
-    
+
     func reportError(with error: String){
         let alert = UIAlertView(title: "Video Error", message: error as String, delegate: nil, cancelButtonTitle: "Ok")
         alert.show()
@@ -108,7 +108,7 @@ import dcframework
         // 4. Present the alert.
         self.present(alert, animated: true, completion: nil)
     }
-    
+
     // MARK: TableView
     
     func numberOfSections(in tableView: UITableView) -> Int {

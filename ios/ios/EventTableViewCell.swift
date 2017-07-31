@@ -14,12 +14,12 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel : UILabel!
     @IBOutlet weak var timeInfoLabel : UILabel!
     
-    var event: DCDEvent!
+    var networkEvent: DCDEvent!
     var eventDetailPresenter: DCPEventDetailPresenter!
     
-    func loadInfo(_ title: String, description: String, track: String, time: String, event: DCDEvent, eventDetailPresenter: DCPEventDetailPresenter) {
+    func loadInfo(_ title: String, description: String, track: String, time: String, networkEvent: DCDEvent, eventDetailPresenter: DCPEventDetailPresenter) {
         
-        self.event = event
+        self.networkEvent = networkEvent
         self.eventDetailPresenter = eventDetailPresenter
         
         titleLabel.text = title.replacingOccurrences(of: "Android", with: "[Sad Puppy]")

@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:scaleType="centerInside"
         android:background="@android:color/white"
-        android:contentDescription="@string/sponsor_image"
-    />
+        android:contentDescription="@string/sponsor_image"/>
 
 </FrameLayout>
