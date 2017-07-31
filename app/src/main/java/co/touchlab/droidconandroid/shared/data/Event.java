@@ -2,12 +2,15 @@ package co.touchlab.droidconandroid.shared.data;
 
 import android.arch.persistence.room.Embedded;
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
+import android.text.TextUtils;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 
@@ -46,6 +49,9 @@ public class Event implements TimeBlock
     public String startDate;
 
     public String endDate;
+
+    @Ignore
+    public List<EventSpeaker> speakerList;
 
     public long getId()
     {
@@ -115,8 +121,9 @@ public class Event implements TimeBlock
 
     public boolean isNow()
     {
-        return startDateLong != null && endDateLong != null && System
-                .currentTimeMillis() < endDateLong && System.currentTimeMillis() > startDateLong;
+        return startDateLong != null && endDateLong != null &&
+                System.currentTimeMillis() < endDateLong &&
+                System.currentTimeMillis() > startDateLong;
     }
 
     @Override
@@ -157,4 +164,18 @@ public class Event implements TimeBlock
         this.rsvpUuid = rsvpUuid;
     }
 
+
+    public String allSpeakersString()
+    {
+        List<String> names = new ArrayList<>();
+        for(EventSpeaker eventSpeaker : speakerList)
+        {
+            if(eventSpeaker != null)
+            {
+                names.add(eventSpeaker.name);
+            }
+        }
+
+        return TextUtils.join(", ", names);
+    }
 }

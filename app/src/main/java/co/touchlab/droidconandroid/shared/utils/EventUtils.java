@@ -20,7 +20,7 @@ public class EventUtils
             Block block = (Block) scheduleBlockHour.timeBlock;
             row.setTitleText(block.name);
             row.setTimeText(scheduleBlockHour.hourStringDisplay.toLowerCase(Locale.getDefault()));
-            row.setDetailText("");
+            row.setSpeakerText("");
             row.setDescription(block.description);
             row.setLiveNowVisible(false);
             row.setRsvpVisible(false, false);
@@ -31,7 +31,7 @@ public class EventUtils
             Event event = (Event) scheduleBlockHour.timeBlock;
             row.setTimeText(scheduleBlockHour.hourStringDisplay.toLowerCase(Locale.getDefault()));
             row.setTitleText(event.name);
-            row.setDetailText(event.getVenue().name);
+            row.setSpeakerText(event.allSpeakersString());
             row.setDescription(event.description);
             row.setLiveNowVisible(event.isNow());
             row.setRsvpVisible(allEvents && event.isRsvped(), event.isPast());
@@ -69,7 +69,7 @@ public class EventUtils
 
         void setTimeText(String s);
 
-        void setDetailText(String s);
+        void setSpeakerText(String s);
 
         void setDescription(String s);
 

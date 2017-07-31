@@ -29,16 +29,16 @@
             android:layout_centerInParent="true"/>
 
         <TextView
-            android:layout_alignParentEnd="true"
             android:id="@+id/advanceTv"
-            android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:padding="@dimen/padding_wedge"
             android:text="@string/next"
-            android:textColor="@color/white"
-            android:layout_width="wrap_content"
+            android:textAllCaps="true"
             tools:ignore="RelativeOverlap"
-            android:layout_height="wrap_content"/>
+            android:textColor="@color/white"/>
 
     </RelativeLayout>
 

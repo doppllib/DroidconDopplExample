@@ -6,7 +6,6 @@ import android.support.annotation.NonNull;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.sql.SQLException;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -73,7 +72,7 @@ public class DatabaseHelper
 
     public List<Event> getEventsWithRsvpsNotNull()
     {
-        return db.eventDao().rsvpUuidNotNull();
+        return combineEventsWithSpeakers(db.eventDao().rsvpUuidNotNull());
     }
 
     public Single<List<Event>> getEvents()
@@ -81,9 +80,24 @@ public class DatabaseHelper
         return Single.fromCallable(this :: getEventsList);
     }
 
-    public List<Event> getEventsList()
+    private List<Event> getEventsList()
     {
         return db.eventDao().getEvents();
+    }
+
+    public List<Event> getEventsWithSpeakersList()
+    {
+        return combineEventsWithSpeakers(getEventsList());
+    }
+
+    private List<Event> combineEventsWithSpeakers(List<Event> events)
+    {
+        for(Event event : events)
+        {
+            event.speakerList = db.eventSpeakerDao().getEventSpeakers(event.id);
+        }
+
+        return events;
     }
 
     public void createEvent(Event event)
@@ -150,7 +164,6 @@ public class DatabaseHelper
     public void convertAndSaveUserAccount(NetworkUserAccount ua, UserAccount userAccount)
     {
         UserAccount dbUa = userAccountToDb(ua, userAccount);
-
         UserAccountDao dao = db.userAccountDao();
         dao.createOrUpdate(dbUa);
     }

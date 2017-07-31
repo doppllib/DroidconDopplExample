@@ -1,35 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/icon"
-        android:src="@drawable/vic_info_outline_black_24dp"
+        style="@style/about_item"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:contentDescription="@string/cd_about_section"
-        style="@style/about_icon"/>
-    
+        android:src="@drawable/vic_info_outline_black_24dp"
+        android:tint="@color/primary_dark_50"/>
+
     <TextView
         android:id="@+id/header"
+        style="@style/about_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_toEndOf="@id/icon"
+        android:fontFamily="sans-serif-medium"
         android:text="@string/about_app_header"
-        style="@style/about_header" />
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_small"/>
 
     <TextView
         android:id="@+id/body"
-        android:layout_toEndOf="@id/icon"
+        style="@style/about_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/header"
-        android:text="@string/about_app"
+        android:layout_toEndOf="@id/icon"
         android:autoLink="web"
-        style="@style/about_body"/>
+        android:ellipsize="end"
+        android:text="@string/about_app"
+        android:textColor="@color/black"
+        android:textColorLink="@color/primary_dark_50"
+        android:textSize="@dimen/text_small"/>
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_toEndOf="@id/icon"
+        style="@style/about_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/body"
-        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@id/icon"
         android:contentDescription="@string/cd_sponsor_logos"
-        style="@style/about_logo"/>
+        android:visibility="gone"
+        tools:visibility="visible"/>
 
 </RelativeLayout>

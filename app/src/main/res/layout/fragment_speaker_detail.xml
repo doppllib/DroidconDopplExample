@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     tools:targetApi="m">
 
     <android.support.design.widget.AppBarLayout
@@ -25,6 +24,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/padding_xxlarge"
+                android:layout_gravity="center_vertical"
                 android:fitsSystemWindows="true"
                 android:gravity="bottom|start">
 
@@ -57,7 +58,8 @@
                     android:layout_alignTop="@id/profile_image"
                     android:layout_toEndOf="@id/profile_image"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/text_xxlarge"/>
+                    android:textSize="@dimen/text_xxlarge"
+                    tools:text="John Doe"/>
 
                 <TextView
                     android:id="@+id/company"
@@ -111,6 +113,7 @@
                 android:drawableStart="@drawable/vic_company_black_24dp"
                 android:drawableTint="@color/primary_dark_50"
                 android:padding="@dimen/padding_medium"
+                android:gravity="center_vertical"
                 android:textColor="@color/primary_dark_50"
                 android:visibility="gone"
                 tools:text="Company"
@@ -125,6 +128,7 @@
                 android:drawableStart="@drawable/vic_website_black_24dp"
                 android:drawableTint="@color/primary_dark_50"
                 android:padding="@dimen/padding_medium"
+                android:gravity="center_vertical"
                 android:textColor="@color/primary_dark_50"
                 android:visibility="gone"
                 tools:text="www.touchlab.co"
@@ -140,6 +144,7 @@
                 android:drawableStart="@drawable/vic_facebook_24dp"
                 android:drawableTint="@color/facebook"
                 android:padding="@dimen/padding_medium"
+                android:gravity="center_vertical"
                 android:textColor="@color/facebook"
                 android:visibility="gone"
                 tools:text="Facebook"
@@ -154,6 +159,7 @@
                 android:drawableStart="@drawable/vic_twitter_24dp"
                 android:drawableTint="@color/twitter"
                 android:padding="@dimen/padding_medium"
+                android:gravity="center_vertical"
                 android:textColor="@color/twitter"
                 android:visibility="gone"
                 tools:text="\@TouchLabNY"
@@ -168,6 +174,7 @@
                 android:drawableStart="@drawable/vic_linkedin_24dp"
                 android:drawableTint="@color/linkedin"
                 android:padding="@dimen/padding_medium"
+                android:gravity="center_vertical"
                 android:textColor="@color/linkedin"
                 android:visibility="gone"
                 tools:text="LinkedIn"
@@ -182,6 +189,7 @@
                 android:drawableStart="@drawable/vic_gplus_24dp"
                 android:drawableTint="@color/g_plus"
                 android:padding="@dimen/padding_medium"
+                android:gravity="center_vertical"
                 android:textColor="@color/g_plus"
                 android:visibility="gone"
                 tools:text="+TouchLab"/>

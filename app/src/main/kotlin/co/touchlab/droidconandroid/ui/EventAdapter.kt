@@ -130,7 +130,9 @@ class EventAdapter(private val context: Context,
 
         override fun setTimeText(s: String?) { itemView.time.text = s }
 
-        override fun setDetailText(s: String?) { itemView.location_time.text = s }
+        override fun setSpeakerText(s: String?) {
+            itemView.speaker.text = s
+        }
 
         override fun setDescription(s: String?) {
             // Field only exists for tablet
