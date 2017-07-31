@@ -53,7 +53,7 @@ public class ConferenceDataHelper
     private static List<TimeBlock> getDaySchedules(DatabaseHelper databaseHelper) throws SQLException
     {
         List<TimeBlock> eventAndBlockList = new ArrayList<>();
-        List<Event> eventList = databaseHelper.getEventsList();
+        List<Event> eventList = databaseHelper.getEventsWithSpeakersList();
 
         eventAndBlockList.addAll(databaseHelper.getBlocksList());
         eventAndBlockList.addAll(eventList);
@@ -191,12 +191,12 @@ public class ConferenceDataHelper
                         }
 
                         eventSpeaker.eventId = newEvent.id;
+                        eventSpeaker.name = oldSpeaker.name;
                         eventSpeaker.userAccountId = oldSpeaker.id;
                         eventSpeaker.displayOrder = speakerCount++;
                         helper.updateSpeaker(eventSpeaker);
                     }
                 }
-
             }
 
             // clear db if events are returned
