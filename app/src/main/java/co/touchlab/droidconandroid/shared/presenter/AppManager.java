@@ -17,8 +17,9 @@ public class AppManager
 {
     public static final String FIRST_SEED = "FIRST_SEED";
 
-    private static Context context;
+    private static Context        context;
     private static PlatformClient platformClient;
+    private static AppManager     instance;
 
     public interface LoadDataSeed
     {
@@ -51,6 +52,17 @@ public class AppManager
                 CrashReport.logException(e);
             }
         }
+    }
+
+    public static AppManager getInstance()
+    {
+        if(instance == null)
+        {
+            instance = new AppManager();
+
+        }
+
+        return instance;
     }
 
     public static Context getContext()
