@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="InvalidPackage">
+        <ignore regexp="okio-1.13.0.jar"/>
+        <ignore regexp="retrofit-2.3.0.jar" />
+    </issue>
+    <issue id="RestrictedApi">
+        <ignore regexp="generated"/>
+    </issue>
+    <!-- TODO remove this error suppression once resources referenced only from Kotlin files are detected as used by lint -->
+    <issue id="UnusedResources" severity="ignore"/>
+
+    <issue id="GoogleAppIndexingWarning" severity="ignore" />
+</lint>

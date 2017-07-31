@@ -72,32 +72,26 @@
             android:background="?attr/selectableItemBackground"
             android:orientation="vertical">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/title"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginEnd="@dimen/padding_large"
-                android:layout_marginStart="@dimen/padding_small"
+                android:textColor="@color/card_text_title"
+                tools:text="This is a title"/>
+
+            <TextView
+                android:id="@+id/speaker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/location_time_margin_bottom"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="@dimen/padding_tiny"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/title"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/padding_micro"
-                    android:layout_marginTop="@dimen/padding_small"
-                    android:textColor="@color/card_text_title"
-                    tools:text="This is a title"/>
-
-                <TextView
-                    android:id="@+id/speaker"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="@dimen/location_time_margin_bottom"
-                    android:layout_marginStart="@dimen/padding_micro"
-                    android:layout_marginTop="@dimen/padding_tiny"
-                    android:textColor="@color/card_text_subtitle"
-                    tools:text="Keanu Reeves"/>
+                android:layout_marginEnd="@dimen/padding_large"
+                android:textColor="@color/card_text_subtitle"
+                tools:text="Keanu Reeves"/>
 
                 <View
                     android:id="@+id/event_divider"
@@ -105,20 +99,19 @@
                     android:layout_height="@dimen/event_divider_height"
                     android:background="#e5e5e5"/>
 
-                <TextView
-                    android:id="@+id/event_description"
-                    android:layout_width="@dimen/event_description_width"
-                    android:layout_height="@dimen/event_description_height"
-                    android:layout_marginBottom="@dimen/event_description_margin_bottom"
-                    android:layout_marginStart="@dimen/event_description_margin_start"
-                    android:layout_marginTop="@dimen/event_description_margin_top"
-                    android:ellipsize="end"
-                    android:maxLines="4"
-                    android:minLines="4"
-                    android:textColor="@color/card_text_subtitle"
-                    tools:text="@string/lorem_long"/>
-
-            </LinearLayout>
+            <TextView
+                android:id="@+id/event_description"
+                android:layout_width="@dimen/event_description_width"
+                android:layout_height="@dimen/event_description_height"
+                android:layout_marginBottom="@dimen/event_description_margin_bottom"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="@dimen/padding_large"
+                android:layout_marginTop="@dimen/event_description_margin_top"
+                android:ellipsize="end"
+                android:maxLines="4"
+                android:minLines="4"
+                android:textColor="@color/card_text_subtitle"
+                tools:text="@string/lorem_long"/>
 
         </LinearLayout>
 
