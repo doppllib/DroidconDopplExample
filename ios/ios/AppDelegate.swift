@@ -9,6 +9,7 @@
 import Foundation
 import UserNotifications
 import JRE
+import FirebaseAnalytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let platformClient = DCIosPlatformClient(dcIosFirebase: self)
         DCPAppManager.initContext(with: AndroidContentIOSContext(), with: platformClient, with: self)
         registerForNotifications()
+        print("Firebase test: \(Analytics.appInstanceID())")
     }
     
     
