@@ -16,6 +16,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import co.touchlab.droidconandroid.shared.data.*
 import co.touchlab.droidconandroid.shared.interactors.EventDetailInteractor
+import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor
 import co.touchlab.droidconandroid.shared.interactors.RsvpInteractor
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 import co.touchlab.droidconandroid.shared.presenter.EventDetailHost
@@ -34,9 +35,10 @@ class EventDetailFragment : Fragment(), EventDetailHost {
     private val viewModel: EventDetailViewModel by lazy {
         val helper = DatabaseHelper.getInstance(activity)
         val appPrefs = AppPrefs.getInstance(activity)
-        val alertsInteractor = UpdateAlertsInteractor(helper, appPrefs)
         val eventDetailsInteractor = EventDetailInteractor(helper, eventId)
         val jobManager = DroidconApplication.getInstance().jobManager
+        val refreshInteractor = RefreshScheduleInteractor(jobManager, helper)
+        val alertsInteractor = UpdateAlertsInteractor(appPrefs, refreshInteractor)
         val rsvpInteractor = RsvpInteractor(jobManager, helper, eventId)
         val factory = EventDetailViewModel.Factory(eventDetailsInteractor, rsvpInteractor, alertsInteractor)
         ViewModelProviders.of(this, factory)[EventDetailViewModel::class.java]
@@ -177,9 +179,9 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         } else {
             fab.setOnClickListener {
                 if (event.isRsvped) {
-                    viewModel.toggleRsvp(true)
-                } else {
                     viewModel.toggleRsvp(false)
+                } else {
+                    viewModel.toggleRsvp(true)
                 }
             }
 

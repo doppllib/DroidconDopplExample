@@ -33,7 +33,7 @@ class ScheduleDataFragment : Fragment(), ConferenceDataHost {
 
     val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
         val prefs = AppPrefs.getInstance(activity)
-        UpdateAlertsInteractor(helper, prefs)
+        UpdateAlertsInteractor(prefs, (activity as ScheduleActivity).interactor)
     }
 
     val RecyclerView.eventAdapter: EventAdapter
@@ -67,7 +67,7 @@ class ScheduleDataFragment : Fragment(), ConferenceDataHost {
     override fun onResume() {
         super.onResume()
         viewModel.register(this)
-        viewModel.refreshData()
+        viewModel.getDataStream(true)
     }
 
     override fun onPause() {
@@ -81,6 +81,14 @@ class ScheduleDataFragment : Fragment(), ConferenceDataHost {
 
     fun updateNotifCard() {
         eventList.eventAdapter.updateNotificationCard(shouldShowNotif)
+    }
+
+    fun switchToAgenda() {
+        viewModel.getDataStream(false)
+    }
+
+    fun switchToConference() {
+        viewModel.getDataStream(true)
     }
 
     private inner class ScheduleEventClickListener : EventClickListener {

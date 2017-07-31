@@ -7,8 +7,8 @@ import co.touchlab.droidconandroid.shared.data.TimeBlock;
  */
 public class HourBlock
 {
-    public final String    hourStringDisplay;
-    public final TimeBlock timeBlock;
+    private final String    hourStringDisplay;
+    private final TimeBlock timeBlock;
 
     public HourBlock(String hourStringDisplay, TimeBlock timeBlock)
     {
