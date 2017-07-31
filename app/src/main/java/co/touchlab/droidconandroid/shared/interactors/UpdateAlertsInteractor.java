@@ -30,7 +30,7 @@ public class UpdateAlertsInteractor {
     public void alert() {
         if (prefs.getAllowNotifications()) {
             refreshInteractor.refreshFromDatabase();
-            refreshInteractor.getDataStream(false)
+            refreshInteractor.getFullConferenceData(false)
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(this::update,

@@ -11,7 +11,6 @@ import co.touchlab.droidconandroid.shared.data.TimeBlock;
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHelper;
 import co.touchlab.droidconandroid.shared.presenter.DaySchedule;
 import co.touchlab.droidconandroid.shared.tasks.persisted.RefreshScheduleJob;
-import io.reactivex.Flowable;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -29,7 +28,7 @@ public class RefreshScheduleInteractor
         this.jobManager = jobManager;
     }
 
-    public Observable<DaySchedule[]> getDataStream(boolean allEvents)
+    public Observable<DaySchedule[]> getFullConferenceData(boolean allEvents)
     {
         return conferenceDataSubject
                 .flatMap(list -> filterAndSortBlocks(list, allEvents))
@@ -56,7 +55,7 @@ public class RefreshScheduleInteractor
     }
 
     private Observable<List<TimeBlock>> filterAndSortBlocks(List<TimeBlock> list, boolean allEvents) {
-        return Flowable.fromIterable(list)
+        return Observable.fromIterable(list)
                 .filter(timeBlock -> allEvents ||
                         timeBlock.isBlock() ||
                         ((timeBlock instanceof Event) && (((Event) timeBlock).rsvpUuid != null)))
