@@ -15,11 +15,7 @@ import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import co.touchlab.droidconandroid.shared.data.DatabaseHelper
 import co.touchlab.droidconandroid.shared.data.UserAccount
-import co.touchlab.droidconandroid.shared.interactors.FindUserInteractor
-import co.touchlab.droidconandroid.shared.network.DataHelper
-import co.touchlab.droidconandroid.shared.network.FindUserRequest
 import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.UserDetailHost
 import co.touchlab.droidconandroid.shared.presenter.UserDetailViewModel
@@ -48,11 +44,13 @@ class UserDetailFragment : Fragment(), UserDetailHost {
     }
 
     private val viewModel: UserDetailViewModel by lazy {
-        val helper = DatabaseHelper.getInstance(activity)
-        val retrofit = DataHelper.makeRetrofit2Client(AppManager.getInstance().getPlatformClient().baseUrl())
-        val findUserRequest = retrofit.create(FindUserRequest::class.java)
-        val task = FindUserInteractor(helper, findUserRequest)
-        val factory = UserDetailViewModel.Factory(task)
+        //        val helper = DatabaseHelper.getInstance(activity)
+//        val retrofit = DataHelper.makeRetrofit2Client(AppManager.getInstance().getPlatformClient().baseUrl())
+//        val findUserRequest = retrofit.create(FindUserRequest::class.java)
+//        val task = FindUserInteractor(helper, findUserRequest)
+//        val factory = UserDetailViewModel.Factory(task)
+        val factory = UserDetailViewModel.Factory()
+        AppManager.getInstance().appComponent.inject(factory)
         ViewModelProviders.of(this, factory)[UserDetailViewModel::class.java]
     }
 
