@@ -1,24 +1,24 @@
 package co.touchlab.droidconandroid.shared.dagger;
 
 
+import android.app.Application;
 import android.content.Context;
 
-import co.touchlab.droidconandroid.DroidconApplication;
 import dagger.Module;
 import dagger.Provides;
 
 @Module
 public class AppModule
 {
-    private final DroidconApplication application;
+    private final Application application;
 
-    public AppModule(DroidconApplication application)
+    public AppModule(Application application)
     {
         this.application = application;
     }
 
     @Provides
-    DroidconApplication providesApplication()
+    Application providesApplication()
     {
         return application;
     }

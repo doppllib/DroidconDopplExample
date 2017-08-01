@@ -3,6 +3,9 @@ package co.touchlab.droidconandroid.shared.interactors;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.network.FindUserRequest;
@@ -14,12 +17,14 @@ import io.reactivex.Observable;
 /**
  * Created by kgalligan on 4/8/16.
  */
+@Singleton
 public class FindUserInteractor
 {
     private final DatabaseHelper  helper;
     private final FindUserRequest request;
     private final Map<Long, Observable<UserAccount>> cache = new HashMap<>();
 
+    @Inject
     public FindUserInteractor(DatabaseHelper helper, FindUserRequest request)
     {
         this.helper = helper;
@@ -43,7 +48,8 @@ public class FindUserInteractor
     private Observable<UserAccount> getUserFromDb(final long userId)
     {
         return helper.getUserAccountForId(userId)
-                .toObservable().doOnError(e -> removeFromCache(userId));
+                .toObservable()
+                .doOnError(e -> removeFromCache(userId));
     }
 
     private Observable<UserInfoResponse> loadUserInfo(final long userId)

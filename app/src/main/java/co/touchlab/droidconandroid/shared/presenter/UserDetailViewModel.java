@@ -5,23 +5,28 @@ import android.arch.lifecycle.ViewModelProvider;
 
 import com.google.j2objc.annotations.Weak;
 
+import javax.inject.Inject;
+
 import co.touchlab.droidconandroid.shared.interactors.FindUserInteractor;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class UserDetailViewModel extends ViewModel {
+public class UserDetailViewModel extends ViewModel
+{
 
     @Weak
-    private UserDetailHost host;
+    private UserDetailHost     host;
     private FindUserInteractor task;
     private CompositeDisposable disposables = new CompositeDisposable();
 
-    private UserDetailViewModel(FindUserInteractor task) {
+    private UserDetailViewModel(FindUserInteractor task)
+    {
         this.task = task;
     }
 
-    public void register(UserDetailHost host) {
+    public void register(UserDetailHost host)
+    {
         this.host = host;
     }
 
@@ -34,20 +39,31 @@ public class UserDetailViewModel extends ViewModel {
                         throwable -> host.findUserError()));
     }
 
-    public void unregister() {
+    public void unregister()
+    {
         disposables.clear();
         host = null;
     }
 
-    public static class Factory extends ViewModelProvider.NewInstanceFactory {
-        private final FindUserInteractor task;
+    public static class Factory extends ViewModelProvider.NewInstanceFactory
+    {
+        @Inject
+        FindUserInteractor task;
 
-        public Factory(FindUserInteractor task) {
+        public Factory()
+        {
+
+        }
+
+        // Keep for now, replace when Daggering.
+        public Factory(FindUserInteractor task)
+        {
             this.task = task;
         }
 
         @Override
-        public <T extends ViewModel> T create(Class<T> modelClass) {
+        public <T extends ViewModel> T create(Class<T> modelClass)
+        {
             //noinspection unchecked
             return (T) new UserDetailViewModel(task);
         }
