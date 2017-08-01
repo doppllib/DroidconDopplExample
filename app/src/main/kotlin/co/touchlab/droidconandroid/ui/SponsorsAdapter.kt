@@ -14,7 +14,7 @@ import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.utils.AnalyticsEvents
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_sponsor.view.*
-import java.util.ArrayList
+import java.util.*
 
 /**
  * Created by sufeizhao on 7/11/17.
@@ -57,7 +57,7 @@ class SponsorsAdapter(private val context: Context) : RecyclerView.Adapter<Recyc
 
             // Set view click
             view.setOnClickListener {
-                AppManager.getPlatformClient()
+                AppManager.getInstance().getPlatformClient()
                         .logEvent(AnalyticsEvents.CLICK_SPONSOR, AnalyticsEvents.PARAM_ITEM_NAME, data.sponsorLink)
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse(data.sponsorLink))
                 context.startActivity(intent)

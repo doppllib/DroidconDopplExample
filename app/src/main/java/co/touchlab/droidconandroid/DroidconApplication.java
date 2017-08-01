@@ -13,8 +13,13 @@ import com.birbit.android.jobqueue.scheduling.FrameworkJobSchedulerService;
 import java.io.IOException;
 
 import co.touchlab.droidconandroid.alerts.AlertManagerKt;
+import co.touchlab.droidconandroid.shared.dagger.AppModule;
+import co.touchlab.droidconandroid.shared.dagger.DaggerAppComponent;
+import co.touchlab.droidconandroid.shared.dagger.DatabaseModule;
+import co.touchlab.droidconandroid.shared.dagger.NetworkModule;
 import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.presenter.AppManager;
+import co.touchlab.droidconandroid.shared.presenter.LoadDataSeed;
 import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor;
 import co.touchlab.droidconandroid.shared.tasks.persisted.JobQueueService;
@@ -41,11 +46,12 @@ public class DroidconApplication extends Application
         getJobManager();
 
         String currentProcessName = getCurrentProcessName(this);
-        Log.i(DroidconApplication.class.getSimpleName(), "currentProcessName: "+ currentProcessName );
+        Log.i(DroidconApplication.class.getSimpleName(),
+                "currentProcessName: " + currentProcessName);
 
         EventBusExt.getDefault().register(this);
 
-        if(!currentProcessName.contains("background_crash"))
+        if(! currentProcessName.contains("background_crash"))
         {
             PlatformClient platformClient = new PlatformClient()
             {
@@ -88,12 +94,14 @@ public class DroidconApplication extends Application
                 @Override
                 public String getString(String id)
                 {
-                    return DroidconApplication.this.getString(
-                            getResources().getIdentifier(id, "string", getPackageName()));
+                    return DroidconApplication.this.getString(getResources().getIdentifier(id,
+                            "string",
+                            getPackageName()));
                 }
             };
 
-            AppManager.initContext(this, platformClient, () -> {
+            LoadDataSeed loadDataSeed = () ->
+            {
                 try
                 {
                     return IOUtils.toString(getAssets().open("dataseed.json"));
@@ -102,7 +110,15 @@ public class DroidconApplication extends Application
                 {
                     throw new RuntimeException(e);
                 }
-            });
+            };
+
+            AppManager.create(DaggerAppComponent.builder()
+                    .appModule(new AppModule(this))
+                    .databaseModule(new DatabaseModule())
+                    .networkModule(new NetworkModule())
+                    .build(), platformClient);
+
+            AppManager.getInstance().seed(loadDataSeed);
 
         }
     }

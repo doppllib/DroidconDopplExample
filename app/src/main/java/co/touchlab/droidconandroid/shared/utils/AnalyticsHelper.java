@@ -15,14 +15,14 @@ public class AnalyticsHelper
 
     public static void recordAnalytics(String analyticsKey, long eventId)
     {
-        AppManager.getPlatformClient()
+        AppManager.getInstance().getPlatformClient()
                 .logEvent(analyticsKey, AnalyticsEvents.PARAM_ITEM_ID, Long.toString(eventId));
     }
 
     public static void recordAnalytics(String analyticsKey, Event event)
     {
         String eventName = event != null ? StringUtils.trimToEmpty(event.getName()) : "";
-        AppManager.getPlatformClient()
+        AppManager.getInstance().getPlatformClient()
                 .logEvent(analyticsKey,
                         AnalyticsEvents.PARAM_ITEM_ID,
                         Long.toString(event.getId()),

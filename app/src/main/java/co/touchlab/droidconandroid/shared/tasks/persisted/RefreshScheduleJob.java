@@ -42,10 +42,11 @@ public class RefreshScheduleJob extends Job
     @Override
     public void onRun() throws Throwable
     {
-        Retrofit retrofit = DataHelper.makeRetrofit2Client(AppManager.getPlatformClient()
+        Retrofit retrofit = DataHelper.makeRetrofit2Client(AppManager.getInstance()
+                .getPlatformClient()
                 .baseUrl());
         RefreshScheduleDataRequest request = retrofit.create(RefreshScheduleDataRequest.class);
-        final PlatformClient platformClient = AppManager.getPlatformClient();
+        final PlatformClient platformClient = AppManager.getInstance().getPlatformClient();
         DatabaseHelper helper = DatabaseHelper.getInstance(getApplicationContext());
         AppPrefs appPrefs = AppPrefs.getInstance(getApplicationContext());
 

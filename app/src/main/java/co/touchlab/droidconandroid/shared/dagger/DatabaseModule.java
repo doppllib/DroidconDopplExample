@@ -15,7 +15,7 @@ public class DatabaseModule
 
     @Provides
     @Singleton
-    DroidconDatabase providesDatabase(Context context)
+    static DroidconDatabase providesDatabase(Context context)
     {
         return Room.databaseBuilder(context, DroidconDatabase.class, "droidcon").build();
     }

@@ -49,7 +49,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
 
     private val viewModel: UserDetailViewModel by lazy {
         val helper = DatabaseHelper.getInstance(activity)
-        val retrofit = DataHelper.makeRetrofit2Client(AppManager.getPlatformClient().baseUrl())
+        val retrofit = DataHelper.makeRetrofit2Client(AppManager.getInstance().getPlatformClient().baseUrl())
         val findUserRequest = retrofit.create(FindUserRequest::class.java)
         val task = FindUserInteractor(helper, findUserRequest)
         val factory = UserDetailViewModel.Factory(task)

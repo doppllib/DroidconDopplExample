@@ -51,7 +51,9 @@ class ScheduleActivity : AppCompatActivity() {
         val factory = ConferenceDataViewModel.Factory(interactor, allEvents, AppPrefs.getInstance(this))
         viewModel = ViewModelProviders.of(this, factory)[ConferenceDataViewModel::class.java]
 
-        when (AppManager.findStartScreen()) {
+        val appPrefs = AppManager.getInstance().appComponent.prefs
+
+        when (goToScreen(appPrefs)) {
             AppManager.AppScreens.Welcome -> {
                 startActivity(WelcomeActivity.getLaunchIntent(this@ScheduleActivity))
                 finish()
@@ -64,6 +66,15 @@ class ScheduleActivity : AppCompatActivity() {
 
                 setContentView(R.layout.activity_schedule)
             }
+        }
+    }
+
+    private fun goToScreen(appPrefs: AppPrefs): AppManager.AppScreens {
+        val hasSeenWelcome = appPrefs.hasSeenWelcome
+        if (!hasSeenWelcome) {
+            return AppManager.AppScreens.Welcome
+        } else {
+            return AppManager.AppScreens.Schedule
         }
     }
 
