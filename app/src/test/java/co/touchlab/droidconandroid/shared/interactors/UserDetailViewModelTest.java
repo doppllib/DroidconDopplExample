@@ -13,6 +13,7 @@ import co.touchlab.droidconandroid.shared.presenter.UserDetailViewModel;
 import io.reactivex.Observable;
 
 
+import static org.mockito.Matchers.anyInt;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -45,9 +46,9 @@ public class UserDetailViewModelTest
     public void whenSuccessGettingUserDetail_shouldShowResults()
     {
         UserAccount user = new UserAccount();
-        when(interactor.loadUserAccount()).thenReturn(Observable.just(user));
+        when(interactor.loadUserAccount(anyInt())).thenReturn(Observable.just(user));
 
-        viewModel.findUser();
+        viewModel.findUser(100);
 
         verify(host).onUserFound(user);
     }
@@ -55,9 +56,9 @@ public class UserDetailViewModelTest
     @Test
     public void whenErrorGettingUserDetail_shouldShowError()
     {
-        when(interactor.loadUserAccount()).thenReturn(Observable.error(new Throwable()));
+        when(interactor.loadUserAccount(anyInt())).thenReturn(Observable.error(new Throwable()));
 
-        viewModel.findUser();
+        viewModel.findUser(100);
 
         verify(host).findUserError();
     }

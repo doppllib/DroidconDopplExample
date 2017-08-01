@@ -25,8 +25,9 @@ public class UserDetailViewModel extends ViewModel {
         this.host = host;
     }
 
-    public void findUser() {
-        disposables.add(task.loadUserAccount()
+    public void findUser(final long userId)
+    {
+        disposables.add(task.loadUserAccount(userId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(userAccount -> host.onUserFound(userAccount),

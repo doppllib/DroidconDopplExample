@@ -1,5 +1,8 @@
 package co.touchlab.droidconandroid.shared.interactors;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.network.FindUserRequest;
@@ -15,38 +18,45 @@ public class FindUserInteractor
 {
     private final DatabaseHelper  helper;
     private final FindUserRequest request;
-    private final long            userId;
-    private Observable<UserAccount> userAccountObservable = null;
+    private final Map<Long, Observable<UserAccount>> cache = new HashMap<>();
 
-    public FindUserInteractor(DatabaseHelper helper, FindUserRequest request, long userId)
+    public FindUserInteractor(DatabaseHelper helper, FindUserRequest request)
     {
         this.helper = helper;
         this.request = request;
-        this.userId = userId;
     }
 
-    public Observable<UserAccount> loadUserAccount()
+    public Observable<UserAccount> loadUserAccount(final long userId)
     {
-        if(userAccountObservable == null)
+        if(cache.containsKey(userId))
         {
-            userAccountObservable = loadUserInfo(userId).flatMap(info -> saveUserResponse(info.user))
-                    .onErrorResumeNext(getUserFromDb(userId))
-                    .cache();
+            return cache.get(userId);
         }
 
+        Observable<UserAccount> userAccountObservable = loadUserInfo(userId).flatMap(info -> saveUserResponse(
+                info.user)).onErrorResumeNext(getUserFromDb(userId)).cache();
+
+        cache.put(userId, userAccountObservable);
         return userAccountObservable;
     }
 
     private Observable<UserAccount> getUserFromDb(final long userId)
     {
         return helper.getUserAccountForId(userId)
-                .toObservable()
-                .doOnError(e -> userAccountObservable = null);
+                .toObservable().doOnError(e -> removeFromCache(userId));
     }
 
     private Observable<UserInfoResponse> loadUserInfo(final long userId)
     {
-        return request.getUserInfo(userId).doOnError(e -> userAccountObservable = null);
+        return request.getUserInfo(userId).doOnError(e -> removeFromCache(userId));
+    }
+
+    private void removeFromCache(long userId)
+    {
+        if(cache.containsKey(userId))
+        {
+            cache.remove(userId);
+        }
     }
 
     private Observable<UserAccount> saveUserResponse(NetworkUserAccount networkUserAccount)

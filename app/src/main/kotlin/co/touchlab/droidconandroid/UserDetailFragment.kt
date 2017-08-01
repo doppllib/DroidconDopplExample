@@ -51,7 +51,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
         val helper = DatabaseHelper.getInstance(activity)
         val retrofit = DataHelper.makeRetrofit2Client(AppManager.getPlatformClient().baseUrl())
         val findUserRequest = retrofit.create(FindUserRequest::class.java)
-        val task = FindUserInteractor(helper, findUserRequest, findUserId())
+        val task = FindUserInteractor(helper, findUserRequest)
         val factory = UserDetailViewModel.Factory(task)
         ViewModelProviders.of(this, factory)[UserDetailViewModel::class.java]
     }
@@ -59,7 +59,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel.register(this)
-        viewModel.findUser()
+        viewModel.findUser(findUserId())
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
