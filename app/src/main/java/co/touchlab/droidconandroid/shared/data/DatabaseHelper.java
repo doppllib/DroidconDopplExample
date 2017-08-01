@@ -70,11 +70,6 @@ public class DatabaseHelper
         return db.eventDao().getRsvpUuidForEventWithId(eventId);
     }
 
-    public List<Event> getEventsWithRsvpsNotNull()
-    {
-        return combineEventsWithSpeakers(db.eventDao().rsvpUuidNotNull());
-    }
-
     public Single<List<Event>> getEvents()
     {
         return Single.fromCallable(this :: getEventsList);

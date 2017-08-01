@@ -4,7 +4,6 @@ import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
@@ -32,8 +31,8 @@ import io.reactivex.Single;
  */
 public class ConferenceDataHelper
 {
-    final static SimpleDateFormat dateFormat;
-    final static SimpleDateFormat timeFormat;
+    private final static SimpleDateFormat dateFormat;
+    private final static SimpleDateFormat timeFormat;
 
     static
     {
@@ -46,36 +45,22 @@ public class ConferenceDataHelper
         return dateFormat.format(d);
     }
 
-    public static Single<DaySchedule[]> getDays(DatabaseHelper helper, boolean allEvents)
+    public static Single<List<TimeBlock>> getDays(DatabaseHelper helper)
     {
-        return Single.fromCallable(() -> getDaySchedules(helper, allEvents));
+        return Single.fromCallable(() -> getDaySchedules(helper));
     }
 
-    private static DaySchedule[] getDaySchedules(DatabaseHelper databaseHelper, boolean allEvents) throws SQLException
+    private static List<TimeBlock> getDaySchedules(DatabaseHelper databaseHelper) throws SQLException
     {
         List<TimeBlock> eventAndBlockList = new ArrayList<>();
-        List<Event> eventList;
-
-        if(allEvents)
-        {
-            eventList = databaseHelper.getEventsWithSpeakersList();
-        }
-        else
-        {
-            eventList = databaseHelper.getEventsWithRsvpsNotNull();
-        }
+        List<Event> eventList = databaseHelper.getEventsWithSpeakersList();
 
         eventAndBlockList.addAll(databaseHelper.getBlocksList());
         eventAndBlockList.addAll(eventList);
-
-        Collections.sort(eventAndBlockList, ConferenceDataHelper:: sortTimeBlocks);
-        TreeMap<String, List<HourBlock>> dateWithBlocksTreeMap = formatHourBlocks(eventAndBlockList);
-        List<DaySchedule> dayScheduleList = convertMapToDaySchedule(dateWithBlocksTreeMap);
-
-        return dayScheduleList.toArray(new DaySchedule[dayScheduleList.size()]);
+        return eventAndBlockList;
     }
 
-    private static int sortTimeBlocks(TimeBlock o1, TimeBlock o2)
+    public static int sortTimeBlocks(TimeBlock o1, TimeBlock o2)
     {
         final long compTimes = o1.getStartLong() - o2.getStartLong();
         if(compTimes != 0)
@@ -100,7 +85,7 @@ public class ConferenceDataHelper
         return ((Event) o1).venue.name.compareTo(((Event) o2).venue.name);
     }
 
-    private static TreeMap<String, List<HourBlock>> formatHourBlocks(List<TimeBlock> eventAndBlockList)
+    public static TreeMap<String, List<HourBlock>> formatHourBlocks(List<TimeBlock> eventAndBlockList)
     {
         TreeMap<String, List<HourBlock>> dateWithBlocksTreeMap = new TreeMap<>();
         String lastHourDisplay = "";
@@ -124,7 +109,7 @@ public class ConferenceDataHelper
         return dateWithBlocksTreeMap;
     }
 
-    private static List<DaySchedule> convertMapToDaySchedule(TreeMap<String, List<HourBlock>> dateWithBlocksTreeMap)
+    public static List<DaySchedule> convertMapToDaySchedule(TreeMap<String, List<HourBlock>> dateWithBlocksTreeMap)
     {
         List<DaySchedule> dayScheduleList = new ArrayList<>();
 
@@ -226,10 +211,8 @@ public class ConferenceDataHelper
                 helper.deleteBlocks(helper.getBlocksList());
 
                 // parse and save new blocks
-
                 for(Block newBlock : newBlockList)
                 {
-                    // reconsider if formatting needs to be done here
                     newBlock.startDateLong = TimeUtils.parseTime(newBlock.startDate);
                     newBlock.endDateLong = TimeUtils.parseTime(newBlock.endDate);
                     helper.updateBlock(newBlock);

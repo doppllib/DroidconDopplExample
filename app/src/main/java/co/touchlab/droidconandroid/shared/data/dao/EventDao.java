@@ -23,9 +23,6 @@ public interface EventDao {
     @Query("SELECT * FROM Event")
     List<Event> getEvents();
 
-    @Query("SELECT * FROM Event WHERE rsvpUuid NOT NULL")
-    List<Event> rsvpUuidNotNull();
-
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void createOrUpdate(Event event);
 

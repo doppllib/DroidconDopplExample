@@ -32,7 +32,6 @@ public class EventDetailInteractor {
         Single<List<UserAccount>> speakersSingle = getEventSpeakers();
 
         return Single.zip(eventSingle, speakersSingle, allEvents, this::createEventInfo);
-
     }
 
     private Single<List<UserAccount>> getEventSpeakers()

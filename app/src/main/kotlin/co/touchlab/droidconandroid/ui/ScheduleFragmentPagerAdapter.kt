@@ -25,6 +25,18 @@ class ScheduleFragmentPagerAdapter(private var fm: FragmentManager, private var 
         }
     }
 
+    fun switchToAgenda() {
+        for (fragment in fm.fragments) {
+            (fragment as? ScheduleDataFragment)?.switchToAgenda()
+        }
+    }
+
+    fun switchToConference() {
+        for (fragment in fm.fragments) {
+            (fragment as? ScheduleDataFragment)?.switchToConference()
+        }
+    }
+
     companion object {
         private val TIME_FORMAT = "MMM dd"
     }
