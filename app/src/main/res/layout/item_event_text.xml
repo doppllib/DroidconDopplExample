@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
+    tools:ignore="UseCompoundDrawables"
     android:layout_marginEnd="@dimen/activity_horizontal_margin"
     android:layout_marginBottom="@dimen/padding_small"
     android:layout_marginTop="@dimen/padding_small">
@@ -27,7 +28,6 @@
         android:layout_weight="1"
         android:autoLink="web"
         android:textColor="@color/black"
-        android:textSize="@dimen/text_small"
-        tools:text="@string/lorem_long"/>
+        android:textSize="@dimen/text_small"/>
 
 </LinearLayout>

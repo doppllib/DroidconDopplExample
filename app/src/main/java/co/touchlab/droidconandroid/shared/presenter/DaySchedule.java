@@ -5,8 +5,8 @@ package co.touchlab.droidconandroid.shared.presenter;
  */
 public class DaySchedule
 {
-    public final String      dayString;
-    public final HourBlock[] hourHolders;
+    private final String      dayString;
+    private final HourBlock[] hourHolders;
 
     public DaySchedule(String dayString, HourBlock[] hourHolders)
     {

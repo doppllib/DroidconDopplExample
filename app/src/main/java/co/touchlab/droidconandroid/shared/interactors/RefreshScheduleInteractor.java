@@ -2,8 +2,12 @@ package co.touchlab.droidconandroid.shared.interactors;
 
 import com.birbit.android.jobqueue.JobManager;
 
+import java.util.List;
+
 import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
+import co.touchlab.droidconandroid.shared.data.Event;
+import co.touchlab.droidconandroid.shared.data.TimeBlock;
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHelper;
 import co.touchlab.droidconandroid.shared.presenter.DaySchedule;
 import co.touchlab.droidconandroid.shared.tasks.persisted.RefreshScheduleJob;
@@ -16,7 +20,7 @@ public class RefreshScheduleInteractor
 {
     private final JobManager     jobManager;
     private final DatabaseHelper databaseHelper;
-    private BehaviorSubject<DaySchedule[]> conferenceDataSubject = BehaviorSubject.create();
+    private BehaviorSubject<List<TimeBlock>> conferenceDataSubject = BehaviorSubject.create();
 
     public RefreshScheduleInteractor(JobManager jobManager, DatabaseHelper databaseHelper)
     {
@@ -24,14 +28,18 @@ public class RefreshScheduleInteractor
         this.jobManager = jobManager;
     }
 
-    public Observable<DaySchedule[]> getDataStream()
+    public Observable<DaySchedule[]> getFullConferenceData(boolean allEvents)
     {
-        return conferenceDataSubject.hide();
+        return conferenceDataSubject
+                .flatMap(list -> filterAndSortBlocks(list, allEvents))
+                .map(ConferenceDataHelper:: formatHourBlocks)
+                .map(ConferenceDataHelper:: convertMapToDaySchedule)
+                .map(dayScheduleList -> dayScheduleList.toArray(new DaySchedule[dayScheduleList.size()]));
     }
 
-    public void refreshFromDatabase(boolean allEvents)
+    public void refreshFromDatabase()
     {
-        ConferenceDataHelper.getDays(databaseHelper, allEvents)
+        ConferenceDataHelper.getDays(databaseHelper)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(conferenceDataSubject:: onNext, e ->
@@ -44,5 +52,14 @@ public class RefreshScheduleInteractor
     public void refreshFromServer()
     {
         jobManager.addJobInBackground(new RefreshScheduleJob());
+    }
+
+    private Observable<List<TimeBlock>> filterAndSortBlocks(List<TimeBlock> list, boolean allEvents) {
+        return Observable.fromIterable(list)
+                .filter(timeBlock -> allEvents ||
+                        timeBlock.isBlock() ||
+                        ((timeBlock instanceof Event) && (((Event) timeBlock).rsvpUuid != null)))
+                .toSortedList(ConferenceDataHelper:: sortTimeBlocks)
+                .toObservable();
     }
 }

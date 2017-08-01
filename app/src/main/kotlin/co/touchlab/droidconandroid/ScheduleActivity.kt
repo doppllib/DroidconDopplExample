@@ -43,12 +43,12 @@ class ScheduleActivity : AppCompatActivity() {
 
     val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
         val prefs = AppPrefs.getInstance(this)
-        UpdateAlertsInteractor(helper, prefs)
+        UpdateAlertsInteractor(prefs, interactor)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val factory = ConferenceDataViewModel.Factory(interactor, allEvents, AppPrefs.getInstance(this))
+        val factory = ConferenceDataViewModel.Factory(interactor, AppPrefs.getInstance(this))
         viewModel = ViewModelProviders.of(this, factory)[ConferenceDataViewModel::class.java]
 
         when (AppManager.findStartScreen()) {
@@ -153,10 +153,12 @@ class ScheduleActivity : AppCompatActivity() {
                 when (titleRes) {
                     R.string.explore -> {
                         allEvents = true
+                        (view_pager.adapter as ScheduleFragmentPagerAdapter).switchToConference()
                         appbar.setExpanded(true)
                     }
                     R.string.my_schedule -> {
                         allEvents = false
+                        (view_pager.adapter as ScheduleFragmentPagerAdapter).switchToAgenda()
                         appbar.setExpanded(true)
                     }
 
