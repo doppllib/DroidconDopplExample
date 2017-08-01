@@ -60,8 +60,10 @@ public class EventDetailViewModel extends ViewModel {
         host = null;
     }
 
-    public void toggleRsvp(boolean rsvp) {
-        if (rsvp) {
+    public void setRsvp(boolean shouldRsvp)
+    {
+        if(shouldRsvp)
+        {
             rsvpInteractor.addRsvp()
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
