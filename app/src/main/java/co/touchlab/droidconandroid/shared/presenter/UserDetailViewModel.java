@@ -2,6 +2,7 @@ package co.touchlab.droidconandroid.shared.presenter;
 
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
+import android.support.annotation.VisibleForTesting;
 
 import com.google.j2objc.annotations.Weak;
 
@@ -55,7 +56,7 @@ public class UserDetailViewModel extends ViewModel
 
         }
 
-        // Keep for now, replace when Daggering.
+        @VisibleForTesting
         public Factory(FindUserInteractor task)
         {
             this.task = task;

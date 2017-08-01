@@ -27,12 +27,14 @@ public class UserDetailViewModelTest
     FindUserInteractor interactor;
     @Mock
     UserDetailHost     host;
+    UserDetailViewModel.Factory factory;
     private UserDetailViewModel viewModel;
 
     @Before
     public void setUp()
     {
-        viewModel = new UserDetailViewModel.Factory(interactor).create(UserDetailViewModel.class);
+        factory = new UserDetailViewModel.Factory(interactor);
+        viewModel = factory.create(UserDetailViewModel.class);
         viewModel.register(host);
     }
 
