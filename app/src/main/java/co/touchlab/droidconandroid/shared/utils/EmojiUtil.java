@@ -1,6 +1,8 @@
 package co.touchlab.droidconandroid.shared.utils;
 import android.text.TextUtils;
 
+import java.util.Locale;
+
 /**
  * Created by Ramona Harrison
  * on 7/13/16.
@@ -45,7 +47,7 @@ public class EmojiUtil
 
         if(! TextUtils.isEmpty(displayName))
         {
-            int c = displayName.toLowerCase().charAt(0) - DECIMAL_VALUE_A;
+            int c = displayName.toLowerCase(Locale.getDefault()).charAt(0) - DECIMAL_VALUE_A;
             if(c >= 0 && c < EMOJI_ABC.length)
             {
                 unicode = EMOJI_ABC[c];

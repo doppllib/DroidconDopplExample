@@ -65,9 +65,9 @@ public class EventDetailViewModel extends ViewModel
         host = null;
     }
 
-    public void toggleRsvp(boolean rsvp, Long eventId)
+    public void setRsvp(boolean shouldRsvp, Long eventId)
     {
-        if(rsvp)
+        if(shouldRsvp)
         {
             rsvpInteractor.addRsvp(eventId)
                     .subscribeOn(Schedulers.io())

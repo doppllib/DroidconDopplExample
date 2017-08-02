@@ -14,13 +14,11 @@ public class ConferenceDataViewModel extends ViewModel
     private static final long SERVER_REFRESH_TIME = 3600000 * 6; // 6 hours
 
     private RefreshScheduleInteractor interactor;
-    private boolean                   allEvents;
     private AppPrefs                  appPrefs;
 
-    private ConferenceDataViewModel(RefreshScheduleInteractor interactor, boolean allEvents, AppPrefs appPrefs)
+    private ConferenceDataViewModel(RefreshScheduleInteractor interactor, AppPrefs appPrefs)
     {
         this.interactor = interactor;
-        this.allEvents = allEvents;
         this.appPrefs = appPrefs;
         refreshConferenceData();
     }
@@ -28,7 +26,7 @@ public class ConferenceDataViewModel extends ViewModel
     @AutoreleasePool
     public void refreshConferenceData()
     {
-        interactor.refreshFromDatabase(allEvents);
+        interactor.refreshFromDatabase();
     }
 
     public void refreshFromServer()
@@ -61,7 +59,7 @@ public class ConferenceDataViewModel extends ViewModel
         public <T extends ViewModel> T create(Class<T> modelClass)
         {
             //noinspection unchecked
-            return (T) new ConferenceDataViewModel(interactor, allEvents, appPrefs);
+            return (T) new ConferenceDataViewModel(interactor, appPrefs);
         }
     }
 }

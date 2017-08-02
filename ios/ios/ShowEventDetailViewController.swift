@@ -17,7 +17,7 @@ import dcframework
     var titleString: String?
     var descriptionString: String?
     var dateTime: String?
-    var networkEvent: DCDEvent!
+    var event: DCDEvent!
     var speakers: [DCDEventSpeaker]?
     var eventDetailPresenter: DCPEventDetailPresenter!
     
@@ -37,7 +37,7 @@ import dcframework
             eventDetailPresenter.unregister()
         }
         
-        eventDetailPresenter = DCPEventDetailPresenter(androidContentContext: DCPAppManager.getContext(), withLong: networkEvent.getId(), with: self)
+        eventDetailPresenter = DCPEventDetailPresenter(androidContentContext: DCPAppManager.getContext(), withLong: event.getId(), with: self)
         
         eventDetailPresenter.refreshData()
         
@@ -64,7 +64,7 @@ import dcframework
     // MARK: Data refresh
     
     func dataRefresh() {
-        networkEvent = eventDetailPresenter.getEventDetailLoadTask().getEvent()
+        event = eventDetailPresenter.getEventDetailLoadTask().getEvent()
         speakers = PlatformContext_iOS.javaList(toList: eventDetailPresenter.getEventDetailLoadTask().getEvent().getSpeakerList()) as? [DCDEventSpeaker]
         tableView.reloadData()
         updateButton()
@@ -74,11 +74,7 @@ import dcframework
     func videoDataRefresh() {
         tableView.reloadData()
     }
-    
-    func callStreamActivity(with task: DCTStartWatchVideoTask){
-        performSegue(withIdentifier: "LiveStream", sender: self)
-    }
-    
+
     func reportError(with error: String){
         let alert = UIAlertView(title: "Video Error", message: error as String, delegate: nil, cancelButtonTitle: "Ok")
         alert.show()
@@ -112,7 +108,7 @@ import dcframework
         // 4. Present the alert.
         self.present(alert, animated: true, completion: nil)
     }
-    
+
     // MARK: TableView
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -131,24 +127,8 @@ import dcframework
         if (indexPath as NSIndexPath).section == 0 {
             let cell:EventTableViewCell = tableView.dequeueReusableCell(withIdentifier: "eventCell") as! EventTableViewCell
 
-            cell.loadInfo(titleString!, description: descriptionString!, track: networkEvent!.getVenue().getName(), time: dateTime!, networkEvent: networkEvent, eventDetailPresenter: eventDetailPresenter)
+            cell.loadInfo(titleString!, description: descriptionString!, track: event!.getVenue().getName(), time: dateTime!, event: event, eventDetailPresenter: eventDetailPresenter)
             cell.selectionStyle = UITableViewCellSelectionStyle.none
-            
-            let videoDetailsInteractor:DCTEventVideoDetailsTask? = eventDetailPresenter.getEventVideoDetailsTask()
-            
-            if (videoDetailsInteractor != nil && videoDetailsInteractor!.hasStream()) {
-                cell.liveStreamButton.addTarget(self, action: #selector(ShowEventDetailViewController.liveStreamTapped(_:)), for: UIControlEvents.touchUpInside)
-                cell.liveStreamButton.isHidden = false
-                cell.liveStreamIcon.isHidden = false
-                if(videoDetailsInteractor!.isNow()){
-                    cell.liveStreamButton.setTitle("LIVE STREAM", for: UIControlState())
-                } else {
-                    cell.liveStreamButton.setTitle("STREAM ARCHIVE", for: UIControlState())
-                }
-            }
-            cell.liveStreamButton.isHidden = true
-            cell.liveStreamIcon.isHidden = true
-            
             return cell
         } else {
             let cell:SpeakerTableViewCell = tableView.dequeueReusableCell(withIdentifier: "speakerCell") as! SpeakerTableViewCell
@@ -178,7 +158,7 @@ import dcframework
     }
     
     func updateButton() {
-        if (networkEvent.isRsvped()) {
+        if (event.isRsvped()) {
             rsvpButton.setImage(UIImage(named: "ic_done"), for: UIControlState())
             rsvpButton.backgroundColor = UIColor.white
         } else {
@@ -189,9 +169,9 @@ import dcframework
     
     //TODO Use Track class from shared lib folder.
     func updateHeaderImage() {
-        let track : DCDTrack  = (networkEvent.getCategory() ?? "").isEmpty ?
+        let track : DCDTrack  = (event.getCategory() ?? "").isEmpty ?
             DCDTrack.findByServerName(with: "Design") : // Default to design (Same as Android)
-        DCDTrack.findByServerName(with: networkEvent.getCategory())
+        DCDTrack.findByServerName(with: event.getCategory())
         
         var imageName : String
         
@@ -215,18 +195,5 @@ import dcframework
 
     @IBAction func toggleRsvp(_ sender: UIButton) {
         eventDetailPresenter.toggleRsvp()
-    }
-    
-    func liveStreamTapped(_ sender: UIButton) {
-        eventDetailPresenter.callStartVideo(with: eventDetailPresenter.getEventVideoDetailsTask().getMergedStreamLink(), with: "")
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "LiveStream") {
-            /*let liveStreamVC = (segue.destination as! LiveStreamViewController)
-            liveStreamVC.titleString = titleString
-            liveStreamVC.streamUrl = eventDetailPresenter.getEventVideoDetailsTask().getMergedStreamLink()
-            liveStreamVC.coverUrl = ""*/
-        }
     }
 }

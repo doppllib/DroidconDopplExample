@@ -8,10 +8,12 @@ import android.content.Intent
 import android.media.RingtoneManager
 import android.support.v4.app.TaskStackBuilder
 import android.support.v7.app.NotificationCompat
+import co.touchlab.droidconandroid.DroidconApplication
 import co.touchlab.droidconandroid.EventDetailActivity
 import co.touchlab.droidconandroid.R
 import co.touchlab.droidconandroid.shared.data.AppPrefs
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper
+import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 
 const val EXTRA_EVENT_NAME = "EXTRA_EVENT_NAME"
@@ -20,14 +22,14 @@ const val EXTRA_EVENT_CATEGORY = "EXTRA_EVENT_CATEGORY"
 const val ALERT_ACTION = "co.touchlab.droidconandroid.DISPLAY_NOTIFICATION"
 
 class AlertReceiver : BroadcastReceiver() {
-    private lateinit var helper: DatabaseHelper
-    private lateinit var prefs: AppPrefs
 
     override fun onReceive(context: Context, intent: Intent) {
 
-        helper = DatabaseHelper.getInstance(context)
-        prefs = AppPrefs.getInstance(context)
-        val updateAlertsInteractor = UpdateAlertsInteractor(helper, prefs)
+        val helper = DatabaseHelper.getInstance(context)
+        val prefs = AppPrefs.getInstance(context)
+        val jobManager = DroidconApplication.getInstance().jobManager
+        val refreshInteractor = RefreshScheduleInteractor(jobManager, helper)
+        val updateAlertsInteractor = UpdateAlertsInteractor(prefs, refreshInteractor)
 
         if (ALERT_ACTION == intent.action) {
 
@@ -44,7 +46,7 @@ class AlertReceiver : BroadcastReceiver() {
             val pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT)
 
             val notification = NotificationCompat.Builder(context)
-                    .setSmallIcon(R.drawable.ic_notification)
+                    .setSmallIcon(R.drawable.ic_notification_smallicon_color)
                     .setContentTitle(context.getString(R.string.notif_title))
                     .setContentText(context.getString(R.string.notif_body, eventName))
                     .setAutoCancel(true)

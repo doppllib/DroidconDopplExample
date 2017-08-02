@@ -153,10 +153,12 @@ class ScheduleActivity : AppCompatActivity() {
                 when (titleRes) {
                     R.string.explore -> {
                         allEvents = true
+                        (view_pager.adapter as ScheduleFragmentPagerAdapter).switchToConference()
                         appbar.setExpanded(true)
                     }
                     R.string.my_schedule -> {
                         allEvents = false
+                        (view_pager.adapter as ScheduleFragmentPagerAdapter).switchToAgenda()
                         appbar.setExpanded(true)
                     }
 

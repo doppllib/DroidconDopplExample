@@ -173,9 +173,9 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         } else {
             fab.setOnClickListener {
                 if (event.isRsvped) {
-                    viewModel.toggleRsvp(true, eventId)
+                    viewModel.setRsvp(false, eventId)
                 } else {
-                    viewModel.toggleRsvp(false, eventId)
+                    viewModel.setRsvp(true, eventId)
                 }
             }
 

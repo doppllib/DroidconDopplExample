@@ -61,7 +61,7 @@ class ScheduleDataFragment : Fragment(), ConferenceDataHost {
     override fun onResume() {
         super.onResume()
         viewModel.register(this)
-        viewModel.refreshData()
+        viewModel.getDataStream(true)
     }
 
     override fun onPause() {
@@ -75,6 +75,14 @@ class ScheduleDataFragment : Fragment(), ConferenceDataHost {
 
     fun updateNotifCard() {
         eventList.eventAdapter.updateNotificationCard(shouldShowNotif)
+    }
+
+    fun switchToAgenda() {
+        viewModel.getDataStream(false)
+    }
+
+    fun switchToConference() {
+        viewModel.getDataStream(true)
     }
 
     private inner class ScheduleEventClickListener : EventClickListener {

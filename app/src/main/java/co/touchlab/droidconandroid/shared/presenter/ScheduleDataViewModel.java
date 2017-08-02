@@ -28,9 +28,9 @@ public class ScheduleDataViewModel extends ViewModel
         this.host = host;
     }
 
-    public void refreshData()
+    public void getDataStream(boolean allEvents)
     {
-        disposables.add(interactor.getDataStream()
+        disposables.add(interactor.getFullConferenceData(allEvents)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(data -> host.loadCallback(data)));

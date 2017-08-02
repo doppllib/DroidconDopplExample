@@ -2,6 +2,7 @@ package co.touchlab.droidconandroid.shared.utils;
 import android.text.TextUtils;
 
 import java.util.List;
+import java.util.Locale;
 
 import co.touchlab.droidconandroid.shared.data.Block;
 import co.touchlab.droidconandroid.shared.data.Event;
@@ -11,14 +12,14 @@ public class EventUtils
 {
     public static void styleEventRow(HourBlock scheduleBlockHour, List dataSet, EventRow row, boolean allEvents)
     {
-        boolean isFirstInBlock = ! scheduleBlockHour.hourStringDisplay.isEmpty();
+        boolean isFirstInBlock = ! scheduleBlockHour.getHourStringDisplay().isEmpty();
         row.setTimeGap(isFirstInBlock);
 
         if(scheduleBlockHour.getTimeBlock().isBlock())
         {
-            Block block = (Block) scheduleBlockHour.timeBlock;
+            Block block = (Block) scheduleBlockHour.getTimeBlock();
             row.setTitleText(block.name);
-            row.setTimeText(scheduleBlockHour.hourStringDisplay.toLowerCase());
+            row.setTimeText(scheduleBlockHour.getHourStringDisplay().toLowerCase(Locale.getDefault()));
             row.setSpeakerText("");
             row.setDescription(block.description);
             row.setLiveNowVisible(false);
@@ -27,9 +28,8 @@ public class EventUtils
         }
         else
         {
-            Event event = (Event) scheduleBlockHour.timeBlock;
-
-            row.setTimeText(scheduleBlockHour.hourStringDisplay.toLowerCase());
+            Event event = (Event) scheduleBlockHour.getTimeBlock();
+            row.setTimeText(scheduleBlockHour.getHourStringDisplay().toLowerCase(Locale.getDefault()));
             row.setTitleText(event.name);
             row.setSpeakerText(event.allSpeakersString());
             row.setDescription(event.description);
@@ -45,9 +45,9 @@ public class EventUtils
         {
             for(Object o : dataSet)
             {
-                if(o instanceof HourBlock && ((HourBlock) o).timeBlock instanceof Event)
+                if(o instanceof HourBlock && ((HourBlock) o).getTimeBlock() instanceof Event)
                 {
-                    Event e = (Event) ((HourBlock) o).timeBlock;
+                    Event e = (Event) ((HourBlock) o).getTimeBlock();
                     if(event.id != e.id && ! TextUtils.isEmpty(e.rsvpUuid) &&
                             event.startDateLong < e.endDateLong &&
                             event.endDateLong > e.startDateLong)

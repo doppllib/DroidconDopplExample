@@ -7,6 +7,7 @@
     android:layout_height="@dimen/height_small"
     android:layout_gravity="center"
     android:background="?attr/selectableItemBackground"
+    tools:ignore="Overdraw"
     android:orientation="vertical"
     android:theme="@style/drawerTheme">
 
