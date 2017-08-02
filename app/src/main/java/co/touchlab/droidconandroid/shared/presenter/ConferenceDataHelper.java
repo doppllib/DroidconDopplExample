@@ -35,6 +35,7 @@ public class ConferenceDataHelper
     final static SimpleDateFormat dateFormat;
     final static SimpleDateFormat timeFormat;
 
+
     static
     {
         dateFormat = TimeUtils.makeDateFormat("MM/dd/yyyy");

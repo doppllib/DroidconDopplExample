@@ -1,6 +1,7 @@
 package co.touchlab.droidconandroid.shared.interactors;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
 import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
@@ -16,6 +17,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.BehaviorSubject;
 
+@Singleton
 public class RefreshScheduleInteractor
 {
     private final DatabaseHelper             databaseHelper;
@@ -33,7 +35,7 @@ public class RefreshScheduleInteractor
 
     public Observable<DaySchedule[]> getDataStream()
     {
-        return conferenceDataSubject.hide();
+        return conferenceDataSubject;
     }
 
     public void refreshFromDatabase(boolean allEvents)
