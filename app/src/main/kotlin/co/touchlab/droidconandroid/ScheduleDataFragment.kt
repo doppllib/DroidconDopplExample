@@ -11,7 +11,6 @@ import android.view.View
 import android.view.ViewGroup
 import co.touchlab.droidconandroid.shared.data.AppPrefs
 import co.touchlab.droidconandroid.shared.data.Event
-import co.touchlab.droidconandroid.shared.data.DatabaseHelper
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 import co.touchlab.droidconandroid.shared.presenter.*
 import co.touchlab.droidconandroid.ui.EventAdapter
@@ -22,18 +21,13 @@ import java.util.*
 class ScheduleDataFragment : Fragment(), ConferenceDataHost {
 
     private val viewModel: ScheduleDataViewModel by lazy {
-        val interactor = (activity as ScheduleActivity).interactor
-        val factory = ScheduleDataViewModel.Factory(interactor)
+        val factory = ScheduleDataViewModel.Factory()
+        AppManager.getInstance().appComponent.inject(factory)
         ViewModelProviders.of(this, factory)[ScheduleDataViewModel::class.java]
     }
 
-    val helper: DatabaseHelper by lazy {
-        DatabaseHelper.getInstance(activity)
-    }
-
     val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
-        val prefs = AppPrefs.getInstance(activity)
-        UpdateAlertsInteractor(helper, prefs)
+        AppManager.getInstance().appComponent.updateAlerts()
     }
 
     val RecyclerView.eventAdapter: EventAdapter

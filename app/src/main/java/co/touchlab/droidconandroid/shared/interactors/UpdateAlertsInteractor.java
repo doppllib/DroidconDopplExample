@@ -4,6 +4,9 @@ import android.util.Log;
 
 import java.util.concurrent.TimeUnit;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
 import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
@@ -17,25 +20,30 @@ import io.reactivex.schedulers.Schedulers;
 /**
  * Created by samuelhill on 7/5/16.
  */
-public class UpdateAlertsInteractor {
+@Singleton
+public class UpdateAlertsInteractor
+{
     private final DatabaseHelper helper;
     private final AppPrefs       prefs;
     public        Event          event;
 
     public static final long ALERT_BUFFER = TimeUnit.MINUTES.toMillis(5);
 
-    public UpdateAlertsInteractor(DatabaseHelper helper, AppPrefs prefs) {
+    @Inject
+    public UpdateAlertsInteractor(DatabaseHelper helper, AppPrefs prefs)
+    {
         this.helper = helper;
         this.prefs = prefs;
     }
 
-    public void alert() {
-        if (prefs.getAllowNotifications()) {
+    public void alert()
+    {
+        if(prefs.getAllowNotifications())
+        {
             ConferenceDataHelper.getDays(helper, false)
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(this::update,
-                            e -> Log.e("UpdateError", "Error retrieving data"));
+                    .subscribe(this :: update, e -> Log.e("UpdateError", "Error retrieving data"));
         }
     }
 
@@ -48,7 +56,8 @@ public class UpdateAlertsInteractor {
                 if(hour.timeBlock instanceof Event)
                 {
                     Event event = (Event) hour.timeBlock;
-                    if (event.getStartLong() - ALERT_BUFFER > System.currentTimeMillis()) {
+                    if(event.getStartLong() - ALERT_BUFFER > System.currentTimeMillis())
+                    {
                         this.event = event;
                         EventBusExt.getDefault().post(this);
                         return;

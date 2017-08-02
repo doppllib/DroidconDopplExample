@@ -15,12 +15,10 @@ import android.support.v7.widget.LinearLayoutManager
 import android.text.format.DateUtils
 import android.view.View
 import co.touchlab.droidconandroid.shared.data.AppPrefs
-import co.touchlab.droidconandroid.shared.data.DatabaseHelper
 import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataViewModel
-import co.touchlab.droidconandroid.shared.tasks.persisted.RefreshScheduleJob
 import co.touchlab.droidconandroid.shared.utils.EventBusExt
 import co.touchlab.droidconandroid.shared.utils.TimeUtils
 import co.touchlab.droidconandroid.ui.*
@@ -30,27 +28,18 @@ import java.util.*
 class ScheduleActivity : AppCompatActivity() {
 
     private var allEvents = true
-    private lateinit var viewModel: ConferenceDataViewModel
-    // temporary till we daggerize
-    val helper: DatabaseHelper by lazy {
-        DatabaseHelper.getInstance(this)
-    }
-
-    val interactor: RefreshScheduleInteractor by lazy {
-        val jobManager = DroidconApplication.getInstance().jobManager
-        RefreshScheduleInteractor(jobManager, helper)
+    private val viewModel: ConferenceDataViewModel by lazy {
+        val factory = ConferenceDataViewModel.Factory(allEvents)
+        AppManager.getInstance().appComponent.inject(factory)
+        ViewModelProviders.of(this, factory)[ConferenceDataViewModel::class.java]
     }
 
     val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
-        val prefs = AppPrefs.getInstance(this)
-        UpdateAlertsInteractor(helper, prefs)
+        AppManager.getInstance().appComponent.updateAlerts()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val factory = ConferenceDataViewModel.Factory(interactor, allEvents, AppPrefs.getInstance(this))
-        viewModel = ViewModelProviders.of(this, factory)[ConferenceDataViewModel::class.java]
-
         val appPrefs = AppManager.getInstance().appComponent.prefs
 
         when (goToScreen(appPrefs)) {
@@ -247,7 +236,7 @@ class ScheduleActivity : AppCompatActivity() {
     }
 
     @Suppress("unused", "UNUSED_PARAMETER")
-    fun onEventMainThread(eventDetailJob: RefreshScheduleJob) {
+    fun onEventMainThread(eventDetailJob: RefreshScheduleInteractor) {
         Handler().post(RefreshRunnable())
     }
 

@@ -1,5 +1,8 @@
 package co.touchlab.droidconandroid.shared.presenter;
+import android.content.Context;
+
 import co.touchlab.droidconandroid.shared.dagger.AppComponent;
+import co.touchlab.droidconandroid.shared.interactors.SeedInteractor;
 
 /**
  * Created by kgalligan on 4/19/16.
@@ -12,7 +15,7 @@ public class AppManager
     private        AppComponent   appComponent;
     private        PlatformClient platformClient;
 
-    private AppManager(AppComponent appComponent, PlatformClient platformClient)
+    private AppManager(Context context, PlatformClient platformClient, AppComponent appComponent)
     {
         this.appComponent = appComponent;
         this.platformClient = platformClient;
@@ -23,11 +26,11 @@ public class AppManager
         return instance;
     }
 
-    public static void create(AppComponent appComponent, PlatformClient platformClient)
+    public static void create(Context context, PlatformClient platformClient, AppComponent appComponent)
     {
         if(instance == null)
         {
-            instance = new AppManager(appComponent, platformClient);
+            instance = new AppManager(context, platformClient, appComponent);
         }
     }
 
@@ -36,6 +39,7 @@ public class AppManager
         SeedInteractor seedInteractor = appComponent.seedInteractor();
         seedInteractor.seedDatabase(loadDataSeed);
     }
+
 
     public AppComponent getAppComponent()
     {

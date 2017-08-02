@@ -4,6 +4,8 @@ import android.arch.lifecycle.ViewModelProvider;
 
 import com.google.j2objc.annotations.AutoreleasePool;
 
+import javax.inject.Inject;
+
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
 import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor;
 
@@ -43,15 +45,16 @@ public class ConferenceDataViewModel extends ViewModel
 
     public static class Factory extends ViewModelProvider.NewInstanceFactory
     {
-        private final RefreshScheduleInteractor interactor;
-        private final boolean                   allEvents;
-        private final AppPrefs                  appPrefs;
+        @Inject
+        RefreshScheduleInteractor interactor;
+        @Inject
+        AppPrefs                  appPrefs;
+        private final boolean allEvents;
 
-        public Factory(RefreshScheduleInteractor interactor, boolean allEvents, AppPrefs appPrefs)
+        public Factory(boolean allEvents)
         {
-            this.interactor = interactor;
+
             this.allEvents = allEvents;
-            this.appPrefs = appPrefs;
         }
 
         @Override
