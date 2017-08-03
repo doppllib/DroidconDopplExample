@@ -30,26 +30,29 @@ import java.util.*
 class ScheduleActivity : AppCompatActivity() {
 
     private var allEvents = true
-    private lateinit var viewModel: ConferenceDataViewModel
-    // temporary till we daggerize
+
     val helper: DatabaseHelper by lazy {
         DatabaseHelper.getInstance(this)
     }
 
+    // temporary till we daggerize
     val interactor: RefreshScheduleInteractor by lazy {
         val jobManager = DroidconApplication.getInstance().jobManager
         RefreshScheduleInteractor(jobManager, helper)
     }
 
-    val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
+    private val viewModel: ConferenceDataViewModel by lazy {
+        val factory = ConferenceDataViewModel.Factory(interactor, AppPrefs.getInstance(this))
+        ViewModelProviders.of(this, factory)[ConferenceDataViewModel::class.java]
+    }
+
+    private val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
         val prefs = AppPrefs.getInstance(this)
         UpdateAlertsInteractor(prefs, interactor)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val factory = ConferenceDataViewModel.Factory(interactor, AppPrefs.getInstance(this))
-        viewModel = ViewModelProviders.of(this, factory)[ConferenceDataViewModel::class.java]
 
         when (AppManager.findStartScreen()) {
             AppManager.AppScreens.Welcome -> {

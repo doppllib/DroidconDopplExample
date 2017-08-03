@@ -3,6 +3,8 @@ package co.touchlab.droidconandroid
 import android.app.Activity
 import android.view.View
 import co.touchlab.droidconandroid.shared.utils.TimeUtils
+import io.reactivex.Observable
+import io.reactivex.Single
 
 /**
  * Created by kgalligan on 7/21/14.
@@ -25,3 +27,8 @@ fun Int.calculateAlphaPercentage(totalScrollRange: Int): Float =
 fun View.setViewVisibility(value: Boolean) {
     this.visibility = if (value) View.VISIBLE else View.INVISIBLE
 }
+
+fun <T> T.just() = Observable.just(this)
+fun <T> Array<T>.from() = Observable.fromArray(this)
+fun <T> Iterable<T>.from() = Observable.fromIterable(this)
+fun <T> (() -> T).fromCallable() = Single.fromCallable(this)
