@@ -21,13 +21,13 @@ import static co.touchlab.droidconandroid.shared.presenter.AppManager.FIRST_SEED
 @Singleton
 public class SeedInteractor
 {
-    private final DatabaseHelper helper;
-    private final AppPrefs       appPrefs;
+    private final ConferenceDataHelper conferenceDataHelper;
+    private final AppPrefs             appPrefs;
 
     @Inject
-    public SeedInteractor(DatabaseHelper helper, AppPrefs appPrefs)
+    public SeedInteractor(ConferenceDataHelper conferenceDataHelper, AppPrefs appPrefs)
     {
-        this.helper = helper;
+        this.conferenceDataHelper = conferenceDataHelper;
         this.appPrefs = appPrefs;
     }
 
@@ -38,9 +38,7 @@ public class SeedInteractor
             try
             {
                 final String seed = loadDataSeed.dataSeed();
-                ConferenceDataHelper.saveConvention(helper,
-                        appPrefs,
-                        new Gson().fromJson(seed, Convention.class))
+                conferenceDataHelper.saveConvention(new Gson().fromJson(seed, Convention.class))
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribe(() ->

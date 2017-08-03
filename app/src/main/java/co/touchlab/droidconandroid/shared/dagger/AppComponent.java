@@ -4,6 +4,7 @@ import javax.inject.Singleton;
 
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor;
+import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHelper;
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataViewModel;
 import co.touchlab.droidconandroid.shared.presenter.EventDetailViewModel;
 import co.touchlab.droidconandroid.shared.presenter.ScheduleDataViewModel;
@@ -20,7 +21,7 @@ public interface AppComponent
 
     SeedInteractor seedInteractor();
 
-    UpdateAlertsInteractor updateAlerts();
+    UpdateAlertsInteractor updateAlertsInteractor();
 
     void inject(UserDetailViewModel.Factory target);
 

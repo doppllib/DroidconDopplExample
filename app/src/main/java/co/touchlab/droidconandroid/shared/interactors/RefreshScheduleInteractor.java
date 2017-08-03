@@ -24,31 +24,30 @@ import io.reactivex.subjects.BehaviorSubject;
 @Singleton
 public class RefreshScheduleInteractor
 {
-    private final DatabaseHelper             databaseHelper;
+    private final ConferenceDataHelper       conferenceDataHelper;
     private final AppPrefs                   appPrefs;
     private final RefreshScheduleDataRequest request;
     private BehaviorSubject<List<TimeBlock>> conferenceDataSubject = BehaviorSubject.create();
 
     @Inject
-    public RefreshScheduleInteractor(AppPrefs appPrefs, DatabaseHelper databaseHelper, RefreshScheduleDataRequest request)
+    public RefreshScheduleInteractor(ConferenceDataHelper conferenceDataHelper, AppPrefs appPrefs, RefreshScheduleDataRequest request)
     {
-        this.databaseHelper = databaseHelper;
+        this.conferenceDataHelper = conferenceDataHelper;
         this.appPrefs = appPrefs;
         this.request = request;
     }
 
     public Observable<DaySchedule[]> getFullConferenceData(boolean allEvents)
     {
-        return conferenceDataSubject
-                .flatMap(list -> filterAndSortBlocks(list, allEvents))
-                .map(ConferenceDataHelper:: formatHourBlocks)
-                .map(ConferenceDataHelper:: convertMapToDaySchedule)
+        return conferenceDataSubject.flatMap(list -> filterAndSortBlocks(list, allEvents))
+                .map(conferenceDataHelper:: formatHourBlocks)
+                .map(conferenceDataHelper:: convertMapToDaySchedule)
                 .map(dayScheduleList -> dayScheduleList.toArray(new DaySchedule[dayScheduleList.size()]));
     }
 
     public void refreshFromDatabase()
     {
-        ConferenceDataHelper.getDays(databaseHelper)
+        conferenceDataHelper.getDays()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(conferenceDataSubject:: onNext, e ->
@@ -65,9 +64,7 @@ public class RefreshScheduleInteractor
         appPrefs.setRefreshTime(System.currentTimeMillis());
 
         request.getScheduleData(platformClient.getConventionId())
-                .flatMapCompletable(convention -> ConferenceDataHelper.saveConvention(databaseHelper,
-                        appPrefs,
-                        convention))
+                .flatMapCompletable(conferenceDataHelper:: saveConvention)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(() -> EventBusExt.getDefault().post(this), CrashReport:: logException);
@@ -75,12 +72,12 @@ public class RefreshScheduleInteractor
         // FIXME: Can get rid of the EventBus here because this links straight to the Activity
     }
 
-    private Observable<List<TimeBlock>> filterAndSortBlocks(List<TimeBlock> list, boolean allEvents) {
+    private Observable<List<TimeBlock>> filterAndSortBlocks(List<TimeBlock> list, boolean allEvents)
+    {
         return Observable.fromIterable(list)
-                .filter(timeBlock -> allEvents ||
-                        timeBlock.isBlock() ||
+                .filter(timeBlock -> allEvents || timeBlock.isBlock() ||
                         ((timeBlock instanceof Event) && (((Event) timeBlock).rsvpUuid != null)))
-                .toSortedList(ConferenceDataHelper:: sortTimeBlocks)
+                .toSortedList(conferenceDataHelper:: sortTimeBlocks)
                 .toObservable();
     }
 }

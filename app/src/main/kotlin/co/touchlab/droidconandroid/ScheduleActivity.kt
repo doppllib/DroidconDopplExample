@@ -35,7 +35,7 @@ class ScheduleActivity : AppCompatActivity() {
     }
 
     val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
-        AppManager.getInstance().appComponent.updateAlerts()
+        AppManager.getInstance().appComponent.updateAlertsInteractor()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -27,7 +27,7 @@ class ScheduleDataFragment : Fragment(), ConferenceDataHost {
     }
 
     val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
-        AppManager.getInstance().appComponent.updateAlerts()
+        AppManager.getInstance().appComponent.updateAlertsInteractor()
     }
 
     val RecyclerView.eventAdapter: EventAdapter
