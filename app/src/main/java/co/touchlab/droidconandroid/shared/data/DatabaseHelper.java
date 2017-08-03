@@ -23,25 +23,12 @@ import io.reactivex.Single;
 public class DatabaseHelper
 {
 
-    private static DatabaseHelper   instance;
-    private        DroidconDatabase db;
+    private DroidconDatabase db;
 
     @Inject
     public DatabaseHelper(Context context)
     {
-        db = Room.databaseBuilder(context, DroidconDatabase.class, "droidcon")
-                .build();
-    }
-
-    @NotNull
-    public static synchronized DatabaseHelper getInstance(Context context)
-    {
-        if(instance == null)
-        {
-            instance = new DatabaseHelper(context);
-        }
-
-        return instance;
+        db = Room.databaseBuilder(context, DroidconDatabase.class, "droidcon").build();
     }
 
     public void deleteEventsNotIn(Set<Long> goodStuff)

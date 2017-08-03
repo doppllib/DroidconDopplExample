@@ -31,7 +31,6 @@ import java.util.*
 
 class ScheduleActivity : AppCompatActivity() {
 
-    private val appPrefs = AppPrefs
     private var allEvents = true
     private val viewModel: ConferenceDataViewModel by lazy {
         val factory = ConferenceDataViewModel.Factory(allEvents)
@@ -41,6 +40,10 @@ class ScheduleActivity : AppCompatActivity() {
 
     val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
         AppManager.getInstance().appComponent.updateAlertsInteractor()
+    }
+
+    val appPrefs: AppPrefs by lazy {
+        AppManager.getInstance().appComponent.prefs
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,9 +56,15 @@ class ScheduleActivity : AppCompatActivity() {
             utils.createChannels()
         }
 
-        val appPrefs = AppManager.getInstance().appComponent.prefs
+        // Firebase Messaging adds data payload to launch activity if notification is sent while
+        // app is in the background. Check for extras here:
+        if (intent.extras != null && intent.extras[EVENT_ID] != null) {
+            val eventId = intent.extras[EVENT_ID].toString().toLong()
+            val intent = EventDetailActivity.createIntent(this, eventId)
+            startActivity(intent)
+        }
 
-        when (goToScreen(appPrefs)) {
+        when (goToScreen()) {
             AppManager.AppScreens.Welcome -> {
                 startActivity(WelcomeActivity.getLaunchIntent(this@ScheduleActivity))
                 finish()
@@ -69,17 +78,9 @@ class ScheduleActivity : AppCompatActivity() {
                 setContentView(R.layout.activity_schedule)
             }
         }
-
-        // Firebase Messaging adds data payload to launch activity if notification is sent while
-        // app is in the background. Check for extras here:
-        if (intent.extras != null && intent.extras[EVENT_ID] != null) {
-            val eventId = intent.extras[EVENT_ID].toString().toLong()
-            val intent = EventDetailActivity.createIntent(this, eventId)
-            startActivity(intent)
-        }
     }
 
-    private fun goToScreen(appPrefs: AppPrefs): AppManager.AppScreens {
+    private fun goToScreen(): AppManager.AppScreens {
         val hasSeenWelcome = appPrefs.hasSeenWelcome
         if (!hasSeenWelcome) {
             return AppManager.AppScreens.Welcome
@@ -150,8 +151,7 @@ class ScheduleActivity : AppCompatActivity() {
         appbar.setExpanded(true)
 
         schedule_toolbar_notif.setOnClickListener {
-            val prefs = AppPrefs.getInstance(this)
-            updateNotifications(!prefs.allowNotifications)
+            updateNotifications(!appPrefs.allowNotifications)
         }
     }
 
@@ -239,16 +239,15 @@ class ScheduleActivity : AppCompatActivity() {
             schedule_toolbar_notif.visibility = View.VISIBLE
         }
 
-        if (AppPrefs.getInstance(this).allowNotifications)
+        if (appPrefs.allowNotifications)
             schedule_toolbar_notif.setImageResource(R.drawable.vic_notifications_active_black_24dp)
         else
             schedule_toolbar_notif.setImageResource(R.drawable.vic_notifications_none_black_24dp)
     }
 
     private fun updateNotifications(allow: Boolean) {
-        val prefs = AppPrefs.getInstance(this)
-        prefs.allowNotifications = allow
-        prefs.showNotifCard = false
+        appPrefs.allowNotifications = allow
+        appPrefs.showNotifCard = false
         (view_pager.adapter as ScheduleFragmentPagerAdapter).updateNotifCard()
         updateAlertsInteractor.alert()
         adjustToolBarAndDrawers()
@@ -273,8 +272,8 @@ class ScheduleActivity : AppCompatActivity() {
     inner class RefreshRunnable : Runnable {
         override fun run() {
             val dates: ArrayList<Long> = ArrayList()
-            val startString: String? = AppPrefs.getInstance(this@ScheduleActivity).conventionStartDate
-            val endString: String? = AppPrefs.getInstance(this@ScheduleActivity).conventionEndDate
+            val startString: String? = appPrefs.conventionStartDate
+            val endString: String? = appPrefs.conventionEndDate
 
             if (!startString.isNullOrBlank() && !endString.isNullOrBlank()) {
                 var start: Long = TimeUtils.sanitize(TimeUtils.LOCAL_DATE_FORMAT.get().parse(startString))

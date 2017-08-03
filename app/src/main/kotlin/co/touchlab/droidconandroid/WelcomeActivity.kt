@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import co.touchlab.droidconandroid.ScheduleActivity.Companion.callMe
 import co.touchlab.droidconandroid.shared.data.AppPrefs
+import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.ui.WelcomePagerAdapter
 import kotlinx.android.synthetic.main.activity_welcome.*
 
@@ -24,6 +25,10 @@ class WelcomeActivity : AppCompatActivity() {
             val intent = Intent(context, WelcomeActivity::class.java)
             return intent
         }
+    }
+
+    val appPrefs: AppPrefs by lazy {
+        AppManager.getInstance().appComponent.prefs
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -72,6 +77,6 @@ class WelcomeActivity : AppCompatActivity() {
 
     override fun finish() {
         super.finish()
-        AppPrefs.getInstance(this).setHasSeenWelcome()
+        appPrefs.setHasSeenWelcome()
     }
 }

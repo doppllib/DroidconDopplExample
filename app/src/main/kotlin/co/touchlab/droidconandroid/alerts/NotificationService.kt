@@ -11,7 +11,6 @@ import android.util.Log
 import co.touchlab.droidconandroid.EventDetailActivity
 import co.touchlab.droidconandroid.R
 import co.touchlab.droidconandroid.ScheduleActivity
-import co.touchlab.droidconandroid.shared.data.DatabaseHelper
 import co.touchlab.droidconandroid.shared.presenter.AppManager
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
@@ -21,7 +20,6 @@ class NotificationService : FirebaseMessagingService() {
     companion object {
         private val TAG = "NotificationService"
         private val DROIDCON = "Droidcon"
-        private val DESIGN = "Design"
         private val TYPE = "type"
         private val EVENT_ID = "eventId"
         private val VERSION_CODE = "versionCode"
@@ -44,21 +42,14 @@ class NotificationService : FirebaseMessagingService() {
             Log.d(TAG, "Received firebase message: " + type)
 
             when (type) {
-                "updateSchedule" -> TODO("Inject Refresh interactor and call refreshFromServer()")
+                "updateSchedule" -> AppManager.getInstance().appComponent.refreshScheduleInteractor().refreshFromServer()
                 "event" -> {
                     if (notification != null) {
                         val message = remoteMessage.notification.body
                         val eventId = data[EVENT_ID]!!.toLong()
-                        DatabaseHelper.getInstance(this)
-                                .getEventForId(eventId)
-                                .filter { it != null }
-                                .subscribe { event ->
-                                    val title = if (remoteMessage.notification.title.isNullOrBlank())
+                        val title = if (remoteMessage.notification.title.isNullOrBlank())
                                         DROIDCON else remoteMessage.notification.title
-                                    val category = if (event.category.isNullOrBlank())
-                                        DESIGN else event.category
-                                    sendEventNotification(title!!, message!!, eventId, category, NotificationUtils.EVENT_CHANNEL_ID)
-                                }
+                        sendEventNotification(title!!, message!!, eventId, NotificationUtils.EVENT_CHANNEL_ID)
                     }
                 }
                 "version" -> {
@@ -88,7 +79,6 @@ class NotificationService : FirebaseMessagingService() {
             }
         } catch(e: Exception) {
             Log.e(TAG, "onMessageReceived error: ", e)
-            AppManager.getPlatformClient().logException(e)
         }
     }
 
@@ -98,8 +88,8 @@ class NotificationService : FirebaseMessagingService() {
         sendIntentNotification(title!!, notification.body!!, intent, channelId)
     }
 
-    private fun sendEventNotification(title: String, message: String, eventId: Long, category: String, channelId: String) {
-        val intent = EventDetailActivity.createIntent(this, category, eventId)
+    private fun sendEventNotification(title: String, message: String, eventId: Long, channelId: String) {
+        val intent = EventDetailActivity.createIntent(this, eventId)
         sendIntentNotification(title, message, intent, channelId)
     }
 
