@@ -24,6 +24,7 @@ import co.touchlab.droidconandroid.shared.tasks.persisted.RefreshScheduleJob
 import co.touchlab.droidconandroid.shared.utils.EventBusExt
 import co.touchlab.droidconandroid.shared.utils.TimeUtils
 import co.touchlab.droidconandroid.ui.*
+import com.google.firebase.messaging.FirebaseMessaging
 import kotlinx.android.synthetic.main.activity_schedule.*
 import java.util.*
 
@@ -48,6 +49,8 @@ class ScheduleActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        FirebaseMessaging.getInstance().subscribeToTopic(ALL_TOPIC)
+        FirebaseMessaging.getInstance().subscribeToTopic(ANDROID_TOPIC)
         val factory = ConferenceDataViewModel.Factory(interactor, AppPrefs.getInstance(this))
         viewModel = ViewModelProviders.of(this, factory)[ConferenceDataViewModel::class.java]
 
@@ -280,6 +283,8 @@ class ScheduleActivity : AppCompatActivity() {
         private val POSITION_EXPLORE = 1
         private val POSITION_MY_SCHEDULE = 2
         private val ALL_EVENTS = "all_events"
+        private val ALL_TOPIC = "all"
+        private val ANDROID_TOPIC = "android"
         @JvmField
         val ALPHA_OPAQUE = 255
 
