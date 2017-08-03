@@ -40,38 +40,36 @@ class NotificationService : FirebaseMessagingService() {
             val notification = remoteMessage.notification
             Log.d(TAG, "Received firebase message: " + type)
 
-            when (type) {
-                "updateSchedule" -> AppManager.getInstance().appComponent.refreshScheduleInteractor().refreshFromServer()
-                "event" -> {
-                    if (notification != null) {
+            if (notification != null) {
+                when (type) {
+                    "updateSchedule" -> AppManager.getInstance().appComponent.refreshScheduleInteractor().refreshFromServer()
+                    "event" -> {
                         val message = remoteMessage.notification.body
                         val eventId = data[EVENT_ID]!!.toLong()
                         val title = if (remoteMessage.notification.title.isNullOrBlank())
                             getString(R.string.app_name) else remoteMessage.notification.title
                         sendEventNotification(title!!, message!!, eventId, NotificationUtils.EVENT_CHANNEL_ID)
                     }
-                }
-                "version" -> {
-                    val pInfo = packageManager.getPackageInfo(packageName, 0)
+                    "version" -> {
+                        val packageInfo = packageManager.getPackageInfo(packageName, 0)
+                        val versionCode = packageInfo.versionCode
+                        val checkCode = data[VERSION_CODE]!!.toInt()
+                        if (versionCode < checkCode) {
+                            var intent = Intent(Intent.ACTION_VIEW,
+                                    Uri.parse("market://details?id=" + packageName))
 
-                    val versionCode = pInfo.versionCode
-                    val checkCode = data[VERSION_CODE]!!.toInt()
-                    if (versionCode < checkCode) {
-                        var intent = Intent(Intent.ACTION_VIEW,
-                                Uri.parse("market://details?id=" + packageName))
+                            if (intent.resolveActivity(packageManager) == null) {
+                                intent = Intent(Intent.ACTION_VIEW,
+                                        Uri.parse("https://play.google.com/store/apps/details?id=" + packageName))
+                            }
 
-                        if (intent.resolveActivity(packageManager) == null) {
-                            intent = Intent(Intent.ACTION_VIEW,
-                                    Uri.parse("https://play.google.com/store/apps/details?id=" + packageName))
+                            val title = if (remoteMessage.notification.title.isNullOrBlank())
+                                getString(R.string.app_name) else remoteMessage.notification.title
+                            val message = remoteMessage.notification.body!!
+                            sendIntentNotification(title!!, message, intent, NotificationUtils.VERSION_CHANNEL_ID)
                         }
-
-                        sendIntentNotification(getString(R.string.app_name),
-                                "Please update your app",
-                                intent, NotificationUtils.VERSION_CHANNEL_ID)
                     }
-                }
-                "general" -> {
-                    if (notification != null) {
+                    "general" -> {
                         sendNotification(notification, NotificationUtils.GENERAL_CHANNEL_ID)
                     }
                 }
