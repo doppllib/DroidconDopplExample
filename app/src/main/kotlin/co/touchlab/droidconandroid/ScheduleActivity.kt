@@ -1,9 +1,11 @@
 package co.touchlab.droidconandroid
 
+import android.app.NotificationManager
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
 import android.content.Intent
 import android.graphics.PorterDuff
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.support.design.widget.TabLayout
@@ -14,6 +16,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.text.format.DateUtils
 import android.view.View
+import co.touchlab.droidconandroid.alerts.NotificationUtils
 import co.touchlab.droidconandroid.shared.data.AppPrefs
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper
 import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor
@@ -51,6 +54,12 @@ class ScheduleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         FirebaseMessaging.getInstance().subscribeToTopic(ALL_TOPIC)
         FirebaseMessaging.getInstance().subscribeToTopic(ANDROID_TOPIC)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            val utils = NotificationUtils(this, notificationManager)
+            utils.createChannels()
+        }
+
         val factory = ConferenceDataViewModel.Factory(interactor, AppPrefs.getInstance(this))
         viewModel = ViewModelProviders.of(this, factory)[ConferenceDataViewModel::class.java]
 

@@ -41,22 +41,25 @@ class NotificationService : FirebaseMessagingService() {
             val data = remoteMessage.data
             val type = data[TYPE]
             val notification = remoteMessage.notification
-
             Log.d(TAG, "Received firebase message: " + type)
 
             when (type) {
                 "updateSchedule" -> TODO("Inject Refresh interactor and call refreshFromServer()")
                 "event" -> {
-                    val message = remoteMessage.notification.body
-                    val eventId = data[EVENT_ID]!!.toLong()
-                    DatabaseHelper.getInstance(this)
-                            .getEventForId(eventId)
-                            .filter { it != null }
-                            .subscribe { event ->
-                                val title = if (remoteMessage.notification.title.isNullOrBlank()) DROIDCON else remoteMessage.notification.title
-                                val category = if (event.category.isNullOrBlank()) DESIGN else event.category
-                                sendEventNotification(title!!, message!!, eventId, category)
-                            }
+                    if (notification != null) {
+                        val message = remoteMessage.notification.body
+                        val eventId = data[EVENT_ID]!!.toLong()
+                        DatabaseHelper.getInstance(this)
+                                .getEventForId(eventId)
+                                .filter { it != null }
+                                .subscribe { event ->
+                                    val title = if (remoteMessage.notification.title.isNullOrBlank())
+                                        DROIDCON else remoteMessage.notification.title
+                                    val category = if (event.category.isNullOrBlank())
+                                        DESIGN else event.category
+                                    sendEventNotification(title!!, message!!, eventId, category, NotificationUtils.EVENT_CHANNEL_ID)
+                                }
+                    }
                 }
                 "version" -> {
                     val pInfo = packageManager.getPackageInfo(packageName, 0)
@@ -74,35 +77,33 @@ class NotificationService : FirebaseMessagingService() {
 
                         sendIntentNotification(getString(R.string.app_name),
                                 "Please update your app",
-                                intent)
+                                intent, NotificationUtils.VERSION_CHANNEL_ID)
                     }
                 }
                 "general" -> {
-                    // Check if message contains a notification payload.
                     if (notification != null) {
-                        sendNotification(notification)
+                        sendNotification(notification, NotificationUtils.GENERAL_CHANNEL_ID)
                     }
                 }
             }
         } catch(e: Exception) {
-            Log.e(TAG, "onMessageReceived: ", e)
+            Log.e(TAG, "onMessageReceived error: ", e)
             AppManager.getPlatformClient().logException(e)
         }
     }
 
-    private fun sendNotification(notification: RemoteMessage.Notification) {
+    private fun sendNotification(notification: RemoteMessage.Notification, channelId: String) {
         val intent = Intent(this, ScheduleActivity::class.java)
         val title = if (notification.title.isNullOrBlank()) DROIDCON else notification.title
-        sendIntentNotification(title!!, notification.body!!, intent)
-        //what if body is null?
+        sendIntentNotification(title!!, notification.body!!, intent, channelId)
     }
 
-    private fun sendEventNotification(title: String, message: String, eventId: Long, category: String) {
+    private fun sendEventNotification(title: String, message: String, eventId: Long, category: String, channelId: String) {
         val intent = EventDetailActivity.createIntent(this, category, eventId)
-        sendIntentNotification(title, message, intent)
+        sendIntentNotification(title, message, intent, channelId)
     }
 
-    private fun sendIntentNotification(title: String, message: String, intent: Intent) {
+    private fun sendIntentNotification(title: String, message: String, intent: Intent, channelId: String) {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         val pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
                 PendingIntent.FLAG_ONE_SHOT)
@@ -115,6 +116,7 @@ class NotificationService : FirebaseMessagingService() {
                 .setAutoCancel(true)
                 .setSound(defaultSoundUri)
                 .setStyle(NotificationCompat.BigTextStyle().bigText(message))
+                .setChannelId(channelId)
                 .setContentIntent(pendingIntent)
 
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
