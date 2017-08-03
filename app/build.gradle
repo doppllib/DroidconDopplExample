@@ -102,6 +102,7 @@ android {
 
 def supportVersion = "26.0.0"
 def archVer = "1.0.0-alpha1"
+def daggerVer = "2.5"
 
 dependencies {
 
@@ -151,12 +152,14 @@ dependencies {
 
     //    doppl 'co.doppl.com.google.code.gson:gson:2.6.2.1'
 
-    compile 'com.birbit:android-priority-jobqueue:2.0.1'
-    doppl 'co.doppl.com.github.yigit:android-priority-jobqueue:2.0.1.0'
+    compile "com.google.dagger:dagger:$daggerVer"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVer"
+    testAnnotationProcessor "com.google.dagger:dagger-compiler:$daggerVer"
+    provided 'javax.annotation:jsr250-api:1.0'
+    doppl 'co.doppl.com.google.dagger:dagger:2.5.3'
 
     compile 'com.google.firebase:firebase-messaging:11.0.4'
 
-    //Testing dependencies
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:1.9.5'
 }

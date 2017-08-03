@@ -8,13 +8,9 @@ import android.content.Intent
 import android.media.RingtoneManager
 import android.support.v4.app.TaskStackBuilder
 import android.support.v7.app.NotificationCompat
-import co.touchlab.droidconandroid.DroidconApplication
 import co.touchlab.droidconandroid.EventDetailActivity
 import co.touchlab.droidconandroid.R
-import co.touchlab.droidconandroid.shared.data.AppPrefs
-import co.touchlab.droidconandroid.shared.data.DatabaseHelper
-import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor
-import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
+import co.touchlab.droidconandroid.shared.presenter.AppManager
 
 const val EXTRA_EVENT_NAME = "EXTRA_EVENT_NAME"
 const val EXTRA_EVENT_ID = "EXTRA_EVENT_ID"
@@ -24,12 +20,7 @@ const val ALERT_ACTION = "co.touchlab.droidconandroid.DISPLAY_NOTIFICATION"
 class AlertReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-
-        val helper = DatabaseHelper.getInstance(context)
-        val prefs = AppPrefs.getInstance(context)
-        val jobManager = DroidconApplication.getInstance().jobManager
-        val refreshInteractor = RefreshScheduleInteractor(jobManager, helper)
-        val updateAlertsInteractor = UpdateAlertsInteractor(prefs, refreshInteractor)
+        val updateAlertsInteractor = AppManager.getInstance().appComponent.updateAlertsInteractor()
 
         if (ALERT_ACTION == intent.action) {
 

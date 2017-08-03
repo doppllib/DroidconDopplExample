@@ -4,6 +4,8 @@ import android.arch.lifecycle.ViewModelProvider;
 
 import com.google.j2objc.annotations.Weak;
 
+import javax.inject.Inject;
+
 import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
@@ -42,11 +44,11 @@ public class ScheduleDataViewModel extends ViewModel
 
     public static class Factory extends ViewModelProvider.NewInstanceFactory
     {
-        private final RefreshScheduleInteractor interactor;
+        @Inject
+        RefreshScheduleInteractor interactor;
 
-        public Factory(RefreshScheduleInteractor interactor)
+        public Factory()
         {
-            this.interactor = interactor;
         }
 
         @Override

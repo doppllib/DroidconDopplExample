@@ -10,6 +10,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeMap;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
 import co.touchlab.droidconandroid.shared.data.Block;
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
@@ -29,38 +32,42 @@ import io.reactivex.Single;
 /**
  * Created by kgalligan on 4/17/16.
  */
+@Singleton
 public class ConferenceDataHelper
 {
-    private final static SimpleDateFormat dateFormat;
-    private final static SimpleDateFormat timeFormat;
+    private final static SimpleDateFormat DATE_FORMAT = TimeUtils.makeDateFormat("MM/dd/yyyy");
+    private final static SimpleDateFormat TIME_FORMAT = TimeUtils.makeDateFormat("h:mma");
+    private final AppPrefs       appPrefs;
+    private final DatabaseHelper helper;
 
-    static
+    @Inject
+    public ConferenceDataHelper(AppPrefs appPrefs, DatabaseHelper helper)
     {
-        dateFormat = TimeUtils.makeDateFormat("MM/dd/yyyy");
-        timeFormat = TimeUtils.makeDateFormat("h:mma");
+        this.appPrefs = appPrefs;
+        this.helper = helper;
     }
 
     public static String dateToDayString(Date d)
     {
-        return dateFormat.format(d);
+        return DATE_FORMAT.format(d);
     }
 
-    public static Single<List<TimeBlock>> getDays(DatabaseHelper helper)
+    public Single<List<TimeBlock>> getDays()
     {
-        return Single.fromCallable(() -> getDaySchedules(helper));
+        return Single.fromCallable(this :: getDaySchedules);
     }
 
-    private static List<TimeBlock> getDaySchedules(DatabaseHelper databaseHelper) throws SQLException
+    private List<TimeBlock> getDaySchedules()
     {
         List<TimeBlock> eventAndBlockList = new ArrayList<>();
-        List<Event> eventList = databaseHelper.getEventsWithSpeakersList();
+        List<Event> eventList = helper.getEventsWithSpeakersList();
 
-        eventAndBlockList.addAll(databaseHelper.getBlocksList());
+        eventAndBlockList.addAll(helper.getBlocksList());
         eventAndBlockList.addAll(eventList);
         return eventAndBlockList;
     }
 
-    public static int sortTimeBlocks(TimeBlock o1, TimeBlock o2)
+    public int sortTimeBlocks(TimeBlock o1, TimeBlock o2)
     {
         final long compTimes = o1.getStartLong() - o2.getStartLong();
         if(compTimes != 0)
@@ -85,7 +92,7 @@ public class ConferenceDataHelper
         return ((Event) o1).venue.name.compareTo(((Event) o2).venue.name);
     }
 
-    public static TreeMap<String, List<HourBlock>> formatHourBlocks(List<TimeBlock> eventAndBlockList)
+    public TreeMap<String, List<HourBlock>> formatHourBlocks(List<TimeBlock> eventAndBlockList)
     {
         TreeMap<String, List<HourBlock>> dateWithBlocksTreeMap = new TreeMap<>();
         String lastHourDisplay = "";
@@ -93,7 +100,7 @@ public class ConferenceDataHelper
         for(TimeBlock timeBlock : eventAndBlockList)
         {
             final Date startDateObj = new Date(timeBlock.getStartLong());
-            final String startDate = dateFormat.format(startDateObj);
+            final String startDate = DATE_FORMAT.format(startDateObj);
             List<HourBlock> blockHourList = dateWithBlocksTreeMap.get(startDate);
             if(blockHourList == null)
             {
@@ -101,7 +108,7 @@ public class ConferenceDataHelper
                 dateWithBlocksTreeMap.put(startDate, blockHourList);
             }
 
-            final String startTime = timeFormat.format(startDateObj);
+            final String startTime = TIME_FORMAT.format(startDateObj);
             final boolean newHourDisplay = ! lastHourDisplay.equals(startTime);
             blockHourList.add(new HourBlock(newHourDisplay ? startTime : "", timeBlock));
             lastHourDisplay = startTime;
@@ -109,7 +116,7 @@ public class ConferenceDataHelper
         return dateWithBlocksTreeMap;
     }
 
-    public static List<DaySchedule> convertMapToDaySchedule(TreeMap<String, List<HourBlock>> dateWithBlocksTreeMap)
+    public List<DaySchedule> convertMapToDaySchedule(TreeMap<String, List<HourBlock>> dateWithBlocksTreeMap)
     {
         List<DaySchedule> dayScheduleList = new ArrayList<>();
 
@@ -124,12 +131,12 @@ public class ConferenceDataHelper
         return dayScheduleList;
     }
 
-    public static Completable saveConvention(final DatabaseHelper helper, final AppPrefs appPrefs, final Convention convention)
+    public Completable saveConvention(final Convention convention)
     {
-        return Completable.fromAction(() -> saveConventionData(helper, appPrefs, convention));
+        return Completable.fromAction(() -> saveConventionData(convention));
     }
 
-    private static void saveConventionData(final DatabaseHelper helper, final AppPrefs appPrefs, final Convention convention)
+    private void saveConventionData(final Convention convention)
     {
 
         if(convention == null)

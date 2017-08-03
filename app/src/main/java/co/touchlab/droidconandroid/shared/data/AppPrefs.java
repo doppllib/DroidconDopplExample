@@ -5,10 +5,14 @@ import android.content.SharedPreferences;
 
 import org.jetbrains.annotations.NotNull;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
 
 /**
  * Created by kgalligan on 6/28/14.
  */
+@Singleton
 public class AppPrefs
 {
     public static final String SEEN_WELCOME     = "seen_welcome";
@@ -28,11 +32,17 @@ public class AppPrefs
     {
         if(instance == null)
         {
-            instance = new AppPrefs();
+            instance = new AppPrefs(context);
             instance.prefs = context.getSharedPreferences("APP_PREFS", Context.MODE_PRIVATE);
         }
 
         return instance;
+    }
+
+    @Inject
+    public AppPrefs(Context context)
+    {
+        prefs = context.getSharedPreferences("APP_PREFS", Context.MODE_PRIVATE);
     }
 
     public boolean once(String key)

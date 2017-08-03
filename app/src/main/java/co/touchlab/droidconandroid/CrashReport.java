@@ -8,6 +8,6 @@ public class CrashReport
 {
     public static void logException(Throwable t)
     {
-        AppManager.getPlatformClient().logException(t);
+        AppManager.getInstance().getPlatformClient().logException(t);
     }
 }

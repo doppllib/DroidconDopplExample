@@ -14,11 +14,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import co.touchlab.droidconandroid.shared.data.*
-import co.touchlab.droidconandroid.shared.interactors.EventDetailInteractor
-import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor
-import co.touchlab.droidconandroid.shared.interactors.RsvpInteractor
-import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
+import co.touchlab.droidconandroid.shared.data.Event
+import co.touchlab.droidconandroid.shared.data.EventInfo
+import co.touchlab.droidconandroid.shared.data.Track
+import co.touchlab.droidconandroid.shared.data.UserAccount
+import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.EventDetailHost
 import co.touchlab.droidconandroid.shared.presenter.EventDetailViewModel
 import kotlinx.android.synthetic.main.fragment_event_detail.*
@@ -33,14 +33,8 @@ class EventDetailFragment : Fragment(), EventDetailHost {
     private val eventId: Long by lazy { findEventIdArg() }
 
     private val viewModel: EventDetailViewModel by lazy {
-        val helper = DatabaseHelper.getInstance(activity)
-        val appPrefs = AppPrefs.getInstance(activity)
-        val eventDetailsInteractor = EventDetailInteractor(helper, eventId)
-        val jobManager = DroidconApplication.getInstance().jobManager
-        val refreshInteractor = RefreshScheduleInteractor(jobManager, helper)
-        val alertsInteractor = UpdateAlertsInteractor(appPrefs, refreshInteractor)
-        val rsvpInteractor = RsvpInteractor(jobManager, helper, eventId)
-        val factory = EventDetailViewModel.Factory(eventDetailsInteractor, rsvpInteractor, alertsInteractor)
+        val factory = EventDetailViewModel.Factory()
+        AppManager.getInstance().appComponent.inject(factory)
         ViewModelProviders.of(this, factory)[EventDetailViewModel::class.java]
     }
 
@@ -108,7 +102,7 @@ class EventDetailFragment : Fragment(), EventDetailHost {
     override fun onResume() {
         super.onResume()
         viewModel.register(this)
-        viewModel.getDetails()
+        viewModel.getDetails(eventId)
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
@@ -179,9 +173,9 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         } else {
             fab.setOnClickListener {
                 if (event.isRsvped) {
-                    viewModel.setRsvp(false)
+                    viewModel.setRsvp(false, eventId)
                 } else {
-                    viewModel.setRsvp(true)
+                    viewModel.setRsvp(true, eventId)
                 }
             }
 
