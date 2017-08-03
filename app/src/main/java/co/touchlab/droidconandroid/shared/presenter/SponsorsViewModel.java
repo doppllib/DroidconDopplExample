@@ -2,6 +2,7 @@ package co.touchlab.droidconandroid.shared.presenter;
 
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
+import android.util.Log;
 
 import com.google.j2objc.annotations.Weak;
 
@@ -10,6 +11,8 @@ import org.jetbrains.annotations.NotNull;
 import javax.inject.Inject;
 
 import co.touchlab.droidconandroid.shared.interactors.SponsorsInteractor;
+import co.touchlab.droidconandroid.shared.network.SponsorsResult;
+import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
@@ -20,6 +23,7 @@ public class SponsorsViewModel extends ViewModel
     @Weak
     private       SponsorsHost       host;
     private CompositeDisposable disposables = new CompositeDisposable();
+    private Observable<SponsorsResult> sponsorsResultObservable;
 
     private SponsorsViewModel(@NotNull SponsorsInteractor task)
     {
@@ -33,8 +37,12 @@ public class SponsorsViewModel extends ViewModel
 
     public void getSponsors(int type)
     {
-        disposables.add(task.getSponsors(type)
-                .subscribeOn(Schedulers.io())
+        if(sponsorsResultObservable == null)
+        {
+            sponsorsResultObservable = task.getSponsors(type).cache();
+        }
+
+        disposables.add(sponsorsResultObservable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(host:: onSponsorsFound, e -> host.onError()));
     }

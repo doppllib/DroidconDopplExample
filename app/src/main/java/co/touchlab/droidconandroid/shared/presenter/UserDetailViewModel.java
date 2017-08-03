@@ -8,7 +8,9 @@ import com.google.j2objc.annotations.Weak;
 
 import javax.inject.Inject;
 
+import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.interactors.FindUserInteractor;
+import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
@@ -20,6 +22,7 @@ public class UserDetailViewModel extends ViewModel
     private UserDetailHost     host;
     private FindUserInteractor task;
     private CompositeDisposable disposables = new CompositeDisposable();
+    private Observable<UserAccount> userAccountObservable;
 
     private UserDetailViewModel(FindUserInteractor task)
     {
@@ -33,8 +36,12 @@ public class UserDetailViewModel extends ViewModel
 
     public void findUser(final long userId)
     {
-        disposables.add(task.loadUserAccount(userId)
-                .subscribeOn(Schedulers.io())
+        if(userAccountObservable == null)
+        {
+            userAccountObservable = task.loadUserAccount(userId).cache();
+        }
+
+        disposables.add(userAccountObservable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(userAccount -> host.onUserFound(userAccount),
                         throwable -> host.findUserError()));

@@ -1,5 +1,7 @@
 package co.touchlab.droidconandroid.shared.interactors;
 
+import android.util.Log;
+
 import javax.inject.Inject;
 
 import co.touchlab.droidconandroid.shared.network.SponsorsRequest;
@@ -11,8 +13,7 @@ public class SponsorsInteractor
     public static final int SPONSOR_GENERAL = 0;
     public static final int SPONSOR_PARTY   = 1;
 
-    private final SponsorsRequest            request;
-    private       Observable<SponsorsResult> sponsorsObservable;
+    private final SponsorsRequest request;
 
     @Inject
     public SponsorsInteractor(SponsorsRequest request)
@@ -22,13 +23,8 @@ public class SponsorsInteractor
 
     public Observable<SponsorsResult> getSponsors(int type)
     {
-        if(sponsorsObservable == null)
-        {
-            String fileName = getFileName(type);
-            sponsorsObservable = request.getSponsors(fileName).cache();
-        }
-
-        return sponsorsObservable;
+        String fileName = getFileName(type);
+        return request.getSponsors(fileName);
     }
 
     private String getFileName(int type)

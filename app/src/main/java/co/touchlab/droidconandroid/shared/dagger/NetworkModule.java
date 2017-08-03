@@ -1,5 +1,6 @@
 package co.touchlab.droidconandroid.shared.dagger;
 
+import javax.inject.Named;
 import javax.inject.Singleton;
 
 import co.touchlab.droidconandroid.shared.network.FindUserRequest;
@@ -16,9 +17,19 @@ public class NetworkModule
 {
 
     @Provides
+    @Singleton
+    @DroidconServer
     String providesBaseUrl()
     {
-        return "https://droidcon-server.herokuapp.com/";
+        return "https://droidcon-server.herokuapp.com";
+    }
+
+    @Provides
+    @Singleton
+    @AmazonServer
+    String providesAmazonBaseUrl()
+    {
+        return "https://s3.amazonaws.com/";
     }
 
     @Provides
@@ -30,34 +41,44 @@ public class NetworkModule
 
     @Provides
     @Singleton
-    FindUserRequest providesFindUserRequest(GsonConverterFactory factory, String baseUrl)
+    @DroidconServer
+    Retrofit providesDroidconRetrofit(GsonConverterFactory factory, @DroidconServer String baseUrl)
     {
         return new Retrofit.Builder().baseUrl(baseUrl)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .addConverterFactory(factory)
-                .build()
-                .create(FindUserRequest.class);
+                .addConverterFactory(factory).build();
     }
 
     @Provides
     @Singleton
-    RefreshScheduleDataRequest providesRefreshScheduleRequest(GsonConverterFactory factory, String baseUrl)
+    @AmazonServer
+    Retrofit providesAmazonRetrofit(GsonConverterFactory factory, @AmazonServer String baseUrl)
     {
         return new Retrofit.Builder().baseUrl(baseUrl)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(factory)
-                .build()
-                .create(RefreshScheduleDataRequest.class);
+                .build();
     }
 
     @Provides
     @Singleton
-    SponsorsRequest providesSponsorRequest(GsonConverterFactory factory, String baseUrl)
+    FindUserRequest providesFindUserRequest(@DroidconServer Retrofit retrofit)
     {
-        return new Retrofit.Builder().baseUrl(baseUrl)
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .addConverterFactory(factory)
-                .build()
-                .create(SponsorsRequest.class);
+        return retrofit.create(FindUserRequest.class);
+    }
+
+
+    @Provides
+    @Singleton
+    RefreshScheduleDataRequest providesRefreshScheduleRequest(@DroidconServer Retrofit retrofit)
+    {
+        return retrofit.create(RefreshScheduleDataRequest.class);
+    }
+
+    @Provides
+    @Singleton
+    SponsorsRequest providesSponsorRequest(@AmazonServer Retrofit retrofit)
+    {
+        return retrofit.create(SponsorsRequest.class);
     }
 }
