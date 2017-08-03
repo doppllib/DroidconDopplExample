@@ -11,9 +11,12 @@ import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.presenter.UserDetailHost;
 import co.touchlab.droidconandroid.shared.presenter.UserDetailViewModel;
 import io.reactivex.Observable;
+import io.reactivex.Single;
 
 
 import static org.mockito.Matchers.anyInt;
+import static org.mockito.Matchers.anyLong;
+import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -27,8 +30,9 @@ public class UserDetailViewModelTest
     FindUserInteractor interactor;
     @Mock
     UserDetailHost     host;
-    UserDetailViewModel.Factory factory;
-    private UserDetailViewModel viewModel;
+    private UserDetailViewModel.Factory factory;
+    private UserDetailViewModel         viewModel;
+    private UserAccount user = new UserAccount();
 
     @Before
     public void setUp()
@@ -65,5 +69,32 @@ public class UserDetailViewModelTest
         verify(host).findUserError();
     }
 
+    @Test
+    public void whenLoadUserSuccessful_ShouldCacheResult()
+    {
+        when(interactor.loadUserAccount(anyInt())).thenReturn(Observable.just(user));
+
+        viewModel.findUser(100);
+
+        when(interactor.loadUserAccount(anyInt())).thenReturn(Observable.just(user));
+
+        viewModel.findUser(100);
+
+        verify(interactor, times(1)).loadUserAccount(100);
+    }
+
+    @Test
+    public void whenErrorLoadingUser_ShouldNotCacheResult()
+    {
+        when(interactor.loadUserAccount(anyInt())).thenReturn(Observable.error(new Throwable()));
+
+        viewModel.findUser(100);
+
+        when(interactor.loadUserAccount(anyInt())).thenReturn(Observable.just(user));
+
+        viewModel.findUser(100);
+
+        verify(interactor, times(2)).loadUserAccount(100);
+    }
 
 }

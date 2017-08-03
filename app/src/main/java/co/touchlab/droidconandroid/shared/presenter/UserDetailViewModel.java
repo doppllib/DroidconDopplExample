@@ -43,6 +43,7 @@ public class UserDetailViewModel extends ViewModel
 
         disposables.add(userAccountObservable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
+                .doOnError(e -> userAccountObservable = null)
                 .subscribe(userAccount -> host.onUserFound(userAccount),
                         throwable -> host.findUserError()));
     }
