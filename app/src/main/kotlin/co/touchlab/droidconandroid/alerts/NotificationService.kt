@@ -19,10 +19,9 @@ class NotificationService : FirebaseMessagingService() {
 
     companion object {
         private val TAG = "NotificationService"
-        private val DROIDCON = "Droidcon"
-        private val TYPE = "type"
-        private val EVENT_ID = "eventId"
-        private val VERSION_CODE = "versionCode"
+        val TYPE = "type"
+        val EVENT_ID = "eventId"
+        val VERSION_CODE = "versionCode"
     }
 
     /**
@@ -48,7 +47,7 @@ class NotificationService : FirebaseMessagingService() {
                         val message = remoteMessage.notification.body
                         val eventId = data[EVENT_ID]!!.toLong()
                         val title = if (remoteMessage.notification.title.isNullOrBlank())
-                                        DROIDCON else remoteMessage.notification.title
+                            getString(R.string.app_name) else remoteMessage.notification.title
                         sendEventNotification(title!!, message!!, eventId, NotificationUtils.EVENT_CHANNEL_ID)
                     }
                 }
@@ -84,7 +83,7 @@ class NotificationService : FirebaseMessagingService() {
 
     private fun sendNotification(notification: RemoteMessage.Notification, channelId: String) {
         val intent = Intent(this, ScheduleActivity::class.java)
-        val title = if (notification.title.isNullOrBlank()) DROIDCON else notification.title
+        val title = if (notification.title.isNullOrBlank()) getString(R.string.app_name) else notification.title
         sendIntentNotification(title!!, notification.body!!, intent, channelId)
     }
 

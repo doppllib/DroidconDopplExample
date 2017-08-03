@@ -68,11 +68,11 @@
     <string name="notif_body">"The \"%s\" session is starting soon!"</string>
     <string name="conflict">Conflict</string>
     <string name="feedback">Feedback</string>
-    <string name="general_name">General Updates</string>
+    <string name="general_name">General</string>
     <string name="general_description">Important updates from Droidcon</string>
-    <string name="version_name">New App Version Alert</string>
+    <string name="version_name">App Version Update</string>
     <string name="version_description">Know when new versions of the app are released</string>
-    <string name="event_name">Upcoming Event Alert</string>
+    <string name="event_name">Upcoming Events</string>
     <string name="event_description">Reminders for upcoming events</string>
 
     <!-- content descriptions-->
