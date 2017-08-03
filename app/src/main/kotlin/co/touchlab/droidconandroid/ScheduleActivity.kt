@@ -68,6 +68,14 @@ class ScheduleActivity : AppCompatActivity() {
                 setContentView(R.layout.activity_schedule)
             }
         }
+
+        // Firebase Messaging adds data payload to launch activity if notification is sent while
+        // app is in the background. Check for extras here:
+        if (intent.extras != null && intent.extras[EVENT_ID] != null) {
+            val eventId = intent.extras[EVENT_ID].toString().toLong()
+            val intent = EventDetailActivity.createIntent(this, eventId)
+            startActivity(intent)
+        }
     }
 
     override fun onStart() {
@@ -285,6 +293,8 @@ class ScheduleActivity : AppCompatActivity() {
         private val ALL_EVENTS = "all_events"
         private val ALL_TOPIC = "all"
         private val ANDROID_TOPIC = "android"
+        private val EVENT_ID = "eventId"
+
         @JvmField
         val ALPHA_OPAQUE = 255
 

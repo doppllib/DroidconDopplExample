@@ -21,6 +21,7 @@ class NotificationService : FirebaseMessagingService() {
     companion object {
         private val TAG = "NotificationService"
         private val DROIDCON = "Droidcon"
+        private val DESIGN = "Design"
         private val TYPE = "type"
         private val EVENT_ID = "eventId"
         private val VERSION_CODE = "versionCode"
@@ -53,7 +54,8 @@ class NotificationService : FirebaseMessagingService() {
                             .filter { it != null }
                             .subscribe { event ->
                                 val title = if (remoteMessage.notification.title.isNullOrBlank()) DROIDCON else remoteMessage.notification.title
-                                sendEventNotification(title!!, message!!, eventId, event.category)
+                                val category = if (event.category.isNullOrBlank()) DESIGN else event.category
+                                sendEventNotification(title!!, message!!, eventId, category)
                             }
                 }
                 "version" -> {
