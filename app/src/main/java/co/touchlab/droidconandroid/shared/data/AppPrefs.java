@@ -22,22 +22,7 @@ public class AppPrefs
     public static final String ALLOW_NOTIFS    = "allow_notifs";
     public static final String SHOW_NOTIF_CARD = "show_notif_card";
 
-    private static AppPrefs instance;
-
     private SharedPreferences prefs;
-
-
-    @NotNull
-    public static synchronized AppPrefs getInstance(Context context)
-    {
-        if(instance == null)
-        {
-            instance = new AppPrefs(context);
-            instance.prefs = context.getSharedPreferences("APP_PREFS", Context.MODE_PRIVATE);
-        }
-
-        return instance;
-    }
 
     @Inject
     public AppPrefs(Context context)

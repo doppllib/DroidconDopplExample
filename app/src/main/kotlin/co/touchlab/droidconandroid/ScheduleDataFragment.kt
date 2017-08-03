@@ -9,7 +9,6 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import co.touchlab.droidconandroid.shared.data.AppPrefs
 import co.touchlab.droidconandroid.shared.data.Event
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 import co.touchlab.droidconandroid.shared.presenter.*
@@ -35,7 +34,7 @@ class ScheduleDataFragment : Fragment(), ConferenceDataHost {
 
     val shouldShowNotif: Boolean
         get() {
-            return AppPrefs.getInstance(context).showNotifCard
+            return AppManager.getInstance().appComponent.prefs.showNotifCard
                     && !arguments.getBoolean(ALL_EVENTS, true)
                     && arguments.getInt(POSITION, 0) == 0
         }
