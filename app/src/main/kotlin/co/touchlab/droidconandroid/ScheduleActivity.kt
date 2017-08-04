@@ -28,6 +28,7 @@ import java.util.*
 class ScheduleActivity : AppCompatActivity() {
 
     private var allEvents = true
+  
     private val viewModel: ConferenceDataViewModel by lazy {
         val factory = ConferenceDataViewModel.Factory(allEvents)
         AppManager.getInstance().appComponent.inject(factory)
