@@ -47,7 +47,8 @@ public class EventDetailViewModel extends ViewModel
     public void getDetails(Long eventId)
     {
         disposables.add(getEventDetails(eventId).subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread()).subscribe(eventInfo ->
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(eventInfo ->
                 {
                     AnalyticsHelper.recordAnalytics(AnalyticsEvents.OPEN_EVENT, eventInfo.event);
                     host.dataRefresh(eventInfo);
@@ -71,22 +72,24 @@ public class EventDetailViewModel extends ViewModel
         {
             rsvpInteractor.addRsvp(eventId)
                     .subscribeOn(Schedulers.io())
-                    .observeOn(AndroidSchedulers.mainThread()).subscribe(event ->
-            {
-                host.updateRsvp(event);
-                alertsInteractor.alert();
-            }, e -> Log.e("Error", "Error trying to add rsvp"));
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(event ->
+                    {
+                        host.updateRsvp(event);
+                        alertsInteractor.alert();
+                    }, e -> Log.e("Error", "Error trying to add rsvp"));
 
         }
         else
         {
             rsvpInteractor.removeRsvp(eventId)
                     .subscribeOn(Schedulers.io())
-                    .observeOn(AndroidSchedulers.mainThread()).subscribe(event ->
-            {
-                host.updateRsvp(event);
-                alertsInteractor.alert();
-            }, e -> Log.e("Error", "Error trying to remove rsvp"));
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(event ->
+                    {
+                        host.updateRsvp(event);
+                        alertsInteractor.alert();
+                    }, e -> Log.e("Error", "Error trying to remove rsvp"));
         }
     }
 
