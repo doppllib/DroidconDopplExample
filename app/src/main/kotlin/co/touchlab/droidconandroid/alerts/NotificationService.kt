@@ -42,13 +42,12 @@ class NotificationService : FirebaseMessagingService() {
 
             if (notification != null) {
                 when (type) {
-                    "updateSchedule" -> AppManager.getInstance().appComponent.refreshScheduleInteractor().refreshFromServer()
+                    "updateSchedule" -> {
+                        AppManager.getInstance().appComponent.refreshScheduleInteractor().refreshFromServer()
+                    }
                     "event" -> {
-                        val message = remoteMessage.notification.body
                         val eventId = data[EVENT_ID]!!.toLong()
-                        val title = if (remoteMessage.notification.title.isNullOrBlank())
-                            getString(R.string.app_name) else remoteMessage.notification.title
-                        sendEventNotification(title!!, message!!, eventId, NotificationUtils.EVENT_CHANNEL_ID)
+                        sendEventNotification(notification, eventId, NotificationUtils.EVENT_CHANNEL_ID)
                     }
                     "version" -> {
                         val packageInfo = packageManager.getPackageInfo(packageName, 0)
@@ -62,15 +61,12 @@ class NotificationService : FirebaseMessagingService() {
                                 intent = Intent(Intent.ACTION_VIEW,
                                         Uri.parse("https://play.google.com/store/apps/details?id=" + packageName))
                             }
-
-                            val title = if (remoteMessage.notification.title.isNullOrBlank())
-                                getString(R.string.app_name) else remoteMessage.notification.title
-                            val message = remoteMessage.notification.body!!
-                            sendIntentNotification(title!!, message, intent, NotificationUtils.VERSION_CHANNEL_ID)
+                            sendIntentNotification(notification, intent, NotificationUtils.VERSION_CHANNEL_ID)
                         }
                     }
                     "general" -> {
-                        sendNotification(notification, NotificationUtils.GENERAL_CHANNEL_ID)
+                        val intent = Intent(this, ScheduleActivity::class.java)
+                        sendIntentNotification(notification, intent, NotificationUtils.GENERAL_CHANNEL_ID)
                     }
                 }
             }
@@ -79,25 +75,22 @@ class NotificationService : FirebaseMessagingService() {
         }
     }
 
-    private fun sendNotification(notification: RemoteMessage.Notification, channelId: String) {
-        val intent = Intent(this, ScheduleActivity::class.java)
-        val title = if (notification.title.isNullOrBlank()) getString(R.string.app_name) else notification.title
-        sendIntentNotification(title!!, notification.body!!, intent, channelId)
-    }
-
-    private fun sendEventNotification(title: String, message: String, eventId: Long, channelId: String) {
+    private fun sendEventNotification(notification: RemoteMessage.Notification, eventId: Long, channelId: String) {
         val intent = EventDetailActivity.createIntent(this, eventId)
-        sendIntentNotification(title, message, intent, channelId)
+        sendIntentNotification(notification, intent, channelId)
     }
 
-    private fun sendIntentNotification(title: String, message: String, intent: Intent, channelId: String) {
+    private fun sendIntentNotification(notification: RemoteMessage.Notification, intent: Intent, channelId: String) {
+        val title = if (notification.title.isNullOrBlank()) getString(R.string.app_name) else notification.title
+        val message = notification.body!!
+
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         val pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
                 PendingIntent.FLAG_ONE_SHOT)
 
         val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
         val notificationBuilder = NotificationCompat.Builder(this)
-                .setSmallIcon(R.mipmap.ic_notification)
+                .setSmallIcon(R.drawable.ic_notification_smallicon_color)
                 .setContentTitle(title)
                 .setContentText(message)
                 .setAutoCancel(true)

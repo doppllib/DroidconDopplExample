@@ -42,6 +42,7 @@ class AlertReceiver : BroadcastReceiver() {
                     .setContentText(context.getString(R.string.notif_body, eventName))
                     .setAutoCancel(true)
                     .setSound(defaultSoundUri)
+                    .setChannelId(NotificationUtils.EVENT_CHANNEL_ID)
                     .setContentIntent(pendingIntent)
                     .build()
 
