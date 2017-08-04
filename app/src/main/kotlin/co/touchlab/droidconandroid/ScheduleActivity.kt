@@ -5,7 +5,6 @@ import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
 import android.content.Intent
 import android.graphics.PorterDuff
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
@@ -58,33 +57,12 @@ class ScheduleActivity : AppCompatActivity() {
             utils.createChannels()
         }
 
-        // Firebase Messaging adds data payload to launch activity if notification is sent while
-        // app is in the background. Check for extras here:
-        if (intent.extras != null && intent.extras[NotificationService.TYPE] != null) {
-            val type = intent.extras[NotificationService.TYPE]
-
-            when (type) {
-                "updateSchedule" -> AppManager.getInstance().appComponent.refreshScheduleInteractor().refreshFromServer()
-                "event" -> {
-                    val eventId = intent.extras[NotificationService.EVENT_ID].toString().toLong()
-                    val intent = EventDetailActivity.createIntent(this, eventId)
-                    startActivity(intent)
-                }
-                "version" -> {
-                    val packageInfo = packageManager.getPackageInfo(packageName, 0)
-                    val versionCode = packageInfo.versionCode
-                    val checkCode = intent.extras[NotificationService.VERSION_CODE].toString().toInt()
-                    if (versionCode < checkCode) {
-                        var intent = Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + packageName))
-
-                        if (intent.resolveActivity(packageManager) == null) {
-                            intent = Intent(Intent.ACTION_VIEW,
-                                    Uri.parse("https://play.google.com/store/apps/details?id=" + packageName))
-                        }
-                        startActivity(intent)
-                    }
-                }
-            }
+        // Firebase Messaging console adds data payload to launch activity if notification is sent
+        // while app is in the background. Check for extras here:
+        if (intent.extras != null && intent.extras[NotificationService.EVENT_ID] != null) {
+            val eventId = intent.extras[NotificationService.EVENT_ID].toString().toLong()
+            val intent = EventDetailActivity.createIntent(this, eventId)
+            startActivity(intent)
         }
 
         when (goToScreen()) {
@@ -323,8 +301,8 @@ class ScheduleActivity : AppCompatActivity() {
         private val POSITION_EXPLORE = 1
         private val POSITION_MY_SCHEDULE = 2
         private val ALL_EVENTS = "all_events"
-        private val ALL_TOPIC = "all"
-        private val ANDROID_TOPIC = "android"
+        private val ALL_TOPIC = "all_debug"
+        private val ANDROID_TOPIC = "android_debug"
 
         @JvmField
         val ALPHA_OPAQUE = 255
