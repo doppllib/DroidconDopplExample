@@ -70,26 +70,26 @@ public class EventDetailViewModel extends ViewModel
     {
         if(shouldRsvp)
         {
-            rsvpInteractor.addRsvp(eventId)
+            disposables.add(rsvpInteractor.addRsvp(eventId)
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(event ->
                     {
                         host.updateRsvp(event);
                         alertsInteractor.alert();
-                    }, e -> Log.e("Error", "Error trying to add rsvp"));
+                    }, e -> Log.e("Error", "Error trying to add rsvp")));
 
         }
         else
         {
-            rsvpInteractor.removeRsvp(eventId)
+            disposables.add(rsvpInteractor.removeRsvp(eventId)
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(event ->
                     {
                         host.updateRsvp(event);
                         alertsInteractor.alert();
-                    }, e -> Log.e("Error", "Error trying to remove rsvp"));
+                    }, e -> Log.e("Error", "Error trying to remove rsvp")));
         }
     }
 
