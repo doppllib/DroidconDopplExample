@@ -3,7 +3,7 @@ package co.touchlab.droidconandroid.shared.presenter;
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
 
-import org.jetbrains.annotations.NotNull;
+import android.support.annotation.NonNull;
 
 import co.touchlab.droidconandroid.shared.interactors.SponsorsInteractor;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -15,11 +15,11 @@ public class SponsorsViewModel extends ViewModel {
     private SponsorsHost host;
     private CompositeDisposable disposables = new CompositeDisposable();
 
-    private SponsorsViewModel(@NotNull SponsorsInteractor task) {
+    private SponsorsViewModel(@NonNull SponsorsInteractor task) {
         this.task = task;
     }
 
-    public void register(@NotNull SponsorsHost host) {
+    public void register(@NonNull SponsorsHost host) {
         this.host = host;
     }
 

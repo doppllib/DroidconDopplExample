@@ -27,10 +27,6 @@ class ScheduleDataFragment : Fragment(), ConferenceDataHost {
         ViewModelProviders.of(this, factory)[ScheduleDataViewModel::class.java]
     }
 
-    val helper: DatabaseHelper by lazy {
-        DatabaseHelper.getInstance(activity)
-    }
-
     val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
         val prefs = AppPrefs.getInstance(activity)
         UpdateAlertsInteractor(prefs, (activity as ScheduleActivity).interactor)

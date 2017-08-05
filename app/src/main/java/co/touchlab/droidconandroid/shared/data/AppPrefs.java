@@ -2,8 +2,11 @@ package co.touchlab.droidconandroid.shared.data;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.support.annotation.NonNull;
 
-import org.jetbrains.annotations.NotNull;
+import java.util.UUID;
+
+import retrofit2.http.PUT;
 
 
 /**
@@ -17,13 +20,14 @@ public class AppPrefs
     public static final String REFRESH_TIME    = "refresh_time";
     public static final String ALLOW_NOTIFS    = "allow_notifs";
     public static final String SHOW_NOTIF_CARD = "show_notif_card";
+    public static final String USER_UNIQUE_UUID = "USER_UNIQUE_UUID";
 
     private static AppPrefs instance;
 
     private SharedPreferences prefs;
 
 
-    @NotNull
+    @NonNull
     public static synchronized AppPrefs getInstance(Context context)
     {
         if(instance == null)
@@ -52,7 +56,7 @@ public class AppPrefs
         setBoolean(SEEN_WELCOME, true);
     }
 
-    public void setConventionStartDate(@NotNull String startDate)
+    public void setConventionStartDate(@NonNull String startDate)
     {
         setString(CONVENTION_START, startDate);
     }
@@ -62,7 +66,7 @@ public class AppPrefs
         return prefs.getString(CONVENTION_START, null);
     }
 
-    public void setConventionEndDate(@NotNull String endDate)
+    public void setConventionEndDate(@NonNull String endDate)
     {
         setString(CONVENTION_END, endDate);
     }
@@ -103,4 +107,14 @@ public class AppPrefs
     {
         prefs.edit().putLong(key, value).apply();
     }
+
+    public String getUserUniqueUuid(){
+        String uuid = prefs.getString(USER_UNIQUE_UUID, null);
+        if(uuid == null)
+        {
+            prefs.edit().putString(USER_UNIQUE_UUID, UUID.randomUUID().toString()).apply();
+        }
+        return prefs.getString(USER_UNIQUE_UUID, null);
+    }
+
 }

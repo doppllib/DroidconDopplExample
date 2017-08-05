@@ -6,7 +6,7 @@ import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 import android.text.TextUtils;
 
-import org.jetbrains.annotations.NotNull;
+import android.support.annotation.NonNull;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -73,7 +73,7 @@ public class Event implements TimeBlock
         return category;
     }
 
-    @NotNull
+    @NonNull
     public Venue getVenue()
     {
         return venue;

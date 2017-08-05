@@ -17,7 +17,6 @@ import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.presenter.AppManager;
 import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor;
-import co.touchlab.droidconandroid.shared.tasks.persisted.JobQueueService;
 import co.touchlab.droidconandroid.shared.utils.EventBusExt;
 import co.touchlab.droidconandroid.shared.utils.IOUtils;
 

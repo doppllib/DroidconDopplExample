@@ -2,7 +2,7 @@ package co.touchlab.droidconandroid.shared.interactors;
 
 import android.text.TextUtils;
 
-import org.jetbrains.annotations.NotNull;
+import android.support.annotation.NonNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +53,7 @@ public class EventDetailInteractor {
         return helper.getEventForId(eventId);
     }
 
-    @NotNull
+    @NonNull
     private EventInfo createEventInfo(Event event, List<UserAccount> eventSpeakers, List<Event> allEvents)
     {
         EventInfo info = new EventInfo();
