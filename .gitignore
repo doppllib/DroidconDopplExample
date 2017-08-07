@@ -38,6 +38,9 @@ captures/
 *.ipr
 .idea
 
+# Google Play Services
+/google-services.json
+
 # Keystore files
 *.jks
 
