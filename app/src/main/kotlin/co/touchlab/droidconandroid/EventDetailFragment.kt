@@ -42,8 +42,6 @@ class EventDetailFragment : Fragment(), EventDetailHost {
     private var fabColorList: ColorStateList? = null
 
     companion object {
-        @JvmField
-        val EXTRA_EVENT_ID = "EXTRA_EVENT_ID"
         private val FAB_URL = "http://imgur.com/gallery/7drHiqr"
         private val TIME_FORMAT = "h:mm a"
         private val EVENT_ID = "EVENT_ID"
