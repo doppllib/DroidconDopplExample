@@ -5,6 +5,7 @@ import javax.inject.Singleton;
 
 import co.touchlab.droidconandroid.shared.network.FindUserRequest;
 import co.touchlab.droidconandroid.shared.network.RefreshScheduleDataRequest;
+import co.touchlab.droidconandroid.shared.network.RsvpRequest;
 import co.touchlab.droidconandroid.shared.network.SponsorsRequest;
 import dagger.Module;
 import dagger.Provides;
@@ -80,5 +81,12 @@ public class NetworkModule
     SponsorsRequest providesSponsorRequest(@AmazonServer Retrofit retrofit)
     {
         return retrofit.create(SponsorsRequest.class);
+    }
+
+    @Provides
+    @Singleton
+    RsvpRequest providesRsvpRequest(@DroidconServer Retrofit retrofit)
+    {
+        return retrofit.create(RsvpRequest.class);
     }
 }
