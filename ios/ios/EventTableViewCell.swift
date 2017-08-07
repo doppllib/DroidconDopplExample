@@ -14,10 +14,10 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel : UILabel!
     @IBOutlet weak var timeInfoLabel : UILabel!
     
-    var networkEvent: DCDEvent!
-    var eventDetailPresenter: DCPEventDetailPresenter!
+    var networkEvent: DDATEvent!
+    var eventDetailPresenter: DPRESEventDetailViewModel!
     
-    func loadInfo(_ title: String, description: String, track: String, time: String, networkEvent: DCDEvent, eventDetailPresenter: DCPEventDetailPresenter) {
+    func loadInfo(_ title: String, description: String, track: String, time: String, networkEvent: DDATEvent, eventDetailPresenter: DPRESEventDetailViewModel) {
         
         self.networkEvent = networkEvent
         self.eventDetailPresenter = eventDetailPresenter

@@ -17,12 +17,10 @@ import co.touchlab.droidconandroid.ui.EventClickListener
 import kotlinx.android.synthetic.main.fragment_schedule_data.*
 import java.util.*
 
-class ScheduleDataFragment : Fragment(), ConferenceDataHost {
+class ScheduleDataFragment : Fragment(), ScheduleDataViewModel.Host {
 
     private val viewModel: ScheduleDataViewModel by lazy {
-        val factory = ScheduleDataViewModel.Factory()
-        AppManager.getInstance().appComponent.inject(factory)
-        ViewModelProviders.of(this, factory)[ScheduleDataViewModel::class.java]
+        ViewModelProviders.of(this, ScheduleDataViewModel.factory())[ScheduleDataViewModel::class.java]
     }
 
     val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
@@ -59,8 +57,7 @@ class ScheduleDataFragment : Fragment(), ConferenceDataHost {
 
     override fun onResume() {
         super.onResume()
-        viewModel.register(this)
-        viewModel.getDataStream(true)
+        viewModel.register(this, true, ConferenceDataHelper.dateToDayString(Date(arguments.getLong(DAY))))
     }
 
     override fun onPause() {
@@ -77,11 +74,11 @@ class ScheduleDataFragment : Fragment(), ConferenceDataHost {
     }
 
     fun switchToAgenda() {
-        viewModel.getDataStream(false)
+        viewModel.register(this, false, ConferenceDataHelper.dateToDayString(Date(arguments.getLong(DAY))))
     }
 
     fun switchToConference() {
-        viewModel.getDataStream(true)
+        viewModel.register(this, true, ConferenceDataHelper.dateToDayString(Date(arguments.getLong(DAY))))
     }
 
     private inner class ScheduleEventClickListener : EventClickListener {
@@ -90,14 +87,8 @@ class ScheduleDataFragment : Fragment(), ConferenceDataHost {
         }
     }
 
-    override fun loadCallback(daySchedules: Array<DaySchedule>) {
-        val dayString = ConferenceDataHelper.dateToDayString(Date(arguments.getLong(DAY)))
-        for (holder in daySchedules) {
-            if (holder.dayString?.equals(dayString) ?: false) {
-                updateAdapter(holder.hourHolders)
-                break
-            }
-        }
+    override fun loadCallback(daySchedule: DaySchedule) {
+        updateAdapter(daySchedule.hourHolders)
         updateAlertsInteractor.alert()
     }
 

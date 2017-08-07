@@ -12,27 +12,32 @@ import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.text.format.DateUtils
 import android.view.View
 import co.touchlab.droidconandroid.shared.data.AppPrefs
-import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataViewModel
 import co.touchlab.droidconandroid.shared.utils.EventBusExt
-import co.touchlab.droidconandroid.shared.utils.TimeUtils
 import co.touchlab.droidconandroid.ui.*
 import kotlinx.android.synthetic.main.activity_schedule.*
 import java.util.*
 
-class ScheduleActivity : AppCompatActivity() {
+class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
+    override fun updateConferenceDates(dates: List<Long>) {
+        if (view_pager.adapter == null) {
+            view_pager.adapter = ScheduleFragmentPagerAdapter(
+                    supportFragmentManager,
+                    dates,
+                    allEvents)
+            view_pager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabs))
+            tabs.setupWithViewPager(view_pager)
+        }
+    }
 
     private var allEvents = true
   
     private val viewModel: ConferenceDataViewModel by lazy {
-        val factory = ConferenceDataViewModel.Factory(allEvents)
-        AppManager.getInstance().appComponent.inject(factory)
-        ViewModelProviders.of(this, factory)[ConferenceDataViewModel::class.java]
+        ViewModelProviders.of(this, ConferenceDataViewModel.factory(allEvents))[ConferenceDataViewModel::class.java]
     }
 
     val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
@@ -46,9 +51,8 @@ class ScheduleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
-        when (goToScreen(appPrefs)) {
-            AppManager.AppScreens.Welcome -> {
+        when (viewModel.goToScreen()) {
+            ConferenceDataViewModel.AppScreens.Welcome -> {
                 startActivity(WelcomeActivity.getLaunchIntent(this@ScheduleActivity))
                 finish()
                 return
@@ -59,17 +63,15 @@ class ScheduleActivity : AppCompatActivity() {
                 }
 
                 setContentView(R.layout.activity_schedule)
+
+                viewModel.register(this)
             }
         }
     }
 
-    private fun goToScreen(appPrefs: AppPrefs): AppManager.AppScreens {
-        val hasSeenWelcome = appPrefs.hasSeenWelcome
-        if (!hasSeenWelcome) {
-            return AppManager.AppScreens.Welcome
-        } else {
-            return AppManager.AppScreens.Schedule
-        }
+    override fun onDestroy() {
+        super.onDestroy()
+        viewModel.unregister()
     }
 
     override fun onStart() {
@@ -84,10 +86,8 @@ class ScheduleActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
-        Handler().post(RefreshRunnable())
-
         // will refresh data from server only if it is old
-        viewModel.refreshFromServer()
+//        viewModel.refreshFromServer()
 
         if (isTablet()) {
             drawer_layout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_OPEN, drawer_recycler)
@@ -170,7 +170,6 @@ class ScheduleActivity : AppCompatActivity() {
                     R.string.sponsors -> SponsorsActivity.callMe(this@ScheduleActivity)
                 }
 
-                Handler().post(RefreshRunnable())
                 (drawer_recycler.adapter as DrawerAdapter).setSelectedPosition(position)
                 adjustToolBarAndDrawers()
             }
@@ -241,42 +240,10 @@ class ScheduleActivity : AppCompatActivity() {
     }
 
     @Suppress("unused", "UNUSED_PARAMETER")
-    fun onEventMainThread(eventDetailJob: RefreshScheduleInteractor) {
-        Handler().post(RefreshRunnable())
-    }
-
-    @Suppress("unused", "UNUSED_PARAMETER")
     fun onEventMainThread(notificationEvent: UpdateAllowNotificationEvent) {
         //Have to handle the notification card way out here so it can update both fragments.
         //Set the app prefs and bounce it back down to the adapter
         updateNotifications(notificationEvent.allow)
-    }
-
-    inner class RefreshRunnable : Runnable {
-        override fun run() {
-            val dates: ArrayList<Long> = ArrayList()
-            val startString: String? = appPrefs.conventionStartDate
-            val endString: String? = appPrefs.conventionEndDate
-
-            if (!startString.isNullOrBlank() && !endString.isNullOrBlank()) {
-                var start: Long = TimeUtils.sanitize(TimeUtils.LOCAL_DATE_FORMAT.get().parse(startString))
-                val end: Long = TimeUtils.sanitize(TimeUtils.LOCAL_DATE_FORMAT.get().parse(endString))
-
-                while (start <= end) {
-                    dates.add(start)
-                    start += DateUtils.DAY_IN_MILLIS
-                }
-
-                if (view_pager.adapter == null) {
-                    view_pager.adapter = ScheduleFragmentPagerAdapter(
-                            supportFragmentManager,
-                            dates,
-                            allEvents)
-                    view_pager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabs))
-                    tabs.setupWithViewPager(view_pager)
-                }
-            }
-        }
     }
 
     companion object {

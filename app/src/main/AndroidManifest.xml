@@ -43,11 +43,6 @@
 
         <activity android:name=".WelcomeActivity"/>
 
-        <service
-            android:name=".JobQueueService"
-            android:permission="android.permission.BIND_JOB_SERVICE"/>
-
-        <receiver android:name=".alerts.AlertReceiver" android:exported="false">
         <receiver android:name=".alerts.AlertReceiver">
             <intent-filter>
                 <action android:name="co.touchlab.droidconandroid.DISPLAY_NOTIFICATION"/>

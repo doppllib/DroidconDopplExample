@@ -53,6 +53,10 @@ public class Event implements TimeBlock
     @Ignore
     public List<EventSpeaker> speakerList;
 
+    public List<EventSpeaker> getSpeakerList() {
+        return speakerList;
+    }
+
     public long getId()
     {
         return id;

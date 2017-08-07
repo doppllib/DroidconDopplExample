@@ -140,6 +140,8 @@ dependencies {
 
     //Shared code dependencies
     doppl 'co.doppl.lib:androidbase:0.8.1.0'
+    testCompile 'co.doppl.lib:androidbasetest:0.8.1'
+    testDoppl 'co.doppl.lib:androidbasetest:0.8.1.0'
 
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
@@ -168,9 +170,16 @@ dependencies {
 
 
 dopplConfig {
-    translatedPathPrefix 'co.touchlab.droidconandroid.shared.data', 'DCD'
-    translatedPathPrefix 'co.touchlab.droidconandroid.shared.presenter', 'DCP'
-    translatedPathPrefix 'co.touchlab.droidconandroid.shared.tasks', 'DCT'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.dagger', 'DDAG'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.data', 'DDAT'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.data.dao', 'DDAO'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.interactors', 'DINT'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.ios', 'DIOS'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.network', 'DNET'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.network.dao', 'DNETD'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.presenter', 'DPRES'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.utils', 'DUT'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared', 'D'
 
     copyMainOutput "../ios/dcframework/generated"
     copyDependencies true
@@ -178,5 +187,6 @@ dopplConfig {
     translatePattern {
         include '**/shared/**'
         include '**/CrashReport.*'
+        include '**/BuildConfig.*'
     }
 }

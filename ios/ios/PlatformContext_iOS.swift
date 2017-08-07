@@ -8,10 +8,11 @@
 
 import Foundation
 import JRE
+import UIKit
 
 protocol PlatformContext_iOSDelegate : class {
     func reloadTableView()
-    func showEventDetailView(with networkEvent: DCDEvent, andIndex index: Int)
+    func showEventDetailView(with timeBlock: DDATTimeBlock, andIndex index: Int)
 }
 
 class PlatformContext_iOS : NSObject {
@@ -29,29 +30,25 @@ class PlatformContext_iOS : NSObject {
     var isDayTwo: Bool = false
     var dateFormatter: DateFormatter!
     var timeFormatter: DateFormatter!
-    var hourBlocks: [DCPScheduleBlockHour]!
-    var conferenceDays: [DCPConferenceDayHolder]?
-    var iOSContext: AndroidContentContext!
+    var hourBlocks: [DPRESHourBlock]!
+    var conferenceDays: [DPRESDaySchedule]?
     
     weak var reloadDelegate: PlatformContext_iOSDelegate?
     
     
-    var appContext: AndroidContentContext {
-        return iOSContext
-    }
     
     lazy var storageDir: String = {
         let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         return paths[0]
     }()
     
-    
-    var hourBlocksArray : [DCPScheduleBlockHour] {
-        var array = [DCPScheduleBlockHour]()
+    //TODO: What is this? Looks like this doesn't need to be here
+    var hourBlocksArray : [DPRESHourBlock] {
+        var array = [DPRESHourBlock]()
         
         let index = self.isDayTwo ? 1 : 0
         if let days = conferenceDays, days.count > index, let objectArray = days[index].getHourHolders() {
-            array.append(contentsOf: convertiOSObjectArrayToArray(objArray: objectArray) as! [DCPScheduleBlockHour])
+            array.append(contentsOf: convertiOSObjectArrayToArray(objArray: objectArray) as! [DPRESHourBlock])
         }
         if dateFormatter == nil {
             dateFormatter = DateFormatter()
@@ -60,19 +57,16 @@ class PlatformContext_iOS : NSObject {
         return array
     }
     
-    override init() {
-        iOSContext = DCPAppManager.getContext()
-    }
-    
-    func getSpeakersArray(from networkEvent: DCDEvent) -> [Any] {
+    func getSpeakersArray(from networkEvent: DDATEvent) -> [Any] {
         return PlatformContext_iOS.javaList(toList: networkEvent.getSpeakerList())
     }
     
-    fileprivate func formatSpeakersString(from array: [DCDEventSpeaker]) -> String {
+    fileprivate func formatSpeakersString(from array: [DDATEventSpeaker]) -> String {
         var speakerNames = [String]()
-        for speaker in array {
-            speakerNames.append(speaker.getUserAccount().getName())
-        }
+        //TODO: Fix this
+//        for speaker in array {
+//            speakerNames.append(speaker.getUserAccount().getName())
+//        }
         return speakerNames.joined(separator: ", ")
     }
     
@@ -134,18 +128,18 @@ extension PlatformContext_iOS : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as! EventListCell
         
         let hourHolder = hourBlocks[indexPath.row]
-        let eventObj = hourHolder.getScheduleBlock()
+        let eventObj = hourHolder.getTime()
         
-        if let event = eventObj as? DCDEvent {
+        if let event = eventObj as? DDATEvent {
             cell.titleLabel.text = event.getName().replacingOccurrences(of: "Android", with: "[Sad Puppy]")
-            let speakers = getSpeakersArray(from: event) as! [DCDEventSpeaker]
+            let speakers = getSpeakersArray(from: event) as! [DDATEventSpeaker]
             cell.speakerNamesLabel.text = formatSpeakersString(from: speakers)
-        } else if let event = eventObj as? DCDBlock {
+        } else if let event = eventObj as? DDATBlock {
             cell.titleLabel.text = event.getName()
             cell.speakerNamesLabel.text = ""
         }
-        cell.timeLabel.text = hourHolder.getStringDisplay().lowercased()
-        cell.startOfBlock = indexPath.row == 0 || hourBlocks[indexPath.row - 1].getScheduleBlock().getStartLong() != eventObj!.getStartLong()
+        cell.timeLabel.text = hourHolder.getHourStringDisplay().lowercased()
+        cell.startOfBlock = indexPath.row == 0 || hourBlocks[indexPath.row - 1].getTime().getStartLong() != eventObj!.getStartLong()
         cell.layer.isOpaque = true
         return cell
     }
@@ -165,22 +159,21 @@ extension PlatformContext_iOS : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         
-        let eventObj = hourBlocks[indexPath.row].getScheduleBlock()
-        if let networkEvent = eventObj as? DCDEvent {
+        let eventObj = hourBlocks[indexPath.row].getTime()
+        if let networkEvent = eventObj {
+            
             reloadDelegate?.showEventDetailView(with: networkEvent, andIndex: indexPath.row)
         }
     }
     
 }
 
-extension PlatformContext_iOS : DCPConferenceDataHost {
-    
-    func loadCallback(withDCPConferenceDayHolderArray daySchedules: IOSObjectArray!) {
-        hourBlocks = [DCPScheduleBlockHour]()
-        conferenceDays = convertiOSObjectArrayToArray(objArray: daySchedules) as! [DCPConferenceDayHolder]
+extension PlatformContext_iOS : DPRESConferenceDataHost {
+    func loadCallback(withDPRESDayScheduleArray daySchedules: IOSObjectArray!) {
+        hourBlocks = [DPRESHourBlock]()
+        conferenceDays = convertiOSObjectArrayToArray(objArray: daySchedules) as! [DPRESDaySchedule]
         updateTableData()
         reloadDelegate?.reloadTableView()
     }
-    
 }
 

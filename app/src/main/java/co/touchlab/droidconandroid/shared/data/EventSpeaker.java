@@ -13,7 +13,7 @@ import android.arch.persistence.room.PrimaryKey;
         @ForeignKey(entity = Event.class, parentColumns = "id", childColumns = "event_id", onDelete = ForeignKey.CASCADE),
         @ForeignKey(entity = UserAccount.class, parentColumns = "id", childColumns = "user_id", onDelete = ForeignKey.CASCADE)
 })
-public class EventSpeaker {
+public class    EventSpeaker {
     @PrimaryKey(autoGenerate = true)
     public Integer id;
 

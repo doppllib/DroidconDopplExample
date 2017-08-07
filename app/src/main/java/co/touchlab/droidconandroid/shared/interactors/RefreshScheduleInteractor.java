@@ -35,6 +35,9 @@ public class RefreshScheduleInteractor
         this.conferenceDataHelper = conferenceDataHelper;
         this.appPrefs = appPrefs;
         this.request = request;
+        refreshFromDatabase();
+        //This should be scheduled somewhere
+        refreshFromServer();
     }
 
     public Observable<DaySchedule[]> getFullConferenceData(boolean allEvents)
@@ -45,7 +48,21 @@ public class RefreshScheduleInteractor
                 .map(dayScheduleList -> dayScheduleList.toArray(new DaySchedule[dayScheduleList.size()]));
     }
 
-    public void refreshFromDatabase()
+    public Observable<DaySchedule> getDayConferenceData(boolean allEvents, String dayString)
+    {
+        return getFullConferenceData(allEvents)
+                .map(daySchedules -> {
+                    for(DaySchedule daySchedule : daySchedules)
+                    {
+                        if(daySchedule.getDayString().equals(dayString))
+                            return daySchedule;
+                    }
+
+                    return null;
+                });
+    }
+
+    void refreshFromDatabase()
     {
         conferenceDataHelper.getDays()
                 .subscribeOn(Schedulers.io())
@@ -57,7 +74,7 @@ public class RefreshScheduleInteractor
                 });
     }
 
-    public void refreshFromServer()
+    void refreshFromServer()
     {
         final PlatformClient platformClient = AppManager.getInstance().getPlatformClient();
 
@@ -67,9 +84,7 @@ public class RefreshScheduleInteractor
                 .flatMapCompletable(conferenceDataHelper:: saveConvention)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(() -> EventBusExt.getDefault().post(this), CrashReport:: logException);
-
-        // FIXME: Can get rid of the EventBus here because this links straight to the Activity
+                .subscribe(() -> {}, CrashReport:: logException);
     }
 
     private Observable<List<TimeBlock>> filterAndSortBlocks(List<TimeBlock> list, boolean allEvents)
