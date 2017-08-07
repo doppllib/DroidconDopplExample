@@ -6,7 +6,7 @@ import android.util.Log;
 
 import com.google.j2objc.annotations.Weak;
 
-import org.jetbrains.annotations.NotNull;
+import android.support.annotation.NonNull;
 
 import javax.inject.Inject;
 
@@ -25,12 +25,12 @@ public class SponsorsViewModel extends ViewModel
     private CompositeDisposable disposables = new CompositeDisposable();
     private Observable<SponsorsResult> sponsorsResultObservable;
 
-    private SponsorsViewModel(@NotNull SponsorsInteractor task)
+    private SponsorsViewModel(@NonNull SponsorsInteractor task)
     {
         this.task = task;
     }
 
-    public void register(@NotNull SponsorsHost host)
+    public void register(@NonNull SponsorsHost host)
     {
         this.host = host;
     }

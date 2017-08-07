@@ -4,8 +4,6 @@ import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;

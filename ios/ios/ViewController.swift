@@ -8,7 +8,7 @@
 
 import Foundation
 import JRE
-
+import UIKit
 
 class ViewController : UIViewController {
 

@@ -9,6 +9,7 @@
 import Foundation
 import UserNotifications
 import JRE
+import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
