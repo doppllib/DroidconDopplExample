@@ -39,7 +39,7 @@ captures/
 .idea
 
 # Google Play Services
-/google-services.json
+google-services.json
 
 # Keystore files
 *.jks
