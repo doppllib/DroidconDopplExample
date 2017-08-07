@@ -1,6 +1,6 @@
 package co.touchlab.droidconandroid.shared.network.dao;
 
-import org.jetbrains.annotations.NotNull;
+import android.support.annotation.NonNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,9 +20,9 @@ public class Convention
 
     public String endDate;
 
-    @NotNull
+    @NonNull
     public List<NetworkVenue> venues = new ArrayList<NetworkVenue>();
 
-    @NotNull
+    @NonNull
     public List<Block> blocks = new ArrayList<>();
 }

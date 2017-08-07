@@ -14,7 +14,6 @@ import co.touchlab.droidconandroid.shared.data.TimeBlock;
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHelper;
 import co.touchlab.droidconandroid.shared.presenter.DaySchedule;
 import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
-import co.touchlab.droidconandroid.shared.utils.EventBusExt;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -34,6 +33,9 @@ public class RefreshScheduleInteractor
         this.conferenceDataHelper = conferenceDataHelper;
         this.appPrefs = appPrefs;
         this.request = request;
+        refreshFromDatabase();
+        //This should be scheduled somewhere
+        refreshFromServer();
     }
 
     public Observable<DaySchedule[]> getFullConferenceData(boolean allEvents)
@@ -44,7 +46,7 @@ public class RefreshScheduleInteractor
                 .map(dayScheduleList -> dayScheduleList.toArray(new DaySchedule[dayScheduleList.size()]));
     }
 
-    public void refreshFromDatabase()
+    void refreshFromDatabase()
     {
         conferenceDataHelper.getDays()
                 .subscribeOn(Schedulers.io())
@@ -66,9 +68,7 @@ public class RefreshScheduleInteractor
                 .flatMapCompletable(conferenceDataHelper:: saveConvention)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(() -> EventBusExt.getDefault().post(this), CrashReport:: logException);
-
-        // FIXME: Can get rid of the EventBus here because this links straight to the Activity
+                .subscribe(() -> {}, CrashReport:: logException);
     }
 
     private Observable<List<TimeBlock>> filterAndSortBlocks(List<TimeBlock> list, boolean allEvents)

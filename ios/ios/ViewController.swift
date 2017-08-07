@@ -8,7 +8,7 @@
 
 import Foundation
 import JRE
-
+import UIKit
 
 class ViewController : UIViewController {
 
@@ -16,7 +16,7 @@ class ViewController : UIViewController {
     var notesArray: [String]!
     var imagesArray: [UIImageView]!
     var platformContext: PlatformContext_iOS!
-    var dataPresenter: DCPConferenceDataPresenter!
+    var dataPresenter: DPRESConferenceDataViewModel!
     var notes: JavaUtilArrayList!
     var allEvents = false
     @IBOutlet weak var dayChooser: UISegmentedControl!
@@ -43,20 +43,17 @@ class ViewController : UIViewController {
         
         tableView.delegate = platformContext
         tableView.dataSource = platformContext
-        
-        // will refresh data from server only if it is old
-        dataPresenter.refreshFromServer()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowEventDetail" {
             let detailViewController = segue.destination as! ShowEventDetailViewController
-            let networkEvent = sender as! DCDEvent
-            let speakers = platformContext.getSpeakersArray(from: networkEvent) as! [DCDEventSpeaker]
+            let networkEvent = sender as! DDATEvent
+            let speakers = platformContext.getSpeakersArray(from: networkEvent) as! [DDATEventSpeaker]
             detailViewController.titleString = networkEvent.getName().replacingOccurrences(of: "Android", with: "[Sad Puppy]")
             detailViewController.descriptionString = networkEvent.getDescription().replacingOccurrences(of: "Android", with: "[Sad Puppy]")
-            detailViewController.networkEvent = networkEvent
-            detailViewController.speakers = speakers
+            detailViewController.event = networkEvent
+//            detailViewController.speakers = speakers
             detailViewController.dateTime = platformContext.getEventTime(startTime: networkEvent.getStartFormatted()! as NSString, andEnd: networkEvent.getEndFormatted()! as NSString)
         }
     }
@@ -65,10 +62,9 @@ class ViewController : UIViewController {
         if platformContext == nil {
             platformContext = PlatformContext_iOS()
             platformContext.reloadDelegate = self
-            dataPresenter = DCPConferenceDataPresenter(androidContentContext: DCPAppManager.getContext(), with: platformContext, withBoolean: allEvents)
-        } else {
-            dataPresenter.refreshConferenceData()
-        }
+            dataPresenter = DPRESConferenceDataViewModel.forIosWithBoolean(allEvents)
+            
+        } 
     }
     
     @IBAction func updateTable(_ sender: AnyObject) {
@@ -99,12 +95,12 @@ extension ViewController : PlatformContext_iOSDelegate {
         tableView.reloadData()
     }
     
-    func showEventDetailView(with networkEvent: DCDEvent, andIndex index: Int) {
+    func showEventDetailView(with networkEvent: DDATTimeBlock, andIndex index: Int) {
         track = index
         performSegue(withIdentifier: "ShowEventDetail", sender: networkEvent)
     }
     
-    func showBlockDetailView(with networkBlock: DCDBlock) {
+    func showBlockDetailView(with networkBlock: DDATBlock) {
         performSegue(withIdentifier: "ShowBlockDetail", sender: networkBlock)
     }
 }

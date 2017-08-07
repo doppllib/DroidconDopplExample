@@ -43,9 +43,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
     }
 
     private val viewModel: UserDetailViewModel by lazy {
-        val factory = UserDetailViewModel.Factory()
-        AppManager.getInstance().appComponent.inject(factory)
-        ViewModelProviders.of(this, factory)[UserDetailViewModel::class.java]
+        ViewModelProviders.of(this, UserDetailViewModel.factory())[UserDetailViewModel::class.java]
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

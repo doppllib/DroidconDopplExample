@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import co.touchlab.droidconandroid.shared.network.SponsorsResult
 import co.touchlab.droidconandroid.shared.presenter.AppManager
+import co.touchlab.droidconandroid.shared.presenter.ScheduleDataViewModel
 import co.touchlab.droidconandroid.shared.presenter.SponsorsHost
 import co.touchlab.droidconandroid.shared.presenter.SponsorsViewModel
 import co.touchlab.droidconandroid.ui.SponsorsAdapter
@@ -19,8 +20,6 @@ import kotlinx.android.synthetic.main.fragment_sponsors_list.*
 import java.util.*
 
 class SponsorsListFragment : Fragment(), SponsorsHost {
-    private lateinit var adapter: SponsorsAdapter
-    private lateinit var layoutManager: GridLayoutManager
 
     companion object {
         private val SPONSOR_TYPE = "SPONSOR_TYPE"
@@ -34,12 +33,14 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
         }
     }
 
+    private val adapter: SponsorsAdapter by lazy { SponsorsAdapter(activity) }
+
+    private val layoutManager: GridLayoutManager by lazy { GridLayoutManager(activity, 1) }
+
     private val type: Int by lazy { arguments.getInt(SPONSOR_TYPE) }
 
     private val viewModel: SponsorsViewModel by lazy {
-        val factory = SponsorsViewModel.Factory()
-        AppManager.getInstance().appComponent.inject(factory)
-        ViewModelProviders.of(this, factory).get(SponsorsViewModel::class.java)
+        ViewModelProviders.of(this, ScheduleDataViewModel.factory()).get(SponsorsViewModel::class.java)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -48,8 +49,6 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adapter = SponsorsAdapter(activity)
-        layoutManager = GridLayoutManager(activity, 1)
         sponsor_recycler.layoutManager = layoutManager
         sponsor_recycler.adapter = adapter
     }

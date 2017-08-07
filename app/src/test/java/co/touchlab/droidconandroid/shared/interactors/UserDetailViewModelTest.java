@@ -51,7 +51,6 @@ public class UserDetailViewModelTest
     @Test
     public void whenSuccessGettingUserDetail_shouldShowResults()
     {
-        UserAccount user = new UserAccount();
         when(interactor.loadUserAccount(anyInt())).thenReturn(Observable.just(user));
 
         viewModel.findUser(100);

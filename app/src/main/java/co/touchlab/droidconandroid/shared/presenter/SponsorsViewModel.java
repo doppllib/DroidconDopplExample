@@ -6,7 +6,7 @@ import android.util.Log;
 
 import com.google.j2objc.annotations.Weak;
 
-import org.jetbrains.annotations.NotNull;
+import android.support.annotation.NonNull;
 
 import javax.inject.Inject;
 
@@ -25,12 +25,12 @@ public class SponsorsViewModel extends ViewModel
     private CompositeDisposable disposables = new CompositeDisposable();
     private Observable<SponsorsResult> sponsorsResultObservable;
 
-    private SponsorsViewModel(@NotNull SponsorsInteractor task)
+    private SponsorsViewModel(@NonNull SponsorsInteractor task)
     {
         this.task = task;
     }
 
-    public void register(@NotNull SponsorsHost host)
+    public void register(@NonNull SponsorsHost host)
     {
         this.host = host;
     }
@@ -69,5 +69,17 @@ public class SponsorsViewModel extends ViewModel
             //noinspection unchecked
             return (T) new SponsorsViewModel(task);
         }
+    }
+
+    public static Factory factory()
+    {
+        Factory factory = new Factory();
+        AppManager.getInstance().getAppComponent().inject(factory);
+        return factory;
+    }
+
+    public static SponsorsViewModel forIos()
+    {
+        return factory().create(SponsorsViewModel.class);
     }
 }

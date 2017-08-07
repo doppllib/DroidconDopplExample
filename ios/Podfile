@@ -1,0 +1,33 @@
+platform :ios, '9.0'
+
+target 'dcframework' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for dcframework
+
+  target 'dcframeworkTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'ios' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ios
+    pod 'Firebase'
+
+  target 'iosTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'iosUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

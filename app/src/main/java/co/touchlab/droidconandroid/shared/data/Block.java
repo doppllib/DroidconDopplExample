@@ -55,4 +55,9 @@ public class Block implements TimeBlock
     {
         return TimeUtils.LOCAL_DATE_FORMAT.get().format(new Date(endDateLong));
     }
+
+    public String getName()
+    {
+        return name;
+    }
 }

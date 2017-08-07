@@ -2,8 +2,6 @@ package co.touchlab.droidconandroid.shared.presenter;
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
 
-import com.google.j2objc.annotations.Weak;
-
 import javax.inject.Inject;
 
 import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor;
@@ -13,8 +11,6 @@ import io.reactivex.schedulers.Schedulers;
 
 public class ScheduleDataViewModel extends ViewModel
 {
-    @Weak
-    private ConferenceDataHost        host;
     private RefreshScheduleInteractor interactor;
     private CompositeDisposable disposables = new CompositeDisposable();
 
@@ -23,23 +19,23 @@ public class ScheduleDataViewModel extends ViewModel
         this.interactor = interactor;
     }
 
-    public void register(ConferenceDataHost host)
+    public interface Host
     {
-        this.host = host;
+        void loadCallback(DaySchedule[] daySchedules);
     }
 
-    public void getDataStream(boolean allEvents)
+    public void register(Host host, boolean allEvents)
     {
+        disposables.clear();
         disposables.add(interactor.getFullConferenceData(allEvents)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(data -> host.loadCallback(data)));
+                .subscribe(host:: loadCallback));
     }
 
     public void unregister()
     {
         disposables.clear();
-        host = null;
     }
 
     public static class Factory extends ViewModelProvider.NewInstanceFactory
@@ -47,7 +43,7 @@ public class ScheduleDataViewModel extends ViewModel
         @Inject
         RefreshScheduleInteractor interactor;
 
-        public Factory()
+        Factory()
         {
         }
 
@@ -57,5 +53,18 @@ public class ScheduleDataViewModel extends ViewModel
             //noinspection unchecked
             return (T) new ScheduleDataViewModel(interactor);
         }
+    }
+
+    public static Factory factory()
+    {
+        Factory factory = new Factory();
+        AppManager.getInstance().getAppComponent().inject(factory);
+
+        return factory;
+    }
+
+    public static ScheduleDataViewModel forIos()
+    {
+        return factory().create(ScheduleDataViewModel.class);
     }
 }

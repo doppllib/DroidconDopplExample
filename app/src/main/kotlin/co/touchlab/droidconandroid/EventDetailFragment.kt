@@ -33,9 +33,7 @@ class EventDetailFragment : Fragment(), EventDetailHost {
     private val eventId: Long by lazy { findEventIdArg() }
 
     private val viewModel: EventDetailViewModel by lazy {
-        val factory = EventDetailViewModel.Factory()
-        AppManager.getInstance().appComponent.inject(factory)
-        ViewModelProviders.of(this, factory)[EventDetailViewModel::class.java]
+        ViewModelProviders.of(this, EventDetailViewModel.factory())[EventDetailViewModel::class.java]
     }
 
     private var trackColor: Int = 0

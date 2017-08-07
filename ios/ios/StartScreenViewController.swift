@@ -11,8 +11,9 @@ import UIKit
 class StartScreenViewController: UIViewController{
     override func viewDidAppear(_ animated: Bool)
     {
-        let appScreen = DCPAppManager.findStartScreen()
-        let segueName = appScreen?.name()
+        let viewModel = DPRESConferenceDataViewModel.forIosWithBoolean(true)
+        let appScreen = viewModel.goToScreen()
+        let segueName = appScreen.name()
         performSegue(withIdentifier: segueName!, sender: self)
     }
 }

@@ -144,8 +144,7 @@ public class ConferenceDataHelper
             throw new IllegalStateException("No convention results");
         }
 
-        appPrefs.setConventionStartDate(convention.startDate);
-        appPrefs.setConventionEndDate(convention.endDate);
+        appPrefs.setConventionDates(convention.startDate, convention.endDate);
 
         List<NetworkVenue> newVenueList = convention.venues;
         List<Block> newBlockList = convention.blocks;
