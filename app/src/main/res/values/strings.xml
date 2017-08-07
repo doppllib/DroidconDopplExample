@@ -42,7 +42,10 @@
     </string>
     <string name="about_app_header">About the app</string>
     <string name="about_app">
-        The Droidcon app is coded in-house by the touchlab team.  Worked on by Liam, Izzy, Sam, Ramona and Kevin.\n\nIt’s a bit of an experiment, written largely in Kotlin, and including a new(ish) ORM framework. Fun stuff.\n\nThe code is open source, at:\nhttps://github.com/touchlab/DroidconApp
+        The Droidcon app is coded in-house by the touchlab team.  Worked on by Liam, Izzy, Sam,
+        Ramona and Kevin.\n\nIt’s a bit of an experiment, written largely in Kotlin, and including
+        a new(ish) ORM framework. Fun stuff.\n\nThe code is open source,
+        at:\nhttps://github.com/touchlab/DroidconApp
     </string>
     <string name="about_touch_header">About touchlab</string>
     <string name="about_touch">
@@ -95,6 +98,7 @@
     <string name="sponsor_image_url" translatable="false">file:///android_asset/sponsors/%1$s.png
     </string>
 
+    <!-- Helper -->
     <string name="lorem_short" translatable="false">Lorem ipsum dolor sit amet, consectetur
         adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua.
