@@ -10,16 +10,16 @@ import UIKit
 import JRE
 import dcframework
 
-@objc class ShowEventDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DCPEventDetailHost {
+@objc class ShowEventDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DPRESEventDetailHost {
     
     // MARK: Properties
     
     var titleString: String?
     var descriptionString: String?
     var dateTime: String?
-    var event: DCDEvent!
-    var speakers: [DCDEventSpeaker]?
-    var eventDetailPresenter: DCPEventDetailPresenter!
+    var event: DDATEvent!
+    var speakers: [DDATUserAccount]?
+    var eventDetailPresenter: DPRESEventDetailViewModel!
     
     @IBOutlet weak var tableView : UITableView!
     @IBOutlet weak var rsvpButton: UIButton!
@@ -37,9 +37,8 @@ import dcframework
             eventDetailPresenter.unregister()
         }
         
-        eventDetailPresenter = DCPEventDetailPresenter(androidContentContext: DCPAppManager.getContext(), withLong: event.getId(), with: self)
-        
-        eventDetailPresenter.refreshData()
+        eventDetailPresenter = DPRESEventDetailViewModel.forIos()
+        eventDetailPresenter.getDetailsWithLong(event.getId())
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 800
@@ -62,21 +61,10 @@ import dcframework
     }
     
     // MARK: Data refresh
-    
-    func dataRefresh() {
-        event = eventDetailPresenter.getEventDetailLoadTask().getEvent()
-        speakers = PlatformContext_iOS.javaList(toList: eventDetailPresenter.getEventDetailLoadTask().getEvent().getSpeakerList()) as? [DCDEventSpeaker]
-        tableView.reloadData()
-        updateButton()
-        updateHeaderImage()
-    }
-    
-    func videoDataRefresh() {
-        tableView.reloadData()
-    }
-    
-    func callStreamActivity(with task: DCTStartWatchVideoTask){
-        performSegue(withIdentifier: "LiveStream", sender: self)
+    func dataRefresh(with eventInfo: DDATEventInfo!) {
+        event = eventInfo.getEvent()
+        speakers = PlatformContext_iOS.javaList(toList: eventInfo.getSpeakers()) as? [DDATUserAccount]
+        updateAllUi()
     }
     
     func reportError(with error: String){
@@ -84,40 +72,21 @@ import dcframework
         alert.show()
     }
     
+    func updateRsvp(with event: DDATEvent!) {
+        self.event = event
+        updateAllUi()
+    }
+    
+    func updateAllUi() {
+        tableView.reloadData()
+        updateButton()
+        updateHeaderImage()
+    }
+    
     func resetStreamProgress() {
         // TODO
     }
-    
-    func showTicketOptions(with email: String!, with link: String!, with cover: String!) {
-        //1. Create the alert controller.
-        //It looks like %1$s isn\'t associated with a streaming-enabled ticket.
-        let formatted = String(format: "It looks like %@ isn\'t associated with a streaming-enabled ticket. If you already bought a ticket, enter the associated email address below. Otherwise, you can pick up a ticket now!", email)
-        
-        let alert = UIAlertController(title: "Whoops!", message: formatted, preferredStyle: .alert)
-        
-        //2. Add the text field. You can configure it however you need.
-        alert.addTextField(configurationHandler: { (textField) -> Void in
-            textField.text = ""
-        })
-        
-        //3. Grab the value from the text field, and print it when the user clicks OK.
-        alert.addAction(UIAlertAction(title: "Cancel", style: .default,handler: { (action) -> Void in
-            
-        }))
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
-            let textField = alert.textFields![0] as UITextField
-            self.eventDetailPresenter.setEventbriteEmailWith(textField.text, with: link, with: cover)
-        }))
-        
-        // 4. Present the alert.
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    func openSlack(with slackLink: String!, with slackLinkHttp: String!, withBoolean showSlackDialog: jboolean) {
-        // TODO
-    }
 
-    
     // MARK: TableView
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -136,33 +105,16 @@ import dcframework
         if (indexPath as NSIndexPath).section == 0 {
             let cell:EventTableViewCell = tableView.dequeueReusableCell(withIdentifier: "eventCell") as! EventTableViewCell
 
-            cell.loadInfo(titleString!, description: descriptionString!, track: event!.getVenue().getName(), time: dateTime!, event: event, eventDetailPresenter: eventDetailPresenter)
+            cell.loadInfo(titleString!, description: descriptionString!, track: event!.getVenue().getName(), time: dateTime!, networkEvent: event, eventDetailPresenter: eventDetailPresenter)
             cell.selectionStyle = UITableViewCellSelectionStyle.none
-            
-            let videoDetailsTask:DCTEventVideoDetailsTask? = eventDetailPresenter.getEventVideoDetailsTask()
-            
-            if (videoDetailsTask != nil && videoDetailsTask!.hasStream()) {
-                cell.liveStreamButton.addTarget(self, action: #selector(ShowEventDetailViewController.liveStreamTapped(_:)), for: UIControlEvents.touchUpInside)
-                cell.liveStreamButton.isHidden = false
-                cell.liveStreamIcon.isHidden = false
-                if(videoDetailsTask!.isNow()){
-                    cell.liveStreamButton.setTitle("LIVE STREAM", for: UIControlState())
-                } else {
-                    cell.liveStreamButton.setTitle("STREAM ARCHIVE", for: UIControlState())
-                }
-            }
-            cell.liveStreamButton.isHidden = true
-            cell.liveStreamIcon.isHidden = true
-            
             return cell
         } else {
             let cell:SpeakerTableViewCell = tableView.dequeueReusableCell(withIdentifier: "speakerCell") as! SpeakerTableViewCell
             
-            let speaker = speakers![indexPath.row] as DCDEventSpeaker
-            if let speakerDescription = (speakers?[indexPath.row].getUserAccount().getProfile()) {
-                let userAccount = speaker.getUserAccount()
-                let imageUrl = userAccount!.avatarImageUrl() ?? ""
-                cell.loadInfo(userAccount!.getName() as! String, info: speakerDescription as! String, imgUrl: imageUrl)
+            let speaker = speakers![indexPath.row] as DDATUserAccount
+            if let speakerDescription = (speaker.getProfile()) {
+                let imageUrl = speaker.avatarImageUrl() ?? ""
+                cell.loadInfo(speaker.getName()!, info: speakerDescription, imgUrl: imageUrl)
             }
             
             cell.selectionStyle = UITableViewCellSelectionStyle.none
@@ -194,20 +146,20 @@ import dcframework
     
     //TODO Use Track class from shared lib folder.
     func updateHeaderImage() {
-        let track : DCDTrack  = (event.getCategory() ?? "").isEmpty ?
-            DCDTrack.findByServerName(with: "Design") : // Default to design (Same as Android)
-        DCDTrack.findByServerName(with: event.getCategory())
+        let track : DDATTrack  = (event.getCategory() ?? "").isEmpty ?
+        DDATTrack.findByServerName(with: "Design") : // Default to design (Same as Android)
+        DDATTrack.findByServerName(with: event.getCategory())
         
         var imageName : String
         
         switch track {
-            case DCDTrack.findByServerName(with: "Dev/Design"):
+            case DDATTrack.findByServerName(with: "Dev/Design"):
                 imageName = "illo_designdevtalk"
                 break
-            case DCDTrack.findByServerName(with: "Design"):
+            case DDATTrack.findByServerName(with: "Design"):
                 imageName = "illo_designtalk"
                 break
-            case DCDTrack.findByServerName(with: "Design Lab"):
+            case DDATTrack.findByServerName(with: "Design Lab"):
                 imageName = "illo_designlab"
                 break
             default:
@@ -219,19 +171,6 @@ import dcframework
     }
 
     @IBAction func toggleRsvp(_ sender: UIButton) {
-        eventDetailPresenter.toggleRsvp()
-    }
-    
-    func liveStreamTapped(_ sender: UIButton) {
-        eventDetailPresenter.callStartVideo(with: eventDetailPresenter.getEventVideoDetailsTask().getMergedStreamLink(), with: "")
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "LiveStream") {
-            /*let liveStreamVC = (segue.destination as! LiveStreamViewController)
-            liveStreamVC.titleString = titleString
-            liveStreamVC.streamUrl = eventDetailPresenter.getEventVideoDetailsTask().getMergedStreamLink()
-            liveStreamVC.coverUrl = ""*/
-        }
+        eventDetailPresenter.setRsvpWithBoolean(!event.isRsvped(), withLong: event.getId())
     }
 }

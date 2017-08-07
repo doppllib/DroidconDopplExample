@@ -1,9 +1,8 @@
 package co.touchlab.droidconandroid.shared.presenter;
 import android.content.Context;
 
-import co.touchlab.android.threading.tasks.TaskQueue;
-import co.touchlab.droidconandroid.shared.data.AppPrefs;
-import co.touchlab.droidconandroid.shared.tasks.SeedScheduleDataTask;
+import co.touchlab.droidconandroid.shared.dagger.AppComponent;
+import co.touchlab.droidconandroid.shared.interactors.SeedInteractor;
 
 /**
  * Created by kgalligan on 4/19/16.
@@ -12,57 +11,46 @@ public class AppManager
 {
     public static final String FIRST_SEED = "FIRST_SEED";
 
-    private static Context context;
-    private static PlatformClient platformClient;
+    private static AppManager     instance;
+    private        AppComponent   appComponent;
+    private        PlatformClient platformClient;
 
-    public interface LoadDataSeed
+    private AppManager(Context context, PlatformClient platformClient, AppComponent appComponent)
     {
-        String dataSeed();
+        this.appComponent = appComponent;
+        this.platformClient = platformClient;
     }
 
-    public static void initContext(Context context, PlatformClient platformClient, LoadDataSeed loadDataSeed)
+    public static AppManager getInstance()
     {
-        AppManager.context = context;
-        AppManager.platformClient = platformClient;
+        return instance;
+    }
 
-        if(AppPrefs.getInstance(context).once(FIRST_SEED))
+    public static void create(Context context, PlatformClient platformClient, AppComponent appComponent)
+    {
+        if(instance == null)
         {
-            final String seed = loadDataSeed.dataSeed();
-            TaskQueue.loadQueueDefault(context).execute(new SeedScheduleDataTask(seed));
+            instance = new AppManager(context, platformClient, appComponent);
         }
     }
 
-    public static Context getContext()
+    public void seed(LoadDataSeed loadDataSeed)
     {
-        return context;
+        SeedInteractor seedInteractor = appComponent.seedInteractor();
+        seedInteractor.seedDatabase(loadDataSeed);
     }
 
-    public static PlatformClient getPlatformClient()
+
+    public AppComponent getAppComponent()
+    {
+        return appComponent;
+    }
+
+    public PlatformClient getPlatformClient()
     {
         return platformClient;
     }
 
-    public enum AppScreens
-    {
-        Welcome, Schedule
-    }
 
-    public static AppScreens findStartScreen()
-    {
-        final AppPrefs appPrefs = AppPrefs.getInstance(context);
-        boolean hasSeenWelcome = appPrefs.getHasSeenWelcome();
-        if (! hasSeenWelcome)
-        {
-            return AppScreens.Welcome;
-        }
-        else
-        {
-            return AppScreens.Schedule;
-        }
-    }
 
-    public static AppPrefs getAppPrefs()
-    {
-        return AppPrefs.getInstance(context);
-    }
 }

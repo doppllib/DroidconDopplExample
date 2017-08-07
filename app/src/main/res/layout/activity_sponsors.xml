@@ -5,8 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:fitsSystemWindows="true">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/sponsors_appbar"
@@ -31,6 +30,7 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/superglyph_outline360x114dp"
                 app:layout_collapseMode="pin"
+                android:contentDescription="@null"
                 app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"/>
 
             <android.support.v7.widget.Toolbar
@@ -44,7 +44,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
-                    android:singleLine="true"
+                    android:maxLines="1"
                     android:text="@string/title_activity_sponsors"
                     android:textSize="@dimen/text_xlarge"/>
 

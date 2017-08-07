@@ -5,8 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
+    android:layout_height="match_parent">
 
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/main_content"
@@ -24,7 +23,6 @@
                 android:id="@+id/collapsing_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fitsSystemWindows="true"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
                 app:statusBarScrim="@android:color/transparent"
                 app:titleEnabled="false">
@@ -32,10 +30,10 @@
                 <ImageView
                     android:id="@+id/schedule_backdrop"
                     android:layout_width="match_parent"
-                    android:layout_height="136dp"
-                    android:fitsSystemWindows="true"
+                    android:layout_height="match_parent"
                     android:scaleType="centerCrop"
                     app:layout_collapseMode="pin"
+                    android:contentDescription="@null"
                     app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"/>
 
                 <android.support.v7.widget.Toolbar
@@ -53,7 +51,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"
                     app:layout_collapseMode="pin"
-                    app:layout_scrollFlags="scroll|enterAlways"/>
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    tools:text="My agenda"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -66,34 +65,12 @@
                         android:id="@+id/schedule_toolbar_notif"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:contentDescription="@string/content_toggle_alerts"
+                        android:contentDescription="@string/cd_toggle_alerts"
                         android:padding="16dp"
                         android:src="@drawable/vic_notifications_none_black_24dp"
-                        android:visibility="gone"/>
-                    <FrameLayout
-                        android:id="@+id/schedule_profile_touch"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="16dp">
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/schedule_toolbar_profile"
-                            android:layout_width="@dimen/height_xxtiny"
-                            android:layout_height="@dimen/height_xxtiny"
-                            android:src="@drawable/circle_profile_placeholder"/>
+                        android:visibility="gone"
+                        tools:visibility="visible"/>
 
-                        <TextView
-                            android:id="@+id/schedule_placeholder_emoji"
-                            android:layout_width="@dimen/height_xxtiny"
-                            android:layout_height="@dimen/height_xxtiny"
-                            android:layout_alignLeft="@id/schedule_toolbar_profile"
-                            android:layout_alignStart="@id/schedule_toolbar_profile"
-                            android:layout_alignTop="@id/schedule_toolbar_profile"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:textSize="@dimen/text_small"
-                            tools:text=":)"/>
-
-                    </FrameLayout>
                 </LinearLayout>
 
                 <android.support.design.widget.TabLayout
@@ -101,8 +78,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     android:layout_gravity="bottom"
-                    android:layout_marginLeft="@dimen/toolbar_title_margin_left"
-                    android:fitsSystemWindows="true"/>
+                    android:layout_marginStart="@dimen/toolbar_title_margin_left"
+                    app:tabGravity="fill"
+                    app:tabMaxWidth="264dp"
+                    app:tabMinWidth="160dp"
+                    app:tabMode="fixed"/>
 
             </android.support.design.widget.CollapsingToolbarLayout>
 
@@ -120,45 +100,8 @@
         android:id="@+id/drawer_recycler"
         android:layout_width="@dimen/drawer_width"
         android:layout_height="match_parent"
-        android:layout_gravity="left|start"
+        android:layout_gravity="start"
         android:background="@color/white"
-        android:elevation="8dp"
-        android:fitsSystemWindows="false"/>
-
-    <RelativeLayout
-        android:id="@+id/filter_wrapper"
-        android:layout_width="@dimen/drawer_width"
-        android:layout_height="match_parent"
-        android:layout_gravity="right|end"
-        android:background="@color/white"
-        android:elevation="8dp"
-        android:fitsSystemWindows="false"
-        android:orientation="vertical"
-        android:paddingTop="40dp">
-
-        <com.wnafee.vector.MorphButton
-            android:id="@+id/back"
-            android:layout_width="@dimen/height_xxtiny"
-            android:layout_height="@dimen/height_xxtiny"
-            android:layout_marginLeft="@dimen/padding_large"
-            android:background="?attr/selectableItemBackground"
-            app:vc_endDrawable="@drawable/ic_back"
-            app:vc_startDrawable="@drawable/ic_back"/>
-
-        <TextView
-            android:id="@+id/label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="@dimen/height_xlarge"
-            android:text="@string/filter"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_xlarge"/>
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/filter_recycler"
-            android:layout_width="@dimen/drawer_width"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/label"/>
-    </RelativeLayout>
+        android:elevation="8dp"/>
 
 </android.support.v4.widget.DrawerLayout>

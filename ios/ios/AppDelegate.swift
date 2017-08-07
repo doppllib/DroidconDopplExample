@@ -9,6 +9,7 @@
 import Foundation
 import UserNotifications
 import JRE
+import UIKit
 import FirebaseAnalytics
 
 @UIApplicationMain
@@ -18,12 +19,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
  
     func applicationDidFinishLaunching(_ application: UIApplication) {
         DopplRuntime.start()
-        
+
        // let bundlePath = Bundle.main.path(forResource: "rebundle", ofType: "bundle")!
         //print("bundle path %@", bundlePath)
         
         let platformClient = DCIosPlatformClient(dcIosFirebase: self)
-        DCPAppManager.initContext(with: AndroidContentIOSContext(), with: platformClient, with: self)
+        let application = AndroidContentIOSContext()
+
+        let appComponent = DDAGDaggerAppComponent.builder().appModule(with: DDAGAppModule(androidAppApplication: application))
+        .databaseModule(with: DDAGDatabaseModule())
+        .networkModule(with: DDAGNetworkModule())
+            .build()
+
+        DPRESAppManager.create(with: AndroidContentIOSContext(), with: platformClient, with: appComponent)
+
+        DPRESAppManager.getInstance().seed(with: self);
+
         registerForNotifications()
         print("Firebase Analytics test \(Analytics.appInstanceID())")
     }
@@ -45,9 +56,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         let type = userInfo["type"] as! String
-        //check the type. event messages just open the app so dont need to the handled here.
+        //check the type. networkEvent messages just open the app so dont need to the handled here.
         if type == "updateSchedule" {
-            CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData.callMe(with: AndroidContentIOSContext(()))
+            //CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData.callMe(with: AndroidContentIOSContext(()))
             completionHandler(.newData)
         } else {
             completionHandler(.noData)
@@ -56,7 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 
-extension AppDelegate : DCPAppManager_LoadDataSeed {
+extension AppDelegate : DPRESLoadDataSeed {
     func dataSeed() -> String! {
         if let fileUrl = Bundle.main.url(forResource: "dataseed", withExtension: "json", subdirectory: "dataseeds"), let partyData = try? Data(contentsOf: fileUrl) {
             return String(data: partyData, encoding: String.Encoding.utf8)

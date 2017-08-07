@@ -1,12 +1,11 @@
 package co.touchlab.droidconandroid.shared.network.dao;
 
-import javax.annotation.Nonnull;
+import android.support.annotation.NonNull;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import co.touchlab.squeaky.field.DatabaseField;
-
+import co.touchlab.droidconandroid.shared.data.Block;
 
 /**
  * Created by kgalligan on 7/19/14.
@@ -17,15 +16,13 @@ public class Convention
     public String description;
     public String locationName;
 
-    @DatabaseField
     public String startDate;
 
-    @DatabaseField
     public String endDate;
 
-    @Nonnull
-    public List<Venue> venues = new ArrayList<Venue>();
+    @NonNull
+    public List<NetworkVenue> venues = new ArrayList<NetworkVenue>();
 
-    @Nonnull
+    @NonNull
     public List<Block> blocks = new ArrayList<>();
 }

@@ -4,8 +4,8 @@ import com.google.j2objc.annotations.ObjectiveCName;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
+import co.touchlab.droidconandroid.BuildConfig;
 import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
-import retrofit.client.Client;
 
 /**
  * Created by kgalligan on 4/10/16.
@@ -21,15 +21,9 @@ public class IosPlatformClient implements PlatformClient
     }
 
     @Override
-    public Client makeClient()
-    {
-        return null;
-    }
-
-    @Override
     public String baseUrl()
     {
-        return "https://droidcon-server.herokuapp.com/";
+        return BuildConfig.BASE_URL;
     }
 
     @Override

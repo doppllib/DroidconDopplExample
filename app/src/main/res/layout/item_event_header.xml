@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingTop="@dimen/padding_medium"
-    android:paddingBottom="@dimen/padding_medium">
+    android:layout_marginTop="@dimen/padding_medium"
+    android:layout_marginBottom="@dimen/padding_small"
+    android:layout_marginEnd="@dimen/activity_horizontal_margin">
 
     <TextView
         android:id="@+id/title"
@@ -14,9 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_gravity="center_vertical"
         android:layout_marginBottom="@dimen/padding_tiny"
-        android:layout_marginLeft="@dimen/padding_large"
         android:layout_marginStart="@dimen/padding_large"
-        android:layout_toRightOf="@+id/image"
         android:layout_toEndOf="@id/image"
         android:autoLink="web"
         android:textColor="@color/primary_dark_50"
@@ -29,9 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/title"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="@dimen/padding_large"
         android:layout_marginStart="@dimen/padding_large"
-        android:layout_toRightOf="@id/image"
         android:layout_toEndOf="@id/image"
         android:autoLink="web"
         android:textSize="@dimen/text_small"
@@ -41,8 +38,9 @@
         android:id="@+id/image"
         android:layout_width="@dimen/event_entry_icon"
         android:layout_height="@dimen/event_entry_icon"
-        android:layout_marginLeft="@dimen/padding_large"
+        android:layout_centerVertical="true"
         android:layout_marginStart="@dimen/padding_large"
+        android:contentDescription="@null"
         android:layout_marginTop="@dimen/padding_large"/>
 
 </RelativeLayout>

@@ -9,8 +9,27 @@
 import UIKit
 
 @objc class EventListCell: UITableViewCell {
+    
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var speakerNamesLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
-    //@IBOutlet var rsvpView: UIView!
+    
+    @IBOutlet var cardBackgroundToTopConstraint: NSLayoutConstraint!
+    
+    var startOfBlock: Bool = false {
+        didSet {
+            cardBackgroundToTopConstraint.constant = startOfBlock ? 10 : 0
+        }
+    }
+    override var isHighlighted: Bool {
+        didSet {
+            updateBackgroundColor()
+        }
+    }
+    @IBInspectable var highlightedColor : UIColor?
+    
+    
+    func updateBackgroundColor() {
+        titleLabel.superview!.backgroundColor = isHighlighted ? highlightedColor : UIColor.white
+    }
 }

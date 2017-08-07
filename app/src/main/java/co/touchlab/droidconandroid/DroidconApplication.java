@@ -5,53 +5,48 @@ import android.app.Application;
 import android.content.Context;
 import android.util.Log;
 
-import co.touchlab.droidconandroid.shared.utils.IOUtils;
-
 import java.io.IOException;
 
-import co.touchlab.android.threading.eventbus.EventBusExt;
 import co.touchlab.droidconandroid.alerts.AlertManagerKt;
+import co.touchlab.droidconandroid.shared.dagger.AppModule;
+import co.touchlab.droidconandroid.shared.dagger.DaggerAppComponent;
+import co.touchlab.droidconandroid.shared.dagger.DatabaseModule;
+import co.touchlab.droidconandroid.shared.dagger.NetworkModule;
+import co.touchlab.droidconandroid.shared.data.Event;
+import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor;
 import co.touchlab.droidconandroid.shared.presenter.AppManager;
+import co.touchlab.droidconandroid.shared.presenter.LoadDataSeed;
 import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
-import co.touchlab.droidconandroid.shared.tasks.UpdateAlertsTask;
-import retrofit.client.Client;
+import co.touchlab.droidconandroid.shared.utils.EventBusExt;
+import co.touchlab.droidconandroid.shared.utils.IOUtils;
 
 /**
  * Created by kgalligan on 6/28/14.
  */
 public class DroidconApplication extends Application
 {
-    public static String getCurrentProcessName(Context context) {
-        // Log.d(TAG, "getCurrentProcessName");
-        int pid = android.os.Process.myPid();
-        ActivityManager manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
-        for (ActivityManager.RunningAppProcessInfo processInfo : manager.getRunningAppProcesses())
-        {
-            // Log.d(TAG, processInfo.processName);
-            if (processInfo.pid == pid)
-                return processInfo.processName;
-        }
-        return "";
+    private static DroidconApplication instance;
+
+    public DroidconApplication()
+    {
+        instance = this;
     }
 
     @Override
     public void onCreate()
     {
         super.onCreate();
-        EventBusExt.getDefault().register(this);
 
         String currentProcessName = getCurrentProcessName(this);
-        Log.i(DroidconApplication.class.getSimpleName(), "currentProcessName: "+ currentProcessName );
-        if(!currentProcessName.contains("background_crash"))
-        {
-            PlatformClient platformClient = new co.touchlab.droidconandroid.shared.presenter.PlatformClient()
-            {
-                @Override
-                public Client makeClient()
-                {
-                    return null;
-                }
+        Log.i(DroidconApplication.class.getSimpleName(),
+                "currentProcessName: " + currentProcessName);
 
+        EventBusExt.getDefault().register(this);
+
+        if(! currentProcessName.contains("background_crash"))
+        {
+            PlatformClient platformClient = new PlatformClient()
+            {
                 @Override
                 public String baseUrl()
                 {
@@ -79,39 +74,75 @@ public class DroidconApplication extends Application
                 @Override
                 public void logEvent(String name, String... params)
                 {
-
+                    StringBuilder sb = new StringBuilder();
+                    for(String param : params)
+                    {
+                        sb.append(param);
+                        sb.append("; ");
+                    }
+                    Log.i(name, sb.toString());
                 }
 
                 @Override
                 public String getString(String id)
                 {
-                    return DroidconApplication.this.getString(
-                            getResources().getIdentifier(id, "string", getPackageName()));
+                    return DroidconApplication.this.getString(getResources().getIdentifier(id,
+                            "string",
+                            getPackageName()));
                 }
             };
 
-            AppManager.initContext(this, platformClient, new AppManager.LoadDataSeed()
+            LoadDataSeed loadDataSeed = () ->
             {
-                @Override
-                public String dataSeed()
+                try
                 {
-                    try
-                    {
-                        return IOUtils.toString(getAssets().open("dataseed.json"));
-                    }
-                    catch(IOException e)
-                    {
-                        throw new RuntimeException(e);
-                    }
+                    return IOUtils.toString(getAssets().open("dataseed.json"));
                 }
-            });
+                catch(IOException e)
+                {
+                    throw new RuntimeException(e);
+                }
+            };
+
+            AppManager.create(this,
+                    platformClient,
+                    DaggerAppComponent.builder()
+                            .appModule(new AppModule(this))
+                            .databaseModule(new DatabaseModule())
+                            .networkModule(new NetworkModule())
+                            .build());
+
+            AppManager.getInstance().seed(loadDataSeed);
 
         }
     }
 
-    @SuppressWarnings("unused")
-    public void onEventMainThread(UpdateAlertsTask task)
+    public static String getCurrentProcessName(Context context)
     {
-        AlertManagerKt.scheduleAlert(this, task.nextEvent);
+        int pid = android.os.Process.myPid();
+        ActivityManager manager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        for(ActivityManager.RunningAppProcessInfo processInfo : manager.getRunningAppProcesses())
+        {
+            if(processInfo.pid == pid)
+            {
+                return processInfo.processName;
+            }
+        }
+        return "";
+    }
+
+    public static DroidconApplication getInstance()
+    {
+        return instance;
+    }
+
+    public void onEventMainThread(UpdateAlertsInteractor interactor)
+    {
+        update(interactor.event);
+    }
+
+    public void update(Event nextEvent)
+    {
+        AlertManagerKt.scheduleAlert(this, nextEvent);
     }
 }

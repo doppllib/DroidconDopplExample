@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.1.2-5'
+    ext.kotlin_version = '1.1.3-2'
     repositories {
         mavenCentral()
     }
@@ -7,34 +7,41 @@ buildscript {
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+        classpath 'me.tatarka:gradle-retrolambda:3.4.0'
     }
 }
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'co.doppl.gradle'
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
-def baseurl = properties.getProperty('baseurl')
+def baseurl = properties.hasProperty('baseurl') ? properties.getProperty('baseurl') : 'https://droidcon-server.herokuapp.com/'
+def amazonurl = properties.getProperty('amazonurl') ? properties.getProperty('amazonurl') : 'https://s3.amazonaws.com/'
 def releasePassword = properties.getProperty('releasePassword')
-def jwLicenseKey = properties.getProperty('jwLicenseKey')
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 26
     buildToolsVersion '25.0.3'
 
     defaultConfig {
         applicationId "co.touchlab.droidcon.anon"
-        minSdkVersion 16
-        targetSdkVersion 25
+        minSdkVersion 21
+        targetSdkVersion 26
         versionCode 101
         versionName "0.1.01"
 
         buildConfigField "String", "BASE_URL", "\"$baseurl\""
-        resValue "string", "jw_license_key", "$jwLicenseKey"
+        buildConfigField "String", "AMAZON_URL", "\"$amazonurl\""
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     signingConfigs {
@@ -62,6 +69,7 @@ android {
         debug {
             debuggable true
             minifyEnabled false
+            pseudoLocalesEnabled true
         }
         staging {
             debuggable true
@@ -91,59 +99,87 @@ android {
     }
 }
 
-def supportVersion = "25.3.1"
+def supportVersion = "26.0.0"
+def archVer = "1.0.0-alpha8"
+def dopplArchVer = "1.0.0.0-alpha8"
+def daggerVer = "2.5"
 
 dependencies {
 
     //UI Dependencies
-    compile "com.android.support:support-v4:$supportVersion"
-    compile 'com.squareup.picasso:picasso:2.4.0'
-    compile 'com.squareup.okhttp:okhttp:2.4.0'
-    compile 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'
-
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.github.johnpersano:supertoasts:1.3.4.1@aar'
-    compile 'com.nineoldandroids:library:2.4.0'
-
-    compile 'commons-io:commons-io:1.4'
-    compile 'org.apache.commons:commons-lang3:3.3.2'
 
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    compile "com.android.support:support-v4:$supportVersion"
     compile "com.android.support:appcompat-v7:$supportVersion"
     compile "com.android.support:design:$supportVersion"
-    compile 'com.viewpagerindicator:library:2.4.1@aar'
-    compile 'com.wnafee:vector-compat:1.0.5'
-    compile 'de.hdodenhof:circleimageview:1.3.0'
     compile "com.android.support:palette-v7:$supportVersion"
     compile "com.android.support:recyclerview-v7:$supportVersion"
     compile "com.android.support:cardview-v7:$supportVersion"
     compile "com.android.support:customtabs:$supportVersion"
 
-    compile 'com.google.code.findbugs:jsr305:3.0.2'
+    compile "android.arch.lifecycle:runtime:$archVer"
+    compile "android.arch.lifecycle:extensions:$archVer"
+
+
+    doppl "co.doppl.android.arch.persistence.room:runtime:$dopplArchVer"
+    doppl "co.doppl.android.arch.lifecycle:runtime:$dopplArchVer"
+    doppl "co.doppl.android.arch.lifecycle:extensions:$dopplArchVer"
+
+    annotationProcessor "android.arch.lifecycle:compiler:$archVer"
+    compile "android.arch.persistence.room:runtime:$archVer"
+    annotationProcessor "android.arch.persistence.room:compiler:$archVer"
+
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'
+
+    compile 'com.viewpagerindicator:library:2.4.1@aar'
+    compile 'de.hdodenhof:circleimageview:1.3.0'
+    compile 'com.squareup.picasso:picasso:2.4.0'
 
     //Shared code dependencies
-    doppl 'co.doppl.lib:androidbase:0.8.0'
+    doppl 'co.doppl.lib:androidbase:0.8.1.0'
+    testCompile 'co.doppl.lib:androidbasetest:0.8.1'
+    testDoppl 'co.doppl.lib:androidbasetest:0.8.1.0'
 
-    compile 'com.squareup.retrofit:retrofit:1.9.0'
-    doppl 'co.doppl.com.squareup.retrofit:retrofit:1.9.0.5'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    doppl 'co.doppl.com.squareup.retrofit2.nossl:retrofit:2.3.0.0'
+    doppl 'co.doppl.com.squareup.retrofit2.nossl:converter-gson:2.3.0.0'
+    doppl 'co.doppl.com.squareup.retrofit2.nossl:adapter-rxjava2:2.3.0.0'
+
+    compile "io.reactivex.rxjava2:rxjava:2.0.8"
+    doppl "co.doppl.io.reactivex.rxjava2:rxjava:2.0.8.0"
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    doppl "co.doppl.io.reactivex.rxjava2:rxandroid:2.0.1.0"
 
     compile 'de.greenrobot:eventbus:2.4.0'
     doppl 'co.doppl.de.greenrobot:eventbus:2.4.0.4'
 
-    compile 'co.touchlab:magicthreads:0.9.3'
-    doppl 'co.touchlab:magicthreads:0.9.3.0'
+    compile "com.google.dagger:dagger:$daggerVer"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVer"
+    testAnnotationProcessor "com.google.dagger:dagger-compiler:$daggerVer"
+    provided 'javax.annotation:jsr250-api:1.0'
+    doppl 'co.doppl.com.google.dagger:dagger:2.5.3'
 
-    annotationProcessor 'co.touchlab.squeaky:squeaky-processor:0.5.3'
-    compile 'co.touchlab.squeaky:squeaky-query:0.5.3'
-    doppl 'co.touchlab.squeaky:squeaky-query:0.5.3.0'
-    //    doppl 'co.doppl.com.google.code.gson:gson:2.6.2.1'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:1.9.5'
 }
 
 
 dopplConfig {
-    translatedPathPrefix 'co.touchlab.droidconandroid.shared.data', 'DCD'
-    translatedPathPrefix 'co.touchlab.droidconandroid.shared.presenter', 'DCP'
-    translatedPathPrefix 'co.touchlab.droidconandroid.shared.tasks', 'DCT'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.dagger', 'DDAG'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.data', 'DDAT'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.data.dao', 'DDAO'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.interactors', 'DINT'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.ios', 'DIOS'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.network', 'DNET'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.network.dao', 'DNETD'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.presenter', 'DPRES'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.utils', 'DUT'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared', 'D'
 
     copyMainOutput "../ios/dcframework/generated"
     copyDependencies true
@@ -151,5 +187,6 @@ dopplConfig {
     translatePattern {
         include '**/shared/**'
         include '**/CrashReport.*'
+        include '**/BuildConfig.*'
     }
 }

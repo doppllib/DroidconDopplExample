@@ -3,7 +3,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 xmlns:tools="http://schemas.android.com/tools"
-                tools:background="@color/droidcon_blue"
                 android:orientation="vertical">
 
     <android.support.v4.view.ViewPager
@@ -30,15 +29,16 @@
             android:layout_centerInParent="true"/>
 
         <TextView
-            android:layout_alignParentRight="true"
-            android:id="@+id/advance"
-            android:textAllCaps="true"
+            android:id="@+id/advanceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:padding="@dimen/padding_wedge"
             android:text="@string/next"
-            android:textColor="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:textAllCaps="true"
+            tools:ignore="RelativeOverlap"
+            android:textColor="@color/white"/>
 
     </RelativeLayout>
 

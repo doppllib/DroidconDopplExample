@@ -8,7 +8,6 @@
 
     <color name="welcome_background_0">#ffc92d</color>
     <color name="welcome_background_1">#689f38</color>
-    <color name="welcome_background_2">#4fc3f7</color>
 
     <!--<color name="primary">#ffc92d</color>
     <color name="primary_dark">#dda91d</color>
@@ -26,6 +25,8 @@
 
     <color name="orange">#ef6541</color>
     <color name="red">#f1582c</color>
+    <color name="black">#000</color>
+    <color name="white">#FFF</color>
 
     <color name="black_95">#F2000000</color>
     <color name="black_90">#E6000000</color>
