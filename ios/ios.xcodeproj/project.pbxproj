@@ -2591,8 +2591,6 @@
 		63EA71F71F36092B00915F81 /* DPRESConferenceDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EA67C61F36091F00915F81 /* DPRESConferenceDataHelper.m */; };
 		63EA71F81F36092B00915F81 /* DPRESConferenceDataHelper_Factory.h in Headers */ = {isa = PBXBuildFile; fileRef = 63EA67C71F36091F00915F81 /* DPRESConferenceDataHelper_Factory.h */; };
 		63EA71F91F36092B00915F81 /* DPRESConferenceDataHelper_Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EA67C81F36091F00915F81 /* DPRESConferenceDataHelper_Factory.m */; };
-		63EA71FA1F36092B00915F81 /* DPRESConferenceDataHost.h in Headers */ = {isa = PBXBuildFile; fileRef = 63EA67C91F36091F00915F81 /* DPRESConferenceDataHost.h */; };
-		63EA71FB1F36092B00915F81 /* DPRESConferenceDataHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EA67CA1F36091F00915F81 /* DPRESConferenceDataHost.m */; };
 		63EA71FC1F36092B00915F81 /* DPRESConferenceDataViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 63EA67CB1F36091F00915F81 /* DPRESConferenceDataViewModel.h */; };
 		63EA71FD1F36092B00915F81 /* DPRESConferenceDataViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EA67CC1F36091F00915F81 /* DPRESConferenceDataViewModel.m */; };
 		63EA71FE1F36092B00915F81 /* DPRESConferenceDataViewModel_Factory_MembersInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = 63EA67CD1F36091F00915F81 /* DPRESConferenceDataViewModel_Factory_MembersInjector.h */; };
@@ -5306,8 +5304,6 @@
 		63EA67C61F36091F00915F81 /* DPRESConferenceDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPRESConferenceDataHelper.m; sourceTree = "<group>"; };
 		63EA67C71F36091F00915F81 /* DPRESConferenceDataHelper_Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPRESConferenceDataHelper_Factory.h; sourceTree = "<group>"; };
 		63EA67C81F36091F00915F81 /* DPRESConferenceDataHelper_Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPRESConferenceDataHelper_Factory.m; sourceTree = "<group>"; };
-		63EA67C91F36091F00915F81 /* DPRESConferenceDataHost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPRESConferenceDataHost.h; sourceTree = "<group>"; };
-		63EA67CA1F36091F00915F81 /* DPRESConferenceDataHost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPRESConferenceDataHost.m; sourceTree = "<group>"; };
 		63EA67CB1F36091F00915F81 /* DPRESConferenceDataViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPRESConferenceDataViewModel.h; sourceTree = "<group>"; };
 		63EA67CC1F36091F00915F81 /* DPRESConferenceDataViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPRESConferenceDataViewModel.m; sourceTree = "<group>"; };
 		63EA67CD1F36091F00915F81 /* DPRESConferenceDataViewModel_Factory_MembersInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPRESConferenceDataViewModel_Factory_MembersInjector.h; sourceTree = "<group>"; };
@@ -5714,8 +5710,6 @@
 				63EA67C61F36091F00915F81 /* DPRESConferenceDataHelper.m */,
 				63EA67C71F36091F00915F81 /* DPRESConferenceDataHelper_Factory.h */,
 				63EA67C81F36091F00915F81 /* DPRESConferenceDataHelper_Factory.m */,
-				63EA67C91F36091F00915F81 /* DPRESConferenceDataHost.h */,
-				63EA67CA1F36091F00915F81 /* DPRESConferenceDataHost.m */,
 				63EA67CB1F36091F00915F81 /* DPRESConferenceDataViewModel.h */,
 				63EA67CC1F36091F00915F81 /* DPRESConferenceDataViewModel.m */,
 				63EA67CD1F36091F00915F81 /* DPRESConferenceDataViewModel_Factory_MembersInjector.h */,
@@ -8420,7 +8414,6 @@
 				63EA70621F36092800915F81 /* AndroidAppSharedPreferencesImpl.h in Headers */,
 				63EA6B841F36092300915F81 /* IoReactivexInternalObserversInnerQueuedObserver.h in Headers */,
 				63EA6E661F36092500915F81 /* IoReactivexInternalOperatorsObservableObservableSkipLast.h in Headers */,
-				63EA71FA1F36092B00915F81 /* DPRESConferenceDataHost.h in Headers */,
 				63EA6A221F36092200915F81 /* Retrofit2ConverterGsonGsonConverterFactory.h in Headers */,
 				63EA6E481F36092500915F81 /* IoReactivexInternalOperatorsObservableObservableReplay.h in Headers */,
 				63EA6D9A1F36092400915F81 /* IoReactivexInternalOperatorsObservableBlockingObservableLatest.h in Headers */,
@@ -10509,7 +10502,6 @@
 				63EA6F0B1F36092600915F81 /* IoReactivexInternalOperatorsSingleSingleNever.m in Sources */,
 				63EA6D811F36092400915F81 /* IoReactivexInternalOperatorsMaybeMaybeTimeoutPublisher.m in Sources */,
 				63EA6A131F36092200915F81 /* Retrofit2AdapterRxjava2CallEnqueueObservable.m in Sources */,
-				63EA71FB1F36092B00915F81 /* DPRESConferenceDataHost.m in Sources */,
 				63EA6CFB1F36092400915F81 /* IoReactivexInternalOperatorsFlowableFlowableWindowBoundary.m in Sources */,
 				63EA689F1F36092100915F81 /* ComGoogleGsonExclusionStrategy.m in Sources */,
 				63EA6B351F36092200915F81 /* IoReactivexInternalDisposablesListCompositeDisposable.m in Sources */,

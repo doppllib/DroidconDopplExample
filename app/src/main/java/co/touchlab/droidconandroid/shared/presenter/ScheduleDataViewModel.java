@@ -21,13 +21,13 @@ public class ScheduleDataViewModel extends ViewModel
 
     public interface Host
     {
-        void loadCallback(DaySchedule daySchedules);
+        void loadCallback(DaySchedule[] daySchedules);
     }
 
-    public void register(Host host, boolean allEvents, String dayString)
+    public void register(Host host, boolean allEvents)
     {
         disposables.clear();
-        disposables.add(interactor.getDayConferenceData(allEvents, dayString)
+        disposables.add(interactor.getFullConferenceData(allEvents)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(host:: loadCallback));

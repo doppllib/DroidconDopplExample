@@ -72,7 +72,6 @@
 #import "DPRESAppManager.h"
 #import "DPRESConferenceDataHelper.h"
 #import "DPRESConferenceDataHelper_Factory.h"
-#import "DPRESConferenceDataHost.h"
 #import "DPRESConferenceDataViewModel.h"
 #import "DPRESConferenceDataViewModel_Factory_MembersInjector.h"
 #import "DPRESDaySchedule.h"

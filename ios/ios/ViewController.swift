@@ -43,9 +43,6 @@ class ViewController : UIViewController {
         
         tableView.delegate = platformContext
         tableView.dataSource = platformContext
-        
-        // will refresh data from server only if it is old
-        dataPresenter.refreshFromServer()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -67,9 +64,7 @@ class ViewController : UIViewController {
             platformContext.reloadDelegate = self
             dataPresenter = DPRESConferenceDataViewModel.forIosWithBoolean(allEvents)
             
-        } else {
-            dataPresenter.refreshConferenceData()
-        }
+        } 
     }
     
     @IBAction func updateTable(_ sender: AnyObject) {

@@ -168,7 +168,10 @@ extension PlatformContext_iOS : UITableViewDelegate {
     
 }
 
-extension PlatformContext_iOS : DPRESConferenceDataHost {
+extension PlatformContext_iOS : DPRESScheduleDataViewModel_Host {
+    func loadCallback(with daySchedules: DPRESDaySchedule!) {
+        
+    }
     func loadCallback(withDPRESDayScheduleArray daySchedules: IOSObjectArray!) {
         hourBlocks = [DPRESHourBlock]()
         conferenceDays = convertiOSObjectArrayToArray(objArray: daySchedules) as! [DPRESDaySchedule]

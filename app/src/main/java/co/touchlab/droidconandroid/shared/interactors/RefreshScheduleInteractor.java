@@ -48,20 +48,6 @@ public class RefreshScheduleInteractor
                 .map(dayScheduleList -> dayScheduleList.toArray(new DaySchedule[dayScheduleList.size()]));
     }
 
-    public Observable<DaySchedule> getDayConferenceData(boolean allEvents, String dayString)
-    {
-        return getFullConferenceData(allEvents)
-                .map(daySchedules -> {
-                    for(DaySchedule daySchedule : daySchedules)
-                    {
-                        if(daySchedule.getDayString().equals(dayString))
-                            return daySchedule;
-                    }
-
-                    return null;
-                });
-    }
-
     void refreshFromDatabase()
     {
         conferenceDataHelper.getDays()

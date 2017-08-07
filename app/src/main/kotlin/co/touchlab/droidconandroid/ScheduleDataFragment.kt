@@ -57,7 +57,7 @@ class ScheduleDataFragment : Fragment(), ScheduleDataViewModel.Host {
 
     override fun onResume() {
         super.onResume()
-        viewModel.register(this, true, ConferenceDataHelper.dateToDayString(Date(arguments.getLong(DAY))))
+        viewModel.register(this, true)
     }
 
     override fun onPause() {
@@ -74,11 +74,11 @@ class ScheduleDataFragment : Fragment(), ScheduleDataViewModel.Host {
     }
 
     fun switchToAgenda() {
-        viewModel.register(this, false, ConferenceDataHelper.dateToDayString(Date(arguments.getLong(DAY))))
+        viewModel.register(this, false)
     }
 
     fun switchToConference() {
-        viewModel.register(this, true, ConferenceDataHelper.dateToDayString(Date(arguments.getLong(DAY))))
+        viewModel.register(this, true)
     }
 
     private inner class ScheduleEventClickListener : EventClickListener {
@@ -87,8 +87,16 @@ class ScheduleDataFragment : Fragment(), ScheduleDataViewModel.Host {
         }
     }
 
-    override fun loadCallback(daySchedule: DaySchedule) {
-        updateAdapter(daySchedule.hourHolders)
+    override fun loadCallback(daySchedule: Array<DaySchedule>) {
+        val dayString = ConferenceDataHelper.dateToDayString(Date(arguments.getLong(DAY)))
+
+        for (daySchedule in daySchedule) {
+            if(daySchedule.dayString?.equals(dayString) ?: false)
+            {
+                updateAdapter(daySchedule.hourHolders)
+            }
+        }
+
         updateAlertsInteractor.alert()
     }
 
