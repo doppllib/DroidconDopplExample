@@ -1,9 +1,6 @@
 package co.touchlab.droidconandroid.shared.interactors;
 
 import android.support.annotation.NonNull;
-import android.util.Log;
-
-import java.util.UUID;
 
 import javax.inject.Inject;
 
@@ -11,7 +8,6 @@ import co.touchlab.droidconandroid.shared.data.AppPrefs;
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.network.RsvpRequest;
-import co.touchlab.droidconandroid.shared.network.SponsorsRequest;
 import co.touchlab.droidconandroid.shared.network.dao.JustId;
 import co.touchlab.droidconandroid.shared.utils.AnalyticsEvents;
 import co.touchlab.droidconandroid.shared.utils.AnalyticsHelper;
@@ -19,7 +15,6 @@ import io.reactivex.Observable;
 import io.reactivex.Single;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
-import io.reactivex.subjects.BehaviorSubject;
 
 /**
  * Created by kgalligan on 4/7/16.
@@ -63,7 +58,7 @@ public class RsvpInteractor
                 Observable<JustId> response = request.unRsvp(event.id, appPrefs.getUserUniqueUuid());
                 response.subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
-                        .subscribe(id -> Log.d("sz", "unrsvped = " + id.getId()));
+                        .subscribe();
                 AnalyticsHelper.recordAnalytics(AnalyticsEvents.UNRSVP_EVENT, event.getId());
             }
             else
@@ -71,7 +66,7 @@ public class RsvpInteractor
                 Observable<JustId> response = request.rsvp(event.id, appPrefs.getUserUniqueUuid());
                 response.subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
-                        .subscribe(id -> Log.d("sz", "rsvped = " + id.getId()));
+                        .subscribe();
                 AnalyticsHelper.recordAnalytics(AnalyticsEvents.RSVP_EVENT, event.getId());
             }
             return event;
