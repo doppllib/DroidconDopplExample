@@ -70,4 +70,16 @@ public class SponsorsViewModel extends ViewModel
             return (T) new SponsorsViewModel(task);
         }
     }
+
+    public static Factory factory()
+    {
+        Factory factory = new Factory();
+        AppManager.getInstance().getAppComponent().inject(factory);
+        return factory;
+    }
+
+    public static SponsorsViewModel forIos()
+    {
+        return factory().create(SponsorsViewModel.class);
+    }
 }

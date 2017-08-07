@@ -62,16 +62,8 @@ public class EventDetailInteractor
     @NonNull
     private EventInfo createEventInfo(Event event, List<UserAccount> eventSpeakers, List<Event> allEvents)
     {
-        EventInfo info = new EventInfo();
-        List<UserAccount> speakerList = new ArrayList<>();
-        for(UserAccount speaker : eventSpeakers)
-        {
-            speakerList.add(speaker);
-        }
-        info.event = event;
-        info.speakers = speakerList;
-        info.conflict = hasConflict(event, allEvents);
-        return info;
+        //Flattened this out. Not sure we need to copy the array, but it was being done explicitly, so I kept.
+        return new EventInfo(event, new ArrayList<>(eventSpeakers), hasConflict(event, allEvents));
     }
 
     private static boolean hasConflict(Event event, List<Event> allEvents)

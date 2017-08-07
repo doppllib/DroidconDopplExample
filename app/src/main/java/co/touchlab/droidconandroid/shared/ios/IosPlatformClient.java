@@ -4,6 +4,7 @@ import com.google.j2objc.annotations.ObjectiveCName;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
+import co.touchlab.droidconandroid.BuildConfig;
 import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
 
 /**
@@ -22,7 +23,7 @@ public class IosPlatformClient implements PlatformClient
     @Override
     public String baseUrl()
     {
-        return "https://droidcon-server.herokuapp.com/";
+        return BuildConfig.BASE_URL;
     }
 
     @Override

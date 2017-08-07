@@ -59,7 +59,7 @@ public class UserDetailViewModel extends ViewModel
         @Inject
         FindUserInteractor task;
 
-        public Factory()
+        private Factory()
         {
 
         }
@@ -78,4 +78,16 @@ public class UserDetailViewModel extends ViewModel
         }
     }
 
+    public static Factory factory()
+    {
+        Factory factory = new Factory();
+        AppManager.getInstance().getAppComponent().inject(factory);
+
+        return factory;
+    }
+
+    public static UserDetailViewModel forIos()
+    {
+        return factory().create(UserDetailViewModel.class);
+    }
 }

@@ -51,10 +51,6 @@ public class AppManager
         return platformClient;
     }
 
-    public enum AppScreens
-    {
-        Welcome,
-        Schedule
-    }
+
 
 }

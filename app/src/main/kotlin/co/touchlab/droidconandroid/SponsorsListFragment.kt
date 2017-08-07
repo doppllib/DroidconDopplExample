@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import co.touchlab.droidconandroid.shared.network.SponsorsResult
 import co.touchlab.droidconandroid.shared.presenter.AppManager
+import co.touchlab.droidconandroid.shared.presenter.ScheduleDataViewModel
 import co.touchlab.droidconandroid.shared.presenter.SponsorsHost
 import co.touchlab.droidconandroid.shared.presenter.SponsorsViewModel
 import co.touchlab.droidconandroid.ui.SponsorsAdapter
@@ -39,9 +40,7 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
     private val type: Int by lazy { arguments.getInt(SPONSOR_TYPE) }
 
     private val viewModel: SponsorsViewModel by lazy {
-        val factory = SponsorsViewModel.Factory()
-        AppManager.getInstance().appComponent.inject(factory)
-        ViewModelProviders.of(this, factory).get(SponsorsViewModel::class.java)
+        ViewModelProviders.of(this, ScheduleDataViewModel.factory()).get(SponsorsViewModel::class.java)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
