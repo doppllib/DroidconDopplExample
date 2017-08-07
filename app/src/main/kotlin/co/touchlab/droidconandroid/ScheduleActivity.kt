@@ -86,9 +86,6 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
     override fun onResume() {
         super.onResume()
 
-        // will refresh data from server only if it is old
-//        viewModel.refreshFromServer()
-
         if (isTablet()) {
             drawer_layout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_OPEN, drawer_recycler)
         } else {

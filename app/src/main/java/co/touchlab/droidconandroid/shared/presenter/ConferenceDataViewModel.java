@@ -42,7 +42,7 @@ public class ConferenceDataViewModel extends ViewModel
 
     public void unregister()
     {
-        compositeDisposable.dispose();
+        compositeDisposable.clear();
     }
 
     public interface Host
@@ -77,6 +77,7 @@ public class ConferenceDataViewModel extends ViewModel
         return factory;
     }
 
+    @NonNull
     public static ConferenceDataViewModel forIos(boolean allEvents)
     {
         return factory(allEvents).create(ConferenceDataViewModel.class);
