@@ -4,7 +4,6 @@ buildscript {
         maven { url 'https://dl.bintray.com/doppllib/maven' }
         jcenter()
         mavenCentral()
-        maven { url dopplMavenDeploy }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
@@ -17,7 +16,6 @@ allprojects {
         maven { url "https://dl.bintray.com/doppllib/maven" }
         maven { url "http://dl.bintray.com/populov/maven" }
         maven { url 'https://maven.google.com' }
-        maven { url dopplMavenDeploy }
         jcenter()
         mavenCentral()
     }
