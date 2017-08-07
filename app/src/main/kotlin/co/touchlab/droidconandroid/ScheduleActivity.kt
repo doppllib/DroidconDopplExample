@@ -15,12 +15,10 @@ import android.support.v7.widget.LinearLayoutManager
 import android.text.format.DateUtils
 import android.view.View
 import co.touchlab.droidconandroid.shared.data.AppPrefs
-import co.touchlab.droidconandroid.shared.data.DatabaseHelper
 import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataViewModel
-import co.touchlab.droidconandroid.shared.tasks.persisted.RefreshScheduleJob
 import co.touchlab.droidconandroid.shared.utils.EventBusExt
 import co.touchlab.droidconandroid.shared.utils.TimeUtils
 import co.touchlab.droidconandroid.ui.*
@@ -30,31 +28,26 @@ import java.util.*
 class ScheduleActivity : AppCompatActivity() {
 
     private var allEvents = true
-
-    val helper: DatabaseHelper by lazy {
-        DatabaseHelper.getInstance(this)
-    }
-
-    // temporary till we daggerize
-    val interactor: RefreshScheduleInteractor by lazy {
-        val jobManager = DroidconApplication.getInstance().jobManager
-        RefreshScheduleInteractor(jobManager, helper)
-    }
-
+  
     private val viewModel: ConferenceDataViewModel by lazy {
-        val factory = ConferenceDataViewModel.Factory(interactor, AppPrefs.getInstance(this))
+        val factory = ConferenceDataViewModel.Factory(allEvents)
+        AppManager.getInstance().appComponent.inject(factory)
         ViewModelProviders.of(this, factory)[ConferenceDataViewModel::class.java]
     }
 
-    private val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
-        val prefs = AppPrefs.getInstance(this)
-        UpdateAlertsInteractor(prefs, interactor)
+    val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
+        AppManager.getInstance().appComponent.updateAlertsInteractor()
+    }
+
+    val appPrefs: AppPrefs by lazy {
+        AppManager.getInstance().appComponent.prefs
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        when (AppManager.findStartScreen()) {
+
+        when (goToScreen(appPrefs)) {
             AppManager.AppScreens.Welcome -> {
                 startActivity(WelcomeActivity.getLaunchIntent(this@ScheduleActivity))
                 finish()
@@ -67,6 +60,15 @@ class ScheduleActivity : AppCompatActivity() {
 
                 setContentView(R.layout.activity_schedule)
             }
+        }
+    }
+
+    private fun goToScreen(appPrefs: AppPrefs): AppManager.AppScreens {
+        val hasSeenWelcome = appPrefs.hasSeenWelcome
+        if (!hasSeenWelcome) {
+            return AppManager.AppScreens.Welcome
+        } else {
+            return AppManager.AppScreens.Schedule
         }
     }
 
@@ -132,8 +134,7 @@ class ScheduleActivity : AppCompatActivity() {
         appbar.setExpanded(true)
 
         schedule_toolbar_notif.setOnClickListener {
-            val prefs = AppPrefs.getInstance(this)
-            updateNotifications(!prefs.allowNotifications)
+            updateNotifications(!appPrefs.allowNotifications)
         }
     }
 
@@ -221,16 +222,15 @@ class ScheduleActivity : AppCompatActivity() {
             schedule_toolbar_notif.visibility = View.VISIBLE
         }
 
-        if (AppPrefs.getInstance(this).allowNotifications)
+        if (appPrefs.allowNotifications)
             schedule_toolbar_notif.setImageResource(R.drawable.vic_notifications_active_black_24dp)
         else
             schedule_toolbar_notif.setImageResource(R.drawable.vic_notifications_none_black_24dp)
     }
 
     private fun updateNotifications(allow: Boolean) {
-        val prefs = AppPrefs.getInstance(this)
-        prefs.allowNotifications = allow
-        prefs.showNotifCard = false
+        appPrefs.allowNotifications = allow
+        appPrefs.showNotifCard = false
         (view_pager.adapter as ScheduleFragmentPagerAdapter).updateNotifCard()
         updateAlertsInteractor.alert()
         adjustToolBarAndDrawers()
@@ -241,7 +241,7 @@ class ScheduleActivity : AppCompatActivity() {
     }
 
     @Suppress("unused", "UNUSED_PARAMETER")
-    fun onEventMainThread(eventDetailJob: RefreshScheduleJob) {
+    fun onEventMainThread(eventDetailJob: RefreshScheduleInteractor) {
         Handler().post(RefreshRunnable())
     }
 
@@ -255,8 +255,8 @@ class ScheduleActivity : AppCompatActivity() {
     inner class RefreshRunnable : Runnable {
         override fun run() {
             val dates: ArrayList<Long> = ArrayList()
-            val startString: String? = AppPrefs.getInstance(this@ScheduleActivity).conventionStartDate
-            val endString: String? = AppPrefs.getInstance(this@ScheduleActivity).conventionEndDate
+            val startString: String? = appPrefs.conventionStartDate
+            val endString: String? = appPrefs.conventionEndDate
 
             if (!startString.isNullOrBlank() && !endString.isNullOrBlank()) {
                 var start: Long = TimeUtils.sanitize(TimeUtils.LOCAL_DATE_FORMAT.get().parse(startString))

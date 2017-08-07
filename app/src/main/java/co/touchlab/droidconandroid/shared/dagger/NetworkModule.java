@@ -1,0 +1,84 @@
+package co.touchlab.droidconandroid.shared.dagger;
+
+import javax.inject.Named;
+import javax.inject.Singleton;
+
+import co.touchlab.droidconandroid.shared.network.FindUserRequest;
+import co.touchlab.droidconandroid.shared.network.RefreshScheduleDataRequest;
+import co.touchlab.droidconandroid.shared.network.SponsorsRequest;
+import dagger.Module;
+import dagger.Provides;
+import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+@Module
+public class NetworkModule
+{
+
+    @Provides
+    @Singleton
+    @DroidconServer
+    String providesBaseUrl()
+    {
+        return "https://droidcon-server.herokuapp.com";
+    }
+
+    @Provides
+    @Singleton
+    @AmazonServer
+    String providesAmazonBaseUrl()
+    {
+        return "https://s3.amazonaws.com/";
+    }
+
+    @Provides
+    @Singleton
+    GsonConverterFactory providesGsonConverterFactory()
+    {
+        return GsonConverterFactory.create();
+    }
+
+    @Provides
+    @Singleton
+    @DroidconServer
+    Retrofit providesDroidconRetrofit(GsonConverterFactory factory, @DroidconServer String baseUrl)
+    {
+        return new Retrofit.Builder().baseUrl(baseUrl)
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(factory).build();
+    }
+
+    @Provides
+    @Singleton
+    @AmazonServer
+    Retrofit providesAmazonRetrofit(GsonConverterFactory factory, @AmazonServer String baseUrl)
+    {
+        return new Retrofit.Builder().baseUrl(baseUrl)
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(factory)
+                .build();
+    }
+
+    @Provides
+    @Singleton
+    FindUserRequest providesFindUserRequest(@DroidconServer Retrofit retrofit)
+    {
+        return retrofit.create(FindUserRequest.class);
+    }
+
+
+    @Provides
+    @Singleton
+    RefreshScheduleDataRequest providesRefreshScheduleRequest(@DroidconServer Retrofit retrofit)
+    {
+        return retrofit.create(RefreshScheduleDataRequest.class);
+    }
+
+    @Provides
+    @Singleton
+    SponsorsRequest providesSponsorRequest(@AmazonServer Retrofit retrofit)
+    {
+        return retrofit.create(SponsorsRequest.class);
+    }
+}

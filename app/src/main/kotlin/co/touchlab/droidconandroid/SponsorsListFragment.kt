@@ -9,10 +9,8 @@ import android.util.SparseIntArray
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import co.touchlab.droidconandroid.shared.interactors.SponsorsInteractor
-import co.touchlab.droidconandroid.shared.network.DataHelper
-import co.touchlab.droidconandroid.shared.network.SponsorsRequest
 import co.touchlab.droidconandroid.shared.network.SponsorsResult
+import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.SponsorsHost
 import co.touchlab.droidconandroid.shared.presenter.SponsorsViewModel
 import co.touchlab.droidconandroid.ui.SponsorsAdapter
@@ -41,10 +39,8 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
     private val type: Int by lazy { arguments.getInt(SPONSOR_TYPE) }
 
     private val viewModel: SponsorsViewModel by lazy {
-        val retrofit = DataHelper.makeRetrofit2Client(BuildConfig.AMAZON_URL)
-        val sponsorsRequest = retrofit.create(SponsorsRequest::class.java)
-        val interactor = SponsorsInteractor(sponsorsRequest, type)
-        val factory = SponsorsViewModel.Factory(interactor)
+        val factory = SponsorsViewModel.Factory()
+        AppManager.getInstance().appComponent.inject(factory)
         ViewModelProviders.of(this, factory).get(SponsorsViewModel::class.java)
     }
 
@@ -61,7 +57,7 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
     override fun onStart() {
         super.onStart()
         viewModel.register(this)
-        viewModel.getSponsors()
+        viewModel.getSponsors(type)
     }
 
     override fun onStop() {

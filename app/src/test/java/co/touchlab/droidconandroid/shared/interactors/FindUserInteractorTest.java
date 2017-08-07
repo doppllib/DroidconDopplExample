@@ -43,7 +43,7 @@ public class FindUserInteractorTest
     @Before
     public void setUp() throws Exception
     {
-        interactor = new FindUserInteractor(helper, request, 100);
+        interactor = new FindUserInteractor(helper, request);
         response = new UserInfoResponse();
         response.user = new NetworkUserAccount();
         user = new UserAccount();
@@ -56,7 +56,7 @@ public class FindUserInteractorTest
         when(helper.saveUserAccount(anyObject())).thenReturn(Completable.complete());
         when(helper.getUserAccountForId(anyInt())).thenReturn(Single.error(new Throwable()));
 
-        interactor.loadUserAccount().test().assertNoErrors();
+        interactor.loadUserAccount(100).test().assertNoErrors();
     }
 
     @Test
@@ -66,7 +66,7 @@ public class FindUserInteractorTest
         when(request.getUserInfo(anyInt())).thenReturn(Observable.error(error));
         when(helper.getUserAccountForId(anyLong())).thenReturn(Single.just(user));
 
-        interactor.loadUserAccount().test().assertValue(user);
+        interactor.loadUserAccount(100).test().assertValue(user);
     }
 
     @Test
@@ -76,47 +76,6 @@ public class FindUserInteractorTest
         when(request.getUserInfo(anyInt())).thenReturn(Observable.error(error));
         when(helper.getUserAccountForId(anyLong())).thenReturn(Single.error(error));
 
-        interactor.loadUserAccount().test().assertError(error);
-    }
-
-    // Have a test to test the cache and stuff
-
-    @Test
-    public void whenNetworkFails_ShouldResetCache()
-    {
-        when(request.getUserInfo(anyInt())).thenReturn(Observable.error(new Throwable()));
-        when(helper.getUserAccountForId(anyLong())).thenReturn(Single.just(user));
-
-        interactor.loadUserAccount().test().assertValue(user);
-        interactor.loadUserAccount().test().assertValue(user);
-        verify(request, times(2)).getUserInfo(anyInt());
-    }
-
-    @Test
-    public void whenNetworkSucceeds_ShouldCache()
-    {
-        when(request.getUserInfo(anyInt())).thenReturn(Observable.just(response));
-        when(helper.getUserAccountForId(anyLong())).thenReturn(Single.error(new Throwable()));
-
-        interactor.loadUserAccount().test().assertComplete();
-        interactor.loadUserAccount().test().assertComplete();
-        verify(request, times(1)).getUserInfo(anyInt());
-    }
-
-    @Test
-    public void whenNetworkFailsAndDatabaseSucceeds_ShouldResetCache()
-    {
-        Throwable exception = new Throwable();
-        when(request.getUserInfo(anyInt())).thenReturn(Observable.error(exception));
-        when(helper.getUserAccountForId(anyLong())).thenReturn(Single.just(user));
-
-        interactor.loadUserAccount().test().assertValue(user);
-
-        when(request.getUserInfo(anyInt())).thenReturn(Observable.just(response));
-        when(helper.getUserAccountForId(anyLong())).thenReturn(Single.error(exception));
-
-        interactor.loadUserAccount().test().assertComplete();
-
-        verify(request, times(2)).getUserInfo(anyInt());
+        interactor.loadUserAccount(100).test().assertError(error);
     }
 }

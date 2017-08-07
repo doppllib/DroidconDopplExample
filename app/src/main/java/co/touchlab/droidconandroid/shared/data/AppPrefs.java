@@ -8,10 +8,14 @@ import java.util.UUID;
 
 import retrofit2.http.PUT;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
 
 /**
  * Created by kgalligan on 6/28/14.
  */
+@Singleton
 public class AppPrefs
 {
     public static final String SEEN_WELCOME     = "seen_welcome";
@@ -22,21 +26,12 @@ public class AppPrefs
     public static final String SHOW_NOTIF_CARD = "show_notif_card";
     public static final String USER_UNIQUE_UUID = "USER_UNIQUE_UUID";
 
-    private static AppPrefs instance;
-
     private SharedPreferences prefs;
 
-
-    @NonNull
-    public static synchronized AppPrefs getInstance(Context context)
+    @Inject
+    public AppPrefs(Context context)
     {
-        if(instance == null)
-        {
-            instance = new AppPrefs();
-            instance.prefs = context.getSharedPreferences("APP_PREFS", Context.MODE_PRIVATE);
-        }
-
-        return instance;
+        prefs = context.getSharedPreferences("APP_PREFS", Context.MODE_PRIVATE);
     }
 
     public boolean once(String key)
