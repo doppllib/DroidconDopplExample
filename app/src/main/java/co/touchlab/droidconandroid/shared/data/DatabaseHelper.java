@@ -10,33 +10,25 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
 import co.touchlab.droidconandroid.shared.data.dao.EventDao;
 import co.touchlab.droidconandroid.shared.data.dao.UserAccountDao;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkUserAccount;
 import io.reactivex.Completable;
 import io.reactivex.Single;
 
+@Singleton
 public class DatabaseHelper
 {
 
-    private static DatabaseHelper   instance;
-    private        DroidconDatabase db;
+    private DroidconDatabase db;
 
-    private DatabaseHelper(Context context)
+    @Inject
+    public DatabaseHelper(Context context)
     {
-        db = Room.databaseBuilder(context, DroidconDatabase.class, "droidcon")
-                .build();
-    }
-
-    @NotNull
-    public static synchronized DatabaseHelper getInstance(Context context)
-    {
-        if(instance == null)
-        {
-            instance = new DatabaseHelper(context);
-        }
-
-        return instance;
+        db = Room.databaseBuilder(context, DroidconDatabase.class, "droidcon").build();
     }
 
     public void deleteEventsNotIn(Set<Long> goodStuff)

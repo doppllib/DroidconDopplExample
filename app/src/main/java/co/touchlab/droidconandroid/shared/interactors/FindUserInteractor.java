@@ -1,5 +1,10 @@
 package co.touchlab.droidconandroid.shared.interactors;
 
+import android.util.Log;
+
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.network.FindUserRequest;
@@ -7,46 +12,40 @@ import co.touchlab.droidconandroid.shared.network.dao.NetworkUserAccount;
 import co.touchlab.droidconandroid.shared.network.dao.UserInfoResponse;
 import io.reactivex.Completable;
 import io.reactivex.Observable;
+import io.reactivex.annotations.NonNull;
+import io.reactivex.functions.Consumer;
 
 /**
  * Created by kgalligan on 4/8/16.
  */
+@Singleton
 public class FindUserInteractor
 {
     private final DatabaseHelper  helper;
     private final FindUserRequest request;
-    private final long            userId;
-    private Observable<UserAccount> userAccountObservable = null;
 
-    public FindUserInteractor(DatabaseHelper helper, FindUserRequest request, long userId)
+    @Inject
+    public FindUserInteractor(DatabaseHelper helper, FindUserRequest request)
     {
         this.helper = helper;
         this.request = request;
-        this.userId = userId;
     }
 
-    public Observable<UserAccount> loadUserAccount()
+    public Observable<UserAccount> loadUserAccount(final long userId)
     {
-        if(userAccountObservable == null)
-        {
-            userAccountObservable = loadUserInfo(userId).flatMap(info -> saveUserResponse(info.user))
-                    .onErrorResumeNext(getUserFromDb(userId))
-                    .cache();
-        }
 
-        return userAccountObservable;
+        return loadUserInfo(userId).flatMap(info -> saveUserResponse(info.user))
+                .onErrorResumeNext(getUserFromDb(userId));
     }
 
     private Observable<UserAccount> getUserFromDb(final long userId)
     {
-        return helper.getUserAccountForId(userId)
-                .toObservable()
-                .doOnError(e -> userAccountObservable = null);
+        return helper.getUserAccountForId(userId).toObservable();
     }
 
     private Observable<UserInfoResponse> loadUserInfo(final long userId)
     {
-        return request.getUserInfo(userId).doOnError(e -> userAccountObservable = null);
+        return request.getUserInfo(userId);
     }
 
     private Observable<UserAccount> saveUserResponse(NetworkUserAccount networkUserAccount)

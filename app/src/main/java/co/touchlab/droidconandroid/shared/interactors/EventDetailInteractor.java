@@ -7,6 +7,8 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.data.EventInfo;
@@ -17,24 +19,27 @@ import io.reactivex.Single;
 /**
  * Created by kgalligan on 4/7/16.
  */
-public class EventDetailInteractor {
-    public final  long           eventId;
+public class EventDetailInteractor
+{
     private final DatabaseHelper helper;
 
-    public EventDetailInteractor(DatabaseHelper helper, long eventId) {
+    @Inject
+    public EventDetailInteractor(DatabaseHelper helper)
+    {
         this.helper = helper;
-        this.eventId = eventId;
     }
 
-    public Single<EventInfo> getEventInfo() {
-        Single<Event> eventSingle = getEvent();
+    public Single<EventInfo> getEventInfo(long eventId)
+    {
+        Single<Event> eventSingle = getEvent(eventId);
         Single<List<Event>> allEvents = helper.getEvents();
-        Single<List<UserAccount>> speakersSingle = getEventSpeakers();
+        Single<List<UserAccount>> speakersSingle = getEventSpeakers(eventId);
 
-        return Single.zip(eventSingle, speakersSingle, allEvents, this::createEventInfo);
+        return Single.zip(eventSingle, speakersSingle, allEvents, this :: createEventInfo);
+
     }
 
-    private Single<List<UserAccount>> getEventSpeakers()
+    private Single<List<UserAccount>> getEventSpeakers(long eventId)
     {
         return helper.getEventSpeakers(eventId)
                 .toObservable()
@@ -44,11 +49,12 @@ public class EventDetailInteractor {
                 .toList();
     }
 
-    public Single<Venue> getEventVenue() {
-        return getEvent().map(event -> event.venue);
+    public Single<Venue> getEventVenue(long eventId)
+    {
+        return getEvent(eventId).map(event -> event.venue);
     }
 
-    private Single<Event> getEvent()
+    private Single<Event> getEvent(long eventId)
     {
         return helper.getEventForId(eventId);
     }
@@ -68,13 +74,16 @@ public class EventDetailInteractor {
         return info;
     }
 
-    private static boolean hasConflict(Event event, List<Event> allEvents) {
-        for (Event existingEvent : allEvents) {
-            if (event.id != existingEvent.id
-                    && !TextUtils.isEmpty(existingEvent.rsvpUuid)
-                    && event.startDateLong < existingEvent.endDateLong
-                    && event.endDateLong > existingEvent.startDateLong)
+    private static boolean hasConflict(Event event, List<Event> allEvents)
+    {
+        for(Event existingEvent : allEvents)
+        {
+            if(event.id != existingEvent.id && ! TextUtils.isEmpty(existingEvent.rsvpUuid) &&
+                    event.startDateLong < existingEvent.endDateLong &&
+                    event.endDateLong > existingEvent.startDateLong)
+            {
                 return true;
+            }
         }
 
         return false;

@@ -4,8 +4,12 @@ import android.util.Log;
 
 import java.util.concurrent.TimeUnit;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
 import co.touchlab.droidconandroid.shared.data.Event;
+import co.touchlab.droidconandroid.shared.network.RefreshScheduleDataRequest;
 import co.touchlab.droidconandroid.shared.presenter.DaySchedule;
 import co.touchlab.droidconandroid.shared.presenter.HourBlock;
 import co.touchlab.droidconandroid.shared.utils.EventBusExt;
@@ -15,14 +19,18 @@ import io.reactivex.schedulers.Schedulers;
 /**
  * Created by samuelhill on 7/5/16.
  */
-public class UpdateAlertsInteractor {
-    private final AppPrefs                  prefs;
+@Singleton
+public class UpdateAlertsInteractor
+{
     private final RefreshScheduleInteractor refreshInteractor;
-    public        Event                     event;
+    private final AppPrefs       prefs;
+    public        Event          event;
 
     public static final long ALERT_BUFFER = TimeUnit.MINUTES.toMillis(5);
 
-    public UpdateAlertsInteractor(AppPrefs prefs, RefreshScheduleInteractor refreshInteractor) {
+    @Inject
+    public UpdateAlertsInteractor(AppPrefs prefs, RefreshScheduleInteractor refreshInteractor)
+    {
         this.prefs = prefs;
         this.refreshInteractor = refreshInteractor;
     }
@@ -33,8 +41,7 @@ public class UpdateAlertsInteractor {
             refreshInteractor.getFullConferenceData(false)
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(this::update,
-                            e -> Log.e("UpdateError", "Error retrieving data"));
+                    .subscribe(this :: update, e -> Log.e("UpdateError", "Error retrieving data"));
         }
     }
 

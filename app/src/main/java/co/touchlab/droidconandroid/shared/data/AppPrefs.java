@@ -5,10 +5,14 @@ import android.content.SharedPreferences;
 
 import org.jetbrains.annotations.NotNull;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
 
 /**
  * Created by kgalligan on 6/28/14.
  */
+@Singleton
 public class AppPrefs
 {
     public static final String SEEN_WELCOME     = "seen_welcome";
@@ -18,21 +22,12 @@ public class AppPrefs
     public static final String ALLOW_NOTIFS    = "allow_notifs";
     public static final String SHOW_NOTIF_CARD = "show_notif_card";
 
-    private static AppPrefs instance;
-
     private SharedPreferences prefs;
 
-
-    @NotNull
-    public static synchronized AppPrefs getInstance(Context context)
+    @Inject
+    public AppPrefs(Context context)
     {
-        if(instance == null)
-        {
-            instance = new AppPrefs();
-            instance.prefs = context.getSharedPreferences("APP_PREFS", Context.MODE_PRIVATE);
-        }
-
-        return instance;
+        prefs = context.getSharedPreferences("APP_PREFS", Context.MODE_PRIVATE);
     }
 
     public boolean once(String key)
