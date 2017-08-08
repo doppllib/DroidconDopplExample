@@ -7,7 +7,6 @@ import java.util.List;
 
 import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
-import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.network.RefreshScheduleDataRequest;
 import co.touchlab.droidconandroid.shared.presenter.AppManager;
 import co.touchlab.droidconandroid.shared.data.Event;
@@ -15,7 +14,6 @@ import co.touchlab.droidconandroid.shared.data.TimeBlock;
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHelper;
 import co.touchlab.droidconandroid.shared.presenter.DaySchedule;
 import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
-import co.touchlab.droidconandroid.shared.utils.EventBusExt;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
