@@ -3,6 +3,7 @@ package co.touchlab.droidconandroid.shared.dagger;
 import javax.inject.Named;
 import javax.inject.Singleton;
 
+import co.touchlab.droidconandroid.BuildConfig;
 import co.touchlab.droidconandroid.shared.network.FindUserRequest;
 import co.touchlab.droidconandroid.shared.network.RefreshScheduleDataRequest;
 import co.touchlab.droidconandroid.shared.network.SponsorsRequest;
@@ -21,7 +22,7 @@ public class NetworkModule
     @DroidconServer
     String providesBaseUrl()
     {
-        return "https://droidcon-server.herokuapp.com";
+        return BuildConfig.BASE_URL;
     }
 
     @Provides

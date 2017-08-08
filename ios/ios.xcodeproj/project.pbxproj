@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		01526F191EC0F99B00D42000 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 01526F181EC0F99B00D42000 /* libiconv.tbd */; };
-		016DFCC51F265C26002E58D7 /* prefixes.properties in Resources */ = {isa = PBXBuildFile; fileRef = FAE033A31C9711F8001C50E1 /* prefixes.properties */; };
 		018320261F152215009794AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018320251F152215009794AC /* ViewController.swift */; };
 		018320281F153CC3009794AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018320271F153CC3009794AC /* AppDelegate.swift */; };
 		0183202C1F155D86009794AC /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0183202B1F155D86009794AC /* NoteTableViewCell.swift */; };
@@ -9867,7 +9866,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				63EA722E1F36092B00915F81 /* prefixes.properties in Resources */,
-				016DFCC51F265C26002E58D7 /* prefixes.properties in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
