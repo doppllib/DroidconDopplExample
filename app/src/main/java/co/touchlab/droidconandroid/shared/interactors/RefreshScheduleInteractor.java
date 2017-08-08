@@ -29,15 +29,23 @@ public class RefreshScheduleInteractor
     private final RefreshScheduleDataRequest request;
     private BehaviorSubject<List<TimeBlock>> conferenceDataSubject = BehaviorSubject.create();
 
+    private static final long SERVER_REFRESH_TIME = 3600000 * 6; // 6 hours
+
     @Inject
     public RefreshScheduleInteractor(ConferenceDataHelper conferenceDataHelper, AppPrefs appPrefs, RefreshScheduleDataRequest request)
     {
         this.conferenceDataHelper = conferenceDataHelper;
         this.appPrefs = appPrefs;
         this.request = request;
-        refreshFromDatabase();
-        //This should be scheduled somewhere
-        refreshFromServer();
+
+        if((System.currentTimeMillis() - appPrefs.getRefreshTime() > SERVER_REFRESH_TIME))
+        {
+            refreshFromServer();
+        }
+        else
+        {
+            refreshFromDatabase();
+        }
     }
 
     public Observable<DaySchedule[]> getFullConferenceData(boolean allEvents)
@@ -64,13 +72,12 @@ public class RefreshScheduleInteractor
     {
         final PlatformClient platformClient = AppManager.getInstance().getPlatformClient();
 
-        appPrefs.setRefreshTime(System.currentTimeMillis());
-
         request.getScheduleData(platformClient.getConventionId())
                 .flatMapCompletable(conferenceDataHelper:: saveConvention)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(() -> {}, CrashReport:: logException);
+                .subscribe(() -> appPrefs.setRefreshTime(System.currentTimeMillis())
+                        , CrashReport:: logException);
     }
 
     private Observable<List<TimeBlock>> filterAndSortBlocks(List<TimeBlock> list, boolean allEvents)
