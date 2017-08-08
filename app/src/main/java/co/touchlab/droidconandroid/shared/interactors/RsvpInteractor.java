@@ -58,6 +58,7 @@ public class RsvpInteractor
     {
         if(event.rsvpUuid == null)
         {
+            // implement persisted task here when ready
             return request.unRsvp(event.id, appPrefs.getUserUniqueUuid())
                     .flatMap(ignore -> {
                         AnalyticsHelper.recordAnalytics(AnalyticsEvents.UNRSVP_EVENT, event.getId());
