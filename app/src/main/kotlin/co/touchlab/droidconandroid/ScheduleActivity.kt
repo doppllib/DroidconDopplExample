@@ -266,8 +266,8 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
         private val POSITION_EXPLORE = 1
         private val POSITION_MY_SCHEDULE = 2
         private val ALL_EVENTS = "all_events"
-        private val ALL_TOPIC = "all_debug"
-        private val ANDROID_TOPIC = "android_debug"
+        private val ALL_TOPIC = "all_2017"
+        private val ANDROID_TOPIC = "android_2017"
 
         @JvmField
         val ALPHA_OPAQUE = 255
