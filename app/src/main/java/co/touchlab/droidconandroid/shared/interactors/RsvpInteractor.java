@@ -12,8 +12,6 @@ import co.touchlab.droidconandroid.shared.utils.AnalyticsEvents;
 import co.touchlab.droidconandroid.shared.utils.AnalyticsHelper;
 import io.reactivex.Observable;
 import io.reactivex.Single;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.schedulers.Schedulers;
 
 /**
  * Created by kgalligan on 4/7/16.
@@ -52,27 +50,28 @@ public class RsvpInteractor
 
     private Single<Event> updateDatabase(Event event)
     {
-        return Single.fromCallable(() ->
-        {
-            helper.updateEvent(event).subscribe();
-            return event;
-        });
+        return helper.updateEvent(event)
+                .andThen(Single.just(event));
     }
 
     private Single<Event> updateBackend(Event event)
     {
         if(event.rsvpUuid == null)
         {
-            AnalyticsHelper.recordAnalytics(AnalyticsEvents.UNRSVP_EVENT, event.getId());
             return request.unRsvp(event.id, appPrefs.getUserUniqueUuid())
-                    .flatMap(ignore -> Observable.just(event))
+                    .flatMap(ignore -> {
+                        AnalyticsHelper.recordAnalytics(AnalyticsEvents.UNRSVP_EVENT, event.getId());
+                        return Observable.just(event);
+                    })
                     .firstOrError();
         }
         else
         {
-            AnalyticsHelper.recordAnalytics(AnalyticsEvents.RSVP_EVENT, event.getId());
             return request.rsvp(event.id, appPrefs.getUserUniqueUuid())
-                    .flatMap(ignore -> Observable.just(event))
+                    .flatMap(ignore -> {
+                        AnalyticsHelper.recordAnalytics(AnalyticsEvents.RSVP_EVENT, event.getId());
+                        return Observable.just(event);
+                    })
                     .firstOrError();
         }
     }
