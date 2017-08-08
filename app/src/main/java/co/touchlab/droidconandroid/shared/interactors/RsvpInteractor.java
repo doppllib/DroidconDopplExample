@@ -10,6 +10,7 @@ import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.network.RsvpRequest;
 import co.touchlab.droidconandroid.shared.utils.AnalyticsEvents;
 import co.touchlab.droidconandroid.shared.utils.AnalyticsHelper;
+import io.reactivex.Observable;
 import io.reactivex.Single;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -62,22 +63,18 @@ public class RsvpInteractor
     {
         if(event.rsvpUuid == null)
         {
-            request.unRsvp(event.id, appPrefs.getUserUniqueUuid())
-                    .subscribeOn(Schedulers.io())
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe();
             AnalyticsHelper.recordAnalytics(AnalyticsEvents.UNRSVP_EVENT, event.getId());
+            return request.unRsvp(event.id, appPrefs.getUserUniqueUuid())
+                    .flatMap(ignore -> Observable.just(event))
+                    .firstOrError();
         }
         else
         {
-            request.rsvp(event.id, appPrefs.getUserUniqueUuid())
-                    .subscribeOn(Schedulers.io())
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe();
             AnalyticsHelper.recordAnalytics(AnalyticsEvents.RSVP_EVENT, event.getId());
+            return request.rsvp(event.id, appPrefs.getUserUniqueUuid())
+                    .flatMap(ignore -> Observable.just(event))
+                    .firstOrError();
         }
-
-        return Single.just(event);
     }
 
     @NonNull
