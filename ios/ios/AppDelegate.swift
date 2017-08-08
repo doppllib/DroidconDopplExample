@@ -10,6 +10,7 @@ import Foundation
 import UserNotifications
 import JRE
 import UIKit
+import FirebaseAnalytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,12 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         .databaseModule(with: DDAGDatabaseModule())
         .networkModule(with: DDAGNetworkModule())
             .build()
-        
+
         DPRESAppManager.create(with: AndroidContentIOSContext(), with: platformClient, with: appComponent)
-        
+
         DPRESAppManager.getInstance().seed(with: self);
-        
+
         registerForNotifications()
+        print("Firebase Analytics test \(Analytics.appInstanceID())")
     }
     
     
