@@ -3,6 +3,7 @@ package co.touchlab.droidconandroid.shared.dagger;
 import javax.inject.Singleton;
 
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
+import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor;
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor;
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHelper;
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataViewModel;
@@ -22,6 +23,8 @@ public interface AppComponent
     SeedInteractor seedInteractor();
 
     UpdateAlertsInteractor updateAlertsInteractor();
+
+    RefreshScheduleInteractor refreshScheduleInteractor();
 
     void inject(UserDetailViewModel.Factory target);
 

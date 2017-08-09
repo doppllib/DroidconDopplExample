@@ -1,11 +1,12 @@
 package co.touchlab.droidconandroid
 
+import android.app.NotificationManager
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
 import android.content.Intent
 import android.graphics.PorterDuff
+import android.os.Build
 import android.os.Bundle
-import android.os.Handler
 import android.support.design.widget.TabLayout
 import android.support.v4.content.ContextCompat
 import android.support.v4.widget.DrawerLayout
@@ -13,12 +14,15 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
+import co.touchlab.droidconandroid.alerts.NotificationService
+import co.touchlab.droidconandroid.alerts.NotificationUtils
 import co.touchlab.droidconandroid.shared.data.AppPrefs
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 import co.touchlab.droidconandroid.shared.presenter.AppManager
 import co.touchlab.droidconandroid.shared.presenter.ConferenceDataViewModel
 import co.touchlab.droidconandroid.shared.utils.EventBusExt
 import co.touchlab.droidconandroid.ui.*
+import com.google.firebase.messaging.FirebaseMessaging
 import kotlinx.android.synthetic.main.activity_schedule.*
 import java.util.*
 
@@ -50,6 +54,21 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        FirebaseMessaging.getInstance().subscribeToTopic(ALL_TOPIC)
+        FirebaseMessaging.getInstance().subscribeToTopic(ANDROID_TOPIC)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            val utils = NotificationUtils(this, notificationManager)
+            utils.createChannels()
+        }
+
+        // Firebase Messaging console adds data payload to launch activity if notification is sent
+        // while app is in the background. Check for extras here:
+        if (intent.extras != null && intent.extras[NotificationService.EVENT_ID] != null) {
+            val eventId = intent.extras[NotificationService.EVENT_ID].toString().toLong()
+            val intent = EventDetailActivity.createIntent(this, eventId)
+            startActivity(intent)
+        }
 
         when (viewModel.goToScreen()) {
             ConferenceDataViewModel.AppScreens.Welcome -> {
@@ -247,6 +266,9 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
         private val POSITION_EXPLORE = 1
         private val POSITION_MY_SCHEDULE = 2
         private val ALL_EVENTS = "all_events"
+        private val ALL_TOPIC = "all_2017"
+        private val ANDROID_TOPIC = "android_2017"
+
         @JvmField
         val ALPHA_OPAQUE = 255
 

@@ -69,7 +69,7 @@ public class RefreshScheduleInteractor
                 });
     }
 
-    void refreshFromServer()
+    public void refreshFromServer()
     {
         final PlatformClient platformClient = AppManager.getInstance().getPlatformClient();
         request.getScheduleData(platformClient.getConventionId())

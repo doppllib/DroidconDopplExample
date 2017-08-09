@@ -36,7 +36,6 @@ class UserDetailFragment : Fragment(), UserDetailHost {
         private val GPLUS_PREFIX: String = "http://www.google.com/+"
         private val LINKEDIN_PREFIX: String = "http://www.linkedin.com/in/"
         private val FACEBOOK_PREFIX: String = "http://www.facebook.com/"
-        private val PHONE_PREFIX: String = "tel:"
 
         interface FinishListener {
             fun onFragmentFinished()
