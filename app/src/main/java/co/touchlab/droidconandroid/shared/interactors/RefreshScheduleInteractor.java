@@ -41,13 +41,11 @@ public class RefreshScheduleInteractor
         this.appPrefs = appPrefs;
         this.request = request;
 
+        refreshFromDatabase();
+
         if((System.currentTimeMillis() - appPrefs.getRefreshTime() > SERVER_REFRESH_TIME))
         {
             refreshFromServer();
-        }
-        else
-        {
-            refreshFromDatabase();
         }
     }
 
@@ -76,10 +74,9 @@ public class RefreshScheduleInteractor
         final PlatformClient platformClient = AppManager.getInstance().getPlatformClient();
         request.getScheduleData(platformClient.getConventionId())
                 .retryWhen(error -> error
-                        .zipWith(Observable.range(1, RETRY_COUNT + 1), (e, integer) ->
+                        .zipWith(Observable.range(1, RETRY_COUNT), (e, integer) ->
                         {
-                            if(integer == RETRY_COUNT + 1) return new Pair<>(error, 0);
-
+                            if(integer == RETRY_COUNT) return new Pair<>(error, 0);
                             return new Pair<>(error, integer);
                         })
                         .flatMap(this :: retryWithExponentialBackoff)
@@ -87,7 +84,11 @@ public class RefreshScheduleInteractor
                 .flatMapCompletable(conferenceDataHelper:: saveConvention)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(() -> appPrefs.setRefreshTime(System.currentTimeMillis()),
+                .subscribe(
+                        () -> {
+                            appPrefs.setRefreshTime(System.currentTimeMillis());
+                            refreshFromDatabase();
+                        },
                         CrashReport:: logException);
     }
 
