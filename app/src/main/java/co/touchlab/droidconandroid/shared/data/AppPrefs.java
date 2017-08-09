@@ -7,11 +7,8 @@ import android.util.Pair;
 
 import java.util.UUID;
 
-import co.touchlab.droidconandroid.BuildConfig;
 import io.reactivex.Observable;
-import io.reactivex.processors.BehaviorProcessor;
 import io.reactivex.subjects.BehaviorSubject;
-import retrofit2.http.PUT;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;

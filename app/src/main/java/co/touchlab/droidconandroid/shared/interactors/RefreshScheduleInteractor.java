@@ -32,7 +32,7 @@ public class RefreshScheduleInteractor
 
     private static final long SERVER_REFRESH_TIME = 3600000 * 6; // 6 hours
     private static final int  RETRY_COUNT         = 5;
-    private static final int  INITIAL_DELAY       = 60;
+    private static final int  INITIAL_DELAY_SEC   = 60;
 
     @Inject
     public RefreshScheduleInteractor(ConferenceDataHelper conferenceDataHelper, AppPrefs appPrefs, RefreshScheduleDataRequest request)
@@ -100,7 +100,7 @@ public class RefreshScheduleInteractor
             return errorRetryCountTuple.first;
         }
 
-        long delay = INITIAL_DELAY * (long) Math.pow(2, Math.max(0, retryAttempt - 1));
+        long delay = INITIAL_DELAY_SEC * (long) Math.pow(2, Math.max(0, retryAttempt - 1));
         return Observable.timer(delay, TimeUnit.SECONDS);
     }
 
