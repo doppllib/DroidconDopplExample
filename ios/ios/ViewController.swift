@@ -50,11 +50,9 @@ class ViewController : UIViewController {
         if segue.identifier == "ShowEventDetail" {
             let detailViewController = segue.destination as! ShowEventDetailViewController
             let networkEvent = sender as! DDATEvent
-            let speakers = platformContext.getSpeakersArray(from: networkEvent) as! [DDATEventSpeaker]
             detailViewController.titleString = networkEvent.getName().replacingOccurrences(of: "Android", with: "[Sad Puppy]")
             detailViewController.descriptionString = networkEvent.getDescription().replacingOccurrences(of: "Android", with: "[Sad Puppy]")
             detailViewController.event = networkEvent
-            //detailViewController.speakers = speakers
             detailViewController.dateTime = platformContext.getEventTime(startTime: networkEvent.getStartFormatted()! as NSString, andEnd: networkEvent.getEndFormatted()! as NSString)
         }
     }

@@ -38,6 +38,7 @@ import dcframework
         }
         
         eventDetailPresenter = DPRESEventDetailViewModel.forIos()
+        eventDetailPresenter.register__(with: self)
         eventDetailPresenter.getDetailsWithLong(event.getId())
         
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -78,9 +79,9 @@ import dcframework
     }
     
     func updateAllUi() {
-        tableView.reloadData()
         updateButton()
         updateHeaderImage()
+        tableView.reloadData()
     }
     
     func resetStreamProgress() {
@@ -96,6 +97,8 @@ import dcframework
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
+        } else if speakers == nil {
+            return 0
         }
         
         return speakers!.count

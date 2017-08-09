@@ -61,14 +61,14 @@ class PlatformContext_iOS : NSObject {
         return PlatformContext_iOS.javaList(toList: networkEvent.getSpeakerList())
     }
     
-    fileprivate func formatSpeakersString(from array: [DDATEventSpeaker]) -> String {
-        var speakerNames = [String]()
-        //TODO: Fix this
-//        for speaker in array {
-//            speakerNames.append(speaker.getUserAccount().getName())
-//        }
-        return speakerNames.joined(separator: ", ")
-    }
+//    fileprivate func formatSpeakersString(from array: [DDATEventSpeaker]) -> String {
+//        var speakerNames = [String]()
+//        //TODO: Fix this
+////        for speaker in array {
+////            speakerNames.append(speaker.getUserAccount().getName())
+////        }
+//        return speakerNames.joined(separator: ", ")
+//    }
     
     func getEventTime(startTime: NSString, andEnd endTime: NSString) -> String {
         var startLoc = 7
@@ -133,8 +133,7 @@ extension PlatformContext_iOS : UITableViewDataSource {
         
         if let event = eventObj as? DDATEvent {
             cell.titleLabel.text = event.getName().replacingOccurrences(of: "Android", with: "[Sad Puppy]")
-            let speakers = getSpeakersArray(from: event) as! [DDATEventSpeaker]
-            cell.speakerNamesLabel.text = formatSpeakersString(from: speakers)
+            cell.speakerNamesLabel.text = event.allSpeakersString()
         } else if let event = eventObj as? DDATBlock {
             cell.titleLabel.text = event.getName()
             cell.speakerNamesLabel.text = ""
