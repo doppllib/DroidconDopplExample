@@ -1,9 +1,12 @@
 package co.touchlab.droidconandroid.shared.interactors;
 
+import android.support.v4.util.Pair;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
@@ -28,6 +31,8 @@ public class RefreshScheduleInteractor
     private BehaviorSubject<List<TimeBlock>> conferenceDataSubject = BehaviorSubject.create();
 
     private static final long SERVER_REFRESH_TIME = 3600000 * 6; // 6 hours
+    private static final int  RETRY_COUNT         = 5;
+    private static final int  INITIAL_DELAY       = 60;
 
     @Inject
     public RefreshScheduleInteractor(ConferenceDataHelper conferenceDataHelper, AppPrefs appPrefs, RefreshScheduleDataRequest request)
@@ -69,13 +74,34 @@ public class RefreshScheduleInteractor
     void refreshFromServer()
     {
         final PlatformClient platformClient = AppManager.getInstance().getPlatformClient();
-
         request.getScheduleData(platformClient.getConventionId())
+                .retryWhen(error -> error
+                        .zipWith(Observable.range(1, RETRY_COUNT + 1), (e, integer) ->
+                        {
+                            if(integer == RETRY_COUNT + 1) return new Pair<>(error, 0);
+
+                            return new Pair<>(error, integer);
+                        })
+                        .flatMap(this :: retryWithExponentialBackoff)
+                )
                 .flatMapCompletable(conferenceDataHelper:: saveConvention)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(() -> appPrefs.setRefreshTime(System.currentTimeMillis())
-                        , CrashReport:: logException);
+                .subscribe(() -> appPrefs.setRefreshTime(System.currentTimeMillis()),
+                        CrashReport:: logException);
+    }
+
+    private Observable retryWithExponentialBackoff(Pair<Observable<Throwable>, Integer> errorRetryCountTuple)
+    {
+        int retryAttempt = errorRetryCountTuple.second;
+
+        if(retryAttempt == 0)
+        {
+            return errorRetryCountTuple.first;
+        }
+
+        long delay = INITIAL_DELAY * (long) Math.pow(2, Math.max(0, retryAttempt - 1));
+        return Observable.timer(delay, TimeUnit.SECONDS);
     }
 
     private Observable<List<TimeBlock>> filterAndSortBlocks(List<TimeBlock> list, boolean allEvents)
