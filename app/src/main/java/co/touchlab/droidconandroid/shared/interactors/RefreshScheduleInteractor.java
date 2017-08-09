@@ -1,6 +1,6 @@
 package co.touchlab.droidconandroid.shared.interactors;
 
-import android.support.v4.util.Pair;
+import android.util.Pair;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
