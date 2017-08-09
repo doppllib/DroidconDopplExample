@@ -16,7 +16,8 @@ class ViewController : UIViewController {
     var notesArray: [String]!
     var imagesArray: [UIImageView]!
     var platformContext: PlatformContext_iOS!
-    var dataPresenter: DPRESConferenceDataViewModel!
+    var conferencePresenter: DPRESConferenceDataViewModel!
+    var schedulePresenter: DPRESScheduleDataViewModel!
     var notes: JavaUtilArrayList!
     var allEvents = false
     @IBOutlet weak var dayChooser: UISegmentedControl!
@@ -53,7 +54,7 @@ class ViewController : UIViewController {
             detailViewController.titleString = networkEvent.getName().replacingOccurrences(of: "Android", with: "[Sad Puppy]")
             detailViewController.descriptionString = networkEvent.getDescription().replacingOccurrences(of: "Android", with: "[Sad Puppy]")
             detailViewController.event = networkEvent
-//            detailViewController.speakers = speakers
+            //detailViewController.speakers = speakers
             detailViewController.dateTime = platformContext.getEventTime(startTime: networkEvent.getStartFormatted()! as NSString, andEnd: networkEvent.getEndFormatted()! as NSString)
         }
     }
@@ -62,7 +63,9 @@ class ViewController : UIViewController {
         if platformContext == nil {
             platformContext = PlatformContext_iOS()
             platformContext.reloadDelegate = self
-            dataPresenter = DPRESConferenceDataViewModel.forIosWithBoolean(allEvents)
+            conferencePresenter = DPRESConferenceDataViewModel.forIosWithBoolean(allEvents)
+            schedulePresenter = DPRESScheduleDataViewModel.forIos()
+            schedulePresenter.register__(with: platformContext, withBoolean: true)
             
         } 
     }

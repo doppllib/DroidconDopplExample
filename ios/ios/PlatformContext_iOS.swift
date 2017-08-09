@@ -48,7 +48,7 @@ class PlatformContext_iOS : NSObject {
         
         let index = self.isDayTwo ? 1 : 0
         if let days = conferenceDays, days.count > index, let objectArray = days[index].getHourHolders() {
-            array.append(contentsOf: convertiOSObjectArrayToArray(objArray: objectArray) as! [DPRESHourBlock])
+            array.append(contentsOf: PlatformContext_iOS.convertiOSObjectArrayToArray(objArray: objectArray) as! [DPRESHourBlock])
         }
         if dateFormatter == nil {
             dateFormatter = DateFormatter()
@@ -102,7 +102,8 @@ class PlatformContext_iOS : NSObject {
         hourBlocks.append(contentsOf: hourBlocksArray)
     }
     
-    fileprivate func convertiOSObjectArrayToArray(objArray: IOSObjectArray) -> [Any] {
+    //TODO move somewhere else
+    static func convertiOSObjectArrayToArray(objArray: IOSObjectArray) -> [Any] {
         var array = [Any]()
         for i in 0..<objArray.length() {
             array.append(objArray.object(at: UInt(i)))
@@ -169,14 +170,13 @@ extension PlatformContext_iOS : UITableViewDelegate {
 }
 
 extension PlatformContext_iOS : DPRESScheduleDataViewModel_Host {
-    func loadCallback(with daySchedules: DPRESDaySchedule!) {
-        
-    }
-    func loadCallback(withDPRESDayScheduleArray daySchedules: IOSObjectArray!) {
-        hourBlocks = [DPRESHourBlock]()
-        conferenceDays = convertiOSObjectArrayToArray(objArray: daySchedules) as! [DPRESDaySchedule]
-        updateTableData()
-        reloadDelegate?.reloadTableView()
-    }
+    
+        func loadCallback(withDPRESDayScheduleArray daySchedules: IOSObjectArray!) {
+            hourBlocks = [DPRESHourBlock]()
+            conferenceDays = PlatformContext_iOS.convertiOSObjectArrayToArray(objArray: daySchedules) as! [DPRESDaySchedule]
+            updateTableData()
+            reloadDelegate?.reloadTableView()
+        }
+    
 }
 
