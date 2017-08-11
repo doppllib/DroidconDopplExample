@@ -10,7 +10,7 @@ import UIKit
 import JRE
 import dcframework
 
-@objc class ShowEventDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DPRESEventDetailHost {
+@objc class EventDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DPRESEventDetailHost {
     
     // MARK: Properties
     

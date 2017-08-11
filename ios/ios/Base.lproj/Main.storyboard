@@ -13,7 +13,7 @@
         <!--Droidcon NYC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ScheduleViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -165,12 +165,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1128.8" y="992.65367316341838"/>
+            <point key="canvasLocation" x="1412" y="1003"/>
         </scene>
-        <!--Show Event Detail View Controller-->
+        <!--Event Detail View Controller-->
         <scene sceneID="7Q1-LW-v1f">
             <objects>
-                <viewController storyboardIdentifier="EventDetail" automaticallyAdjustsScrollViewInsets="NO" id="eMM-Ow-Y8D" customClass="ShowEventDetailViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventDetail" automaticallyAdjustsScrollViewInsets="NO" id="eMM-Ow-Y8D" customClass="EventDetailViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="evr-4l-2Pv"/>
                         <viewControllerLayoutGuide type="bottom" id="mXV-h5-qs4"/>
@@ -246,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u9y-Xd-Qes" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1128.8" y="1767.1664167916044"/>
+            <point key="canvasLocation" x="1111" y="1793"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="SEn-eK-DHA">
@@ -276,7 +276,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sN-Nq-cpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1130" y="217"/>
+            <point key="canvasLocation" x="1042" y="187"/>
         </scene>
         <!--My Agenda-->
         <scene sceneID="6Jk-Re-33h">
@@ -304,7 +304,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAY-F3-QQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="217"/>
+            <point key="canvasLocation" x="1793" y="187"/>
         </scene>
         <!--About-->
         <scene sceneID="ZE3-ed-YrL">
@@ -473,7 +473,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEE-Uo-vuv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3145" y="335"/>
+            <point key="canvasLocation" x="2553" y="187"/>
         </scene>
         <!--Droidcon Tab Bar View Controller-->
         <scene sceneID="R1K-Rd-8j6">
@@ -524,7 +524,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XEU-Cb-iZn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1370" y="-1453"/>
+            <point key="canvasLocation" x="1834" y="-1241"/>
         </scene>
         <!--Sponsors View Controller-->
         <scene sceneID="45q-F7-s0a">
@@ -625,7 +625,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfw-Fu-Ihy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2160" y="-1453"/>
+            <point key="canvasLocation" x="2748" y="-1242"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pvd-7g-3y8">
@@ -810,10 +810,10 @@
             </objects>
             <point key="canvasLocation" x="-1208" y="1003"/>
         </scene>
-        <!--Welcome4 View Controller-->
+        <!--Welcome Sponsors View Controller-->
         <scene sceneID="WAY-H5-dJ0">
             <objects>
-                <viewController storyboardIdentifier="Welcome4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iRu-46-VA8" customClass="Welcome4ViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Welcome4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iRu-46-VA8" customClass="WelcomeSponsorsViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JNE-n4-uyk"/>
                         <viewControllerLayoutGuide type="bottom" id="5MF-xg-m5e"/>
@@ -832,7 +832,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingPhotoCell" id="JoG-rC-NKQ" customClass="OnboardingPhotoCell" customModule="ios" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SponsorPhotoCell" id="JoG-rC-NKQ" customClass="SponsorPhotoCell" customModule="ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64" width="200" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -855,7 +855,7 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingHeaderView" id="1a8-s9-BPQ">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WelcomeHeaderView" id="1a8-s9-BPQ" customClass="WelcomeHeaderView" customModule="ios" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -933,7 +933,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qT-pK-Mpw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-560" y="1003"/>
+            <point key="canvasLocation" x="-562" y="1003"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="0e3-VE-SHx">
@@ -989,7 +989,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zqj-i6-iXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-624" y="217"/>
+            <point key="canvasLocation" x="-481" y="156"/>
         </scene>
         <!--Welcome Page View Controller-->
         <scene sceneID="lHY-LM-xMX">
@@ -999,12 +999,12 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i1A-KG-8te" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2524" y="217"/>
+            <point key="canvasLocation" x="-1578" y="125"/>
         </scene>
         <!--Entry Controller-->
         <scene sceneID="bJN-GJ-YrV">
             <objects>
-                <viewController title="Entry Controller" id="QQp-Hh-HEz" customClass="StartScreenViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Entry Controller" id="QQp-Hh-HEz" customClass="LaunchViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="emk-8Z-PJf"/>
                         <viewControllerLayoutGuide type="bottom" id="tuS-3a-fJN"/>
@@ -1021,7 +1021,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xGO-zC-FFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="155" y="-561"/>
+            <point key="canvasLocation" x="137" y="-608"/>
         </scene>
     </scenes>
     <resources>
@@ -1037,7 +1037,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tzR-iU-b0c"/>
-        <segue reference="pVg-yj-H2O"/>
+        <segue reference="gpQ-ie-VS3"/>
         <segue reference="Y1n-90-loS"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.066666666666666666" green="0.30196078431372547" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

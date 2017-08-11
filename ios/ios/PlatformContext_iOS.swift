@@ -141,7 +141,7 @@ extension PlatformContext_iOS : DPRESScheduleDataViewModel_Host {
     
         func loadCallback(withDPRESDayScheduleArray daySchedules: IOSObjectArray!) {
             hourBlocks = [DPRESHourBlock]()
-            conferenceDays = JavaUtils.convertiOSObjectArrayToArray(objArray: daySchedules) as! [DPRESDaySchedule]
+            conferenceDays = JavaUtils.convertiOSObjectArrayToArray(objArray: daySchedules) as? [DPRESDaySchedule]
             updateTableData()
             reloadDelegate?.reloadTableView()
         }
