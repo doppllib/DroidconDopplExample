@@ -19,12 +19,13 @@ class SpeakerTableViewCell: UITableViewCell {
         nameLabel.text = name
         infoLabel.text = info//formatHTMLString(info)
         
-        nameLabel.sizeToFit()
-        infoLabel.sizeToFit()
-        
-        speakerImage.kf_setImage(with: URL(string: imgUrl)!)
+        speakerImage.kf.setImage(with: URL(string: imgUrl)!)
         speakerImage.layer.cornerRadius = 24
         speakerImage.layer.masksToBounds = true
+        
+        nameLabel.sizeToFit()
+        infoLabel.sizeToFit()
+        speakerImage.sizeToFit()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
