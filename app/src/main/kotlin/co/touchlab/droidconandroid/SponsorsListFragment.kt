@@ -40,7 +40,7 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
     private val type: Int by lazy { arguments.getInt(SPONSOR_TYPE) }
 
     private val viewModel: SponsorsViewModel by lazy {
-        ViewModelProviders.of(this, ScheduleDataViewModel.factory()).get(SponsorsViewModel::class.java)
+        ViewModelProviders.of(this, SponsorsViewModel.factory()).get(SponsorsViewModel::class.java)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
