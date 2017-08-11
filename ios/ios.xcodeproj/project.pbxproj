@@ -2653,7 +2653,6 @@
 		63EE30CE1CC6985800B64D3D /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30CD1CC6985800B64D3D /* StartScreenViewController.swift */; };
 		63EE30D01CC6AD4400B64D3D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30CF1CC6AD4400B64D3D /* WelcomeViewController.swift */; };
 		63EE30DF1CD025AC00B64D3D /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30DE1CD025AC00B64D3D /* EventListCell.swift */; };
-		63F0E9461DC4F2C1000A2AD7 /* JWPlayer-iOS-SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F0E9451DC4F2C1000A2AD7 /* JWPlayer-iOS-SDK.framework */; };
 		84A04B60DAEE845879A58D90 /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62B114202731562C1A1C003 /* Pods_ios.framework */; };
 		889BCE286CBE9ED98416F630 /* Pods_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9231D71C59376C0F37908DFA /* Pods_iosUITests.framework */; };
 		F92EB65A1D5A5EEC003B47B7 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */; };
@@ -2666,6 +2665,7 @@
 		FA6128C31C986E7A001142E8 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6128C21C986E7A001142E8 /* EventTableViewCell.xib */; };
 		FA6128C51C986E87001142E8 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6128C41C986E87001142E8 /* EventTableViewCell.swift */; };
 		FAE033A61C974C65001C50E1 /* ShowEventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE033A51C974C65001C50E1 /* ShowEventDetailViewController.swift */; };
+		FBD247BD1F3E406800E48171 /* JavaUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD247BC1F3E406800E48171 /* JavaUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -5397,6 +5397,7 @@
 		FA6128C41C986E87001142E8 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		FA86A7F91C92169900C09CE7 /* ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		FAE033A51C974C65001C50E1 /* ShowEventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventDetailViewController.swift; sourceTree = "<group>"; };
+		FBD247BC1F3E406800E48171 /* JavaUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavaUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -5404,7 +5405,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63F0E9461DC4F2C1000A2AD7 /* JWPlayer-iOS-SDK.framework in Frameworks */,
 				6342B6C21DC6A18B0060BE83 /* dcframework.framework in Frameworks */,
 				6342B6A71DC67BE00060BE83 /* Kingfisher.framework in Frameworks */,
 				84A04B60DAEE845879A58D90 /* Pods_ios.framework in Frameworks */,
@@ -8297,6 +8297,7 @@
 				631B98EE1C7D6533008AA20D /* Supporting Files */,
 				63EE30CB1CC5E1BD00B64D3D /* CheckLoginController.swift */,
 				63EE30CD1CC6985800B64D3D /* StartScreenViewController.swift */,
+				FBD247BC1F3E406800E48171 /* JavaUtils.swift */,
 				63EE30CF1CC6AD4400B64D3D /* WelcomeViewController.swift */,
 				63EE30DE1CD025AC00B64D3D /* EventListCell.swift */,
 				F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */,
@@ -10298,6 +10299,7 @@
 				018320301F156ADA009794AC /* PlatformContext_iOS.swift in Sources */,
 				FA6128C51C986E87001142E8 /* EventTableViewCell.swift in Sources */,
 				018320261F152215009794AC /* ViewController.swift in Sources */,
+				FBD247BD1F3E406800E48171 /* JavaUtils.swift in Sources */,
 				63EE30D01CC6AD4400B64D3D /* WelcomeViewController.swift in Sources */,
 				F9D6952D1D47AF9D0095F0F9 /* AboutViewController.swift in Sources */,
 				4CFD936D1D8355630018C837 /* OnboardingHeaderView.swift in Sources */,

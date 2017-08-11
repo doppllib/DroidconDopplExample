@@ -66,12 +66,12 @@ import dcframework
     func dataRefresh(with eventInfo: DDATEventInfo!) {
         event = eventInfo.getEvent()
         conflict = eventInfo.getConflict()
-        speakers = PlatformContext_iOS.javaList(toList: eventInfo.getSpeakers()) as? [DDATUserAccount]
+        speakers = JavaUtils.javaList(toList: eventInfo.getSpeakers()) as? [DDATUserAccount]
         updateAllUi()
     }
     
     func reportError(with error: String){
-        let alert = UIAlertView(title: "Video Error", message: error as String, delegate: nil, cancelButtonTitle: "Ok")
+        let alert = UIAlertView(title: "Error", message: error as String, delegate: nil, cancelButtonTitle: "Ok")
         alert.show()
     }
     
@@ -84,10 +84,6 @@ import dcframework
         updateButton()
         updateHeaderImage()
         tableView.reloadData()
-    }
-    
-    func resetStreamProgress() {
-        // TODO
     }
     
     // MARK: TableView
