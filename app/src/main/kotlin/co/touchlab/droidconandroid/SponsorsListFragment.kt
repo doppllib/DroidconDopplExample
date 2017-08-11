@@ -10,8 +10,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import co.touchlab.droidconandroid.shared.network.SponsorsResult
-import co.touchlab.droidconandroid.shared.presenter.AppManager
-import co.touchlab.droidconandroid.shared.presenter.ScheduleDataViewModel
 import co.touchlab.droidconandroid.shared.presenter.SponsorsHost
 import co.touchlab.droidconandroid.shared.presenter.SponsorsViewModel
 import co.touchlab.droidconandroid.ui.SponsorsAdapter
@@ -55,8 +53,7 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
 
     override fun onStart() {
         super.onStart()
-        viewModel.register(this)
-        viewModel.getSponsors(type)
+        viewModel.register(this, type)
     }
 
     override fun onStop() {
@@ -65,6 +62,8 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
     }
 
     override fun onSponsorsFound(sponsorResult: SponsorsResult) {
+        adapter.clearAll()
+
         // Filter through and insert "filler items" .. TODO This is a hack
         val finalList: ArrayList<Any> = ArrayList()
 
@@ -72,7 +71,6 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
         val lastIndex = sponsorResult.sponsors.lastIndex
         val spanCounts = SparseIntArray()
         for (sponsor in sponsorResult.sponsors) {
-            // Add object to results
             finalList.add(sponsor)
 
             // Increment count

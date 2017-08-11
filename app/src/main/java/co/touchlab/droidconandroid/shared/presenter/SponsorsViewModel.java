@@ -21,7 +21,6 @@ public class SponsorsViewModel extends ViewModel
 {
     private final SponsorsInteractor task;
     @Weak
-    private       SponsorsHost       host;
     private CompositeDisposable disposables = new CompositeDisposable();
     private Observable<SponsorsResult> sponsorsResultObservable;
 
@@ -30,18 +29,14 @@ public class SponsorsViewModel extends ViewModel
         this.task = task;
     }
 
-    public void register(@NonNull SponsorsHost host)
+    public void register(@NonNull SponsorsHost host, int type)
     {
-        this.host = host;
-    }
+        disposables.clear();
 
-    public void getSponsors(int type)
-    {
         if(sponsorsResultObservable == null)
         {
             sponsorsResultObservable = task.getSponsors(type).cache();
         }
-
         disposables.add(sponsorsResultObservable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(host:: onSponsorsFound, e -> host.onError()));
@@ -49,7 +44,6 @@ public class SponsorsViewModel extends ViewModel
 
     public void unregister()
     {
-        host = null;
         disposables.clear();
     }
 
