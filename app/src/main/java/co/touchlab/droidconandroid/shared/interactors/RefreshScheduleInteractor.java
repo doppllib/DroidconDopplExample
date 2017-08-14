@@ -48,7 +48,7 @@ public class RefreshScheduleInteractor
                 .map(dayScheduleList -> dayScheduleList.toArray(new DaySchedule[dayScheduleList.size()]));
     }
 
-    void refreshFromDatabase()
+    public void refreshFromDatabase()
     {
         conferenceDataHelper.getDays()
                 .subscribeOn(Schedulers.io())
