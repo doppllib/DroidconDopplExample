@@ -14,6 +14,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import co.touchlab.droidconandroid.R.id.*
 import co.touchlab.droidconandroid.shared.data.Event
 import co.touchlab.droidconandroid.shared.data.EventInfo
 import co.touchlab.droidconandroid.shared.data.Track
