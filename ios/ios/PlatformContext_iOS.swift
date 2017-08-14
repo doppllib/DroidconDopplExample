@@ -48,7 +48,7 @@ class PlatformContext_iOS : NSObject {
         
         let index = self.isDayTwo ? 1 : 0
         if let days = conferenceDays, days.count > index, let objectArray = days[index].getHourHolders() {
-            array.append(contentsOf: convertiOSObjectArrayToArray(objArray: objectArray) as! [DPRESHourBlock])
+            array.append(contentsOf: PlatformContext_iOS.convertiOSObjectArrayToArray(objArray: objectArray) as! [DPRESHourBlock])
         }
         if dateFormatter == nil {
             dateFormatter = DateFormatter()
@@ -59,15 +59,6 @@ class PlatformContext_iOS : NSObject {
     
     func getSpeakersArray(from networkEvent: DDATEvent) -> [Any] {
         return PlatformContext_iOS.javaList(toList: networkEvent.getSpeakerList())
-    }
-    
-    fileprivate func formatSpeakersString(from array: [DDATEventSpeaker]) -> String {
-        var speakerNames = [String]()
-        //TODO: Fix this
-//        for speaker in array {
-//            speakerNames.append(speaker.getUserAccount().getName())
-//        }
-        return speakerNames.joined(separator: ", ")
     }
     
     func getEventTime(startTime: NSString, andEnd endTime: NSString) -> String {
@@ -102,7 +93,8 @@ class PlatformContext_iOS : NSObject {
         hourBlocks.append(contentsOf: hourBlocksArray)
     }
     
-    fileprivate func convertiOSObjectArrayToArray(objArray: IOSObjectArray) -> [Any] {
+    //TODO move somewhere else
+    static func convertiOSObjectArrayToArray(objArray: IOSObjectArray) -> [Any] {
         var array = [Any]()
         for i in 0..<objArray.length() {
             array.append(objArray.object(at: UInt(i)))
@@ -132,8 +124,7 @@ extension PlatformContext_iOS : UITableViewDataSource {
         
         if let event = eventObj as? DDATEvent {
             cell.titleLabel.text = event.getName().replacingOccurrences(of: "Android", with: "[Sad Puppy]")
-            let speakers = getSpeakersArray(from: event) as! [DDATEventSpeaker]
-            cell.speakerNamesLabel.text = formatSpeakersString(from: speakers)
+            cell.speakerNamesLabel.text = event.allSpeakersString()
         } else if let event = eventObj as? DDATBlock {
             cell.titleLabel.text = event.getName()
             cell.speakerNamesLabel.text = ""
@@ -169,14 +160,13 @@ extension PlatformContext_iOS : UITableViewDelegate {
 }
 
 extension PlatformContext_iOS : DPRESScheduleDataViewModel_Host {
-    func loadCallback(with daySchedules: DPRESDaySchedule!) {
-        
-    }
-    func loadCallback(withDPRESDayScheduleArray daySchedules: IOSObjectArray!) {
-        hourBlocks = [DPRESHourBlock]()
-        conferenceDays = convertiOSObjectArrayToArray(objArray: daySchedules) as! [DPRESDaySchedule]
-        updateTableData()
-        reloadDelegate?.reloadTableView()
-    }
+    
+        func loadCallback(withDPRESDayScheduleArray daySchedules: IOSObjectArray!) {
+            hourBlocks = [DPRESHourBlock]()
+            conferenceDays = PlatformContext_iOS.convertiOSObjectArrayToArray(objArray: daySchedules) as! [DPRESDaySchedule]
+            updateTableData()
+            reloadDelegate?.reloadTableView()
+        }
+    
 }
 
