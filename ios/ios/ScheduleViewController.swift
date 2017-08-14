@@ -19,7 +19,7 @@ class ScheduleViewController : UIViewController {
     var conferencePresenter: DPRESConferenceDataViewModel!
     var schedulePresenter: DPRESScheduleDataViewModel!
     var notes: JavaUtilArrayList!
-    var allEvents = false
+    var allEvents = true
     @IBOutlet weak var dayChooser: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
@@ -63,7 +63,7 @@ class ScheduleViewController : UIViewController {
             platformContext.reloadDelegate = self
             conferencePresenter = DPRESConferenceDataViewModel.forIosWithBoolean(allEvents)
             schedulePresenter = DPRESScheduleDataViewModel.forIos()
-            schedulePresenter.register__(with: platformContext, withBoolean: true)
+            schedulePresenter.register__(with: platformContext, withBoolean: allEvents)
             
         } 
     }

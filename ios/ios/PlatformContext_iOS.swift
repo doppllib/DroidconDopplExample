@@ -16,7 +16,7 @@ protocol PlatformContext_iOSDelegate : class {
 }
 
 class PlatformContext_iOS : NSObject {
-    
+
     var isDayTwo: Bool = false
     var dateFormatter: DateFormatter!
     var timeFormatter: DateFormatter!
@@ -24,7 +24,7 @@ class PlatformContext_iOS : NSObject {
     var conferenceDays: [DPRESDaySchedule]?
     
     weak var reloadDelegate: PlatformContext_iOSDelegate?
-    
+
     lazy var storageDir: String = {
         let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         return paths[0]

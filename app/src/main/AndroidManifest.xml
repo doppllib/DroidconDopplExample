@@ -43,6 +43,17 @@
 
         <activity android:name=".WelcomeActivity"/>
 
+        <service
+            android:name=".alerts.NotificationService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+
         <receiver android:name=".alerts.AlertReceiver">
             <intent-filter>
                 <action android:name="co.touchlab.droidconandroid.DISPLAY_NOTIFICATION"/>

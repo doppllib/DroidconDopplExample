@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,6 +24,8 @@ class ScheduleDataFragment : Fragment(), ScheduleDataViewModel.Host {
         ViewModelProviders.of(this, ScheduleDataViewModel.factory())[ScheduleDataViewModel::class.java]
     }
 
+    private var allEvents = true
+
     val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
         AppManager.getInstance().appComponent.updateAlertsInteractor()
     }
@@ -33,7 +36,7 @@ class ScheduleDataFragment : Fragment(), ScheduleDataViewModel.Host {
     val shouldShowNotif: Boolean
         get() {
             return AppManager.getInstance().appComponent.prefs.showNotifCard
-                    && !arguments.getBoolean(ALL_EVENTS, true)
+                    && !allEvents
                     && arguments.getInt(POSITION, 0) == 0
         }
 
@@ -49,19 +52,21 @@ class ScheduleDataFragment : Fragment(), ScheduleDataViewModel.Host {
             eventList.layoutManager = LinearLayoutManager(activity)
         }
 
+        allEvents = arguments.getBoolean(ALL_EVENTS, true)
         eventList.adapter = EventAdapter(activity,
-                arguments.getBoolean(ALL_EVENTS, true),
+                allEvents,
                 ScheduleEventClickListener(),
                 shouldShowNotif)
     }
 
     override fun onResume() {
         super.onResume()
-        viewModel.register(this, true)
+        viewModel.register(this, allEvents)
     }
 
     override fun onPause() {
         super.onPause()
+        arguments.putBoolean(ALL_EVENTS, allEvents)
         viewModel.unregister()
     }
 
@@ -74,11 +79,15 @@ class ScheduleDataFragment : Fragment(), ScheduleDataViewModel.Host {
     }
 
     fun switchToAgenda() {
-        viewModel.register(this, false)
+        allEvents = false
+        updateNotifCard()
+        viewModel.register(this, allEvents)
     }
 
     fun switchToConference() {
-        viewModel.register(this, true)
+        allEvents = true
+        updateNotifCard()
+        viewModel.register(this, allEvents)
     }
 
     private inner class ScheduleEventClickListener : EventClickListener {

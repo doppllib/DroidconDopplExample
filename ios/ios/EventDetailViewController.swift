@@ -44,7 +44,7 @@ import dcframework
         
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
-        
+
         let nib = UINib(nibName: "EventTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "eventCell")
         
@@ -86,7 +86,7 @@ import dcframework
         updateHeaderImage()
         tableView.reloadData()
     }
-    
+
     // MARK: TableView
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -123,15 +123,15 @@ import dcframework
             return cell
         }
     }
-    
+
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
-    
+
     // MARK: Action
     
     func styleButton() {
@@ -159,7 +159,7 @@ import dcframework
             }
         }
     }
-    
+
     func updateHeaderImage() {
         let track : DDATTrack  = (event.getCategory() ?? "").isEmpty ?
             DDATTrack.findByServerName(with: "Design") : // Default to design (Same as Android)
@@ -184,7 +184,7 @@ import dcframework
         
         headerImage.image =  UIImage(named:imageName)!
     }
-    
+
     @IBAction func toggleRsvp(_ sender: UIButton) {
         eventDetailPresenter.setRsvpWithBoolean(!event.isRsvped(), withLong: event.getId())
     }
