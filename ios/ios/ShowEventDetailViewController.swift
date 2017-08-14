@@ -18,6 +18,7 @@ import dcframework
     var descriptionString: String?
     var dateTime: String?
     var event: DDATEvent!
+    var conflict: jboolean!
     var speakers: [DDATUserAccount]?
     var eventDetailPresenter: DPRESEventDetailViewModel!
     
@@ -41,9 +42,9 @@ import dcframework
         eventDetailPresenter.register__(with: self)
         eventDetailPresenter.getDetailsWithLong(event.getId())
         
+        tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 800
-
+        
         let nib = UINib(nibName: "EventTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "eventCell")
         
@@ -64,6 +65,7 @@ import dcframework
     // MARK: Data refresh
     func dataRefresh(with eventInfo: DDATEventInfo!) {
         event = eventInfo.getEvent()
+        conflict = eventInfo.getConflict()
         speakers = PlatformContext_iOS.javaList(toList: eventInfo.getSpeakers()) as? [DDATUserAccount]
         updateAllUi()
     }
@@ -87,7 +89,7 @@ import dcframework
     func resetStreamProgress() {
         // TODO
     }
-
+    
     // MARK: TableView
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -107,8 +109,8 @@ import dcframework
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if (indexPath as NSIndexPath).section == 0 {
             let cell:EventTableViewCell = tableView.dequeueReusableCell(withIdentifier: "eventCell") as! EventTableViewCell
-
-            cell.loadInfo(titleString!, description: descriptionString!, track: event!.getVenue().getName(), time: dateTime!, networkEvent: event, eventDetailPresenter: eventDetailPresenter)
+            cell.descriptionLabel.numberOfLines = 0
+            cell.loadInfo(titleString!, description: descriptionString!, track: event!.getVenue().getName(), time: dateTime!, networkEvent: event, eventDetailPresenter: eventDetailPresenter, conflict: conflict)
             cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
         } else {
@@ -124,7 +126,15 @@ import dcframework
             return cell
         }
     }
-
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
     // MARK: Action
     
     func styleButton() {
@@ -134,45 +144,50 @@ import dcframework
         rsvpButton.layer.shadowOffset = CGSize(width: 5, height: 5)
         rsvpButton.layer.shadowRadius = 5
         rsvpButton.layer.shadowOpacity = 1.0
+        rsvpButton.isHidden = true
         updateButton()
     }
     
     func updateButton() {
-        if (event.isRsvped()) {
-            rsvpButton.setImage(UIImage(named: "ic_done"), for: UIControlState())
-            rsvpButton.backgroundColor = UIColor.white
+        if event.isPast() {
+            rsvpButton.isHidden = true
         } else {
-            rsvpButton.setImage(UIImage(named: "ic_add"), for: UIControlState())
-            rsvpButton.backgroundColor = UIColor(red: 93/255.0, green: 253/255.0, blue: 173/255.0, alpha: 1.0)
+            rsvpButton.isHidden = false
+            if (event.isRsvped()) {
+                rsvpButton.setImage(UIImage(named: "ic_done"), for: UIControlState())
+                rsvpButton.backgroundColor = UIColor.white
+            } else {
+                rsvpButton.setImage(UIImage(named: "ic_add"), for: UIControlState())
+                rsvpButton.backgroundColor = UIColor(red: 93/255.0, green: 253/255.0, blue: 173/255.0, alpha: 1.0)
+            }
         }
     }
     
-    //TODO Use Track class from shared lib folder.
     func updateHeaderImage() {
         let track : DDATTrack  = (event.getCategory() ?? "").isEmpty ?
-        DDATTrack.findByServerName(with: "Design") : // Default to design (Same as Android)
-        DDATTrack.findByServerName(with: event.getCategory())
+            DDATTrack.findByServerName(with: "Design") : // Default to design (Same as Android)
+            DDATTrack.findByServerName(with: event.getCategory())
         
         var imageName : String
         
         switch track {
-            case DDATTrack.findByServerName(with: "Dev/Design"):
-                imageName = "illo_designdevtalk"
-                break
-            case DDATTrack.findByServerName(with: "Design"):
-                imageName = "illo_designtalk"
-                break
-            case DDATTrack.findByServerName(with: "Design Lab"):
-                imageName = "illo_designlab"
-                break
-            default:
-                imageName = "illo_devtalk"
-                break
+        case DDATTrack.findByServerName(with: "Dev/Design"):
+            imageName = "illo_designdevtalk"
+            break
+        case DDATTrack.findByServerName(with: "Design"):
+            imageName = "illo_designtalk"
+            break
+        case DDATTrack.findByServerName(with: "Design Lab"):
+            imageName = "illo_designlab"
+            break
+        default:
+            imageName = "illo_devtalk"
+            break
         }
         
         headerImage.image =  UIImage(named:imageName)!
     }
-
+    
     @IBAction func toggleRsvp(_ sender: UIButton) {
         eventDetailPresenter.setRsvpWithBoolean(!event.isRsvped(), withLong: event.getId())
     }
