@@ -61,15 +61,6 @@ class PlatformContext_iOS : NSObject {
         return PlatformContext_iOS.javaList(toList: networkEvent.getSpeakerList())
     }
     
-//    fileprivate func formatSpeakersString(from array: [DDATEventSpeaker]) -> String {
-//        var speakerNames = [String]()
-//        //TODO: Fix this
-////        for speaker in array {
-////            speakerNames.append(speaker.getUserAccount().getName())
-////        }
-//        return speakerNames.joined(separator: ", ")
-//    }
-    
     func getEventTime(startTime: NSString, andEnd endTime: NSString) -> String {
         var startLoc = 7
         var endLoc = 7
