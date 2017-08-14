@@ -2649,7 +2649,7 @@
 		639320311D77FF700047224B /* dataseeds in Resources */ = {isa = PBXBuildFile; fileRef = 639320301D77FF700047224B /* dataseeds */; };
 		63EE30CE1CC6985800B64D3D /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30CD1CC6985800B64D3D /* LaunchViewController.swift */; };
 		63EE30D01CC6AD4400B64D3D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30CF1CC6AD4400B64D3D /* WelcomeViewController.swift */; };
-		63EE30DF1CD025AC00B64D3D /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30DE1CD025AC00B64D3D /* EventListCell.swift */; };
+		63EE30DF1CD025AC00B64D3D /* ScheduleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30DE1CD025AC00B64D3D /* ScheduleListCell.swift */; };
 		84A04B60DAEE845879A58D90 /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62B114202731562C1A1C003 /* Pods_ios.framework */; };
 		889BCE286CBE9ED98416F630 /* Pods_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9231D71C59376C0F37908DFA /* Pods_iosUITests.framework */; };
 		F92EB65A1D5A5EEC003B47B7 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */; };
@@ -5366,7 +5366,7 @@
 		639320301D77FF700047224B /* dataseeds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dataseeds; sourceTree = "<group>"; };
 		63EE30CD1CC6985800B64D3D /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		63EE30CF1CC6AD4400B64D3D /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		63EE30DE1CD025AC00B64D3D /* EventListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListCell.swift; sourceTree = "<group>"; };
+		63EE30DE1CD025AC00B64D3D /* ScheduleListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListCell.swift; sourceTree = "<group>"; };
 		63F0E8291DC4EBEA000A2AD7 /* JRE.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JRE.framework; path = ../../../devel/j2objc/dist/frameworks/JRE.framework; sourceTree = "<group>"; };
 		63F0E9451DC4F2C1000A2AD7 /* JWPlayer-iOS-SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "JWPlayer-iOS-SDK.framework"; path = "Manual/JWPlayer-iOS-SDK.framework"; sourceTree = "<group>"; };
 		64233A54317D231B2EF3DC6C /* Pods-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosTests/Pods-iosTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -8285,9 +8285,9 @@
 				F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */,
 				F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */,
 				FAE033A51C974C65001C50E1 /* EventDetailViewController.swift */,
-				63EE30DE1CD025AC00B64D3D /* EventListCell.swift */,
 				FBD247BC1F3E406800E48171 /* JavaUtils.swift */,
 				63EE30CD1CC6985800B64D3D /* LaunchViewController.swift */,
+				63EE30DE1CD025AC00B64D3D /* ScheduleListCell.swift */,
 				018320251F152215009794AC /* ScheduleViewController.swift */,
 				4C81B70A1D75E7B500DFB89C /* SponsorImage.swift */,
 				4C81B70E1D76162000DFB89C /* SponsorPhotoCell.swift */,
@@ -10279,7 +10279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				018320281F153CC3009794AC /* AppDelegate.swift in Sources */,
-				63EE30DF1CD025AC00B64D3D /* EventListCell.swift in Sources */,
+				63EE30DF1CD025AC00B64D3D /* ScheduleListCell.swift in Sources */,
 				0183202E1F155F9A009794AC /* UIViewController.swift in Sources */,
 				4C81B70B1D75E7B500DFB89C /* SponsorImage.swift in Sources */,
 				018320301F156ADA009794AC /* PlatformContext_iOS.swift in Sources */,

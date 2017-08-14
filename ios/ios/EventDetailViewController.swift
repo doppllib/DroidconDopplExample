@@ -71,8 +71,9 @@ import dcframework
     }
     
     func reportError(with error: String){
-        let alert = UIAlertView(title: "Error", message: error as String, delegate: nil, cancelButtonTitle: "Ok")
-        alert.show()
+        let alert = UIAlertController(title: "Error", message: error as String, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
+        self.present(alert, animated: true) {}
     }
     
     func updateRsvp(with event: DDATEvent!) {

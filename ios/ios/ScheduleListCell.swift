@@ -1,5 +1,5 @@
 //
-//  EventListCell.swift
+//  ScheduleListCell.swift
 //  ios
 //
 //  Created by Kevin Galligan on 4/26/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc class EventListCell: UITableViewCell {
+@objc class ScheduleListCell: UITableViewCell {
     
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var speakerNamesLabel: UILabel!

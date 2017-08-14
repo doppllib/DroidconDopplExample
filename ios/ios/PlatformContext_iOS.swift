@@ -95,7 +95,7 @@ extension PlatformContext_iOS : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as! EventListCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as! ScheduleListCell
         
         let hourHolder = hourBlocks[indexPath.row]
         let eventObj = hourHolder.getTime()
@@ -138,12 +138,12 @@ extension PlatformContext_iOS : UITableViewDelegate {
 }
 
 extension PlatformContext_iOS : DPRESScheduleDataViewModel_Host {
-    
-        func loadCallback(withDPRESDayScheduleArray daySchedules: IOSObjectArray!) {
-            hourBlocks = [DPRESHourBlock]()
-            conferenceDays = JavaUtils.convertiOSObjectArrayToArray(objArray: daySchedules) as? [DPRESDaySchedule]
-            updateTableData()
-            reloadDelegate?.reloadTableView()
-        }
+
+    func loadCallback(withDPRESDayScheduleArray daySchedules: IOSObjectArray!) {
+        hourBlocks = [DPRESHourBlock]()
+        conferenceDays = JavaUtils.convertiOSObjectArrayToArray(objArray: daySchedules) as? [DPRESDaySchedule]
+        updateTableData()
+        reloadDelegate?.reloadTableView()
+    }
 }
 

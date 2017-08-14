@@ -51,9 +51,10 @@ class EventTableViewCell: UITableViewCell {
     func formatHTMLString(_ htmlString: String) -> NSAttributedString {
         let modifiedFont = NSString(format:"<span style=\"font: -apple-system-body; font-size: 12px\">%@</span>", htmlString) as String
         
-        let attrStr = try! NSAttributedString(
+        let attrStr = NSAttributedString(
             string: modifiedFont,
-            attributes: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: String.Encoding.utf8])
+            attributes: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: String.Encoding.utf8]
+        )
         
         return attrStr
     }
