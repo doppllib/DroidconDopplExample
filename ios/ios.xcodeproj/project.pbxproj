@@ -2621,18 +2621,16 @@
 		013AF8B21F3A3D8000C91182 /* UserDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 013AEE7F1F3A3D7800C91182 /* UserDataHelper.m */; };
 		013AF8B31F3A3DBA00C91182 /* prefixes.properties in Resources */ = {isa = PBXBuildFile; fileRef = 013AEE7D1F3A3D7800C91182 /* prefixes.properties */; };
 		01526F191EC0F99B00D42000 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 01526F181EC0F99B00D42000 /* libiconv.tbd */; };
-		018320261F152215009794AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018320251F152215009794AC /* ViewController.swift */; };
+		018320261F152215009794AC /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018320251F152215009794AC /* ScheduleViewController.swift */; };
 		018320281F153CC3009794AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018320271F153CC3009794AC /* AppDelegate.swift */; };
-		0183202C1F155D86009794AC /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0183202B1F155D86009794AC /* NoteTableViewCell.swift */; };
 		0183202E1F155F9A009794AC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0183202D1F155F9A009794AC /* UIViewController.swift */; };
 		018320301F156ADA009794AC /* PlatformContext_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0183202F1F156ADA009794AC /* PlatformContext_iOS.swift */; };
 		07CCD3CE27FF018D46925D26 /* Pods_dcframework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F416FDB1C506169C053AA9 /* Pods_dcframework.framework */; };
 		1456E8857FD3A196CF1C2B4D /* Pods_dcframeworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F54A492D46D70B0A7D6257 /* Pods_dcframeworkTests.framework */; };
-		4C0769921D8339A0003DD320 /* OnboardingPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0769911D8339A0003DD320 /* OnboardingPhotoCell.swift */; };
 		4C81B70B1D75E7B500DFB89C /* SponsorImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81B70A1D75E7B500DFB89C /* SponsorImage.swift */; };
 		4C81B70F1D76162000DFB89C /* SponsorPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81B70E1D76162000DFB89C /* SponsorPhotoCell.swift */; };
 		4C81B7131D7616C500DFB89C /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81B7121D7616C500DFB89C /* SponsorsViewController.swift */; };
-		4CFD936D1D8355630018C837 /* OnboardingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD936C1D8355630018C837 /* OnboardingHeaderView.swift */; };
+		4CFD936D1D8355630018C837 /* WelcomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFD936C1D8355630018C837 /* WelcomeHeaderView.swift */; };
 		591E70DC4046D8C4A81031B6 /* Pods_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E2C7E96CF82BF0295604FB /* Pods_iosTests.framework */; };
 		631B98F91C7D6533008AA20D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631B98F71C7D6533008AA20D /* Main.storyboard */; };
 		631B98FB1C7D6533008AA20D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631B98FA1C7D6533008AA20D /* Assets.xcassets */; };
@@ -2649,24 +2647,22 @@
 		6342C9D71DC6A3540060BE83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6342C9D61DC6A3540060BE83 /* UIKit.framework */; };
 		63931C2B1EEFFCE100544DB1 /* JSR305.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63931C2A1EEFFCE100544DB1 /* JSR305.framework */; };
 		639320311D77FF700047224B /* dataseeds in Resources */ = {isa = PBXBuildFile; fileRef = 639320301D77FF700047224B /* dataseeds */; };
-		63EE30CC1CC5E1BD00B64D3D /* CheckLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30CB1CC5E1BD00B64D3D /* CheckLoginController.swift */; };
-		63EE30CE1CC6985800B64D3D /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30CD1CC6985800B64D3D /* StartScreenViewController.swift */; };
+		63EE30CE1CC6985800B64D3D /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30CD1CC6985800B64D3D /* LaunchViewController.swift */; };
 		63EE30D01CC6AD4400B64D3D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30CF1CC6AD4400B64D3D /* WelcomeViewController.swift */; };
-		63EE30DF1CD025AC00B64D3D /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30DE1CD025AC00B64D3D /* EventListCell.swift */; };
-		63F0E9461DC4F2C1000A2AD7 /* JWPlayer-iOS-SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F0E9451DC4F2C1000A2AD7 /* JWPlayer-iOS-SDK.framework */; };
+		63EE30DF1CD025AC00B64D3D /* ScheduleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30DE1CD025AC00B64D3D /* ScheduleListCell.swift */; };
 		84A04B60DAEE845879A58D90 /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62B114202731562C1A1C003 /* Pods_ios.framework */; };
 		889BCE286CBE9ED98416F630 /* Pods_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9231D71C59376C0F37908DFA /* Pods_iosUITests.framework */; };
 		F92EB65A1D5A5EEC003B47B7 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */; };
 		F9903FA21D3FBEC70050687E /* DroidconTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */; };
 		F9D6952D1D47AF9D0095F0F9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */; };
-		FA258F611C937F5900986E0D /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA258F601C937F5900986E0D /* NoteTableViewCell.xib */; };
 		FA6128BF1C986E05001142E8 /* SpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6128BE1C986E05001142E8 /* SpeakerTableViewCell.swift */; };
 		FA6128C11C986E16001142E8 /* SpeakerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6128C01C986E16001142E8 /* SpeakerTableViewCell.xib */; };
 		FA6128C31C986E7A001142E8 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6128C21C986E7A001142E8 /* EventTableViewCell.xib */; };
 		FA6128C51C986E87001142E8 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6128C41C986E87001142E8 /* EventTableViewCell.swift */; };
-		FAE033A61C974C65001C50E1 /* ShowEventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE033A51C974C65001C50E1 /* ShowEventDetailViewController.swift */; };
-		FBB8D9111F435EFA00614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = FBB8D90F1F435EFA00614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */; };
-		FBB8D9121F435EFA00614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB8D9101F435EFA00614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */; };
+		FAE033A61C974C65001C50E1 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE033A51C974C65001C50E1 /* EventDetailViewController.swift */; };
+		FBB8D9191F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = FBB8D9171F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */; };
+		FBB8D91A1F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB8D9181F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */; };
+		FBD247BD1F3E406800E48171 /* JavaUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD247BC1F3E406800E48171 /* JavaUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -5335,20 +5331,18 @@
 		013AEE7E1F3A3D7800C91182 /* UserDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDataHelper.h; sourceTree = "<group>"; };
 		013AEE7F1F3A3D7800C91182 /* UserDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDataHelper.m; sourceTree = "<group>"; };
 		01526F181EC0F99B00D42000 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
-		018320251F152215009794AC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		018320251F152215009794AC /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		018320271F153CC3009794AC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0183202B1F155D86009794AC /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		0183202D1F155F9A009794AC /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		0183202F1F156ADA009794AC /* PlatformContext_iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformContext_iOS.swift; sourceTree = "<group>"; };
 		12798AB3597109A6332B0FEC /* Pods-dcframeworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dcframeworkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dcframeworkTests/Pods-dcframeworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		220DE85ED760BE3767522AD0 /* Pods-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosUITests/Pods-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		293850C9795D8448C4C595E4 /* Pods-dcframework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dcframework.release.xcconfig"; path = "Pods/Target Support Files/Pods-dcframework/Pods-dcframework.release.xcconfig"; sourceTree = "<group>"; };
 		3E0AC4033C323A7CAB9C2742 /* Pods-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosTests/Pods-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4C0769911D8339A0003DD320 /* OnboardingPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPhotoCell.swift; sourceTree = "<group>"; };
 		4C81B70A1D75E7B500DFB89C /* SponsorImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorImage.swift; sourceTree = "<group>"; };
 		4C81B70E1D76162000DFB89C /* SponsorPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorPhotoCell.swift; sourceTree = "<group>"; };
 		4C81B7121D7616C500DFB89C /* SponsorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		4CFD936C1D8355630018C837 /* OnboardingHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingHeaderView.swift; sourceTree = "<group>"; };
+		4CFD936C1D8355630018C837 /* WelcomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeHeaderView.swift; sourceTree = "<group>"; };
 		55F54A492D46D70B0A7D6257 /* Pods_dcframeworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dcframeworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		631B98EB1C7D6533008AA20D /* Droicon NYC 2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Droicon NYC 2016.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		631B98F81C7D6533008AA20D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -5371,10 +5365,9 @@
 		6342C9D61DC6A3540060BE83 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		63931C2A1EEFFCE100544DB1 /* JSR305.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSR305.framework; path = ../../../devel/j2objc/dist/frameworks/JSR305.framework; sourceTree = "<group>"; };
 		639320301D77FF700047224B /* dataseeds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = dataseeds; sourceTree = "<group>"; };
-		63EE30CB1CC5E1BD00B64D3D /* CheckLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckLoginController.swift; sourceTree = "<group>"; };
-		63EE30CD1CC6985800B64D3D /* StartScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		63EE30CD1CC6985800B64D3D /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		63EE30CF1CC6AD4400B64D3D /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		63EE30DE1CD025AC00B64D3D /* EventListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListCell.swift; sourceTree = "<group>"; };
+		63EE30DE1CD025AC00B64D3D /* ScheduleListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleListCell.swift; sourceTree = "<group>"; };
 		63F0E8291DC4EBEA000A2AD7 /* JRE.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JRE.framework; path = ../../../devel/j2objc/dist/frameworks/JRE.framework; sourceTree = "<group>"; };
 		63F0E9451DC4F2C1000A2AD7 /* JWPlayer-iOS-SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "JWPlayer-iOS-SDK.framework"; path = "Manual/JWPlayer-iOS-SDK.framework"; sourceTree = "<group>"; };
 		64233A54317D231B2EF3DC6C /* Pods-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosTests/Pods-iosTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -5390,15 +5383,15 @@
 		F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
 		F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroidconTabBarViewController.swift; sourceTree = "<group>"; };
 		F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		FA258F601C937F5900986E0D /* NoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
 		FA6128BE1C986E05001142E8 /* SpeakerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerTableViewCell.swift; sourceTree = "<group>"; };
 		FA6128C01C986E16001142E8 /* SpeakerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerTableViewCell.xib; sourceTree = "<group>"; };
 		FA6128C21C986E7A001142E8 /* EventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
 		FA6128C41C986E87001142E8 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		FA86A7F91C92169900C09CE7 /* ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-Bridging-Header.h"; sourceTree = "<group>"; };
-		FAE033A51C974C65001C50E1 /* ShowEventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventDetailViewController.swift; sourceTree = "<group>"; };
-		FBB8D90F1F435EFA00614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAGNetworkModule_ProvidesRsvpRequestFactory.h; sourceTree = "<group>"; };
-		FBB8D9101F435EFA00614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAGNetworkModule_ProvidesRsvpRequestFactory.m; sourceTree = "<group>"; };
+		FAE033A51C974C65001C50E1 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		FBB8D9171F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAGNetworkModule_ProvidesRsvpRequestFactory.h; sourceTree = "<group>"; };
+		FBB8D9181F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAGNetworkModule_ProvidesRsvpRequestFactory.m; sourceTree = "<group>"; };
+		FBD247BC1F3E406800E48171 /* JavaUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavaUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -5406,7 +5399,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63F0E9461DC4F2C1000A2AD7 /* JWPlayer-iOS-SDK.framework in Frameworks */,
 				6342B6C21DC6A18B0060BE83 /* dcframework.framework in Frameworks */,
 				6342B6A71DC67BE00060BE83 /* Kingfisher.framework in Frameworks */,
 				84A04B60DAEE845879A58D90 /* Pods_ios.framework in Frameworks */,
@@ -5457,8 +5449,8 @@
 		013AE4371F3A3D6400C91182 /* generated */ = {
 			isa = PBXGroup;
 			children = (
-				FBB8D90F1F435EFA00614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */,
-				FBB8D9101F435EFA00614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */,
+				FBB8D9171F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */,
+				FBB8D9181F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */,
 				013AE4381F3A3D6400C91182 /* co_doppl_android_arch_core_common_1_0_0_0_alpha8 */,
 				013AE43F1F3A3D6400C91182 /* co_doppl_android_arch_core_runtime_1_0_0_0_alpha8 */,
 				013AE4461F3A3D6400C91182 /* co_doppl_android_arch_lifecycle_common_1_0_0_0_alpha8 */,
@@ -8290,30 +8282,29 @@
 		631B98ED1C7D6533008AA20D /* ios */ = {
 			isa = PBXGroup;
 			children = (
-				F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */,
 				018320271F153CC3009794AC /* AppDelegate.swift */,
-				631B98FA1C7D6533008AA20D /* Assets.xcassets */,
-				63EE30CB1CC5E1BD00B64D3D /* CheckLoginController.swift */,
-				639320301D77FF700047224B /* dataseeds */,
-				F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */,
-				63EE30DE1CD025AC00B64D3D /* EventListCell.swift */,
-				631B98FF1C7D6533008AA20D /* Info.plist */,
-				631B98FC1C7D6533008AA20D /* LaunchScreen.storyboard */,
-				631B98F71C7D6533008AA20D /* Main.storyboard */,
-				4CFD936C1D8355630018C837 /* OnboardingHeaderView.swift */,
-				4C0769911D8339A0003DD320 /* OnboardingPhotoCell.swift */,
 				0183202F1F156ADA009794AC /* PlatformContext_iOS.swift */,
-				FAE033A51C974C65001C50E1 /* ShowEventDetailViewController.swift */,
+				639320301D77FF700047224B /* dataseeds */,
+				631B98FF1C7D6533008AA20D /* Info.plist */,
+				F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */,
+				F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */,
+				FAE033A51C974C65001C50E1 /* EventDetailViewController.swift */,
+				FBD247BC1F3E406800E48171 /* JavaUtils.swift */,
+				63EE30CD1CC6985800B64D3D /* LaunchViewController.swift */,
+				63EE30DE1CD025AC00B64D3D /* ScheduleListCell.swift */,
+				018320251F152215009794AC /* ScheduleViewController.swift */,
 				4C81B70A1D75E7B500DFB89C /* SponsorImage.swift */,
 				4C81B70E1D76162000DFB89C /* SponsorPhotoCell.swift */,
 				4C81B7121D7616C500DFB89C /* SponsorsViewController.swift */,
-				63EE30CD1CC6985800B64D3D /* StartScreenViewController.swift */,
-				631B98EE1C7D6533008AA20D /* Supporting Files */,
 				0183202D1F155F9A009794AC /* UIViewController.swift */,
-				018320251F152215009794AC /* ViewController.swift */,
-				FA258F5F1C937F4100986E0D /* Views */,
+				4CFD936C1D8355630018C837 /* WelcomeHeaderView.swift */,
 				F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */,
 				63EE30CF1CC6AD4400B64D3D /* WelcomeViewController.swift */,
+				631B98FA1C7D6533008AA20D /* Assets.xcassets */,
+				631B98FC1C7D6533008AA20D /* LaunchScreen.storyboard */,
+				631B98F71C7D6533008AA20D /* Main.storyboard */,
+				631B98EE1C7D6533008AA20D /* Supporting Files */,
+				FA258F5F1C937F4100986E0D /* Views */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -8383,12 +8374,10 @@
 		FA258F5F1C937F4100986E0D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FA258F601C937F5900986E0D /* NoteTableViewCell.xib */,
 				FA6128C21C986E7A001142E8 /* EventTableViewCell.xib */,
 				FA6128C41C986E87001142E8 /* EventTableViewCell.swift */,
 				FA6128C01C986E16001142E8 /* SpeakerTableViewCell.xib */,
 				FA6128BE1C986E05001142E8 /* SpeakerTableViewCell.swift */,
-				0183202B1F155D86009794AC /* NoteTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -9029,7 +9018,7 @@
 				013AF6801F3A3D7E00C91182 /* IoReactivexPluginsRxJavaPlugins.h in Headers */,
 				013AEECA1F3A3D7900C91182 /* AndroidArchPersistenceRoomInsert.h in Headers */,
 				013AF1C21F3A3D7A00C91182 /* IoReactivexInternalFuseableFuseToMaybe.h in Headers */,
-				FBB8D9111F435EFA00614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h in Headers */,
+				FBB8D9191F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h in Headers */,
 				013AF1241F3A3D7900C91182 /* IoReactivexAndroidPluginsRxAndroidPlugins.h in Headers */,
 				013AF73C1F3A3D7E00C91182 /* AndroidDatabaseSqliteSQLiteDebug.h in Headers */,
 				013AEEBC1F3A3D7900C91182 /* AndroidArchPersistenceRoomDatabase.h in Headers */,
@@ -9905,7 +9894,6 @@
 				631B98FE1C7D6533008AA20D /* LaunchScreen.storyboard in Resources */,
 				631B98FB1C7D6533008AA20D /* Assets.xcassets in Resources */,
 				FA6128C31C986E7A001142E8 /* EventTableViewCell.xib in Resources */,
-				FA258F611C937F5900986E0D /* NoteTableViewCell.xib in Resources */,
 				631B98F91C7D6533008AA20D /* Main.storyboard in Resources */,
 				FA6128C11C986E16001142E8 /* SpeakerTableViewCell.xib in Resources */,
 			);
@@ -10295,25 +10283,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				018320281F153CC3009794AC /* AppDelegate.swift in Sources */,
-				63EE30DF1CD025AC00B64D3D /* EventListCell.swift in Sources */,
+				63EE30DF1CD025AC00B64D3D /* ScheduleListCell.swift in Sources */,
 				0183202E1F155F9A009794AC /* UIViewController.swift in Sources */,
 				4C81B70B1D75E7B500DFB89C /* SponsorImage.swift in Sources */,
-				63EE30CC1CC5E1BD00B64D3D /* CheckLoginController.swift in Sources */,
 				018320301F156ADA009794AC /* PlatformContext_iOS.swift in Sources */,
 				FA6128C51C986E87001142E8 /* EventTableViewCell.swift in Sources */,
-				018320261F152215009794AC /* ViewController.swift in Sources */,
+				018320261F152215009794AC /* ScheduleViewController.swift in Sources */,
+				FBD247BD1F3E406800E48171 /* JavaUtils.swift in Sources */,
 				63EE30D01CC6AD4400B64D3D /* WelcomeViewController.swift in Sources */,
 				F9D6952D1D47AF9D0095F0F9 /* AboutViewController.swift in Sources */,
-				4CFD936D1D8355630018C837 /* OnboardingHeaderView.swift in Sources */,
-				0183202C1F155D86009794AC /* NoteTableViewCell.swift in Sources */,
+				4CFD936D1D8355630018C837 /* WelcomeHeaderView.swift in Sources */,
 				4C81B7131D7616C500DFB89C /* SponsorsViewController.swift in Sources */,
 				4C81B70F1D76162000DFB89C /* SponsorPhotoCell.swift in Sources */,
-				FAE033A61C974C65001C50E1 /* ShowEventDetailViewController.swift in Sources */,
-				4C0769921D8339A0003DD320 /* OnboardingPhotoCell.swift in Sources */,
+				FAE033A61C974C65001C50E1 /* EventDetailViewController.swift in Sources */,
 				FA6128BF1C986E05001142E8 /* SpeakerTableViewCell.swift in Sources */,
 				F9903FA21D3FBEC70050687E /* DroidconTabBarViewController.swift in Sources */,
 				F92EB65A1D5A5EEC003B47B7 /* WelcomePageViewController.swift in Sources */,
-				63EE30CE1CC6985800B64D3D /* StartScreenViewController.swift in Sources */,
+				63EE30CE1CC6985800B64D3D /* LaunchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -11585,7 +11571,7 @@
 				013AF5BF1F3A3D7D00C91182 /* IoReactivexInternalSchedulersScheduledDirectPeriodicTask.m in Sources */,
 				013AF26D1F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableAllSingle.m in Sources */,
 				013AF63F1F3A3D7D00C91182 /* IoReactivexMaybeSource.m in Sources */,
-				FBB8D9121F435EFA00614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m in Sources */,
+				FBB8D91A1F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m in Sources */,
 				013AF1EF1F3A3D7A00C91182 /* IoReactivexInternalObserversBlockingObserver.m in Sources */,
 				013AF23D1F3A3D7A00C91182 /* IoReactivexInternalOperatorsCompletableCompletableLift.m in Sources */,
 				013AF07D1F3A3D7900C91182 /* Okhttp3MultipartBody.m in Sources */,

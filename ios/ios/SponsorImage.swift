@@ -33,24 +33,22 @@ class SponsorItem : Equatable {
         
         let sponsorImageUrl = URL(string: sponsorImage)
         let loadRequest = URLRequest(url:sponsorImageUrl!)
-        NSURLConnection.sendAsynchronousRequest(loadRequest,
-                                                queue: OperationQueue.main) {
-                                                    response, data, error in
-                                                    
-                                                    if error != nil {
-                                                        completion(self, error as NSError?)
-                                                        return
-                                                    }
-                                                    
-                                                    if data != nil {
-                                                        let returnedImage = UIImage(data: data!)
-                                                        self.image = returnedImage
-                                                        completion(self, nil)
-                                                        return
-                                                    }
-                                                    
-                                                    completion(self, nil)
+        let task = URLSession.shared.dataTask(with: loadRequest) { data, request, error in
+            if error != nil {
+                completion(self, error as NSError?)
+                return
+            }
+            
+            if data != nil {
+                let returnedImage = UIImage(data: data!)
+                self.image = returnedImage
+                completion(self, nil)
+                return
+            }
+            
+            completion(self, nil)
         }
+        task.resume()
     }
     
     func sizeToFillWidthOfSize(_ size:CGSize) -> CGSize {
@@ -97,7 +95,7 @@ class Sponsor {
         let searchURL = getSearchUrlForSponsorType(sponsorType)
         let searchRequest = URLRequest(url: searchURL)
         
-        NSURLConnection.sendAsynchronousRequest(searchRequest, queue: processingQueue) {response, data, error in
+        let task = URLSession.shared.dataTask(with: searchRequest) { data, request, error in
             if error != nil {
                 completion(nil,error as NSError?)
                 return
@@ -125,7 +123,7 @@ class Sponsor {
                         sponsorItems += [item]
                     }
                 }
-    
+                
                 DispatchQueue.main.async(execute: {
                     completion(SponsorResults(totalSpanCount: totalSpanCount!, searchResults: sponsorItems), nil)
                 })
@@ -135,6 +133,7 @@ class Sponsor {
                 return
             }
         }
+        task.resume()
     }
     
     fileprivate func getSearchUrlForSponsorType(_ sponsorType:Int) -> URL {

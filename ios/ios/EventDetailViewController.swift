@@ -10,7 +10,7 @@ import UIKit
 import JRE
 import dcframework
 
-@objc class ShowEventDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DPRESEventDetailHost {
+@objc class EventDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DPRESEventDetailHost {
     
     // MARK: Properties
     
@@ -44,7 +44,7 @@ import dcframework
         
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
-        
+
         let nib = UINib(nibName: "EventTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "eventCell")
         
@@ -66,13 +66,14 @@ import dcframework
     func dataRefresh(with eventInfo: DDATEventInfo!) {
         event = eventInfo.getEvent()
         conflict = eventInfo.getConflict()
-        speakers = PlatformContext_iOS.javaList(toList: eventInfo.getSpeakers()) as? [DDATUserAccount]
+        speakers = JavaUtils.javaList(toList: eventInfo.getSpeakers()) as? [DDATUserAccount]
         updateAllUi()
     }
     
     func reportError(with error: String){
-        let alert = UIAlertView(title: "Video Error", message: error as String, delegate: nil, cancelButtonTitle: "Ok")
-        alert.show()
+        let alert = UIAlertController(title: "Error", message: error as String, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default) { _ in })
+        self.present(alert, animated: true) {}
     }
     
     func updateRsvp(with event: DDATEvent!) {
@@ -85,11 +86,7 @@ import dcframework
         updateHeaderImage()
         tableView.reloadData()
     }
-    
-    func resetStreamProgress() {
-        // TODO
-    }
-    
+
     // MARK: TableView
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -126,15 +123,15 @@ import dcframework
             return cell
         }
     }
-    
+
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
-    
+
     // MARK: Action
     
     func styleButton() {
@@ -162,7 +159,7 @@ import dcframework
             }
         }
     }
-    
+
     func updateHeaderImage() {
         let track : DDATTrack  = (event.getCategory() ?? "").isEmpty ?
             DDATTrack.findByServerName(with: "Design") : // Default to design (Same as Android)
@@ -187,7 +184,7 @@ import dcframework
         
         headerImage.image =  UIImage(named:imageName)!
     }
-    
+
     @IBAction func toggleRsvp(_ sender: UIButton) {
         eventDetailPresenter.setRsvpWithBoolean(!event.isRsvped(), withLong: event.getId())
     }

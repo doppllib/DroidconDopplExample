@@ -14,7 +14,7 @@
         <!--Droidcon NYC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ScheduleViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -33,7 +33,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="EventListCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellIdentifier" rowHeight="75" id="gju-G3-1je" customClass="EventListCell" customModule="ios" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="ScheduleListCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellIdentifier" rowHeight="75" id="gju-G3-1je" customClass="ScheduleListCell" customModule="ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gju-G3-1je" id="gPi-ye-4bF">
@@ -166,12 +166,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1128.8" y="992.65367316341838"/>
+            <point key="canvasLocation" x="1412" y="1003"/>
         </scene>
-        <!--Show Event Detail View Controller-->
+        <!--Event Detail View Controller-->
         <scene sceneID="7Q1-LW-v1f">
             <objects>
-                <viewController storyboardIdentifier="EventDetail" automaticallyAdjustsScrollViewInsets="NO" id="eMM-Ow-Y8D" customClass="ShowEventDetailViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventDetail" automaticallyAdjustsScrollViewInsets="NO" id="eMM-Ow-Y8D" customClass="EventDetailViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="evr-4l-2Pv"/>
                         <viewControllerLayoutGuide type="bottom" id="mXV-h5-qs4"/>
@@ -180,8 +180,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZbT-NM-odG">
-                                <rect key="frame" x="0.0" y="64" width="600" height="160"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZbT-NM-odG">
+                                <rect key="frame" x="0.0" y="64" width="375" height="160"/>
                                 <color key="backgroundColor" red="0.0" green="0.35294117650000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="hA1-Ef-aN7"/>
@@ -208,8 +208,8 @@
                                     <outlet property="delegate" destination="eMM-Ow-Y8D" id="aQy-sY-hGU"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQK-un-yDe">
-                                <rect key="frame" x="20" y="198" width="48" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQK-un-yDe">
+                                <rect key="frame" x="16" y="198" width="48" height="48"/>
                                 <color key="backgroundColor" red="0.36470588235294116" green="0.99215686274509807" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="Vyw-Sd-QEx"/>
@@ -247,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u9y-Xd-Qes" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1128.8" y="1767.1664167916044"/>
+            <point key="canvasLocation" x="1110.5" y="1792.5"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="SEn-eK-DHA">
@@ -277,7 +277,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sN-Nq-cpl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1130" y="217"/>
+            <point key="canvasLocation" x="1042" y="187"/>
         </scene>
         <!--My Agenda-->
         <scene sceneID="6Jk-Re-33h">
@@ -305,7 +305,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAY-F3-QQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790" y="217"/>
+            <point key="canvasLocation" x="1793" y="187"/>
         </scene>
         <!--About-->
         <scene sceneID="ZE3-ed-YrL">
@@ -319,8 +319,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TT5-5I-JdE">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TT5-5I-JdE">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="64"/>
                                 <color key="backgroundColor" red="0.0" green="0.3529411764705882" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="1P4-d6-NJj"/>
@@ -334,27 +334,27 @@
                                     <navigationItem title="About" id="82e-EG-pfM"/>
                                 </items>
                             </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSQ-hI-l2X">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSQ-hI-l2X">
+                                <rect key="frame" x="-4" y="64" width="383" height="554"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="udt-ka-FgF">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="500"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udt-ka-FgF">
+                                        <rect key="frame" x="0.0" y="0.0" width="383" height="500"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="About the Droidcon NYC 2016 app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5W-0Y-4as">
-                                                <rect key="frame" x="38" y="38" width="554" height="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About the Droidcon NYC 2016 app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5W-0Y-4as">
+                                                <rect key="frame" x="38" y="38" width="337" height="15"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIh-7I-yAB">
-                                                <rect key="frame" x="38" y="60" width="554" height="43"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIh-7I-yAB">
+                                                <rect key="frame" x="38" y="60" width="327" height="72"/>
                                                 <string key="text">The Droidcon app is coded in-house by the touchlab team.  Worked on by Liam, Izzy, Sam, Ramona, Walter, Brad and Kevin (ie almost everybody). The UI is native iOS. Networking, storage, logic built with j2objc/Doppl. Open source (soon) at:</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="https://github.com/touchlab/DroidconApp" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Zfz-Gq-Rpg">
-                                                <rect key="frame" x="38" y="111" width="554" height="38"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="https://github.com/touchlab/DroidconApp" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Zfz-Gq-Rpg">
+                                                <rect key="frame" x="38" y="140" width="337" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="uEi-1G-J1A"/>
                                                 </constraints>
@@ -363,20 +363,20 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                             </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="About Droidcon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mrh-Pz-tMC">
-                                                <rect key="frame" x="38" y="157" width="554" height="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Droidcon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mrh-Pz-tMC">
+                                                <rect key="frame" x="38" y="186" width="337" height="15"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="About touchlab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDI-Rb-l4S">
-                                                <rect key="frame" x="38" y="259" width="554" height="15"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About touchlab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDI-Rb-l4S">
+                                                <rect key="frame" x="38" y="316" width="337" height="15"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Me-pN-hgs">
-                                                <rect key="frame" x="38" y="282" width="554" height="84"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Me-pN-hgs">
+                                                <rect key="frame" x="38" y="339" width="327" height="98"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>
                                                         <string key="content">Touchlab is a developer founded and run development shop focused on building amazing mobile experiences with great design as a foundational principle. We’re a group of mobile experts who believe that mobile can and must be better. We believe that what we built yesterday was great, but what we build with you tomorrow will be even better. And we’re currently hiring. Get in touch:</string>
@@ -389,15 +389,15 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmA-0b-uKl">
-                                                <rect key="frame" x="38" y="180" width="554" height="58"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmA-0b-uKl">
+                                                <rect key="frame" x="38" y="209" width="327" height="86"/>
                                                 <string key="text">Droidcon conferences around the world support mobile development and create a global network for developers and companies. We offer best-in-class presentations from leaders in all parts of the mobile ecosystem, including core development, embedded solutions, augmented reality, business solutions, and games.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="http://touchlab.co" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4x5-1P-Yeg">
-                                                <rect key="frame" x="38" y="374" width="554" height="38"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="http://touchlab.co" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4x5-1P-Yeg">
+                                                <rect key="frame" x="38" y="445" width="337" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="Q1n-Bh-XzO"/>
                                                 </constraints>
@@ -418,9 +418,9 @@
                                             <constraint firstItem="Zfz-Gq-Rpg" firstAttribute="top" secondItem="VIh-7I-yAB" secondAttribute="bottom" constant="8" id="Dad-jS-OO1"/>
                                             <constraint firstItem="Zfz-Gq-Rpg" firstAttribute="leading" secondItem="udt-ka-FgF" secondAttribute="leading" constant="38" id="FKQ-Xm-1fr"/>
                                             <constraint firstAttribute="trailing" secondItem="4x5-1P-Yeg" secondAttribute="trailing" constant="8" id="JOj-bn-khh"/>
-                                            <constraint firstAttribute="trailing" secondItem="ZmA-0b-uKl" secondAttribute="trailing" constant="8" id="KZt-y3-ECv"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZmA-0b-uKl" secondAttribute="trailing" constant="18" id="KZt-y3-ECv"/>
                                             <constraint firstItem="VIh-7I-yAB" firstAttribute="top" secondItem="E5W-0Y-4as" secondAttribute="bottom" constant="7" id="LCh-b5-4fg"/>
-                                            <constraint firstAttribute="trailing" secondItem="VIh-7I-yAB" secondAttribute="trailing" constant="8" id="SMa-TS-0Td"/>
+                                            <constraint firstAttribute="trailing" secondItem="VIh-7I-yAB" secondAttribute="trailing" constant="18" id="SMa-TS-0Td"/>
                                             <constraint firstItem="4x5-1P-Yeg" firstAttribute="top" secondItem="0Me-pN-hgs" secondAttribute="bottom" constant="8" id="Sfo-fn-rJL"/>
                                             <constraint firstAttribute="height" constant="500" id="V0E-c3-DTA"/>
                                             <constraint firstItem="Mrh-Pz-tMC" firstAttribute="leading" secondItem="udt-ka-FgF" secondAttribute="leading" constant="38" id="Whj-LG-zg5"/>
@@ -429,7 +429,7 @@
                                             <constraint firstItem="ZmA-0b-uKl" firstAttribute="leading" secondItem="udt-ka-FgF" secondAttribute="leading" constant="38" id="eCU-CY-qtr"/>
                                             <constraint firstItem="VDI-Rb-l4S" firstAttribute="leading" secondItem="udt-ka-FgF" secondAttribute="leading" constant="38" id="rS9-nO-V8g"/>
                                             <constraint firstItem="ZmA-0b-uKl" firstAttribute="top" secondItem="Mrh-Pz-tMC" secondAttribute="bottom" constant="8" id="sWk-a2-9uM"/>
-                                            <constraint firstAttribute="trailing" secondItem="0Me-pN-hgs" secondAttribute="trailing" constant="8" id="scc-Bd-e0g"/>
+                                            <constraint firstAttribute="trailing" secondItem="0Me-pN-hgs" secondAttribute="trailing" constant="18" id="scc-Bd-e0g"/>
                                             <constraint firstAttribute="trailing" secondItem="Mrh-Pz-tMC" secondAttribute="trailing" constant="8" id="trG-sI-U5v"/>
                                             <constraint firstItem="0Me-pN-hgs" firstAttribute="top" secondItem="VDI-Rb-l4S" secondAttribute="bottom" constant="8" id="u4q-Zr-K9e"/>
                                             <constraint firstItem="0Me-pN-hgs" firstAttribute="leading" secondItem="udt-ka-FgF" secondAttribute="leading" constant="38" id="yUM-aD-PQ1"/>
@@ -474,7 +474,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEE-Uo-vuv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3145" y="335"/>
+            <point key="canvasLocation" x="2552.5" y="186.5"/>
         </scene>
         <!--Droidcon Tab Bar View Controller-->
         <scene sceneID="R1K-Rd-8j6">
@@ -525,7 +525,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XEU-Cb-iZn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1370" y="-1453"/>
+            <point key="canvasLocation" x="1834" y="-1241"/>
         </scene>
         <!--Sponsors View Controller-->
         <scene sceneID="45q-F7-s0a">
@@ -539,8 +539,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="D48-Pf-YXw">
-                                <rect key="frame" x="60" y="64" width="493" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="D48-Pf-YXw">
+                                <rect key="frame" x="56" y="64" width="276" height="29"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="General 😎"/>
@@ -552,8 +552,8 @@
                                     <action selector="updateTable:" destination="BYZ-38-t0r" eventType="valueChanged" id="hRc-47-8PZ"/>
                                 </connections>
                             </segmentedControl>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" shadowImage="TransparentPixel" translatesAutoresizingMaskIntoConstraints="NO" id="sRh-d5-k9y">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                            <navigationBar contentMode="scaleToFill" shadowImage="TransparentPixel" translatesAutoresizingMaskIntoConstraints="NO" id="sRh-d5-k9y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="THX-Xy-CIb"/>
                                 </constraints>
@@ -566,8 +566,8 @@
                                     <navigationItem title="Sponsors" id="bz2-eY-7hv"/>
                                 </items>
                             </navigationBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xae-Hj-UNI" customClass="Sp">
-                                <rect key="frame" x="0.0" y="100" width="600" height="451"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xae-Hj-UNI" customClass="Sp">
+                                <rect key="frame" x="0.0" y="100" width="375" height="518"/>
                                 <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yxH-Xx-V76">
                                     <size key="itemSize" width="200" height="200"/>
@@ -577,7 +577,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SponsorPhotoCell" id="9Be-la-hab" customClass="SponsorPhotoCell" customModule="ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
@@ -625,7 +625,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfw-Fu-Ihy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2160" y="-1453"/>
+            <point key="canvasLocation" x="2747.5" y="-1242.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pvd-7g-3y8">
@@ -639,27 +639,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Welcome to Droidcon NYC!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSM-rN-Nbl">
-                                <rect key="frame" x="38" y="436" width="241" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Droidcon NYC!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSM-rN-Nbl">
+                                <rect key="frame" x="38" y="503" width="241" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="241" id="OnX-oO-d8e"/>
+                                    <constraint firstAttribute="height" constant="18" id="qcs-MX-x7n"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This app will help you navigate the world's largest community-driven [Sad Puppy] conference." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3I-iW-ww4">
-                                <rect key="frame" x="38" y="462" width="241" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app will help you navigate the world's largest community-driven [Sad Puppy] conference." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3I-iW-ww4">
+                                <rect key="frame" x="34" y="529" width="307" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="QtI-x8-EcU"/>
-                                    <constraint firstAttribute="width" constant="241" id="oel-nz-qzw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="illo_welcome" translatesAutoresizingMaskIntoConstraints="NO" id="BLC-KQ-aRb">
-                                <rect key="frame" x="20" y="20" width="560" height="408"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="illo_welcome" translatesAutoresizingMaskIntoConstraints="NO" id="BLC-KQ-aRb">
+                                <rect key="frame" x="16" y="20" width="343" height="483"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.3529411764705882" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -676,6 +676,7 @@
                             <constraint firstItem="YSM-rN-Nbl" firstAttribute="leading" secondItem="OpV-hy-Zqz" secondAttribute="leading" constant="38" id="mmD-hO-Iaw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BLC-KQ-aRb" secondAttribute="trailing" id="u6m-pS-GLl"/>
                             <constraint firstItem="ajx-tI-duj" firstAttribute="top" secondItem="s3I-iW-ww4" secondAttribute="bottom" constant="88" id="wXH-3k-jWC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="s3I-iW-ww4" secondAttribute="trailing" constant="18" id="yMN-eb-AMf"/>
                             <constraint firstItem="BLC-KQ-aRb" firstAttribute="top" secondItem="Q0h-Sd-7WB" secondAttribute="bottom" id="ymC-EJ-SP9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BLC-KQ-aRb" secondAttribute="trailing" id="zsF-Fn-nxk"/>
                         </constraints>
@@ -707,18 +708,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Quickly make and manage your schedule to stay on track." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4b-li-esl">
-                                <rect key="frame" x="48" y="462" width="250" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quickly make and manage your schedule to stay on track." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4b-li-esl">
+                                <rect key="frame" x="48" y="529" width="263" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="jI0-n8-FDS"/>
                                     <constraint firstAttribute="height" constant="30" id="lNF-fh-hsw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Plan ahead" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnx-fI-jnz">
-                                <rect key="frame" x="48" y="436" width="250" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plan ahead" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnx-fI-jnz">
+                                <rect key="frame" x="48" y="503" width="250" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="Psl-1v-Am3"/>
                                     <constraint firstAttribute="height" constant="18" id="SLV-Vx-VlM"/>
@@ -800,22 +800,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Gw-d7-BU0">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Gw-d7-BU0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.0" green="0.4823529412" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="cXn-Km-1vl" kind="embed" id="mkz-jV-5jD"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sbl-yG-yD7">
-                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sbl-yG-yD7">
+                                <rect key="frame" x="-4" y="617" width="383" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.35294117650000001" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="xvt-kV-JEI"/>
                                 </constraints>
                             </view>
-                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="SH6-li-0Hj">
-                                <rect key="frame" x="0.0" y="557" width="600" height="37"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="SH6-li-0Hj">
+                                <rect key="frame" x="0.0" y="624" width="375" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="ocA-ja-eDy"/>
                                 </constraints>
@@ -842,7 +842,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zqj-i6-iXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-624" y="217"/>
+            <point key="canvasLocation" x="-481.5" y="155.5"/>
         </scene>
         <!--Welcome Page View Controller-->
         <scene sceneID="lHY-LM-xMX">
@@ -852,12 +852,12 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i1A-KG-8te" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2524" y="217"/>
+            <point key="canvasLocation" x="-1578" y="125"/>
         </scene>
         <!--Entry Controller-->
         <scene sceneID="bJN-GJ-YrV">
             <objects>
-                <viewController title="Entry Controller" id="QQp-Hh-HEz" customClass="StartScreenViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Entry Controller" id="QQp-Hh-HEz" customClass="LaunchViewController" customModule="ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="emk-8Z-PJf"/>
                         <viewControllerLayoutGuide type="bottom" id="tuS-3a-fJN"/>
@@ -874,7 +874,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xGO-zC-FFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="155" y="-561"/>
+            <point key="canvasLocation" x="137" y="-608"/>
         </scene>
     </scenes>
     <resources>
@@ -889,7 +889,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tzR-iU-b0c"/>
-        <segue reference="pVg-yj-H2O"/>
+        <segue reference="gpQ-ie-VS3"/>
         <segue reference="Y1n-90-loS"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.066666666666666666" green="0.30196078431372547" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

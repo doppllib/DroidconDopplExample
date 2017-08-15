@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StartScreenViewController: UIViewController{
+class LaunchViewController: UIViewController{
     override func viewDidAppear(_ animated: Bool)
     {
         let viewModel = DPRESConferenceDataViewModel.forIosWithBoolean(true)

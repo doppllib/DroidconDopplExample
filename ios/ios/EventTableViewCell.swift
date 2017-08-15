@@ -9,12 +9,12 @@
 import UIKit
 
 class EventTableViewCell: UITableViewCell {
-    
+
     @IBOutlet weak var titleLabel : UILabel!
     @IBOutlet weak var descriptionLabel : UILabel!
     @IBOutlet weak var timeInfoLabel : UILabel!
     @IBOutlet weak var timeConflictLabel: UILabel!
-    
+
     var networkEvent: DDATEvent!
     var conflict: jboolean!
     var eventDetailPresenter: DPRESEventDetailViewModel!
@@ -28,7 +28,7 @@ class EventTableViewCell: UITableViewCell {
         titleLabel.text = title.replacingOccurrences(of: "Android", with: "[Sad Puppy]")
         timeInfoLabel.text = "Track " + track + ", " + time
         descriptionLabel.text = description.replacingOccurrences(of: "/n/n", with: "/n")
-        
+
         if networkEvent.isNow() {
             timeConflictLabel.isHidden = false
             timeConflictLabel.text = "This session is happening now"
@@ -47,13 +47,14 @@ class EventTableViewCell: UITableViewCell {
         descriptionLabel.sizeToFit()
         timeConflictLabel.sizeToFit()
     }
-    
+
     func formatHTMLString(_ htmlString: String) -> NSAttributedString {
         let modifiedFont = NSString(format:"<span style=\"font: -apple-system-body; font-size: 12px\">%@</span>", htmlString) as String
-        
-        let attrStr = try! NSAttributedString(
+
+        let attrStr = NSAttributedString(
             string: modifiedFont,
-            attributes: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: String.Encoding.utf8])
+            attributes: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: String.Encoding.utf8]
+        )
         
         return attrStr
     }

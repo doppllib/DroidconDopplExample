@@ -16,17 +16,7 @@ protocol PlatformContext_iOSDelegate : class {
 }
 
 class PlatformContext_iOS : NSObject {
-    
-    
-    static func javaList(toList list: JavaUtilList) -> [Any] {
-        var array = [Any]()
-        for i in 0..<list.size() {
-            array.append(list.getWith(i))
-        }
-        return array
-    }
-    
-    
+
     var isDayTwo: Bool = false
     var dateFormatter: DateFormatter!
     var timeFormatter: DateFormatter!
@@ -34,9 +24,7 @@ class PlatformContext_iOS : NSObject {
     var conferenceDays: [DPRESDaySchedule]?
     
     weak var reloadDelegate: PlatformContext_iOSDelegate?
-    
-    
-    
+
     lazy var storageDir: String = {
         let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         return paths[0]
@@ -48,7 +36,7 @@ class PlatformContext_iOS : NSObject {
         
         let index = self.isDayTwo ? 1 : 0
         if let days = conferenceDays, days.count > index, let objectArray = days[index].getHourHolders() {
-            array.append(contentsOf: PlatformContext_iOS.convertiOSObjectArrayToArray(objArray: objectArray) as! [DPRESHourBlock])
+            array.append(contentsOf: JavaUtils.convertiOSObjectArrayToArray(objArray: objectArray) as! [DPRESHourBlock])
         }
         if dateFormatter == nil {
             dateFormatter = DateFormatter()
@@ -58,7 +46,7 @@ class PlatformContext_iOS : NSObject {
     }
     
     func getSpeakersArray(from networkEvent: DDATEvent) -> [Any] {
-        return PlatformContext_iOS.javaList(toList: networkEvent.getSpeakerList())
+        return JavaUtils.javaList(toList: networkEvent.getSpeakerList())
     }
     
     func getEventTime(startTime: NSString, andEnd endTime: NSString) -> String {
@@ -92,16 +80,6 @@ class PlatformContext_iOS : NSObject {
         hourBlocks.removeAll()
         hourBlocks.append(contentsOf: hourBlocksArray)
     }
-    
-    //TODO move somewhere else
-    static func convertiOSObjectArrayToArray(objArray: IOSObjectArray) -> [Any] {
-        var array = [Any]()
-        for i in 0..<objArray.length() {
-            array.append(objArray.object(at: UInt(i)))
-        }
-        return array
-    }
-    
 }
 
 extension PlatformContext_iOS : UITableViewDataSource {
@@ -117,7 +95,7 @@ extension PlatformContext_iOS : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as! EventListCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as! ScheduleListCell
         
         let hourHolder = hourBlocks[indexPath.row]
         let eventObj = hourHolder.getTime()
@@ -160,13 +138,12 @@ extension PlatformContext_iOS : UITableViewDelegate {
 }
 
 extension PlatformContext_iOS : DPRESScheduleDataViewModel_Host {
-    
-        func loadCallback(withDPRESDayScheduleArray daySchedules: IOSObjectArray!) {
-            hourBlocks = [DPRESHourBlock]()
-            conferenceDays = PlatformContext_iOS.convertiOSObjectArrayToArray(objArray: daySchedules) as! [DPRESDaySchedule]
-            updateTableData()
-            reloadDelegate?.reloadTableView()
-        }
-    
+
+    func loadCallback(withDPRESDayScheduleArray daySchedules: IOSObjectArray!) {
+        hourBlocks = [DPRESHourBlock]()
+        conferenceDays = JavaUtils.convertiOSObjectArrayToArray(objArray: daySchedules) as? [DPRESDaySchedule]
+        updateTableData()
+        reloadDelegate?.reloadTableView()
+    }
 }
 

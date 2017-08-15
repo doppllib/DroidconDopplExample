@@ -10,7 +10,7 @@ import Foundation
 import JRE
 import UIKit
 
-class ViewController : UIViewController {
+class ScheduleViewController : UIViewController {
 
     var track: Int!
     var notesArray: [String]!
@@ -48,7 +48,7 @@ class ViewController : UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowEventDetail" {
-            let detailViewController = segue.destination as! ShowEventDetailViewController
+            let detailViewController = segue.destination as! EventDetailViewController
             let networkEvent = sender as! DDATEvent
             detailViewController.titleString = networkEvent.getName().replacingOccurrences(of: "Android", with: "[Sad Puppy]")
             detailViewController.descriptionString = networkEvent.getDescription().replacingOccurrences(of: "Android", with: "[Sad Puppy]")
@@ -90,7 +90,7 @@ class ViewController : UIViewController {
 }
 
 //MARK: PlatformContext_iOSDelegate
-extension ViewController : PlatformContext_iOSDelegate {
+extension ScheduleViewController : PlatformContext_iOSDelegate {
     
     func reloadTableView() {
         tableView.reloadData()
