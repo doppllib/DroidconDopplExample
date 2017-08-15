@@ -27,6 +27,7 @@ public class ScheduleDataViewModel extends ViewModel
     public void register(Host host, boolean allEvents)
     {
         disposables.clear();
+        interactor.refreshFromDatabase();
         disposables.add(interactor.getFullConferenceData(allEvents)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
