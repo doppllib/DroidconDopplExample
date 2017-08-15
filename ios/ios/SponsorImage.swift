@@ -83,9 +83,8 @@ func == (lhs: SponsorItem, rhs: SponsorItem) -> Bool {
 class Sponsor {
     
     static let SPONSOR_GENERAL   = 0
-    static let SPONSOR_STREAMING = 1
-    static let SPONSOR_PARTY     = 2
-    static let SPONSOR_ALL       = 3
+    static let SPONSOR_PARTY     = 1
+    static let SPONSOR_ALL       = 2
     
     class func allSponsors() -> Int
     {
@@ -142,8 +141,6 @@ class Sponsor {
         
         var photoUrl = "https://s3.amazonaws.com/droidconsponsers/"
         switch sponsorType {
-            case Sponsor.SPONSOR_STREAMING:
-                photoUrl.append("sponsors_stream.json")
             case Sponsor.SPONSOR_PARTY:
                 photoUrl.append("sponsors_party.json")
             case Sponsor.SPONSOR_ALL:
