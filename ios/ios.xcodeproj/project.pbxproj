@@ -2653,7 +2653,6 @@
 		84A04B60DAEE845879A58D90 /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62B114202731562C1A1C003 /* Pods_ios.framework */; };
 		889BCE286CBE9ED98416F630 /* Pods_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9231D71C59376C0F37908DFA /* Pods_iosUITests.framework */; };
 		F92EB65A1D5A5EEC003B47B7 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */; };
-		F92EB65C1D5B7D3B003B47B7 /* WelcomeSponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EB65B1D5B7D3B003B47B7 /* WelcomeSponsorsViewController.swift */; };
 		F9903FA21D3FBEC70050687E /* DroidconTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */; };
 		F9D6952D1D47AF9D0095F0F9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */; };
 		FA6128BF1C986E05001142E8 /* SpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6128BE1C986E05001142E8 /* SpeakerTableViewCell.swift */; };
@@ -2661,8 +2660,8 @@
 		FA6128C31C986E7A001142E8 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6128C21C986E7A001142E8 /* EventTableViewCell.xib */; };
 		FA6128C51C986E87001142E8 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6128C41C986E87001142E8 /* EventTableViewCell.swift */; };
 		FAE033A61C974C65001C50E1 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE033A51C974C65001C50E1 /* EventDetailViewController.swift */; };
-		FBB8D9091F435C4400614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = FBB8D9071F435C4400614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */; };
-		FBB8D90A1F435C4400614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB8D9081F435C4400614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */; };
+		FBB8D9191F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = FBB8D9171F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */; };
+		FBB8D91A1F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB8D9181F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */; };
 		FBD247BD1F3E406800E48171 /* JavaUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD247BC1F3E406800E48171 /* JavaUtils.swift */; };
 /* End PBXBuildFile section */
 
@@ -5382,7 +5381,6 @@
 		F62B114202731562C1A1C003 /* Pods_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7B0B04A58CF9690A7D7E15C /* Pods-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosUITests/Pods-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
-		F92EB65B1D5B7D3B003B47B7 /* WelcomeSponsorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeSponsorsViewController.swift; sourceTree = "<group>"; };
 		F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroidconTabBarViewController.swift; sourceTree = "<group>"; };
 		F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		FA6128BE1C986E05001142E8 /* SpeakerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerTableViewCell.swift; sourceTree = "<group>"; };
@@ -5391,8 +5389,8 @@
 		FA6128C41C986E87001142E8 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		FA86A7F91C92169900C09CE7 /* ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		FAE033A51C974C65001C50E1 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
-		FBB8D9071F435C4400614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAGNetworkModule_ProvidesRsvpRequestFactory.h; sourceTree = "<group>"; };
-		FBB8D9081F435C4400614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAGNetworkModule_ProvidesRsvpRequestFactory.m; sourceTree = "<group>"; };
+		FBB8D9171F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAGNetworkModule_ProvidesRsvpRequestFactory.h; sourceTree = "<group>"; };
+		FBB8D9181F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAGNetworkModule_ProvidesRsvpRequestFactory.m; sourceTree = "<group>"; };
 		FBD247BC1F3E406800E48171 /* JavaUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavaUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -5451,8 +5449,8 @@
 		013AE4371F3A3D6400C91182 /* generated */ = {
 			isa = PBXGroup;
 			children = (
-				FBB8D9071F435C4400614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */,
-				FBB8D9081F435C4400614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */,
+				FBB8D9171F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */,
+				FBB8D9181F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */,
 				013AE4381F3A3D6400C91182 /* co_doppl_android_arch_core_common_1_0_0_0_alpha8 */,
 				013AE43F1F3A3D6400C91182 /* co_doppl_android_arch_core_runtime_1_0_0_0_alpha8 */,
 				013AE4461F3A3D6400C91182 /* co_doppl_android_arch_lifecycle_common_1_0_0_0_alpha8 */,
@@ -8301,7 +8299,6 @@
 				0183202D1F155F9A009794AC /* UIViewController.swift */,
 				4CFD936C1D8355630018C837 /* WelcomeHeaderView.swift */,
 				F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */,
-				F92EB65B1D5B7D3B003B47B7 /* WelcomeSponsorsViewController.swift */,
 				63EE30CF1CC6AD4400B64D3D /* WelcomeViewController.swift */,
 				631B98FA1C7D6533008AA20D /* Assets.xcassets */,
 				631B98FC1C7D6533008AA20D /* LaunchScreen.storyboard */,
@@ -9021,7 +9018,7 @@
 				013AF6801F3A3D7E00C91182 /* IoReactivexPluginsRxJavaPlugins.h in Headers */,
 				013AEECA1F3A3D7900C91182 /* AndroidArchPersistenceRoomInsert.h in Headers */,
 				013AF1C21F3A3D7A00C91182 /* IoReactivexInternalFuseableFuseToMaybe.h in Headers */,
-				FBB8D9091F435C4400614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h in Headers */,
+				FBB8D9191F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h in Headers */,
 				013AF1241F3A3D7900C91182 /* IoReactivexAndroidPluginsRxAndroidPlugins.h in Headers */,
 				013AF73C1F3A3D7E00C91182 /* AndroidDatabaseSqliteSQLiteDebug.h in Headers */,
 				013AEEBC1F3A3D7900C91182 /* AndroidArchPersistenceRoomDatabase.h in Headers */,
@@ -10299,7 +10296,6 @@
 				4C81B7131D7616C500DFB89C /* SponsorsViewController.swift in Sources */,
 				4C81B70F1D76162000DFB89C /* SponsorPhotoCell.swift in Sources */,
 				FAE033A61C974C65001C50E1 /* EventDetailViewController.swift in Sources */,
-				F92EB65C1D5B7D3B003B47B7 /* WelcomeSponsorsViewController.swift in Sources */,
 				FA6128BF1C986E05001142E8 /* SpeakerTableViewCell.swift in Sources */,
 				F9903FA21D3FBEC70050687E /* DroidconTabBarViewController.swift in Sources */,
 				F92EB65A1D5A5EEC003B47B7 /* WelcomePageViewController.swift in Sources */,
@@ -11575,7 +11571,7 @@
 				013AF5BF1F3A3D7D00C91182 /* IoReactivexInternalSchedulersScheduledDirectPeriodicTask.m in Sources */,
 				013AF26D1F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableAllSingle.m in Sources */,
 				013AF63F1F3A3D7D00C91182 /* IoReactivexMaybeSource.m in Sources */,
-				FBB8D90A1F435C4400614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m in Sources */,
+				FBB8D91A1F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m in Sources */,
 				013AF1EF1F3A3D7A00C91182 /* IoReactivexInternalObserversBlockingObserver.m in Sources */,
 				013AF23D1F3A3D7A00C91182 /* IoReactivexInternalOperatorsCompletableCompletableLift.m in Sources */,
 				013AF07D1F3A3D7900C91182 /* Okhttp3MultipartBody.m in Sources */,
