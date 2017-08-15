@@ -53,8 +53,6 @@
 			</dict>
 		</array>
 	</dict>
-	<key>JWPlayerKey</key>
-	<string>GOSIGNUP!!!</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>

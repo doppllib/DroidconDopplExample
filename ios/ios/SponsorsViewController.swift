@@ -109,7 +109,7 @@ class SponsorsViewController: UIViewController, UICollectionViewDataSource, UICo
         let item = photoForIndexPath(indexPath)
         let url = URL(string: item.sponsorImage)
         
-        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
             let data = try? Data(contentsOf: url!)
             DispatchQueue.main.async(execute: {
                 if(data != nil){
@@ -127,7 +127,7 @@ class SponsorsViewController: UIViewController, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         let item = photoForIndexPath(indexPath)
-        UIApplication.shared.openURL(URL(string: item.sponsorLink)!)
+        UIApplication.shared.open(URL(string: item.sponsorLink)!)
         return false
     }
     

@@ -33,24 +33,22 @@ class SponsorItem : Equatable {
         
         let sponsorImageUrl = URL(string: sponsorImage)
         let loadRequest = URLRequest(url:sponsorImageUrl!)
-        NSURLConnection.sendAsynchronousRequest(loadRequest,
-                                                queue: OperationQueue.main) {
-                                                    response, data, error in
-                                                    
-                                                    if error != nil {
-                                                        completion(self, error as NSError?)
-                                                        return
-                                                    }
-                                                    
-                                                    if data != nil {
-                                                        let returnedImage = UIImage(data: data!)
-                                                        self.image = returnedImage
-                                                        completion(self, nil)
-                                                        return
-                                                    }
-                                                    
-                                                    completion(self, nil)
+        let task = URLSession.shared.dataTask(with: loadRequest) { data, request, error in
+            if error != nil {
+                completion(self, error as NSError?)
+                return
+            }
+            
+            if data != nil {
+                let returnedImage = UIImage(data: data!)
+                self.image = returnedImage
+                completion(self, nil)
+                return
+            }
+            
+            completion(self, nil)
         }
+        task.resume()
     }
     
     func sizeToFillWidthOfSize(_ size:CGSize) -> CGSize {
@@ -83,9 +81,8 @@ func == (lhs: SponsorItem, rhs: SponsorItem) -> Bool {
 class Sponsor {
     
     static let SPONSOR_GENERAL   = 0
-    static let SPONSOR_STREAMING = 1
-    static let SPONSOR_PARTY     = 2
-    static let SPONSOR_ALL       = 3
+    static let SPONSOR_PARTY     = 1
+    static let SPONSOR_ALL       = 2
     
     class func allSponsors() -> Int
     {
@@ -98,7 +95,7 @@ class Sponsor {
         let searchURL = getSearchUrlForSponsorType(sponsorType)
         let searchRequest = URLRequest(url: searchURL)
         
-        NSURLConnection.sendAsynchronousRequest(searchRequest, queue: processingQueue) {response, data, error in
+        let task = URLSession.shared.dataTask(with: searchRequest) { data, request, error in
             if error != nil {
                 completion(nil,error as NSError?)
                 return
@@ -126,7 +123,7 @@ class Sponsor {
                         sponsorItems += [item]
                     }
                 }
-    
+                
                 DispatchQueue.main.async(execute: {
                     completion(SponsorResults(totalSpanCount: totalSpanCount!, searchResults: sponsorItems), nil)
                 })
@@ -136,14 +133,13 @@ class Sponsor {
                 return
             }
         }
+        task.resume()
     }
     
     fileprivate func getSearchUrlForSponsorType(_ sponsorType:Int) -> URL {
         
         var photoUrl = "https://s3.amazonaws.com/droidconsponsers/"
         switch sponsorType {
-            case Sponsor.SPONSOR_STREAMING:
-                photoUrl.append("sponsors_stream.json")
             case Sponsor.SPONSOR_PARTY:
                 photoUrl.append("sponsors_party.json")
             case Sponsor.SPONSOR_ALL:
