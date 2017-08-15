@@ -751,8 +751,9 @@
                                     <segue destination="hAB-Au-Rvm" kind="show" id="tzR-iU-b0c"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="20" placeholderIntrinsicHeight="20" image="ic_keyboard_arrow_right_white" translatesAutoresizingMaskIntoConstraints="NO" id="6Mg-IB-LAg">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="20" placeholderIntrinsicHeight="20" image="ic_keyboard_arrow_right_white" translatesAutoresizingMaskIntoConstraints="NO" id="6Mg-IB-LAg">
                                 <rect key="frame" x="335" y="582" width="20" height="20"/>
+                                <color key="tintColor" red="0.36470588235294116" green="0.99215686274509807" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="2By-ap-ii1"/>
                                     <constraint firstAttribute="height" constant="20" id="P4K-v5-CEX"/>
@@ -785,7 +786,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pkb-kg-84g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1279" y="1003"/>
+            <point key="canvasLocation" x="-1279.2" y="1002.5487256371815"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="0e3-VE-SHx">

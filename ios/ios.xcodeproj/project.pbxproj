@@ -2657,7 +2657,6 @@
 		84A04B60DAEE845879A58D90 /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62B114202731562C1A1C003 /* Pods_ios.framework */; };
 		889BCE286CBE9ED98416F630 /* Pods_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9231D71C59376C0F37908DFA /* Pods_iosUITests.framework */; };
 		F92EB65A1D5A5EEC003B47B7 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */; };
-		F92EB65C1D5B7D3B003B47B7 /* Welcome4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EB65B1D5B7D3B003B47B7 /* Welcome4ViewController.swift */; };
 		F9903FA21D3FBEC70050687E /* DroidconTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */; };
 		F9D6952D1D47AF9D0095F0F9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */; };
 		FA258F611C937F5900986E0D /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA258F601C937F5900986E0D /* NoteTableViewCell.xib */; };
@@ -5387,7 +5386,6 @@
 		F62B114202731562C1A1C003 /* Pods_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7B0B04A58CF9690A7D7E15C /* Pods-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosUITests/Pods-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
-		F92EB65B1D5B7D3B003B47B7 /* Welcome4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Welcome4ViewController.swift; sourceTree = "<group>"; };
 		F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroidconTabBarViewController.swift; sourceTree = "<group>"; };
 		F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		FA258F601C937F5900986E0D /* NoteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
@@ -8308,7 +8306,6 @@
 				0183202D1F155F9A009794AC /* UIViewController.swift */,
 				018320251F152215009794AC /* ViewController.swift */,
 				FA258F5F1C937F4100986E0D /* Views */,
-				F92EB65B1D5B7D3B003B47B7 /* Welcome4ViewController.swift */,
 				F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */,
 				63EE30CF1CC6AD4400B64D3D /* WelcomeViewController.swift */,
 			);
@@ -10306,7 +10303,6 @@
 				4C81B70F1D76162000DFB89C /* SponsorPhotoCell.swift in Sources */,
 				FAE033A61C974C65001C50E1 /* ShowEventDetailViewController.swift in Sources */,
 				4C0769921D8339A0003DD320 /* OnboardingPhotoCell.swift in Sources */,
-				F92EB65C1D5B7D3B003B47B7 /* Welcome4ViewController.swift in Sources */,
 				FA6128BF1C986E05001142E8 /* SpeakerTableViewCell.swift in Sources */,
 				F9903FA21D3FBEC70050687E /* DroidconTabBarViewController.swift in Sources */,
 				F92EB65A1D5A5EEC003B47B7 /* WelcomePageViewController.swift in Sources */,
