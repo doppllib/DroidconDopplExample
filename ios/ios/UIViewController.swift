@@ -11,7 +11,6 @@ import UIKit
 
 extension UIViewController {
 
-    
     static func currentViewController(vcType: AnyClass) -> UIViewController {
         let viewController = UIApplication.shared.keyWindow!.rootViewController!
         return UIViewController.findBest(viewController: viewController, forType: vcType)

@@ -8,12 +8,12 @@
 
 import UIKit
 
-class Welcome4ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class WelcomeSponsorsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var arrow: UIImageView!
     
-    fileprivate let reuseIdentifier = "OnboardingPhotoCell"
+    fileprivate let reuseIdentifier = "SponsorPhotoCell"
     fileprivate let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
     
     fileprivate var items = NSMutableDictionary()
@@ -69,7 +69,7 @@ class Welcome4ViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "OnboardingHeaderView", for: indexPath)
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "WelcomeHeaderView", for: indexPath)
         return headerView
     }
     
@@ -97,7 +97,7 @@ class Welcome4ViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! OnboardingPhotoCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SponsorPhotoCell
         
         cell.backgroundColor = UIColor.white
         cell.imageView.image = nil
@@ -105,7 +105,7 @@ class Welcome4ViewController: UIViewController, UICollectionViewDataSource, UICo
         let item = photoForIndexPath(indexPath)
         let url = URL(string: item.sponsorImage)
         
-        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
             let data = try? Data(contentsOf: url!)
             if(data != nil){
                 DispatchQueue.main.async(execute: {
@@ -123,7 +123,7 @@ class Welcome4ViewController: UIViewController, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         let item = photoForIndexPath(indexPath)
-        UIApplication.shared.openURL(URL(string: item.sponsorLink)!)
+        UIApplication.shared.open(URL(string: item.sponsorLink)!)
         return false
     }
     

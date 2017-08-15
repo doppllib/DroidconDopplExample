@@ -1,5 +1,5 @@
 //
-//  OnboardingHeaderView.swift
+//  WelcomeHeaderView.swift
 //  ios
 //
 //  Created by Wojciech Dziemianczyk on 9/9/16.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class OnboardingHeaderView: UICollectionReusableView {
+class WelcomeHeaderView: UICollectionReusableView {
 
 }
