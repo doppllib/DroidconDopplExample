@@ -12,8 +12,11 @@ import dcframework
 
 @objc class EventDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DPRESEventDetailHost {
     
-    // MARK: Properties
+    @IBOutlet weak var tableView : UITableView!
+    @IBOutlet weak var rsvpButton: UIButton!
+    @IBOutlet weak var headerImage: UIImageView!
     
+    // MARK: Properties
     var titleString: String?
     var descriptionString: String?
     var dateTime: String?
@@ -22,11 +25,7 @@ import dcframework
     var speakers: [DDATUserAccount]?
     var eventDetailPresenter: DPRESEventDetailViewModel!
     
-    @IBOutlet weak var tableView : UITableView!
-    @IBOutlet weak var rsvpButton: UIButton!
-    @IBOutlet weak var headerImage: UIImageView!
     // MARK: Lifecycle events
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
     }
@@ -88,7 +87,6 @@ import dcframework
     }
 
     // MARK: TableView
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
@@ -133,7 +131,6 @@ import dcframework
     }
 
     // MARK: Action
-    
     func styleButton() {
         rsvpButton.layer.cornerRadius = 24
         rsvpButton.layer.masksToBounds = true
