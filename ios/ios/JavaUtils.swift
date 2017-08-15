@@ -1,5 +1,5 @@
 //
-//  StringUtils.swift
+//  JavaUtils.swift
 //  ios
 //
 //  Created by Sufei Zhao on 8/11/17.
