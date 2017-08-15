@@ -2626,7 +2626,7 @@
 		0183202E1F155F9A009794AC /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0183202D1F155F9A009794AC /* UIViewController.swift */; };
 		07CCD3CE27FF018D46925D26 /* Pods_dcframework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F416FDB1C506169C053AA9 /* Pods_dcframework.framework */; };
 		1456E8857FD3A196CF1C2B4D /* Pods_dcframeworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F54A492D46D70B0A7D6257 /* Pods_dcframeworkTests.framework */; };
-		4C81B70B1D75E7B500DFB89C /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81B70A1D75E7B500DFB89C /* Sponsor.swift */; };
+		4C81B70B1D75E7B500DFB89C /* SponsorImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81B70A1D75E7B500DFB89C /* SponsorImage.swift */; };
 		4C81B70F1D76162000DFB89C /* SponsorPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81B70E1D76162000DFB89C /* SponsorPhotoCell.swift */; };
 		4C81B7131D7616C500DFB89C /* SponsorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C81B7121D7616C500DFB89C /* SponsorsViewController.swift */; };
 		591E70DC4046D8C4A81031B6 /* Pods_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E2C7E96CF82BF0295604FB /* Pods_iosTests.framework */; };
@@ -5335,7 +5335,7 @@
 		220DE85ED760BE3767522AD0 /* Pods-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosUITests/Pods-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		293850C9795D8448C4C595E4 /* Pods-dcframework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dcframework.release.xcconfig"; path = "Pods/Target Support Files/Pods-dcframework/Pods-dcframework.release.xcconfig"; sourceTree = "<group>"; };
 		3E0AC4033C323A7CAB9C2742 /* Pods-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iosTests/Pods-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4C81B70A1D75E7B500DFB89C /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sponsor.swift; sourceTree = "<group>"; };
+		4C81B70A1D75E7B500DFB89C /* SponsorImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorImage.swift; sourceTree = "<group>"; };
 		4C81B70E1D76162000DFB89C /* SponsorPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorPhotoCell.swift; sourceTree = "<group>"; };
 		4C81B7121D7616C500DFB89C /* SponsorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		55F54A492D46D70B0A7D6257 /* Pods_dcframeworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dcframeworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -8286,7 +8286,7 @@
 				63EE30CD1CC6985800B64D3D /* LaunchViewController.swift */,
 				63EE30DE1CD025AC00B64D3D /* ScheduleListCell.swift */,
 				018320251F152215009794AC /* ScheduleViewController.swift */,
-				4C81B70A1D75E7B500DFB89C /* Sponsor.swift */,
+				4C81B70A1D75E7B500DFB89C /* SponsorImage.swift */,
 				4C81B70E1D76162000DFB89C /* SponsorPhotoCell.swift */,
 				4C81B7121D7616C500DFB89C /* SponsorsViewController.swift */,
 				0183202D1F155F9A009794AC /* UIViewController.swift */,
@@ -10275,7 +10275,7 @@
 				018320281F153CC3009794AC /* AppDelegate.swift in Sources */,
 				63EE30DF1CD025AC00B64D3D /* ScheduleListCell.swift in Sources */,
 				0183202E1F155F9A009794AC /* UIViewController.swift in Sources */,
-				4C81B70B1D75E7B500DFB89C /* Sponsor.swift in Sources */,
+				4C81B70B1D75E7B500DFB89C /* SponsorImage.swift in Sources */,
 				FA6128C51C986E87001142E8 /* EventTableViewCell.swift in Sources */,
 				018320261F152215009794AC /* ScheduleViewController.swift in Sources */,
 				FBD247BD1F3E406800E48171 /* JavaUtils.swift in Sources */,
