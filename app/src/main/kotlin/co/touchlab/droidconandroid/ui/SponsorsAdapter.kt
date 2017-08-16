@@ -91,6 +91,10 @@ class SponsorsAdapter(private val context: Context) : RecyclerView.Adapter<Recyc
         notifyDataSetChanged()
     }
 
+    fun clearAll() {
+        dataset.clear()
+    }
+
     companion object {
         private val VIEW_TYPE_ITEM = 0
         private val VIEW_TYPE_EMPTY = 1
