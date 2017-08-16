@@ -114,8 +114,8 @@
                                 <rect key="frame" x="56" y="64" width="263" height="29"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
-                                    <segment title=""/>
-                                    <segment title=""/>
+                                    <segment title="Sep 29"/>
+                                    <segment title="Sep 30"/>
                                 </segments>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
