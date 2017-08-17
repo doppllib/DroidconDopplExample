@@ -2649,6 +2649,39 @@
 		63EE30DF1CD025AC00B64D3D /* ScheduleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EE30DE1CD025AC00B64D3D /* ScheduleListCell.swift */; };
 		84A04B60DAEE845879A58D90 /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62B114202731562C1A1C003 /* Pods_ios.framework */; };
 		889BCE286CBE9ED98416F630 /* Pods_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9231D71C59376C0F37908DFA /* Pods_iosUITests.framework */; };
+		ED9154B51F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplContextDelegateTestRunner.h in Headers */ = {isa = PBXBuildFile; fileRef = ED9154971F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplContextDelegateTestRunner.h */; };
+		ED9154B61F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplContextDelegateTestRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9154981F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplContextDelegateTestRunner.m */; };
+		ED9154B71F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplHacks.h in Headers */ = {isa = PBXBuildFile; fileRef = ED9154991F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplHacks.h */; };
+		ED9154B81F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplHacks.m in Sources */ = {isa = PBXBuildFile; fileRef = ED91549A1F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplHacks.m */; };
+		ED9154B91F462DEC00DCADC8 /* CoTouchlabDopplTestingDopplIosContextTestRunner.h in Headers */ = {isa = PBXBuildFile; fileRef = ED91549B1F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplIosContextTestRunner.h */; };
+		ED9154BA1F462DEC00DCADC8 /* CoTouchlabDopplTestingDopplIosContextTestRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = ED91549C1F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplIosContextTestRunner.m */; };
+		ED9154BB1F462DEC00DCADC8 /* CoTouchlabDopplTestingDopplJunitTestHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = ED91549D1F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplJunitTestHelper.h */; };
+		ED9154BC1F462DEC00DCADC8 /* CoTouchlabDopplTestingDopplJunitTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ED91549E1F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplJunitTestHelper.m */; };
+		ED9154BD1F462DEC00DCADC8 /* CoTouchlabDopplTestingDopplRuntimeEnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = ED91549F1F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplRuntimeEnvironment.h */; };
+		ED9154BE1F462DEC00DCADC8 /* CoTouchlabDopplTestingDopplRuntimeEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9154A01F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplRuntimeEnvironment.m */; };
+		ED9154BF1F462DEC00DCADC8 /* CoTouchlabDopplTestingDopplTest.h in Headers */ = {isa = PBXBuildFile; fileRef = ED9154A11F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplTest.h */; };
+		ED9154C01F462DEC00DCADC8 /* CoTouchlabDopplTestingDopplTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9154A21F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplTest.m */; };
+		ED9154C11F462DEC00DCADC8 /* CoTouchlabDopplTestingMockGen.h in Headers */ = {isa = PBXBuildFile; fileRef = ED9154A31F462DEB00DCADC8 /* CoTouchlabDopplTestingMockGen.h */; };
+		ED9154C21F462DEC00DCADC8 /* CoTouchlabDopplTestingMockGen.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9154A41F462DEB00DCADC8 /* CoTouchlabDopplTestingMockGen.m */; };
+		ED9154C31F462DEC00DCADC8 /* CoTouchlabDopplTestingTestingContext.h in Headers */ = {isa = PBXBuildFile; fileRef = ED9154A51F462DEB00DCADC8 /* CoTouchlabDopplTestingTestingContext.h */; };
+		ED9154C41F462DEC00DCADC8 /* CoTouchlabDopplTestingTestingContext.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9154A61F462DEB00DCADC8 /* CoTouchlabDopplTestingTestingContext.m */; };
+		ED9154C51F462DEC00DCADC8 /* CoTouchlabDopplUtilsPlatformUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = ED9154A71F462DEB00DCADC8 /* CoTouchlabDopplUtilsPlatformUtils.h */; };
+		ED9154C61F462DEC00DCADC8 /* CoTouchlabDopplUtilsPlatformUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9154A81F462DEB00DCADC8 /* CoTouchlabDopplUtilsPlatformUtils.m */; };
+		ED9154C71F462DEC00DCADC8 /* CoTouchlabDopplUtilsXcodeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = ED9154A91F462DEB00DCADC8 /* CoTouchlabDopplUtilsXcodeUtils.h */; };
+		ED9154C81F462DEC00DCADC8 /* CoTouchlabDopplUtilsXcodeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9154AA1F462DEB00DCADC8 /* CoTouchlabDopplUtilsXcodeUtils.m */; };
+		ED9154C91F462DEC00DCADC8 /* DINTFindUserInteractorTest.h in Headers */ = {isa = PBXBuildFile; fileRef = ED9154AB1F462DEB00DCADC8 /* DINTFindUserInteractorTest.h */; };
+		ED9154CA1F462DEC00DCADC8 /* DINTFindUserInteractorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9154AC1F462DEB00DCADC8 /* DINTFindUserInteractorTest.m */; };
+		ED9154CB1F462DEC00DCADC8 /* DINTOneTest.h in Headers */ = {isa = PBXBuildFile; fileRef = ED9154AD1F462DEB00DCADC8 /* DINTOneTest.h */; };
+		ED9154CC1F462DEC00DCADC8 /* DINTOneTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9154AE1F462DEB00DCADC8 /* DINTOneTest.m */; };
+		ED9154CD1F462DEC00DCADC8 /* DINTRxTrampolineSchedulerRule.h in Headers */ = {isa = PBXBuildFile; fileRef = ED9154AF1F462DEB00DCADC8 /* DINTRxTrampolineSchedulerRule.h */; };
+		ED9154CE1F462DEC00DCADC8 /* DINTRxTrampolineSchedulerRule.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9154B01F462DEB00DCADC8 /* DINTRxTrampolineSchedulerRule.m */; };
+		ED9154CF1F462DEC00DCADC8 /* DINTUserDetailViewModelTest.h in Headers */ = {isa = PBXBuildFile; fileRef = ED9154B11F462DEB00DCADC8 /* DINTUserDetailViewModelTest.h */; };
+		ED9154D01F462DEC00DCADC8 /* DINTUserDetailViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9154B21F462DEB00DCADC8 /* DINTUserDetailViewModelTest.m */; };
+		ED9154D11F462DEC00DCADC8 /* dopplTests.txt in Resources */ = {isa = PBXBuildFile; fileRef = ED9154B31F462DEB00DCADC8 /* dopplTests.txt */; };
+		ED9154D21F462DEC00DCADC8 /* prefixes.properties in Resources */ = {isa = PBXBuildFile; fileRef = ED9154B41F462DEB00DCADC8 /* prefixes.properties */; };
+		ED9154D41F463C7C00DCADC8 /* JUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9154D31F463C7C00DCADC8 /* JUnit.framework */; };
+		ED9154D61F463CF900DCADC8 /* Mockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9154D51F463CF900DCADC8 /* Mockito.framework */; };
+		ED9154D71F463DB000DCADC8 /* dopplTests.txt in Resources */ = {isa = PBXBuildFile; fileRef = ED9154B31F462DEB00DCADC8 /* dopplTests.txt */; };
 		F92EB65A1D5A5EEC003B47B7 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */; };
 		F9903FA21D3FBEC70050687E /* DroidconTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */; };
 		F9D6952D1D47AF9D0095F0F9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */; };
@@ -5371,6 +5404,38 @@
 		7FD2B2860CA09246E08CB191 /* Pods-dcframework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dcframework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dcframework/Pods-dcframework.debug.xcconfig"; sourceTree = "<group>"; };
 		9231D71C59376C0F37908DFA /* Pods_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F416FDB1C506169C053AA9 /* Pods_dcframework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dcframework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED9154971F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplContextDelegateTestRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDopplTestingDopplContextDelegateTestRunner.h; sourceTree = "<group>"; };
+		ED9154981F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplContextDelegateTestRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDopplTestingDopplContextDelegateTestRunner.m; sourceTree = "<group>"; };
+		ED9154991F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplHacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDopplTestingDopplHacks.h; sourceTree = "<group>"; };
+		ED91549A1F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplHacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDopplTestingDopplHacks.m; sourceTree = "<group>"; };
+		ED91549B1F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplIosContextTestRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDopplTestingDopplIosContextTestRunner.h; sourceTree = "<group>"; };
+		ED91549C1F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplIosContextTestRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDopplTestingDopplIosContextTestRunner.m; sourceTree = "<group>"; };
+		ED91549D1F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplJunitTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDopplTestingDopplJunitTestHelper.h; sourceTree = "<group>"; };
+		ED91549E1F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplJunitTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDopplTestingDopplJunitTestHelper.m; sourceTree = "<group>"; };
+		ED91549F1F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplRuntimeEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDopplTestingDopplRuntimeEnvironment.h; sourceTree = "<group>"; };
+		ED9154A01F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplRuntimeEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDopplTestingDopplRuntimeEnvironment.m; sourceTree = "<group>"; };
+		ED9154A11F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDopplTestingDopplTest.h; sourceTree = "<group>"; };
+		ED9154A21F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDopplTestingDopplTest.m; sourceTree = "<group>"; };
+		ED9154A31F462DEB00DCADC8 /* CoTouchlabDopplTestingMockGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDopplTestingMockGen.h; sourceTree = "<group>"; };
+		ED9154A41F462DEB00DCADC8 /* CoTouchlabDopplTestingMockGen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDopplTestingMockGen.m; sourceTree = "<group>"; };
+		ED9154A51F462DEB00DCADC8 /* CoTouchlabDopplTestingTestingContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDopplTestingTestingContext.h; sourceTree = "<group>"; };
+		ED9154A61F462DEB00DCADC8 /* CoTouchlabDopplTestingTestingContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDopplTestingTestingContext.m; sourceTree = "<group>"; };
+		ED9154A71F462DEB00DCADC8 /* CoTouchlabDopplUtilsPlatformUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDopplUtilsPlatformUtils.h; sourceTree = "<group>"; };
+		ED9154A81F462DEB00DCADC8 /* CoTouchlabDopplUtilsPlatformUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDopplUtilsPlatformUtils.m; sourceTree = "<group>"; };
+		ED9154A91F462DEB00DCADC8 /* CoTouchlabDopplUtilsXcodeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTouchlabDopplUtilsXcodeUtils.h; sourceTree = "<group>"; };
+		ED9154AA1F462DEB00DCADC8 /* CoTouchlabDopplUtilsXcodeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTouchlabDopplUtilsXcodeUtils.m; sourceTree = "<group>"; };
+		ED9154AB1F462DEB00DCADC8 /* DINTFindUserInteractorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DINTFindUserInteractorTest.h; sourceTree = "<group>"; };
+		ED9154AC1F462DEB00DCADC8 /* DINTFindUserInteractorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DINTFindUserInteractorTest.m; sourceTree = "<group>"; };
+		ED9154AD1F462DEB00DCADC8 /* DINTOneTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DINTOneTest.h; sourceTree = "<group>"; };
+		ED9154AE1F462DEB00DCADC8 /* DINTOneTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DINTOneTest.m; sourceTree = "<group>"; };
+		ED9154AF1F462DEB00DCADC8 /* DINTRxTrampolineSchedulerRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DINTRxTrampolineSchedulerRule.h; sourceTree = "<group>"; };
+		ED9154B01F462DEB00DCADC8 /* DINTRxTrampolineSchedulerRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DINTRxTrampolineSchedulerRule.m; sourceTree = "<group>"; };
+		ED9154B11F462DEB00DCADC8 /* DINTUserDetailViewModelTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DINTUserDetailViewModelTest.h; sourceTree = "<group>"; };
+		ED9154B21F462DEB00DCADC8 /* DINTUserDetailViewModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DINTUserDetailViewModelTest.m; sourceTree = "<group>"; };
+		ED9154B31F462DEB00DCADC8 /* dopplTests.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dopplTests.txt; sourceTree = "<group>"; };
+		ED9154B41F462DEB00DCADC8 /* prefixes.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = prefixes.properties; sourceTree = "<group>"; };
+		ED9154D31F463C7C00DCADC8 /* JUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JUnit.framework; path = ../../../j2objc/dist/frameworks/JUnit.framework; sourceTree = "<group>"; };
+		ED9154D51F463CF900DCADC8 /* Mockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mockito.framework; path = ../../../j2objc/dist/frameworks/Mockito.framework; sourceTree = "<group>"; };
 		F08872F4EDF9EC345739A52F /* Pods-dcframeworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dcframeworkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dcframeworkTests/Pods-dcframeworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F62B114202731562C1A1C003 /* Pods_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7B0B04A58CF9690A7D7E15C /* Pods-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosUITests/Pods-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -5422,7 +5487,9 @@
 				01526F191EC0F99B00D42000 /* libiconv.tbd in Frameworks */,
 				6342C9D71DC6A3540060BE83 /* UIKit.framework in Frameworks */,
 				63931C2B1EEFFCE100544DB1 /* JSR305.framework in Frameworks */,
+				ED9154D41F463C7C00DCADC8 /* JUnit.framework in Frameworks */,
 				013AA6BE1F38EF8300C91182 /* JavaxInject.framework in Frameworks */,
+				ED9154D61F463CF900DCADC8 /* Mockito.framework in Frameworks */,
 				6342C9D51DC6A34E0060BE83 /* JRE.framework in Frameworks */,
 				07CCD3CE27FF018D46925D26 /* Pods_dcframework.framework in Frameworks */,
 			);
@@ -8231,6 +8298,8 @@
 		2AAED8C9B01D04A8C89A3D0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED9154D51F463CF900DCADC8 /* Mockito.framework */,
+				ED9154D31F463C7C00DCADC8 /* JUnit.framework */,
 				013AA6BC1F38EF3600C91182 /* JavaxInject.framework */,
 				63931C2A1EEFFCE100544DB1 /* JSR305.framework */,
 				01526F181EC0F99B00D42000 /* libiconv.tbd */,
@@ -8329,6 +8398,7 @@
 		6342B6AE1DC6A18A0060BE83 /* dcframework */ = {
 			isa = PBXGroup;
 			children = (
+				ED9154951F462DEB00DCADC8 /* generatedTests */,
 				013AE4371F3A3D6400C91182 /* generated */,
 				6342B6AF1DC6A18A0060BE83 /* dcframework.h */,
 				6342B6B01DC6A18A0060BE83 /* Info.plist */,
@@ -8360,6 +8430,51 @@
 				F7B0B04A58CF9690A7D7E15C /* Pods-iosUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		ED9154951F462DEB00DCADC8 /* generatedTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED9154961F462DEB00DCADC8 /* co_doppl_lib_androidbasetest_0_8_1_0 */,
+				ED9154AB1F462DEB00DCADC8 /* DINTFindUserInteractorTest.h */,
+				ED9154AC1F462DEB00DCADC8 /* DINTFindUserInteractorTest.m */,
+				ED9154AD1F462DEB00DCADC8 /* DINTOneTest.h */,
+				ED9154AE1F462DEB00DCADC8 /* DINTOneTest.m */,
+				ED9154AF1F462DEB00DCADC8 /* DINTRxTrampolineSchedulerRule.h */,
+				ED9154B01F462DEB00DCADC8 /* DINTRxTrampolineSchedulerRule.m */,
+				ED9154B11F462DEB00DCADC8 /* DINTUserDetailViewModelTest.h */,
+				ED9154B21F462DEB00DCADC8 /* DINTUserDetailViewModelTest.m */,
+				ED9154B31F462DEB00DCADC8 /* dopplTests.txt */,
+				ED9154B41F462DEB00DCADC8 /* prefixes.properties */,
+			);
+			path = generatedTests;
+			sourceTree = "<group>";
+		};
+		ED9154961F462DEB00DCADC8 /* co_doppl_lib_androidbasetest_0_8_1_0 */ = {
+			isa = PBXGroup;
+			children = (
+				ED9154971F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplContextDelegateTestRunner.h */,
+				ED9154981F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplContextDelegateTestRunner.m */,
+				ED9154991F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplHacks.h */,
+				ED91549A1F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplHacks.m */,
+				ED91549B1F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplIosContextTestRunner.h */,
+				ED91549C1F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplIosContextTestRunner.m */,
+				ED91549D1F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplJunitTestHelper.h */,
+				ED91549E1F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplJunitTestHelper.m */,
+				ED91549F1F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplRuntimeEnvironment.h */,
+				ED9154A01F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplRuntimeEnvironment.m */,
+				ED9154A11F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplTest.h */,
+				ED9154A21F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplTest.m */,
+				ED9154A31F462DEB00DCADC8 /* CoTouchlabDopplTestingMockGen.h */,
+				ED9154A41F462DEB00DCADC8 /* CoTouchlabDopplTestingMockGen.m */,
+				ED9154A51F462DEB00DCADC8 /* CoTouchlabDopplTestingTestingContext.h */,
+				ED9154A61F462DEB00DCADC8 /* CoTouchlabDopplTestingTestingContext.m */,
+				ED9154A71F462DEB00DCADC8 /* CoTouchlabDopplUtilsPlatformUtils.h */,
+				ED9154A81F462DEB00DCADC8 /* CoTouchlabDopplUtilsPlatformUtils.m */,
+				ED9154A91F462DEB00DCADC8 /* CoTouchlabDopplUtilsXcodeUtils.h */,
+				ED9154AA1F462DEB00DCADC8 /* CoTouchlabDopplUtilsXcodeUtils.m */,
+			);
+			path = co_doppl_lib_androidbasetest_0_8_1_0;
 			sourceTree = "<group>";
 		};
 		FA258F5F1C937F4100986E0D /* Views */ = {
@@ -8408,6 +8523,7 @@
 				013AEEB81F3A3D7800C91182 /* AndroidArchPersistenceRoomColumnInfo.h in Headers */,
 				013AF3901F3A3D7B00C91182 /* IoReactivexInternalOperatorsMaybeMaybeCallbackObserver.h in Headers */,
 				013AF16E1F3A3D7A00C91182 /* IoReactivexExceptionsProtocolViolationException.h in Headers */,
+				ED9154C91F462DEC00DCADC8 /* DINTFindUserInteractorTest.h in Headers */,
 				013AF09A1F3A3D7900C91182 /* Retrofit2AdapterRxjava2Result.h in Headers */,
 				013AF0681F3A3D7900C91182 /* Okhttp3InternalPlatformOptionalMethod.h in Headers */,
 				013AF4D41F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableScalarXMap.h in Headers */,
@@ -8484,6 +8600,7 @@
 				013AEF461F3A3D7900C91182 /* ComGoogleGsonInternalBindTypeAdapterRuntimeTypeWrapper.h in Headers */,
 				013AF3A21F3A3D7B00C91182 /* IoReactivexInternalOperatorsMaybeMaybeDelayOtherPublisher.h in Headers */,
 				013AF4221F3A3D7B00C91182 /* IoReactivexInternalOperatorsObservableObservableAllSingle.h in Headers */,
+				ED9154B51F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplContextDelegateTestRunner.h in Headers */,
 				013AF0421F3A3D7900C91182 /* Okhttp3InternalHttpCallServerInterceptor.h in Headers */,
 				013AEF4C1F3A3D7900C91182 /* ComGoogleGsonInternalConstructorConstructor.h in Headers */,
 				013AF6301F3A3D7D00C91182 /* IoReactivexInternalUtilSuppressAnimalSniffer.h in Headers */,
@@ -8588,6 +8705,7 @@
 				013AF0601F3A3D7900C91182 /* Okhttp3InternalNamedRunnable.h in Headers */,
 				013AF3EE1F3A3D7B00C91182 /* IoReactivexInternalOperatorsMaybeMaybeOnErrorComplete.h in Headers */,
 				013AF89A1F3A3D8000C91182 /* DPRESUserDetailHost.h in Headers */,
+				ED9154B91F462DEC00DCADC8 /* CoTouchlabDopplTestingDopplIosContextTestRunner.h in Headers */,
 				013AF6161F3A3D7D00C91182 /* IoReactivexInternalUtilExceptionHelper.h in Headers */,
 				013AEFB01F3A3D7900C91182 /* DaggerInternalSetFactory.h in Headers */,
 				013AF19C1F3A3D7A00C91182 /* IoReactivexFunctionsFunction7.h in Headers */,
@@ -8640,11 +8758,13 @@
 				013AF7E31F3A3D7F00C91182 /* UtilsUnicode.h in Headers */,
 				013AF6CC1F3A3D7E00C91182 /* IoReactivexSubscribersTestSubscriber.h in Headers */,
 				013AF2921F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableConcatMapPublisher.h in Headers */,
+				ED9154C11F462DEC00DCADC8 /* CoTouchlabDopplTestingMockGen.h in Headers */,
 				013AF49C1F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableJust.h in Headers */,
 				013AEF6E1F3A3D7900C91182 /* ComGoogleGsonJsonObject.h in Headers */,
 				013AF71C1F3A3D7E00C91182 /* AndroidDatabaseSqliteSQLiteAccessPermException.h in Headers */,
 				013AEED61F3A3D7900C91182 /* AndroidArchPersistenceRoomRoomWarnings.h in Headers */,
 				013AF6F01F3A3D7E00C91182 /* AndroidDatabaseCharArrayBuffer.h in Headers */,
+				ED9154C31F462DEC00DCADC8 /* CoTouchlabDopplTestingTestingContext.h in Headers */,
 				013AF4841F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableFromPublisher.h in Headers */,
 				013AF1FE1F3A3D7A00C91182 /* IoReactivexInternalObserversFullArbiterObserver.h in Headers */,
 				013AF7141F3A3D7E00C91182 /* AndroidDatabaseObservable.h in Headers */,
@@ -8808,6 +8928,7 @@
 				013AF3BC1F3A3D7B00C91182 /* IoReactivexInternalOperatorsMaybeMaybeFlatMapBiSelector.h in Headers */,
 				013AF3EC1F3A3D7B00C91182 /* IoReactivexInternalOperatorsMaybeMaybeObserveOn.h in Headers */,
 				013AF5B41F3A3D7D00C91182 /* IoReactivexInternalSchedulersIoScheduler.h in Headers */,
+				ED9154CF1F462DEC00DCADC8 /* DINTUserDetailViewModelTest.h in Headers */,
 				013AF4821F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableFromIterable.h in Headers */,
 				013AF38E1F3A3D7B00C91182 /* IoReactivexInternalOperatorsMaybeMaybeCache.h in Headers */,
 				013AF0DE1F3A3D7900C91182 /* Retrofit2HttpPOST.h in Headers */,
@@ -9016,6 +9137,7 @@
 				013AF4C41F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableRepeatUntil.h in Headers */,
 				013AF6BC1F3A3D7E00C91182 /* IoReactivexSubjectsSubject.h in Headers */,
 				013AF3B81F3A3D7B00C91182 /* IoReactivexInternalOperatorsMaybeMaybeFilter.h in Headers */,
+				ED9154BF1F462DEC00DCADC8 /* CoTouchlabDopplTestingDopplTest.h in Headers */,
 				013AF5681F3A3D7C00C91182 /* IoReactivexInternalOperatorsSingleSingleDoOnSubscribe.h in Headers */,
 				013AF7F81F3A3D7F00C91182 /* DDAGAppModule_ProvidesApplicationFactory.h in Headers */,
 				013AF3261F3A3D7B00C91182 /* IoReactivexInternalOperatorsFlowableFlowableRepeatWhen.h in Headers */,
@@ -9070,6 +9192,7 @@
 				013AF1261F3A3D7900C91182 /* IoReactivexAndroidSchedulersAndroidSchedulers.h in Headers */,
 				013AEEAC1F3A3D7800C91182 /* AndroidArchLifecycleViewModelProvider.h in Headers */,
 				013AEEE01F3A3D7900C91182 /* AndroidArchPersistenceRoomDatabaseConfiguration.h in Headers */,
+				ED9154BD1F462DEC00DCADC8 /* CoTouchlabDopplTestingDopplRuntimeEnvironment.h in Headers */,
 				013AF2E01F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableHide.h in Headers */,
 				013AF3561F3A3D7B00C91182 /* IoReactivexInternalOperatorsFlowableFlowableTake.h in Headers */,
 				013AF0801F3A3D7900C91182 /* Okhttp3Protocol.h in Headers */,
@@ -9092,6 +9215,7 @@
 				013AF6101F3A3D7D00C91182 /* IoReactivexInternalUtilConnectConsumer.h in Headers */,
 				013AF7981F3A3D7F00C91182 /* AndroidSupportAnnotationIntDef.h in Headers */,
 				013AF2A41F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableDematerialize.h in Headers */,
+				ED9154B71F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplHacks.h in Headers */,
 				013AF3B41F3A3D7B00C91182 /* IoReactivexInternalOperatorsMaybeMaybeError.h in Headers */,
 				013AF4D01F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableSampleTimed.h in Headers */,
 				013AF3DA1F3A3D7B00C91182 /* IoReactivexInternalOperatorsMaybeMaybeIgnoreElement.h in Headers */,
@@ -9138,6 +9262,7 @@
 				013AF0441F3A3D7900C91182 /* Okhttp3InternalHttpHttp1xStream.h in Headers */,
 				013AF4321F3A3D7B00C91182 /* IoReactivexInternalOperatorsObservableObservableBufferBoundarySupplier.h in Headers */,
 				013AF06C1F3A3D7900C91182 /* Okhttp3InternalTlsBasicCertificateChainCleaner.h in Headers */,
+				ED9154CB1F462DEC00DCADC8 /* DINTOneTest.h in Headers */,
 				013AF3D61F3A3D7B00C91182 /* IoReactivexInternalOperatorsMaybeMaybeFromSingle.h in Headers */,
 				013AEFAA1F3A3D7900C91182 /* DaggerInternalMembersInjectors.h in Headers */,
 				013AF5161F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableWindowBoundary.h in Headers */,
@@ -9168,12 +9293,14 @@
 				013AF86C1F3A3D8000C91182 /* DNETDUserInfoResponse.h in Headers */,
 				013AF5DC1F3A3D7D00C91182 /* IoReactivexInternalSubscribersFullArbiterSubscriber.h in Headers */,
 				013AF11A1F3A3D7900C91182 /* DeGreenrobotEventUtilAsyncExecutor.h in Headers */,
+				ED9154BB1F462DEC00DCADC8 /* CoTouchlabDopplTestingDopplJunitTestHelper.h in Headers */,
 				013AF0781F3A3D7900C91182 /* Okhttp3InternalVersion.h in Headers */,
 				013AF8781F3A3D8000C91182 /* DPRESAppManager.h in Headers */,
 				013AF1F21F3A3D7A00C91182 /* IoReactivexInternalObserversConsumerSingleObserver.h in Headers */,
 				013AF8121F3A3D7F00C91182 /* DDAGNetworkModule_ProvidesSponsorRequestFactory.h in Headers */,
 				013AF5AC1F3A3D7D00C91182 /* IoReactivexInternalSchedulersComputationScheduler.h in Headers */,
 				013AF0AC1F3A3D7900C91182 /* Retrofit2Call.h in Headers */,
+				ED9154CD1F462DEC00DCADC8 /* DINTRxTrampolineSchedulerRule.h in Headers */,
 				013AEFC61F3A3D7900C91182 /* DaggerMultibindingsIntoSet.h in Headers */,
 				013AEF101F3A3D7900C91182 /* ComGoogleGsonAnnotationsExpose.h in Headers */,
 				013AEF521F3A3D7900C91182 /* ComGoogleGsonInternalLazilyParsedNumber.h in Headers */,
@@ -9423,6 +9550,7 @@
 				013AF6381F3A3D7D00C91182 /* IoReactivexMaybeObserver.h in Headers */,
 				013AF6A81F3A3D7E00C91182 /* IoReactivexSingleTransformer.h in Headers */,
 				013AF2CA1F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableFlatMapSingle.h in Headers */,
+				ED9154C51F462DEC00DCADC8 /* CoTouchlabDopplUtilsPlatformUtils.h in Headers */,
 				013AF5861F3A3D7D00C91182 /* IoReactivexInternalOperatorsSingleSingleLift.h in Headers */,
 				013AF6A61F3A3D7E00C91182 /* IoReactivexSingleSource.h in Headers */,
 				013AEF401F3A3D7900C91182 /* ComGoogleGsonInternalBindReflectiveTypeAdapterFactory.h in Headers */,
@@ -9464,6 +9592,7 @@
 				013AF62A1F3A3D7D00C91182 /* IoReactivexInternalUtilQueueDrain.h in Headers */,
 				013AF46A1F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableEmpty.h in Headers */,
 				013AF80E1F3A3D7F00C91182 /* DDAGNetworkModule_ProvidesGsonConverterFactoryFactory.h in Headers */,
+				ED9154C71F462DEC00DCADC8 /* CoTouchlabDopplUtilsXcodeUtils.h in Headers */,
 				013AEF1A1F3A3D7900C91182 /* ComGoogleGsonAnnotationsUntil.h in Headers */,
 				013AF6B41F3A3D7E00C91182 /* IoReactivexSubjectsPublishSubject.h in Headers */,
 				013AF2B41F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableElementAt.h in Headers */,
@@ -9882,6 +10011,7 @@
 			files = (
 				013AF8B31F3A3DBA00C91182 /* prefixes.properties in Resources */,
 				639320311D77FF700047224B /* dataseeds in Resources */,
+				ED9154D71F463DB000DCADC8 /* dopplTests.txt in Resources */,
 				631B98FB1C7D6533008AA20D /* Assets.xcassets in Resources */,
 				FA6128C31C986E7A001142E8 /* EventTableViewCell.xib in Resources */,
 				631B98F91C7D6533008AA20D /* Main.storyboard in Resources */,
@@ -9907,7 +10037,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED9154D11F462DEC00DCADC8 /* dopplTests.txt in Resources */,
 				013AF8B01F3A3D8000C91182 /* prefixes.properties in Resources */,
+				ED9154D21F462DEC00DCADC8 /* prefixes.properties in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -10694,11 +10826,13 @@
 				013AF8931F3A3D8000C91182 /* DPRESScheduleDataViewModel_Factory_MembersInjector.m in Sources */,
 				013AF5F91F3A3D7D00C91182 /* IoReactivexInternalSubscriptionsDeferredScalarSubscription.m in Sources */,
 				013AEF631F3A3D7900C91182 /* ComGoogleGsonJsonArray.m in Sources */,
+				ED9154C21F462DEC00DCADC8 /* CoTouchlabDopplTestingMockGen.m in Sources */,
 				013AF8831F3A3D8000C91182 /* DPRESDaySchedule.m in Sources */,
 				013AF80B1F3A3D7F00C91182 /* DDAGNetworkModule_ProvidesDroidconRetrofitFactory.m in Sources */,
 				013AF0131F3A3D7900C91182 /* Okhttp3InternalConnectionConnectionSpecSelector.m in Sources */,
 				013AF1611F3A3D7A00C91182 /* IoReactivexDisposablesSubscriptionDisposable.m in Sources */,
 				013AF38D1F3A3D7B00C91182 /* IoReactivexInternalOperatorsMaybeMaybeAmb.m in Sources */,
+				ED9154C41F462DEC00DCADC8 /* CoTouchlabDopplTestingTestingContext.m in Sources */,
 				013AEFD91F3A3D7900C91182 /* Okhttp3Address.m in Sources */,
 				013AF0C31F3A3D7900C91182 /* Retrofit2HttpFormUrlEncoded.m in Sources */,
 				013AF5B71F3A3D7D00C91182 /* IoReactivexInternalSchedulersNewThreadScheduler.m in Sources */,
@@ -10762,6 +10896,7 @@
 				013AF7691F3A3D7F00C91182 /* AndroidNetUri.m in Sources */,
 				013AEF431F3A3D7900C91182 /* ComGoogleGsonInternalBindSqlDateTypeAdapter.m in Sources */,
 				013AF0C71F3A3D7900C91182 /* Retrofit2HttpHEAD.m in Sources */,
+				ED9154CA1F462DEC00DCADC8 /* DINTFindUserInteractorTest.m in Sources */,
 				013AF4A31F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableLift.m in Sources */,
 				013AF4A11F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableLastSingle.m in Sources */,
 				013AF8251F3A3D7F00C91182 /* DDATAppPrefs.m in Sources */,
@@ -10788,6 +10923,7 @@
 				013AF6C91F3A3D7E00C91182 /* IoReactivexSubscribersSafeSubscriber.m in Sources */,
 				013AF0CD1F3A3D7900C91182 /* Retrofit2HttpHeaders.m in Sources */,
 				013AF25B1F3A3D7A00C91182 /* IoReactivexInternalOperatorsCompletableCompletableToObservable.m in Sources */,
+				ED9154BA1F462DEC00DCADC8 /* CoTouchlabDopplTestingDopplIosContextTestRunner.m in Sources */,
 				013AF7171F3A3D7E00C91182 /* AndroidDatabaseSQLException.m in Sources */,
 				013AF7B71F3A3D7F00C91182 /* AndroidUtilJsonToken.m in Sources */,
 				013AF4291F3A3D7B00C91182 /* IoReactivexInternalOperatorsObservableObservableAnySingle.m in Sources */,
@@ -10860,6 +10996,7 @@
 				013AEEBD1F3A3D7900C91182 /* AndroidArchPersistenceRoomDatabase.m in Sources */,
 				013AF4CB1F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableRetryBiPredicate.m in Sources */,
 				013AF2951F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableCount.m in Sources */,
+				ED9154B61F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplContextDelegateTestRunner.m in Sources */,
 				013AF3CB1F3A3D7B00C91182 /* IoReactivexInternalOperatorsMaybeMaybeFlatten.m in Sources */,
 				013AF89B1F3A3D8000C91182 /* DPRESUserDetailHost.m in Sources */,
 				013AF5CF1F3A3D7D00C91182 /* IoReactivexInternalSubscribersBasicFuseableSubscriber.m in Sources */,
@@ -10873,6 +11010,7 @@
 				013AEFD51F3A3D7900C91182 /* DaggerReusable.m in Sources */,
 				013AEFCF1F3A3D7900C91182 /* DaggerMultibindingsStringKey.m in Sources */,
 				013AF2411F3A3D7A00C91182 /* IoReactivexInternalOperatorsCompletableCompletableMergeArray.m in Sources */,
+				ED9154C81F462DEC00DCADC8 /* CoTouchlabDopplUtilsXcodeUtils.m in Sources */,
 				013AF1F91F3A3D7A00C91182 /* IoReactivexInternalObserversDisposableLambdaObserver.m in Sources */,
 				013AF22F1F3A3D7A00C91182 /* IoReactivexInternalOperatorsCompletableCompletableFromCallable.m in Sources */,
 				013AF3751F3A3D7B00C91182 /* IoReactivexInternalOperatorsFlowableFlowableUnsubscribeOn.m in Sources */,
@@ -10893,6 +11031,7 @@
 				013AF4CF1F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableRetryWhen.m in Sources */,
 				013AF45B1F3A3D7B00C91182 /* IoReactivexInternalOperatorsObservableObservableDistinctUntilChanged.m in Sources */,
 				013AF8011F3A3D7F00C91182 /* DDAGDroidconServer.m in Sources */,
+				ED9154CE1F462DEC00DCADC8 /* DINTRxTrampolineSchedulerRule.m in Sources */,
 				013AF8911F3A3D8000C91182 /* DPRESScheduleDataViewModel.m in Sources */,
 				013AF2A11F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableDelay.m in Sources */,
 				013AF2791F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableBuffer.m in Sources */,
@@ -10987,6 +11126,7 @@
 				013AF8351F3A3D8000C91182 /* DDATEventInfo.m in Sources */,
 				013AF5231F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableZip.m in Sources */,
 				013AF2B51F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableElementAt.m in Sources */,
+				ED9154C01F462DEC00DCADC8 /* CoTouchlabDopplTestingDopplTest.m in Sources */,
 				013AF3B51F3A3D7B00C91182 /* IoReactivexInternalOperatorsMaybeMaybeError.m in Sources */,
 				013AF0311F3A3D7900C91182 /* Okhttp3InternalFramedHuffman.m in Sources */,
 				013AF6131F3A3D7D00C91182 /* IoReactivexInternalUtilEmptyComponent.m in Sources */,
@@ -11102,6 +11242,7 @@
 				013AF2011F3A3D7A00C91182 /* IoReactivexInternalObserversFutureObserver.m in Sources */,
 				013AF7371F3A3D7E00C91182 /* AndroidDatabaseSqliteSQLiteDatabaseCorruptException.m in Sources */,
 				013AF76F1F3A3D7F00C91182 /* AndroidOsBundle.m in Sources */,
+				ED9154BE1F462DEC00DCADC8 /* CoTouchlabDopplTestingDopplRuntimeEnvironment.m in Sources */,
 				013AF4E11F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableSingleMaybe.m in Sources */,
 				013AF7071F3A3D7E00C91182 /* AndroidDatabaseDatabaseErrorHandler.m in Sources */,
 				013AF3171F3A3D7B00C91182 /* IoReactivexInternalOperatorsFlowableFlowableRangeLong.m in Sources */,
@@ -11129,6 +11270,7 @@
 				013AF30F1F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableOnErrorReturn.m in Sources */,
 				013AF7331F3A3D7E00C91182 /* AndroidDatabaseSqliteSQLiteDatabase.m in Sources */,
 				013AF5471F3A3D7C00C91182 /* IoReactivexInternalOperatorsParallelParallelSortedJoin.m in Sources */,
+				ED9154D01F462DEC00DCADC8 /* DINTUserDetailViewModelTest.m in Sources */,
 				013AF1ED1F3A3D7A00C91182 /* IoReactivexInternalObserversBlockingMultiObserver.m in Sources */,
 				013AF2251F3A3D7A00C91182 /* IoReactivexInternalOperatorsCompletableCompletableDoOnEvent.m in Sources */,
 				013AF2EF1F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableJust.m in Sources */,
@@ -11238,6 +11380,7 @@
 				013AEF791F3A3D7900C91182 /* ComGoogleGsonJsonSerializer.m in Sources */,
 				013AEFD31F3A3D7900C91182 /* DaggerProvides.m in Sources */,
 				013AEEBB1F3A3D7800C91182 /* AndroidArchPersistenceRoomDao.m in Sources */,
+				ED9154BC1F462DEC00DCADC8 /* CoTouchlabDopplTestingDopplJunitTestHelper.m in Sources */,
 				013AEFDF1F3A3D7900C91182 /* Okhttp3CacheControl.m in Sources */,
 				013AEFCB1F3A3D7900C91182 /* DaggerMultibindingsMultibinds.m in Sources */,
 				013AF8651F3A3D8000C91182 /* DNETDJustId.m in Sources */,
@@ -11309,6 +11452,7 @@
 				013AEFC71F3A3D7900C91182 /* DaggerMultibindingsIntoSet.m in Sources */,
 				013AF0531F3A3D7900C91182 /* Okhttp3InternalHttpRealResponseBody.m in Sources */,
 				013AF1B31F3A3D7A00C91182 /* IoReactivexInternalDisposablesEmptyDisposable.m in Sources */,
+				ED9154B81F462DEB00DCADC8 /* CoTouchlabDopplTestingDopplHacks.m in Sources */,
 				013AF1A11F3A3D7A00C91182 /* IoReactivexFunctionsFunction9.m in Sources */,
 				013AF66B1F3A3D7D00C91182 /* IoReactivexObserversResourceObserver.m in Sources */,
 				013AF19F1F3A3D7A00C91182 /* IoReactivexFunctionsFunction8.m in Sources */,
@@ -11352,6 +11496,7 @@
 				013AF4DD1F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableSequenceEqualSingle.m in Sources */,
 				013AEFE11F3A3D7900C91182 /* Okhttp3Call.m in Sources */,
 				013AF14B1F3A3D7900C91182 /* IoReactivexCompletableSource.m in Sources */,
+				ED9154C61F462DEC00DCADC8 /* CoTouchlabDopplUtilsPlatformUtils.m in Sources */,
 				013AF0231F3A3D7900C91182 /* Okhttp3InternalFramedFramedStream.m in Sources */,
 				013AF5DD1F3A3D7D00C91182 /* IoReactivexInternalSubscribersFullArbiterSubscriber.m in Sources */,
 				013AF23B1F3A3D7A00C91182 /* IoReactivexInternalOperatorsCompletableCompletableHide.m in Sources */,
@@ -11557,6 +11702,7 @@
 				013AF4711F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableFlatMap.m in Sources */,
 				013AEF3D1F3A3D7900C91182 /* ComGoogleGsonInternalBindMapTypeAdapterFactory.m in Sources */,
 				013AF5BF1F3A3D7D00C91182 /* IoReactivexInternalSchedulersScheduledDirectPeriodicTask.m in Sources */,
+				ED9154CC1F462DEC00DCADC8 /* DINTOneTest.m in Sources */,
 				013AF26D1F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableAllSingle.m in Sources */,
 				013AF63F1F3A3D7D00C91182 /* IoReactivexMaybeSource.m in Sources */,
 				FBB8D91A1F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m in Sources */,
@@ -11924,7 +12070,9 @@
 					"$(J2OBJC_LOCAL_PATH)/frameworks/JRE.framework/Headers",
 					"$(PROJECT_DIR)",
 					"$(J2OBJC_LOCAL_PATH)/frameworks/JSR305.framework/Headers",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/JUnit.framework/Headers",
 					"$(J2OBJC_LOCAL_PATH)/frameworks/JavaxInject.framework/Headers",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/Mockito.framework/Headers",
 				);
 				INFOPLIST_FILE = dcframework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -11970,7 +12118,9 @@
 					"$(J2OBJC_LOCAL_PATH)/frameworks/JRE.framework/Headers",
 					"$(PROJECT_DIR)",
 					"$(J2OBJC_LOCAL_PATH)/frameworks/JSR305.framework/Headers",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/JUnit.framework/Headers",
 					"$(J2OBJC_LOCAL_PATH)/frameworks/JavaxInject.framework/Headers",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/Mockito.framework/Headers",
 				);
 				INFOPLIST_FILE = dcframework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

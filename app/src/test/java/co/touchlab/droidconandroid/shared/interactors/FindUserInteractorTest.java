@@ -3,9 +3,8 @@ package co.touchlab.droidconandroid.shared.interactors;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.MockitoAnnotations;
 
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data.UserAccount;
@@ -20,11 +19,8 @@ import io.reactivex.Single;
 import static org.mockito.Matchers.anyInt;
 import static org.mockito.Matchers.anyLong;
 import static org.mockito.Matchers.anyObject;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-@RunWith(MockitoJUnitRunner.class)
 public class FindUserInteractorTest
 {
     @Rule
@@ -43,6 +39,7 @@ public class FindUserInteractorTest
     @Before
     public void setUp() throws Exception
     {
+        MockitoAnnotations.initMocks(this);
         interactor = new FindUserInteractor(helper, request);
         response = new UserInfoResponse();
         response.user = new NetworkUserAccount();
