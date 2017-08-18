@@ -6,7 +6,6 @@
 #include "DDATUserAccount.h"
 #include "DINTFindUserInteractor.h"
 #include "DINTFindUserInteractorTest.h"
-#include "DINTRxTrampolineSchedulerRule.h"
 #include "DNETDNetworkUserAccount.h"
 #include "DNETDUserInfoResponse.h"
 #include "DNETFindUserRequest.h"
@@ -19,7 +18,6 @@
 #include "J2ObjC_source.h"
 #include "java/lang/annotation/Annotation.h"
 #include "org/junit/Before.h"
-#include "org/junit/Rule.h"
 #include "org/junit/Test.h"
 #include "org/mockito/Answers.h"
 #include "org/mockito/Matchers.h"
@@ -52,8 +50,6 @@ __attribute__((unused)) static IOSObjectArray *DINTFindUserInteractorTest__Annot
 __attribute__((unused)) static IOSObjectArray *DINTFindUserInteractorTest__Annotations$4();
 
 __attribute__((unused)) static IOSObjectArray *DINTFindUserInteractorTest__Annotations$5();
-
-__attribute__((unused)) static IOSObjectArray *DINTFindUserInteractorTest__Annotations$6();
 
 @implementation DINTFindUserInteractorTest
 
@@ -94,7 +90,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 - (void)dealloc {
-  RELEASE_(schedulerRule_);
   RELEASE_(helper_);
   RELEASE_(request_);
   RELEASE_(interactor_);
@@ -120,15 +115,14 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[4].selector = @selector(whenNetworkAndDatabaseError_ShouldError);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "schedulerRule_", "LDINTRxTrampolineSchedulerRule;", .constantValue.asLong = 0, 0x11, -1, -1, -1, 5 },
-    { "helper_", "LDDATDatabaseHelper;", .constantValue.asLong = 0, 0x0, -1, -1, -1, 6 },
-    { "request_", "LDNETFindUserRequest;", .constantValue.asLong = 0, 0x0, -1, -1, -1, 7 },
+    { "helper_", "LDDATDatabaseHelper;", .constantValue.asLong = 0, 0x0, -1, -1, -1, 5 },
+    { "request_", "LDNETFindUserRequest;", .constantValue.asLong = 0, 0x0, -1, -1, -1, 6 },
     { "interactor_", "LDINTFindUserInteractor;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "response_", "LDNETDUserInfoResponse;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "user_", "LDDATUserAccount;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LJavaLangException;", (void *)&DINTFindUserInteractorTest__Annotations$0, (void *)&DINTFindUserInteractorTest__Annotations$1, (void *)&DINTFindUserInteractorTest__Annotations$2, (void *)&DINTFindUserInteractorTest__Annotations$3, (void *)&DINTFindUserInteractorTest__Annotations$4, (void *)&DINTFindUserInteractorTest__Annotations$5, (void *)&DINTFindUserInteractorTest__Annotations$6 };
-  static const J2ObjcClassInfo _DINTFindUserInteractorTest = { "FindUserInteractorTest", "co.touchlab.droidconandroid.shared.interactors", ptrTable, methods, fields, 7, 0x1, 5, 6, -1, -1, -1, -1, -1 };
+  static const void *ptrTable[] = { "LJavaLangException;", (void *)&DINTFindUserInteractorTest__Annotations$0, (void *)&DINTFindUserInteractorTest__Annotations$1, (void *)&DINTFindUserInteractorTest__Annotations$2, (void *)&DINTFindUserInteractorTest__Annotations$3, (void *)&DINTFindUserInteractorTest__Annotations$4, (void *)&DINTFindUserInteractorTest__Annotations$5 };
+  static const J2ObjcClassInfo _DINTFindUserInteractorTest = { "FindUserInteractorTest", "co.touchlab.droidconandroid.shared.interactors", ptrTable, methods, fields, 7, 0x1, 5, 5, -1, -1, -1, -1, -1 };
   return &_DINTFindUserInteractorTest;
 }
 
@@ -136,7 +130,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 void DINTFindUserInteractorTest_init(DINTFindUserInteractorTest *self) {
   NSObject_init(self);
-  JreStrongAssignAndConsume(&self->schedulerRule_, new_DINTRxTrampolineSchedulerRule_init());
 }
 
 DINTFindUserInteractorTest *new_DINTFindUserInteractorTest_init() {
@@ -164,14 +157,10 @@ IOSObjectArray *DINTFindUserInteractorTest__Annotations$3() {
 }
 
 IOSObjectArray *DINTFindUserInteractorTest__Annotations$4() {
-  return [IOSObjectArray arrayWithObjects:(id[]){ create_OrgJunitRule() } count:1 type:JavaLangAnnotationAnnotation_class_()];
-}
-
-IOSObjectArray *DINTFindUserInteractorTest__Annotations$5() {
   return [IOSObjectArray arrayWithObjects:(id[]){ create_OrgMockitoMock(JreLoadEnum(OrgMockitoAnswers, RETURNS_DEFAULTS), [IOSObjectArray arrayWithLength:0 type:IOSClass_class_()], @"") } count:1 type:JavaLangAnnotationAnnotation_class_()];
 }
 
-IOSObjectArray *DINTFindUserInteractorTest__Annotations$6() {
+IOSObjectArray *DINTFindUserInteractorTest__Annotations$5() {
   return [IOSObjectArray arrayWithObjects:(id[]){ create_OrgMockitoMock(JreLoadEnum(OrgMockitoAnswers, RETURNS_DEFAULTS), [IOSObjectArray arrayWithLength:0 type:IOSClass_class_()], @"") } count:1 type:JavaLangAnnotationAnnotation_class_()];
 }
 

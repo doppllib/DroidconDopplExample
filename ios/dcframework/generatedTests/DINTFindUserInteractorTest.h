@@ -16,12 +16,10 @@
 #define DINTFindUserInteractorTest_
 
 @class DDATDatabaseHelper;
-@class DINTRxTrampolineSchedulerRule;
 @protocol DNETFindUserRequest;
 
 @interface DINTFindUserInteractorTest : NSObject {
  @public
-  DINTRxTrampolineSchedulerRule *schedulerRule_;
   DDATDatabaseHelper *helper_;
   id<DNETFindUserRequest> request_;
 }
@@ -42,7 +40,6 @@
 
 J2OBJC_EMPTY_STATIC_INIT(DINTFindUserInteractorTest)
 
-J2OBJC_FIELD_SETTER(DINTFindUserInteractorTest, schedulerRule_, DINTRxTrampolineSchedulerRule *)
 J2OBJC_FIELD_SETTER(DINTFindUserInteractorTest, helper_, DDATDatabaseHelper *)
 J2OBJC_FIELD_SETTER(DINTFindUserInteractorTest, request_, id<DNETFindUserRequest>)
 

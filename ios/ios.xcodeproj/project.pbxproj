@@ -2673,8 +2673,6 @@
 		ED9154CA1F462DEC00DCADC8 /* DINTFindUserInteractorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9154AC1F462DEB00DCADC8 /* DINTFindUserInteractorTest.m */; };
 		ED9154CB1F462DEC00DCADC8 /* DINTOneTest.h in Headers */ = {isa = PBXBuildFile; fileRef = ED9154AD1F462DEB00DCADC8 /* DINTOneTest.h */; };
 		ED9154CC1F462DEC00DCADC8 /* DINTOneTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9154AE1F462DEB00DCADC8 /* DINTOneTest.m */; };
-		ED9154CD1F462DEC00DCADC8 /* DINTRxTrampolineSchedulerRule.h in Headers */ = {isa = PBXBuildFile; fileRef = ED9154AF1F462DEB00DCADC8 /* DINTRxTrampolineSchedulerRule.h */; };
-		ED9154CE1F462DEC00DCADC8 /* DINTRxTrampolineSchedulerRule.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9154B01F462DEB00DCADC8 /* DINTRxTrampolineSchedulerRule.m */; };
 		ED9154CF1F462DEC00DCADC8 /* DINTUserDetailViewModelTest.h in Headers */ = {isa = PBXBuildFile; fileRef = ED9154B11F462DEB00DCADC8 /* DINTUserDetailViewModelTest.h */; };
 		ED9154D01F462DEC00DCADC8 /* DINTUserDetailViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9154B21F462DEB00DCADC8 /* DINTUserDetailViewModelTest.m */; };
 		ED9154D11F462DEC00DCADC8 /* dopplTests.txt in Resources */ = {isa = PBXBuildFile; fileRef = ED9154B31F462DEB00DCADC8 /* dopplTests.txt */; };
@@ -5438,8 +5436,6 @@
 		ED9154AC1F462DEB00DCADC8 /* DINTFindUserInteractorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DINTFindUserInteractorTest.m; sourceTree = "<group>"; };
 		ED9154AD1F462DEB00DCADC8 /* DINTOneTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DINTOneTest.h; sourceTree = "<group>"; };
 		ED9154AE1F462DEB00DCADC8 /* DINTOneTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DINTOneTest.m; sourceTree = "<group>"; };
-		ED9154AF1F462DEB00DCADC8 /* DINTRxTrampolineSchedulerRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DINTRxTrampolineSchedulerRule.h; sourceTree = "<group>"; };
-		ED9154B01F462DEB00DCADC8 /* DINTRxTrampolineSchedulerRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DINTRxTrampolineSchedulerRule.m; sourceTree = "<group>"; };
 		ED9154B11F462DEB00DCADC8 /* DINTUserDetailViewModelTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DINTUserDetailViewModelTest.h; sourceTree = "<group>"; };
 		ED9154B21F462DEB00DCADC8 /* DINTUserDetailViewModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DINTUserDetailViewModelTest.m; sourceTree = "<group>"; };
 		ED9154B31F462DEB00DCADC8 /* dopplTests.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dopplTests.txt; sourceTree = "<group>"; };
@@ -8470,8 +8466,6 @@
 				ED9154AC1F462DEB00DCADC8 /* DINTFindUserInteractorTest.m */,
 				ED9154AD1F462DEB00DCADC8 /* DINTOneTest.h */,
 				ED9154AE1F462DEB00DCADC8 /* DINTOneTest.m */,
-				ED9154AF1F462DEB00DCADC8 /* DINTRxTrampolineSchedulerRule.h */,
-				ED9154B01F462DEB00DCADC8 /* DINTRxTrampolineSchedulerRule.m */,
 				ED9154B11F462DEB00DCADC8 /* DINTUserDetailViewModelTest.h */,
 				ED9154B21F462DEB00DCADC8 /* DINTUserDetailViewModelTest.m */,
 				ED9154B31F462DEB00DCADC8 /* dopplTests.txt */,
@@ -9332,7 +9326,6 @@
 				013AF8121F3A3D7F00C91182 /* DDAGNetworkModule_ProvidesSponsorRequestFactory.h in Headers */,
 				013AF5AC1F3A3D7D00C91182 /* IoReactivexInternalSchedulersComputationScheduler.h in Headers */,
 				013AF0AC1F3A3D7900C91182 /* Retrofit2Call.h in Headers */,
-				ED9154CD1F462DEC00DCADC8 /* DINTRxTrampolineSchedulerRule.h in Headers */,
 				013AEFC61F3A3D7900C91182 /* DaggerMultibindingsIntoSet.h in Headers */,
 				013AEF101F3A3D7900C91182 /* ComGoogleGsonAnnotationsExpose.h in Headers */,
 				013AEF521F3A3D7900C91182 /* ComGoogleGsonInternalLazilyParsedNumber.h in Headers */,
@@ -11067,7 +11060,6 @@
 				013AF4CF1F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableRetryWhen.m in Sources */,
 				013AF45B1F3A3D7B00C91182 /* IoReactivexInternalOperatorsObservableObservableDistinctUntilChanged.m in Sources */,
 				013AF8011F3A3D7F00C91182 /* DDAGDroidconServer.m in Sources */,
-				ED9154CE1F462DEC00DCADC8 /* DINTRxTrampolineSchedulerRule.m in Sources */,
 				013AF8911F3A3D8000C91182 /* DPRESScheduleDataViewModel.m in Sources */,
 				013AF2A11F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableDelay.m in Sources */,
 				013AF2791F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableBuffer.m in Sources */,
