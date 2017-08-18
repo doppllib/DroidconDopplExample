@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,7 +36,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gju-G3-1je" id="gPi-ye-4bF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oQ-BT-1py">
@@ -732,7 +731,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIs-iv-Rw5">
                                 <rect key="frame" x="-4" y="567" width="383" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="pIs-iv-Rw5" secondAttribute="height" multiplier="383:50" id="HLM-sv-QYi"/>
                                     <constraint firstAttribute="height" constant="50" id="HT6-YS-mPJ"/>
                                     <constraint firstAttribute="height" constant="50" id="teX-Uo-18a"/>
                                 </constraints>
@@ -887,7 +885,7 @@
         <image name="illo_welcome" width="360" height="360"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pVg-yj-H2O"/>
+        <segue reference="gpQ-ie-VS3"/>
         <segue reference="G8c-Yr-iby"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.066666666666666666" green="0.30196078431372547" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
