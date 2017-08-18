@@ -17,17 +17,11 @@ class ScheduleViewController : UIViewController, UITableViewDelegate, UITableVie
     
     // MARK: Properties
     var isDayTwo: Bool = false
-    var dateFormatter: DateFormatter!
-    var timeFormatter: DateFormatter!
     var hourBlocks: [DPRESHourBlock]!
     var conferenceDays: [DPRESDaySchedule]?
     
-    var track: Int!
-    var notesArray: [String]!
-    var imagesArray: [UIImageView]!
     var conferencePresenter: DPRESConferenceDataViewModel!
     var schedulePresenter: DPRESScheduleDataViewModel!
-    var notes: JavaUtilArrayList!
     var allEvents = true
   
     var hourBlocksArray : [DPRESHourBlock] {
@@ -36,10 +30,6 @@ class ScheduleViewController : UIViewController, UITableViewDelegate, UITableVie
         let index = isDayTwo ? 1 : 0
         if let days = conferenceDays, days.count > index, let objectArray = days[index].getHourHolders() {
             array.append(contentsOf: JavaUtils.convertiOSObjectArrayToArray(objArray: objectArray) as! [DPRESHourBlock])
-        }
-        if dateFormatter == nil {
-            dateFormatter = DateFormatter()
-            dateFormatter.dateFormat="hh:mma"
         }
         return array
     }
@@ -90,15 +80,6 @@ class ScheduleViewController : UIViewController, UITableViewDelegate, UITableVie
         tableView.reloadData()
     }
     
-    func loadImage(with imagePath: String) {
-        let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
-        let documentsDirectory = URL(fileURLWithPath: paths[0])
-        let path = documentsDirectory.appendingPathComponent(imagePath)
-        let image = UIImage(contentsOfFile: path.absoluteString)
-        let imageView = UIImageView(image: image)
-        imagesArray.append(imageView)
-    }
-    
     func loadCallback(withDPRESDayScheduleArray daySchedules: IOSObjectArray!) {
         hourBlocks = [DPRESHourBlock]()
         conferenceDays = JavaUtils.convertiOSObjectArrayToArray(objArray: daySchedules) as? [DPRESDaySchedule]
@@ -114,7 +95,6 @@ class ScheduleViewController : UIViewController, UITableViewDelegate, UITableVie
     }
     
     func showEventDetailView(with networkEvent: DDATTimeBlock, andIndex index: Int) {
-        track = index
         performSegue(withIdentifier: "ShowEventDetail", sender: networkEvent)
     }
     
@@ -137,7 +117,9 @@ class ScheduleViewController : UIViewController, UITableViewDelegate, UITableVie
         
         let eventObj = hourBlocks[indexPath.row].getTime()
         if let networkEvent = eventObj {
-            showEventDetailView(with: networkEvent, andIndex: indexPath.row)
+            if networkEvent is DDATEvent {
+                showEventDetailView(with: networkEvent, andIndex: indexPath.row)
+            }
         }
     }
     

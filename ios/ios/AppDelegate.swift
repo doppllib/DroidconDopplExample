@@ -140,11 +140,12 @@ extension AppDelegate : MessagingDelegate {
         sendNotification(content: content, trigger: trigger, notificationIdentifier: notificationIdentifier)
     }
     
-    func sendAlarmNotification(title: String, date: Date) {
+    func sendAlarmNotification(title: String, date: Date, eventId: String) {
         let content = UNMutableNotificationContent()
         content.title = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
         content.body = "The \(title) session is starting soon!"
         content.sound = UNNotificationSound.default()
+        content.userInfo = ["eventId": eventId]
         let triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second,], from: date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
         let notificationIdentifier = "eventNotification"
