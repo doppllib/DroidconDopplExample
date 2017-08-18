@@ -19,7 +19,9 @@ class SpeakerTableViewCell: UITableViewCell {
         nameLabel.text = name
         infoLabel.text = info//formatHTMLString(info)
         
-        speakerImage.kf.setImage(with: URL(string: imgUrl)!)
+        if (!imgUrl.isEmpty) {
+            speakerImage.kf.setImage(with: URL(string: imgUrl)!)
+        }
         speakerImage.layer.cornerRadius = 24
         speakerImage.layer.masksToBounds = true
         

@@ -11,62 +11,138 @@ import UserNotifications
 import JRE
 import UIKit
 import FirebaseAnalytics
+import FirebaseMessaging
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
- 
-    func applicationDidFinishLaunching(_ application: UIApplication) {
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         DopplRuntime.start()
-
-       // let bundlePath = Bundle.main.path(forResource: "rebundle", ofType: "bundle")!
-        //print("bundle path %@", bundlePath)
         
         let platformClient = DCIosPlatformClient(dcIosFirebase: self)
         let application = AndroidContentIOSContext()
-
+        
         let appComponent = DDAGDaggerAppComponent.builder().appModule(with: DDAGAppModule(androidAppApplication: application))
-        .databaseModule(with: DDAGDatabaseModule())
-        .networkModule(with: DDAGNetworkModule())
+            .databaseModule(with: DDAGDatabaseModule())
+            .networkModule(with: DDAGNetworkModule())
             .build()
-
+        
         DPRESAppManager.create(with: AndroidContentIOSContext(), with: platformClient, with: appComponent)
-
         DPRESAppManager.getInstance().seed(with: self);
-
-        //TODO currently no notifications, so hiding this
-        //registerForNotifications()
+        
+        FirebaseApp.configure()
+        Messaging.messaging().delegate = self
+        Messaging.messaging().shouldEstablishDirectChannel = true
+        registerForNotifications()
         print("Firebase Analytics test \(Analytics.appInstanceID())")
+        return true
     }
     
-    
     func registerForNotifications() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .sound, .alert]) {
-            accepted, error in
+        UNUserNotificationCenter.current().delegate = self
+        
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        UNUserNotificationCenter.current().requestAuthorization(options: authOptions, completionHandler: { accepted, error in
             if let error = error as NSError? {
-                if error.code == 3010 {
+                if accepted {
+                    print("Push notification permission granted")
+                } else if error.code == 3010 {
                     print("Push notifications are not supported in the iOS Simulator.", terminator: "")
                 } else {
-                    print("requestAuthorizationWithOptions failed with error: %@", error, terminator: "")
+                    print("RequestAuthorizationWithOptions failed with error: %@", error, terminator: "")
                 }
             }
             UIApplication.shared.registerForRemoteNotifications()
-        }
+        })
     }
     
+    // only called if "content_available" is set to true
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        let type = userInfo["type"] as! String
-        //check the type. networkEvent messages just open the app so dont need to the handled here.
-        if type == "updateSchedule" {
-            //CoTouchlabDroidconandroidSharedTasksPersistedRefreshScheduleData.callMe(with: AndroidContentIOSContext(()))
-            completionHandler(.newData)
-        } else {
-            completionHandler(.noData)
-        }
+        Messaging.messaging().appDidReceiveMessage(userInfo)
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Unable to register for remote notifications: \(error.localizedDescription)")
+    }
+
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print("APNs token retrieved: \(deviceToken)")
+        Messaging.messaging().apnsToken = deviceToken
+        Messaging.messaging().subscribe(toTopic: "/topics/all_2017")
+        Messaging.messaging().subscribe(toTopic: "/topics/ios_2017")
     }
 }
 
+extension AppDelegate : UNUserNotificationCenterDelegate {
+    // called when notification is sent
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        let data = notification.request.content.userInfo
+        Messaging.messaging().appDidReceiveMessage(data)
+        completionHandler([.alert, .badge, .sound])
+    }
+    
+    // called when notification is clicked on
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        let identifier = response.notification.request.identifier
+        let data = response.notification.request.content.userInfo
+        Messaging.messaging().appDidReceiveMessage(data)
+        
+        if identifier == "versionNotification" {
+            UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/us/app/droidcon-nyc-2016/id1155197664?mt=8")! as URL)
+        } else if data["type"] as? String == "event" {
+            if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EventDetail") as? EventDetailViewController {
+                if let window = self.window, let rootViewController = window.rootViewController {
+                    var currentController = rootViewController
+                    while let presentedController = currentController.presentedViewController {
+                        currentController = presentedController
+                    }
+                    let id = data["eventId"] as! String
+                    controller.eventId = jlong.init(id)
+                    currentController.present(controller, animated: true, completion: nil)
+                }
+            }
+        }
+        
+        completionHandler()
+    }
+}
+
+extension AppDelegate : MessagingDelegate {
+    func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
+        print("Firebase registration token: \(fcmToken)")
+    }
+   
+    // Receive data messages on iOS 10+ directly from FCM (bypassing APNs) when the app is in the foreground.
+    func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
+        print("Received direct data message: \(remoteMessage.appData)")
+        if let type = remoteMessage.appData["type"] as? String {
+            if (type == "updateSchedule") {
+                DPRESAppManager.getInstance().getAppComponent().refreshScheduleInteractor().refreshFromServer()
+            } else if (type == "version") {
+                let newVersion = remoteMessage.appData["versionCode"] as! String
+                let currentVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
+                if currentVersion < newVersion {
+                    sendVersionNotification()
+                }
+            }
+        }
+    }
+    
+    func sendVersionNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
+        content.body = "A new version of the app is now available!"
+        content.sound = UNNotificationSound.default()
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
+        let notificatoinIdentifier = "versionNotification"
+        let request = UNNotificationRequest(identifier: notificatoinIdentifier, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request) { (error) in
+            print("Notification error: \(error as Any)")
+        }
+    }
+}
 
 extension AppDelegate : DPRESLoadDataSeed {
     func dataSeed() -> String! {
@@ -75,8 +151,6 @@ extension AppDelegate : DPRESLoadDataSeed {
         }
         
         return nil
-        
-        
     }
 }
 
