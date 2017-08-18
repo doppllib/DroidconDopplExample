@@ -1,6 +1,5 @@
 package co.touchlab.droidconandroid.shared.dagger;
 
-import javax.inject.Named;
 import javax.inject.Singleton;
 
 import co.touchlab.droidconandroid.BuildConfig;
@@ -10,6 +9,9 @@ import co.touchlab.droidconandroid.shared.network.RsvpRequest;
 import co.touchlab.droidconandroid.shared.network.SponsorsRequest;
 import dagger.Module;
 import dagger.Provides;
+import io.reactivex.ObservableTransformer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -89,5 +91,12 @@ public class NetworkModule
     RsvpRequest providesRsvpRequest(@DroidconServer Retrofit retrofit)
     {
         return retrofit.create(RsvpRequest.class);
+    }
+
+    @Provides
+    ObservableTransformer providesTransformer()
+    {
+        return upstream -> upstream.subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
     }
 }

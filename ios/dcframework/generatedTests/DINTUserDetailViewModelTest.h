@@ -16,12 +16,10 @@
 #define DINTUserDetailViewModelTest_
 
 @class DINTFindUserInteractor;
-@class DINTRxTrampolineSchedulerRule;
 @protocol DPRESUserDetailHost;
 
 @interface DINTUserDetailViewModelTest : NSObject {
  @public
-  DINTRxTrampolineSchedulerRule *schedulerRule_;
   DINTFindUserInteractor *interactor_;
   id<DPRESUserDetailHost> host_;
 }
@@ -46,7 +44,6 @@
 
 J2OBJC_EMPTY_STATIC_INIT(DINTUserDetailViewModelTest)
 
-J2OBJC_FIELD_SETTER(DINTUserDetailViewModelTest, schedulerRule_, DINTRxTrampolineSchedulerRule *)
 J2OBJC_FIELD_SETTER(DINTUserDetailViewModelTest, interactor_, DINTFindUserInteractor *)
 J2OBJC_FIELD_SETTER(DINTUserDetailViewModelTest, host_, id<DPRESUserDetailHost>)
 

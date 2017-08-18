@@ -3,19 +3,21 @@
 //
 
 #include "DDATUserAccount.h"
+#include "DINTDaggerTestComponent.h"
 #include "DINTFindUserInteractor.h"
-#include "DINTRxTrampolineSchedulerRule.h"
+#include "DINTTestComponent.h"
+#include "DINTTestSchedulerModule.h"
 #include "DINTUserDetailViewModelTest.h"
 #include "DPRESUserDetailHost.h"
 #include "DPRESUserDetailViewModel.h"
 #include "IOSClass.h"
 #include "IOSObjectArray.h"
 #include "IoReactivexObservable.h"
+#include "IoReactivexObservableTransformer.h"
 #include "J2ObjC_source.h"
 #include "java/lang/annotation/Annotation.h"
 #include "org/junit/After.h"
 #include "org/junit/Before.h"
-#include "org/junit/Rule.h"
 #include "org/junit/Test.h"
 #include "org/mockito/Answers.h"
 #include "org/mockito/Matchers.h"
@@ -54,8 +56,6 @@ __attribute__((unused)) static IOSObjectArray *DINTUserDetailViewModelTest__Anno
 
 __attribute__((unused)) static IOSObjectArray *DINTUserDetailViewModelTest__Annotations$7();
 
-__attribute__((unused)) static IOSObjectArray *DINTUserDetailViewModelTest__Annotations$8();
-
 @implementation DINTUserDetailViewModelTest
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
@@ -67,7 +67,9 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)setUp {
   OrgMockitoMockitoAnnotations_initMocksWithId_(self);
-  JreStrongAssignAndConsume(&factory_, new_DPRESUserDetailViewModel_Factory_initWithDINTFindUserInteractor_(interactor_));
+  id<DINTTestComponent> component = [((DINTDaggerTestComponent_Builder *) nil_chk([((DINTDaggerTestComponent_Builder *) nil_chk(DINTDaggerTestComponent_builder())) testSchedulerModuleWithDINTTestSchedulerModule:create_DINTTestSchedulerModule_init()])) build];
+  id<IoReactivexObservableTransformer> transformer = [((id<DINTTestComponent>) nil_chk(component)) getTransformer];
+  JreStrongAssignAndConsume(&factory_, new_DPRESUserDetailViewModel_Factory_initWithDINTFindUserInteractor_withIoReactivexObservableTransformer_(interactor_, transformer));
   JreStrongAssign(&viewModel_, [factory_ createWithIOSClass:DPRESUserDetailViewModel_class_()]);
   [((DPRESUserDetailViewModel *) nil_chk(viewModel_)) register__WithDPRESUserDetailHost:host_];
 }
@@ -105,7 +107,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 }
 
 - (void)dealloc {
-  RELEASE_(schedulerRule_);
   RELEASE_(interactor_);
   RELEASE_(host_);
   RELEASE_(factory_);
@@ -135,15 +136,14 @@ J2OBJC_IGNORE_DESIGNATED_END
   methods[6].selector = @selector(whenErrorLoadingUser_ShouldNotCacheResult);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "schedulerRule_", "LDINTRxTrampolineSchedulerRule;", .constantValue.asLong = 0, 0x11, -1, -1, -1, 6 },
-    { "interactor_", "LDINTFindUserInteractor;", .constantValue.asLong = 0, 0x0, -1, -1, -1, 7 },
-    { "host_", "LDPRESUserDetailHost;", .constantValue.asLong = 0, 0x0, -1, -1, -1, 8 },
+    { "interactor_", "LDINTFindUserInteractor;", .constantValue.asLong = 0, 0x0, -1, -1, -1, 6 },
+    { "host_", "LDPRESUserDetailHost;", .constantValue.asLong = 0, 0x0, -1, -1, -1, 7 },
     { "factory_", "LDPRESUserDetailViewModel_Factory;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "viewModel_", "LDPRESUserDetailViewModel;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "user_", "LDDATUserAccount;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { (void *)&DINTUserDetailViewModelTest__Annotations$0, (void *)&DINTUserDetailViewModelTest__Annotations$1, (void *)&DINTUserDetailViewModelTest__Annotations$2, (void *)&DINTUserDetailViewModelTest__Annotations$3, (void *)&DINTUserDetailViewModelTest__Annotations$4, (void *)&DINTUserDetailViewModelTest__Annotations$5, (void *)&DINTUserDetailViewModelTest__Annotations$6, (void *)&DINTUserDetailViewModelTest__Annotations$7, (void *)&DINTUserDetailViewModelTest__Annotations$8 };
-  static const J2ObjcClassInfo _DINTUserDetailViewModelTest = { "UserDetailViewModelTest", "co.touchlab.droidconandroid.shared.interactors", ptrTable, methods, fields, 7, 0x1, 7, 6, -1, -1, -1, -1, -1 };
+  static const void *ptrTable[] = { (void *)&DINTUserDetailViewModelTest__Annotations$0, (void *)&DINTUserDetailViewModelTest__Annotations$1, (void *)&DINTUserDetailViewModelTest__Annotations$2, (void *)&DINTUserDetailViewModelTest__Annotations$3, (void *)&DINTUserDetailViewModelTest__Annotations$4, (void *)&DINTUserDetailViewModelTest__Annotations$5, (void *)&DINTUserDetailViewModelTest__Annotations$6, (void *)&DINTUserDetailViewModelTest__Annotations$7 };
+  static const J2ObjcClassInfo _DINTUserDetailViewModelTest = { "UserDetailViewModelTest", "co.touchlab.droidconandroid.shared.interactors", ptrTable, methods, fields, 7, 0x1, 7, 5, -1, -1, -1, -1, -1 };
   return &_DINTUserDetailViewModelTest;
 }
 
@@ -151,7 +151,6 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 void DINTUserDetailViewModelTest_init(DINTUserDetailViewModelTest *self) {
   NSObject_init(self);
-  JreStrongAssignAndConsume(&self->schedulerRule_, new_DINTRxTrampolineSchedulerRule_init());
   JreStrongAssignAndConsume(&self->user_, new_DDATUserAccount_init());
 }
 
@@ -188,14 +187,10 @@ IOSObjectArray *DINTUserDetailViewModelTest__Annotations$5() {
 }
 
 IOSObjectArray *DINTUserDetailViewModelTest__Annotations$6() {
-  return [IOSObjectArray arrayWithObjects:(id[]){ create_OrgJunitRule() } count:1 type:JavaLangAnnotationAnnotation_class_()];
-}
-
-IOSObjectArray *DINTUserDetailViewModelTest__Annotations$7() {
   return [IOSObjectArray arrayWithObjects:(id[]){ create_OrgMockitoMock(JreLoadEnum(OrgMockitoAnswers, RETURNS_DEFAULTS), [IOSObjectArray arrayWithLength:0 type:IOSClass_class_()], @"") } count:1 type:JavaLangAnnotationAnnotation_class_()];
 }
 
-IOSObjectArray *DINTUserDetailViewModelTest__Annotations$8() {
+IOSObjectArray *DINTUserDetailViewModelTest__Annotations$7() {
   return [IOSObjectArray arrayWithObjects:(id[]){ create_OrgMockitoMock(JreLoadEnum(OrgMockitoAnswers, RETURNS_DEFAULTS), [IOSObjectArray arrayWithLength:0 type:IOSClass_class_()], @"") } count:1 type:JavaLangAnnotationAnnotation_class_()];
 }
 

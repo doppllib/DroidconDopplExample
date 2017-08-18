@@ -10,6 +10,7 @@ import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.presenter.UserDetailHost;
 import co.touchlab.droidconandroid.shared.presenter.UserDetailViewModel;
 import io.reactivex.Observable;
+import io.reactivex.ObservableTransformer;
 
 
 import static org.mockito.Matchers.anyInt;
@@ -19,9 +20,6 @@ import static org.mockito.Mockito.when;
 
 public class UserDetailViewModelTest
 {
-    @Rule
-    public final RxTrampolineSchedulerRule schedulerRule = new RxTrampolineSchedulerRule();
-
     @Mock
     FindUserInteractor interactor;
     @Mock
@@ -34,7 +32,11 @@ public class UserDetailViewModelTest
     public void setUp()
     {
         MockitoAnnotations.initMocks(this);
-        factory = new UserDetailViewModel.Factory(interactor);
+        TestComponent component = DaggerTestComponent.builder()
+                .testSchedulerModule(new TestSchedulerModule())
+                .build();
+        ObservableTransformer<UserAccount, UserAccount> transformer = component.getTransformer();
+        factory = new UserDetailViewModel.Factory(interactor, transformer);
         viewModel = factory.create(UserDetailViewModel.class);
         viewModel.register(host);
     }

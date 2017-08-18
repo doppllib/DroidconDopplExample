@@ -37,7 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         //TODO currently no notifications, so hiding this
         //registerForNotifications()
-        DINTOneTest.runDopplResources(with: "dopplTests.txt")
         
         print("Firebase Analytics test \(Analytics.appInstanceID())")
     }

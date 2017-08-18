@@ -1,7 +1,6 @@
 package co.touchlab.droidconandroid.shared.interactors;
 
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -23,9 +22,6 @@ import static org.mockito.Mockito.when;
 
 public class FindUserInteractorTest
 {
-    @Rule
-    public final RxTrampolineSchedulerRule schedulerRule = new RxTrampolineSchedulerRule();
-
     @Mock
     DatabaseHelper helper;
 

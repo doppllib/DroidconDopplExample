@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "DINTOneTest.h"
 
 @interface dcframeworkTests : XCTestCase
 
@@ -27,6 +28,7 @@
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    [DINTOneTest runDopplResourcesWithNSString:@"dopplTests.txt"];
 }
 
 - (void)testPerformanceExample {

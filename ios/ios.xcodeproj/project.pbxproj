@@ -2682,6 +2682,16 @@
 		ED9154D41F463C7C00DCADC8 /* JUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9154D31F463C7C00DCADC8 /* JUnit.framework */; };
 		ED9154D61F463CF900DCADC8 /* Mockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9154D51F463CF900DCADC8 /* Mockito.framework */; };
 		ED9154D71F463DB000DCADC8 /* dopplTests.txt in Resources */ = {isa = PBXBuildFile; fileRef = ED9154B31F462DEB00DCADC8 /* dopplTests.txt */; };
+		ED91A8081F477FC500DCADC8 /* DINTDaggerTestComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = ED91A8001F477FC400DCADC8 /* DINTDaggerTestComponent.h */; };
+		ED91A8091F477FC500DCADC8 /* DINTDaggerTestComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = ED91A8011F477FC400DCADC8 /* DINTDaggerTestComponent.m */; };
+		ED91A80A1F477FC500DCADC8 /* DINTTestComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = ED91A8021F477FC400DCADC8 /* DINTTestComponent.h */; };
+		ED91A80B1F477FC500DCADC8 /* DINTTestComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = ED91A8031F477FC500DCADC8 /* DINTTestComponent.m */; };
+		ED91A80C1F477FC500DCADC8 /* DINTTestSchedulerModule_ProvidesTransformerFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = ED91A8041F477FC500DCADC8 /* DINTTestSchedulerModule_ProvidesTransformerFactory.h */; };
+		ED91A80D1F477FC500DCADC8 /* DINTTestSchedulerModule_ProvidesTransformerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = ED91A8051F477FC500DCADC8 /* DINTTestSchedulerModule_ProvidesTransformerFactory.m */; };
+		ED91A80E1F477FC500DCADC8 /* DINTTestSchedulerModule.h in Headers */ = {isa = PBXBuildFile; fileRef = ED91A8061F477FC500DCADC8 /* DINTTestSchedulerModule.h */; };
+		ED91A80F1F477FC500DCADC8 /* DINTTestSchedulerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = ED91A8071F477FC500DCADC8 /* DINTTestSchedulerModule.m */; };
+		ED91A8121F477FF200DCADC8 /* DDAGNetworkModule_ProvidesTransformerFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = ED91A8101F477FF200DCADC8 /* DDAGNetworkModule_ProvidesTransformerFactory.h */; };
+		ED91A8131F477FF200DCADC8 /* DDAGNetworkModule_ProvidesTransformerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = ED91A8111F477FF200DCADC8 /* DDAGNetworkModule_ProvidesTransformerFactory.m */; };
 		F92EB65A1D5A5EEC003B47B7 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */; };
 		F9903FA21D3FBEC70050687E /* DroidconTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */; };
 		F9D6952D1D47AF9D0095F0F9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */; };
@@ -5436,6 +5446,16 @@
 		ED9154B41F462DEB00DCADC8 /* prefixes.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = prefixes.properties; sourceTree = "<group>"; };
 		ED9154D31F463C7C00DCADC8 /* JUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JUnit.framework; path = ../../../j2objc/dist/frameworks/JUnit.framework; sourceTree = "<group>"; };
 		ED9154D51F463CF900DCADC8 /* Mockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mockito.framework; path = ../../../j2objc/dist/frameworks/Mockito.framework; sourceTree = "<group>"; };
+		ED91A8001F477FC400DCADC8 /* DINTDaggerTestComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DINTDaggerTestComponent.h; sourceTree = "<group>"; };
+		ED91A8011F477FC400DCADC8 /* DINTDaggerTestComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DINTDaggerTestComponent.m; sourceTree = "<group>"; };
+		ED91A8021F477FC400DCADC8 /* DINTTestComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DINTTestComponent.h; sourceTree = "<group>"; };
+		ED91A8031F477FC500DCADC8 /* DINTTestComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DINTTestComponent.m; sourceTree = "<group>"; };
+		ED91A8041F477FC500DCADC8 /* DINTTestSchedulerModule_ProvidesTransformerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DINTTestSchedulerModule_ProvidesTransformerFactory.h; sourceTree = "<group>"; };
+		ED91A8051F477FC500DCADC8 /* DINTTestSchedulerModule_ProvidesTransformerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DINTTestSchedulerModule_ProvidesTransformerFactory.m; sourceTree = "<group>"; };
+		ED91A8061F477FC500DCADC8 /* DINTTestSchedulerModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DINTTestSchedulerModule.h; sourceTree = "<group>"; };
+		ED91A8071F477FC500DCADC8 /* DINTTestSchedulerModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DINTTestSchedulerModule.m; sourceTree = "<group>"; };
+		ED91A8101F477FF200DCADC8 /* DDAGNetworkModule_ProvidesTransformerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAGNetworkModule_ProvidesTransformerFactory.h; sourceTree = "<group>"; };
+		ED91A8111F477FF200DCADC8 /* DDAGNetworkModule_ProvidesTransformerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAGNetworkModule_ProvidesTransformerFactory.m; sourceTree = "<group>"; };
 		F08872F4EDF9EC345739A52F /* Pods-dcframeworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dcframeworkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dcframeworkTests/Pods-dcframeworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F62B114202731562C1A1C003 /* Pods_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7B0B04A58CF9690A7D7E15C /* Pods-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosUITests/Pods-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -5510,6 +5530,8 @@
 		013AE4371F3A3D6400C91182 /* generated */ = {
 			isa = PBXGroup;
 			children = (
+				ED91A8101F477FF200DCADC8 /* DDAGNetworkModule_ProvidesTransformerFactory.h */,
+				ED91A8111F477FF200DCADC8 /* DDAGNetworkModule_ProvidesTransformerFactory.m */,
 				FBB8D9171F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */,
 				FBB8D9181F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */,
 				013AE4381F3A3D6400C91182 /* co_doppl_android_arch_core_common_1_0_0_0_alpha8 */,
@@ -8435,6 +8457,14 @@
 		ED9154951F462DEB00DCADC8 /* generatedTests */ = {
 			isa = PBXGroup;
 			children = (
+				ED91A8001F477FC400DCADC8 /* DINTDaggerTestComponent.h */,
+				ED91A8011F477FC400DCADC8 /* DINTDaggerTestComponent.m */,
+				ED91A8021F477FC400DCADC8 /* DINTTestComponent.h */,
+				ED91A8031F477FC500DCADC8 /* DINTTestComponent.m */,
+				ED91A8041F477FC500DCADC8 /* DINTTestSchedulerModule_ProvidesTransformerFactory.h */,
+				ED91A8051F477FC500DCADC8 /* DINTTestSchedulerModule_ProvidesTransformerFactory.m */,
+				ED91A8061F477FC500DCADC8 /* DINTTestSchedulerModule.h */,
+				ED91A8071F477FC500DCADC8 /* DINTTestSchedulerModule.m */,
 				ED9154961F462DEB00DCADC8 /* co_doppl_lib_androidbasetest_0_8_1_0 */,
 				ED9154AB1F462DEB00DCADC8 /* DINTFindUserInteractorTest.h */,
 				ED9154AC1F462DEB00DCADC8 /* DINTFindUserInteractorTest.m */,
@@ -8700,6 +8730,7 @@
 				013AF1981F3A3D7A00C91182 /* IoReactivexFunctionsFunction5.h in Headers */,
 				013AF2321F3A3D7A00C91182 /* IoReactivexInternalOperatorsCompletableCompletableFromPublisher.h in Headers */,
 				013AF4181F3A3D7B00C91182 /* IoReactivexInternalOperatorsObservableBlockingObservableIterable.h in Headers */,
+				ED91A80E1F477FC500DCADC8 /* DINTTestSchedulerModule.h in Headers */,
 				013AEFFC1F3A3D7900C91182 /* Okhttp3Handshake.h in Headers */,
 				013AF8AA1F3A3D8000C91182 /* DUTIOUtils.h in Headers */,
 				013AF0601F3A3D7900C91182 /* Okhttp3InternalNamedRunnable.h in Headers */,
@@ -9030,6 +9061,7 @@
 				013AF89C1F3A3D8000C91182 /* DPRESUserDetailViewModel.h in Headers */,
 				013AF49E1F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableLastMaybe.h in Headers */,
 				013AF6AE1F3A3D7E00C91182 /* IoReactivexSubjectsCompletableSubject.h in Headers */,
+				ED91A8081F477FC500DCADC8 /* DINTDaggerTestComponent.h in Headers */,
 				013AF7D91F3A3D7F00C91182 /* UtilsErrors.h in Headers */,
 				013AF7281F3A3D7E00C91182 /* AndroidDatabaseSqliteSQLiteConnectionPool.h in Headers */,
 				013AF25C1F3A3D7A00C91182 /* IoReactivexInternalOperatorsCompletableCompletableToSingle.h in Headers */,
@@ -9375,6 +9407,7 @@
 				013AF84C1F3A3D8000C91182 /* DINTRsvpInteractor.h in Headers */,
 				013AF17E1F3A3D7A00C91182 /* IoReactivexFlowablespackage-info.h in Headers */,
 				013AEF0C1F3A3D7900C91182 /* AndroidArchPersistenceDbFrameworkFrameworkSQLiteProgram.h in Headers */,
+				ED91A80A1F477FC500DCADC8 /* DINTTestComponent.h in Headers */,
 				013AF12A1F3A3D7900C91182 /* IoReactivexAnnotationsBackpressureKind.h in Headers */,
 				013AF6761F3A3D7E00C91182 /* IoReactivexParallelpackage-info.h in Headers */,
 				013AF60E1F3A3D7D00C91182 /* IoReactivexInternalUtilBlockingIgnoringReceiver.h in Headers */,
@@ -9537,6 +9570,7 @@
 				013AEF301F3A3D7900C91182 /* ComGoogleGsonInternalBindArrayTypeAdapter.h in Headers */,
 				013AF1561F3A3D7900C91182 /* IoReactivexDisposablesFutureDisposable.h in Headers */,
 				013AF2AA1F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableDistinctUntilChanged.h in Headers */,
+				ED91A80C1F477FC500DCADC8 /* DINTTestSchedulerModule_ProvidesTransformerFactory.h in Headers */,
 				013AF2781F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableBuffer.h in Headers */,
 				013AF5981F3A3D7D00C91182 /* IoReactivexInternalOperatorsSingleSingleTimer.h in Headers */,
 				013AF0D81F3A3D7900C91182 /* Retrofit2HttpPartMap.h in Headers */,
@@ -9685,6 +9719,7 @@
 				013AF7DE1F3A3D7F00C91182 /* UtilsString16.h in Headers */,
 				013AF5041F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableTimeInterval.h in Headers */,
 				013AF0581F3A3D7900C91182 /* Okhttp3InternalHttpStatusLine.h in Headers */,
+				ED91A8121F477FF200DCADC8 /* DDAGNetworkModule_ProvidesTransformerFactory.h in Headers */,
 				013AF2B01F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableDoOnEach.h in Headers */,
 				013AF5E01F3A3D7D00C91182 /* IoReactivexInternalSubscribersInnerQueuedSubscriber.h in Headers */,
 				013AF1141F3A3D7900C91182 /* DeGreenrobotEventSubscriberMethodFinder.h in Headers */,
@@ -10619,6 +10654,7 @@
 				013AF36F1F3A3D7B00C91182 /* IoReactivexInternalOperatorsFlowableFlowableTimer.m in Sources */,
 				013AF3FF1F3A3D7B00C91182 /* IoReactivexInternalOperatorsMaybeMaybeTimeoutMaybe.m in Sources */,
 				013AF16D1F3A3D7A00C91182 /* IoReactivexExceptionspackage-info.m in Sources */,
+				ED91A80B1F477FC500DCADC8 /* DINTTestComponent.m in Sources */,
 				013AEFEF1F3A3D7900C91182 /* Okhttp3ConnectionSpec.m in Sources */,
 				013AEF9B1F3A3D7900C91182 /* DaggerInternalBeta.m in Sources */,
 				013AEE911F3A3D7800C91182 /* AndroidArchLifecycleLifecycleObserver.m in Sources */,
@@ -11131,6 +11167,7 @@
 				013AF0311F3A3D7900C91182 /* Okhttp3InternalFramedHuffman.m in Sources */,
 				013AF6131F3A3D7D00C91182 /* IoReactivexInternalUtilEmptyComponent.m in Sources */,
 				013AF7931F3A3D7F00C91182 /* AndroidProviderBaseColumns.m in Sources */,
+				ED91A80D1F477FC500DCADC8 /* DINTTestSchedulerModule_ProvidesTransformerFactory.m in Sources */,
 				013AF2911F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableConcatMapEagerPublisher.m in Sources */,
 				013AF5551F3A3D7C00C91182 /* IoReactivexInternalOperatorsSingleSingleDelayWithCompletable.m in Sources */,
 				013AF0C11F3A3D7900C91182 /* Retrofit2HttpFieldMap.m in Sources */,
@@ -11278,6 +11315,7 @@
 				013AEF751F3A3D7900C91182 /* ComGoogleGsonJsonPrimitive.m in Sources */,
 				013AF6D91F3A3D7E00C91182 /* AndroidAnnotationNullable.m in Sources */,
 				013AF4A71F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableMapNotification.m in Sources */,
+				ED91A8091F477FC500DCADC8 /* DINTDaggerTestComponent.m in Sources */,
 				013AF2B91F3A3D7A00C91182 /* IoReactivexInternalOperatorsFlowableFlowableElementAtSingle.m in Sources */,
 				013AF51F1F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableWithLatestFrom.m in Sources */,
 				013AF3DD1F3A3D7B00C91182 /* IoReactivexInternalOperatorsMaybeMaybeIgnoreElementCompletable.m in Sources */,
@@ -11386,6 +11424,7 @@
 				013AF8651F3A3D8000C91182 /* DNETDJustId.m in Sources */,
 				013AF51D1F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableWindowTimed.m in Sources */,
 				013AF5771F3A3D7C00C91182 /* IoReactivexInternalOperatorsSingleSingleFlatMapIterableObservable.m in Sources */,
+				ED91A80F1F477FC500DCADC8 /* DINTTestSchedulerModule.m in Sources */,
 				013AF1331F3A3D7900C91182 /* IoReactivexAnnotationsExperimental.m in Sources */,
 				013AF1471F3A3D7900C91182 /* IoReactivexCompletableOnSubscribe.m in Sources */,
 				013AF1E11F3A3D7A00C91182 /* IoReactivexInternalObserversBasicIntQueueDisposable.m in Sources */,
@@ -11476,6 +11515,7 @@
 				013AEF211F3A3D7900C91182 /* ComGoogleGsonFieldAttributes.m in Sources */,
 				013AF5711F3A3D7C00C91182 /* IoReactivexInternalOperatorsSingleSingleFlatMap.m in Sources */,
 				013AF5251F3A3D7C00C91182 /* IoReactivexInternalOperatorsObservableObservableZipIterable.m in Sources */,
+				ED91A8131F477FF200DCADC8 /* DDAGNetworkModule_ProvidesTransformerFactory.m in Sources */,
 				013AF4331F3A3D7B00C91182 /* IoReactivexInternalOperatorsObservableObservableBufferBoundarySupplier.m in Sources */,
 				013AF8091F3A3D7F00C91182 /* DDAGNetworkModule_ProvidesBaseUrlFactory.m in Sources */,
 				013AF1031F3A3D7900C91182 /* DeGreenrobotEventEventBus.m in Sources */,
@@ -12150,6 +12190,14 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(J2OBJC_LOCAL_PATH)/frameworks/JRE.framework/Headers",
+					"$(PROJECT_DIR)",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/JSR305.framework/Headers",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/JUnit.framework/Headers",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/JavaxInject.framework/Headers",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/Mockito.framework/Headers",
+				);
 				INFOPLIST_FILE = dcframeworkTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -12169,6 +12217,14 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(J2OBJC_LOCAL_PATH)/frameworks/JRE.framework/Headers",
+					"$(PROJECT_DIR)",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/JSR305.framework/Headers",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/JUnit.framework/Headers",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/JavaxInject.framework/Headers",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/Mockito.framework/Headers",
+				);
 				INFOPLIST_FILE = dcframeworkTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
