@@ -21,6 +21,7 @@ extension UIViewController {
         if viewController.isKind(of: type) {
             return viewController
         }
+        
         if let presentedViewController = viewController.presentedViewController {
             // Return presented view controller
             return UIViewController.findBest(viewController: presentedViewController, forType: type)
@@ -32,7 +33,6 @@ extension UIViewController {
                 return viewController
             }
         } else if viewController.isKind(of: UINavigationController.self) {
-            
             //Return top view
             let navController = viewController as! UINavigationController
             if navController.viewControllers.count > 0 {
@@ -41,7 +41,6 @@ extension UIViewController {
                 return viewController
             }
         } else if viewController.isKind(of: UITabBarController.self) {
-            
             //Return visible view
             let tabController = viewController as! UITabBarController
             if let viewControllers = tabController.viewControllers, viewControllers.count > 0 {

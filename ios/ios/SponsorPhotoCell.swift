@@ -9,6 +9,5 @@
 import UIKit
 
 class SponsorPhotoCell: UICollectionViewCell {
-    
     @IBOutlet weak var imageView: UIImageView!
 }
