@@ -91,7 +91,7 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         
         if identifier == "versionNotification" {
             UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/us/app/droidcon-nyc-2016/id1155197664?mt=8")! as URL)
-        } else if data["type"] as? String == "event" {
+        } else if (data["type"] as? String == "event") || identifier == "eventNotification" {
             if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EventDetail") as? EventDetailViewController {
                 if let window = self.window, let rootViewController = window.rootViewController {
                     var currentController = rootViewController
@@ -136,8 +136,23 @@ extension AppDelegate : MessagingDelegate {
         content.body = "A new version of the app is now available!"
         content.sound = UNNotificationSound.default()
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
-        let notificatoinIdentifier = "versionNotification"
-        let request = UNNotificationRequest(identifier: notificatoinIdentifier, content: content, trigger: trigger)
+        let notificationIdentifier = "versionNotification"
+        sendNotification(content: content, trigger: trigger, notificationIdentifier: notificationIdentifier)
+    }
+    
+    func sendAlarmNotification(title: String, date: Date) {
+        let content = UNMutableNotificationContent()
+        content.title = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
+        content.body = "The \(title) session is starting soon!"
+        content.sound = UNNotificationSound.default()
+        let triggerDate = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second,], from: date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+        let notificationIdentifier = "eventNotification"
+        sendNotification(content: content, trigger: trigger, notificationIdentifier: notificationIdentifier)
+    }
+    
+    func sendNotification(content: UNMutableNotificationContent, trigger: UNNotificationTrigger, notificationIdentifier: String) {
+        let request = UNNotificationRequest(identifier: notificationIdentifier, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request) { (error) in
             print("Notification error: \(error as Any)")
         }
