@@ -59,7 +59,7 @@
                 <outlet property="nameLabel" destination="qCf-1y-7Lg" id="4UI-iw-9HN"/>
                 <outlet property="speakerImage" destination="Kv0-F4-vGC" id="kPR-cJ-tU3"/>
             </connections>
-            <point key="canvasLocation" x="375" y="347"/>
+            <point key="canvasLocation" x="371" y="347"/>
         </tableViewCell>
     </objects>
 </document>

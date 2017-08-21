@@ -2657,6 +2657,7 @@
 		FA6128C31C986E7A001142E8 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6128C21C986E7A001142E8 /* EventTableViewCell.xib */; };
 		FA6128C51C986E87001142E8 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6128C41C986E87001142E8 /* EventTableViewCell.swift */; };
 		FAE033A61C974C65001C50E1 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE033A51C974C65001C50E1 /* EventDetailViewController.swift */; };
+		FB138D0A1F4B4DA000B712D2 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB138D091F4B4DA000B712D2 /* UserDetailViewController.swift */; };
 		FBB8D9191F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = FBB8D9171F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */; };
 		FBB8D91A1F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB8D9181F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */; };
 		FBD247BD1F3E406800E48171 /* JavaUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD247BC1F3E406800E48171 /* JavaUtils.swift */; };
@@ -5383,6 +5384,7 @@
 		FA6128C41C986E87001142E8 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		FA86A7F91C92169900C09CE7 /* ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		FAE033A51C974C65001C50E1 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		FB138D091F4B4DA000B712D2 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		FBB8D9171F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAGNetworkModule_ProvidesRsvpRequestFactory.h; sourceTree = "<group>"; };
 		FBB8D9181F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAGNetworkModule_ProvidesRsvpRequestFactory.m; sourceTree = "<group>"; };
 		FBD247BC1F3E406800E48171 /* JavaUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavaUtils.swift; sourceTree = "<group>"; };
@@ -8290,6 +8292,7 @@
 				4C81B70E1D76162000DFB89C /* SponsorPhotoCell.swift */,
 				4C81B7121D7616C500DFB89C /* SponsorsViewController.swift */,
 				0183202D1F155F9A009794AC /* UIViewController.swift */,
+				FB138D091F4B4DA000B712D2 /* UserDetailViewController.swift */,
 				F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */,
 				63EE30CF1CC6AD4400B64D3D /* WelcomeViewController.swift */,
 				631B98FA1C7D6533008AA20D /* Assets.xcassets */,
@@ -9829,7 +9832,7 @@
 				TargetAttributes = {
 					631B98EA1C7D6533008AA20D = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 7FYJJPTXQ8;
+						DevelopmentTeam = 2UER9BPG44;
 						LastSwiftMigration = 0800;
 					};
 					631B99031C7D6533008AA20D = {
@@ -9843,7 +9846,6 @@
 					};
 					6342B6AC1DC6A18A0060BE83 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 7FYJJPTXQ8;
 						ProvisioningStyle = Automatic;
 					};
 					6342B6B41DC6A18B0060BE83 = {
@@ -10272,6 +10274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB138D0A1F4B4DA000B712D2 /* UserDetailViewController.swift in Sources */,
 				018320281F153CC3009794AC /* AppDelegate.swift in Sources */,
 				63EE30DF1CD025AC00B64D3D /* ScheduleListCell.swift in Sources */,
 				0183202E1F155F9A009794AC /* UIViewController.swift in Sources */,
@@ -11763,7 +11766,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7FYJJPTXQ8;
+				DEVELOPMENT_TEAM = 2UER9BPG44;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -11808,7 +11811,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7FYJJPTXQ8;
+				DEVELOPMENT_TEAM = 2UER9BPG44;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -11911,7 +11914,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7FYJJPTXQ8;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -11957,7 +11960,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7FYJJPTXQ8;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
