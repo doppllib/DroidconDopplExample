@@ -26,7 +26,7 @@
 }
 
 - (void)testAndroidUnitTests {
-    [DINTOneTest runDopplResourcesWithNSString:@"dopplTests.txt"];
+    
 }
 
 @end

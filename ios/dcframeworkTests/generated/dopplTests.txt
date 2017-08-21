@@ -1,3 +1,0 @@
-co.touchlab.droidconandroid.shared.interactors.FindUserInteractorTest
-co.touchlab.droidconandroid.shared.interactors.RxTrampolineSchedulerRule
-co.touchlab.droidconandroid.shared.interactors.UserDetailViewModelTest
