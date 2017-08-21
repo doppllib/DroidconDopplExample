@@ -37,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         //TODO currently no notifications, so hiding this
         //registerForNotifications()
+        
         print("Firebase Analytics test \(Analytics.appInstanceID())")
     }
     

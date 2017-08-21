@@ -3,29 +3,23 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.MockitoAnnotations;
 
 import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.presenter.UserDetailHost;
 import co.touchlab.droidconandroid.shared.presenter.UserDetailViewModel;
 import io.reactivex.Observable;
-import io.reactivex.Single;
+import io.reactivex.ObservableTransformer;
 
 
 import static org.mockito.Matchers.anyInt;
-import static org.mockito.Matchers.anyLong;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-@RunWith(MockitoJUnitRunner.class)
 public class UserDetailViewModelTest
 {
-    @Rule
-    public final RxTrampolineSchedulerRule schedulerRule = new RxTrampolineSchedulerRule();
-
     @Mock
     FindUserInteractor interactor;
     @Mock
@@ -37,7 +31,12 @@ public class UserDetailViewModelTest
     @Before
     public void setUp()
     {
-        factory = new UserDetailViewModel.Factory(interactor);
+        MockitoAnnotations.initMocks(this);
+        TestComponent component = DaggerTestComponent.builder()
+                .testSchedulerModule(new TestSchedulerModule())
+                .build();
+        ObservableTransformer<UserAccount, UserAccount> transformer = component.getTransformer();
+        factory = new UserDetailViewModel.Factory(interactor, transformer);
         viewModel = factory.create(UserDetailViewModel.class);
         viewModel.register(host);
     }
