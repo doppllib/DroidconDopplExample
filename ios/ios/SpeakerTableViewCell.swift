@@ -14,6 +14,7 @@ class SpeakerTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel : UILabel!
     @IBOutlet weak var infoLabel : UILabel!
     @IBOutlet weak var speakerImage: UIImageView!
+    @IBOutlet weak var speakerImageLabel: UILabel!
     
     func loadInfo(_ name: String, info: String, imgUrl: String) {
         nameLabel.text = name
@@ -21,13 +22,16 @@ class SpeakerTableViewCell: UITableViewCell {
         
         if (!imgUrl.isEmpty) {
             speakerImage.kf.setImage(with: URL(string: imgUrl)!)
+            speakerImage.layer.cornerRadius = 24
+            speakerImage.layer.masksToBounds = true
+        } else {
+            speakerImageLabel.text = DUTEmojiUtil.getEmojiForUser(with: name)
         }
-        speakerImage.layer.cornerRadius = 24
-        speakerImage.layer.masksToBounds = true
-        
+    
         nameLabel.sizeToFit()
         infoLabel.sizeToFit()
         speakerImage.sizeToFit()
+        speakerImageLabel.sizeToFit()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
