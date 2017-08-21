@@ -19,6 +19,7 @@ target 'ios' do
 
   # Pods for ios
     pod 'Firebase'
+    pod 'Firebase/Messaging'
 
   target 'iosTests' do
     inherit! :search_paths
