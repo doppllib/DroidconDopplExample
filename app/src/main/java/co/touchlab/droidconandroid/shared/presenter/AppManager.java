@@ -3,6 +3,9 @@ import android.content.Context;
 
 import co.touchlab.droidconandroid.shared.dagger.AppComponent;
 import co.touchlab.droidconandroid.shared.interactors.SeedInteractor;
+import co.touchlab.droidconandroid.shared.network.DataHelper;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 
 /**
  * Created by kgalligan on 4/19/16.
@@ -31,6 +34,7 @@ public class AppManager
         if(instance == null)
         {
             instance = new AppManager(context, platformClient, appComponent);
+            DataHelper.callPie();
         }
     }
 

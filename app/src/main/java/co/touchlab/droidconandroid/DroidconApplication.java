@@ -113,7 +113,6 @@ public class DroidconApplication extends Application
                             .build());
 
             AppManager.getInstance().seed(loadDataSeed);
-
         }
     }
 

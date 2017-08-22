@@ -2,6 +2,7 @@ package co.touchlab.droidconandroid.shared.network;
 
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
 import io.reactivex.Observable;
+import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
@@ -11,4 +12,7 @@ import retrofit2.http.Path;
 public interface RefreshScheduleDataRequest {
     @GET("/dataTest/scheduleData/{conventionId}")
     Observable<Convention> getScheduleData(@Path("conventionId") Integer conventionId);
+
+    @GET("/dataTest/scheduleData/{conventionId}")
+    Call<Convention> getScheduleDataSync(@Path("conventionId") Integer conventionId);
 }

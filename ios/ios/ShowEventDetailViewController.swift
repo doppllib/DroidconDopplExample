@@ -97,7 +97,7 @@ import dcframework
         if section == 0 {
             return 1
         }
-        
+
         return speakers!.count
     }
     
