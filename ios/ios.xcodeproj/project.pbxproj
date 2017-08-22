@@ -2657,6 +2657,8 @@
 		FA6128C31C986E7A001142E8 /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6128C21C986E7A001142E8 /* EventTableViewCell.xib */; };
 		FA6128C51C986E87001142E8 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6128C41C986E87001142E8 /* EventTableViewCell.swift */; };
 		FAE033A61C974C65001C50E1 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE033A51C974C65001C50E1 /* EventDetailViewController.swift */; };
+		FB0055F21F45ECCA005B1B8D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB0055F11F45ECCA005B1B8D /* GoogleService-Info.plist */; };
+		FB4869F41F46469C002065CE /* TimeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4869F31F46469C002065CE /* TimeUtils.swift */; };
 		FBB8D9191F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = FBB8D9171F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */; };
 		FBB8D91A1F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB8D9181F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */; };
 		FBD247BD1F3E406800E48171 /* JavaUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD247BC1F3E406800E48171 /* JavaUtils.swift */; };
@@ -2888,10 +2890,10 @@
 		013AE4EB1F3A3D6400C91182 /* ComGoogleGsonGsonBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComGoogleGsonGsonBuilder.m; sourceTree = "<group>"; };
 		013AE4EC1F3A3D6400C91182 /* ComGoogleGsonInstanceCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComGoogleGsonInstanceCreator.h; sourceTree = "<group>"; };
 		013AE4ED1F3A3D6400C91182 /* ComGoogleGsonInstanceCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComGoogleGsonInstanceCreator.m; sourceTree = "<group>"; };
-		013AE4EE1F3A3D6400C91182 /* ComGoogleGsonInternal$Gson$Preconditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComGoogleGsonInternal$Gson$Preconditions.h; sourceTree = "<group>"; };
-		013AE4EF1F3A3D6400C91182 /* ComGoogleGsonInternal$Gson$Preconditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComGoogleGsonInternal$Gson$Preconditions.m; sourceTree = "<group>"; };
-		013AE4F01F3A3D6400C91182 /* ComGoogleGsonInternal$Gson$Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComGoogleGsonInternal$Gson$Types.h; sourceTree = "<group>"; };
-		013AE4F11F3A3D6400C91182 /* ComGoogleGsonInternal$Gson$Types.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComGoogleGsonInternal$Gson$Types.m; sourceTree = "<group>"; };
+		013AE4EE1F3A3D6400C91182 /* ComGoogleGsonInternal$Gson$Preconditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ComGoogleGsonInternal$Gson$Preconditions.h"; sourceTree = "<group>"; };
+		013AE4EF1F3A3D6400C91182 /* ComGoogleGsonInternal$Gson$Preconditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ComGoogleGsonInternal$Gson$Preconditions.m"; sourceTree = "<group>"; };
+		013AE4F01F3A3D6400C91182 /* ComGoogleGsonInternal$Gson$Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ComGoogleGsonInternal$Gson$Types.h"; sourceTree = "<group>"; };
+		013AE4F11F3A3D6400C91182 /* ComGoogleGsonInternal$Gson$Types.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ComGoogleGsonInternal$Gson$Types.m"; sourceTree = "<group>"; };
 		013AE4F21F3A3D6400C91182 /* ComGoogleGsonInternalBindArrayTypeAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComGoogleGsonInternalBindArrayTypeAdapter.h; sourceTree = "<group>"; };
 		013AE4F31F3A3D6400C91182 /* ComGoogleGsonInternalBindArrayTypeAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComGoogleGsonInternalBindArrayTypeAdapter.m; sourceTree = "<group>"; };
 		013AE4F41F3A3D6400C91182 /* ComGoogleGsonInternalBindCollectionTypeAdapterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComGoogleGsonInternalBindCollectionTypeAdapterFactory.h; sourceTree = "<group>"; };
@@ -5339,7 +5341,7 @@
 		4C81B70E1D76162000DFB89C /* SponsorPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorPhotoCell.swift; sourceTree = "<group>"; };
 		4C81B7121D7616C500DFB89C /* SponsorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		55F54A492D46D70B0A7D6257 /* Pods_dcframeworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dcframeworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		631B98EB1C7D6533008AA20D /* Droicon NYC 2016.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Droicon NYC 2016.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		631B98EB1C7D6533008AA20D /* Droidcon 17 anon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Droidcon 17 anon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		631B98F81C7D6533008AA20D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		631B98FA1C7D6533008AA20D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		631B98FF1C7D6533008AA20D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -5383,9 +5385,12 @@
 		FA6128C41C986E87001142E8 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		FA86A7F91C92169900C09CE7 /* ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		FAE033A51C974C65001C50E1 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		FB0055F11F45ECCA005B1B8D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FB4869F31F46469C002065CE /* TimeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeUtils.swift; sourceTree = "<group>"; };
 		FBB8D9171F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAGNetworkModule_ProvidesRsvpRequestFactory.h; sourceTree = "<group>"; };
 		FBB8D9181F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAGNetworkModule_ProvidesRsvpRequestFactory.m; sourceTree = "<group>"; };
 		FBD247BC1F3E406800E48171 /* JavaUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavaUtils.swift; sourceTree = "<group>"; };
+		FBE971831F44E42100487A6A /* Droicon NYC 2016.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Droicon NYC 2016.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -8264,7 +8269,7 @@
 		631B98EC1C7D6533008AA20D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				631B98EB1C7D6533008AA20D /* Droicon NYC 2016.app */,
+				631B98EB1C7D6533008AA20D /* Droidcon 17 anon.app */,
 				631B99041C7D6533008AA20D /* iosTests.xctest */,
 				631B990F1C7D6533008AA20D /* iosUITests.xctest */,
 				6342B6AD1DC6A18A0060BE83 /* dcframework.framework */,
@@ -8276,13 +8281,15 @@
 		631B98ED1C7D6533008AA20D /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				FBE971831F44E42100487A6A /* Droicon NYC 2016.entitlements */,
 				018320271F153CC3009794AC /* AppDelegate.swift */,
+				FBD247BC1F3E406800E48171 /* JavaUtils.swift */,
+				FB4869F31F46469C002065CE /* TimeUtils.swift */,
 				639320301D77FF700047224B /* dataseeds */,
 				631B98FF1C7D6533008AA20D /* Info.plist */,
 				F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */,
 				F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */,
 				FAE033A51C974C65001C50E1 /* EventDetailViewController.swift */,
-				FBD247BC1F3E406800E48171 /* JavaUtils.swift */,
 				63EE30CD1CC6985800B64D3D /* LaunchViewController.swift */,
 				63EE30DE1CD025AC00B64D3D /* ScheduleListCell.swift */,
 				018320251F152215009794AC /* ScheduleViewController.swift */,
@@ -8292,6 +8299,7 @@
 				0183202D1F155F9A009794AC /* UIViewController.swift */,
 				F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */,
 				63EE30CF1CC6AD4400B64D3D /* WelcomeViewController.swift */,
+				FB0055F11F45ECCA005B1B8D /* GoogleService-Info.plist */,
 				631B98FA1C7D6533008AA20D /* Assets.xcassets */,
 				631B98F71C7D6533008AA20D /* Main.storyboard */,
 				631B98EE1C7D6533008AA20D /* Supporting Files */,
@@ -9723,7 +9731,7 @@
 			);
 			name = ios;
 			productName = ios;
-			productReference = 631B98EB1C7D6533008AA20D /* Droicon NYC 2016.app */;
+			productReference = 631B98EB1C7D6533008AA20D /* Droidcon 17 anon.app */;
 			productType = "com.apple.product-type.application";
 		};
 		631B99031C7D6533008AA20D /* iosTests */ = {
@@ -9829,8 +9837,14 @@
 				TargetAttributes = {
 					631B98EA1C7D6533008AA20D = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 7FYJJPTXQ8;
+						DevelopmentTeam = 2UER9BPG44;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					631B99031C7D6533008AA20D = {
 						CreatedOnToolsVersion = 7.2;
@@ -9843,7 +9857,6 @@
 					};
 					6342B6AC1DC6A18A0060BE83 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 7FYJJPTXQ8;
 						ProvisioningStyle = Automatic;
 					};
 					6342B6B41DC6A18B0060BE83 = {
@@ -9886,6 +9899,7 @@
 				FA6128C31C986E7A001142E8 /* EventTableViewCell.xib in Resources */,
 				631B98F91C7D6533008AA20D /* Main.storyboard in Resources */,
 				FA6128C11C986E16001142E8 /* SpeakerTableViewCell.xib in Resources */,
+				FB0055F21F45ECCA005B1B8D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -9987,13 +10001,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iosUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3D37BFCB66229BC15B176609 /* [CP] Check Pods Manifest.lock */ = {
@@ -10002,13 +10019,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iosTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4ADFA7188E05A380D7FB1124 /* [CP] Check Pods Manifest.lock */ = {
@@ -10121,13 +10141,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ios-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B0B01C04F37E110A39AD9EDE /* [CP] Check Pods Manifest.lock */ = {
@@ -10136,13 +10159,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dcframework-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B9F9E5CDCDC085164D821BBC /* [CP] Copy Pods Resources */ = {
@@ -10181,9 +10207,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ios/Pods-ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -10211,13 +10244,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dcframeworkTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EB97482FEF65C7B46258CA87 /* [CP] Check Pods Manifest.lock */ = {
@@ -10273,6 +10309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				018320281F153CC3009794AC /* AppDelegate.swift in Sources */,
+				FB4869F41F46469C002065CE /* TimeUtils.swift in Sources */,
 				63EE30DF1CD025AC00B64D3D /* ScheduleListCell.swift in Sources */,
 				0183202E1F155F9A009794AC /* UIViewController.swift in Sources */,
 				4C81B70B1D75E7B500DFB89C /* SponsorImage.swift in Sources */,
@@ -11759,11 +11796,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "ios/Droicon NYC 2016.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7FYJJPTXQ8;
+				DEVELOPMENT_TEAM = 2UER9BPG44;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -11788,10 +11826,11 @@
 					"$(inherited)",
 					"-lsqlite3",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = co.touchlab.ios.albany;
+				PRODUCT_BUNDLE_IDENTIFIER = co.touchlab.ios.anon;
 				PRODUCT_MODULE_NAME = ios;
-				PRODUCT_NAME = "Droicon NYC 2016";
+				PRODUCT_NAME = "Droidcon 17 anon";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ios/ios-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -11805,10 +11844,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "ios/Droicon NYC 2016.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7FYJJPTXQ8;
+				DEVELOPMENT_TEAM = 2UER9BPG44;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -11833,10 +11873,11 @@
 					"$(inherited)",
 					"-lsqlite3",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = co.touchlab.ios.albany;
+				PRODUCT_BUNDLE_IDENTIFIER = co.touchlab.ios.anon;
 				PRODUCT_MODULE_NAME = ios;
-				PRODUCT_NAME = "Droicon NYC 2016";
+				PRODUCT_NAME = "Droidcon 17 anon";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ios/ios-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
@@ -11911,7 +11952,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7FYJJPTXQ8;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -11957,7 +11998,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7FYJJPTXQ8;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

@@ -18,19 +18,16 @@ class SponsorItem : Equatable {
     
     var image : UIImage?
     let spanCount : Int
-    let sponsorName : String
     let sponsorImage : String
     let sponsorLink : String
-    
-    init (count:Int, name:String, image:String, link:String) {
+
+    init (count: Int, image: String, link: String) {
         self.spanCount = count
-        self.sponsorName = name
         self.sponsorImage = image
         self.sponsorLink = link
     }
     
     func loadImage(_ completion: @escaping (_ photo:SponsorItem, _ error: NSError?) -> Void) {
-        
         let sponsorImageUrl = URL(string: sponsorImage)
         let loadRequest = URLRequest(url:sponsorImageUrl!)
         let task = URLSession.shared.dataTask(with: loadRequest) { data, request, error in
@@ -58,7 +55,6 @@ class SponsorItem : Equatable {
         
         let imageSize = image!.size
         var returnSize = size
-        
         let aspectRatio = imageSize.width / imageSize.height
         
         returnSize.height = returnSize.width / aspectRatio
@@ -91,7 +87,7 @@ class Sponsor {
     
     let processingQueue = OperationQueue()
     
-    func getSponsorResults(_ sponsorType: Int, completion : @escaping (_ results: SponsorResults?, _ error : NSError?) -> Void){
+    func getSponsorResults(_ sponsorType: Int, completion : @escaping (_ results: SponsorResults?, _ error : NSError?) -> Void) {
         let searchURL = getSearchUrlForSponsorType(sponsorType)
         let searchRequest = URLRequest(url: searchURL)
         
@@ -110,16 +106,10 @@ class Sponsor {
                     for sponsorJson in sponsorArray {
                         
                         let spanCount = sponsorJson["spanCount"] as? Int
-                        let sponsorName = sponsorJson["sponsorName"] as? String
                         let sponsorImage = sponsorJson["sponsorImage"] as? String
                         let sponsorLink = sponsorJson["sponsorLink"] as? String
-                        
-                        let item = SponsorItem(
-                            count: spanCount!,
-                            name: sponsorName!,
-                            image: sponsorImage!,
-                            link: sponsorLink!)
-                        
+
+                        let item = SponsorItem(count: spanCount!, image: sponsorImage!, link: sponsorLink!)
                         sponsorItems += [item]
                     }
                 }

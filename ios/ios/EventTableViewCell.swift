@@ -19,15 +19,16 @@ class EventTableViewCell: UITableViewCell {
     var conflict: jboolean!
     var eventDetailPresenter: DPRESEventDetailViewModel!
     
-    func loadInfo(_ title: String, description: String, track: String, time: String, networkEvent: DDATEvent, eventDetailPresenter: DPRESEventDetailViewModel, conflict: jboolean?) {
+    func loadInfo(_ networkEvent: DDATEvent, eventDetailPresenter: DPRESEventDetailViewModel, conflict: jboolean?) {
         
         self.networkEvent = networkEvent
         self.conflict = conflict
         self.eventDetailPresenter = eventDetailPresenter
         
-        titleLabel.text = title.replacingOccurrences(of: "Android", with: "[Sad Puppy]")
-        timeInfoLabel.text = "Track " + track + ", " + time
-        descriptionLabel.text = description.replacingOccurrences(of: "/n/n", with: "/n")
+        titleLabel.text = networkEvent.getName().replacingOccurrences(of: "Android", with: "[Sad Puppy]")
+        let time = TimeUtils.getEventTime(startTime: networkEvent.getStartFormatted()! as NSString, andEnd: networkEvent.getEndFormatted()! as NSString)
+        timeInfoLabel.text = "Track " + networkEvent.getVenue().getName() + ", " + time
+        descriptionLabel.text = networkEvent.getDescription().replacingOccurrences(of: "/n/n", with: "/n")
 
         if networkEvent.isNow() {
             timeConflictLabel.isHidden = false
