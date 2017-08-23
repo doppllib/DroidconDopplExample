@@ -97,6 +97,7 @@
 #import "DUTIOUtils.h"
 #import "DUTStringUtils.h"
 #import "DUTTimeUtils.h"
+#import "DOneTest.h"
 
 #import "AndroidContentContext.h"
 #import "AndroidContentIOSContext.h"
