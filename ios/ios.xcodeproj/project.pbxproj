@@ -2478,12 +2478,6 @@
 		63DD1C201F4D1CB30050A7FC /* DIOSIosFirebase.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD11C31F4D1CA80050A7FC /* DIOSIosFirebase.m */; };
 		63DD1C211F4D1CB30050A7FC /* DIOSIosPlatformClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD11C41F4D1CA80050A7FC /* DIOSIosPlatformClient.h */; };
 		63DD1C221F4D1CB30050A7FC /* DIOSIosPlatformClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD11C51F4D1CA80050A7FC /* DIOSIosPlatformClient.m */; };
-		63DD1C231F4D1CB30050A7FC /* DNETAsdfApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD11C61F4D1CA80050A7FC /* DNETAsdfApi.h */; };
-		63DD1C241F4D1CB30050A7FC /* DNETAsdfApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD11C71F4D1CA80050A7FC /* DNETAsdfApi.m */; };
-		63DD1C251F4D1CB30050A7FC /* DNETAsdfPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD11C81F4D1CA80050A7FC /* DNETAsdfPlayer.h */; };
-		63DD1C261F4D1CB30050A7FC /* DNETAsdfPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD11C91F4D1CA80050A7FC /* DNETAsdfPlayer.m */; };
-		63DD1C271F4D1CB30050A7FC /* DNETDataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD11CA1F4D1CA80050A7FC /* DNETDataHelper.h */; };
-		63DD1C281F4D1CB30050A7FC /* DNETDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD11CB1F4D1CA80050A7FC /* DNETDataHelper.m */; };
 		63DD1C291F4D1CB30050A7FC /* DNETDConvention.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD11CC1F4D1CA80050A7FC /* DNETDConvention.h */; };
 		63DD1C2A1F4D1CB30050A7FC /* DNETDConvention.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD11CD1F4D1CA80050A7FC /* DNETDConvention.m */; };
 		63DD1C2B1F4D1CB30050A7FC /* DNETDJustId.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD11CE1F4D1CA80050A7FC /* DNETDJustId.h */; };
@@ -2498,8 +2492,6 @@
 		63DD1C341F4D1CB30050A7FC /* DNETDUserInfoResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD11D71F4D1CA90050A7FC /* DNETDUserInfoResponse.m */; };
 		63DD1C351F4D1CB30050A7FC /* DNETFindUserRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD11D81F4D1CA90050A7FC /* DNETFindUserRequest.h */; };
 		63DD1C361F4D1CB30050A7FC /* DNETFindUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD11D91F4D1CA90050A7FC /* DNETFindUserRequest.m */; };
-		63DD1C371F4D1CB30050A7FC /* DNETQuikOrderApi.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD11DA1F4D1CA90050A7FC /* DNETQuikOrderApi.h */; };
-		63DD1C381F4D1CB30050A7FC /* DNETQuikOrderApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD11DB1F4D1CA90050A7FC /* DNETQuikOrderApi.m */; };
 		63DD1C391F4D1CB30050A7FC /* DNETRefreshScheduleDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD11DC1F4D1CA90050A7FC /* DNETRefreshScheduleDataRequest.h */; };
 		63DD1C3A1F4D1CB30050A7FC /* DNETRefreshScheduleDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD11DD1F4D1CA90050A7FC /* DNETRefreshScheduleDataRequest.m */; };
 		63DD1C3B1F4D1CB30050A7FC /* DNETRsvpRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD11DE1F4D1CA90050A7FC /* DNETRsvpRequest.h */; };
@@ -2508,8 +2500,6 @@
 		63DD1C3E1F4D1CB30050A7FC /* DNETSponsorsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD11E11F4D1CA90050A7FC /* DNETSponsorsRequest.m */; };
 		63DD1C3F1F4D1CB30050A7FC /* DNETSponsorsResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD11E21F4D1CA90050A7FC /* DNETSponsorsResult.h */; };
 		63DD1C401F4D1CB30050A7FC /* DNETSponsorsResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD11E31F4D1CA90050A7FC /* DNETSponsorsResult.m */; };
-		63DD1C411F4D1CB30050A7FC /* DNETTokenResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD11E41F4D1CA90050A7FC /* DNETTokenResponse.h */; };
-		63DD1C421F4D1CB30050A7FC /* DNETTokenResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD11E51F4D1CA90050A7FC /* DNETTokenResponse.m */; };
 		63DD1C431F4D1CB30050A7FC /* DPRESAppManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD11E61F4D1CA90050A7FC /* DPRESAppManager.h */; };
 		63DD1C441F4D1CB30050A7FC /* DPRESAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DD11E71F4D1CA90050A7FC /* DPRESAppManager.m */; };
 		63DD1C451F4D1CB30050A7FC /* DPRESConferenceDataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DD11E81F4D1CA90050A7FC /* DPRESConferenceDataHelper.h */; };
@@ -5236,12 +5226,6 @@
 		63DD11C31F4D1CA80050A7FC /* DIOSIosFirebase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIOSIosFirebase.m; sourceTree = "<group>"; };
 		63DD11C41F4D1CA80050A7FC /* DIOSIosPlatformClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIOSIosPlatformClient.h; sourceTree = "<group>"; };
 		63DD11C51F4D1CA80050A7FC /* DIOSIosPlatformClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIOSIosPlatformClient.m; sourceTree = "<group>"; };
-		63DD11C61F4D1CA80050A7FC /* DNETAsdfApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNETAsdfApi.h; sourceTree = "<group>"; };
-		63DD11C71F4D1CA80050A7FC /* DNETAsdfApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNETAsdfApi.m; sourceTree = "<group>"; };
-		63DD11C81F4D1CA80050A7FC /* DNETAsdfPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNETAsdfPlayer.h; sourceTree = "<group>"; };
-		63DD11C91F4D1CA80050A7FC /* DNETAsdfPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNETAsdfPlayer.m; sourceTree = "<group>"; };
-		63DD11CA1F4D1CA80050A7FC /* DNETDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNETDataHelper.h; sourceTree = "<group>"; };
-		63DD11CB1F4D1CA80050A7FC /* DNETDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNETDataHelper.m; sourceTree = "<group>"; };
 		63DD11CC1F4D1CA80050A7FC /* DNETDConvention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNETDConvention.h; sourceTree = "<group>"; };
 		63DD11CD1F4D1CA80050A7FC /* DNETDConvention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNETDConvention.m; sourceTree = "<group>"; };
 		63DD11CE1F4D1CA80050A7FC /* DNETDJustId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNETDJustId.h; sourceTree = "<group>"; };
@@ -5256,8 +5240,6 @@
 		63DD11D71F4D1CA90050A7FC /* DNETDUserInfoResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNETDUserInfoResponse.m; sourceTree = "<group>"; };
 		63DD11D81F4D1CA90050A7FC /* DNETFindUserRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNETFindUserRequest.h; sourceTree = "<group>"; };
 		63DD11D91F4D1CA90050A7FC /* DNETFindUserRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNETFindUserRequest.m; sourceTree = "<group>"; };
-		63DD11DA1F4D1CA90050A7FC /* DNETQuikOrderApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNETQuikOrderApi.h; sourceTree = "<group>"; };
-		63DD11DB1F4D1CA90050A7FC /* DNETQuikOrderApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNETQuikOrderApi.m; sourceTree = "<group>"; };
 		63DD11DC1F4D1CA90050A7FC /* DNETRefreshScheduleDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNETRefreshScheduleDataRequest.h; sourceTree = "<group>"; };
 		63DD11DD1F4D1CA90050A7FC /* DNETRefreshScheduleDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNETRefreshScheduleDataRequest.m; sourceTree = "<group>"; };
 		63DD11DE1F4D1CA90050A7FC /* DNETRsvpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNETRsvpRequest.h; sourceTree = "<group>"; };
@@ -5266,8 +5248,6 @@
 		63DD11E11F4D1CA90050A7FC /* DNETSponsorsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNETSponsorsRequest.m; sourceTree = "<group>"; };
 		63DD11E21F4D1CA90050A7FC /* DNETSponsorsResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNETSponsorsResult.h; sourceTree = "<group>"; };
 		63DD11E31F4D1CA90050A7FC /* DNETSponsorsResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNETSponsorsResult.m; sourceTree = "<group>"; };
-		63DD11E41F4D1CA90050A7FC /* DNETTokenResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNETTokenResponse.h; sourceTree = "<group>"; };
-		63DD11E51F4D1CA90050A7FC /* DNETTokenResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DNETTokenResponse.m; sourceTree = "<group>"; };
 		63DD11E61F4D1CA90050A7FC /* DPRESAppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPRESAppManager.h; sourceTree = "<group>"; };
 		63DD11E71F4D1CA90050A7FC /* DPRESAppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPRESAppManager.m; sourceTree = "<group>"; };
 		63DD11E81F4D1CA90050A7FC /* DPRESConferenceDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPRESConferenceDataHelper.h; sourceTree = "<group>"; };
@@ -5785,12 +5765,6 @@
 				63DD11C31F4D1CA80050A7FC /* DIOSIosFirebase.m */,
 				63DD11C41F4D1CA80050A7FC /* DIOSIosPlatformClient.h */,
 				63DD11C51F4D1CA80050A7FC /* DIOSIosPlatformClient.m */,
-				63DD11C61F4D1CA80050A7FC /* DNETAsdfApi.h */,
-				63DD11C71F4D1CA80050A7FC /* DNETAsdfApi.m */,
-				63DD11C81F4D1CA80050A7FC /* DNETAsdfPlayer.h */,
-				63DD11C91F4D1CA80050A7FC /* DNETAsdfPlayer.m */,
-				63DD11CA1F4D1CA80050A7FC /* DNETDataHelper.h */,
-				63DD11CB1F4D1CA80050A7FC /* DNETDataHelper.m */,
 				63DD11CC1F4D1CA80050A7FC /* DNETDConvention.h */,
 				63DD11CD1F4D1CA80050A7FC /* DNETDConvention.m */,
 				63DD11CE1F4D1CA80050A7FC /* DNETDJustId.h */,
@@ -5805,8 +5779,6 @@
 				63DD11D71F4D1CA90050A7FC /* DNETDUserInfoResponse.m */,
 				63DD11D81F4D1CA90050A7FC /* DNETFindUserRequest.h */,
 				63DD11D91F4D1CA90050A7FC /* DNETFindUserRequest.m */,
-				63DD11DA1F4D1CA90050A7FC /* DNETQuikOrderApi.h */,
-				63DD11DB1F4D1CA90050A7FC /* DNETQuikOrderApi.m */,
 				63DD11DC1F4D1CA90050A7FC /* DNETRefreshScheduleDataRequest.h */,
 				63DD11DD1F4D1CA90050A7FC /* DNETRefreshScheduleDataRequest.m */,
 				63DD11DE1F4D1CA90050A7FC /* DNETRsvpRequest.h */,
@@ -5815,8 +5787,6 @@
 				63DD11E11F4D1CA90050A7FC /* DNETSponsorsRequest.m */,
 				63DD11E21F4D1CA90050A7FC /* DNETSponsorsResult.h */,
 				63DD11E31F4D1CA90050A7FC /* DNETSponsorsResult.m */,
-				63DD11E41F4D1CA90050A7FC /* DNETTokenResponse.h */,
-				63DD11E51F4D1CA90050A7FC /* DNETTokenResponse.m */,
 				63DD11E61F4D1CA90050A7FC /* DPRESAppManager.h */,
 				63DD11E71F4D1CA90050A7FC /* DPRESAppManager.m */,
 				63DD11E81F4D1CA90050A7FC /* DPRESConferenceDataHelper.h */,
@@ -8879,7 +8849,6 @@
 				63DD13451F4D1CAB0050A7FC /* DaggerInternalInstanceFactory.h in Headers */,
 				63DD13DB1F4D1CAB0050A7FC /* Okhttp3InternalFramedSpdy3.h in Headers */,
 				63DD197D1F4D1CAF0050A7FC /* IoReactivexInternalSchedulersRxThreadFactory.h in Headers */,
-				63DD1C371F4D1CB30050A7FC /* DNETQuikOrderApi.h in Headers */,
 				63DD176D1F4D1CAD0050A7FC /* IoReactivexInternalOperatorsMaybeMaybeDoFinally.h in Headers */,
 				63DD12B71F4D1CAB0050A7FC /* ComGoogleGsonAnnotationsSerializedName.h in Headers */,
 				63DD12411F4D1CAA0050A7FC /* AndroidArchLifecycleMediatorLiveData.h in Headers */,
@@ -9021,7 +8990,6 @@
 				63DD18FF1F4D1CAF0050A7FC /* IoReactivexInternalOperatorsParallelParallelPeek.h in Headers */,
 				63DD182D1F4D1CAE0050A7FC /* IoReactivexInternalOperatorsObservableObservableError.h in Headers */,
 				63DD15571F4D1CAC0050A7FC /* IoReactivexFunctionsFunction4.h in Headers */,
-				63DD1C231F4D1CB30050A7FC /* DNETAsdfApi.h in Headers */,
 				63DD13551F4D1CAB0050A7FC /* DaggerLazy.h in Headers */,
 				63DD15511F4D1CAC0050A7FC /* IoReactivexFunctionsConsumer.h in Headers */,
 				63DD1BC71F4D1CB30050A7FC /* DDAGNetworkModule_ProvidesAmazonRetrofitFactory.h in Headers */,
@@ -9244,7 +9212,6 @@
 				63DD16F11F4D1CAD0050A7FC /* IoReactivexInternalOperatorsFlowableFlowableSamplePublisher.h in Headers */,
 				63DD12751F4D1CAB0050A7FC /* AndroidArchPersistenceRoomRoomMasterTable.h in Headers */,
 				63DD1BDD1F4D1CB30050A7FC /* DDAOEventDao_Impl.h in Headers */,
-				63DD1C251F4D1CB30050A7FC /* DNETAsdfPlayer.h in Headers */,
 				63DD1A791F4D1CB00050A7FC /* IoReactivexSubjectsSerializedSubject.h in Headers */,
 				63DD17A31F4D1CAD0050A7FC /* IoReactivexInternalOperatorsMaybeMaybeJust.h in Headers */,
 				63DD130D1F4D1CAB0050A7FC /* ComGoogleGsonJsonNull.h in Headers */,
@@ -9533,7 +9500,6 @@
 				63DD1B8B1F4D1CB20050A7FC /* ComAndroidInternalUtilGrowingArrayUtils.h in Headers */,
 				63DD1B571F4D1CB20050A7FC /* AndroidSupportAnnotationCheckResult.h in Headers */,
 				63DD1A451F4D1CB00050A7FC /* IoReactivexProcessorsBehaviorProcessor.h in Headers */,
-				63DD1C411F4D1CB30050A7FC /* DNETTokenResponse.h in Headers */,
 				63DD13F51F4D1CAB0050A7FC /* Okhttp3InternalHttpRequestLine.h in Headers */,
 				63DD13ED1F4D1CAB0050A7FC /* Okhttp3InternalHttpHttpMethod.h in Headers */,
 				63DD17791F4D1CAD0050A7FC /* IoReactivexInternalOperatorsMaybeMaybeFilter.h in Headers */,
@@ -9724,7 +9690,6 @@
 				63DD18231F4D1CAE0050A7FC /* IoReactivexInternalOperatorsObservableObservableDoOnLifecycle.h in Headers */,
 				63DD1B9F1F4D1CB20050A7FC /* UtilsString16.h in Headers */,
 				63DD13CD1F4D1CAB0050A7FC /* Okhttp3InternalFramedHpack.h in Headers */,
-				63DD1C271F4D1CB30050A7FC /* DNETDataHelper.h in Headers */,
 				63DD1BC51F4D1CB30050A7FC /* DDAGNetworkModule_ProvidesAmazonBaseUrlFactory.h in Headers */,
 				63DD1ADB1F4D1CB10050A7FC /* AndroidDatabaseSqliteSQLiteAbortException.h in Headers */,
 				63DD1B6D1F4D1CB20050A7FC /* AndroidUtilAndroidException.h in Headers */,
@@ -10514,7 +10479,6 @@
 				63DD1A501F4D1CB00050A7FC /* IoReactivexProcessorsSerializedProcessor.m in Sources */,
 				63DD12EE1F4D1CAB0050A7FC /* ComGoogleGsonInternalConstructorConstructor.m in Sources */,
 				63DD174E1F4D1CAD0050A7FC /* IoReactivexInternalOperatorsMaybeMaybeAmb.m in Sources */,
-				63DD1C421F4D1CB30050A7FC /* DNETTokenResponse.m in Sources */,
 				63DD17701F4D1CAD0050A7FC /* IoReactivexInternalOperatorsMaybeMaybeDoOnEvent.m in Sources */,
 				63DD17821F4D1CAD0050A7FC /* IoReactivexInternalOperatorsMaybeMaybeFlatMapIterableFlowable.m in Sources */,
 				63DD18561F4D1CAE0050A7FC /* IoReactivexInternalOperatorsObservableObservableInternalHelper.m in Sources */,
@@ -10735,7 +10699,6 @@
 				63DD19BE1F4D1CB00050A7FC /* IoReactivexInternalSubscriptionsFullArbiter.m in Sources */,
 				63DD1D561F4D267F0050A7FC /* Retrofit2RequestBuilder.m in Sources */,
 				63DD16081F4D1CAC0050A7FC /* IoReactivexInternalOperatorsCompletableCompletableMergeIterable.m in Sources */,
-				63DD1C281F4D1CB30050A7FC /* DNETDataHelper.m in Sources */,
 				63DD15721F4D1CAC0050A7FC /* IoReactivexInternalDisposablesDisposableHelper.m in Sources */,
 				63DD16B41F4D1CAD0050A7FC /* IoReactivexInternalOperatorsFlowableFlowableLastSingle.m in Sources */,
 				63DD124C1F4D1CAA0050A7FC /* AndroidArchLifecycleViewModel.m in Sources */,
@@ -10853,7 +10816,6 @@
 				63DD12301F4D1CAA0050A7FC /* AndroidArchLifecycleLifecycle.m in Sources */,
 				63DD178E1F4D1CAD0050A7FC /* IoReactivexInternalOperatorsMaybeMaybeFromAction.m in Sources */,
 				63DD16FA1F4D1CAD0050A7FC /* IoReactivexInternalOperatorsFlowableFlowableScanSeed.m in Sources */,
-				63DD1C261F4D1CB30050A7FC /* DNETAsdfPlayer.m in Sources */,
 				63DD16B81F4D1CAD0050A7FC /* IoReactivexInternalOperatorsFlowableFlowableMap.m in Sources */,
 				63DD1B181F4D1CB10050A7FC /* AndroidDatabaseSqliteSQLiteReadOnlyDatabaseException.m in Sources */,
 				63DD16381F4D1CAC0050A7FC /* IoReactivexInternalOperatorsFlowableFlowableBlockingSubscribe.m in Sources */,
@@ -11129,7 +11091,6 @@
 				63DD1D641F4D267F0050A7FC /* Retrofit2UrlsessionUrlSessionCall.m in Sources */,
 				63DD16661F4D1CAC0050A7FC /* IoReactivexInternalOperatorsFlowableFlowableDematerialize.m in Sources */,
 				63DD183E1F4D1CAE0050A7FC /* IoReactivexInternalOperatorsObservableObservableFromArray.m in Sources */,
-				63DD1C241F4D1CB30050A7FC /* DNETAsdfApi.m in Sources */,
 				63DD16C21F4D1CAD0050A7FC /* IoReactivexInternalOperatorsFlowableFlowableObserveOn.m in Sources */,
 				63DD1A1A1F4D1CB00050A7FC /* IoReactivexObserversBaseTestConsumer.m in Sources */,
 				63DD14441F4D1CAB0050A7FC /* Retrofit2ConverterGsonGsonConverterFactory.m in Sources */,
@@ -11528,7 +11489,6 @@
 				63DD13F41F4D1CAB0050A7FC /* Okhttp3InternalHttpRealResponseBody.m in Sources */,
 				63DD1C7A1F4D1CB40050A7FC /* DUTTimeUtils.m in Sources */,
 				63DD136E1F4D1CAB0050A7FC /* DaggerMultibindingspackage-info.m in Sources */,
-				63DD1C381F4D1CB30050A7FC /* DNETQuikOrderApi.m in Sources */,
 				63DD1A101F4D1CB00050A7FC /* IoReactivexObservablesGroupedObservable.m in Sources */,
 				63DD1A881F4D1CB10050A7FC /* IoReactivexSubscribersResourceSubscriber.m in Sources */,
 				63DD19501F4D1CAF0050A7FC /* IoReactivexInternalOperatorsSingleSingleOnErrorReturn.m in Sources */,
