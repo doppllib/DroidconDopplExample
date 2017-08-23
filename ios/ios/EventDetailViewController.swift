@@ -95,7 +95,7 @@ import dcframework
         } else if speakers == nil {
             return 0
         }
-        
+
         return speakers!.count
     }
     

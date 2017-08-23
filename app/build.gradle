@@ -7,7 +7,7 @@ buildscript {
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
-        classpath 'me.tatarka:gradle-retrolambda:3.4.0'
+        classpath 'me.tatarka:gradle-retrolambda:3.6.1'
         classpath 'com.google.gms:google-services:3.1.0'
     }
 }
@@ -20,7 +20,7 @@ apply plugin: 'co.doppl.gradle'
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
-def baseurl = properties.hasProperty('baseurl') ? properties.getProperty('baseurl') : 'http://droidcon-server.herokuapp.com/'
+def baseurl = properties.hasProperty('baseurl') ? properties.getProperty('baseurl') : 'https://droidcon-server.herokuapp.com/'
 def amazonurl = properties.getProperty('amazonurl') ? properties.getProperty('amazonurl') : 'https://s3.amazonaws.com/'
 def releasePassword = properties.getProperty('releasePassword')
 
@@ -100,7 +100,7 @@ android {
     }
 }
 
-def supportVersion = "26.0.0"
+def supportVersion = "26.0.1"
 def archVer = "1.0.0-alpha8"
 def dopplArchVer = "1.0.0.0-alpha8"
 def daggerVer = "2.5"
@@ -147,9 +147,9 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-    doppl 'co.doppl.com.squareup.retrofit2.nossl:retrofit:2.3.0.0'
-    doppl 'co.doppl.com.squareup.retrofit2.nossl:converter-gson:2.3.0.0'
-    doppl 'co.doppl.com.squareup.retrofit2.nossl:adapter-rxjava2:2.3.0.0'
+    doppl 'co.doppl.com.squareup.retrofit2.urlsession:retrofit:2.3.0.3'
+    doppl 'co.doppl.com.squareup.retrofit2.urlsession:converter-gson:2.3.0.0'
+    doppl 'co.doppl.com.squareup.retrofit2.urlsession:adapter-rxjava2:2.3.0.0'
 
     compile "io.reactivex.rxjava2:rxjava:2.0.8"
     doppl "co.doppl.io.reactivex.rxjava2:rxjava:2.0.8.0"

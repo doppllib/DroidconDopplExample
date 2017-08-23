@@ -3,6 +3,7 @@ package co.touchlab.droidconandroid.shared.network;
 
 import co.touchlab.droidconandroid.shared.network.dao.JustId;
 import io.reactivex.Observable;
+import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -16,6 +17,10 @@ public interface RsvpRequest {
     @POST("/dataTest/rsvpEventAnon/{id}")
     @FormUrlEncoded
     Observable<JustId> rsvp(@Path("id") Long eventId, @Field("uuid") String uuid);
+
+    @POST("/dataTest/rsvpEventAnon/{id}")
+    @FormUrlEncoded
+    Call<JustId> rsvpSync(@Path("id") Long eventId, @Field("uuid") String uuid);
 
     @POST("/dataTest/unRsvpEventAnon/{id}")
     @FormUrlEncoded

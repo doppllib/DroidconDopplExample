@@ -2,6 +2,7 @@
 buildscript {
     repositories {
         maven { url 'https://dl.bintray.com/doppllib/maven' }
+        maven { url dopplMavenDeploy }
         jcenter()
         mavenCentral()
     }
@@ -16,6 +17,7 @@ allprojects {
         maven { url "https://dl.bintray.com/doppllib/maven" }
         maven { url "http://dl.bintray.com/populov/maven" }
         maven { url 'https://maven.google.com' }
+        maven { url dopplMavenDeploy }
         jcenter()
         mavenCentral()
     }
