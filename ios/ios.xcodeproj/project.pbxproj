@@ -2670,7 +2670,6 @@
 		EDC16D501F4E019800C62686 /* CoTouchlabDopplUtilsPlatformUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC16D341F4E019700C62686 /* CoTouchlabDopplUtilsPlatformUtils.m */; };
 		EDC16D511F4E019800C62686 /* CoTouchlabDopplUtilsXcodeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = EDC16D351F4E019700C62686 /* CoTouchlabDopplUtilsXcodeUtils.h */; };
 		EDC16D521F4E019800C62686 /* CoTouchlabDopplUtilsXcodeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC16D361F4E019700C62686 /* CoTouchlabDopplUtilsXcodeUtils.m */; };
-		EDC16D551F4E019800C62686 /* dopplTests.txt in Resources */ = {isa = PBXBuildFile; fileRef = EDC16D391F4E019700C62686 /* dopplTests.txt */; };
 		EDC16D561F4E019800C62686 /* DPRESConferenceViewModelTest.h in Headers */ = {isa = PBXBuildFile; fileRef = EDC16D3A1F4E019700C62686 /* DPRESConferenceViewModelTest.h */; };
 		EDC16D571F4E019800C62686 /* DPRESConferenceViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC16D3B1F4E019700C62686 /* DPRESConferenceViewModelTest.m */; };
 		EDC16D5A1F4E019800C62686 /* prefixes.properties in Resources */ = {isa = PBXBuildFile; fileRef = EDC16D3E1F4E019700C62686 /* prefixes.properties */; };
@@ -2682,6 +2681,9 @@
 		EDC1D4161F4E23FA00C62686 /* DPRESUserDetailViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC1D4141F4E23FA00C62686 /* DPRESUserDetailViewModelTest.m */; };
 		EDC1D4191F4E266500C62686 /* DOneTest.h in Headers */ = {isa = PBXBuildFile; fileRef = EDC1D4171F4E266500C62686 /* DOneTest.h */; };
 		EDC1D41A1F4E266500C62686 /* DOneTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC1D4181F4E266500C62686 /* DOneTest.m */; };
+		EDC1D41B1F4E31AE00C62686 /* dopplTests.txt in Resources */ = {isa = PBXBuildFile; fileRef = EDC16D391F4E019700C62686 /* dopplTests.txt */; };
+		EDC1D41C1F4E31B400C62686 /* dopplTests.txt in Resources */ = {isa = PBXBuildFile; fileRef = EDC16D391F4E019700C62686 /* dopplTests.txt */; };
+		EDC1D41D1F4E31DC00C62686 /* dopplTests.txt in Resources */ = {isa = PBXBuildFile; fileRef = EDC16D391F4E019700C62686 /* dopplTests.txt */; };
 		F92EB65A1D5A5EEC003B47B7 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */; };
 		F9903FA21D3FBEC70050687E /* DroidconTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */; };
 		F9D6952D1D47AF9D0095F0F9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */; };
@@ -9989,7 +9991,8 @@
 					};
 					6342B6B41DC6A18B0060BE83 = {
 						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						TestTargetID = 631B98EA1C7D6533008AA20D;
 					};
 				};
 			};
@@ -10024,6 +10027,7 @@
 				639320311D77FF700047224B /* dataseeds in Resources */,
 				631B98FB1C7D6533008AA20D /* Assets.xcassets in Resources */,
 				FA6128C31C986E7A001142E8 /* EventTableViewCell.xib in Resources */,
+				EDC1D41D1F4E31DC00C62686 /* dopplTests.txt in Resources */,
 				631B98F91C7D6533008AA20D /* Main.storyboard in Resources */,
 				FA6128C11C986E16001142E8 /* SpeakerTableViewCell.xib in Resources */,
 				EDC16D201F4DFE0900C62686 /* GoogleService-Info.plist in Resources */,
@@ -10048,7 +10052,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDC16D551F4E019800C62686 /* dopplTests.txt in Resources */,
+				EDC1D41B1F4E31AE00C62686 /* dopplTests.txt in Resources */,
 				013AF8B01F3A3D8000C91182 /* prefixes.properties in Resources */,
 				EDC16D5A1F4E019800C62686 /* prefixes.properties in Resources */,
 			);
@@ -10058,6 +10062,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC1D41C1F4E31B400C62686 /* dopplTests.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -12188,11 +12193,22 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = "";
+				HEADER_SEARCH_PATHS = (
+					"$(J2OBJC_LOCAL_PATH)/frameworks/JRE.framework/Headers",
+					"$(PROJECT_DIR)",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/JSR305.framework/Headers",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/JavaxInject.framework/Headers",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/JUnit.framework/Headers",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/Mockito.framework/Headers",
+				);
 				INFOPLIST_FILE = dcframeworkTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.touchlab.dcframeworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Droidcon 17 anon.app/Droidcon 17 anon";
 			};
 			name = Debug;
 		};
@@ -12206,11 +12222,22 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = "";
+				HEADER_SEARCH_PATHS = (
+					"$(J2OBJC_LOCAL_PATH)/frameworks/JRE.framework/Headers",
+					"$(PROJECT_DIR)",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/JSR305.framework/Headers",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/JavaxInject.framework/Headers",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/JUnit.framework/Headers",
+					"$(J2OBJC_LOCAL_PATH)/frameworks/Mockito.framework/Headers",
+				);
 				INFOPLIST_FILE = dcframeworkTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.touchlab.dcframeworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Droidcon 17 anon.app/Droidcon 17 anon";
 			};
 			name = Release;
 		};
