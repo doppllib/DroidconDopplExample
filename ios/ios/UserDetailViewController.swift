@@ -8,104 +8,154 @@
 
 import UIKit
 
-class UserDetailViewController: UIViewController {
+class UserDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var speakerImage: UIImageView!
     @IBOutlet weak var speakerName: UILabel!
     @IBOutlet weak var speakerCompany: UILabel!
-    @IBOutlet weak var speakerCompany2: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var website: UILabel!
-    
-    @IBOutlet weak var facebook: UILabel!
-    
-    @IBOutlet weak var twitter: UILabel!
-    
-    @IBOutlet weak var linkedin: UILabel!
-    
-    @IBOutlet weak var speakerBio: UILabel!
-    
-    
-    
+    private let GOOGLE_URL: String = "http://www.google.com/search?q="
+    private let TWITTER_URL: String = "http://www.twitter.com/"
+    private let GPLUS_URL: String = "http://www.plus.google.com/s/"
+    private let LINKEDIN_URL: String = "http://www.linkedin.com/in/"
+    private let FACEBOOK_URL: String = "http://www.facebook.com/"
     
     var speaker: DDATUserAccount!
-    private var searchUrl: String = "https://www.google.com/search?q="
+    var speakerInfos: [SpeakerInfo] = []
     
+    // MARK: Lifecycle events
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        speakerName.text = speaker.getName()
+        checkForSpeakerInfo()
         
+        if (!speaker.getName().isEmpty) {
+            speakerName.text = speaker.getName()
+            speakerName.isHidden = false
+            speakerName.sizeToFit()
+        }
         if (!speaker.getCompany().isEmpty) {
             speakerCompany.text = speaker?.getCompany()
-            speakerCompany2.text = speaker?.getCompany()
-            let companyClick = UITapGestureRecognizer(target: self, action: Selector(("openCompany:")))
-            speakerCompany2.addGestureRecognizer(companyClick)
-        } else {
-            speakerCompany.isHidden = true
-            speakerCompany2.isHidden = true
+            speakerCompany.isHidden = false
+            speakerCompany.sizeToFit()
         }
-        
-        if (!speaker.getWebsite().isEmpty) {
-            //        website.text
-        } else {
-            website.isHidden = true
-        }
-        
-        if (!speaker.getFacebook().isEmpty) {
-            //        facebook.text =
-        } else {
-            facebook.isHidden = true
-        }
-        
-        if (!speaker.getTwitter().isEmpty) {
-            //        twitter.text =
-        } else {
-            twitter.isHidden = true
-        }
-        
-        if (!speaker.getLinkedIn().isEmpty) {
-            //        linkedin.text =
-        } else {
-            linkedin.isHidden = true
-        }
-        
-        if (!speaker.getProfile().isEmpty) {
-            //        speakerBio.text =
-        } else {
-            speakerBio.isHidden = true
-        }
-        
-        
-            
+                
         speakerImage.kf.setImage(with: URL(string: (speaker?.avatarImageUrl())!))
         speakerImage.layer.cornerRadius = 24
         speakerImage.layer.masksToBounds = true
-        
-        speakerCompany.sizeToFit()
-        speakerName.sizeToFit()
         speakerImage.sizeToFit()
     }
     
-    func openCompany() {
-        var search = searchUrl + (speaker?.getCompany())!
-        UIApplication.shared.open(URL(string: search)!)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.delegate = self
+        tableView.dataSource = self
+        let nib = UINib(nibName: "UserTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "userCell")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func checkForSpeakerInfo() {
+        let speakerCompany = speaker.getCompany()
+        if speakerCompany.isNotNilOrEmpty() {
+            speakerInfos.append(SpeakerInfo(type: .company, info: speakerCompany!))
+        }
+        
+        let speakerWebsite = speaker.getWebsite()
+        if speakerWebsite.isNotNilOrEmpty() {
+            speakerInfos.append(SpeakerInfo(type: .website, info: speakerWebsite!))
+        }
+        
+        let speakerFb = speaker.getFacebook()
+        if speakerFb.isNotNilOrEmpty() {
+            speakerInfos.append(SpeakerInfo(type: .facebook, info: speakerFb!))
+        }
+        
+        let speakerTwitter = speaker.getTwitter()
+        if speakerTwitter.isNotNilOrEmpty() {
+            speakerInfos.append(SpeakerInfo(type: .twitter, info: speakerTwitter!))
+        }
+        
+        let speakerLinkedin = speaker.getLinkedIn()
+        if speakerLinkedin.isNotNilOrEmpty() {
+            speakerInfos.append(SpeakerInfo(type: .linkedin, info: speakerLinkedin!))
+        }
+        
+        let speakerGPlus = speaker.getgPlus()
+        if speakerGPlus.isNotNilOrEmpty() {
+            speakerInfos.append(SpeakerInfo(type: .gplus, info: speakerGPlus!))
+        }
+        
+        let speakerProfile = speaker.getProfile()
+        if speakerProfile.isNotNilOrEmpty() {
+            speakerInfos.append(SpeakerInfo(type: .profile, info: speakerProfile!))
+        }
     }
-    */
-
+    
+    func openWebsite(_ selected: SpeakerInfo) {
+        var url = ""
+        
+        if selected.info.contains(".com") {
+            url = selected.info.formatUrl()
+        } else {
+            switch (selected.type) {
+            case .company:
+                url = GOOGLE_URL + selected.info
+                break
+            case .website:
+                url = selected.info.formatUrl()
+                break
+            case .facebook:
+                url = FACEBOOK_URL + selected.info
+                break
+            case .twitter:
+                url = TWITTER_URL + selected.info
+                break
+            case .linkedin:
+                url = LINKEDIN_URL + selected.info
+                break
+            case .gplus:
+                url = GPLUS_URL + selected.info.replacingOccurrences(of: "+", with: "")
+                break
+            default:
+                break
+            }
+        }
+        
+        if (!url.isEmpty) {
+            UIApplication.shared.open(URL(string: url)!)
+        }
+    }
+    
+    // MARK: TableView
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return speakerInfos.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UserTableViewCell = tableView.dequeueReusableCell(withIdentifier: "userCell") as! UserTableViewCell
+        
+        let speakerInfo = speakerInfos[indexPath.row]
+        cell.loadInfo(speakerInfo)
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        
+        let selected = speakerInfos[indexPath.row]
+        openWebsite(selected)
+        
+    }
 }

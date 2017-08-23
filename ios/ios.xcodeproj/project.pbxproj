@@ -2658,6 +2658,9 @@
 		FA6128C51C986E87001142E8 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6128C41C986E87001142E8 /* EventTableViewCell.swift */; };
 		FAE033A61C974C65001C50E1 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE033A51C974C65001C50E1 /* EventDetailViewController.swift */; };
 		FB138D0A1F4B4DA000B712D2 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB138D091F4B4DA000B712D2 /* UserDetailViewController.swift */; };
+		FB138D0C1F4C7E6600B712D2 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB138D0B1F4C7E6600B712D2 /* UserTableViewCell.swift */; };
+		FB138D0E1F4C7EBA00B712D2 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB138D0D1F4C7EBA00B712D2 /* UserTableViewCell.xib */; };
+		FB138D101F4DC3B300B712D2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB138D0F1F4DC3B200B712D2 /* Extensions.swift */; };
 		FBB8D9191F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = FBB8D9171F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */; };
 		FBB8D91A1F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FBB8D9181F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */; };
 		FBD247BD1F3E406800E48171 /* JavaUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD247BC1F3E406800E48171 /* JavaUtils.swift */; };
@@ -5385,6 +5388,9 @@
 		FA86A7F91C92169900C09CE7 /* ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		FAE033A51C974C65001C50E1 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		FB138D091F4B4DA000B712D2 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		FB138D0B1F4C7E6600B712D2 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		FB138D0D1F4C7EBA00B712D2 /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		FB138D0F1F4DC3B200B712D2 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FBB8D9171F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAGNetworkModule_ProvidesRsvpRequestFactory.h; sourceTree = "<group>"; };
 		FBB8D9181F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAGNetworkModule_ProvidesRsvpRequestFactory.m; sourceTree = "<group>"; };
 		FBD247BC1F3E406800E48171 /* JavaUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavaUtils.swift; sourceTree = "<group>"; };
@@ -8285,6 +8291,7 @@
 				F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */,
 				FAE033A51C974C65001C50E1 /* EventDetailViewController.swift */,
 				FBD247BC1F3E406800E48171 /* JavaUtils.swift */,
+				FB138D0F1F4DC3B200B712D2 /* Extensions.swift */,
 				63EE30CD1CC6985800B64D3D /* LaunchViewController.swift */,
 				63EE30DE1CD025AC00B64D3D /* ScheduleListCell.swift */,
 				018320251F152215009794AC /* ScheduleViewController.swift */,
@@ -8370,6 +8377,8 @@
 			children = (
 				FA6128C21C986E7A001142E8 /* EventTableViewCell.xib */,
 				FA6128C41C986E87001142E8 /* EventTableViewCell.swift */,
+				FB138D0D1F4C7EBA00B712D2 /* UserTableViewCell.xib */,
+				FB138D0B1F4C7E6600B712D2 /* UserTableViewCell.swift */,
 				FA6128C01C986E16001142E8 /* SpeakerTableViewCell.xib */,
 				FA6128BE1C986E05001142E8 /* SpeakerTableViewCell.swift */,
 			);
@@ -9885,6 +9894,7 @@
 				013AF8B31F3A3DBA00C91182 /* prefixes.properties in Resources */,
 				639320311D77FF700047224B /* dataseeds in Resources */,
 				631B98FB1C7D6533008AA20D /* Assets.xcassets in Resources */,
+				FB138D0E1F4C7EBA00B712D2 /* UserTableViewCell.xib in Resources */,
 				FA6128C31C986E7A001142E8 /* EventTableViewCell.xib in Resources */,
 				631B98F91C7D6533008AA20D /* Main.storyboard in Resources */,
 				FA6128C11C986E16001142E8 /* SpeakerTableViewCell.xib in Resources */,
@@ -10281,9 +10291,11 @@
 				4C81B70B1D75E7B500DFB89C /* SponsorImage.swift in Sources */,
 				FA6128C51C986E87001142E8 /* EventTableViewCell.swift in Sources */,
 				018320261F152215009794AC /* ScheduleViewController.swift in Sources */,
+				FB138D101F4DC3B300B712D2 /* Extensions.swift in Sources */,
 				FBD247BD1F3E406800E48171 /* JavaUtils.swift in Sources */,
 				63EE30D01CC6AD4400B64D3D /* WelcomeViewController.swift in Sources */,
 				F9D6952D1D47AF9D0095F0F9 /* AboutViewController.swift in Sources */,
+				FB138D0C1F4C7E6600B712D2 /* UserTableViewCell.swift in Sources */,
 				4C81B7131D7616C500DFB89C /* SponsorsViewController.swift in Sources */,
 				4C81B70F1D76162000DFB89C /* SponsorPhotoCell.swift in Sources */,
 				FAE033A61C974C65001C50E1 /* EventDetailViewController.swift in Sources */,
