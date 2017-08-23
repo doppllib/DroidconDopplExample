@@ -169,6 +169,7 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:1.9.5'
+    testCompile "org.robolectric:robolectric:3.3.2"
 }
 
 

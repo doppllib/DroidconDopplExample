@@ -83,7 +83,7 @@ public class AppPrefs
      */
     public Observable<Pair<String, String>> observeConventionDates()
     {
-        return conventionDateProcessor.distinct();
+        return conventionDateProcessor.distinctUntilChanged();
     }
 
     public void setRefreshTime(long time)

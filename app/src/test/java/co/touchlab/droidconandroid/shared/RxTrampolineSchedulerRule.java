@@ -1,4 +1,4 @@
-package co.touchlab.droidconandroid.shared.interactors;
+package co.touchlab.droidconandroid.shared;
 
 
 import org.junit.rules.TestRule;

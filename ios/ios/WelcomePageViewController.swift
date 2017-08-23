@@ -41,8 +41,7 @@ class WelcomePageViewController: UIPageViewController {
 
 extension WelcomePageViewController: UIPageViewControllerDataSource {
     
-    func pageViewController(_ pageViewController: UIPageViewController,
-                            viewControllerBefore viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
             return nil
         }
@@ -61,8 +60,7 @@ extension WelcomePageViewController: UIPageViewControllerDataSource {
 
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController,
-                            viewControllerAfter viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
             return nil
         }
@@ -87,10 +85,7 @@ extension WelcomePageViewController: UIPageViewControllerDataSource {
 
 extension WelcomePageViewController: UIPageViewControllerDelegate {
     
-    func pageViewController(_ pageViewController: UIPageViewController,
-                            didFinishAnimating finished: Bool,
-                                               previousViewControllers: [UIViewController],
-                                               transitionCompleted completed: Bool) {
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         if let firstViewController = viewControllers?.first,
             let index = orderedViewControllers.index(of: firstViewController) {
             welcomeDelegate?.welcomePageViewController(self,
@@ -102,9 +97,7 @@ extension WelcomePageViewController: UIPageViewControllerDelegate {
 
 protocol WelcomePageViewControllerDelegate: class {
     
-    func welcomePageViewController(_ welcomePageViewController: WelcomePageViewController,
-                                    didUpdatePageCount count: Int)
+    func welcomePageViewController(_ welcomePageViewController: WelcomePageViewController, didUpdatePageCount count: Int)
     
-    func welcomePageViewController(_ welcomePageViewController: WelcomePageViewController,
-                                    didUpdatePageIndex index: Int)
+    func welcomePageViewController(_ welcomePageViewController: WelcomePageViewController, didUpdatePageIndex index: Int)
 }

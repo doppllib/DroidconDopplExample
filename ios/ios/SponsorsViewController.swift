@@ -8,15 +8,12 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
 class SponsorsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tabs: UISegmentedControl!
     
-    fileprivate let reuseIdentifier = "SponsorPhotoCell"
     fileprivate let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
     
     fileprivate var items = NSMutableDictionary()
@@ -73,14 +70,10 @@ class SponsorsViewController: UIViewController, UICollectionViewDataSource, UICo
             
                 self.collectionView?.reloadData()
             }
-            
         })
-
     }
     
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                               insetForSectionAt section: Int) -> UIEdgeInsets {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return sectionInsets
     }
     
@@ -101,7 +94,7 @@ class SponsorsViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SponsorPhotoCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SponsorPhotoCell", for: indexPath) as! SponsorPhotoCell
         
         cell.backgroundColor = UIColor.white
         cell.imageView.image = nil
@@ -112,7 +105,7 @@ class SponsorsViewController: UIViewController, UICollectionViewDataSource, UICo
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
             let data = try? Data(contentsOf: url!)
             DispatchQueue.main.async(execute: {
-                if(data != nil){
+                if (data != nil) {
                     cell.imageView.image = UIImage(data: data!)
                 }
             });
@@ -131,9 +124,7 @@ class SponsorsViewController: UIViewController, UICollectionViewDataSource, UICo
         return false
     }
     
-    func collectionView(_ collectionView: UICollectionView,
-                            layout collectionViewLayout: UICollectionViewLayout,
-                                   sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let photo = photoForIndexPath(indexPath)
         let paddingPerRow =  CGFloat(itemSpacing)  * (CGFloat(self.totalSpanCount) / CGFloat(photo.spanCount) - 1)
         let collectionSize = collectionView.bounds.size.width - sectionInsets.left - sectionInsets.right - paddingPerRow

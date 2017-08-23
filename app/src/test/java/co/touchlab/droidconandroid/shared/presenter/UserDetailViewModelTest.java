@@ -1,4 +1,4 @@
-package co.touchlab.droidconandroid.shared.interactors;
+package co.touchlab.droidconandroid.shared.presenter;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -7,15 +7,13 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import co.touchlab.droidconandroid.shared.RxTrampolineSchedulerRule;
 import co.touchlab.droidconandroid.shared.data.UserAccount;
-import co.touchlab.droidconandroid.shared.presenter.UserDetailHost;
-import co.touchlab.droidconandroid.shared.presenter.UserDetailViewModel;
+import co.touchlab.droidconandroid.shared.interactors.FindUserInteractor;
 import io.reactivex.Observable;
-import io.reactivex.Single;
 
 
 import static org.mockito.Matchers.anyInt;
-import static org.mockito.Matchers.anyLong;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;

@@ -82,7 +82,7 @@ class NotificationService : FirebaseMessagingService() {
 
     private fun sendIntentNotification(notification: RemoteMessage.Notification, intent: Intent, channelId: String) {
         val title = if (notification.title.isNullOrBlank()) getString(R.string.app_name) else notification.title
-        val message = notification.body!!
+        val message = if (notification.body.isNullOrBlank()) getString(R.string.version_message) else notification.body
 
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         val pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,

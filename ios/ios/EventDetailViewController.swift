@@ -17,10 +17,8 @@ import dcframework
     @IBOutlet weak var headerImage: UIImageView!
     
     // MARK: Properties
-    var titleString: String?
-    var descriptionString: String?
-    var dateTime: String?
     var event: DDATEvent!
+    var eventId: jlong!
     var conflict: jboolean!
     var speakers: [DDATUserAccount]?
     var eventDetailPresenter: DPRESEventDetailViewModel!
@@ -28,6 +26,7 @@ import dcframework
     // MARK: Lifecycle events
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        navigationItem.hidesBackButton = false
     }
     
     override func viewDidLoad() {
@@ -39,7 +38,7 @@ import dcframework
         
         eventDetailPresenter = DPRESEventDetailViewModel.forIos()
         eventDetailPresenter.register__(with: self)
-        eventDetailPresenter.getDetailsWithLong(event.getId())
+        eventDetailPresenter.getDetailsWithLong(eventId)
         
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -53,8 +52,6 @@ import dcframework
         self.tableView.contentInset = UIEdgeInsets.zero
         self.tableView.separatorStyle = .none
         self.tableView.reloadData()
-        
-        styleButton()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -74,6 +71,7 @@ import dcframework
         event = eventInfo.getEvent()
         conflict = eventInfo.getConflict()
         speakers = JavaUtils.javaList(toList: eventInfo.getSpeakers()) as? [DDATUserAccount]
+        styleButton()
         updateAllUi()
     }
     
@@ -113,16 +111,18 @@ import dcframework
         if (indexPath as NSIndexPath).section == 0 {
             let cell:EventTableViewCell = tableView.dequeueReusableCell(withIdentifier: "eventCell") as! EventTableViewCell
             cell.descriptionLabel.numberOfLines = 0
-            cell.loadInfo(titleString!, description: descriptionString!, track: event!.getVenue().getName(), time: dateTime!, networkEvent: event, eventDetailPresenter: eventDetailPresenter, conflict: conflict)
+            if (event != nil) {
+                cell.loadInfo(event, eventDetailPresenter: eventDetailPresenter, conflict: conflict)
+            }
             cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
         } else {
             let cell:SpeakerTableViewCell = tableView.dequeueReusableCell(withIdentifier: "speakerCell") as! SpeakerTableViewCell
-            
-            let speaker = speakers![indexPath.row] as DDATUserAccount
-            if let speakerDescription = (speaker.getProfile()) {
-                let imageUrl = speaker.avatarImageUrl() ?? ""
-                cell.loadInfo(speaker.getName()!, info: speakerDescription, imgUrl: imageUrl)
+            for speaker in speakers! {
+                if let speakerDescription = (speaker.getProfile()) {
+                    let imageUrl = speaker.avatarImageUrl() ?? ""
+                    cell.loadInfo(speaker.getName()!, info: speakerDescription, imgUrl: imageUrl)
+                }
             }
             
             cell.selectionStyle = UITableViewCellSelectionStyle.none

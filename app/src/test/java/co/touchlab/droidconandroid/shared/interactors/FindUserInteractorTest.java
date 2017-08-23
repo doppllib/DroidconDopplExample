@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import co.touchlab.droidconandroid.shared.RxTrampolineSchedulerRule;
 import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.network.FindUserRequest;
@@ -20,8 +21,6 @@ import io.reactivex.Single;
 import static org.mockito.Matchers.anyInt;
 import static org.mockito.Matchers.anyLong;
 import static org.mockito.Matchers.anyObject;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)

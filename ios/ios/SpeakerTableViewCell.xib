@@ -40,6 +40,19 @@
                             <constraint firstAttribute="width" constant="48" id="e4C-KL-Ti8"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5V-VV-oSi">
+                        <rect key="frame" x="13" y="8" width="48" height="48"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="48" id="1co-ad-5rz"/>
+                            <constraint firstAttribute="width" constant="48" id="95f-2J-71Z"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="dmI-Z3-ba9" secondAttribute="bottom" constant="8" id="DBB-4B-yc7"/>
@@ -52,12 +65,14 @@
                     <constraint firstItem="dmI-Z3-ba9" firstAttribute="trailing" secondItem="qCf-1y-7Lg" secondAttribute="trailing" id="jS3-ZQ-rMu"/>
                     <constraint firstItem="Kv0-F4-vGC" firstAttribute="leading" secondItem="YcR-Cc-Hdz" secondAttribute="leadingMargin" constant="5" id="lvK-G9-FwG"/>
                     <constraint firstItem="qCf-1y-7Lg" firstAttribute="leading" secondItem="dmI-Z3-ba9" secondAttribute="leading" id="qb6-tw-JnS"/>
+                    <constraint firstItem="qCf-1y-7Lg" firstAttribute="leading" secondItem="Kv0-F4-vGC" secondAttribute="trailing" constant="13" id="w84-NJ-hu2"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="infoLabel" destination="dmI-Z3-ba9" id="XHG-tr-C9C"/>
                 <outlet property="nameLabel" destination="qCf-1y-7Lg" id="4UI-iw-9HN"/>
                 <outlet property="speakerImage" destination="Kv0-F4-vGC" id="kPR-cJ-tU3"/>
+                <outlet property="speakerImageLabel" destination="p5V-VV-oSi" id="bE0-Vt-ssn"/>
             </connections>
             <point key="canvasLocation" x="371" y="347"/>
         </tableViewCell>
