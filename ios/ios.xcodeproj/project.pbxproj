@@ -2682,6 +2682,8 @@
 		EDC1D4191F4E266500C62686 /* DOneTest.h in Headers */ = {isa = PBXBuildFile; fileRef = EDC1D4171F4E266500C62686 /* DOneTest.h */; };
 		EDC1D41A1F4E266500C62686 /* DOneTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC1D4181F4E266500C62686 /* DOneTest.m */; };
 		EDC1D41D1F4E31DC00C62686 /* dopplTests.txt in Resources */ = {isa = PBXBuildFile; fileRef = EDC16D391F4E019700C62686 /* dopplTests.txt */; };
+		EDC1D4201F4F249300C62686 /* DDAGNetworkModule_ProvidesTransformerFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = EDC1D41E1F4F249300C62686 /* DDAGNetworkModule_ProvidesTransformerFactory.h */; };
+		EDC1D4211F4F249300C62686 /* DDAGNetworkModule_ProvidesTransformerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC1D41F1F4F249300C62686 /* DDAGNetworkModule_ProvidesTransformerFactory.m */; };
 		F92EB65A1D5A5EEC003B47B7 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */; };
 		F9903FA21D3FBEC70050687E /* DroidconTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */; };
 		F9D6952D1D47AF9D0095F0F9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D6952C1D47AF9D0095F0F9 /* AboutViewController.swift */; };
@@ -5438,6 +5440,8 @@
 		EDC1D4141F4E23FA00C62686 /* DPRESUserDetailViewModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPRESUserDetailViewModelTest.m; sourceTree = "<group>"; };
 		EDC1D4171F4E266500C62686 /* DOneTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOneTest.h; sourceTree = "<group>"; };
 		EDC1D4181F4E266500C62686 /* DOneTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOneTest.m; sourceTree = "<group>"; };
+		EDC1D41E1F4F249300C62686 /* DDAGNetworkModule_ProvidesTransformerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAGNetworkModule_ProvidesTransformerFactory.h; sourceTree = "<group>"; };
+		EDC1D41F1F4F249300C62686 /* DDAGNetworkModule_ProvidesTransformerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAGNetworkModule_ProvidesTransformerFactory.m; sourceTree = "<group>"; };
 		F08872F4EDF9EC345739A52F /* Pods-dcframeworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dcframeworkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dcframeworkTests/Pods-dcframeworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F62B114202731562C1A1C003 /* Pods_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7B0B04A58CF9690A7D7E15C /* Pods-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosUITests/Pods-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -5514,6 +5518,8 @@
 		013AE4371F3A3D6400C91182 /* generated */ = {
 			isa = PBXGroup;
 			children = (
+				EDC1D41E1F4F249300C62686 /* DDAGNetworkModule_ProvidesTransformerFactory.h */,
+				EDC1D41F1F4F249300C62686 /* DDAGNetworkModule_ProvidesTransformerFactory.m */,
 				FBB8D9171F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.h */,
 				FBB8D9181F43762300614C8D /* DDAGNetworkModule_ProvidesRsvpRequestFactory.m */,
 				013AE4381F3A3D6400C91182 /* co_doppl_android_arch_core_common_1_0_0_0_alpha8 */,
@@ -8504,6 +8510,7 @@
 			files = (
 				013AF53A1F3A3D7C00C91182 /* IoReactivexInternalOperatorsParallelParallelMap.h in Headers */,
 				013AF2081F3A3D7A00C91182 /* IoReactivexInternalObserversLambdaObserver.h in Headers */,
+				EDC1D4201F4F249300C62686 /* DDAGNetworkModule_ProvidesTransformerFactory.h in Headers */,
 				013AF08E1F3A3D7900C91182 /* Okhttp3TlsVersion.h in Headers */,
 				013AF5761F3A3D7C00C91182 /* IoReactivexInternalOperatorsSingleSingleFlatMapIterableObservable.h in Headers */,
 				EDC1D4191F4E266500C62686 /* DOneTest.h in Headers */,
@@ -11602,6 +11609,7 @@
 				013AEFED1F3A3D7900C91182 /* Okhttp3ConnectionPool.m in Sources */,
 				013AF0671F3A3D7900C91182 /* Okhttp3InternalPlatformJdkWithJettyBootPlatform.m in Sources */,
 				013AF8111F3A3D7F00C91182 /* DDAGNetworkModule_ProvidesRefreshScheduleRequestFactory.m in Sources */,
+				EDC1D4211F4F249300C62686 /* DDAGNetworkModule_ProvidesTransformerFactory.m in Sources */,
 				013AF7CE1F3A3D7F00C91182 /* AndroidLog.cpp in Sources */,
 				013AEF4B1F3A3D7900C91182 /* ComGoogleGsonInternalBindUtilISO8601Utils.m in Sources */,
 				013AF6951F3A3D7E00C91182 /* IoReactivexSchedulerspackage-info.m in Sources */,

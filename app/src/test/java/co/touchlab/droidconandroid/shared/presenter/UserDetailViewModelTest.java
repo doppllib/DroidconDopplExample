@@ -33,7 +33,9 @@ public class UserDetailViewModelTest
         MockitoAnnotations.initMocks(this);
         ObservableTransformer<UserAccount, UserAccount> transformer = upstream -> upstream.subscribeOn(
                 Schedulers.trampoline()).observeOn(Schedulers.trampoline());
-        factory = new UserDetailViewModel.Factory(interactor, transformer);
+        factory = new UserDetailViewModel.Factory();
+        factory.task = interactor;
+        factory.transformer = transformer;
         viewModel = factory.create(UserDetailViewModel.class);
         viewModel.register(host);
     }

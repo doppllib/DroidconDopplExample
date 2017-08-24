@@ -2,7 +2,6 @@ package co.touchlab.droidconandroid.shared.presenter;
 
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
-import android.support.annotation.VisibleForTesting;
 
 import com.google.j2objc.annotations.Weak;
 
@@ -21,7 +20,7 @@ public class UserDetailViewModel extends ViewModel
     private UserDetailHost     host;
     private FindUserInteractor task;
     private CompositeDisposable disposables = new CompositeDisposable();
-    private Observable<UserAccount> userAccountObservable;
+    private Observable<UserAccount>                         userAccountObservable;
     private ObservableTransformer<UserAccount, UserAccount> transformer;
 
     private UserDetailViewModel(FindUserInteractor task, ObservableTransformer transformer)
@@ -57,19 +56,13 @@ public class UserDetailViewModel extends ViewModel
     public static class Factory extends ViewModelProvider.NewInstanceFactory
     {
         @Inject
-        FindUserInteractor task;
-        private ObservableTransformer transformer;
+        FindUserInteractor    task;
+        @Inject
+        ObservableTransformer transformer;
 
-        private Factory()
+        Factory()
         {
 
-        }
-
-        @VisibleForTesting
-        public Factory(FindUserInteractor task, ObservableTransformer transformer)
-        {
-            this.task = task;
-            this.transformer = transformer;
         }
 
         @Override
