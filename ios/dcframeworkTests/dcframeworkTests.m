@@ -26,8 +26,7 @@
 }
 
 - (void)testAndroidUnitTests {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    // This runs all of the unit tests in the files listed in dopplTests.txt
     [DOneTest runDopplResourcesWithNSString:@"dopplTests.txt"];
 }
 
