@@ -2681,7 +2681,6 @@
 		EDC1D4161F4E23FA00C62686 /* DPRESUserDetailViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC1D4141F4E23FA00C62686 /* DPRESUserDetailViewModelTest.m */; };
 		EDC1D4191F4E266500C62686 /* DOneTest.h in Headers */ = {isa = PBXBuildFile; fileRef = EDC1D4171F4E266500C62686 /* DOneTest.h */; };
 		EDC1D41A1F4E266500C62686 /* DOneTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC1D4181F4E266500C62686 /* DOneTest.m */; };
-		EDC1D41C1F4E31B400C62686 /* dopplTests.txt in Resources */ = {isa = PBXBuildFile; fileRef = EDC16D391F4E019700C62686 /* dopplTests.txt */; };
 		EDC1D41D1F4E31DC00C62686 /* dopplTests.txt in Resources */ = {isa = PBXBuildFile; fileRef = EDC16D391F4E019700C62686 /* dopplTests.txt */; };
 		F92EB65A1D5A5EEC003B47B7 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EB6591D5A5EEC003B47B7 /* WelcomePageViewController.swift */; };
 		F9903FA21D3FBEC70050687E /* DroidconTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9903FA11D3FBEC70050687E /* DroidconTabBarViewController.swift */; };
@@ -10060,7 +10059,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDC1D41C1F4E31B400C62686 /* dopplTests.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
