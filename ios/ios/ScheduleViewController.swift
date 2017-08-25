@@ -9,6 +9,7 @@
 import Foundation
 import JRE
 import UIKit
+import dcframework
 
 class ScheduleViewController : UIViewController, UITableViewDelegate, UITableViewDataSource, DPRESScheduleDataViewModel_Host, DPRESConferenceDataViewModel_Host {
   

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import dcframework
 
 class WelcomeViewController: UIViewController
 {

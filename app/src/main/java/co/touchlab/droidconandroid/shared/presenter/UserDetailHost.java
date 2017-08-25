@@ -10,3 +10,5 @@ public interface UserDetailHost {
 
     void onUserFound(@NonNull UserAccount userAccount);
 }
+
+
