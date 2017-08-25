@@ -2,7 +2,6 @@ package co.touchlab.droidconandroid.shared.presenter;
 
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
-import android.support.annotation.VisibleForTesting;
 
 import com.google.j2objc.annotations.Weak;
 
@@ -11,9 +10,8 @@ import javax.inject.Inject;
 import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.interactors.FindUserInteractor;
 import io.reactivex.Observable;
-import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.ObservableTransformer;
 import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.schedulers.Schedulers;
 
 public class UserDetailViewModel extends ViewModel
 {
@@ -22,11 +20,13 @@ public class UserDetailViewModel extends ViewModel
     private UserDetailHost     host;
     private FindUserInteractor task;
     private CompositeDisposable disposables = new CompositeDisposable();
-    private Observable<UserAccount> userAccountObservable;
+    private Observable<UserAccount>                         userAccountObservable;
+    private ObservableTransformer<UserAccount, UserAccount> transformer;
 
-    private UserDetailViewModel(FindUserInteractor task)
+    private UserDetailViewModel(FindUserInteractor task, ObservableTransformer transformer)
     {
         this.task = task;
+        this.transformer = transformer;
     }
 
     public void register(UserDetailHost host)
@@ -41,8 +41,7 @@ public class UserDetailViewModel extends ViewModel
             userAccountObservable = task.loadUserAccount(userId).cache();
         }
 
-        disposables.add(userAccountObservable.subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+        disposables.add(userAccountObservable.compose(transformer)
                 .doOnError(e -> userAccountObservable = null)
                 .subscribe(userAccount -> host.onUserFound(userAccount),
                         throwable -> host.findUserError()));
@@ -57,24 +56,20 @@ public class UserDetailViewModel extends ViewModel
     public static class Factory extends ViewModelProvider.NewInstanceFactory
     {
         @Inject
-        FindUserInteractor task;
+        FindUserInteractor    task;
+        @Inject
+        ObservableTransformer transformer;
 
-        private Factory()
+        Factory()
         {
 
-        }
-
-        @VisibleForTesting
-        public Factory(FindUserInteractor task)
-        {
-            this.task = task;
         }
 
         @Override
         public <T extends ViewModel> T create(Class<T> modelClass)
         {
             //noinspection unchecked
-            return (T) new UserDetailViewModel(task);
+            return (T) new UserDetailViewModel(task, transformer);
         }
     }
 
