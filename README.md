@@ -59,7 +59,7 @@ If using Carthage, cd into the `ios` dir and run `carthage update` which should 
 
 Doppl uses a slightly modified j2objc runtime. This will likely be merged over time to keep the standard j2objc runtime, but for now, grab ours. It's about 1 gig, fyi.
 
-[j2objc runtime](http://dopplmaven.s3-website-us-east-1.amazonaws.com/dist.zip)
+[j2objc runtime](http://dopplmaven.s3-website-us-east-1.amazonaws.com/doppldist.zip)
 
 Extract the zip to a directory (avoid spaces in the path if possible).
 
