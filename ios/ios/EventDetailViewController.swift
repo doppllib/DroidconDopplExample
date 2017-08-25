@@ -54,6 +54,14 @@ import dcframework
         self.tableView.reloadData()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowSpeakerDetail" {
+            let detailViewController = segue.destination as! UserDetailViewController
+            let speaker = sender as! DDATUserAccount
+            detailViewController.speaker = speaker
+        }
+    }
+    
     deinit {
         eventDetailPresenter.unregister()
     }
@@ -129,6 +137,15 @@ import dcframework
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        
+        if (indexPath as NSIndexPath).section == 1 {
+            let speaker = speakers![indexPath.row] as DDATUserAccount
+            showSpeakerDetailView(speaker: speaker)
+        }
+    }
 
     // MARK: Action
     func styleButton() {
@@ -184,5 +201,9 @@ import dcframework
 
     @IBAction func toggleRsvp(_ sender: UIButton) {
         eventDetailPresenter.setRsvpWithBoolean(!event.isRsvped(), withLong: event.getId())
+    }
+    
+    func showSpeakerDetailView(speaker: DDATUserAccount) {
+        performSegue(withIdentifier: "ShowSpeakerDetail", sender: speaker)
     }
 }
