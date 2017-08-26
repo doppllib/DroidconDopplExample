@@ -18,14 +18,14 @@ public class UserDetailViewModel extends ViewModel
 
     @Weak
     private UserDetailHost     host;
-    private FindUserInteractor task;
+    private FindUserInteractor interactor;
     private CompositeDisposable disposables = new CompositeDisposable();
     private Observable<UserAccount>                         userAccountObservable;
     private ObservableTransformer<UserAccount, UserAccount> transformer;
 
-    private UserDetailViewModel(FindUserInteractor task, ObservableTransformer transformer)
+    private UserDetailViewModel(FindUserInteractor interactor, ObservableTransformer transformer)
     {
-        this.task = task;
+        this.interactor = interactor;
         this.transformer = transformer;
     }
 
@@ -38,7 +38,7 @@ public class UserDetailViewModel extends ViewModel
     {
         if(userAccountObservable == null)
         {
-            userAccountObservable = task.loadUserAccount(userId).cache();
+            userAccountObservable = interactor.loadUserAccount(userId).cache();
         }
 
         disposables.add(userAccountObservable.compose(transformer)

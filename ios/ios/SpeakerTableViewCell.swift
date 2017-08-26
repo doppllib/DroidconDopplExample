@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import dcframework
 
 class SpeakerTableViewCell: UITableViewCell {
 

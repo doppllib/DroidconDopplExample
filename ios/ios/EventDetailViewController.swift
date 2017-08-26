@@ -58,7 +58,7 @@ import dcframework
         if segue.identifier == "ShowSpeakerDetail" {
             let detailViewController = segue.destination as! UserDetailViewController
             let speaker = sender as! DDATUserAccount
-            detailViewController.speaker = speaker
+            detailViewController.userId = speaker.getId().longLongValue()
         }
     }
     
@@ -103,7 +103,7 @@ import dcframework
         } else if speakers == nil {
             return 0
         }
-        
+
         return speakers!.count
     }
     

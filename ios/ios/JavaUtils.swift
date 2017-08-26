@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import dcframework
 
 class JavaUtils {
     static func convertiOSObjectArrayToArray(objArray: IOSObjectArray) -> [Any] {

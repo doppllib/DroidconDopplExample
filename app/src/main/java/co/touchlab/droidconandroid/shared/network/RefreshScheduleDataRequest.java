@@ -2,6 +2,7 @@ package co.touchlab.droidconandroid.shared.network;
 
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
 import io.reactivex.Observable;
+import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import dcframework
 
-class UserDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class UserDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DPRESUserDetailHost {
 
     @IBOutlet weak var speakerImage: UIImageView!
     @IBOutlet weak var speakerName: UILabel!
@@ -21,29 +22,17 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     private let LINKEDIN_URL: String = "http://www.linkedin.com/in/"
     private let FACEBOOK_URL: String = "http://www.facebook.com/"
     
-    var speaker: DDATUserAccount!
     var speakerInfos: [SpeakerInfo] = []
+    var viewModel: DPRESUserDetailViewModel!
+    var userId: jlong = 0
+    
     
     // MARK: Lifecycle events
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkForSpeakerInfo()
-        
-        if (!speaker.getName().isEmpty) {
-            speakerName.text = speaker.getName()
-            speakerName.isHidden = false
-            speakerName.sizeToFit()
-        }
-        if (!speaker.getCompany().isEmpty) {
-            speakerCompany.text = speaker?.getCompany()
-            speakerCompany.isHidden = false
-            speakerCompany.sizeToFit()
-        }
-                
-        speakerImage.kf.setImage(with: URL(string: (speaker?.avatarImageUrl())!))
-        speakerImage.layer.cornerRadius = 24
-        speakerImage.layer.masksToBounds = true
-        speakerImage.sizeToFit()
+        viewModel = DPRESUserDetailViewModel.forIos()
+        viewModel.register__(with: self)
+        viewModel.findUser(withLong: userId)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +42,46 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.register(nib, forCellReuseIdentifier: "userCell")
     }
     
-    func checkForSpeakerInfo() {
+    deinit {
+        viewModel.unregister()
+    }
+    
+    func findUserError() {
+        showError("No luck")
+    }
+    
+    func onUserFound(with userAccount: DDATUserAccount) {
+        showUserData(userAccount)
+    }
+    
+    func showUserData(_ userAccount: DDATUserAccount){
+        checkForSpeakerInfo(speaker: userAccount)
+        
+        if (!userAccount.getName().isEmpty) {
+            speakerName.text = userAccount.getName()
+            speakerName.isHidden = false
+            speakerName.sizeToFit()
+        }
+        if (!userAccount.getCompany().isEmpty) {
+            speakerCompany.text = userAccount.getCompany()
+            speakerCompany.isHidden = false
+            speakerCompany.sizeToFit()
+        }
+        
+        speakerImage.kf.setImage(with: URL(string: (userAccount.avatarImageUrl())!))
+        speakerImage.layer.cornerRadius = 24
+        speakerImage.layer.masksToBounds = true
+        speakerImage.sizeToFit()
+        tableView.reloadData()
+    }
+    
+    func showError(_ err:String){
+        let alert = UIAlertController(title: "Problems", message: err, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func checkForSpeakerInfo(speaker: DDATUserAccount) {
         let speakerCompany = speaker.getCompany()
         if speakerCompany.isNotNilOrEmpty() {
             speakerInfos.append(SpeakerInfo(type: .company, info: speakerCompany!))
@@ -89,6 +117,8 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
             speakerInfos.append(SpeakerInfo(type: .profile, info: speakerProfile!))
         }
     }
+    
+    
     
     func openWebsite(_ selected: SpeakerInfo) {
         var url = ""

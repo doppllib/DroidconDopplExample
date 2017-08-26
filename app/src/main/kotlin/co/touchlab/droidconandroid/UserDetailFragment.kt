@@ -87,8 +87,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
     }
 
     override fun onUserFound(userAccount: UserAccount) {
-        val user = userAccount
-        showUserData(user)
+        showUserData(userAccount)
     }
 
     private fun showUserData(userAccount: UserAccount) {

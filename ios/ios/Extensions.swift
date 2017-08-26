@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import dcframework
 
 extension Optional where Wrapped == String {
     func isNotNilOrEmpty() -> jboolean {

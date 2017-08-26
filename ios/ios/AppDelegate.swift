@@ -12,6 +12,7 @@ import JRE
 import UIKit
 import FirebaseAnalytics
 import FirebaseMessaging
+import dcframework
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
