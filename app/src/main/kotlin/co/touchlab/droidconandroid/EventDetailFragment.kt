@@ -40,7 +40,6 @@ class EventDetailFragment : Fragment(), EventDetailHost {
     private var fabColorList: ColorStateList? = null
 
     companion object {
-        private val FAB_URL = "http://imgur.com/gallery/7drHiqr"
         private val TIME_FORMAT = "h:mm a"
         private val EVENT_ID = "EVENT_ID"
         private val TRACK_ID = "TRACK_ID"
@@ -150,15 +149,6 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         } else {
             fab.setImageDrawable(ContextCompat.getDrawable(activity, R.drawable.ic_plus))
             fab.isActivated = false
-        }
-
-        if (event.isNow) {
-            fab.setOnLongClickListener {
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(FAB_URL))
-                if (intent.resolveActivity(activity.packageManager) != null)
-                    activity.startActivity(intent)
-                true
-            }
         }
 
         val layoutParams = fab.layoutParams as CoordinatorLayout.LayoutParams

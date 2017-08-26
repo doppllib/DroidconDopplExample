@@ -140,9 +140,9 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.4.0'
 
     //Shared code dependencies
-    doppl 'co.doppl.lib:androidbase:0.8.1.0'
-    testCompile 'co.doppl.lib:androidbasetest:0.8.1'
-    testDoppl 'co.doppl.lib:androidbasetest:0.8.1.0'
+    doppl 'co.doppl.lib:androidbase:0.8.2.0'
+    testCompile 'co.doppl.lib:androidbasetest:0.8.2'
+    testDoppl 'co.doppl.lib:androidbasetest:0.8.2.0'
 
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
@@ -186,7 +186,16 @@ dopplConfig {
     translatedPathPrefix 'co.touchlab.droidconandroid.shared', 'D'
 
     copyMainOutput "../ios/dcframework/generated"
+    copyTestOutput "../ios/dcframework/generatedTests"
     copyDependencies true
+
+    emitLineDirectives true
+
+    testIdentifier {
+        include "**/*Test.java"
+
+        exclude "**/OneTest.java"
+    }
 
     translatePattern {
         include '**/shared/**'

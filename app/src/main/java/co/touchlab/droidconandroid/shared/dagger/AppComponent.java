@@ -1,5 +1,7 @@
 package co.touchlab.droidconandroid.shared.dagger;
 
+import android.support.annotation.NonNull;
+
 import javax.inject.Singleton;
 
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
