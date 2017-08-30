@@ -23,9 +23,4 @@ public class AppModule
         return application;
     }
 
-    @Provides
-    Context providesApplicationContext()
-    {
-        return application.getApplicationContext();
-    }
 }

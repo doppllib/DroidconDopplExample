@@ -6,13 +6,12 @@ import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import co.touchlab.droidconandroid.shared.data.Event
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
-import co.touchlab.droidconandroid.shared.presenter.*
+import co.touchlab.droidconandroid.shared.viewmodel.*
 import co.touchlab.droidconandroid.ui.EventAdapter
 import co.touchlab.droidconandroid.ui.EventClickListener
 import kotlinx.android.synthetic.main.fragment_schedule_data.*

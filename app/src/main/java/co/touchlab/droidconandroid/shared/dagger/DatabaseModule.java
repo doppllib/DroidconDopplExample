@@ -12,7 +12,6 @@ import dagger.Provides;
 @Module
 public class DatabaseModule
 {
-
     @Provides
     @Singleton
     static DroidconDatabase providesDatabase(Context context)

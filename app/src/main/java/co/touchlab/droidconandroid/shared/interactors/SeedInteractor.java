@@ -8,15 +8,14 @@ import javax.inject.Singleton;
 
 import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
-import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
-import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHelper;
-import co.touchlab.droidconandroid.shared.presenter.LoadDataSeed;
+import co.touchlab.droidconandroid.shared.viewmodel.ConferenceDataHelper;
+import co.touchlab.droidconandroid.shared.viewmodel.LoadDataSeed;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
 
-import static co.touchlab.droidconandroid.shared.presenter.AppManager.FIRST_SEED;
+import static co.touchlab.droidconandroid.shared.viewmodel.AppManager.FIRST_SEED;
 
 @Singleton
 public class SeedInteractor

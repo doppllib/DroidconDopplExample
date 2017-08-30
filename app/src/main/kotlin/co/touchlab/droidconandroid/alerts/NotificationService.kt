@@ -11,7 +11,7 @@ import android.util.Log
 import co.touchlab.droidconandroid.EventDetailActivity
 import co.touchlab.droidconandroid.R
 import co.touchlab.droidconandroid.ScheduleActivity
-import co.touchlab.droidconandroid.shared.presenter.AppManager
+import co.touchlab.droidconandroid.shared.viewmodel.AppManager
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 

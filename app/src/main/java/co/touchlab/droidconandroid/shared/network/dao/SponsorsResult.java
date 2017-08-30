@@ -1,4 +1,4 @@
-package co.touchlab.droidconandroid.shared.network;
+package co.touchlab.droidconandroid.shared.network.dao;
 import java.util.List;
 
 public class SponsorsResult

@@ -18,8 +18,8 @@ import co.touchlab.droidconandroid.alerts.NotificationService
 import co.touchlab.droidconandroid.alerts.NotificationUtils
 import co.touchlab.droidconandroid.shared.data.AppPrefs
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
-import co.touchlab.droidconandroid.shared.presenter.AppManager
-import co.touchlab.droidconandroid.shared.presenter.ConferenceDataViewModel
+import co.touchlab.droidconandroid.shared.viewmodel.AppManager
+import co.touchlab.droidconandroid.shared.viewmodel.ConferenceDataViewModel
 import co.touchlab.droidconandroid.shared.utils.EventBusExt
 import co.touchlab.droidconandroid.ui.*
 import com.google.firebase.messaging.FirebaseMessaging

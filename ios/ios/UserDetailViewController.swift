@@ -47,7 +47,7 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func findUserError() {
-        showError("No luck")
+        
     }
     
     func onUserFound(with userAccount: DDATUserAccount) {

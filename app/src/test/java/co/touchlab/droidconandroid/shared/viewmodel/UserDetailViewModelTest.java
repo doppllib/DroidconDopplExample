@@ -1,4 +1,4 @@
-package co.touchlab.droidconandroid.shared.presenter;
+package co.touchlab.droidconandroid.shared.viewmodel;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

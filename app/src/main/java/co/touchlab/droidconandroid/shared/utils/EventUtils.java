@@ -6,7 +6,7 @@ import java.util.Locale;
 
 import co.touchlab.droidconandroid.shared.data.Block;
 import co.touchlab.droidconandroid.shared.data.Event;
-import co.touchlab.droidconandroid.shared.presenter.HourBlock;
+import co.touchlab.droidconandroid.shared.viewmodel.HourBlock;
 
 public class EventUtils
 {
@@ -39,7 +39,7 @@ public class EventUtils
         }
     }
 
-    public static boolean hasConflict(Event event, List dataSet)
+    private static boolean hasConflict(Event event, List dataSet)
     {
         if(event.isRsvped() && ! event.isPast())
         {

@@ -1,8 +1,7 @@
-package co.touchlab.droidconandroid.shared.presenter;
+package co.touchlab.droidconandroid.shared.viewmodel;
 
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
-import android.util.Log;
 
 import com.google.j2objc.annotations.Weak;
 
@@ -11,7 +10,7 @@ import android.support.annotation.NonNull;
 import javax.inject.Inject;
 
 import co.touchlab.droidconandroid.shared.interactors.SponsorsInteractor;
-import co.touchlab.droidconandroid.shared.network.SponsorsResult;
+import co.touchlab.droidconandroid.shared.network.dao.SponsorsResult;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
@@ -20,7 +19,7 @@ import io.reactivex.schedulers.Schedulers;
 public class SponsorsViewModel extends ViewModel
 {
     private final SponsorsInteractor task;
-    @Weak
+
     private CompositeDisposable disposables = new CompositeDisposable();
     private Observable<SponsorsResult> sponsorsResultObservable;
 

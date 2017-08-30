@@ -1,6 +1,7 @@
-package co.touchlab.droidconandroid.shared.presenter;
+package co.touchlab.droidconandroid.shared.viewmodel;
 
-import java.sql.SQLException;
+import android.text.TextUtils;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -138,97 +139,98 @@ public class ConferenceDataHelper
 
     private void saveConventionData(final Convention convention)
     {
-
         if(convention == null)
         {
             throw new IllegalStateException("No convention results");
         }
 
-        appPrefs.setConventionDates(convention.startDate, convention.endDate);
+        helper.runInTransaction(() -> {
+            appPrefs.setConventionDates(convention.startDate, convention.endDate);
 
-        List<NetworkVenue> newVenueList = convention.venues;
-        List<Block> newBlockList = convention.blocks;
-        Set<Long> eventIdList = new HashSet<>();
+            List<NetworkVenue> newVenueList = convention.venues;
+            List<Block> newBlockList = convention.blocks;
+            Set<Long> eventIdList = new HashSet<>();
 
-        try
-        {
-            for(NetworkVenue newVenue : newVenueList)
+            try
             {
-                for(NetworkEvent newEvent : newVenue.events)
+                for(NetworkVenue newVenue : newVenueList)
                 {
-                    eventIdList.add(newEvent.id);
-                    String matchingRsvpUuid = helper.getRsvpUuidForEventWithId(newEvent.id);
-                    newEvent.venue = newVenue;
-
-                    if(StringUtils.isEmpty(newEvent.startDate) ||
-                            StringUtils.isEmpty(newEvent.endDate))
+                    for(NetworkEvent newEvent : newVenue.events)
                     {
-                        continue;
-                    }
+                        eventIdList.add(newEvent.id);
+                        String matchingRsvpUuid = helper.getRsvpUuidForEventWithId(newEvent.id);
+                        newEvent.venue = newVenue;
 
-                    newEvent.startDateLong = TimeUtils.parseTime(newEvent.startDate);
-                    newEvent.endDateLong = TimeUtils.parseTime(newEvent.endDate);
-
-                    if(matchingRsvpUuid != null)
-                    {
-                        newEvent.rsvpUuid = matchingRsvpUuid;
-                    }
-
-                    helper.createEvent(newEvent);
-                    int speakerCount = 0;
-
-                    for(NetworkUserAccount newSpeaker : newEvent.speakers)
-                    {
-                        UserAccount oldSpeaker = helper.getUserAccount(newSpeaker.id);
-
-                        if(oldSpeaker == null)
+                        if(TextUtils.isEmpty(newEvent.startDate) ||
+                                TextUtils.isEmpty(newEvent.endDate))
                         {
-                            oldSpeaker = new UserAccount();
+                            continue;
                         }
 
-                        helper.convertAndSaveUserAccount(newSpeaker, oldSpeaker);
+                        newEvent.startDateLong = TimeUtils.parseTime(newEvent.startDate);
+                        newEvent.endDateLong = TimeUtils.parseTime(newEvent.endDate);
 
-                        EventSpeaker eventSpeaker = helper.getSpeakerForEventWithId(newEvent.id,
-                                newSpeaker.id);
-
-                        if(eventSpeaker == null)
+                        if(matchingRsvpUuid != null)
                         {
-                            eventSpeaker = new EventSpeaker();
+                            newEvent.rsvpUuid = matchingRsvpUuid;
                         }
 
-                        eventSpeaker.eventId = newEvent.id;
-                        eventSpeaker.name = oldSpeaker.name;
-                        eventSpeaker.userAccountId = oldSpeaker.id;
-                        eventSpeaker.displayOrder = speakerCount++;
-                        helper.updateSpeaker(eventSpeaker);
+                        helper.createEvent(newEvent);
+                        int speakerCount = 0;
+
+                        for(NetworkUserAccount newSpeaker : newEvent.speakers)
+                        {
+                            UserAccount oldSpeaker = helper.getUserAccount(newSpeaker.id);
+
+                            if(oldSpeaker == null)
+                            {
+                                oldSpeaker = new UserAccount();
+                            }
+
+                            helper.convertAndSaveUserAccount(newSpeaker, oldSpeaker);
+
+                            EventSpeaker eventSpeaker = helper.getSpeakerForEventWithId(newEvent.id,
+                                    newSpeaker.id);
+
+                            if(eventSpeaker == null)
+                            {
+                                eventSpeaker = new EventSpeaker();
+                            }
+
+                            eventSpeaker.eventId = newEvent.id;
+                            eventSpeaker.name = oldSpeaker.name;
+                            eventSpeaker.userAccountId = oldSpeaker.id;
+                            eventSpeaker.displayOrder = speakerCount++;
+                            helper.updateSpeaker(eventSpeaker);
+                        }
                     }
                 }
-            }
 
-            // clear db if events are returned
-            if(! eventIdList.isEmpty())
-            {
-                helper.deleteEventsNotIn(eventIdList);
-            }
-
-            if(newBlockList.size() > 0)
-            {
-                //Dump all old blocks first
-                helper.deleteBlocks(helper.getBlocksList());
-
-                // parse and save new blocks
-                for(Block newBlock : newBlockList)
+                // clear db if events are returned
+                if(! eventIdList.isEmpty())
                 {
-                    newBlock.startDateLong = TimeUtils.parseTime(newBlock.startDate);
-                    newBlock.endDateLong = TimeUtils.parseTime(newBlock.endDate);
-                    helper.updateBlock(newBlock);
+                    helper.deleteEventsNotIn(eventIdList);
                 }
-            }
 
-        }
-        catch(ParseException e)
-        {
-            throw new RuntimeException(e);
-        }
+                if(newBlockList.size() > 0)
+                {
+                    //Dump all old blocks first
+                    helper.deleteBlocks(helper.getBlocksList());
+
+                    // parse and save new blocks
+                    for(Block newBlock : newBlockList)
+                    {
+                        newBlock.startDateLong = TimeUtils.parseTime(newBlock.startDate);
+                        newBlock.endDateLong = TimeUtils.parseTime(newBlock.endDate);
+                        helper.updateBlock(newBlock);
+                    }
+                }
+
+            }
+            catch(ParseException e)
+            {
+                throw new RuntimeException(e);
+            }
+        });
     }
 }

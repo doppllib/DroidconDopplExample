@@ -1,19 +1,16 @@
 package co.touchlab.droidconandroid.shared.dagger;
 
-import android.support.annotation.NonNull;
-
 import javax.inject.Singleton;
 
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
 import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor;
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor;
-import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHelper;
-import co.touchlab.droidconandroid.shared.presenter.ConferenceDataViewModel;
-import co.touchlab.droidconandroid.shared.presenter.EventDetailViewModel;
-import co.touchlab.droidconandroid.shared.presenter.ScheduleDataViewModel;
+import co.touchlab.droidconandroid.shared.viewmodel.ConferenceDataViewModel;
+import co.touchlab.droidconandroid.shared.viewmodel.EventDetailViewModel;
+import co.touchlab.droidconandroid.shared.viewmodel.ScheduleDataViewModel;
 import co.touchlab.droidconandroid.shared.interactors.SeedInteractor;
-import co.touchlab.droidconandroid.shared.presenter.SponsorsViewModel;
-import co.touchlab.droidconandroid.shared.presenter.UserDetailViewModel;
+import co.touchlab.droidconandroid.shared.viewmodel.SponsorsViewModel;
+import co.touchlab.droidconandroid.shared.viewmodel.UserDetailViewModel;
 import dagger.Component;
 
 @Singleton

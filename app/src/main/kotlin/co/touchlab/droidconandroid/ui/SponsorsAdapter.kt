@@ -9,8 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import co.touchlab.droidconandroid.R
 import co.touchlab.droidconandroid.SponsorsListFragment
-import co.touchlab.droidconandroid.shared.network.SponsorsResult
-import co.touchlab.droidconandroid.shared.presenter.AppManager
+import co.touchlab.droidconandroid.shared.network.dao.SponsorsResult
+import co.touchlab.droidconandroid.shared.viewmodel.AppManager
 import co.touchlab.droidconandroid.shared.utils.AnalyticsEvents
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_sponsor.view.*

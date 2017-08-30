@@ -14,9 +14,9 @@ import co.touchlab.droidconandroid.shared.dagger.DatabaseModule;
 import co.touchlab.droidconandroid.shared.dagger.NetworkModule;
 import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor;
-import co.touchlab.droidconandroid.shared.presenter.AppManager;
-import co.touchlab.droidconandroid.shared.presenter.LoadDataSeed;
-import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
+import co.touchlab.droidconandroid.shared.viewmodel.AppManager;
+import co.touchlab.droidconandroid.shared.viewmodel.LoadDataSeed;
+import co.touchlab.droidconandroid.shared.viewmodel.PlatformClient;
 import co.touchlab.droidconandroid.shared.utils.EventBusExt;
 import co.touchlab.droidconandroid.shared.utils.IOUtils;
 

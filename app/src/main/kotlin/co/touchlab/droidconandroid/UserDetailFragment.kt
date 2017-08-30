@@ -16,9 +16,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import co.touchlab.droidconandroid.shared.data.UserAccount
-import co.touchlab.droidconandroid.shared.presenter.AppManager
-import co.touchlab.droidconandroid.shared.presenter.UserDetailHost
-import co.touchlab.droidconandroid.shared.presenter.UserDetailViewModel
+import co.touchlab.droidconandroid.shared.viewmodel.UserDetailHost
+import co.touchlab.droidconandroid.shared.viewmodel.UserDetailViewModel
 import co.touchlab.droidconandroid.shared.utils.EmojiUtil
 import co.touchlab.droidconandroid.utils.Toaster
 import com.squareup.picasso.Callback

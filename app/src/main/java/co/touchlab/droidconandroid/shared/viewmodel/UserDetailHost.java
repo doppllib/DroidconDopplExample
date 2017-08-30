@@ -1,4 +1,4 @@
-package co.touchlab.droidconandroid.shared.presenter;
+package co.touchlab.droidconandroid.shared.viewmodel;
 
 import android.support.annotation.NonNull;
 

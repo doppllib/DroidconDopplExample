@@ -1,4 +1,4 @@
-package co.touchlab.droidconandroid.shared.presenter;
+package co.touchlab.droidconandroid.shared.viewmodel;
 import android.content.Context;
 
 import co.touchlab.droidconandroid.shared.dagger.AppComponent;

@@ -9,9 +9,9 @@ import android.util.SparseIntArray
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import co.touchlab.droidconandroid.shared.network.SponsorsResult
-import co.touchlab.droidconandroid.shared.presenter.SponsorsHost
-import co.touchlab.droidconandroid.shared.presenter.SponsorsViewModel
+import co.touchlab.droidconandroid.shared.network.dao.SponsorsResult
+import co.touchlab.droidconandroid.shared.viewmodel.SponsorsHost
+import co.touchlab.droidconandroid.shared.viewmodel.SponsorsViewModel
 import co.touchlab.droidconandroid.ui.SponsorsAdapter
 import co.touchlab.droidconandroid.utils.Toaster
 import kotlinx.android.synthetic.main.fragment_sponsors_list.*

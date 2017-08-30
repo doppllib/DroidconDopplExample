@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 
 import co.touchlab.droidconandroid.BuildConfig;
-import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
+import co.touchlab.droidconandroid.shared.viewmodel.PlatformClient;
 
 /**
  * Created by kgalligan on 4/10/16.

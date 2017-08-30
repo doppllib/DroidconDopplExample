@@ -1,4 +1,4 @@
-package co.touchlab.droidconandroid.shared.presenter;
+package co.touchlab.droidconandroid.shared.viewmodel;
 
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
@@ -11,6 +11,7 @@ import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.interactors.FindUserInteractor;
 import io.reactivex.Observable;
 import io.reactivex.ObservableTransformer;
+import io.reactivex.Single;
 import io.reactivex.disposables.CompositeDisposable;
 
 public class UserDetailViewModel extends ViewModel
@@ -20,7 +21,7 @@ public class UserDetailViewModel extends ViewModel
     private UserDetailHost     host;
     private FindUserInteractor interactor;
     private CompositeDisposable disposables = new CompositeDisposable();
-    private Observable<UserAccount>                         userAccountObservable;
+    private Observable<UserAccount>                             userAccountObservable;
     private ObservableTransformer<UserAccount, UserAccount> transformer;
 
     private UserDetailViewModel(FindUserInteractor interactor, ObservableTransformer transformer)

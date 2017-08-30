@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import co.touchlab.droidconandroid.shared.data.UserAccount
-import co.touchlab.droidconandroid.shared.presenter.EventDetailViewModel
+import co.touchlab.droidconandroid.shared.viewmodel.EventDetailViewModel
 import co.touchlab.droidconandroid.shared.utils.StringUtils
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_event_header.view.*

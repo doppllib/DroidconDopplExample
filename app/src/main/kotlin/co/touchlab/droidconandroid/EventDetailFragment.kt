@@ -1,9 +1,7 @@
 package co.touchlab.droidconandroid
 
 import android.arch.lifecycle.ViewModelProviders
-import android.content.Intent
 import android.content.res.ColorStateList
-import android.net.Uri
 import android.os.Bundle
 import android.support.design.widget.CoordinatorLayout
 import android.support.v4.app.Fragment
@@ -18,9 +16,8 @@ import co.touchlab.droidconandroid.shared.data.Event
 import co.touchlab.droidconandroid.shared.data.EventInfo
 import co.touchlab.droidconandroid.shared.data.Track
 import co.touchlab.droidconandroid.shared.data.UserAccount
-import co.touchlab.droidconandroid.shared.presenter.AppManager
-import co.touchlab.droidconandroid.shared.presenter.EventDetailHost
-import co.touchlab.droidconandroid.shared.presenter.EventDetailViewModel
+import co.touchlab.droidconandroid.shared.viewmodel.EventDetailHost
+import co.touchlab.droidconandroid.shared.viewmodel.EventDetailViewModel
 import kotlinx.android.synthetic.main.fragment_event_detail.*
 import java.util.*
 
