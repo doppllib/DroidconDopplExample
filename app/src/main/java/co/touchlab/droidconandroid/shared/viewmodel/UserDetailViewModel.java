@@ -9,6 +9,7 @@ import javax.inject.Inject;
 
 import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.interactors.FindUserInteractor;
+import io.reactivex.FlowableTransformer;
 import io.reactivex.Observable;
 import io.reactivex.ObservableTransformer;
 import io.reactivex.Single;
@@ -16,42 +17,27 @@ import io.reactivex.disposables.CompositeDisposable;
 
 public class UserDetailViewModel extends ViewModel
 {
-
-    @Weak
-    private UserDetailHost     host;
     private FindUserInteractor interactor;
-    private CompositeDisposable disposables = new CompositeDisposable();
-    private Observable<UserAccount>                             userAccountObservable;
-    private ObservableTransformer<UserAccount, UserAccount> transformer;
 
-    private UserDetailViewModel(FindUserInteractor interactor, ObservableTransformer transformer)
+    private CompositeDisposable disposables = new CompositeDisposable();
+    private FlowableTransformer<UserAccount, UserAccount> transformer;
+
+    private UserDetailViewModel(FindUserInteractor interactor, FlowableTransformer transformer)
     {
         this.interactor = interactor;
         this.transformer = transformer;
     }
 
-    public void register(UserDetailHost host)
+    public void register(UserDetailHost host, final long userId)
     {
-        this.host = host;
-    }
-
-    public void findUser(final long userId)
-    {
-        if(userAccountObservable == null)
-        {
-            userAccountObservable = interactor.loadUserAccount(userId).cache();
-        }
-
-        disposables.add(userAccountObservable.compose(transformer)
-                .doOnError(e -> userAccountObservable = null)
-                .subscribe(userAccount -> host.onUserFound(userAccount),
-                        throwable -> host.findUserError()));
+        disposables.add(interactor.loadUserAccount(userId)
+                .compose(transformer)
+                .subscribe(host:: onUserFound, throwable -> host.findUserError()));
     }
 
     public void unregister()
     {
         disposables.clear();
-        host = null;
     }
 
     public static class Factory extends ViewModelProvider.NewInstanceFactory
@@ -59,7 +45,7 @@ public class UserDetailViewModel extends ViewModel
         @Inject
         FindUserInteractor    task;
         @Inject
-        ObservableTransformer transformer;
+        FlowableTransformer transformer;
 
         Factory()
         {

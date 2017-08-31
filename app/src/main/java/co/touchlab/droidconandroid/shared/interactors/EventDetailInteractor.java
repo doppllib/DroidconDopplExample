@@ -34,7 +34,6 @@ public class EventDetailInteractor
         Single<List<UserAccount>> speakersSingle = getEventSpeakers(eventId);
 
         return Single.zip(eventSingle, speakersSingle, allEvents, this :: createEventInfo);
-
     }
 
     private Single<List<UserAccount>> getEventSpeakers(long eventId)
@@ -43,7 +42,7 @@ public class EventDetailInteractor
                 .toObservable()
                 .flatMapIterable(list -> list)
                 .map(eventSpeaker -> eventSpeaker.userAccountId)
-                .flatMap(userId -> helper.getUserAccountForId(userId))
+                .flatMap(helper:: getUserAccountForId)
                 .toList();
     }
 

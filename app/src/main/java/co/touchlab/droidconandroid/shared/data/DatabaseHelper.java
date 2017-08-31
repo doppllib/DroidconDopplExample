@@ -16,6 +16,7 @@ import co.touchlab.droidconandroid.shared.data.dao.EventDao;
 import co.touchlab.droidconandroid.shared.data.dao.UserAccountDao;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkUserAccount;
 import io.reactivex.Completable;
+import io.reactivex.Flowable;
 import io.reactivex.Observable;
 import io.reactivex.Single;
 
@@ -140,6 +141,11 @@ public class DatabaseHelper
     public UserAccount getUserAccount(long userId)
     {
         return db.userAccountDao().getUserAccount(userId);
+    }
+
+    public Flowable<UserAccount> flowUserAccount(long userId)
+    {
+        return db.userAccountDao().flowUserAccount(userId);
     }
 
     public Completable saveUserAccount(UserAccount userAccount)

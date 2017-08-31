@@ -41,7 +41,7 @@ public class FindUserInteractorTest
         response.user = new NetworkUserAccount();
         user = new UserAccount();
     }
-
+/*
     @Test
     public void whenNetworkReturns_ShouldNotGoToDatabase()
     {
@@ -70,5 +70,5 @@ public class FindUserInteractorTest
         when(helper.getUserAccountForId(anyLong())).thenReturn(Single.error(error));
 
         interactor.loadUserAccount(100).test().assertError(error);
-    }
+    }*/
 }

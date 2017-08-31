@@ -47,8 +47,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.register(this)
-        viewModel.findUser(findUserId())
+        viewModel.register(this, findUserId())
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
