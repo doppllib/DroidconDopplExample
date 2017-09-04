@@ -16,7 +16,6 @@ import co.touchlab.droidconandroid.shared.data.Event
 import co.touchlab.droidconandroid.shared.data.EventInfo
 import co.touchlab.droidconandroid.shared.data.Track
 import co.touchlab.droidconandroid.shared.data.UserAccount
-import co.touchlab.droidconandroid.shared.viewmodel.EventDetailHost
 import co.touchlab.droidconandroid.shared.viewmodel.EventDetailViewModel
 import kotlinx.android.synthetic.main.fragment_event_detail.*
 import java.util.*
@@ -25,7 +24,7 @@ import java.util.*
  * Created by kgalligan on 7/27/14.
  */
 
-class EventDetailFragment : Fragment(), EventDetailHost {
+class EventDetailFragment : Fragment(), EventDetailViewModel.Host {
 
     private val eventId: Long by lazy { findEventIdArg() }
 
@@ -58,7 +57,7 @@ class EventDetailFragment : Fragment(), EventDetailHost {
 
     override fun onDestroy() {
         super.onDestroy()
-        viewModel.unregister()
+        viewModel.unwire()
     }
 
     private fun findEventIdArg(): Long {
@@ -93,8 +92,7 @@ class EventDetailFragment : Fragment(), EventDetailHost {
 
     override fun onResume() {
         super.onResume()
-        viewModel.register(this)
-        viewModel.getDetails(eventId)
+        viewModel.wire(this, eventId)
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
@@ -156,9 +154,9 @@ class EventDetailFragment : Fragment(), EventDetailHost {
         } else {
             fab.setOnClickListener {
                 if (event.isRsvped) {
-                    viewModel.setRsvp(false, eventId)
+                    viewModel.setRsvp(false, eventId, this)
                 } else {
-                    viewModel.setRsvp(true, eventId)
+                    viewModel.setRsvp(true, eventId, this)
                 }
             }
 

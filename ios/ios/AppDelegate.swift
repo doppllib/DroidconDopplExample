@@ -30,8 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .networkModule(with: DDAGNetworkModule())
             .build()
         
-        DPRESAppManager.create(with: AndroidContentIOSContext(), with: platformClient, with: appComponent)
-        DPRESAppManager.getInstance().seed(with: self);
+        DVMAppManager.create(with: AndroidContentIOSContext(), with: platformClient, with: appComponent)
+        DVMAppManager.getInstance().seed(with: self);
         
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
@@ -120,7 +120,7 @@ extension AppDelegate : MessagingDelegate {
         print("Received direct data message: \(remoteMessage.appData)")
         if let type = remoteMessage.appData["type"] as? String {
             if (type == "updateSchedule") {
-                DPRESAppManager.getInstance().getAppComponent().refreshScheduleInteractor().refreshFromServer()
+                DVMAppManager.getInstance().getAppComponent().refreshScheduleInteractor().refreshFromServer()
             } else if (type == "version") {
                 let newVersion = remoteMessage.appData["versionCode"] as! String
                 let currentVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
@@ -161,7 +161,7 @@ extension AppDelegate : MessagingDelegate {
     }
 }
 
-extension AppDelegate : DPRESLoadDataSeed {
+extension AppDelegate : DVMLoadDataSeed {
     func dataSeed() -> String! {
         if let fileUrl = Bundle.main.url(forResource: "dataseed", withExtension: "json", subdirectory: "dataseeds"), let partyData = try? Data(contentsOf: fileUrl) {
             return String(data: partyData, encoding: String.Encoding.utf8)

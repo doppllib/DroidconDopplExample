@@ -18,9 +18,9 @@ class EventTableViewCell: UITableViewCell {
 
     var networkEvent: DDATEvent!
     var conflict: jboolean!
-    var eventDetailPresenter: DPRESEventDetailViewModel!
+    var eventDetailPresenter: DVMEventDetailViewModel!
     
-    func loadInfo(_ networkEvent: DDATEvent, eventDetailPresenter: DPRESEventDetailViewModel, conflict: jboolean?) {
+    func loadInfo(_ networkEvent: DDATEvent, eventDetailPresenter: DVMEventDetailViewModel, conflict: jboolean?) {
         
         self.networkEvent = networkEvent
         self.conflict = conflict

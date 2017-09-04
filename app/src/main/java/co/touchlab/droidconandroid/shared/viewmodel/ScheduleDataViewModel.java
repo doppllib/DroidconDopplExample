@@ -24,7 +24,7 @@ public class ScheduleDataViewModel extends ViewModel
         void loadCallback(DaySchedule[] daySchedules);
     }
 
-    public void register(Host host, boolean allEvents)
+    public void wire(Host host, boolean allEvents)
     {
         disposables.clear();
         interactor.refreshFromDatabase();
@@ -34,7 +34,7 @@ public class ScheduleDataViewModel extends ViewModel
                 .subscribe(host:: loadCallback));
     }
 
-    public void unregister()
+    public void unwire()
     {
         disposables.clear();
     }

@@ -9,13 +9,10 @@ import co.touchlab.droidconandroid.shared.data.UserAccount;
 import co.touchlab.droidconandroid.shared.interactors.FindUserInteractor;
 import io.reactivex.Flowable;
 import io.reactivex.FlowableTransformer;
-import io.reactivex.Observable;
-import io.reactivex.ObservableTransformer;
 import io.reactivex.schedulers.Schedulers;
 
 
 import static org.mockito.Matchers.anyInt;
-import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -24,7 +21,7 @@ public class UserDetailViewModelTest
     @Mock
     FindUserInteractor interactor;
     @Mock
-    UserDetailHost     host;
+    UserDetailViewModel.Host     host;
     private UserDetailViewModel.Factory factory;
     private UserDetailViewModel         viewModel;
     private UserAccount user = new UserAccount();
@@ -45,7 +42,7 @@ public class UserDetailViewModelTest
     @After
     public void tearDown()
     {
-        viewModel.unregister();
+        viewModel.unwire();
     }
 
     @Test
@@ -53,7 +50,7 @@ public class UserDetailViewModelTest
     {
         when(interactor.loadUserAccount(anyInt())).thenReturn(Flowable.just(user));
 
-        viewModel.register(host, 100);
+        viewModel.wire(host, 100);
 
         verify(host).onUserFound(user);
     }
@@ -63,7 +60,7 @@ public class UserDetailViewModelTest
     {
         when(interactor.loadUserAccount(anyInt())).thenReturn(Flowable.error(new Throwable()));
 
-        viewModel.register(host, 100);
+        viewModel.wire(host, 100);
 
         verify(host).findUserError();
     }
@@ -73,7 +70,7 @@ public class UserDetailViewModelTest
     {
         when(interactor.loadUserAccount(anyInt())).thenReturn(Flowable.just(user));
 
-        viewModel.register(host, 100);
+        viewModel.wire(host, 100);
 
 //        when(interactor.loadUserAccount(anyInt())).thenReturn(Observable.just(user));
 //

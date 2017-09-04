@@ -9,7 +9,7 @@
 import UIKit
 import dcframework
 
-class UserDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DPRESUserDetailHost {
+class UserDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DVMUserDetailViewModel_Host {
 
     @IBOutlet weak var speakerImage: UIImageView!
     @IBOutlet weak var speakerName: UILabel!
@@ -23,16 +23,15 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     private let FACEBOOK_URL: String = "http://www.facebook.com/"
     
     var speakerInfos: [SpeakerInfo] = []
-    var viewModel: DPRESUserDetailViewModel!
+    var viewModel: DVMUserDetailViewModel!
     var userId: jlong = 0
     
     
     // MARK: Lifecycle events
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = DPRESUserDetailViewModel.forIos()
-        viewModel.register__(with: self)
-        viewModel.findUser(withLong: userId)
+        viewModel = DVMUserDetailViewModel.forIos()
+        viewModel.wire(with: self, withLong: userId)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,7 +42,7 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     deinit {
-        viewModel.unregister()
+        viewModel.unwire()
     }
     
     func findUserError() {

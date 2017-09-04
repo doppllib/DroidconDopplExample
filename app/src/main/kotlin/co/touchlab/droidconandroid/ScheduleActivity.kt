@@ -83,14 +83,14 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
 
                 setContentView(R.layout.activity_schedule)
 
-                viewModel.register(this)
+                viewModel.wire(this)
             }
         }
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        viewModel.unregister()
+        viewModel.unwire()
     }
 
     override fun onStart() {

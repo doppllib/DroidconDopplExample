@@ -22,7 +22,7 @@ public class ConferenceDataViewModel extends ViewModel
     {
         this.appPrefs = appPrefs;
     }
-    public void register(Host host)
+    public void wire(Host host)
     {
         compositeDisposable.add(appPrefs.observeConventionDates().subscribe(datePair ->
         {
@@ -40,7 +40,7 @@ public class ConferenceDataViewModel extends ViewModel
         }));
     }
 
-    public void unregister()
+    public void unwire()
     {
         compositeDisposable.clear();
     }

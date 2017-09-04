@@ -29,7 +29,10 @@ public class EventDetailInteractor
 
     public Single<EventInfo> getEventInfo(long eventId)
     {
-        Single<Event> eventSingle = getEvent(eventId);
+//        helper.flowEventInfo(eventId).subscribe(eventAndSpeakers -> {
+//            System.out.println(eventAndSpeakers);
+//        });
+        Single<Event> eventSingle = helper.getEventForId(eventId);
         Single<List<Event>> allEvents = helper.getEvents();
         Single<List<UserAccount>> speakersSingle = getEventSpeakers(eventId);
 
@@ -44,11 +47,6 @@ public class EventDetailInteractor
                 .map(eventSpeaker -> eventSpeaker.userAccountId)
                 .flatMap(helper:: getUserAccountForId)
                 .toList();
-    }
-
-    private Single<Event> getEvent(long eventId)
-    {
-        return helper.getEventForId(eventId);
     }
 
     @NonNull

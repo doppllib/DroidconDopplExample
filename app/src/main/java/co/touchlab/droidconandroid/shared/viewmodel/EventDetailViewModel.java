@@ -8,6 +8,7 @@ import com.google.j2objc.annotations.Weak;
 
 import javax.inject.Inject;
 
+import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.data.EventInfo;
 import co.touchlab.droidconandroid.shared.interactors.EventDetailInteractor;
 import co.touchlab.droidconandroid.shared.interactors.RsvpInteractor;
@@ -25,12 +26,12 @@ import io.reactivex.schedulers.Schedulers;
  */
 public class EventDetailViewModel extends ViewModel
 {
-    @Weak
-    private       EventDetailHost        host;
-    private final EventDetailInteractor  detailInteractor;
-    private final RsvpInteractor         rsvpInteractor;
-    private final UpdateAlertsInteractor alertsInteractor;
-    private CompositeDisposable disposables = new CompositeDisposable();
+    public interface Host
+    {
+        void dataRefresh(EventInfo eventInfo);
+        void reportError(String error);
+        void updateRsvp(Event event);
+    }
 
     private EventDetailViewModel(EventDetailInteractor detailInteractor, RsvpInteractor rsvpInteractor, UpdateAlertsInteractor alertsInteractor)
     {
@@ -39,12 +40,7 @@ public class EventDetailViewModel extends ViewModel
         this.alertsInteractor = alertsInteractor;
     }
 
-    public void register(EventDetailHost host)
-    {
-        this.host = host;
-    }
-
-    public void getDetails(long eventId)
+    public void wire(Host host, long eventId)
     {
         disposables.add(getEventDetails(eventId).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -60,13 +56,17 @@ public class EventDetailViewModel extends ViewModel
         return detailInteractor.getEventInfo(eventId).toObservable();
     }
 
-    public void unregister()
+    private final EventDetailInteractor  detailInteractor;
+    private final RsvpInteractor         rsvpInteractor;
+    private final UpdateAlertsInteractor alertsInteractor;
+    private CompositeDisposable disposables = new CompositeDisposable();
+
+    public void unwire()
     {
         disposables.clear();
-        host = null;
     }
 
-    public void setRsvp(boolean shouldRsvp, long eventId)
+    public void setRsvp(boolean shouldRsvp, long eventId, Host host)
     {
         if(shouldRsvp)
         {

@@ -23,12 +23,19 @@ public class SponsorsViewModel extends ViewModel
     private CompositeDisposable disposables = new CompositeDisposable();
     private Observable<SponsorsResult> sponsorsResultObservable;
 
+    public interface Host
+    {
+        void onSponsorsFound(SponsorsResult result);
+
+        void onError();
+    }
+
     private SponsorsViewModel(@NonNull SponsorsInteractor task)
     {
         this.task = task;
     }
 
-    public void register(@NonNull SponsorsHost host, int type)
+    public void wire(@NonNull Host host, int type)
     {
         disposables.clear();
 
@@ -41,7 +48,7 @@ public class SponsorsViewModel extends ViewModel
                 .subscribe(host:: onSponsorsFound, e -> host.onError()));
     }
 
-    public void unregister()
+    public void unwire()
     {
         disposables.clear();
     }

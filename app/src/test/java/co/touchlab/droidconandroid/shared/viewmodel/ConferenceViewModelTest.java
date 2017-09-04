@@ -49,7 +49,7 @@ public class ConferenceViewModelTest
         Observable<Pair<String, String>> obs = Observable.just(pair1, pair2, pair3).distinctUntilChanged();
         when(appPrefs.observeConventionDates()).thenReturn(obs);
 
-        conferenceDataViewModel.register(host);
+        conferenceDataViewModel.wire(host);
 
         verify(host, times(3)).updateConferenceDates(anyList());
     }

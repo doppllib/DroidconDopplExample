@@ -2,6 +2,7 @@ package co.touchlab.droidconandroid.shared.viewmodel;
 
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
+import android.support.annotation.NonNull;
 
 import com.google.j2objc.annotations.Weak;
 
@@ -22,20 +23,27 @@ public class UserDetailViewModel extends ViewModel
     private CompositeDisposable disposables = new CompositeDisposable();
     private FlowableTransformer<UserAccount, UserAccount> transformer;
 
+    public interface Host
+    {
+        void findUserError();
+
+        void onUserFound(@NonNull UserAccount userAccount);
+    }
+
     private UserDetailViewModel(FindUserInteractor interactor, FlowableTransformer transformer)
     {
         this.interactor = interactor;
         this.transformer = transformer;
     }
 
-    public void register(UserDetailHost host, final long userId)
+    public void wire(Host host, final long userId)
     {
         disposables.add(interactor.loadUserAccount(userId)
                 .compose(transformer)
                 .subscribe(host:: onUserFound, throwable -> host.findUserError()));
     }
 
-    public void unregister()
+    public void unwire()
     {
         disposables.clear();
     }
