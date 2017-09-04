@@ -8,15 +8,18 @@ import android.arch.persistence.room.Query;
 import java.util.List;
 
 import co.touchlab.droidconandroid.shared.data.UserAccount;
+import io.reactivex.Flowable;
 
 @Dao
 public interface UserAccountDao {
 
-    @Query("SELECT * FROM UserAccount WHERE id = :userId")
-    UserAccount getUserAccount(long userId);
+    String SELECT_USER = "SELECT * FROM UserAccount WHERE id = :userId";
 
-    @Query("SELECT * FROM UserAccount WHERE userCode = :code")
-    List<UserAccount> getUsersWithCode(String code);
+    @Query(SELECT_USER)
+    Flowable<UserAccount> flowUserAccount(long userId);
+
+    @Query(SELECT_USER)
+    UserAccount getUserAccount(long userId);
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void createOrUpdate(UserAccount userAccount);

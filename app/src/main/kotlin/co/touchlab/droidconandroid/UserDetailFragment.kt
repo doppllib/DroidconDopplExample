@@ -16,9 +16,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import co.touchlab.droidconandroid.shared.data.UserAccount
-import co.touchlab.droidconandroid.shared.presenter.AppManager
-import co.touchlab.droidconandroid.shared.presenter.UserDetailHost
-import co.touchlab.droidconandroid.shared.presenter.UserDetailViewModel
+import co.touchlab.droidconandroid.shared.viewmodel.UserDetailViewModel
 import co.touchlab.droidconandroid.shared.utils.EmojiUtil
 import co.touchlab.droidconandroid.utils.Toaster
 import com.squareup.picasso.Callback
@@ -29,7 +27,7 @@ import kotlinx.android.synthetic.main.fragment_speaker_detail.*
  * Created by kgalligan on 7/27/14.
  */
 
-class UserDetailFragment : Fragment(), UserDetailHost {
+class UserDetailFragment : Fragment(), UserDetailViewModel.Host {
 
     companion object {
         private val TWITTER_PREFIX: String = "http://www.twitter.com/"
@@ -48,8 +46,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.register(this)
-        viewModel.findUser(findUserId())
+        viewModel.wire(this, findUserId())
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -67,7 +64,7 @@ class UserDetailFragment : Fragment(), UserDetailHost {
     }
 
     override fun onDestroy() {
-        viewModel.unregister()
+        viewModel.unwire()
         super.onDestroy()
     }
 

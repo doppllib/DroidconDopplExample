@@ -9,6 +9,7 @@ import co.touchlab.droidconandroid.shared.network.RsvpRequest;
 import co.touchlab.droidconandroid.shared.network.SponsorsRequest;
 import dagger.Module;
 import dagger.Provides;
+import io.reactivex.FlowableTransformer;
 import io.reactivex.ObservableTransformer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -94,7 +95,13 @@ public class NetworkModule
     }
 
     @Provides
-    ObservableTransformer providesTransformer()
+    ObservableTransformer providesObservableTransformer()
+    {
+        return upstream -> upstream.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Provides
+    FlowableTransformer providesFlowableTransformer()
     {
         return upstream -> upstream.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
     }

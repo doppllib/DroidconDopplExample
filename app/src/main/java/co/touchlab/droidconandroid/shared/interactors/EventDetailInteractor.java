@@ -1,8 +1,7 @@
 package co.touchlab.droidconandroid.shared.interactors;
 
-import android.text.TextUtils;
-
 import android.support.annotation.NonNull;
+import android.text.TextUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +12,6 @@ import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.data.EventInfo;
 import co.touchlab.droidconandroid.shared.data.UserAccount;
-import co.touchlab.droidconandroid.shared.data.Venue;
 import io.reactivex.Single;
 
 /**
@@ -31,12 +29,14 @@ public class EventDetailInteractor
 
     public Single<EventInfo> getEventInfo(long eventId)
     {
-        Single<Event> eventSingle = getEvent(eventId);
+//        helper.flowEventInfo(eventId).subscribe(eventAndSpeakers -> {
+//            System.out.println(eventAndSpeakers);
+//        });
+        Single<Event> eventSingle = helper.getEventForId(eventId);
         Single<List<Event>> allEvents = helper.getEvents();
         Single<List<UserAccount>> speakersSingle = getEventSpeakers(eventId);
 
         return Single.zip(eventSingle, speakersSingle, allEvents, this :: createEventInfo);
-
     }
 
     private Single<List<UserAccount>> getEventSpeakers(long eventId)
@@ -45,18 +45,8 @@ public class EventDetailInteractor
                 .toObservable()
                 .flatMapIterable(list -> list)
                 .map(eventSpeaker -> eventSpeaker.userAccountId)
-                .flatMap(userId -> helper.getUserAccountForId(userId).toObservable())
+                .flatMap(helper:: getUserAccountForId)
                 .toList();
-    }
-
-    public Single<Venue> getEventVenue(long eventId)
-    {
-        return getEvent(eventId).map(event -> event.venue);
-    }
-
-    private Single<Event> getEvent(long eventId)
-    {
-        return helper.getEventForId(eventId);
     }
 
     @NonNull

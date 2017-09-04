@@ -37,7 +37,7 @@ extension WelcomeViewController: WelcomePageViewControllerDelegate
         pageControl.currentPage = index
         
         if (pageControl.numberOfPages - 1 == pageControl.currentPage) {
-            DPRESAppManager.getInstance().getAppComponent().getPrefs().setHasSeenWelcome()
+            DVMAppManager.getInstance().getAppComponent().getPrefs().setHasSeenWelcome()
         }
     }
 }

@@ -2,29 +2,22 @@ package co.touchlab.droidconandroid.shared.interactors;
 
 import android.util.Pair;
 
-import com.google.gson.Gson;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import java.io.IOException;
-import java.util.List;
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
-
 import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
-import co.touchlab.droidconandroid.shared.network.RefreshScheduleDataRequest;
-import co.touchlab.droidconandroid.shared.network.dao.Convention;
-import co.touchlab.droidconandroid.shared.presenter.AppManager;
 import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.data.TimeBlock;
-import co.touchlab.droidconandroid.shared.presenter.ConferenceDataHelper;
-import co.touchlab.droidconandroid.shared.presenter.DaySchedule;
-import co.touchlab.droidconandroid.shared.presenter.PlatformClient;
+import co.touchlab.droidconandroid.shared.network.RefreshScheduleDataRequest;
+import co.touchlab.droidconandroid.shared.viewmodel.AppManager;
+import co.touchlab.droidconandroid.shared.viewmodel.ConferenceDataHelper;
+import co.touchlab.droidconandroid.shared.viewmodel.DaySchedule;
+import co.touchlab.droidconandroid.shared.viewmodel.PlatformClient;
 import io.reactivex.Observable;
-import io.reactivex.Single;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.BehaviorSubject;
@@ -69,7 +62,7 @@ public class RefreshScheduleInteractor
         conferenceDataHelper.getDays()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(conferenceDataSubject:: onNext, e -> CrashReport.logException(e));
+                .subscribe(conferenceDataSubject:: onNext, CrashReport:: logException);
     }
 
     public void refreshFromServer()

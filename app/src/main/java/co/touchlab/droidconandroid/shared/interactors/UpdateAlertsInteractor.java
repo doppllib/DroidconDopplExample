@@ -9,10 +9,9 @@ import javax.inject.Singleton;
 
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
 import co.touchlab.droidconandroid.shared.data.Event;
-import co.touchlab.droidconandroid.shared.network.RefreshScheduleDataRequest;
-import co.touchlab.droidconandroid.shared.presenter.DaySchedule;
-import co.touchlab.droidconandroid.shared.presenter.HourBlock;
 import co.touchlab.droidconandroid.shared.utils.EventBusExt;
+import co.touchlab.droidconandroid.shared.viewmodel.DaySchedule;
+import co.touchlab.droidconandroid.shared.viewmodel.HourBlock;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 

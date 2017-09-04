@@ -10,7 +10,7 @@ import UIKit
 import JRE
 import dcframework
 
-@objc class EventDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DPRESEventDetailHost {
+@objc class EventDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DVMEventDetailViewModel_Host {
     
     @IBOutlet weak var tableView : UITableView!
     @IBOutlet weak var rsvpButton: UIButton!
@@ -21,7 +21,7 @@ import dcframework
     var eventId: jlong!
     var conflict: jboolean!
     var speakers: [DDATUserAccount]?
-    var eventDetailPresenter: DPRESEventDetailViewModel!
+    var eventDetailPresenter: DVMEventDetailViewModel!
     
     // MARK: Lifecycle events
     override func viewWillAppear(_ animated: Bool) {
@@ -33,12 +33,11 @@ import dcframework
         super.viewDidLoad()
         
         if eventDetailPresenter != nil {
-            eventDetailPresenter.unregister()
+            eventDetailPresenter.unwire()
         }
         
-        eventDetailPresenter = DPRESEventDetailViewModel.forIos()
-        eventDetailPresenter.register__(with: self)
-        eventDetailPresenter.getDetailsWithLong(eventId)
+        eventDetailPresenter = DVMEventDetailViewModel.forIos()
+        eventDetailPresenter.wire(with: self, withLong: eventId)
         
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -63,7 +62,7 @@ import dcframework
     }
     
     deinit {
-        eventDetailPresenter.unregister()
+        eventDetailPresenter.unwire()
     }
     
     // MARK: Data refresh
@@ -200,7 +199,7 @@ import dcframework
     }
 
     @IBAction func toggleRsvp(_ sender: UIButton) {
-        eventDetailPresenter.setRsvpWithBoolean(!event.isRsvped(), withLong: event.getId())
+        eventDetailPresenter.setRsvpWithBoolean(!event.isRsvped(), withLong: event.getId(), with: self)
     }
     
     func showSpeakerDetailView(speaker: DDATUserAccount) {

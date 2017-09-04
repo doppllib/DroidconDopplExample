@@ -9,15 +9,14 @@ import android.util.SparseIntArray
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import co.touchlab.droidconandroid.shared.network.SponsorsResult
-import co.touchlab.droidconandroid.shared.presenter.SponsorsHost
-import co.touchlab.droidconandroid.shared.presenter.SponsorsViewModel
+import co.touchlab.droidconandroid.shared.network.dao.SponsorsResult
+import co.touchlab.droidconandroid.shared.viewmodel.SponsorsViewModel
 import co.touchlab.droidconandroid.ui.SponsorsAdapter
 import co.touchlab.droidconandroid.utils.Toaster
 import kotlinx.android.synthetic.main.fragment_sponsors_list.*
 import java.util.*
 
-class SponsorsListFragment : Fragment(), SponsorsHost {
+class SponsorsListFragment : Fragment(), SponsorsViewModel.Host {
 
     companion object {
         private val SPONSOR_TYPE = "SPONSOR_TYPE"
@@ -53,12 +52,12 @@ class SponsorsListFragment : Fragment(), SponsorsHost {
 
     override fun onStart() {
         super.onStart()
-        viewModel.register(this, type)
+        viewModel.wire(this, type)
     }
 
     override fun onStop() {
         super.onStop()
-        viewModel.unregister()
+        viewModel.unwire()
     }
 
     override fun onSponsorsFound(sponsorResult: SponsorsResult) {

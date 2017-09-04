@@ -11,7 +11,7 @@ import co.touchlab.droidconandroid.isOdd
 import co.touchlab.droidconandroid.setViewVisibility
 import co.touchlab.droidconandroid.shared.data.Block
 import co.touchlab.droidconandroid.shared.data.Event
-import co.touchlab.droidconandroid.shared.presenter.HourBlock
+import co.touchlab.droidconandroid.shared.viewmodel.HourBlock
 import co.touchlab.droidconandroid.shared.utils.EventBusExt
 import co.touchlab.droidconandroid.shared.utils.EventUtils
 import kotlinx.android.synthetic.main.item_event.view.*

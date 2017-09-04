@@ -12,12 +12,12 @@ import co.touchlab.droidconandroid.shared.data.dao.UserAccountDao;
 public abstract class DroidconDatabase extends RoomDatabase {
     static final int DATABASE_VERSION = 1;
 
-    public abstract BlockDao blockDao();
+    abstract BlockDao blockDao();
 
-    public abstract UserAccountDao userAccountDao();
+    abstract UserAccountDao userAccountDao();
 
-    public abstract EventSpeakerDao eventSpeakerDao();
+    abstract EventSpeakerDao eventSpeakerDao();
 
-    public abstract EventDao eventDao();
+    abstract EventDao eventDao();
 
 }

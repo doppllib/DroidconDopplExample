@@ -11,36 +11,36 @@ import JRE
 import UIKit
 import dcframework
 
-class ScheduleViewController : UIViewController, UITableViewDelegate, UITableViewDataSource, DPRESScheduleDataViewModel_Host, DPRESConferenceDataViewModel_Host {
+class ScheduleViewController : UIViewController, UITableViewDelegate, UITableViewDataSource, DVMScheduleDataViewModel_Host, DVMConferenceDataViewModel_Host {
   
     @IBOutlet weak var dayChooser: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: Properties
     var isDayTwo: Bool = false
-    var hourBlocks: [DPRESHourBlock]!
-    var conferenceDays: [DPRESDaySchedule]?
+    var hourBlocks: [DVMHourBlock]!
+    var conferenceDays: [DVMDaySchedule]?
     
-    var conferencePresenter: DPRESConferenceDataViewModel!
-    var schedulePresenter: DPRESScheduleDataViewModel!
+    var conferencePresenter: DVMConferenceDataViewModel!
+    var schedulePresenter: DVMScheduleDataViewModel!
     var allEvents = true
   
-    var hourBlocksArray : [DPRESHourBlock] {
-        var array = [DPRESHourBlock]()
+    var hourBlocksArray : [DVMHourBlock] {
+        var array = [DVMHourBlock]()
         
         let index = isDayTwo ? 1 : 0
         if let days = conferenceDays, days.count > index, let objectArray = days[index].getHourHolders() {
-            array.append(contentsOf: JavaUtils.convertiOSObjectArrayToArray(objArray: objectArray) as! [DPRESHourBlock])
+            array.append(contentsOf: JavaUtils.convertiOSObjectArrayToArray(objArray: objectArray) as! [DVMHourBlock])
         }
         return array
     }
     
     // MARK: Lifecycle events
     override func viewWillAppear(_ animated: Bool) {
-        conferencePresenter = DPRESConferenceDataViewModel.forIosWithBoolean(allEvents)
-        schedulePresenter = DPRESScheduleDataViewModel.forIos()
-        schedulePresenter.register__(with: self, withBoolean: allEvents)
-        conferencePresenter.register__(with: self)
+        conferencePresenter = DVMConferenceDataViewModel.forIosWithBoolean(allEvents)
+        schedulePresenter = DVMScheduleDataViewModel.forIos()
+        schedulePresenter.wire(with: self, withBoolean: allEvents)
+        conferencePresenter.wire(with: self)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -70,8 +70,8 @@ class ScheduleViewController : UIViewController, UITableViewDelegate, UITableVie
     }
     
     deinit {
-        schedulePresenter.unregister()
-        conferencePresenter.unregister()
+        schedulePresenter.unwire()
+        conferencePresenter.unwire()
     }
     
     // MARK: Data refresh
@@ -81,9 +81,9 @@ class ScheduleViewController : UIViewController, UITableViewDelegate, UITableVie
         tableView.reloadData()
     }
     
-    func loadCallback(withDPRESDayScheduleArray daySchedules: IOSObjectArray!) {
-        hourBlocks = [DPRESHourBlock]()
-        conferenceDays = JavaUtils.convertiOSObjectArrayToArray(objArray: daySchedules) as? [DPRESDaySchedule]
+    func loadCallback(withDVMDayScheduleArray daySchedules: IOSObjectArray!) {
+        hourBlocks = [DVMHourBlock]()
+        conferenceDays = JavaUtils.convertiOSObjectArrayToArray(objArray: daySchedules) as? [DVMDaySchedule]
         updateTableData()
         tableView.reloadData()
     }

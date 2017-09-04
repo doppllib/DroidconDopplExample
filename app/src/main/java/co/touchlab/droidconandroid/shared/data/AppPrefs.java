@@ -1,5 +1,6 @@
 package co.touchlab.droidconandroid.shared.data;
 
+import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
@@ -33,7 +34,7 @@ public class AppPrefs
     private final BehaviorSubject<Pair<String, String>> conventionDateProcessor;
 
     @Inject
-    public AppPrefs(Context context)
+    public AppPrefs(Application context)
     {
         prefs = context.getSharedPreferences("APP_PREFS", Context.MODE_PRIVATE);
 

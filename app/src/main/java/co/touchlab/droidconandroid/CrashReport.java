@@ -1,5 +1,5 @@
 package co.touchlab.droidconandroid;
-import co.touchlab.droidconandroid.shared.presenter.AppManager;
+import co.touchlab.droidconandroid.shared.viewmodel.AppManager;
 
 /**
  * Created by kgalligan on 4/6/16.

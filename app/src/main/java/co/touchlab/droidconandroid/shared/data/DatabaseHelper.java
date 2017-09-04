@@ -1,5 +1,6 @@
 package co.touchlab.droidconandroid.shared.data;
 
+import android.app.Application;
 import android.arch.persistence.room.Room;
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -15,6 +16,8 @@ import co.touchlab.droidconandroid.shared.data.dao.EventDao;
 import co.touchlab.droidconandroid.shared.data.dao.UserAccountDao;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkUserAccount;
 import io.reactivex.Completable;
+import io.reactivex.Flowable;
+import io.reactivex.Observable;
 import io.reactivex.Single;
 
 @Singleton
@@ -24,9 +27,14 @@ public class DatabaseHelper
     private DroidconDatabase db;
 
     @Inject
-    public DatabaseHelper(Context context)
+    public DatabaseHelper(Application context)
     {
         db = Room.databaseBuilder(context, DroidconDatabase.class, "droidcon").build();
+    }
+
+    public void runInTransaction(Runnable r)
+    {
+        db.runInTransaction(r);
     }
 
     public void deleteEventsNotIn(Set<Long> goodStuff)
@@ -95,11 +103,6 @@ public class DatabaseHelper
         return Completable.fromAction(() -> db.eventDao().updateEvent(event));
     }
 
-    public void deleteEvents(List<Event> events)
-    {
-        db.eventDao().deleteAll(events);
-    }
-
     public List<Block> getBlocksList()
     {
         return db.blockDao().getBlocks();
@@ -130,14 +133,19 @@ public class DatabaseHelper
         return Single.fromCallable(() -> db.eventSpeakerDao().getEventSpeakers(eventId));
     }
 
-    public Single<UserAccount> getUserAccountForId(long userId)
+    public Observable<UserAccount> getUserAccountForId(long userId)
     {
-        return Single.fromCallable(() -> getUserAccount(userId));
+        return Observable.fromCallable(() -> getUserAccount(userId));
     }
 
     public UserAccount getUserAccount(long userId)
     {
         return db.userAccountDao().getUserAccount(userId);
+    }
+
+    public Flowable<UserAccount> flowUserAccount(long userId)
+    {
+        return db.userAccountDao().flowUserAccount(userId);
     }
 
     public Completable saveUserAccount(UserAccount userAccount)

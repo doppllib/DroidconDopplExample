@@ -6,13 +6,12 @@ import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import co.touchlab.droidconandroid.shared.data.Event
 import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
-import co.touchlab.droidconandroid.shared.presenter.*
+import co.touchlab.droidconandroid.shared.viewmodel.*
 import co.touchlab.droidconandroid.ui.EventAdapter
 import co.touchlab.droidconandroid.ui.EventClickListener
 import kotlinx.android.synthetic.main.fragment_schedule_data.*
@@ -61,13 +60,13 @@ class ScheduleDataFragment : Fragment(), ScheduleDataViewModel.Host {
 
     override fun onResume() {
         super.onResume()
-        viewModel.register(this, allEvents)
+        viewModel.wire(this, allEvents)
     }
 
     override fun onPause() {
         super.onPause()
         arguments.putBoolean(ALL_EVENTS, allEvents)
-        viewModel.unregister()
+        viewModel.unwire()
     }
 
     private fun updateAdapter(data: Array<out HourBlock>) {
@@ -81,13 +80,13 @@ class ScheduleDataFragment : Fragment(), ScheduleDataViewModel.Host {
     fun switchToAgenda() {
         allEvents = false
         updateNotifCard()
-        viewModel.register(this, allEvents)
+        viewModel.wire(this, allEvents)
     }
 
     fun switchToConference() {
         allEvents = true
         updateNotifCard()
-        viewModel.register(this, allEvents)
+        viewModel.wire(this, allEvents)
     }
 
     private inner class ScheduleEventClickListener : EventClickListener {

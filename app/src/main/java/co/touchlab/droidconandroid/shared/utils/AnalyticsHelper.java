@@ -1,6 +1,6 @@
 package co.touchlab.droidconandroid.shared.utils;
 import co.touchlab.droidconandroid.shared.data.Event;
-import co.touchlab.droidconandroid.shared.presenter.AppManager;
+import co.touchlab.droidconandroid.shared.viewmodel.AppManager;
 
 /**
  * Created by sufeizhao on 7/19/17.

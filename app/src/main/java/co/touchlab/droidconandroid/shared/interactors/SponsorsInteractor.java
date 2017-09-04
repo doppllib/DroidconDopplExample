@@ -1,12 +1,11 @@
 package co.touchlab.droidconandroid.shared.interactors;
 
-import android.util.Log;
-
 import javax.inject.Inject;
 
 import co.touchlab.droidconandroid.shared.network.SponsorsRequest;
-import co.touchlab.droidconandroid.shared.network.SponsorsResult;
+import co.touchlab.droidconandroid.shared.network.dao.SponsorsResult;
 import io.reactivex.Observable;
+import io.reactivex.Single;
 
 public class SponsorsInteractor
 {
