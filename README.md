@@ -12,6 +12,8 @@ Install [CocoaPods](https://cocoapods.org/). This is not needed for Doppl, but t
 
 Clone the repo (obv)
 
+As in the tutorial, add 'j2objc.home' to your local.properties
+
 Open terminal to ios directory and run
 
 ```bash
