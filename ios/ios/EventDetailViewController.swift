@@ -178,22 +178,7 @@ import dcframework
             DDATTrack.findByServerName(with: "Design") : // Default to design (Same as Android)
             DDATTrack.findByServerName(with: event.getCategory())
         
-        var imageName : String
-        
-        switch track {
-        case DDATTrack.findByServerName(with: "Dev/Design"):
-            imageName = "illo_designdevtalk"
-            break
-        case DDATTrack.findByServerName(with: "Design"):
-            imageName = "illo_designtalk"
-            break
-        case DDATTrack.findByServerName(with: "Design Lab"):
-            imageName = "illo_designlab"
-            break
-        default:
-            imageName = "illo_devtalk"
-            break
-        }
+        let imageName = "talkheader"
         
         headerImage.image =  UIImage(named:imageName)!
     }

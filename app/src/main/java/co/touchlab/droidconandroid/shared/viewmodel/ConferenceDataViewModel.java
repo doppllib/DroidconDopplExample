@@ -92,12 +92,14 @@ public class ConferenceDataViewModel extends ViewModel
     @NonNull
     public AppScreens goToScreen()
     {
-        boolean hasSeenWelcome = appPrefs.getHasSeenWelcome();
-        if (!hasSeenWelcome)
-        {
-            return AppScreens.Welcome;
-        }
-        else
+        //Hello! Ran out of time to redesign the welcome screens. But you should!
+
+//        boolean hasSeenWelcome = appPrefs.getHasSeenWelcome();
+//        if (!hasSeenWelcome)
+//        {
+//            return AppScreens.Welcome;
+//        }
+//        else
         {
             return AppScreens.Schedule;
         }

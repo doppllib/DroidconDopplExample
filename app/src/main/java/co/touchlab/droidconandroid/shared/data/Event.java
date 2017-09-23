@@ -20,6 +20,7 @@ import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 @Entity
 public class Event implements TimeBlock
 {
+    public static final int SOONTIME = 5 * 60 * 1000;
     @PrimaryKey
     public long id;
 
@@ -118,6 +119,17 @@ public class Event implements TimeBlock
         return rsvpUuid != null;
     }
 
+    public boolean isSoon()
+    {
+        return !isNow() && !isPast() && startDateLong != null && System.currentTimeMillis() > (startDateLong -
+                SOONTIME);
+    }
+
+    public Long getStartDateSoon()
+    {
+        return startDateLong == null ? null : startDateLong - SOONTIME;
+    }
+
     public boolean isPast()
     {
         return endDateLong != null && System.currentTimeMillis() > endDateLong;
@@ -130,6 +142,12 @@ public class Event implements TimeBlock
                 System.currentTimeMillis() > startDateLong;
     }
 
+    public boolean isAfter(Event event)
+    {
+        //Don't know?
+        return ! (startDateLong == null || event.startDateLong == null) &&
+                startDateLong > event.startDateLong;
+    }
     @Override
     public boolean isBlock()
     {

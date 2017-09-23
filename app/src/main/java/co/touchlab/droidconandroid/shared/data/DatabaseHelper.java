@@ -27,9 +27,9 @@ public class DatabaseHelper
     private DroidconDatabase db;
 
     @Inject
-    public DatabaseHelper(Application context)
+    public DatabaseHelper(DroidconDatabase droidconDatabase)
     {
-        db = Room.databaseBuilder(context, DroidconDatabase.class, "droidcon").build();
+        db = droidconDatabase;
     }
 
     public void runInTransaction(Runnable r)
@@ -73,7 +73,7 @@ public class DatabaseHelper
         return Single.fromCallable(this :: getEventsList);
     }
 
-    private List<Event> getEventsList()
+    public List<Event> getEventsList()
     {
         return db.eventDao().getEvents();
     }

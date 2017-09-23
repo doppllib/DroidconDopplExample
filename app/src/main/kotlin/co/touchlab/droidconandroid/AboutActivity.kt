@@ -33,6 +33,8 @@ class AboutActivity : AppCompatActivity() {
         adapter.add(R.string.about_app_header, 0, R.string.about_app)
         adapter.add(R.string.about_con_header, 0, R.string.about_con)
         adapter.add(R.string.about_touch_header, 0, R.string.about_touch)
+        //Binky's row
+        adapter.add(null, null, null)
         about_list_rv.adapter = adapter
     }
 

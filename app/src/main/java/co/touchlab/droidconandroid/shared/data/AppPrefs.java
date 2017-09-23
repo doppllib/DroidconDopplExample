@@ -32,11 +32,34 @@ public class AppPrefs
     private SharedPreferences prefs;
 
     private final BehaviorSubject<Pair<String, String>> conventionDateProcessor;
+    private final BehaviorSubject<Boolean> allowNotifsSubject;
+    private final BehaviorSubject<Boolean> showNotifCardSubject;
+    private final SharedPreferences.OnSharedPreferenceChangeListener preferenceChangeListener;
 
     @Inject
     public AppPrefs(Application context)
     {
         prefs = context.getSharedPreferences("APP_PREFS", Context.MODE_PRIVATE);
+
+        preferenceChangeListener = new SharedPreferences.OnSharedPreferenceChangeListener()
+        {
+            @Override
+            public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s)
+            {
+                if(s.equals(ALLOW_NOTIFS))
+                {
+                    allowNotifsSubject.onNext(prefs.getBoolean(ALLOW_NOTIFS, false));
+                }
+                else if(s.equals(CONVENTION_START) || s.equals(CONVENTION_END))
+                {
+                    conventionDateProcessor.onNext(new Pair<>(prefs.getString(CONVENTION_START, null),
+                            prefs.getString(CONVENTION_END, null)));
+                }
+            }
+        };
+        prefs.registerOnSharedPreferenceChangeListener(preferenceChangeListener);
+        allowNotifsSubject = BehaviorSubject.createDefault(prefs.getBoolean(ALLOW_NOTIFS, false));
+        showNotifCardSubject = BehaviorSubject.createDefault(prefs.getBoolean(SHOW_NOTIF_CARD, true));
 
         //We're depending on seeded data to properly init the screen.
         if(prefs.getString(CONVENTION_START, null) == null)
@@ -74,8 +97,6 @@ public class AppPrefs
         editor.putString(CONVENTION_START, startDate);
         editor.putString(CONVENTION_END, endDate);
         editor.apply();
-
-        conventionDateProcessor.onNext(new Pair<>(startDate, endDate));
     }
 
     /**
@@ -97,14 +118,24 @@ public class AppPrefs
         return prefs.getLong(REFRESH_TIME, 0);
     }
 
-    public boolean getAllowNotifications()
+    public Observable<Boolean> observeAllowNotifications()
     {
-        return prefs.getBoolean(ALLOW_NOTIFS, false);
+        return allowNotifsSubject;
+    }
+
+    public Observable<Boolean> observeShowNotifCard()
+    {
+        return showNotifCardSubject;
     }
 
     public void setAllowNotifications(boolean allow)
     {
         prefs.edit().putBoolean(ALLOW_NOTIFS, allow).apply();
+    }
+
+    public boolean getAllowNotificationsUi()
+    {
+        return prefs.getBoolean(ALLOW_NOTIFS, false);
     }
 
     public boolean getShowNotifCard()

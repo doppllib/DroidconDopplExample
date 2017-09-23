@@ -14,7 +14,6 @@ FOUNDATION_EXPORT const unsigned char dcframeworkVersionString[];
 #import <dcframework/DDAGAppModule.h>
 #import <dcframework/DDAGAppModule_ProvidesApplicationFactory.h>
 #import <dcframework/DDAGDaggerAppComponent.h>
-#import <dcframework/DDAGDatabaseModule.h>
 #import <dcframework/DDAGDatabaseModule_ProvidesDatabaseFactory.h>
 #import <dcframework/DDAGDroidconServer.h>
 #import <dcframework/DDAGNetworkModule.h>

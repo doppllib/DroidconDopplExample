@@ -78,11 +78,10 @@ class Sponsor {
     
     static let SPONSOR_GENERAL   = 0
     static let SPONSOR_PARTY     = 1
-    static let SPONSOR_ALL       = 2
     
     class func allSponsors() -> Int
     {
-        return Sponsor.SPONSOR_ALL
+        return Sponsor.SPONSOR_GENERAL
     }
     
     let processingQueue = OperationQueue()
@@ -131,11 +130,9 @@ class Sponsor {
         var photoUrl = "https://s3.amazonaws.com/droidconsponsers/"
         switch sponsorType {
             case Sponsor.SPONSOR_PARTY:
-                photoUrl.append("sponsors_party.json")
-            case Sponsor.SPONSOR_ALL:
-                photoUrl.append("sponsors_all.json")
+                photoUrl.append("sponsors_party_2017.json")
             default:
-                photoUrl.append("sponsors_general.json")
+                photoUrl.append("sponsors_general_2017.json")
         }
         return URL(string: photoUrl)!;
     }

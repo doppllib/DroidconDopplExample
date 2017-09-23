@@ -3,21 +3,22 @@ package co.touchlab.droidconandroid;
 import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
+import android.os.StrictMode;
 import android.util.Log;
 
+import com.crashlytics.android.Crashlytics;
+import com.google.firebase.iid.FirebaseInstanceId;
+
+import co.touchlab.droidconandroid.alerts.EventNotificationsManager;
+import io.fabric.sdk.android.Fabric;
 import java.io.IOException;
 
-import co.touchlab.droidconandroid.alerts.AlertManagerKt;
 import co.touchlab.droidconandroid.shared.dagger.AppModule;
 import co.touchlab.droidconandroid.shared.dagger.DaggerAppComponent;
-import co.touchlab.droidconandroid.shared.dagger.DatabaseModule;
 import co.touchlab.droidconandroid.shared.dagger.NetworkModule;
-import co.touchlab.droidconandroid.shared.data.Event;
-import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor;
 import co.touchlab.droidconandroid.shared.viewmodel.AppManager;
 import co.touchlab.droidconandroid.shared.viewmodel.LoadDataSeed;
 import co.touchlab.droidconandroid.shared.viewmodel.PlatformClient;
-import co.touchlab.droidconandroid.shared.utils.EventBusExt;
 import co.touchlab.droidconandroid.shared.utils.IOUtils;
 
 /**
@@ -26,6 +27,7 @@ import co.touchlab.droidconandroid.shared.utils.IOUtils;
 public class DroidconApplication extends Application
 {
     private static DroidconApplication instance;
+    private EventNotificationsManager eventNotificationsManager;
 
     public DroidconApplication()
     {
@@ -36,12 +38,29 @@ public class DroidconApplication extends Application
     public void onCreate()
     {
         super.onCreate();
+        Fabric.with(this, new Crashlytics());
 
         String currentProcessName = getCurrentProcessName(this);
         Log.i(DroidconApplication.class.getSimpleName(),
                 "currentProcessName: " + currentProcessName);
 
-        EventBusExt.getDefault().register(this);
+        /*if (DEVELOPER_MODE) */{
+            StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+                    .detectDiskReads()
+                    .detectDiskWrites()
+                    .detectNetwork()   // or .detectAll() for all detectable problems
+                    .penaltyFlashScreen()
+                    .penaltyLog()
+                    .build());
+            StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
+                    .detectLeakedSqlLiteObjects()
+                    .detectLeakedClosableObjects()
+                    .penaltyLog()
+                    .penaltyDeath()
+                    .build());
+        }
+
+        Log.w("regtoken", "reg: "+ FirebaseInstanceId.getInstance().getToken());
 
         if(! currentProcessName.contains("background_crash"))
         {
@@ -69,6 +88,7 @@ public class DroidconApplication extends Application
                 public void logException(Throwable t)
                 {
                     Log.e(DroidconApplication.class.getSimpleName(), "", t);
+                    Crashlytics.logException(t);
                 }
 
                 @Override
@@ -104,15 +124,21 @@ public class DroidconApplication extends Application
                 }
             };
 
+            AppModule appModule = new AppModule(this);
+            NetworkModule networkModule = new NetworkModule();
             AppManager.create(this,
                     platformClient,
                     DaggerAppComponent.builder()
-                            .appModule(new AppModule(this))
-                            .databaseModule(new DatabaseModule())
-                            .networkModule(new NetworkModule())
+                            .appModule(appModule)
+                            .networkModule(networkModule)
                             .build());
 
-            AppManager.getInstance().seed(loadDataSeed);
+            AppManager instance = AppManager.getInstance();
+            instance.seed(loadDataSeed);
+
+            eventNotificationsManager = new EventNotificationsManager(instance.getAppComponent().getPrefs(),
+                    this,
+                    instance.getAppComponent().refreshScheduleInteractor());
         }
     }
 
@@ -135,13 +161,8 @@ public class DroidconApplication extends Application
         return instance;
     }
 
-    public void onEventMainThread(UpdateAlertsInteractor interactor)
+    public void updateEventNotifications()
     {
-        update(interactor.event);
-    }
-
-    public void update(Event nextEvent)
-    {
-        AlertManagerKt.scheduleAlert(this, nextEvent);
+        eventNotificationsManager.resetObserver();
     }
 }

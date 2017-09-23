@@ -4,7 +4,6 @@ import javax.inject.Singleton;
 
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
 import co.touchlab.droidconandroid.shared.interactors.RefreshScheduleInteractor;
-import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor;
 import co.touchlab.droidconandroid.shared.viewmodel.ConferenceDataViewModel;
 import co.touchlab.droidconandroid.shared.viewmodel.EventDetailViewModel;
 import co.touchlab.droidconandroid.shared.viewmodel.ScheduleDataViewModel;
@@ -14,14 +13,12 @@ import co.touchlab.droidconandroid.shared.viewmodel.UserDetailViewModel;
 import dagger.Component;
 
 @Singleton
-@Component(modules = {AppModule.class, DatabaseModule.class, NetworkModule.class})
+@Component(modules = {AppModule.class, NetworkModule.class})
 public interface AppComponent
 {
     AppPrefs getPrefs();
 
     SeedInteractor seedInteractor();
-
-    UpdateAlertsInteractor updateAlertsInteractor();
 
     RefreshScheduleInteractor refreshScheduleInteractor();
 

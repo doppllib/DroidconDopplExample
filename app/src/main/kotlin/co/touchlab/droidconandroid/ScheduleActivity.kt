@@ -17,12 +17,12 @@ import android.view.View
 import co.touchlab.droidconandroid.alerts.NotificationService
 import co.touchlab.droidconandroid.alerts.NotificationUtils
 import co.touchlab.droidconandroid.shared.data.AppPrefs
-import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 import co.touchlab.droidconandroid.shared.viewmodel.AppManager
 import co.touchlab.droidconandroid.shared.viewmodel.ConferenceDataViewModel
-import co.touchlab.droidconandroid.shared.utils.EventBusExt
 import co.touchlab.droidconandroid.ui.*
 import com.google.firebase.messaging.FirebaseMessaging
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.functions.Consumer
 import kotlinx.android.synthetic.main.activity_schedule.*
 import java.util.*
 
@@ -39,13 +39,10 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
     }
 
     private var allEvents = true
+    private val cd = CompositeDisposable()
   
     private val viewModel: ConferenceDataViewModel by lazy {
         ViewModelProviders.of(this, ConferenceDataViewModel.factory(allEvents))[ConferenceDataViewModel::class.java]
-    }
-
-    val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
-        AppManager.getInstance().appComponent.updateAlertsInteractor()
     }
 
     val appPrefs: AppPrefs by lazy {
@@ -83,23 +80,28 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
 
                 setContentView(R.layout.activity_schedule)
 
+                schedule_toolbar_notif.visibility = View.GONE
+
                 viewModel.wire(this)
+
+                cd.add(appPrefs.observeAllowNotifications().subscribe { b: Boolean ->
+                    adjustToolBarAndDrawers()
+                })
             }
         }
+
     }
 
     override fun onDestroy() {
         super.onDestroy()
         viewModel.unwire()
+        cd.clear()
     }
 
     override fun onStart() {
         super.onStart()
         setupToolbar()
         setupNavigationDrawer()
-        adjustToolBarAndDrawers()
-
-        EventBusExt.getDefault().register(this)
     }
 
     override fun onResume() {
@@ -126,11 +128,6 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
         outState.putBoolean(ALL_EVENTS, allEvents)
     }
 
-    override fun onStop() {
-        EventBusExt.getDefault().unregister(this)
-        super.onStop()
-    }
-
     private fun setupToolbar() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
@@ -138,7 +135,7 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
         supportActionBar?.setHomeButtonEnabled(!isTablet())
 
         schedule_backdrop.setImageDrawable(ContextCompat.getDrawable(this,
-                R.drawable.superglyph_outline360x114dp))
+                R.drawable.bannerback))
 
         appbar.addOnOffsetChangedListener { appBarLayout, verticalOffset ->
             if (appBarLayout.totalScrollRange > 0) {
@@ -150,7 +147,7 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
         appbar.setExpanded(true)
 
         schedule_toolbar_notif.setOnClickListener {
-            updateNotifications(!appPrefs.allowNotifications)
+            appPrefs.setAllowNotifications(!appPrefs.allowNotificationsUi)
         }
     }
 
@@ -208,58 +205,37 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
 
     private fun adjustToolBarAndDrawers() {
         if (allEvents) {
-            (drawer_recycler.adapter as DrawerAdapter).setSelectedPosition(POSITION_EXPLORE)
+            if(drawer_recycler.adapter != null)
+            {
+                (drawer_recycler.adapter as DrawerAdapter).setSelectedPosition(POSITION_EXPLORE)
+            }
             schedule_toolbar_title.setText(R.string.app_name)
-            schedule_backdrop.setColorFilter(ContextCompat.getColor(this, R.color.glyph_foreground_dark))
-            schedule_backdrop.setBackgroundColor(ContextCompat.getColor(this, R.color.glyph_background_dark))
-            schedule_toolbar_title.setTextColor(ContextCompat.getColor(this, R.color.tab_text_dark))
-            tabs.setTabTextColors(ContextCompat.getColor(this, R.color.tab_inactive_text_dark), ContextCompat.getColor(this, R.color.tab_text_dark))
-            tabs.setSelectedTabIndicatorColor(ContextCompat.getColor(this, R.color.tab_accent_dark))
-            val menuIconDark = toolbar.navigationIcon?.mutate()
-            menuIconDark?.mutate()?.setColorFilter(ContextCompat.getColor(this, R.color.tab_text_dark), PorterDuff.Mode.SRC_IN)
-            menuIconDark?.alpha = ALPHA_OPAQUE
-            toolbar.navigationIcon = menuIconDark
-
             schedule_toolbar_notif.visibility = View.GONE
         } else {
-            (drawer_recycler.adapter as DrawerAdapter).setSelectedPosition(POSITION_MY_SCHEDULE)
-            schedule_toolbar_title.setText(R.string.my_schedule)
-            schedule_backdrop.setColorFilter(ContextCompat.getColor(this, R.color.glyph_foreground_light))
-            schedule_backdrop.setBackgroundColor(ContextCompat.getColor(this, R.color.glyph_background_light))
-            schedule_toolbar_title.setTextColor(ContextCompat.getColor(this, R.color.tab_text_light))
-            tabs.setTabTextColors(ContextCompat.getColor(this, R.color.tab_inactive_text_light), ContextCompat.getColor(this, R.color.tab_text_light))
-            tabs.setSelectedTabIndicatorColor(ContextCompat.getColor(this, R.color.tab_accent_light))
-            val menuIconLight = toolbar.navigationIcon?.mutate()
-            menuIconLight?.setColorFilter(ContextCompat.getColor(this, R.color.tab_text_light), PorterDuff.Mode.SRC_IN)
-            menuIconLight?.alpha = ALPHA_OPAQUE
-            toolbar.navigationIcon = menuIconLight
+            if(drawer_recycler.adapter != null) {
 
+                (drawer_recycler.adapter as DrawerAdapter).setSelectedPosition(POSITION_MY_SCHEDULE)
+            }
+            schedule_toolbar_title.setText(R.string.my_schedule)
             schedule_toolbar_notif.visibility = View.VISIBLE
         }
 
-        if (appPrefs.allowNotifications)
+        schedule_toolbar_title.setTextColor(ContextCompat.getColor(this, R.color.tab_text_dark))
+        tabs.setTabTextColors(ContextCompat.getColor(this, R.color.tab_inactive_text_dark), ContextCompat.getColor(this, R.color.tab_text_dark))
+        tabs.setSelectedTabIndicatorColor(ContextCompat.getColor(this, R.color.tab_accent_dark))
+        val menuIconDark = toolbar.navigationIcon?.mutate()
+        menuIconDark?.mutate()?.setColorFilter(ContextCompat.getColor(this, R.color.tab_text_dark), PorterDuff.Mode.SRC_IN)
+        menuIconDark?.alpha = ALPHA_OPAQUE
+        toolbar.navigationIcon = menuIconDark
+
+        if (appPrefs.allowNotificationsUi)
             schedule_toolbar_notif.setImageResource(R.drawable.vic_notifications_active_black_24dp)
         else
             schedule_toolbar_notif.setImageResource(R.drawable.vic_notifications_none_black_24dp)
     }
 
-    private fun updateNotifications(allow: Boolean) {
-        appPrefs.allowNotifications = allow
-        appPrefs.showNotifCard = false
-        (view_pager.adapter as ScheduleFragmentPagerAdapter).updateNotifCard()
-        updateAlertsInteractor.alert()
-        adjustToolBarAndDrawers()
-    }
-
     private fun isTablet(): Boolean {
         return resources.getBoolean(R.bool.is_tablet)
-    }
-
-    @Suppress("unused", "UNUSED_PARAMETER")
-    fun onEventMainThread(notificationEvent: UpdateAllowNotificationEvent) {
-        //Have to handle the notification card way out here so it can update both fragments.
-        //Set the app prefs and bounce it back down to the adapter
-        updateNotifications(notificationEvent.allow)
     }
 
     companion object {

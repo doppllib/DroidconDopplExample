@@ -8,7 +8,7 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="wrap_content"
         android:fitsSystemWindows="true">
 
         <android.support.design.widget.CollapsingToolbarLayout
@@ -22,7 +22,8 @@
 
             <ImageView
                 android:id="@+id/backdrop"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|bottom"
                 android:contentDescription="@null"

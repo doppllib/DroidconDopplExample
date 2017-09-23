@@ -43,9 +43,6 @@ class SponsorsActivity : AppCompatActivity() {
         menuIconDark?.alpha = ALPHA_OPAQUE
         sponsors_toolbar.navigationIcon = menuIconDark
 
-        // set color of bg image
-        sponsors_toolbar_backdrop.setColorFilter(ContextCompat.getColor(this, R.color.glyph_foreground_dark))
-
         // Adjust toolbar alpha on scroll
         sponsors_appbar.setExpanded(true)
         sponsors_appbar.addOnOffsetChangedListener { appBarLayout, verticalOffset ->

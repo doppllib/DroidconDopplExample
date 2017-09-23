@@ -31,9 +31,9 @@ public class SponsorsInteractor
         switch(type)
         {
             case SPONSOR_PARTY:
-                return "sponsors_party.json";
+                return "sponsors_party_2017.json";
             default:
-                return "sponsors_general.json";
+                return "sponsors_general_2017.json";
         }
     }
 }

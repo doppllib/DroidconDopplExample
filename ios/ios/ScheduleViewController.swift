@@ -141,7 +141,7 @@ class ScheduleViewController : UIViewController, UITableViewDelegate, UITableVie
         let eventObj = hourHolder.getTime()
         
         if let event = eventObj as? DDATEvent {
-            cell.titleLabel.text = event.getName().replacingOccurrences(of: "Android", with: "[Sad Puppy]")
+            cell.titleLabel.text = event.getName().replacingOccurrences(of: "Android", with: "Binky")
             cell.speakerNamesLabel.text = event.allSpeakersString()
         } else if let event = eventObj as? DDATBlock {
             cell.titleLabel.text = event.getName()

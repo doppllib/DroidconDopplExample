@@ -60,35 +60,34 @@ class SponsorsListFragment : Fragment(), SponsorsViewModel.Host {
         viewModel.unwire()
     }
 
-    override fun onSponsorsFound(sponsorResult: SponsorsResult) {
+    override fun onShowSponsors(sections: List<SponsorsViewModel.SponsorSection>) {
+
         adapter.clearAll()
 
-        // Filter through and insert "filler items" .. TODO This is a hack
+        val totalSpanCount = 12
+//        val lastIndex = sponsorResult.sponsors.lastIndex
+        val spanCounts = SparseIntArray()
         val finalList: ArrayList<Any> = ArrayList()
 
-        val totalSpanCount = sponsorResult.totalSpanCount
-        val lastIndex = sponsorResult.sponsors.lastIndex
-        val spanCounts = SparseIntArray()
-        for (sponsor in sponsorResult.sponsors) {
-            finalList.add(sponsor)
+        for (section in sections) {
+            var currentCount = 1
+            for (sponsor in section.sponsors) {
+                finalList.add(sponsor)
 
-            // Increment count
-            var currentCount = spanCounts.get(sponsor.spanCount, -1)
-            if (currentCount == -1) {
-                spanCounts.put(sponsor.spanCount, 1)
-                currentCount = 1
-            } else {
-                spanCounts.put(sponsor.spanCount, ++currentCount)
+                // Increment count
+                currentCount = spanCounts.get(sponsor.spanCount, -1)
+                if (currentCount == -1) {
+                    spanCounts.put(sponsor.spanCount, 1)
+                    currentCount = 1
+                } else {
+                    spanCounts.put(sponsor.spanCount, ++currentCount)
+                }
             }
 
-            // Check if last item of group, if so, insert any spaces if needed
-            val index = sponsorResult.sponsors.indexOf(sponsor)
-            if (index != lastIndex && sponsor.spanCount != sponsorResult.sponsors[index + 1].spanCount) {
-                var emptySpots = (totalSpanCount - (currentCount * sponsor.spanCount) % totalSpanCount) / sponsor.spanCount
-                while (emptySpots > 0) {
-                    finalList.add(Empty(sponsor.spanCount))
-                    emptySpots--
-                }
+            var emptySpots = (totalSpanCount - (currentCount * section.spanCount) % totalSpanCount) / section.spanCount
+            while (emptySpots > 0) {
+                finalList.add(Empty(section.spanCount))
+                emptySpots--
             }
         }
 

@@ -1,8 +1,12 @@
 package co.touchlab.droidconandroid.shared.interactors;
 
+import android.arch.persistence.room.InvalidationTracker;
+import android.support.annotation.NonNull;
+import android.util.Log;
 import android.util.Pair;
 
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import javax.inject.Inject;
@@ -10,6 +14,8 @@ import javax.inject.Singleton;
 
 import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
+import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
+import co.touchlab.droidconandroid.shared.data.DroidconDatabase;
 import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.data.TimeBlock;
 import co.touchlab.droidconandroid.shared.network.RefreshScheduleDataRequest;
@@ -35,7 +41,7 @@ public class RefreshScheduleInteractor
     private static final int  INITIAL_DELAY_SEC   = 60;
 
     @Inject
-    public RefreshScheduleInteractor(ConferenceDataHelper conferenceDataHelper, AppPrefs appPrefs, RefreshScheduleDataRequest request)
+    public RefreshScheduleInteractor(ConferenceDataHelper conferenceDataHelper, AppPrefs appPrefs, RefreshScheduleDataRequest request, DroidconDatabase droidconDatabase)
     {
         this.conferenceDataHelper = conferenceDataHelper;
         this.appPrefs = appPrefs;
@@ -47,6 +53,20 @@ public class RefreshScheduleInteractor
         {
             refreshFromServer();
         }
+
+        droidconDatabase.getInvalidationTracker().addObserver(new InvalidationTracker.Observer("Block", "Event", "EventSpeaker", "UserAccount")
+        {
+            @Override
+            public void onInvalidated(@NonNull Set<String> set)
+            {
+                refreshFromDatabase();
+            }
+        });
+    }
+
+    public Observable<List<TimeBlock>> getRawTimeUpdates()
+    {
+        return conferenceDataSubject;
     }
 
     public Observable<DaySchedule[]> getFullConferenceData(boolean allEvents)
@@ -57,8 +77,9 @@ public class RefreshScheduleInteractor
                 .map(dayScheduleList -> dayScheduleList.toArray(new DaySchedule[dayScheduleList.size()]));
     }
 
-    public void refreshFromDatabase()
+    private void refreshFromDatabase()
     {
+        Log.w(RefreshScheduleInteractor.class.getSimpleName(), "refreshFromDatabase()");
         conferenceDataHelper.getDays()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -69,23 +90,22 @@ public class RefreshScheduleInteractor
     {
         final PlatformClient platformClient = AppManager.getInstance().getPlatformClient();
         request.getScheduleData(platformClient.getConventionId())
-                .retryWhen(error -> error
-                        .zipWith(Observable.range(1, RETRY_COUNT), (e, integer) ->
-                        {
-                            if(integer == RETRY_COUNT) return new Pair<>(error, 0);
-                            return new Pair<>(error, integer);
-                        })
-                        .flatMap(this :: retryWithExponentialBackoff)
-                )
+                .retryWhen(error -> error.zipWith(Observable.range(1, RETRY_COUNT), (e, integer) ->
+                {
+                    if(integer == RETRY_COUNT)
+                    {
+                        return new Pair<>(error, 0);
+                    }
+                    return new Pair<>(error, integer);
+                }).flatMap(this :: retryWithExponentialBackoff))
                 .flatMapCompletable(conferenceDataHelper:: saveConvention)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(
-                        () -> {
-                            appPrefs.setRefreshTime(System.currentTimeMillis());
-                            refreshFromDatabase();
-                        },
-                        CrashReport:: logException);
+                .subscribe(() ->
+                {
+                    appPrefs.setRefreshTime(System.currentTimeMillis());
+                    refreshFromDatabase();
+                }, CrashReport:: logException);
     }
 
     private Observable retryWithExponentialBackoff(Pair<Observable<Throwable>, Integer> errorRetryCountTuple)

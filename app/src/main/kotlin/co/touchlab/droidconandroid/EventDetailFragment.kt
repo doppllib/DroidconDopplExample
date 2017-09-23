@@ -214,21 +214,9 @@ class EventDetailFragment : Fragment(), EventDetailViewModel.Host {
         val track = if (!category.isNullOrBlank()) Track.findByServerName(category)
         else Track.findByServerName("Design")
 
-        var drawableResourceId = R.drawable.illo_development
+//        var drawableResourceId = R.drawable.illo_development
 
-        when (track) {
-            Track.DEVDESIGN -> {
-                drawableResourceId = R.drawable.illo_designdevtalk
-            }
 
-            Track.DESIGN -> {
-                drawableResourceId = R.drawable.illo_designtalk
-            }
-
-            Track.DESIGNLAB -> {
-                drawableResourceId = R.drawable.illo_designlab
-            }
-        }
 
         trackColor = ContextCompat.getColor(context,
                 context.resources.getIdentifier(track.textColorRes,
@@ -241,7 +229,7 @@ class EventDetailFragment : Fragment(), EventDetailViewModel.Host {
 
         collapsingToolbar.setContentScrimColor(trackColor)
         collapsingToolbar.setStatusBarScrimColor(trackColor)
-        backdrop.setBackgroundColor(trackColor)
-        backdrop.setImageResource(drawableResourceId)
+        backdrop.setImageResource(R.drawable.eventback)
+//        backdrop.setImageResource(drawableResourceId)
     }
 }

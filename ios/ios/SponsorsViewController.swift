@@ -9,7 +9,7 @@
 import UIKit
 import dcframework
 
-class SponsorsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class SponsorsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, DVMSponsorsViewModel_Host {
     
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -17,10 +17,12 @@ class SponsorsViewController: UIViewController, UICollectionViewDataSource, UICo
     
     fileprivate let sectionInsets = UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
     
-    fileprivate var items = NSMutableDictionary()
     fileprivate let sponsorApi = Sponsor()
     fileprivate var totalSpanCount : Int = 12
     fileprivate var itemSpacing : CGFloat = 10
+    
+    let viewModel = DVMSponsorsViewModel.forIos()
+    var sponsorSections : JavaUtilList = JavaUtilArrayList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,50 +30,38 @@ class SponsorsViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        refreshSponsors()
+        
         let transparentPixel = UIImage(named: "TransparentPixel")
         navBar.setBackgroundImage(transparentPixel, for: UIBarMetrics.default)
         navBar.shadowImage = UIImage()
         navBar.backgroundColor = UIColor.clear
         navBar.isTranslucent = true
+    }
+    
+    deinit {
+        viewModel.unwire()
+    }
+    
+    func onShowSponsors(with sections: JavaUtilList!) {
+        sponsorSections = sections
+        self.collectionView?.reloadData()
+    }
+    
+    func onSponsorsFound(with result: DNETDSponsorsResult!) {
         
-        loadItems(tabs.selectedSegmentIndex)
+    }
+    
+    func onError() {
+        
     }
     
     @IBAction func indexChanged(_ sender: UISegmentedControl) {
-        loadItems(sender.selectedSegmentIndex)
+        refreshSponsors()
     }
     
-    func loadItems(_ type: Int) {
-        self.items.removeAllObjects()
-        self.collectionView?.reloadData()
-        
-        sponsorApi.getSponsorResults(type, completion: {
-            (results, error) in
-            
-            // Check for error
-            if error != nil {
-                return
-            }
-            
-            // Post results
-            if results != nil {
-                self.totalSpanCount = (results?.totalSpanCount)!
-                
-                // Loop through all items and group them in as "sections"
-                for item : SponsorItem in (results?.searchResults)! {
-                    let key = String(item.spanCount)
-                    var uncastList = self.items.object(forKey: key) as? NSMutableArray;
-                    if (uncastList == nil){
-                        uncastList = NSMutableArray()
-                        self.items.setValue(uncastList, forKey: key)
-                    }
-                    
-                    uncastList!.add(item)
-                }
-            
-                self.collectionView?.reloadData()
-            }
-        })
+    func refreshSponsors(){
+        viewModel.wire(with: self, with: jint(tabs.selectedSegmentIndex))
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -87,11 +77,15 @@ class SponsorsViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return items.count
+        return Int(sponsorSections.size())
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (items.allValues[section] as! [SponsorItem]).count
+        return Int((findSponsorSection(section)).getSponsors().size())
+    }
+    
+    func findSponsorSection(_ section: Int) -> DVMSponsorsViewModel_SponsorSection {
+        return sponsorSections.getWith(jint(section)) as! DVMSponsorsViewModel_SponsorSection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -101,7 +95,7 @@ class SponsorsViewController: UIViewController, UICollectionViewDataSource, UICo
         cell.imageView.image = nil
         
         let item = photoForIndexPath(indexPath)
-        let url = URL(string: item.sponsorImage)
+        let url = URL(string: item.getImage())
         
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
             let data = try? Data(contentsOf: url!)
@@ -115,21 +109,21 @@ class SponsorsViewController: UIViewController, UICollectionViewDataSource, UICo
         return cell
     }
     
-    func photoForIndexPath(_ indexPath: IndexPath) -> SponsorItem {
-        return (items.allValues[(indexPath as NSIndexPath).section] as! [SponsorItem])[(indexPath as NSIndexPath).row]
+    func photoForIndexPath(_ indexPath: IndexPath) -> DNETDSponsorsResult_Sponsor {
+        return findSponsorSection((indexPath as NSIndexPath).section).getSponsors().getWith(jint((indexPath as NSIndexPath).row)) as! DNETDSponsorsResult_Sponsor
     }
     
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         let item = photoForIndexPath(indexPath)
-        UIApplication.shared.open(URL(string: item.sponsorLink)!)
+        UIApplication.shared.open(URL(string: item.getLink())!)
         return false
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let photo = photoForIndexPath(indexPath)
-        let paddingPerRow =  CGFloat(itemSpacing)  * (CGFloat(self.totalSpanCount) / CGFloat(photo.spanCount) - 1)
+        let paddingPerRow =  CGFloat(itemSpacing)  * (CGFloat(self.totalSpanCount) / CGFloat(photo.getSpanCount()) - 1)
         let collectionSize = collectionView.bounds.size.width - sectionInsets.left - sectionInsets.right - paddingPerRow
-        let itemSize = Int(Float(photo.spanCount) / Float(self.totalSpanCount) * Float(collectionSize))
+        let itemSize = Int(Float(photo.getSpanCount()) / Float(self.totalSpanCount) * Float(collectionSize))
         return CGSize(width: itemSize, height: itemSize)
     }
     

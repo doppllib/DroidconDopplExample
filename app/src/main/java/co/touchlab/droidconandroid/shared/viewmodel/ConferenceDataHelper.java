@@ -36,8 +36,20 @@ import io.reactivex.Single;
 @Singleton
 public class ConferenceDataHelper
 {
-    private final static SimpleDateFormat DATE_FORMAT = TimeUtils.makeDateFormat("MM/dd/yyyy");
-    private final static SimpleDateFormat TIME_FORMAT = TimeUtils.makeDateFormat("h:mma");
+    private final static ThreadLocal<SimpleDateFormat> DATE_FORMAT = new ThreadLocal<SimpleDateFormat>(){
+        @Override
+        protected SimpleDateFormat initialValue()
+        {
+            return TimeUtils.makeDateFormat("MM/dd/yyyy");
+        }
+    };
+    private final static ThreadLocal<SimpleDateFormat> TIME_FORMAT =  new ThreadLocal<SimpleDateFormat>(){
+        @Override
+        protected SimpleDateFormat initialValue()
+        {
+            return TimeUtils.makeDateFormat("h:mma");
+        }
+    };
     private final AppPrefs       appPrefs;
     private final DatabaseHelper helper;
 
@@ -50,7 +62,7 @@ public class ConferenceDataHelper
 
     public static String dateToDayString(Date d)
     {
-        return DATE_FORMAT.format(d);
+        return DATE_FORMAT.get().format(d);
     }
 
     public Single<List<TimeBlock>> getDays()
@@ -101,7 +113,7 @@ public class ConferenceDataHelper
         for(TimeBlock timeBlock : eventAndBlockList)
         {
             final Date startDateObj = new Date(timeBlock.getStartLong());
-            final String startDate = DATE_FORMAT.format(startDateObj);
+            final String startDate = DATE_FORMAT.get().format(startDateObj);
             List<HourBlock> blockHourList = dateWithBlocksTreeMap.get(startDate);
             if(blockHourList == null)
             {
@@ -109,7 +121,7 @@ public class ConferenceDataHelper
                 dateWithBlocksTreeMap.put(startDate, blockHourList);
             }
 
-            final String startTime = TIME_FORMAT.format(startDateObj);
+            final String startTime = TIME_FORMAT.get().format(startDateObj);
             final boolean newHourDisplay = ! lastHourDisplay.equals(startTime);
             blockHourList.add(new HourBlock(newHourDisplay ? startTime : "", timeBlock));
             lastHourDisplay = startTime;

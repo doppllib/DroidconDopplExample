@@ -120,7 +120,8 @@ class EventDetailAdapter(private val context: Context,
                             .into(view.profile_image)
                 }
 
-                view.name.text = context.getString(R.string.event_speaker_name).format(user.name, user.company)
+                val companyName = if (user.company.isNullOrEmpty()) "" else user.company
+                view.name.text = context.getString(R.string.event_speaker_name).format(user.name, companyName)
                 view.name.setTextColor(trackColor)
 
                 view.setOnClickListener { UserDetailActivity.callMe(context as Activity, user.userId) }
@@ -159,7 +160,7 @@ class EventDetailAdapter(private val context: Context,
 
     inner class TextDetail(type: Int, val text: String, val icon: Int) : Detail(type)
 
-    inner class SpeakerDetail(type: Int, val avatar: String?, val name: String, val company: String, val bio: String?, val userId: Long) : Detail(type)
+    inner class SpeakerDetail(type: Int, val avatar: String?, val name: String, val company: String?, val bio: String?, val userId: Long) : Detail(type)
 
     inner class SpaceDetail(type: Int, val size: Int) : Detail(type)
 

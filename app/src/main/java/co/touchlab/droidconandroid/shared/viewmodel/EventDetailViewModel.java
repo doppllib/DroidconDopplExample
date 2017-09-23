@@ -4,15 +4,13 @@ import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
 import android.util.Log;
 
-import com.google.j2objc.annotations.Weak;
-
 import javax.inject.Inject;
 
+import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.data.EventInfo;
 import co.touchlab.droidconandroid.shared.interactors.EventDetailInteractor;
 import co.touchlab.droidconandroid.shared.interactors.RsvpInteractor;
-import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor;
 import co.touchlab.droidconandroid.shared.utils.AnalyticsEvents;
 import co.touchlab.droidconandroid.shared.utils.AnalyticsHelper;
 import io.reactivex.Observable;
@@ -33,11 +31,10 @@ public class EventDetailViewModel extends ViewModel
         void updateRsvp(Event event);
     }
 
-    private EventDetailViewModel(EventDetailInteractor detailInteractor, RsvpInteractor rsvpInteractor, UpdateAlertsInteractor alertsInteractor)
+    private EventDetailViewModel(EventDetailInteractor detailInteractor, RsvpInteractor rsvpInteractor)
     {
         this.detailInteractor = detailInteractor;
         this.rsvpInteractor = rsvpInteractor;
-        this.alertsInteractor = alertsInteractor;
     }
 
     public void wire(Host host, long eventId)
@@ -48,7 +45,10 @@ public class EventDetailViewModel extends ViewModel
                 {
                     AnalyticsHelper.recordAnalytics(AnalyticsEvents.OPEN_EVENT, eventInfo.getEvent());
                     host.dataRefresh(eventInfo);
-                }, e -> host.reportError("Error getting event details")));
+                }, e -> {
+                    CrashReport.logException(e);
+                    host.reportError("Error getting event details");
+                }));
     }
 
     private Observable<EventInfo> getEventDetails(long eventId)
@@ -58,7 +58,6 @@ public class EventDetailViewModel extends ViewModel
 
     private final EventDetailInteractor  detailInteractor;
     private final RsvpInteractor         rsvpInteractor;
-    private final UpdateAlertsInteractor alertsInteractor;
     private CompositeDisposable disposables = new CompositeDisposable();
 
     public void unwire()
@@ -76,7 +75,6 @@ public class EventDetailViewModel extends ViewModel
                     .subscribe(event ->
                     {
                         host.updateRsvp(event);
-                        alertsInteractor.alert();
                     }, e -> Log.e("Error", "Error trying to add rsvp")));
 
         }
@@ -88,7 +86,6 @@ public class EventDetailViewModel extends ViewModel
                     .subscribe(event ->
                     {
                         host.updateRsvp(event);
-                        alertsInteractor.alert();
                     }, e -> Log.e("Error", "Error trying to remove rsvp")));
         }
     }
@@ -99,26 +96,23 @@ public class EventDetailViewModel extends ViewModel
         EventDetailInteractor  detailInteractor;
         @Inject
         RsvpInteractor         rsvpInteractor;
-        @Inject
-        UpdateAlertsInteractor alertsInteractor;
 
         private Factory()
         {
 
         }
 
-        public Factory(EventDetailInteractor detailInteractor, RsvpInteractor rsvpInteractor, UpdateAlertsInteractor alertsInteractor)
+        public Factory(EventDetailInteractor detailInteractor, RsvpInteractor rsvpInteractor)
         {
             this.detailInteractor = detailInteractor;
             this.rsvpInteractor = rsvpInteractor;
-            this.alertsInteractor = alertsInteractor;
         }
 
         @Override
         public <T extends ViewModel> T create(Class<T> modelClass)
         {
             //noinspection unchecked
-            return (T) new EventDetailViewModel(detailInteractor, rsvpInteractor, alertsInteractor);
+            return (T) new EventDetailViewModel(detailInteractor, rsvpInteractor);
         }
     }
 

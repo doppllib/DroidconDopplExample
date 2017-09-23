@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Droidcon NYC 2016!</string>
-    <string name="convention_id">61100</string>
+    <string name="app_name">Droidcon NYC 2017!</string>
+    <!--<string name="convention_id">61100</string>-->
+    <string name="convention_id">90400</string>
 
     <!-- drawer copy-->
     <string name="navigation_drawer_open">Open</string>
@@ -42,10 +43,16 @@
     </string>
     <string name="about_app_header">About the app</string>
     <string name="about_app">
-        The Droidcon app is coded in-house by the touchlab team. Worked on by Liam, Izzy, Sam,
-        Ramona, David, Sufei, Kachi and Kevin.\n\nIt’s a bit of an experiment, written largely in
-        Kotlin, and including a new(ish) ORM framework. Fun stuff.\n\nThe code is open source,
-        at:\nhttps://github.com/touchlab/DroidconApp
+        The Droidcon app is coded in-house by the touchlab team.
+
+        \n\n
+        Architecturally, this is built with the new Android Architecture components, Room,
+        RxJava 2, and Retrofit 2. All of this code works natively in the iOS app, using
+        J2objc and Doppl.
+
+        \n\n
+
+        See the repo and read more at:\nhttps://github.com/doppllib/DroidconDopplExample
     </string>
     <string name="about_touch_header">About touchlab</string>
     <string name="about_touch">

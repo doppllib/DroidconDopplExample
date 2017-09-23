@@ -3,16 +3,17 @@ package co.touchlab.droidconandroid.ui
 import android.content.Context
 import android.support.v4.content.ContextCompat
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import co.touchlab.droidconandroid.R
 import co.touchlab.droidconandroid.isOdd
 import co.touchlab.droidconandroid.setViewVisibility
+import co.touchlab.droidconandroid.shared.data.AppPrefs
 import co.touchlab.droidconandroid.shared.data.Block
 import co.touchlab.droidconandroid.shared.data.Event
 import co.touchlab.droidconandroid.shared.viewmodel.HourBlock
-import co.touchlab.droidconandroid.shared.utils.EventBusExt
 import co.touchlab.droidconandroid.shared.utils.EventUtils
 import kotlinx.android.synthetic.main.item_event.view.*
 import kotlinx.android.synthetic.main.item_notification.view.*
@@ -26,7 +27,8 @@ import java.util.*
 class EventAdapter(private val context: Context,
                    private val allEvents: Boolean,
                    private val eventClickListener: EventClickListener,
-                   private var showNotificationCard: Boolean) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+                   private var showNotificationCard: Boolean,
+                   private val appPrefs: AppPrefs) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var dataSet: List<HourBlock> = emptyList()
     private var filteredData: ArrayList<HourBlock?> = ArrayList()
@@ -98,6 +100,10 @@ class EventAdapter(private val context: Context,
                     // Insert an empty block to indicate a new row
                     filteredData.add(null)
                 }
+                else
+                {
+                    Log.e("EventAdapter", "What not odd?!")
+                }
                 filteredData.add(item)
             }
 
@@ -109,13 +115,9 @@ class EventAdapter(private val context: Context,
         updateData()
     }
 
-    fun updateNotificationCard(show: Boolean) {
-        if (show == showNotificationCard) return
-
-        showNotificationCard = show
-        if (show)
-            notifyItemInserted(0)
-        else if (itemCount > 0)
+    fun clearNotificationCard() {
+        showNotificationCard = false
+        if (itemCount > 0)
             notifyItemRemoved(0)
     }
 
@@ -178,10 +180,14 @@ class EventAdapter(private val context: Context,
     inner class NotificationViewHolder(itemView: View) : ScheduleCardViewHolder(itemView) {
         init {
             itemView.notify_accept.setOnClickListener {
-                EventBusExt.getDefault().post(UpdateAllowNotificationEvent(true))
+                appPrefs.showNotifCard = false
+                appPrefs.setAllowNotifications(true)
+                clearNotificationCard()
             }
             itemView.notify_decline.setOnClickListener {
-                EventBusExt.getDefault().post(UpdateAllowNotificationEvent(false))
+                appPrefs.showNotifCard = false
+                appPrefs.setAllowNotifications(false)
+                clearNotificationCard()
             }
         }
     }

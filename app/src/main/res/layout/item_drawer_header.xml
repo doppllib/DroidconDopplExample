@@ -2,18 +2,18 @@
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/drawer_header_height"
+    android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:background="@color/white"
+    android:background="@color/nav_header_background"
     android:orientation="vertical">
 
     <ImageView
+        android:layout_marginTop="25dp"
         android:id="@+id/cover"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/cd_profile_cover_image"
-        android:src="@drawable/superglyph_blue"
-        android:layout_margin="20dp"
-        android:scaleType="centerInside"/>
+        android:src="@drawable/drawerback"
+        android:scaleType="centerCrop"/>
 
 </FrameLayout>

@@ -9,10 +9,10 @@ public class SponsorsResult
 
     public class Sponsor
     {
-       public int spanCount;
-       public String sponsorName;
-       public String sponsorImage;
-       public String sponsorLink;
+       public final int spanCount;
+       public final String sponsorName;
+       public final String sponsorImage;
+       public final String sponsorLink;
 
         public Sponsor(int spanCount, String sponsorName, String sponsorImage, String sponsorLink)
         {
@@ -21,5 +21,27 @@ public class SponsorsResult
             this.sponsorImage = sponsorImage;
             this.sponsorLink = sponsorLink;
         }
+
+        public int getSpanCount()
+        {
+            return spanCount;
+        }
+
+        public String getSponsorName()
+        {
+            return sponsorName;
+        }
+
+        public String getSponsorImage()
+        {
+            return sponsorImage;
+        }
+
+        public String getSponsorLink()
+        {
+            return sponsorLink;
+        }
     }
+
+
 }

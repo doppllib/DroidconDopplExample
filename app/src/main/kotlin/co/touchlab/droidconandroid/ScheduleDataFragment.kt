@@ -6,11 +6,11 @@ import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import co.touchlab.droidconandroid.shared.data.Event
-import co.touchlab.droidconandroid.shared.interactors.UpdateAlertsInteractor
 import co.touchlab.droidconandroid.shared.viewmodel.*
 import co.touchlab.droidconandroid.ui.EventAdapter
 import co.touchlab.droidconandroid.ui.EventClickListener
@@ -25,17 +25,13 @@ class ScheduleDataFragment : Fragment(), ScheduleDataViewModel.Host {
 
     private var allEvents = true
 
-    val updateAlertsInteractor: UpdateAlertsInteractor by lazy {
-        AppManager.getInstance().appComponent.updateAlertsInteractor()
-    }
-
     val RecyclerView.eventAdapter: EventAdapter
         get() = adapter as EventAdapter
 
     val shouldShowNotif: Boolean
         get() {
             return AppManager.getInstance().appComponent.prefs.showNotifCard
-                    && !allEvents
+//                    && !allEvents
                     && arguments.getInt(POSITION, 0) == 0
         }
 
@@ -55,7 +51,8 @@ class ScheduleDataFragment : Fragment(), ScheduleDataViewModel.Host {
         eventList.adapter = EventAdapter(activity,
                 allEvents,
                 ScheduleEventClickListener(),
-                shouldShowNotif)
+                shouldShowNotif,
+                AppManager.getInstance().appComponent.prefs)
     }
 
     override fun onResume() {
@@ -73,19 +70,13 @@ class ScheduleDataFragment : Fragment(), ScheduleDataViewModel.Host {
         eventList.eventAdapter.updateEvents(data.asList())
     }
 
-    fun updateNotifCard() {
-        eventList.eventAdapter.updateNotificationCard(shouldShowNotif)
-    }
-
     fun switchToAgenda() {
         allEvents = false
-        updateNotifCard()
         viewModel.wire(this, allEvents)
     }
 
     fun switchToConference() {
         allEvents = true
-        updateNotifCard()
         viewModel.wire(this, allEvents)
     }
 
@@ -95,17 +86,16 @@ class ScheduleDataFragment : Fragment(), ScheduleDataViewModel.Host {
         }
     }
 
-    override fun loadCallback(daySchedule: Array<DaySchedule>) {
+    override fun loadCallback(dayScheduleArray: Array<DaySchedule>) {
+        Log.w("ScheduleDataFragment", "loadCallback: "+ dayScheduleArray.size)
         val dayString = ConferenceDataHelper.dateToDayString(Date(arguments.getLong(DAY)))
 
-        for (daySchedule in daySchedule) {
+        for (daySchedule in dayScheduleArray) {
             if(daySchedule.dayString?.equals(dayString) ?: false)
             {
                 updateAdapter(daySchedule.hourHolders)
             }
         }
-
-        updateAlertsInteractor.alert()
     }
 
     companion object {

@@ -3,9 +3,13 @@ package co.touchlab.droidconandroid.shared.viewmodel;
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
 
-import com.google.j2objc.annotations.Weak;
-
 import android.support.annotation.NonNull;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 import javax.inject.Inject;
 
@@ -18,34 +22,74 @@ import io.reactivex.schedulers.Schedulers;
 
 public class SponsorsViewModel extends ViewModel
 {
-    private final SponsorsInteractor task;
+    private final SponsorsInteractor sponsorsInteractor;
 
     private CompositeDisposable disposables = new CompositeDisposable();
-    private Observable<SponsorsResult> sponsorsResultObservable;
+
+    public static class SponsorSection
+    {
+        private final int spanCount;
+        private final List<SponsorsResult.Sponsor> sponsors = new ArrayList<>();
+
+        public SponsorSection(int spanCount)
+        {
+            this.spanCount = spanCount;
+        }
+
+        public void addSponsor(SponsorsResult.Sponsor sponsor)
+        {
+            sponsors.add(sponsor);
+        }
+
+        public int getSpanCount()
+        {
+            return spanCount;
+        }
+
+        public List<SponsorsResult.Sponsor> getSponsors()
+        {
+            return sponsors;
+        }
+    }
 
     public interface Host
     {
-        void onSponsorsFound(SponsorsResult result);
-
+        void onShowSponsors(@NonNull List<SponsorSection> sections);
         void onError();
     }
 
-    private SponsorsViewModel(@NonNull SponsorsInteractor task)
+    private SponsorsViewModel(@NonNull SponsorsInteractor sponsorsInteractor)
     {
-        this.task = task;
+        this.sponsorsInteractor = sponsorsInteractor;
     }
 
     public void wire(@NonNull Host host, int type)
     {
         disposables.clear();
 
-        if(sponsorsResultObservable == null)
-        {
-            sponsorsResultObservable = task.getSponsors(type).cache();
-        }
+        Observable<SponsorsResult> sponsorsResultObservable = sponsorsInteractor.getSponsors(type).cache();
+
         disposables.add(sponsorsResultObservable.subscribeOn(Schedulers.io())
+                .map(sponsorsResult -> {
+                    Map<Integer, SponsorSection> sectionMap = new TreeMap<>();
+
+                    for(SponsorsResult.Sponsor sponsor : sponsorsResult.sponsors)
+                    {
+                        SponsorSection sponsors = sectionMap.get(sponsor.spanCount);
+                        if(sponsors == null)
+                        {
+                            sponsors = new SponsorSection(sponsor.spanCount);
+                            sectionMap.put(sponsor.spanCount, sponsors);
+                        }
+                        sponsors.addSponsor(sponsor);
+                    }
+
+                    ArrayList<SponsorSection> sponsorSections = new ArrayList<>(sectionMap.values());
+                    Collections.reverse(sponsorSections);
+                    return sponsorSections;
+                })
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(host:: onSponsorsFound, e -> host.onError()));
+                .subscribe(host:: onShowSponsors, e -> host.onError()));
     }
 
     public void unwire()
@@ -78,6 +122,7 @@ public class SponsorsViewModel extends ViewModel
         return factory;
     }
 
+    @NonNull
     public static SponsorsViewModel forIos()
     {
         return factory().create(SponsorsViewModel.class);

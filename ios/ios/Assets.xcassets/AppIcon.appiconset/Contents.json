@@ -95,6 +95,12 @@
       "idiom" : "ipad",
       "filename" : "AppStore167.png",
       "scale" : "2x"
+    },
+    {
+      "size" : "1024x1024",
+      "idiom" : "ios-marketing",
+      "filename" : "logonoalpha.png",
+      "scale" : "1x"
     }
   ],
   "info" : {

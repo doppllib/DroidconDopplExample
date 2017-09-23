@@ -29,7 +29,7 @@ public class IosPlatformClient implements PlatformClient
     @Override
     public Integer getConventionId()
     {
-        return 61100;
+        return 90400;
     }
 
     @Override

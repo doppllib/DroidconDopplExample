@@ -1,4 +1,5 @@
 package co.touchlab.droidconandroid;
+
 import co.touchlab.droidconandroid.shared.viewmodel.AppManager;
 
 /**
