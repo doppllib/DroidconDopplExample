@@ -26,7 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let application = AndroidContentIOSContext()
         
         let appComponent = DDAGDaggerAppComponent.builder().appModule(with: DDAGAppModule(androidAppApplication: application))
-            .databaseModule(with: DDAGDatabaseModule())
             .networkModule(with: DDAGNetworkModule())
             .build()
         

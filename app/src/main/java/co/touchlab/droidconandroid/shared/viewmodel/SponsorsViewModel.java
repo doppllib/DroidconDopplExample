@@ -13,6 +13,7 @@ import java.util.TreeMap;
 
 import javax.inject.Inject;
 
+import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.interactors.SponsorsInteractor;
 import co.touchlab.droidconandroid.shared.network.dao.SponsorsResult;
 import io.reactivex.Observable;
@@ -89,7 +90,10 @@ public class SponsorsViewModel extends ViewModel
                     return sponsorSections;
                 })
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(host:: onShowSponsors, e -> host.onError()));
+                .subscribe(host:: onShowSponsors, e -> {
+                    CrashReport.logException(e);
+                    host.onError();
+                }));
     }
 
     public void unwire()

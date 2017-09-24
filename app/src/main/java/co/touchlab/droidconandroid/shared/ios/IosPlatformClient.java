@@ -1,8 +1,12 @@
 package co.touchlab.droidconandroid.shared.ios;
+import android.util.Log;
+
 import com.google.j2objc.annotations.ObjectiveCName;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+
+import javax.net.ssl.HttpsURLConnection;
 
 import co.touchlab.droidconandroid.BuildConfig;
 import co.touchlab.droidconandroid.shared.viewmodel.PlatformClient;
@@ -13,7 +17,10 @@ import co.touchlab.droidconandroid.shared.viewmodel.PlatformClient;
 @ObjectiveCName("DCIosPlatformClient")
 public class IosPlatformClient implements PlatformClient
 {
+    public static final String TAG = IosPlatformClient.class.getSimpleName();
     private final IosFirebase iosFirebase;
+
+    private Class[] compiles = new Class[]{HttpsURLConnection.class};
 
     public IosPlatformClient(IosFirebase iosFirebase)
     {
@@ -45,6 +52,7 @@ public class IosPlatformClient implements PlatformClient
     @Override
     public void logException(Throwable t)
     {
+        Log.e(TAG, "", t);
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
         t.printStackTrace(pw);

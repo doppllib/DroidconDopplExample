@@ -14,7 +14,6 @@ FOUNDATION_EXPORT const unsigned char dcframeworkVersionString[];
 #import <dcframework/DDAGAppModule.h>
 #import <dcframework/DDAGAppModule_ProvidesApplicationFactory.h>
 #import <dcframework/DDAGDaggerAppComponent.h>
-#import <dcframework/DDAGDatabaseModule_ProvidesDatabaseFactory.h>
 #import <dcframework/DDAGDroidconServer.h>
 #import <dcframework/DDAGNetworkModule.h>
 #import <dcframework/DDAGNetworkModule_ProvidesAmazonBaseUrlFactory.h>
@@ -62,8 +61,6 @@ FOUNDATION_EXPORT const unsigned char dcframeworkVersionString[];
 #import <dcframework/DINTSeedInteractor_Factory.h>
 #import <dcframework/DINTSponsorsInteractor.h>
 #import <dcframework/DINTSponsorsInteractor_Factory.h>
-#import <dcframework/DINTUpdateAlertsInteractor.h>
-#import <dcframework/DINTUpdateAlertsInteractor_Factory.h>
 #import <dcframework/DIOSIosFirebase.h>
 #import <dcframework/DIOSIosPlatformClient.h>
 #import <dcframework/DNETDConvention.h>
@@ -80,7 +77,6 @@ FOUNDATION_EXPORT const unsigned char dcframeworkVersionString[];
 #import <dcframework/DUTAnalyticsEvents.h>
 #import <dcframework/DUTAnalyticsHelper.h>
 #import <dcframework/DUTEmojiUtil.h>
-#import <dcframework/DUTEventBusExt.h>
 #import <dcframework/DUTEventUtils.h>
 #import <dcframework/DUTIOUtils.h>
 #import <dcframework/DUTStringUtils.h>

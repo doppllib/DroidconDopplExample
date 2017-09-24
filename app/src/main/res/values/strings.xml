@@ -31,7 +31,7 @@
     <string name="event_now" >This session is happening now</string>
     <string name="event_past" >This session has already ended</string>
     <string name="event_conflict">This session conflicts with another session in your schedule</string>
-    <string name="about_con_header">About Droidcon Albany</string>
+    <string name="about_con_header">About Droidcon NYC</string>
     <string name="about_con">
         Droidcon conferences around the world
         support the Android platform and create a

@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 import io.reactivex.disposables.CompositeDisposable;
@@ -37,6 +38,9 @@ public class ConferenceDataViewModel extends ViewModel
             }
 
             host.updateConferenceDates(dateLongs);
+        }, throwable -> {
+            throwable.printStackTrace();
+            CrashReport.logException(throwable);
         }));
     }
 
@@ -94,12 +98,12 @@ public class ConferenceDataViewModel extends ViewModel
     {
         //Hello! Ran out of time to redesign the welcome screens. But you should!
 
-//        boolean hasSeenWelcome = appPrefs.getHasSeenWelcome();
-//        if (!hasSeenWelcome)
-//        {
-//            return AppScreens.Welcome;
-//        }
-//        else
+        boolean hasSeenWelcome = appPrefs.getHasSeenWelcome();
+        if (!hasSeenWelcome)
+        {
+            return AppScreens.Welcome;
+        }
+        else
         {
             return AppScreens.Schedule;
         }

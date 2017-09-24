@@ -89,7 +89,7 @@ class ScheduleViewController : UIViewController, UITableViewDelegate, UITableVie
     }
     
     func updateConferenceDates(with dateList: JavaUtilList) {
-        for index in 0...dayChooser.numberOfSegments {
+        for index in 0...(dayChooser.numberOfSegments-1) {
             let dateTitle = DUTTimeUtils.makeDateFormat(with: "MMM dd").format(withId: dateList.getWith(jint(index)))
             dayChooser.setTitle(dateTitle, forSegmentAt: index)
         }

@@ -199,7 +199,7 @@ dopplConfig {
     copyTestOutput "../ios/dcframework/generatedTests"
     copyDependencies true
 
-    emitLineDirectives true
+//    emitLineDirectives true
 
     testIdentifier {
         include "**/*Test.java"

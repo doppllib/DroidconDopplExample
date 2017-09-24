@@ -117,13 +117,12 @@ import dcframework
             return cell
         } else {
             let cell:SpeakerTableViewCell = tableView.dequeueReusableCell(withIdentifier: "speakerCell") as! SpeakerTableViewCell
-            for speaker in speakers! {
-                if let speakerDescription = (speaker.getProfile()) {
-                    let imageUrl = speaker.avatarImageUrl() ?? ""
-                    cell.loadInfo(speaker.getName()!, info: speakerDescription, imgUrl: imageUrl)
-                }
+            let speaker = speakers![indexPath.row]
+            if let speakerDescription = (speaker.getProfile()) {
+                let imageUrl = speaker.avatarImageUrl() ?? ""
+                cell.loadInfo(speaker.getName()!, info: speakerDescription, imgUrl: imageUrl)
             }
-            
+        
             cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
         }

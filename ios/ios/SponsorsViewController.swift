@@ -53,7 +53,7 @@ class SponsorsViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     func onError() {
-        
+        print("An error?")
     }
     
     @IBAction func indexChanged(_ sender: UISegmentedControl) {
