@@ -12,12 +12,13 @@ import java.util.ArrayList
 import android.support.v4.content.ContextCompat.startActivity
 import android.content.Intent
 import android.net.Uri
+import co.touchlab.droidconandroid.shared.data.AppPrefs
 
 
 /**
  * Created by sufeizhao on 7/11/17.
  */
-class AboutAdapter(private val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class AboutAdapter(private val context: Context, private val appPrefs: AppPrefs) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private var dataset = ArrayList<AboutItem>()
 
     fun add(headerRes: Int?, logoRes: Int?, bodyRes: Int?) {
@@ -33,15 +34,20 @@ class AboutAdapter(private val context: Context) : RecyclerView.Adapter<Recycler
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
         val view = (holder as AboutVH).itemView
         val data = dataset[position]
-        if(data.bodyRes == null)
-        {
+        if(data.bodyRes == null) {
 
             view.aboutBinkyBody.visibility = View.VISIBLE
             view.aboutTextBody.visibility = View.GONE
-            view.aboutBinkyBody.setOnClickListener {
-                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://medium.com/@kpgalligan/whos-binky-aa27f0e400a1"))
-                if(context is Activity)
-                    (context as Activity).startActivity(browserIntent)
+            if (appPrefs.dogClicked) {
+                clearDogClick(view)
+            } else {
+                view.aboutBinkyBody.setOnClickListener {
+                    clearDogClick(view)
+                    appPrefs.dogClicked = true
+                    val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://medium.com/@kpgalligan/whos-binky-aa27f0e400a1"))
+                    if (context is Activity)
+                        (context as Activity).startActivity(browserIntent)
+                }
             }
         }
         else
@@ -66,6 +72,10 @@ class AboutAdapter(private val context: Context) : RecyclerView.Adapter<Recycler
             view.body.maxLines = Int.MAX_VALUE
         }
 
+    }
+
+    private fun clearDogClick(view: View) {
+        view.aboutBinkyBody.setOnClickListener(null)
     }
 
     override fun getItemCount(): Int {

@@ -40,8 +40,8 @@ android {
         applicationId "co.touchlab.droidcon.anon"
         minSdkVersion 21
         targetSdkVersion 26
-        versionCode 104
-        versionName "1.0.4"
+        versionCode 105
+        versionName "1.0.5"
 
         buildConfigField "String", "BASE_URL", "\"$baseurl\""
         buildConfigField "String", "AMAZON_URL", "\"$amazonurl\""

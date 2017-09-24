@@ -28,6 +28,7 @@ public class AppPrefs
     public static final String ALLOW_NOTIFS     = "allow_notifs";
     public static final String SHOW_NOTIF_CARD  = "show_notif_card";
     public static final String USER_UNIQUE_UUID = "USER_UNIQUE_UUID";
+    public static final String DOG_CLICKED = "DOG_CLICKED";
 
     private SharedPreferences prefs;
 
@@ -146,6 +147,16 @@ public class AppPrefs
     public void setShowNotifCard(boolean show)
     {
         prefs.edit().putBoolean(SHOW_NOTIF_CARD, show).apply();
+    }
+
+    public boolean getDogClicked()
+    {
+        return prefs.getBoolean(DOG_CLICKED, false);
+    }
+
+    public void setDogClicked(boolean b)
+    {
+        prefs.edit().putBoolean(DOG_CLICKED, b).apply();
     }
 
     //helper methods
