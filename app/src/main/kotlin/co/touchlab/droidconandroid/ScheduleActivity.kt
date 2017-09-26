@@ -39,6 +39,8 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
     }
 
     private var allEvents = true
+    private var selectedDrawerTitleRes = -1
+    private var selectedDrawerPosition = -1
     private val cd = CompositeDisposable()
   
     private val viewModel: ConferenceDataViewModel by lazy {
@@ -90,6 +92,10 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
             }
         }
 
+        if (savedInstanceState != null) {
+            selectedDrawerPosition = savedInstanceState.getInt(SELECTED_DRAWER_POSITION, -1)
+            selectedDrawerTitleRes = savedInstanceState.getInt(SELECTED_DRAWER_TITLE_RES, -1)
+        }
     }
 
     override fun onDestroy() {
@@ -126,6 +132,8 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putBoolean(ALL_EVENTS, allEvents)
+        outState.putInt(SELECTED_DRAWER_POSITION, selectedDrawerPosition)
+        outState.putInt(SELECTED_DRAWER_TITLE_RES, selectedDrawerTitleRes)
     }
 
     private fun setupToolbar() {
@@ -165,31 +173,40 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
 
         drawer_recycler.adapter = DrawerAdapter(this, getDrawerItems(), object : DrawerClickListener {
             override fun onNavigationItemClick(position: Int, titleRes: Int) {
-                if (!isTablet()) drawer_layout.closeDrawer(drawer_recycler)
-
-                when (titleRes) {
-                    R.string.explore -> {
-                        allEvents = true
-                        (view_pager.adapter as ScheduleFragmentPagerAdapter).switchToConference()
-                        appbar.setExpanded(true)
-                    }
-                    R.string.my_schedule -> {
-                        allEvents = false
-                        (view_pager.adapter as ScheduleFragmentPagerAdapter).switchToAgenda()
-                        appbar.setExpanded(true)
-                    }
-
-                    R.string.about -> AboutActivity.callMe(this@ScheduleActivity)
-                    R.string.sponsors -> SponsorsActivity.callMe(this@ScheduleActivity)
-                }
-
-                (drawer_recycler.adapter as DrawerAdapter).setSelectedPosition(position)
-                adjustToolBarAndDrawers()
+                selectNavigationItem(titleRes, position)
             }
 
             override fun onHeaderItemClick() {}
         })
         drawer_recycler.layoutManager = LinearLayoutManager(this)
+        if (selectedDrawerPosition >= 0) {
+            selectNavigationItem(selectedDrawerTitleRes, selectedDrawerPosition)
+        }
+    }
+
+    private fun selectNavigationItem(titleRes: Int, position: Int) {
+        if (!isTablet()) drawer_layout.closeDrawer(drawer_recycler)
+
+        when (titleRes) {
+            R.string.explore -> {
+                allEvents = true
+                (view_pager.adapter as ScheduleFragmentPagerAdapter).switchToConference()
+                appbar.setExpanded(true)
+            }
+            R.string.my_schedule -> {
+                allEvents = false
+                (view_pager.adapter as ScheduleFragmentPagerAdapter).switchToAgenda()
+                appbar.setExpanded(true)
+            }
+
+            R.string.about -> AboutActivity.callMe(this@ScheduleActivity)
+            R.string.sponsors -> SponsorsActivity.callMe(this@ScheduleActivity)
+        }
+
+        selectedDrawerTitleRes = titleRes
+        selectedDrawerPosition = position
+        (drawer_recycler.adapter as DrawerAdapter).setSelectedPosition(position)
+        adjustToolBarAndDrawers()
     }
 
     private fun getDrawerItems(): List<Any> {
@@ -244,6 +261,8 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
         private val ALL_EVENTS = "all_events"
         private val ALL_TOPIC = "all_2017"
         private val ANDROID_TOPIC = "android_2017"
+        private val SELECTED_DRAWER_POSITION = "selected_drawer_position"
+        private val SELECTED_DRAWER_TITLE_RES = "selected_drawer_title_res"
 
         @JvmField
         val ALPHA_OPAQUE = 255
