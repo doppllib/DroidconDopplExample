@@ -37,3 +37,9 @@ Assuming that goes to plan, in Finder, navigate to the ios directory, and open t
 ![Finding workspace in Finder](docs/findworkspace.gif)
 
 Pick a simulator and run app!
+
+
+### BTW
+
+We've committed some api config files that you probably wouldn't commit to your own code. fabric.properties and similar. Please
+be kind. Just didn't want to add setup steps to try app code.

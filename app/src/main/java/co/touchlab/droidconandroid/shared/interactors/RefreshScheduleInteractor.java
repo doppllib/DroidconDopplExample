@@ -36,7 +36,7 @@ public class RefreshScheduleInteractor
     private final RefreshScheduleDataRequest request;
     private BehaviorSubject<List<TimeBlock>> conferenceDataSubject = BehaviorSubject.create();
 
-    private static final long SERVER_REFRESH_TIME = 3600000 * 6; // 6 hours
+    private static final long SERVER_REFRESH_TIME = 1000 * 60 * 30; // 30 minutes
     private static final int  RETRY_COUNT         = 5;
     private static final int  INITIAL_DELAY_SEC   = 60;
 
@@ -49,10 +49,7 @@ public class RefreshScheduleInteractor
 
         refreshFromDatabase();
 
-        if((System.currentTimeMillis() - appPrefs.getRefreshTime() > SERVER_REFRESH_TIME))
-        {
-            refreshFromServer();
-        }
+        callRefreshIfOld();
 
         droidconDatabase.getInvalidationTracker().addObserver(new InvalidationTracker.Observer("Block", "Event", "EventSpeaker", "UserAccount")
         {
@@ -64,6 +61,14 @@ public class RefreshScheduleInteractor
         });
     }
 
+    private void callRefreshIfOld()
+    {
+        if((System.currentTimeMillis() - appPrefs.getRefreshTime() > SERVER_REFRESH_TIME))
+        {
+            refreshFromServer();
+        }
+    }
+
     public Observable<List<TimeBlock>> getRawTimeUpdates()
     {
         return conferenceDataSubject;
@@ -71,6 +76,7 @@ public class RefreshScheduleInteractor
 
     public Observable<DaySchedule[]> getFullConferenceData(boolean allEvents)
     {
+        callRefreshIfOld();
         return conferenceDataSubject.flatMap(list -> filterAndSortBlocks(list, allEvents))
                 .map(conferenceDataHelper:: formatHourBlocks)
                 .map(conferenceDataHelper:: convertMapToDaySchedule)

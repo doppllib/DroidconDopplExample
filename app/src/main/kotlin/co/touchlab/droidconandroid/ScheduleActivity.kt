@@ -39,8 +39,6 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
     }
 
     private var allEvents = true
-    private var selectedDrawerTitleRes = -1
-    private var selectedDrawerPosition = -1
     private val cd = CompositeDisposable()
   
     private val viewModel: ConferenceDataViewModel by lazy {
@@ -92,10 +90,6 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
             }
         }
 
-        if (savedInstanceState != null) {
-            selectedDrawerPosition = savedInstanceState.getInt(SELECTED_DRAWER_POSITION, -1)
-            selectedDrawerTitleRes = savedInstanceState.getInt(SELECTED_DRAWER_TITLE_RES, -1)
-        }
     }
 
     override fun onDestroy() {
@@ -132,8 +126,6 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putBoolean(ALL_EVENTS, allEvents)
-        outState.putInt(SELECTED_DRAWER_POSITION, selectedDrawerPosition)
-        outState.putInt(SELECTED_DRAWER_TITLE_RES, selectedDrawerTitleRes)
     }
 
     private fun setupToolbar() {
@@ -179,9 +171,6 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
             override fun onHeaderItemClick() {}
         })
         drawer_recycler.layoutManager = LinearLayoutManager(this)
-        if (selectedDrawerPosition >= 0) {
-            selectNavigationItem(selectedDrawerTitleRes, selectedDrawerPosition)
-        }
     }
 
     private fun selectNavigationItem(titleRes: Int, position: Int) {
@@ -203,8 +192,6 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
             R.string.sponsors -> SponsorsActivity.callMe(this@ScheduleActivity)
         }
 
-        selectedDrawerTitleRes = titleRes
-        selectedDrawerPosition = position
         (drawer_recycler.adapter as DrawerAdapter).setSelectedPosition(position)
         adjustToolBarAndDrawers()
     }
@@ -261,8 +248,6 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
         private val ALL_EVENTS = "all_events"
         private val ALL_TOPIC = "all_2017"
         private val ANDROID_TOPIC = "android_2017"
-        private val SELECTED_DRAWER_POSITION = "selected_drawer_position"
-        private val SELECTED_DRAWER_TITLE_RES = "selected_drawer_title_res"
 
         @JvmField
         val ALPHA_OPAQUE = 255

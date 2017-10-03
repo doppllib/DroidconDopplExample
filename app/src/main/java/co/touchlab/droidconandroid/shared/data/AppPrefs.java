@@ -24,7 +24,7 @@ public class AppPrefs
     public static final String SEEN_WELCOME     = "seen_welcome";
     public static final String CONVENTION_START = "convention_start";
     public static final String CONVENTION_END   = "convention_end";
-    public static final String REFRESH_TIME     = "refresh_time";
+    public static final String REFRESH_TIME     = "refresh_time2";
     public static final String ALLOW_NOTIFS     = "allow_notifs";
     public static final String SHOW_NOTIF_CARD  = "show_notif_card";
     public static final String USER_UNIQUE_UUID = "USER_UNIQUE_UUID";
