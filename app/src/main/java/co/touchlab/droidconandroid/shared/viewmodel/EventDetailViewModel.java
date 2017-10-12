@@ -47,7 +47,7 @@ public class EventDetailViewModel extends ViewModel
                     host.dataRefresh(eventInfo);
                 }, e -> {
                     CrashReport.logException(e);
-                    host.reportError("Error getting event details");
+                    host.reportError("Error getting event details - Hello!");
                 }));
     }
 

@@ -150,21 +150,21 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.4.0'
 
     //Shared code dependencies
-    doppl 'co.doppl.lib:androidbase:0.8.3.0'
-    testCompile 'co.doppl.lib:androidbasetest:0.8.4'
-    testDoppl 'co.doppl.lib:androidbasetest:0.8.4.0'
+    doppl 'co.doppl.lib:androidbase:0.8.5.0'
+    testCompile 'co.doppl.lib:androidbasetest:0.8.5'
+    testDoppl 'co.doppl.lib:androidbasetest:0.8.5.0'
 
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-    doppl 'co.doppl.com.squareup.retrofit2.urlsession:retrofit:2.3.0.6'
-    doppl 'co.doppl.com.squareup.retrofit2.urlsession:converter-gson:2.3.0.6'
-    doppl 'co.doppl.com.squareup.retrofit2.urlsession:adapter-rxjava2:2.3.0.6'
+    doppl 'co.doppl.com.squareup.retrofit2.urlsession:retrofit:2.3.0.7'
+    doppl 'co.doppl.com.squareup.retrofit2.urlsession:converter-gson:2.3.0.7'
+    doppl 'co.doppl.com.squareup.retrofit2.urlsession:adapter-rxjava2:2.3.0.7'
 
-    compile "io.reactivex.rxjava2:rxjava:2.0.8"
-    doppl "co.doppl.io.reactivex.rxjava2:rxjava:2.0.8.2"
+    compile "io.reactivex.rxjava2:rxjava:2.1.5"
+    doppl "co.doppl.io.reactivex.rxjava2:rxjava:2.1.5.0"
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    doppl "co.doppl.io.reactivex.rxjava2:rxandroid:2.0.1.2"
+    doppl "co.doppl.io.reactivex.rxjava2:rxandroid:2.0.1.4"
 
     compile "com.google.dagger:dagger:$daggerVer"
     annotationProcessor "com.google.dagger:dagger-compiler:$daggerVer"

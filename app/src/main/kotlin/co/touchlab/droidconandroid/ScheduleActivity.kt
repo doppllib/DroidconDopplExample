@@ -67,7 +67,20 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
             startActivity(intent)
         }
 
-        when (viewModel.goToScreen()) {
+        if (savedInstanceState != null) {
+            allEvents = savedInstanceState.getBoolean(ALL_EVENTS)
+        }
+
+        setContentView(R.layout.activity_schedule)
+
+        schedule_toolbar_notif.visibility = View.GONE
+
+        viewModel.wire(this)
+
+        cd.add(appPrefs.observeAllowNotifications().subscribe { b: Boolean ->
+            adjustToolBarAndDrawers()
+        })
+       /* when (viewModel.goToScreen()) {
             ConferenceDataViewModel.AppScreens.Welcome -> {
                 startActivity(WelcomeActivity.getLaunchIntent(this@ScheduleActivity))
                 finish()
@@ -88,7 +101,7 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
                     adjustToolBarAndDrawers()
                 })
             }
-        }
+        }*/
 
     }
 
