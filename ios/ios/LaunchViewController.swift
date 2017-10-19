@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import dcframework
+import doppllib
 
 class LaunchViewController: UIViewController{
     override func viewDidAppear(_ animated: Bool)

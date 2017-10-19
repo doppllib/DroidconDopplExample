@@ -8,7 +8,7 @@
 
 import UIKit
 import Kingfisher
-import dcframework
+import doppllib
 
 class SpeakerTableViewCell: UITableViewCell {
 

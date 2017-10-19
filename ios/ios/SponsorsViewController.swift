@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import dcframework
+import doppllib
 
 class SponsorsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, DVMSponsorsViewModel_Host {
     

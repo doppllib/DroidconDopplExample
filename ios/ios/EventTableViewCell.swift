@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import dcframework
+import doppllib
 
 class EventTableViewCell: UITableViewCell {
 

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import dcframework
+import doppllib
 
 class JavaUtils {
     static func convertiOSObjectArrayToArray(objArray: IOSObjectArray) -> [Any] {

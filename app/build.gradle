@@ -195,15 +195,8 @@ dopplConfig {
     translatedPathPrefix 'co.touchlab.droidconandroid.shared.utils', 'DUT'
     translatedPathPrefix 'co.touchlab.droidconandroid.shared', 'D'
 
-    copyMainOutput "../ios/dcframework/generated"
-    copyTestOutput "../ios/dcframework/generatedTests"
-    copyDependencies true
-
-//    emitLineDirectives true
-
     testIdentifier {
         include "**/*Test.java"
-
         exclude "**/OneTest.java"
     }
 

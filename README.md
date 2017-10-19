@@ -8,28 +8,24 @@ The 2017 app is a refactor that updates the application to use more modern archi
 
 Follow the [Doppl Tutorial](http://doppl.co/docs/quicktutorial.html) to make sure you have j2objc installed and configured.
 
-Install [CocoaPods](https://cocoapods.org/). This is not needed for Doppl, but the Droidcon app uses Firebase, which is *much* easier to install with CocoaPods than manually.
+Install [CocoaPods](https://cocoapods.org/).
 
 Clone the repo (obv)
 
 As in the tutorial, add 'j2objc.home' to your local.properties
 
-Open terminal to ios directory and run
+Open terminal and run
+
+```bash
+./gradlew dopplBuild
+```
+
+This will transform the shared Java code and compile dependencies.
+
+cd into the ios directory and run
 
 ```bash
 pod install
-```
-
-Look for the following somewhere on output
-
-```bash
-Pod installation complete! There are 3 dependencies from the Podfile and 9 total pods installed.
-```
-
-cd back to the home directory (of the repo), and run
-
-```bash
-./gradlew dopplDeploy
 ```
 
 Assuming that goes to plan, in Finder, navigate to the ios directory, and open the ios workspace project for Xcode. Double-click on it.
@@ -41,5 +37,5 @@ Pick a simulator and run app!
 
 ### BTW
 
-We've committed some api config files that you probably wouldn't commit to your own code. fabric.properties and similar. Please
+We've committed some api config files that you probably wouldn't commit to your own production code. fabric.properties and similar. Please
 be kind. Just didn't want to add setup steps to try app code.

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import dcframework
+import doppllib
 
 class UserDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DVMUserDetailViewModel_Host {
 

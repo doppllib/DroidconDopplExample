@@ -9,7 +9,7 @@
 import Foundation
 import JRE
 import UIKit
-import dcframework
+import doppllib
 
 class ScheduleViewController : UIViewController, UITableViewDelegate, UITableViewDataSource, DVMScheduleDataViewModel_Host, DVMConferenceDataViewModel_Host {
   

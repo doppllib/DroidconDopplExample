@@ -8,7 +8,7 @@
 
 import UIKit
 import JRE
-import dcframework
+import doppllib
 
 @objc class EventDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DVMEventDetailViewModel_Host {
     
