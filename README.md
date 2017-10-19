@@ -6,9 +6,7 @@ The 2017 app is a refactor that updates the application to use more modern archi
 
 # Getting Started
 
-Follow the [Doppl Tutorial](http://doppl.co/docs/quicktutorial.html) to make sure you have j2objc installed and configured.
-
-Install [CocoaPods](https://cocoapods.org/).
+Follow the [Doppl Tutorial](http://doppl.co/docs/Tutorial.html) to make sure you have j2objc installed and configured.
 
 Clone the repo (obv)
 
