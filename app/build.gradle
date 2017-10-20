@@ -108,9 +108,9 @@ android {
     }
 }
 
-def supportVersion = "26.0.1"
-def archVer = "1.0.0-alpha8"
-def dopplArchVer = "1.0.0.2-alpha8"
+def supportVersion = "26.1.0"
+def archVer = "1.0.0-rc1"
+def dopplArchVer = "1.0.0.0-rc1"
 def daggerVer = "2.5"
 
 dependencies {
@@ -128,7 +128,7 @@ dependencies {
     compile "com.android.support:cardview-v7:$supportVersion"
     compile "com.android.support:customtabs:$supportVersion"
 
-    compile "android.arch.lifecycle:runtime:$archVer"
+    compile "android.arch.lifecycle:runtime:1.0.3"
     compile "android.arch.lifecycle:extensions:$archVer"
 
 
@@ -172,7 +172,7 @@ dependencies {
     provided 'javax.annotation:jsr250-api:1.0'
     doppl 'co.doppl.com.google.dagger:dagger:2.5.6'
 
-    compile 'com.google.firebase:firebase-messaging:11.4.0'
+    compile 'com.google.firebase:firebase-messaging:11.4.2'
 
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:1.9.5'
