@@ -123,7 +123,12 @@ public class ConferenceDataHelper
 
             final String startTime = TIME_FORMAT.get().format(startDateObj);
             final boolean newHourDisplay = ! lastHourDisplay.equals(startTime);
-            blockHourList.add(new HourBlock(newHourDisplay ? startTime : "", timeBlock));
+
+            if(newHourDisplay)
+            {
+                blockHourList.add(new HourBlock(startTime, null));
+            }
+            blockHourList.add(new HourBlock("", timeBlock));
             lastHourDisplay = startTime;
         }
         return dateWithBlocksTreeMap;

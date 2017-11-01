@@ -25,4 +25,13 @@ public class EventInfo
     public boolean getConflict() {
         return conflict;
     }
+
+    public int getSpeakerCount(){
+        return speakers.size();
+    }
+
+    public UserAccount getSpeaker(int speaker)
+    {
+        return speakers.get(speaker);
+    }
 }

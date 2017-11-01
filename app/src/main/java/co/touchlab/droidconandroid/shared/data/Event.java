@@ -200,4 +200,15 @@ public class Event implements TimeBlock
 
         return TextUtils.join(", ", names);
     }
+
+    public String getSpeakers()
+    {
+        return allSpeakersString();
+    }
+
+    @Override
+    public long eventId()
+    {
+        return id;
+    }
 }

@@ -49,31 +49,9 @@ class UserDetailFragment : Fragment(), UserDetailViewModel.Host {
         viewModel.wire(this, findUserId())
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_speaker_detail, container)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        toolbar.title = ""
-        val activity = activity as AppCompatActivity
-        activity.setSupportActionBar(toolbar)
-        activity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        activity.supportActionBar?.setDisplayShowHomeEnabled(true)
-    }
-
     override fun onDestroy() {
         viewModel.unwire()
         super.onDestroy()
-    }
-
-    private fun findUserId(): Long {
-        val userId = activity.intent.getLongExtra(UserDetailActivity.USER_ID, 0L)
-        if (userId == 0L)
-            findUserError()
-
-        return userId
     }
 
     override fun findUserError() {
@@ -186,6 +164,28 @@ class UserDetailFragment : Fragment(), UserDetailViewModel.Host {
             bio.text = Html.fromHtml(userAccount.profile.trim())
             bio.visibility = View.VISIBLE
         }
+    }
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return inflater.inflate(R.layout.fragment_speaker_detail, container)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        toolbar.title = ""
+        val activity = activity as AppCompatActivity
+        activity.setSupportActionBar(toolbar)
+        activity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        activity.supportActionBar?.setDisplayShowHomeEnabled(true)
+    }
+
+    private fun findUserId(): Long {
+        val userId = activity.intent.getLongExtra(UserDetailActivity.USER_ID, 0L)
+        if (userId == 0L)
+            findUserError()
+
+        return userId
     }
 
     private fun openLink(webPage: Uri?) {

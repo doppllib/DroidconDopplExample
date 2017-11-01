@@ -1,5 +1,9 @@
 package co.touchlab.droidconandroid.shared.viewmodel;
 
+import android.support.annotation.NonNull;
+
+import co.touchlab.droidconandroid.shared.data.Block;
+import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.data.TimeBlock;
 
 /**
@@ -25,4 +29,26 @@ public class HourBlock
     {
         return timeBlock;
     }
+
+    public Event getEvent()
+    {
+        if(timeBlock instanceof Event)
+            return (Event)timeBlock;
+        else
+            return null;
+    }
+
+    public Block getBlock()
+    {
+        if(timeBlock instanceof Block)
+            return (Block)timeBlock;
+        else
+            return null;
+    }
+
+    @NonNull
+    public String getName(){return timeBlock == null ? hourStringDisplay : timeBlock.getName();}
+
+    @NonNull
+    public String getSpeakers(){return timeBlock == null ? "" : timeBlock.getSpeakers();}
 }

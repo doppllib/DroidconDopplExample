@@ -4,6 +4,8 @@ import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
 import android.util.Log;
 
+import com.google.j2objc.annotations.ObjectiveCName;
+
 import javax.inject.Inject;
 
 import co.touchlab.droidconandroid.CrashReport;
@@ -26,8 +28,11 @@ public class EventDetailViewModel extends ViewModel
 {
     public interface Host
     {
+        @ObjectiveCName("dataRefresh:")
         void dataRefresh(EventInfo eventInfo);
+        @ObjectiveCName("reportError:")
         void reportError(String error);
+        @ObjectiveCName("updateRsvp:")
         void updateRsvp(Event event);
     }
 

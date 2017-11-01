@@ -184,11 +184,16 @@ dependencies {
 
 
 dopplConfig {
+
+    copyMainOutput "../kotlinNativeLib/kotlinNativeLib/source"
+    copyDependencies = true
+
     translatedPathPrefix 'co.touchlab.droidconandroid.shared.dagger', 'DDAG'
     translatedPathPrefix 'co.touchlab.droidconandroid.shared.data', 'DDAT'
     translatedPathPrefix 'co.touchlab.droidconandroid.shared.data.dao', 'DDAO'
     translatedPathPrefix 'co.touchlab.droidconandroid.shared.interactors', 'DINT'
     translatedPathPrefix 'co.touchlab.droidconandroid.shared.ios', 'DIOS'
+    translatedPathPrefix 'co.touchlab.droidconandroid.shared.kotlinnative', 'DKOT'
     translatedPathPrefix 'co.touchlab.droidconandroid.shared.network', 'DNET'
     translatedPathPrefix 'co.touchlab.droidconandroid.shared.network.dao', 'DNETD'
     translatedPathPrefix 'co.touchlab.droidconandroid.shared.viewmodel', 'DVM'

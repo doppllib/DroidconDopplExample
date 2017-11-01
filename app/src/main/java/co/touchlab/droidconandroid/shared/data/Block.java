@@ -60,4 +60,16 @@ public class Block implements TimeBlock
     {
         return name;
     }
+
+    @Override
+    public String getSpeakers()
+    {
+        return "";
+    }
+
+    @Override
+    public long eventId()
+    {
+        return -1;
+    }
 }

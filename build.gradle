@@ -4,18 +4,26 @@ buildscript {
         maven { url 'https://dl.bintray.com/doppllib/maven2' }
         jcenter()
         mavenCentral()
+        maven {
+            url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies"
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
         classpath 'co.doppl:gradle:0.9.0'
+        classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:+"
     }
 }
 
 allprojects {
     repositories {
+        maven {
+            url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies"
+        }
         maven { url "https://dl.bintray.com/doppllib/maven2" }
         maven { url "http://dl.bintray.com/populov/maven" }
         maven { url 'https://maven.google.com' }
+
         jcenter()
         mavenCentral()
     }

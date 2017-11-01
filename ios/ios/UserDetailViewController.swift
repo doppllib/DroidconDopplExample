@@ -20,25 +20,17 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     private let TWITTER_URL: String = "http://www.twitter.com/"
     private let GPLUS_URL: String = "http://www.plus.google.com/s/"
     private let LINKEDIN_URL: String = "http://www.linkedin.com/in/"
-    private let FACEBOOK_URL: String = "http://www.facebook.com/"
+    private let FACEBOOK_URL: Stri ng = "http://www.facebook.com/"
     
     var speakerInfos: [SpeakerInfo] = []
     var viewModel: DVMUserDetailViewModel!
     var userId: jlong = 0
+
     
-    
-    // MARK: Lifecycle events
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = DVMUserDetailViewModel.forIos()
         viewModel.wire(with: self, withLong: userId)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        tableView.delegate = self
-        tableView.dataSource = self
-        let nib = UINib(nibName: "UserTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "userCell")
     }
     
     deinit {
@@ -46,7 +38,7 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func findUserError() {
-        
+        showError("Problems...")
     }
     
     func onUserFound(with userAccount: DDATUserAccount) {
@@ -72,6 +64,13 @@ class UserDetailViewController: UIViewController, UITableViewDelegate, UITableVi
         speakerImage.layer.masksToBounds = true
         speakerImage.sizeToFit()
         tableView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.delegate = self
+        tableView.dataSource = self
+        let nib = UINib(nibName: "UserTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "userCell")
     }
     
     func showError(_ err:String){

@@ -7,4 +7,8 @@ public interface TimeBlock
     boolean isBlock();
     Long getStartLong();
     Long getEndLong();
+    String getName();
+    String getSpeakers();
+
+    long eventId();
 }
