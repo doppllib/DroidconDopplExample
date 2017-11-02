@@ -17,7 +17,7 @@ public class EmojiUtil
             0x1F430, // bunny
             0x1F425, // chick
             0x1F436, // dog
-            0x1F346, // eggplant
+            0x1F60E, // sunglasses
             0x1F438, // frog
             0x1F347, // grapes
             0x1F439, // hamster

@@ -27,8 +27,8 @@ public class ConferenceDataViewModel extends ViewModel
     {
         compositeDisposable.add(appPrefs.observeConventionDates().subscribe(datePair ->
         {
-            Long start = TimeUtils.sanitize(TimeUtils.LOCAL_DATE_FORMAT.get().parse(datePair.first));
-            Long end = TimeUtils.sanitize(TimeUtils.LOCAL_DATE_FORMAT.get().parse(datePair.second));
+            Long start = TimeUtils.LOCAL_DATE_FORMAT.get().parse(datePair.first).getTime();
+            Long end = TimeUtils.LOCAL_DATE_FORMAT.get().parse(datePair.second).getTime();
 
             List<Long> dateLongs = new ArrayList<>();
 

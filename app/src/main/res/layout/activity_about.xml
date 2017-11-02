@@ -22,7 +22,7 @@
                 android:scaleType="centerCrop"
                 android:adjustViewBounds="true"
                 android:layout_alignBottom="@+id/toolbar"
-                android:src="@drawable/superglyph_outline360x114dp"
+                android:src="@drawable/bannerback"
                 android:contentDescription="@null"
                 android:paddingTop="@dimen/status_bar_height"/>
 

@@ -11,6 +11,7 @@ import com.google.firebase.iid.FirebaseInstanceId;
 
 import co.touchlab.droidconandroid.alerts.EventNotificationsManager;
 import io.fabric.sdk.android.Fabric;
+
 import java.io.IOException;
 
 import co.touchlab.droidconandroid.shared.dagger.AppModule;
@@ -26,8 +27,8 @@ import co.touchlab.droidconandroid.shared.utils.IOUtils;
  */
 public class DroidconApplication extends Application
 {
-    private static DroidconApplication instance;
-    private EventNotificationsManager eventNotificationsManager;
+    private static DroidconApplication       instance;
+    private        EventNotificationsManager eventNotificationsManager;
 
     public DroidconApplication()
     {
@@ -44,102 +45,95 @@ public class DroidconApplication extends Application
         Log.i(DroidconApplication.class.getSimpleName(),
                 "currentProcessName: " + currentProcessName);
 
-        /*if (DEVELOPER_MODE) */{
-            StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
-                    .detectDiskReads()
+        /*if (DEVELOPER_MODE) */
+        {
+            StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectDiskReads()
                     .detectDiskWrites()
                     .detectNetwork()   // or .detectAll() for all detectable problems
                     .penaltyFlashScreen()
                     .penaltyLog()
                     .build());
-            StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
-                    .detectLeakedSqlLiteObjects()
+            StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder().detectLeakedSqlLiteObjects()
                     .detectLeakedClosableObjects()
                     .penaltyLog()
                     .penaltyDeath()
                     .build());
         }
 
-        Log.w("regtoken", "reg: "+ FirebaseInstanceId.getInstance().getToken());
-
-        if(! currentProcessName.contains("background_crash"))
+        PlatformClient platformClient = new PlatformClient()
         {
-            PlatformClient platformClient = new PlatformClient()
+            @Override
+            public String baseUrl()
             {
-                @Override
-                public String baseUrl()
-                {
-                    return BuildConfig.BASE_URL;
-                }
+                return BuildConfig.BASE_URL;
+            }
 
-                @Override
-                public Integer getConventionId()
-                {
-                    return Integer.parseInt(DroidconApplication.this.getString(R.string.convention_id));
-                }
-
-                @Override
-                public void log(String s)
-                {
-                    Log.i(DroidconApplication.class.getSimpleName(), s);
-                }
-
-                @Override
-                public void logException(Throwable t)
-                {
-                    Log.e(DroidconApplication.class.getSimpleName(), "", t);
-                    Crashlytics.logException(t);
-                }
-
-                @Override
-                public void logEvent(String name, String... params)
-                {
-                    StringBuilder sb = new StringBuilder();
-                    for(String param : params)
-                    {
-                        sb.append(param);
-                        sb.append("; ");
-                    }
-                    Log.i(name, sb.toString());
-                }
-
-                @Override
-                public String getString(String id)
-                {
-                    return DroidconApplication.this.getString(getResources().getIdentifier(id,
-                            "string",
-                            getPackageName()));
-                }
-            };
-
-            LoadDataSeed loadDataSeed = () ->
+            @Override
+            public Integer getConventionId()
             {
-                try
+                return Integer.parseInt(DroidconApplication.this.getString(R.string.convention_id));
+            }
+
+            @Override
+            public void log(String s)
+            {
+                Log.i(DroidconApplication.class.getSimpleName(), s);
+            }
+
+            @Override
+            public void logException(Throwable t)
+            {
+                Log.e(DroidconApplication.class.getSimpleName(), "", t);
+                Crashlytics.logException(t);
+            }
+
+            @Override
+            public void logEvent(String name, String... params)
+            {
+                StringBuilder sb = new StringBuilder();
+                for(String param : params)
                 {
-                    return IOUtils.toString(getAssets().open("dataseed.json"));
+                    sb.append(param);
+                    sb.append("; ");
                 }
-                catch(IOException e)
-                {
-                    throw new RuntimeException(e);
-                }
-            };
+                Log.i(name, sb.toString());
+            }
 
-            AppModule appModule = new AppModule(this);
-            NetworkModule networkModule = new NetworkModule();
-            AppManager.create(this,
-                    platformClient,
-                    DaggerAppComponent.builder()
-                            .appModule(appModule)
-                            .networkModule(networkModule)
-                            .build());
+            @Override
+            public String getString(String id)
+            {
+                return DroidconApplication.this.getString(getResources().getIdentifier(id,
+                        "string",
+                        getPackageName()));
+            }
+        };
 
-            AppManager instance = AppManager.getInstance();
-            instance.seed(loadDataSeed);
+        LoadDataSeed loadDataSeed = () ->
+        {
+            try
+            {
+                return IOUtils.toString(getAssets().open("dataseed.json"));
+            }
+            catch(IOException e)
+            {
+                throw new RuntimeException(e);
+            }
+        };
 
-            eventNotificationsManager = new EventNotificationsManager(instance.getAppComponent().getPrefs(),
-                    this,
-                    instance.getAppComponent().refreshScheduleInteractor());
-        }
+        AppModule appModule = new AppModule(this);
+        NetworkModule networkModule = new NetworkModule();
+        AppManager.create(this,
+                platformClient,
+                DaggerAppComponent.builder()
+                        .appModule(appModule)
+                        .networkModule(networkModule)
+                        .build());
+
+        AppManager instance = AppManager.getInstance();
+        instance.seed(loadDataSeed);
+
+        eventNotificationsManager = new EventNotificationsManager(instance.getAppComponent()
+                .getPrefs(), this, instance.getAppComponent().refreshScheduleInteractor());
     }
 
     public static String getCurrentProcessName(Context context)

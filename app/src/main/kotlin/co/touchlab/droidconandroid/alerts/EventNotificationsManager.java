@@ -118,9 +118,9 @@ public class EventNotificationsManager
         safeSetAlarm(nextEvent.startDateLong - rewindTime(), cancelBroadcast);
     }
 
-    private long rewindTime()
+    public static long rewindTime()
     {
-        return 0;//(86400000 * 2) - (60*1000*25);
+        return (1000*60*60*24*4);
     }
 
     private void safeSetAlarm(long time, PendingIntent intent)

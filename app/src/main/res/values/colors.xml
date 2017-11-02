@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="primary">#3a45a4</color>
-    <color name="primary_dark">#1e2981</color>
-    <color name="primary_dark_50">#121a5e</color>
-    <color name="accent">#5be1a4</color>
+    <color name="primary">#68d1fd</color>
+    <color name="primary_dark">#166494</color>
+    <color name="primary_dark_50">#104769</color>
+    <color name="accent">#68d1fd</color>
 
     <color name="welcome_background_0">#3a45a4</color>
     <color name="welcome_background_1">#1e2981</color>
@@ -84,9 +84,9 @@
 
     <color name="glyph_foreground_dark">@color/primary</color>
     <color name="glyph_background_dark">@color/primary_dark</color>
-    <color name="tab_inactive_text_dark">#6fff</color>
-    <color name="tab_text_dark">@color/white</color>
-    <color name="tab_accent_dark">@color/accent</color>
+    <color name="tab_inactive_text_dark">#6000</color>
+    <color name="tab_text_dark">@color/black</color>
+    <color name="tab_accent_dark">@color/primary_dark</color>
 
     <color name="glyph_foreground_light">#60f3af</color>
     <color name="glyph_background_light">@color/accent</color>

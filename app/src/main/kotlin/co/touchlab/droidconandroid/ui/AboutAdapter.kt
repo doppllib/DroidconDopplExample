@@ -58,9 +58,11 @@ class AboutAdapter(private val context: Context, private val appPrefs: AppPrefs)
             if(data.logoRes == null)
             {
                 view.logo.setImageDrawable(null)
+                view.logo.visibility = View.GONE
             }
             else {
                 view.logo.setImageResource(data.logoRes)
+                view.logo.visibility = View.VISIBLE
             }
             if(data.headerRes == null)
             {

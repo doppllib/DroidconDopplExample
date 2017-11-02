@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Droidcon NYC 2017!</string>
+    <string name="app_name">Droidcon SF 2017!</string>
     <!--<string name="convention_id">61100</string>-->
-    <string name="convention_id">90400</string>
+    <string name="convention_id">97450</string>
 
     <!-- drawer copy-->
     <string name="navigation_drawer_open">Open</string>
@@ -31,7 +31,7 @@
     <string name="event_now" >This session is happening now</string>
     <string name="event_past" >This session has already ended</string>
     <string name="event_conflict">This session conflicts with another session in your schedule</string>
-    <string name="about_con_header">About Droidcon NYC</string>
+    <string name="about_con_header">About Droidcon SF</string>
     <string name="about_con">
         Droidcon conferences around the world
         support the Android platform and create a
@@ -42,31 +42,30 @@
         solutions, and games.
     </string>
     <string name="about_app_header">About the app</string>
+    <string name="about_doppl_header">About Doppl</string>
     <string name="about_app">
         The Droidcon app is coded in-house by the touchlab team.
 
         \n\n
         Architecturally, this is built with the new Android Architecture components, Room,
-        RxJava 2, and Retrofit 2. All of this code works natively in the iOS app, using
-        J2objc and Doppl.
+        RxJava 2, and Retrofit 2.
 
         \n\n
 
         See the repo and read more at:\nhttps://github.com/doppllib/DroidconDopplExample
     </string>
+    <string name="about_doppl">
+        We\'re sharing the same reactive architecture to power the iOS
+        app using Doppl, our code sharing platform.
+        \n\n
+        More info at http://doppl.co
+    </string>
     <string name="about_touch_header">About touchlab</string>
     <string name="about_touch">
-        Touchlab is a developer founded and run
-        development shop focused on building
-        amazing Android experiences with great
-        design as a foundational principle.\n\nWe’re a group of Android experts who believe
-        that Android can and must be better.\n\nWe believe that what we built yesterday was
-        great, but what we build with you tomorrow
-        will be even better.\n\nAnd we’re currently hiring. Want to join a team
-        where Android isn’t that other platform, where
-        we care about pushing our favorite technology
-        forward, and where you can get more involved
-        with the community at large? Get in touch.\n\nhttp://touchlab.co\n\n
+        Touchlab Accelerates Mobile Innovation for Enterprise and
+        Startups.
+        \n\n
+        Get in touch.\n\nhttp://touchlab.co
     </string>
 
     <!-- notification -->

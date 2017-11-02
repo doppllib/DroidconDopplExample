@@ -27,13 +27,14 @@ class AboutActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
-        about_backdrop.setColorFilter(ContextCompat.getColor(this, R.color.glyph_foreground_dark))
+//        about_backdrop.setColorFilter(ContextCompat.getColor(this, R.color.glyph_foreground_dark))
         about_list_rv.layoutManager = LinearLayoutManager(this)
 
         val adapter = AboutAdapter(this, AppManager.getInstance().appComponent.prefs)
         adapter.add(R.string.about_app_header, 0, R.string.about_app)
-        adapter.add(R.string.about_con_header, 0, R.string.about_con)
-        adapter.add(R.string.about_touch_header, 0, R.string.about_touch)
+        adapter.add(R.string.about_doppl_header, R.drawable.dopplpng, R.string.about_doppl)
+        adapter.add(R.string.about_con_header, R.drawable.droidconlogo, R.string.about_con)
+        adapter.add(R.string.about_touch_header, R.drawable.tllogopadding, R.string.about_touch)
         //Binky's row
         adapter.add(null, null, null)
         about_list_rv.adapter = adapter

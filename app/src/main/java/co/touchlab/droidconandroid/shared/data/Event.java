@@ -8,10 +8,12 @@ import android.text.TextUtils;
 
 import android.support.annotation.NonNull;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import co.touchlab.droidconandroid.alerts.EventNotificationsManager;
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 
 /**
@@ -132,7 +134,7 @@ public class Event implements TimeBlock
 
     public boolean isPast()
     {
-        return endDateLong != null && System.currentTimeMillis() > endDateLong;
+        return endDateLong != null && System.currentTimeMillis() > getAdjustedEndDateLong();
     }
 
     public boolean isNow()
@@ -140,6 +142,21 @@ public class Event implements TimeBlock
         return startDateLong != null && endDateLong != null &&
                 System.currentTimeMillis() < endDateLong &&
                 System.currentTimeMillis() > startDateLong;
+    }
+
+    private Long getAdjustedStartDateLong()
+    {
+        return startDateLong == null ? null : startDateLong - EventNotificationsManager.rewindTime();
+    }
+
+    private Long getAdjustedEndDateLong()
+    {
+        return endDateLong == null ? null : endDateLong - EventNotificationsManager.rewindTime();
+    }
+
+    public String getAdjustedEndDateString()
+    {
+        return new SimpleDateFormat("MM/dd HH:mm").format(new Date(getAdjustedEndDateLong()));
     }
 
     public boolean isAfter(Event event)
