@@ -8,7 +8,6 @@ buildscript {
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
-        classpath 'me.tatarka:gradle-retrolambda:3.6.1'
         classpath 'com.google.gms:google-services:3.1.0'
         classpath 'io.fabric.tools:gradle:1.+'
     }
@@ -23,7 +22,6 @@ repositories {
 
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'co.doppl.gradle'
 
 Properties properties = new Properties()
@@ -172,6 +170,7 @@ dependencies {
     provided 'javax.annotation:jsr250-api:1.0'
     doppl 'co.doppl.com.google.dagger:dagger:2.5.6'
 
+    compile 'com.google.firebase:firebase-core:11.4.2'
     compile 'com.google.firebase:firebase-messaging:11.4.2'
 
     testCompile 'junit:junit:4.12'
