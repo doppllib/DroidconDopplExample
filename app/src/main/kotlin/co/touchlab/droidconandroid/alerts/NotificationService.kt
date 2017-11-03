@@ -40,50 +40,54 @@ class NotificationService : FirebaseMessagingService() {
             val notification = remoteMessage.notification
             Log.d(TAG, "Received firebase message: " + type)
 
-            if (notification != null) {
-                when (type) {
-                    "updateSchedule" -> {
-                        AppManager.getInstance().appComponent.refreshScheduleInteractor().refreshFromServer()
-                    }
-                    "event" -> {
-                        val eventId = data[EVENT_ID]!!.toLong()
-                        sendEventNotification(notification, eventId, NotificationUtils.EVENT_CHANNEL_ID)
-                    }
-                    "version" -> {
-                        val packageInfo = packageManager.getPackageInfo(packageName, 0)
-                        val versionCode = packageInfo.versionCode
-                        val checkCode = data[VERSION_CODE]!!.toInt()
-                        if (versionCode < checkCode) {
-                            var intent = Intent(Intent.ACTION_VIEW,
-                                    Uri.parse("market://details?id=" + packageName))
+            when (type) {
+                "updateSchedule" -> {
+                    AppManager.getInstance().appComponent.refreshScheduleInteractor().refreshFromServer()
+                }
+                "event" -> {
+                    val eventId = data[EVENT_ID]!!.toLong()
+                    val title = if (notification.title.isNullOrBlank()) getString(R.string.app_name) else notification.title
+                    val message = if (notification.body.isNullOrBlank()) getString(R.string.event_description) else notification.body
+                    val intent = EventDetailActivity.createIntent(this, eventId)
 
-                            if (intent.resolveActivity(packageManager) == null) {
-                                intent = Intent(Intent.ACTION_VIEW,
-                                        Uri.parse("https://play.google.com/store/apps/details?id=" + packageName))
-                            }
-                            sendIntentNotification(notification, intent, NotificationUtils.VERSION_CHANNEL_ID)
+                    sendIntentNotification(title!!, message!!, intent, NotificationUtils.EVENT_CHANNEL_ID)
+                }
+                "version" -> {
+                    val packageInfo = packageManager.getPackageInfo(packageName, 0)
+                    val versionCode = packageInfo.versionCode
+                    val checkCode = data[VERSION_CODE]!!.toInt()
+                    if (versionCode < checkCode) {
+                        var intent = Intent(Intent.ACTION_VIEW,
+                                Uri.parse("market://details?id=" + packageName))
+
+                        if (intent.resolveActivity(packageManager) == null) {
+                            intent = Intent(Intent.ACTION_VIEW,
+                                    Uri.parse("https://play.google.com/store/apps/details?id=" + packageName))
                         }
-                    }
-                    "general" -> {
-                        val intent = Intent(this, ScheduleActivity::class.java)
-                        sendIntentNotification(notification, intent, NotificationUtils.GENERAL_CHANNEL_ID)
+                        sendVersionIntentNotification(intent, NotificationUtils.VERSION_CHANNEL_ID)
                     }
                 }
+                "general" -> {
+                    val intent = Intent(this, ScheduleActivity::class.java)
+                    val title = if (notification.title.isNullOrBlank()) getString(R.string.app_name) else notification.title
+                    val message = if (notification.body.isNullOrBlank()) getString(R.string.welcome_0_title) else notification.body
+                    sendIntentNotification(title!!, message!!, intent, NotificationUtils.GENERAL_CHANNEL_ID)
+                }
             }
-        } catch(e: Exception) {
+        } catch (e: Exception) {
             Log.e(TAG, "onMessageReceived error: ", e)
         }
     }
 
-    private fun sendEventNotification(notification: RemoteMessage.Notification, eventId: Long, channelId: String) {
-        val intent = EventDetailActivity.createIntent(this, eventId)
-        sendIntentNotification(notification, intent, channelId)
+    private fun sendVersionIntentNotification(intent: Intent, channelId: String)
+    {
+        val title = getString(R.string.app_name)
+        val message = getString(R.string.version_message)
+
+        sendIntentNotification(title, message, intent, channelId)
     }
 
-    private fun sendIntentNotification(notification: RemoteMessage.Notification, intent: Intent, channelId: String) {
-        val title = if (notification.title.isNullOrBlank()) getString(R.string.app_name) else notification.title
-        val message = if (notification.body.isNullOrBlank()) getString(R.string.version_message) else notification.body
-
+    private fun sendIntentNotification(title: String, message: String, intent: Intent, channelId: String) {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         val pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
                 PendingIntent.FLAG_ONE_SHOT)
