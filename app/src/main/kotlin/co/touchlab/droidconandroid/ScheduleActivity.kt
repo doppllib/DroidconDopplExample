@@ -73,13 +73,9 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
 
         setContentView(R.layout.activity_schedule)
 
-        schedule_toolbar_notif.visibility = View.GONE
-
         viewModel.wire(this)
 
-        cd.add(appPrefs.observeAllowNotifications().subscribe { b: Boolean ->
-            adjustToolBarAndDrawers()
-        })
+
        /* when (viewModel.goToScreen()) {
             ConferenceDataViewModel.AppScreens.Welcome -> {
                 startActivity(WelcomeActivity.getLaunchIntent(this@ScheduleActivity))
@@ -154,14 +150,11 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
             if (appBarLayout.totalScrollRange > 0) {
                 val percentage = verticalOffset.calculateAlphaPercentage(appBarLayout.totalScrollRange)
                 schedule_toolbar_title.alpha = percentage
-                schedule_toolbar_notif.alpha = percentage
             }
         }
         appbar.setExpanded(true)
 
-        schedule_toolbar_notif.setOnClickListener {
-            appPrefs.setAllowNotifications(!appPrefs.allowNotificationsUi)
-        }
+
     }
 
     private fun setupNavigationDrawer() {
@@ -227,14 +220,14 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
                 (drawer_recycler.adapter as DrawerAdapter).setSelectedPosition(POSITION_EXPLORE)
             }
             schedule_toolbar_title.setText(R.string.app_name)
-            schedule_toolbar_notif.visibility = View.GONE
+
         } else {
             if(drawer_recycler.adapter != null) {
 
                 (drawer_recycler.adapter as DrawerAdapter).setSelectedPosition(POSITION_MY_SCHEDULE)
             }
             schedule_toolbar_title.setText(R.string.my_schedule)
-            schedule_toolbar_notif.visibility = View.VISIBLE
+
         }
 
         schedule_toolbar_title.setTextColor(ContextCompat.getColor(this, R.color.tab_text_dark))
@@ -244,11 +237,6 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
         menuIconDark?.mutate()?.setColorFilter(ContextCompat.getColor(this, R.color.tab_text_dark), PorterDuff.Mode.SRC_IN)
         menuIconDark?.alpha = ALPHA_OPAQUE
         toolbar.navigationIcon = menuIconDark
-
-        if (appPrefs.allowNotificationsUi)
-            schedule_toolbar_notif.setImageResource(R.drawable.vic_notifications_active_black_24dp)
-        else
-            schedule_toolbar_notif.setImageResource(R.drawable.vic_notifications_none_black_24dp)
     }
 
     private fun isTablet(): Boolean {

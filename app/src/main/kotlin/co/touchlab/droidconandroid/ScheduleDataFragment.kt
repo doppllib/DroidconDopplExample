@@ -28,13 +28,6 @@ class ScheduleDataFragment : Fragment(), ScheduleDataViewModel.Host {
     val RecyclerView.eventAdapter: EventAdapter
         get() = adapter as EventAdapter
 
-    val shouldShowNotif: Boolean
-        get() {
-            return AppManager.getInstance().appComponent.prefs.showNotifCard
-//                    && !allEvents
-                    && arguments.getInt(POSITION, 0) == 0
-        }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_schedule_data, container, false)
     }
@@ -51,7 +44,6 @@ class ScheduleDataFragment : Fragment(), ScheduleDataViewModel.Host {
         eventList.adapter = EventAdapter(activity,
                 allEvents,
                 ScheduleEventClickListener(),
-                shouldShowNotif,
                 AppManager.getInstance().appComponent.prefs)
     }
 

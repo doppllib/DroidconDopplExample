@@ -28,8 +28,7 @@ class WelcomePageViewController: UIPageViewController {
     
     fileprivate(set) lazy var orderedViewControllers: [UIViewController] = {
         return [self.newWelcomeViewController("1"),
-                self.newWelcomeViewController("2"),
-                self.newWelcomeViewController("3")]
+                self.newWelcomeViewController("2")]
     }()
     
     fileprivate func newWelcomeViewController(_ index: String) -> UIViewController {

@@ -7,9 +7,6 @@ import android.os.StrictMode;
 import android.util.Log;
 
 import com.crashlytics.android.Crashlytics;
-import com.google.firebase.iid.FirebaseInstanceId;
-
-import co.touchlab.droidconandroid.alerts.EventNotificationsManager;
 import io.fabric.sdk.android.Fabric;
 
 import java.io.IOException;
@@ -28,7 +25,6 @@ import co.touchlab.droidconandroid.shared.utils.IOUtils;
 public class DroidconApplication extends Application
 {
     private static DroidconApplication       instance;
-    private        EventNotificationsManager eventNotificationsManager;
 
     public DroidconApplication()
     {
@@ -131,9 +127,6 @@ public class DroidconApplication extends Application
 
         AppManager instance = AppManager.getInstance();
         instance.seed(loadDataSeed);
-
-        eventNotificationsManager = new EventNotificationsManager(instance.getAppComponent()
-                .getPrefs(), this, instance.getAppComponent().refreshScheduleInteractor());
     }
 
     public static String getCurrentProcessName(Context context)
@@ -153,10 +146,5 @@ public class DroidconApplication extends Application
     public static DroidconApplication getInstance()
     {
         return instance;
-    }
-
-    public void updateEventNotifications()
-    {
-        eventNotificationsManager.resetObserver();
     }
 }

@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import co.touchlab.droidconandroid.alerts.EventNotificationsManager;
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 
 /**
@@ -86,15 +85,15 @@ public class Event implements TimeBlock
         return venue;
     }
 
-    public Long getStartDateLong()
-    {
-        return startDateLong;
-    }
-
-    public Long getEndDateLong()
-    {
-        return endDateLong;
-    }
+//    public Long getStartDateLong()
+//    {
+//        return startDateLong;
+//    }
+//
+//    public Long getEndDateLong()
+//    {
+//        return endDateLong;
+//    }
 
     public boolean isPublicEvent()
     {
@@ -123,7 +122,7 @@ public class Event implements TimeBlock
 
     public boolean isSoon()
     {
-        return !isNow() && !isPast() && startDateLong != null && System.currentTimeMillis() > (startDateLong -
+        return !isNow() && !isPast() && startDateLong != null && TimeUtils.getMyTime() > (startDateLong -
                 SOONTIME);
     }
 
@@ -134,24 +133,24 @@ public class Event implements TimeBlock
 
     public boolean isPast()
     {
-        return endDateLong != null && System.currentTimeMillis() > getAdjustedEndDateLong();
+        return endDateLong != null && TimeUtils.getMyTime() > getAdjustedEndDateLong();
     }
 
     public boolean isNow()
     {
         return startDateLong != null && endDateLong != null &&
-                System.currentTimeMillis() < endDateLong &&
-                System.currentTimeMillis() > startDateLong;
+                TimeUtils.getMyTime() < endDateLong &&
+                TimeUtils.getMyTime() > startDateLong;
     }
 
     private Long getAdjustedStartDateLong()
     {
-        return startDateLong == null ? null : startDateLong - EventNotificationsManager.rewindTime();
+        return startDateLong == null ? null : startDateLong;
     }
 
     private Long getAdjustedEndDateLong()
     {
-        return endDateLong == null ? null : endDateLong - EventNotificationsManager.rewindTime();
+        return endDateLong == null ? null : endDateLong;
     }
 
     public String getAdjustedEndDateString()

@@ -26,7 +26,7 @@ class EventTableViewCell: UITableViewCell {
         self.conflict = conflict
         self.eventDetailPresenter = eventDetailPresenter
         
-        titleLabel.text = networkEvent.getName().replacingOccurrences(of: "Android", with: "Binky")
+        titleLabel.text = networkEvent.getName().replacingOccurrences(of: "Android", with: "Lulu")
         let time = TimeUtils.getEventTime(startTime: networkEvent.getStartFormatted()! as NSString, andEnd: networkEvent.getEndFormatted()! as NSString)
         timeInfoLabel.text = "Track " + networkEvent.getVenue().getName() + ", " + time
         descriptionLabel.text = networkEvent.getDescription().replacingOccurrences(of: "/n/n", with: "/n")

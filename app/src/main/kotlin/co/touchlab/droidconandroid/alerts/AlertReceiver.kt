@@ -25,9 +25,6 @@ class AlertReceiver : BroadcastReceiver() {
 
             val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
-            //Trigger following notifications
-            (context.applicationContext as DroidconApplication).updateEventNotifications()
-
             val eventID = intent.getLongExtra(EXTRA_EVENT_ID, -1)
             if(eventID.toInt() == -1)
             {

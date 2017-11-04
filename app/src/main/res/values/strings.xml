@@ -69,10 +69,6 @@
     </string>
 
     <!-- notification -->
-    <string name="notif_card_title">Session notification</string>
-    <string name="notif_card_body">Turn on notifications for sessions in your schedule?</string>
-    <string name="notif_card_accept">Sure</string>
-    <string name="notif_card_decline">No thanks</string>
     <string name="notif_title">Session starting soon</string>
     <string name="notif_body">"The \"%s\" session is starting soon!"</string>
     <string name="conflict">Conflict</string>

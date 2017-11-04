@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "illo_planahead.png",
+      "filename" : "luluagain-0.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "illo_planahead-1.png",
+      "filename" : "luluagain-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "illo_planahead-2.png",
+      "filename" : "luluagain-2.png",
       "scale" : "3x"
     }
   ],

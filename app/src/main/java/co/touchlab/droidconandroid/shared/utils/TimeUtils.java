@@ -52,4 +52,14 @@ public class TimeUtils
     {
         return TimeUtils.LOCAL_DATE_FORMAT.get().parse(date).getTime();
     }
+
+    public static int timeZoneDiff()
+    {
+        return TimeZone.getDefault().getRawOffset() - TIME_ZONE.getRawOffset();
+    }
+
+    public static long getMyTime()
+    {
+        return System.currentTimeMillis() + timeZoneDiff();
+    }
 }

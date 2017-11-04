@@ -16,7 +16,6 @@ import co.touchlab.droidconandroid.shared.data.Event
 import co.touchlab.droidconandroid.shared.viewmodel.HourBlock
 import co.touchlab.droidconandroid.shared.utils.EventUtils
 import kotlinx.android.synthetic.main.item_event.view.*
-import kotlinx.android.synthetic.main.item_notification.view.*
 import java.util.*
 
 /**
@@ -27,14 +26,13 @@ import java.util.*
 class EventAdapter(private val context: Context,
                    private val allEvents: Boolean,
                    private val eventClickListener: EventClickListener,
-                   private var showNotificationCard: Boolean,
                    private val appPrefs: AppPrefs) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var dataSet: List<HourBlock> = emptyList()
     private var filteredData: ArrayList<HourBlock?> = ArrayList()
 
     override fun getItemCount(): Int {
-        return filteredData.size + adjustNotification
+        return filteredData.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): RecyclerView.ViewHolder {
@@ -47,10 +45,6 @@ class EventAdapter(private val context: Context,
                 val v = LayoutInflater.from(context).inflate(R.layout.item_block, parent, false)
                 ScheduleBlockViewHolder(v)
             }
-            VIEW_TYPE_NOTIFICATION -> {
-                val v = LayoutInflater.from(context).inflate(R.layout.item_notification, parent, false)
-                NotificationViewHolder(v)
-            }
             VIEW_TYPE_NEW_ROW -> {
                 val v = LayoutInflater.from(context).inflate(R.layout.item_new_row, parent, false)
                 NewRowViewHolder(v)
@@ -61,7 +55,7 @@ class EventAdapter(private val context: Context,
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         if (holder is ScheduleBlockViewHolder) {
-            val adjustedPosition = position - adjustNotification
+            val adjustedPosition = position
             val scheduleBlockHour = filteredData[adjustedPosition]
 
             scheduleBlockHour?.let {
@@ -75,11 +69,8 @@ class EventAdapter(private val context: Context,
     }
 
     override fun getItemViewType(position: Int): Int {
-        //Position 0 is always the notification
-        if (position == 0 && showNotificationCard)
-            return VIEW_TYPE_NOTIFICATION
 
-        val adjustedPosition = position - adjustNotification
+        val adjustedPosition = position
         if (filteredData[adjustedPosition] == null) {
             return VIEW_TYPE_NEW_ROW
         }
@@ -95,7 +86,7 @@ class EventAdapter(private val context: Context,
     private fun updateData() {
         filteredData.clear()
             for (item in dataSet) {
-                val position = filteredData.size + adjustNotification
+                val position = filteredData.size
                 if (item.hourStringDisplay.isNotBlank() && position.isOdd()) {
                     // Insert an empty block to indicate a new row
                     filteredData.add(null)
@@ -115,14 +106,6 @@ class EventAdapter(private val context: Context,
         updateData()
     }
 
-    fun clearNotificationCard() {
-        showNotificationCard = false
-        if (itemCount > 0)
-            notifyItemRemoved(0)
-    }
-
-    private val adjustNotification: Int
-        get() = if (showNotificationCard) HEADER_ITEMS_COUNT else 0
 
     inner abstract class ScheduleCardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
@@ -177,28 +160,12 @@ class EventAdapter(private val context: Context,
         }
     }
 
-    inner class NotificationViewHolder(itemView: View) : ScheduleCardViewHolder(itemView) {
-        init {
-            itemView.notify_accept.setOnClickListener {
-                appPrefs.showNotifCard = false
-                appPrefs.setAllowNotifications(true)
-                clearNotificationCard()
-            }
-            itemView.notify_decline.setOnClickListener {
-                appPrefs.showNotifCard = false
-                appPrefs.setAllowNotifications(false)
-                clearNotificationCard()
-            }
-        }
-    }
-
     inner class NewRowViewHolder(itemView: View) : ScheduleCardViewHolder(itemView)
 
     companion object {
         private val VIEW_TYPE_EVENT = 0
         private val VIEW_TYPE_BLOCK = 1
         private val VIEW_TYPE_PAST_EVENT = 2
-        private val VIEW_TYPE_NOTIFICATION = 3
         private val VIEW_TYPE_NEW_ROW = 4
         private val HEADER_ITEMS_COUNT = 1
     }

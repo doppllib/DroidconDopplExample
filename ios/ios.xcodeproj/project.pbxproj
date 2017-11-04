@@ -919,7 +919,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.touchlab.ios.albany;
 				PRODUCT_MODULE_NAME = ios;
-				PRODUCT_NAME = "Droidcon NYC 2017";
+				PRODUCT_NAME = "Droidcon SF 2017";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -966,7 +966,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.touchlab.ios.albany;
 				PRODUCT_MODULE_NAME = ios;
-				PRODUCT_NAME = "Droidcon NYC 2017";
+				PRODUCT_NAME = "Droidcon SF 2017";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";

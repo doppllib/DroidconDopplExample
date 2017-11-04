@@ -25,16 +25,12 @@ public class AppPrefs
     public static final String CONVENTION_START = "convention_start";
     public static final String CONVENTION_END   = "convention_end";
     public static final String REFRESH_TIME     = "refresh_time2";
-    public static final String ALLOW_NOTIFS     = "allow_notifs";
-    public static final String SHOW_NOTIF_CARD  = "show_notif_card";
     public static final String USER_UNIQUE_UUID = "USER_UNIQUE_UUID";
     public static final String DOG_CLICKED = "DOG_CLICKED";
 
     private SharedPreferences prefs;
 
     private final BehaviorSubject<Pair<String, String>> conventionDateProcessor;
-    private final BehaviorSubject<Boolean> allowNotifsSubject;
-    private final BehaviorSubject<Boolean> showNotifCardSubject;
     private final SharedPreferences.OnSharedPreferenceChangeListener preferenceChangeListener;
 
     @Inject
@@ -47,11 +43,7 @@ public class AppPrefs
             @Override
             public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s)
             {
-                if(s.equals(ALLOW_NOTIFS))
-                {
-                    allowNotifsSubject.onNext(prefs.getBoolean(ALLOW_NOTIFS, false));
-                }
-                else if(s.equals(CONVENTION_START) || s.equals(CONVENTION_END))
+                if(s.equals(CONVENTION_START) || s.equals(CONVENTION_END))
                 {
                     conventionDateProcessor.onNext(new Pair<>(prefs.getString(CONVENTION_START, null),
                             prefs.getString(CONVENTION_END, null)));
@@ -59,8 +51,6 @@ public class AppPrefs
             }
         };
         prefs.registerOnSharedPreferenceChangeListener(preferenceChangeListener);
-        allowNotifsSubject = BehaviorSubject.createDefault(prefs.getBoolean(ALLOW_NOTIFS, false));
-        showNotifCardSubject = BehaviorSubject.createDefault(prefs.getBoolean(SHOW_NOTIF_CARD, true));
 
         //We're depending on seeded data to properly init the screen.
         if(prefs.getString(CONVENTION_START, null) == null)
@@ -117,36 +107,6 @@ public class AppPrefs
     public long getRefreshTime()
     {
         return prefs.getLong(REFRESH_TIME, 0);
-    }
-
-    public Observable<Boolean> observeAllowNotifications()
-    {
-        return allowNotifsSubject;
-    }
-
-    public Observable<Boolean> observeShowNotifCard()
-    {
-        return showNotifCardSubject;
-    }
-
-    public void setAllowNotifications(boolean allow)
-    {
-        prefs.edit().putBoolean(ALLOW_NOTIFS, allow).apply();
-    }
-
-    public boolean getAllowNotificationsUi()
-    {
-        return prefs.getBoolean(ALLOW_NOTIFS, false);
-    }
-
-    public boolean getShowNotifCard()
-    {
-        return prefs.getBoolean(SHOW_NOTIF_CARD, true);
-    }
-
-    public void setShowNotifCard(boolean show)
-    {
-        prefs.edit().putBoolean(SHOW_NOTIF_CARD, show).apply();
     }
 
     public boolean getDogClicked()

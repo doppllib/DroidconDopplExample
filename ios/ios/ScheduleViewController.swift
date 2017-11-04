@@ -50,7 +50,7 @@ class ScheduleViewController : UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         
         allEvents = self.tabBarController?.selectedIndex == 0
-        navigationItem.title = allEvents ? "Droidcon NYC" : "My Agenda"
+        navigationItem.title = allEvents ? "Droidcon SF" : "My Agenda"
         
         // Hide the nav bar shadow
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -141,7 +141,7 @@ class ScheduleViewController : UIViewController, UITableViewDelegate, UITableVie
         let eventObj = hourHolder.getTime()
         
         if let event = eventObj as? DDATEvent {
-            cell.titleLabel.text = event.getName().replacingOccurrences(of: "Android", with: "Binky")
+            cell.titleLabel.text = event.getName().replacingOccurrences(of: "Android", with: "Lulu")
             cell.speakerNamesLabel.text = event.allSpeakersString()
         } else if let event = eventObj as? DDATBlock {
             cell.titleLabel.text = event.getName()
