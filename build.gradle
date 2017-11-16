@@ -3,10 +3,10 @@ buildscript {
     repositories {
         maven { url 'https://dl.bintray.com/doppllib/maven2' }
         jcenter()
-        mavenCentral()
+        google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.0.0'
         classpath 'co.doppl:gradle:0.9.2'
     }
 }
@@ -17,7 +17,7 @@ allprojects {
         maven { url "http://dl.bintray.com/populov/maven" }
         maven { url 'https://maven.google.com' }
         jcenter()
-        mavenCentral()
+        google()
     }
 }
 

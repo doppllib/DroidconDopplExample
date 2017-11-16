@@ -34,7 +34,7 @@ def releasePassword = properties.getProperty('releasePassword')
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '25.0.3'
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         applicationId "co.touchlab.droidcon.anon"
