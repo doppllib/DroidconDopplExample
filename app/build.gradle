@@ -25,12 +25,33 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'co.doppl.gradle'
+apply plugin: 'build-time-tracker'
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 def baseurl = properties.hasProperty('baseurl') ? properties.getProperty('baseurl') : 'https://droidcon-server.herokuapp.com/'
 def amazonurl = properties.getProperty('amazonurl') ? properties.getProperty('amazonurl') : 'https://s3.amazonaws.com/'
 def releasePassword = properties.getProperty('releasePassword')
+
+buildtimetracker {
+    reporters {
+        csv {
+            output "build/times.csv"
+            append true
+            header false
+        }
+
+        summary {
+            ordered false
+            threshold 50
+            barstyle "unicode"
+        }
+
+        csvSummary {
+            csv "build/times.csv"
+        }
+    }
+}
 
 android {
     compileSdkVersion 26
@@ -60,12 +81,12 @@ android {
             keyAlias "androiddebugkey"
             keyPassword "android"
         }
-        staging {
+        /*staging {
             storeFile file("release.jks")
             keyAlias "android"
             storePassword "$releasePassword"
             keyPassword "$releasePassword"
-        }
+        }*/
         release {
             storeFile file("release.jks")
             keyAlias "key0"
@@ -80,11 +101,11 @@ android {
             minifyEnabled false
             pseudoLocalesEnabled true
         }
-        staging {
+        /*staging {
             debuggable true
             minifyEnabled false
             signingConfig signingConfigs.release
-        }
+        }*/
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -109,9 +130,9 @@ android {
 }
 
 def supportVersion = "26.1.0"
-def archVer = "1.0.0-rc1"
-def dopplArchVer = "1.0.0.0-rc1"
-def daggerVer = "2.5"
+def archVer = doppl_archbeta_java
+def dopplArchVer = doppl_archbeta_doppl
+def daggerVer = doppl_dagger_java
 
 dependencies {
 
@@ -150,35 +171,40 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.4.0'
 
     //Shared code dependencies
-    doppl 'co.doppl.lib:androidbase:0.8.5.0'
-    testCompile 'co.doppl.lib:androidbasetest:0.8.5'
-    testDoppl 'co.doppl.lib:androidbasetest:0.8.5.0'
+    doppl "co.doppl.lib:androidbase:$doppl_core_java"
+    testCompile "co.doppl.lib:androidbasetest:$doppl_core_java"
+    testDoppl "co.doppl.lib:androidbasetest:$doppl_core_doppl"
 
-    compile 'com.squareup.retrofit2:retrofit:2.3.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
-    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-    doppl 'co.doppl.com.squareup.retrofit2.urlsession:retrofit:2.3.0.7'
-    doppl 'co.doppl.com.squareup.retrofit2.urlsession:converter-gson:2.3.0.7'
-    doppl 'co.doppl.com.squareup.retrofit2.urlsession:adapter-rxjava2:2.3.0.7'
+    compile "com.squareup.retrofit2:retrofit:$doppl_retrofit2_java"
+    compile "com.squareup.retrofit2:converter-gson:$doppl_retrofit2_java"
+    compile "com.squareup.retrofit2:adapter-rxjava2:$doppl_retrofit2_java"
 
-    compile "io.reactivex.rxjava2:rxjava:2.1.5"
-    doppl "co.doppl.io.reactivex.rxjava2:rxjava:2.1.5.0"
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    doppl "co.doppl.io.reactivex.rxjava2:rxandroid:2.0.1.4"
+    doppl "co.doppl.com.squareup.retrofit2.urlsession:retrofit:$doppl_retrofit2_doppl"
+    doppl "co.doppl.com.squareup.retrofit2.urlsession:converter-gson:$doppl_retrofit2_doppl"
+    doppl "co.doppl.com.squareup.retrofit2.urlsession:adapter-rxjava2:$doppl_retrofit2_doppl"
+
+    compile "io.reactivex.rxjava2:rxjava:$doppl_rxjava2_java"
+    doppl "co.doppl.io.reactivex.rxjava2:rxjava:$doppl_rxjava2_doppl"
+    compile "io.reactivex.rxjava2:rxandroid:$doppl_rxandroid_java"
+    doppl "co.doppl.io.reactivex.rxjava2:rxandroid:$doppl_rxandroid_doppl"
 
     compile "com.google.dagger:dagger:$daggerVer"
     annotationProcessor "com.google.dagger:dagger-compiler:$daggerVer"
     testAnnotationProcessor "com.google.dagger:dagger-compiler:$daggerVer"
     provided 'javax.annotation:jsr250-api:1.0'
-    doppl 'co.doppl.com.google.dagger:dagger:2.5.6'
+    doppl "co.doppl.com.google.dagger:dagger:$doppl_dagger_doppl"
 
     compile 'com.google.firebase:firebase-messaging:11.4.2'
 
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.mockito:mockito-core:1.9.5'
+    testCompile "junit:junit:$doppl_junit_java"
+    testDoppl "co.doppl.junit:junit:$doppl_junit_doppl"
+
+    testCompile "org.mockito:mockito-core:$doppl_mockito_java"
+    testDoppl "co.doppl.org.mockito:mockito-core:$doppl_mockito_doppl"
+
     testCompile "org.robolectric:robolectric:3.3.2"
     compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
-        transitive = true;
+        transitive = true
     }
 }
 
@@ -195,6 +221,8 @@ dopplConfig {
     translatedPathPrefix 'co.touchlab.droidconandroid.shared.utils', 'DUT'
     translatedPathPrefix 'co.touchlab.droidconandroid.shared', 'D'
 
+//    javaDebug true
+
     testIdentifier {
         include "**/*Test.java"
         exclude "**/OneTest.java"
@@ -204,6 +232,10 @@ dopplConfig {
         include '**/shared/**'
         include '**/CrashReport.*'
         include '**/BuildConfig.*'
+    }
+
+    mainFramework{
+        managePod "../ios"
     }
 }
 
