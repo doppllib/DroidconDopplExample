@@ -221,7 +221,7 @@ dopplConfig {
     translatedPathPrefix 'co.touchlab.droidconandroid.shared.utils', 'DUT'
     translatedPathPrefix 'co.touchlab.droidconandroid.shared', 'D'
 
-//    javaDebug true
+    javaDebug true
 
     testIdentifier {
         include "**/*Test.java"
@@ -234,9 +234,9 @@ dopplConfig {
         include '**/BuildConfig.*'
     }
 
-    mainFramework{
+    /*mainFramework{
         managePod "../ios"
-    }
+    }*/
 }
 
 apply plugin: 'com.google.gms.google-services'

@@ -42,7 +42,7 @@ public class DroidconApplication extends Application
 
         String currentProcessName = getCurrentProcessName(this);
         Log.i(DroidconApplication.class.getSimpleName(),
-                "currentProcessName: " + currentProcessName);
+                "currentProcessName-cheese: " + currentProcessName);
 
         /*if (DEVELOPER_MODE) */{
             StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
