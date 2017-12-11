@@ -13,7 +13,7 @@ target 'ios' do
     pod 'Firebase'
     pod 'Firebase/Messaging'
     pod 'Kingfisher', '~> 3.0'
-    pod 'doppllib', :path => '../app/build'
+    pod 'doppllib', :path => '../app'
 
   target 'iosTests' do
     inherit! :search_paths

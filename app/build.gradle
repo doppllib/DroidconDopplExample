@@ -234,9 +234,9 @@ dopplConfig {
         include '**/BuildConfig.*'
     }
 
-    /*mainFramework{
-        managePod "../ios"
-    }*/
+//    mainFramework{
+//        managePod "../ios"
+//    }
 }
 
 apply plugin: 'com.google.gms.google-services'
