@@ -26,7 +26,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 @Module
 public class NetworkModule
 {
-
     @Provides
     @Singleton
     @DroidconServer

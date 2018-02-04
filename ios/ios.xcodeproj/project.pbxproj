@@ -88,7 +88,7 @@
 		4C81B7121D7616C500DFB89C /* SponsorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		55F54A492D46D70B0A7D6257 /* Pods_dcframeworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dcframeworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6313E3C41F736EB300EA04ED /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		631B98EB1C7D6533008AA20D /* Droidcon NYC 2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Droidcon NYC 2017.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		631B98EB1C7D6533008AA20D /* Droidcon NYC 2017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Droidcon NYC 2017.app"; path = "Droidcon SF 2017.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		631B98F81C7D6533008AA20D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		631B98FA1C7D6533008AA20D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		631B98FF1C7D6533008AA20D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
