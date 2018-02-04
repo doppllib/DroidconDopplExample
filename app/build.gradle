@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.1.3-2'
+    ext.kotlin_version = '1.1.51'
     repositories {
         mavenCentral()
         maven { url 'https://maven.fabric.io/public' }
@@ -23,6 +23,7 @@ repositories {
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'co.doppl.gradle'
+apply plugin: 'build-time-tracker'
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
@@ -30,9 +31,29 @@ def baseurl = properties.hasProperty('baseurl') ? properties.getProperty('baseur
 def amazonurl = properties.getProperty('amazonurl') ? properties.getProperty('amazonurl') : 'https://s3.amazonaws.com/'
 def releasePassword = properties.getProperty('releasePassword')
 
+buildtimetracker {
+    reporters {
+        csv {
+            output "build/times.csv"
+            append true
+            header false
+        }
+
+        summary {
+            ordered false
+            threshold 50
+            barstyle "unicode"
+        }
+
+        csvSummary {
+            csv "build/times.csv"
+        }
+    }
+}
+
 android {
     compileSdkVersion 26
-    buildToolsVersion '27.0.0'
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         applicationId "co.touchlab.droidcon.sf2017"
@@ -58,12 +79,12 @@ android {
             keyAlias "androiddebugkey"
             keyPassword "android"
         }
-        staging {
+        /*staging {
             storeFile file("release.jks")
             keyAlias "android"
             storePassword "$releasePassword"
             keyPassword "$releasePassword"
-        }
+        }*/
         release {
             storeFile file("release.jks")
             keyAlias "key0"
@@ -78,11 +99,11 @@ android {
             minifyEnabled false
             pseudoLocalesEnabled true
         }
-        staging {
+        /*staging {
             debuggable true
             minifyEnabled false
             signingConfig signingConfigs.release
-        }
+        }*/
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -107,15 +128,12 @@ android {
 }
 
 def supportVersion = "26.1.0"
-def archVer = "1.0.0-rc1"
-def dopplArchVer = "1.0.0.0-rc1"
-def daggerVer = "2.5"
+def daggerVer = doppl_dagger_java
 
 dependencies {
 
-    //UI Dependencies
-    compile fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
     implementation "com.android.support:support-v4:$supportVersion"
     implementation "com.android.support:appcompat-v7:$supportVersion"
     implementation "com.android.support:design:$supportVersion"
@@ -123,48 +141,66 @@ dependencies {
     implementation "com.android.support:recyclerview-v7:$supportVersion"
     implementation "com.android.support:cardview-v7:$supportVersion"
     implementation "com.android.support:customtabs:$supportVersion"
-    implementation 'android.arch.lifecycle:runtime:1.0.3'
-    implementation "android.arch.lifecycle:extensions:$archVer"
-    doppl "co.doppl.android.arch.persistence.room:runtime:$dopplArchVer"
-    doppl "co.doppl.android.arch.persistence.room:rxjava2:$dopplArchVer"
-    doppl "co.doppl.android.arch.lifecycle:runtime:$dopplArchVer"
-    doppl "co.doppl.android.arch.lifecycle:extensions:$dopplArchVer"
-    annotationProcessor "android.arch.lifecycle:compiler:$archVer"
-    implementation "android.arch.persistence.room:runtime:$archVer"
-    implementation "android.arch.persistence.room:rxjava2:$archVer"
-    annotationProcessor "android.arch.persistence.room:compiler:$archVer"
+
+    annotationProcessor "android.arch.lifecycle:compiler:$doppl_arch_lifecycle_ext_java"
+
+    implementation "android.arch.lifecycle:runtime:$doppl_arch_lifecycle_java"
+    doppl "co.doppl.android.arch.lifecycle:runtime:$doppl_arch_lifecycle_doppl"
+
+    implementation "android.arch.lifecycle:extensions:$doppl_arch_lifecycle_ext_java"
+    doppl "co.doppl.android.arch.lifecycle:extensions:$doppl_arch_lifecycle_ext_doppl"
+
+    annotationProcessor "android.arch.persistence.room:compiler:$doppl_arch_room_java"
+
+    implementation "android.arch.persistence.room:runtime:$doppl_arch_room_java"
+    doppl "co.doppl.android.arch.persistence.room:runtime:$doppl_arch_room_doppl"
+
+    implementation "android.arch.persistence.room:rxjava2:$doppl_arch_room_java"
+    doppl "co.doppl.android.arch.persistence.room:rxjava2:$doppl_arch_room_doppl"
+
     implementation 'com.squareup.okhttp:okhttp:2.4.0'
     implementation 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'
-    implementation 'com.viewpagerindicator:library:2.4.1@aar'
-    implementation 'de.hdodenhof:circleimageview:1.3.0'
-    implementation 'com.squareup.picasso:picasso:2.4.0'
 
-    //Shared code dependencies
-    doppl 'co.doppl.lib:androidbase:0.8.5.0'
-    testImplementation 'co.doppl.lib:androidbasetest:0.8.5'
-    testDoppl 'co.doppl.lib:androidbasetest:0.8.5.0'
-    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-    doppl 'co.doppl.com.squareup.retrofit2.urlsession:retrofit:2.3.0.7'
-    doppl 'co.doppl.com.squareup.retrofit2.urlsession:converter-gson:2.3.0.7'
-    doppl 'co.doppl.com.squareup.retrofit2.urlsession:adapter-rxjava2:2.3.0.7'
-    implementation 'io.reactivex.rxjava2:rxjava:2.1.5'
-    doppl "co.doppl.io.reactivex.rxjava2:rxjava:2.1.5.0"
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    doppl "co.doppl.io.reactivex.rxjava2:rxandroid:2.0.1.4"
+    implementation 'com.viewpagerindicator:library:2.4.1@aar'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
+    doppl "co.doppl.lib:androidbase:$doppl_core_java"
+    testImplementation "co.doppl.lib:androidbasetest:$doppl_core_java"
+    testDoppl "co.doppl.lib:androidbasetest:$doppl_core_doppl"
+
+    implementation "com.squareup.retrofit2:retrofit:$doppl_retrofit2_java"
+    implementation "com.squareup.retrofit2:converter-gson:$doppl_retrofit2_java"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$doppl_retrofit2_java"
+    implementation "co.doppl.com.squareup.retrofit2.urlsession:retrofitfactory:$doppl_retrofit2_java"
+
+    doppl "co.doppl.com.squareup.retrofit2.urlsession:retrofit:$doppl_retrofit2_doppl"
+    doppl "co.doppl.com.squareup.retrofit2.urlsession:converter-gson:$doppl_retrofit2_doppl"
+    doppl "co.doppl.com.squareup.retrofit2.urlsession:adapter-rxjava2:$doppl_retrofit2_doppl"
+    doppl "co.doppl.com.squareup.retrofit2.urlsession:retrofitfactory:$doppl_retrofit2_doppl"
+
+    implementation "io.reactivex.rxjava2:rxjava:$doppl_rxjava2_java"
+    doppl "co.doppl.io.reactivex.rxjava2:rxjava:$doppl_rxjava2_doppl"
+    implementation "io.reactivex.rxjava2:rxandroid:$doppl_rxandroid_java"
+    doppl "co.doppl.io.reactivex.rxjava2:rxandroid:$doppl_rxandroid_doppl"
+
     implementation "com.google.dagger:dagger:$daggerVer"
     annotationProcessor "com.google.dagger:dagger-compiler:$daggerVer"
     testAnnotationProcessor "com.google.dagger:dagger-compiler:$daggerVer"
-    provided 'javax.annotation:jsr250-api:1.0'
-    doppl 'co.doppl.com.google.dagger:dagger:2.5.6'
-    implementation 'com.google.firebase:firebase-core:11.4.2'
+    compileOnly 'javax.annotation:jsr250-api:1.0'
+    doppl "co.doppl.com.google.dagger:dagger:$doppl_dagger_doppl"
+
     implementation 'com.google.firebase:firebase-messaging:11.4.2'
-    testImplementation 'junit:junit:4.12'
-    testImplementation 'org.mockito:mockito-core:1.9.5'
-    testImplementation 'org.robolectric:robolectric:3.3.2'
+
+    testImplementation "junit:junit:$doppl_junit_java"
+    testDoppl "co.doppl.junit:junit:$doppl_junit_doppl"
+
+    testImplementation "org.mockito:mockito-core:$doppl_mockito_java"
+    testDoppl "co.doppl.org.mockito:mockito-core:$doppl_mockito_doppl"
+
+    testImplementation "org.robolectric:robolectric:3.3.2"
     implementation('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
-        transitive = true;
+        transitive = true
     }
 }
 
@@ -181,6 +217,8 @@ dopplConfig {
     translatedPathPrefix 'co.touchlab.droidconandroid.shared.utils', 'DUT'
     translatedPathPrefix 'co.touchlab.droidconandroid.shared', 'D'
 
+    javaDebug true
+
     testIdentifier {
         include "**/*Test.java"
         exclude "**/OneTest.java"
@@ -191,6 +229,10 @@ dopplConfig {
         include '**/CrashReport.*'
         include '**/BuildConfig.*'
     }
+
+//    mainFramework{
+//        managePod "../ios"
+//    }
 }
 
 apply plugin: 'com.google.gms.google-services'

@@ -12,6 +12,7 @@ import co.touchlab.droidconandroid.shared.viewmodel.SponsorsViewModel;
 import co.touchlab.droidconandroid.shared.viewmodel.UserDetailViewModel;
 import dagger.Component;
 
+
 @Singleton
 @Component(modules = {AppModule.class, NetworkModule.class})
 public interface AppComponent

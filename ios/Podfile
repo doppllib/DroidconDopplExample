@@ -1,14 +1,19 @@
 platform :ios, '9.0'
 
+install! 'cocoapods',
+           :deterministic_uuids => false
+
 target 'ios' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+
+
 
   # Pods for ios
     pod 'Firebase'
     pod 'Firebase/Messaging'
     pod 'Kingfisher', '~> 3.0'
-    pod 'doppllib', :path => '../app/build'
+    pod 'doppllib', :path => '../app'
 
   target 'iosTests' do
     inherit! :search_paths

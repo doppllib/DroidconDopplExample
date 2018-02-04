@@ -19,7 +19,8 @@
         android:paddingStart="0dp"
         android:paddingTop="@dimen/padding_wedge"
         android:textColor="@color/card_text_title"
-        tools:text="9:10am"/>
+        tools:text="9:00am"/>
+
 
     <TextView
         android:id="@+id/conflict_text"
