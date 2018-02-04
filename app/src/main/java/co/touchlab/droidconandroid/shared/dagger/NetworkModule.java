@@ -1,5 +1,7 @@
 package co.touchlab.droidconandroid.shared.dagger;
 
+import java.util.concurrent.TimeUnit;
+
 import javax.inject.Singleton;
 
 import co.touchlab.droidconandroid.BuildConfig;
@@ -13,8 +15,12 @@ import io.reactivex.FlowableTransformer;
 import io.reactivex.ObservableTransformer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
+import okhttp3.Call;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+import retrofit2.clientfactory.CallClientFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module
@@ -46,12 +52,46 @@ public class NetworkModule
 
     @Provides
     @Singleton
-    @DroidconServer
-    Retrofit providesDroidconRetrofit(GsonConverterFactory factory, @DroidconServer String baseUrl)
+    Call.Factory providesDroidconRetrofitCallFactory()
     {
-        return new Retrofit.Builder().baseUrl(baseUrl)
+        CallClientFactory callClientFactory = new CallClientFactory()
+        {
+            @Override
+            protected void initAndroid(OkHttpClient.Builder builder)
+            {
+                builder.connectTimeout(10, TimeUnit.SECONDS);
+            }
+
+            @Override
+            protected void initIos(UrlSessionBuilder builder)
+            {
+                builder.setTimeoutIntervalForRequest(15);
+            }
+
+            @Override
+            protected Request modifyRequest(Request request)
+            {
+                Request.Builder builder = request.newBuilder();
+                builder.addHeader("HELLO", "HITHERE!!!");
+                return builder.build();
+            }
+        };
+
+        return callClientFactory.createFactory();
+    }
+
+    @Provides
+    @Singleton
+    @DroidconServer
+    Retrofit providesDroidconRetrofit(GsonConverterFactory factory, @DroidconServer String baseUrl, Call.Factory callFactory)
+    {
+        Retrofit.Builder builder = new Retrofit.Builder().baseUrl(baseUrl)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .addConverterFactory(factory).build();
+                .callFactory(callFactory)
+                .addConverterFactory(factory);
+
+        return builder
+                .build();
     }
 
     @Provides

@@ -2,13 +2,14 @@
 buildscript {
     def doppl_gradle_version = doppl_gradle
     repositories {
+        maven { url dopplMavenDeploy }
         maven { url 'https://dl.bintray.com/doppllib/maven2' }
         jcenter()
         google()
-//        maven { url dopplMavenDeploy }
+
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.0'
+        classpath 'com.android.tools.build:gradle:3.0.1'
         classpath "co.doppl:gradle:${doppl_gradle_version}"
         classpath "net.rdrei.android.buildtimetracker:gradle-plugin:0.11.+"
     }
@@ -16,12 +17,13 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url dopplMavenDeploy }
         maven { url "https://dl.bintray.com/doppllib/maven2" }
         maven { url "http://dl.bintray.com/populov/maven" }
         maven { url 'https://maven.google.com' }
         jcenter()
         google()
-//        maven { url dopplMavenDeploy }
+
     }
 }
 
