@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
     s.ios.deployment_target = '8.0'
 
-    s.source_files = FileList["build/testdoppllib.h"].include("build/dopplBuild/dependencies/out/main/**/*.{h,m,cpp,properites,txt}").include("build/dopplBuild/source/out/main/**/*.{h,m,cpp,properites,txt}").include("build/dopplBuild/dependencies/exploded/doppl/co_doppl_lib_androidbase_0_8_10_0/src/**/*.{h,m,cpp,properites,txt}").include("build/dopplBuild/dependencies/exploded/doppl/co_doppl_com_squareup_okio_okio_1_13_0_0/src/**/*.{h,m,cpp,properites,txt}").include("build/dopplBuild/dependencies/out/test/**/*.{h,m,cpp,properites,txt}").include("build/dopplBuild/source/out/test/**/*.{h,m,cpp,properites,txt}").include("build/generated/source/apt/debug/**/*.java").include("build/generated/source/buildConfig/debug/**/*.java").include("build/generated/source/r/debug/**/*.java").include("src/debug/java/**/*.java").include("src/main/java/**/*.java").include("src/main/kotlin/**/*.java").include("build/generated/source/apt/test/debug/**/*.java").include("src/test/java/**/*.java").include("src/testDebug/java/**/*.java").to_ary
+    s.source_files = FileList["build/testdoppllib.h"].include("build/dopplBuild/dependencies/out/main/**/*.{h,m,cpp,properites,txt}").include("build/dopplBuild/source/out/main/**/*.{h,m,cpp,properites,txt}").include("build/dopplBuild/dependencies/exploded/doppl/co_doppl_lib_androidbase_0_9_0_0/src/**/*.{h,m,cpp,properites,txt}").include("build/dopplBuild/dependencies/exploded/doppl/co_doppl_com_squareup_okio_okio_1_13_0_0/src/**/*.{h,m,cpp,properites,txt}").include("build/dopplBuild/dependencies/out/test/**/*.{h,m,cpp,properites,txt}").include("build/dopplBuild/source/out/test/**/*.{h,m,cpp,properites,txt}").include("build/generated/source/apt/debug/**/*.java").include("build/generated/source/buildConfig/debug/**/*.java").include("build/generated/source/r/debug/**/*.java").include("src/debug/java/**/*.java").include("src/main/java/**/*.java").include("src/main/kotlin/**/*.java").include("build/generated/source/apt/test/debug/**/*.java").include("src/test/java/**/*.java").include("src/testDebug/java/**/*.java").to_ary
 
     s.public_header_files = FileList["build/testdoppllib.h"].include("build/dopplBuild/dependencies/out/main/**/*.h").include("build/dopplBuild/source/out/main/**/*.h").include("build/dopplBuild/dependencies/out/test/**/*.h").include("build/dopplBuild/source/out/test/**/*.h").exclude(/cpphelp/).exclude(/jni/).to_ary
 
@@ -27,14 +27,14 @@ Pod::Spec.new do |s|
     s.frameworks = 'UIKit'
 
     s.pod_target_xcconfig = {
-     'HEADER_SEARCH_PATHS' => '/Users/kgalligan/devel/j2objc-cleanup/dist/include','LIBRARY_SEARCH_PATHS' => '/Users/kgalligan/devel/j2objc-cleanup/dist/lib',
+     'HEADER_SEARCH_PATHS' => '/Users/kgalligan/bin/j2objc/include /Users/kgalligan/devel-doppl-supported/DroidconDopplExample/app/build/dopplBuild/dependencies/exploded/doppl/co_doppl_lib_androidbase_0_9_0_0/src /Users/kgalligan/devel-doppl-supported/DroidconDopplExample/app/build/dopplBuild/dependencies/exploded/doppl/co_doppl_com_squareup_okio_okio_1_13_0_0/src','LIBRARY_SEARCH_PATHS' => '/Users/kgalligan/bin/j2objc/lib',
      'OTHER_LDFLAGS' => '-ObjC',
 'CLANG_WARN_DOCUMENTATION_COMMENTS' => 'NO',
 'GCC_WARN_64_TO_32_BIT_CONVERSION' => 'NO'
     }
     
     s.user_target_xcconfig = {
-     'HEADER_SEARCH_PATHS' => '/Users/kgalligan/devel/j2objc-cleanup/dist/frameworks/JRE.framework/Headers /Users/kgalligan/devel/j2objc-cleanup/dist/frameworks/JavaxInject.framework/Headers /Users/kgalligan/devel/j2objc-cleanup/dist/frameworks/JSR305.framework/Headers /Users/kgalligan/devel/j2objc-cleanup/dist/frameworks/JUnit.framework/Headers /Users/kgalligan/devel/j2objc-cleanup/dist/frameworks/Mockito.framework/Headers /Users/kgalligan/devel/j2objc-cleanup/dist/frameworks/Xalan.framework/Headers /Users/kgalligan/devel/j2objc-cleanup/dist/frameworks/Guava.framework/Headers'
+     'HEADER_SEARCH_PATHS' => '/Users/kgalligan/bin/j2objc/frameworks/JRE.framework/Headers /Users/kgalligan/bin/j2objc/frameworks/JavaxInject.framework/Headers /Users/kgalligan/bin/j2objc/frameworks/JSR305.framework/Headers /Users/kgalligan/bin/j2objc/frameworks/JUnit.framework/Headers /Users/kgalligan/bin/j2objc/frameworks/Mockito.framework/Headers /Users/kgalligan/bin/j2objc/frameworks/Xalan.framework/Headers /Users/kgalligan/bin/j2objc/frameworks/Guava.framework/Headers'
     }
     
     
