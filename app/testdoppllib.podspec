@@ -23,18 +23,18 @@ Pod::Spec.new do |s|
     s.public_header_files = FileList["build/testdoppllib.h"].include("build/dopplBuild/dependencies/out/main/**/*.h").include("build/dopplBuild/source/out/main/**/*.h").include("build/dopplBuild/dependencies/out/test/**/*.h").include("build/dopplBuild/source/out/test/**/*.h").exclude(/cpphelp/).exclude(/jni/).to_ary
 
     s.requires_arc = false
-    s.libraries = 'z', 'sqlite3', 'iconv', 'javax_inject', 'jre_emul', 'jsr305', 'guava'
+    s.libraries = 'z', 'sqlite3', 'iconv', 'jre_emul'
     s.frameworks = 'UIKit'
 
     s.pod_target_xcconfig = {
-     'HEADER_SEARCH_PATHS' => '/Users/kgalligan/bin/j2objc/include /Users/kgalligan/devel-doppl-supported/DroidconDopplExample/app/build/dopplBuild/dependencies/exploded/doppl/co_doppl_lib_androidbase_0_9_0_0/src /Users/kgalligan/devel-doppl-supported/DroidconDopplExample/app/build/dopplBuild/dependencies/exploded/doppl/co_doppl_com_squareup_okio_okio_1_13_0_0/src','LIBRARY_SEARCH_PATHS' => '/Users/kgalligan/bin/j2objc/lib',
+     'HEADER_SEARCH_PATHS' => '/Users/kgalligan/.doppl/j2objc/2.0.6a/include /Users/kgalligan/devel-doppl-supported/DroidconDopplExample/app/build/dopplBuild/dependencies/exploded/doppl/co_doppl_lib_androidbase_0_9_0_0/src /Users/kgalligan/devel-doppl-supported/DroidconDopplExample/app/build/dopplBuild/dependencies/exploded/doppl/co_doppl_com_squareup_okio_okio_1_13_0_0/src','LIBRARY_SEARCH_PATHS' => '/Users/kgalligan/.doppl/j2objc/2.0.6a/lib',
      'OTHER_LDFLAGS' => '-ObjC',
 'CLANG_WARN_DOCUMENTATION_COMMENTS' => 'NO',
 'GCC_WARN_64_TO_32_BIT_CONVERSION' => 'NO'
     }
     
     s.user_target_xcconfig = {
-     'HEADER_SEARCH_PATHS' => '/Users/kgalligan/bin/j2objc/frameworks/JRE.framework/Headers /Users/kgalligan/bin/j2objc/frameworks/JavaxInject.framework/Headers /Users/kgalligan/bin/j2objc/frameworks/JSR305.framework/Headers /Users/kgalligan/bin/j2objc/frameworks/JUnit.framework/Headers /Users/kgalligan/bin/j2objc/frameworks/Mockito.framework/Headers /Users/kgalligan/bin/j2objc/frameworks/Xalan.framework/Headers /Users/kgalligan/bin/j2objc/frameworks/Guava.framework/Headers'
+     'HEADER_SEARCH_PATHS' => '/Users/kgalligan/.doppl/j2objc/2.0.6a/frameworks/JRE.framework/Headers'
     }
     
     
