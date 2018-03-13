@@ -2,7 +2,7 @@
 buildscript {
     def doppl_gradle_version = doppl_gradle
     repositories {
-        maven { url dopplMavenDeploy }
+//        maven { url dopplMavenDeploy }
         maven { url 'https://dl.bintray.com/doppllib/maven2' }
         jcenter()
         google()
@@ -17,7 +17,7 @@ buildscript {
 
 allprojects {
     repositories {
-        maven { url dopplMavenDeploy }
+//        maven { url dopplMavenDeploy }
         maven { url "https://dl.bintray.com/doppllib/maven2" }
         maven { url "http://dl.bintray.com/populov/maven" }
         maven { url 'https://maven.google.com' }
