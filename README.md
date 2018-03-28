@@ -4,6 +4,12 @@ This is the Droidcon NYC 2017 app. This will deploy on both Android and iOS usin
 
 The 2017 app is a refactor that updates the application to use more modern architecture and libraries. These include Android Architecture Components, Room DB, RxJava 2, Retrofit 2.
 
+# CI Status
+
+Fingers crossed...
+
+[![Build status](https://build.appcenter.ms/v0.1/apps/75d67777-b806-4d55-9029-4ed199653717/branches/master/badge)](https://appcenter.ms)
+
 # Getting Started
 
 Follow the [Doppl Tutorial](http://doppl.co/docs/Tutorial.html) to make sure you have j2objc installed and configured.
