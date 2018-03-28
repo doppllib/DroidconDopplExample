@@ -6,9 +6,11 @@ The 2017 app is a refactor that updates the application to use more modern archi
 
 # CI Status
 
-Fingers crossed...
-
+## J2objc/iOS
 [![Build status](https://build.appcenter.ms/v0.1/apps/75d67777-b806-4d55-9029-4ed199653717/branches/master/badge)](https://appcenter.ms)
+
+## Android
+[![Build status](https://build.appcenter.ms/v0.1/apps/0b5a4973-92e0-4cac-847f-9fbd62b33d1f/branches/master/badge)](https://appcenter.ms)
 
 # Getting Started
 
