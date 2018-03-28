@@ -2,23 +2,23 @@
 buildscript {
     def doppl_gradle_version = doppl_gradle
     repositories {
-//        maven { url dopplMavenDeploy }
-        maven { url 'https://dl.bintray.com/doppllib/maven2' }
+//        maven { url j2objcMavenDeploy }
+        maven { url 'https://dl.bintray.com/doppllib/j2objc' }
         jcenter()
         google()
 
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
-        classpath "co.doppl:gradle:${doppl_gradle_version}"
+        classpath "org.j2objcgradle:gradle:${doppl_gradle_version}"
         classpath "net.rdrei.android.buildtimetracker:gradle-plugin:0.11.+"
     }
 }
 
 allprojects {
     repositories {
-//        maven { url dopplMavenDeploy }
-        maven { url "https://dl.bintray.com/doppllib/maven2" }
+//        maven { url j2objcMavenDeploy }
+        maven { url 'https://dl.bintray.com/doppllib/j2objc' }
         maven { url "http://dl.bintray.com/populov/maven" }
         maven { url 'https://maven.google.com' }
         jcenter()

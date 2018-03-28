@@ -51,6 +51,11 @@ public class EventDetailViewModel extends ViewModel
                 }));
     }
 
+    public Observable<EventInfo> rxEventInfo(long eventId)
+    {
+        return getEventDetails(eventId);
+    }
+
     private Observable<EventInfo> getEventDetails(long eventId)
     {
         return detailInteractor.getEventInfo(eventId).toObservable();

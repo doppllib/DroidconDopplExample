@@ -22,7 +22,7 @@ repositories {
 
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'co.doppl.gradle'
+apply plugin: 'org.j2objcgradle.gradle'
 apply plugin: 'build-time-tracker'
 
 Properties properties = new Properties()
@@ -145,18 +145,18 @@ dependencies {
     annotationProcessor "android.arch.lifecycle:compiler:$doppl_arch_lifecycle_ext_java"
 
     implementation "android.arch.lifecycle:runtime:$doppl_arch_lifecycle_java"
-    doppl "co.doppl.android.arch.lifecycle:runtime:$doppl_arch_lifecycle_doppl"
+    j2objc "co.doppl.android.arch.lifecycle:runtime:$doppl_arch_lifecycle_doppl"
 
     implementation "android.arch.lifecycle:extensions:$doppl_arch_lifecycle_ext_java"
-    doppl "co.doppl.android.arch.lifecycle:extensions:$doppl_arch_lifecycle_ext_doppl"
+    j2objc "co.doppl.android.arch.lifecycle:extensions:$doppl_arch_lifecycle_ext_doppl"
 
     annotationProcessor "android.arch.persistence.room:compiler:$doppl_arch_room_java"
 
     implementation "android.arch.persistence.room:runtime:$doppl_arch_room_java"
-    doppl "co.doppl.android.arch.persistence.room:runtime:$doppl_arch_room_doppl"
+    j2objc "co.doppl.android.arch.persistence.room:runtime:$doppl_arch_room_doppl"
 
     implementation "android.arch.persistence.room:rxjava2:$doppl_arch_room_java"
-    doppl "co.doppl.android.arch.persistence.room:rxjava2:$doppl_arch_room_doppl"
+    j2objc "co.doppl.android.arch.persistence.room:rxjava2:$doppl_arch_room_doppl"
 
     implementation 'com.squareup.okhttp:okhttp:2.4.0'
     implementation 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'
@@ -165,38 +165,38 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:2.1.0'
     implementation 'com.squareup.picasso:picasso:2.5.2'
 
-    doppl "co.doppl.lib:androidbase:$doppl_core_java"
+    j2objc "co.doppl.lib:androidbase:$doppl_core_java"
     testImplementation "co.doppl.lib:androidbasetest:$doppl_core_java"
-    testDoppl "co.doppl.lib:androidbasetest:$doppl_core_doppl"
+    testJ2objc "co.doppl.lib:androidbasetest:$doppl_core_doppl"
 
     implementation "com.squareup.retrofit2:retrofit:$doppl_retrofit2_java"
     implementation "com.squareup.retrofit2:converter-gson:$doppl_retrofit2_java"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$doppl_retrofit2_java"
     implementation "co.doppl.com.squareup.retrofit2.urlsession:retrofitfactory:$doppl_retrofit2_java"
 
-    doppl "co.doppl.com.squareup.retrofit2.urlsession:retrofit:$doppl_retrofit2_doppl"
-    doppl "co.doppl.com.squareup.retrofit2.urlsession:converter-gson:$doppl_retrofit2_doppl"
-    doppl "co.doppl.com.squareup.retrofit2.urlsession:adapter-rxjava2:$doppl_retrofit2_doppl"
-    doppl "co.doppl.com.squareup.retrofit2.urlsession:retrofitfactory:$doppl_retrofit2_doppl"
+    j2objc "co.doppl.com.squareup.retrofit2.urlsession:retrofit:$doppl_retrofit2_doppl"
+    j2objc "co.doppl.com.squareup.retrofit2.urlsession:converter-gson:$doppl_retrofit2_doppl"
+    j2objc "co.doppl.com.squareup.retrofit2.urlsession:adapter-rxjava2:$doppl_retrofit2_doppl"
+    j2objc "co.doppl.com.squareup.retrofit2.urlsession:retrofitfactory:$doppl_retrofit2_doppl"
 
     implementation "io.reactivex.rxjava2:rxjava:$doppl_rxjava2_java"
-    doppl "co.doppl.io.reactivex.rxjava2:rxjava:$doppl_rxjava2_doppl"
+    j2objc "co.doppl.io.reactivex.rxjava2:rxjava:$doppl_rxjava2_doppl"
     implementation "io.reactivex.rxjava2:rxandroid:$doppl_rxandroid_java"
-    doppl "co.doppl.io.reactivex.rxjava2:rxandroid:$doppl_rxandroid_doppl"
+    j2objc "co.doppl.io.reactivex.rxjava2:rxandroid:$doppl_rxandroid_doppl"
 
     implementation "com.google.dagger:dagger:$daggerVer"
     annotationProcessor "com.google.dagger:dagger-compiler:$daggerVer"
     testAnnotationProcessor "com.google.dagger:dagger-compiler:$daggerVer"
     compileOnly 'javax.annotation:jsr250-api:1.0'
-    doppl "co.doppl.com.google.dagger:dagger:$doppl_dagger_doppl"
+    j2objc "co.doppl.com.google.dagger:dagger:$doppl_dagger_doppl"
 
     implementation 'com.google.firebase:firebase-messaging:11.4.2'
 
     testImplementation "junit:junit:$doppl_junit_java"
-    testDoppl "co.doppl.junit:junit:$doppl_junit_doppl"
+    testJ2objc "org.j2objcgradle.junit:junit:$doppl_junit_doppl"
 
     testImplementation "org.mockito:mockito-core:$doppl_mockito_java"
-    testDoppl "co.doppl.org.mockito:mockito-core:$doppl_mockito_doppl"
+    testJ2objc "org.j2objcgradle.org.mockito:mockito-core:$doppl_mockito_doppl"
 
     testImplementation "org.robolectric:robolectric:3.3.2"
     implementation('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
@@ -205,7 +205,7 @@ dependencies {
 }
 
 
-dopplConfig {
+j2objcConfig {
     translatedPathPrefix 'co.touchlab.droidconandroid.shared.dagger', 'DDAG'
     translatedPathPrefix 'co.touchlab.droidconandroid.shared.data', 'DDAT'
     translatedPathPrefix 'co.touchlab.droidconandroid.shared.data.dao', 'DDAO'
