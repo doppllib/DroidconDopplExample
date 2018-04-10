@@ -23,7 +23,6 @@ repositories {
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'org.j2objcgradle.gradle'
-apply plugin: 'build-time-tracker'
 
 Properties properties = new Properties()
 try {
@@ -34,28 +33,8 @@ catch(Exception e)
     //Meh
 }
 def baseurl = properties.hasProperty('baseurl') ? properties.getProperty('baseurl') : 'https://droidcon-server.herokuapp.com/'
-def amazonurl = properties.getProperty('amazonurl') ? properties.getProperty('amazonurl') : 'https://s3.amazonaws.com/'
+def amazonurl = properties.hasProperty('amazonurl') ? properties.getProperty('amazonurl') : 'https://s3.amazonaws.com/'
 def releasePassword = properties.getProperty('releasePassword')
-
-buildtimetracker {
-    reporters {
-        csv {
-            output "build/times.csv"
-            append true
-            header false
-        }
-
-        summary {
-            ordered false
-            threshold 50
-            barstyle "unicode"
-        }
-
-        csvSummary {
-            csv "build/times.csv"
-        }
-    }
-}
 
 android {
     compileSdkVersion 26
@@ -164,7 +143,7 @@ dependencies {
     implementation "android.arch.persistence.room:rxjava2:$doppl_arch_room_java"
     j2objc "co.doppl.android.arch.persistence.room:rxjava2:$doppl_arch_room_doppl"
 
-    implementation 'com.squareup.okhttp:okhttp:2.4.0'
+    implementation 'com.squareup.okhttp:okhttp:2.7.5'
     implementation 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'
 
     implementation 'com.viewpagerindicator:library:2.4.1@aar'
@@ -204,7 +183,7 @@ dependencies {
     testImplementation "org.mockito:mockito-core:$doppl_mockito_java"
     testJ2objc "org.j2objcgradle.org.mockito:mockito-core:$doppl_mockito_doppl"
 
-    testImplementation "org.robolectric:robolectric:3.3.2"
+    testImplementation "org.robolectric:robolectric:3.6.1"
     implementation('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
         transitive = true
     }
@@ -237,7 +216,6 @@ j2objcConfig {
     }
 
     mainFramework{
-//        managePod "../ios"
         flagObjc = false
     }
 }

@@ -16,7 +16,7 @@ runs tests against that.
 ## Android
 [![Build status](https://build.appcenter.ms/v0.1/apps/0b5a4973-92e0-4cac-847f-9fbd62b33d1f/branches/master/badge)](https://appcenter.ms)
 
-# Getting Started wiht iOS
+# Getting Started with iOS
 
 Follow the [J2objc Gradle tutorials](https://j2objcgradle.github.io/basicquickstart.html) to make sure you have j2objc installed and configured.
 
