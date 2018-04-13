@@ -14,7 +14,6 @@ import javax.inject.Singleton;
 
 import co.touchlab.droidconandroid.CrashReport;
 import co.touchlab.droidconandroid.shared.data.AppPrefs;
-import co.touchlab.droidconandroid.shared.data.DatabaseHelper;
 import co.touchlab.droidconandroid.shared.data.DroidconDatabase;
 import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.data.TimeBlock;
@@ -77,7 +76,8 @@ public class RefreshScheduleInteractor
     public Observable<DaySchedule[]> getFullConferenceData(boolean allEvents)
     {
         callRefreshIfOld();
-        return conferenceDataSubject.flatMap(list -> filterAndSortBlocks(list, allEvents))
+        return conferenceDataSubject
+                .flatMap(list -> filterAndSortBlocks(list, allEvents))
                 .map(conferenceDataHelper:: formatHourBlocks)
                 .map(conferenceDataHelper:: convertMapToDaySchedule)
                 .map(dayScheduleList -> dayScheduleList.toArray(new DaySchedule[dayScheduleList.size()]));

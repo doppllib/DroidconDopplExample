@@ -1,6 +1,7 @@
 package co.touchlab.droidconandroid.shared.viewmodel;
 
 import android.text.TextUtils;
+import android.util.Log;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -21,14 +22,21 @@ import co.touchlab.droidconandroid.shared.data.Event;
 import co.touchlab.droidconandroid.shared.data.EventSpeaker;
 import co.touchlab.droidconandroid.shared.data.TimeBlock;
 import co.touchlab.droidconandroid.shared.data.UserAccount;
+import co.touchlab.droidconandroid.shared.network.SessionizeApi;
 import co.touchlab.droidconandroid.shared.network.dao.Convention;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkEvent;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkUserAccount;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkVenue;
-import co.touchlab.droidconandroid.shared.utils.StringUtils;
+import co.touchlab.droidconandroid.shared.network.sessionize.Session;
+import co.touchlab.droidconandroid.shared.network.sessionize.SessionGroup;
+import co.touchlab.droidconandroid.shared.network.sessionize.SessionsAndSpeakers;
+import co.touchlab.droidconandroid.shared.network.sessionize.Speaker;
 import co.touchlab.droidconandroid.shared.utils.TimeUtils;
 import io.reactivex.Completable;
 import io.reactivex.Single;
+import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Created by kgalligan on 4/17/16.
@@ -50,6 +58,9 @@ public class ConferenceDataHelper
             return TimeUtils.makeDateFormat("h:mma");
         }
     };
+
+    private static final String CONFERENCE_ID = "9whey58s";
+
     private final AppPrefs       appPrefs;
     private final DatabaseHelper helper;
 
@@ -67,7 +78,33 @@ public class ConferenceDataHelper
 
     public Single<List<TimeBlock>> getDays()
     {
-        return Single.fromCallable(this :: getDaySchedules);
+
+        // Get it, save it, then get it back from the DB and create UI objects and stuff ya know
+        SessionizeApi sessionize = new Retrofit.Builder()
+                .baseUrl("https://sessionize.com/")
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                .create(SessionizeApi.class);
+
+        List<TimeBlock> timeBlocks = new ArrayList<>();
+
+
+        Single<List<Session>> sessionsSingle = sessionize.fetchSessions(CONFERENCE_ID)
+                .flattenAsObservable(group -> group)
+                .map(SessionGroup:: getSessions)
+                .collectInto(new ArrayList<Session>(), List::addAll);
+
+        Single<List<Speaker>> speakersSingle = sessionize.fetchSpeakers(CONFERENCE_ID);
+
+        return Single.zip(sessionsSingle, speakersSingle, SessionsAndSpeakers::new)
+                .flatMapCompletable(helper:: insertScheduleData)
+                .andThen(helper.getSessionsWithSpeakers())
+                .map(sessions -> {
+                    timeBlocks.addAll(sessions);
+                    return timeBlocks;
+                })
+                .doOnSuccess(blox -> Log.d("ConferenceData", "Sessions came from the database"));
     }
 
     private List<TimeBlock> getDaySchedules()
@@ -102,7 +139,7 @@ public class ConferenceDataHelper
             return - 1;
         }
 
-        return ((Event) o1).venue.name.compareTo(((Event) o2).venue.name);
+        return ((Session) o1).getTitle().compareTo(((Session) o2).getTitle());
     }
 
     public TreeMap<String, List<HourBlock>> formatHourBlocks(List<TimeBlock> eventAndBlockList)

@@ -83,10 +83,10 @@ class ScheduleDataFragment : Fragment(), ScheduleDataViewModel.Host {
         val dayString = ConferenceDataHelper.dateToDayString(Date(arguments.getLong(DAY)))
 
         for (daySchedule in dayScheduleArray) {
-            if(daySchedule.dayString?.equals(dayString) ?: false)
-            {
+//            if(daySchedule.dayString?.equals(dayString) ?: false)
+//            {
                 updateAdapter(daySchedule.hourHolders)
-            }
+//            }
         }
     }
 

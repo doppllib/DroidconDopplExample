@@ -22,7 +22,6 @@
                 android:scaleType="centerCrop"
                 android:adjustViewBounds="true"
                 android:layout_alignBottom="@+id/toolbar"
-                android:src="@drawable/bannerback"
                 android:contentDescription="@null"
                 android:paddingTop="@dimen/status_bar_height"/>
 

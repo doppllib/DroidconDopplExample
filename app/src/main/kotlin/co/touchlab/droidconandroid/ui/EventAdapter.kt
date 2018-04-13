@@ -13,8 +13,9 @@ import co.touchlab.droidconandroid.setViewVisibility
 import co.touchlab.droidconandroid.shared.data.AppPrefs
 import co.touchlab.droidconandroid.shared.data.Block
 import co.touchlab.droidconandroid.shared.data.Event
-import co.touchlab.droidconandroid.shared.viewmodel.HourBlock
+import co.touchlab.droidconandroid.shared.network.sessionize.SessionWithSpeakers
 import co.touchlab.droidconandroid.shared.utils.EventUtils
+import co.touchlab.droidconandroid.shared.viewmodel.HourBlock
 import kotlinx.android.synthetic.main.item_event.view.*
 import java.util.*
 
@@ -77,7 +78,7 @@ class EventAdapter(private val context: Context,
 
         val item = filteredData[adjustedPosition]?.timeBlock
         when (item) {
-            is Event -> return if (item.isPast) VIEW_TYPE_PAST_EVENT else VIEW_TYPE_EVENT
+            is SessionWithSpeakers -> return VIEW_TYPE_EVENT
             is Block -> return VIEW_TYPE_BLOCK
             else -> throw UnsupportedOperationException()
         }

@@ -6,6 +6,7 @@ import java.util.Locale;
 
 import co.touchlab.droidconandroid.shared.data.Block;
 import co.touchlab.droidconandroid.shared.data.Event;
+import co.touchlab.droidconandroid.shared.network.sessionize.SessionWithSpeakers;
 import co.touchlab.droidconandroid.shared.viewmodel.HourBlock;
 
 public class EventUtils
@@ -28,14 +29,11 @@ public class EventUtils
         }
         else
         {
-            Event event = (Event) scheduleBlockHour.getTimeBlock();
-            row.setTimeText(scheduleBlockHour.getHourStringDisplay().toLowerCase(Locale.getDefault()));
-            row.setTitleText(event.name);
-            row.setSpeakerText(event.allSpeakersString());
-            row.setDescription(event.description);
-            row.setLiveNowVisible(event.isNow());
-            row.setRsvpVisible(allEvents && event.isRsvped(), event.isPast());
-            row.setRsvpConflict(allEvents && hasConflict(event, dataSet));
+            SessionWithSpeakers sessionWithSpeakers = (SessionWithSpeakers) scheduleBlockHour.getTimeBlock();
+            row.setDescription(sessionWithSpeakers.getSession().getDescription());
+            row.setTitleText(sessionWithSpeakers.getSession().getTitle());
+            row.setTimeText(scheduleBlockHour.getHourStringDisplay().toLowerCase());
+            row.setSpeakerText(sessionWithSpeakers.getSpeakerString());
         }
     }
 

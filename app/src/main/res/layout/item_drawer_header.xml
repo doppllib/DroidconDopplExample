@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/cd_profile_cover_image"
-        android:src="@drawable/drawerback"
         android:scaleType="centerCrop"/>
 
 </FrameLayout>

@@ -3,11 +3,11 @@ package co.touchlab.droidconandroid.shared.dagger;
 
 import android.app.Application;
 import android.arch.persistence.room.Room;
-import android.content.Context;
 
 import javax.inject.Singleton;
 
 import co.touchlab.droidconandroid.shared.data.DroidconDatabase;
+import co.touchlab.droidconandroid.shared.network.sessionize.SessionizeDatabase;
 import dagger.Module;
 import dagger.Provides;
 
@@ -32,5 +32,12 @@ public class AppModule
     DroidconDatabase providesDroidconDatabase(Application application)
     {
         return Room.databaseBuilder(application, DroidconDatabase.class, "droidcon").build();
+    }
+
+    @Provides
+    @Singleton
+    SessionizeDatabase provideSessionizeDatabase(Application application)
+    {
+        return Room.databaseBuilder(application, SessionizeDatabase.class, "droidcon-sessionize-database").build();
     }
 }

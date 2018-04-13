@@ -13,16 +13,17 @@ import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.view.View
 import co.touchlab.droidconandroid.alerts.NotificationService
 import co.touchlab.droidconandroid.alerts.NotificationUtils
 import co.touchlab.droidconandroid.shared.data.AppPrefs
 import co.touchlab.droidconandroid.shared.viewmodel.AppManager
 import co.touchlab.droidconandroid.shared.viewmodel.ConferenceDataViewModel
-import co.touchlab.droidconandroid.ui.*
+import co.touchlab.droidconandroid.ui.DrawerAdapter
+import co.touchlab.droidconandroid.ui.DrawerClickListener
+import co.touchlab.droidconandroid.ui.NavigationItem
+import co.touchlab.droidconandroid.ui.ScheduleFragmentPagerAdapter
 import com.google.firebase.messaging.FirebaseMessaging
 import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.functions.Consumer
 import kotlinx.android.synthetic.main.activity_schedule.*
 import java.util.*
 
@@ -142,9 +143,6 @@ class ScheduleActivity : AppCompatActivity(), ConferenceDataViewModel.Host {
         supportActionBar?.setDisplayShowTitleEnabled(false)
         supportActionBar?.setDisplayHomeAsUpEnabled(!isTablet())
         supportActionBar?.setHomeButtonEnabled(!isTablet())
-
-        schedule_backdrop.setImageDrawable(ContextCompat.getDrawable(this,
-                R.drawable.bannerback))
 
         appbar.addOnOffsetChangedListener { appBarLayout, verticalOffset ->
             if (appBarLayout.totalScrollRange > 0) {

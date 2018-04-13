@@ -27,6 +27,8 @@ public class TimeUtils
         }
     };
 
+    public static final String SESSIONIZE_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss";
+
     public static SimpleDateFormat makeDateFormat(String format)
     {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format, Locale.US);

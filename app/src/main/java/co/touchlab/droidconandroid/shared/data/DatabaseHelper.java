@@ -1,10 +1,8 @@
 package co.touchlab.droidconandroid.shared.data;
 
-import android.app.Application;
-import android.arch.persistence.room.Room;
-import android.content.Context;
 import android.support.annotation.NonNull;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
@@ -15,6 +13,12 @@ import javax.inject.Singleton;
 import co.touchlab.droidconandroid.shared.data.dao.EventDao;
 import co.touchlab.droidconandroid.shared.data.dao.UserAccountDao;
 import co.touchlab.droidconandroid.shared.network.dao.NetworkUserAccount;
+import co.touchlab.droidconandroid.shared.network.sessionize.Session;
+import co.touchlab.droidconandroid.shared.network.sessionize.SessionSpeakerJoin;
+import co.touchlab.droidconandroid.shared.network.sessionize.SessionWithSpeakers;
+import co.touchlab.droidconandroid.shared.network.sessionize.SessionizeDatabase;
+import co.touchlab.droidconandroid.shared.network.sessionize.SessionsAndSpeakers;
+import co.touchlab.droidconandroid.shared.network.sessionize.Speaker;
 import io.reactivex.Completable;
 import io.reactivex.Flowable;
 import io.reactivex.Observable;
@@ -24,12 +28,14 @@ import io.reactivex.Single;
 public class DatabaseHelper
 {
 
-    private DroidconDatabase db;
+    private DroidconDatabase   db;
+    private SessionizeDatabase sessionizeDatabase;
 
     @Inject
-    public DatabaseHelper(DroidconDatabase droidconDatabase)
+    public DatabaseHelper(DroidconDatabase droidconDatabase, SessionizeDatabase sessionizeDatabase)
     {
         db = droidconDatabase;
+        this.sessionizeDatabase = sessionizeDatabase;
     }
 
     public void runInTransaction(Runnable r)
@@ -181,6 +187,59 @@ public class DatabaseHelper
         dbUa.facebook = ua.facebook;
         dbUa.emailPublic = ua.emailPublic;
         return dbUa;
+    }
+
+
+    // Sessionize implementations below
+
+    // Will come together zipped
+    public Completable insertScheduleData(SessionsAndSpeakers sessionsAndSpeakers)
+    {
+        Completable addSessions = Completable.fromAction(() -> sessionizeDatabase.getScheduleDao()
+                .insertSessions(sessionsAndSpeakers.getSessions()));
+
+        Completable addJoins = Completable.fromAction(() ->
+        {
+
+            List<SessionSpeakerJoin> joinList = new ArrayList<>();
+
+            // This doesn't actually filter things out to only show the speakers for that specific session, but oh well...
+
+            for (Session session : sessionsAndSpeakers.getSessions()) {
+                for(Speaker speaker : sessionsAndSpeakers.getSpeakers()) {
+                    if(session.getSpeakers().contains(speaker.getId()))
+                    {
+                        SessionSpeakerJoin join = new SessionSpeakerJoin(session.getId(), speaker.getId());
+                        joinList.add(join);
+                    }
+                }
+            }
+
+            sessionizeDatabase.getScheduleDao().insertJoins(joinList);
+        });
+
+        return Completable.fromAction(() -> sessionizeDatabase.getScheduleDao()
+                .insertSpeakers(sessionsAndSpeakers.getSpeakers()))
+                .andThen(addSessions)
+                .andThen(addJoins);
+    }
+
+    private Single<List<Session>> getSessions()
+    {
+        return Single.fromCallable(() -> sessionizeDatabase.getScheduleDao().getSessions());
+    }
+
+    public Single<List<SessionWithSpeakers>> getSessionsWithSpeakers()
+    {
+        return getSessions()
+                .flattenAsObservable(it -> it)
+                .map(it -> new SessionWithSpeakers(it, getSpeakersForSession(it.getId())))
+                .toList();
+    }
+
+    private List<Speaker> getSpeakersForSession(String sessionId)
+    {
+        return sessionizeDatabase.getScheduleDao().getSpeakersForSession(sessionId);
     }
 
 }
